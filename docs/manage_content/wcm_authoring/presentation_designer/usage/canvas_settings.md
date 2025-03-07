@@ -1,6 +1,6 @@
 # Canvas settings in Presentation Designer
 
-With canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used Canvas settings for the user in the browser. These settings include the width, height, zoom level, canvas orientation, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
+With canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used canvas settings for the user in the browser. These settings include the width, height, zoom level, canvas orientation, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
 
 To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
 
@@ -8,13 +8,13 @@ To learn how to use the different user elements in Presentation Designer, refer 
 
 ## Canvas dimensions
 
-The canvas dimensions settings in Presentation Designer can be used to set the width and height of the canvas to adapt to specified size requirements. You can also use Canvas dimensions to select from predefined sizes such as desktop, tablet, and mobile.
+The canvas dimensions settings in Presentation Designer can be used to set the width and height of the canvas to adapt to specified size requirements. You can also use Canvas dimensions to select from predefined sizes such as **Desktop**, **Tablet**, and **Mobile**.
 
-In the following image, you can see the options for selecting predefined sizes (for example, desktop, tablet, or mobile) and for entering specific dimensions for width and height.
+In the following image, you can see the options for selecting predefined sizes and for entering specific dimensions for width and height.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions.png)
 
-1. **Predefined sizes:** Select from the predefined sizes for desktop, tablet, or mobile.
+1. **Predefined sizes:** Select from the predefined sizes for **Desktop**, **Tablet**, or **Mobile**.
 2. **Width and Height:** Enter specific dimensions to adjust the width and height of the canvas.
 
 ## Canvas rotate
@@ -35,7 +35,7 @@ The following image shows the **RTL** toggle. Use this to switch from LTR to RTL
 
 ## Canvas zoom
 
-With canvas zoom, you can select how much you want to zoom in or out of the canvas. There is a minimum zoom level of 50% up to a maximum of 200%. You can also select a zoom level to fit your window.
+In the **Zoom** field, you can select how much you want to zoom in or out of the canvas. There is a minimum zoom level of 50% up to a maximum of 200%. You can also select a zoom level to fit your window.
 
 The following image shows the zoom level options in Presentation Designer.
 
