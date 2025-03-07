@@ -21,4 +21,4 @@ configuration:
 
 !!!notes 
     - For more details on deploying Leap, go to [the Kubernetes Helm deployment](https://opensource.hcltechsw.com/leap-doc/9.3.8/kubernetes_helm_deployment.html) section of the HCL Leap product documentation.
-    - It is recommended that you perform the [post-deployment tasks](https://help.hcltechsw.com/Leap/9.3.2/in_setting_up_environment.html) for HCL Leap.
+    - It is recommended that you perform the [post-deployment tasks](https://opensource.hcltechsw.com/leap-doc/9.3.8/in_setting_up_environment.html) for HCL Leap.
