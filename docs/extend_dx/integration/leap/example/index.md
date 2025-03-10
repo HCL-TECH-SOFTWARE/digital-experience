@@ -58,8 +58,8 @@ Leap.onReady = function() {
     [/Plugin:NotEquals]
 
     let launchParams =  {
-        'appId': ‘***’,
-        'formId': ‘***’,
+        'appId': '***',
+        'formId': '***',
         'locale': 'en',
         'targetId': '[Plugin:ScriptPortletNamespace]leapDiv',
         'prefSecMode': prefSecMod
