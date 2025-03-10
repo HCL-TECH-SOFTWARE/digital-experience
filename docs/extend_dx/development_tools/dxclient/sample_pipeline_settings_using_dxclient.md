@@ -2,9 +2,7 @@
 
 A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL DX 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
 
-## Sample Pipeline Setting details
-
-Sample Pipeline settings are provided for deploying or updating a portlet application, Script Application, or Themes. A sample pipeline code that uses container version of dxclient for a combined task run(deploying portlet, theme and script application) is made available under the samples folder in the DXClient root folder. Refer [here](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy) for the same. Developers and administrators can use this sample as a basis for Jenkins automation server jobs. 
+A sample pipeline code that uses container version of dxclient for a combined task run(deploying portlet, theme and script application) is made available under the samples folder in the DXClient root folder. Refer [here](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy) for the same. Developers and administrators can use this sample as a basis for Jenkins automation server jobs. 
 
 ## Parameters for installing DXClient
 
@@ -171,4 +169,4 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
 
 ???+ info "Related information" 
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample-pipeline-settings-using-dxclient)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample-pipeline-settings-using-dxclient.md)
