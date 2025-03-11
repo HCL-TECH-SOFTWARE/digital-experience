@@ -100,7 +100,7 @@ To save the generated metrics to a file, use the following command:
 ```sh
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics [-productFeatureIdName <productFeatureId>]
 ```
-The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example:`2024-06-24T02-50-00_usage.metrics`
+The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.
 
 !!!example "Sample command"
 
