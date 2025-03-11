@@ -127,4 +127,4 @@ The use cases for My HCLSoftware in Kubernetes deployments are similar to the us
 
 **Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlement before it expires will be posted in the container log.
 
-**User Session Reporting**: Periodically send user session reports to My HCLSoftware, allowing customers and HCL to monitor consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
+- **User session reporting**: Periodically send user session reports to My HCLSoftware to allow customers and HCL to monitor consumption and make sure consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
