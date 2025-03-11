@@ -11,7 +11,7 @@ You can use the following services:
 
 Perform the following tasks to configure Security Access Manager:
 
--   **[Configuring Security Access Manager](../security_access_manager/cfg_sec_access_mgr)**  
+-   **[Configuring Security Access Manager](../security_access_manager/cfg_sec_access_mgr/)**  
 HCL Digital Experience can be integrated with IBM Security Access Manager to provide authentication services, authorization, and to link HCL Digital Experience's credential vault to the ISAM GSO Lockbox feature.
 -   **[Enabling user provisioning](../security_access_manager/usr_prov.md)**  
 When users are created in HCL Digital Experience, they are not automatically imported into Security Access Manager. Enabling automatic user provisioning to Security Access Manager changes this behavior. After this feature is enabled, users are automatically imported into Security Access Manager whenever they are created in HCL Digital Experience. When user provisioning is enabled, anyone with access to the public URL can become an active user in Security Access Manager if the self-registration feature remains enabled.
