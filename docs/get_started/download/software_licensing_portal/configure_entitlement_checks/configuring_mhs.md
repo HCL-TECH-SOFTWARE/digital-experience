@@ -122,7 +122,7 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ### Uploading usage metrics
 After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file My HCLSoftware for processing. For more information, see [Uploading the usage metric file to My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
 
-## My HCLSoftware vs FlexNet on Kubernetes
+## My HCLSoftware use cases
 The use cases for My HCLSoftware in Kubernetes deployments are very similar to those for FlexNet. The HCL DX License Manager container has been extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
 
 **Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlement before it expires will be posted in the container log.
