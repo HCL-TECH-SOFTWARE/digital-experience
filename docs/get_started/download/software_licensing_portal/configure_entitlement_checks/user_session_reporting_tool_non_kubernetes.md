@@ -98,7 +98,7 @@ If a reverse proxy server, load balancer, or a similar component is used in the 
 
 ## Running the User Session Reporting Tool
 
-### Generating and uploading user session data usage in metrics format
+### Generating user session data usage in metrics format
 To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:

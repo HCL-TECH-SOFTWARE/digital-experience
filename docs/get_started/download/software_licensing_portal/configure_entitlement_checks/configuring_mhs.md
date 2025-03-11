@@ -79,7 +79,7 @@ INFO: License validity: true
 ## File-based export in a Kubernetes environment
 The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with MyHCLSoftware portal.
 
-### Generating and uploading user session data usage in metrics format
+### Generating user session data usage in metrics format
 To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
 
 Use the following command to generate usage metrics from the user session data. Make sure to specify the appropriate `startDate`, `endDate` and `deploymentId` values.
@@ -92,23 +92,23 @@ Where:
 
 -   `startDate` is the start date of the user session in YYYY-MM-DD format.
 -   `endDate` is the end date of the user session in YYYY-MM-DD format.
--   `deploymentId` is the deployment identifier.
+-   `deploymentId` is the deployment identifier.You can find the `deploymentId` in the MyHCLSoftware portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
 -   `productFeatureId` is the product name either HCL_DX_CloudNative or HCL_DX_Compose
 
-To save the generated metrics to a file, use this command:
+To save the generated metrics to a file, use the following command:
 
 ```sh
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics [-productFeatureIdName <productFeatureId>]
 ```
 The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example:`2024-06-24T02-50-00_usage.metrics`
 
-### Example
+!!!example "Sample command"
 
 ```sh
 kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics -productFeatureIdName HCL_DX_CloudNative
 ```
 
-### Expected result
+#### Expected result
 
 ```
 1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
