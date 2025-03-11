@@ -1,6 +1,6 @@
 # LiveSync
 
-This topic provides information about syncing WebDAV-based theme or WCM Design Library files from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the DX server.
+This topic provides information about syncing WebDAV-based theme or WCM Design Library files from local-to-server and server-to-local in real time. LiveSync watches the file system for changes in the background and reflects them in the HCL Digital Experience (DX) server.
 
 It is recommended that you use the node version of the DXClient while working with LiveSync. LiveSync is supported in scaled DX environment setups.
 
@@ -436,6 +436,7 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - If the real-time sync during the push command gets disrupted, disconnect and reconnect again.
 - It is not recommended to use LiveSync on a production server.
 - Conflict detection and resolutions are not implemented.
+- Concurrent users might encounter discrepancies in certain scenarios which are detailed in [WCM Design Library](./livesync.md#wcm-design-library).
 
 ### Themes
 
@@ -453,7 +454,13 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 - The LiveSync Pull and Push WCM Design Library feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ).
-- If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. LiveSync is a unidirectional process that only happens from your local server to the DX server. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server. To resolve this error, you must stop the sync, manually add the local file to the  DX server, and pull the WCM library.
+- Concurrent user issues:
+    a. If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system. No local indication of any deletion will be available. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server.
+    b. If a concurrent user renames any file from the WCM library on the DX server during the LiveSync process between the local and DX servers, those files will not be restored from the local system. No local indication of any deletion will be available.
+    c. If a concurrent user pushes a stylesheet for a component that is under a recently deleted folder, it will be pushed but will be placed directly under components folder as the orginal folder no longer exists.
+
+LiveSync is a unidirectional process that only happens from your local system to the DX server. 
+To resolve/prevent these errors, you must stop the sync, manually add the local file to the DX server, and pull the WCM library.
 
 ## HCLSoftware U learning materials
 
