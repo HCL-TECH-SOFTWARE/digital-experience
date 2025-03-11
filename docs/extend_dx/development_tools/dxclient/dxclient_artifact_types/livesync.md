@@ -459,8 +459,7 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
     - If a concurrent user renames any file from the WCM library on the DX server during the LiveSync process between the local and DX servers, those files will not be restored from the local system. No local indication of any deletion will be available.
     - If a concurrent user pushes a stylesheet for a component that is under a recently deleted folder, it will be pushed but will be placed directly under components folder as the orginal folder no longer exists.
 
-LiveSync is a unidirectional process that only happens from your local system to the DX server. 
-To resolve/prevent these errors, you must stop the sync, manually add the local file to the DX server, and pull the WCM library.
+    LiveSync is a unidirectional process that only happens from your local system to the DX server. To resolve these errors, you must stop the sync, manually add the local file to the DX server, and pull the WCM library.
 
 ## HCLSoftware U learning materials
 
