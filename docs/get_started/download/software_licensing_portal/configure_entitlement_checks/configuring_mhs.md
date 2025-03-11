@@ -125,6 +125,6 @@ After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage
 ## My HCLSoftware use cases
 The use cases for My HCLSoftware in Kubernetes deployments are similar to the use cases for FlexNet. The HCL DX License Manager container is extended to integrate with MyHCL Software in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
 
-**Entitlement Validation**: Periodically check whether the entitlement is still valid (typically valid for 12 months). The same grace period is also allowed, during which time reminders to renew the entitlement before it expires will be posted in the container log.
+- **Entitlement validation**: Periodically check the validity of your DX entitlement. Your entitlement is typically valid for 12 months. The same grace period is also allowed, during which reminders to renew the entitlement before it expires are posted in the container log.
 
 - **User session reporting**: Periodically send user session reports to My HCLSoftware to allow customers and HCL to monitor consumption and make sure consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
