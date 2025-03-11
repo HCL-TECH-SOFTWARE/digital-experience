@@ -77,7 +77,7 @@ INFO: License validity: true
 ```
 
 ## File-based export in a Kubernetes environment
-The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with My HCLSoftware Portal.
+The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with MyHCLSoftware portal.
 
 ### Generating and uploading user session data usage in metrics format
 To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
@@ -93,7 +93,7 @@ Where:
 -   `startDate` is the start date of the user session in YYYY-MM-DD format.
 -   `endDate` is the end date of the user session in YYYY-MM-DD format.
 -   `deploymentId` is the deployment identifier.
--   `productFeatureId` is the Product name either HCL_DX_CloudNative or HCL_DX_Compose
+-   `productFeatureId` is the product name either HCL_DX_CloudNative or HCL_DX_Compose
 
 To save the generated metrics to a file, use this command:
 
