@@ -22,7 +22,7 @@ The following table identifies the reporting options for Kubernetes deployments:
 
 For traditional deployments (non-Kubernetes), you can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md).
 
-A standalone tool called the [User Session Reporting Tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
+A standalone tool called the [User session reporting tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from the software delivery portals, as an alternative to Google Analytics or other methods customers might have used to gather usage data.
 
 ## HCL DX Cloud Native 9.5 entitlement-check requirement
 
