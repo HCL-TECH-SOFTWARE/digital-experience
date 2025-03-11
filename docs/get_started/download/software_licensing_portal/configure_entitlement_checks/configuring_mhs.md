@@ -119,7 +119,7 @@ HCL_DX_CloudNative,2024-10-20T08:00:37.267Z,2024-10-20T08:10:37.267Z,1,e946675c3
 End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321ba5437b78896908a0b78de6b7ee6db989b0ccd28ce5c58bd9a09
 ```
 
-### Upload usage metrics
+### Uploading usage metrics
 After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file My HCLSoftware for processing. For more information, see [Uploading the usage metric file to My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
 
 ## My HCLSoftware vs FlexNet on Kubernetes
