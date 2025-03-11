@@ -4,11 +4,11 @@ title: Software licensing portals
 
 # Downloading and installing HCL DX from a software licensing portal
 
-HCL Digital Experience (DX) software is now available through the new [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal, in parallel to the existing [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} delivered in FlexNet.
+HCL Digital Experience (DX) software is now available through the new [MyHCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal, in parallel to the existing [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} delivered in FlexNet.
 
-To change your entitlement server from FlexNet to My HCLSoftware portal, see the instructions in [Entitlement checking in the My HCLSoftware delivery portal](./configure_entitlement_checks/configuring_mhs.md). If there is any overlap between the data from FlexNet and My HCLSoftware portal, you can retrieve the session usage numbers from both platforms separately. You can then add the numbers from both platforms to obtain the total number of sessions for a specific period.
+To change your entitlement server from FlexNet to MyHCLSoftware portal, see the instructions in [Entitlement checking in the MyHCLSoftware delivery portal](./configure_entitlement_checks/configuring_mhs.md). If there is any overlap between the data from FlexNet and MyHCLSoftware portal, you can retrieve the session usage numbers from both platforms separately. You can then add the numbers from both platforms to obtain the total number of sessions for a specific period.
 
-New customers, or those with new deployments, must register at the My HCLSoftware portal and download their entitled HCL DX packages there to avoid any need to convert later.
+New customers, or those with new deployments, must register at the MyHCLSoftware portal and download their entitled HCL DX packages there to avoid any need to convert later.
 
 Co-packaged software is identified in HCL DX 9.5 download documents, which are available in your entitlements in the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}.
 

@@ -5,7 +5,7 @@ title: User session reporting tool for non-Kubernetes deployments
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
-The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool will generate the user session data usage in metrics format, the report include session data that has been encrypted that will uploaded the My HCLSoftware. This offers a precise understanding of usage data over specified periods.
+The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool will generate the user session data usage in metrics format, the report include session data that has been encrypted that will uploaded the MyHCLSoftware. This offers a precise understanding of usage data over specified periods.
 
 ## Functionalities
 
@@ -42,7 +42,7 @@ The tool is designed to integrate effortlessly into existing HCL DX deployments,
     - [Enable access logs.](#enabling-access-logs)
     - [(Optional) Handle the routing setup.](#optional-handling-the-routing-setup)
 
--   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware Portal](https://my.hcltechsw.com/).
+-   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware Portal](https://my.hcltechsw.com/).
 
 
 ### Enabling access logs
@@ -99,7 +99,7 @@ If a reverse proxy server, load balancer, or a similar component is used in the 
 ## Running the User Session Reporting Tool
 
 ### Generating user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the My HCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. The `deploymentId` can be found in the MyHCLSoftware Portal after clicking the deployment card in the URL; for example, https://my.hcltechsw.com/deployments/pzneck8m. In this case, `pzneck8m` represents the `deploymentId` as illustrated in the example URL.
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
@@ -166,4 +166,4 @@ You can run the User Session Reporting Tool either once for all collected log fi
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
 
 ### Upload usage metrics
-The generated `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics` file should then be uploaded to the [My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md) portal for processing.
+The generated `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics` file should then be uploaded to the [MyHCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md) portal for processing.
