@@ -1,6 +1,6 @@
 # DXClient
 
-DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
+DXClient is a command line tool featuring a single, unified interface to all HCL Digital Experience (DX) automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
 
 DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.
 
@@ -40,23 +40,21 @@ The following options to install DXClient are available starting CF221. Both opt
           
 The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
 
-- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
+- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command.
 
-- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
+- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command.
 
 - To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
 ### Installing DXClient using the container image in the Harbor repository
 
-1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command:
+1. Pull the docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
 
     ```
      docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
     ```
 
-2. Download DXClient scripts.
-    
-    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
+2. Download DXClient scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}.
 
 ## Installing DXClient using the container package from HCL Software portal
 
@@ -573,28 +571,27 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 ### Configuring TLS Certificate Validation for Secure Connections
 
-As part of our ongoing efforts to improve security and maintain best practices in our development and production environments, we have made a key change in the way we handle TLS (Transport Layer Security) connections while using DXClient from CF226. You can still trust custom certificates (e.g., self-signed or third-party CAs), without disabling validation entirely.
+As part of ongoing efforts to improve security and maintain best practices in development and production environments, a key change was made in the way TLS (Transport Layer Security) connections are handled while using DXClient from CF226. You can still trust custom certificates such as self-signed or third-party CAs without disabling validation entirely.
 
-Step 1:Obtain the Certificate
-Ensure you have the .pem certificate file that you wish to add to the trust store. It must contain the whole content of both key and certificate files.
+1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the trust store. It must contain the key and certificate files.
 
-Step 2:Add the certificate
-You have two ways to add/set the Certificate file.
-a. Using NODE_EXTRA_CA_CERTS
-By enabling NODE_EXTRA_CA_CERTS, we now provide a secure way to add custom trusted certificates. To use the NODE_EXTRA_CA_CERTS environment variable, you need to specify the path to a PEM file that contains the key & certificate details. Here's how you can configure it in your local or production environment:
+2. Add the certificate using one of the following methods:
+    1. Use the `NODE_EXTRA_CA_CERTS` environment variable. `NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
 
-"Linux and Apple macOS"
-	```
-	export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
+        === "Linux and Apple macOS"
+            ```
+            export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
+            ```
 
-	```
-"Microsoft Windows"
-	```
-	set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
-	```
-b. Add certificate to the trust store on your OS.
+        === "Microsoft Windows"
+            ```
+            set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
+            ```
 
-**Note**  In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting NODE_TLS_REJECT_UNAUTHORIZED to 0, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
+    2. Add certificate to the trust store on your operating system.
+
+!!!note
+    In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting `NODE_TLS_REJECT_UNAUTHORIZED` to `0`, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
 
 ## DXClient information commands
 

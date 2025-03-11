@@ -1,18 +1,18 @@
 # Sample Pipeline Settings using DXClient
 
-A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL DX 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
+A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
 
-A sample pipeline code that uses container version of dxclient for a combined task run(deploying portlet, theme and script application) is made available under the samples folder in the DXClient root folder. Refer [here](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy) for the same. Developers and administrators can use this sample as a basis for Jenkins automation server jobs. 
+A sample pipeline code that uses container version of DXclient for a combined task run of deploying portlet, theme and script application is made available under the samples folder in the DXClient root folder. Developers and administrators can also use [this sample](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy){target="_blank"} as a basis for Jenkins automation server jobs.
 
 ## Parameters for installing DXClient
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
-|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
-|`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name / password credentials needed to access tool package URL|
-|`ARTIFACT_PATH`|URL (except filenames) for artifacts to be deployed|Artifacts fetched via curl|
-|`ARTIFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name / password credentials needed to access artifact URLs|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched using curl|
+|`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access tool package URL|
+|`ARTIFACT_PATH`|URL (except filenames) for artifacts to be deployed|Artifacts fetched through curl|
+|`ARTIFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access artifact URLs|
 
 ## Parameters of DX Server Configuration
 
@@ -21,35 +21,35 @@ A sample pipeline code that uses container version of dxclient for a combined ta
 |`DX_HOST`|Host name or IP address of DX server|Artifacts will be deployed to this server|
 |`DX_PROTOCOL`|Protocol to connect to DX server|http or https|
 |`DX_PORT`|Port to connect to DX serve|Port for the DX main profile|
-|`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name / password credentials needed to access DX server|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet (route change only in case of Open Shift Kubernetes Environment. For other case, this parameter should be same as DX_HOST)|Hostname for the DX Configuration Wizard profile|
+|`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet. The route only changes in Open Shift Kubernetes Environment. Otherwise, this parameter should be same as DX_HOST|Hostname for the DX Configuration Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX config wizard profile|
-|`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name / password credentials needed to access DX server config wizard profile|
+|`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server config wizard profile|
 
 ## Deploy portlet
 
-This sample shows how to install the DXClient tool in a pipeline and then deploy or update a portlet. It is designed to be run from a Jenkins job that provides the following parameters:
+This sample shows how to install the DXClient tool in a pipeline and deploy or update a portlet. It is designed to be run from a Jenkins job that provides the following parameters:
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`DEPLOY_PORTLET`|Select this to deploy the portlet| |
-|`XML_CONFIG_PATH`|URL path to the config servlet for xmlaccess|Defaults to '/wps/config'|
-|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default to /wps/mycontenthandler/|
+|`XML_CONFIG_PATH`|URL path to the config servlet for XMLAccess|Defaults to '/wps/config'|
+|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Defaults to /wps/mycontenthandler/|
 |`DX_PROFILE_NAME`|Profile name of the DX server| |
 |`DX_PROFILE_PATH`|Profile path of the DX server| |
 |`DX_SOAP_PORT`|Soap Port number of the DX server| |
-|`PORTLET_WAR_ARTIFACT_NAME`|Filename of WAR to deploy the portlet|Required for deploy portlet|
-|`PORTLET_XML_ARTIFACT_NAME`|Filename of xmlaccess script used to deploy the portlet|Required for deploy portlet|
+|`PORTLET_WAR_ARTIFACT_NAME`|Filename of WAR to deploy the portlet|Required for deploying the portlet|
+|`PORTLET_XML_ARTIFACT_NAME`|Filename of XMLAccess script used to deploy the portlet|Required for deploying the portlet|
 
 ## Deploy theme
 
-This sample shows how to install the DXClient tool in a pipeline and then deploy or update a theme. It is designed to be run from a Jenkins job that provides the following parameters:
+This sample shows how to install the DXClient tool in a pipeline and deploy or update a theme. It is designed to be run from a Jenkins job that provides the following parameters:
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`DEPLOY_THEME`|Select this to deploy the theme| |
-|`XML_CONFIG_PATH`|URL path to the config servlet for xmlaccess|Defaults to '/wps/config'|
-|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default to /wps/mycontenthandler/|
+|`XML_CONFIG_PATH`|URL path to the config servlet for XMLAccess|Defaults to '/wps/config'|
+|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Defaults to /wps/mycontenthandler/|
 |`DX_PROFILE_NAME`|Profile name of the DX server| |
 |`DX_PROFILE_PATH`|Profile path of the DX server| |
 |`DX_SOAP_PORT`|Soap Port number of the DX server| |
@@ -61,33 +61,33 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ## Deploy script application
 
-This sample shows how to install the DXClient tool in a pipeline and then deploy a Script Application. It is designed to be run from a Jenkins job that provides the following parameters:
+This sample shows how to install the DXClient tool in a pipeline and deploy a Script Application. It is designed to be run from a Jenkins job that provides the following parameters:
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`DEPLOY_SCRIPT_APPLICATION`|Select this to deploy the script application| |
-|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Default to /wps/mycontenthandler/|
+|`CONTENT_HANDLER_PATH`|Alternate path for the portal context root or the content handler servlet|Defaults to /wps/mycontenthandler/|
 |`DX_PROFILE_NAME`|Profile name of the DX server| |
 |`DX_PROFILE_PATH`|Profile path of the DX server| |
-|`SCRIPT_APP_ARTIFACT_NAME`|Filename of zipped script application to deploy|Required for deploy script application|
-|`MAIN_HTML_FILE`|File name of Main HTML file within the script application|Required for deploy script application|
-|`WCM_SITE_AREA`|SiteArea of the Script Application content|Required for deploy script application|
-|`CONTENT_NAME`|Name of the Script Application instance to be created or updated|Required for deploy script application|
+|`SCRIPT_APP_ARTIFACT_NAME`|Filename of zipped script application to deploy|Required for deploying the script application|
+|`MAIN_HTML_FILE`|File name of Main HTML file within the script application|Required for deploying the script application|
+|`WCM_SITE_AREA`|SiteArea of the Script Application content|Required for deploying the script application|
+|`CONTENT_NAME`|Name of the Script Application instance to be created or updated|Required for deploying the script application|
 
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file1.png)
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file2.png)
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-## Some more Sample Pipeline Settings
+## Other Sample Pipeline Settings
 
 ### Restore script application
 
-This sample shows how to install the DXClient tool in a pipeline and then restore an existing script application to any of its specified previous version. It is designed to be run from a Jenkins job that provides the following parameters:
+This sample shows how to install the DXClient tool in a pipeline and restore an existing script application to any of its specified previous version. It is designed to be run from a Jenkins job that provides the following parameters:
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
-|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched using curl|
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
 |`DX_HOST`|Host name or IP address of DX server|Artifacts will be deployed to this server|
 |`DX_PROTOCOL`|Protocol to connect to DX server|HTTP or HTTPS|
@@ -106,9 +106,9 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
-|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched using curl|
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
-|`ARTIFACT_PATH`|URL \(except filenames\) for artifacts to be deployed|Artifacts fetched via curl|
+|`ARTIFACT_PATH`|URL \(except filenames\) for artifacts to be deployed|Artifacts fetched using curl|
 |`ARTIFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access artifact URLs|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX server|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Server Configuration Wizard profile|
@@ -131,7 +131,7 @@ This sample shows how to restart the DX Core server using the DXClient tool in a
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
-|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched using curl|
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core server|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core Server Configuration Wizard profile|
@@ -148,7 +148,7 @@ This sample shows how to install the DXClient tool in a pipeline and then enable
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`AGENT_LABEL`|Jenkins agent label|Determines on which agents the pipeline can run|
-|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched via curl|
+|`TOOL_PACKAGE_URL`|URL to DXClient zip|Fetched using curl|
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX server|
 |`DX_PROTOCOL`|Protocol to connect to DX server|HTTP or HTTPS|
