@@ -169,4 +169,4 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
 
 ???+ info "Related information" 
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample-pipeline-settings-using-dxclient.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](./sample_pipeline_settings_using_dxclient.md)

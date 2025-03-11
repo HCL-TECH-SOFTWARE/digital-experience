@@ -880,7 +880,7 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
     - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
     - [Troubleshooting DXClient](troubleshooting_dxclient.md)
     - [DXConnect](dxconnect.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample-pipeline-settings-using-dxclient.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](./sample_pipeline_settings_using_dxclient.md)
     - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
     - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
     - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
