@@ -1,8 +1,9 @@
 ---
-title: This topic provides the steps on how to upload usage metric files to My HCLSoftware.
+title: Uploading usage metric files to MyHCLSoftware
 ---
 
-## Accessing MyHCL Software usage reporting dashboard
+This topic provides the steps on how to upload usage metric files to My HCLSoftware.
+
 1. Go to the **Deployments** section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 
 ![](../../software_licensing_portal/_img/upload_usage_metric_file.png) 
