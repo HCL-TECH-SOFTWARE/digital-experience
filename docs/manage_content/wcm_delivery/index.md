@@ -10,15 +10,15 @@ The type of delivery method you use to deliver web content to your viewers depen
 
 This information is primarily aimed at system administrators and application developers who would must configure web content delivery.
 
--   **[Vanity URLs](./vanity_url/index.md)**
+-   **[Vanity URLs](./vanity_url/index.md)**  
 You can use Vanity URLs, also known as marketing URLs, to create shorter URLs that people can easily type and remember.
--   **[Syndication](./syndication/index.md)**
+-   **[Syndication](./syndication/index.md)**  
 You can use syndication to replicate web content library data from one server to another. Syndication is based on a syndicator and subscriber relationship, where the syndicator has the current data and the subscriber receives the data.
--   **[WebDAV](./webdav/index.md)**
+-   **[WebDAV](./webdav/index.md)**  
 Using WebDAV, you can use standard operating system tools to create, modify, and delete web content rather than using the standard authoring portlet.
--   **[Content as a Service pages](./content_as_a_service/index.md)**
+-   **[Content as a Service pages](./content_as_a_service/index.md)**  
 You can use Content as a Service (CaaS) pages in HCL Digital Experience (DX) to render content managed by your HCL Web Content Manager (WCM) in different data formats such as JSON or XML. CaaS pages also allows the content in your website to be accessed by other data clients in raw data formats.
--   **[Previewing as another user](./preview_another_user/index.md)**
+-   **[Previewing as another user](./preview_another_user/index.md)**  
 Using the preview capability, you can quickly check changes to your website without having to log in and out as another user. You can view specific changes to users with varying access levels, including unauthenticated users.
 -   **[Access web content by using a servlet](./wcm_config_delivery_servlet.md)**  
 Users can access content displayed using the WCM servlet by connecting to a URL. A servlet-delivered website is used when you do not need to use any HCL DX based features such as authoring tools.
