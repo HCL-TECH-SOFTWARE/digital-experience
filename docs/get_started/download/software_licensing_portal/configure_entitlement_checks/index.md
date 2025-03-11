@@ -15,7 +15,7 @@ The following table identifies the reporting options for Kubernetes deployments:
 | My HCLSoftware | [Online Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
 | My HCLSoftware | [Offline / Disconnected Reporting](./configuring_mhs.md/#generating-and-uploading-user-session-data-usage-in-metrics-format) |
 | Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
-| My HCLSoftware | [Traditional deployments(non-Kubernetes)](./user_session_reporting_tool_non_kubernetes.md) |
+| My HCLSoftware | [Traditional deployments (non-Kubernetes)](./user_session_reporting_tool_non_kubernetes.md) |
 
 !!! note
     Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
