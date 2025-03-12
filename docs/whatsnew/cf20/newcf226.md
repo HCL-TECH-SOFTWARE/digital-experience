@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - MyHCLSoftware delivery portal
 - Presentation Designer - Canvas settings
+- DXClient - TLS certificate validation
 - DXClient - New limitations for LiveSync
 - New section for How-to articles
 
@@ -29,10 +30,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### MyHCLSoftware delivery portal
 
 === "Containers"
-    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md).
+    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md).
 
 === "On-Premises"
-    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md).
+    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md), and [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md).
 
 ### Presentation Designer - Canvas settings
 
@@ -42,13 +43,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access/index.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
 
+### DXClient - TLS certificate validation
+
+=== "Containers"
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
+
+=== "On-Premises"
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
+
 ### DXClient - New limitations for LiveSync
 
 === "Containers"
-    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), if any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. Steps on how to resolve these limitations to the LiveSync process are provided.
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are available. Steps on how to resolve these limitations to the LiveSync process are also provided.
 
 === "On-Premises"
-    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), if files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system, and there will be no local indication of this deletion. Steps on how to resolve these limitations to the LiveSync process are provided.
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are available. Steps on how to resolve these limitations to the LiveSync process are also provided.
 
 ### New section for How-to articles
 

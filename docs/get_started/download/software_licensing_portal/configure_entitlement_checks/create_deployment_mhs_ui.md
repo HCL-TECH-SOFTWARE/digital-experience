@@ -2,7 +2,7 @@
 title: Creating a deployment in MyHCLSoftware portal
 ---
 
-This document provides steps on how to set up and create deployment instances in the My HCLSoftware (MHS) environment and how to obtain the initial deployment key.
+This document provides steps on how to set up and create deployment instances in the MyHCLSoftware (MHS) environment and how to obtain the initial deployment key.
 
 ## Creating a new deployment
 

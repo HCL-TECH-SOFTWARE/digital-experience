@@ -571,7 +571,7 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 ### Configuring TLS certificate validation for secure connections
 
-Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
+Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. This is to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
 
 1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
 
