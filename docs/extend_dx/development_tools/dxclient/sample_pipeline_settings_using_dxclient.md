@@ -22,7 +22,7 @@ You can find a sample pipeline code under the samples folder in the DXClient roo
 |`DX_PROTOCOL`|Protocol to connect to DX server|http or https|
 |`DX_PORT`|Port to connect to DX server|Port for the DX main profile|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet. The route only changes in OpenShift Kubernetes Environment. Otherwise, this parameter should be same as DX_HOST|Hostname for the DX Config Wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet. The route only changes in OpenShift Kubernetes environment. Otherwise, this parameter should be same as DX_HOST|Hostname for the DX Config Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Config Wizard profile|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server Config Wizard profile|
 
@@ -115,7 +115,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`DX_PROTOCOL`|Protocol to connect to DX server|HTTP or HTTPS|
 |`DX_HOST`|Host name or IP address of DX server|Artifacts will be deployed to this server|
 |`DX_PORT`|Port to connect to DX server|Port for the DX main profile|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes Environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile. Default to 10202|
 |`APPLICATION_FILE`|File name of EAR application to deploy|Required for EAR deployment|
 |`APPLICATION_NAME`|Application name for the EAR file to deploy|Required for EAR deployment|
@@ -135,7 +135,7 @@ This sample shows how to restart the DX Core server using the DXClient tool in a
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core server|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core Server Configuration Wizard profile|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes Environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile. Default to 10202|
 |`DX_PROFILE_PATH`|Profile path of the DX Core server|Required for restarting the DX Core server|
 
