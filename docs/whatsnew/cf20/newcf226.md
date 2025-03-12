@@ -45,7 +45,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### DXClient - TLS certificate validation
 
-(Doc in progress)
+=== "Containers"
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
+
+=== "On-Premises"
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
 
 ### DXClient - New limitations for LiveSync
 
