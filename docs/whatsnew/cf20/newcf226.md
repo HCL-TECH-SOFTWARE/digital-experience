@@ -54,10 +54,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - New limitations for LiveSync
 
 === "Containers"
-    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are available. Steps on how to resolve these limitations to the LiveSync process are also provided.
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are added. Steps on how to resolve these limitations to the LiveSync process are also provided.
 
 === "On-Premises"
-    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are available. Steps on how to resolve these limitations to the LiveSync process are also provided.
+    New limitations are documented for using LiveSync. For [Themes](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#themes), if files are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. For [WCM Design Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library), various scenarios and their limitations for concurrent users are added. Steps on how to resolve these limitations to the LiveSync process are also provided.
 
 ### New section for How-to articles
 
