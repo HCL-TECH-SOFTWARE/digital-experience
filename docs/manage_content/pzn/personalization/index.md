@@ -22,7 +22,7 @@ The engine identifies the particular user. Personalization retrieves user profil
 
 ## Types of Personalization
 
-There are three types of Personalization: simple filtering rules engines, and collaborative filtering.
+There are three types of Personalization: simple filtering, rules engines, and collaborative filtering.
 
 **Simple filtering**
 
