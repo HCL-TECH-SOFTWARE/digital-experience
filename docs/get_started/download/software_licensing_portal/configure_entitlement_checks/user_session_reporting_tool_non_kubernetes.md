@@ -157,7 +157,7 @@ The timestamp in the usage metrics file should be earlier than the start date. T
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
-- A generate the user session data usage in metrics format, the report include session data that has been encrypted in file or terminal output.
+- A user session data usage in metrics format. The report includes session data that has been encrypted in file or terminal output.
 
 - A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
