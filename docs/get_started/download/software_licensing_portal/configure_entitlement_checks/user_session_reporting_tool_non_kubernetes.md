@@ -1,5 +1,5 @@
 ---
-title: User session reporting tool for non-Kubernetes deployments
+title: User Session Reporting Tool with MyHCLSoftware
 ---
 # Using the User Session Reporting Tool with MyHCLSoftware
 
