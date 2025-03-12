@@ -1,24 +1,24 @@
 ---
-title:  Entitlement checking in the MyHCLSoftware delivery portal
+title:  Entitlement checking in the My HCLSoftware delivery portal
 ---
 
-MyHCLSoftware (MHS) provides access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the MyHCLSoftware delivery portal. 
+My HCLSoftware (MHS) provides access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal. 
 
 ## Prerequisites
 
-Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using MyHCLSoftware delivery portal for entitlement checking:  
+Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using My HCLSoftware delivery portal for entitlement checking:  
 
--   A MyHCLSoftware account and access to the [MyHCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
+-   A My HCLSoftware account and access to the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
--   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your MyHCLSoftware portal instances.  
+-   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
 -   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if currently using a prior version.
--   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware Portal](https://my.hcltechsw.com/).
+-   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware portal](https://my.hcltechsw.com/).
 
 In addition to these elements, review the [architecture](#architecture) that presents the License Manager component of the HCL DX v9.5 Container Update software.
 
 ## Architecture
 
-The License Manager component communicates with the MyHCLSoftware entitlement service. This is to validate license entitlement at set periods for HCL DX Cloud Native V9.5 Tier 1 – 7 software after configuring the DX Cloud Native 9.5 deployment through the Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to the MyHCLSoftware usage reporting services.
+The License Manager component communicates with the My HCLSoftware entitlement service. This is to validate license entitlement at set periods for HCL DX Cloud Native V9.5 Tier 1 – 7 software after configuring the DX Cloud Native 9.5 deployment through the Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to the My HCLSoftware usage reporting services.
 
 ![Architecture](../../software_licensing_portal/_img/DX_95_container_license_manager_arch_mhs.png) 
 
@@ -48,7 +48,7 @@ To validate the entitlement details for your software, configure the following p
 -   `productionEnvironment`: Set to `true` to send usage reports to MHS. For other environments (for example, test or UAT), set to `false`.
 -   `licenseServerUri`: Set to the MHS License Server URI.
 -   `customMhsDeploymentKeySecret`: Set to the deployment key that creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key.
--   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [MyHCLSoftware Portal](https://my.hcltechsw.com/).
+-   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [My HCLSoftware portal](https://my.hcltechsw.com/).
 
 To create a custom secret, run the following command:
 
@@ -77,7 +77,7 @@ INFO: License validity: true
 ```
 
 ## File-based export in a Kubernetes environment
-The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with MyHCLSoftware portal.
+The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with My HCLSoftware portal.
 
 ### Generating user session data usage in metrics format
 To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
@@ -92,7 +92,7 @@ Where:
 
 -   `startDate` is the start date of the user session in YYYY-MM-DD format.
 -   `endDate` is the end date of the user session in YYYY-MM-DD format.
--   `deploymentId` is the deployment identifier.You can find the `deploymentId` in the MyHCLSoftware portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
+-   `deploymentId` is the deployment identifier.You can find the `deploymentId` in the My HCLSoftware portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
 -   `productFeatureId` is the product name, either `HCL_DX_CloudNative` or `HCL_DX_Compose`.
 
 To save the generated metrics to a file, use the following command:
@@ -122,11 +122,11 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 ```
 
 ### Uploading usage metrics
-After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to MyHCLSoftware for processing. For more information, see [Uploading the usage metric file to MyHCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
+After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing. For more information, see [Uploading the usage metric file to My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
 
-## MyHCLSoftware use cases
-The use cases for MyHCLSoftware in Kubernetes deployments are similar to the use cases for FlexNet. The HCL DX License Manager container is extended to integrate with MyHCLSoftware in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
+## My HCLSoftware use cases
+The use cases for My HCLSoftware in Kubernetes deployments are similar to the use cases for FlexNet. The HCL DX License Manager container is extended to integrate with My HCLSoftware in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
 
 - **Entitlement validation**: Periodically verify the validity of your DX entitlement. Generally, your entitlement is valid for 12 months, with a grace period of 28 days during which reminders for renewal are posted in the container log before it expires.
 
-- **User session reporting**: Periodically send user session reports to MyHCLSoftware to allow customers and HCL to monitor consumption and make sure consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
+- **User session reporting**: Periodically send user session reports to My HCLSoftware to allow customers and HCL to monitor consumption and make sure consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.
