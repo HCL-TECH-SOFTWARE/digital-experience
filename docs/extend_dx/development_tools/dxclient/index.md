@@ -48,7 +48,7 @@ The option to install or uninstall from the NpmJS registry is only available sta
 
 ### Installing DXClient using the container image in the Harbor repository
 
-1. Pull the docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
+1. Pull the Docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
 
     ```
      docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
@@ -569,11 +569,11 @@ Common command arguments can be pre-configured inside the config.json file avail
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
-### Configuring TLS Certificate Validation for Secure Connections
+### Configuring TLS certificate validation for secure connections
 
 Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. This is to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
 
-1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the trust store. It must contain the key and certificate files.
+1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
 
 2. Add the certificate using one of the following methods:
     1. Use the `NODE_EXTRA_CA_CERTS` environment variable. `NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
@@ -588,9 +588,9 @@ Starting CF226, DXClient no longer ignores certificates that cannot be properly 
             set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
             ```
 
-    2. Add certificate to the trust store on your operating system.
+    2. Add certificate to the truststore on your operating system.
 
-!!!note
+!!!important
     In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting `NODE_TLS_REJECT_UNAUTHORIZED` to `0`, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
 
 ## DXClient information commands
@@ -877,7 +877,7 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
     - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
     - [Troubleshooting DXClient](troubleshooting_dxclient.md)
     - [DXConnect](dxconnect.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](./sample_pipeline_settings_using_dxclient.md)
+    - [Sample Pipeline Settings using DXClient](./sample_pipeline_settings_using_dxclient.md)
     - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
     - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
     - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
