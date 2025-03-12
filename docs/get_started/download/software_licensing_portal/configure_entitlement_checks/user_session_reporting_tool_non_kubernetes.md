@@ -153,7 +153,7 @@ HCL_DX_CloudNative,2024-07-22T01:00:00.000Z,2024-07-22T23:59:00.000Z,109,569b2e7
 END,30f0dd458d3ca9463870c1275d344d2361df87d617e32077a5c3c379a7e9e05f413fc1fa491e808b82e1eccc70c1ab4a89d2606904a1d5c64cea50588cca8509
 ```
 
-The timestamp in the usage metrics file should be earlier than the start date, formatted as {YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics. For example: `2024-06-24T02-50-00_usage.metrics`
+The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
