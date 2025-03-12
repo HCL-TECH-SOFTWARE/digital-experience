@@ -3,7 +3,7 @@ title: User session reporting tool for non-Kubernetes deployments
 ---
 # User session reporting tool for non-Kubernetes deployments
 
-This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
+This topic describes how you can use the User Session Reporting Tool to count and report user sessions and how to upload the user session data to MyHCLSoftware for processing.
 
 The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool generates the user session data usage in metrics format. This report includes session data that has been encrypted and will be uploaded to the MyHCLSoftware portal. This offers a precise understanding of usage data over specified periods.
 
