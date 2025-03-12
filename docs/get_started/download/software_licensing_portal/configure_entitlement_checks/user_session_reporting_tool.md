@@ -1,7 +1,7 @@
 ---
-title: User Session Reporting Tool
+title: User session reporting tool
 ---
-# User Session Reporting Tool
+# User session reporting tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
@@ -13,7 +13,7 @@ This section provides information about the functionalities and use cases of the
 
 - **Detects new unique sessions based on parameters such as Internet Protocol (IP) addresses, user-agent strings, and timestamp.** The tool increments the session counter when a session becomes inactive. Inactive is defined as no new requests from the same user for 30 minutes or after a maximum of 4 hours from the start of the session. This ensures accurate session counting, even across extended periods of user activity. It supports custom date range analysis, allowing users to track and report on specific time frames. 
 
-- **Automatically excludes internal requests.** This ensures that session data reflects only external user activity. This is crucial for organizations focusing on customer interactions rather than internal maintenance or system-generated traffic. To further ensure its reliability, the User Session Reporting Tool has been rigorously tested with large sets of log files and across different access log formats. This demonstrates its capability to handle diverse and extensive data sources without compromising accuracy.
+- **Allows manual exclusion of internal requests.** The tool filters out internal requests, ensuring that session data only reflects external user activity. You can exclude specific IPs or [session keys](./user_session_reporting_tool.md#running-the-user-session-reporting-tool) (which consists of the remote host, User-Agent, and X-Forwarded-For headers) by either passing them as command-line parameters or listing them within text files. This feature is crucial for organizations that focus on customer interactions rather than internal maintenance or system-generated traffic. The User Session Reporting Tool has also been rigorously tested with large sets of log files and across different access log formats. This ensures its reliability in handling diverse and extensive data sources without compromising accuracy.
 
 - **Handles complex scenarios such as merging multiple log files without overcounting sessions.** This feature is useful in environments where logs are segmented or spread across different servers. You can manually input and exclude specific IP addresses for greater flexibility in reporting and ensuring that internal or irrelevant traffic does not skew the session data. The tool also supports alternate syntax inputs to avoid potential user errors during setup or configuration.
 
@@ -94,13 +94,19 @@ For every request, a key is computed based on the requesting IP address of the u
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
-## Running the User Session Reporting Tool
+## Running the user session reporting tool
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
 ```cmd
+java -jar <jarFilepath> -h
+
 # <jarFilepath> Path to the jar file
 # <filePaths> List of input log files to get session counts
+# <excludeIPFile> Path to the file containing IPs (separated by a new line) to exclude from session counts
+# <excludeSessionKeyFile> Path to the file containing session keys (separated by a new line) to exclude from session counts
+# <excludeIPs> List of IPs (separated by space) to exclude from session counts
+# <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
@@ -108,7 +114,25 @@ The tool is packaged as an executable JAR file. Execute the tool by using the fo
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate>
+
+# Example
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+
+```
+
+See the following sample of an `excludedIPs.txt` file:
+
+```text
+192.168.243.142
+192.168.243.143
+```
+
+See the following sample of an `excludeSessionKeys.txt` file:
+
+```text
+192.168.243.139 "python-requests/2.24.0" "-"
+192.168.243.137 "axios/1.6.8" "-"
 ```
 
 After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
@@ -120,3 +144,7 @@ After execution, the system returns the expected session count within the specif
 You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
 
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
+
+## HCLSoftware U learning materials
+
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.

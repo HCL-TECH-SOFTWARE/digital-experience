@@ -1,6 +1,6 @@
-# Cumulative fix instructions: Stand-alone 9.5
+# Cumulative fix instructions: Standalone 9.5
 
-Read the installation instructions to learn how to apply a cumulative fix to a stand-alone portal installation or to roll back the cumulative fix.
+Read the installation instructions to learn how to apply a cumulative fix to a standalone portal installation or to roll back the cumulative fix.
 
 ## Before you begin
 
@@ -18,7 +18,7 @@ Ensure that enough disk space is available in the following directories:
 
 ## Best Practices
 
-Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page for Portal Upgrade Best Practices.
+For more information about upgrading to HCL Digital Experience (DX) 9.5, refer to the [Portal Upgrades: Best Practices for 8.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012732){target="_blank"} page and the [From the DX Experts! Best Practices: How to upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=community_question&sys_id=5d4013ae1bf1f9d0574121f7ec4bcbd3){target="_blank"} webinars.
 
 ## Syndicator/Subscriber Information
 
@@ -51,7 +51,7 @@ See [Backup and Restore](https://help.hcltechsw.com/digital-experience/8.5/admin
 
 ## Known Issues
 
-Review the [Known issues for combined cumulative fix](ccf_95_known_issues.md) topic page to be aware of any known issues for the HCL Portal Version 9.5 CF releases.
+Review the [Known issues for combined cumulative fix](ccf_95_known_issues.md) topic page to be aware of any known issues for the HCL DX Version 9.5 CF releases.
 
 ## Review supported hardware/software requirements
 
@@ -70,7 +70,7 @@ Also check whether the fixes installed on your system are included in the list o
 
 ## Ensure `wkplc.properties` files are correct
 
-The HCL Portal upgrade will run several ConfigEngine scripts. These scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
+The HCL DX upgrade will run several ConfigEngine scripts. These scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
 
 1.  Edit the (wp_profile root)/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:
     -   `WasRemoteHostName=(the hostname of your WAS instance)`
@@ -113,7 +113,7 @@ Verify that all of your profiles are at the same level before starting the upgra
 
 ## Non-root considerations
 
-In Linux environments, you must install the cumulative fix as the same user which you used to install HCL Portal originally. This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:
+In Linux environments, you must install the cumulative fix as the same user which you used to install HCL DX originally. This could be either root or a non-root user. If you need to use a non-root user, ensure the following conditions are met:
 
 -   If you are installing as a non-root user on Linux, the `umask` setting for your login session must be set to 0022 or better. (`umask` is a setting that controls what file permissions are set for newly created files and directories. A value of 0022 correspond to permission settings of `(rwxr-xr-x)`.) If the `umask` is not set appropriately by default, you must set it when you start Installation Manager or when you open a command-line utility to run Installation Manager commands
 -   The non-root user has a `ulimit - n` setting of at least 18192. This must be a number and not unlimited.
@@ -184,11 +184,11 @@ There are several different methods to install the cumulative fix. Choose one me
         serverStatus.bat -all
         ```
 
-3.  Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.
+3.  Launch the IBM Installation Manager that was used to install HCL DX Version 8.5.
 4.  Using Installation Manager, click **File** then **Preferences**.
 5.  Go to the **Repositories** panel and click **Add Repository**.
 6.  Navigate to the repository.config file mentioned earlier and select it.
-7.  Select **Update** and follow the prompts to update HCL Portal.
+7.  Select **Update** and follow the prompts to update HCL DX.
 8.  After installation completes, proceed with the *Additional configuration steps*.
 
 
@@ -262,7 +262,7 @@ There are several different methods to install the cumulative fix. Choose one me
     features='ce.install,portal.binary,portal.profile'
     ```
 
-    If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL Portal, or creating multiple profiles, or you originally installed HCL Portal as a binary install ), then you should remove the 'portal.profile' feature from this list
+    If you do not have any profiles on this node (because you are in the process of migration from a previous version of HCL DX, or creating multiple profiles, or you originally installed HCL DX as a binary install ), then you should remove the 'portal.profile' feature from this list
 
     ```
     features='ce.install,portal.binary'
@@ -302,7 +302,7 @@ There are several different methods to install the cumulative fix. Choose one me
     ```
 
 5.  Complete the following steps to add the repositories.
-6.  Select **Update** and follow the prompts to update HCL Portal.
+6.  Select **Update** and follow the prompts to update HCL DX.
 7.  After installation completes, proceed with the *Additional configuration steps*.
 
 To add the repositories for Step 6:
@@ -310,7 +310,7 @@ To add the repositories for Step 6:
 1.  Enter P to go to the Preferences menu.
 2.  Enter 1 to go to the Repositories menu.
 3.  Enter D to add repositories.
-4.  Type the path for your HCL Portal 8.5 CF repository file.
+4.  Type the path for your HCL DX 8.5 CF repository file.
 5.  Enter A to apply your repositories and return to the **Preferences** menu.
 6.  Enter R to return to the Main menu.
 
@@ -318,7 +318,7 @@ To add the repositories for Step 6:
 
 If you have any profiles the following configuration steps are mandatory.
 
-If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL Portal or plan to add this node to an existing cluster\, no additional configuration steps are necessary and you can continue with the *Post installation steps*. If you are in the process of a migration, you will need to follow these additional configuration steps after running upgrade-profile for your migrated environment.
+If you do not have any profiles at this point (because you are in the process of migration from a previous version of HCL DX or plan to add this node to an existing cluster\, no additional configuration steps are necessary and you can continue with the *Post installation steps*. If you are in the process of a migration, you will need to follow these additional configuration steps after running upgrade-profile for your migrated environment.
 
 !!!note
     The following configuration steps should be run as the user who normally administers the Portal Server, which may or may not be the same user who runs the installation program.
@@ -338,7 +338,7 @@ Use the following commands to update all profiles. These steps must be repeated 
 
 ## Apply Cumulative Fix (CF)
 
-1.  Ensure the HCL Portal server is stopped on the profile you intend to upgrade.
+1.  Ensure the HCL DX server is stopped on the profile you intend to upgrade.
 2.  Execute the following command from within the path of the profile to configure. If you are installing the CF on an empty portal, see *Special Considerations* below before running `applyCF`. If the `applyCF` command fails for any reason, check the error logs and correct error conditions before re-running.
     -   Linux:
 
@@ -427,9 +427,9 @@ If you are installing the CF on an empty portal then extra steps are required to
 3.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using HCL Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to installing the cumulative fix.
 4.  Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page see if the Configuration changes and options introduced in the HCL Web Content Manager 8.5 Combined Cumulative Fixes apply to your environment:
 5.  If you modified the permissions on the PortalServer home directory tree to install the cumulative fix as non-root, restore the original permissions.
-6.  If you have set up a remote search server or document conversion server for use with HCL Portal 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the HCL Portal 8.5 [Combined cumulative fix instructions: Remote search](ccf_95_remote_search.md) for the details of applying a cumulative fix to the remote server.
+6.  If you have set up a remote search server or document conversion server for use with HCL DX 8.5, then whenever you apply a cumulative fix to the portal server, you should also apply the corresponding cumulative fix to the remote server. Refer to the HCL DX 8.5 [Combined cumulative fix instructions: Remote search](ccf_95_remote_search.md) for the details of applying a cumulative fix to the remote server.
 7.  Clear the browser cache.
-8.  Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page for Recommended Updates for HCL Portal and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.
+8.  Go to the [HCL Software Support](https://support.hcltechsw.com/csm) page for Recommended Updates for HCL DX and HCL Web Content Manager Version 8.5 to review and apply any recommended Fixes.
 9. Prior to CF07, it was recommended to set the DB2 database configuration parameter `dft_queryopt` to a value of 2 as this was tested to provide the best balance of query optimization time and query execution time for the SQL produced by the JCR. For CF07 or later, this recommendation has been changed to use a value of 5 in conjunction with the testing and changes made to the JCR and JCR schema. This can be done manually by customers by executing the following SQL against the JCR Domain Database:
 
     ```
@@ -455,11 +455,11 @@ If you are installing the CF on an empty portal then extra steps are required to
 
 1.  Changing the server context root after upgrading is an unsupported rollback path. To roll back after changing the context root, you must first change the server context root to the values of the previous version.
 2.  When rolling back a CF install, if you have configured an empty context root you cannot roll back to a CF level that does not support the empty context root capability. For instance, if you have applied CF08 and have configured an empty context root you cannot rollback to CF07. If you have applied CF09 and have configured an empty context root you can roll back to CF08 but you would not be able to roll back if your previous CF level was CF07 or prior.
-3.  Configuring HCL Portal from a stand-alone environment to a clustered environment after upgrading is an unsupported rollback path.
+3.  Configuring HCL DX from a standalone environment to a clustered environment after upgrading is an unsupported rollback path.
 
 ## Before you begin rollback
 
-1.  The HCL Portal rollback scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
+1.  The HCL DX rollback scripts depend on the `wkplc.properties` being up to date and accurate, particularly with the password properties. If you are using multiple profiles, verify that the information in each profile is correct.
 2.  Edit the (wp_profile root)/ConfigEngine/properties/wkplc.properties file and ensure the following values are set correctly:
 
     -   `WasRemoteHostName=(the hostname of your WAS instance)`
@@ -473,7 +473,7 @@ If you are installing the CF on an empty portal then extra steps are required to
     -   `WpsContextRoot=(your Portal context root)`
     
     !!!note
-        In a Standalone Portal environment, the `WasRemoteHostName` should be the local hostname and the `WasSoapPort` should be the soap port of the HCL Portal server.
+        In a Standalone Portal environment, the `WasRemoteHostName` should be the local hostname and the `WasSoapPort` should be the soap port of the HCL DX server.
 
 3.  Edit the (wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties file and ensure the following values are set correctly:
     -   `release.DbPassword=(your database user password)`
@@ -511,8 +511,8 @@ Choose one method that is available for your system. Follow the detailed steps f
     -   Windows: `serverStatus.bat -all`
 
 
-3.  Launch the IBM Installation Manager that was used to install HCL Portal Version 8.5.
-4.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL Portal back to the desired level.
+3.  Launch the IBM Installation Manager that was used to install HCL DX Version 8.5.
+4.  Select **Roll Back** on the Installation Manager main window and follow the prompts to roll HCL DX back to the desired level.
 5.  After rollback completes, proceed with the *Post Rollback Steps*.
 
 ## Use a command line to rollback (available on Windows and Linux operating systems)
@@ -602,7 +602,7 @@ Choose one method that is available for your system. Follow the detailed steps f
     imcl.exe -c
     ```
 
-5.  Select Roll back and follow the prompts to roll back HCL Portal.
+5.  Select Roll back and follow the prompts to roll back HCL DX.
 6.  After installation completes, proceed with the *Post Rollback Steps*.
 
 ## Post Rollback Steps (Linux and Windows)
@@ -634,9 +634,7 @@ Use the following commands to roll back all profiles. These steps must be repeat
 2.  If you are running an external web server and you are using the WebSphere Application Server automatic generation and propagation of the plug-in, then restart the web server. If you are not using the automatic generation and propagation, simply regenerate the web server plugin, copy the plugin-cfg.xml file to the plugin directory, then restart the web server.
 3.  If you previously customized any configuration files in the wp_profile_root/PortalServer/config directory, check to see if rolling back the cumulative fix affected those files by restoring a version of the files that was saved when the cumulative fix was originally installed. If it did affect the files, you must perform the same customization on the restored version of each file.
 4.  If necessary, redeploy any customizations, including JSPs, to the WCM portlets (if using Web Content Manager), any other portlets, or any other Portal enterprise applications, if these were customized prior to rolling back the cumulative fix.
-5.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled, remove the old Brightcove plugins, then configure HCL Portal to add the new Brightcove plugins.
-6.  For rollback to CF03 or earlier level only: If using Rich Media Edition, remove the Rich Media Edition plugin, restart the Portal Server, then configure HCL Portal to add the Rich Media Edition plugins.
-7.  If you have set up a remote search server or document conversion server for use with HCL Portal Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.
+5.  For rollback to CF03 or earlier level only: If the Brightcove integration was enabled, remove the old Brightcove plugins, then configure HCL DX to add the new Brightcove plugins.
+6.  For rollback to CF03 or earlier level only: If using Rich Media Edition, remove the Rich Media Edition plugin, restart the Portal Server, then configure HCL DX to add the Rich Media Edition plugins.
+7.  If you have set up a remote search server or document conversion server for use with HCL DX Version 8.5, then whenever you roll back a cumulative fix to the portal server, you should also roll back the corresponding cumulative fix to the remote server.
 8.  Clear the browser cache.
-
-

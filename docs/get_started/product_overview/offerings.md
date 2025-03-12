@@ -1,4 +1,4 @@
-# HCL Digital Experience Cloud Native 9.5 offerings
+# HCL Digital Experience 9.5 offerings
 
 See the latest offerings for HCL Digital Experience 9.5.
 
@@ -8,12 +8,12 @@ HCL Digital Experience (DX) Cloud Native is a powerful digital experience platfo
 
 HCL Digital Experience Cloud Native also includes:
 
-- Entitlements to HCL [Volt Foundry](https://www.hcl-software.com/volt-mx?referrer=www.hcl-software.com) on-premises components supporting K8s Helm deployments to use in conjunction with their DX environment. These capabilities add data integration middleware pre-built adapters, and workflow and API management services that simplify integrations and can quickly present the results through DX web pages to target audiences. These DX web pages can be developed using tools such as the [Digital Data Connector](application_integration.md), [Script Application](../../guide_me/tutorials/scriptapps/index.md), or [HCL Leap](../../extend_dx/integration/leap/installation/index.md). For installation and integration information, see Installing [HCL Volt MX Foundry to integrate with HCL Digital Experience 9.5](../../extend_dx/integration/mx/installation/index.md).
+- Entitlements to HCL [Volt Foundry](https://www.hcl-software.com/volt-mx?referrer=www.hcl-software.com){target="_blank"} on-premises components supporting K8s Helm deployments to use in conjunction with their DX environment. These capabilities add data integration middleware pre-built adapters, and workflow and API management services that simplify integrations and can quickly present the results through DX web pages to target audiences. These DX web pages can be developed using tools such as the [Digital Data Connector](application_integration.md), [Script Application](../../guide_me/tutorials/scriptapps/index.md), or [HCL Leap](../../extend_dx/integration/leap/installation/index.md). For installation and integration information, see Installing [HCL Volt MX Foundry to integrate with HCL Digital Experience 9.5](../../extend_dx/integration/mx/installation/index.md).
 
-- Entitlements to [HCL Leap](https://www.hcl-software.com/leap), with the capability to create sophisticated web applications for data collection and process automation. Easily [integrate with DX solutions](../../extend_dx/integration/leap/index.md) to deliver customer and employee facing applications and forms, and transform processes to be more efficient.
+- Entitlements to [HCL Leap](https://www.hcl-software.com/leap){target="_blank"}, with the capability to create sophisticated web applications for data collection and process automation. Easily [integrate with DX solutions](../../extend_dx/integration/leap/index.md) to deliver customer and employee facing applications and forms, and transform processes to be more efficient.
 
 
--  HCL Digital Experience Cloud Native 9.5.1 is available in the [HCL Software License Portal (Flexnet)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) to customers licensed for the [HCL Digital Experience Cloud Native 9.5](https://www.hcl-software.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y) offering. 
+-  HCL Digital Experience Cloud Native 9.5.1 and higher updates are available in the [HCL Software License Portal (Flexnet)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} to customers licensed for the [HCL Digital Experience Cloud Native 9.5](https://www.hcl-software.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} offering. 
 
 For the latest list of Digital Experience 9.5 components available for HCL Digital Experience Cloud Native 9.5 offering deployments to Docker and certified Kubernetes platforms, refer to the [Docker Image list](../../deployment/install/container/image_list.md) topic in the Help Center.
 
@@ -28,7 +28,16 @@ For additional information on previous updates to the [HCL Digital Experience Cl
 ## HCL Digital Experience Cloud
 
 HCL Digital Experience (DX) Cloud is the SLA-based cloud service platform, with built-in security and compliance. This solution includes the capabilities of HCL DX Cloud Native 9.5 offering software, and ongoing maintenance and upgrades to the latest releases of HCL Software. This means you can focus on achieving business results faster, while reducing time building and managing systems and ensuring the highest security and reliability. 
-For more information, see [Introducing HCL Digital Experience Cloud](https://content.comms.hcltechsw.com/deliverirs/servlet/IRSL?v=5&a=214&r=232333&m=660&l=7&e=2&x=2460685.0). Contact [HCL to discuss further](https://www.hcl-software.com/dx/upgrade/contact-us?utm_medium=email&utm_source=unica_email&utm_campaign=DT_DX_Newsletter_Jan24_C000000168&referrer=mail.google.com) and get started. 
+For more information, see [Introducing HCL Digital Experience Cloud](https://content.comms.hcltechsw.com/deliverirs/servlet/IRSL?v=5&a=214&r=232333&m=660&l=7&e=2&x=2460685.0){target="_blank"}. Contact [HCL to discuss further](https://www.hcl-software.com/dx/upgrade/contact-us?utm_medium=email&utm_source=unica_email&utm_campaign=DT_DX_Newsletter_Jan24_C000000168&referrer=mail.google.com){target="_blank"} and get started. 
 
+## HCL Digital Experience Compose
 
-For additional information about HCL Digital Experience solutions, visit the [HCL Digital Experience](https://www.hcltechsw.com/dx) website. 
+HCL Digital Experience (DX) Compose is a lightweight, fast performing, cloud–only digital experience platform for delivering content-centric and transactional experiences. DX Compose includes a core container called WebEngine that is built on the Open Liberty platform and operates on certified Kubernetes platforms. This architecture supports fast startup and execution times to deliver high performance DX sites, and is capable of using the latest Java Development Kit (JDK) and Java 2 Enterprise Edition (J2EE) levels.
+
+DX Compose supports site design and web content authoring features such as Web Content Management (WCM), Personalization, secure and role-based delivery, virtual portals, Script Applications, Digital Asset Management (DAM), and Content Composer. Integration capabilities are also available, including custom Script Applications, HCL Volt Foundry services, and HCL Leap, and support for open-standards APIs.
+
+HCL DX Compose 9.5 is available in the [HCL Software License Portal (Flexnet)](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} to customers licensed for the [HCL Digital Experience Compose v9.5 offering](https://www.hcl-software.com/resources/license-agreements){target="_blank"}.
+
+For the latest list of Digital Experience Compose 9.5 components for deployments to certified Kubernetes platforms, refer to the [Container file listings](https://help.hcl-software.com/digital-experience/dx-compose/CF224/deploy_dx/install/kubernetes_deployment/image_list/){target="_blank"}<!--to be confirmed if url is correct--> topic in the DX Compose Help Center.
+
+For additional information about HCL Digital Experience solutions, visit the [HCL Digital Experience](https://www.hcltechsw.com/dx){target="_blank"} website.

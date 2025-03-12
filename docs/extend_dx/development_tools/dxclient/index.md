@@ -1,16 +1,21 @@
 # DXClient
 
-DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
+DXClient is a command line tool featuring a single, unified interface to all HCL Digital Experience (DX) automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
 
 DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-DXClient comes with two deployment options:
+DXClient comes with multiple deployment options:
 
-- First option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
 
-- The alternative option is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+- In the HCL Software License Portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+
+!!!warning
+    Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
+
+- An alternative option in the HCL Software License Portal is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
 
 !!!important "Information about DXClient versions and distribution"
     DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
@@ -22,6 +27,34 @@ DXClient comes with two deployment options:
 The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
+
+## Public and free DXClient installation options 
+
+The following options to install DXClient are available starting CF221. Both options are free to use.
+
+- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+
+- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+
+### Installing or uninstalling DXClient from NpmJS registry
+          
+The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
+
+- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command.
+
+- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command.
+
+- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
+
+### Installing DXClient using the container image in the Harbor repository
+
+1. Pull the docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
+
+    ```
+     docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+    ```
+
+2. Download DXClient scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}.
 
 ## Installing DXClient using the container package from HCL Software portal
 
@@ -190,7 +223,8 @@ In addition, the package includes scripts for all operating systems that make it
             make_unlink.bat
             ```
 
-2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
+2.  Ensure that a long-term support (LTS) version of Node.js or a later version is installed in the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
+    
 
 3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
@@ -298,36 +332,6 @@ In addition, the package includes scripts for all operating systems that make it
         make_unlink.bat
         ```
 
-## Public and free DXClient installation options 
-
-The following options to install DXClient are available starting CF221. Both options are free to use.
-
-- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
-
-- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
-
-### Installing or uninstalling DXClient from NpmJS registry
-          
-The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
-
-- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command. 
-
-- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command. 
-
-- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
-
-### Installing DXClient using the container image in the Harbor repository
-
-1. Pull the docker image from https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab using the following command:
-
-    ```
-     docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
-    ```
-
-2. Download DXClient scripts.
-    
-    To download DXClient scripts, go to [dxclient-scripts](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts) of the HCL-TECH-SOFTWARE GitHub repository. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab).
-
 ## Verifying your DXClient installation
 
 Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
@@ -341,8 +345,15 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
     
+    -   HCL DX 9.5 CF226 release: **V226.0.0
+        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation-for-secure-connections)
+
+    -   HCL DX 9.5 CF225 release: **V225.0.0
+        -  Livesync is enabled for Presentation Template under WCM Design Library.
+
     -   HCL DX 9.5 CF224 release: **V224.0.0
         -  New DXClient LiveSync sub-commands: [LiveSync push-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-push-wcm-design-library) and [pull-wcm-design-library](../dxclient/dxclient_artifact_types/livesync.md#livesync-pull-wcm-design-library)
+        - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
         -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
@@ -557,6 +568,30 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
+
+### Configuring TLS Certificate Validation for Secure Connections
+
+Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. This is to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
+
+1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the trust store. It must contain the key and certificate files.
+
+2. Add the certificate using one of the following methods:
+    1. Use the `NODE_EXTRA_CA_CERTS` environment variable. `NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
+
+        === "Linux and Apple macOS"
+            ```
+            export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
+            ```
+
+        === "Microsoft Windows"
+            ```
+            set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
+            ```
+
+    2. Add certificate to the trust store on your operating system.
+
+!!!note
+    In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting `NODE_TLS_REJECT_UNAUTHORIZED` to `0`, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
 
 ## DXClient information commands
 
@@ -842,7 +877,7 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
     - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
     - [Troubleshooting DXClient](troubleshooting_dxclient.md)
     - [DXConnect](dxconnect.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](./sample_pipeline_settings_using_dxclient.md)
     - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
     - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
     - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)

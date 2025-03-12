@@ -1,17 +1,17 @@
 # Binding your theme to the context root of the web application
 
-You must bind your theme to the context root of the web application for your theme.
+You must bind your theme to the context root of the web application for your theme. You can bind your theme using XMLAccess through the command line or the Portal Administration pages.
 
-You can bind your theme by using XMLAccess in two ways: on the command line or in the Portal Administration pages. Use the steps in this procedure to bind your theme by using XMLAccess on the command line.
+## Binding your theme through the command line
 
-To bind your theme by using XMLAccess in the Portal Administration pages, click the **Administration menu** icon. Then, click **Portal Settings** \> **Import XML**. Click **Browse** and select the input.xml file. Then, click **Import** and copy the results from the **View Details** window.
+Refer to the following steps to bind your theme using the command line.
 
-1.  In [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin, create the file input.xml with the following contents:
+1. In the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin, create the file `input.xml` with the following contents:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
     <request xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-       xsi:noNamespaceSchemaLocation="PortalConfig\_8.5.0.xsd" 
+       xsi:noNamespaceSchemaLocation="PortalConfig_8.5.0.xsd" 
        type="export"  
     >
     <portal action="locate">
@@ -21,72 +21,101 @@ To bind your theme by using XMLAccess in the Portal Administration pages, click 
     </request>
     ```
 
-2.  From a command line, change to the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin directory and run the following xmlaccess command to export all skin and theme definitions to a file called output.xml:
+2. From a command line, switch to the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin directory and run the following XMLAccess command to export all skin and theme definitions to a file called `output.xml`.
 
     ```
     xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output.xml
     ```
 
-3.  Edit the output.xml file. Search for the title of your theme, such as Custom Theme. Scroll up to the line with the surrounding `<theme>` tag. It is likely the last `<theme>` tag in the file. Modify it from:
+3. In the `output.xml` file, modify the `<theme>` tag of your theme.
 
-    ```
-    <theme action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
-      objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots">
-    ```
+    1. Search for the title of your theme, such as **Custom Theme**.
 
-    to:
+    2. Navigate to the line with the surrounding `<theme>` tag. It is likely the last `<theme>` tag in the file.
 
-    ```
-    <theme action="update" active="true" context-root="/customTheme" default="false" domain="rel" 
-      objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots" uniquename="customTheme">
-    ```
+    3. Modify the `<theme>` tag from:
 
-    Set the correct context-root and uniquename for your theme.
+        ```
+        <theme action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
+          objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots">
+        ```
 
-4.  Search for the title of your skin. Scroll up to the line with the surrounding `<skin>` tag; it is likely the last `<skin>` tag in the file. Modify it from:
+        to:
 
-    ```
-    <skin action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
-      objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="Hidden" type="default">
-    ```
+        ```
+        <theme action="update" active="true" context-root="/customTheme" default="false" domain="rel" 
+          objectid="ZJ_MLSU3F54089F00IP6G7P3F10S5" resourceroot="dynamicSpots" uniquename="customTheme">
+        ```
 
-    to:
+        Make sure to set the correct `context-root` and `uniquename` for your theme.
 
-    ```
-    <skin action="update" active="true" context-root="/customTheme" default="false" domain="rel" 
-      objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="customSkin" type="default" uniquename="customSkin">
-    ```
+4. Modify the `<skin>` tag of your theme.
 
-    Set the correct context-root, resourceroot, and uniquename for your skin.
+    1. Search for the title of your skin.
+
+    2. Navigate to the line with the surrounding `<skin>` tag. It is likely the last `<skin>` tag in the file.
+
+    3. Modify the `<skin>` tag from:
+
+        ```
+        <skin action="update" active="true" context-root="/wps/themeModules" default="false" domain="rel" 
+          objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="Hidden" type="default">
+        ```
+
+        to:
+
+        ```
+        <skin action="update" active="true" context-root="/customTheme" default="false" domain="rel" 
+          objectid="ZK_73OKBB1A088IE0I5O7IP2J0G77" resourceroot="customSkin" type="default" uniquename="customSkin">
+        ```
+
+        Make sure to set the correct `context-root`, `resourceroot`, and `uniquename` for your skin. 
 
     !!! note
-      resourceroot was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, this parameter should be set to the folder name where the skin is located.
+        The `resourceroot` parameter was used in previous versions of Portal when multiple themes were deployed in the same WAR file. It indicates which folder in the WAR file to find the specific theme. For the skin, set this parameter to the folder name where the skin is located.
 
-5.  Find the `<theme>` tag for the Portal 8.5 theme. It is likely the first `<theme>` tag in the file. Find and copy one of the `<allowed-skin>` tag lines, such as:
+5.  Add the `<allowed-skin>` tag  to your `customTheme` theme.
 
-    ```
-    <allowed-skin skin="ZK_CGAH47L00GJJ40IDC03MS13OS2" update="set"/>
-    ```
+    1. Find the `<theme>` tag for the Portal 8.5 theme. It is likely the first `<theme>` tag in the file. 
 
-    Find the `<theme>` tag for your customTheme theme; it is likely the last `<theme>` tag in the file. Paste the `<allowed-skin>` tag line in just before the `<parameter>` tags. Modify the skin parameter value identifier to be the unique name of your customSkin skin, which can be found in the uniquename parameter of the `<skin>` tag of your customSkin skin. It is likely the last `<skin>` tag in the file, such as:
+    2. Find and copy one of the `<allowed-skin>` tag lines, such as:
 
-    ```
-    <allowed-skin skin="customSkin" update="set"/>
-    ```
+      ```
+      <allowed-skin skin="ZK_CGAH47L00GJJ40IDC03MS13OS2" update="set"/>
+      ```
 
-6.  From the command line, run the following xmlaccess command to update the skin and theme definitions according to your change:
+    3. Find the `<theme>` tag for your `customTheme` theme. It is likely the last `<theme>` tag in the file. 
+
+    4. Paste the `<allowed-skin>` tag line just before the `<parameter>` tags.
+
+    5. Change the `skin` parameter value identifier to the unique name of your `customSkin` skin. You can find this name in the `uniquename` parameter of the `<skin>` tag of your `customSkin` skin. It is likely the last `<skin>` tag in the file, such as:
+
+      ```
+      <allowed-skin skin="customSkin" update="set"/>
+      ```
+
+6.  From the command line, run the following XMLAccess command to update the skin and theme definitions according to your change:
 
     ```
     xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in output.xml -out output2.xml
     ```
 
-7.  From the command line, run the following xmlaccess command to export all skin and theme definitions again to a file called output3.xml.
+7.  From the command line, run the following XMLAccess command to export all skin and theme definitions again to a file called `output3.xml`.
 
     ```
     xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output3.xml
     ```
 
-8.  Edit the output3.xml file to verify that the result works, and then delete the input.xml, output.xml, output2.xml, and output3.xml files.
+8.  Edit the `output3.xml` file to verify that the result works, and then delete the `input.xml`, `output.xml`, `output2.xml`, and `output3.xml` files.
 
+## Binding your theme through the Portal Administration page
 
+Refer to the following steps to bind your theme by using XMLAccess in the Portal Administration pages.
 
+1. Click the **Administration menu** icon.
+
+2. Click **Portal Settings > Import XML**.
+
+3. Click **Browse** and select the `input.xml` file.
+
+4. Click **Import** and copy the results from the **View Details** window.

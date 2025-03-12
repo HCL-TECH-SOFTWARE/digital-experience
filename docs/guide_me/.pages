@@ -1,7 +1,7 @@
 title: Guide Me
 nav:
     - Tutorials: tutorials
-    - How-to: howto
+    - How-to articles: howto
     - wpsdirstr.md
     - cleanup_wcm.md
     - SecurityHardeningGuide
