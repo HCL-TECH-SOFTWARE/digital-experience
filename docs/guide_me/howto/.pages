@@ -1,0 +1,5 @@
+title: How-to articles
+nav:
+    - index.md
+    - administration
+    - configuration
