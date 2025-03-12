@@ -1,7 +1,7 @@
 ---
 title: User session reporting tool for non-Kubernetes deployments
 ---
-# User session reporting tool for non-Kubernetes deployments
+# Using the User Session Reporting Tool with MyHCLSoftware
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions and how to upload the user session data to MyHCLSoftware for processing.
 
