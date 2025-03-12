@@ -55,3 +55,6 @@ To change the cell name and node name in a standalone DX environment, refer to t
 7. Edit `setupCmdLine.sh` file and change the `WAS_NODE` value to the new node name. Make sure that the `WAS_CELL` value is updated with new cell name.  
 
 8. Restart the WebSphere_Portal server.
+
+???+ info "Related information"
+    - [Configuring a stand-alone server](../../../deployment/manage/config_standalone.md)

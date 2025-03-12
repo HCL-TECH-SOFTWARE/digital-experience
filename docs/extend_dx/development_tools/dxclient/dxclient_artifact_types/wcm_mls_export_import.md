@@ -172,4 +172,4 @@ To learn more about multilingual deployment options, go to [Multilingual for Adm
     - [DXClient](../index.md)
     - [DXClient Artifact Types](../dxclient_artifact_types/index.md)
     - [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](sample-pipeline-settings-using-dxclient.md)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipeline_settings_using_dxclient.md)
