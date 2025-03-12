@@ -145,7 +145,7 @@ See the following sample of an `excludeSessionKeys.txt` file:
 192.168.243.137 "axios/1.6.8" "-"
 ```
 
-### Expected Output
+### Expected output
 
 ```
 1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
