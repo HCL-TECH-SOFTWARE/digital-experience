@@ -17,5 +17,5 @@ This topic provides the steps on how to upload usage metric files to MyHCLSoftwa
 
     - If the status is `validating` or `processing`, you can wait on the page or go back to the previous page to see the status change to `completed`, `failed`, or `rejected`.
     - If the status is `rejected` , reasons may include: hash chaining is tampered, invalid signature, or fields are not in the required format. Make sure to upload the valid metrics file. 
-    - If the status is `failed`, reach out to MyHCLSoftware Support through IT operations.
+    - If the status is `failed`, reach out to [MyHCLSoftware Support](https://support.hcl-software.com/csm){target="_blank"} through IT operations.
     - If status is `completed`, file is validated and the data is processed successfully.
