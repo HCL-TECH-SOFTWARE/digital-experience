@@ -8,3 +8,4 @@ nav:
     -   create_deployment_mhs_ui.md
     -   mhs_upload_usage_metrics.md
     -   user_session_reporting_tool_non_kubernetes.md
+    -   user_session_reporting_tool.md
