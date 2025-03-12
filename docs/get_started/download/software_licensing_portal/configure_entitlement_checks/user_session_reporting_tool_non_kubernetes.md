@@ -42,7 +42,7 @@ The tool is designed to integrate effortlessly into existing HCL DX deployments,
     - [Enable access logs.](#enabling-access-logs)
     - [(Optional) Handle the routing setup.](#optional-handling-the-routing-setup)
 
--   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware Portal](https://my.hcltechsw.com/).
+-   Create an instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}.
 
 
 ### Enabling access logs
