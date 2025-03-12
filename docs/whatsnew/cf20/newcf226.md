@@ -4,7 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- MyHCLSoftware delivery portal
+- My HCLSoftware delivery portal
 - Presentation Designer - Canvas settings
 - DXClient - TLS certificate validation
 - DXClient - New limitations for LiveSync
@@ -27,13 +27,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### MyHCLSoftware delivery portal
+### My HCLSoftware delivery portal
 
 === "Containers"
-    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md), [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the MyHCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), and [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md).
+    HCL DX software is now available through the new [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md), [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), and [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md).
 
 === "On-Premises"
-    HCL DX software is now available through the new [MyHCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md), [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the MyHCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), and [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md).
+    HCL DX software is now available through the new [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md), [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), and [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md).
 
 ### Presentation Designer - Canvas settings
 

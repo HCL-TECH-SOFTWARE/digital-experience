@@ -1,11 +1,11 @@
 ---
-title: User Session Reporting Tool with MyHCLSoftware
+title: User Session Reporting Tool with My HCLSoftware
 ---
-# Using the User Session Reporting Tool with MyHCLSoftware
+# Using the User Session Reporting Tool with My HCLSoftware
 
-This topic describes how you can use the User Session Reporting Tool to count and report user sessions and how to upload the user session data to MyHCLSoftware for processing.
+This topic describes how you can use the User Session Reporting Tool to count and report user sessions and how to upload the user session data to My HCLSoftware (MHS) for processing.
 
-The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool generates the user session data usage in metrics format. This report includes session data that has been encrypted and will be uploaded to the MyHCLSoftware portal. This offers a precise understanding of usage data over specified periods.
+The User Session Reporting Tool is a utility designed for HCL Digital Experience (DX) users managing on-premises deployments. This tool provides a solution for analyzing and interpreting web traffic data by processing National Center for Supercomputing Applications (NCSA) access log files. Relevant parts of each log are extracted to identify and count unique user sessions. This tool generates the user session data usage in metrics format. This report includes session data that has been encrypted and will be uploaded to the My HCLSoftware portal. This offers a precise understanding of usage data over specified periods.
 
 ## Functionalities
 
@@ -42,7 +42,7 @@ The tool is designed to integrate effortlessly into existing HCL DX deployments,
     - [Enable access logs.](#enabling-access-logs)
     - [(Optional) Handle the routing setup.](#optional-handling-the-routing-setup)
 
--   Create an instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [MyHCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}.
+-   Create an instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"}.
 
 
 ### Enabling access logs
@@ -99,7 +99,7 @@ If a reverse proxy server, load balancer, or a similar component is used in the 
 ## Running the User Session Reporting Tool
 
 ### Generating user session data usage in metrics format
-To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. You can find the `deploymentId` in the MyHCLSoftware portal after clicking the deployment card in the URL. For example, in `https://my.hcltechsw.com/deployments/pzneck8m` the `deploymentID` is `pzneck8m`.
+To generate the user session data usage in metrics format, the report must include session data that has been encrypted for each user session. You can find the `deploymentId` in the My HCLSoftware portal after clicking the deployment card in the URL. For example, in `https://my.hcltechsw.com/deployments/pzneck8m` the `deploymentID` is `pzneck8m`.
 
 The tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
 
@@ -166,4 +166,4 @@ You can run the User Session Reporting Tool either once for all collected log fi
 Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
 
 ### Uploading usage metrics
-After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to MyHCLSoftware for processing. For more information, see [Uploading the usage metric file to MyHCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
+After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing. For more information, see [Uploading the usage metric file to My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
