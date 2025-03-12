@@ -20,6 +20,8 @@ Using WebDAV, you can use standard operating system tools to create, modify, and
 You can use Content as a Service (CaaS) pages in HCL Digital Experience (DX) to render content managed by your HCL Web Content Manager (WCM) in different data formats such as JSON or XML. CaaS pages also allows the content in your website to be accessed by other data clients in raw data formats.
 -   **[Previewing as another user](./preview_another_user/index.md)**  
 Using the preview capability, you can quickly check changes to your website without having to log in and out as another user. You can view specific changes to users with varying access levels, including unauthenticated users.
+-   **[Social Media Publisher](./socialmedia_publisher/index.md)**  
+Using Social Media Publisher for HCL WCM, businesses can promote their web content on social networks and provide basic statistics about the promoted content.
 -   **[Access web content by using a servlet](./wcm_config_delivery_servlet.md)**  
 Users can access content displayed using the WCM servlet by connecting to a URL. A servlet-delivered website is used when you do not need to use any HCL DX based features such as authoring tools.
 -   **[Rendering modes for web content](./wcm_rendering_modes.md)**  

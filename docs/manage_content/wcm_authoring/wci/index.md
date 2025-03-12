@@ -1,11 +1,11 @@
 # Web Content Integrator
 
-The Web Content Integrator is a solution for integrating externally managed web content with HCL Portal. By using standard content syndication feed technologies based on RSS 2.0, the Web Content Integrator provides a loosely coupled mechanism for transferring published content and metadata to the portal after they are approved in the source system. When the content and metadata are transferred to the portal, it is possible to use the built-in content management features of Web Content Manager to secure, personalize, and display the content to users.
+The Web Content Integrator is a solution for integrating externally managed web content with HCL Digital Experience (DX). By using standard content syndication feed technologies based on RSS 2.0, the Web Content Integrator provides a loosely coupled mechanism for transferring published content and metadata to the portal after they are approved in the source system. When the content and metadata are transferred to the portal, it is possible to use the built-in content management features of Web Content Manager to secure, personalize, and display the content to users.
 
 To use the Web Content Integrator you must:
 
 1.  Create a feed on your source system by using the Web Content Integrator feed format specification.
-2.  Configure HCL Portal to consume the feed.
+2.  Configure HCL DX to consume the feed.
 
 ## Feed format specification
 

@@ -10,13 +10,16 @@ Configuring the content management system enables you to tailor it to your needs
 
 This information is primarily aimed at system administrators.
 
-## More Information
-
-- [Web content administration tools](wcm_adm_tools/index.md)
-- [Configure authoring environment](cfg_webcontent_auth_env/index.md)
-- [Configure delivery environment](cfg_webcontent_delivery_env/index.md)
-- [Custom Caching](custom_caching/index.md)
-- [Service Configuration](wcm_svc_cfg/index.md)
+- **[Web content administration tools](wcm_adm_tools/index.md)**  
+HCL Web Content Manager (WCM) includes tasks and tools to help maintain your content management system such as the member fixer task and the workflow checker and updater tools.
+- **[Configure authoring environment](cfg_webcontent_auth_env/index.md)**  
+Set up the authoring environment by installing the authoring portlet and enabling other features that are required to support the authoring environment.
+- **[Configure web content delivery environment](cfg_webcontent_delivery_env/index.md)**  
+Set up your delivery environment by installing web content viewers and enabling other required features.
+- **[Custom Caching](custom_caching/index.md)**  
+With custom caching, you can overrule the default caching parameters of a site by using the `cache` and `expire` parameters in URLs and HCL WCM tags.
+- **[Web Content Manager configuration](wcm_svc_cfg/index.md)**  
+Configuration services for HCL WCM contain settings for the general operation of the web content system such as messaging, pre-rendering, and searching.
 
 ## HCLSoftware U learning materials
 

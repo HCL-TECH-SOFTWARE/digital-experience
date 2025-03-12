@@ -1,6 +1,6 @@
 # WCM Authoring Portlet
 
-The WCM Authoring Portlet provides a comprehensive management user interface for all artifacts managed by HCL DX web content manager.
+The Web Content Manager (WCM) Authoring Portlet provides a comprehensive management user interface for all artifacts managed by HCL DX WCM.
 
 ##  What is it For?
 
