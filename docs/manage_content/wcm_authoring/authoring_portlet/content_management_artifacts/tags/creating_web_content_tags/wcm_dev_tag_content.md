@@ -92,3 +92,9 @@ Refer to the following examples of use cases for the `Content` tag.
     [Content path="./My Content"]
 
     ```
+
+- You can specify the presentation template to render the content using the `renderMode` parameter. For example, to render the content with the **Summary Presentation Template** selected in the content item's authoring template, use the following parameter.
+
+    ```
+    [Content path="./My Content" renderMode="summary"]
+    ```
