@@ -1,5 +1,6 @@
 title: Guide Me
 nav:
+    - index.md
     - Tutorials: tutorials
     - How-to articles: howto
     - wpsdirstr.md
