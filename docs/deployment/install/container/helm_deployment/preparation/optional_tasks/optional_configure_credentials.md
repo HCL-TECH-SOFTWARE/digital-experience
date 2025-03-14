@@ -45,11 +45,17 @@ security:
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: ""
+    # when using the wasUser and wasPassword fields, keep the customWasSecret field empty:
+    customWasSecret: ""
+
     # Credentials used for HCL Digital Experience Core administrative access.
     # The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
     wpsUser: "wpsadmin"
     wpsPassword: ""
+    # when using the wpsUser and wpsPassword fields, keep the customWpsSecret field empty:
+    customWpsSecret: ""
+
     # Credentials used for Config Wizard administrative access. This only takes effect when "configuration.core.tuning.configWizard" is enabled.
     # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # This will also map the user as the user for Config Wizard and dxconnect (for dxclient)
@@ -57,20 +63,32 @@ security:
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
     configWizardUser: "wpsadmin"
     configWizardPassword: ""
+    # when using the configWizardUser and configWizardPassword fields, keep the customConfigWizardSecret field empty:
+    customConfigWizardSecret: ""
+
   # Security configuration for Digital Asset Management
   digitalAssetManagement:
     # Credentials used by Digital Asset Management to access the persistence database.
     dbUser: "REDACTED"
     dbPassword: "REDACTED"
+    # when using the dbUser and dbPassword fields, keep the customDBSecret field empty:
+    customDBSecret: ""
+
     # Credentials used by the persistence database to perform replication between database nodes.
     replicationUser: "REDACTED"
     replicationPassword: "REDACTED"
+    # when using the replicationUser and replicationPassword fields, keep the customReplicationSecret field empty:
+    customReplicationSecret: ""
+
   # Security configuration for Open LDAP
   openLdap:
     # Admin user for Open LDAP, can not be adjusted currently.
     ldapUser: "REDACTED"
     # Admin password for Open LDAP
     ldapPassword: "REDACTED"
+    # when using the ldapUser and ldapPassword fields, keep the customLdapSecret field empty:
+    customLdapSecret: ""
+
   # Security configuration for Remote Search
   remoteSearch:
     # Credentials used for IBM WebSphere Application Server administrative access.
@@ -79,6 +97,8 @@ security:
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
     wasUser: "wpsadmin"
     wasPassword: ""
+    # when using the wasUser and wasPassword fields, keep the customWasSecret field empty:
+    customWasSecret: ""
 ```
 
 ## Updating credentials
