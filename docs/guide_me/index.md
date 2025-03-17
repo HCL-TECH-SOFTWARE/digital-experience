@@ -13,7 +13,7 @@ This section describes how you can clean up old Web Content Manager (WCM) items 
 - **[Security Hardening Guide](./SecurityHardeningGuide/index.md)**  
 This section contains instructions on how to evaluate and improve the security of applications based on HCL DX.
 - **[Performance Tuning Guides](./performance_tuning/index.md)**  
-This section contains various performance tuning guides for deployments in Container and On-Premises (Traditional) platforms.
+This section contains various performance tuning guides for deployments in Container and Traditional (non-Kubernetes) platforms.
 - **[Tips for searching the Help Center](./search_tips.md)**  
 This section contains tips on how to improve your search results and find the information you need in the HCL DX Help Center.
 - **[Glossary](./glossary.md)**  
