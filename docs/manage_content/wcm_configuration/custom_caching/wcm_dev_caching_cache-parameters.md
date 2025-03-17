@@ -89,7 +89,7 @@ How to enable these options:
 
     Value: `true`
 
-
 Note that it is possible to have **both** options enabled at the same time. However, the second option flushes the whole cache, which renders the first option useless.
 
-
+???+ info "Related information"
+    - [How to clear WCM caches with ConfigEngine task](../../../guide_me/howto/administration/ClearWCMCaches.md)
