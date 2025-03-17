@@ -12,6 +12,8 @@ You can use both commands to optimize the DB2 performance. This document provide
 
 ## Instructions
 
+The next sections describe the detailed usage of the `DB2 RUNSTATS` and `REORG TABLE`commands.
+
 ### DB2 RUNSTATS on wide table only
 
 ```text
