@@ -24,7 +24,7 @@ People Service automatically indexes data when changes occur. However, it does n
 
 ### Regular indexing behavior
 
-When creating and mutating users using the API or provisioning users through [User synchronization](../administration/user_provisioning/user_synchronization/), the user data is indexed as needed as part of the creation or mutation process.
+When creating and mutating users using the API or provisioning users through [User synchronization](../administration/user_provisioning/user_synchronization.md), the user data is indexed as needed as part of the creation or mutation process.
 
 ### On-demand indexing
 
