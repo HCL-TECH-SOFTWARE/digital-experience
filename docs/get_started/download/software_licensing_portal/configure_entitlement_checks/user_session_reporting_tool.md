@@ -1,7 +1,7 @@
 ---
-title: User session reporting tool
+title: User Session Reporting Tool
 ---
-# User session reporting tool
+# User Session Reporting Tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
