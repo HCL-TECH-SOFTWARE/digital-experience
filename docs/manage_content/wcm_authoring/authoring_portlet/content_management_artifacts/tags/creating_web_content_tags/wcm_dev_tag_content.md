@@ -48,7 +48,7 @@ Refer to the following steps to create a `Content` tag:
 
     -   **Selected**
 
-        If selected, the context is set by the selected item. You select an item by clicking **Select**. The selected item is added to the tag either with the `uuid=" "` parameter that points to the UUID of the content or site area, or the `path=" "` parameter that points to the item's path. If the UUID or path parameter is specified, the context is always "selected", so you do not have to specify `context="Selected"`.
+        If selected, the context is set by the selected item. You can select an item by clicking **Select content** in the dialog. The selected item is then added to the tag with the `uuid=" "` parameter that points to the UUID of the content or site area. Alternatively, you can manually enter the `path=" "` parameter that points to the item's path. If the UUID or path parameter is specified, the context is always "selected", so you do not have to specify `context="Selected"`.
 
 4.  Click **OK** to add the tag to your navigator design.
 
