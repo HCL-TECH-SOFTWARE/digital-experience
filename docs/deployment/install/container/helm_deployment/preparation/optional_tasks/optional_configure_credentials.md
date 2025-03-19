@@ -32,7 +32,7 @@ kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=j
 
 ## Adjusting default credentials
 
-You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need. For details regarding the custom secrets (customWasSecret, customWpsSecret, etc.), see [Configuring Credentials from Secrets](#configuring-credentials-from-secrets) below.
+You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need. For details about the custom secrets (for example, `customWasSecret`, `customWpsSecret`), see the section [Configuring Credentials from Secrets](#configuring-credentials-from-secrets).
 
 ```yaml
 # Security related configuration, e.g. default credentials
