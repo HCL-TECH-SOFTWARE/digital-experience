@@ -7,7 +7,6 @@ The following features and updates are available to customers installing HCL Dig
 <!-- 
 - My HCLSoftware delivery portal 
 -->
-- WAS and JDK versions
 - Presentation Designer - Canvas settings
 - DXClient - TLS certificate validation
 - DXClient - New limitations for LiveSync
@@ -20,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- WAS and JDK versions
 - RingAPI - Extending the trust store
 - DAM - New parameter for access control
 - People Service and Search V2 integration
@@ -39,20 +39,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCL DX software is now available through the new [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet. For more information, see the topics [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md), [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md), [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md), and [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md).
 -->
-
-### WAS and JDK versions
-
-=== "Containers"
-    HCL DX 9.5 CF226 contains the following:
-
-    - WebSphere Application Server 9.0.5.22
-    - Java Development Kit 8.0.8.35
-
-=== "On-Premises"
-    HCL DX 9.5 CF226 contains the following:
-
-    - WebSphere Application Server 9.0.5.22
-    - Java Development Kit 8.0.8.35
 
 ### Presentation Designer - Canvas settings
 
@@ -101,6 +87,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### WAS and JDK versions
+
+=== "Containers"
+    HCL DX 9.5 CF226 contains the following:
+
+    - WebSphere Application Server 9.0.5.22
+    - Java Development Kit 8.0.8.35
 
 ### RingAPI - Extending the trust store
 
