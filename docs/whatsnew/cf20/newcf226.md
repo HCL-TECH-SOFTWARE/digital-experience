@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- WAS and JDK versions
 - RingAPI - Extending the trust store
 - DAM - New parameter for access control
 - People Service and Search V2 integration
@@ -86,6 +87,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### WAS and JDK versions
+
+=== "Containers"
+    HCL DX 9.5 CF226 contains the following:
+
+    - WebSphere Application Server 9.0.5.22
+    - Java Development Kit 8.0.8.35
 
 ### RingAPI - Extending the trust store
 
