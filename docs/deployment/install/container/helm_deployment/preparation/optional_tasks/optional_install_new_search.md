@@ -203,7 +203,7 @@ configuration:
 
 ### Common fields mapping for fallback  
 
-Common field mappings are the default mappings for WCM, DAM, JCR, PORTAL and PEOPLE in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply. For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
+Common field mappings are the default mappings for WCM, DAM, JCR, PORTAL, and PEOPLE in the `documentObject` parameter. You can find appropriate mappings for each field in this parameter. Use an empty string if none of the mappings apply. For more information about the `documentObject` parameter, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
 
 ```yaml
 commonFieldMappings:
@@ -241,10 +241,10 @@ commonFieldMappings:
 
 Refer to the following list for more information about the fields:
 
-- `wcm`, `dam`, `jcr`, `portal` and `people` are the types of content source currently supported.  
+- `wcm`, `dam`, `jcr`, `portal`, and `people` are the types of content source currently supported.  
 - Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
 - Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
-- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr`, and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
 
 ### Persistent Volume size requests  
 
