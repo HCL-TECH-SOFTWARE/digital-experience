@@ -1,4 +1,4 @@
-# How to display data from external sources
+# Displaying data from external sources
 
 You display data from external sources, such as SQL databases, by using the same methods as you would when you create a website.
 

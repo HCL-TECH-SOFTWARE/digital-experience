@@ -11,14 +11,15 @@ People Service APIs are categorized into the following sections:
 - **Authentication**: APIs related to user authentication and session management.
 - **Profiles**: APIs related to managing user profiles, including creating, updating, and deleting profiles.
 - **Schema**: APIs related to managing profile attributes and schema definitions.
-- **Custom fields**: APIs related to managing custom fields for user profiles.
-- **Images and media**: APIs related to managing profile images and media content.
+- **Custom Fields**: APIs related to managing custom fields for user profiles.
+- **Images and Media**: APIs related to managing profile images and media content.
 - **Tags**: APIs related to managing tags for user profiles.
 - **Search**: APIs related to searching for user profiles based on specific criteria.
 - **Privacy**: APIs related to managing user privacy settings and data protection.
-- **Federation and user directories**: APIs related to integrating with external user directories and federated identity providers.
+- **Federation and User Directories**: APIs related to integrating with external user directories and federated identity providers.
 - **Utils**: Utility APIs for common tasks and operations.
 - **Probes**: Health check APIs for monitoring the service status and availability.
+- **Search Re-Index**: APIs related to retrying full or partial re-indexing for all or pending user profiles.
 
 ## OpenAPI and Swagger Explorer
 
@@ -32,7 +33,3 @@ Use the following URLs to access the Swagger Explorer for People Service APIs an
 - **OpenAPI Specification**: `<HOSTNAME>/dx/api/people/v1/openapi/openapi.json`
 
 Ensure to replace `<HOSTNAME>` with the correct value.
-
-## OpenAPI Specification
-
-For more information on the People Service API schema, refer to the [OpenAPI spec](./people-service-openapi-spec.json) JSON file.

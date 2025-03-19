@@ -1,6 +1,8 @@
 # Search
 
-Use the Digital Experience (DX) Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
+Use the Digital Experience (DX) Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your DX platform. 
+
+There are two types of search in HCL DX: DX Search and Search V2. DX Search can be used in DX Core and is available in containers, hybrid, and on-premises deployments. For full container deployments, you can use [Search V2](../search_v2/index.md).
 
 
 1.  [HCL Digital Experience Portal Search](../search/portal_search/index.md)  

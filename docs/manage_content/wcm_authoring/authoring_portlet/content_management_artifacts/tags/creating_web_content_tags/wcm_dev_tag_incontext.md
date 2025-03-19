@@ -30,13 +30,13 @@ To create an `InContext` tag:
 
         If selected, the context is set by the context of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-        See the knowledge center topic that is called **Web content associations** for further information.
+        Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
     -   **Portal Mapping**
 
         If selected, the context is set by the web content association of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-        See the knowledge center topic that is called **Web content associations** for further information.
+        Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
     -   **Portlet Context**
 

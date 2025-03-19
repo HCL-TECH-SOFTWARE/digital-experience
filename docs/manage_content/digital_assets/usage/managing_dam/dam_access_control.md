@@ -25,13 +25,29 @@ DAM collection is accessible by the currently logged in user based on his role a
 
 From the DAM perspective, each individual root-level collection and child collection is a resource instance that can be administered.
 
-- User role: The user can view items in the collection and the collection itself as well as child collections.
-- Editor role: All permissions of the User role plus the user can edit collection details as well as upload items.
-- Administrator role: All permissions of the User and Editor role plus the user can view, create, edit, and delete a collection, delete items in a collection and he can assign/remove permission for other users as well on the collections.
+| Permission/Action                          | User Role | Editor Role | Administrator Role |
+|--------------------------------------------|-----------|-------------|--------------------|
+| View items in the collection               | Yes       | Yes         | Yes                |
+| View the collection                        | Yes       | Yes         | Yes                |
+| Edit collection details                    | No        | Yes         | Yes                |
+| Upload items                               | No        | Yes         | Yes                |
+| Create collections                         | No        | Yes         | Yes                |
+| Delete items in a collection               | No        | No          | Yes                |
+| Delete a collection                        | No        | No          | Yes                |
+| Manage permissions for other users         | No        | No          | Yes                |
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
 
-See the [Out of the box access](#Out-of-the-box-access) section, to understand how the default access works for a collection.
+The following Helm configuration allows users with the Editor role to create collections in DAM. By default, both Administrator and Editor roles can create collections. To disable Editors from creating collections, set `allowEditorToCreateCollections` to `false` in the `custom-values.yaml` file. This configuration is set to `true` by default.
+
+```
+# Application Configuration
+configuration:
+  digitalAssetManagement:
+    allowEditorToCreateCollections: true
+```
+
+See the [Out of the box access](./dam_access_control.md#out-of-the-box-access) section, to understand how the default access works for a collection.
 
 !!! note
     The Manager Role is not exposed in DAM UI currently.
