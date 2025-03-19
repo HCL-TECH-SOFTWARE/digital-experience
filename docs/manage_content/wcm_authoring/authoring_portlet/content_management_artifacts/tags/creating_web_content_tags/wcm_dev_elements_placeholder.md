@@ -141,7 +141,6 @@ Once you add the tag to your design, you can also add the following parameters t
 |--------------|-------|
 |`start=" "` <br> `end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
-**Using a URLCmpnt tag:**
+**URL Component tag**
 
-The URLCmpnt tag is used to generate a URL to a site area or content item and can be used as an alternative to a placeholder when a URL is generated. This method is useful when you create links to web content displayed within rendering portlets.
-
+The URL Component (URLCmpnt) tag is used to generate a URL to a site area or content item and can be used as an alternative to a placeholder when a URL is generated. This method is useful when you create links to web content displayed within rendering portlets. Refer to the [URL Component tag](../creating_web_content_tags/wcm_dev_item-details_url.md) page for more information.

@@ -13,6 +13,7 @@
 |DB2 Enterprise Server Edition|11.1.0|11.1.0 and later maintenance|9.5|Full|None|
 |DB2 Express Edition|11.1.0|11.1.0 and later maintenance|9.5|Full|None|
 |DB2 for z/OS|11.1.0|11.1.0 and later maintenance|9.5|Full|None|
+|DB2 Published Cumulative Special Build (CSB)|12.1.0|12.1.0 and later maintenance|9.5|Full|None|
 |Microsoft SQL Server|2014|2014 and later maintenance|9.5|Full|None|
 ||2016|2016 and later maintenance|9.5|Full|None|
 |Microsoft SQL Server Enterprise and Standard Edition|2017, 2019 and 2022|2017, 2019, 2022 and later maintenance|9.5|Full|None|

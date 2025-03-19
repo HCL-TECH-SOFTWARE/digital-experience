@@ -1,6 +1,6 @@
-# Themes Artifacts
+# Themes
 
-This topic provides information about the deployment and undeployment of themes artifacts.
+This topic provides information about the deployment and undeployment of themes.
 
 ## Deploy theme
 
@@ -360,6 +360,9 @@ Users can restore the theme by using the backup files.
     dxclient undeploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -hostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationName <application name> -themeName <theme-name> -enableBackup <enable-backup> -dxProfileName <Profile name of the DX core server profile> 
     ```
 
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
+
 ???+ Info "Related information"
     - [DXClient](../index.md)
-

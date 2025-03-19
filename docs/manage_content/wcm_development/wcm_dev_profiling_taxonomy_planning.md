@@ -1,4 +1,4 @@
-# Taxonomies, Categories, and keywords
+# Taxonomies, categories, and keywords
 
 The combination of taxonomy and categories enables control what displays in menus.
 

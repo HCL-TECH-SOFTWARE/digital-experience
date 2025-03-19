@@ -4,7 +4,7 @@ Secure socket layers \(SSL\) encrypt traffic between the client browser and the 
 
 Perform the following tasks to configure SSL.
 
-1.  [Setting up SSL](../configuring_ssl/setup_ssl)  
+1.  [Setting up SSL](../configuring_ssl/setup_ssl/)  
 Get an overview of the tasks that are required to configure SSL for HCL Digital Experience. Some of these tasks are completed on the IBM® WebSphere® Application Server and the web server. The steps that refer to the WebSphere® Application Server and the web server are summarized here; refer to the WebSphere® Application Server and the web server documentation for detailed information. Steps that are unique to HCL Portal are described in detail here.
 2.  [Configuring SSL only for the login process](../configuring_ssl/config_ssl_login.md)  
 You can encrypt only the login process to HCL Digital Experience and then allow subsequent requests through HTTP.
