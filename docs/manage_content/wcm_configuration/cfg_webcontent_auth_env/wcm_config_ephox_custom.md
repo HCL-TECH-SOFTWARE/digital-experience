@@ -105,10 +105,10 @@ tinyconfig = {
 };
 ```
 
-A more detailed sample configuration file with multiple examples can be found at PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce.
+A more detailed sample configuration file with multiple examples can be found at `PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce`.
 
 There are a variety of configuration options available for you to enhance the rich text editing experience. These can be added to the tinyconfig
-JSON object in the tiny_config.jsp file as configuration keys and values. 
+JSON object in the `tiny_config.jsp` file as configuration keys and values. 
 
 |Key|Value Type|Default|Description|
 |-----|----------|-------|-----------|
