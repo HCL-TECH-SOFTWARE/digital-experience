@@ -22,9 +22,7 @@ After configuring your authoring portlet to use TinyMCE, you can create a new pi
 
 ## Creating a custom configuration file for use with the TinyMCE editor
 
-In order to customize the TinyMCE editor toolbar, plugins, style, and functionality, you need to create a tiny_config.jsp file.
-
-A simple tiny_config.jsp file looks like this:
+To customize the TinyMCE editor toolbar, plugins, style, and functionality, you need to create a `tiny_config.jsp` file. For example:
 ```jsp
 // JSP page imports
 <%@ page trimDirectiveWhitespaces="true" %>
