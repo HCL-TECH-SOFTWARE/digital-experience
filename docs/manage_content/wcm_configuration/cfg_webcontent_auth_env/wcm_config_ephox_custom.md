@@ -112,7 +112,7 @@ JSON object in the `tiny_config.jsp` file as configuration keys and values.
 
 |Key|Value Type|Default|Description|
 |-----|----------|-------|-----------|
-|`additionalToolbarItems`|`string[]`| `[]` |An array of strings that lists additional toolbar buttons to append to the end of the toolbar string|
+|`additionalToolbarItems`|`string[]`| `[]` |An array of strings that lists additional toolbar buttons to append to the end of the toolbar string.|
 |`additionalPlugins`| `string` | `''` |A string that includes a list of plugins to include in TinyMCE. This string should have plugin names separated by spaces.|
 |`content_style`|`string`|`''`|This option allows custom CSS styles to be set as a string. The styles are injected into the head of the page containing the editable area. In the Web Content Authoring Portlet, it is injected into the head of TinyMCE’s iframe. When inline editing, it is injected into the head of the page TinyMCE is rendered in.|
 |`css.showDocumentStyles`|`boolean`|`false`|Determines whether to append the CSS classes in css.documentStyles and css.stylesheets to the styles dropdown|
