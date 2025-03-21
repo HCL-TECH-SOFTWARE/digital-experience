@@ -120,28 +120,28 @@ JSON object in the `tiny_config.jsp` file as configuration keys and values.
 |`directionality`|`string`|`'<%= directionality %>'`|Sets the editors text flow direction. By default, it is mapped to a JSP function that dynamically determines the directionality for the current logged in user.|
 |`language`|`string`|`'<%= locale %>'`|Sets the editor's language. By default, it is mapped to a JSP function that dynamically determines the language of the current logged in user.|
 |`relative_urls`|`boolean`|`false`|For URLs with the same domain as the page containing the TinyMCE editor. If set to: \ntrue — All URLs created in TinyMCE will be converted to a link relative to the base url. \nfalse — All URLs will be converted to absolute URLs.|
-|`spelling.url`|`string`|`"/ephox-spelling-mce"`|Sets the spelling service URL for spell checking|
-|`style_formats`|An array of JSON objects|`|This option allows you to define custom items for the styles dropdown toolbar button and the styles menu item.|
-|`style_formats_autohide`|`boolean`|`false`|Determines whether the style formats dropdown will automatically hide CSS classes that are not relevant to the currently selected DOM element in the rich text|
-|`table_background_color_map`|An array of JSON objects||This option is used to specify the default values for the table cell background color picker|
-|`table_border_color_map`|An array of JSON objects||This option is used to specify the default values for the table cell border color picker|
-|`toolbar`|`string`|`'undo redo \| tbio_insert \| styles \| bold italic underline \| ' + ' align \| bullist numlist indent outdent blockquote \| ' + ' forecolor backcolor tbio_font-menu formatpainter removeformat ltr rtl \| ' + ' searchreplace a11ycheck fullscreen code tbio_usersettings'`|A string representing toolbar buttons, toolbar groups, and toolbar sections|
-|`toolbar_mode`|`string`|`'floating'`|The toolbar_mode option is used to extend the toolbar to accommodate the overflowing toolbar buttons. This option is useful for small screens or small editor frames.|
-|`table_toolbar`|`string`|`'tableprops tabledelete \| tableinsertrowbefore tableinsertrowafter tabledeleterow \| tableinsertcolbefore tableinsertcolafter tabledeletecol'`|This option allows you to specify the toolbar buttons shown on the contextual toolbar for tables|
-|`ui.fonts`|`string[]` or an array of objects| |An array of strings with valid font names or an array of JSON objects with the font title and font name specified as key-value pairs|
-|`ui.colors.buttons`|An array of JSON objects| |An array of color key value pairs where the value is an HTML color value used to add additional custom colors to the color picker|
-|`ui.colors.custom`|`boolean`|`false`|Whether to show a custom color picker option below the standard color buttons| 
-|`ui.toolbar.items`|`string[]`|`['undo', 'insert', 'style', 'emphasis', 'align', 'listindent', 'format', 'tools']`|An array of strings representing toolbar buttons and toolbar button groups| 
-|`valid_children`|`string`|`''`|This option enables you to control what child elements can exist within specified parent elements.|
+|`spelling.url`|`string`|`"/ephox-spelling-mce"`|Sets the spelling service URL for spell checking.|
+|`style_formats`|An array of JSON objects|`|Defines custom items for the styles dropdown toolbar button and the styles menu item.|
+|`style_formats_autohide`|`boolean`|`false`|Determines whether the style formats dropdown will automatically hide CSS classes that are not relevant to the currently selected DOM element in the rich text. |
+|`table_background_color_map`|An array of JSON objects||Specifies the default values for the table cell background color picker.|
+|`table_border_color_map`|An array of JSON objects||Specifies the default values for the table cell border color picker.|
+|`toolbar`|`string`|`'undo redo \| tbio_insert \| styles \| bold italic underline \| ' + ' align \| bullist numlist indent outdent blockquote \| ' + ' forecolor backcolor tbio_font-menu formatpainter removeformat ltr rtl \| ' + ' searchreplace a11ycheck fullscreen code tbio_usersettings'`|A string representing toolbar buttons, toolbar groups, and toolbar sections.|
+|`toolbar_mode`|`string`|`'floating'`|Extends the toolbar to accommodate the overflowing toolbar buttons. This option is useful for small screens or small editor frames.|
+|`table_toolbar`|`string`|`'tableprops tabledelete \| tableinsertrowbefore tableinsertrowafter tabledeleterow \| tableinsertcolbefore tableinsertcolafter tabledeletecol'`|Specifies the toolbar buttons shown on the contextual toolbar for tables.|
+|`ui.fonts`|`string[]` or an array of JSON objects| |An array of strings with valid font names or an array of JSON objects with the font title and font name specified as key-value pairs.|
+|`ui.colors.buttons`|An array of JSON objects| |An array of color key-value pairs where the value is an HTML color value used to add additional custom colors to the color picker.|
+|`ui.colors.custom`|`boolean`|`false`|Determines whether to show a custom color picker option below the standard color buttons.| 
+|`ui.toolbar.items`|`string[]`|`['undo', 'insert', 'style', 'emphasis', 'align', 'listindent', 'format', 'tools']`|An array of strings representing toolbar buttons and toolbar button groups.| 
+|`valid_children`|`string`|`''`|Determines which child elements can exist within specified parent elements.|
 
 ## Customizing the TinyMCE toolbar
 
-You can customize the toolbar, adding, removing, reordering, and grouping buttons and dropdowns, by using either the `toolbar` or `ui.toolbar.items` config keys. 
+You can customize the toolbar as well as the buttons and dropdowns for adding, removing, reordering, and grouping using the `toolbar` or `ui.toolbar.items` config keys. 
 
 ???+ info "Note" 
-    The two separate config keys for customizing the toolbar, `toolbar` and `ui.toolbar.items` are mutually exclusive and should not be used together.
+    The `toolbar` and `ui.toolbar.items` config keys are mutually exclusive and should not be used together.
 
-The default toolbar configuration looks like this:
+The following example shows the default toolbar configuration:
 
 ```jsp
 tinyconfig ={
@@ -168,19 +168,21 @@ The `toolbar` object defined in `tinyconfig` contains a list of toolbar item gro
 |`format`|`forecolor`, `backcolor`, `tbio_font-menu`, `formatpainter`, `removeformat`, `ltr`, `rtl`|
 |`tools`|`searchreplace`, `a11ycheck`, `fullscreen`, `code`, `tbio_usersettings`|
 
-Most of the above toolbar buttons are documented in significant detail at TinyMCE's documentation site. There are a number of HCL DX developed and maintained buttons. Those are:
+For more information about TinyMCE toolbar buttons, refer to [Toolbar Buttons Available for TinyMCE](https://www.tiny.cloud/docs/tinymce/latest/available-toolbar-buttons/){target="_blank"}.
+
+The following toolbar buttons are developed and maintained by HCL DX:
 
 |Toolbar Button Name|Description|
 |-------------------|-----------|
-|`wcm_insert`|the `+` button dropdown group that contains `wcmlink`, `wcmimage`, `wcmtag`, `wcmremotedocumentlink`|
-|`wcmlink`|Used to insert a link to either an external website or to a WCM content item|
-|`wcmimage`|Used to insert an image into the rich text element. This can be an image in HCL Digital Asset Management, WCM, or from the author's local system|
-|`wcmtag`|Used to insert a WCM tag|
-|`wcmremotedocumentlink`|Used to insert a link to a remote document|
+|`wcm_insert`|The `+` button dropdown group that contains `wcmlink`, `wcmimage`, `wcmtag`, and `wcmremotedocumentlink`.|
+|`wcmlink`|Used to insert a link to either an external website or to a WCM content item.|
+|`wcmimage`|Used to insert an image into the rich text element. This can be an image in HCL Digital Asset Management, WCM, or from the author's local system.|
+|`wcmtag`|Used to insert a WCM tag.|
+|`wcmremotedocumentlink`|Used to insert a link to a remote document.|
 
 The simplest way to customize the toolbar is to include, remove, or reorder the groups of buttons in the `items` array. 
 
-For more granular control, you can define your own toolbar groups before the `tinyconfig` object and then include those in the `items` array. The groups are of the form of 
+For more granular control, you can define your own toolbar groups before the `tinyconfig` object then include those groups in the `items` array. You can define your own toolbar groups using the following:
 
 ```js
 var groupName = {
@@ -191,7 +193,7 @@ var groupName = {
 }
 ```
 
-Toolbar groups can have nested groups as well. Here is a more complex example of various user-defined toolbar groups. 
+Toolbar groups can have nested groups as well, as shown in the following example of various user-defined toolbar groups: 
 
 ```js
 var insertGroup = {
@@ -233,7 +235,7 @@ tinyconfig = {
 }
 ```
 
-Alternatively, as of CF224, you can define the toolbar buttons directly in the `toolbar` config string, like so:
+Alternatively, as of CF224, you can define the toolbar buttons directly in the `toolbar` config string. For example:
 
 ```json
 tinyconfig = {
@@ -243,10 +245,10 @@ tinyconfig = {
 }
 ```
 
-The above toolbar string results in a toolbar that only contains the buttons listed above. The individual toolbar buttons are in a space separated string and the separate toolbar sections are separated with `|`. Further details on the kinds of buttons and the format of the toolbar string are available at TinyMCE's documentation site.
+The `toolbar` config string results in a toolbar that only contains the buttons that are listed. The individual toolbar buttons are separated using spaces and the toolbar sections are separated using `|`. For more information about TinyMCE toolbar buttons, refer to [Options for customizing the editor’s toolbars](https://www.tiny.cloud/docs/tinymce/latest/toolbar-configuration-options/){target="_blank"}.
 
 ???+ info "Note"
-    The HCL Digital Experience Enhanced Editor passes the `tinyconfig` object defined in `tiny_config.jsp` to our own internal call to initialize the TinyMCE Editor in the WCM authoring portlet. Only use the TinyMCE documentation site as a reference to look up further information about toolbar buttons, plugins, and properties that are specifically listed in the configuration options table. Do not invoke `tinymce.init()` in the `tiny_config.jsp` file.
+    The HCL DX Enhanced Editor passes the `tinyconfig` object defined in `tiny_config.jsp` to its own internal call to initialize the TinyMCE Editor in the WCM authoring portlet. Only use the TinyMCE documentation site as a reference to look up further information about toolbar buttons, plugins, and properties that are specifically listed in the configuration options table. Do not invoke `tinymce.init()` in the `tiny_config.jsp` file.
 
 ## Using a custom configuration with the TinyMCE editor in the WCM authoring portlet
 
@@ -281,9 +283,9 @@ These customization steps only apply to the Enhanced editor used in the HCL WCM 
      ConfigEngine(sh/bat) remove-wcm-ephox-editor-custom-configuration -DWasPassword=password -DPortalAdminId=username -DPortalAdminPwd=password
     ```
 
-## Migrating Textbox.io customizations to TinyMCE. 
+## Migrating Textbox.io customizations to TinyMCE
 
-If you have customized the WCM Advanced Editor, Textbox.io, you may need to migrate your customizations to the Enhanced Editor. Most configuration values supported in textbox.io will immediately work. At a high level, you can migrate these customizations by following these steps:
+If you have customized the WCM Advanced Editor, Textbox.io, you may need to migrate your customizations to the Enhanced Editor. Most configuration values supported in Textbox.io will immediately work. At a high level, you can migrate these customizations using the following steps:
 
 1. Create a new `tiny_config.jsp` file by copying the sample configuration file found in `PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce\tiny_config.jsp`. 
 2. Copy any additional custom JSP page imports from your `tbio_config.jsp` file to your new `tiny_config.jsp` file.
