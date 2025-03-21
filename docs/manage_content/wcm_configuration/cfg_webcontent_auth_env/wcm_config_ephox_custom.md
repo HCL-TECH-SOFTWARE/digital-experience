@@ -329,5 +329,5 @@ These customization steps only apply to Web content in-place editing with the Ti
 
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
-    - [TinyMCE Documentation](https://www.tiny.cloud/docs/tinymce/6/)
-    - [TinyMCE Plugin API Documentation](https://www.tiny.cloud/docs/tinymce/6/apis/tinymce.plugin/)
+    - [TinyMCE Documentation](https://www.tiny.cloud/docs/tinymce/6/){target="_blank"}
+    - [TinyMCE Plugin API Documentation](https://www.tiny.cloud/docs/tinymce/6/apis/tinymce.plugin/){target="_blank"}
