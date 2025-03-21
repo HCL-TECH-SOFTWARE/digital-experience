@@ -7,7 +7,7 @@ This topic explains the different enhanced rich text editor configuration option
 The TinyMCE editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
 
 ## Using the TinyMCE editor in the WCM authoring portlet
-
+You can use the TinyMCE editor in the WCM authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
 You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
 
 Before you can use TinyMCE in WCM, you need to add the following custom property to the WCM WCMConfigService resource environment provider: `inplaceEdit.defaultRichTextEditor=TinyMCE`
@@ -115,10 +115,10 @@ JSON object in the `tiny_config.jsp` file as configuration keys and values.
 |`additionalToolbarItems`|`string[]`| `[]` |An array of strings that lists additional toolbar buttons to append to the end of the toolbar string.|
 |`additionalPlugins`| `string` | `''` |A string that includes a list of plugins to include in TinyMCE. This string should have plugin names separated by spaces.|
 |`content_style`|`string`|`''`|This option allows custom CSS styles to be set as a string. The styles are injected into the head of the page containing the editable area. In the Web Content Authoring Portlet, it is injected into the head of TinyMCE’s iframe. When inline editing, it is injected into the head of the page TinyMCE is rendered in.|
-|`css.showDocumentStyles`|`boolean`|`false`|Determines whether to append the CSS classes in css.documentStyles and css.stylesheets to the styles dropdown|
-|`css.stylesheets`|`string[]`| | A list of CSS stylesheets that are used when editing rich text in the TinyMCE editor within the Web Content Authoring Portlet. This array should be made up of paths to CSS stylesheets, which are loaded in order from first to last. Note: this does not apply to inline editing|
-|`directionality`|`string`|`'<%= directionality %>'`|Sets the editors text flow direction. By default it is mapped to a JSP function that dynamically determines the directionality for the current logged in user.|
-|`language`|`string`|`'<%= locale %>'`|Sets the editor's language. By default it is mapped to a JSP function that dynamically determines the language of the current logged in user.|
+|`css.showDocumentStyles`|`boolean`|`false`|Determines whether to append the CSS classes in `css.documentStyles` and `css.stylesheets` to the styles dropdown.|
+|`css.stylesheets`|`string[]`| | A list of CSS stylesheets that are used when editing rich text in the TinyMCE editor within the Web Content Authoring Portlet. This array should be made up of paths to CSS stylesheets, which are loaded in order from first to last. Note that this configuration key does not apply to inline editing.|
+|`directionality`|`string`|`'<%= directionality %>'`|Sets the editors text flow direction. By default, it is mapped to a JSP function that dynamically determines the directionality for the current logged in user.|
+|`language`|`string`|`'<%= locale %>'`|Sets the editor's language. By default, it is mapped to a JSP function that dynamically determines the language of the current logged in user.|
 |`relative_urls`|`boolean`|`false`|For URLs with the same domain as the page containing the TinyMCE editor. If set to: \ntrue — All URLs created in TinyMCE will be converted to a link relative to the base url. \nfalse — All URLs will be converted to absolute URLs.|
 |`spelling.url`|`string`|`"/ephox-spelling-mce"`|Sets the spelling service URL for spell checking|
 |`style_formats`|An array of JSON objects|`|This option allows you to define custom items for the styles dropdown toolbar button and the styles menu item.|
