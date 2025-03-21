@@ -293,7 +293,7 @@ If you have customized the WCM Advanced Editor, Textbox.io, you may need to migr
 5. Rewrite your custom plugins to use the TinyMCE `PluginManager` API.
 6. Copy your configuration key-value pairs from the `config` object defined in `tbio_config.jsp` directly to the `tinyconfig` object in `tiny_config.jsp`. 
 
-After creating the `tiny_config.jsp` customization file, follow the steps listed under **Using a custom configuration with the TinyMCE editor in the WCM authoring portlet** to apply your customizations to the Enhanced Editor.
+After creating the `tiny_config.jsp` customization file, follow the steps listed under [Using a custom configuration with the TinyMCE editor in the WCM authoring portlet](./wcm_config_ephox_custom.md#using-a-custom-configuration-with-the-tinymce-editor-in-the-wcm-authoring-portlet--test) to apply your customizations to the Enhanced Editor.
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
