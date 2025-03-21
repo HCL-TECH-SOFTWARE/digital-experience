@@ -286,9 +286,9 @@ These customization steps only apply to the Enhanced editor used in the HCL WCM 
 If you have customized the WCM Advanced Editor, Textbox.io, you may need to migrate your customizations to the Enhanced Editor. Most configuration values supported in textbox.io will immediately work. At a high level, you can migrate these customizations by following these steps:
 
 1. Create a new `tiny_config.jsp` file by copying the sample configuration file found in `PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce\tiny_config.jsp`. 
-2. Copy any additional custom JSP page imports from your tbio_config.jsp file to your new tiny_config.jsp file.
-3. Copy any custom JSP functions from your tbio_config.jsp to your new tiny_config.jsp file. 
-4. Copy any custom JSP variables from your old tbio_config.jsp file to your new tiny_config.jsp file. Do not overwrite the new variables or their new values, especially the `contextRoot`. 
+2. Copy any additional custom JSP page imports from your `tbio_config.jsp` file to your new `tiny_config.jsp` file.
+3. Copy any custom JSP functions from your `tbio_config.jsp` to your new `tiny_config.jsp` file. 
+4. Copy any custom JSP variables from your old `tbio_config.jsp` file to your new `tiny_config.jsp` file. Do not overwrite the new variables or their new values, especially the `contextRoot`. 
 5. If you previously customized your toolbar with custom toolbar groups in tbio_config.jsp, those can be copied as-is along with the helper functions to `flatten` the toolbar groups into a single array.
 5. Rewrite your custom plugins to use the TinyMCE `PluginManager` API.
 6. Copy your configuration key-value pairs from the `config` object defined in `tbio_config.jsp` directly to the `tinyconfig` object in `tiny_config.jsp`. 
