@@ -117,7 +117,10 @@ The following is a sample command for running the User Session Reporting Tool us
 java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIPs <excludedIPs>] [-excludeSessionKeys <excludeSessionKeys>] <startDate> <endDate>
 
 # Example
-java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
+
+# Example for multiple exludeIPs and excludeSessionKeys
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeIPs "192.168.245.143" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKeys "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
 
 ```
 

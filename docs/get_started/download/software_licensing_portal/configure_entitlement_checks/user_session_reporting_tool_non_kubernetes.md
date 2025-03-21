@@ -126,9 +126,10 @@ java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-ex
 ### Example
 ```
 # Output in the terminal
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk   > /tmp/2022-06-24T02-50-00_usage.metrics
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKeys "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk   > /tmp/2022-06-24T02-50-00_usage.metrics
+
 # Write Output in file
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk fileOutput 
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKeys "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk fileOutput 
 ```
 
 See the following sample of an `excludedIPs.txt` file:
