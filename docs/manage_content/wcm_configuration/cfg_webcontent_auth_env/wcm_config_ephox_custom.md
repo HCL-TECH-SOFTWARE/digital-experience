@@ -1,6 +1,10 @@
 # Enhanced rich text editor configuration options
 
-**Prerequisite:** The TinyMCE Editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
+This topic explains the different enhanced rich text editor configuration options using the TinyMCE editor for HCL Web Content Manager (WCM).
+
+## Prerequisite
+
+The TinyMCE editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
 
 ## Using the TinyMCE editor in the WCM authoring portlet
 
