@@ -18,7 +18,6 @@ The home page is a simple user interfaced personalized for the current user. The
 
     You can develop a custom user interface, referred to as a custom launch page. Select launch page if you have a custom launch page.
 
-
 ## The library explorer
 
 The library explorer is a more advanced user interface than the home page. It displays different lists of items you have access to. You can select a library and browse through the different item-type views within each library. You can choose to display an explorer tree to assist you browse through the items in each library.
@@ -58,4 +57,6 @@ When configured to be visible, the navigation bar is displayed next to either th
 
     Any views or items that are currently open are listed in the **Open Views** or **Open Items** sections of the navigation bar.
 
+## HCLSoftware U learning materials
 
+To learn how to get started with the development aspects of HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
