@@ -276,10 +276,10 @@ If you cannot recall all the configuration settings you usually change and also 
 
 When comparing configuration settings, you might notice differences in the settings that DX configures in containers. The following is a list of changes performed for Resource Environment Providers for containers/Kubernetes:
 
-- WCM WCMConfigService: Tuning changes as documented in the tuning task: [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
+- WCM WCMConfigService: Tuning changes as documented in the tuning task. Refer to [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md) for more information.
 - WP ConfigService: ```use.db.cache.invalidation.table``` and ```db.cache.invalidation.read.freq``` for cache replication. ```digitalAssets.useSSLDAM``` for DAM integration.
 - WCM DigitalAssetManagerService: ```enabled``` if using DAM.
-- WP CacheManagerService: Tuning changes as documented in the tuning task: [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
+- WP CacheManagerService: Tuning changes as documented in the tuning task. Refer to [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md) for more information.
 
 ### Configuration tasks changing resource environment providers
 
@@ -298,4 +298,3 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
     -   [HCL Digital Experience 9.5 Roadmap: Container deployment](../../../get_started/plan_deployment/container_deployment/rm_container/rm_container_deployment.md)
     -   [Configuring a remote search service](../../../build_sites/search/remotesearch/cfg_remotesearch_service/index.md)
     -   [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html)
-
