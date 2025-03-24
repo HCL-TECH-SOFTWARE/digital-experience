@@ -135,9 +135,9 @@ networking:
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
-## Using annotations to control the Service behaviour for different Cloud Providers
+## Using annotations to control the HAProxy Service behaviour for different Cloud Providers
 
-The Helm chart provides the ability to add annotations to the HAProxy service to control the behaviour of the service for different cloud providers. Annotations can be added in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations)
+The Helm chart provides the ability to add annotations to the HAProxy service to control the behaviour of the service for different cloud providers. This can be used to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. Annotations can be added in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations)
 
 Examples for such annotations are in an non-exhaustive list. Please refer to the documentation of your cloud provider for more information:
 
