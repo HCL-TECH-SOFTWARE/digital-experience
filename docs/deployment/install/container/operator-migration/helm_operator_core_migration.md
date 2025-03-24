@@ -277,7 +277,7 @@ kubectl exec -n <NAMESPACE> dx-deployment-core-0 -- bash -c 'cd /opt/HCL/ConfigE
 ### Create Ingress Secret
 Create the secret with your TLS certificate for the Ambassador Ingress in your Helm-based deployment.
 
-To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See [Use certificate](../../container/helm_deployment/preparation/mandatory_tasks/prepare_ingress_certificate.md#use-certificate) for more information.
+To make your migrated Helm deployment accessible, you need to configure the TLS certificate that is used by the Ambassador Ingress. See [Use certificate](../../container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configure-haproxy-certificate) for more information.
 
 ### (Optional) Update Secrets
 If you have changed the WAS/Portal Administrator user, update the corresponding secrets \(`dx-deployment-was` and `dx-deployment-wps`\) in the Helm-based deployment.

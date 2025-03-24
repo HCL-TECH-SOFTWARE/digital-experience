@@ -135,6 +135,16 @@ networking:
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
+## Using annotations to control the Service behaviour for different Cloud Providers
+
+The Helm chart provides the ability to add annotations to the HAProxy service to control the behaviour of the service for different cloud providers. Annotations can be added in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations)
+
+Examples for such annotations are in an non-exhaustive list. Please refer to the documentation of your cloud provider for more information:
+
+- [Amazon Elastic Kubernetes Service - Use Service Annotations to configure Network Load Balancers](https://docs.aws.amazon.com/eks/latest/userguide/auto-configure-nlb.html)
+- [Google Kubernetes Engine - LoadBalancer Service parameters](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer-parameters)
+- [Azure Kubernetes Service - LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/#loadbalancer-annotations)
+
 ## Generate self-signed certificate
 
 **It is recommended that you use a properly signed certificate for HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
@@ -185,11 +195,11 @@ networking:
 !!! note
     Verify you have entered the correct name.
 
-### OpenShift Passthrough
+## OpenShift Passthrough
 
 Previous versions of the Helm chart had an `openShiftPassthrough` value that created an OpenShift `Route` resource automatically. This is deprecated and removed and from CF211, a `Route` resource must be created manually when required as part of the deployment.
 
-#### Create the route resource manually
+### Create the route resource manually
 
 If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
