@@ -7,8 +7,8 @@ This topic explains the different enhanced rich text editor configuration option
 The TinyMCE editor requires a minimum supported Java level of 1.8. If you are unable to move to Java 8, it is recommended that you use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
 
 ## Using the TinyMCE editor in the WCM authoring portlet
-You can use the TinyMCE editor in the WCM authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
-You can use the TinyMCE editor in the Web Content Manager (WCM) authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode). 
+
+You can use the TinyMCE editor in the WCM authoring portlet and [inline editing](wcm_config_prop_authoring.md#default-in-place-editing-mode).
 
 Before you can use TinyMCE in WCM, you need to add the following custom property to the WCM WCMConfigService resource environment provider: `inplaceEdit.defaultRichTextEditor=TinyMCE`
 
@@ -27,6 +27,7 @@ After configuring your authoring portlet to use TinyMCE, you can create a new pi
 ## Creating a custom configuration file for use with the TinyMCE editor
 
 To customize the TinyMCE editor toolbar, plugins, style, and functionality, you need to create a `tiny_config.jsp` file. For example:
+
 ```jsp
 // JSP page imports
 <%@ page trimDirectiveWhitespaces="true" %>
@@ -107,8 +108,7 @@ tinyconfig = {
 
 A more detailed sample configuration file with multiple examples can be found at `PortalServer_root\wcm\prereq.wcm\wcm\config\templates\shared\app\config\tinymce`.
 
-There are a variety of configuration options available for you to enhance the rich text editing experience. These can be added to the tinyconfig
-JSON object in the `tiny_config.jsp` file as configuration keys and values. 
+There are a variety of configuration options available for you to enhance the rich text editing experience. These can be added to the tinyconfig JSON object in the `tiny_config.jsp` file as configuration keys and values.
 
 |Key|Value Type|Default|Description|
 |-----|----------|-------|-----------|
@@ -182,7 +182,7 @@ The following toolbar buttons are developed and maintained by HCL DX:
 
 The simplest way to customize the toolbar is to include, remove, or reorder the groups of buttons in the `items` array. 
 
-For more granular control, you can define your own toolbar groups before the `tinyconfig` object then include those groups in the `items` array. You can define your own toolbar groups using the following:
+For more granular control, you can define your own toolbar groups before the `tinyconfig` object then include those groups in the `items` array. You can define your own toolbar groups using the following example:
 
 ```js
 var groupName = {
@@ -295,7 +295,7 @@ If you have customized the WCM Advanced Editor, Textbox.io, you may need to migr
 5. Rewrite your custom plugins to use the TinyMCE `PluginManager` API.
 6. Copy your configuration key-value pairs from the `config` object defined in `tbio_config.jsp` directly to the `tinyconfig` object in `tiny_config.jsp`. 
 
-After creating the `tiny_config.jsp` customization file, follow the steps listed under [Using a custom configuration with the TinyMCE editor in the WCM authoring portlet](./wcm_config_ephox_custom.md#using-a-custom-configuration-with-the-tinymce-editor-in-the-wcm-authoring-portlet--test) to apply your customizations to the Enhanced Editor.
+After creating the `tiny_config.jsp` customization file, follow the steps listed under [Using a custom configuration with the TinyMCE editor in the WCM authoring portlet](./wcm_config_ephox_custom.md#using-a-custom-configuration-with-the-tinymce-editor-in-the-wcm-authoring-portlet) to apply your customizations to the Enhanced Editor.
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
