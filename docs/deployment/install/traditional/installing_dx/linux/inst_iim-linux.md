@@ -4,8 +4,9 @@ The IBM Installation Manager is used to install installation packages such as HC
 
 ## Procedure
 
-If you have an existing Installation Manager, start it and go to **File > Preferences**. Then, click **Updates**. Click the **Search for Installation Manager updates** check box. This box enables the Installation Manager to search for updates the next time you run an installation or update.
-
+    !!!note
+       Due to incompatibilities between recent IIM levels and DX install packages, do not update IBM Installation Manager to version 1.10
+	   
 If you do not have an existing Installation Manager, then complete the following procedure:
 
 1.  Start all servers and applications that require a port number to avoid port conflicts when installing HCL Portal.
