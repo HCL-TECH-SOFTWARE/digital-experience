@@ -4,8 +4,8 @@ The IBM Installation Manager is used to install installation packages such as HC
 
 ## Procedure
 
-    !!!note
-       Due to incompatibilities between recent IIM levels and DX install packages, do not update IBM Installation Manager to version 1.10
+    !!! warning
+        Due to incompatibilities between recent IIM levels and DX install packages, do not update IBM Installation Manager to version 1.10
 	   
 If you do not have an existing Installation Manager, then complete the following procedure:
 
