@@ -441,7 +441,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
 
     | **Part** | **Description**|
     | -------------- | ---------|
-    | **exportparts** | This attribute is used to expose the internal parts of the dx-button component so that they can be styled externally. It takes a comma-separated list of part names. |
+    | **BUTTON_PARTS** | This attribute is used to expose the internal parts of the dx-button component so that they can be styled externally. It takes a comma-separated list of part names. |
 
 - **dx-menu:** This component is designed to represent a dropdown menu that can be anchored to a target element and toggled open or closed.
 
@@ -502,19 +502,6 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **pages-section** | Represents the section of the pagination component that handles page navigation controls (e.g., buttons for first, previous, next, and last pages). |
     | **pages-nav-button** | Represents the navigation buttons for page controls (e.g., first page, previous page, next page, last page). |
     | **pages-description** | Represents the part that displays the total number of pages (e.g., "/ 10"). |
-
-- **dx-theme-inspector:** This component is designed to visually inspect and display theme-related properties, such as colors and their shades, for a given theme configuration. It is designed to help developers and designers understand and verify the theme's color palette and properties in both light and dark modes.
-
-    | **Properties** | **type** | **Description** | **Default** |
-    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**_themePropertiesDelimiter** | String	| Delimiter used to split theme property keys.|	'ZZZ' |
-    |**_themePrefix** | String	| Prefix used to identify theme-related keys.|	'theme' |
-    |**_shadeKeys** | Number[]	| Array of numeric keys representing shade levels for colors|	[100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1000_80, 1100] |
-    |**_colorKeys** | String[]	| Array of color names used in the theme.|	['GREY', 'BLACK', 'BLUE', 'GREEN', 'HCLSOFTWAREBLUE', 'INDIGO', 'LIME', 'ORANGE', 'PINK', 'PURPLE', 'RED', 'TEAL', 'WHITE', 'YELLOW'] |
-    |**_blackKeys** | String[]	| Array of keys representing shades of black.|	['100P', '87P', '60P', '55P', '43P', '38P', '32P', '20P', '12P', '8P', '7P'] |
-    |**_whiteKeys** | String[]	| Array of keys representing shades of white.|	['100P', '93P', '80P', '70P', '55P', '40P', '38P', '24P', '15P', '12P', '8P'] |
-    |**_hclSoftwareBlueKeys** | String[]	| Array of keys representing shades of HCL Software Blue.|	['01', '02', '03', '04', '05', '06', '07', '07_20', '07_12', '07_8', '08', '09', '09_20', '09_12', '09_8'] |
-    |**_theme** | ThemeType | undefined	| Object representing the theme data, imported from themeUtils.ts.|	undefined |
 
 
 ### Functional Composite Components
