@@ -65,7 +65,6 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **button-enchanted-outlined** | Represents the button with an enchanted outlined style. This is used when the variant is set to `outlined`. |
     | **button-enchanted-outlined-disabled** | Represents the enchanted outlined button in a `disabled` state. This is used when the `disabled` property is true and the variant is set to `outlined`. |
     | **button-enchanted-outlined-focused** | Represents the enchanted `outlined` button when it is `focused`. This is used when the `focused` property is true and the variant is set to `outlined`. |
-    
 
 - **dx-input-select:** This flexible, accessible, and customizable component can handle a variety of user interactions and scenarios.
 
@@ -75,7 +74,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **disabled**   | Boolean | Indicates whether the input select component is disabled. | false |
     | **selectedValue**     | String | The currently selected value. | undefined |
     | **selectedId** | String | The id of the currently selected option. | undefined |
-    | **options**    | String, String[], OptionData[] | List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
+    | **options**    | String, String\[], OptionData\[] | List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
     | **field**    | DxSearchInputFieldType, String | The type of the input field used to determine default labels or handle specific behaviors. You can use `DxSearchInputFieldType` strings such as `contentSource` or `documentObjectType` or leave it blank. | '' |
     | **toggleDropDown**    | Boolean | Indicates whether the dropdown is currently open or closed. | false |
     | **listItems**    | HTMLElement[], undefined | A list of HTMLElement items in the dropdown. | undefined |
@@ -220,8 +219,8 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     |**disabled** |	Boolean	| Determines if the button is disabled. |	false |
     |**outlined** |	Boolean	| Indicates whether the button should be rendered with an outlined style. |	false |
     | **selectedValue** |	String |	The currently selected value of the toggle button. |	'' |
-    |**iconUrls** |	String[] |	Array of URLs for the icons displayed on the buttons. |	[] |
-    |**values** |	String[] |	Array of values corresponding to each button's selection state. |	[] |
+    |**iconUrls** |	String\[] |	Array of URLs for the icons displayed on the buttons. |	[] |
+    |**values** |	String\[] |	Array of values corresponding to each button's selection state. |	[] |
 
     Following css part attributes are responsible for determining the appropriate CSS for the `dx-toggle-button` and its elements based on the component's state and properties.
 
@@ -542,8 +541,8 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     |**field** |	String	| The field associated with the input. |	'' |
-    |**contentSources** |	DxSearchGetContentSource[]	| List of content sources fetched from the service. This property is internally managed by the component and should not be used. To be converted to internal state in the next release. |	[] |
-    | **scope** |	String[] |	The current selected scope or content source. This property is internally managed by the component and should not be used. To be converted to internal state in the next release.|	['All Sources'] |
+    |**contentSources** |	DxSearchGetContentSource\[]	| List of content sources fetched from the service. This property is internally managed by the component and should not be used. To be converted to internal state in the next release. |	[] |
+    | **scope** |	String\[] |	The current selected scope or content source. This property is internally managed by the component and should not be used. To be converted to internal state in the next release.|	\['All Sources'] |
     |**disabled** |	Boolean |	Indicates whether the input is disabled. |	false |
     |**label** |	String |	The label for the input field. |	'' |
     |**placeholder** |	String |	The placeholder text for the input field. |	'' |
@@ -571,7 +570,7 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | **disabled** |	Boolean |	Indicates whether the search input is disabled. |	false |
     |**label** |	String |	The label text for the search input. |	'' |
     |**placeholder** |	String |	The placeholder text for the search input. |	'' |
-    |**options** | OptionData[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
+    |**options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
 
 - **dx-search-output:** This search result display component integrates with backend search services. It manages various search states such as loading, results, no results, or error, and updates the UI dynamically based on search parameters. It is designed for applications that require real-time search with pagination, filtering, and error handling.
 
@@ -581,7 +580,7 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     |**templatePaginationId** |	String	| The ID of the pagination template element used for paginated search results. |	'' |
     | **searchValue** |	String |	The current search query or keyword entered by the user. |	'' |
     |**documentObjectType** |	String |	The attribute in the document object being searched. |	'' |
-    |**scope** |	String[] |	A list of content source IDs that limit the search query. |	[] |
+    |**scope** |	String\[] |	A list of content source IDs that limit the search query. |	[] |
     |**searchResults** |	DxSearchResults	| Contains the search results, including hit count, individual hits, and scores. |	{ hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
     |**isLoading** |	Boolean	| A flag that indicates whether search results are being loaded. |	false |
 
@@ -643,15 +642,13 @@ You can use the default theme modules (CSS and JS files) provided to you as-is, 
 
 13. Open the `default.css`file in a code editor such as Visual Studio Code then open the **Command Palette**. You can open the **Command Palette** by pressing Cmd + Shift + P for Mac, or Ctrl + Shift + P for Windows.
 
-14. In the **Command Palette**, enter `> Format Document` to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to [Styling the search components](#styling-the-search-components).
-
+14. In the **Command Palette**, enter `> Format Document` to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to [Styling the search components](./customizations.md#styling-search-components).
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_12.png "Open the `default.css` file you have downloaded in a code editor such as Visual Studio Code")
 
     See the sample view of the formatted `default.css` file.
 
     ![](../../assets/HCL_Search_Get_Theme_Modules_13.png "Log in to HCL Digital Experience 9.5 and Go to the Search V2 UI")
-
 
 ## Communication between components using the Broadcast Channel API
 
