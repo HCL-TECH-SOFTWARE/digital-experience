@@ -50,9 +50,9 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **button-outlined** | Represents the button with an outlined style when the `variant` property is set to `outlined`. |
     | **button-outlined-focused** | Represents the `outlined` button in a focused state when the `focused` property is set to `true` and the `variant` property is set to `outlined`. |
     | **button-outlined-disabled** | Represents the `outlined` button in a disabled state when the `disabled` property is set to `true` and the `variant` property is set to `outlined`. |
-    | **button-start-icon** | Represents the start icon of the button when the starticon property is true. |
+    | **button-start-icon** | Represents the start icon of the button when the `starticon` property is set to `true`. |
     | **button-start-icon-with-padding** | Represents the start icon of the button with padding when the button does not have text (`buttontext` is set to `""`) but has the `withPadding` property set to `true`. |
-    | **button-end-icon** | Represents the end icon of the button when the `endicon` property is `true`. |
+    | **button-end-icon** | Represents the end icon of the button when the `endicon` property is set to `true`. |
     | **button-start-icon-no-margin** | Represents the start icon of the button without margin when the button does not have text (`buttontext` is set to `""`) and the `withPadding` property is set to `false`. |
     | **button-start-icon-rtl-margin** | Represents the start icon of the button with right-to-left (RTL) margin when the text direction is set to `RTL`. |
     | **button-text** | Represents the text content of the button when the button has text (`buttontext` is not an empty string). |
@@ -117,7 +117,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **switch-label-disabled** | Represents the label element of the switch component if the `isDisabled` property is set to `true`.|
     | **switch-input** | Represents the input element of the switch, which is a checkbox. It handles the toggle functionality of the switch. |
     | **switch-slider** | Represents the slider element of the switch, which visually indicates whether the switch is on or off. |
-    | **switch-slider-checked** |  Represents the slider element of the switch if the **isChecked** property is set to `true`. |
+    | **switch-slider-checked** |  Represents the slider element of the switch if the `isChecked` property is set to `true`. |
     | **switch-slider-disabled** |  Represents the slider element of the switch if the `isDisabled` property is set to `true` but the `isChecked` property is set to `false`. |
     | **switch-slider-checked-disabled** |  Represents the slider element of the switch if the `isDisabled` and `isChecked` properties are set to `true`. |
 
@@ -229,8 +229,8 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **toggle-button-div** | Represents the outer container `<div>` of the toggle button component. |
     | **toggle-button-div-outlined** | Represents the outer container `<div>` of the toggle button component if the `outlined` property is set to `true`. |
     | **first-button** | Represents the first `<button>` element in the toggle button. |
-    | **toggle-button-selected** | Represents the first or second `<button>` element in the toggle button, depending on whether the `selectedValue` matches the first value in the `values` array. |
-    | **toggle-button** | Represents the first or second `<button>` element in the toggle button, depending on whether the `selectedValue` matches the first value in the `values` array; otherwise, it represents the unselected button. |
+    | **toggle-button-selected** | Represents the first or second `<button>` element in the toggle button if the `selectedValue` matches the first value in the `values` array. |
+    | **toggle-button** | Represents the first or second `<button>` element in the toggle button if the `selectedValue` does not match the first value in the `values` array. |
     | **second-button** |Represents the second `<button>` element in the toggle button. |
     | **toggle-button-icon** |Represents the `<img>` elements inside the buttons, which display the icons for the toggle button options. This part remains constant and does not change. |
 
@@ -242,7 +242,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     |**imgUrl** |	String	| The URL of the image to be displayed as the avatar when the `variant` is set to `avatar-img`.|	undefined |
     | **iconUrl** |	String |	The URL of the icon to be displayed as the avatar when the `variant` is set to `avatar-icon`. |	undefined |
     |**avatarText** |	String |	The text to be displayed in the avatar when the `variant` is set to `avatar-letter`.  |	undefined |
-    |**type** |	String |	Determines the shape of the avatar (`avatar-rounded` or `avatar-circular`).  |	undefined |
+    |**type** |	String |	Determines the shape of the avatar. Possible values are `avatar-rounded` or `avatar-circular`.  |	undefined |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-avatar` component and its elements based on the component's state and properties.
 
@@ -456,8 +456,8 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **menu-root** | Represents the root container of the menu. It is the main wrapper for the menu content. |
     | **backdrop** | Represents the backdrop element behind the menu. It is used to detect clicks outside the menu to trigger the menu to close. |
     | **paper-root** | Represents the container for the menu content. It holds the actual menu items and is styled to appear as the menu. |
-    | **LIST_PARTS** (Exported through the `dx-list` component) | Represents the parts of the `dx-list` component used inside the menu. These parts are exported to allow for the styling of the list and its items. |
-    | **BUTTON_PARTS** (Exported through the target anchor) | Represents the parts of the `dx-button` element that triggers the menu. These parts are exported to allow for the styling of the trigger element. |
+    | **LIST_PARTS** | Represents the parts of the `dx-list` component used inside the menu. These parts are exported through the `dx-list` component to allow for the styling of the list and its items. |
+    | **BUTTON_PARTS** | Represents the parts of the `dx-button` element that triggers the menu. These parts are exported through the target anchor to allow for the styling of the trigger element. |
 
 - **dx-menu-item:** This component is designed to represent a single menu item in a menu list and enables interaction and accessibility.
 
@@ -479,9 +479,9 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     |**disabled** | Boolean	| Indicates whether the pagination component is disabled.|	false |
-    |**currentPage** | Number | undefined	| Indicates the current page number.|	1 |
-    |**totalCount** | Number | undefined	| Indicates the total number of items in the dataset.| 0 |
-    |**rowSize** | Number | undefined	| Indicates the number of rows displayed per page.| undefined |
+    |**currentPage** | Number | Indicates the current page number.|	1 |
+    |**totalCount** | Number | Indicates the total number of items in the dataset.| 0 |
+    |**rowSize** | Number | Indicates the number of rows displayed per page.| undefined |
     |**pagesCount** | Number	| Indicates the total number of pages.| 0 |
     |**currentPageState** | Number	| Indicates the current page number used internally by the component.| 1 |
     |**rowSizeState** | Number	| Indicates the number of rows per page used internally by the component.| 50 |
