@@ -60,7 +60,7 @@ Leap.onReady = function() {
     let launchParams =  {
         'appId': '{appId}',
         'formId': '{formId}',
-        'locale': 'en',
+        'locale': navigator.language,
         'targetId': '[Plugin:ScriptPortletNamespace]leapDiv',
         'prefSecMode': prefSecMod
     };
