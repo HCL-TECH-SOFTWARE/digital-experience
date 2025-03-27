@@ -17,7 +17,7 @@ In this topic, you will learn how to install the Pers_Offers portlet using Micro
 
 Refer to the following steps to compile and package the Pers_offers project in VSCode.
 
-1. Clone the **[Personalization development sample (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample){target="_blank"}** git repository using the following command:
+1. Clone the **[HCL Digital Experience Personalization development sample (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample){target="_blank"}** git repository using the following command:
 
     ```text
     git clone https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample
@@ -29,15 +29,20 @@ Refer to the following steps to compile and package the Pers_offers project in V
     \dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers  
     ```
 
-3. Add the `ejb-thin-client` JAR dependencies to the `pom.xml` file of the **pers_offers** project. The `com.ibm.ws.ejb.thinclient_9.0.jar` file is one additional dependency that is needed to compile the project correctly. More information about it can be found on the IBM page [Running the IBM Thin Client for Enterprise JavaBeans (EJB)](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=applications-running-thin-client-enterprise-javabeans-ejb){target="_blank"}.  
-
-    Example to add the `com.ibm.ws.ejb.thinclient_9.0.jar` dependency to the `pom.xml` file:  
+3. Add the `ejb-thin-client` JAR dependencies to the `pom.xml` file of the **pers_offers** project. For example:
 
     ![Change in pom.xml](./images/ejb_thin_client_pre_req.png)  
 
-4. Compile and package the **pers_offers** project using the Maven plugin in VSCode . This can be done in Visual Studio Code in the `File > Explorer` view. Just expand the `MAVEN` menu and then in the `Lifecycle` section click to `package`. After packaging the project, a`\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file is created.  
+    The `com.ibm.ws.ejb.thinclient_9.0.jar` file is an additional dependency needed to compile the project correctly. Refer to [Running the IBM Thin Client for Enterprise JavaBeans (EJB)](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=applications-running-thin-client-enterprise-javabeans-ejb){target="_blank"} for more information.  
+
+4. Compile and package the **pers_offers** project using the Maven plugin in VSCode.
+
+    1. In the VSCode, go to **Explorer > MAVEN > HCL DX Pers_Offers Personalization Demo Portlet > Lifecycle**.
+    2. Click **package**.
 
     ![Maven Packaging](./images/maven_packaging_pers_offers.png)  
+
+    After packaging the project, a`\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file is created.  
 
 5. Modify the `pers_offers-1.0-SNAPSHOT.jar` file using tools such as 7-zip to ensure the file only contains the **pers_offers** folder and its Java classes. Remove all other files and directories in the JAR file to ensure that the rule classes are loaded correctly by the Portal runtime.  
 
