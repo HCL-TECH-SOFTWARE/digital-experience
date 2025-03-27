@@ -31,15 +31,15 @@ configuration:
 
 3\. Check that your app is accessible without having to log in. 
 
-4\. **Create a new library** via Practitioner Studio > Web Content > Web Content Libraries. Enable viewing it in Authoring by going to Authoring > Preferences > Shared Settings > Library Selection and add your new library to the Selected Libraries box.
+4\. **Create a new library** via Practitioner Studio > Web Content > Web Content Libraries > Create New Library. Enable viewing it in Authoring by going to Authoring > Preferences > Edit Shared Settings > Library Selection. Add your new library to the Selected Libraries box then press OK.
 
 5\. Inside your new Library, **create a presentation template** and put this under “Presentation Template Options”: `[Element context="current" type="content" key="html"]`
 
-6\. **Create a content template** and give it the name `Simple HTML - CT`. Under Manage Elements, add an HTML element without default content. Set the content template's default presentation template to the presentation template you made in the previous step:
+6\. **Create an authoring template/content template** and give it the name `Simple HTML - CT`. Under Manage Elements, add an HTML element. Set the content template's default presentation template to the presentation template you made in the previous step:
   
 <img src="../../../../assets/dx-leap-integration-html-ct.png" alt="default presentation template" width="600" height="1000">
 
-7\. **Create a site area** (you can use the default template and use any name for the site area, eg Leap Applications). Under the Properties tab > Profile > Keywords, add `ibm.portal.toolbar.NewContent`.
+7\. **Create a site area** (you can use the default template and use any name for the site area, eg Leap Applications). Under the Properties tab > Profile > Keywords, add `ibm.portal.toolbar.NewContent`. This will make your site area visible under your DX site's Edit Mode.
 
 <img src="../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
 
@@ -73,11 +73,11 @@ Leap.onReady = function() {
 ```
 <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
 
-9\. Go to your site (eg Woodburn Studio) and **embed the Leap app** by doing the following. Open Edit Mode. (If using Woodburn Studio, create a new page before embedding; otherwise you might get errors). On the new page, click the Add page components and applications button, then pick the Site Area you created (ours is called “Leap Applications”). 
+9\. Go to your site (eg Woodburn Studio) and **embed the Leap app** by doing the following. Open Edit Mode. (If using Woodburn Studio, create a new page before embedding; otherwise you might get errors). On the new page, click the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">), then pick the Site Area you created. 
 
 <img src="../../../../assets/dx-leap-integration-edit.png" alt="embed leap app" width="800" height="400">
 
-10\. Click on the Content, then Add Page.
+10\. Click on the content you created, then click Add To Page.
 
 11\. Your app should now be embedded on the page. Check that the app works by turning off Edit Mode, submitting the form, and checking via the Leap admin board whether the data got submitted.
 
