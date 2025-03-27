@@ -7,14 +7,7 @@ These steps will enable you to install Leap, with the most basic settings, on th
 
 1. Deploy a Kubernetes cluster with [DX](../../../../deployment/install/container/helm_deployment/overview.md) and [Ingress](../configuration/index.md) enabled.
 2. In the cluster, [pull the Leap image and create a Kubernetes secret](https://opensource.hcltechsw.com/leap-doc/9.3.9/helm_load_images.html#retrieve-leap-container-image).
-3. Create a custom values file and [configure SSL behavior.](https://opensource.hcltechsw.com/leap-doc/9.3.9/helm_configure_ssl.html) This allows you to open Leap in a browser. Your custom values file should now look similar to this:
-```yaml
-configuration:
-    leap:
-        configOverrideFiles:
-            sslOverride:
-                <server><ssl id="defaultSSLConfig" trustDefaultCerts="true" /></server>
-```
+3. Create a custom values file and [configure SSL behavior.](https://opensource.hcltechsw.com/leap-doc/9.3.9/helm_configure_ssl.html) This allows you to open Leap in a browser. 
 4. Install your Leap helm chart into your cluster with `helm install <your-release-name> <path-to-leap-helm-chart> -f <path-to-custom-values.yaml>`
 5. Access Leap via `https://<your-domain>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
 ![](../../../../assets/Leap_homepage.png)
