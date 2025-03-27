@@ -43,7 +43,7 @@ configuration:
 
 <img src="../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
 
-8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. Click on the “Remove Workflow” button. For the HTML value, use the script below, replacing the `***` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
+8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. Click on the “Remove Workflow” button. For the HTML value, use the script below, replacing `{appId}` and `{formId}` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
 ```
 <div id="[Plugin:ScriptPortletNamespace]leapDiv" style="width: 100%"></div>
 
@@ -58,8 +58,8 @@ Leap.onReady = function() {
     [/Plugin:NotEquals]
 
     let launchParams =  {
-        'appId': '***',
-        'formId': '***',
+        'appId': '{appId}',
+        'formId': '{formId}',
         'locale': 'en',
         'targetId': '[Plugin:ScriptPortletNamespace]leapDiv',
         'prefSecMode': prefSecMod
