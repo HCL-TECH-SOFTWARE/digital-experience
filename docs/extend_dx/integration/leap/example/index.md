@@ -21,7 +21,7 @@ These steps will enable you to embed a Leap application onto a DX site using Lea
 
 1\. Create your leap app. 
 
-2\. A Leap property must be added to the Helm values to enable anonymous access of your apps. It is described [here](https://opensource.hcltechsw.com/leap-doc/9.3.8/co_configuration_properties.html#section_blockanonaccess). Under configuration > leap > leapProperties in your Leap custom values file, add this property: `ibm.nitro.NitroConfig.blockAnonAccess=disabled`. After saving the file, do a helm upgrade. You might have to recreate the Leap pod to apply your changes
+2\. A Leap property must be added to the Helm values to enable anonymous access of your apps. It is described [here](https://opensource.hcltechsw.com/leap-doc/9.3.9/co_configuration_properties.html#section_blockanonaccess). Under configuration > leap > leapProperties in your Leap custom values file, add this property: `ibm.nitro.NitroConfig.blockAnonAccess=disabled`. After saving the file, do a helm upgrade. You might have to recreate the Leap pod to apply your changes
 
 ```yaml
 configuration:

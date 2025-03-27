@@ -6,8 +6,8 @@ HCL Digital Experience (DX) can be integrated with HCL Leap. Both products can b
 These steps will enable you to install Leap, with the most basic settings, on the same cluster as DX. Follow the links for detailed steps.
 
 1. Deploy a Kubernetes cluster with [DX](../../../../deployment/install/container/helm_deployment/overview.md) and [Ingress](../configuration/index.md) enabled.
-2. In the cluster, [pull the Leap image and create a Kubernetes secret](https://opensource.hcltechsw.com/leap-doc/9.3.8/helm_load_images.html#retrieve-leap-container-image).
-3. Create a custom values file and [configure SSL behavior.](https://opensource.hcltechsw.com/leap-doc/9.3.8/helm_configure_ssl.html) This allows you to open Leap in a browser. Your custom values file should now look similar to this:
+2. In the cluster, [pull the Leap image and create a Kubernetes secret](https://opensource.hcltechsw.com/leap-doc/9.3.9/helm_load_images.html#retrieve-leap-container-image).
+3. Create a custom values file and [configure SSL behavior.](https://opensource.hcltechsw.com/leap-doc/9.3.9/helm_configure_ssl.html) This allows you to open Leap in a browser. Your custom values file should now look similar to this:
 ```yaml
 configuration:
     leap:
@@ -20,5 +20,5 @@ configuration:
 ![](../../../../assets/Leap_homepage.png)
 
 !!!notes 
-    - For more details on deploying Leap, go to [the Kubernetes Helm deployment](https://opensource.hcltechsw.com/leap-doc/9.3.8/kubernetes_helm_deployment.html) section of the HCL Leap product documentation.
-    - It is recommended that you perform the [post-deployment tasks](https://opensource.hcltechsw.com/leap-doc/9.3.8/in_setting_up_environment.html) for HCL Leap.
+    - For more details on deploying Leap, go to [the Kubernetes Helm deployment](https://opensource.hcltechsw.com/leap-doc/9.3.9/kubernetes_helm_deployment.html) section of the HCL Leap product documentation.
+    - It is recommended that you perform the [post-deployment tasks](https://opensource.hcltechsw.com/leap-doc/9.3.9/in_setting_up_environment.html) for HCL Leap.
