@@ -16,7 +16,7 @@ There is one method to collect data and analyze symptoms for problem determinati
         -   AIX® and Linux™: `./wpcollector.sh`
         -   Windows™: wpcollector.bat
 
-    4.  If you did not automatically FTP your results, locate the wp.mustgather.zip file or the pmr-wp.mustgather-timestamp.zip file in the wp_profile_root/filesForAutoPD/ directory. Follow the instructions in "Exchanging information with IBM Technical Support for problem determination" to manually FTP your results.
+    4.  Locate the wp.mustgather.zip file in the wp_profile_root/filesForAutoPD/ directory. Follow the instructions in ["Support - File upload and download instructions"](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064) to FTP your results to your HCL case number.
     
     !!!note "Restriction"
         If you try to extract the wp.mustgather.zip file, some collections might not expand properly if the path name exceeds the 256 character limitation.
@@ -38,7 +38,7 @@ There is one method to collect data and analyze symptoms for problem determinati
         !!!attention
             If the collect-cw-logs task fails, run the stopserver server1 command from the AppServer_root/bin directory. Then, rerun the collect-cw-logs task.
 
-    3.  If you did not automatically FTP your results, locate the cw.mustgather.zip file or the pmr-cw.mustgather-timestamp.zip file in the AppServer_root/filesForAutoPD directory. Follow the instructions in "Exchanging information with IBM Technical Support for problem determination" to manually FTP your results.
+    3.  Locate the cw.mustgather.zip file in the AppServer_root/filesForAutoPD directory. Follow the instructions in ["Support - File upload and download instructions"](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064) to FTP your results to your HCL case number.
 
 -   **Troubleshooting:**
 
