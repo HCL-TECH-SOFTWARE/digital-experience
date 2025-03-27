@@ -1,6 +1,6 @@
 # Reviewing the Pers_Offers project
 
-In this topic, you will learn about the structure of the Pers_Offers project. Upon opening the Pers_Offers project with Microsoft Visual Studio Code (VSC), the following directory structure appears. The highlighted sections will be described in detail below.
+In this topic, you will learn about the structure of the Pers_Offers project. Upon opening the Pers_Offers project with Microsoft Visual Studio Code (VSCode), the following directory structure appears. The highlighted sections will be described in detail below.
 
 ![Pers_Offers MVC project overview](./images/Pers_offers_project_overview.png)  
 
@@ -12,7 +12,7 @@ In this topic, you will learn about the structure of the Pers_Offers project. Up
 
 4. The **Pers_OffersPortletView.jsp** file is used to display the personalized data.
 
-5. When using IBM Rational Application Developer, a personalization wizard helps you to create the source code of the **pers offers** resource collection classes stored in the **src/main/java/pers_offers** folder. The wizard also automatically creates HRF files that specifies the mapping between the rules, Java classes, and backend databases. This wizard is currently not available in Microsoft VSC. Alternatively, you can use the sample HRF files in **\src\main\webapp\WEB-INF\pzn-resourceCollections\pers_offers** as a guide to create your own classes and rules.
+5. When using IBM Rational Application Developer, a personalization wizard helps you to create the source code of the **pers offers** resource collection classes stored in the **src/main/java/pers_offers** folder. The wizard also automatically creates HRF files that specifies the mapping between the rules, Java classes, and backend databases. This wizard is currently not available in VSCode. Alternatively, you can use the sample HRF files in **\src\main\webapp\WEB-INF\pzn-resourceCollections\pers_offers** as a guide to create your own classes and rules.
 
     See the sample **Pzn_offers.hrf** file below.
 

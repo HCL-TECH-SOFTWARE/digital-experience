@@ -1,10 +1,10 @@
 # Installing the Pers_Offers portlet  
 
-In this topic, you will learn how to install the Pers_Offers portlet using Microsoft Visual Studio Code (VSC). You will also learn how to clone, compile, and package the Pers_offers project required to install the portlet.
+In this topic, you will learn how to install the Pers_Offers portlet using Microsoft Visual Studio Code (VSCode). You will also learn how to clone, compile, and package the Pers_offers project required to install the portlet.
 
 ## Prerequisites
 
-- Ensure you have installed git or git-bash, Microsoft VSC, and Maven. Refer to [Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md){target="_blank"} for more information.
+- Ensure you have installed git or git-bash, VSCode, and Maven. Refer to [Prerequisites for the Personalization portlet exercise](./pzn_demoprereq.md){target="_blank"} for more information.
 - Ensure to run the following ConfigEngine tasks:
     - UNIX™Linux™:  
         - `./ConfigEngine.sh create-pzndemo-users -DPortalAdminPwd=<password> -DWasPassword=<password>`  
@@ -15,7 +15,7 @@ In this topic, you will learn how to install the Pers_Offers portlet using Micro
 
 ## Compiling and packaging the Pers_offers project
 
-Refer to the following steps to compile and package the Pers_offers project in VSC.
+Refer to the following steps to compile and package the Pers_offers project in VSCode.
 
 1. Clone the **[Personalization development sample (Pers_Offers)](https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample){target="_blank"}** git repository using the following command:
 
@@ -23,7 +23,7 @@ Refer to the following steps to compile and package the Pers_offers project in V
     git clone https://github.com/HCL-TECH-SOFTWARE/DX-Personalization-Development-Sample
     ```  
 
-2. In Microsoft VSC, go to this file path:  
+2. In VSCode, go to this file path:  
 
     ```text
     \dx-portlet-development-utilities\personalization\Pers_Offers\pers_offers  
@@ -35,7 +35,7 @@ Refer to the following steps to compile and package the Pers_offers project in V
 
     ![Change in pom.xml](./images/ejb_thin_client_pre_req.png)  
 
-4. Compile and package the **pers_offers** project using the Maven plugin in Microsoft VSC. This can be done in Visual Studio Code in the `File > Explorer` view. Just expand the `MAVEN` menu and then in the `Lifecycle` section click to `package`. After packaging the project, a`\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file is created.  
+4. Compile and package the **pers_offers** project using the Maven plugin in VSCode . This can be done in Visual Studio Code in the `File > Explorer` view. Just expand the `MAVEN` menu and then in the `Lifecycle` section click to `package`. After packaging the project, a`\target\pers_offers-1.0-SNAPSHOT\WEB-INF\lib\pers_offers-1.0-SNAPSHOT.jar` file is created.  
 
     ![Maven Packaging](./images/maven_packaging_pers_offers.png)  
 
@@ -55,7 +55,7 @@ As soon as the server restarts, you can install the **Pers_Offers** portlet. You
 
     - DX client installation  
 
-        1. In Microsoft VSC, open the `tasks.json` file and verify the DXclient command settings to ensure it matches your DX environment settings.  
+        1. In VSCode, open the `tasks.json` file and verify the DXclient command settings to ensure it matches your DX environment settings.  
 
         2. Click **Terminal** > **Run task...**.  
 
