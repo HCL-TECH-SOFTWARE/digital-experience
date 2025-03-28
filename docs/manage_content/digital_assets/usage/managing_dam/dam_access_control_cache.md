@@ -6,27 +6,22 @@ This document provides an overview of the **Digital Asset Management (DAM) Acces
 
 The **DAM Access Control Cache** reduces the load on the **Ring API** by caching access control responses. Without caching, every DAM request requires a fresh access control validation via the Ring API, increasing overhead.  
 
-By caching the Ring API response using a **cache key** and retrieving the stored response for subsequent requests, the system improves efficiency. The cache operates with a **Time-To-Live (TTL)** mechanism, which is **configurable** via Helm and defaults to **10 seconds**.  
+By caching the Ring API response using a **cache key** and retrieving the stored response for subsequent requests, the system improves efficiency. The cache operates with a **Time-To-Live (TTL)** mechanism, which is  [**configurable**](#helm-configuration) via Helm and defaults to **10 seconds**.  
 
 ### **Cache Key Generation**  
 The **cache key** is generated using a combination of the **function name** and **request parameters**.  
 - If two **authenticated users** request the same resource, **each will have a unique cache key**.  
-- For **anonymous users**, the **cache key remains the same**, ensuring consistent caching behavior.  
-
-### **Handling In-Flight Requests**  
-To prevent redundant requests to the **Ring API**, the caching service **stores in-flight request promises**:  
-- When a request is made, the **pending promise** is stored.  
-- If the same request is received before the first one resolves, it **waits for the stored promise** instead of making another API call.  
-- Once resolved, the response is stored in the cache with the corresponding **cache key**.  
+- For **anonymous users**, the **cache key remains the same**, ensuring consistent caching behavior.
 
 !!! note  
     - Avoid setting a high TTL, as it may cause **accessibility conflicts**.  
     - Caching is per **instance only** and does **not sync** across multiple DAM pods. 
-    - This caching mechanism is not implemented for Staging and EXIM.
+    - This caching mechanism is not applicable for Staging and EXIM as real time data is required.
+    - Reducing redundant API calls significantly improves UI rendering performance by minimizing delays in data fetching.
 
 ## **Helm Configuration**  
 
-The following Helm configuration allows users to customize `aclCacheTtl`. The default TTL value is **10 seconds**.  
+The following Helm configuration allows users to customize the time to live parameter in values.yaml. The default TTL value of `aclCacheTtl` is **10 seconds**.  The value can be overridden using the `custom-values.yaml` file. aclCacheTtl can be set to zero to disable Access Control Caching.
 
 ```yaml
 # Application Configuration
