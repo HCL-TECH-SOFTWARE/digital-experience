@@ -7,6 +7,7 @@ There is one method to collect data and analyze symptoms for problem determinati
 Complete the following steps to collect and transfer data using the `wpcollector` tool:
 
 1.  If the support team requested tracing, enable it now as instructed and then re-create the problem. If no tracing is requested, skip to the next step.
+
 2.  Open a command prompt and change to the `wp_profile_root/PortalServer/bin/` directory.
 
     !!!attention
@@ -25,7 +26,7 @@ Complete the following steps to collect and transfer data using the `wpcollector
 
 Complete the following steps if the configuration wizard failed before it created the `wp\_profile/ConfigEngine` instance:
 
-1.  Open a command prompt and change to the `AppServer_root/ConfigEngine `directory.
+1.  Open a command prompt and change to the `AppServer_root/ConfigEngine` directory.
 2.  Run the following task to collect the configuration wizard logs:
 
     !!!note "Tip"
