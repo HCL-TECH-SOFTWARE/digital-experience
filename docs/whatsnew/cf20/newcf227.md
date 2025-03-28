@@ -21,3 +21,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     User Session Reporting Tool parameters have been updated to allow all named parameters to be used in any order within the generate user session data usage command. You can now exclude multiple IPs and session keys by adding multiple `-excludeIP` or `-excludeSessionKey` parameters, respectively. The `-excludeIPs` and `-excludeSessionKeys` parameters have also been updated to exclude the `-excludeIP` and `-excludeSessionKey` parameters. For more information, refer to [User Session Reporting Tool with My HCLSoftware](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool_non_kubernetes.md) and [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+
+### DAM Access Control Caching
+
+=== "Containers"
+    The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses for a configurable TTL (default: 10s) and optimizes efficiency by handling in-flight requests. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md)
+
+=== "On-Premises"
+    The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses for a configurable TTL (default: 10s) and optimizes efficiency by handling in-flight requests. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md)
