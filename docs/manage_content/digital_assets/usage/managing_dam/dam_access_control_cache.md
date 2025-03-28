@@ -21,7 +21,8 @@ To prevent redundant requests to the **Ring API**, the caching service **stores 
 
 !!! note  
     - Avoid setting a high TTL, as it may cause **accessibility conflicts**.  
-    - Caching is per **instance only** and does **not sync** across multiple DAM pods.  
+    - Caching is per **instance only** and does **not sync** across multiple DAM pods. 
+    - This caching mechanism is not implemented for Staging and EXIM.
 
 ## **Helm Configuration**  
 
