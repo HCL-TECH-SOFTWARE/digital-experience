@@ -6,7 +6,7 @@ This topic provides information on how you can check your entitlements in the Fl
 
 Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using the FlexNet License and Delivery Portal for entitlement checking:  
 
--   An HCL Software Account and access to the [HCL Software License & Delivery Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}. 
+-   An HCL Software Account and access to the [HCL Software License & Delivery Portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}. Licenses are presented in your HCLSoftware License & Delivery Portal entitlements, and may also be found at the [HCLSoftware License Agreements](https://www.hcl-software.com/resources/license-agreements){target="_blank"} site.
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your HCL Software License portal instances. For example:
     ![DX Cloud Native 9.5 (Tier 1 – 7) entitlements](../../software_licensing_portal/_img/DX_cloud_native_entitlements.png)
@@ -19,7 +19,7 @@ Review the [architecture](#architecture) that presents the License Manager compo
 
 ## Architecture
 
-The License Manager component communicates with the HCL FlexNet server. This is to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configuring the DX Cloud Native 9.5 deployment through the Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to their specific FlexNet entitlements dashboard.
+The License Manager component communicates with the HCL FlexNet server. This is to validate license entitlement at set periods for HCL DX Cloud Native V9.5 Tier 1 – 7 software after you configuring the DX Cloud Native 9.5 deployment through the Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to their specific FlexNet entitlements dashboard.
 
 ![](../../software_licensing_portal/_img/DX_95_container_license_manager_arch_flexnet.png)
 
@@ -109,7 +109,7 @@ Follow the configuration steps in []() before you deploy a new or update an exis
     ```
 
     !!!important
-        Configure these properties to your Helm chart **before** you install the environment. If you are changing the environment, configure the properties before you start the DX 9.5 Container Update 207 or later Helm upgrade to your HCL Digital Experience Cloud Native 9.5 production or non-production deployment. For more information about the Helm configuration steps to manage DX 9.5 Container Update upgrades, see [Upgrade the Helm deployment to the latest version](../../../../deployment/install/container/helm_deployment/update_helm_deployment.md).
+        Configure these properties to your Helm chart **before** you install the environment. If you are changing the environment, configure the properties before you start the DX 9.5 Container Update 207 or later Helm upgrade to your HCL DX Cloud Native 9.5 production or non-production deployment. For more information about the Helm configuration steps to manage DX 9.5 Container Update upgrades, see [Upgrade the Helm deployment to the latest version](../../../../deployment/install/container/helm_deployment/update_helm_deployment.md).
 
 5. (Optional) [Create and upload a public/private key pair](#securing-license-server-communication-for-the-license-manager-application). The License Manager uses a default key when no custom key is configured.
 
@@ -274,7 +274,7 @@ Access the Reports section of the HCL Software License and Download Portal serve
 The Usage report shows the following information:
 
 -   **Period**: The period of the report results.
--   **Usage**: The number of user sessions that ran on your DX 9.5 Container Update deployment that is mapped to this entitlement and that has the **ProductionEnvironment** variable enabled and set to `True`. See the user session details in the [HCL Digital Experience Cloud Native 9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} on the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements){target="_blank"} site.
+-   **Usage**: The number of user sessions that ran on your DX 9.5 Container Update deployment that is mapped to this entitlement and that has the **ProductionEnvironment** variable enabled and set to `True`. See the user session details in the latest HCL Digital Experience Cloud Native 9.5 license on the [HCL Software License Agreements](https://www.hcltechsw.com/resources/license-agreements){target="_blank"} site.
 
     !!!note
         Only user-session data totals per month for the calendar year of purchase are transmitted to the customer's FlexNet/MHS dashboards for their viewing and monitoring purposes. No personal or personally identifiable information (PII) data is transmitted.
