@@ -12,14 +12,14 @@ There are several ways to integrate HCL Leap applications into HCL Digital Exper
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
-These steps will enable you to embed a Leap application onto a DX site using Leap's Embedding API. For further details, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation. It is recommended that you take the following HCL Software U lessons to properly implement this: 
+These steps will enable you to embed a Leap application onto a DX site using Leap's Embedding API. For further details, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.  It is recommended that you have basic knowledge of DX to properly implement this. The following HCL Software U lessons may help: 
 
-  - The [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction) and [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) are prerequisites as they familiarize the learner with the basic functions of DX. The “Digital Assets” and “Content Targeting” lessons are optional if we just want to embed a simple Leap app onto a DX site.
-  - [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner) explains the DX features targeted towards Developers. For the basic embedding we only made use of information from the Introduction and Web Content lessons.
+  - The [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction) and [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) are highly recommended as they familiarize the learner with the basic functions of DX. The “Digital Assets” and “Content Targeting” lessons are optional if we just want to embed a simple Leap app onto a DX site.
+  - [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner) explains the DX features targeted towards Developers. For the basic embedding we made use of information from the Introduction and Web Content lessons.
   - This HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) introduces how to make leap applications.
 
 
-1\. Create your leap app. 
+1\. Initially, create the leap application that you plan to integrate. 
 
 2\. A Leap property must be added to the Helm values to enable anonymous access of your apps. It is described [here](https://opensource.hcltechsw.com/leap-doc/9.3.9/co_configuration_properties.html#section_blockanonaccess). Under configuration > leap > leapProperties in your Leap custom values file, add this property: `ibm.nitro.NitroConfig.blockAnonAccess=disabled`. After saving the file, do a helm upgrade. You might have to recreate the Leap pod to apply your changes
 
@@ -31,9 +31,9 @@ configuration:
 
 3\. Check that your app is accessible without having to log in. 
 
-4\. **Create a new library** via Practitioner Studio > Web Content > Web Content Libraries > Create New Library. Enable viewing it in Authoring by going to Authoring > Preferences > Edit Shared Settings > Library Selection. Add your new library to the Selected Libraries box then press OK.
+4\. We now need to **create a library** in DX. To create a new library, go to Practitioner Studio > Web Content > Web Content Libraries > Create New Library. Enable viewing it in Authoring by going to Web Content > Authoring > Preferences > Edit Shared Settings > Library Selection. Add your new library to the Selected Libraries box then press OK.
 
-5\. Inside your new Library, **create a presentation template** and put this under “Presentation Template Options”: `[Element context="current" type="content" key="html"]`
+5\. **Create a new Presentation template** in the new Library. Enter the following in the field labeled "Presentation Template Options": `[Element context="current" type="content" key="html"]`
 
 6\. **Create an authoring template/content template** and give it the name `Simple HTML - CT`. Under Manage Elements, add an HTML element. Set the content template's default presentation template to the presentation template you made in the previous step:
   
@@ -43,7 +43,7 @@ configuration:
 
 <img src="../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
 
-8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. Click on the “Remove Workflow” button. For the HTML value, use the script below, replacing `{appId}` and `{formId}` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
+8\. Inside the Site Area you created, create the Content based on your `Simple HTML - CT` content template. If you do not want to use a workflow, select "Remove Workflow". For the HTML value, use the script below, replacing `{appId}` and `{formId}` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
 ```
 <div id="[Plugin:ScriptPortletNamespace]leapDiv" style="width: 100%"></div>
 
@@ -73,7 +73,7 @@ Leap.onReady = function() {
 ```
 <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
 
-9\. Go to your site (eg Woodburn Studio) and **embed the Leap app** by doing the following. Open Edit Mode. (If using Woodburn Studio, create a new page before embedding; otherwise you might get errors). On the new page, click the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">), then pick the Site Area you created. 
+9\. Go to your site and **embed the Leap app** by doing the following. Open Edit Mode. While on the page you want to embed to, click the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">), then pick the Site Area you created. 
 
 <img src="../../../../assets/dx-leap-integration-edit.png" alt="embed leap app" width="800" height="400">
 
