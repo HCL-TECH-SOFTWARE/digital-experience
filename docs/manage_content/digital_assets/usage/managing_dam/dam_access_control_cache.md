@@ -14,10 +14,10 @@ The **cache key** is generated using a combination of the **function name** and 
 - For **anonymous users**, the **cache key remains the same**, ensuring consistent caching behavior.
 
 !!! note  
-    - Avoid setting a high TTL, as it may cause **accessibility conflicts**.  
+    - Avoid setting a high TTL, as it may cause **access issues**.  
     - Caching is per **instance only** and does **not sync** across multiple DAM pods. 
-    - This caching mechanism is not applicable for Staging and EXIM as real time data is required.
-    - Reducing redundant API calls significantly improves UI rendering performance by minimizing delays in data fetching.
+    - This caching mechanism is not considered during Staging and EXIM as real time data is required.
+    - There is no active cache invalidation on permission changes. It is recommended to set the TTL based on your usage scenario.
 
 ## **Helm Configuration**  
 
