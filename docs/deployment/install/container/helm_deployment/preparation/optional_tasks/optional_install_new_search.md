@@ -214,7 +214,7 @@ commonFieldMappings:
       type: "documentType"
       tags: "tags"
     # Mappings for DAM
-    people:
+    dam:
       title: "name"
       description: "description"
       type: "type"
@@ -232,7 +232,7 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
     # Mappings for PEOPLE
-    dam:
+    people:
       title: "title"
       description: "summary"
       type: "category"
