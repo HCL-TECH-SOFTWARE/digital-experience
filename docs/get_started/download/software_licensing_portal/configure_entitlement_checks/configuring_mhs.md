@@ -2,7 +2,7 @@
 title:  Entitlement checking in the My HCLSoftware delivery portal
 ---
 
-My HCLSoftware (MHS) provides access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal.
+The My HCLSoftware portal (MHS) is available for the distribution of HCLSoftware products. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal.
 
 ## Prerequisites
 
