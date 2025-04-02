@@ -232,7 +232,7 @@ commonFieldMappings:
       type: "category"
       tags: "tags"
     # Mappings for PEOPLE
-    dam:
+    people:
       title: "title"
       description: "summary"
       type: "category"
