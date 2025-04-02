@@ -214,7 +214,7 @@ commonFieldMappings:
       type: "documentType"
       tags: "tags"
     # Mappings for DAM
-    dam:
+    people:
       title: "name"
       description: "description"
       type: "type"
