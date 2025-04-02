@@ -137,7 +137,7 @@ This configuration is helpful for those who want to use a custom `Ingress Contro
 
 ## Using annotations to control the HAProxy service behavior for different cloud providers
 
-The Helm chart allows you to add annotations to the HAProxy service to control the behavior of the service for different cloud providers. You can use this to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. You can add annotations in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations)
+The Helm chart allows you to add annotations to the HAProxy service to control the behavior of the service for different cloud providers. You can use this to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. You can add annotations in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations).
 
 Examples for such annotations are in an non-exhaustive list. Refer to the documentation provided by your cloud provider for more information:
 
