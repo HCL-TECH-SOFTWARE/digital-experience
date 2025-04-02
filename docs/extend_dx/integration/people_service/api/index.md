@@ -1,6 +1,6 @@
 # API documentation
 
-In this section, you will learn about the available APIs in People Service and how to interact with them. This section serves as a reference for developers and administrators looking to leverage People Service APIs to enhance their platforms. It includes details on the available APIs such as OpenAPI, Swagger Explorer, and [Experience API documentation](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/){target="_blank"} to help users understand and work with People Service APIs effectively.
+In this section, you will learn about the available APIs in People Service and how to interact with them. This section serves as a reference for developers and administrators looking to leverage People Service APIs to enhance their platforms. It includes details on the available APIs such as OpenAPI and Swagger Explorer to help users understand and work with People Service APIs effectively.
 
 ## Working with APIs
 
@@ -8,20 +8,18 @@ People Service APIs are designed to provide developers and administrators with t
 
 People Service APIs are categorized into the following sections:
 
-| **API Category**                | **Description**                                                                                     |
-|----------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**Authentication**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Authentication){target="_blank"} | APIs related to user authentication and session management.                                         |
-| [**Profiles**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Profiles){target="_blank"}       | APIs related to managing user profiles, including creating, updating, and deleting profiles.        |
-| [**Schema**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Schema){target="_blank"}           | APIs related to managing profile attributes and schema definitions.                                 |
-| [**Custom fields**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Custom-fields){target="_blank"} | APIs related to managing custom fields for user profiles.                                           |
-| [**Images and media**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Images-and-media){target="_blank"} | APIs related to managing profile images and media content.                                          |
-| [**Tags**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Tags){target="_blank"}               | APIs related to managing tags for user profiles.                                                    |
-| [**Search**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Search){target="_blank"}           | APIs related to searching for user profiles based on specific criteria.                             |
-| [**Privacy**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Privacy){target="_blank"}         | APIs related to managing user privacy settings and data protection.                                 |
-| [**Federation and User directories**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Federation-User-directories){target="_blank"} | APIs related to integrating with external user directories and federated identity providers.        |
-| [**Utils**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Utils){target="_blank"}                   | Utility APIs for common tasks and operations.                                                       |
-| [**Probes**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Probes){target="_blank"}                 | Health check APIs for monitoring the service status and availability.                               |
-| [**Search Re-Index**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Search-Re-Index){target="_blank"} | APIs related to retrying full or partial re-indexing for all or pending user profiles.              |
+- **Authentication**: APIs related to user authentication and session management.
+- **Profiles**: APIs related to managing user profiles, including creating, updating, and deleting profiles.
+- **Schema**: APIs related to managing profile attributes and schema definitions.
+- **Custom Fields**: APIs related to managing custom fields for user profiles.
+- **Images and Media**: APIs related to managing profile images and media content.
+- **Tags**: APIs related to managing tags for user profiles.
+- **Search**: APIs related to searching for user profiles based on specific criteria.
+- **Privacy**: APIs related to managing user privacy settings and data protection.
+- **Federation and User Directories**: APIs related to integrating with external user directories and federated identity providers.
+- **Utils**: Utility APIs for common tasks and operations.
+- **Probes**: Health check APIs for monitoring the service status and availability.
+- **Search Re-Index**: APIs related to retrying full or partial re-indexing for all or pending user profiles.
 
 ## OpenAPI and Swagger Explorer
 
@@ -35,5 +33,3 @@ Use the following URLs to access the Swagger Explorer for People Service APIs an
 - **OpenAPI Specification**: `<HOSTNAME>/dx/api/people/v1/openapi/openapi.json`
 
 Ensure to replace `<HOSTNAME>` with the correct value.
-
-For more information on the People Service API schema, refer to the [HCL Experience API Documentation](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/){target="_blank"}.
