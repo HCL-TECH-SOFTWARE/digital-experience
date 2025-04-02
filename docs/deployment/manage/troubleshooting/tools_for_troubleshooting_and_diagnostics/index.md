@@ -1,6 +1,6 @@
 # Troubleshooting and diagnostics tools
 
-A number of tools and resources are available to help you troubleshoot issues and resolve problems while using HCL Digital Experience (DX). If you need further assistance, you can use the tools described here to identify and collect information to help HCL Software Support determine the underlying cause of a problem.
+A number of tools and resources are available to help you troubleshoot issues and resolve problems while using HCL Digital Experience (DX). If you need further assistance, you can use the tools described here to identify and collect information to help HCL Software Support determine the underlying cause of a problem. You can also refer to the [Digital Experience Resources](https://support.hcl-software.com/csm?id=dx_support){target="_blank"} and [HCLSoftware Support Guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010420){target="_blank"} for more information.
 
 To expedite the resolution of your issue, support will initially ask you the following information:
 
@@ -39,7 +39,3 @@ To expedite the resolution of your issue, support will initially ask you the fol
 Starting with HCL DX version 8.5, you can use a task to collect the configuration wizard logs is available. You can collect data and analyze symptoms of a problem by running a task that can collect and optionally send the data to you. This task is only necessary if the wizard fails before the steps to create the wp\_profile/ConfigEngine instance.
 -   **[Portal version and history information](wp_history.md)**  
 You can use the HCL DX version and history information tools to gather information about your portal installation.
-
-???+ info "Related information"
-    - [Digital Experience Resources](https://support.hcl-software.com/csm?id=dx_support){target="_blank"}
-    - [HCLSoftware Support Guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010420){target="_blank"}
