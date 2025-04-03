@@ -1,6 +1,6 @@
 # DAM Access Control Cache
 
-This document provides an overview of the Digital Asset Management (DAM) Access Control Caching Service, outlining its features, functionality, and limitations.  
+This document provides an overview of the Digital Asset Management (DAM) Access Control Caching Service, including its features, functionality, and limitations.  
 
 ## Overview
 
@@ -10,20 +10,20 @@ This service improves system efficiency by caching the Ring API response using a
 
 ### Cache Key Generation
 
-The cache key is generated using a combination of the function name and request parameters.  
+The cache key is generated using the function name and request parameters.  
 
 - If two authenticated users request the same resource, each will have a unique cache key.  
-- For anonymous users, the cache key remains the same, ensuring consistent caching behavior.
+- For anonymous users, the cache key remains the same to ensure consistent caching behavior.
 
 !!! note  
-    - Avoid setting a high TTL, as it may cause access issues.  
-    - Caching is per instance only and does not sync across multiple DAM pods.
-    - This caching mechanism is not considered during Staging and EXIM as real time data is required.
+    - Avoid setting a high TTL to prevent access issues.  
+    - Caching is instance-specific and does not sync across multiple DAM pods.
+    - This caching mechanism is not considered during [Staging](../../configuration/staging_dam/dam_subscription_staging.md) and [Export and Import (EXIM)](./dam_exim.md) as real time data is required.
     - There is no active cache invalidation on permission changes. It is recommended to set the TTL based on your usage scenario.
 
 ## Helm Configuration  
 
-The following Helm configuration allows users to customize the time to live parameter in values.yaml. The default TTL value of `aclCacheTtl` is 10 seconds.  The value can be overridden using the `custom-values.yaml` file. aclCacheTtl can be set to zero to disable Access Control Caching.
+The following Helm configuration allows you to customize the `aclCacheTtl` TTL parameter in `values.yaml`. The default TTL value of this parameter is 10 seconds.  The value can be overridden using the `custom-values.yaml` file. You can also set this parameter to 0 to disable Access Control Caching.
 
 ```yaml
 # Application Configuration
