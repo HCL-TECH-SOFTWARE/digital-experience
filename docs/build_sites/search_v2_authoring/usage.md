@@ -84,4 +84,4 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 - If the search engine is down or unavailable, the following message is displayed.
     
-    ![](../../assets/PLACEHOLDER.png)
+    ![](../../assets/HCL_SearchV2_Authoring_search_engine_down.png)
