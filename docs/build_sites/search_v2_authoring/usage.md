@@ -26,31 +26,31 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_Initial_State.png "Open side navigation and select Authoring")
 
-4.  In the Search V2 Authoring user interface, enter your search terms on the **Search** field, then press **Enter** on your keyboard. In the example below, the term "article" is searched.
+4.  In the Search V2 Authoring user interface, enter your search terms on the **Search** field, then press **Enter** on your keyboard. In the example below, the term "content" is searched.
 
-    ![](../../assets/PLACEHOLDER.png "Input your search terms in the Search field and press Enter")
+    ![](../../assets/HCL_SearchV2_Authoring_content_search.png "Input your search terms in the Search field and press Enter")
 
-5.  View the search results generated. Beside the dialog title, you can see the total number of results found for the search term. Below the table of results, you can also see more detailed pagination information. In the example below, the term "article" generated 32 search results.
+5.  View the search results generated. Beside the dialog title, you can see the total number of results found for the search term. Below the table of results, you can also see more detailed pagination information. In the example below, the term "content" generated 995 search results.
 
-    ![](../../assets/PLACEHOLDER.png "View the search results and note the count of results found")
+    ![](../../assets/HCL_SearchV2_Authoring_result_count.png "View the search results and note the count of results found")
 
 6.  Navigate thru the search results by changing the page size and current page.
 
     1. Click the dropdown with label **Show rows: ** and select "25".
 
-        ![](../../assets/PLACEHOLDER.png "Change number of results shown per page")
+        ![](../../assets/HCL_SearchV2_Authoring_result_per_page.png "Change number of results shown per page")
 
     2. Click the dropdown with label **Page: ** and select "2".
 
-        ![](../../assets/PLACEHOLDER.png "Change the current page viewed")
+        ![](../../assets/HCL_SearchV2_Authoring_page_view.png "Change the current page viewed")
 
 7.  Hover over a column header such as "Title" and click on the sorting icon that appears. Search by **title** in an **ascending** order.
 
-    ![](../../assets/PLACEHOLDER.png "Sort the search results by clicking on sorting icon that appears on hover on column header, for example, title ascending")
+    ![](../../assets/HCL_SearchV2_Authoring_title_sort_icon.png "Sort the search results by clicking on sorting icon that appears on hover on column header, for example, title ascending")
 
 8.  Hover over a result item row and click on the Edit icon.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Edit icon after hovering on result item to open it in the same tab under Edit mode")
+    ![](../../assets/HCL_SearchV2_Authoring_edit_icon.png "Click on Edit icon after hovering on result item to open it in the same tab under Edit mode")
 
 9.  Reopen the SearchV2 Authoring dialog by clicking on the header button.
 
@@ -58,23 +58,23 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 10. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
+    ![](../../assets/HCL_SearchV2_Authoring_menu_icon_ttriple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
 11. Click on Read option to open the item in the same tab under Read mode.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Read option to open the item in the same tab under Read mode")
+    ![](../../assets/HCL_SearchV2_Authoring_read.png "Click on Read option to open the item in the same tab under Read mode")
 
 12. Reopen the SearchV2 Authoring dialog by clicking on the header button.
 
     ![](../../assets/HCL_SearchV2_Authoring_Header_Button.png "Reopen SearchV2 Authoring dialog")
 
-13. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
+<!-- 13. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
     ![](../../assets/PLACEHOLDER.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
 14. Click on Preview option to open the item in a new tab under Preview mode.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Preview option to open the item in a new tab under Preview mode")
+    ![](../../assets/PLACEHOLDER.png "Click on Preview option to open the item in a new tab under Preview mode") -->
 
 ## Other search result scenarios
 
