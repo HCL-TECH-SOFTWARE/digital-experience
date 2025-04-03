@@ -68,13 +68,13 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_Header_Button.png "Reopen SearchV2 Authoring dialog")
 
-<!-- 13. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
+13. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
+    ![](../../assets/HCL_SearchV2_Authoring_menu_or_triple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
 14. Click on Preview option to open the item in a new tab under Preview mode.
 
-    ![](../../assets/PLACEHOLDER.png "Click on Preview option to open the item in a new tab under Preview mode") -->
+    ![](../../assets/HCL_SearchV2_Authoring_preview.png "Click on Preview option to open the item in a new tab under Preview mode")
 
 ## Other search result scenarios
 
