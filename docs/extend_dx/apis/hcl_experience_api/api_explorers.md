@@ -1,6 +1,6 @@
 # REST API Explorers
 
-Developers can accelerate development tasks using the following explorers provided for REST APIs available for use with HCL Digital Experience deployments to on premises platforms, and HCL Digital Experience 9.5 deployments to supported Kubernetes container platforms. You can initiate and test transactions or other capabilities such as content delivery using the API explorers.
+Developers can accelerate development tasks using the following explorers provided for REST APIs available for use with HCL Digital Experience (DX) deployments to on premises platforms, and HCL DX 9.5 deployments to supported Kubernetes container platforms. You can initiate and test transactions or other capabilities such as content delivery using the API explorers.
 
 This section shows the DX REST API explorers available for use with deployments to on-premises and container platforms. The following tables list the APIs and the URLs. Note that the URLs are relative, and you can append these URLs to your host name.
 
