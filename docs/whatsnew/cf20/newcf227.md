@@ -10,7 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- DAM Access Control Caching
+- DAM - Access Control Caching
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -26,7 +26,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DAM Access Control Caching
+### DAM - Access Control Caching
 
 === "Containers"
     The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses with a configurable Time-to-Live (TTL) mechanism (default: 10 seconds) and optimizes efficiency by handling in-flight requests. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md).
