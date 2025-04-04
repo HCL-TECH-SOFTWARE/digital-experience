@@ -130,7 +130,7 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../images/Core_Friendly_Url_Cache.png){ width="1000" }
 
-- Adjusted JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
+- Adjusted JVM heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
       ![](../../../images/Core_JVM_Tuning.png){ width="1000" }
 
@@ -186,8 +186,27 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
+### Recommended heap size configuration
+
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
+
 !!!note
-     Do not size your JVM Heap size larger than the allotted memory for the pod.
+     Do not size your JVM heap size larger than the allotted memory for the pod.
+
+- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
+      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
+      - This eliminates the overhead of heap expansion and improves performance consistency.
+
+- Ensure the Kubernetes pod resource limits match the JVM heap settings
+      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
+      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
+
+- Determine the final memory requirements based on load testing
+      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
+      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
+      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
+
+### Helm chart modifications
 
 Modifications were made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 10,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
 
