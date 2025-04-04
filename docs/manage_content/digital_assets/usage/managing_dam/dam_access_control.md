@@ -1,4 +1,4 @@
-# DAM Access Control Management
+# DAM access control management
 
 This topic describes the details of Digital Access Management (DAM) access control, its features and limitations and also on how to assign permission to Users through the DAM user interface.
 
