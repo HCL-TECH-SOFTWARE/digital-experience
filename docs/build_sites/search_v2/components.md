@@ -426,7 +426,7 @@ Atomic Components (AC) are the smallest possible building blocks of the search f
     | **header-end-container** |Represents the container for the end section of the header. This section is typically used for elements such as user profile icons or action buttons. |
     | **header-end** |Represents the specific slot within the end section of the header. This slot allows users to insert custom content into the end section. |
 
-- **dx-icon-button:** This component is designed to render a `dx-button` button that can display an icon or image. Its padding and size can be customized. 
+- **dx-icon-button:** This component is designed to render a `dx-button` button that can display an icon or image. Its padding and size can be customized. Users also need to add `aria-label` to avoid the screen reader reading the img alt of this component. 
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
