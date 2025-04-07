@@ -12,7 +12,7 @@ There are several ways to integrate HCL Leap applications into HCL Digital Exper
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
-These steps will enable you to embed a Leap application onto a DX site using Leap's Embedding API. For further details, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.  It is recommended that you have basic knowledge of DX to properly implement this. The following HCL Software U lessons may help: 
+These steps will enable you to embed a Leap application onto a DX site using Leap's Embedding API. For further details, refer to [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding) in the HCL Leap documentation.  It is recommended that you have basic knowledge of DX to properly implement this. The following HCL Software U lessons may help: 
 
   - The [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction) and [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) are highly recommended as they familiarize the learner with the basic functions of DX. The “Digital Assets” and “Content Targeting” lessons are optional if we just want to embed a simple Leap app onto a DX site.
   - [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner) explains the DX features targeted towards Developers. For the basic embedding we made use of information from the Introduction and Web Content lessons.
@@ -21,7 +21,7 @@ These steps will enable you to embed a Leap application onto a DX site using Lea
 
 1\. Initially, create the leap application that you plan to integrate. 
 
-2\. A Leap property must be added to the Helm values to enable anonymous access of your apps. It is described [here](https://opensource.hcltechsw.com/leap-doc/9.3.9/co_configuration_properties.html#section_blockanonaccess). Under configuration > leap > leapProperties in your Leap custom values file, add this property: `ibm.nitro.NitroConfig.blockAnonAccess=disabled`. After saving the file, do a helm upgrade. You might have to recreate the Leap pod to apply your changes
+2\. A Leap property must be added to the Helm values to enable anonymous access of your apps. It is described [here](https://opensource.hcltechsw.com/leap-doc/latest/co_configuration_properties.html#section_blockanonaccess). Under configuration > leap > leapProperties in your Leap custom values file, add this property: `ibm.nitro.NitroConfig.blockAnonAccess=disabled`. After saving the file, do a helm upgrade. You might have to recreate the Leap pod to apply your changes
 
 ```yaml
 configuration:
