@@ -5,13 +5,54 @@ HCL Digital Experience (DX) can be integrated with HCL Leap. Both products can b
 ## Steps to Create a Basic Leap/DX Installation
 These steps will enable you to install Leap, with the most basic settings, on the same cluster as DX. Follow the links for detailed steps.
 
-1\. Deploy a Kubernetes cluster with [DX](../../../../deployment/install/container/helm_deployment/overview.md) and [Ingress](../configuration/index.md) enabled.
+1\. [Deploy DX](../../../../deployment/install/container/helm_deployment/overview.md) using Helm.
 
 2\. In the cluster, [pull the Leap image and create a Kubernetes secret](https://opensource.hcltechsw.com/leap-doc/latest/helm_load_images.html#retrieve-leap-container-image).
 
 3\. Install your Leap helm chart into your cluster with `helm install <your-release-name> <path-to-leap-helm-chart> -f <path-to-custom-values.yaml>`
 
-4\. Access Leap via `https://<your-domain>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
+4\. [Configure Ingress](../configuration/index.md#configuring-ingress-for-hcl-dx-and-hcl-leap) for DX and Leap. After following these steps, you should have an Ingress controller and service in your cluster, and an Ingress resource in the same namespace as Leap and DX. Your Ingress resource may include the paths for both DX and Leap, resulting in the following:
+```yaml
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+    name: custom-routes
+    spec:
+        ingressClassName: nginx
+        tls:
+        - secretName: dx-tls-cert
+        hosts:
+            - <your-domain-name>
+        rules:
+        - host: <your-domain-name>
+        http:
+            paths:
+            - path: /
+            pathType: Prefix
+            backend:
+                service:
+                name: <dx-release-name>-haproxy
+                port:
+                    name: haproxy
+            - path: /apps
+            pathType: Prefix
+            backend:
+                service:
+                name: <leap-release-name>-leap
+                port:
+                    number: 9080
+```
+
+5\. If there's only one external IP available you may have to set networking.haproxy.serviceType to `ClusterIP` and networking.haproxy.ssl to `false` in your DX values file to detach the external IP from HAProxy. After running a helm upgrade with these settings, your external IP should now be attached to Ingress instead of HAProxy.
+```yaml
+    ### DX helm values
+    networking:
+        haproxy:
+            serviceType: ClusterIP
+            ssl: false
+```
+
+6\. Access Leap via `https://<your-domain-name>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
 
 ![](../../../../assets/Leap_homepage.png)
 !!!note 
