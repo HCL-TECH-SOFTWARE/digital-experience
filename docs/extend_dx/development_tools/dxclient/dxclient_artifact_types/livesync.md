@@ -451,7 +451,11 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 
 ### WCM Design Library
 
-- Supported WCM types: Presentation Template, HTML Component, and Folder Component.
+- Supported WCM types: Presentation Template, HTML Component, Folder Component, Style-sheet Component.
+- Style-sheet Component file types and extension limitations:
+    - All CSS files will be considered as style-sheet component.
+    - HTML file based style-sheet component cannot be created from the local via DXClient. Pull, update and delete are the only supported functions for this file type of style-sheet component.
+    - Any other file type of style-sheet component is not supported.
 - Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
