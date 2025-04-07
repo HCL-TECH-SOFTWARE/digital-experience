@@ -38,7 +38,7 @@ The following options to install DXClient are available starting CF221. Both opt
 
 ### Installing or uninstalling DXClient from NpmJS registry
           
-The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
+This option is recommended for **local developers and admins**. The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
 
 - To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command.
 
@@ -47,6 +47,8 @@ The option to install or uninstall from the NpmJS registry is only available sta
 - To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
 
 ### Installing DXClient using the container image in the Harbor repository
+
+The DXClient container package is preferred for **CI/CD automation** scenarios. More details can be found in the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}.
 
 1. Pull the Docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
 
@@ -345,6 +347,9 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
     
+    -   HCL DX 9.5 CF227 release: **V227.0.0
+        -  Livesync is enabled for Style-Sheet Components under WCM Design Library.
+
     -   HCL DX 9.5 CF226 release: **V226.0.0
         -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation-for-secure-connections)
 
@@ -864,7 +869,7 @@ dxclient livesync push-wcm-design-library [options]
 
 - Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
 
-- Currently, the maximum input file size allowed in DXClient is 256 MB.
+- (As of CF222, this limitation has been removed.) The maximum input file size allowed in DXClient is 256 MB.
 
 ## HCLSoftware U learning materials
 
