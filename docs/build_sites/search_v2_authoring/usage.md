@@ -58,7 +58,7 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 10. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
-    ![](../../assets/HCL_SearchV2_Authoring_menu_icon_ttriple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
+    ![](../../assets/HCL_SearchV2_Authoring_menu_icon_triple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
 11. Click on Read option to open the item in the same tab under Read mode.
 
