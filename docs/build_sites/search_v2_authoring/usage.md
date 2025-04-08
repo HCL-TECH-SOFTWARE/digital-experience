@@ -36,11 +36,11 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 6.  Navigate thru the search results by changing the page size and current page.
 
-    1. Click the dropdown with label **Show rows: ** and select "25".
+    1. Click the dropdown with label **Show rows:** and select "25".
 
         ![](../../assets/HCL_SearchV2_Authoring_result_per_page.png "Change number of results shown per page")
 
-    2. Click the dropdown with label **Page: ** and select "2".
+    2. Click the dropdown with label **Page:** and select "2".
 
         ![](../../assets/HCL_SearchV2_Authoring_page_view.png "Change the current page viewed")
 
