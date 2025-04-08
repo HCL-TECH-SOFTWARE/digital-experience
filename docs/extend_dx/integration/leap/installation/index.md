@@ -11,7 +11,7 @@ These steps will enable you to install Leap, with the most basic settings, on th
 
 3\. Install your Leap helm chart into your cluster with `helm install <your-release-name> <path-to-leap-helm-chart> -f <path-to-custom-values.yaml>`
 
-4\. If there's only one external IP available you may have to set networking.haproxy.serviceType to `ClusterIP` and networking.haproxy.ssl to `false` in your DX values file. Do a helm upgrade with this configuration to detach the external IP from HAProxy and make it available to Ingress.
+4\. If there's only one external IP available you may have to set networking.haproxy.serviceType to `ClusterIP` and networking.haproxy.ssl to `false` in your DX values file. Do a helm upgrade with this configuration to detach the external IP from HAProxy and make it available to Ingress on the next step.
 ```yaml
 ### DX helm values
 networking:
@@ -56,8 +56,8 @@ spec:
 6\. Access Leap via `https://<your-domain-name>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
 
 ![](../../../../assets/Leap_homepage.png)
-!!!note 
-    If instead of this screen, you get the error `There was a problem during the setup or startup. Unable to connect to internal setup routine...`, you may have to [configure SSL behavior.](https://opensource.hcltechsw.com/leap-doc/latest/helm_configure_ssl.html). Do a helm upgrade afterwards.
+!!!tip 
+    If instead of this screen, you get the error `There was a problem during the setup or startup. Unable to connect to internal setup routine...`, you may have to [configure SSL behavior](https://opensource.hcltechsw.com/leap-doc/latest/helm_configure_ssl.html). Do a helm upgrade afterwards.
 
 !!!notes 
     - For more details on deploying Leap, go to [the Kubernetes Helm deployment](https://opensource.hcltechsw.com/leap-doc/latest/kubernetes_helm_deployment.html) section of the HCL Leap product documentation.
