@@ -1,4 +1,4 @@
-# Using Search V2 Authoring
+Using Search V2 Authoring
 
 Generate search results from JCR content source using Search V2 Authoring. This section details how to generate a set of search results in Search V2 Authoring.
 
@@ -48,7 +48,7 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_title_sort_icon.png "Sort the search results by clicking on sorting icon that appears on hover on column header, for example, title ascending")
 
-8.  Hover over a result item row and click on the Edit icon.
+8.  **To Edit an Item**: Hover over a result item row and click on the Edit icon.
 
     ![](../../assets/HCL_SearchV2_Authoring_edit_icon.png "Click on Edit icon after hovering on result item to open it in the same tab under Edit mode")
 
@@ -56,11 +56,11 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_Header_Button.png "Reopen SearchV2 Authoring dialog")
 
-10. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
+10. **To See more actions for the Item**: Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
     ![](../../assets/HCL_SearchV2_Authoring_menu_icon_triple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
-11. Click on Read option to open the item in the same tab under Read mode.
+11. **To Open an Item**: Click on Read option to open the item in the same tab under Read mode.
 
     ![](../../assets/HCL_SearchV2_Authoring_read.png "Click on Read option to open the item in the same tab under Read mode")
 
@@ -68,11 +68,11 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_Header_Button.png "Reopen SearchV2 Authoring dialog")
 
-13. Hover over a result item row and click on the overflow menu icon or icon with triple dots.
+13. **To See more actions for the Item**: Hover over a result item row and click on the overflow menu icon or icon with triple dots.
 
     ![](../../assets/HCL_SearchV2_Authoring_menu_or_triple_dot.png "Click on Overflow Menu icon after hovering on result item to open basic actions for result item")
 
-14. Click on Preview option to open the item in a new tab under Preview mode.
+14. **To Preview an Item**: Click on Preview option to open the item in a new tab under Preview mode.
 
     ![](../../assets/HCL_SearchV2_Authoring_preview.png "Click on Preview option to open the item in a new tab under Preview mode")
 
