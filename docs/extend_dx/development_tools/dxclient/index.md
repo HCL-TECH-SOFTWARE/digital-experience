@@ -38,7 +38,7 @@ The following options to install DXClient are available starting CF221. Both opt
 
 ### Installing or uninstalling DXClient from NpmJS registry
           
-This option is recommended for **local developers and admins**. The option to install or uninstall from the NpmJS registry is only available starting CF221. The DXClient version installed must be 221.0.0.
+This option is recommended for **local developers and admins**. The option to install or uninstall from the NpmJS registry is only available starting CF221.
 
 - To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command.
 

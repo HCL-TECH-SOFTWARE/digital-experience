@@ -5,10 +5,10 @@ This topic provides information about syncing WebDAV-based theme or WCM Design L
 It is recommended that you use the node version of the DXClient while working with LiveSync. LiveSync is supported in scaled DX environment setups.
 
 !!! note
-    You can trigger all LiveSync commands from within the target local theme path.
+    You can trigger all LiveSync commands from within the target local paths.
     Starting CF223, HTML and Folder Components are now supported in LiveSync Pull and Push commands for WCM Design Library are available for .
-    Starting CF225, Presentation Templates is now supported in LiveSync Pull and Push commands for WCM Design Library are available.
-    Starting CF227, Style-Sheet Components is now supported in LiveSync Pull and Push commands for WCM Design Library.
+    Starting CF225, Presentation Templates are now supported in LiveSync Pull and Push commands for WCM Design Library are available.
+    Starting CF227, Style-Sheet Components are now supported in LiveSync Pull and Push commands for WCM Design Library.
 
 ## LiveSync Push Theme
 
@@ -453,8 +453,8 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 
 - Supported WCM types: Presentation Template, HTML Component, Folder Component, Style-sheet Component.
 - Style-sheet Component file types and extension limitations:
-    - All CSS files will be considered as style-sheet component.
-    - HTML file based style-sheet component cannot be created from the local via DXClient. Pull, update and delete are the only supported functions for this file type of style-sheet component.
+    - All CSS files will be considered as a style-sheet component.
+    - HTML file based stylesheet components cannot be created locally via DXClient.
     - Any other file type of style-sheet component is not supported.
 - Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 - If a published component has a draft version, the feature will pull and push into the draft version.
