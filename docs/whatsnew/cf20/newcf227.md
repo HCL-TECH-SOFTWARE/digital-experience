@@ -4,6 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- DXClient - Style-sheet components for LiveSync
 - User Session Reporting Tool - Updated the command to generate user session data usage in metrics format
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -22,6 +23,14 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### DX Client - Style-sheet components for LiveSync
+
+=== "Containers"
+    Style-sheet components are now supported in LiveSync Pull and Push commands for the HCL Web Content Manager (WCM) Design Library. For more information, refer to [LiveSync - Limitations and Troubleshooting: WCM Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
+
+=== "On-Premises"
+    Style-sheet components are now supported in LiveSync Pull and Push commands for the HCL Web Content Manager (WCM) Design Library. For more information, refer to [LiveSync - Limitations and Troubleshooting: WCM Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
 
 ### User Session Reporting Tool - Updated the command to generate user session data usage in metrics format
 
