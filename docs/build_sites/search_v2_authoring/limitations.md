@@ -16,7 +16,7 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Localization
 
-- The Search user interface currently only supports the English localization. Translation will be added later.
+- The UI is only in English.  Translation will be added later.
 
 ## Accessibility
 
