@@ -10,7 +10,7 @@ Use Search V2 Authoring to generate search results from a JCR content source. Th
 
 ## Generating a set of search results
 
-A set of search results is generated based on the keywords or phrases you enter in the Search input field. A JCR content source has already been pre-configured for the Search V2 Authoring.
+Search results are generated based on the keywords or phrases entered in the search input field. A JCR content source is pre-configured for use with Search V2 Authoring.
 
 1.  Log in to your HCL DX 9.5 platform then select **Web Content** from the Practitioner Studio homepage or side navigation panel.
 
