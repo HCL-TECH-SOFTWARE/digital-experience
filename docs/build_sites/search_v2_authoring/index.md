@@ -10,7 +10,7 @@ Search V2 Authoring, as part of its initial release for CF227, offers the follow
 - Perform searches using a query input field.
 - Display and sort search results using a datagrid with title, name, status, author, last modified date, and location columns.
 - Open a search result item in Edit or Read mode within the same browser tab, while preserving the search results in a closed dialog.
-- Allow a search result item to be opened on Preview mode in a new tab.
+- Open a search result item in Preview mode in a new browser tab.
 
 ## Prerequisites
 
