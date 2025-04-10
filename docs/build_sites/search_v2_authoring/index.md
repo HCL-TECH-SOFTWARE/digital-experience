@@ -28,7 +28,7 @@ This section provides a high-level overview of the architecture and the steps to
 This section provides the steps on how to access the Search V2 Authoring portlet.
 
 - **[Using Search V2 Authoring](./usage.md)**<br>
-This section provides a guide on generating results using the Search V2 Authoring.
+This section provides a step-by-step guide on generating search results using Search V2 Authoring.
 
 - **[Limitations of Search V2 Authoring](./limitations.md)**<br>
 This section lists the current limitations of Search V2 Authoring.
