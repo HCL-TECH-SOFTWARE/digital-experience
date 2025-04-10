@@ -8,7 +8,7 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Basic Actions
 
-- Only Edit, Read, and Preview actions for search result items are available. More actions may be added later.
+- Currently, only Edit, Read, and Preview actions are available for search result items. Additional actions may be introduced in the future.
 
 ## Bulk Action
 
