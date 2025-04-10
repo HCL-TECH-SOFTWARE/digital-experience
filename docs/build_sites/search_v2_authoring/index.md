@@ -7,7 +7,7 @@ Search V2 Authoring aims to replaces the existing Authoring Search feature in HC
 Search V2 Authoring, as part of its initial release for CF227, offers the following capabilities:
 
 - Using the new Search page in DX once it is enabled.
-- Search with a query input field.
+- Perform searches using a query input field.
 - Display and sort search results using a datagrid with title, name, status, author, last modified date, and location columns.
 - Allow a search result item to be opened on Edit or Read mode in the same browsing tab while retaining search results in closed dialog.
 - Allow a search result item to be opened on Preview mode in a new tab.
