@@ -30,7 +30,7 @@ A set of search results is generated based on the keywords or phrases you enter 
 
     ![](../../assets/HCL_SearchV2_Authoring_content_search.png "Input your search terms in the Search field and press Enter")
 
-5.  View the search results generated. Beside the dialog title, you can see the total number of results found for the search term. Below the table of results, you can also see more detailed pagination information. In the example below, the term "content" generated 995 search results.
+5.  View the search results generated. Beside the dialog title, you can see the total number of results found for the search term. Below the table of results, you can also see more detailed pagination information. In the example below, the term "content" generated 372 search results.
 
     ![](../../assets/HCL_SearchV2_Authoring_result_count.png "View the search results and note the count of results found")
 
