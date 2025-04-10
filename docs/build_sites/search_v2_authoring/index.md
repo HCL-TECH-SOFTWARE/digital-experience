@@ -31,4 +31,4 @@ This section provides the steps to access the Search V2 Authoring portlet.
 This section provides a step-by-step guide on generating search results using Search V2 Authoring.
 
 - **[Limitations of Search V2 Authoring](./limitations.md)**<br>
-This section lists the current limitations of Search V2 Authoring.
+This section highlights the current limitations of Search V2 Authoring.
