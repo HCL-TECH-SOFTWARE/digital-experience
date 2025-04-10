@@ -9,7 +9,7 @@ Starting from HCL Digital Experience (DX) 9.5 CF227, you can enable Search V2 Au
 After configuring the image in your HCL DX 9.5 CF227 deployment, you can access Search V2 Authoring from the Practitioner Studio interface.
 
 !!! note
-    You must be authenticated to use the Search page. The search results will vary based on your current user role.
+    Authentication is required to access the Search page. The search results displayed will depend on your assigned user role.
 
 ## Accessing Search V2 Authoring from Practitioner Studio
 
