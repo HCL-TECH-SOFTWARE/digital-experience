@@ -12,7 +12,7 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Bulk Action
 
-- No bulk actions are available for CF227. Bulk action may be added later.
+- Bulk actions are not currently supported for CF227. This functionality may be added in the future.
 
 ## Localization
 
