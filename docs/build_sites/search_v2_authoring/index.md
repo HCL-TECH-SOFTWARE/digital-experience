@@ -14,7 +14,7 @@ Search V2 Authoring, as part of its initial release for CF227, offers the follow
 
 ## Prerequisites
 
-Before you can use Search V2 Authoring, complete the following prerequisites:
+To use Search V2 Authoring, ensure the following prerequisites are met:
 
 1. Install Search V2 Authoring. For more information on how to install Search V2 Authoring, refer to [Installing Search V2 Authoring](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
 2. Enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
