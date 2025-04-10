@@ -1,6 +1,6 @@
 Using Search V2 Authoring
 
-Generate search results from JCR content source using Search V2 Authoring. This section details how to generate a set of search results in Search V2 Authoring.
+Use Search V2 Authoring to generate search results from a JCR content source. This section explains how to create a set of search results using Search V2 Authoring.
 
 ## Prerequisites
 
