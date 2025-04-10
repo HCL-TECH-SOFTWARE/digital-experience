@@ -34,6 +34,6 @@ The Search V2 Authoring UI has the following components:
 ![](../../assets/HCL_Search_General_Components.png)
 
 -   **Search Header** - This section includes the page title and a button to open the search dialog.
--   **Search Dialog** - This section displays input field where you can type your query in the dialog header. In the dialog body, the search data grid with results and pagination will be displayed. In the dialog footer, a Close button is available.
+-   **Search Dialog** - This section includes an input field in the dialog header for entering your query. The dialog body displays a data grid with search results and pagination, while the dialog footer provides a Close button.
 -   **Search Data Grid** - This component presents the search results in a table format with columns such as title, name, status, author, last modified date, and location. Hovering over a column header reveals a sort icon, allowing you to sort the results. Each result row includes an edit icon to open the item in Edit mode and an overflow menu icon to access options like Read or Preview mode.
 -   **Pagination** - This component displays the current number of rows per page and the total number of pages for the search results. You can adjust the number of rows per page or navigate to the next, previous, first, or last page.
