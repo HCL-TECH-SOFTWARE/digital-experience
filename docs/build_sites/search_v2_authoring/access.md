@@ -13,7 +13,7 @@ After configuring the image in your HCL DX 9.5 CF227 deployment, you can access 
 
 ## Accessing Search V2 Authoring from Practitioner Studio
 
-To access Search V2 Authoring from the Practitioner Studio, log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio homepage or side navigation panel.
+To access Search V2 Authoring from the Practitioner Studio, log in to your HCL Digital Experience 9.5 platform and navigate to **Web Content** from the Practitioner Studio homepage or the side navigation panel.
 
 ![](../../assets/HCL_SearchV2_Authoring_Access_01.png "Log in to HCL Digital Experience 9.5")
 
