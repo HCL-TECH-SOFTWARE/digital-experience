@@ -4,7 +4,7 @@ Use Search V2 Authoring to generate search results from a JCR content source. Th
 
 ## Prerequisites
 
-- Starting from HCL Digital Experience (DX) 9.5 CF227, you can enable Search V2 Authoring. For instructions on how to manually install Search V2 Authoring on supported environments, refer to [Installing HCL Digital Experience 9.5 Search V2 Authoring](./installation.md).
+- Starting with HCL Digital Experience (DX) 9.5 CF227, Search V2 Authoring can be enabled. For detailed instructions on manually installing Search V2 Authoring in supported environments, refer to [Installing HCL Digital Experience 9.5 Search V2 Authoring](./installation.md).
 
 - For instructions on how to access the Search V2 Authoring UI, refer to [Accessing HCL DX 9.5 Search V2 Authoring](./access.md).
 
