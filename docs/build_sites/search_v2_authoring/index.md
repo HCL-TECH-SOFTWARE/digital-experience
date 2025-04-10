@@ -25,7 +25,7 @@ Refer to the following pages for more information:
 This section provides a high-level overview of the architecture and the steps to install, enable, and update Search V2 Authoring.
 
 - **[Accessing Search V2 Authoring](./access.md)**<br>
-This section provides the steps on how to access the Search V2 Authoring portlet.
+This section provides the steps to access the Search V2 Authoring portlet.
 
 - **[Using Search V2 Authoring](./usage.md)**<br>
 This section provides a step-by-step guide on generating search results using Search V2 Authoring.
