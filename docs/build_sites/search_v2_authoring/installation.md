@@ -1,6 +1,6 @@
 # Installing and Deploying Search V2 Authoring
 
-This section contains instructions on how to install and deploy the Search V2 Authoring application manually. 
+This section provides detailed instructions for manually installing and deploying the Search V2 Authoring application.
 
 !!! note 
     Starting from HCL Digital Experience (DX) 9.5 CF227, Search V2 Authoring can be enabled for container-based deployments.
