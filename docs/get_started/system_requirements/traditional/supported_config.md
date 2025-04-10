@@ -133,6 +133,7 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022 and later maintenance releases|8.5|
 |Oracle Database 19c|19c and later maintenance releases|8.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|8.5|
+|Oracle on Amazon Relational Database Service|21c and later maintenance releases|8.5|
 
 \* Apache Derby is not supported in a product environment.  
 \* DB2 includes support for the DB2 pureScale component.  
