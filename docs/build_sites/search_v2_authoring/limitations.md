@@ -4,7 +4,7 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Searchable Fields
 
-- No advanced search filters are available for CF227.
+- Advanced search filters are not currently supported for CF227.
 
 ## Basic Actions
 
