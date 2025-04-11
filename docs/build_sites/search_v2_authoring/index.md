@@ -4,7 +4,7 @@ Search V2 Authoring aims to replaces the existing Authoring Search feature in HC
 
 ## Overview
 
-Search V2 Authoring, as part of its initial release for CF227, offers the following capabilities:
+Search V2 Authoring provides the following functionalities:
 
 - Access the new Search page in DX after it has been enabled.
 - Perform searches using a query input field.
