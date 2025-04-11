@@ -36,4 +36,4 @@ The Search V2 Authoring UI has the following components:
 -   **Search Header** - This section includes the page title and a button to open the search dialog.
 -   **Search Field** - This section includes an input field for entering your query.
 -   **Search Data Grid** - This component presents the search results in a table format with columns such as title, name, status, author, last modified date, and location. Hovering over a column header reveals a sort icon, allowing you to sort the results. Each result row includes an edit icon to open the item in Edit mode and an overflow menu icon to access options like Read or Preview mode.
--   **Pagination** - This component displays the current number of rows per page and the total number of pages for the search results. You can adjust the number of rows per page or navigate to the next, previous, first, or last page.
+-   **Pagination** - This section displays the current number of rows per page and the total number of pages for the search results. You can adjust the number of rows displayed per page or navigate to the next, previous, first, or last page.
