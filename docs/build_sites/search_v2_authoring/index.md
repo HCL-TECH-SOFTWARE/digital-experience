@@ -8,7 +8,7 @@ Search V2 Authoring provides the following functionalities:
 
 - Access the new Search page in DX after it has been enabled.
 - Perform searches using a query input field.
-- Display and sort search results using a datagrid with title, name, status, author, last modified date, and location columns.
+- Display and sort search results in a datagrid with columns for title, name, status, author, last modified date, and location.
 - Open a search result item in Edit or Read mode within the same browser tab, while preserving the search results in a closed dialog.
 - Open a search result item in Preview mode in a new browser tab.
 
