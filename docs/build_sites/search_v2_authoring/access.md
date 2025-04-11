@@ -23,8 +23,6 @@ Open the side navigation panel, and select **Authoring**.
 
 Refer to the Search V2 Authoring user interface below and click the search button to open the search dialog.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Access_03.png "See the Search V2 Authoring user interface")
-
 ![](../../assets/HCL_SearchV2_Authoring_Initial_State.png "See the Search V2 Authoring initial state")
 
 ## The Search V2 Authoring UI

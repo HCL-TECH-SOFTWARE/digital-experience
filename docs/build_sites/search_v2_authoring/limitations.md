@@ -23,7 +23,8 @@ Take note of the following limitations when using Search V2 Authoring:
 - To ensure full accessibility on the Search page, the user's browser-specific settings for keyboard navigation must be enabled.
 
     See the keyboard navigation setting for Firefox below.
-    ![](../../assets/HCL_Search_Browser_Safari_Settings.png){: style="height:600px"}
+    ![](../../assets/HCL_Search_Browser_Safari_Settings.png)
 
     See the keyboard navigation setting for Safari below.
-    ![](../../assets/HCL_Search_Browser_Firefox_Settings.png){: style="height:600px"}
+
+    ![](../../assets/HCL_Search_Browser_Firefox_Settings.png)
