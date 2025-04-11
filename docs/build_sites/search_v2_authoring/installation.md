@@ -12,7 +12,7 @@ Search V2 Authoring is a search integration portlet configured to load static as
 For container-based Helm deployment, the deployment `values.yaml` can also be configured so Search V2 Authoring is enabled by default.
 
 !!! important
-    Before you can enable Search V2 Authoring, you need to install Search V2 Authoring. For more information on how to install this feature, refer to [Installing Search V2 Authoring](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
+    Before you can enable Search V2 Authoring, you need to install Search V2 Authoring. For more information on how to install this feature, refer to [Installing the Search V2 backend](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
 
 ## Enabling and disabling Search V2 Authoring
 
