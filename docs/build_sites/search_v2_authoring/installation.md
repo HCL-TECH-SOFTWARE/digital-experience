@@ -7,7 +7,7 @@ This section provides detailed instructions for manually installing and deployin
 
 ## Packaging, installing, and deploying design
 
-Search V2 Authoring is a search integration portlet configured to load static assets such as JavaScript, stylesheets, and HTML markup. It is positioned above the existing Authoring portlet on the same Authoring page. You can enable or disable it using ConfigEngine tasks for container-based deployments. The enable task deploys and configures the portlet, creates the HTTP outbound proxy policy to allow DX to fetch the assets, and deploys the page.
+Search V2 Authoring is a search integration portlet configured to load static assets such as JavaScript, stylesheets, and HTML markup. It is located above the existing Authoring portlet on the same Authoring page. You can enable or disable it using ConfigEngine tasks for container-based deployments. The enable task deploys and configures the portlet, creates the HTTP outbound proxy policy to allow DX to fetch the assets, then deploys the page.
 
 For container-based Helm deployment, the deployment `values.yaml` can also be configured so Search V2 Authoring is enabled by default.
 
