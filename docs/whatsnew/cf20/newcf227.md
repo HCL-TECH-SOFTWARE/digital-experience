@@ -60,7 +60,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - Access Control Cache
 
 === "Containers"
-    The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses with a configurable Time-to-Live (TTL) mechanism (default: 10 seconds) and optimizes efficiency by handling in-flight requests. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md).
+    The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses with a configurable Time-to-Live (TTL) mechanism and optimizes efficiency by handling in-flight requests. Caching is enabled by default with a TTL of 10 seconds. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md).
 
 === "On-Premises"
     The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses with a configurable Time-to-Live (TTL) mechanism (default: 10 seconds) and optimizes efficiency by handling in-flight requests. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md).
