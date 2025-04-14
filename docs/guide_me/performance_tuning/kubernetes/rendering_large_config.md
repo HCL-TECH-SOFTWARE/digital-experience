@@ -139,7 +139,6 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 !!!note
      For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
-
 ### Recommendations
 
 - For a large-sized workload in AWS, start the Kubernetes cluster with 1 master and 12 worker nodes.
@@ -158,8 +157,25 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To ensure optimal CPU allocation for the HAProxy pod, allocate 1 additional CPU for every 10,000 concurrent users.
 
+### Recommended heap size configuration
+
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
+
 !!!note
-     Do not set the JVM heap size larger than the allocated memory for the pod.
+     Do not set your JVM heap size larger than the allotted memory for the pod.
+
+- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
+      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
+      - This eliminates the overhead of heap expansion and improves performance consistency.
+
+- Ensure the Kubernetes pod resource limits match the JVM heap settings
+      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
+      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
+
+- Determine the final memory requirements based on load testing
+      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
+      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
+      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
 
 Modifications were made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 30,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
 
