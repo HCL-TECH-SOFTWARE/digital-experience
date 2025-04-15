@@ -121,6 +121,9 @@ The following list contains details about the tuning and enhancements done to th
 
 - Increased the LTPA token timeout from 120 minutes to 600 minutes for the rendering tests.
 
+!!!note
+      For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
+
 Modifications were also made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 30,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
 
 |  |  | Request | Request | Limit | Limit |
@@ -149,9 +152,6 @@ For convenience, these values were added to the `large-config-values.yaml` file 
 2. Extract the `hcl-dx-deployment-XXX.tgz` file.
 
 3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/large-config-values.yaml` and copy the `large-config-values.yaml` file.  
-
-!!!note
-      For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
 
 ## Results
 
