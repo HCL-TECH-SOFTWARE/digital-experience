@@ -157,6 +157,35 @@ The following list contains details about the tuning and enhancements done to th
 
      - For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
 
+Modifications were also made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 10,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
+
+|  |  | Request | Request | Limit | Limit |
+|---|---|---:|---|---|---|
+| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
+| contentComposer | 1 | 100 | 128 | 100 | 128 |
+| **core** | **7** | **5600** | **8192** | **5600** | **8192** |
+| **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
+| imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
+| **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
+| **persistenceNode** | **2** | **1200** | **2048** | **1200** | **2048** |
+| **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
+| **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
+| runtimeController | 1 | 100 | 256 | 100 | 256 |
+| **haproxy** | **2** | **2000** | **1024** | **2000** | **1024** |
+| licenseManager | 1 | 100 | 300 | 100 | 300 |
+| **Total** | | **56000** | **79532** | **56000** | **79532** |
+
+!!!note
+     Values in bold are tuned Helm values while the rest are default minimal values.
+
+For convenience, these values were added to the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
+
+1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+
+2. Extract the `hcl-dx-deployment-XXX.tgz` file.
+
+3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/medium-config-values.yaml` and copy the `medium-config-values.yaml` file.
+
 ## Results
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and three worker nodes. The system successfully handled concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users, with a low error rate (< 0.0001%). At 8,000 users, error rates increased dramatically and the response times went up. For a response time to be considered optimal, it should be under one second.
@@ -205,37 +234,6 @@ To ensure optimal performance and stability of HCL DX on Kubernetes, it is essen
       - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
       - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
       - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
-
-### Helm chart modifications
-
-Modifications were made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 10,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
-
-|  |  | Request | Request | Limit | Limit |
-|---|---|---:|---|---|---|
-| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
-| contentComposer | 1 | 100 | 128 | 100 | 128 |
-| **core** | **7** | **5600** | **8192** | **5600** | **8192** |
-| **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
-| imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
-| **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
-| **persistenceNode** | **2** | **1200** | **2048** | **1200** | **2048** |
-| **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
-| **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
-| runtimeController | 1 | 100 | 256 | 100 | 256 |
-| **haproxy** | **2** | **2000** | **1024** | **2000** | **1024** |
-| licenseManager | 1 | 100 | 300 | 100 | 300 |
-| **Total** | | **56000** | **79532** | **56000** | **79532** |
-
-!!!note
-     Values in bold are tuned Helm values while the rest are default minimal values.
-
-For convenience, these values were added to the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
-
-1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
-
-2. Extract the `hcl-dx-deployment-XXX.tgz` file.
-
-3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/medium-config-values.yaml` and copy the `medium-config-values.yaml` file.
 
 ???+ info "Related information"
     - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
