@@ -25,7 +25,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### DX Client - Style-sheet components for LiveSync
+### DXClient - Style-sheet components for LiveSync
 
 === "Containers"
     Style-sheet components are now supported in LiveSync Pull and Push commands for the HCL Web Content Manager (WCM) Design Library. For more information, refer to [LiveSync - Limitations and Troubleshooting: WCM Library](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync.md#wcm-design-library).
@@ -85,13 +85,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### WAS and JDK versions
+### WAS and JDK versions <!--check again before release-->
 
 === "Containers"
     HCL DX 9.5 CF227 contains the following:
 
-    - WebSphere Application Server X.X.X.XX
-    - Java Development Kit X.X.X.XX
+    - WebSphere Application Server 9.0.5.23
+    - Java Development Kit 8.0.8.40
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
