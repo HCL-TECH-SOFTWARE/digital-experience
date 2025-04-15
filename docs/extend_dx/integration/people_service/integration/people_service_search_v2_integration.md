@@ -11,7 +11,7 @@ You can integrate People Service with [Search V2](../../../../build_sites/search
 
 ## Indexing capabilities
 
-People Service provides indexing capabilities to ensure search results are up-to-date. Administrators can initiate a full index or retry indexing operations if needed. You can find API details for these operations in [API documentation](../api/index.md).
+People Service provides indexing capabilities to ensure search results are up-to-date. Administrators can initiate a full index or retry indexing operations if needed. You can find API details for these operations in [People Service API](../api/index.md).
 
 ## Configuration
 
