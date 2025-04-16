@@ -4,7 +4,7 @@ This section provides steps on how to access the Search V2 Authoring page and po
 
 ## Prerequisite
 
-Starting from HCL Digital Experience (DX) 9.5 CF227, you can enable Search V2 Authoring. For instructions on how to install Search V2 Authoring manually on supported environments, refer to [Installing HCL Digital Experience 9.5 Search V2 Authoring](./installation.md).
+Starting from HCL Digital Experience (DX) 9.5 CF227, you can enable Search V2 Authoring. For instructions on how to install Search V2 Authoring manually on supported environments, refer to [Installing Search V2 Authoring](./installation.md).
 
 After configuring the image in your HCL DX 9.5 CF227 deployment, you can access Search V2 Authoring from the Practitioner Studio interface.
 
