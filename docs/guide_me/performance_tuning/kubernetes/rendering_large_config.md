@@ -139,7 +139,6 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 !!!note
      For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
-
 ### Recommendations
 
 - For a large-sized workload in AWS, start the Kubernetes cluster with 1 master and 12 worker nodes.
@@ -148,7 +147,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the OpenLDAP pod is not for production use.
+- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
