@@ -73,7 +73,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 Authoring - New Authoring Search interface
 
 === "Containers"
-    Search V2 Authoring aims to replaces the existing Authoring Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience. For more information, refer to Search V2 Authoring (Doc in progress). <!--[Search V2 Authoring]()-->
+    Search V2 Authoring aims to replace the existing Authoring Search feature in HCL DX. This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience. For more information, refer to [Search V2 Authoring](../../build_sites/search_v2_authoring/index.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
