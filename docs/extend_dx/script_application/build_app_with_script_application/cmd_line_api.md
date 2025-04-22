@@ -4,7 +4,7 @@ This API reference can help you customize an instance of your Script Application
 
 ## Namespace `spHelper`
 
-The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:Portlet key="namespace" compute="once"]`. To make it easier to use this object, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:Portlet key="namespace" compute="once"]spHelper;`.
+The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:ScriptPortletNamespace]`. To make it easier to use this object, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
 
 ## spHelper field summary
 
@@ -35,7 +35,7 @@ The `spHelper` provides the functions and variables that are related to a specif
 
 ## Method summary
 
--   **`spHelper.getScriptPortletPreference()`**
+-   **`spHelper.getPortletPreference()`**
 
     Retrieves the values for the portlet preference that is used for Script Applications.
 
@@ -43,7 +43,7 @@ The `spHelper` provides the functions and variables that are related to a specif
     // Sample using the Promise object calling the then function for the promise object
      // adding functions as parameters to the then function to handle success and error 
      function sampleRetrievePreference() {
-      myspHelper.getScriptPortletPreference().then(function(prefData) {
+      myspHelper.getPortletPreference().then(function(prefData) {
           // for this script application the preferences are an array of strings
       			var prefs = prefData;  
                  // if the first preference value is false then hide the field
@@ -83,7 +83,7 @@ The `spHelper` provides the functions and variables that are related to a specif
 
         The error is an Error object that contains the information about the Error. For example, the error ERR0001:Preference data is not available in this context results when the code is run in the preview view or the dependency on the `wp_client_ext` is missing.
 
--   **`spHelper.setScriptPortletPreference(preferenceData)`**
+-   **`spHelper.setPortletPreference(preferenceData)`**
 
     Sets the values for the portlet preference that is used for Script Applications.
 
