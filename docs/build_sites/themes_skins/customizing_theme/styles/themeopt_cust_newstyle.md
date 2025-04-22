@@ -1,28 +1,30 @@
 # Creating a theme style
 
-You can add your own custom style to the theme that can be selected on the site toolbar.
+You can add a custom style to the theme that can be selected on the site toolbar.
 
-To add your own custom style to the theme, create a Cascading Style Sheet \(CSS\) file in WebDAV. This new file includes CSS class definitions that override the ones that are provided by the default CSS layer, which is located here: dav:fs-type1/themes/YourThemeName/css/master.css.
+To add your own custom style to the theme, create a Cascading Style Sheet \(CSS\) file in `WebDAV`. This new file includes CSS class definitions that override the ones from the default CSS layer. It is located in `dav:fs-type1/themes/YourThemeName/css/master.css`.
 
-The ready-use alternate styles can be used as guide while creating your own alternate files in folders as peers to the default CSS layer. The alternate styles can be found at this location: dav:fs-type1/themes/YourThemeName/css/.
+The ready-use alternate styles can be used as a guide while creating your alternate files in folders as peers to the default CSS layer., The alternate styles can be found in `dav:fs-type1/themes/YourThemeName/css/`.
 
-These steps add a new style to the Styles tab of the site toolbar.
+To add a new style on the site toolbar Styles tab: 
 
-1.  On your local system, create a folder and place a new CSS file in it that includes the class overrides for the alternate style.
+1. On your local system, create a folder and place a new CSS file (including the class overrides for the alternate style).
 
-    For example, ./custom/custom.css.
+    For example, `./custom/custom.css`.
 
     !!! note
-        Best practice is to create a minified custom.css and human readable custom.css.uncompressed.css for debugging purposes.
+        For best practice, create a minified `custom.css` and readable `custom.css.uncompressed.css` for debugging purposes.
 
-2.  Connect to the fs-type1 WebDAV entry point, http://server:port/wps/mycontenthandler/dav/fs-type1/.
+2.  Connect to the fs-type1 WebDAV entry point, `http://server:port/wps/mycontenthandler/dav/fs-type1/`.
 
-3.  Copy the new folder to this location in WebDAV: dav:fs-type1/themes/YourThemeName/css/.
+3.  Copy the new folder to this location in WebDAV: `dav:fs-type1/themes/YourThemeName/css/`.
 
-4.  Open the file in WebDAV at dav:fs-type1/themes/YourThemeName/system/styles.json.
+4.  Open the file in WebDAV at `dav:fs-type1/themes/YourThemeName/system/styles.json`.
 
 5.  Register the style by adding an entry to the items array in the following format:
 
+    !!! note
+        Ensure the image file is  PNG and should be 64x64 pixels.
     ```
           {'label':'display_name_for_the_style',
        'id':'unique_name_for_style',
