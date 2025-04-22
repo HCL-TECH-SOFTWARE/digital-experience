@@ -1,6 +1,6 @@
 # Search V2 Authoring
 
-Search V2 Authoring aims to replaces the existing Authoring Search feature in HCL Digital Experience (DX). This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience.
+Search V2 Authoring aims to replace the existing Authoring Search feature in HCL Digital Experience (DX). This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience.
 
 ## Overview
 
