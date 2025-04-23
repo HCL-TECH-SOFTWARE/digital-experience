@@ -95,7 +95,7 @@ The `spHelper` provides the functions and variables that are related to a specif
       preferences =
       ["" + $('#pref1').prop('checked'),
        "" + $('#pref2').val()];
-      myspHelper.setScriptPortletPreference(preferences).then(function(prefData){
+      myspHelper.setPortletPreference(preferences).then(function(prefData){
            // on success close the preference dialog
           $('#prefDialog').dialog('close');
           }, err: function(errorText){
