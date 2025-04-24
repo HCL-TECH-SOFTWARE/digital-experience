@@ -107,6 +107,8 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
 |`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, see [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1). | Boolean |`false`|
 |`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
+|`affinityCookieSameSiteAttribute`|Available starting CF226. Sets the "SameSite" attribute for the DxSessionAffinity cookie to the values: `None`, `Lax`, `Strict`, or `""`. This should only be set on an HTTPS environment. | String |`""`|
+|`alwaysEnableSessionAffinity`|Available starting CF227. When enabled, HAProxy will insert the DxSessionAffinity cookie for all incoming requests, regardless of the presence of the JSESSIONID. HAProxy only inserts a new affinity cookie if a valid DxSessionAffinity cookie is not already present. | Boolean |`false`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -131,6 +133,13 @@ networking:
       preload: false
     # Set cookie value for session affinity in HAProxy configuration for DX applications that require session affinity (e.g. HAProxy)
     sessionCookieName: "JSESSIONID"
+    # Set the "SameSite" attribute for the HAProxy DxSessionAffinity cookie to the values: None, Lax, Strict, or empty string
+    # Setting this to an empty string will not add the SameSite attribute to the DxSessionAffinity cookie.
+    # Note: This should only be set in an HTTPS environment to prevent unwanted behaviours
+    affinityCookieSameSiteAttribute: ""
+    # Set alwaysEnableSessionAffinity to ensure any session, even unauthenticated sessions, receive a DxSessionAffinity token and route to a single
+    # core pod for the lifetime of the session. Defaults to false.
+    alwaysEnableSessionAffinity: false
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
