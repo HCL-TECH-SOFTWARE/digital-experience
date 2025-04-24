@@ -116,12 +116,13 @@ HCL Digital Experience 9.5 requires the following capabilities and products to p
   
 
 ### Java SDK
-HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. 
+HCL Digital Experience 9.5 requires JDK 7.0* or later for installation. 
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|8.0 and later maintenance releases|8.5|  
 
+*The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).
 
 ## Databases
 
