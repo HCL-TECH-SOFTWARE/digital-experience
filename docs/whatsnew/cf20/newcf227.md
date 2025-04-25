@@ -19,7 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 - Search V2 Authoring - New Authoring Search interface
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
-- WAS and JDK versions
+- WAS, JDK, and iFix versions
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -85,13 +85,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### WAS and JDK versions <!--check again before release-->
+### WAS, JDK, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF227 contains the following:
 
     - WebSphere Application Server 9.0.5.23
     - Java Development Kit 8.0.8.40
+    - No iFixes
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
