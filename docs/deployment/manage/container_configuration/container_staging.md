@@ -221,7 +221,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 Follow these steps to syndicate the source and target environments:
 
 !!!note
-    If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html).
+    If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [IBM DB2: Database transfer](../../../deployment/manage/db_mgmt_sys/dbtransfer_db2i/index.md).
 
 1.  Since the Kubernetes deployment typically allows only SSL traffic, you need to update the SSL Signer certificates for the Syndicator and Subscriber setups so that they can communicate with each other. To do this, log into the WAS console (`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`) and go to the **Signer certificates** page that is available in the **Security > SSL certificate and key management** menu:
 
@@ -297,4 +297,4 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)
     -   [HCL Digital Experience 9.5 Roadmap: Container deployment](../../../get_started/plan_deployment/container_deployment/rm_container/rm_container_deployment.md)
     -   [Configuring a remote search service](../../../build_sites/search/remotesearch/cfg_remotesearch_service/index.md)
-    -   [Transfer HCL Digital Experience 9.5 container default database to IBM DB2](https://help.hcltechsw.com/digital-experience/9.5/containerization/cw_containerdbtransfer_ibm_db2.html)
+    -   [IBM DB2: Database transfer](../../../deployment/manage/db_mgmt_sys/dbtransfer_db2i/index.md)
