@@ -1,11 +1,64 @@
 # Container and Supported OS File listings
 
-This section presents the latest available HCL Digital Experience (DX) 9.5 Container images. 
+This section presents the latest available HCL Digital Experience (DX) 9.5 Container images.
 
 You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry and in the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
 
 Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF227
+
+If you are deploying the HCL DX 9.5 CF227 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF227 DXClient files
+
+```shell
+hcl-dxclient-image-v95_CF227_20250425-1936.zip
+hcl-dxclient-v95_CF227_20250425-1936.zip
+```
+
+### hcl-dx-kubernetes-v95-CF227.zip
+
+```shell
+HCL DX notices V9.5 CF227.txt
+hcl-dx-content-composer-image-v1.40.0_20250425-1905.tar.gz
+hcl-dx-core-image-v95_CF227_20250425-1935.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20250425-1907.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20250425-1908.tar.gz
+hcl-dx-deployment-v2.36.0_20250428-1459.tgz
+hcl-dx-digital-asset-manager-image-v1.39.0_20250425-1945.tar.gz
+hcl-dx-file-processor-image-v2.0.0_20250425-1932.tar.gz
+hcl-dx-haproxy-image-v1.23.0_20250425-1932.tar.gz
+hcl-dx-image-processor-image-v1.40.0_20250425-1933.tar.gz
+hcl-dx-license-manager-image-v95_CF227_20250425-1914.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20250425-1915.tar.gz
+hcl-dx-openldap-image-v2.6.8_20250425-1911.tar.gz
+hcl-dx-opensearch-image-v2.0.0_20250425-1916.tar.gz
+hcl-dx-people-service-image-v1.0.0_20250425-1910.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.37.0_20250425-1931.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.35.0_20250425-1930.tar.gz
+hcl-dx-persistence-node-image-v1.27_20250425-1926.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20250425-1933.tar.gz
+hcl-dx-remote-search-image-v95_CF227_20250425-1935.tar.gz
+hcl-dx-ringapi-image-v1.40.0_20250425-1924.tar.gz
+hcl-dx-runtime-controller-image-v95_CF227_20250425-1917.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20250425-1929.tar.gz
+hcl-dx-search-v2.25.0_20250428-1459.tgz
+```
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF227_Express_Update|HCL-DX-CF227_Express_Update.zip|
+|HCL-DX-CF227_RemoteSearch_Update|HCL-DX-CF227_RemoteSearch_Update.zip|
+|HCL-DX-CF227_Server_Update|HCL-DX-CF227_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+<!--
 ## HCL DX 9.5 CF226
 
 If you are deploying the HCL DX 9.5 CF226 Container update release, the package name and images are as follows.
@@ -58,7 +111,6 @@ This section presents the latest available HCL DX File package listings for supp
 
 See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
-<!--
 ## HCL DX 9.5 CF225
 
 If you are deploying the HCL DX 9.5 CF225 Container update release, the package name and images are as follows.
