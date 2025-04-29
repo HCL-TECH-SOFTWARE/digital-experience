@@ -135,9 +135,9 @@ networking:
     sessionCookieName: "JSESSIONID"
     # Set the "SameSite" attribute for the HAProxy DxSessionAffinity cookie to the values: None, Lax, Strict, or empty string
     # Setting this to an empty string will not add the SameSite attribute to the DxSessionAffinity cookie.
-    # Note: This should only be set in an HTTPS environment to prevent unwanted behaviours
+    # Note: This should only be set in an HTTPS environment to prevent unwanted behaviors
     affinityCookieSameSiteAttribute: ""
-    # Set alwaysEnableSessionAffinity to ensure any session, even unauthenticated sessions, receive a DxSessionAffinity token and route to a single
+    # Set alwaysEnableSessionAffinity to ensure any session, even unauthenticated sessions, receives a DxSessionAffinity token and routes to a single
     # core pod for the lifetime of the session. Defaults to false.
     alwaysEnableSessionAffinity: false
 ```
