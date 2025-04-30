@@ -6,10 +6,8 @@ Like  other HTTP headers, you can also set the cookies.  When setting cookies, t
     ```
     PortletReponse.addProperty\(javax.servlet.http.Cookie cookie\)
     ```
-    
-2. When setting cookies, use the `addProperty` parameter before the response headers are committed. This should occur before the Render headers subphase of the Render lifecycle phase.  
-    Example:
-
+   
+2. When setting cookies, use the `addProperty` parameter before the response headers are committed. This should occur before the Render headers subphase of the Render lifecycle phase. For example:
     ```
     protected void doHeaders(RenderRequest request, RenderResponse response)
     {
@@ -19,8 +17,7 @@ Like  other HTTP headers, you can also set the cookies.  When setting cookies, t
     }
     ```
     !!!Important
-
-    - To ensure the cookies are visible in the web browser, set the `Domain` and `MaxAge`parameters.
-    - To set cookies on HTTPS sessions only, use the `c.setSecure(true);` parameter.
+        - To ensure the cookies are visible in the web browser, set the `Domain` and `MaxAge`parameters.
+        - To set cookies on HTTPS sessions only, use the `c.setSecure(true);` parameter.
 
 
