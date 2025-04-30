@@ -6,7 +6,7 @@ Like  other HTTP headers, you can also set the cookies.  When setting cookies, t
     ```
     PortletReponse.addProperty\(javax.servlet.http.Cookie cookie\)
     ```
-   
+    
 2. When setting cookies, use the `addProperty` parameter before the response headers are committed. This should occur before the Render headers subphase of the Render lifecycle phase. For example:
     ```
     protected void doHeaders(RenderRequest request, RenderResponse response)
