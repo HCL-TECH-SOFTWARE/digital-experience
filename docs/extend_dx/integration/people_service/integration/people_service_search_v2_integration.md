@@ -11,7 +11,7 @@ You can integrate People Service with [Search V2](../../../../build_sites/search
 
 ## Indexing capabilities
 
-People Service provides indexing capabilities to ensure search results are up-to-date. Administrators can initiate a full index or retry indexing operations if needed. You can find API details for these operations in [API documentation](../api/index.md).
+People Service provides indexing capabilities to ensure search results are up-to-date. Administrators can initiate a full index or retry indexing operations if needed. You can find API details for these operations in [People Service API](../api/index.md).
 
 ## Configuration
 
@@ -26,13 +26,13 @@ People Service automatically indexes data when changes occur. However, it does n
 
 When creating and mutating users using the API or provisioning users through [User synchronization](../administration/user_provisioning/user_synchronization.md), the user data is indexed as needed as part of the creation or mutation process.
 
-- **People Profile API endpoint**
+- [**People Profile API endpoint**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/People-Profiles){target="_blank"}
 
     - To create new user profile and index, trigger the `POST` endpoint named `/dx/api/people/v1/people`.
     - To update existing user profile and indexing, trigger the `PUT` endpoint named `/dx/api/people/v1/people/{id}`.
     - To delete existing user profile and indexing, trigger the `DELETE` endpoint named `/dx/api/people/v1/people/{id}`.
 
-- **User Synchronization API endpoint**
+- [**User Synchronization API endpoint**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Federation-User-directories){target="_blank"}
 
     - To start user synchronization and indexing, trigger the `POST` endpoint named `/dx/api/people/v1/user-directories/sync`.
 
@@ -40,7 +40,7 @@ When creating and mutating users using the API or provisioning users through [Us
 
 If immediate processing is required, People Service provides an indexing API that fully resynchronizes the index with the People Service user data.
 
-- **Search Indexing API endpoint**
+- [**Search Indexing API endpoint**](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/#tag/Search-Re-Index){target="_blank"}
 
     - To get details of all pending and failed user index operations, trigger the `GET` endpoint named `/dx/api/people/v1/search/index/pending`.
     - To retry pending and failed user index operations, trigger the `POST` endpoint named `/dx/api/people/v1/search/index/pending`.

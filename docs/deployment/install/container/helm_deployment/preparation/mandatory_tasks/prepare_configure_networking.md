@@ -81,7 +81,7 @@ networking:
     ssl: true
 ```
 
-Please refer to the original values.yaml for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
+Refer to the original `values.yaml` for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
 
 Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
 
@@ -107,6 +107,8 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
 |`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, see [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1). | Boolean |`false`|
 |`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
+|`affinityCookieSameSiteAttribute`|Sets the "SameSite" attribute for the DxSessionAffinity cookie to the values: `None`, `Lax`, `Strict`, or `""`. This should only be set on an HTTPS environment. | String |`""`|
+|`alwaysEnableSessionAffinity`|When enabled, HAProxy will insert the DxSessionAffinity cookie for all incoming requests, regardless of the presence of the cookie defined in the `sessionCookieName`. HAProxy only inserts a new affinity cookie if a valid DxSessionAffinity cookie is not already present. | Boolean |`false`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -131,9 +133,26 @@ networking:
       preload: false
     # Set cookie value for session affinity in HAProxy configuration for DX applications that require session affinity (e.g. HAProxy)
     sessionCookieName: "JSESSIONID"
+    # Set the "SameSite" attribute for the HAProxy DxSessionAffinity cookie to the values: None, Lax, Strict, or empty string
+    # Setting this to an empty string will not add the SameSite attribute to the DxSessionAffinity cookie.
+    # Note: This should only be set in an HTTPS environment to prevent unwanted behaviors
+    affinityCookieSameSiteAttribute: ""
+    # Set alwaysEnableSessionAffinity to ensure any session, even unauthenticated sessions, receives a DxSessionAffinity token and routes to a single
+    # core pod for the lifetime of the session. Defaults to false.
+    alwaysEnableSessionAffinity: false
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
+
+## Using annotations to control the HAProxy service behavior for different cloud providers
+
+The Helm chart allows you to add annotations to the HAProxy service to control the behavior of the service for different cloud providers. You can use this to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. You can add annotations in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations).
+
+Examples for such annotations are in an non-exhaustive list. Refer to the documentation provided by your cloud provider for more information:
+
+- [Amazon Elastic Kubernetes Service - Use Service Annotations to configure Network Load Balancers](https://docs.aws.amazon.com/eks/latest/userguide/auto-configure-nlb.html){target="_blank"}
+- [Google Kubernetes Engine - LoadBalancer Service parameters](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer-parameters){target="_blank"}
+- [Azure Kubernetes Service - LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/#loadbalancer-annotations){target="_blank"}
 
 ## Generate self-signed certificate
 
@@ -185,16 +204,16 @@ networking:
 !!! note
     Verify you have entered the correct name.
 
-### OpenShift Passthrough
+## OpenShift Passthrough
 
 Previous versions of the Helm chart had an `openShiftPassthrough` value that created an OpenShift `Route` resource automatically. This is deprecated and removed and from CF211, a `Route` resource must be created manually when required as part of the deployment.
 
-#### Create the route resource manually
+### Create the route resource manually
 
-If you want to deploy OpenShift manually using `Routes`, you need to create a .yaml file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
+If you want to deploy OpenShift manually using `Routes`, you need to create a `.yaml` file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
 For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
 
-In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Please refer to the [OpenShift documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) to select the appropriate value for your deployment. 
+In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Refer to the [OpenShift documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) to select the appropriate value for your deployment. 
 
 ```yaml
 apiVersion: "route.openshift.io/v1"
