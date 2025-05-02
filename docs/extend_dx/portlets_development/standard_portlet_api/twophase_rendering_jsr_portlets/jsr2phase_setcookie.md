@@ -13,9 +13,11 @@ While you can set cookies like any other HTTP header, the portlet API allows you
     ```java
     protected void doHeaders(RenderRequest request, RenderResponse response)
     {
-        Cookie c = new Cookie("myCookieName", "myCookieValue"); 
-        c.setPath("/"); c.setDomain("localhost"); c.setMaxAge(7200); 
-        response.addProperty(c); 
+        Cookie c = new Cookie("myCookieName", "myCookieValue");
+        c.setPath("/");
+        c.setDomain("localhost");
+        c.setMaxAge(7200);
+        response.addProperty(c);
     }
     ```
 
