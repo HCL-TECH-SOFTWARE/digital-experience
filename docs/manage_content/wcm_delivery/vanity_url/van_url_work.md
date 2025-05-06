@@ -8,7 +8,7 @@ Vanity URLs are stored as part of the page data on the Web Content Manager porta
 
 -   Manage vanity URLs by using the portal toolbar and the Managed Pages features. Therefore, if you want to use vanity URLs, Managed Pages must be enabled. The Managed Pages feature is enabled by default in the HCL DDX Version 9.5 installation. 
 -   Assigning a new vanity URL to a page, or changing or deleting an existing vanity URL in the scope of a project creates a draft of the page.
--   To export vanity URL information, use the [WCM Export](../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md) of the portal page site area instead of the XML configuration interface (XMLAccess).
+-   To export vanity URL information, use the [WCM Export](../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md) of the portal page site area instead of the [Working with the XML configuration interface](../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md) page.
 
 HCL DX provides a vanity URL servlet. It resolves an incoming vanity URL request to the appropriate portal page or content item.
 
@@ -52,7 +52,7 @@ See the process flow below for an example of a business user who works with a va
 
     When the portal redirects the user, it also adds state information to the URL. For example, this state information includes the portal and the locale information (selected when you created the vanity URL in the previous steps).
 
-6.  You can make the vanity URLs shorter by omitting the portal root context `/wps` and the string `/vanityurl`. In this case, you must use a web server and define a rewrite rule. For more information, see *Providing short vanity URLs*. You can then pass out the following URL for your advertising campaign:
+6.  You can make the vanity URLs shorter by omitting the portal root context `/wps` and the string `/vanityurl`. In this case, you must use a web server and define a rewrite rule. For more information, see [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md). You can then pass out the following URL for your advertising campaign:
 
     ```
     http://hostname:port/shoe-sale
