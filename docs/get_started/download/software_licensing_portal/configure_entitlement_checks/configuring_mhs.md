@@ -37,7 +37,7 @@ To validate the entitlement details for your software, configure the following p
     # is still validated.
     productionEnvironment: true
     # MHS License Server URI
-    licenseServerUri: ""
+    licenseServerUri: "https://api.hcltechsw.com/"
     # Custom Deployment key secret for MHS deployment instance
     customMhsDeploymentKeySecret: ""
     # Deployment key for MHS deployment instance
@@ -46,7 +46,7 @@ To validate the entitlement details for your software, configure the following p
 ```
 
 -   `productionEnvironment`: Set to `true` to send usage reports to MHS. For other environments (for example, test or UAT), set to `false`.
--   `licenseServerUri`: Set to the MHS License Server URI.
+-   `licenseServerUri`: Set to the MHS License Server URI (https://api.hcltechsw.com/).
 -   `customMhsDeploymentKeySecret`: Set to the deployment key that creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key.
 -   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [My HCLSoftware portal](https://my.hcltechsw.com/).
 
