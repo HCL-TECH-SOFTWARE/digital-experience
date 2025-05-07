@@ -10,9 +10,9 @@ This document describes tuning tips to improve the performance of Web Content Ma
 
 ## Instructions
 
-Refer to the following options to reduce your query time:
+To reduce your query time, refer to the following options you can try:
 
-1. Run the `runstats` and `reorg` commands on the database, preferably with DX server not running. For more information on these commands, refer to the [HCL DX Performance Tuning Guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0074411){target="_blank"}.
+1. Run the `runstats` and `reorg` commands on the database, preferably with DX server not running. For more information on these commands, refer to the [HCL DX Performance Tuning Guides](../../performance_tuning/index.md).
 
 2. Isolate the query in a JCR trace using the following command:
 
@@ -24,11 +24,11 @@ Refer to the following options to reduce your query time:
 
 3. The database administrator can recommend a query "hint" that can dramatically reduce the prepare time for the query on the database server side. For more details, please check step 6.
 
-4. Modify the portal configuration in accordance with Portal/WCM the tuning guides:
+4. Modify the portal configuration in accordance with DX and WCM the tuning guides:
 
     - [Web content maintenance](https://help.hcl-software.com/digital-experience/8.5/admin-system/web-content-maintenance.html){target="_blank"}  
-    - [Portal server performance tuning tool](https://help.hcl-software.com/digital-experience/9.5/latest/deployment/manage/tune_servers/wp_tune_tool/){target="_blank"}  
-    - [HCL DX Performance Tuning Guide](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0074411){target="_blank"}  
+    - [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
+    - [HCL DX Performance Tuning Guides](../../performance_tuning/index.md)
 
 5. Reduce the size of the WCM database. Delete un-needed content/libraries. Run clearVersions to prune un-needed versions.
 
