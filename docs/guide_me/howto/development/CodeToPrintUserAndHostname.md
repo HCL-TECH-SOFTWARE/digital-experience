@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document provides the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request and describes how to do it.
+This document provides the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request and describes how to use it.
 
 ## Instructions
 
