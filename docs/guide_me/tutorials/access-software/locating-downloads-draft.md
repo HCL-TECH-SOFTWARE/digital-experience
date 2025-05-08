@@ -1,18 +1,18 @@
 # Locating and Downloading DX Products (Draft)
 
-At this point, you should have been able to register an account and secure access to the License & Delivery Portal site.
+At this point, you should have been able to register an account and secure access to the License and Delivery Portal site. For more information, refer to the [HCL Digital Experience offerings are now available for download from the My HCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"} knowledge article.
 
 ## For HCL Customers
 
 Refer to the following steps to access your HCL Digital Experience (DX) software:
 
-1. Log in to My HCLSoftware Portal.
+1. Log in to [My HCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}.
 
 2. Go to **Downloads > HCL Digital Experience** to view HCL DX software and updates entitled to your organization.
 
     ![HCL DX Offering](./images/HCL%20DX%20Offering.png)
 
-3. See the latest versions of the software made available for HCL DX.
+    The latest versions of the software made available are also shown for reference.
 
     ![HCL DX latest versions](./images/HCL%20DX%20latest%20versions.png)
 
@@ -24,11 +24,11 @@ There are several offerings that are under the HCL DX product line according to 
 |-----------|----|----|----|------------------------------------|----|----|
 |HCL DX Cloud Native 9.5.x (Tiers 1 – 6)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* and MX Foundry\*|
 |HCL DX Cloud Native 9.5.x (Tier 7)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap*, MX Foundry, and HCL Discover\*|
-|HCL DX Manage|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* |
+|HCL DX Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* |
 |HCL Portal Enable|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Portal Express|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Portal Extend|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
-|HCL Portal Server|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
+|HCL Portal Server|Cloud Native|Portal Offerings||Third Party for DX|||
 |HCL Customer Experience Suite|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Employee Experience Suite|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Web Content Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
