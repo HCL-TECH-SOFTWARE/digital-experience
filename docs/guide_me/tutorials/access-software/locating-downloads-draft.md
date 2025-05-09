@@ -50,7 +50,7 @@ HCL DX Continuous Delivery Cumulative Fix (CF) Releases are presented within eac
 
 ![HCL DX Accept License Agreements](./images/HCL%20DX%20Accept%20License%20Agreements.png)
 
-Refer to the following steps to download the the files:
+Refer to the following steps to download the files:
 
 1. Accept the applicable license agreements.
 
