@@ -4,7 +4,7 @@ At this point, you should have been able to register an account and secure acces
 
 ## For HCL Customers
 
-To access your HCL Digital Experience (DX) software, log in to [My HCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}. After authenticating to the portal, Digital Experience Software and updates entitled to your organization are presented through selections from the HCL Digital Experience offerings tile:
+After authenticating to the [My HCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}, Digital Experience Software and updates entitled to your organization are presented through selections from the HCL Digital Experience offerings tile:
 
 ![HCL DX Offering](./images/HCL%20DX%20Offering.png)
 
