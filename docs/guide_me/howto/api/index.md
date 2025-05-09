@@ -1,3 +1,3 @@
 # API
 
-This section will include how-to articles about API-related content in Digital Experience (DX).
+This section will eventually include how-to articles about API-related content in HCL Digital Experience (DX).
