@@ -4,23 +4,19 @@ At this point, you should have been able to register an account and secure acces
 
 ## For HCL Customers
 
-Refer to the following steps to access your HCL Digital Experience (DX) software:
+To access your HCL Digital Experience (DX) software, log in to [My HCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}. After authenticating to the portal, Digital Experience Software and updates entitled to your organization are presented through selections from the HCL Digital Experience offerings tile:
 
-1. Log in to [My HCLSoftware Portal](https://my.hcltechsw.com/){target="_blank"}.
+![HCL DX Offering](./images/HCL%20DX%20Offering.png)
 
-2. Go to **Downloads > HCL Digital Experience** to view HCL DX software and updates entitled to your organization.
+The latest versions of the software made available are also shown for reference.
 
-    ![HCL DX Offering](./images/HCL%20DX%20Offering.png)
-
-    The latest versions of the software made available are also shown for reference.
-
-    ![HCL DX latest versions](./images/HCL%20DX%20latest%20versions.png)
+![HCL DX latest versions](./images/HCL%20DX%20latest%20versions.png)
 
 ### HCL DX Offerings and Key Components and Entitlements
 
 There are several offerings that are under the HCL DX product line according to the offerings customers have purchased and are entitled to. Refer to the following list for the offerings, and key offering entitlements and components.
 
-|DX Offering|Header?|Header?|Header?|Included Entitlements and components|Header?|Header?|
+|DX Offering||||Included Entitlements and components|||
 |-----------|----|----|----|------------------------------------|----|----|
 |HCL DX Cloud Native 9.5.x (Tiers 1 – 6)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* and MX Foundry\*|
 |HCL DX Cloud Native 9.5.x (Tier 7)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap*, MX Foundry, and HCL Discover\*|
@@ -54,10 +50,12 @@ HCL DX Continuous Delivery Cumulative Fix (CF) Releases are presented within eac
 
 ![HCL DX Accept License Agreements](./images/HCL%20DX%20Accept%20License%20Agreements.png)
 
-1. Accept the license agreement.
+Refer to the following steps to download the the files:
 
-2. Click and check the file(s) to download from the Actions download icon.
+1. Accept the applicable license agreements.
 
-3. Verify or update the path provided to begin the download.
+2. Locate the file(s) you want to download then click the download icon under **Actions**.
+
+3. Verify or update the path provided to begin downloading.
 
 If you encounter issues with finding software or downloading files, refer to the [Customer Support FAQ](support-faqs.md) section for support.
