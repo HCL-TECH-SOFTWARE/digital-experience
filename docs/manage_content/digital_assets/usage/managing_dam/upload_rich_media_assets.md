@@ -16,7 +16,7 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 
             See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
-2. (Optional) After selecting the rich media assets for upload, if number of assets are more than the number specified for **maxBulkUploadWithoutWarning** in helm then you are prompted with a warning to confirm.
+2. (Optional) After selecting the rich media assets for upload, a warning prompt requiring confirmation is displayed if number of assets exceeds the **maxBulkUploadWithoutWarning** parameter configured in Helm.
 
     ![Warning to confirm number of files uploaded in bulk](../../../../images/Bulk_Upload_Warning_Digital_Asset_Management.png)
 
