@@ -5,7 +5,7 @@ This section contains How-to articles to help you learn how to use HCL Digital E
 - **[Administration](./administration/index.md)**  
 Learn how to do specific administration tasks in your HCL DX environment.
 - **[API](./api/index.md)**  
-Learn how to how to configure HCL DX APIs.
+Learn how to configure HCL DX APIs.
 - **[Configuration](./configuration/index.md)**  
 Learn how to configure your HCL DX environment.
 - **[Container](./container/index.md)**  
