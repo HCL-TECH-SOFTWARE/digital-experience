@@ -4,18 +4,7 @@ Both the [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_a
 
 Entitlement checking and usage reporting are done differently, depending on whether customers are using Cloud Native (Kubernetes) or traditional (non-Kuberntes) deployments.
 
-For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or another (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternative options are available to connect to either a local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways.
-
-The following table identifies the reporting options for Kubernetes deployments:
-
-| Software Portal | Further Information |
-| --------------- | ------------------- |
-| FlexNet | [Online Reporting](./flexnet_license_and_delivery.md) |
-| FlexNet | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server) |
-| My HCLSoftware| [Online Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
-| My HCLSoftware| [Offline / Disconnected Reporting](./configuring_mhs.md/#generating-and-uploading-user-session-data-usage-in-metrics-format) |
-| Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
-| My HCLSoftware| [Traditional deployments (non-Kubernetes)](./user_session_reporting_tool_non_kubernetes.md) |
+For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or another (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternative options are available to connect to either a local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways. This [reporting options table](#reporting-options) identifies the reporting options for Kubernetes and traditional deployments.
 
 !!! note
     Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
@@ -53,6 +42,23 @@ The following table describes the possible entitlement-check response scenarios 
 | 4. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has started.|HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. HCL DX CN 9.5 entitlement grace period of four weeks has started and will expire on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
 | 5. The connection to the entitlement server fails. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. You are currently operating within the HCL DX CN 9.5 entitlement grace period of four weeks, which expires on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
 | 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br><br> If you require an extension to the grace period, you can contact Support for a one-time extension of up to 14 additional days. |
+
+## HCL DX Cloud Native v9.5 Usage Reporting
+
+### Reporting Options
+
+The following table identifies the reporting options for Kubernetes and Traditional deployments:
+
+| Software Portal           | Further Information                                                                                                                                             | Deployment   |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| FlexNet                   | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                            | Kubernetes   |
+| FlexNet                   | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                              | Kubernetes   |
+| My HCLSoftware            | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                         | Kubernetes   |
+| My HCLSoftware            | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                                   | Kubernetes   |
+| My HCLSoftware            | [Non Kube Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)                                   | Traditional   |
+| Manual CSV Extract        | [Manual Report Extracts](./export_usage_report.md)                                                                                                               | Kubernetes   |
+| User Session Reporting Tool | [Access Logs Export](./user_session_reporting_tool.md)                                                                                          | Traditional  |
+
 
 ### Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
@@ -100,7 +106,7 @@ The License Manager uses whichever FlexNet or MHS service endpoint is configured
 
 For more information about FlexNet entitlement checking / usage reporting, see [Entitlement checking in FlexNet software delivery portal](./flexnet_license_and_delivery.md).
 
-For more information about My HCLSoftware entitlement checking / usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./configuring_mhs.md).
+For more information about My HCLSoftware entitlement checking / usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./mhs_license_and_delivery.md).
 
 ???+ info "Related information"
     -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}
