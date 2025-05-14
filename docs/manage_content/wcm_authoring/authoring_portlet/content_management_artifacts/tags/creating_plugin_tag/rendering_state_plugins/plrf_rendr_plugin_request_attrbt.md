@@ -1,6 +1,6 @@
 # The request attribute plug-in
 
-Use the RequestAttribute rendering plug-in to retrieve, set, or remove attributes on the underlying request.
+Use the `RequestAttribute` rendering plug-in to retrieve, set, or remove attributes on the underlying request.
 
 The syntax for this plug-in is as follows:
 
@@ -10,55 +10,53 @@ The syntax for this plug-in is as follows:
 
 This plug-in uses the following attributes:
 
--   **key**
+- **key**
 
-    This attribute is mandatory. Use this attribute to specify the name that is used to retrieve or set an attribute for the request.
+    This attribute is mandatory. This attribute is used to specify the name. The name is used to retrieve or set an attribute for the request.
 
--   **mode**
+- **mode**
 
     Use this attribute to specify the operation that you want to perform:
 
-    -   **get**
+- **get**
 
-        Retrieve the specified attribute from the request and return the attribute value.
+    Use this attribute to retrieve the specified attribute from the request and return the attribute value.
 
-    -   **set**
+- **set**
 
-        Set the specified attribute to the request.
+     Use this attribute to set the specified attribute to the request.
 
-    -   **delete**
+- **delete**
 
-        Delete the specified attribute from the request.
+    Use this attribute to delete the specified attribute from the request.
 
-    -   **remove**
+- **remove**
 
-        Remove the specified attribute from the request and return the attribute value that was previously set.
+    Use this attribute to remove the specified attribute from the request and return the attribute value that was previously set.
 
--   **value**
+- **value**
 
-    Use this attribute to specify the value of the attribute that you want to be set. If an attribute with the same name exists on the request, that attribute is overwritten with the new value. If you want to set an attribute on the request, this attribute is mandatory.
+    Use this attribute to use a specific value. If an attribute with the same name exists on the request,it over writes the new value. you are required to use this attribute when setting set an attribute on the request.
 
--   **defaultValue**
+- **defaultValue**
 
-    This attribute is optional. Use this attribute to specify the value that is used when an attribute from the request is not defined or has a value of `null`.
+    This attribute is optional. Use this attribute for specific value such as an attribute from the request is not defined or has a value of `null`.
 
--   **escape**
+- **escape**
 
-    Use this attribute to define the escaping that you want to be used for writing the URL. Specify one of the values `xml`, `json`, `javascript`, or `none`. The default value is `none`. This value is evaluated only if the `mode` attribute is set to `get` or `remove`.
-
-
-!!! note
-    The `RequestAttribute` plug-in is available with Version 8.0.0.1 of HCL Web Content Manager.
+    Use this attribute to define what needs to be used in writing the URL. 
+Select from the values: `xml`, `json`, `javascript`, or `none`. The default value is `none`.
+ This value is evaluated only if the `mode` attribute is set to `get` or `remove`.
 
 ## Examples
 
--   To write out the string representation of the request attribute with the name key1, use the following plug-in tag:
+- To override a request attribute list with the name key1, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1"]
     ```
 
--   To write out value1 only when the key1 attribute does not exist on the request or the attribute value is null, use the following plug-in tag. Otherwise, the actual value of the key1 attribute is used.
+-   You can use value1 only when the key1 attribute does not exist on the request or the attribute value is `null`. Use the following plug-in tag. Otherwise, the actual value of the key1 attribute can be used.
 
     ```
     [Plugin:RequestAttribute key="key1" defaultValue="value1"]
@@ -78,7 +76,7 @@ This plug-in uses the following attributes:
     [Plugin:RequestAttribute key="key1" value=""]
     ```
 
--   To remove the attribute with the key `key1` from the portlet request, and to return the previously set value, use the following plug-in tag:
+- To remove the attribute with the key `key1` from the portlet request, and to return the previously set value, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1" mode="remove"]
@@ -86,5 +84,5 @@ This plug-in uses the following attributes:
 
 
 ???+ info "Related information"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
+    [List presentation override](https://help.hcl-software.com/digital-experience/9.5/CF224/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/list_presentation/wcm_dev_listpres_override/)
 
