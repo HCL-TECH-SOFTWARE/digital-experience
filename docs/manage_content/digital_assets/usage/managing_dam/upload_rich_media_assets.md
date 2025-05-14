@@ -1,8 +1,8 @@
 # Uploading rich media assets
 
-Follow these steps to upload rich media assets using HCL Digital Experience 9.5 Digital Asset Management \(DAM\).
+Follow these steps to upload rich media assets using HCL Digital Experience (DX) 9.5 Digital Asset Management \(DAM\).
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click **Upload**. This allows you to view or search, select, and upload rich media assets, such as images and videos from your source repository, to be stored in HCL DAM.
+1. From the HCL DX 9.5 DAM user interface, click **Upload**. This allows you to view or search, select, and upload rich media assets, such as images and videos from your source repository, to be stored in HCL DAM.
 
     ![Upload button from the HCL DAM interface](../../../../images/dam_interface_upload_button.png)
 
@@ -16,17 +16,31 @@ Follow these steps to upload rich media assets using HCL Digital Experience 9.5 
 
             See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
-2. (Optional) After selecting the rich media assets for upload, a warning prompt requiring confirmation is displayed if number of assets exceeds the **maxBulkUploadWithoutWarning** parameter configured in Helm.
+2. (Optional) Upon selecting the rich media assets, a warning prompt will appear if the number of assets you selected exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm. Click **Upload** to continue.
 
     ![Warning to confirm number of files uploaded in bulk](../../../../images/Bulk_Upload_Warning_Digital_Asset_Management.png)
 
-3. Then you are prompted to either add the selected assets to an existing collection or create a collection.
-4. Click **Create Collection** to add selected rich media assets to a new collection. Enter the **Collection Name** and **Collection Description** as applicable.
+    Afterwards, you are prompted to either upload the assets to an existing collection or create a collection.
+
+3. Upload the assets to an existing collection or create a collection.
 
     ![Create or assign rich media assets to a Collection](../../../../images/Upload_Media_HCL_Digital_Asset_Management.png)
 
-5. Click **Upload**.
-6. The HCL DAM user interface shows an upload progress bar. When completed, it shows a success message. Click **View Details** to see information about the media asset uploaded, including file size and media type.
+    To upload the assets to an existing collection:
+
+    1. Click the **Collection** dropdown and select an existing collection.
+
+    2. Click **Upload**.
+
+    To upload the assets to a new collection:
+
+    1. Click **Create Collection** to add selected rich media assets to a new collection.
+
+    2. Enter the **Collection Name** and **Collection Description**.
+
+    3. Click **Create and Upload**.
+
+4. The HCL DAM user interface shows an upload progress bar on the lower right corner of the page. Once the upload is completed, click the **View upload details** arrow to see more information about the media assets uploaded, including the file size and media type.
 
     ![Upload completed with details viewed](../../../../images/dam_interface_upload_success_view_details.png)
 
@@ -44,19 +58,19 @@ To upload files and folders using drag-and-drop, refer to the following steps:
 
     ![Uploading folders](../../../../images/drag_and_drop_2.png)
 
-3. (Optional) Upon dropping files and folders, a warning prompt requiring confirmation is displayed if their combined count exceeds the **maxBulkUploadWithoutWarning** parameter configured in Helm.
+3. (Optional) Upon dropping your files and folders, a warning prompt will appear if the number of rich media assets you want to upload exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm.
 
     ![Warning to confirm number of files uploaded in bulk](../../../../images/Bulk_Upload_Warning_Digital_Asset_Management.png)
 
-4. (Optional) If files are dropped into a root collection page, a dialog box appears where you can select the collection where you want to upload the assets.
+4. (Optional) If files are dropped into a root collection page, a dialog box appears, allowing you to select the collection where you want to upload the assets.
 
 All uploaded folders create a collection with the same name as the folder. The contents of the folders are uploaded into the same collection.
 
 ![Uploaded folders](../../../../images/drag_and_drop_3.png)
 
-### Configuration to change maxBulkUploadWithoutWarning value
+### Configuration to change the `maxBulkUploadWithoutWarning` value
 
-The maximum allowed bulk upload value is configurable through Helm.
+You can configure the maximum number of assets allowed for bulk upload without prompting a warning using the following Helm configuration:
 
 ```yaml
 configuration:
