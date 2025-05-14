@@ -16,8 +16,9 @@ The latest versions of the software made available are also shown for reference.
 
 There are several offerings that are under the HCL DX product line according to the offerings customers have purchased and are entitled to. Refer to the following list for the offerings, and key offering entitlements and components.
 
-|DX Offering||||Included Entitlements and components|||
+||![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)||
 |-----------|----|----|----|------------------------------------|----|----|
+|**DX Offering**||||**Included Entitlements and components**|||
 |HCL DX Cloud Native 9.5.x (Tiers 1 – 6)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* and MX Foundry\*|
 |HCL DX Cloud Native 9.5.x (Tier 7)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap*, MX Foundry, and HCL Discover\*|
 |HCL DX Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* |
