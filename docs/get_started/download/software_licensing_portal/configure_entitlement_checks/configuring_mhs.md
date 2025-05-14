@@ -53,16 +53,16 @@ To validate the entitlement details for your software, configure the following p
 To create a custom secret, run the following command:
 
 ```sh
-#Example to create custom secret
+# Sample command for creating a custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
 ```
 
-The above command will produce the following secret:
+See the following secret produced by the command:
 
 ```yaml
 apiVersion: v1
 data:
-  deploymentKey: <deploymentKey> # base64 encoded version of <deploymentKey> from the above command
+  deploymentKey: <deploymentKey> # base64 encoded version of <deploymentKey> from the command
 kind: Secret
 metadata:
   name: <secret-name>
