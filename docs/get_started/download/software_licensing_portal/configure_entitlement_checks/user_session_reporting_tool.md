@@ -128,12 +128,13 @@ In some cases, certain log entries—such as internal service calls, monitoring 
 ```
 [DX_UST] [17/Jun/2024:10:12:45 +0000] 192.168.243.139 "python-requests/2.24.0" "10.134.209.51" [/DX_UST]
 ```
-| **Field**           | **Value**                           | **Notes**                                                              |
-|---------------------|-------------------------------------|------------------------------------------------------------------------|
-| Timestamp           | [17/Jun/2024:10:12:45 +0000]        | Time the request was made                                              |
-| Client IP           | 192.168.243.139                     | Internal server or probe IP (likely the monitoring agent)              |
-| User-Agent          | "python-requests/2.24.0"            | Identifies it as a scripted call, not from a browser                   |
-| X-Forwarded-For     | "10.134.209.51"                     | IP of the original client, if routed through a proxy/load balancer     |
+
+| **Field**            | **Example Value**                                                                                              | **Description**                                      |
+|----------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| Timestamp (`%t`)      | `[17/Jun/2024:10:12:45 +0000]`                                                                                 | Time the request was made                            |
+| Client IP (`%h`)      | `192.168.243.139`                                                                                              | Internal server or probe IP (monitoring agent)        |
+| User-Agent            | `"python-requests/2.24.0"` | Identifies it as a scripted call, not from a browser                  |
+| X-Forwarded-For       | `"10.134.209.51"`                                                                                              | IP of the original client, routed through a proxy/load balancer    |
 
 Additional tip to determine logs for exclusion, users can set the log formating to expose more details (e.g. full http request line, response status, etc)
 
@@ -142,7 +143,7 @@ Additional tip to determine logs for exclusion, users can set the log formating 
 # formaat
 %r %s [DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]
 #log output
-GET /dx/api/content/v1/pages HTTP/1.1 200 [DX_UST] [15/May/2025:12:15:22 +0000] 10.0.0.12 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" "198.51.100.45" [/DX_UST]
+GET /wps/mycontenthandler/wcmrest-v2/categories?type=category HTTP/1.1 200 [DX_UST] [15/May/2025:14:42:12 +0000] 10.0.0.15 "curl/7.68.0" "203.0.113.45" [/DX_UST]
 ```
 
 !!! note 
