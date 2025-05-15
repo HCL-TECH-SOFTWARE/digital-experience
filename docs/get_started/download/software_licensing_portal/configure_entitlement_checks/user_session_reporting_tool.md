@@ -135,6 +135,18 @@ In some cases, certain log entries—such as internal service calls, monitoring 
 | User-Agent          | "python-requests/2.24.0"            | Identifies it as a scripted call, not from a browser                   |
 | X-Forwarded-For     | "10.134.209.51"                     | IP of the original client, if routed through a proxy/load balancer     |
 
+Additional tip to determine logs for exclusion, users can set the log formating to expose more details (e.g. full http request line, response status, etc)
+
+**Example**
+```
+# formaat
+%r %s [DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]
+#log output
+GET /dx/api/content/v1/pages HTTP/1.1 200 [DX_UST] [15/May/2025:12:15:22 +0000] 10.0.0.12 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" "198.51.100.45" [/DX_UST]
+```
+
+!!! note 
+    You may update the overall log format; however, do not modify the content within the [DX_UST][/DX_UST] tags. The tool relies on this exact format to correctly identify and process session data for accurate counting.
 
 Once the IP addresses or session keys to be excluded have been identified, users can configure the exclusion parameters when running the tool to ensure those entries are omitted from the session count. See [Excluding Specific Request](#excluding-specific-request) for more information.
 
