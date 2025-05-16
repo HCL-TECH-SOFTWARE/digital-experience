@@ -16,7 +16,7 @@ Follow these steps to upload rich media assets using HCL Digital Experience (DX)
 
             See the [Configure DAM - Kaltura integration](../../configuration/dam_extensibility/kaltura_configuration.md) topic for details.
 
-2. (Optional) Upon selecting the rich media assets, a warning prompt will appear if the number of assets you selected exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm. Click **Upload** to continue.
+2. (Optional) Upon selecting the rich media assets, a warning prompt will appear if the number of files and folders you selected exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm. Click **Upload** to continue.
 
     ![Warning to confirm number of files uploaded in bulk](../../../../images/Bulk_Upload_Warning_Digital_Asset_Management.png)
 
@@ -58,7 +58,7 @@ To upload files and folders using drag-and-drop, refer to the following steps:
 
     ![Uploading folders](../../../../images/drag_and_drop_2.png)
 
-3. (Optional) Upon dropping your files and folders, a warning prompt will appear if the number of rich media assets you want to upload exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm.
+3. (Optional) Upon dropping your rich media assets, a warning prompt will appear if the number of files and folders you want to upload exceeds the limit set using the `maxBulkUploadWithoutWarning` parameter configured in Helm.
 
     ![Warning to confirm number of files uploaded in bulk](../../../../images/Bulk_Upload_Warning_Digital_Asset_Management.png)
 
