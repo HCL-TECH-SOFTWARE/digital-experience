@@ -11,7 +11,7 @@ A property tag is used to display various fields and metadata from content items
 The format of a property tag:
 
 ```
-[Property field=" " context=" " type=" " name=" " format=" " link=" " separator=" " 
+[Property field=" " context=" " type=" " name=" " format=" " separator=" " 
 htmlencode=" " awareness=" " ifEmpty=" " include=" " restrict=" " resolve=" "
 pre=" " start=" " end=" " ]
 ```
