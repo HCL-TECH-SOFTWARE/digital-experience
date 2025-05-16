@@ -37,11 +37,11 @@ The tool is designed to integrate effortlessly into existing HCL DX deployments,
 
 Please note the following deployment scenarios with their use cases when using the tool:
 
-1. **Manual Usage Reporting to the Product Team (On-Premises)** - For traditional/on-premises deployments, you can use the User Session Reporting Tool as a standalone utility to analyze access logs and calculate session consumption over a specified date range. The tool outputs a human-readable CSV report and a log file summarizing session activity. These files can be manually submitted to the HCL DX product management team for internal analysis and feedback purposes.
-
-2. **Disconnected/File-Based Usage Reporting to My HCLSoftware (On-Premises)** - In disconnected on-premises deployments (i.e., those not integrated with My HCLSoftware APIs) who intend to report usage to MHS, usage data can still be reported manually. This involves using the User Session Reporting Tool to process NCSA access logs and export the data into the MHS metric file format. The generated metrics file can then be uploaded manually to the My HCLSoftware portal via the file-based reporting feature. See [MHS File Based Usage Reporting for Non-Kubernetes Deployments](../configuring_mfs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-non-kubernetes-deployments) for more information.
-
-3. **Disconnected/File-Based Usage Reporting to My HCLSoftware (Kubernetes)** - For Kubernetes-based deployments that are not connected to My HCLSoftware (e.g., disconnected environments where the Helm chart was not configured for online reporting), you can also generate and submit session usage data manually. The HCL DX License Manager (deployed with HAProxy) records usage, and the included User Session Reporting Tool can convert this data into the MHS metric file format. This file can then be uploaded manually to the My HCLSoftware portal using the file-based reporting option. See [MHS File Based Usage Reporting for Kubernetes Deployments](../configuring_mfs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-kubernetes-deployments) for more information.
+| **Deployment Type** | **Scenario** | **Description** |
+|---------------------|--------------|-----------------|
+| On-Premises | **Manual Usage Reporting to the Product Team** | For traditional/on-premises deployments, you can use the User Session Reporting Tool as a standalone utility to analyze access logs and calculate session consumption over a specified date range. The tool outputs a human-readable CSV report and a log file summarizing session activity. These files can be manually submitted to the HCL DX product management team for internal analysis and feedback purposes. |
+| On-Premises | **Disconnected/File-Based Usage Reporting to My HCLSoftware** | In disconnected on-premises deployments (i.e., those not integrated with My HCLSoftware APIs), usage data can be reported manually. Use the User Session Reporting Tool to process NCSA access logs and export data into the MHS metric file format. The generated metrics file can then be uploaded manually to the My HCLSoftware portal. See [MHS File Based Usage Reporting for Non-Kubernetes Deployments](configuring_mfs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-non-kubernetes-deployments) for more information. |
+| Kubernetes | **Disconnected/File-Based Usage Reporting to My HCLSoftware** | For Kubernetes-based deployments not connected to My HCLSoftware (e.g., disconnected environments where the Helm chart isn’t configured for online reporting), you can generate and submit usage data manually. The HCL DX License Manager (deployed with HAProxy) records usage, and the User Session Reporting Tool converts it to the MHS metric file format. Upload this file to the MHS portal. See [MHS File Based Usage Reporting for Kubernetes Deployments](configuring_mfs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-kubernetes-deployments) for more information. |
 
 ## Prerequisites
 
@@ -140,7 +140,7 @@ Additional tip to determine logs for exclusion, users can set the log formating 
 
 **Example**
 ```
-# formaat
+# format
 %r %s [DX_UST] %t %h "%{User-Agent}i" "%{X-Forwarded-For}i" [/DX_UST]
 #log output
 GET /wps/mycontenthandler/wcmrest-v2/categories?type=category HTTP/1.1 200 [DX_UST] [15/May/2025:14:42:12 +0000] 10.0.0.15 "curl/7.68.0" "203.0.113.45" [/DX_UST]

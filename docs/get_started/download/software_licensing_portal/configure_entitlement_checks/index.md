@@ -47,18 +47,23 @@ The following table describes the possible entitlement-check response scenarios 
 
 ### Reporting Options
 
-The following table identifies the reporting options for Kubernetes and Traditional deployments:
+When reporting product usage in HCL Digital Experience (DX), the method of reporting depends on the connectivity of your deployment to external licensing services. Two primary modes are available: Online and Offline (Disconnected) usage reporting.
 
-| Software Portal           | Further Information                                                                                                                                             | Deployment   |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| FlexNet                   | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                            | Kubernetes   |
-| FlexNet                   | [Offline / Disconnected Reporting](configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                              | Kubernetes   |
-| My HCLSoftware            | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                         | Kubernetes   |
-| My HCLSoftware            | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                                   | Kubernetes   |
-| My HCLSoftware            | [Non Kube Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)                                   | Traditional   |
-| Manual CSV Extract        | [Manual Report Extracts](./export_usage_report.md)                                                                                                               | Kubernetes   |
-| User Session Reporting Tool | [Access Logs Export](./user_session_reporting_tool.md)                                                                                          | Traditional  |
+1. **Online Usage Reporting** - In online mode, the deployment is connected to the internet and can communicate directly with licensing services like FlexNet or My HCLSoftware (MHS). Usage data such as user sessions or feature utilization is automatically reported in near real-time through integrated APIs. This is the most seamless and automated method of entitlement tracking and compliance.
 
+2. **Offline / Disconnected Usage Reporting** - In offline or disconnected mode, the environment has no external connectivity to licensing servers. This is common in air-gapped, on-premises, or highly secure deployments. In this mode, usage data must be collected manually, converted into supported metric formats, and then uploaded manually via a web portal or submitted to HCL teams.
+
+To determine the appropriate reporting method for your existing deployment, refer to the table below. It outlines the available usage reporting options for both Kubernetes and Traditional (on-premises) environments, along with their corresponding software portals and documentation links.
+
+| **Software Portal**     | **Deployment Type** | **Further Information**                                                                                                                                              |
+|-------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **FlexNet**             | Kubernetes          | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                                |
+|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                                |
+| **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                    |
+|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                    |
+|                         | Traditional         | [Non-Kubernetes Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
+| **Manual Export**       | Kubernetes          | [Manual Report Extracts](./export_usage_report.md)                                                                                                                   |
+|                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                               |
 
 ### Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
