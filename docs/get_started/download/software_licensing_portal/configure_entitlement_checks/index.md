@@ -55,7 +55,7 @@ When reporting product usage in HCL Digital Experience (DX), the method of repor
 
 To determine the appropriate reporting method for your existing deployment, refer to the table below. It outlines the available usage reporting options for both Kubernetes and Traditional (on-premises) environments, along with their corresponding software portals and documentation links.
 
-| **Software Portal**     | **Deployment Type** | **Further Information**                                                                                                                                              |
+| **Reporting Target**     | **Deployment Type** | **Further Information**                                                                                                                                              |
 |-------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **FlexNet**             | Kubernetes          | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                                |
 |                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                                |
