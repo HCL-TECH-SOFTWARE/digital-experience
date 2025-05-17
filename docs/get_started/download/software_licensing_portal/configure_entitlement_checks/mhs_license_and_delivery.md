@@ -91,8 +91,21 @@ To validate the entitlement details for your software, configure the following p
 To create a custom secret, run the following command:
 
 ```sh
-#Example to create custom secret
+# Sample command for creating a custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
+```
+
+See the following secret produced by the command:
+
+```yaml
+apiVersion: v1
+data:
+  deploymentKey: <deploymentKey> # base64 encoded version of <deploymentKey> from the command
+kind: Secret
+metadata:
+  name: <secret-name>
+  namespace: <namespace>
+type: Opaque
 ```
 
 ## Validating the DX Cloud Native 9.5 deployment entitlement

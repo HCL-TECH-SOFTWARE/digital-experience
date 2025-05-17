@@ -113,7 +113,7 @@ Modifications were made to the initial Helm chart configuration during the tests
 | runtimeController | 1 | 100 | 256 | 100 | 256 |
 | **haproxy** | **1** | **700** | **1024** | **700** | **1024** |
 | licenseManager | 1 | 100 | 300 | 100 | 300 |
-| **Total** | | **6400** | **13108** | **6400** | **13108** |
+| **Total** | **11** | **6400** | **13108** | **6400** | **13108** |
 
 !!!note
      Values in bold are tuned Helm values while the rest are default minimal values.
@@ -290,7 +290,7 @@ Modifications were also made to the initial Helm chart configuration during the 
 | runtimeController | 1 | 100 | 256 | 100 | 256 |
 | **haproxy** | **1** | **700** | **1024** | **700** | **1024** |
 | licenseManager | 1 | 100 | 300 | 100 | 300 |
-| **Total** | | **30000** | **50860** | **30000** | **50860** |
+| **Total** | 20 | **30000** | **50860** | **30000** | **50860** |
 
 !!!note
      Values in bold are tuned Helm values while the rest are default minimal values.
