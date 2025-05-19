@@ -12,31 +12,31 @@ This plug-in uses the following attributes:
 
 - **key**
 
-    This attribute is mandatory. This attribute is used to specify the name. The name is used to retrieve or set an attribute for the request.
+    This attribute is mandatory. Use this attribute to specify the name used to retrieve or set an attribute for the request.
 
 - **mode**
 
     Use this attribute to specify the operation that you want to perform:
 
-- **get**
+    - **get**
 
-    Use this attribute to retrieve the specified attribute from the request and return the attribute value.
+        Use this attribute to retrieve the specified attribute from the request and return the attribute value.
 
-- **set**
+    - **set**
 
-     Use this attribute to set the specified attribute to the request.
+        Use this attribute to set the specified attribute to the request.
 
-- **delete**
+    - **delete**
 
-    Use this attribute to delete the specified attribute from the request.
+        Use this attribute to delete the specified attribute from the request.
 
-- **remove**
+    - **remove**
 
-    Use this attribute to remove the specified attribute from the request and return the attribute value that was previously set.
+        Use this attribute to remove the specified attribute from the request and return the attribute value that was previously set.
 
 - **value**
 
-    Use this attribute to use a specific value. If an attribute with the same name exists on the request,it over writes the new value. you are required to use this attribute when setting set an attribute on the request.
+    Use this attribute to specify the value of the attribute that you want to be set. If an attribute with the same name exists on the request, that attribute is overwritten with the new value. If you want to set an attribute on the request, this attribute is mandatory.
 
 - **defaultValue**
 
@@ -44,45 +44,42 @@ This plug-in uses the following attributes:
 
 - **escape**
 
-    Use this attribute to define what needs to be used in writing the URL. 
-Select from the values: `xml`, `json`, `javascript`, or `none`. The default value is `none`.
- This value is evaluated only if the `mode` attribute is set to `get` or `remove`.
+    Use this attribute to define the escaping that you want to be used for writing the URL. Specify one of the values `xml`, `json`, `javascript`, or `none`. The default value is `none`. This value is only evaluated if the `mode` attribute is set to `get` or `remove`.
 
 ## Examples
 
-- To override a request attribute list with the name key1, use the following plug-in tag:
+- To override a request attribute list with the name `key1`, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1"]
     ```
 
--   You can use value1 only when the key1 attribute does not exist on the request or the attribute value is `null`. Use the following plug-in tag. Otherwise, the actual value of the key1 attribute can be used.
+- You can use `value1` only when the `key1` attribute does not exist on the request or the attribute value is `null`. Use the following plug-in tag. Otherwise, the actual value of the `key1` attribute can be used.
 
     ```
     [Plugin:RequestAttribute key="key1" defaultValue="value1"]
     ```
 
--   To set the request attribute key1 to the value value1, use the following plug-in tag:
+- To set the request attribute `key1` to the value `value1`, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1" value="value1"]
     [Plugin:RequestAttribute mode="set" key="key1" value="value1"]
     ```
 
--   To remove the request attribute key1 by passing an empty value attribute, use the following plug-in tag:
+- To remove the request attribute `key1` by passing an empty value attribute, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1" mode="delete"]
     [Plugin:RequestAttribute key="key1" value=""]
     ```
 
-- To remove the attribute with the key `key1` from the portlet request, and to return the previously set value, use the following plug-in tag:
+- To remove the attribute with the key `key1` from the portlet request and return the previously set value, use the following plug-in tag:
 
     ```
     [Plugin:RequestAttribute key="key1" mode="remove"]
     ```
 
-
 ???+ info "Related information"
-    [List presentation override](https://help.hcl-software.com/digital-experience/9.5/CF224/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/list_presentation/wcm_dev_listpres_override/)
-
+    - [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)
+    - [List presentation override](https://help.hcl-software.com/digital-experience/9.5/CF224/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/list_presentation/wcm_dev_listpres_override/)
