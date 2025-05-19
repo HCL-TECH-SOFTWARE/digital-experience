@@ -82,4 +82,3 @@ This plug-in uses the following attributes:
 
 ???+ info "Related information"
     - [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)
-    - [List presentation override](https://help.hcl-software.com/digital-experience/9.5/CF224/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/list_presentation/wcm_dev_listpres_override/)
