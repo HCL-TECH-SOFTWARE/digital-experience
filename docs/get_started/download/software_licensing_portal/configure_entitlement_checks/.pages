@@ -1,9 +1,9 @@
-title: Configure entitlement checks
+title: Configure entitlement checks and usage reporting
 nav:
     -   index.md
     -   flexnet_license_and_delivery.md
     -   configuring_local_flexnet_entitlement_server.md
     -   mhs_license_and_delivery.md
-    -   configuring_mfs_file_base_session_reporting.md
+    -   configuring_mhs_file_base_session_reporting.md
     -   user_session_reporting_tool.md
     -   export_usage_report.md
