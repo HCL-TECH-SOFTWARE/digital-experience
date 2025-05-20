@@ -61,7 +61,7 @@ To determine the appropriate reporting method for your existing deployment, refe
 |                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                                |
 | **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                    |
 |                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                    |
-|                         | Traditional         | [Non-Kubernetes Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
+|                         | Traditional         | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
 | **Manual Export**       | Kubernetes          | [Manual Report Extracts](./export_usage_report.md)                                                                                                                   |
 |                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                               |
 
