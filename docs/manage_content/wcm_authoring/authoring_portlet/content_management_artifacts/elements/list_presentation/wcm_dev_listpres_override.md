@@ -20,7 +20,7 @@ An item has a component reference element that refers to a list presentation com
 To set the ID, use the following attributes:
 
 ```
-[Plugin:RequestAttribute key="ListPresentationId" compute="once" value="[Element context='...' type='...' key='list presentation' format='id']"]
+[Plugin:RequestAttribute key="ListPresentationId" value="[Element context='...' type='...' key='list presentation' format='id']"]
 [Element context="..." type="..." key="list"] 
 [Plugin:RequestAttribute key="ListPresentationId" mode="delete"]
 ```
@@ -28,7 +28,7 @@ To set the ID, use the following attributes:
 To set the path, use the following attributes:
 
 ```
-[Plugin:RequestAttribute key="ListPresentation" compute="once" value="[Element context='...' type='...' key='list presentation' format='namepath']"]
+[Plugin:RequestAttribute key="ListPresentation" value="[Element context='...' type='...' key='list presentation' format='namepath']"]
 [Element context="..." type="..." key="list"]
 [Plugin:RequestAttribute key="ListPresentation" mode="delete"]
 ```
