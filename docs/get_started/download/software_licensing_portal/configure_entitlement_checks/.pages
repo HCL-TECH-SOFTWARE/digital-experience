@@ -1,8 +1,6 @@
 title: Configure entitlement checks
 nav:
     -   index.md
-    -   flexnet_license_and_delivery.md
-    -   configuring_local_flexnet_entitlement_server.md
     -   configuring_mhs.md
     -   export_usage_report.md
     -   create_deployment_mhs_ui.md
