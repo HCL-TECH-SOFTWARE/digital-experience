@@ -86,9 +86,7 @@ This information is stored in memory only for up to four hours and is discarded 
 
 Some customers might choose to use a proxy, for example, a load balancer, DMZ endpoint, or other service that resides between the user and the HCL DX Cloud Native v9.5 deployment. In that case, the customer should ensure the relevant information to facilitate user-session tracking arrives properly at the DX deployment for accurate tracking.
 
-The License Manager pod manages entitlement checking and user-session consumption reporting for production deployments. 
-
-The License Manager transmits the total number of completed user sessions to the customer [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8){target="_blank"} instance dashboard. The user session keys are not transmitted, nor is any other information about users or sessions.
+The License Manager pod manages entitlement checking and user-session consumption reporting for production deployments.
 
 The License Manager uses the MHS service endpoint configured to transmit the data total amount and each API request contains in its entirety the following data:
 
