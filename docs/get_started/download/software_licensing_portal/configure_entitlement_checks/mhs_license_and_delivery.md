@@ -34,7 +34,7 @@ Follow the configuration steps in [Configuring the DX Cloud Native 9.5 entitleme
 
 ### Creating MHS Deployment Instance
 
-A My HCLSoftware (MHS) deployment instance is a registered environment—such as development, test, or production—associated with a customer’s account in the MHS portal. It serves as the target for license metering and entitlement tracking, allowing HCL software (like HCL Digital Experience) to report usage data such as user sessions. Each deployment instance helpsnmonitor consumption against licensed entitlements. In connected environments, the DX License Manager reports directly to the assigned instance; in disconnected setups, [usage data is exported and manually uploaded to the appropriate instance in the portal](../configuring_mfs_file_base_session_reporting.md).
+A My HCLSoftware (MHS) deployment instance is a registered environment—such as development, test, or production—associated with a customer’s account in the MHS portal. It serves as the target for license metering and entitlement tracking, allowing HCL software (like HCL Digital Experience) to report usage data such as user sessions. Each deployment instance helpsnmonitor consumption against licensed entitlements. In connected environments, the DX License Manager reports directly to the assigned instance; in disconnected setups, [usage data is exported and manually uploaded to the appropriate instance in the portal](../configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
 1. Log in to [My HCLSoftware portal](https://my.hcltechsw.com/).
 

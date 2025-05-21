@@ -1,4 +1,4 @@
-# HCL Digital Experience Cloud Native 9.5 entitlement checks
+# HCL Digital Experience Cloud Native 9.5 entitlement checks and usage reporting
 
 !!!Important
     Starting March 31, 2025, the software download packages for all current and future HCL Digital Experience (DX) offering product releases will be available through the [My HCLSoftware (MHS)](https://my.hcltechsw.com/){target="_blank"} portal. Customers should plan to transition to access their entitled DX software using the MHS portal by June 30, 2025. For more information refer to [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
@@ -75,8 +75,8 @@ To determine the appropriate reporting method for your existing deployment, refe
 | **FlexNet**             | Kubernetes          | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                                |
 |                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                                |
 | **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                    |
-|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                    |
-|                         | Traditional         | [Non-Kubernetes Disconnected Reporting](./configuring_mfs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
+|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                    |
+|                         | Traditional         | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
 | **Manual Export**       | Kubernetes          | [Manual Report Extracts](./export_usage_report.md)                                                                                                                   |
 |                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                               |
 

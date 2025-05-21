@@ -42,7 +42,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
-    - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md)
+    - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
     - [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md)
 
 === "On-Premises"
@@ -51,16 +51,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
-    - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs.md)
+    - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
     - [Entitlement checking in the FlexNet software delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/flexnet_license_and_delivery.md)
 
 ### User Session Reporting Tool - Updated the command to generate user session data usage in metrics format
 
 === "Containers"
-    User Session Reporting Tool parameters have been updated to allow all named parameters to be used in any order within the generate user session data usage command. You can now exclude multiple IPs and session keys by adding multiple `-excludeIP` or `-excludeSessionKey` parameters, respectively. The `-excludeIPs` and `-excludeSessionKeys` parameters have also been updated to exclude the `-excludeIP` and `-excludeSessionKey` parameters. For more information, refer to [Using the User Session Reporting Tool with My HCLSoftware](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool_non_kubernetes.md) and [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+    User Session Reporting Tool parameters have been updated to allow all named parameters to be used in any order within the generate user session data usage command. You can now exclude multiple IPs and session keys by adding multiple `-excludeIP` or `-excludeSessionKey` parameters, respectively. The `-excludeIPs` and `-excludeSessionKeys` parameters have also been updated to exclude the `-excludeIP` and `-excludeSessionKey` parameters. For more information, refer to [Using the User Session Reporting Tool with My HCLSoftware](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement) and [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 === "On-Premises"
-    User Session Reporting Tool parameters have been updated to allow all named parameters to be used in any order within the generate user session data usage command. You can now exclude multiple IPs and session keys by adding multiple `-excludeIP` or `-excludeSessionKey` parameters, respectively. The `-excludeIPs` and `-excludeSessionKeys` parameters have also been updated to exclude the `-excludeIP` and `-excludeSessionKey` parameters. For more information, refer to [Using the User Session Reporting Tool with My HCLSoftware](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool_non_kubernetes.md) and [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
+    User Session Reporting Tool parameters have been updated to allow all named parameters to be used in any order within the generate user session data usage command. You can now exclude multiple IPs and session keys by adding multiple `-excludeIP` or `-excludeSessionKey` parameters, respectively. The `-excludeIPs` and `-excludeSessionKeys` parameters have also been updated to exclude the `-excludeIP` and `-excludeSessionKey` parameters. For more information, refer to [Using the User Session Reporting Tool with My HCLSoftware](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md) and [User Session Reporting Tool](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
