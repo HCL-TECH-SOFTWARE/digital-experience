@@ -22,17 +22,15 @@ To reduce your query time, refer to the following options you can try:
 
     Run the query from a database client instead of DX server while the database administrator analyzes the query implementation on the database side. They can advise if creating or deleting indexes or modifying database config will help. Using this trace string will help isolate the query in the trace.
 
-3. The database administrator can recommend a query "hint" that can dramatically reduce the prepare time for the query on the database server side. For more details, please check step 6.
-
-4. Modify the portal configuration in accordance with DX and WCM the tuning guides:
+3. Modify the portal configuration in accordance with DX and WCM the tuning guides:
 
     - [Web content maintenance](https://help.hcl-software.com/digital-experience/8.5/admin-system/web-content-maintenance.html){target="_blank"}  
     - [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
     - [HCL DX Performance Tuning Guides](../../performance_tuning/index.md)
 
-5. Reduce the size of the WCM database. Delete un-needed content/libraries. Run clearVersions to prune un-needed versions.
+4. Reduce the size of the WCM database. Delete un-needed content/libraries. Run clearVersions to prune un-needed versions.
 
-6. There are multiple query hints to the Oracle optimizer that can dramatically reduced query times for some queries. These hints should be be added to `icm.properties` in DX 8.0.0.x and below. For DX 8.5.x and above, they should be added to the Resource Environment provider `JCR ConfigService PortalContent` using the Websphere Application Manager (WAS) Deployment Manager or WAS Admin console.
+5. There are multiple query hints to the Oracle optimizer that can dramatically reduced query times for some queries. These hints should be be added to `icm.properties` in DX 8.0.0.x and below. For DX 8.5.x and above, they should be added to the Resource Environment provider `JCR ConfigService PortalContent` using the Websphere Application Manager (WAS) Deployment Manager or WAS Admin console.
 
     Add this new entry under custom properties:
 
