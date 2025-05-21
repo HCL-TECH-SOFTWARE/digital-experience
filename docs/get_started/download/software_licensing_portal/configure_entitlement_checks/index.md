@@ -5,22 +5,7 @@
 
 The [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal supports entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels.
 
-<<<<<<< HEAD
 For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or another (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternative options are available to connect to either a local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways. This [reporting options table](#reporting-options) identifies the reporting options for Kubernetes and traditional deployments.
-=======
-Entitlement checking and usage reporting are done differently, depending on whether you are using Cloud Native (Kubernetes) or traditional (non-Kubernetes) deployments.
-
-For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage that can be reported to the My HCLSoftware delivery portal. If you cannot or do not want to integrate directly with a delivery portal for automatic online reporting, you may use alternative options such as producing report extracts in a simple file format, that can be read, uploaded periodically, and shared in other ways.
-
-The following table identifies the reporting options for Kubernetes deployments:
-
-| Software Portal | Further Information |
-| --------------- | ------------------- |
-| My HCLSoftware| [Online Reporting](./configuring_mhs.md#configuring-the-dx-cloud-native-95-entitlement) |
-| My HCLSoftware| [Offline / Disconnected Reporting](./configuring_mhs.md#generating-user-session-data-usage-in-metrics-format) |
-| Manual CSV Extract | [Manual Report Extracts](./export_usage_report.md) |
-| My HCLSoftware| [Traditional deployments (non-Kubernetes)](./user_session_reporting_tool_non_kubernetes.md) |
->>>>>>> 5cf0baf6c73c363b2eedac5757fd960b28eae75c
 
 !!! note
     Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to support specified operating systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
