@@ -5,12 +5,12 @@
 
 The [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal supports entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels.
 
-For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage against one or another (but not both) of the software delivery portals. Where customers cannot or do not want to integrate directly with a delivery portal for automatic online reporting, alternative options are available to connect to either a local License Server (in the case of FlexNet), or to produce report extracts in a simple file format, that can be read and shared in other ways. This [reporting options table](#reporting-options) identifies the reporting options for Kubernetes and traditional deployments.
+For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage that can be reported to the MHS delivery portal. If you cannot or do not want to integrate directly with a delivery portal for automatic online reporting, you may use alternative options such as producing report extracts in a simple file format, that can be read, uploaded periodically, and shared in other ways. Refer to [Reporting Options](#reporting-options) to identify how to report usage for Kubernetes and traditional deployments.
 
 !!! note
     Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to support specified operating systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
 
-A standalone tool called the [User Session Reporting Tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from DX entitlements in the My HCLSoftware delivery portal.
+A standalone tool called the [User Session Reporting Tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from DX entitlements in the MHS delivery portal.
 
 You may also use web analytics reporting software such as Google Analytics to track user session consumption in DX v9.5 and earlier release versions of production deployments. For more information, refer to [Integrate Google Analytics with HCL DX](../../../../build_sites/site_analytics/google_analytics/index.md)..
 
@@ -41,44 +41,42 @@ The following table describes the possible entitlement-check response scenarios 
 | 3. The connection to the entitlement server is successful. You do not have a valid HCL DX Cloud Native 9.5 entitlement. |HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on grace period end date. Resolve this issue to avoid interruption in the service.`|
 | 4. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has started.|HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. HCL DX CN 9.5 entitlement grace period of four weeks has started and will expire on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
 | 5. The connection to the entitlement server fails. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. You are currently operating within the HCL DX CN 9.5 entitlement grace period of four weeks, which expires on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
-| 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br><br> If you require an extension to the grace period, you can contact Support for a one-time extension of up to 14 additional days. |
+| 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br><br> If you require an extension to the grace period, you can contact support for a one-time extension of up to 14 additional days. |
 
 ## HCL DX Cloud Native v9.5 Usage Reporting
 
 ### Reporting Options
 
-When reporting product usage in HCL Digital Experience (DX), the method of reporting depends on the connectivity of your deployment to external licensing services. Two primary modes are available: Online and Offline (Disconnected) usage reporting.
+When reporting product usage in HCL DX, the method of reporting depends on the connectivity of your deployment to external licensing services. Two primary modes are available: online and offline (disconnected) usage reporting.
 
-1. **Online Usage Reporting** - In online mode, the deployment is connected to the internet and can communicate directly with licensing services like FlexNet or My HCLSoftware (MHS). Usage data such as user sessions or feature utilization is automatically reported in near real-time through integrated APIs. This is the most seamless and automated method of entitlement tracking and compliance.
+1. Online usage reporting: In online mode, the deployment is connected to the internet and can communicate directly with the MHS license service. Usage data such as user sessions or feature utilization is automatically reported in near real-time through integrated APIs. This is the most seamless and automated method of entitlement tracking and compliance.
 
-2. **Offline / Disconnected Usage Reporting** - In offline or disconnected mode, the environment has no external connectivity to licensing servers. This is common in air-gapped, on-premises, or highly secure deployments. In this mode, usage data must be collected manually, converted into supported metric formats, and then uploaded manually via a web portal or submitted to HCL teams.
+2. Offline (disconnected) usage reporting: In offline or disconnected mode, the environment has no external connectivity to licensing servers. This is common in air-gapped, on-premises, or highly secure deployments. In this mode, usage data must be collected manually, converted into supported metric formats, and uploaded manually through a web portal.
 
-To determine the appropriate reporting method for your existing deployment, refer to the table below. It outlines the available usage reporting options for both Kubernetes and Traditional (on-premises) environments, along with their corresponding software portals and documentation links.
+Refer to the following table to determine the appropriate reporting method for your existing deployment. It outlines the available usage reporting options for both Kubernetes and traditional (on-premises) environments, along with their corresponding software portals and documentation links.
 
-| **Reporting Target**     | **Deployment Type** | **Further Information**                                                                                                                                              |
+| **Reporting Target**     | **Deployment Type** | **Further Information**                                                                                                                                             |
 |-------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **FlexNet**             | Kubernetes          | [Online Reporting](./flexnet_license_and_delivery.md)                                                                                                                |
-|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_local_flexnet_entitlement_server.md) (Local FlexNet License Server)                                                |
-| **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                    |
-|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-kubernetes-deployments)                    |
-|                         | Traditional         | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md/#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)           |
+| **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                     |
+|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-kubernetes-deployments)                       |
+|                         | Traditional         | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)                   |
 | **Manual Export**       | Kubernetes          | [Manual Report Extracts](./export_usage_report.md)                                                                                                                   |
-|                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                               |
+|                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                      |
 
 ### Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
 !!! note
-    Calculating and reporting of user session consumption produces the same results, regardless of which software delivery portal is being used.
+    Calculating and reporting user session consumption produces the same results, regardless of which software delivery portal is being used.
 
-In addition to verifying entitlement to the contract period for purchased subscription software, the HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL DX Cloud Native v9.5 Tier 1 – 7 offerings for production deployments.
+In addition to verifying entitlement to the contract period for purchased subscription software, HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL DX Cloud Native v9.5 Tier 1 – 7 offerings for production deployments.
 
-HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually.  A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
+HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually. A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
 
-**A user session begins** when a user (authenticated or anonymous) visits a DX deployment operating for production use and then interacts with program website pages and is identified through appropriate tags that use the appropriate scripts for each site page view request. User session interactions can include one or more production-use website page views.
+- A user session begins when a user (authenticated or anonymous) visits a DX deployment operating for production use and then interacts with program website pages and is identified through appropriate tags that use the appropriate scripts for each site page view request. User session interactions can include one or more production-use website page views.
 
-**A user session ends** when the user interaction with the production-use program is idle for 30 minutes or until the user ends the interaction explicitly by closing their authentication or web session with the site.
+- A user session ends when the user interaction with the production-use program is idle for 30 minutes or until the user ends the interaction explicitly by closing their authentication or web session with the site.
 
-The maximum duration for an individual user session with continuous interactions is four hours.
+- The maximum duration for an individual user session with continuous interactions is four hours.
 
 You can view user-session consumption by using usage reports in the corresponding software delivery portal. To be included in these reports, your DX Cloud Native 9.5 entitlements must be:
 
@@ -101,11 +99,9 @@ The License Manager pod manages entitlement checking and user-session consumptio
 
 The License Manager uses the MHS service endpoint configured to transmit the data total amount and each API request contains in its entirety the following data:
 
--   Timestamp of data transmission (implicit in the call, not explicitly provided)
--   Deployment identification information
--   Total number of completed user sessions calculated by the License Manager since the last transmission
-
-For more information about FlexNet entitlement checking / usage reporting, see [Entitlement checking in FlexNet software delivery portal](./flexnet_license_and_delivery.md).
+- Timestamp of data transmission (implicit in the call, not explicitly provided)
+- Deployment identification information
+- Total number of completed user sessions calculated by the License Manager since the last transmission
 
 For more information about My HCLSoftware entitlement checking / usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./mhs_license_and_delivery.md).
 
