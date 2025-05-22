@@ -15,6 +15,5 @@ Here you find some procedures for running administration tasks on the outbound H
 
 
 ???+ info "Related information"
-    - [Preparing your system environment and the prerequisites for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_prep.html)
-    - [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
-
+    - [Preparing your system environment and the prerequisites for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_prep.html)
+    - [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)

@@ -2,7 +2,7 @@
 title:  Entitlement checking in the My HCLSoftware delivery portal
 ---
 
-My HCLSoftware (MHS) provides access to various customer-facing systems such as Downloads, Software Entitlements, eCommerce, Support, Subscriptions, Account Management, Marketplace, and more. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal. 
+The My HCLSoftware portal (MHS) is available for the distribution of HCLSoftware products. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the My HCLSoftware delivery portal.
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ Make sure you have the following elements before configuring the HCL Digital Exp
 -   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
 -   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
 -   A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if currently using a prior version.
--   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware Portal](https://my.hcltechsw.com/).
+-   An instance deployment. To create an instance deployment, refer to the steps in [Creating a deployment](../../software_licensing_portal/configure_entitlement_checks/create_deployment_mhs_ui.md) in [My HCLSoftware portal](https://my.hcltechsw.com/).
 
 In addition to these elements, review the [architecture](#architecture) that presents the License Manager component of the HCL DX v9.5 Container Update software.
 
@@ -37,7 +37,7 @@ To validate the entitlement details for your software, configure the following p
     # is still validated.
     productionEnvironment: true
     # MHS License Server URI
-    licenseServerUri: ""
+    licenseServerUri: "https://api.hcltechsw.com"
     # Custom Deployment key secret for MHS deployment instance
     customMhsDeploymentKeySecret: ""
     # Deployment key for MHS deployment instance
@@ -46,15 +46,28 @@ To validate the entitlement details for your software, configure the following p
 ```
 
 -   `productionEnvironment`: Set to `true` to send usage reports to MHS. For other environments (for example, test or UAT), set to `false`.
--   `licenseServerUri`: Set to the MHS License Server URI.
--   `customMhsDeploymentKeySecret`: Set to the deployment key that creates a custom secret name. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key.
--   `mhsDeploymentKey`: Set to the credentials for product deployments. Any method can use `customMhsDeploymentKeySecret` or `mhsDeploymentKey` for the deployment key. You can obtain the deployment key from [My HCLSoftware Portal](https://my.hcltechsw.com/).
+-   `licenseServerUri`: Set to the MHS License Server URI (`https://api.hcltechsw.com`).
+-   `customMhsDeploymentKeySecret`: The name of a secret that has been created and contains the deployment key in a data element called `deploymentKey`. Use a secret for production environments or in any situation where you prefer not to store the deployment key directly in `values.yaml`.
+-   `mhsDeploymentKey`: A unique identifier for a specific deployment of DX, against which the usage information for that environment is reported. You can generate a deployment and its associated deployment key for each environment in which you enable License Manager within the [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"}. Put the deployment key in this value element for non-production environments or in situations where storing the key directly in `values.yaml` is acceptable.
 
 To create a custom secret, run the following command:
 
 ```sh
-#Example to create custom secret
+# Sample command for creating a custom secret
 kubectl create secret generic <secret-name> --from-literal=deploymentKey=<deploymentKey> --namespace=<namespace>
+```
+
+See the following secret produced by the command:
+
+```yaml
+apiVersion: v1
+data:
+  deploymentKey: <deploymentKey> # base64 encoded version of <deploymentKey> from the command
+kind: Secret
+metadata:
+  name: <secret-name>
+  namespace: <namespace>
+type: Opaque
 ```
 
 ## Validating the DX Cloud Native 9.5 deployment entitlement
@@ -75,3 +88,58 @@ INFO: The connection to the entitlement server is successful. You have a valid H
 INFO: Starting session count of the license manager
 INFO: License validity: true
 ```
+
+## File-based export in a Kubernetes environment
+The method of using a file-based export of user session data usage is only used in disconnected use cases within the Kubernetes environment where the Helm chart has not configured DX with My HCLSoftware portal.
+
+### Generating user session data usage in metrics format
+To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
+
+Use the following command to generate usage metrics from the user session data. Make sure to specify the appropriate `startDate`, `endDate` and `deploymentId` values.
+
+```sh
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
+```
+
+Where:
+
+-   `startDate` is the start date of the user session in YYYY-MM-DD format.
+-   `endDate` is the end date of the user session in YYYY-MM-DD format.
+-   `deploymentId` is the deployment identifier.You can find the `deploymentId` in the My HCLSoftware portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
+-   `productFeatureId` is the product name, either `HCL_DX_CloudNative` or `HCL_DX_Compose`.
+
+To save the generated metrics to a file, use the following command:
+
+```sh
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics [-productFeatureIdName <productFeatureId>]
+```
+
+The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.
+
+!!!example "Sample command"
+    ```sh
+    kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics -productFeatureIdName HCL_DX_CloudNative
+    ```
+
+#### Expected result
+
+The following is a sample expected result when generating user session data usage in metrics format:
+
+```
+1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
+HCL_DX_CloudNative,2024-10-20T06:49:23.183Z,2024-10-20T06:59:23.183Z,0,7ddd259d3077bca6774a14c005250614b9dec4fc3ac7cd4954c2c4ca0212562d
+HCL_DX_CloudNative,2024-10-20T07:00:54.836Z,2024-10-20T07:10:54.836Z,0,0c8210ba2bcb22c29d35df2aae2a7292f74385dc1125dbca634e9d2ba5affcd5
+HCL_DX_CloudNative,2024-10-20T07:32:00.618Z,2024-10-20T07:42:00.618Z,1,470a75d9d6eb8553fdd54f873baa85c89935cd4710d7430542e8696c3eda20d8
+HCL_DX_CloudNative,2024-10-20T08:00:37.267Z,2024-10-20T08:10:37.267Z,1,e946675c396d99f892c7099e772b776082b2a9a269a1d2670ea9063b61ac43e2
+End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321ba5437b78896908a0b78de6b7ee6db989b0ccd28ce5c58bd9a09
+```
+
+### Uploading usage metrics
+After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing. For more information, see [Uploading the usage metric file to My HCLSoftware](../../software_licensing_portal/configure_entitlement_checks/mhs_upload_usage_metrics.md).
+
+## My HCLSoftware use cases
+The use cases for My HCLSoftware in Kubernetes deployments are similar to the use cases for FlexNet. The HCL DX License Manager container is extended to integrate with My HCLSoftware in a similar way to the existing integration with FlexNet. This integration ensures proper entitlement validation and usage reporting.
+
+- **Entitlement validation**: Periodically verify the validity of your DX entitlement. Generally, your entitlement is valid for 12 months, with a grace period of 28 days during which reminders for renewal are posted in the container log before it expires.
+
+- **User session reporting**: Periodically send user session reports to My HCLSoftware to allow customers and HCL to monitor consumption and make sure consumption is aligned within the allocated entitlement tier. These reports help assess if a change to a different usage tier is required based on the number of user sessions consumed.

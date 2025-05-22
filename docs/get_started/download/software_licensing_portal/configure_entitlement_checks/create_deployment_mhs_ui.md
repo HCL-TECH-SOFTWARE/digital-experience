@@ -1,12 +1,12 @@
 ---
-title: Creating a deployment in My HCLSoftware Portal
+title: Creating a deployment in My HCLSoftware portal
 ---
 
 This document provides steps on how to set up and create deployment instances in the My HCLSoftware (MHS) environment and how to obtain the initial deployment key.
 
 ## Creating a new deployment
 
-1. Log in to [My HCLSoftware PortalURL](https://my.hcltechsw.com/).
+1. Log in to [My HCLSoftware portal](https://my.hcltechsw.com/).
 
 2. Go to **Deployments** tab and click **Add Deployment**.
 

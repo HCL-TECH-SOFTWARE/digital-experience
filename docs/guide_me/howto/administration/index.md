@@ -1,7 +1,6 @@
 # Administration
 
-This section includes how-to documents that belong to the administration topics
+This section includes how-to articles about administration in HCL Digital Experience (DX).
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
-
-- **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)**
+- **[How to clear WCM caches with ConfigEngine task](./ClearWCMCaches.md)**  
+Learn how to clear WCM caches using the ConfigEngine task.

@@ -1,7 +1,7 @@
 ---
-title: User session reporting tool
+title: User Session Reporting Tool
 ---
-# User session reporting tool
+# User Session Reporting Tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
@@ -19,7 +19,7 @@ This section provides information about the functionalities and use cases of the
 
 ## Availability and system compatibility
 
-The User Session Reporting Tool (UserSessionReporting_v1.0.x.zip) is available in the [HCL DX Core offering](../../software_licensing_portal/index.md) you have purchased entitlements to in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. For example:
+The User Session Reporting Tool (UserSessionReporting-v1.2.0.zip and later) is available in the [HCL DX Core offering](../../software_licensing_portal/index.md) you have purchased entitlements to in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. For example:
 
 - HCL Portal Server 9.5
 - HCL Web Content Manager 9.5
@@ -105,8 +105,8 @@ java -jar <jarFilepath> -h
 # <filePaths> List of input log files to get session counts
 # <excludeIPFile> Path to the file containing IPs (separated by a new line) to exclude from session counts
 # <excludeSessionKeyFile> Path to the file containing session keys (separated by a new line) to exclude from session counts
-# <excludeIPs> List of IPs (separated by space) to exclude from session counts
-# <excludeSessionKeys> List of session keys (separated by space) to exclude from session counts
+# <excludeIP> IP to exclude from session counts (Multiple IPs can be excluded by adding multiple -excludeIP parameters)
+# <excludeSessionKey> Session key to exclude from session counts (Multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
 ```
@@ -114,10 +114,13 @@ java -jar <jarFilepath> -h
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> -excludeIPFilePath <excludeIPFile> -excludeSessionKeyFilePath <excludeSessionKeyFile> -excludeIPs <excludedIPs...> -excludeSessionKeys <excludeSessionKeys ...> <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate>
 
 # Example
-java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIPs "192.168.243.142" -excludeSessionKeys "192.168.243.136 \"axios/1.6.7\" \"-\"" "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
+
+# Example for multiple exludeIP and excludeSessionKey
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeIP "192.168.245.143" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
 
 ```
 

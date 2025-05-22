@@ -9,3 +9,5 @@ This section provides information on how to use the different user elements in P
 This section provides information on how to use the styling options available in Presentation Designer.
 -   **[Editing a  presentation template in Presentation Designer](../usage/edit_presentation_template.md)**<br>
 This section provides steps on how to edit presentation templates in Presentation Designer.
+-   **[Canvas settings](../usage/canvas_settings.md)**  
+This section provides information on how to use the canvas settings in Presentation Designer.
