@@ -1,29 +1,29 @@
 ---
-title: Configuring MHS File Based Session Reporting
+title: Configuring MHS file-based session reporting
 ---
 
-My HCLSoftware (MHS) provides a manual reporting option for session data consumption using a file-based upload method. This approach is available for both Kubernetes and traditional (on-premises) deployments, specifically for customers who cannot or choose not to integrate directly with the MHS metering APIs for automatic online reporting.
+My HCLSoftware (MHS) allows you to manually report your session data consumption using a file-based upload method. This approach is available for both Kubernetes and traditional (on-premises) deployments, specifically for customers who cannot or choose not to integrate directly with the MHS metering APIs for automatic online reporting.
 
 In both scenarios, the User Session Reporting Tool is used to export session data in the MHS metric file format—the only format accepted by the MHS portal’s file upload feature. This ensures consistency in license usage reporting across disconnected or non-integrated environments.
 
-## MHS File Based Usage Reporting for Non-Kubernetes Deployments
+## MHS file-based usage reporting for non-Kubernetes deployments
 
-Using the [User Session Reporting Tool](../configure_entitlement_checks/user_session_reporting_tool.md), data from [generated NCSA access log files](../configure_entitlement_checks/user_session_reporting_tool.md#enabling-access-logs) can be exported and converted into an MHS readable metrics format, allowing to generate MHS metric files that contain the session data, this file in turn can be uploaded directly to the MHS portal.
+Using the [User Session Reporting Tool](../configure_entitlement_checks/user_session_reporting_tool.md), data from [generated National Center for Supercomputing Applications (NCSA) access log files](../configure_entitlement_checks/user_session_reporting_tool.md#enabling-access-logs) can be exported and converted into an MHS-readable metrics format. This allows you to generate MHS metric files that contain the session data, which you can upload directly to the MHS portal.
 
-### Generating User Session Data Usage in  MHS Metrics Format (Traditional Deployment)
+### Generating user session data usage in MHS metrics format (traditional deployment)
 
-To generate the user session data usage (from NCSA access logs) in MHS metrics format, the report must include session data that has been encrypted for each user session. A deployment ID from a [created MHS deployment instance](../configure_entitlement_checks/mhs_license_and_delivery.md#creating-mhs-deployment-instance) is needed as a paramater to know which deployment instance is the sessions being reported/recorded to. You can find the `deploymentId` in the My HCLSoftware portal after clicking the deployment card in the URL. For example, in `https://my.hcltechsw.com/deployments/pzneck8m` the `deploymentID` is `pzneck8m`.
+To generate the user session data usage from NCSA access logs in MHS metrics format, the report must include session data that has been encrypted for each user session. A deployment ID from a [created MHS deployment instance](../configure_entitlement_checks/mhs_license_and_delivery.md#creating-an-mhs-deployment-instance) is needed as a parameter to know which deployment instance the sessions are being reported or recorded to. You can find the `deploymentId` in the MHS portal after clicking the deployment card in the URL. For example, in `https://my.hcltechsw.com/deployments/pzneck8m` the `deploymentID` is `pzneck8m`.
 
-The User Session Reporting Tool is packaged as an executable JAR file. Execute the tool by using the following parameters:
+The User Session Reporting Tool is packaged as an executable JAR file. Run the tool using the following parameters:
 
 ```cmd
 java -jar <jarFilepath> -h
-# <jarFilepath> Path to the jar file
+# <jarFilepath> Path to the JAR file
 # <filePaths> List of input log files to get session counts
 # <excludeIPFile> Path to the file containing IPs (separated by a new line) to exclude from session counts
 # <excludeSessionKeyFile> Path to the file containing session keys (separated by a new line) to exclude from session counts
-# <excludeIP> IP to exclude from session counts (Multiple IPs can be excluded by adding multiple -excludeIP parameters)
-# <excludeSessionKey> Session key to exclude from session counts (Multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
+# <excludeIP> IP to exclude from session counts (multiple IPs can be excluded by adding multiple -excludeIP parameters)
+# <excludeSessionKey> Session key to exclude from session counts (multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
 # <deploymentId> String deploymentID from MHS
@@ -31,7 +31,7 @@ java -jar <jarFilepath> -h
 # <productFeatureId> Product name (HCL_DX_CloudNative or HCL_DX_Compose)
 ```
 
-The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
+See the sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
 java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] [-productFeatureIdName <productFeatureId>] <startDate> <endDate> <deploymentId> <option> 
@@ -49,14 +49,14 @@ java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIP.txt
 java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk fileOutput 
 ```
 
-See the following sample of an `excludedIPs.txt` file:
+See the sample `excludedIPs.txt` file:
 
 ```text
 192.168.243.142
 192.168.243.143
 ```
 
-See the following sample of an `excludeSessionKeys.txt` file:
+See the sample `excludeSessionKeys.txt` file:
 
 ```text
 192.168.243.139 "python-requests/2.24.0" "-"
@@ -75,21 +75,21 @@ END,30f0dd458d3ca9463870c1275d344d2361df87d617e32077a5c3c379a7e9e05f413fc1fa491e
 
 The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.
 
-After execution, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
+After running the command, the system returns the expected session count within the specified start and end date parameters. The tool generates the following files:
 
 - A user session data usage in metrics format. The report includes session data that has been encrypted in file or terminal output.
 
-- A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. It is important to save this file and store it securely because it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
+- A DAT file named `sessionStorage.dat` which serves as the internal storage for saving session data and counts between runs. This file allows the tool to maintain its state, enabling accurate aggregation of session counts over time. You must save this file and store it securely as it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
-You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. It stores its state between runs, processing only the logs that are after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages. 
+You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs and only processes logs generated after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages.
 
-Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run, because the tool will merge them to provide a comprehensive and accurate session count.
+Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run because the tool will merge them to provide a comprehensive and accurate session count.
 
-## MHS File Based Usage Reporting for Kubernetes Deployments
+## MHS file-based usage reporting for Kubernetes deployments
 
-For file based Usage reporting on kuberenetes deployments, usage data export are done using the DX License Manager utilizing the [User Session Reporting Tool](../configure_entitlement_checks/user_session_reporting_tool.md) packaged with it. The User Session Reporting Tool analyzes and exports session data recorded by the license manager through HAProxy, in turn exports the data into MHS readable metrics file to be uploaded.
+For file-based usage reporting on Kubernetes deployments, usage data export is done using the DX License Manager, utilizing the [User Session Reporting Tool](../configure_entitlement_checks/user_session_reporting_tool.md) packaged with it. The User Session Reporting Tool analyzes session data recorded by the license manager through HAProxy and exports it into an MHS-readable metrics file for upload.
 
-### Generating User Session Data Usage in  MHS Metrics Format (Kuberetes Deployment)
+### Generating user session data usage in MHS metrics format (Kubernetes deployment)
 
 To generate the user session data usage in metrics format, the report must include the session data encrypted for each user session.
 
@@ -99,12 +99,10 @@ Use the following command to generate usage metrics from the user session data. 
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId>
 ```
 
-Where:
-
--   `startDate` is the start date of the user session in YYYY-MM-DD format.
--   `endDate` is the end date of the user session in YYYY-MM-DD format.
--   `deploymentId` is the deployment identifier.You can find the `deploymentId` in the My HCLSoftware portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
--   `productFeatureId` is the product name, either `HCL_DX_CloudNative` or `HCL_DX_Compose`.
+- `startDate`: The start date of the user session in YYYY-MM-DD format.
+- `endDate`: The end date of the user session in YYYY-MM-DD format.
+- `deploymentId`: The deployment identifier. You can find the `deploymentId` in the MHS portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
+- `productFeatureId`: The product name (`HCL_DX_CloudNative` or `HCL_DX_Compose`).
 
 To save the generated metrics to a file, use the following command:
 
@@ -124,7 +122,7 @@ kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSe
 
 ### Expected result
 
-The following is a sample expected result when generating user session data usage in metrics format:
+Upon running the sample command, the following output is produced:
 
 ```
 1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
@@ -139,18 +137,18 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 
 After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing.
 
-1. Go to the **Deployments** section of the My HCLSoftware portal to review entitlements and user session consumption reports.
+1. Go to the **Deployments** section of the MHS portal to review entitlements and user session consumption reports.
 
-    ![](../../software_licensing_portal/_img/upload_usage_metric_file.png) 
+    ![](../../software_licensing_portal/_img/upload_usage_metric_file.png)
 
-2. Upload the usage metric file to My HCLSoftware.
-    1. In the **Deployments** page, select a deployment where you want to upload your metrics file.
-    2. Click **Upload new file** to upload the usage metric file.
+2. Upload the usage metric file to MHS.
+    1. On the **Deployments** page, select the deployment to which you want to upload your metrics file.
+    2. Click **Upload new file**.
     3. Select the metrics file you want to upload to the deployment.
 
-3. Wait for the upload to finish. Refer to the following status messages and corresponding actions when uploading metrics files to My HCLSoftware:
+3. Wait for the upload to finish. Refer to the following status messages and corresponding actions when uploading metrics files to MHS:
 
-    - If the status is `validating` or `processing`, you can wait on the page or go back to the previous page to see the status change to `completed`, `failed`, or `rejected`.
-    - If the status is `rejected` , reasons may include: hash chaining is tampered, invalid signature, or fields are not in the required format. Make sure to upload the valid metrics file. 
-    - If the status is `failed`, reach out to [My HCLSoftware Support](https://support.hcl-software.com/csm){target="_blank"} through IT operations.
-    - If status is `completed`, file is validated and the data is processed successfully.
+    - If the status is `validating` or `processing`, wait on the page or return to the previous page to observe the status change (`completed`, `failed`, or `rejected`).
+    - If the status is `rejected`, check for tampered hash chaining, invalid signatures, or fields not in the required format.. Ensure to upload the valid metrics file.
+    - If the status is `failed`, reach out to [MHS support](https://support.hcl-software.com/csm){target="_blank"} through IT operations.
+    - If the status is `completed`, the file is validated and the data is processed successfully.
