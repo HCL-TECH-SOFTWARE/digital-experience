@@ -1,5 +1,5 @@
 title: Administration
-
 nav:
     - index.md
-    - ClearWCMCaches.md  
+    - ClearWCMCaches.md 
+    - ImproveQueryPerformance.md
