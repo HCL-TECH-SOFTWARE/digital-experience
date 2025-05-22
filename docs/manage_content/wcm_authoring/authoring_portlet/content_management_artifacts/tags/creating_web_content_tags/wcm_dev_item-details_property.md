@@ -11,7 +11,7 @@ A property tag is used to display various fields and metadata from content items
 The format of a property tag:
 
 ```
-[Property field=" " context=" " type=" " name=" " format=" " link=" " separator=" " 
+[Property field=" " context=" " type=" " name=" " format=" " separator=" " 
 htmlencode=" " awareness=" " ifEmpty=" " include=" " restrict=" " resolve=" "
 pre=" " start=" " end=" " ]
 ```
@@ -49,7 +49,7 @@ To create a property tag:
 
     **Portal mapping versus portal context:** The portal mapping context is determined by the web content associations that are assigned to each page. This context is used for rendering when users first access a page. The context of the page can change when users interact with the content on the page. Each web content viewer on a page can be configured with an explicit context that overrides the rendering page context. The context of the portlet can also change if it is configured to receive links. When users click a link within the viewer that is configured to broadcast its links, the page context is updated. This new context is maintained until users click another link, or until users start a new session. When users start a new session, the original page context is used.
 
-5.  Click **OK** to add the tag to your navigator design.
+5.  Click **OK** to add the tag to your navigator design. 
 
 
 When you add the tag to your design, you can also add the following parameters to the tag:
