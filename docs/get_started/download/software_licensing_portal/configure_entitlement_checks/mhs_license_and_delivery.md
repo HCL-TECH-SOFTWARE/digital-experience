@@ -10,7 +10,7 @@ Make sure you have the following elements before configuring the HCL Digital Exp
 
 - An MHS account and access to the [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
 - A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
-- Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your My HCLSoftware portal instances.  
+- Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your MHS portal instances.  
 - A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if you are currently using a prior version.
 - An instance deployment. To create an instance deployment, refer to the steps in [Creating an MHS deployment instance](#creating-an-mhs-deployment-instance) in the MHS portal.
 
@@ -26,7 +26,7 @@ Follow the configuration steps in [Configuring the DX Cloud Native 9.5 entitleme
 
 ## Configuring the DX Cloud Native 9.5 entitlement
 
-DX Cloud Native 9.5 uses the License Manager to connect with My HCLSoftware (MHS) for checking license validity and tracking user sessions. This helps make sure your deployment stays within the allowed usage and provides insights for license management.
+DX Cloud Native 9.5 uses the License Manager to connect with MHS to check license validity and track user sessions. This helps make sure your deployment stays within the allowed usage and provides insights for license management.
 
 - Entitlement validation: The License Manager periodically validates the active DX entitlement by communicating with MHS. Entitlements are typically valid for 12 months, with a 28-day grace period before expiration. During this grace period, reminder messages are logged within the container to prompt timely renewal.
 
@@ -58,11 +58,12 @@ After creating a deployment, refer to the following steps to get the deployment 
 
     ![More menu](../../software_licensing_portal/_img/create_dep_key.png){ width="500" }
 
-3. Copy and save the unique deployment key, this will serve as an initial refresh token.
+3. Copy and save the unique deployment key. This will serve as an initial refresh token.
 
     ![Deployment key](../../software_licensing_portal/_img/new_deployment_key.png){ width="500" }
 
-4. (Optional) To replace a lost deployment key, open the deployment card, click the three-dot menu, and select **Replace Deployment Key** to generate a new one.
+!!! Tip
+    If you lose your deployment key, you can generate a new one. On the **Deployments** tab, open your deployment and click the three-dot icon. Then, select **Replace Deployment Key** to generate a new key.
 
 ### Configuring License Server
 

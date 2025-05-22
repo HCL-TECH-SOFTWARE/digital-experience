@@ -33,7 +33,7 @@ The User Session Reporting Tool (UserSessionReporting-v1.2.0.zip and later) is a
 
 The tool is designed to integrate effortlessly into existing HCL DX deployments, particularly in on-premises deployments. It is backward compatible with previous deployment versions. You do not need to upgrade to the latest Cumulative Fix (CF) to utilize the User Session Reporting Tool, making it accessible to a broader range of deployments without requiring additional updates or changes to the existing infrastructure.
 
-## Deployment Scenarios
+## Deployment scenarios
 
 Note the following deployment scenarios and their use cases when using the tool:
 
@@ -112,7 +112,7 @@ For example, see the following access logs:
 
 | **Field**            | **Example Value**                                                                                              | **Description**                                      |
 |----------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| Timestamp (`%t`)      | `[17/Jun/2024:09:47:25 +0000]`                                                                                 | Session duration are counted as 1 session count based on the condition mentioned [here](index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments)
+| Timestamp (`%t`)      | `[17/Jun/2024:09:47:25 +0000]`                                                                                 | Session duration is counted as a single user session based on the conditions mentioned in [Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments](index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments)|
 | Client IP (`%h`)      | `192.168.243.142`                                                                                              | IP seen by the server        |
 | User-Agent            | `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"` | Contains the browser info of the request                  |
 | X-Forwarded-For       | `"10.134.209.51"`                                                                                              | Actual client IP passed by a proxy or load balancer    |

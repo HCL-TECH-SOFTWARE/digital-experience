@@ -3,7 +3,7 @@
 !!!Important
     Starting March 31, 2025, the software download packages for all current and future HCL Digital Experience (DX) offering product releases will be available through the [My HCLSoftware (MHS)](https://my.hcltechsw.com/){target="_blank"} portal. Customers should plan to transition to access their entitled DX software using the MHS portal by June 30, 2025. For more information refer to [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
 
-The [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal supports entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels.
+The [MHS portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} supports entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels.
 
 For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage that can be reported to the MHS delivery portal. If you cannot or do not want to integrate directly with a delivery portal for automatic online reporting, you may use alternative options such as producing report extracts in a simple file format, that can be read, uploaded periodically, and shared in other ways. Refer to [Reporting Options](#reporting-options) to identify how to report usage for Kubernetes and traditional deployments.
 
@@ -45,7 +45,7 @@ The following table describes the possible entitlement-check response scenarios 
 
 ## HCL DX Cloud Native v9.5 Usage Reporting
 
-### Reporting Options
+### Reporting options
 
 When reporting product usage in HCL DX, the method of reporting depends on the connectivity of your deployment to external licensing services. Two primary modes are available: online and offline (disconnected) usage reporting.
 
@@ -103,7 +103,7 @@ The License Manager uses the MHS service endpoint configured to transmit the dat
 - Deployment identification information
 - Total number of completed user sessions calculated by the License Manager since the last transmission
 
-For more information about My HCLSoftware entitlement checking / usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./mhs_license_and_delivery.md).
+For more information about MHS entitlement checking and usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./mhs_license_and_delivery.md).
 
 ???+ info "Related information"
     -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}
