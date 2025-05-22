@@ -116,7 +116,7 @@ Once the access logs are extracted, the next step is to understand how the tool 
 
 | **Field**            | **Example Value**                                                                                              | **Description**                                      |
 |----------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| Timestamp (`%t`)      | `[17/Jun/2024:09:47:25 +0000]`                                                                                 | session duration are counted based on the condition mentioned [here](index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments), this validates if the session is counted for 1 session count                            |
+| Timestamp (`%t`)      | `[17/Jun/2024:09:47:25 +0000]`                                                                                 | session duration are counted as 1 session count based on the condition mentioned [here](index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments)
 | Client IP (`%h`)      | `192.168.243.142`                                                                                              | IP seen by the server        |
 | User-Agent            | `"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"` | Contains the browser info  of the request                  |
 | X-Forwarded-For       | `"10.134.209.51"`                                                                                              | Actual client IP passed by a proxy/load balancer    |

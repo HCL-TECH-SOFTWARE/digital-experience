@@ -39,6 +39,8 @@ java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-ex
 
 ### Example
 
+Refer to the following sample commands to generate user session data usage in MHS metrics format for non-Kubernetes deployments:
+
 ```
 # Output in the terminal
 java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIP.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk   > /tmp/2022-06-24T02-50-00_usage.metrics
@@ -62,6 +64,8 @@ See the following sample of an `excludeSessionKeys.txt` file:
 ```
 
 ### Expected output
+
+Upon running the sample commands, the following output is produced:
 
 ```
 1,Alpha525634,HCL Digital Experience,v9.5,pnkeq6pk,ebb89d32f30abc4eed049f7afbb8a7299bdc8459fd235d0b8473ca22e9457c65
@@ -112,6 +116,8 @@ The timestamp in the usage metrics file should be earlier than the start date. T
 
 ### Example
 
+Refer to the following sample command to generate user session data usage in MHS metrics format for Kubernetes deployments:
+
 ```sh
 kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics -productFeatureIdName HCL_DX_CloudNative
 ```
@@ -131,7 +137,7 @@ End,370d193fe0be35950d2707026d23ce595ae46054b77efcc944aa2484eab39399976854c58321
 
 ## Uploading Usage Metrics File to MHS
 
-After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing. For more information.
+After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`), upload the file to My HCLSoftware for processing.
 
 1. Go to the **Deployments** section of the My HCLSoftware portal to review entitlements and user session consumption reports.
 
