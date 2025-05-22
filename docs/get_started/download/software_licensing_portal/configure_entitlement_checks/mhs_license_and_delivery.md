@@ -56,7 +56,7 @@ After creating a deployment, refer to the following steps to get the deployment 
 
     ![More menu](../../software_licensing_portal/_img/deployment_key.png){ width="500" }
 
-3. Copy the unique deployment key, also known as the initial refresh token.
+3. Copy and save the unique deployment key, also known as the initial refresh token.
 
     ![Deployment key](../../software_licensing_portal/_img/new_deployment_key.png){ width="500" }
 
