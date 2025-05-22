@@ -89,10 +89,17 @@ To use the sample code, refer to the following steps:
 
 3. Create a JSP component with `/jsp/html/puma.jsp` in the `path` field. For more information on creating JSP components, refer to [Creating a JSP component](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/jsp_element/wcm_dev_elements_jsp_creating.md).
 
-4. Edit a presentation template to render the JSP component created in Step 3. For more information on editing presentation templates, refer to [Editing a presentation template in Presentation Designer](../../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md).
+4. Edit a presentation template and add the JSP component created in Step 3 to the template. For more information on editing presentation templates, refer to [Editing a presentation template in Presentation Designer](../../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md).
 
-5. Toggle **Edit Mode:** to **ON**, then go to **Edit Shared settings**.
+5. Under `Web Content > Libraries > <library name>` use an existing site area or create a new one.
 
-6. Map the presentation template and authoring template to a site area and render content from the site area in the Web Content Viewer portlet. For more information on mapping templates, refer to [Template mappings](../../../build_sites/create_sites/create_reusable_assets/wcm_cms_template_maps.md).
+6. Map the presentation template and authoring template to a site area. Later the whole content will be rendered inside of the Web Content Viewer portlet. For more information on mapping templates, refer to [Template mappings](../../../build_sites/create_sites/create_reusable_assets/wcm_cms_template_maps.md).
 
-7. Render the page with the Web Content Viewer portlet. For more information on the Web Content Viewer, refer to [Displaying content with Web Content Viewers](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/displaying_content/index.md).
+7. On an existing page or on a new page in the Portal add the `Web Content Viewer portlet` to the page.
+
+8. On the Portal page toggle **Edit Mode:** to **ON**
+
+9. On the `Web Content Viewer portlet` in the menu, go to **Edit Shared settings**. Configure the `Web Content Viewer portlet` to render the site area that was mapped in step 5.
+
+10. Render the page and check the results. The `Web Content Viewer portlet` should now show up the information of the JSP file.  
+    For more information on the Web Content Viewer, refer to [Displaying content with Web Content Viewers](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/displaying_content/index.md).
