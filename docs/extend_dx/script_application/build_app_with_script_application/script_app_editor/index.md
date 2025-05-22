@@ -1,4 +1,4 @@
-# Script Application Editor
+# Script Application editor
 
 You can take any existing web page, pick out individual parts, and enter them into corresponding tabs in the Script Application Editor. The Preview window displays the results as you edit.
 

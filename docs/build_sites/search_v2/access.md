@@ -25,7 +25,7 @@ See the Search V2 user interface below.
 
 The Search V2 UI has the following components:
 
-![](../../assets/HCL_Search_General_Components.png)
+![](../../assets/HCL_Search_03_End_user_Search_Results.png)
 
 -   **Main Header** - This section contains the title of the page.
 -   **Search Input** - This section displays the fields the user can interact with to modify the search parameters before clicking **Search**. There are three fields: the search field, the content source dropdown, and the search attribute dropdown.

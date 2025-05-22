@@ -58,4 +58,6 @@ Tool components are used to create tools that can be added to web pages for user
 
 -   [Search](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/search_element/index.md): You use a search component element to display the results of a search query. A search element cannot be used in isolation, but must be used together with an HTML element that is used to define the search query form.
 
+## HCLSoftware U learning materials
 
+To learn how to get started with the development aspects of HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
