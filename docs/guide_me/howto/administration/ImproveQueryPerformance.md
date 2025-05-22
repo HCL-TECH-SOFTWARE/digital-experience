@@ -30,15 +30,15 @@ To reduce your query time, refer to the following options you can try:
 
 4. Reduce the size of the WCM database. Delete un-needed content/libraries. Run clearVersions to prune un-needed versions.
 
-5. There are multiple query hints to the Oracle optimizer that can dramatically reduced query times for some queries. These hints should be be added to `icm.properties` in DX 8.0.0.x and below. For DX 8.5.x and above, they should be added to the Resource Environment provider `JCR ConfigService PortalContent` using the Websphere Application Manager (WAS) Deployment Manager or WAS Admin console.
+5. There are multiple query hints to the Oracle optimizer that can dramatically reduced query times for some queries. These hints should be added to `icm.properties` in DX 8.0.0.x and below. For DX 8.5.x and above, they should be added to the Resource Environment provider `JCR ConfigService PortalContent` using the WebSphere Application Server Integrated Solutions Console (WAS admin console).
 
-    Add this new entry under custom properties:
+    In the WebSphere Application Server Integrated Solutions Console under `Resources > Resource Environment provider > JCR ConfigService PortalContent` add a new custom property with name:  
 
     ```
     jcr.query.predicate.hint.optimization.info
     ```
 
-    Value:
+    Add the following as value of this property:
 
     ```text
     [icm:label,,,opt_param(''_optimizer_squ_bottomup'',''FALSE'') leading({2})
