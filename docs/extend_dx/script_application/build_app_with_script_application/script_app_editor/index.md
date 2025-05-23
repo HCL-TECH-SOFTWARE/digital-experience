@@ -29,3 +29,7 @@ Add the Script Application to a page. Then, import an application.
 You can export applications to edit the scripts by using your portal interface.
 - **[CSS best practices](./css_best_practices.md)**  
 If your code uses a map, or another element that has no fixed height, you must give it an explicit height, such as `400px vs 50%`.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip).
