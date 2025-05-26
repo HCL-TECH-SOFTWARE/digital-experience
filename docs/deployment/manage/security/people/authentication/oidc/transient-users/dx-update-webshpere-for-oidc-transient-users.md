@@ -1,8 +1,8 @@
 # Updating WebSphere to support OIDC Authentication for DX with Transient Users
 
-In addition to the basic OIDC Authentication for HCL Digital Experience (DX), you can give users(transient users) who are trusted and verified by an identity provider to access DX. These trusted and verified users do not require a local and registered Portal user account. For more information, see [Configuring transient users | HCL Digital Experience](https://help.hcltechsw.com/digital-experience/9.5/security/openid_trans_users.html).
+In addition to the basic OIDC Authentication for HCL Digital Experience (DX), you can give users(transient users) who are trusted and verified by an identity provider to access DX. These trusted and verified users do not require a local and registered Portal user account. For more information, see [Configuring transient users](../../../authentication/openid_trans_users.md).
 
-The Java Authentication and Authorization Service (JAAS) login module uses transient user attribute values based on the username supplied by the TAI. Also, it skips group membership process, since DX treats transient users as members of a `All Authenticated Portal Users` group. For more information on the JAAS module, see [Developing custom login modules for a system login configuration for JAAS](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=ujaaspmwa-developing-custom-login-modules-system-login-configuration-jaas).
+The Java Authentication and Authorization Service (JAAS) login module uses transient user attribute values based on the username supplied by the TAI. Also, it skips group membership process, since DX treats transient users as members of a `All Authenticated Portal Users` group. For more information on the JAAS module, see [Developing custom login modules for a system login configuration for JAAS](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=ujaaspmwa-developing-custom-login-modules-system-login-configuration-jaas){target="_blank"}.
 
 This functionality allows you to write minimal custom code that can bridge components and provide DX-based applications to integrate with an OIDC OpenID Provider (OP). This configuration is for the basic login module that enables Transient Users with any inconsistent Trust Association Interceptor (TAI).
 
@@ -102,6 +102,6 @@ Once you have updated WebSphere to support OIDC authentication for DX, you shoul
 
 ## Additional topics around JAAS Login Module
 
-- [Building Custom JAAS Login Module for your Identity Provider (IdP)](./transient-users-building-jaas-modules): This document outlines how to build a custom JAAS Login Module, enabling you to make additional authentication decisions or add information to the subject to make fine-grained authorization decisions inside your application.
+- [Building Custom JAAS Login Module for your Identity Provider (IdP)](./transient-users-building-jaas-modules.md): This document outlines how to build a custom JAAS Login Module, enabling you to make additional authentication decisions or add information to the subject to make fine-grained authorization decisions inside your application.
 
 - [Configuring Rule-based user groups adapter for Transient Users](./transient-users-softgroups-configuration.md): This is an optional configuration, to strengthen your transient user integration with additional features such as user role/group mapping from an IdP to DX.

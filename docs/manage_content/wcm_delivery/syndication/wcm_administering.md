@@ -6,7 +6,7 @@ Use syndication to replicate web content library data from one server to another
 Syndication is the method that is used by HCL Web Content Manager to replicate data from a web content library on one server to a web content library on another server.
 -   **[Syndication properties](wcm_config_prop_syndication.md)**  
 You can tailor the syndication behavior of your web content environment by changing configuration settings such as the syndication interval and automatic syndication.
--   **[How to manage syndicators and subscribers](manage_synd_subs)**  
+-   **[How to manage syndicators and subscribers](manage_synd_subs/index.md)**  
 You can set up syndication relationships by using the Administration Portlets or the command line. To set up a syndication relationship from the command line, use the XML configuration interface \(XML access\) and the ConfigEngine command to configure the subscriber.
 -   **[Syndication tuning](wcm_syndication_tuning.md)**  
 While syndication is a vital part of keeping your web content current, the same syndication strategy is not appropriate for every environment. Depending on how you deploy HCL Web Content Manager, you can use different syndication strategies to balance the currency of your content with the performance your environment requires.
