@@ -30,13 +30,13 @@ To create an `InContext` tag:
 
         If selected, the context is set by the context of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-        See the knowledge center topic that is called **Web content associations** for further information.
+        Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
     -   **Portal Mapping**
 
         If selected, the context is set by the web content association of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-        See the knowledge center topic that is called **Web content associations** for further information.
+        Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
     -   **Portlet Context**
 
@@ -84,3 +84,7 @@ The new context can be specified relative to the name path of the current contex
 [Element context="current" type="content" key="MyElement"]
 [/InContext]
 ```
+
+## HCLSoftware U learning materials
+
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
