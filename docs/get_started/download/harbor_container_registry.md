@@ -5,7 +5,7 @@ title: Harbor container registry
 # Download and deploy HCL products from a Harbor Repository
 <!-- Harbor is a project name that, as far as I can see, does not belong to HCL. Therefore, placing our company name in front of “ Harbor container repository” makes it seem as though It’s HCL’s Harbor container repository. The Harbor container repository is associated with HCL, to be sure, but we have to word items like this so there’s no confusion.  -->
 
-The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL container repository on Harbor](https://hclcr.io/){:target="_blank"}. Customers with credentials to access entitled software on the HCL Software Licensing Portal can apply those credentials to optionally access these components of Digital Experience v9.5. 
+The HCL Digital Experience 9.5 container images and Helm charts can be accessed from the [HCL container repository on Harbor](https://hclcr.io/){target="_blank"}. Customers with credentials to access entitled software on the HCL Software Licensing Portal can apply those credentials to optionally access these components of Digital Experience v9.5. 
 
 With the CF216 release (November 2023), the Harbor repository provides an OCI-based registry. The Helm chart command is updated to be OCI-compliant. However, older versions of the Helm chart are still used in the non-OCI approach. Both approaches are described later.
 
@@ -58,7 +58,7 @@ helm repo add
 hcl-dx https://hclcr.io/chartrepo/dx
 ```
 
-To obtain the `CLI secret`, you must log in to [Harbor GitHub site for HCL](https://hclcr.io/) by using your authorized HCL user credentials, navigating to your HCL `User Profile` on Harbor, and then copying it from the `CLI secret` field.
+To obtain the `CLI secret`, you must log in to [Harbor GitHub site for HCL](https://hclcr.io/){target="_blank"} by using your authorized HCL user credentials, navigating to your HCL `User Profile` on Harbor, and then copying it from the `CLI secret` field.
 
 After you add the repository to your Helm deployment, you should see the following message:
 
@@ -88,7 +88,7 @@ You can see which chart version correlates to which HCL Digital Experience 9.5 C
 After you complete the preceding actions, your Helm configuration can use HCL DX 9.5 Helm charts directly from the Helm Repository on Harbor.
 
 !!! note
-    Applying the method to pull DX 9.5 Container Update images directly from the HCL container registry on Harbor requires that every cluster node can access the HCL container registry on Harbor. To leverage this feature, you have to configure an `ImagePullSecret` with your HCL credentials for the Harbor site. For instructions, see [Configure deployment to use the HCL container registry on Harbor](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry).
+    Applying the method to pull DX 9.5 Container Update images directly from the HCL container registry on Harbor requires that every cluster node can access the HCL container registry on Harbor. To leverage this feature, you have to configure an `ImagePullSecret` with your HCL credentials for the Harbor site. For instructions, see [Configuring deployment to use the HCL container registry on Harbor](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_imagepullsecrets.md#configuring-deployment-to-use-the-hcl-harbor-container-registry).
 
 #### Pulling a Helm chart for deployment
 

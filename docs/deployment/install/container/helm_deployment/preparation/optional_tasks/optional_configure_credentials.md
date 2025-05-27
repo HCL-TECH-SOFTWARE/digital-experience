@@ -32,7 +32,7 @@ kubectl get secret <release-name>-remote-search-was --namespace <namespace> -o=j
 
 ## Adjusting default credentials
 
-You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need:
+You can adjust the default credentials that HCL Digital Experience 9.5 is using by adding the following syntax to your custom-values.yaml file and changing the values you need. For details about the custom secrets (for example, `customWasSecret`, `customWpsSecret`), see the section [Configuring Credentials from Secrets](#configuring-credentials-from-secrets).
 
 ```yaml
 # Security related configuration, e.g. default credentials
@@ -43,42 +43,62 @@ security:
     # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # If wasUser and/or wasPassword is not empty, the customWasSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     wasUser: "wpsadmin"
     wasPassword: ""
+    customWasSecret: ""
+
     # Credentials used for HCL Digital Experience Core administrative access.
     # The credentials defined in these values define the HCL Digital Experience Core administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wpsUser and wpsPassword need to be manually updated accordingly.
+    # If wpsUser and/or wpsPassword is not empty, the customWpsSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     wpsUser: "wpsadmin"
     wpsPassword: ""
+    customWpsSecret: ""
+
     # Credentials used for Config Wizard administrative access. This only takes effect when "configuration.core.tuning.configWizard" is enabled.
     # The credentials defined in these values define the WebSphere Application Server primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # This will also map the user as the user for Config Wizard and dxconnect (for dxclient)
     # - If the Config Wizard admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for configWizardUser and configWizardPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for configWizardUser and configWizardPassword need to be manually updated accordingly.
+    # If configWizardUser and/or configWizardPassword is not empty, the customConfigWizardSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     configWizardUser: "wpsadmin"
     configWizardPassword: ""
+    customConfigWizardSecret: ""
+
   # Security configuration for Digital Asset Management
   digitalAssetManagement:
     # Credentials used by Digital Asset Management to access the persistence database.
+    # If dbUser and/or dbPassword is not empty, the customDBSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     dbUser: "REDACTED"
     dbPassword: "REDACTED"
+    customDBSecret: ""
+
     # Credentials used by the persistence database to perform replication between database nodes.
+    # If replicationUser and/or replicationPassword is not empty, the customReplicationSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     replicationUser: "REDACTED"
     replicationPassword: "REDACTED"
+    customReplicationSecret: ""
+
   # Security configuration for Open LDAP
   openLdap:
+    # If ldapUser and/or ldapPassword is not empty, the customLdapSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     # Admin user for Open LDAP, can not be adjusted currently.
     ldapUser: "REDACTED"
     # Admin password for Open LDAP
     ldapPassword: "REDACTED"
+    customLdapSecret: ""
+
   # Security configuration for Remote Search
   remoteSearch:
     # Credentials used for IBM WebSphere Application Server administrative access.
     # The credentials defined in these values define the WebSphere Application Server's primary administrative user. The user gets created if necessary and/or the password is set to the current value.
     # - If the WAS admin credentials were changed by any other means than through the helm values, the currently active credentials need to be entered as the values for wasUser and wasPassword.
     # - If LDAP is configured as the user repository, the WebSphere Application Server admin user won't be applied automatically and LDAP has the authority over the credentials. Whenever the credentials are changed in LDAP, the values for wasUser and wasPassword need to be manually updated accordingly.
+    # If wasUser and/or wasPassword is not empty, the customWasSecret below should be an empty string. If both default credential and secret name are filled it will block the chart from being deployed.
     wasUser: "wpsadmin"
     wasPassword: ""
+    customWasSecret: ""
 ```
 
 ## Updating credentials

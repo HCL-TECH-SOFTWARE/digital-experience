@@ -1,4 +1,4 @@
-# Script Application Improvements
+# Script Application improvements
 
 In CF201, some improvements are made to the Script Applications. You can now upload minified content, use a new configuration task to set the required WCM properties for script applications such as React or Angular, and make use of the new **Deferred with React** theme profile.
 

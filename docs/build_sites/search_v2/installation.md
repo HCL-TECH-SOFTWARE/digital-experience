@@ -31,9 +31,9 @@ For more information on how to run ConfigEngine tasks on container deployments, 
 
 To enable Search V2 manually, run the **enable-search-v2** config task. You do not need to stop or restart the Portal when running these tasks.
 
--   AIX: `./ConfigEngine.sh enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.wcm.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
--   Linux: `./ConfigEngine.sh enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.wcm.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
--   Windows: `ConfigEngine.bat enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.wcm.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
+-   AIX: `./ConfigEngine.sh enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
+-   Linux: `./ConfigEngine.sh enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
+-   Windows: `ConfigEngine.bat enable-search-v2 -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Dsearch.input.redirect.version=2 -Dsearch.middleware.ui.uri=http://{search.middleware.ui.uri}/dx/ui/search`
     
 !!! important
     The `{search.middleware.ui.uri}` placeholder needs to be replaced with the exact search middleware service name in your deployment. For example:`http://dx-search-search-middleware-query:3000`.
