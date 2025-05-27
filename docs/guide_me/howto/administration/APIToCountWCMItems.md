@@ -6,14 +6,13 @@
 
 ## Introduction
 
-WCM API sample code to count WCM items and versions
+This document shows the WCM API sample code to count WCM items and versions in HCL Digital Experience (DX).
 
 ## Instructions
 
-**DISCLAIMER OF WARRANTIES:**
-The following enclosed code is sample code created by HCL Corporation.
-This sample code is provided to you solely for the purpose of assisting you in the development of your applications.
-The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+!!!Important
+    **DISCLAIMER OF WARRANTIES:**
+    The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ```java
 
@@ -52,4 +51,5 @@ The code is provided "AS IS", without warranty of any kind. HCL shall not be lia
    }
 ```
 
-Note: see the javadoc for Interface DocumentTypes to see a list of all available DocumentTypes that could be counted in this manner.
+!!!Note
+    See the Javadoc for interface `DocumentTypes` to see a list of all available `DocumentTypes` that could be counted in this manner.
