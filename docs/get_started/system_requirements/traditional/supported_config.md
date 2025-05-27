@@ -8,7 +8,7 @@ For more details, see [HCL DX support statement](../../../get_started/software_s
 
 ## Operating systems
 
-HCL Digital Experience V9.5 supports the following operating systems, which are organized by operating system family. Operating system families include AIX, Linux, and Windows.
+HCL Digital Experience (DX) V9.5 supports the following operating systems, which are organized by operating system family. Operating system families include AIX, Linux, and Windows.
 
 ### AIX family
 
@@ -18,10 +18,10 @@ HCL Digital Experience V9.5 supports the following operating systems, which are 
 |AIX 7.2|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.0|
 |AIX 7.3|Base and later maintenance releases|Power System - Big Endian|64-Exploit, 64-Tolerate|9.5|
 
-!!! important 
+!!! important
 	If the installation of DX on AIX 7.3 fails (with missing library messages) while you use the IBM Installation Manager (IIM) installer contained in the DX Setup ``.zip`` files, then use the a later version of IBM AIX IIM (version 1.9.2.3 or later). Using a later IIM version helps ensure that the required AIX 7.3 libraries for installation are present. Refer to the following link to check the list of IIM fix levels and their corresponding download links: [Fix list for Installation Manager](https://www.ibm.com/support/pages/fix-list-installation-manager).
 
-!!! important 
+!!! important
 	The Portal Express offering does not support AIX.
 
 ### Linux family
@@ -59,16 +59,16 @@ HCL Digital Experience V9.5 supports the following operating systems, which are 
 
 ## Hypervisors
 
-HCL Digital Experience 9.5 supports the following hypervisors:
+HCL DX 9.5 supports the following hypervisors:
 
 ### AIX summary
 
 |Hypervisor|Product minimum|Deployment units|Supported guest operating system|
 |---------|-----|-----|----------------------------------|
-|IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<Br>-	AIX 7.2 POWER System \- Big Endian|
-|WPAR: Product installed in System Workload Partition AIX 6.1|8.5|Server|-	AIX 7.1 POWER System \– Big Endian<br>-	AIX 7.2 POWER System \– Big Endian|
+|IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|8.5|Server|- AIX 7.1 POWER System \– Big Endian<Br>- AIX 7.2 POWER System \- Big Endian|
+|WPAR: Product installed in System Workload Partition AIX 6.1|8.5|Server|- AIX 7.1 POWER System \– Big Endian<br>- AIX 7.2 POWER System \– Big Endian|
 
-!!! important 
+!!! important
 	The Portal Express offering does not support AIX.  
 
 ### Linux summary
@@ -77,7 +77,7 @@ HCL Digital Experience 9.5 supports the following hypervisors:
 |---------|-----|-----|----------------------------------|
 |IBM PR/SM any version|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM zSystems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |IBM PowerVM Hypervisor (LPAR, DPAR, Micro-Partition) any supported version|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
-|Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian|<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
+|Red Hat KVM as delivered with Red Hat Enterprise Linux (RHEL) and its RHEV equivalent 7.0|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |VMware ESXi 6.5 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |VMware ESXi 7.0|9.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 
@@ -89,12 +89,12 @@ HCL Digital Experience 9.5 supports the following hypervisors:
 |VMware ESXi 6.5|8.5|Server|All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Standard Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64|
 |VMware ESXi 7.0|9.5|Server|All supported operating systems:<br>- Windows Server 2012 Datacenter Edition x86-64<br>- Windows Server 2012 Standard Edition x86-64<br>- Windows 8.1 Enterprise x86-64<br>- Windows 8.1 Professional x86-64<br>- Windows 8.1 Standard x86-64<br>- Windows Server 2012 R2 Datacenter Edition x86-64<br>- Windows Server 2012 R2 Standard Edition x86-64<br>- Windows 10 Pro x86-64<br>- Windows 10 Enterprise x86-64<br>- Windows Server 2016 Datacenter Edition x86-64<br>- Windows Server 2016 Standard Edition x86-64<br>- Windows Server 2016 Essentials Edition x86-64<br>- Windows Server 2019 Datacenter Edition x86-64<br>- Windows Server 2019 Standard Edition x86-64|
 
-
 ## Prerequisites
 
-HCL Digital Experience 9.5 requires the following capabilities and products to provide those capabilities:
+HCL DX 9.5 requires the following capabilities and products to provide those capabilities:
 
 ### WebSphere Application Server
+
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |WebSphere Application Server|8.5.5.12 and later maintenance releases**|8.5|
@@ -107,50 +107,54 @@ HCL Digital Experience 9.5 requires the following capabilities and products to p
 |----------|----------|----------|
 |WebSphere eXtreme Scale|8.6.1 and later maintenance releases|8.5|
 
-
 ### IBM Installation Manager
+
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |IBM Installation Manager|1.8.5 and later maintenance|8.5|  
 
-  
-
 ### Java SDK
-HCL Digital Experience 9.5 requires JDK 7.0 or later for installation. 
+
+HCL DX 9.5 requires JDK 7.0* or later for installation.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|8.0 and later maintenance releases|8.5|  
 
+*The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).
 
 ## Databases
 
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Apache Derby|10.11*<br/>|8.5|
-|DB2 Standard and Advanced Edition|11.5** and later maintenance releases|8.5|
 |DB2 on Amazon Relational Database Service|11.5** and later maintenance releases|8.5|
-|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022 and later maintenance releases|8.5|
+|DB2 Published Cumulative Special Build (CSB)|12.1.0 and later maintenances releases|8.5|
+|DB2 Standard and Advanced Edition|11.5** and later maintenance releases|8.5|
+|Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022, and later maintenance releases|8.5|
 |Oracle Database 19c|19c and later maintenance releases|8.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|8.5|
+|Oracle on Amazon Relational Database Service|21c and later maintenance releases|8.5|
 
 \* Apache Derby is not supported in a product environment.  
 \* DB2 includes support for the DB2 pureScale component.  
 
+## Collaboration
 
-## Collaboration 
 |Prerequisite|Supported software versions|Product minimum|
 |-----------|------------------|-----|
 |HCL Connections|8.0 and later maintenance|9.5|
 |HCL Leap|9.2 and later maintenance|9.5|
 
-## Development tools 
+## Development tools
+
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |HCL Web Experience Factory|8.5.1 and later maintenance releases|8.5|
 |Rational Application Developer for WebSphere|9.7 and later maintenance releases|8.5|
 
 ## JDBC drivers
+
 JDBC Drivers support forward compatibility for all maintenance levels and also new version levels for the types listed below, unless explicitly stated otherwise.
 
 |Supported software|Supported software minimum|Product minimum|
@@ -162,14 +166,14 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 |Microsoft SQL Server JDBC Driver|6.2, and later maintenance releases|8.5|
 |Oracle JDBC Driver 12.c***|12.2, and later maintenance releases|8.5|
 
-\*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported. 
+\*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
 
 \**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
 
 ***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  
-		 
 
 ## LDAP servers 
+
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
 |Supported software|Supported software minimum|Product minimum|
@@ -177,21 +181,22 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |IBM Security Directory Suite|8.0.1 and later maintenance releases|8.5|
 |IBM Security Verify Directory|10.0.1 and later maintenance releases|8.5|
 
-## Product-specific or mixed content 
+## Product-specific or mixed content
+
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Dojo Toolkit|1.9.7|8.5|
 |IBM License Metric Tool|9.2 and later maintenance releases|8.5|
 |jQuery|3.5.1|8.5|  
 
-
 ## Security management
+
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|CA Siteminder*|12.0, and later maintenance releases|8.5|   
+|CA Siteminder*|12.0, and later maintenance releases|8.5|
 
+## Web browsers
 
-## Web browsers 
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Android default browser|Newer levels are supported|8.5|
@@ -202,6 +207,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 |Mozilla Firefox ESR|Newer levels are supported|8.5|
 
 ## Web Servers (Non-Container Platforms)
+
 |Supported software|Supported software minimum, and later|Product minimum|
 |-----------|------------------|-----|
 |Apache Server|2.4 and later maintenance releases|8.5|
@@ -213,11 +219,12 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 
 *IBM HTTP Server 8.5.5 is supported only with WebSphere Application V8.5.5.x.  
 
-
 ## Hardware requirements
-HCL Digital Experience requires the following hardware, organized by type of hardware, deployment units or components.
+
+HCL DX requires the following hardware, organized by type of hardware, deployment units or components.
 
 ### AIX
+
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |---------|------|------|-----------|
 |Disk space|Server|Minimum 3 GB free disk space for installation of DX Portal<br>Minimum 2 GB free disk space for installation of WebSphere Application Server<br>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br>Minimum 8 GB total free disk space recommended for installation|All supported AIX operating systems|
@@ -226,10 +233,11 @@ HCL Digital Experience requires the following hardware, organized by type of har
 |Processor|Server|X86-64 IBM POWER Family of processors<br>System z Processors|All supported AIX operating systems|
 |-|Server|Minimum 2 CPUs for installation of Portal or WCM|All supported AIX operating systems|
 
-!!! important 
+!!! important
 	The Portal Express offering does not support AIX.
 
 ### Linux
+
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |------------------|-----|------|-------------|
 |Disk Space|Server|Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation|All supported Linux operating systems|
@@ -239,6 +247,7 @@ HCL Digital Experience requires the following hardware, organized by type of har
 ||Server|Minimum 2 CPUs for installation of Portal or WCM|All supported Linux operating systems|
 
 ### Windows
+
 |Hardware|Deployment units|Requirement|Applicable operating systems|
 |------------------|-----|------|-------------|
 |Disk Space|Server|Minimum 3 GB free disk space for installation of DX Portal<br/>Minimum 2 GB free disk space for installation of WebSphere Application Server<br/>Minimum 3 GB free disk space for installation of IBM Installation Manager and the Installation Manager shared directory<br/>Minimum 8 GB total free disk space recommended for installation|All supported Windows operating systems|

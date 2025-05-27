@@ -8,22 +8,7 @@ With HCL DX 9.5 Container Update CF195 and later releases, new options are avail
 
 |Basic caching|Advanced Caching|Data caching|
 |-------------|----------------|------------|
-|CACHE=SITE  
- CACHE=SESSION  
- CACHE=NONE
-
-|CONTENTCACHE=SITE   
- CONTENTCACHE=SESSION   
- CONTENTCACHE=USER  
- CONTENTCACHE=SECURED  
- CONTENTCACHE=PERSONALIZED   
- CONTENTCACHE=NONE
-
-|CONNECTORCACHE=SITE   
- CONNECTORCACHE=SESSION   
- CONNECTORCACHE=NONE
-
-|
+|CACHE=SITE<br>CACHE=SESSION<br>CACHE=NONE|CONTENTCACHE=SITE<br>CONTENTCACHE=SESSION<br>CONTENTCACHE=USER<br>CONTENTCACHE=SECURED<br>CONTENTCACHE=PERSONALIZED<br>CONTENTCACHE=NONE|CONNECTORCACHE=SITE<br>CONNECTORCACHE=SESSION<br>CONNECTORCACHE=NONE|
 
 **Examples:**
 
@@ -104,7 +89,7 @@ How to enable these options:
 
     Value: `true`
 
-
 Note that it is possible to have **both** options enabled at the same time. However, the second option flushes the whole cache, which renders the first option useless.
 
-
+???+ info "Related information"
+    - [How to clear WCM caches with ConfigEngine task](../../../guide_me/howto/administration/ClearWCMCaches.md)

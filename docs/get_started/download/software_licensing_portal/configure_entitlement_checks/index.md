@@ -1,255 +1,110 @@
-# HCL Digital Experience Cloud Native 9.5 entitlement checks
+# HCL Digital Experience Cloud Native 9.5 entitlement checks and usage reporting
 
-The [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) supports entitlement checking for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/) in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels. 
+!!!Important
+    Starting March 31, 2025, the software download packages for all current and future HCL Digital Experience (DX) offering product releases will be available through the [My HCLSoftware (MHS)](https://my.hcltechsw.com/){target="_blank"} portal. Customers should plan to transition to access their entitled DX software using the MHS portal by June 30, 2025. For more information refer to [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
 
-## Overview
-Beginning with [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md), if you deploy DX to supported Kubernetes platforms you must specify certain entitlement check parameters in [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters or fail to configure them correctly, then the entitlement check will not pass and software access will enter the grace period. To learn more about the various entitlement check scenarios, see [HCL DX Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md).
+The [MHS portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} supports entitlement checking and usage reporting for several HCL Software solutions, including the [HCL Digital Experience (DX) Cloud Native 9.5 Tier 1 – 7 offerings](https://blog.hcltechsw.com/digital-experience/introducing-new-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"} in the HCL DX portfolio. By checking entitlements, you can track purchased software entitlement periods and usage levels.
 
-Optionally, you can [configure a local FlexNet entitlement server](./configuring_local_flexnet_entitlement_server.md) for enhanced control over the security of entitlement checks in your environments. With this option, you can dedicate a computer to act as a local FlexNet entitlement server. You can remain in entitlement compliance without the need for outbound connections to the HCL-hosted FlexNet entitlement service from your HCL DX Cloud Native 9.5 Kubernetes installations.
+For Kubernetes deployments, the HCL License Manager container service is configured to check entitlements and record usage that can be reported to the MHS delivery portal. If you cannot or do not want to integrate directly with a delivery portal for automatic online reporting, you may use alternative options such as producing report extracts in a simple file format, that can be read, uploaded periodically, and shared in other ways. Refer to [Reporting Options](#reporting-options) to identify how to report usage for Kubernetes and traditional deployments.
 
-A local FlexNet entitlement server can also be configured to function without outbound connections. You can accomplish this configuration by using the offline version of the HCL FlexNet Embedded License Server. With outbound connections disabled, however, a member of your development team must manually update the entitlement server periodically, to verify entitlement with HCL. See [Configuring a local FlexNet License Server](configuring_local_flexnet_entitlement_server.md) for more information.
+!!! note
+    Entitlement checking is not implemented in the HCL DX Cloud Native v9.5 software that is deployed to support specified operating systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of user sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y){target="_blank"} .  
 
-During the grace period, errors are displayed in the DX Kubernetes deployment server logs. If you encounter these errors, contact HCL Support to resolve the issue. For more information about FlexNet user and device management, see the [What is the HCL License & Delivery Portal (FlexNet Portal?)](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) knowledge article on the HCL Customer Support portal.
+A standalone tool called the [User Session Reporting Tool](./user_session_reporting_tool.md) was delivered in CF223 and is available from DX entitlements in the MHS delivery portal.
+
+You may also use web analytics reporting software such as Google Analytics to track user session consumption in DX v9.5 and earlier release versions of production deployments. For more information, refer to [Integrate Google Analytics with HCL DX](../../../../build_sites/site_analytics/google_analytics/index.md)..
+
+## HCL DX Cloud Native 9.5 entitlement-check requirement
+
+If you deploy DX to supported Kubernetes platforms, you must specify certain entitlement check parameters in [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks. If you do not specify these entitlement check parameters or fail to configure them correctly, the entitlement check will not pass and software access will enter the grace period.
+
+Review the following [HCL DX Cloud Native 9.5](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to see responses when entitlement-validation attempts fail.
+
+HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve HCL Software License Portal entitlement checks for the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies that your purchased product subscription period is valid. If your subscription lapses, you must renew the subscription with HCL. For example, if you purchase a DX Cloud Native 9.5 Tier 2 part on May 30, 2025, the entitlement period is valid until May 30, 2026.
+
+### Entitlement-check scenarios
+
+When the HCL DX Cloud Native 9.5 License Manager container service starts, and entitlement checking and usage reporting are enabled, it will perform an entitlement check against the configured software delivery portal and report the result of that check in log messages.
+
+During the grace period and beyond, messages are displayed in the License Manager container logs as a reminder that the contracted entitlement has expired. If you encounter these messages, contact your HCL salesperson to discuss the entitlement.
 
 !!!note
-    Entitlement checking is not implemented in HCL DX Cloud Native v9.5 software that is deployed to supported specified Operating Systems (for example, Windows, Linux or IBM AIX). Customers deploying HCL DX Cloud Native v9.5 software to these platforms should plan to measure and report the total number of User Sessions consumed per contract year, in accordance with the terms of the [HCL DX Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-ofP.t-Y).  
+    - The grace period is 28 days. This period is determined and defined by the entitlement server. During this time, the DX Cloud Native 9.5 server starts, despite failing an entitlement check.
+    - To confirm that your entitlement is verified and that your HCL DX CN 9.5 server is not in the grace period, access the HCL DX v9.5 Container Update Log Manager pod logs. However, you must first ensure that your DX Cloud Native 9.5 deployment Helm chart is configured for entitlement checking to verify that there are no HCL DX CN 9.5 entitlement messages.
 
-Customers can use web analytics reporting software such as Google Analytics to track user session consumption in their DX v9.5 production deployments. For more information, see [Integrate Google Analytics with HCL Digital Experience](../../../../build_sites/site_analytics/google_analytics/index.md). In addition, customers that have deployed DX 9.5 to supported Kubernetes platforms can use the HCL DX 9.5 user session tracking and reporting to monitor user sessions over a specified time period. For more information, see [Tracking user session consumption and exporting usage reports](export_usage_report.md).
+The following table describes the possible entitlement-check response scenarios and the corresponding behavior of the DX Cloud Native 9.5 Tier 1 – 7 (CN) services.
 
-## Prerequisites
-The following elements are the prerequisites for configuring the DX Cloud Native V9.5 entitlements to be deployed to supported Kubernetes platforms on your HCL FlexNet License and Delivery Portal instance for entitlement checking:  
+| Entitlement-Check Response Scenario | DX Cloud Native 9.5 Server Behavior |
+| ----------- | ----------- |
+| 1. The connection to the entitlement server is successful. You have a valid HCL DX Cloud Native 9.5 entitlement.|The HCL DX Cloud Native 9.5 server starts.|
+| 2. The connection to the entitlement server is successful. The HCL DX CN 9.5 entitlement has expired. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file and on another DX location: <br><br> `HCL DX CN 9.5 entitlement has ended on expiry date. The grace period will expire in (number of days remaining). To avoid interruption in service, please contact your HCL salesperson to resolve the entitlement issue.`|
+| 3. The connection to the entitlement server is successful. You do not have a valid HCL DX Cloud Native 9.5 entitlement. |HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on grace period end date. Resolve this issue to avoid interruption in the service.`|
+| 4. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has started.|HCL DX Cloud Native 9.5 server starts. The following message is included in the server-side log file in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. HCL DX CN 9.5 entitlement grace period of four weeks has started and will expire on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
+| 5. The connection to the entitlement server fails. You are operating within the HCL DX CN 9.5 entitlement grace period.|HCL DX Cloud Native 9.5 server starts. The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `The connection to the entitlement server failed. You are currently operating within the HCL DX CN 9.5 entitlement grace period of four weeks, which expires on (grace period end date). Please contact HCL Support to resolve the connection issue and try again.`|
+| 6. The connection to the entitlement server fails. The HCL DX CN 9.5 entitlement grace period has expired.|The following message is included in the HCL DX 9.5 Container Update License Manager pod logs: <br><br> `HCL DX CN 9.5 entitlement grace period has ended on (grace period end date). If you feel this is an error, please log in to the HCL Customer Support portal ([https://support.hcltechsw.com/csm](https://support.hcltechsw.com/csm)) and open a Licensing case (New cases > Licensing case). Otherwise, contact your HCL salesperson to update your licensing.`<br><br> If you require an extension to the grace period, you can contact support for a one-time extension of up to 14 additional days. |
 
--   HCL Software Account and access to the [HCL Software License & Delivery Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344). 
--   A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) offering parts have been purchased and issued by the HCL Software licensing team.
--   Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your HCL Software License portal instances. 
-    ![DX Cloud Native 9.5 (Tier 1 – 7) entitlements](../../software_licensing_portal/_img/DX_cloud_native_entitlements.png)
-See the "How to check your entitlements" and "Map entitlements" sections in: [What is the HCL Software License & Download Portal?](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344#a8) for guidance in locating and mapping your entitlements on your deployment servers.
--   A plan you must implement to deploy or update an [HCL DX 9.5 Container Update CF207](../../../../whatsnew/cf20/newcf207.md) or later release. 
+## HCL DX Cloud Native v9.5 Usage Reporting
 
-Review the architecture that presents the License Manager component of HCL DX v9.5 Container Update software, which follows in the next section.
+### Reporting options
 
-## Architecture
-The License Manager component communicates with the HCL FlexNet server to validate license entitlement at set periods for HCL Digital Experience Cloud Native V9.5 Tier 1 – 7 software after you configure it in the DX Cloud Native 9.5 deployment Helm chart. The License Manager component also transmits user session consumption from your production DX Cloud Native 9.5 deployments to their specific FlexNet entitlements dashboard.
+When reporting product usage in HCL DX, the method of reporting depends on the connectivity of your deployment to external licensing services. Two primary modes are available: online and offline (disconnected) usage reporting.
 
-![](../../software_licensing_portal/_img/DX_95_container_update_software_architecture_license_manager_component.png)
+1. Online usage reporting: In online mode, the deployment is connected to the internet and can communicate directly with the MHS license service. Usage data such as user sessions or feature utilization is automatically reported in near real-time through integrated APIs. This is the most seamless and automated method of entitlement tracking and compliance.
 
-Follow the configuration steps in the following procedure before you deploy a new or update an existing DX 9.5 Container deployment. By completing these steps, you configure the DX Cloud Native 9.5 Tier 1 – 7 deployment a Helm chart and enable the License Manager entitlement-checking functions.  
+2. Offline (disconnected) usage reporting: In offline or disconnected mode, the environment has no external connectivity to licensing servers. This is common in air-gapped, on-premises, or highly secure deployments. In this mode, usage data must be collected manually, converted into supported metric formats, and uploaded manually through a web portal.
 
-## Procedure
-1. Obtain access to the [HCL License and Delivery Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/startPage.do) for your organization. There, you can download the Flexnex entitlement server software and manage your FlexNet entitlement user names, passwords, and device IDs. Entitlement verification is performed against the HCL-hosted FlexNet entitlement server.
+Refer to the following table to determine the appropriate reporting method for your existing deployment. It outlines the available usage reporting options for both Kubernetes and traditional (on-premises) environments, along with their corresponding software portals and documentation links.
 
-    !!!important
-        For remote entitlement checks to succeed, ensure that your system and network firewalls allow for outbound connections to `hclsoftware.compliance.flexnetoperations.com`.
+| **Reporting Target**     | **Deployment Type** | **Further Information**                                                                                                                                             |
+|-------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **My HCLSoftware**      | Kubernetes          | [Online Reporting](./mhs_license_and_delivery.md#configuring-the-dx-cloud-native-95-entitlement)                                                                     |
+|                         | Kubernetes          | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-kubernetes-deployments)                       |
+|                         | Traditional         | [Offline / Disconnected Reporting](./configuring_mhs_file_base_session_reporting.md#mhs-file-based-usage-reporting-for-non-kubernetes-deployments)                   |
+| **Manual Export**       | Kubernetes          | [Manual Report Extracts](./export_usage_report.md)                                                                                                                   |
+|                         | Traditional         | [User Session Reporting Tool](./user_session_reporting_tool.md)                                                                                                      |
 
-2. Configure your [HCL DX Cloud Native 9.5](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) software for entitlement checks by making adjustments to your HCL DX [deployment Helm chart](../../../../get_started/plan_deployment/container_deployment/index.md). You can make these adjustments to a new or existing deployment.
-
-3. Look for the following information to configure in the DX 9.5 Container Update CF207 or later Helm chart to enable License Manager and FlexNet entitlement checking:
-
-You must configure these properties to your entitlements to the applicable **DX Cloud Native 9.5 Tier 1 – 7 offering parts** that you have previously mapped to your HCL Software server devices defined on the HCL Software License Portal. See the [Pre-requisites](#prerequisites) section for instructions.
-
-    ```yaml
-    # License Manager Configuration Controls which application is deployed and configured
-    applications:
-      # License Manager
-      # If using the HCL DX 9.5 Cloud Native Tier 1 – 7 software and licensing you are required to set this to true.
-      # The License Manager service manages the license requirements for your DX deployment.
-      licenseManager: <boolean>
-    configuration:
-      # License Manager Configuration
-      licenseManager:
-          # Configures if this environment is a production environment. 
-          # For non production environments user sessions are not counted but the license 
-          # must still be validated.
-          productionEnvironment: true
-          # Flexnet License Server ID
-          licenseServerId: "LICENSE_SERVER_ID"
-          # Flexnet License Server URL
-          licenseServerUri: "LICENSE_SERVER_URI"
-          # Flexnet License Server's Configured Features
-          licenseFeatureNameWithVersion: "LICENSE_SERVER_FEATURE_WITH_VERSION"
-          # Flexnet License Username
-          licenseManagerUser: "LICENSE_USERNAME"
-          # Flexnet License Password
-          licenseManagerPassword: "LICENSE_PASSWORD"
-
-    ```
-
-    By using entitlements and device properties that you defined through the mapping process, you will configure those properties to your Helm chart to validate the entitlement period for your software. After completion, your DX 9.5 Container Update 207 and higher deployments verifies the entitlement period is valid for your [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) subscription entitlements.
-
-5. Configure the following items of your DX 9.5 Container Update CF207 or later Helm chart according to the DX Cloud Native 9.5 entitlements (Tier 1 – 7) that you are entitled to and have mapped to your HCL FlexNet Server instance:
-
-    - `productionEnvironment:true` - Configure this variable to true if this deployment will be used to support a Production deployment. See the [HCL DX 9.5 license document](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad) for the definitions of production and non-production deployments. 
-    - `licenseServer ID` – Set to your HCL FlexNet Software licenseServer ID.
-    - `licenseServer URL` – Verify your connection to the HCL FlexNet Server URL. Ensure that your system and network firewalls allow outbound connections to hclsoftware.compliance.flexnetoperations.com.
-    - `licenseFeatureNameWithVersion` – Configure this variable according to the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering part your organization has acquired and that is mapped to your HCL FlexNet server instances. See HCL DX Cloud Native 9.5 Tier 1 – 7 parts and FlexNet License Server Feature Name table that follows.
-    - `licenseManagerUser` – Configure this variable with the user name of the administrator who is authenticated to manage your HCL Software License Portal entitlements. 
-    - `licenseManagerPassword` – Configure this variable with the password associated with the user name of the administrator to manage your HCL Software License Portal entitlements that you defined in the previous step.
-
-6. (Optional) [Create and upload a public/private key pair](#securing-license-server-communication-for-the-license-manager-application). The License Manager uses a default key when no custom key is configured.
-
-**HCL DX Cloud Native 9.5 Tier 1 – 7 parts and HCL FlexNet License Server Feature Name**
-
-| HCL Digital Experience Cloud Native 9.5 Part Description Part Number | Part Number | Feature Name |
-| ----------- | ----------- | ----------- |
-| HCL Digital Experience Cloud Native Tier 1, 12 Month Term License & S&S, 1-500K User Sessions|TN100928Y01|DXPN_CloudNative_Tier1_500K@9.5 |
-| HCL Digital Experience Cloud Native Tier 2, 12 Month Term License & S&S, 500K-2M User Sessions|TN100929Y01|DXPN_CloudNative_Tier2_2M@9.5|
-| HCL Digital Experience Cloud Native Tier 3, 12 Month Term License & S&S, 2M-6M User Sessions|TN100930Y01|DXPN_CloudNative_Tier3_6M@9.5|
-| HCL Digital Experience Cloud Native Tier 4, 12 Month Term License & S&S, 6M-12M User Sessions|TN100931Y01|DXPN_CloudNative_Tier4_12M@9.5|
-| HCL Digital Experience Cloud Native Tier 5, 12 Month Term License & S&S, 12M-24M User Sessions|TN100932Y01|DXPN_CloudNative_Tier5_24M@9.5|
-| HCL Digital Experience Cloud Native Tier 6, 12 Month Term License & S&S, 24M-60M User Sessions|TN100933Y01|DXPN_CloudNative_Tier6_60M@9.5|
-| HCL Digital Experience Cloud Native Tier 7, 12 Month Term License & S&S, 60M-120M User Sessions|TN100934Y01|DXPN_CloudNative_Tier7_120M@9.5|
-
-Example values configured to an HCL DX Cloud Native 9.5 deployment Helm chart follow:  
-
-```yaml
-configuration:
-# License Manager Configuration
-  licenseManager:
-    # Configures if flexnet license checking is enabled
-    productionEnvironment: true
-    # Flexnet License Server ID
-    licenseServerId: "Q8A6YCZ3A4GH"
-    # Flexnet License Server URL
-    licenseServerUri: "https://hclsoftware.compliance.flexnetoperations.com"
-    # Flexnet License Server's Configured Features
-    licenseFeatureNameWithVersion: "DXPN_CloudNative_Tier1_500K@9.5"
-    # Flexnet License Username
-    licenseManagerUser: "admin"
-    # Flexnet License Password
-    licenseManagerPassword: "mypassword"
-```
-
-!!!reminder
-    These properties must be configured to your Helm chart **before** you install the environment. If you're changing the environment, configure the properties before you start the DX 9.5 ContainerUpdate 207 or later Helm upgrade to your HCL Digital Experience Cloud Native 9.5 production or non-production deployment. For more information about the Helm configuration steps to manage DX 9.5 Container Update upgrades, see [Upgrade the Helm deployment to the latest version](../../../../deployment/install/container/helm_deployment/update_helm_deployment.md).
-
-## Results
-Your HCL DX Cloud Native 9.5 environments are configured for entitlement checks that will validate that your deployment software remains in the purchased timeframe. 
-
-Ensure that your entitlement checks succeed by viewing your HCL DX 9.5 Container Update Server License Manager pod logs.
-
-Use kubectl logs for the license manager pod. For example, in a namespace dxns, run the following command: 
-
-```
-kubectl logs pod/<release-name>-license-manager-0 -n <namespace>
-```
-
-See the HCL DX Cloud Native 9.5 entitlement check scenarios for success and error messages and how to manage them: [HCL Digital Experience Cloud Native 9.5 entitlement check scenarios](entitlement_checks_scenarios.md). 
-
-Entitlement checking to ensure that the entitlement period for the DX Cloud Native 9.5 part is valid for the purchased term is initiated at deployment start, upgrade, or configuration-change processes. Entitlement checking also occurs once per day for active deployments. 
-
-Refer to [Configuring a local HCL Flexnet entitlement server](configuring_local_flexnet_entitlement_server.md) topic for additional configurations needed to enable connectivity to a local license server.
-
-## Securing License Server communication for the License Manager application
-
-Secure communication between HCL DX and the HCL License Server (cloud or local) involves signed content that uses a public and private keypair. HCL DX signs licensing requests with the private key and the License Server verifies signatures with the corresponding public key.
+### Monitoring user-session consumption for HCL DX Cloud Native v9.5 production deployments
 
 !!! note
-     The License Manager expects the public key to be uploaded to the License Server beforehand and the private key to be passed as a secret in the Helm values. However, if the private key is not provided, the default key is used and uploaded automatically.
+    Calculating and reporting user session consumption produces the same results, regardless of which software delivery portal is being used.
 
-### Generating a public/private keypair
+In addition to verifying entitlement to the contract period for purchased subscription software, HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL DX Cloud Native v9.5 Tier 1 – 7 offerings for production deployments.
 
-You must generate a public/private keypair to be used for secure communication. The following list shows the required formats: 
+HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually. A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
 
-- The keypair must be in “RSA 2048-bit” format. 
-- The private key must be “pksc8” format. 
-- The public key must be in “DER” format.
+- A user session begins when a user (authenticated or anonymous) visits a DX deployment operating for production use and then interacts with program website pages and is identified through appropriate tags that use the appropriate scripts for each site page view request. User session interactions can include one or more production-use website page views.
 
-Various third-party tools are available for generating this keypair. See the documentation supplied with the third-party tool for instructions.
-The following is an example of keypair generation by using OpenSSL:
+- A user session ends when the user interaction with the production-use program is idle for 30 minutes or until the user ends the interaction explicitly by closing their authentication or web session with the site.
 
-```
-# Generate private key 
-openssl genrsa -out portal_private_key.pem 2048
+- The maximum duration for an individual user session with continuous interactions is four hours.
 
-# Get the public key. 
-openssl rsa -in portal_private_key.pem -pubout -outform DER -out portal_public_key.der
+You can view user-session consumption by using usage reports in the corresponding software delivery portal. To be included in these reports, your DX Cloud Native 9.5 entitlements must be:
 
-# Convert private key to pkcs8 format to use it with HCL Portal
-openssl pkcs8 -topk8 -inform PEM -outform PEM -in portal_private_key.pem -out portal_private_key_pkcs8.pem -nocrypt
+- Mapped to the appropriate software delivery portal for entitlement checking.
+- Configured for production use in your deployment Helm charts.
 
-```
-### Uploading public key
+For more information, refer to [Announcing HCLSoftware Download site and Licensing mechanism changes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0112538){target="_blank"} and [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}.
 
-The following instructions show you how to upload the public key to your License Server by using the provided command line tool. 
+### How user sessions in production deployments are calculated for report totals
 
-1. Get the Bearer Authentication from FlexNet by using authorize endpoint:
+HCL DX Cloud Native 9.5 applies the following approach when it reports totals for user-session consumption in deployments configured for production:
 
-```sh
-curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/authorize' \
---header 'Content-Type: application/json' \
---data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
+When a user interacts with an HCL DX Cloud Native 9.5 production deployment site, the License Manager pod, in conjunction with the HAProxy Pod, coordinates a combination of IP address and user agent to identify a unique user session. For every request, a key is computed based on the requesting IP of the user, combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy (if a customer uses a proxy in their deployment setup) usage. Subsequent interactions during the same user session period use that key to identify the same user.
 
-```
-Response from authorize endpoint:
+This information is stored in memory only for up to four hours and is discarded afterwards. This information is only accessible by a Kubernetes administrator with permissions to access the log files. HCL cannot access this information at any time.
 
-```JSON
-{
-    "expires": "2023-12-19T05:39:28.850Z",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMjg3Nzk2OCwiZXhwIjoxNzAyOTY0MzY4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjRmOWRjMGFkLWQ1MGMtNGZhZi05YmE0LTc0N2ZmMjJjODQ0MiJ9.mvuXXJNfew-WzJ7CX8Y8yH339zX3SNpaX79jMTu-shanE8nHPfZRA240EAsVO64nMxFAPyr_8gP7JOLRQ2XOeA"
-}
-```
+Some customers might choose to use a proxy, for example, a load balancer, DMZ endpoint, or other service that resides between the user and the HCL DX Cloud Native v9.5 deployment. In that case, the customer should ensure the relevant information to facilitate user-session tracking arrives properly at the DX deployment for accurate tracking.
 
-2. Upload the public key to the FlexNet server:
+The License Manager pod manages entitlement checking and user-session consumption reporting for production deployments.
 
-```sh
-curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/rest_licensing_keys' \
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMTk0NTY5NCwiZXhwIjoxNzAyMDMyMDk0LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEIOPKLVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjI0MjRiOTgwLWY2ZDEtNGViYi04NWQ5LTI3YmQzMTJmYzIwZiJ9.JR0fnMZyyMY4wwPtE9kMWD2kvbxLgBplq2X-wgmYpe7COFW-5IVvdLmdaRvb0AydSKHf3DKPDGVrd2dubr9Lbw' \
---header 'Content-Type: application/octet-stream' \
---data '@/Flexnet-release/portal_public_key.der'
-```
-Response from FlexNet server:
+The License Manager uses the MHS service endpoint configured to transmit the data total amount and each API request contains in its entirety the following data:
 
-```JSON
-{
-    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAUUUIPHJnjgPOMnbqsjqsL29p313tvMpV0QjIDT03traV3v4UnUuIrIYmYPerzQJsVzoKZHU0IYA9FZTLXP4uJMPTwNJhDVtbki5Fbx4h9U2c7h78QCFne07kdtAeBh0keReFklpj7CJbOi4RhqSX6uaZ/gBOg+RMT6/q9Oxkry31WvqISNWlAXmyfNQTo/GMUe4dKpbEBGPOLKRESHlBXnqrqPw+EqlrJDiJSr/TIfLokm8qFLSzBwYahhi6L0gnLmnuEPPfkxFwhjaSjdb336dVGzkRc1AsS9L0TDTtQBzUxkL6cIW+EzxXOyWnT2ekcFMripuyXBG80UkhXKTVpRwj/nXeXQIDAQAB"
-}
+- Timestamp of data transmission (implicit in the call, not explicitly provided)
+- Deployment identification information
+- Total number of completed user sessions calculated by the License Manager since the last transmission
 
-```
+For more information about MHS entitlement checking and usage reporting, see [Entitlement checking in My HCLSoftware delivery portal](./mhs_license_and_delivery.md).
 
-### Helm Chart configuration to enable the private key in License Manager deployment
- 
-1. Create your secret using a private Key:
-
- ```sh
- kubectl create secret generic <secret name> --from-file=privateKey=portal_private_key_pkcs8.pem -n <namespace>
- ```
-2. Refer to the secret in helm values in yaml:
-
- ```yaml
- security:
-   licenseManager:
-     customFlexnetLicenseManagerPrivateKeySecret: <secret name>
- ```
-
-!!! note
-     For multiple instances that run with the same entitlement and license server, all instances must conform to one of the following criteria:
-     - They use the same private key.
-     - They do not have a private key configured.
-
-### Revoking of public key from FlexNet
-
-If you have to revoke the public key from FlexNet, complete the following steps. To complete the revocation process, you must provide the Bearer Authentication token to authenticate the request. Without the token, the revocation you cannot complete the process.
-
-1. Get the Bearer Authentication from Flextnet by using authorize endpoint:
-
-```sh
-curl --location 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/authorize' \
---header 'Content-Type: application/json' \
---data-raw '{"password":"XXXXXXX","user":"XXXXXXX"}'
-
-```
-Response from authorize endpoint:
-
-```JSON
-{
-    "expires": "2023-12-19T05:39:28.850Z",
-    "token": "eyJ0eXAiOiJKV1QiLCJhbXXXYYYUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQYUPLFWNUISQACIsImlhdCI6MTcwMjg3Nzk2OCwiZXhwIjoxNzAyOTY0MzY4LCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjRmOWRjMGFkLWQ1MGMtNGZhZi05YmE0LTc0N2ZmMjJjODQ0MiJ9.mvuXXJNfew-WzJ7CX8Y8yH339zX3SNpaX79jMTu-shanE8nHPfZRA240EAsVO64nMxFAPyr_8gP7JOLRQ2XOeA"
-}
-```
-2. Use DELETE endpoint to revoke the public key:
-
-```sh
-curl --location --request DELETE 'https://hclsoftware.compliance.flexnetoperations.com/api/1.0/instances/<instance ID>/rest_licensing_keys' \
---header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlE4QTVZQ1ozQTRHSCIsImlhdCI6MTcwMzQ5ODg0MywiZXhwIjoxNzAzNTg1MjQzLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9EUk9QQ0xJRU5ULFJPTEVfUkVBRCxST0xFX1JFU0VSVkFUSU9OUyIsInhzcmZUb2tlbiI6IjJlYTNjM2U3LWQ3MDEtNDFjMS05NWQ2LWEyOTMzZjBlNTQwNyJ9.u8ZAF4SpBoLucxPA0WaEtcDkuQVT3ZCGx-qAtHYbcZDD%YYBBzqvYWkxN3fTRHjNRKE0idV8bh5Zs75KSvU9A'
-```
-Expected status: `410 Gone`
+???+ info "Related information"
+    -   [HCL Digital Experience Cloud Native v9.5 license](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"}
+    -   [Simplified Pricing, More Value: HCL Digital Experience v9.5 User Session bundle](https://blog.hcltechsw.com/digital-experience/simplified-pricing-more-value-hcl-digital-experience-cloud-native-9-5-bundle-with-user-session-pricing/){target="_blank"}
