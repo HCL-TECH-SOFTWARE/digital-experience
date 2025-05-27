@@ -4,7 +4,7 @@ nav:
     - script_app_editor
     - script_app_improvements.md
     - cmd_line_push_cmd_patt_rep.md
-    - import_app_that_links_to_js_framework
+    - js_libraries
     - script_app_editor_actions_menu_overview
     - combine_js_files.md
     - drop_app_toolbar.md

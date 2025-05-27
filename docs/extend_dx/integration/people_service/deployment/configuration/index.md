@@ -17,6 +17,7 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | configuration.production | boolean | `true` | Specifies whether you are running in production mode or not |
+| configuration.serviceAccountName | string | `` | AWS Service Account Name for EKS deployments |
 | configuration.authStrategy | string | `none` | Authentication strategy. Accepted values are `OIDC`, `DX`, and `none` |
 | configuration.uniqueUserIdentifier | string | `guid` | Identifier that uniquely distinguishes a user |
 | configuration.integration.dx | boolean | `false` | Indicates if DX integration is enabled |
@@ -42,7 +43,7 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| configuration.dx.sessionCookieName | string | `JSESSIONID` | Session cookie name |
+| configuration.dx.sessionCookieName | string | `LtpaToken2` | Session cookie name |
 | configuration.dx.userValidationEndpoint | string | `/auth/validate` | User validation endpoint that confirms if the user is still authenticated |
 | configuration.dx.currentUserAccessEndpoint | string | `/dxmyrest/access/current-user?resourceId=wps.USERS` | Current user access endpoint that identifies the current user's access level information. This information is used to determine the user's role. Accepted values are `Privileged`, `Authenticated`, or `Unauthenticated` |
 | configuration.dx.userAccessPrivilegedRoles | string | `Administrator,Privileged User,Editor` | List of privileged roles separated by commas |
@@ -56,6 +57,19 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 |-----|------|---------|-------------|
 | configuration.schema.readonlyFields | array | `["id","firstName","lastName","displayName","organization","email","dn","managerId"]` | List of profile fields that should be marked as read-only |
 | configuration.schema.customFields | array | `[]` | List of custom fields that need to be created while deployment |
+
+## Search configuration
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| configuration.search.middleware.enabled | boolean | `false` | Enable/Disable search middleware. |
+| configuration.search.middleware.host | string | `` | Host of search middleware. |
+| configuration.search.middleware.port | number | `nil` | Port of search middleware. |
+| configuration.search.middleware.ssl | boolean | `false` | Setting if SSL is enabled for search middleware. |
+| configuration.search.middleware.pushAdminUser | string | `pushadmin` | Username of the push administrator. |
+| configuration.search.middleware.pushAdminPassword | string | `adminpush` | Password of the push administrator. |
+| configuration.search.middleware.existingPushAdminSecret | string | `` | Provide an existing secret that will be used to set credentials for push administration. If `customPushAdminSecret` is provided, `pushAdminUser` and `pushAdminPassword` values are ignored. |
+| configuration.search.contentSourceId | string | `` | Content Source ID for People Service. |
 
 ## Networking configuration
 
@@ -146,7 +160,7 @@ You can deploy HCL People Service using the HCL Digital Experience (DX) Helm cha
 | logging.sidecar.image.pullPolicy | enum | `IfNotPresent` | Logging sidecar image pull policy. Accepted values are `Always`, `Never`, and `IfNotPresent` |
 | logging.sidecar.image.registry | string | `quintana-docker.artifactory.cwp.pnp-hcl.com` | Logging sidecar container image registry |
 | logging.sidecar.image.repository | string | `dx-build-output/common/logging-sidecar` | Logging sidecar container image repository |
-| logging.sidecar.image.tag | string | `v1.0.0_20240506-1523_pjs_develop` | Logging sidecar container image tag |
+| logging.sidecar.image.tag | string | `v1.0.0_20250203-2231` | Logging sidecar container image tag |
 
 ## Resource configuration
 
