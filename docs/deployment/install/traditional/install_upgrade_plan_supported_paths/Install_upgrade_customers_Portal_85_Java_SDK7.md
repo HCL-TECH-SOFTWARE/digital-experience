@@ -6,7 +6,7 @@ This guide shows how to upgrade your HCL Digital Experience (DX) or Web Content 
 
 Before you install HCL Digital Experience, review the [hardware and software requirements](../../../../get_started/system_requirements/index.md) to ensure that you have the supported versions of prerequisite and co-requisite software and the required hardware.
 
-Make sure to also review the [detailed requirements article](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) to ensure that your system meets or exceeds the minimum requirements provided by HCL.
+Make sure to also review the [detailed requirements article](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514){target="_blank"} to ensure that your system meets or exceeds the minimum requirements provided by HCL.
 
 ### Preparing your operating system for installation
 
@@ -18,9 +18,9 @@ Make sure to also review the [detailed requirements article](https://support.hcl
 
 ## Getting the software
 
-Obtain the product software from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do).
+Obtain the product software from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}.
 
-Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
+Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){target="_blank"}.
 
 1. Sign in to the HCL Software Licensing Portal.
 
@@ -60,7 +60,7 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
     - HCL-Portal-95_Enable_SETUP-04.zip
 
     !!! note 
-        The listed zip files contain all the software required to upgrade Portal 8.5 to Portal 9.5 following Portal 8.5 upgrade to [the latest available cumulative fix](../../../../whatsnew/cf20/).
+        The listed zip files contain all the software required to upgrade Portal 8.5 to Portal 9.5 following Portal 8.5 upgrade to [the latest available cumulative fix](../../../../whatsnew/index.md).
 
 ### Preparing the files for installation
 

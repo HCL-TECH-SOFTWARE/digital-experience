@@ -369,7 +369,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
     
     -   HCL DX 9.5 CF216 release: **V1.25.0
-        -   [Shows version compatibility details between DX Core and DXClient](#dxclient-usage-information-commands)
+        -   [Shows version compatibility details between DX Core and DXClient](#dxclient-information-commands)
         -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
         -   [Delete staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#delete-staging-mismatch)
 
@@ -397,7 +397,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [Restart All Core Pods in Kubernetes Deployment](../dxclient/dxclient_artifact_types/dxcoreserver.md#restart-dx-core-pods)
 
     -   HCL DX 9.5 CF208 release: **V1.17.0
-        -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#get-all-subscribers-details-for-dam-staging)
+        -   [Get all subscribers details for DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#getting-all-subscribers-details-for-dam-staging)
 
     -   HCL DX 9.5 CF207 release: **V1.16.0
         -   Support to set different Container Runtime.
