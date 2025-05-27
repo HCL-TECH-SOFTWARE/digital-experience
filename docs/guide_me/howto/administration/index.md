@@ -6,5 +6,5 @@ This section includes how-to articles about administration in HCL Digital Experi
 Learn how to clear Web Content Manager (WCM) caches using the ConfigEngine task.
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune WCM to reduce your query time.
-- **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**
+- **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.
