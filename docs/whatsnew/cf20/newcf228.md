@@ -76,8 +76,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     HCL DX 9.5 CF228 contains the following:
 
-    - WebSphere Application Server 9.0.5.23
-    - Java Development Kit 8.0.8.40
+    - [WebSphere Application Server 9.0.5.23](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit 8.0.8.40](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - No iFixes
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
