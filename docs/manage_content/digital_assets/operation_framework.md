@@ -1,4 +1,4 @@
-# DAM - Operations framework 
+# Operations framework 
 
 One integral part of HCL DX Digital Asset Management is the so-called "operations framework". This tooling allows DAM to run asynchronous background processes.
  

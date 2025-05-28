@@ -1,5 +1,8 @@
 # Configuration
 
-This section includes how-to documents that belong to the configuration topics
+This section includes How-to articles about configuration in HCL Digital Experience (DX).
 
-- **[How to configure IBM Rational Application Developer to use HCL Digital Experience Server](./ConfigureRAD.md)**
+- **[How to change cell and node names in a standalone HCL DX environment](./ChangeCellandNodeName.md)**  
+Learn how to change cell and node names after installing HCL DX.
+- **[How to configure IBM Rational Application Developer to use HCL Digital Experience Server](./ConfigureRAD.md)**  
+Learn how to configure the IBM Rational Application Developer for use in HCL DX servers.

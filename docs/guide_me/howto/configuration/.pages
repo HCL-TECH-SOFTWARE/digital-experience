@@ -1,4 +1,6 @@
 title: Configuration
+
 nav:
     - index.md
+    - ChangeCellandNodeName.md
     - ConfigureRAD.md
