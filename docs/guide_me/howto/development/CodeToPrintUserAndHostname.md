@@ -91,15 +91,15 @@ To use the sample code, refer to the following steps:
 
 4. Edit a presentation template and add the JSP component created in Step 3 to the template. For more information on editing presentation templates, refer to [Editing a presentation template in Presentation Designer](../../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md).
 
-5. Under `Web Content > Libraries > <library name>` use an existing site area or create a new one.
+5. Go to **Web Content > Web Content Libraries** and create a new library to use as a site area (or use an existing one).
 
-6. Map the presentation template and authoring template to a site area. Later the whole content will be rendered inside of the Web Content Viewer portlet. For more information on mapping templates, refer to [Template mappings](../../../build_sites/create_sites/create_reusable_assets/wcm_cms_template_maps.md).
+6. Map the presentation template and authoring template to a site area. The content will be rendered in the Web Content Viewer portlet. For more information on mapping templates, refer to [Template mappings](../../../build_sites/create_sites/create_reusable_assets/wcm_cms_template_maps.md).
 
-7. On an existing page or on a new page in the Portal add the `Web Content Viewer portlet` to the page.
+7. Add the **Web Content Viewer portlet** on a new or existing page in the Portal.
 
-8. On the Portal page toggle **Edit Mode:** to **ON**
+8. On the Portal page, toggle **Edit Mode:** to **ON**
 
-9. On the `Web Content Viewer portlet` in the menu, go to **Edit Shared settings**. Configure the `Web Content Viewer portlet` to render the site area that was mapped in step 5.
+9. On the **Web Content Viewer portlet**, go to **Edit Shared settings** and configure the portlet to render the site area that was mapped in step 5.
 
-10. Render the page and check the results. The `Web Content Viewer portlet` should now show up the information of the JSP file.  
+10. Render the page and check the results. The **Web Content Viewer portlet** should now display the contents of the JSP file.  
     For more information on the Web Content Viewer, refer to [Displaying content with Web Content Viewers](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/displaying_content/index.md).
