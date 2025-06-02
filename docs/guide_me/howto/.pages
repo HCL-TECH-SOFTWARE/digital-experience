@@ -9,6 +9,7 @@ nav:
     - content
     - dam
     - database
+    - deployment
     - development
     - install
     - migration
@@ -22,4 +23,3 @@ nav:
     - troubleshooting
     - upgrade
     - wcmlibrarymanagement
-    
