@@ -581,7 +581,7 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 
 The following sections also apply for hybrid deployments:
 
-- [Configuring staging hostname](#configuring-staging-hostname)
+- [Configuring staging hostname](#configure-staging-hostname)
 - [Configuring LTPA Token Refresh Time](#configuring-ltpa-token-refresh-time)
 - [Configuring LDAP](#configuring-ldap)
 

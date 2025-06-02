@@ -174,7 +174,7 @@ Follow the steps to register the OAuth client.
 
       - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
       
-      - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment. [Redirect URL](#add-a-new-app-in-foundry) should be available in Volt MX Foundry (for example, voltmx-env.com).
+      - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment. [Redirect URL](#adding-a-new-application-in-volt-mx-foundry) should be available in Volt MX Foundry (for example, voltmx-env.com).
 
       - `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64 (dx-hostname) encoded string.
 

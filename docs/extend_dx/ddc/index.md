@@ -1,6 +1,6 @@
-# Digital Data Connector for HCL Portal
+# Digital Data Connector for HCL DX
 
-You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components. External data means that the data does not need to be stored directly in HCL Web Content Manager. For example, you can use DDC to render social data that you have on your HCL Connections server or on other social platforms in the context of your portal pages. Other possible data sources include news feeds, task lists, product catalog information, to name just a few.
+You can use the Digital Data Connector (DDC) for HCL Digital Experience (DX) framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components. External data means that the data does not need to be stored directly in HCL Web Content Manager. For example, you can use DDC to render social data that you have on your HCL Connections server or on other social platforms in the context of your portal pages. Other possible data sources include news feeds, task lists, product catalog information, to name just a few.
 
 With Digital Data Connector, your website designers can use Web Content Manager presentation components to generate the web page markup for your external data. They can use all the Web Content Manager data management facilities for managing your external data visualizations. These facilities include content syndication, version handling, workflow, and targeting. They can manage the design components in the same way as your other Web Content Manager content and design components. The major benefits of this approach include the following:
 
@@ -17,27 +17,27 @@ You can use Digital Data Connector in the following ways:
 -   You can also use a combination of the two approaches.
 
 -   **[Technical concepts](plrf_tech_concepts.md)**  
-Before you use the Digital Data Connector \(DDC\) for HCL Portal framework, you can familiarize yourself with its main technical concepts and building blocks.
+Before you use the Digital Data Connector \(DDC\) for HCL DX framework, you can familiarize yourself with its main technical concepts and building blocks.
 -   **[The rendering flow](plrf_render_flow.md)**  
-Read about the rendering flow of Digital Data Connector \(DDC\) for HCL Portal.
+Read about the rendering flow of Digital Data Connector \(DDC\) for HCL DX.
 -   **[Connecting to HCL VoltMX Foundry through Digital Data Connector (DDC)](../ddc/integrating_voltmx_foundry/index.md)**  
-This section provides the steps on using DDC for HCL Portal framework to integrate data from HCL VoltMX Foundry (integrated external data sources) on your portal pages by using HCL Web Content Manager presentation components.
+This section provides the steps on using DDC for HCL DX framework to integrate data from HCL VoltMX Foundry (integrated external data sources) on your portal pages by using HCL Web Content Manager presentation components.
 -   **[Implementing user interactions](../ddc/implementing_user_interactions/index.md)**  
-With Digital Data Connector \(DDC\) for HCL Portal, you can use HCL Web Content Manager presentation components for visualizing external data. As a further benefit, you can also add user interfaces for creating, modifying, and deleting external data to your DDC list appearance components. This way, your users can use these features to create, modify, or delete external data items from your lists.
+With Digital Data Connector \(DDC\) for HCL DX, you can use HCL Web Content Manager presentation components for visualizing external data. As a further benefit, you can also add user interfaces for creating, modifying, and deleting external data to your DDC list appearance components. This way, your users can use these features to create, modify, or delete external data items from your lists.
 -   **[Working with list-rendering profiles](../ddc/working_with_list_rendering_profiles/index.md)**  
 You can create new or derived list-rendering profiles. After you create a list-rendering profile, you deploy it.
 -   **[Integrating remote XML data](../ddc/integrating_remote_xml_data/index.md)**  
-The Digital Data Connector \(DDC\) for HCL Portal framework provides a generic XML DDC plug-in that is ready to use for integrating external XML data of your choice. You can use this plug-in to render external XML data on your portal pages without having to write custom Java code.
+The Digital Data Connector \(DDC\) for HCL DX framework provides a generic XML DDC plug-in that is ready to use for integrating external XML data of your choice. You can use this plug-in to render external XML data on your portal pages without having to write custom Java code.
 -   **[Integrating remote JSON data](../ddc/integrating_remote_json_data/index.md)**  
-The Digital Data Connector \(DDC\) for HCL Portal framework provides a generic JSON DDC plug-in that is ready to use for integrating external JSON data of your choice. You can use this plug-in to render external JSON data on your portal pages without having to write custom Java code.
+The Digital Data Connector \(DDC\) for HCL DX framework provides a generic JSON DDC plug-in that is ready to use for integrating external JSON data of your choice. You can use this plug-in to render external JSON data on your portal pages without having to write custom Java code.
 -   **[Creating and deploying custom Digital Data Connector plug-ins](plrf_crt_dply_cust_beanlst_prvdr.md)**  
-You can deploy custom Digital Data Connector \(DDC\) for HCL Portal plug-ins as plug-ins into the HCL Portal application extension registry.
+You can deploy custom Digital Data Connector \(DDC\) for HCL DX plug-ins as plug-ins into the HCL DX application extension registry.
 -   **[Creating and deploying custom attribute value processor plug-ins](crt_dply_cstm_attval_pro_plgin.md)**  
-You can deploy custom attribute value processor plug-ins for DDC into the HCL Portal application extension registry. Attribute value processor plug-ins can be used to process the value of an item attribute after the value is determined by the list rendering profile.
+You can deploy custom attribute value processor plug-ins for DDC into the HCL DX application extension registry. Attribute value processor plug-ins can be used to process the value of an item attribute after the value is determined by the list rendering profile.
 -   **[Digital Data Connector cache tuning](../ddc/ddc_cache_tuning/index.md)**  
-To improve performance, you can tune the caches for the Digital Data Connector (DDC) for HCL Portal framework.
+To improve performance, you can tune the caches for the Digital Data Connector (DDC) for HCL DX framework.
 -   **[Hints and tips for Digital Data Connector](plrf_hint_tip.md)**  
-Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector (DDC) for HCL Portal.
+Learn about things that are useful to know when you work with the social rendering integration with Digital Data Connector (DDC) for HCL DX.
 
 ## HCLSoftware U learning materials
 
@@ -55,4 +55,3 @@ For an introduction and a demo on how to use the Digital Data Connector, go to [
     - [The request attribute plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_request_attrbt.md)
     - [The session attribute plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_session_attrbt.md)
     - [The resource URL plug-in](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/rendering_state_plugins/plrf_rendr_plugin_resrc_url.md)
-

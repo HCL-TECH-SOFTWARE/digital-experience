@@ -4,14 +4,12 @@ This document provides instructions on how to configure a WebSphere Application 
 
 Follow the tasks to execute this configuration:
 
-1. [Install the OIDC RP TAI for WebSphere](#installing-the-oidc-rp-tai)
+1. [Installing OpenID Connect](#installing-openid-connect)
 2. [Configure the TAI against Keycloak OIDC](#configuring-the-oidc-rp-tai-against-your-idp)
 3. [Updating WAS security properties to match the new TAI requirements](#updating-was-security-properties)
 4. [Adding the server certificate to the WAS trust store to allow internal HTTPS communication](#adding-the-hostname-or-server-certificate-to-the-was-trust-store)
-5. [Adding the trusted authentication realm](#adding-the-trusted-authentication-realm)
-6. [Security role to user or group mapping](#security-role-to-user-or-group-mapping)
-7. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
-8. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
+5. [Updating the DX Logout flow for OIDC](#updating-the-dx-logout-flow-for-oidc)
+6. [Configuring DX VMM to match OIDC identities](#configuring-dx-vmm-to-match-oidc-identities)
 
 ## Installing OpenID Connect
 

@@ -1,5 +1,5 @@
 ---
-title: Update Existing Application from CLI
+title: Update an existing Script Application from CLI
 ---
 
 # Updating an existing Script Application instance with the command line push application
