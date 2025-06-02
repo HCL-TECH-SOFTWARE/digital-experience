@@ -1,4 +1,4 @@
-# How to Deploy DX 9.5 on Azure AKS
+# How to deploy DX 9.5 on the Azure Kubernetes Service
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides a sample step-by-step guide to deploy HCL DX 9.5 CF194 using DXCTL and HCL DX 9.5 CF197 using Helm Chart.
+This article provides step-by-step guides to deploy HCL Digital Experience (DX) 9.5 CF194 on Azure Kubernetes Service (AKS) using the HCL DX Control Tool (DXCTL), and HCL DX 9.5 CF197 using the Helm chart.
 
 !!!DISCLAIMER OF WARRANTIES  
     The following enclosed documents are sample guides created by HCL Corporation.
@@ -15,6 +15,6 @@ This article provides a sample step-by-step guide to deploy HCL DX 9.5 CF194 usi
 
 ## Instructions
 
-[How to Deploy HCL DX 9.5 CF194 on Azure AKS using DXCTL](./files/HCL_deploying%20DX_9.5_CF194_using_dxctl_on_Azure.pdf){target="_blank"}
+- To deploy CF194 on AKS using DXCTL, refer to [How to Deploy HCL DX 9.5 CF194 on Azure AKS using DXCTL](./files/HCL_deploying%20DX_9.5_CF194_using_dxctl_on_Azure.pdf){target="_blank"}.
 
-[How to Deploy HCL DX 9.5 CF197 on Azure AKS using HELM Chart](./files/HCL_deploying%20DX_9.5_CF197_using_HELM_on_Azure.pdf){target="_blank"}
+- To deploy CF197 on AKS using the Helm chart, refer to [How to Deploy HCL DX 9.5 CF197 on Azure AKS using HELM Chart](./files/HCL_deploying%20DX_9.5_CF197_using_HELM_on_Azure.pdf){target="_blank"}.

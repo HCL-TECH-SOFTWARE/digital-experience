@@ -2,4 +2,4 @@
 
 This section includes how-to documents that belong to the deployment topics
 
-- **[How to Deploy DX 9.5 on Azure AKS](./DeployOnAzure.md)**
+- **[How to deploy DX 9.5 on the Azure Kubernetes Service](./DeployOnAzure.md)**
