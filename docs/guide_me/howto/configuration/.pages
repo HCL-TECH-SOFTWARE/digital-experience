@@ -2,4 +2,5 @@ title: Configuration
 
 nav:
     - index.md
+    - DeployRobots.md
     - ChangeCellandNodeName.md
