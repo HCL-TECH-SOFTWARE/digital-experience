@@ -1,5 +1,6 @@
 title: Administration
 nav:
     - index.md
+    - APIToCountWCMItems.md
     - ClearWCMCaches.md 
     - ImproveQueryPerformance.md
