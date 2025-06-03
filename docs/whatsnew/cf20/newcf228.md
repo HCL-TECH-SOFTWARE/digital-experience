@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
+- TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -39,6 +40,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
+
+### TinyMCE Enhanced Rich Text Editor updated to version 7.8
+
+=== "Containers"
+    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. For more information, refer to [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
+
+=== "On-Premises"
+    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. For more information, refer to [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
