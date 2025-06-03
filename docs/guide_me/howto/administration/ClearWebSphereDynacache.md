@@ -6,7 +6,7 @@
 
 ## Introduction
 
-While you can clear individual WebSphere Dynacaches with the Extended Cache Monitor, clearing individual caches can be tedious when trying to narrow down which cache is holding a stale entry. Clearing multiple caches using a JSP can be a more efficient way to isolate the cache in question.
+Clearing individual caches can be tedious when trying to narrow down which cache is holding a stale entry. Clearing multiple caches using a JSP can be a more efficient way to isolate the cache in question.  
 
 ## Instructions
 
