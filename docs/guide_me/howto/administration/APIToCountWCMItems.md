@@ -51,5 +51,4 @@ This document shows the WCM API sample code to count WCM items and versions in H
    }
 ```
 
-!!!Note
-    See the Javadoc for interface `DocumentTypes` to see a list of all available `DocumentTypes` that could be counted in this manner.
+For more information, refer to the Javadoc for [Interface `DocumentType<T extends WCMApiObject>`](https://help.hcl-software.com/digital-experience/9.5/dev/javadoc/vrm/850/spi_docs/com/ibm/workplace/wcm/api/DocumentType.html){target="_blank"} to see a list of all available `DocumentTypes` that could be counted in this manner.
