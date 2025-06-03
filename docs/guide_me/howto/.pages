@@ -9,7 +9,6 @@ nav:
     - content
     - dam
     - database
-    - deployment
     - development
     - install
     - migration
