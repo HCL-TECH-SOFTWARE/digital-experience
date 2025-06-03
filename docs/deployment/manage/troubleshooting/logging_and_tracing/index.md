@@ -17,7 +17,7 @@ You can use the information gathered to help solve your own problems or to repor
 
 -   **How do I turn on HCL Digital Experience trace logging?**
 
-    See [Trace logging](adsyslog.md#tra_log) for information.
+    See [Trace logging](adsyslog.md#trace-logging) for information.
 
 
 -   **What are the different trace settings and where are they logged?**
@@ -27,7 +27,7 @@ You can use the information gathered to help solve your own problems or to repor
 
 -   **How do I change the location of my logs?**
 
-    See [Changing the log file name and location](adsyslog.md#log_loc) for information.
+    See [Changing the log file name and location](./adsyslog.md#changing-the-log-file-name-and-location) for information.
 
 
 -   **[Installation and migration logs](inst_logs.md)**  
@@ -48,7 +48,7 @@ The system event logging facility of HCL Digital Experience enables the recordin
 Enable the use of WebSphere Application Server trace facilities to create trace information for Web Content Manager. This tracing can be enabled either permanently or for just the current HCL Digital Experience session.
 -   **[Logging and tracing for containers and new services](logging_tracing_containers_and_new_services.md)**  
 The following table outlines the tracing options that are used to capture logging and tracing for HCL Digital Experience 9.5 container-based services with container update CF181 and later releases.
--   **[Logging and tracing client side rendering](../logging_and_tracing/logging_and_tracing_clientside/)**  
+-   **[Logging and tracing client side rendering](../logging_and_tracing/logging_and_tracing_clientside/index.md)**  
 Learn the how to enable client side logging and tracing of your HCL Digital Experience pages.
 
 ## HCLSoftware U learning materials

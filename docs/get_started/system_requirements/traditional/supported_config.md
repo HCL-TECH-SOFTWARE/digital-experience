@@ -8,7 +8,7 @@ For more details, see [HCL DX support statement](../../../get_started/software_s
 
 ## Operating systems
 
-HCL Digital Experience (DX) 9.5 supports the following operating systems, which are organized by operating system family. Operating system families include AIX, Linux, and Windows.
+HCL Digital Experience (DX) V9.5 supports the following operating systems, which are organized by operating system family. Operating system families include AIX, Linux, and Windows.
 
 ### AIX family
 
@@ -115,11 +115,13 @@ HCL DX 9.5 requires the following capabilities and products to provide those cap
 
 ### Java SDK
 
-HCL DX 9.5 requires JDK 7.0 or later for installation.
+HCL DX 9.5 requires JDK 7.0* or later for installation.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|8.0 and later maintenance releases|8.5|  
+
+*The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).
 
 ## Databases
 
@@ -164,13 +166,13 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 |Microsoft SQL Server JDBC Driver|6.2, and later maintenance releases|8.5|
 |Oracle JDBC Driver 12.c***|12.2, and later maintenance releases|8.5|
 
-\*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported. 
+\*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
 
 \**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
 
-***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only. 
+***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  
 
-## LDAP servers
+## LDAP servers 
 
 All LDAP Servers that support the LDAP V3 Specification are supported.
 
@@ -191,7 +193,7 @@ All LDAP Servers that support the LDAP V3 Specification are supported.
 
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
-|CA Siteminder*|12.0, and later maintenance releases|8.5|   
+|CA Siteminder*|12.0, and later maintenance releases|8.5|
 
 ## Web browsers
 

@@ -1,5 +1,25 @@
 title: How-to articles
+
 nav:
     - index.md
     - administration
+    - api
     - configuration
+    - container
+    - content
+    - dam
+    - database
+    - deployment
+    - development
+    - install
+    - migration
+    - performance
+    - personalization
+    - search
+    - security
+    - syndication
+    - themes
+    - tools
+    - troubleshooting
+    - upgrade
+    - wcmlibrarymanagement
