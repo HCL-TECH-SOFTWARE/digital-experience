@@ -1,4 +1,4 @@
-# How to deploy a `robots.txt` in DX containers environments
+# How to add a robots.txt in DX containers environments
 
 ## Applies to
 
@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This document describes how to deploy a `robots.txt` file in HCL Digital Experience (DX) container environments.
+This document describes hints for preparing HCL DX web-sites to get better be found from third party search engines like Google, Bing or Yahoo. It provides detailed steps in how to add/deploy a `robots.txt` file in HCL Digital Experience (DX) container environments. A `robots.txt` file contain information for search engine crawlers. With that information search engine crawlers know, which URLs can be accessed on web-site to build a search index. For more information, please check [Introduction to robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro).  
 
 ## Instructions
 
-Refer to the following steps to deploy a `robots.txt` file in DX container environments:
+Refer to the following steps to add a `robots.txt` file in DX container environments:
 
 1. Deploy DX in any supported cloud providers, such as Amazon Elastic Kubernetes Service (EKS), Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), and Red Hat OpenShift.  
 2. Build your web application (`.war` file) with the `robots.txt` file included within the root of the application's web content.
