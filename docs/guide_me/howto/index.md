@@ -14,8 +14,6 @@ Learn how to do specific container tasks in your HCL DX environment.
 Learn how to do specific Web Content Manager (WCM) Authoring, Content Composer, and Multilingual Solution (MLS) tasks in your HCL DX environment.
 - **[Database](./database/index.md)**  
 Learn how to configure your HCL DX database.
-- **[Deployment](./deployment/index.md)**  
-Learn how to deploy HCL DX into your environments.
 - **[Development](./development/index.md)**  
 Learn how to develop applications, portlets, JavaServer Pages (JSP), JS, Web Application Builder (WAB), Web Experience Factory (WEF), Web Services, and more on your HCL DX environment.
 - **[Digital Asset Management](./dam/index.md)**  
