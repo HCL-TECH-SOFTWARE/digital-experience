@@ -1,6 +1,12 @@
 # Integrating HCL Volt MX Foundry with HCL Digital Experience
 
-Volt MX Foundry is a back-end service provider that helps developers build omni-channel digital applications. Volt MX Foundry ensures that developers build mobile applications quickly and obtain secured back-end services instantly. Volt MX Foundry has multiple features, such as - Identity, Integration, Objects, Orchestration, and Engagement Services. These features can be accessed through a common, centralized VoltMXFoundry Console. For more information, see the [HCL Volt MX documentation](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmxFoundryFundamentals.html).
+HCL Volt MX Foundry is a back-end service provider that helps developers build omni-channel digital applications. HCL Volt MX Foundry ensures that developers build mobile applications quickly and obtain secured back-end services instantly. HCL Volt MX Foundry has multiple features, such as - Identity, Integration, Objects, Orchestration, and Engagement Services. These features can be accessed through a common, centralized VoltMXFoundry Console. For more information, see the [HCL Volt MX documentation](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmxFoundryFundamentals.html).
+
+The HCL Digital Experience (DX) Cloud Native offering includes the HCL Volt Foundry files, HCL Volt Foundry Container installer (Kubernetes cluster), and HCL Volt Foundry Container deployment tool that should be used to deploy HCL Volt Foundry for use with DX on supported K8s platforms. Platform-specific HCL Volt Foundry deployment files are not provided. To deploy HCL Volt Foundry with HCL DX Cloud Native 9.5.x deployments on supported Kubernetes platforms, the latest versions of the following HCL Volt Foundry files are provided in your HCL Software download portal entitlements for Cloud Native 9.5.x Tier 1-7 offerings:
+
+- `HelmChart-9.5.15.8_GA.zip`
+- `VoltFoundtryContainersOnPrem-9.5.15.8_GA.zip `
+- `mfcli_9.5.3.4_GA.jar`
 
 !!! note
     This guide only applies to HCL Digital Experience 9.5 Container Deployments in combination with HCL Volt MX Foundry Helm installations.
@@ -11,7 +17,7 @@ Volt MX Foundry is a back-end service provider that helps developers build omni-
 
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
-Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry. [](../../../)
+Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry.
 <!--
 ```mermaid
 

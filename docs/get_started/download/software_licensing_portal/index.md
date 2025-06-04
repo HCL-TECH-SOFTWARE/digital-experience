@@ -1,16 +1,20 @@
 ---
-title: Software Licensing Portal
+title: Software licensing portals
 ---
 
-# Download and Install HCL Digital Experience from the Software Licensing Portal
+# Downloading and installing HCL DX from a software licensing portal
 
-New and current users must register at the HCL Software License Portal and download their entitled HCL Digital Experience packages.
+HCL Digital Experience (DX) software is now available through the new [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} (MHS) portal, in parallel to the existing [HCL Software License Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} delivered in FlexNet.
 
-Co-packaged software is identified in HCL Digital Experience 9.5 download documents, which are available in your entitlements on the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344).
+To change your entitlement server from FlexNet to My HCLSoftware portal, see the instructions in [Entitlement checking in the My HCLSoftware delivery portal](./configure_entitlement_checks/mhs_license_and_delivery.md). If there is any overlap between the data from FlexNet and My HCLSoftware portal, you can retrieve the session usage numbers from both platforms separately. You can then add the numbers from both platforms to obtain the total number of sessions for a specific period.
+
+New customers, or those with new deployments, must register at the My HCLSoftware portal and download their entitled HCL DX packages there to avoid any need to convert later.
+
+Co-packaged software is identified in HCL DX 9.5 download documents, which are available in your entitlements in the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}.
 
 ## Getting the software
 
-Product software can be accessed from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../../guide_me/tutorials/access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
+You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../../guide_me/tutorials/access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
 
 HCL Digital Experience V9.5 for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal can apply those credentials to optionally access the Docker components of Digital Experience v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information. 
 
@@ -72,7 +76,7 @@ Follow this installation path to deploy DX from an existing HCL Digital Experien
 3.  Stage the content to the new environment to move from an existing system to HCL Digital Experience on Kubernetes platforms.
 
 ## Configure HCL Digital Experience Cloud Native 9.5 entitlement checks
-Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters in your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software Licensing and Delivery Portal (Flexnet). See [HCL Digital Experience Cloud Native 9.5 entitlement checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
+Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters in your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software delivery portals. See [HCL Digital Experience Cloud Native 9.5 Entitlement Checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
 
 ???+ info "Related information"
     - [Locating and Downloading DX Products](../../../guide_me/tutorials/access-software/locating-downloads.md)

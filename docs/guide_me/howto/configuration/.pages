@@ -1,4 +1,7 @@
 title: Configuration
+
 nav:
-- index.md
-- ChangeDisplayLanguage.md
+    - index.md
+    - ChangeCellandNodeName.md
+    - ChangeDisplayLanguage.md
+    - RemoveStateInformationFromURL.md
