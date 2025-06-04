@@ -38,6 +38,7 @@ Using OCI commands requires an initial login before you can run the pull command
     # total 8868
     # -rw-r--r--. 1 user user  136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
     ```
+
 ## Helm chart and CF versions
 
 Refer to the following list of Helm chart versions and their corresponding CF versions for HCL DX.
