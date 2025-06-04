@@ -1,4 +1,4 @@
-# How to configure IBM Rational Application Developer to use HCL Digital Experience Server
+# How to configure the IBM Rational Application Developer to use the HCL DX server
 
 ## Applies to
 
@@ -6,27 +6,27 @@
 
 ## Introduction
 
-When using IBM Rational Developer(RAD) for developing Portlets and you want to configure RAD to use HCL Digital Experience (Portal Server), there are some steps required during installation to get both products connected correctly.
+This document provides the steps to configure the IBM Rational Application Developer (RAD) to use the HCL Digital Experience (DX) server when developing portlets.
 
 ## Instructions
 
-If Rational Application Developer is already installed and it is missed to select the Portal Development Tools during the installation then please follow the below steps to enable the different Portal development kits.
+If you installed RAD without selecting the Portal development tools during the installation, refer to the following steps to enable the different Portal development kits.
 
-1. Launch IBM Installation Manager.
+1. Open the IBM Installation Manager.
 
-2. Click on modify.
+2. Click **Modify**.
 
-3. Select the `Development tools` and the `Remote server stub` that match your installed Portal Server version.  
-    (If you want to use more than one version, then you can also select all of them)  
+3. Select the **Development tools** and the **Remote server stub** checkboxes that match your installed Portal server version. You can also select more than one version.
 
     ![Modify Packages](./images/KB0111273_image_2.png)  
 
-4. Click on the `next` and the `finish` to install it.  
+4. Click **Next > Finish**.
 
-5. Start the IBM Rational Application Developer again. When creating a new Portlet Project you should be able to see then the different Portal Server stubs.
+5. Open IBM RAD to verify the changes. When creating a new **Portlet Project**, you should now see the different Portal server stubs.
 
-   ![Portlet Project](./images/KB0111273_image_1.png)
+    ![Portlet Project](./images/KB0111273_image_1.png)
 
-After selecting the right WebSphere Portal Server stub, it should be possible to connect to the preferred HCL Digital Experience Server.
+    After selecting the correct WebSphere Portal server stub, you can now connect to the HCL DX server.
 
-When installing IBM Rational Application Developer new from scratch, the same options exist.
+!!!note
+    When installing IBM RAD from scratch, the same options exist.
