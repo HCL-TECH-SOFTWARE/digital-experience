@@ -171,8 +171,5 @@ To learn more about multilingual deployment options, go to [Multilingual for Adm
 ???+ info "Related information"
     - [DXClient](../index.md)
     - [DXClient Artifact Types](../dxclient_artifact_types/index.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
     - [HCL Web Content Manager Multilingual Solution](../../../../manage_content/wcm_authoring/multi_lingual/index.md)
-    - [Sample Pipelines for the DXClient Docker image file](../sample_pipelines_docker_dxclient.md)
-    - [Sample Pipelines for the DXClient node package file](../sample_pipelines_node_dxclient.md)
-    - [Deploy DX components using HCL DXClient and DXConnect](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.html)
+    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipeline_settings_using_dxclient.md)
