@@ -21,13 +21,13 @@ You can change the display language of HCL DX log files using Java properties. T
 4. Add the following parameters in the **Generic JVM arguments** field:
 
     ``` generic
-        -Duser.language=<language> -Duser.region=<region>
+    -Duser.language=<language> -Duser.region=<region>
     ```
 
     For example, to set the language to English, use the following parameters:
 
     ``` generic
-        -Duser.language=en -Duser.region=US      
+    -Duser.language=en -Duser.region=US
     ```
 
     For more information on the supported languages, refer to [JVM command-line properties and options](https://www.ibm.com/docs/en/wamt?topic=binaries-jvm-command-line-properties-options){target="_blank"}. If a specific language or region cannot be found, contact IBM support.
