@@ -107,6 +107,9 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
     The overall sums for CPU and memory include all components of HCL DX. 
     In most cases, you only want to deploy a subset of all components. Therefore, the minimal system requirements decrease accordingly.
 
+!!!note
+    This configuration outlines the minimum requirements. For production environments or higher workloads, scale to small, medium, or larger configurations as appropriate. If you encounter performance issues, increase resource allocations as needed. For guidance on optimizing your deployment, see the [performance tuning guide](../../../guide_me/performance_tuning/kubernetes/index.md).
+
 ## Prereqs Checker For DX Deployment
 
 HCL DX introduced a tool called Prereqs Checker that runs a number of checks to confirm whether the prerequisites for various components are met.  
