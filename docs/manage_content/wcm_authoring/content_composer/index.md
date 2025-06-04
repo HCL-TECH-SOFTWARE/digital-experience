@@ -12,7 +12,7 @@ This section provides a high-level overview of the architecture and the steps to
 This section provides steps on how to configure HCL Content Composer for specific use.
 -   **[Usage of HCL Content Composer](../content_composer/usage/index.md)**  
 Access, author, and manage content and content templates using HCL Content Composer. Users can also manage workflow approvals of content and content templates using HCL Content Composer.
--   **[Limitations](../content_composer/limitations/index.md)** 
+-   **[Limitations](../content_composer/limitations/index.md)**  
 List of limitations that currently exist in HCL Content Composer.
 
 ## HCLSoftware U learning materials

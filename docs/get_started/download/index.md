@@ -1,10 +1,12 @@
 # Download the HCL Digital Experience software
 
-New and existing users need to register at the HCL Software License Portal and download their entitled HCL Digital Experience packages.
+New and existing users need to register [on the HCLSoftware portals](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0069114){target="_blank"} to download their entitled HCL Digital Experience (DX) packages from the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal site.
 
-Co-packaged software is identified in HCL Digital Experience 9.5 Download documents available in your entitlements on the HCL Software License Portal.
+Co-packaged software entitlements are identified in the specific [HCL DX offering licenses](https://www.hcl-software.com/resources/license-agreements){target="_blank"} published on the HCL Software License site, and are presented within the DX offering download pages presented on the My HCLSoftware site. See the examples presented in [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) for more information.
 
 ## HCLSoftware U learning materials
+
+For a tutorial overview of HCL DX offerings on [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"}, go to the [HCL DX What's New in 2025 video lesson, CF226](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3593){target="_blank"}.
 
 For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
 
