@@ -6,7 +6,7 @@
 
 ## Introduction
 
-HCL Digital Experience (DX) log file messages are displayed using the locale set in your operating system. This document provides the steps on how to change the display language without modifying the locale.
+HCL Digital Experience (DX) log file messages by default are displayed using the locale set in your operating system. This document provides the steps on how to change the display language without modifying the locale.
 
 ## Instructions
 
@@ -20,15 +20,17 @@ You can change the display language of HCL DX log files using Java properties. T
 
 4. Add the following parameters in the **Generic JVM arguments** field:
 
-    ```
-    -Duser.language=<language> -Duser.region=<region>
+    ``` generic
+        -Duser.language=<language> -Duser.region=<region>
     ```
 
     For example, to set the language to English, use the following parameters:
 
+    ``` generic
+        -Duser.language=en -Duser.region=US      
     ```
-    -Duser.language=en -Duser.region=US  
-    ```
+
+    A list of supported languages can be found at [JVM command-line properties and options](https://www.ibm.com/docs/en/wamt?topic=binaries-jvm-command-line-properties-options){target="_blank"}. If a specific language or region cannot be found, please get in contact with IBM support to find out the correct language and region code.
 
     For more information, refer to [Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server){target="_blank"}.
 
@@ -36,4 +38,4 @@ You can change the display language of HCL DX log files using Java properties. T
 
 6. Restart your HCL DX environment.
 
-7. Test.
+7. Test the new settings by opening for example the `<wp_profile_root>\logs\WebSphere_Portal\SystemOut.log` file. Review the log entries in the file and verify the language in which the log-entries are printed out.  
