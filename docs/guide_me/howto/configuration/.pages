@@ -4,4 +4,5 @@ nav:
     - index.md
     - DeployRobots.md
     - ChangeCellandNodeName.md
+    - ConfigureRAD.md
     - RemoveStateInformationFromURL.md
