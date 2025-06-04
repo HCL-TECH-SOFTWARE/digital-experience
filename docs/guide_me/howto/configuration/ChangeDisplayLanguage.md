@@ -6,7 +6,7 @@
 
 ## Introduction
 
-HCL Digital Experience (DX) log file messages by default are displayed using the locale set in your operating system. This document provides the steps on how to change the display language without modifying the locale.
+By default, HCL Digital Experience (DX) log file messages are displayed using the locale set in your operating system. This document provides the steps on how to change the display language without modifying the locale.
 
 ## Instructions
 
@@ -30,12 +30,12 @@ You can change the display language of HCL DX log files using Java properties. T
         -Duser.language=en -Duser.region=US      
     ```
 
-    A list of supported languages can be found at [JVM command-line properties and options](https://www.ibm.com/docs/en/wamt?topic=binaries-jvm-command-line-properties-options){target="_blank"}. If a specific language or region cannot be found, please get in contact with IBM support to find out the correct language and region code.
+    For more information on the supported languages, refer to [JVM command-line properties and options](https://www.ibm.com/docs/en/wamt?topic=binaries-jvm-command-line-properties-options){target="_blank"}. If a specific language or region cannot be found, contact IBM support.
 
-    For more information, refer to [Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server){target="_blank"}.
+    For more information on generic JVM arguments, refer to [Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server){target="_blank"}.
 
 5. Click **Apply > Save**.
 
 6. Restart your HCL DX environment.
 
-7. Test the new settings by opening for example the `<wp_profile_root>\logs\WebSphere_Portal\SystemOut.log` file. Review the log entries in the file and verify the language in which the log-entries are printed out.  
+7. Open a log file (for example, `<wp_profile_root>\logs\WebSphere_Portal\SystemOut.log`) and review the log entries to verify the language change.
