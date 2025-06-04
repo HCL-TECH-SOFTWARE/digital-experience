@@ -1,4 +1,4 @@
-# How to change the display language in HCL Digital Experience log files without changing the locale in OS?
+# How to change the display language in HCL DX log files without changing the operating system's locale
 
 ## Applies to
 
@@ -6,31 +6,34 @@
 
 ## Introduction
 
-When the HCL Digital Experience log files will be reviewed, messages are shown in the locale language. How can the display language been changed, without changing the locale in the Operating System?
+HCL Digital Experience (DX) log file messages are displayed using the locale set in your operating system. This document provides the steps on how to change the display language without modifying the locale.
 
 ## Instructions
 
-The language of the HCL Digital Experience log files can be overwritten by using Java properties. These properties need to be set into the Generic JVM arguments before restarting target JVM.
-
-Steps for changing the display language of HCL Digital Experience log files:
+You can change the display language of HCL DX log files using Java properties. These properties must be added to the **Generic Java Virtual Machine (JVM) arguments** before restarting the target JVM. Refer to the following steps to change the display language of HCL DX log files:
 
 1. Log on to IBM WebSphere Integrated Solutions Console.  
 
-2. Navigate to `Servers > Server Types > WebSphere application servers > <PORTAL_SERVER_NAME> > Java and Process Management > Process definition > Java Virtual Machine`.
+2. Navigate to **Servers > Server Types > WebSphere application servers**.
 
-3. Add the parameters below in the Generic JVM arguments:
+3. Click your Portal server name then go to **Java and Process Management > Process definition > Java Virtual Machine**.
 
-      `-Duser.language=<language> -Duser.region=<region>`
+4. Add the following parameters in the **Generic JVM arguments** field:
 
-   For example, to change the language in English:
+    ```
+    -Duser.language=<language> -Duser.region=<region>
+    ```
 
-      -Duser.language=en -Duser.region=US  
+    For example, to set the language to English, use the following parameters:
 
-4. Click OK and Save to save the changing.
+    ```
+    -Duser.language=en -Duser.region=US  
+    ```
 
-5. Restart the HCL Digital Experience environment.
+    For more information, refer to [Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server){target="_blank"}.
 
-6. Test  
+5. Click **Apply > Save**.
 
-Reference:
-[Setting generic JVM arguments in WebSphere Application Server](https://www.ibm.com/support/pages/setting-generic-jvm-arguments-websphere-application-server)
+6. Restart your HCL DX environment.
+
+7. Test.
