@@ -1,4 +1,4 @@
-# How do I decode long Portal URLs
+# How to decode long Portal URLs
 
 ## Applies to
 
@@ -6,38 +6,40 @@
 
 ## Introduction
 
-When I access pages in Portal site I always see long and unreadable Portal URLs. How can I decode these long Portal URLs?
+This document provides steps to decode long and unreadable Portal URLs in the HCL Digital Experience (DX) site.
 
 ## Instructions
 
-The main reason the URL is long and unreadable is that it's a base64 and gzip encoding of the XML needed to code both the page and the portlet states of all the portlets on the page for the back-button.
+Portal URLs become long and unreadable because it contains a `base64`- and `gzip`-encoded XML string. This string captures the dynamic state of the page and all its portlets, enabling the browser's back button to restore the exact view.
 
-To decode a URL, paste the whole URL or URL starting with /wps in a contentHandler query:
+Refer to the following steps to decode a URL:
 
-```url
-http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/<URL to be decoded>
-```
+1. Construct a URL that passes your encoded Portal URL as a parameter to a `mycontenthandler` query and paste it in your browser:
 
-So it would be like this:
+    ```url
+    http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/<URL to be decoded>
+    ```
 
-```url
-http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
-```
+    See the following example of a URL with the encoded Portal URL passed as a `mycontenthandler` parameter:
 
-Then you will see an XML output like this:
+    ```url
+    http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
+    ```
 
-```xml
-<root>
-<state type="navigational">  
-<selection selection-node="Z6_68G0HG02L07FA0A1D256B904O1">  
-<mapping src="Z6_68G0HG02L07FA0A1D256B904O1" dst="Z6_000000000000000000000000A0"/>
-</selection>
-<expansions>
-<node id="Z6_68G0HG02L07FA0A1D256B900M4"/>
-<node id="Z6_000000000000000000000000A0"/>
-</expansions>
-</state>
-</root>
-```
+    When you access this URL, an XML output appears, displaying the decoded information:
 
-From that XML, you need to look at an XMLAccess result of the site to see the page in question. It's the objectid above called "Z6_68G0HG02L07FA0A1D256B904O1" and is referenced as the "selection-node".
+    ```xml
+    <root>
+    <state type="navigational">  
+    <selection selection-node="Z6_68G0HG02L07FA0A1D256B904O1">  
+    <mapping src="Z6_68G0HG02L07FA0A1D256B904O1" dst="Z6_000000000000000000000000A0"/>
+    </selection>
+    <expansions>
+    <node id="Z6_68G0HG02L07FA0A1D256B900M4"/>
+    <node id="Z6_000000000000000000000000A0"/>
+    </expansions>
+    </state>
+    </root>
+    ```
+
+2. From the resulting XML output, identify the specific Portal page by looking for its object ID. This XML output is formatted like an XMLAccess result, and the object ID (for example, `Z6_68G0HG02L07FA0A1D256B904O1`) is referred to as the `selection-node`.
