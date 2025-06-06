@@ -10,3 +10,5 @@ Learn how to clear WebSphere Dynacache caches using the sample JSP code.
 Learn how to tune WCM to reduce your query time.
 - **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.
+- **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
+Learn about long Portal URLs and how to decode them.

@@ -14,23 +14,35 @@ Portal URLs become long and unreadable because it contains a `base64`- and `gzip
 
 Refer to the following steps to decode a URL:
 
-1. Construct a URL that passes your encoded Portal URL as a parameter to a `mycontenthandler` query and paste it in your browser:
+1. Construct a URL that passes your encoded Portal URL as a parameter to a `mycontenthandler` query and paste it in your browser. The Syntax for that URL is as following:  
 
     ```url
     http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/<URL to be decoded>
     ```
 
-    See the following example of a URL with the encoded Portal URL passed as a `mycontenthandler` parameter:
+    The next section provides a detailed example to decode such an URL.  
 
-    ```url
-    http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
-    ```
+## Sample
 
-    When you access this URL, an XML output appears, displaying the decoded information:
+Let's assume the following Portal page will be accessed in the web-browser:  
 
-    ```xml
-    <root>
-    <state type="navigational">  
+```url
+http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
+```
+
+and detailed state information of that page need to be reviewed.  
+
+To get the detailed information from that page the `http://<server>:<port>/wps/mycontenthandler?uri=state:<URL to be decoded>` syntax can be used. Where the `?uri=state:<URL to be decoded>` part of that URL helps to get the page state decoded. For example:
+
+```url
+http://<server>:<port>/wps/mycontenthandler?uri=state:http://<server>:<port>/wps/portal/home/shopapply/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zizSzcDTzcDYx8DMzdHA0cDV2MTM2cLA1M_A31wwkpiAJKG-AAjgZA_VFgJThMMPA1gSrAY0ZBboRBpqOiIgBSYigH/dz/d5/L2dBISEvZ0FBIS9nQSEh/
+```
+
+When the URL is accessed, an XML output appears, displaying the decoded information:
+
+```xml
+<root>
+  <state type="navigational">  
     <selection selection-node="Z6_68G0HG02L07FA0A1D256B904O1">  
     <mapping src="Z6_68G0HG02L07FA0A1D256B904O1" dst="Z6_000000000000000000000000A0"/>
     </selection>
@@ -38,8 +50,8 @@ Refer to the following steps to decode a URL:
     <node id="Z6_68G0HG02L07FA0A1D256B900M4"/>
     <node id="Z6_000000000000000000000000A0"/>
     </expansions>
-    </state>
-    </root>
-    ```
+  </state>
+</root>
+```
 
-2. From the resulting XML output, identify the specific Portal page by looking for its object ID. This XML output is formatted like an XMLAccess result, and the object ID (for example, `Z6_68G0HG02L07FA0A1D256B904O1`) is referred to as the `selection-node`.
+From the resulting XML output, identify the specific Portal page by looking for its object ID. This XML output is formatted like an XMLAccess result, and the object ID (for example, `Z6_68G0HG02L07FA0A1D256B904O1`) is referred to as the `selection-node`.
