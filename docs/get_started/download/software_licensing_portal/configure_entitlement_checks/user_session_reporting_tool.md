@@ -57,7 +57,7 @@ Refer to the following steps to enable and configure NCSA access logging:
 
 1. Click **Servers > Server Types > WebSphere application servers > server_name (for example, Websphere_Portal)**. Under the **Troubleshooting** section, click **NCSA access and HTTP error logging**.
 2. Select **Enable logging service at server start-up**.
-3. Ensure that **Enable access logging** is selected and the file path is set to `${SERVER_LOG_ROOT}/http_access.log`. 
+3. Ensure that **Enable access logging** is selected and the file path is set to `${SERVER_LOG_ROOT}/http_access.log`.
 4. In **Maximum number of historical files**, enter the maximum file number for historical files. For better tracking, the recommended number is 3.
 
     !!! note
@@ -148,7 +148,7 @@ GET /wps/mycontenthandler/wcmrest-v2/categories?type=category HTTP/1.1 200 [DX_U
 
 Once the IP addresses or session keys to be excluded have been identified, you can configure the exclusion parameters when running the tool to ensure those entries are omitted from the session count. See [Excluding specific requests](#excluding-specific-requests) for more information.
 
-## Running the user session reporting tool
+## Running the User Session Reporting Tool
 
 ### Tool parameters
 
@@ -214,7 +214,7 @@ After running the command, the system returns the expected session count within 
     !!! note
         You must save the DAT file and store it securely as it will be used by the tool to continue the session count during the next run. Losing or tampering with this file could result in incorrect session data and an inaccurate count.
 
-### Additional use-cases
+### Additional use cases
 
 - You can run the User Session Reporting Tool either once for all collected log files or incrementally every X days, hours, or minutes. The tool stores its state between runs and only processes logs generated after the last previously processed timestamp to prevent reprocessing old entries. This ensures that you still get the correct overall result, even when processing logs in multiple stages.
 
