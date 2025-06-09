@@ -171,6 +171,8 @@ configuration:
       enabled: true
     wcm:
       enabled: true
+    people:
+      enabled: true
 ```  
 
 You can enable an automated setup for content sources and crawlers. This setting is enabled by default for all content sources and crawlers. This includes the following content sources:
@@ -178,6 +180,7 @@ You can enable an automated setup for content sources and crawlers. This setting
 - 'jcr' for Java Content Repository (`jcr_default_content_source` - `680f8805-92f3-45d4-a900-8f28c7160935`)
 - 'portal' for Portal (`portal_default_content_source` - `5d2d2fa4-8f71-435d-9341-c3034ff9c509`)
 - 'wcm' for Web Content Manager (`wcm_default_content_source` - `972369e7-041c-4459-9211-069f4917c1ba`)
+- 'people' for People Service (`people_default_content_source` - `81f17efc-2a4a-4247-ae0b-3bb99eb62643`)
 
 For each of the content sources, you can enable or disable the automated setup by setting the `enabled` field to `true` or `false`. It is possible to override the default settings for `uuid`, `aclLookupHost`, and `aclLookupPath` for each content source. If left empty, the setup will automatically detect default values by inspecting the existing DX deployment.
 
@@ -200,7 +203,7 @@ configuration:
 
 ### Common fields mapping for fallback  
 
-Common field mappings are the default mappings for WCM, DAM, JCR, and PORTAL in the `documentObject`. You can find appropriate mappings for each field in the `documentObject`. Use an empty string if none of the mappings apply. For more information about `documentObject`, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents). 
+Common field mappings are the default mappings for WCM, DAM, JCR, PORTAL, and PEOPLE in the `documentObject` parameter. You can find appropriate mappings for each field in this parameter. Use an empty string if none of the mappings apply. For more information about the `documentObject` parameter, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
 
 ```yaml
 commonFieldMappings:
@@ -228,14 +231,20 @@ commonFieldMappings:
       description: "summary"
       type: "category"
       tags: "tags"
+    # Mappings for PEOPLE
+    people:
+      title: "title"
+      description: "summary"
+      type: "category"
+      tags: "tags"
 ```  
 
 Refer to the following list for more information about the fields:
 
-- `wcm`, `dam`, `jcr`, and `portal` are the types of content source currently supported.  
+- `wcm`, `dam`, `jcr`, `portal`, and `people` are the types of content source currently supported.  
 - Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
 - Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
-- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr` and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
+- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr`, and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
 
 ### Persistent Volume size requests  
 

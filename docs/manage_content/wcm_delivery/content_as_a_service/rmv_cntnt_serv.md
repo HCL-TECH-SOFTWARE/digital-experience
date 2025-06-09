@@ -1,6 +1,6 @@
 # Removing Content as a Service
 
-To remove Content as a Service feature in HCL Portal, you must disable it by using an HCL Digital Experience configuration task.
+To remove Content as a Service feature in HCL Digital Experience (DX), you must disable it by using an HCL Digital Experience configuration task.
 
 1.  Change the directory to the wp_profile_root/ConfigEngine directory.
 
@@ -21,7 +21,4 @@ To remove Content as a Service feature in HCL Portal, you must disable it by usi
     !!! note
         Uninstalling the shared resources while the virtual portal scoped installation is still present for other virtual portals leads Content as a Service feature to become dysfunctional for all virtual portals.
 
-3.  Restart your portal server.
-
-
-
+3.  Restart your DX server.
