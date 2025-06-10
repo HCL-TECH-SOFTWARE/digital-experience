@@ -1,8 +1,9 @@
 title: Administration
+
 nav:
     - index.md
-    - APIToCountWCMItems.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
     - DecodeLongURLs.md
     - ImproveQueryPerformance.md
+    - APIToCountWCMItems.md
