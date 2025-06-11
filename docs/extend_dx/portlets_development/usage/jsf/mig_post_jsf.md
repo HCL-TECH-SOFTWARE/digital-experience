@@ -2,7 +2,7 @@
 
 The default JavaServer Faces \(JSF\) implementation has changed starting in WebSphere Application Server 8.
 
-When you are migrating JSF portlets from an earlier version of HCL Digital Experience (DX), be aware that WebSphere® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, see *JavaServer Faces migration* in the WebSphere Application Server documentation.
+When you are migrating JSF portlets from an earlier version of HCL Digital Experience (DX), be aware that WebSphere® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, refer to [JavaServer Faces migration](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=components-javaserver-faces-migration){target="_blank"}.
 
 ## Replacement of IBM JSF Bridge with HCL DX JSF Bridge
 
