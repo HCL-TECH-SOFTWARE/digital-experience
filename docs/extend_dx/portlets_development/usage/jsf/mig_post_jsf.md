@@ -6,9 +6,9 @@ When you are migrating JSF portlets from an earlier version of HCL Digital Exper
 
 ## Replacement of IBM JSF Bridge with HCL Digital Experience JSF Bridge
 
-With [HCL Digital Experience 9.5 CF171 Container Update and later release](https://help.hcltechsw.com/digital-experience/9.5/containerization/limitations_requirements.html?hl=java%2Cserver%2Cfaces), IBM WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge
+With HCL Digital Experience 9.5 CF171 Container Update and later release, IBM WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge.
 
-With HCL Digital Experience 9.5 CF18 update and Container Update releases, an updated JSF portlet bridge is introduced and installed in the HCL Digital Experience software. Customers installing HCL Digital Experience 8.5, 9.0, 9.5 CF18, or Container Update release CF18, using an IBM Websphere Application Server version later than 8.5.5.17 or 9.0.5.2, will have the JSF portlet bridge installed automatically.
+With HCL Digital Experience 9.5 CF18 update and Container Update releases, the HCL JSF portlet bridge is introduced and installed with the HCL Digital Experience software. Customers installing HCL Digital Experience 8.5, 9.0, 9.5 CF18, or Container Update release CF18, using an IBM Websphere Application Server version later than 8.5.5.17 or 9.0.5.2, will have the HCL JSF portlet bridge installed automatically.
 
 If customers install HCL Digital Experience 9.5 CF18 and upgrade the IBM WebSphere Application Server to 8.5.5.17 and higher, or 9.0.5.2 and higher, to the required level at a later point, HCL provides the following config task to enable the HCL JSF portlet bridge.
 
