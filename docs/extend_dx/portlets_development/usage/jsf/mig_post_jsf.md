@@ -2,15 +2,15 @@
 
 The default JavaServer Faces \(JSF\) implementation has changed starting in WebSphere Application Server 8.
 
-When you are migrating JSF portlets from an earlier version of HCL Digital Experience, be aware that WebSphere® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, see *JavaServer Faces migration* in the WebSphere Application Server documentation.
+When you are migrating JSF portlets from an earlier version of HCL Digital Experience (DX), be aware that WebSphere® Application Server has changed the default JSF implementation starting in WebSphere Application Server 8. For more information, see *JavaServer Faces migration* in the WebSphere Application Server documentation.
 
-## Replacement of IBM JSF Bridge with HCL Digital Experience JSF Bridge
+## Replacement of IBM JSF Bridge with HCL DX JSF Bridge
 
-With [HCL Digital Experience 9.5 CF171 Container Update and later release](https://help.hcltechsw.com/digital-experience/9.5/containerization/limitations_requirements.html?hl=java%2Cserver%2Cfaces), IBM WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge
+With HCL DX 9.5 CF171 Container Update and later release, IBM WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge.
 
-With HCL Digital Experience 9.5 CF18 update and Container Update releases, an updated JSF portlet bridge is introduced and installed in the HCL Digital Experience software. Customers installing HCL Digital Experience 8.5, 9.0, 9.5 CF18, or Container Update release CF18, using an IBM Websphere Application Server version later than 8.5.5.17 or 9.0.5.2, will have the JSF portlet bridge installed automatically.
+With HCL DX 9.5 CF18 update and Container Update releases, the HCL JSF portlet bridge is introduced and installed with the HCL DX software. Customers installing HCL DX 8.5, 9.0, 9.5 CF18, or Container Update release CF18, using an IBM Websphere Application Server version later than 8.5.5.17 or 9.0.5.2, will have the HCL JSF portlet bridge installed automatically.
 
-If customers install HCL Digital Experience 9.5 CF18 and upgrade the IBM WebSphere Application Server to 8.5.5.17 and higher, or 9.0.5.2 and higher, to the required level at a later point, HCL provides the following config task to enable the HCL JSF portlet bridge.
+If customers install HCL DX 9.5 CF18 and upgrade the IBM WebSphere Application Server to 8.5.5.17 and higher, or 9.0.5.2 and higher, to the required level at a later point, HCL provides the following config task to enable the HCL JSF portlet bridge.
 
 For IBM WebSphere Application Server 8.5.5.x:
 
@@ -58,7 +58,5 @@ Prior to HCL taking ownership of the Portlet Bridge IBM claimed support for JSF 
 
 HCL remains committed to providing ongoing support for customers running portlets for many years to come as this is a key capability of the DX product. While HCL is investigating what is required to complete the JSF 2.2 bridge, we do not anticipate a solution being available in the short-term. HCL will update this statement as soon as we have determined a solution for the portlet bridge JSF 2.2 implementation.
 
-
 ???+ info "Related information"
     - [Support for JavaServer Faces 2.2](../jsf/dx_bridge_for_jsf_onwas9x.md)
-
