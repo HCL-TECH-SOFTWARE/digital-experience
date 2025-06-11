@@ -5,7 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
-- Presentation Designer - Updated units of measurement for style properties
+- Presentation Designer - Additional units of measurement for style properties
 - TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -42,13 +42,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### Presentation Designer - Updated units of measurement for style properties
+### Presentation Designer - Additional units of measurement for style properties
 
 === "Containers"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. For more information, refer to [Styling options](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
+    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
 
 === "On-Premises"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. For more information, refer to [Styling options](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
+    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
 
 ### TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
