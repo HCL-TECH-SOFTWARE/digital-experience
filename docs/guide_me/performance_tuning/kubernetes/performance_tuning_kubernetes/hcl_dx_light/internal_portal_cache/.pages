@@ -1,0 +1,6 @@
+title: Internal Portal Caches
+nav:
+    - index.md
+    - base_portal_cache.md
+    - wcm_cache_instances.md
+    - sample_scenarios.md
