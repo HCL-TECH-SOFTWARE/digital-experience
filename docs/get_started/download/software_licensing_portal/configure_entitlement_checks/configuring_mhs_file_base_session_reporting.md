@@ -28,14 +28,15 @@ java -jar <jarFilepath> -h
 # <endDate> Specifies the end date in YYYY-MM-DD format
 # <deploymentId> String deploymentID from MHS
 # <option> Specify "fileOutput" to write usage into an automatically named file. If option is unspecified, the usage metrics are displayed in the terminal and not saved in a file.
-# <productFeatureId> Product name (HCL_DX_CloudNative or HCL_DX_Compose)
 ```
 
 See the sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] [-productFeatureIdName <productFeatureId>] <startDate> <endDate> <deploymentId> <option> 
+java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate> <deploymentId> <option>
 ```
+
+**Note:** The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ### Example
 
@@ -43,10 +44,10 @@ Refer to the following sample commands to generate user session data usage in MH
 
 ```
 # Output in the terminal
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIP.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk   > /tmp/2022-06-24T02-50-00_usage.metrics
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIP.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk   > /tmp/2022-06-24T02-50-00_usage.metrics
 
 # Write Output in file
-java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 pnkeq6pk fileOutput 
+java -jar UserSessionReporting.jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 pnkeq6pk fileOutput 
 ```
 
 See the sample `excludedIPs.txt` file:
@@ -102,12 +103,11 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar Us
 - `startDate`: The start date of the user session in YYYY-MM-DD format.
 - `endDate`: The end date of the user session in YYYY-MM-DD format.
 - `deploymentId`: The deployment identifier. You can find the `deploymentId` in the MHS portal after clicking the deployment card in the URL. For example, in the URL `https://my.hcltechsw.com/deployments/pzneck8m`, `pzneck8m` is the `deploymentId`.
-- `productFeatureId`: The product name (`HCL_DX_CloudNative` or `HCL_DX_Compose`).
 
 To save the generated metrics to a file, use the following command:
 
 ```sh
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics [-productFeatureIdName <productFeatureId>]
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
 
 The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.
@@ -117,7 +117,7 @@ The timestamp in the usage metrics file should be earlier than the start date. T
 Refer to the following sample command to generate user session data usage in MHS metrics format for Kubernetes deployments:
 
 ```sh
-kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics -productFeatureIdName HCL_DX_CloudNative
+kubectl exec -it pod/dx-deployment-license-manager-0 -n dxns -- java -jar UserSessionReporting.jar GenerateMetricFile 2022-07-22 2025-07-28 pnkeq6pk > /tmp/2022-06-24T02-50-00_usage.metrics
 ```
 
 ### Expected result
