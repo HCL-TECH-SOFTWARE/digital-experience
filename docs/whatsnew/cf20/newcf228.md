@@ -53,10 +53,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 === "Containers"
-    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. For more information, refer to [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
+    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. This version includes bugfixes, additional custom plugins, and customized user interface components. For more information, refer to [TinyMCE 7.8.0](https://www.tiny.cloud/docs/tinymce/latest/7.8.0-release-notes/){target="_blank"} and [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
 
 === "On-Premises"
-    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. For more information, refer to [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
+    The TinyMCE Enhanced Rich Text Editor used for HCL Web Content Manager (WCM) has been updated to version 7.8. This version includes bugfixes, additional custom plugins, and customized user interface components. For more information, refer to [TinyMCE 7.8.0](https://www.tiny.cloud/docs/tinymce/latest/7.8.0-release-notes/){target="_blank"} and [Enhanced rich text editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
