@@ -7,19 +7,19 @@ title: Exporting a usage report manually
 
 With this feature, you can:
 
-- Configure user session tracking DX 9.5 deployments on supported Kubernetes platforms.
+- Configure user session tracking HCL Digital Experience (DX) 9.5 deployments on supported Kubernetes platforms.
 - View [DX 9.5 user session](./index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments) consumption in DX 9.5 Kubernetes deployments.
-- Manually export a report of the number of sessions used in specified time periods. The DX Kubernetes deployment user session usage report presents the data in the form of sessions month in a given date range. See examples in the next sections. 
+- Manually export a report of the number of sessions used in specified time periods. The DX Kubernetes deployment user session usage report presents the data in the form of sessions month in a given date range. See examples in the next sections.
 - Produce a local report from HCL License Manager regardless of which software delivery portal is in use.
 
 !!! note
-    User session tracking and reporting support the protection of personally identifiable information (PII) of users. Data such as the User ID and the requestor IP address are not stored in the server logs or presented in user session consumption reports. These reports present only the timestamp and numerical data necessary to show user session counts for the requested time period. 
+    User session tracking and reporting support the protection of Personally Identifiable Information (PII) of users. Data such as the User ID and the requestor IP address are not stored in the server logs or presented in user session consumption reports. These reports present only the timestamp and numerical data necessary to show user session counts for the requested time period.
 
 For information on how user sessions are defined and when they begin and end, see [User session consumption for HCL DX Cloud Native v9.5 production deployments](./index.md#monitoring-user-session-consumption-for-hcl-dx-cloud-native-v95-production-deployments)
 
 ## Unique identifier for the HCL DX deployment session usage report
 
-Optionally, set a unique identifier for the specified HCL DX Kubernetes deployment. This is included in the exported user session data and helps to identify from which deployment any given report was produced.
+Optionally, set a unique identifier for the specified HCL DX Kubernetes deployment. This is included in the exported user session data and helps identify from which deployment any given report was produced.
 
 ```yaml
 configuration:
@@ -27,7 +27,7 @@ configuration:
     licenseManualReportUniqueIdentifier: "myUniqueIdentifier-123"
 ```
 
-If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance. 
+If no unique DX Kubernetes deployment identity is set in the helm value, the deployment uses the release name and namespace combination by default. See [Kubernetes Overview](../../../../get_started/plan_deployment/container_deployment/index.md) for deployment and configuration guidance.
 
 ## Exporting the user session usage report in CSV format
 
@@ -123,4 +123,4 @@ Total session usage: 34739664
 ############################################################
 ```
 
-Optionally, you can import the the locally created .txt or .csv file into a spreadsheet or other reporting tools for visualization and further analysis.
+Optionally, you can import the the locally created `.txt` or `.csv` file into a spreadsheet or other reporting tools for visualization and further analysis.

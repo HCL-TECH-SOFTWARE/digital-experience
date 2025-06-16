@@ -17,7 +17,7 @@ The HCL Digital Experience (DX) Cloud Native offering includes the HCL Volt Foun
 
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
-Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry. [](../../../)
+Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Volt MX Foundry.
 <!--
 ```mermaid
 
