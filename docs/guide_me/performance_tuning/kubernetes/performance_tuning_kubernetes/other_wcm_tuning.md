@@ -128,4 +128,4 @@ WCM and Portal page management authoring environments involve constant database 
 
 2. Delete any unused projects to reduce clutter and improve performance.
 
-3. After cleanup, run `RUNSTATS` on the database as described in the [DB2 Tuning](database_tuning.md#db2-tuning) section <!--!ok to use database_tuning#db2_tuning?-->
+3. After cleanup, run `RUNSTATS` on the database as described in the [DB2 Tuning](database_tuning.md#db2-tuning) section 
