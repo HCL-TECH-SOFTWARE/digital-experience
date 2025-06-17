@@ -36,7 +36,8 @@ See the sample command for running the User Session Reporting Tool using all the
 java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate> <deploymentId> <option>
 ```
 
-**Note:** The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
+!!!note
+    The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ### Example
 
