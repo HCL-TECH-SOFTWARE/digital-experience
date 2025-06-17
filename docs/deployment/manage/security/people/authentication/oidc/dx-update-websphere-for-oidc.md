@@ -198,6 +198,6 @@ The restart takes a few minutes to complete.
 ## What's next
 
 !!!note
-    In case you desire to fully detach your WebSphere environment from the user federation, this is considered a "transient user" setup. This requires additional steps to be performed and are outlined in [Updating WebSphere to support OIDC Authentication for DX with Transient Users](transient-users/dx-update-webshpere-for-oidc-transient-users.md).
+    In case you desire to fully detach your WebSphere environment from the user federation, this is considered a "transient user" setup. This requires additional steps to be performed and are outlined in [Updating WebSphere to support OIDC Authentication for DX with Transient Users](transient-users/dx-update-websphere-for-oidc-transient-users.md).
 
 Once you have updated WebSphere to support OIDC authentication for DX,  look at the steps outlined in [Adjusting the DX Login flow for OIDC](./dx-integration.md).

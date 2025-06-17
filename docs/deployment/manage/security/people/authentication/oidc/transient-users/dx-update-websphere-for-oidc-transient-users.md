@@ -6,7 +6,7 @@ The Java Authentication and Authorization Service (JAAS) login module uses trans
 
 This functionality allows you to write minimal custom code that can bridge components and provide DX-based applications to integrate with an OIDC OpenID Provider (OP). This configuration is for the basic login module that enables Transient Users with any inconsistent Trust Association Interceptor (TAI).
 
-Before you begin, please ensure you have carried out the steps outlined in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md).
+Before you begin, please ensure you have carried out the steps outlined in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-websphere-for-oidc.md).
 
 ## Configuring the transient users
 

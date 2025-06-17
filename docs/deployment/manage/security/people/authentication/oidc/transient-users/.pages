@@ -5,5 +5,5 @@ title: Transient users
 ## This section defines the navigation structure for this directory
 
 nav:
-    - Updating WebSphere to support OIDC Authentication for DX with Transient Users: dx-update-webshpere-for-oidc-transient-users.md
+    - Updating WebSphere to support OIDC Authentication for DX with Transient Users: dx-update-websphere-for-oidc-transient-users.md
     - ...
