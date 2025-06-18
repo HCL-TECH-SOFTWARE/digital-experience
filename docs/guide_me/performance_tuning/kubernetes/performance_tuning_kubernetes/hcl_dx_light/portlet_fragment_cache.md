@@ -80,7 +80,7 @@ WebSphere Application Server comes with a Cache Monitor application that allows 
 
 **How to Set**
 
-1.  For more information, see [Detailed steps to download and install the WebSphere Extended Cache Monitor](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075565){target="_blank"}.<!--!link not working-->
+1.  For more information, see [Detailed steps to download and install the WebSphere Extended Cache Monitor](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0075565){target="_blank"}.<!--!record not found-->
 
 2.  Before you can access the Cache Monitor application, you will need to **grant an administrator account access** to this application.
     1.  In the WebSphere Integrated Solutions Console, navigate to **Applications > Application Types > WebSphere enterprise applications > Dynamic Cache Monitor > Security role to user/group mapping**.

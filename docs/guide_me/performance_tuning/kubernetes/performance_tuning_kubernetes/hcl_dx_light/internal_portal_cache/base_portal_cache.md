@@ -678,7 +678,7 @@ The cache caches the processing of the locales in HTML files that represent the 
 
 The cache values are medium sized.
 
-The content of the cache can be viewed via `<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.locale.LocalizationParser>`. <!--!link correct? does not seem to work?-->
+The content of the cache can be viewed via `<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.locale.LocalizationParser>`. 
 
 **Cache.com.ibm.wps.spa.parser.skin.SkinParserCache**
 
@@ -688,7 +688,7 @@ The cache caches the parsing of skins for dynamic spots. The size of the cache s
 
 The cache values are medium sized.
 
-The content of the cache can be viewed via `<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.skin.SkinParserCache>`.<!--!link correct? does not seem to work?-->
+The content of the cache can be viewed via `<http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.skin.SkinParserCache>`.
 
 
 **com.ibm.wps.spa.parser.skin.ThemeParserCache**
