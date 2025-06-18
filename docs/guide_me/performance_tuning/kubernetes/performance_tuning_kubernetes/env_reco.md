@@ -3,8 +3,7 @@
 
 Before you install HCL Digital Experience (DX) and Web Content Manager (WCM), you should consider how the environment will be used to achieve ideal performance.
 
- **HCL DX 9.5 CF200 and later** is designed to run on any [Certified Kubernetes platform](https://www.cncf.io/certification/software-conformance){target="_blank"}, as long as the Kubernetes platform:<!--!page cannot be reached. can we just remove the link?-->
-
+ **HCL DX 9.5 CF200 and later** is designed to run on any [Certified Kubernetes platform](https://www.cncf.io/certification/software-conformance){target="_blank"}, as long as the Kubernetes platform:
 -  Runs on **x86-64 hardware**  
  Is officially supported by [Helm](https://helm.sh/docs/topics/kubernetes_distros/){target="_blank"}
 

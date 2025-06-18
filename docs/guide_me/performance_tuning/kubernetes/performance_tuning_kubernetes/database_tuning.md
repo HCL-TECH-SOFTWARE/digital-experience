@@ -175,7 +175,7 @@ The following configuration parameters were used for tuning the Oracle database:
 
 Optimizer statistics are a collection of data about the database and the objects in the database. These statistics are used by the query optimizer to choose the best execution plan for each SQL statement. Because the objects in a database can be constantly changing, statistics must be regularly updated so that they accurately describe these database objects, particularly after periods of heavy data modifications (inserts, updates, and deletes) such as a population phase. We have used the following commands in our environment to recompute these statistics:
 
-```sql
+```
 EXECUTE dbms_stats.gather_database_stats(
     dbms_stats.auto_sample_size,
     method_opt => 'FOR ALL INDEXED COLUMNS SIZE AUTO',
