@@ -36,7 +36,7 @@ You can display messages in the status bar to share important information with u
 You can display a draft page ribbon that appears along both sides of a page that has a draft in the current project.
 - **[Adding jQuery to a theme](./add_jquery_to_theme/index.md)**  
 HCL DX includes a jQuery module for the jQuery core so you can use jQuery in a theme.
-- **[Tags used by the portal JSPs](./portal_jsp_tag/index.md)**
+- **[Tags used by the portal JSPs](./portal_jsp_tag/index.md)**  
 You can use portal JSP tags modify the appearance and layout of the portal page.
 
 ## HCLSoftware U learning materials
