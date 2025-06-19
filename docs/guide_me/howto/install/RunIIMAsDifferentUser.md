@@ -1,4 +1,4 @@
-# How can we run the Installation Manager as a different user than the one that installed it?
+# How to run the IBM Installation Manager as a different user
 
 ## Applies to
 
@@ -6,17 +6,15 @@
 
 ## Introduction
 
-The IBM Installation Manager (IIM) cannot be started.  
-
-A message box displays the following message when you try to run IIM and another user originally installed IIM.  
+If you try to run the IBM Installation Manager (IIM) on a Windows machine and another user originally installed it, you may encounter the following error message:
 
 `The Installation Manager cannot be started. The registry information does not exist or does not match with this executable. This may happen if you are trying to run Installation Manager installed by another user.`  
 
-This article describes how to run IIM as a different user than the one who installed it.  
+This article describes how to run IIM as a different user than the one who installed it.
 
 ## Instructions
 
-For Windows only:
+Refer to the following steps to run IIM on Windows as a different user:
 
 1. Add `SOFTWARE\IBM\Installation Manager` registry keys and values from `HKEY_CURRENT_USER` under `HKEY_LOCAL_MACHINE`  
 
