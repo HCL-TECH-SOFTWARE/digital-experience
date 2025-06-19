@@ -8,8 +8,6 @@ Create a site area template to configure the design of the authoring form and de
 Create a content template to configure the design of the authoring form and determine what elements can be included in the form.
 -   **[Defining display settings of fields and elements](wcm_dev_auth-temp_fields.md)**  
 You can define the display properties of field and elements that are displayed on a content form. Different field and element types have different display properties.
--   **[Selecting the digital asset source for image and file elements](dam_wcm_select.md)**  
-When you add a resource to an authoring template, you can define how the resource is selected when a content item is created.
 -   **[Customizing elements with JSP](wcm_dev_custom_jsp.md)**  
 A "custom JSP" field is available on some element types when added to an authoring template. You use this field to reference a JSP file to use instead of the element default view in the user interface. You can write JSP to control the design of an element, and to restrict the values that can be entered into an element.
 -   **[Previewing an authoring template](wcm_dev_auth-temp_preview.md)**  
