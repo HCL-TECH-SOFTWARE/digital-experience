@@ -1,4 +1,4 @@
-# Set unique custom URL for a media asset
+# Setting a unique custom URL for a media asset
 
 The media assets in the HCL Digital Asset Management (DAM) can be accessed through a URL. However, this URL is long and complex since it contains unique identifiers to locate the resource. Digital Asset Management allows users to customize complex URLs and change them to human-readable URLs, which are shorter, readable, and easier to use.
 

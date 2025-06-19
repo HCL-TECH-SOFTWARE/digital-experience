@@ -12,9 +12,9 @@ Starting CF224, AI Workflows and AI Translation are available.
 
 ### OpenAI ChatGPT overview
 
-OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
+OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground){target="_blank"}, you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
-For privacy and API availability and other conditions, see the [OpenAI](https://openai.com) website or contact the OpenAI team.
+For privacy and API availability and other conditions, see the [OpenAI](https://openai.com){target="_blank"} website or contact the OpenAI team.
 
 ## Configure the engine task for enabling content AI analysis
 
@@ -27,7 +27,7 @@ To enable content AI analysis:
     !!!note
         - Possible values for the ```ContentAIProvider``` parameter are ```OPEN_AI``` or ```CUSTOM```.
         - If the ```ContentAIProvider``` value is set as ```OPEN_AI```, the value set for the parameter ```CustomAIClassName``` is ignored.
-        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the custom content AI provider implementation class in the ```CustomAIClassName``` parameter . For example, enter ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-ai-class-for-custom-content-ai-provider) for more information about how to implement a custom content AI provider class.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the custom content AI provider implementation class in the ```CustomAIClassName``` parameter . For example, enter ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-an-ai-class-for-a-custom-content-ai-provider) for more information about how to implement a custom content AI provider class.
         - Depending on the ```ContentAIProvider``` value, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
