@@ -1,4 +1,4 @@
-# How to run HCL Digital Experience v8.5 or v9.0 on Red Hat Linux (RHEL) v8 or v9?
+# How to run HCL Digital Experience 8.5 or 9.0 on Red Hat Linux 8.x or 9.x
 
 ## Applies to
 
@@ -6,15 +6,17 @@
 
 ## Introduction
 
-This article describe instructions to run HCL Digital Experience on Red Hat Linux (RHEL) v8 or v9.  
+HCL Digital Experience (DX) 8.5 does not support Red Hat Linux (RHEL) versions 8.x or 9.x.
+You must be on HCL DX 9.0 or later to use RHEL 8.x.  
+You must be on HCL DX 9.5 Cumulative Fix (CF) 209 or later to use Red Hat 9.x.  
+
+For more information, refer to [Supported configurations](../../../get_started/system_requirements/traditional/supported_config.md).
+
+This article provides instructions on how to run HCL DX 8.5 and 9.0 on RHEL 8.x or 9.x.  
 
 ## Instructions
 
-HCL Digital Experience v8.5 does not support Red Hat version 8.x or 9.x.  
-You must be on HCL Digital Experience version 9.0 or later to use Red Hat v8.  
-You must be on HCL Digital Experience version 9.5 Cumulative Fix (CF) 209 or later to use Red Hat 9.  
-
-See [Supported configurations](https://help.hcl-software.com/digital-experience/9.5/latest/get_started/system_requirements/traditional/supported_config/) for details.  
+Refer to the following steps to run HCL DX 8.5 and 9.0 on RHEL 8.x or 9.x.
 
 ### Upgrade HCL Digital Experience v8.5 to support RHEL v8.x or v9.x
 
