@@ -1,4 +1,10 @@
 title: Configuration
+
 nav:
     - index.md
+    - DeployRobots.md
+    - ChangeCellandNodeName.md
+    - ChangeDisplayLanguage.md
+    - ConfigureRAD.md
+    - RemoveStateInformationFromURL.md
     - UseSVGFormattedFiles.md

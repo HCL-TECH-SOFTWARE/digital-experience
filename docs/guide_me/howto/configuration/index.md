@@ -1,7 +1,14 @@
 # Configuration
 
-This section includes how-to documents that belong to the configuration topics
+This section includes How-to articles about configuration in HCL Digital Experience (DX).
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
-
-- **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)**
+- **[How to add a robots.txt file in DX container environments](./DeployRobots.md)**  
+Learn how to add a robots.txt file in your HCL DX environment to control how search engines crawl and index your site.
+- **[How to change cell and node names in a standalone HCL DX environment](./ChangeCellandNodeName.md)**  
+Learn how to change cell and node names after installing HCL DX.
+- **[How to change the display language in HCL DX log files without changing the operating system's locale](./ChangeDisplayLanguage.md)**  
+Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.
+- **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
+Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.
+- **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
+Learn how to remove state information from page URLs.

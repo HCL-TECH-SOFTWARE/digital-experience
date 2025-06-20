@@ -1,4 +1,4 @@
-# Example API Calls
+# Sample API Calls
 
 To give users more insight on how to use Experience API, the following samples are provided.
 
@@ -6,14 +6,14 @@ To give users more insight on how to use Experience API, the following samples a
 
 -   **Call Examples**
 
-    Before sending an API call, users need to get the UUID of the content they want to access out of HCL Digital Experience 9.5. Here are the steps to follow:
+    Before sending an API call, users need to get the UUID of the content they want to access out of HCL Digital Experience (DX) 9.5. Here are the steps to follow:
 
-    1.  Log in to HCL Digital Experience 9.5 using `http://<PORTAL_HOST>:<PORTAL_PORT>/wps/portal`.
+    1.  Log in to HCL DX 9.5 using `http://<PORTAL_HOST>:<PORTAL_PORT>/wps/portal`.
     2.  Go to **Web Content Authoring**.
 
         !!! note
             -   If you have Practitioner Studio enabled, navigate to **Web Content \> Authoring**.
-            -   If you do not have Practitioner Studio configured in your Digital Experience 9.5 deployment, navigate to **Content \> Authoring**.
+            -   If you do not have Practitioner Studio configured in your DX 9.5 deployment, navigate to **Content \> Authoring**.
 
     3.  From **Authoring**, click on the **Web Content \> Content \> Articles**. A list of articles is displayed.
     4.  Click on any article and select **Properties \> Content Properties**.

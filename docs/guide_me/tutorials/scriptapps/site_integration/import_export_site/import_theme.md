@@ -43,11 +43,11 @@
            ```
 
     !!!info "Notes on parameters:"
-         1. `xmlFile` should be pointing to your installTheme.xml which can be the one exported from [here](export_theme.md#1-exporting-the-theme-metadata) or the one mentioned in [manual export](manual_export_theme.md).
+         1. `xmlFile` should be pointing to your installTheme.xml which can be the one exported from [here](export_theme.md#exporting-the-theme-metadata) or the one mentioned in [manual export](manual_export_theme.md).
             - `"Woodburn Insurance/components/Woodburn Insurance/content/xmlaccess/install/installTheme.xml"` if you are on Woodburn Insurance Demo
          2. `themeName` should be what is the theme name.
             - `"Woodburn Insurance"` if you are on Woodburn Insurance Demo
-         3. `themePath` should be pointing to your exported theme zip which can be the one exported from [here](export_theme.md#2-exporting-theme-source-code) or the one mentioned in [manual export](manual_export_theme.md).
+         3. `themePath` should be pointing to your exported theme zip which can be the one exported from [here](export_theme.md#exporting-theme-source-code) or the one mentioned in [manual export](manual_export_theme.md).
             - This could be a uncompressed folder just like in the Woodburn Insurance Demo.
             - `"Woodburn Insurance/components/Woodburn Insurance/content/webdav/themes/Woodburn Insurance"` if you are on Woodburn Insurance Demo
          4. Ensure to place your correct credentials in the `{DXUSERNAME}` and `{DXPASSWORD}`.
