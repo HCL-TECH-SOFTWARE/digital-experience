@@ -5,7 +5,7 @@ This topic provides information on how to configure Ingress for HCL Digital Expe
 ### Prerequisite
 Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
 
-### Configuring Ingress for HCL DX
+### Configuring Ingress for HCL DX and MX
 You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
 
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
@@ -30,6 +30,97 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
          
      Refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration) for more details on the used values.
 
+# Configure Gateway API for HCL DX and MX
+
+## Overview
+This section outlines the process for configuring the Gateway API for HCL Digital Experience (DX) and HCL Leap (MX). The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
+
+## Steps to Configure
+1. **Set Up the Gateway API for HCL DX**
+    - Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for detailed instructions on setting up the Gateway API for HCL DX.
+
+2. **Configure Gateway API for MX**
+    - You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
+
+### Example Configuration
+The provided YAML configuration demonstrates how to set up a Gateway API resource for MX, specifying various paths and their corresponding backend services. Each path is matched using the `PathPrefix` type, directing traffic to the appropriate backend service based on the request path. This configuration is essential for ensuring that requests to the specified paths are routed correctly to the corresponding services within the MX deployment.
+
+```yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: mx-gateway-api-route
+spec:
+  parentRefs:
+  - name: gateway
+    sectionName: https
+  hostnames:
+  - your-kube-deployment.com
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /authService
+    backendRefs:
+    - name: voltmx-foundry-identity
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /mfconsole
+    backendRefs:
+    - name: voltmx-foundry-console
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /accounts
+    backendRefs:
+    - name: voltmx-foundry-console
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /workspace
+    backendRefs:
+    - name: voltmx-foundry-console
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /admin
+    backendRefs:
+    - name: voltmx-foundry-integration
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /services
+    backendRefs:
+    - name: voltmx-foundry-integration
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /apps
+    backendRefs:
+    - name: voltmx-foundry-integration
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /kpns
+    backendRefs:
+    - name: voltmx-foundry-engagement
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /apiportal
+    backendRefs:
+    - name: voltmx-foundry-apiportal
+      port: 8080
+```
 
 ### Verifying the deployment
 To test a local deployment that does not include haproxy container, access DXConnect by specifying the container port in the following URL:
