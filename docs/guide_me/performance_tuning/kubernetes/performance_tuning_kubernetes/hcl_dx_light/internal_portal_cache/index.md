@@ -167,7 +167,7 @@ As example, consider the following three caches:
 Then, caches are referenced by setting additional configuration properties:
 
 
-```properties
+```
 cacheinstance.com.ibm.wps.resolver.data.cache.DataSourceCache.firstLevelCache= com.ibm.wps.resolver.data.cache.FirstLevelDataSourceCache
 ```
 
@@ -175,7 +175,7 @@ cacheinstance.com.ibm.wps.resolver.data.cache.DataSourceCache.firstLevelCache= c
 
  
  and
-```properties
+```
 cacheinstance.com.ibm.wps.resolver.data.cache.DataSourceCache.cacheMissCache= com.ibm.wps.resolver.data.cache.CacheMissDataSourceCache
 ```
 
