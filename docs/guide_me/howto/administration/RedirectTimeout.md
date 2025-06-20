@@ -1,4 +1,4 @@
-# Redirecting the Login / Logout / Session Timeout to another URL
+# How to change the redirect URL for Login, Logout, and Session Timeout
 
 ## Applies to
 
@@ -6,21 +6,18 @@
 
 ## Introduction
 
-In this article, you will learn how to change the redirect URL for (Login, Logout, and Session Timeout).
+If a user successfully logged in to your website, they will be redirected to another page (for example, the main landing page or welcome page). This redirection also applies when a user logs out or when their session times out.
 
-**Example Scenario:**
-
-If a user has made a successful login to your website, the user will be redirected to another page (i.e. Main Page / Welcome Page).
-
-The example is also applicable upon logging out or when the user has triggered the session timeout.
+In this article, you will learn how to change the redirect URL for Login, Logout, and Session Timeout.
 
 ## Instructions
 
-**Changing the Login Redirect Page:**
+Refer to the following steps to change the redirect pages for Login, Logout, and Session Timeout.
 
-1. Go to ../wp_profile_root/PortalServer/config/ConfigService.properties
+### Changing the Login and Logout redirect page
 
-2. Edit the Logout redirect parameters as following:
+1. Go to `../wp_profile_root/PortalServer/config/ConfigService.properties`.
+2. Edit the Login redirect parameters to the following:
 
     ```log
     # Default: true
@@ -31,7 +28,7 @@ The example is also applicable upon logging out or when the user has triggered t
     #redirect.login.url = http://<domain>/wps/portal/Home/<url>
     ```
 
-3. Same steps above are applicable for changing the Logout Redirect Page:
+3. Edit the Logout redirect parameters to the following:
 
     ```log
     # Default: false
@@ -42,22 +39,24 @@ The example is also applicable upon logging out or when the user has triggered t
     #redirect.logout.url =http://<domain>/wps/portal/Home/<url>
     ```
 
-4. Go to wp_profile_root\ConfigEngine and locate the ConfigEngine.sh
-5. Execute: ./ConfigEngine.sh update-properties -DWasPassword=password
+4. Go to `wp_profile_root\ConfigEngine` and locate `ConfigEngine.sh`.
+5. Run the following command:
 
-**Changing the Session Timeout Redirect Page:**
+    ```
+    ./ConfigEngine.sh update-properties -DWasPassword=password
+    ```
 
-1. Login to WAS as an Admin User
-2. Navigate to Resources - >Resource environment - > Resource environment providers
-3. Click on WP ConfigService
-4. Click on Custom properties
-5. Click on New
-6. Provide "redirect.logout" to the name field
-7. Provide true to value field
-8. Click OK
-9. Click new again to add another property
-10. Provide redirect.logout.url to name field
-11. Provide /wps/portal to value field (this will bring up login portlet after session time out. You can also provide custom URL to redirect users to custom screen after session time out)
-12. Click Ok and
-13. Save configuration
-14. Restart portal.
+### Changing the Session Timeout redirect page
+
+1. Log in to the WebSphere Integrated Solutions Console as an admin user.
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**.
+3. Click **New...**.
+4. Under **Name**, enter **redirect.logout**.
+5. Under **Value**, enter **true**.
+6. Click **OK**.
+7. Click **New...**.
+8. Under **Name**, enter **redirect.logout.url**.
+9. Under **Value**, enter **/wps/portal**. This will redirect the user to login portlet after a session timeout. You can also provide custom URL to redirect users to a custom screen instead.
+10. Click **Ok**.
+11. Click **Save** at the top of the console messages.
+12. Restart your HCL DX server.
