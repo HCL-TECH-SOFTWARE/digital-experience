@@ -1,6 +1,6 @@
 # Custom caching
 
-You can overrule the default caching parameters of a site by using "cache" and "expire" parameters in URLs and HCL Web Content Manager tags.
+You can overrule the default caching parameters of a site by using the `cache` and `expire` parameters in URLs and HCL Web Content Manager tags.
 
 !!! note
     Custom caching can be used only when a server's default web content cache is set to none or advanced caching. If basic caching is used as your default web Content cache, Custom caching cannot be used.

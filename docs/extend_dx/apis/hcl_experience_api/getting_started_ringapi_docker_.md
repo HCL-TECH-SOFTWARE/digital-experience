@@ -4,13 +4,13 @@ Follow these steps to get started with the HCL Experience API.
 
 ## Getting Started
 
-1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to download the files from your HCL Digital Experience entitlements.
+1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){target="_blank"} to download the files from your HCL Digital Experience (DX) entitlements.
 2.  Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example (`hcl-dx-kubernetes-v95-CF19.zip`).
 3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
 4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
 
     !!! note
-        As HCL Digital Experience releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
+        As HCL DX releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
 
 5.  Load the HCL Experience API image using the following command:
 
@@ -43,7 +43,7 @@ Follow these steps to get started with the HCL Experience API.
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
         ```
 
-    -   If you wish to use `https` to connect to HCL Digital Experience 9.5 for security reasons, the command to start would be:
+    -   If you wish to use `https` to connect to HCL DX 9.5 for security reasons, the command to start would be:
 
         ```
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e PORTAL_SSL_ENABLED=true hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
@@ -57,7 +57,7 @@ Follow these steps to get started with the HCL Experience API.
 
 8.  Verify if `http://<HOST>:<PORT>dx/api/core/v1/explorer` is accessible and shows the HCL Experience explorer (example: http://127.0.0.1:3000/dx/api/core/v1/explorer).
 9.  Verify if the GraphQL application is accessible through URL `http://<HOST>:<GRAPHQL_PORT>dx/api/core/v1/graphql` (example: http://127.0.0.1:3001/dx/api/core/v1/graphql).
-10. To verify if the HCL Experience API is properly connected to HCL Digital Experience 9.5, please run the following command. Login credentials must be an authenticated username and password:
+10. To verify if the HCL Experience API is properly connected to HCL DX 9.5, please run the following command. Login credentials must be an authenticated username and password:
 
     ```
     curl -X POST "http://<HOST>:<PORT>dx/api/core/v1/auth/login" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"username\":\"<USER_NAME>\",\"password\":\"<PASSWORD>\"}"
