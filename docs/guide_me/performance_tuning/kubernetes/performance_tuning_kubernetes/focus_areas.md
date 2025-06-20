@@ -15,12 +15,12 @@ Out of Memory (OOM) errors in Kubernetes pods occur when a container exceeds its
 
 - Configure auto-scaling policies to automatically adjust resources based on demand. Refer Horizontal Pod Acutoscaling topic in this guide.
 
-**WCM advanced Caching**
+#### WCM advanced Caching
 
- - Refer to the [WCM advanced caching topic](/docs/guide_me/performance_tuning/kubernetes//performance_tuning_kubernetes//hcl_dx_light/internal_portal_cache/wcm_cache_instances.md)
+ - Refer to the [WCM advanced caching topic](wcm_tuning.md#wcm-advanced-caching)
  
 - In a rendering environment(such as one serving end users rather than authors), advanced caching strategies are essential for optimal performance when using Web Content Manager (WCM) regularly.
 
 **Performance Monitoring and Integration**
 
-- Refer to Refer to [Performance Tuning Kubernetes Base Portal](performance_tuning/kubernetes/performance_tuning_kubernetes/base_portal.md)
+- Refer to Refer to [Performance Tuning Kubernetes Base Portal](base_portal.md)

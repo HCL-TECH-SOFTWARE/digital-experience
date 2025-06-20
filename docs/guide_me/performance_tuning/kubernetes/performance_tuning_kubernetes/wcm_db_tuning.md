@@ -48,7 +48,7 @@ Several DB2 parameters related to how queries are parsed and executed may be ben
 
 This setting is NOT updated automatically within your JCR Database Domain configuration.
 
-## How to Set
+#### How to Set
 
 This can be done manually by customers by executing the following DB2 command against the JCR domain database:
 
@@ -66,11 +66,11 @@ In general, the more complex the SQL statement and the more complex the database
 
 Performance benchmarks show the best performance with the default setting. No change was observed using a setting of 30. However, data population with deep content hierarchies may benefit from changing this parameter to a higher value.
 
-**How to Set**
+#### How to Set
 
 1. Run the following command to set the value:
 
-```bash
+```
 db2set DB2_UNION_OPTIMIZATION="MAX_JOINS_IN_UNION=30"
 ```
 To return to the default setting, run `db2set DB2_UNION_OPTIMIZATION=`
@@ -106,7 +106,7 @@ In the **WebSphere Integrated Solutions Console**:
 
 For performance benchmarks in our WCM authoring environments, automatic maintenance was turned off using the following command:
 
-```bash
+```
 db2 update db cfg for <jcrdb> using auto_maint off
 ```
 Maintenance was disabled to ensure that no database statistics or table reorganizations were performed during the measurement.
