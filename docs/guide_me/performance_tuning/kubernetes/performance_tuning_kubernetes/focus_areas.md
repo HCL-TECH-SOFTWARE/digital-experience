@@ -23,4 +23,4 @@ Out of Memory (OOM) errors in Kubernetes pods occur when a container exceeds its
 
 **Performance Monitoring and Integration**
 
-- Refer to Refer to [Performance Tuning Kubernetes Base Portal](base_portal.md)
+- Refer to Refer to [Performance Tuning Kubernetes Base Portal](./base_portal.md)

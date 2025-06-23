@@ -29,17 +29,16 @@ If permissions are assigned to nested groups, disabling nested group support is 
 In environments with a large number of pages or significant amounts of WCM content(especially where many explicit role mappings are defined), a substantial volume of Portal Access Control (PAC) data may be required to render pages for users. When the portal is first started, this data is not yet cached and must be retrieved from the database. As a result, the initial users accessing the system may experience longer response times.
 To improve initial response times, the PAC Warmup Service can be enabled to load data into caches at Portal startup. The service will load the specified users or groups asynchronously from the database before users access the site.
 
-!!! Note The syndication or authoring will potentially clear the caches so the warmup is typically useful only for the first hits on the system, before any changes are made to the content.
+!!! Note 
+    The syndication or authoring will potentially clear the caches so the warmup is typically useful only for the first hits on the system, before any changes are made to the content.
 
 **How to Set**
 
-1. In the WebSphere Integrated Solutions Console,
+1. In the WebSphere Integrated Solutions Console, go to: **Resources > Resource Environment > Resource Environment Providers > WP AccessControlWarmUpService**
 
-go to: **Resources > Resource Environment > Resource Environment Providers > WP AccessControlWarmUpService**
+2. Add the following custom properties:
 
-Add the following custom properties:
-
-| **Name**                    | **Value**                         |
+| **Name** | **Value** |
 |----------------------------|-----------------------------------|
 | `enabled`                  | `true`                            |
 | `numberOfMostRecentUsers`  | `10`                              |
