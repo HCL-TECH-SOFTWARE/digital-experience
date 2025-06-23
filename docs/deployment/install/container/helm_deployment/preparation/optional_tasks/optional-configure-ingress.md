@@ -1,18 +1,22 @@
-# Configure Ingress For DX Deployment
+# Configure access layer For DX Deployment
 
-With HAProxy replacing Ambassador in DX deployments, it is easier to use a custom Ingress in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Ingress alongside with HAProxy as the internal reverse proxy and load balancer.
+With HAProxy replacing Ambassador in DX deployments, it is easier to use a custom  access layer in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external  access layer alongside with HAProxy as the internal reverse proxy and load balancer.
 
 !!! note
-       -  **HCL DX intentionally does not ship any Ingress to reduce DX's deployment footprint in any Kubernetes cluster.**<br>
-       -  This document shows an example configuration for some Ingress controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br>
-       -  Implementing an Ingress for use with a HCL DX deployment in Kubernetes is an optional effort based on the Kubernetes cluster’s requirements and customer’s discretion.
+       -  **HCL DX intentionally does not ship any  access layer to reduce DX's deployment footprint in any Kubernetes cluster.**<br>
+       -  This document shows an example configuration for some  access layer controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br>
+       -  Implementing an  access layer for use with a HCL DX deployment in Kubernetes is an optional effort based on the Kubernetes cluster’s requirements and customer’s discretion.
 
-![Ingress Implementation](../../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png)
+![Access layer Implementation](../../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png)
 
-## Ingress Implementation
+## Access Layer for DX Deployment
 
-The following guide is a basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX. The actual implementation might vary depending on the Cluster's setup and configuration.
+This how-do guide provides the available options for implementing the access layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
+### **Ingress Implementation For DX Deployment**
+This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX. The actual implementation might vary depending on the Cluster's setup and configuration.
+
+#### Prerequisites
 - In the DX Helm values by default HAProxy `serviceType` is set to `loadBalancer`. To use the external Ingress this must be set to the serviceType applicable for the appropriate use case, for this example `ClusterIP` is used, with that HAProxy service will not have any External IP.
 
 ```yaml
@@ -20,6 +24,7 @@ networking:
   haproxy:
     serviceType: ClusterIP
 ```
+#### Steps to Configure
 
 - Install an Ingress controller of your choice, this will serve as the entry point to the cluster. The Ingress controller applies the rules that are set in the Ingress resources. By design the Ingress controller is a cluster-wide resource and can be deployed in any namespace and does not have to be in the same namespace as DX. The controller can be used to route multiple applications in multiple namespaces. NGINX Ingress Controller is used here as an example. To install a NGINX Ingress on your cluster, please issue the following command:
 
@@ -64,7 +69,7 @@ spec:
               name: haproxy
 ```
 
-## Advanced configuration
+#### Advanced configuration
 
 !!!important
     The configuration in the **Ingress Implementation** section is the recommended configuration and should be used whenever possible.
@@ -126,10 +131,11 @@ spec:
             port:
               name: haproxy
 ```
-# Configure Gateway API For DX Deployment
-This how-do guide provides a comprehensive guide for configuring optional Ingress in a Kubernetes environment using Helm and the Gateway API. It includes prerequisites, installation steps, and configuration details necessary for setting up the Gateway API.
 
-## Prerequisites
+### **Gateway API Implementation For DX Deployment**
+
+This how-do guide provides a comprehensive guide for configuring optional Ingress in a Kubernetes environment using Helm and the Gateway API. It includes prerequisites, installation steps, and configuration details necessary for setting up the Gateway API.
+#### Prerequisites
 - Ensure that there are no existing Ingress controllers and Ingress resources in your cluster.
 - Verify that HAProxy is not utilizing the External IP. In the DX values file, set the following parameters:
 ```yml
@@ -139,17 +145,16 @@ networking:
     ssl: false
 ```
 
-## Steps
-1. **Install the Gateway API CRDs**: Ensure to replace `[VERSION_NUMBER]` with the desired version number. Replace `[VERSION_NUMBER]` with the desired version number. You can check the official documentation for the latest standard release.
+#### Steps to Configure
+- **Install the Gateway API CRDs**: Ensure to replace `[VERSION_NUMBER]` with the desired version number. Replace `[VERSION_NUMBER]` with the desired version number. You can check the official documentation for the latest standard release.
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/[VERSION_NUMBER]/standard-install.yaml
 ```
-2. **Or install NGINX Gateway Fabric**: This step provides the command to install the NGINX Gateway Fabric using Helm.
-```
+- **Or install NGINX Gateway Fabric**: This step provides the command to install the NGINX Gateway Fabric using Helm.
+```bash
 helm install ngf oci://ghcr.io/nginx/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway
 ```
-3. **Create and Apply Gateway**: Instructions on how to create the Gateway resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-gateway.yaml`.
-
+- **Create and Apply Gateway**: Instructions on how to create the Gateway resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-gateway.yaml`.
 ```yml
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
@@ -172,8 +177,7 @@ spec:
       - kind: Secret
         name: dx-tls-cert
 ```
-4. **Create and Apply HTTPRoutes**: Instructions on how to create the HTTPRoute resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-http-route.yaml`.
-
+- **Create and Apply HTTPRoutes**: Instructions on how to create the HTTPRoute resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-http-route.yaml`.
 ```yml
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
@@ -194,11 +198,11 @@ spec:
     - name: <release-name>-haproxy
       port: 80
 ```
-## Notes
+#### Notes
 - Always check the official documentation for the latest version numbers and additional configuration options.
 - Ensure that the configurations align with your cluster's requirements and existing resources.
 
-## Advanced configuration
+#### Advanced configuration
 
 !!!important
     The configuration in the **Gateway API Implementation** section is the recommended configuration and should be used whenever possible.
@@ -260,3 +264,5 @@ spec:
           port:
             name: haproxy
 ```
+### **Recommendation**
+Choose the option that best fits your deployment architecture and operational needs.
