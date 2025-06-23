@@ -6,9 +6,9 @@ This topic provides information on how to configure Ingress for HCL Digital Expe
 Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
 
 ### Configuring Ingress for HCL DX and MX
-You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
+You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
 
-1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
+1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
 2. Configure HCL Volt MX Foundry to use the existing Ingress controller. The following sample values for HCL Volt MX Foundry configure the Ingress to use an SSL connection using the provided custom certificates. 
      - The certificate in `customCert` must match the certificate used for the Ingress configuration of HCL Digital Experience. The `cer` and `key` file must be located in the `apps/certs` directory of the MX Helm chart.
      - The `class` in this configuration refers to the class name of the deployed Ingress controller.
@@ -36,7 +36,7 @@ This how-do guide provides the process for configuring the Gateway API for HCL D
 
 ## Steps to Configure
 1. **Set Up the Gateway API for HCL DX**
-    - Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for detailed instructions on setting up the Gateway API for HCL DX.
+    - Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for detailed instructions on setting up the Gateway API for HCL DX.
 
 2. **Configure Gateway API for MX**
     - You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
