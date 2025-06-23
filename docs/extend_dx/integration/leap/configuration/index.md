@@ -10,7 +10,7 @@ This how-do guide provides the available options for implementing the access lay
 This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and Leap. The actual implementation might vary depending on the Cluster's setup and configuration.
 
 #### Prerequisites
-- Set up the Ingress for HCL DX. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+- Set up the Ingress for HCL DX. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#ingress-implementation-for-dx-deployment).
 
 #### Steps to Configure
 - Add a second Ingress resource for Leap or extend the existing DX Ingress. Point the Ingress resource to the path at which Leap is configured; this depends on the context route of the Leap deployment.
@@ -46,7 +46,7 @@ This how-do guide provides instructions on how to configure the optional Gateway
 
 ### Prerequisites
 1. **Set Up the Gateway API for HCL DX**
-  - Follow the guidelines provided in the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) to set up the Gateway API for HCL DX.
+  - Follow the guidelines provided in the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment) to set up the Gateway API for HCL DX.
 
 ### Steps to Configure
   - You can either add a second Gateway API resource specifically for HCL Leap or extend the existing DX Ingress configuration. Ensure that the Gateway API resource points to the correct path where Leap is deployed, which is determined by the context route of the Leap deployment.
