@@ -134,8 +134,12 @@ This document provides a comprehensive guide for configuring optional Ingress in
 ## Prerequisites
 - Ensure that there are no existing Ingress controllers and Ingress resources in your cluster.
 - Verify that HAProxy is not utilizing the External IP. In the DX values file, set the following parameters:
-  - `networking.haproxy.serviceType` should be `ClusterIP`
-  - `networking.haproxy.ssl` should be `false`
+```yml
+networking:
+  haproxy:
+    serviceType: ClusterIP
+    ssl: false
+```
 
 ## Steps
 1. **Install the Gateway API CRDs**: Ensure to replace `[VERSION_NUMBER]` with the desired version number. Replace `[VERSION_NUMBER]` with the desired version number. You can check the official documentation for the latest standard release.
@@ -146,13 +150,37 @@ kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/downloa
 ```
 helm install ngf oci://ghcr.io/nginx/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway
 ```
-3. **Create and Apply Gateway and HTTPRoutes**: Instructions on how to create the Gateway and HTTPRoute resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-gateway-api-route.yaml`.
+3. **Create and Apply Gateway**: Instructions on how to create the Gateway resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-gateway.yaml`.
+
+```yml
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: gateway
+spec:
+  gatewayClassName: nginx
+  listeners:
+  - name: http
+    port: 80
+    protocol: HTTP
+    hostname: your-kube-deployment.com
+  - name: https
+    port: 443
+    protocol: HTTPS
+    hostname: your-kube-deployment.com
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - kind: Secret
+        name: dx-tls-cert
+```
+4. **Create and Apply HTTPRoutes**: Instructions on how to create the HTTPRoute resources, including a sample YAML configuration and apply them using `kubectl apply -f dx-http-route.yaml`.
 
 ```yml
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: dx-gateway-api-route
+  name: dx-http-route
 spec:
   parentRefs:
   - name: gateway
@@ -196,7 +224,7 @@ Example of an Gateway API resource:
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: dx-gateway-api-route
+  name: dx-http-route
 spec:
   parentRefs:
   - name: gateway

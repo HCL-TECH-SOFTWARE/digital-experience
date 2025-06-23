@@ -49,7 +49,7 @@ The provided YAML configuration demonstrates how to set up a Gateway API resourc
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: mx-gateway-api-route
+  name: mx-http-route
 spec:
   parentRefs:
   - name: gateway

@@ -58,7 +58,7 @@ The following YAML snippet illustrates how to define a Gateway API resource for 
   apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: leap-gateway-api-route
+  name: leap-http-api-route
 spec:
   parentRefs:
   - name: gateway
