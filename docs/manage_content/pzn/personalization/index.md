@@ -22,31 +22,29 @@ The engine identifies the particular user. Personalization retrieves user profil
 
 ## Types of Personalization
 
-There are three types of Personalization:
+There are three types of Personalization: simple filtering, rules engines, and collaborative filtering.
 
--   **Simple filtering**
+**Simple filtering**
 
-    A site renders content based on predefined groups of site visitors. For example, if a site visitor is in the Human Resources department, the site provides access to URLs containing Human Resources policy manuals.
+A site renders content based on predefined groups of site visitors. For example, if a site visitor is in the Human Resources department, the site provides access to URLs containing Human Resources policy manuals.
 
--   **Rules engines**
+**Rules engines**
 
-    In a rules-based system, the site owner defines a set of business rules. The rules determine what category of content is shown when a certain profile type visits the site. An example would be to show all four-wheel drive SUVs to visitors in the northeast in the 21-to-35 age group.
+In a rules-based system, the site owner defines a set of business rules. The rules determine what category of content is shown when a certain profile type visits the site. An example would be to show all four-wheel drive SUVs to visitors in the northeast in the 21-to-35 age group.
 
     Use this approach to drive the site behavior based on the business objectives. The site owner is usually the owner of a marketing campaign or some other business manager.
 
--   **Collaborative filtering**
+**Collaborative filtering**
 
-    A site visitor rates a selection of products, explicitly or implicitly. Those ratings are compared with the ratings offered by other visitors. Software algorithms detect similarities. For example, a visitor receives book recommendations based on the similar purchases of others.
+A site visitor rates a selection of products, explicitly or implicitly. Those ratings are compared with the ratings offered by other visitors. Software algorithms detect similarities. For example, a visitor receives book recommendations based on the similar purchases of others.
 
-
-1.  [Content that you personalize](oob_pzn_content.md)  
+- **[Content that you personalize](oob_pzn_content.md)**  
 You can personalize specific content spots of your intranet and internet website. For example, you can personalize a list of new articles that appears on the website based on the visitors geographical location. You can personalize employee bulletins for specific groups of employees, such as changes to benefit plans. You can personalize a product list on a commerce website.
-2.  [Creating a business rule](oob_pzn_rule_create.md)  
+- **[Creating a business rule](oob_pzn_rule_create.md)**  
 Rules are used to define how your website interacts with individuals and groups of site visitors. Rules are composed of easy-to-read logic statements that specify how to evaluate conditions and what actions to take.
-3.  [Link the rule to a content spot on your site](oob_pzn_rule_link.md)  
+- **[Link the rule to a content spot on your site](oob_pzn_rule_link.md)**  
 A content spot is a placeholder for a personalization rule on a web page. When you create a content spot, you associate a business rule with it. This association is referred to as mapping or linking the personalization rule to a content spot.
-4.  [Publish your rules to production](oob_pzn_publish.md)  
+- **[Publish your rules to production](oob_pzn_publish.md)**  
 You can publish selected rules or the full workspaces from the personalization navigator. Before you publish, you must define the publishing server.
-5.  [Personalization](../personalization/personalization_2/index.md)  
+- **[Personalization](../personalization/personalization_2/index.md)**  
 Personalization allows a portal or website to choose which content appears for particular site visitors. For example, a site that uses Personalization can show different news articles to managers than to regular employees, or different information to valued customers.
-
