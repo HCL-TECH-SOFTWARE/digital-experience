@@ -4,7 +4,7 @@ This document contains instructions on how to install and deploy DX Picker.
 
 ## Packaging, installing, and deploying design
 
-DX Picker is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. You can also enable dxPicker in the `values.yaml` file. For more information, see [Prepare Configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-container-valuesyaml-file).
+DX Picker is an instance of a react integration portlet configured to point to where the static files of the app can be loaded from. It can be enabled and disabled by using Config Engine tasks. The enable task would deploy, configure the portlet, then deploy the page. You can also enable dxPicker in the `values.yaml` file. For more information, see [Prepare Configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
 
 ## Enabling and disabling DX Picker
 

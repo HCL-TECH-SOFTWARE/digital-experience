@@ -1,4 +1,10 @@
-title: Configuration
+title: Administration
+
 nav:
     - index.md
+    - ClearWCMCaches.md
+    - ClearWebSphereDynacache.md
+    - DecodeLongURLs.md
+    - ImproveQueryPerformance.md
+    - APIToCountWCMItems.md
     - UseJavaScriptToReplaceText.md

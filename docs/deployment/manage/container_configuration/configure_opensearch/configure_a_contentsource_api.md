@@ -194,7 +194,7 @@ The response of the API call looks similar to the following sample:
 }
 ```
 
-The response contains the `id` of the content source, which is required when you [configure a crawler](#configuring-the-crawler).
+The response contains the `id` of the content source, which is required when you [configure a crawler](./configure_a_crawler_api.md).
 
 ## Configuring content sources for virtual portals and alternate context roots
 

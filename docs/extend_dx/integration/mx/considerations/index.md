@@ -4,11 +4,11 @@ This topic lists down the things to consider when integrating HCL Volt MX Foundr
 
 ## Volt MX on Cloud
 
-Make sure to configure [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"} while setting up [single sign-on](../configuration/index.md#enable-sso-for-dx-and-mx) (SSO).
+Make sure to configure [CORS](https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"} while setting up [single sign-on](../configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx) (SSO).
 
 ## Volt MX Foundry and HCL DX in the same deployment
 
-HCL Volt MX Foundry uses ingress. If HCL DX is deployed on the same deployment, the ingress routing should be used. For more information, refer to [Configuring Ingress for HCL Digital Experience and HCL Volt MX Foundry](../configuration/index.md#configuring-ingress-for-hcl-digital-experience-and-hcl-volt-mx-foundry).
+HCL Volt MX Foundry uses ingress. If HCL DX is deployed on the same deployment, the ingress routing should be used. For more information, refer to [Configuring Ingress for HCL DX](../configuration/index.md#configuring-ingress-for-hcl-dx).
 
 ## Limitations
 

@@ -3,6 +3,7 @@ nav:
     - index.md
     - Configuration: configuration
     - Usage: usage
+    - operation_framework.md
     - dam_backup_restore_image.md
     - Limitations: limitations
-    - Operation Framework: operation_framework.md
+
