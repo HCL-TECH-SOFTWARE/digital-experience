@@ -1,26 +1,49 @@
 # DXClient
 
-DXClient is a command line tool featuring a single, unified interface to all HCL Digital Experience (DX) automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
+## Table of Contents
+- [Introduction](#dxclient)
+- [Architecture](#architecture)
+- [Installation Options](#public-and-free-dxclient-installation-options)
+  - [Installing from NpmJS Registry](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+  - [Installing from Harbor Repository](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+  - [Installing from Native JavaScript Package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal)
+- [Configuration](#configuring-dxclient)
+  - [Multiple Environments](#configuring-multiple-environments-in-dxclient)
+  - [TLS Certificate Validation](#configuring-tls-certificate-validation-for-secure-connections)
+- [Commands](#dxclient-commands)
+- [Limitations](#limitations)
+- [Learning Materials](#hclsoftware-u-learning-materials)
+- [Related Information](#related-information)
 
-DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.
+## Introduction
 
-DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
+DXClient is a unified command-line tool designed to automate and manage a wide range of HCL Digital Experience (DX) tasks. With a single, platform-independent interface, DXClient enables both developers and administrators to efficiently handle operations such as uploading portlets, Script Applications, and themes, as well as managing WCM libraries, Personalization (PZN) rules, shared libraries, and more.
 
-DXClient comes with multiple deployment options:
+DXClient supports deployment of locally developed artifacts to HCL DX servers, regardless of whether your environment is on-premises (standalone, cluster, or farm topology) or containerized. It is built to integrate seamlessly with any automation or CI/CD infrastructure, making it a one-stop solution for DX automation needs.
 
-- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
+### Deployment Options
 
-- In the HCL Software License Portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
+DXClient offers multiple deployment and installation options to suit different environments:
 
-!!!warning
-    Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
+- **Free and Public Distribution:**  
+  DXClient is available for free download and installation from [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
 
-- An alternative option in the HCL Software License Portal is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+- **Container Package (HCL Software License Portal):**  
+  DXClient can be deployed as a container image, compatible with OCI-based runtimes such as Docker or Podman (Docker is currently recommended due to recent Podman compatibility issues). The container image is available from HCL DX 9.5 CF196 and later. For details, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-hcl-software-portal).
 
-!!!important "Information about DXClient versions and distribution"
-    DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
+    !!! warning
+        Recent changes to Podman introduced by Red Hat have caused compatibility issues with the DXClient container implementation. HCL recommends using Docker until further notice.
 
-    HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](#dxclient-information-commands).
+- **Native JavaScript Package (HCL Software License Portal):**  
+  Alternatively, DXClient can be installed as a native JavaScript package. This option requires you to install a compatible Node.js and npm runtime environment, along with the necessary dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+
+### Versioning and Licensing
+
+!!! important "DXClient Versioning and License Acceptance"
+    DXClient is now openly distributed via [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). The versioning format has changed from `1.xx.x` to `<CFNumber>.x.x` to align with DX CF releases (e.g., version "1.29.0" is now "221.0.0" for CF221).  
+    A license agreement must be accepted using the `accept-license` command. For details, see [DXClient information commands](#dxclient-information-commands).
+
+DXClient is your comprehensive, flexible, and modern solution for automating HCL DX operations across all supported environments.
 
 ## Architecture
 
@@ -28,13 +51,22 @@ The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
-## Public and free DXClient installation options 
+## Public and Free DXClient Installation Options
 
-The following options to install DXClient are available starting CF221. Both options are free to use.
+The following options to install DXClient for free are available starting CF221. 
 
-- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+| **Installation Option**                  | **Command**                                                                 | **Notes**                                                                 |
+|------------------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Install DXClient from NpmJS Registry** | `npm install @hcl-software/dxclient`                                       | Install the latest version of DXClient.                                  |
+| **Install DXClient Globally**            | `npm install -g @hcl-software/dxclient`                                    | Installs DXClient globally on your system.                               |
+| **Uninstall DXClient**                   | `npm uninstall @hcl-software/dxclient`                                     | Removes DXClient from your system.                                       |
+| **Install DXClient from Harbor Repository** | `docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG`                        | Pulls the container image from HCL DX Open Harbor.                       |
+| **Install DXClient Scripts**             | Download from [GitHub Repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"} | Includes installation and usage details for containerized DXClient.      |
 
-- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+For more details, refer to the respective sections:
+- [Installing or Uninstalling DXClient from NpmJS Registry](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+- [Installing DXClient Using the Container Image in the Harbor Repository](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+
 
 ### Installing or uninstalling DXClient from NpmJS registry
           
@@ -56,281 +88,147 @@ The option to install or uninstall from the NpmJS registry is only available sta
 
 2. Download DXClient scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}.
 
-## Installing DXClient using the container package from HCL Software portal
+## Installing DXClient from HCL Software Licensed Portal
 
-The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
+DXClient can be installed using two methods: the **container package** or the **native JavaScript package**. Choose the method that best suits your environment and requirements.
 
-In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.
+### Common Steps for Both Methods
+1. **Download DXClient Package**  
+   Navigate to the `<working-directory>` folder and download the DXClient.zip file from the HCL Software License Portal.
 
-!!!note
-    When you upgrade to use the container image DXClient, you must first uninstall the Node.js DXClient.
+2. **Uninstall Previous Version (If Upgrading)**  
+   If upgrading from an older version, uninstall or unlink the current version:
+    - **Linux/macOS**: `make unlink`
+    - **Windows**: `make_unlink.bat`
 
-1. Navigate to the `<working-directory>` folder where you wish to use the DXClient from.
+3. **Extract DXClient.zip**  
+   Extract the downloaded DXClient.zip file.
 
-2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL Digital Experience 9.5 CF196 or higher entitlements on the HCL Software License Portal.
+---
 
-    !!! note
-        If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
+### **Installing DXClient Using the Container Package**
+1. **Set Container Runtime (Optional)**  
+   If using a runtime other than Docker, set the runtime:
+    - **Linux/macOS**: `export CONTAINER_RUNTIME=podman`
+    - **Windows**: `set CONTAINER_RUNTIME=podman`
 
-        === "Linux and Apple macOS"
-            ```bash
-            make unlink
-            ```
-            
-        === "Microsoft Windows"
-            ```bash
-            make_unlink.bat
-            ```
+2. **Load Container Image**  
+   Load the `dxclient.tar.gz` image:
+    - **Linux/macOS**: `docker load < dxclient.tar.gz`
+    - **Windows**: `docker load -i dxclient.tar.gz`
 
-3. Extract the DXClient.zip file.
+3. **Add DXClient to PATH (Optional)**  
+   Add the DXClient bin directory to your PATH variable:
+    - **Linux/macOS**: `export PATH=<working-directory>/bin:$PATH`
+    - **Windows**: `set PATH=<working-directory>\bin;%PATH%`
 
-    !!! note
-        The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, run the following command before proceeding further.
+4. **Verify Installation**  
+   Run `dxclient -V` to check the installed version.
 
-        === "Linux and Apple macOS"
-            ```bash
-            export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-                
-            # For example: export CONTAINER_RUNTIME=podman
-            ```
+---
 
-        === "Microsoft Windows"
-            ```batch
-            set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-                
-            :: For example: set CONTAINER_RUNTIME=podman
-            ```
+### **Installing DXClient Using the Native JavaScript Package**
+1. **Ensure Node.js is Installed**  
+   Install a long-term support (LTS) version of Node.js on your system.
 
-4. Load `dxclient.tar.gz` image.
+2. **Install DXClient**  
+   From the extracted folder, run the following command:
+    - **Linux/macOS**: `make install`
+    - **Windows**: `make_install.bat`
 
-    === "Linux and Apple macOS"
-        ```bash
-        docker load < dxclient.tar.gz
-        ```
+3. **Link Application (Optional)**  
+   Run the following command to link your application to the local npm module:
+    - **Linux/macOS**: `make link`
+    - **Windows**: `make_link.bat`
 
-    === "Microsoft Windows"
-        ```batch
-        docker load -i dxclient.tar.gz
-        ```
+   Alternatively, run the application directly:
+    - **Linux/macOS**: `./bin/dxclient`
+    - **Windows**: `node bin/dxclient`
 
-5. Optional: Add DXClient to your PATH.
-     Open terminal and add path to the DXClient bin directory to your PATH variable to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
+4. **Verify Installation**  
+   Run `dxclient -V` to check the installed version.
 
-    === "Linux and Apple macOS"
-        ```bash
-        export PATH=<working-directory>/bin:$PATH
-        ```
+---
 
-    === "Microsoft Windows"
-        Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
+### **Additional Notes**
+- A folder named `store` will be created in your working directory. This is the default location for configuration, logger, and output files.
+- Common command arguments can be pre-configured inside the `config.json` file available under `<working-directory>/<VOLUME_DIR>`.
+- For container installations, ensure appropriate permissions for the `bin` and `VOLUME_DIR` directories.
 
-        ```batch
-        set PATH=<working-directory>\bin;%PATH%
-        ```
+For more information on setting up volume siretiry, see [Setting Up the Volume Directory](#setting-up-the-volume-directory).
 
-    !!! note
-        You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
+---         
 
-6. Set appropriate read and execute permissions as per user/group/owner.
+## Uninstalling DXClient
 
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/bin
+To uninstall DXClient installed using the JavaScript package, follow these steps:
 
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
+### Steps to Uninstall DXClient
+1. **Clean Installation Files**  
+   Run the following command to remove all installation files:
+   - **Linux/macOS**: `make clean`
+   - **Windows**: `make_uninstall.bat`
 
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/bin` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
+2. **Unlink DXClient (Optional)**  
+   If DXClient was linked globally, unlink it using the following command:
+   - **Linux/macOS**: `make unlink`
+   - **Windows**: `make_unlink.bat`
 
-7. Run `dxclient -V` to verify that the required version of DXClient command line is installed.
+### Notes
+- Ensure that all tasks using DXClient are completed before uninstalling.
+- If upgrading DXClient, unlink the current version before installing the new one.
 
-8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
+For more information on installation options, see [Installing DXClient](#installing-dxclient).
 
-    === "Linux and Apple macOS"
-        ```bash
-        export VOLUME_DIR=storeForScriptApplication
+## Setting Up the Volume Directory
 
-        # or if you want spaces in its value, enclosed it in double quotes ("")
-        export VOLUME_DIR="store for script application"
-        ```
+To create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task.
 
-    === "Microsoft Windows"
-        ```batch
-        set VOLUME_DIR=storeForScriptApplication
+### Commands to Set Up `VOLUME_DIR`
 
-        :: or if you want spaces in its value
-        set VOLUME_DIR=store for script application
-        ```
-
-        !!!warning
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This will produce unwanted errors when executing dxclient commands.
-
-     The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
-
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/<VOLUME_DIR>
-
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
-
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
-
-
-9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
-
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
-
-10. Refer to the sample pipeline provided to find out how to integrate the container image in the automation server.
-
-11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
-
-    Example usage:
-    
-    === "Linux and Apple macOS"
-        ```bash
-        export Timezone=Asia/Kolkata
-        ```
-    
-    === "Microsoft Windows"
-        ```batch
-        SET Timezone=Asia/Kolkata
-        ```
-
-## Installing DXClient using the native JavaScript package from HCL Software portal
-
-!!! note
-    You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.
-
-1.  Complete the following steps to install the DXClient tool in your local development workstation or automation server.
-
-    !!! note
-        If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
-
-        === "Linux and Apple macOS"
-            ```bash
-            make unlink
-            ```
-
-        === "Microsoft Windows"
-            ```batch
-            make_unlink.bat
-            ```
-
-2.  Ensure that a long-term support (LTS) version of Node.js or a later version is installed in the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
-    
-
-3.  Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
-
-4.  Extract the DXClient.zip file.
-
-5.  From the extracted folder, run the following command.
-
-    === "Linux and Apple macOS"
-        ```bash
-        make install
-        ```
-
-    === "Microsoft Windows"
-        ```bash
-        make_install.bat
-        ```
-
-6.  Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
-
-    === "Linux and Apple macOS"
-        ```bash
-        make link
-        ```
-
-    === "Microsoft Windows"
-        ```bash
-        make_link.bat
-        ```
-
-    !!! note
-        -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
-        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:
-
-        === "Linux and Apple macOS"
-            ```bash
-            ./bin/dxclient
-            ```
-
-        === "Microsoft Windows"
-            ```bash
-            node bin/dxclient
-            ```
-
-7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable `VOLUME_DIR` to the desired directory name and run your task. For example:
-
-    === "Linux and Apple macOS"
-        ```bash
-        export VOLUME_DIR=storeForScriptApplication
-
-        # or if you want spaces in its value, enclose it in double quotes ("")
-        export VOLUME_DIR="store for script application"
-        ```
-
-    === "Microsoft Windows"
-        ```batch
-        set VOLUME_DIR=storeForScriptApplication
-
-        :: or if you want spaces in its value
-        set VOLUME_DIR=store for script application
-        ```
-
-        !!!important
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands.
-
-     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
-
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/<VOLUME_DIR>
-
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
-
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
-
-8. You can find the configuration, logger, and output files under `<working-directory>/<VOLUME_DIR>`.
-
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
-
-## Uninstalling DXClient using the JavaScript package
-
--   To uninstall the DXClient tool, perform the following commands:
-
-    === "Linux and Apple macOS"
-        ```bash
-        make clean
-        ```
-
-    === "Microsoft Windows"
-        ```bash
-        make_uninstall.bat
-        ```
-
--   Optional: To unlink the DXClient tool, perform the following commands:
-
-    === "Linux and Apple macOS"
-        ```bash
-        make unlink
-        ```
-    === "Microsoft Windows"
-        ```bash
-        make_unlink.bat
-        ```
+=== "Linux and Apple macOS"
+```bash
+export VOLUME_DIR=storeForScriptApplication
+
+# If you want spaces in its value, enclose it in double quotes ("")
+export VOLUME_DIR="store for script application"
+```
+=== "Microsoft Windows"
+```bash
+set VOLUME_DIR=storeForScriptApplication
+
+# If you want spaces in its value
+set VOLUME_DIR=store for script application
+```
+???+ warning "Important Notes for Windows Users"
+    - Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This will produce unwanted errors when executing DXClient commands.
+    - Ensure the `VOLUME_DIR` has read and write access permissions.
+
+### Setting Permissions for `VOLUME_DIR`
+
+The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions based on your operating system:
+
+=== "Linux and Apple macOS"
+```bash
+chmod xxx <working-directory>/<VOLUME_DIR>
+
+# Replace xxx with a 3-digit number (0–7) based on your desired permissions.
+# Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
+```
+
+=== "Microsoft Windows"
+1. Right-click `<working-directory>/<VOLUME_DIR>` directory.
+2. Select "Properties" > "Security" Tab.
+3. Set the appropriate permissions for the folder.
+
+### Additional Notes
+
+- You can find the configuration, logger, output, and sample files under `<working-directory>/<VOLUME_DIR>`.
+- Common command arguments can be pre-configured inside the `config.json` file available under the `<working-directory>/<VOLUME_DIR>` folder.
+- A sample configuration file for standalone, cluster, or Kubernetes platforms is available under `<working-directory>/samples/sample-configurations` for reference.
+- If you want to override any parameters in the `config.json`, add them in your command line.
+
+For more information on setting up multiple environments, see [Configuring Multiple Environments in DXClient](#configuring-multiple-environments-in-dxclient).
 
 ## Verifying your DXClient installation
 
@@ -459,12 +357,50 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
-## Additional information
-    
-1. The attribute `-dxConnectHostname` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-hostname` wherever necessary.
-2. The attribute `-targetServerHostname`, `-targetServerPort`,`-targetServerUsername`,`-targetServerPassword` & `-targetServerProfileName` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-targetHostname`, `-targetDxConnectPort`,`-targetDxConnectUsername`,`-targetDxConnectPassword` & `-targetDxProfileName` respectively wherever necessary.
-3. If deploying or importing huge CICD artifacts using DXClient to the Kubernetes environment, you might receive failure or request pending messages while you run the ceratin tasks. This might happen because of the connection getting closed by the load balancer due to timeout before the response is ready. In such situations, before re-triggering the request, we advise you to check your target server to verify if the artifact has been deployed/imported or the server is up, as the request was already triggered from the client-side. In cases of request pending you are expected to receive a `requestId` which you can use to check the status of response later. Find troubleshooting tips [here](troubleshooting_dxclient.md#troubleshooting-for-some-known-issues).
-4. As of CF213, the property `DXCONNECT_MAX_MEMORY_SIZE_MB` in DXC_ConfigSettings Resource Environment Provider has been removed. Refer [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect) for more details.
+## Additional Information
+
+### 1. Deprecated Attributes
+- **`-dxConnectHostname`**: Deprecated since CF202 and removed since CF210. Replace it with `-hostname` wherever necessary.
+- **`-targetServerHostname`, `-targetServerPort`, `-targetServerUsername`, `-targetServerPassword`, `-targetServerProfileName`**: Deprecated since CF202 and removed since CF210. Replace them with:
+  - `-targetHostname`
+  - `-targetDxConnectPort`
+  - `-targetDxConnectUsername`
+  - `-targetDxConnectPassword`
+  - `-targetDxProfileName`
+
+---
+
+### 2. Handling Large Artifacts in Kubernetes
+- When deploying or importing large CI/CD artifacts in a Kubernetes environment, you may encounter failure or request pending messages due to load balancer timeouts.
+- Before re-triggering the request:
+  - Verify if the artifact has been deployed/imported.
+  - Check if the server is up.
+- Use the `requestId` provided during the request to check the status later.
+- For troubleshooting tips, refer to [Troubleshooting DXClient](troubleshooting_dxclient.md#troubleshooting-for-some-known-issues).
+
+---
+
+### 3. Removed Properties
+- **`DXCONNECT_MAX_MEMORY_SIZE_MB`**: Removed as of CF213. For more details, refer to [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect).
+
+---
+
+### 4. Troubleshooting Tips
+- If you encounter issues with DXClient commands or configurations, refer to the [Troubleshooting DXClient](troubleshooting_dxclient.md) guide for known issues and solutions.
+
+---
+
+### 5. Notes on Compatibility
+- Ensure that the DXClient version matches the DX Core CF version for optimal compatibility.
+- Use the `dxclient version-compat` command to check version compatibility between DX Core and DXClient.
+
+---
+
+### 6. Additional Resources
+- For more information on DXClient commands and configurations, refer to:
+  - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
+  - [DXConnect](dxconnect.md)
+  - [Sample Pipelines for use with HCL DXClient](./sample_pipeline_settings_using_dxclient.md)
 
 ## Configuring DXClient
 
