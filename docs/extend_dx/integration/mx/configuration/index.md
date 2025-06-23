@@ -32,8 +32,7 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 
 # Configure Gateway API for HCL DX and MX
 
-## Overview
-This section outlines the process for configuring the Gateway API for HCL Digital Experience (DX) and HCL Leap (MX). The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
+This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and HCL Leap (MX). The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
 
 ## Steps to Configure
 1. **Set Up the Gateway API for HCL DX**

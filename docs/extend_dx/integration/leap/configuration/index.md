@@ -39,9 +39,7 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
 After applying the configuration, both HCL DX and HCL Leap can be accessed using the provided hostname.
 
 # Configuring Gateway API for HCL DX and HCL Leap
-
-## Overview
-This document provides instructions on how to configure the optional Gateway API for HCL Digital Experience (DX) and HCL Leap. The Gateway API allows for routing requests to both products under the same hostname enhancing the deployment's efficiency and management.
+This how-do guide provides instructions on how to configure the optional Gateway API for HCL Digital Experience (DX) and HCL Leap. The Gateway API allows for routing requests to both products under the same hostname enhancing the deployment's efficiency and management.
 
 ## Steps to Configure
 
