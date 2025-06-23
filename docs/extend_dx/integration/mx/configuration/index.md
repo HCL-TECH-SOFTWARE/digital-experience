@@ -5,11 +5,18 @@ This topic provides information on how to configure Ingress for HCL Digital Expe
 ### Prerequisite
 Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
 
-### Configuring Ingress for HCL DX and MX
-You can use an [optional Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) with HCL Digital Experience. While an Ingress is not required to run HCL Digital Experience, it can be configured to be reused by HCL Volt MX Foundry to handle the routing for both products and make them available on the same host.
+## Access Layer for for HCL DX and MX
 
+This how-do guide provides the available options for implementing the access layer in the DX Deployment and MX. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
+
+### Ingress for for HCL DX and MX
+This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and MX. The actual implementation might vary depending on the Cluster's setup and configuration.
+
+#### Prerequisite
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
-2. Configure HCL Volt MX Foundry to use the existing Ingress controller. The following sample values for HCL Volt MX Foundry configure the Ingress to use an SSL connection using the provided custom certificates. 
+
+#### Steps to Configure
+1. Configure HCL Volt MX Foundry to use the existing Ingress controller. The following sample values for HCL Volt MX Foundry configure the Ingress to use an SSL connection using the provided custom certificates. 
      - The certificate in `customCert` must match the certificate used for the Ingress configuration of HCL Digital Experience. The `cer` and `key` file must be located in the `apps/certs` directory of the MX Helm chart.
      - The `class` in this configuration refers to the class name of the deployed Ingress controller.
      - The `serverDomainName` must match the hostname that the Ingress is available at:
@@ -30,18 +37,17 @@ You can use an [optional Ingress](../../../../deployment/install/container/helm_
          
      Refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration) for more details on the used values.
 
-# Configure Gateway API for HCL DX and MX
+### Gateway API for HCL DX and MX
 
-This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and HCL Leap (MX). The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
+This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
 
-## Steps to Configure
-1. **Set Up the Gateway API for HCL DX**
-    - Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for detailed instructions on setting up the Gateway API for HCL DX.
+#### Prerequisite
+- Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for detailed instructions on setting up the Gateway API for HCL DX.
 
-2. **Configure Gateway API for MX**
-    - You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
+#### Steps to Configure
+- You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
 
-### Example Configuration
+#### Example Configuration
 The provided YAML configuration demonstrates how to set up a Gateway API resource for MX, specifying various paths and their corresponding backend services. Each path is matched using the `PathPrefix` type, directing traffic to the appropriate backend service based on the request path. This configuration is essential for ensuring that requests to the specified paths are routed correctly to the corresponding services within the MX deployment.
 
 ```yaml
@@ -120,6 +126,8 @@ spec:
     - name: voltmx-foundry-apiportal
       port: 8080
 ```
+### Recommendation
+Choose the option that best fits your deployment architecture and operational needs.
 
 ### Verifying the deployment
 To test a local deployment that does not include haproxy container, access DXConnect by specifying the container port in the following URL:

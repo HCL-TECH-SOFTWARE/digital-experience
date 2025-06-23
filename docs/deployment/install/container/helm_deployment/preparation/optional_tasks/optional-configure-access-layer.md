@@ -13,7 +13,7 @@ With HAProxy replacing Ambassador in DX deployments, it is easier to use a custo
 
 This how-do guide provides the available options for implementing the access layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
-### **Ingress Implementation For DX Deployment**
+### Ingress Implementation For DX Deployment
 This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX. The actual implementation might vary depending on the Cluster's setup and configuration.
 
 #### Prerequisites
@@ -132,7 +132,7 @@ spec:
               name: haproxy
 ```
 
-### **Gateway API Implementation For DX Deployment**
+### Gateway API Implementation For DX Deployment
 
 This how-do guide provides a comprehensive guide for configuring optional Ingress in a Kubernetes environment using Helm and the Gateway API. It includes prerequisites, installation steps, and configuration details necessary for setting up the Gateway API.
 #### Prerequisites
@@ -264,5 +264,5 @@ spec:
           port:
             name: haproxy
 ```
-### **Recommendation**
+### Recommendation
 Choose the option that best fits your deployment architecture and operational needs.
