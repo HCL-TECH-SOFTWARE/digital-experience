@@ -1,7 +1,6 @@
 ---
-title: Exporting a usage report manually
+title: Tracking user session consumption and exporting usage reports 
 ---
-# Tracking user session consumption and exporting usage reports 
 
 ## Overview
 
