@@ -8,8 +8,8 @@ You can create and edit applications with the Script Application Editor, import 
 ou can now upload minified content, use a new configuration task to set the required WCM properties for script applications such as React or Angular, and make use of the new **Deferred with React** theme profile.
 -   **[Generate Unique Namespace IDs](cmd_line_push_cmd_patt_rep.md)**  
 Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application.
--   **[Import applications that include links to JavaScript frameworks](import_app_that_links_to_js_framework/index.md)**  
-To use a JavaScript framework or library from an application, use portal theme modules to load the shared JavaScript.
+-   **[Third-party JavaScript libraries](./js_libraries/index.md)**  
+You can easily use third-party JavaScript libraries from a Script Application.
 -   **[Actions Menu in the Script Application Editor](script_app_editor_actions_menu_overview/index.md)**  
 You can insert tags, preferences, and parameters and export a Script Application with the Actions menu in the Script Application Editor.
 -   **[Combine local JavaScript files when you import applications](combine_js_files.md)**  

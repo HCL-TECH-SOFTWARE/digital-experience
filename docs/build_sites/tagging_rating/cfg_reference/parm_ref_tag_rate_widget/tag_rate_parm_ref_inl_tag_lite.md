@@ -119,5 +119,5 @@ The following parameters are optional for the tag widget. They correspond to sim
     - [The rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
     - [Customizing the tag widget](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_cust_inltag_lite.md)
     - [Adding the rating widget to your portal content](../../tagging_rating_ui/tagging_rating_widget/tag_widget/tag_rate_add_inltag_lite.md)
-    - [Customizing the rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/)
+    - [Customizing the rating widget](../../tagging_rating_ui/tagging_rating_widget/rating_widget/index.md)
 

@@ -1,4 +1,10 @@
 title: Administration
+
 nav:
-    - index.md
     - DataSourceTracing.md
+    - index.md
+    - ClearWCMCaches.md
+    - ClearWebSphereDynacache.md
+    - DecodeLongURLs.md
+    - ImproveQueryPerformance.md
+    - APIToCountWCMItems.md

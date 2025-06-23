@@ -1,4 +1,4 @@
-# Edit image
+# Editing an image
 
 Follow these steps to edit images using HCL Digital Experience 9.5 Digital Asset Management:
 

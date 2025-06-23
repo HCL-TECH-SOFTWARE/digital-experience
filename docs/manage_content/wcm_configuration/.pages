@@ -1,5 +1,6 @@
 title: Configure Web Content Manager
 nav:
+    - index.md
     - Web content administration tools: wcm_adm_tools
     - cfg_webcontent_auth_env
     - cfg_webcontent_delivery_env

@@ -1,10 +1,15 @@
 title: Deliver Web Content
 nav:
+    - index.md
+    - wcm_rendering_modes.md
+    - Delivering web content on a DX page: deliver_webcontent_on_dx
+    - wcm_config_delivery_servlet.md
+    - Content as a Service Pages: content_as_a_service
+    - Pre-rendered delivery: pre-rendered_delivery
+    - WebDAV: webdav
+    - Social Media Publisher: socialmedia_publisher
+    - Previewing as Another User: preview_another_user
     - Vanity URLs: vanity_url
     - Syndication: syndication
-    - WebDAV: webdav
-    - Content as a Service Pages: content_as_a_service
-    - Previewing as Another User: preview_another_user
-    - Social Media Publisher: socialmedia_publisher
     - ...
 
