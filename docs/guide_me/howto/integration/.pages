@@ -1,0 +1,7 @@
+title: Integration
+
+nav:
+    - index.md
+    - how-to-integrate-leap.md
+    - enable-sso-leap-dx.md
+    - embed-leap-app.md
