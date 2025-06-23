@@ -61,7 +61,7 @@ The following cache sizes were changed from the base Portal settings. See the Ca
 
 **File:** `CacheManagerService.properties`
 
-| 🛠️ Parameter                                                                 |  Default Value |  Value Used |
+|  Parameter                                                                 |  Default Value |  Value Used |
 |------------------------------------------------------------------------------|------------------|----------------|
 | `cacheinstance.com.ibm.wps.ac.AccessControlUserContextCache.size`           | 6000             | 8403           |
 | `cacheinstance.com.ibm.wps.model.factory.UserSpecificModelCache.size`       | 6000             | 8403           |
