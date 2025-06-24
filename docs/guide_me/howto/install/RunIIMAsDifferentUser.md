@@ -31,4 +31,4 @@ Refer to the following steps to run IBM Installation Manager on Windows as a dif
 7. In the **config.ini** file change the value `cic.appDataLocation=C\:\\ProgramData\\IBM\\Installation Manager` to `C\:\Users\AppData\Roaming\IBM\Installation Manager`  
 
 For more details, please check IBMs Installation Manager Knowledge Center at URL:  
-[Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group)
+[Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}
