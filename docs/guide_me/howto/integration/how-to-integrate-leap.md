@@ -1,11 +1,14 @@
 # How to integrate Leap and DX so they can be accessed from the same domain
 
-## Prerequisites:
+## Applies to
 
-- Leap basics
-- ...
+> HCL Digital Experience...
 
-## Directions:
+## Introduction
+
+This article gives you the steps to integrate Leap and DX so they can be accessed from the same domain. Doing so opens up new capabilities, such as [embedding a Leap application into a DX site](./embed-leap-app.md) if [single sign-on](./enable-sso-leap-dx.md) is also enabled.
+
+## Instructions: 
 
 Follow the links for detailed steps.
 
