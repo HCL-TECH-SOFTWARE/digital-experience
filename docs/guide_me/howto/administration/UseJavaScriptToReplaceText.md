@@ -1,4 +1,4 @@
-# How to use Java Script to find and replace text on Portal Page?
+# Using JavaScript to Find and Replace Text on a Portal Page
 
 ## Applies to
 
@@ -6,50 +6,63 @@
 
 ## Introduction
 
-This article describe detailed sample steps to use Java Script for finding and replacing text on Portal pages.  
+This article describes detailed sample steps to use JavaScript to find and replace text on Portal pages.
 
-The example was written for Hcl Digital Experience version 8.5 Cumulative Fix 10. It describe steps to change some text on the default welcome page that can be noticed right before login `(http://<host>:<port>/wps/portal)`. The page is using the default Portal 8.5 Theme. One portlet on the welcome page has this title `BPM and Forms Integration`. The sample shows up steps to change that title wording from `BPM` to `RPM`.
+The example was written for HCL Digital Experience version 8.5 Cumulative Fix 10. It describes steps to change text on the default welcome page, which is visible right before login (`http://<host>:<port>/wps/portal`). The page uses the default Portal 8.5 Theme. One portlet on the welcome page is titled `BPM and Forms Integration`. The sample demonstrates steps to change the title wording from `BPM` to `RPM`.
 
 ## Instructions
 
-1) Backup then edit the Default.jsp for the default Portal theme. The file is located in directory:  
+**File Location**
 
-    `<PortalServer_root>\theme\wp.theme.themes\default85\installedApps\DefaultTheme85.ear\DefaultTheme85.war\themes\html\Default.jsp`  
+To edit the default Portal theme, navigate to the following file path: 
+<PortalServer_root>\theme\wp.theme.themes\default85\installedApps\DefaultTheme85.ear\DefaultTheme85.war\themes\html\Default.jsp
 
-2) Add the following at the bottom of the file:  
+1. Copy this path as needed when locating the `Default.jsp` file.
 
-   ``` javascript
-      <script type="text/javascript"> 
-      window.onload = replaceBPM;
-      function replaceBPM() { 
-           document.body.innerHTML = document.body.innerHTML.replace('BPM', 'RPM');   
-      }
-      </script>
+2. **Add the following script at the bottom of the file**:
+
+   ```html
+   <script type="text/javascript">
+     window.onload = replaceBPM;
+     function replaceBPM() {
+         document.body.innerHTML = document.body.innerHTML.replace('BPM', 'RPM');
+     }
+   </script>
    ```
+3. Refresh the Welcome page and verify the title.
+ It should now display: **RPM and Forms Integration**.
 
-3) Refresh the Welcome Page and verify the title. Now it should display `RPM and Forms Integration`.  
+---
 
-   The method above is the most straightforward approach but has two major drawbacks.  
+### Considerations
 
-   1. When using `window.onload` it will over-write any previous invocations of `window.onload` that may contain critical updates.  
+The method above is straightforward but has **two major drawbacks**:
 
-   2. It is need to review the page source to determine the impact of the find/replace operation. All instances of the string will be replaced on the page on all pages that use the theme. This includes any occurrences of the string within URLs. That could break a lot of page function.  
+1. Using `window.onload` will overwrite any previous `window.onload` assignments that may include critical functionality.
+2. The script performs a global find-and-replace on every instance of the string `'BPM'`.  
+   This includes text within URLs, links, or script references. As a result, it may break page functionality across all pages using the theme. Always review the page source before applying changes.
 
-### Mitigating the side-effects
 
-It is possible to mitigate the two issues mentioned above by using `i$.addOnLoad` instead of `window.onload` and determining the individual element in the page document that requires the update and modify that element only. An example of this approach is detailed below.  
+### Mitigating Side-Effects
 
-Notice at that top of the welcome page there is a link with name `Log in to use authoring capabilities`. Let's assume we want to change the word `capabilities` to `skills`. If a right mouse click will be done on the Welcome Page and view the page source will be selected, it is possible to identify the id of the element that contains the text in question:
+The two issues mentioned above can be mitigated by using `i$.addOnLoad` instead of `window.onload`. This involves determining the specific element in the page document that requires the update and modifying only that element. An example of this approach is detailed below.
+---
 
-``` HTML
-    <div id="wpToolbarLogin" class="wpToolbarLogin">
-    <div><a href='/wps/myportal/Home/Welcome/!ut/p/blah/' >Log in to use authoring capabilities</a>
-    </div>
+Notice that at the top of the welcome page, there is a link named `Log in to use authoring capabilities`. Let's assume we want to change the word `capabilities` to `skills`. If you right-click on the `Welcome Page` and select 'View page source', you can identify the ID of the element containing the text in question:
+
+<details>
+<summary>Click to view HTML snippet</summary>
+
+```html
+<div id="wpToolbarLogin" class="wpToolbarLogin">
+  <div>
+    <a href="/wps/myportal/Home/Welcome/!ut/p/blah/">Log in to use authoring capabilities</a>
+  </div>
+</div>
 ```
-
 So it is needed to modify the element with id `wpToolbarLogin`. With that it could then be edit the same `Default.jsp` file mentioned above to add this:
 
-``` javascript
+``` 
     <script>
         i$.addOnLoad(function(){
             var elem = i$.byId("wpToolbarLogin");
@@ -58,4 +71,6 @@ So it is needed to modify the element with id `wpToolbarLogin`. With that it cou
     </script>
 ```
 
-Even though this is the most direct approach to implement the desired function, theme best practice is to use a module to deliver javascript of this nature instead of editing `Default.jsp` directly. For details, please check [Writing modules | HCL Digital Experience](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/themes_skins/the_module_framework/writing_module/?h=writing+modules)
+While this is the most direct approach to achieve the desired functionality, the best practice for themes is to use a module to deliver JavaScript of this nature instead of editing `Default.jsp` directly. For details, refer to:
+
+[Writing modules | HCL Digital Experience](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/themes_skins/the_module_framework/writing_module/?h=writing+modules)

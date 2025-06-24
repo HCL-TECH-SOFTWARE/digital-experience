@@ -1,24 +1,27 @@
-title: How-to articles
+title: How-to Articles
 
 nav:
-    - index.md
-    - administration
-    - api
-    - configuration
-    - container
-    - content
-    - dam
-    - database
-    - development
-    - install
-    - migration
-    - performance
-    - personalization
-    - search
-    - security
-    - syndication
-    - themes
-    - tools
-    - troubleshooting
-    - upgrade
-    - wcmlibrarymanagement
+  - index.md
+  - Administration: administration
+  - API: api
+  - Configuration: configuration
+  - Container: container
+  - Content: content
+  - Digital Asset Management: dam
+  - Database: database
+  - Development: development
+  - Install: install
+  - Migration: migration
+  - Performance: performance
+  - Personalization: personalization
+  - Search: search
+  - Security: security
+  - Syndication: syndication
+  - Themes: themes
+  - Tools: tools
+  - Troubleshooting: troubleshooting
+  - Upgrade: upgrade
+  - Web Content Manager Library Management: wcmlibrarymanagement
+
+
+
