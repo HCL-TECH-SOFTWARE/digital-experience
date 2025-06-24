@@ -7,7 +7,7 @@ This how-to guide provides instructions to configure the Access Layer for HCL Di
 This how-to guide provides the available options for implementing the access layer in the DX Deployment and MX. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
 ### Ingress for HCL DX and MX
-This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and MX. The actual implementation might vary depending on the Cluster's setup and configuration.
+This how-to guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and MX. The actual implementation might vary depending on the Cluster's setup and configuration.
 
 #### Prerequisite
 1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#ingress-implementation-for-dx-deployment).
