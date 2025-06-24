@@ -16,19 +16,20 @@ This article describes how to run IBM Installation Manager as a different user t
 
 Refer to the following steps to run IBM Installation Manager on Windows as a different user:  
 
-1. In regedit copy all registry keys and values under `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\IBM\Installation Manager` to `Computer\HKEY_CURRENT_USER\SOFTWARE\IBM\Installation Manager`  
+1. Open the **Registry Editor** and copy all registry keys and values under `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\IBM\Installation Manager` to `Computer\HKEY_CURRENT_USER\SOFTWARE\IBM\Installation Manager`.
 
-2. Open the **IBMIM.ini** located in directory `<Installation_Manager_root>\eclipse` with a text editor.  
+2. Open the following files located in `<Installation_Manager_root>\eclipse` with a text editor:
 
-3. In the **IBMIM.ini** change the `-accessRights` property value from `nonAdmin` to `admin`.  
+    1. `IBMIM.ini`
+    2. `installRegistry.xml`
+    3. `launcher.ini`
 
-4. Modify the **installRegistry.xml** and **launcher.ini** file located in `<Installation_Manager_root>\eclipse` to use the value `admin` instead of `nonAdmin` for the property `-accessRights` as well.  
+3. In each file, change the value of the `-accessRights` property from `nonAdmin` to `admin`.
 
-5. Copy the folder `C:\ProgramData\IBM\Installation Manager` and all sub-folders from the users folder to folder `C:\Users\AppData\Roaming\IBM\Installation Manager`.  
+4. Copy the `C:\ProgramData\IBM\Installation Manager` folder to `C:\Users\AppData\Roaming\IBM\Installation Manager`.  
 
-6. Open the file **C:\IBM\Installation Manager\eclipse\configuration\config.ini** with a text editor.  
+5. Open the `config.ini` file located in `C:\IBM\Installation Manager\eclipse\configuration` with a text editor.  
 
-7. In the **config.ini** file change the value `cic.appDataLocation=C\:\\ProgramData\\IBM\\Installation Manager` to `C\:\Users\AppData\Roaming\IBM\Installation Manager`  
+6. In the `config.ini` file, change the value of `cic.appDataLocation=C\:\\ProgramData\\IBM\\Installation Manager` to `C\:\Users\AppData\Roaming\IBM\Installation Manager`
 
-For more details, please check IBMs Installation Manager Knowledge Center at URL:  
-[Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}  
+For more details, refer to [Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}.
