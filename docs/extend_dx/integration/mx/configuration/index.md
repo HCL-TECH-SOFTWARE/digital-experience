@@ -1,9 +1,6 @@
 # Configuring HCL Volt MX Foundry for integration with HCL Digital Experience
 
-This topic provides information on how to configure Ingress for HCL Digital Experience (DX) for integration with HCL Volt MX Foundry.
-
-### Prerequisite
-Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
+This how-to guide provides instructions to configure the Access Layer for HCL Digital Experience (DX) to integrate with HCL Volt MX Foundry.
 
 ## Access Layer for HCL DX and MX
 

@@ -1,17 +1,17 @@
-# Configure access layer For DX Deployment
+# Configure Access Layer For DX Deployment
 
-With HAProxy replacing Ambassador in DX deployments, it is easier to use a custom  access layer in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external  access layer alongside with HAProxy as the internal reverse proxy and load balancer.
+With HAProxy replacing Ambassador in DX deployments, it is easier to use a custom Access Layer in front of DX to handle advance requirements to routing, proxying and other similar use cases. This document explains how to leverage external Access Layer alongside with HAProxy as the internal reverse proxy and load balancer.
 
 !!! note
-       -  **HCL DX intentionally does not ship any  access layer to reduce DX's deployment footprint in any Kubernetes cluster.**<br>
-       -  This document shows an example configuration for some  access layer controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br>
+       -  **HCL DX intentionally does not ship any Access Layer to reduce DX's deployment footprint in any Kubernetes cluster.**<br>
+       -  This document shows an example configuration for some Access Layer controllers and briefly describes minimally necessary steps to implement it inside a Kubernetes environment. This configuration is neither a proposal nor does HCL provide official support for it. <br>
        -  Implementing an  access layer for use with a HCL DX deployment in Kubernetes is an optional effort based on the Kubernetes cluster’s requirements and customer’s discretion.
 
 ![Access layer Implementation](../../../../../../images/HCL-DX-deployment-diagram-Kubernetes.png)
 
 ## Access Layer for DX Deployment
 
-This how-do guide provides the available options for implementing the access layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
+This how-do guide provides the available options for implementing the Access Layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
 ### Ingress Implementation For DX Deployment
 This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX. The actual implementation might vary depending on the Cluster's setup and configuration.
