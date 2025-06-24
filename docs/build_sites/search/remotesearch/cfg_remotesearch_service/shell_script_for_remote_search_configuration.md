@@ -14,7 +14,7 @@ Using HCL Digital Experience 9.5 Remote Search images in the supported cloud con
 
 **Deploying Remote Search in HCL Digital Experience 9.5 OpenShift and Kubernetes platforms**
 
-Prerequisite: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the HCL Software License Portal.
+Prerequisite: Download the HCL Digital Experience 9.5 Docker containers from your HCL Digital Experience entitlements from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"}.
 
 The HCL DX 9.5 container update CF181 and later packages include a core software and Remote search container. Load both of these images into an OpenShift release platform supported by HCL DX 9.5 such as Red Hat OpenShift. Use CF195 and later if you deploy to a Kubernetes platform.
 In this example, the OpenShift load command can be used. Note that if your organization has a corporate OpenShift repository, you might use OpenShift pull instead to put it into your local repository.
