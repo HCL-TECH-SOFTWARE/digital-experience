@@ -4,7 +4,7 @@ This how-to guide provides instructions to configure the Access Layer for HCL Di
 
 ## Access Layer for HCL DX and MX
 
-This how-do guide provides the available options for implementing the access layer in the DX Deployment and MX. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
+This how-to guide provides the available options for implementing the access layer in the DX Deployment and MX. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
 ### Ingress for HCL DX and MX
 This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and MX. The actual implementation might vary depending on the Cluster's setup and configuration.
