@@ -11,7 +11,7 @@ With HAProxy replacing Ambassador in DX deployments, it is easier to use a custo
 
 ## Access Layer for DX Deployment
 
-This how-do guide provides the available options for implementing the Access Layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
+This how-to guide provides the available options for implementing the Access Layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
 ### Ingress Implementation For DX Deployment
 This how-to guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX. The actual implementation might vary depending on the Cluster's setup and configuration.
