@@ -80,6 +80,7 @@ For JXR images, refer to the following steps:
     4. Click **Apply**.
 
     If the property already exists:
+
     1. Locate and click **imageresourcecmpnt.allowedmimetypes**.
     2. Under **Value**, enter **image/jxr**.
     3. Click **Apply**.
@@ -123,13 +124,13 @@ For SVG images, refer to the following steps:
 
     1. Click **New...**.
     2. Under **Name**, enter **imageresourcecmpnt.allowedmimetypes**.
-    3. Under **Value**, add the following additional value **image/svg+xml**
+    3. Under **Value**, enter **image/svg+xml**.
     4. Click **Apply**.
 
     If the property already exists:
 
     1. Locate and click **imageresourcecmpnt.allowedmimetypes**.
-    2. Under **Value**, add the following additional value **image/svg+xml**.
+    2. Under **Value**, enter **image/svg+xml**.
     3. Click **Apply**.
 
 4. Modify the `image.initialFileExtensions` property:
@@ -168,12 +169,14 @@ For WEBP images, refer to the following steps:
 3. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
 
     If the property does not exist:
+
     1. Click **New...**.
     2. Under **Name**, enter **imageresourcecmpnt.allowedmimetypes**.
     3. Under **Value**, enter **image/webp**.
     4. Click **Apply**.
 
     If the property already exists:
+
     1. Locate and click **imageresourcecmpnt.allowedmimetypes**.
     2. Under **Value**, enter **image/webp**.
     3. Click **Apply**.
