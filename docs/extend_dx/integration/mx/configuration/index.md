@@ -5,15 +5,15 @@ This topic provides information on how to configure Ingress for HCL Digital Expe
 ### Prerequisite
 Install HCL Digital Experience (DX).  For more information, see [Deploying DX](../../../../deployment/index.md#deploying-dx).
 
-## Access Layer for for HCL DX and MX
+## Access Layer for HCL DX and MX
 
 This how-do guide provides the available options for implementing the access layer in the DX Deployment and MX. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
-### Ingress for for HCL DX and MX
+### Ingress for HCL DX and MX
 This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and MX. The actual implementation might vary depending on the Cluster's setup and configuration.
 
 #### Prerequisite
-1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+1. Set up the Ingress for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#ingress-implementation-for-dx-deployment).
 
 #### Steps to Configure
 1. Configure HCL Volt MX Foundry to use the existing Ingress controller. The following sample values for HCL Volt MX Foundry configure the Ingress to use an SSL connection using the provided custom certificates. 
@@ -42,7 +42,7 @@ This how-do guide provides basic example on implementing a generic Ingress on yo
 This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
 
 #### Prerequisite
-- Reference the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for detailed instructions on setting up the Gateway API for HCL DX.
+- Set up the Gateway API for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment).
 
 #### Steps to Configure
 - You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
