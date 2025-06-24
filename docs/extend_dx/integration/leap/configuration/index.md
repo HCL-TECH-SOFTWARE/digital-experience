@@ -7,7 +7,7 @@ This page provides information on how to configure the integration of HCL Leap w
 This how-to guide provides the available options for implementing the access layer in the DX Deployment. It presents two primary choices: **Ingress** and **Gateway API**, allowing users to choose based on their specific needs and preferences.
 
 ### Ingress for HCL DX and HCL Leap
-This how-do guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and Leap. The actual implementation might vary depending on the Cluster's setup and configuration.
+This how-to guide provides basic example on implementing a generic Ingress on your Kubernetes cluster for use with HCL DX and Leap. The actual implementation might vary depending on the Cluster's setup and configuration.
 
 #### Prerequisites
 - Set up the Ingress for HCL DX. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#ingress-implementation-for-dx-deployment).
