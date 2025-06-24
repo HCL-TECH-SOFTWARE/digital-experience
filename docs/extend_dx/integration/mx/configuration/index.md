@@ -36,7 +36,7 @@ This how-do guide provides basic example on implementing a generic Ingress on yo
 
 ### Gateway API for HCL DX and MX
 
-This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
+This how-to guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
 
 #### Prerequisite
 - Set up the Gateway API for HCL Digital Experience. For more information, refer to the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment).
