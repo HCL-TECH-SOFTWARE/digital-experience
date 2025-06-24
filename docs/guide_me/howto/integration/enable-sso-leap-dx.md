@@ -1,6 +1,14 @@
 # How to setup LTPA SSO between DX and Leap
 
-These steps are based on [this community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4) 
+## Applies to
+
+> HCL Digital Experience...
+
+## Introduction
+
+This guide shows you how to setup LTPA single sign-on between DX and Leap. These steps are based on [this community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4) 
+
+## Instructions:
  
 1\. Ensure both sides use an identical user registry configuration.
  
