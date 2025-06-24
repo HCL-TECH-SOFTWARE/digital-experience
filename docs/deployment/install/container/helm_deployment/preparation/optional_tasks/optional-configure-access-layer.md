@@ -150,7 +150,7 @@ networking:
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/[VERSION_NUMBER]/standard-install.yaml
 ```
-- **Or install NGINX Gateway Fabric**: This step provides the command to install the NGINX Gateway Fabric using Helm.
+- **Install NGINX Gateway Fabric**: This step provides the command to install the NGINX Gateway Fabric using Helm.
 ```bash
 helm install ngf oci://ghcr.io/nginx/charts/nginx-gateway-fabric --create-namespace -n nginx-gateway
 ```
