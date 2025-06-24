@@ -2,15 +2,15 @@
 
 ## Applies to
 
-> HCL Digital Experience...
+> HCL Digital Experience 8.5 and higher
 
 ## Introduction
 
-These steps will enable you to embed a Leap application onto a DX site using Leap's Embedding API. For further details, refer to [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding) in the HCL Leap documentation. It is recommended that you have basic knowledge of DX to properly implement this; the following HCL Software U lessons may help: [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction), [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) and [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner). This HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) introduces how to make Leap applications. 
+These steps will enable you to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding). It is recommended that you have basic knowledge of DX to properly implement this; the following HCL Software U lessons may help: [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction), [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) and [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner). This HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) introduces how to make Leap applications. 
 
 ## Instructions: 
 
-1\. Create the leap application that you plan to integrate, if you haven't done so. 
+1\. Create the Leap application that you plan to integrate, if you haven't done so. 
 
 2\. Ensure that you can [access Leap and DX from the same domain name](./how-to-integrate-leap.md) and that [single sign-on is enabled](./enable-sso-leap-dx.md).
 
