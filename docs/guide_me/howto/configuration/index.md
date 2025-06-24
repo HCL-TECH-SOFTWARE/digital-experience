@@ -10,5 +10,7 @@ Learn how to change cell and node names after installing HCL DX.
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.
+- **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
+Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.
