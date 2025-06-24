@@ -49,7 +49,7 @@ This how-do guide provides instructions on how to configure the optional Gateway
   - Follow the guidelines provided in the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment) to set up the Gateway API for HCL DX.
 
 #### Steps to Configure
-  - You can either add a second Gateway API resource specifically for HCL Leap or extend the existing DX Ingress configuration. Ensure that the Gateway API resource points to the correct path where Leap is deployed, which is determined by the context route of the Leap deployment.
+  - You can either add a second Gateway API resource specifically for HCL Leap or extend the existing DX Gateway API configuration. Ensure that the Gateway API resource points to the correct path where Leap is deployed, which is determined by the context route of the Leap deployment.
 
 #### Example Configuration
 The following YAML snippet illustrates how to define a Gateway API resource for HCL Leap:

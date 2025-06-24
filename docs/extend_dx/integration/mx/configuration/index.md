@@ -39,10 +39,10 @@ This how-do guide provides basic example on implementing a generic Ingress on yo
 This how-do guide provides the process for configuring the Gateway API for HCL Digital Experience (DX) and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, thereby improving deployment efficiency and management.
 
 #### Prerequisite
-- Set up the Gateway API for HCL Digital Experience. For more information, refer to the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment).
+- Set up the Gateway API for HCL Digital Experience. For more information, refer to the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployment).
 
 #### Steps to Configure
-- You have the option to create a separate Gateway API resource for MX or modify the existing DX Ingress configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
+- You have the option to create a separate Gateway API resource for MX or modify the existing DX Gateway API configuration. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
 
 #### Example Configuration
 The provided YAML configuration demonstrates how to set up a Gateway API resource for MX, specifying various paths and their corresponding backend services. Each path is matched using the `PathPrefix` type, directing traffic to the appropriate backend service based on the request path. This configuration is essential for ensuring that requests to the specified paths are routed correctly to the corresponding services within the MX deployment.

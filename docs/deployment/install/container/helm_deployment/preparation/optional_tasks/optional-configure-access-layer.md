@@ -134,7 +134,7 @@ spec:
 
 ### Gateway API Implementation For DX Deployment
 
-This how-do guide provides a comprehensive guide for configuring optional Ingress in a Kubernetes environment using Helm and the Gateway API. It includes prerequisites, installation steps, and configuration details necessary for setting up the Gateway API.
+This how-do guide provides a comprehensive guide for configuring optional Gateway API in a Kubernetes environment using Helm and the Gateway API. It includes prerequisites, installation steps, and configuration details necessary for setting up the Gateway API.
 #### Prerequisites
 - Ensure that there are no existing Ingress controllers and Ingress resources in your cluster.
 - Verify that HAProxy is not utilizing the External IP. In the DX values file, set the following parameters:
