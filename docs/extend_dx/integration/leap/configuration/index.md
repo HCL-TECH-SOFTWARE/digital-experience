@@ -42,7 +42,7 @@ The following YAML snippet illustrates how to define a Ingress resource for HCL 
                   number: 9080
   ```
 ### Gateway API for HCL DX and HCL Leap
-This how-do guide provides instructions on how to configure the optional Gateway API for HCL Digital Experience (DX) and HCL Leap. The Gateway API allows for routing requests to both products under the same hostname enhancing the deployment's efficiency and management.
+This how-to guide provides instructions on how to configure the optional Gateway API for HCL Digital Experience (DX) and HCL Leap. The Gateway API allows for routing requests to both products under the same hostname enhancing the deployment's efficiency and management.
 
 #### Prerequisites
 1. **Set Up the Gateway API for HCL DX**
