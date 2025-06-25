@@ -12,7 +12,7 @@ This article gives you the steps to integrate Leap and DX so they can be accesse
 
 Follow the links for detailed steps.
 
-1\. [Deploy DX](../../../../deployment/install/container/helm_deployment/overview.md) using Helm.
+1\. [Deploy DX](../../../deployment/install/container/helm_deployment/overview.md) using Helm.
 
 2\. In the cluster, [pull the Leap image and create the leap-harbor secret](https://opensource.hcltechsw.com/leap-doc/latest/helm_load_images.html#retrieve-leap-container-image).
 
@@ -27,7 +27,7 @@ networking:
         ssl: false
 ```
 
-5\. [Configure Ingress](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for DX and Leap. Once you have successfully configured Ingress, you should have an Ingress controller and service in your cluster, and an Ingress resource in the same namespace as Leap and DX. Your Ingress resource may include the paths for both DX and Leap, resulting in the following:
+5\. [Configure either Ingress or Gateway API for external traffic routing](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). Below are some snippets to show you how your Ingress resource or HTTPRoute could look like:
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -62,7 +62,7 @@ spec:
 
 6\. Access Leap via `https://<your-domain-name>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
 
-![](../../../../assets/Leap_homepage.png)
+![](../../../assets/Leap_homepage.png)
 !!!tip 
     If instead of this screen, you get the error `There was a problem during the setup or startup. Unable to connect to internal setup routine...`, you may have to [configure SSL behavior](https://opensource.hcltechsw.com/leap-doc/latest/helm_configure_ssl.html). Do a helm upgrade afterwards.
 
