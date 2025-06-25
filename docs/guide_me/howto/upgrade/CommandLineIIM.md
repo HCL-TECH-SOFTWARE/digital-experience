@@ -15,12 +15,16 @@ For detailed information on Combined Cumulative Fix (CF) installation, refer to 
 
 **Installation Manager command line to list installed packages:**
 
-`imcl listInstallPackages -long`
+```
+imcl listInstallPackages -long`
+```
 
 If you prefer to use `imcl` in **console mode**, review the steps below:
 
 1.  **Execute the Console Command:**
+```
     `/opt/HCL/InstallationManager/eclipse/tools/imcl -c`
+```
 
 2.  **Navigate Options:**
     Enter the letter or number that corresponds with the option you want to select.
