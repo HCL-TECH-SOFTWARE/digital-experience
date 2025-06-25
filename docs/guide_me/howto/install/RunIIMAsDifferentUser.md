@@ -25,18 +25,16 @@ Refer to the following steps to run IBM Installation Manager on Windows as a dif
 
 3. In each file, change the value of the `-accessRights` property from `nonAdmin` to `admin`.
 
-4. Open the following file located in `<Portal_Install_root>\WebSphere\PortalServer\version\installRegistry.xml`
+4. Open the `installRegistry.xml`located in `<Portal_Install_root>\WebSphere\PortalServer\version`.
 
-5. Modify the property `<property name='accessRights' value='nonAdmin'/>` to `<property name='accessRights' value='admin'/>`
+5. In the `installRegistry.xml` file, change the value of the `accessRights` property from `nonAdmin` to `admin`.
 
-6. Copy the entire folder `C:\Users\AppData\Roaming\IBM\Installation Manager` to the folder `C:\ProgramData\IBM\Installation Manager`.  
+6. Copy the entire `C:\Users\AppData\Roaming\IBM\Installation Manager` folder to the `C:\ProgramData\IBM\Installation Manager` folder.  
 
 7. Open the `config.ini` file located in `<Installation_Manager_Install_root>\eclipse\configuration` with a text editor.  
 
-8. In the `config.ini` file, change the value of `cic.appDataLocation=C\:\\ProgramData\\IBM\\Installation Manager` to `C\:\Users\AppData\Roaming\IBM\Installation Manager`
+8. In the `config.ini` file, change the value of `cic.appDataLocation=C\:\\ProgramData\\IBM\\Installation Manager` to `C\:\Users\AppData\Roaming\IBM\Installation Manager`.
 
-For more details, refer to [Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}.
-
-## Additional References
-
-[Cannot install Installation Manager in nonadmininstrator mode after installing in administrator mode](https://www.ibm.com/support/pages/cannot-install-installation-manager-nonadmininstrator-mode-after-installing-administrator-mode)
+???+ info "Related information"
+    - [Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}.
+    - [Cannot install Installation Manager in nonadmininstrator mode after installing in administrator mode](https://www.ibm.com/support/pages/cannot-install-installation-manager-nonadmininstrator-mode-after-installing-administrator-mode)
