@@ -1,0 +1,9 @@
+title: How to Integrate HCL Volt MX with HCL Digital Experience
+
+nav:
+    - index.md
+    - how_to_integrate_mx.md
+    - how_to_enable_sso.md
+    - how_to_integrate_dx_api_mx.md
+    - how_to_integrate_mx_portlet_to_dx.md
+    - how_to_integrate_mx_data_to_dx.md
