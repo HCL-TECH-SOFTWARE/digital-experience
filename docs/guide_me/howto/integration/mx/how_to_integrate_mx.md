@@ -1,4 +1,7 @@
 # How to Integrate HCL Digital Experience (DX) and HCL Volt MX
+
+## Overview
+
 This guide explains how to integrate **HCL Digital Experience (DX)** and **HCL Volt MX** within the same Kubernetes environment
 
 ## Prerequisites
@@ -100,5 +103,6 @@ https://<host-name>/mfconsole
 
 Make sure this is accessible and correctly routed via the shared ingress.
 
+## Result
 
-**Your DX and Volt MX applications should now be integrated under a unified access layer and securely routed using the shared ingress configuration.** 
+Your DX and Volt MX applications should now be integrated under a unified access layer and securely routed using the shared ingress configuration.

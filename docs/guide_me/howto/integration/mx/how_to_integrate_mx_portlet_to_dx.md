@@ -2,6 +2,8 @@
 
 # How to Deploy HCL Volt MX Portlets into HCL Digital Experience (DX)
 
+## Overview
+
 This guide shows how to generate a Volt MX portlet using Iris, deploy it into HCL DX, and verify that the portlet renders correctly on a DX page.
 
 ## Prerequisites
@@ -68,5 +70,6 @@ If your Volt MX app contains a login page but you want to use **SSO via HCL DX**
 
 [How to Enable SSO Between HCL DX and Volt MX](./how_to_enable_sso.md)
 
+## Result
 
-**You have successfully deployed and verified the HCL Volt MX portlet in HCL DX.**
+You have successfully deployed and verified the HCL Volt MX portlet in HCL DX.

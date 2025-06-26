@@ -1,5 +1,7 @@
 # How to Use HCL DX Experience APIs in HCL Volt MX Foundry
 
+## Overview
+
 This guide explains how to integrate **HCL DX Experience APIs** into **HCL Volt MX Foundry** using the **HCL DX Content Adapter**. This enables Volt MX users to consume WCM REST V2 endpoints via custom integration services.
 
 ## Prerequisites
@@ -68,6 +70,10 @@ This enables Volt MX to authenticate against the same identity provider used by 
 
 ### 3. Log in using your identity provider credentials.
 ### 4. Confirm the response returns valid data.
+
+## Result
+
+You now have access to DX Experience APIs within Volt MX through the custom content/data adapter integration.
 
 ## Additional Resources
 

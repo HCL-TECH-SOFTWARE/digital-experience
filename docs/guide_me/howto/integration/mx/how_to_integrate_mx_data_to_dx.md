@@ -1,5 +1,7 @@
 # How to Integrate Volt MX Data and Applications into HCL DX
 
+## Overview
+
 This guide explains how to:
 
 1. Display **Volt MX Foundry data** on HCL DX pages using **Digital Data Connector (DDC)**.
@@ -70,7 +72,9 @@ Guide: [Web Dock Application](../../wab/wab/h_wab_dock.md)
 ### 4. Under **Applications**, search for your Web Dock App: `MX Foundry Application`
 ### 5. Click **Add To Page**.
 
-**Your Volt MX app will now render within the DX page.**
+## Result
+
+Your Volt MX app will now render within the DX page.
 
 Support for this feature is not available in the HCL Support Center. For questions and issues, reach out either in the [DXers - The HCL DX User Group](https://ptb.discord.com/channels/787019554173485067/992504153328861184){target="_blank"} on Discord or in the [HCL DX forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=02c5dcf01b32f70cc1f9759d1e4bcb43){target="_blank"}.
 
