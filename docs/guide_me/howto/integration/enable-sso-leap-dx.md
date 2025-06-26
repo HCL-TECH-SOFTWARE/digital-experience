@@ -10,9 +10,9 @@ This guide shows you how to setup LTPA single sign-on between DX and Leap. These
 
 ## Instructions:
  
-1\. Ensure both sides use an identical user registry configuration.
+1\. Ensure both DX and Leap use an identical user registry configuration.
  
-2\. Ensure both sides use the same RealmName (e.g., defaultWIMFileBasedRealm).
+2\. Ensure both DX and Leap use the same RealmName (e.g., defaultWIMFileBasedRealm).
   
    - For DX, you may set the realm name via the WAS Console, at Security > Global Security > User Account Repository > Realm Name, as shown in the following image:
 ![](../../../assets/dx-leap-integration-realm.png)
