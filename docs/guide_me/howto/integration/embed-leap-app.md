@@ -56,4 +56,4 @@ Leap.onReady = function() {
 ```
 <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
 
-8\. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created, and within that, the Content you created. Add that Content to the page to **embed your Leap app**. 
+8\. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created under "Page Components". Click on the Site Area, then you should find the Content you created. Add that Content to the page to **embed your Leap app**. 
