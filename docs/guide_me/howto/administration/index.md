@@ -2,6 +2,8 @@
 
 This section includes how-to articles about administration in HCL Digital Experience (DX).
 
+- **[How to add MIME types to the DX server](./SupportForAdditionalMIMETypes.md)**  
+Learn how to add support for additional MIME types to your DX server.
 - **[How to change the redirect URL for Login, Logout, and Session Timeout](./RedirectTimeout.md)**  
 Learn how to redirect a user to a different page after a successful login or logout, or after a session timeout.
 - **[How to clear WCM caches with ConfigEngine task](./ClearWCMCaches.md)**  

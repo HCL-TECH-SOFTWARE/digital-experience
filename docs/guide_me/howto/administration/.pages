@@ -2,6 +2,7 @@ title: Administration
 
 nav:
     - index.md
+    - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
