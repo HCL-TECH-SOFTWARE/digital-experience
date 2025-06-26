@@ -31,7 +31,7 @@ If installing to an existing HCL Digital Experience 9.5 CF181 or higher Kubernet
 
 1.  Verify that you can access the HCL Digital Experience 9.5 CF181 or higher Practitioner Studio by logging in to your HCL Digital Experience 9.5 Practitioner Studio interface. See the [HCL Digital Experience 9.5 Practitioner Studio](../../../../build_sites/practitioner_studio/index.md) topic for information.
 
-2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"} to the local file system.
+2.  Download and extract the HCL Digital Experience 9.5 components from your Digital Experience entitlements from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} to the local file system.
 
     **Sample download package name**: `hcl-dx-kubernetes-v95-CF181-other.zip` or higher, depending on the DX 9.5 Container Update version you are installing.
 
