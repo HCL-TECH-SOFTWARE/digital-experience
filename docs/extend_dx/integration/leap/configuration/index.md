@@ -18,9 +18,9 @@ Ensure you follow the guidelines provided in the [optional Ingress documentation
 
 1. Create a separate Ingress resource for Leap or extend the existing DX Ingress configuration. In Kubernetes, Ingress resources manage how external HTTP(S) traffic is routed to services within the cluster. You can either define a dedicated Ingress for Leap or incorporate its routes into the existing DX Ingress.
 
-2. Ensure the Ingress resource is configured to match Leap’s deployment path. The specified path (e.g., /apps) should align with Leap’s context route so that incoming requests are correctly routed to the Leap service as accessed by end users.
+2. Ensure the Ingress resource is configured to match Leap’s deployment path. The specified path (for example, `/apps`) should align with Leap’s context route so that incoming requests are correctly routed to the Leap service as accessed by end users.
 
-The following YAML snippet illustrates how to define a Ingress resource for Leap:
+The following YAML file demonstrates how to define an Ingress resource that routes traffic to the Leap backend service based on a specific path (for example, `/apps`):
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -46,7 +46,10 @@ spec:
                 number: 9080
 ```
 
-The YAML file shown above demonstrates how to define an Ingress resource that routes traffic to the Leap backend service based on a specific path (e.g., /apps). The `metadata` section identifies the Ingress resource, while the `spec` section outlines the routing configuration. The `tls` block sets up HTTPS for the specified domain. Within the `rules` section, requests to the /apps path (including sub-paths) for the defined host are directed to the Leap service deployed in the cluster.
+- The `metadata` section identifies the Ingress resource.
+- The `spec` section outlines the routing configuration.
+- The `tls` block sets up HTTPS for the specified domain.
+- Within the `rules` section, requests to the `/apps` path (including sub-paths) for the defined host are directed to the Leap service deployed in the cluster.
 
 ### Gateway API for HCL DX and HCL Leap
 
@@ -58,11 +61,11 @@ Ensure you follow the guidelines provided in the [optional Gateway API documenta
 
 #### Implementing Gateway API for HCL DX and HCL Leap
 
-1. Configure a Gateway API Resource for Leap: Either create a separate Gateway API resource for Leap or extend the existing DX Gateway configuration. The Gateway API offers a more flexible and expressive approach to traffic management than traditional Ingress. Consolidating routing for both DX and Leap under a single configuration can simplify access layer management.
+1. Create a separate Gateway API resource for Leap or extend the existing DX Gateway configuration. The Gateway API offers a more flexible and expressive approach to traffic management than traditional Ingress. Consolidating routing for both DX and Leap under a single configuration can simplify access layer management.
 
-2. Define the Correct Routing Path: Ensure the Gateway API configuration accurately reflects the context route used in the Leap deployment (e.g., /apps). This ensures that incoming requests to that path are properly routed to the Leap backend service.
+2. Ensure the Gateway API configuration accurately reflects the context route used in the Leap deployment (for example, `/apps`). This ensures that incoming requests to that path are properly routed to the Leap backend service.
 
-The following YAML snippet illustrates how to define a Gateway API resource for Leap:
+The following YAML file demonstrates how to define a Gateway API `HTTPRoute` resource for routing requests to the Leap backend service:
   
   ```yaml
   apiVersion: gateway.networking.k8s.io/v1
@@ -85,7 +88,12 @@ The following YAML snippet illustrates how to define a Gateway API resource for 
         port: 9080
   ```
 
-The YAML file above demonstrates how to define a Gateway API `HTTPRoute` resource for routing requests to the Leap backend service. In this example, requests to a specific path (such as /`apps`) are directed accordingly. The `metadata` section assigns a name to the HTTPRoute resource. The `spec` section outlines the routing configuration: `parentRefs` links the route to a specific Gateway and its section (e.g., HTTPS), while `hostnames` indicates the domain this route is intended for. Within `rules`, the `matches` block defines the path prefix condition (such as /apps), and the `backendRefs` section specifies the target backend service and port where Leap is hosted.
+- The `metadata` section assigns a name to the HTTPRoute resource.
+- The `spec` section outlines the routing configuration.
+- The `parentRefs` section links the route to a specific Gateway and its section (for example, `https`).
+- The `hostnames` section indicates the domain this route is intended for.
+- Within `rules`, the `matches` block defines the path prefix condition (such as `/apps`)
+- The `backendRefs` section specifies the target backend service and port where Leap is hosted.
 
 ## Enabling LTPA SSO between HCL Leap and HCL DX in Kubernetes
 
