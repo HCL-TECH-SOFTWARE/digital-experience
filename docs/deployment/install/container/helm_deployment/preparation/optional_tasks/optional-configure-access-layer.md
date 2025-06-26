@@ -29,7 +29,7 @@ haproxy:
 
 #### Implementing Ingress for DX deployments
 
-1. Install an Ingress controller of your choice. The Ingress controller serves as the entry point to the cluster and applies the rules set in the Ingress resources. This controller is a cluster-wide resource that can be deployed in any namespace and does not have to be in the same namespace as DX. It can also be used to route multiple applications in multiple namespaces.
+1. Install an Ingress controller of your choice (e.g., Traefik, HAProxy Ingress, Kong Ingress Controller). The Ingress controller serves as the entry point to the cluster and applies the rules set in the Ingress resources. This controller is a cluster-wide resource that can be deployed in any namespace and does not have to be in the same namespace as DX. It can also be used to route multiple applications in multiple namespaces.
 
     The following example uses the NGINX Ingress Controller. To install a NGINX Ingress on your cluster, run the following command on your terminal:
 

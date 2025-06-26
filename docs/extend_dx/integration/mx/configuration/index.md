@@ -48,11 +48,13 @@ Ensure you follow the guidelines provided in the [optional Gateway API documenta
 
 #### Implementing Gateway API for HCL DX and HCL Volt MX Foundry
 
-1. Create a separate Gateway API resource for MX or modify the existing DX Gateway API configuration.
+1. Create or update the Gateway API resource for MX: Define a new Gateway API resource for Volt MX Foundry (MX) or extend the existing DX Gateway configuration to include MX routes. The Gateway API offers a modern and centralized approach to manage HTTP(S) routing across multiple backend services under a single domain.
 
-2. Ensure that the Gateway API resource is correctly pointed to the MX deployment path, which is defined by the context route of the MX deployment.
+2. Configure routing rules for MX context paths: Ensure the Gateway API resource includes routing rules for all relevant MX context routes (e.g., /authService, /mfconsole, /accounts, /workspace, /admin, /services, /apps, /kpns, /apiportal). Each rule should forward traffic to the correct backend service and port corresponding to each MX component.
 
 The provided YAML configuration demonstrates how to set up a Gateway API resource for MX, specifying various paths and their corresponding backend services. Each path is matched using the `PathPrefix` type, directing traffic to the appropriate backend service based on the request path. This configuration is essential for ensuring that requests to the specified paths are routed correctly to the corresponding services within the MX deployment.
+
+It is an example of a Gateway API HTTPRoute resource that defines multiple routing rules, each matching a specific path prefix (e.g., `/authService`, `/mfconsole`) and forwarding requests to the appropriate backend service (such as voltmx-foundry-identity, voltmx-foundry-console, etc.) on the correct port. The `parentRefs` section associates the route with a specific Gateway and section (e.g., HTTPS), while the `hostnames` field specifies the domain these rules apply to. The `rules` section lists the path matches and their corresponding backend references, ensuring proper routing of requests to the correct MX service components.
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
