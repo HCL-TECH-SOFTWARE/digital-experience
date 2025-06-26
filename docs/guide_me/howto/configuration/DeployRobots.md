@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document describes how to add a `robots.txt` file in your HCL Digital Experience (DX) container environment to control how search engines crawl and index your site. A robots.txt file contains instructions that search engine crawlers use to determine which parts of your site to crawl and include in their search index. For more information, refer to [Introduction to robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro){target="_blank"}.
+This article describes how to add a `robots.txt` file in your HCL Digital Experience (DX) container environment to control how search engines crawl and index your site. A robots.txt file contains instructions that search engine crawlers use to determine which parts of your site to crawl and include in their search index. For more information, refer to [Introduction to robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro){target="_blank"}.
 
 ## Instructions
 
