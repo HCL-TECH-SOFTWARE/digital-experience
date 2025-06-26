@@ -21,7 +21,7 @@ To edit the default Portal theme, navigate to the following file path:
 
 2. **Add the following script at the bottom of the file**:
 
-   ```html
+   ```
    <script type="text/javascript">
      window.onload = replaceBPM;
      function replaceBPM() {
@@ -41,12 +41,14 @@ The method above is straightforward but has **two major drawbacks**:
 1. Using `window.onload` will overwrite any previous `window.onload` assignments that may include critical functionality.
 2. The script performs a global find-and-replace on every instance of the string `'BPM'`.  
    This includes text within URLs, links, or script references. As a result, it may break page functionality across all pages using the theme. Always review the page source before applying changes.
+   
 
 
 ### Mitigating Side-Effects
 
-The two issues mentioned above can be mitigated by using `i$.addOnLoad` instead of `window.onload`. This involves determining the specific element in the page document that requires the update and modifying only that element. An example of this approach is detailed below.
----
+
+  The two issues mentioned above can be mitigated by using `i$.addOnLoad` instead of `window.onload`. This involves determining the specific element in the page document that requires the update and modifying only that element. An example of this approach is detailed below.
+
 
 Notice that at the top of the welcome page, there is a link named `Log in to use authoring capabilities`. Let's assume we want to change the word `capabilities` to `skills`. If you right-click on the `Welcome Page` and select 'View page source', you can identify the ID of the element containing the text in question:
 

@@ -1,11 +1,11 @@
 title: Administration
 
 nav:
-    - index.md
-    - RedirectTimeout.md
-    - ClearWCMCaches.md
-    - ClearWebSphereDynacache.md
-    - DecodeLongURLs.md
-    - ImproveQueryPerformance.md
-    - APIToCountWCMItems.md
-    - UseJavaScriptToReplaceText.md
+- index.md
+- APIToCountWCMItems.md
+- ClearWCMCaches.md
+- ClearWebSphereDynacache.md
+- DecodeLongURLs.md
+- ImproveQueryPerformance.md
+- RedirectTimeout.md
+- UseJavaScriptToReplaceText.md
