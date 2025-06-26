@@ -37,4 +37,4 @@ Refer to the following steps to run IBM Installation Manager on Windows as a dif
 
 ???+ info "Related information"
     - [Installing as an administrator, nonadministrator, or group](https://www.ibm.com/docs/en/installation-manager/latest?topic=mode-installing-as-administrator-nonadministrator-group){target="_blank"}.
-    - [Cannot install Installation Manager in nonadmininstrator mode after installing in administrator mode](https://www.ibm.com/support/pages/cannot-install-installation-manager-nonadmininstrator-mode-after-installing-administrator-mode)
+    - [Cannot install Installation Manager in nonadmininstrator mode after installing in administrator mode](https://www.ibm.com/support/pages/cannot-install-installation-manager-nonadmininstrator-mode-after-installing-administrator-mode){target="_blank"}
