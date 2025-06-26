@@ -27,7 +27,7 @@ networking:
         ssl: false
 ```
 
-5\. [Configure either Ingress or Gateway API for external traffic routing](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md). Below are some snippets to show you how your Ingress resource or HTTPRoute could look like:
+5\. [Configure either Ingress or Gateway API for external traffic routing](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md). Below are some snippets to show you how your Ingress resource or HTTPRoute could look like:
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
