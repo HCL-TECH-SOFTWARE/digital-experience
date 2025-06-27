@@ -6,7 +6,6 @@ To access Presentation Designer and understand its user interface, refer to the 
 
 To learn how to use the different user elements in Presentation Designer, refer to the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
 
-
 ## Style panel
 
 The styling options change based on the specific user element selected on the canvas. To check the available styling options for each element on your canvas, click an element and check the rendered style options in the **Style** panel.
@@ -18,7 +17,6 @@ See the following sample styling options for a static text element:
 See the following sample styling options for a static container element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Container_Sample.png)
-
 
 ## Inline styles
 
@@ -36,12 +34,16 @@ See the following sample preview displayed in a browser:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Preview.png)
 
-
 ## Style sections
 
 Style sections in Presentation Designer refer to categorized areas where users can adjust specific style properties of the selected user element on the canvas. Each section focuses on a different aspect of an element's design, helping users navigate the **Style** panel and apply the adjustments they need for each element.
 
+You can change the measuring unit of each style property depending on the supported units. Click the measuring unit next to a style property to reveal a list of units you can choose from. For example:
+
+![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Style_Units_Sample.png)
+
 ### Dimensions
+
 The **Dimensions** section allows users to control the size and scaling of elements within the design, ensuring they fit well within their containers and across various screen sizes.
 
 - **Width**: Adjusts the width of the selected element.
@@ -56,8 +58,8 @@ This section supports the following units and values:
 - **Supported Units**: `px`, `vh`, `vw`, `%`, `calc()`  
 - **Sample Values**: `200px`, `100vh`, `25%`, `calc(50vh - 10px)`, `auto`, `inherit`
 
-
 ### Spacing
+
 **Spacing** properties allow users to control the space around and within elements, ensuring proper layout structure and distance between each element.
 
 - **Margin**: Controls the space outside the element, determining how far an element is from adjacent ones.
@@ -68,15 +70,15 @@ This section supports the following units and values:
 - **Supported Units**: `px`, `em`, `rem`, `vh`, `vw`, `%`, `calc()`  
 - **Sample Values**: `10px`, `1em`, `2rem`, `5%`, `calc(10px + 2vw)`, `auto`
 
-
 ### Borders
+
 The **Border** section allows users to customize the border around elements, enhancing their appearance and creating a clear visual structure.
 
 - **Border style**: Specifies the element's border type. Possible values include solid, dashed, and dotted.
 
 - **Border radius**: Controls the roundness of an element's corners.
-    -  **Supported Units**: `px`, `em`, `rem`, `%`
-    -  **Sample Values**: `5px`, `10px`, `1rem`, `50%`, `inherit`
+    - **Supported Units**: `px`, `em`, `rem`, `%`
+    - **Sample Values**: `5px`, `10px`, `1rem`, `50%`, `inherit`
 
 - **Border color**: Specifies an element's border color.
     - **Sample Values**: `#FFFFFF`, `rgba(255, 99, 71, 0.2)`, `red`
@@ -85,8 +87,8 @@ The **Border** section allows users to customize the border around elements, enh
     - **Supported Units**: `px`, `em`, `rem`  
     - **Sample Values**: `1px`, `3em`, `0.1rem`
 
-
 ### Appearance
+
 The **Appearance** section allows users to change the colors of elements to make them stand out or blend into the overall design.
 
 - **Background color**: Changes the background color of the selected element.
@@ -95,8 +97,8 @@ The **Appearance** section allows users to change the colors of elements to make
 - **Text color**: Changes the color of any text within the element.
     - **Sample Values**: `#000000`, `rgba(0, 0, 0, 0.8)`, `green`
 
-
 ### Layout
+
 The **Layout** section allows users to control the structural positioning and setup of the grid element, ensuring proper arrangement and organization of content within rows and columns.
 
 - **Rows**: Specifies the number of horizontal sections (rows) in the grid. The minimum value is `1` row. 
@@ -121,8 +123,8 @@ The **Layout** section allows users to control the structural positioning and se
 - **Grid Cell (Rows)**: Specifies the number of rows the grid cell will occupy.  
     - **Sample Values**: `1`, `2`, `3`
 
-
 ### Position
+
 The **Position** section allows users to precisely control the placement of elements on the canvas, ensuring accurate positioning based on the layout's needs.
 
 - **Object position**: Sets an element’s position relative to its parent or containing element. Possible values include static, relative, absolute, sticky, and fixed.
@@ -145,7 +147,6 @@ The **Position** section allows users to precisely control the placement of elem
     - **Send Backward**: Moves the selected element one layer down in the stacking order.
     - **Send to Back**: Moves the selected element to the lowest layer in the stacking order.
 
-
 ### Typography
 
 The **Typography** section allows users to customize text-based elements, giving them full control over the font, size, and styling of text. This ensures readability and alignment with design standards.
@@ -161,6 +162,7 @@ The **Typography** section allows users to customize text-based elements, giving
 - **Capitalization**: Adjusts text to be uppercase, lowercase, or sentence case.
 
 ### Units of measurement
+
 Refer to the following tips on selecting the appropriate unit of measurement for the properties you want to adjust.
 
 - Use `px` for fixed and precise measurements such as button width or border thickness.
@@ -172,4 +174,3 @@ Refer to the following tips on selecting the appropriate unit of measurement for
     - **`hex`**: Uses hex values for precise color definition. For example, you can use`#FFFFFF` for the color white.
     - **`rgb`**: Defines colors with red, green, and blue values. For example, you can enter `rgb(255, 165, 0)` for the color orange.
     - **`rgba`**: Adds alpha transparency to colors. For example, use `rgba(255, 99, 71, 0.5)` for a semi-transparent color.
-
