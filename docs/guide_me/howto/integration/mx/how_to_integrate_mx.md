@@ -53,7 +53,7 @@ spec:
               name: haproxy
 ```
 
-## Step 3: Configure Ingress for Volt MX Foundry
+## Step 4: Configure Ingress for Volt MX Foundry
 
 Next, configure Volt MX to use the same ingress controller and domain.
 
@@ -75,7 +75,7 @@ ingress:
 serverDomainName: "your-mx-and-dx-host.com"
 ```
 
-## Step 4: Verify the Ingress and Integration
+## Step 5: Verify the Ingress and Integration
 
 ### 1. Access DXConnect
 
