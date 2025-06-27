@@ -362,7 +362,7 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
         -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
         -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
-        -   [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md)
+        -   [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md)
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
@@ -861,6 +861,12 @@ Use this command to sync a local WCM Design Library with the DX server. Succeedi
 
 ```bash
 dxclient livesync push-wcm-design-library [options]
+```
+
+Use this command to trigger [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md):
+
+```bash
+    dxclient trigger-dam-reindex [options]
 ```
 
 ## Limitations
