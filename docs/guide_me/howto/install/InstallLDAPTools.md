@@ -1,4 +1,4 @@
-# Installing IBM SDS 6.4.0.27 Ldap Client Tools, on Linux
+# How to Install IBM SDS 6.4.0.27 LDAP Client Tools, on Linux
 
 ## Applies to
 
