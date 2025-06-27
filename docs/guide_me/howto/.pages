@@ -1,4 +1,4 @@
-title: How-to articles
+title: How-to Articles
 
 nav:
     - index.md
@@ -11,6 +11,7 @@ nav:
     - database
     - development
     - install
+    - installation
     - migration
     - performance
     - personalization

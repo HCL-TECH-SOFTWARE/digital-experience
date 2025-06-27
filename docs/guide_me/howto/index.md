@@ -1,14 +1,14 @@
 # How-to
 
-Learn how to use HCL Digital Experience with all it's features.
+earn how to use HCL Digital Experience with all it's features.
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
+Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. This platform offers technical education for the HCL Software portfolio, organized by practitioner role. For more information, see the [HCL Digital Experience section on HCL Software U](https://hclsoftwareu.hcltechsw.com/).
 
 - **[Getting Started with HCL Digital Experience](../../get_started/product_overview/index.md)**
 
-# How-to articles
+# How-to Articles
 
-This section contains How-to articles to help you learn how to use HCL Digital Experience (DX) and all its features. The How-to articles are classified into the following topics:
+This article describes to use HCL Digital Experience (DX) and explore all its features. The How-to articles are classified into the following topics:
 
 - **[Administration](./administration/index.md)**  
 Learn how to do specific administration tasks in your HCL DX environment.
