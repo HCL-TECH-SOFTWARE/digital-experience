@@ -6,19 +6,19 @@ title: AWS Marketplace Helm Deployment
 
 This topic provides information on how to deploy HCL Digital Experience (DX) acquired from the AWS Marketplace on both Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments. 
 
-The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 is available through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a) for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of your preference.
+The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 is available through the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxuhyr7adj3a){target="_blank"} for customers who purchase through the Marketplace as a containerized product offering. Upon subscription, you can utilize the Helm-based fulfillment option presented for selection, enabling the deployment of DX on a Kubernetes cluster of your preference.
 
 ## Prerequisites
 
 ### Configuring TLS certificate
 
-The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to [Use certificate](../preparation/mandatory_tasks/prepare_configure_networking/#use-certificate) for more information.
+The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to [Use certificate](./preparation/mandatory_tasks/prepare_configure_networking.md#use-certificate) for more information.
 
 ### Configuring volumes
 
 Currently, the Helm chart is configured with the `gp3` storage class, which is the default storage class provided by AWS. 
 
-However, to use the full functionality and to scale all Pods, it is recommended to specify a different value for `ReadWriteMany` volumes. For self-managed clusters, you must specify all volumes according to the storage in your cluster in the `custom-values.yaml` file. See [Prepare persistent volume](../preparation/mandatory_tasks/prepare_persistent_volume_claims/) for more information.
+However, to use the full functionality and to scale all Pods, it is recommended to specify a different value for `ReadWriteMany` volumes. For self-managed clusters, you must specify all volumes according to the storage in your cluster in the `custom-values.yaml` file. See [Prepare persistent volume](./preparation/mandatory_tasks/prepare_persistent_volume_claims.md) for more information.
 
 ## Launching with Helm Deployment
 
@@ -28,7 +28,7 @@ Refer to the `Launch Instructions` found in the configuration section of the HCL
 
 ### Deploying in Amazon-managed Kubernetes
 
-If your cluster is prepared and your AWS CLI is configured, see [Set up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html). To deploy HCL DX 9.5 on an Amazon-managed Kubernetes cluster, refer to the following steps:
+If your cluster is prepared and your AWS CLI is configured, see [Set up the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html){target="_blank"}. To deploy HCL DX 9.5 on an Amazon-managed Kubernetes cluster, refer to the following steps:
 
 1. [Create an AWS IAM role and Kubernetes service account.](#creating-an-aws-iam-role-and-kubernetes-service-account)
 2. [Launch the software.](#launching-the-software-on-an-amazon-managed-kubernetes-cluster)
@@ -39,8 +39,8 @@ Applications within containers of a Pod can employ an AWS SDK or the AWS CLI to 
 
 It is crucial to ensure that the service account is configured with appropriate IAM roles because the DX License Manager utilizes it to verify entitlements.
 
--  For information about IAM roles for service accounts, see [IAM roles for service accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
--  For information about assuming IAM roles to service accounts, see [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html#irsa-create-role).
+-  For information about IAM roles for service accounts, see [IAM roles for service accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html){target="_blank"}.
+-  For information about assuming IAM roles to service accounts, see [Configure a Kubernetes service account to assume an IAM role](https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html#irsa-create-role){target="_blank"}.
 
 The following is an example of creating a service account and associating IAM roles with it:
 
@@ -204,7 +204,7 @@ After configuring the service account and defining the ENVs and pull secrets, pu
 
 ### Updating the initial randomized password
 
-In accordance with AWS Marketplace requirements, container-based products are required to utilize an initial randomized password. These products should refrain from using initial fixed or blank passwords for external administrative access. To adhere to this guideline, initial randomized passwords for the application credentials within custom secrets are integrated. See [Configure credentials](../preparation/optional_tasks/optional_configure_credentials/) for more information.
+In accordance with AWS Marketplace requirements, container-based products are required to utilize an initial randomized password. These products should refrain from using initial fixed or blank passwords for external administrative access. To adhere to this guideline, initial randomized passwords for the application credentials within custom secrets are integrated. See [Configure credentials](./preparation/optional_tasks/optional_configure_credentials.md) for more information.
 
 ### Patching Runtime Controller service account
 
@@ -232,4 +232,4 @@ configurations:
 
 ### Usage tracking and reporting
 
-To monitor current user session tracking in DX production deployments on Kubernetes platforms, a manual tracking method is implemented in the deployments. See [Tracking user session consumption and exporting usage reports](../../../../../get_started/download/software_licensing_portal/configure_entitlement_checks/export_usage_report/) for more information.
+To monitor current user session tracking in DX production deployments on Kubernetes platforms, a manual tracking method is implemented in the deployments. See [Tracking user session consumption and exporting usage reports](../../../../get_started/download/software_licensing_portal/configure_entitlement_checks/export_usage_report.md) for more information.

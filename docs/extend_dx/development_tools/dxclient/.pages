@@ -4,6 +4,4 @@ nav:
     - DXClient Artifact Types: dxclient_artifact_types
     - troubleshooting_dxclient.md
     - dxconnect.md
-    - sample_pipelines_for_use_with_dx_client_and_automation_servers.md
-    - sample_pipelines_docker_dxclient.md
-    - sample_pipelines_node_dxclient.md
+    - sample_pipeline_settings_using_dxclient.md

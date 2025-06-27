@@ -118,7 +118,7 @@ Steps to create Presentation Template are as follows:
 
     ![](../../../assets/DDC_presentation_template_using_params.png "DDC Presentation Template with attribute sourceParams")
 
-###  Creating a Content Template
+### Creating a Content Template
 
 Under Authoring Templates, create a Content Template.
 
@@ -200,7 +200,7 @@ Under Authoring Templates, create a Content Template.
               ```
         - Footer: `</ul>`
         !!!note
-            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#steps-to-create-the-list-rendering-profile-are-as-follows). For example, `ddcDemo.ItemAttribute.fullname`.
+            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#creating-the-list-rendering-profile). For example, `ddcDemo.ItemAttribute.fullname`.
 
         ![](../../../assets/WCM_List_Markup.png "Use HTML to define how list results are presented to your site visitors, including a header, footer, and separator.")
 

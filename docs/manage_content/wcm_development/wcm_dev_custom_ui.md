@@ -1,4 +1,4 @@
-# How to create a custom launch page
+# Creating a custom launch page
 
 You can configure an authoring portlet to use a launch page of your own design instead of the default user interface.
 

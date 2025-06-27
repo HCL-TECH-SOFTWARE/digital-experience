@@ -6,7 +6,7 @@ title: Configuring OIDC for HCL DX
 
 nav:
     - index.md
-    - Updating WebSphere to support OIDC Authentication for DX: dx-update-webshpere-for-oidc.md
+    - Updating WebSphere to support OIDC Authentication for DX: dx-update-websphere-for-oidc.md
     - Adjusting the DX Login flow for OIDC: dx-integration.md
     - Implications for customizing IdP's user login flow: dx-oidc-customization-considerations.md
     - ...

@@ -1,5 +1,5 @@
 ---
-title: Generate Unique Namespace IDs
+title: Generate unique namespace IDs
 ---
 
 # Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application
