@@ -4,7 +4,6 @@ earn how to use HCL Digital Experience with all it's features.
 
 Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. This platform offers technical education for the HCL Software portfolio, organized by practitioner role. For more information, see the [HCL Digital Experience section on HCL Software U](https://hclsoftwareu.hcltechsw.com/).
 
-- **[Getting Started with HCL Digital Experience](../../get_started/product_overview/index.md)**
 
 # How-to Articles
 
