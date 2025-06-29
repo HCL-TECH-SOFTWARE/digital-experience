@@ -1,43 +1,45 @@
-# How to Install IBM SDS 6.4.0.27 LDAP Client Tools, on Linux
+# How to Install IBM SDS 6.4.0.27 LDAP Client Tools on Linux
 
 ## Applies to
 
-> HCL Digital Experience v8.5 and higher
+> HCL Digital Experience 8.5 and higher
 
 ## Introduction
 
-It's very common for HCL Digital Experience (DX) to perform searches and even modifications on `LDAP` servers. This article describes how to install `IBM SDS Client tools` version 6.4.0.27 (June/2023).
+It's very common for HCL Digital Experience (DX) to perform searches and modifications on `LDAP` servers. This article describes how to install `IBM SDS Client tools` version 6.4.0.27 (June 2023).
 
 IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Directory Server`), is very common in `DX` environments. This article provides detailed steps to install the following `IBM SDS Client tools`:
 
-- `idsldapadd`
-- `idsldapchangepwd`
-- `idsldapdelete`
-- `idsldapexop`
-- `idsldapmodify`
-- `idsldapmodrdn`
-- `idsldapsearch`
-- `idsldaptrace`
+* `idsldapadd`
+* `idsldapchangepwd`
+* `idsldapdelete`
+* `idsldapexop`
+* `idsldapmodify`
+* `idsldapmodrdn`
+* `idsldapsearch`
+* `idsldaptrace`
 
 !!! note "Check for Newer Version"
-    Please check the product offerings; if a more recent version already exists.
+    Check the product offerings for a more recent version.
+    
 
 ## Instructions
 
-1. [Install IBM Security Directory Server](https://www.ibm.com/docs/en/sva/11.0.0?topic=configuration-security-directory-server-installation){target="_blank"}
+1.  [Install IBM Security Directory Server](https://www.ibm.com/docs/en/sva/11.0.0?topic=configuration-security-directory-server-installation){target="_blank"}
 
-    !!!note
-        It is suggested to first install IBM Security Directory Server. This is just needed for the tests. You can install the Client Tools without having the Server installed.  
+    !!! note "Server Installation Note"
+        First, install IBM Security Directory Server. This is needed only for testing. You can install the Client Tools without the server installed.
 
 2.  Instantiate the necessary environment variables (change them appropriately):
 
-    ```
+    ```bash
     SDS64="<your server's IP address>"
     PORT="389"
     DN="cn=root"
     PASSWORD="<password>"
     export SDS64 PORT DN PASSWORD
     ```
+
 3.  Download the latest SDS64 fixes from Flexnet or IBM, and copy the files to the directory `/mnt/install/portal95/sds64/fixes`.
     For this article, version 6.4.0.27 is used, for which the following files need to be downloaded:
 
@@ -68,7 +70,7 @@ IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Direc
 
     ```bash
     /tmp/sds64/fixes/*-ISS-ISDS-LinuxX64-*/license/idsLicense -q
-    ```    
+    ```
 
 8.  Verify the license status (a "0" indicates success) and install the license RPM:
 
