@@ -1,4 +1,4 @@
-# How-to articles
+# How-To Articles
 
 This section contains How-to articles to help you learn how to use HCL Digital Experience (DX) and all its features. The How-to articles are classified into the following topics:
 

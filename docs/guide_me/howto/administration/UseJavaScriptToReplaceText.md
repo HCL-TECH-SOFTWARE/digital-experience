@@ -1,8 +1,8 @@
-# Using JavaScript to Find and Replace Text on a Portal Page
+# How to Use JavaScript to Find and Replace Text on a Portal Page
 
 ## Applies to
 
-> HCL Digital Experience v8.5 and higher
+> HCL Digital Experience version 8.5 and higher
 
 ## Introduction
 
@@ -49,9 +49,7 @@ The method above is straightforward but has **two major drawbacks**:
 
   The two issues mentioned above can be mitigated by using `i$.addOnLoad` instead of `window.onload`. This involves determining the specific element in the page document that requires the update and modifying only that element. An example of this approach is detailed below.
 
-
 Notice that at the top of the welcome page, there is a link named `Log in to use authoring capabilities`. Let's assume we want to change the word `capabilities` to `skills`. If you right-click on the `Welcome Page` and select 'View page source', you can identify the ID of the element containing the text in question:
-
 <details>
 <summary>Click to view HTML snippet</summary>
 
