@@ -1,8 +1,10 @@
-# Upgrade
+# Upgrade Guides
 
-This section includes how-to documents that belong to the upgrade topics
+This section includes how-to documents related to upgrade topics.
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
+---
 
-- **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)**
-This section will eventually include how-to articles about upgrade-related content in HCL Digital Experience (DX).
+Access the latest **HCL Digital Experience 9.5** education materials on HCL Software U. This platform offers technical education for the HCL Software portfolio, organized by practitioner role. For more information, see the [HCL Digital Experience section on HCL Software U](https://help.hcl-software.com/digital-experience/9.5/latest/deployment/manage/manage_fix_packs/ccf_install/).
+
+---
+
