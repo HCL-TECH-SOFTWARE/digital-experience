@@ -1,5 +1,9 @@
 # How to Use HCL DX APIs in HCL Volt MX Foundry
 
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
 ## Introduction
 
 This guide explains how to integrate **HCL DX APIs** into **HCL Volt MX Foundry** using the **HCL DX Content Adapter**. This enables Volt MX users to consume WCM REST V2 endpoints via custom integration services.

@@ -1,5 +1,9 @@
 # How to Integrate Volt MX Data and Applications into HCL DX
 
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
 ## Introduction
 
 This guide explains how to:

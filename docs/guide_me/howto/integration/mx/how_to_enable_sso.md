@@ -1,5 +1,9 @@
 # How to Enable SSO Between HCL DX and Volt MX Foundry
 
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
 ## Introduction
 
 This guide walks you through enabling **Single Sign-On (SSO)** between **HCL Digital Experience** and **HCL Volt MX Foundry**, where DX acts as the OAuth 2.0 service provider.

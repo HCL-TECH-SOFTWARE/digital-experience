@@ -1,5 +1,9 @@
 # How to Deploy HCL DX and HCL Volt MX within the Same Kubernetes Environment
 
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
 ## Introduction
 
 This guide explains how to deploy **HCL DX** and **HCL Volt MX** within the same Kubernetes environment and set up the ingress and routes to be accessed on the same host.

@@ -1,5 +1,9 @@
 # How to Deploy HCL Volt MX Portlets into HCL DX
 
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
 ## Introduction
 
 This guide shows you how to generate a **Volt MX portlet** using Iris, deploy it into **HCL DX**, and verify that the portlet renders correctly on a DX page.
