@@ -125,6 +125,9 @@ HCL DX 9.5 requires JDK 7.0* or later for installation.
 
 ## Databases
 
+!!!note
+    All databases require Extended Architecture (XA) transactions using a two-phase commit protocol (2PC) and Distributed Transaction Coordinator (DTC) to be enabled.
+
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Apache Derby|10.11*<br/>|8.5|
