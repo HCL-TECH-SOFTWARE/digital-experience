@@ -11,7 +11,7 @@ Follow the installation and configuration steps to integrate HCL Digital Experie
 
     Note that the specified HCL Volt MX Foundry version is the tested version. Using later versions will most probably work but it is not guaranteed.
 
--   **[How to Integrate HCL Digital Experience and HCL Volt MX ](./how_to_integrate_mx.md)**
+-   **[How to Deploy HCL DX and HCL Volt MX within the Same Kubernetes Environment](./how_to_integrate_mx.md)**
 -   **[How to Enable SSO Between HCL Digital Experience and HCL Volt MX](./how_to_enable_sso.md)**  
 -   **[How to Use HCL Digital Experience APIs in HCL Volt MX Foundry](./how_to_integrate_dx_api_mx.md)** 
 -   **[How to Deploy Volt MX portlet into HCL DX](./how_to_integrate_mx_portlet_to_dx.md)**

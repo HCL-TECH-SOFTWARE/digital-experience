@@ -1,70 +1,69 @@
+# How to Deploy HCL Volt MX Portlets into HCL DX
 
+## Introduction
 
-# How to Deploy HCL Volt MX Portlets into HCL Digital Experience (DX)
-
-## Overview
-
-This guide shows how to generate a Volt MX portlet using Iris, deploy it into HCL DX, and verify that the portlet renders correctly on a DX page.
+This guide shows you how to generate a **Volt MX portlet** using Iris, deploy it into **HCL DX**, and verify that the portlet renders correctly on a DX page.
 
 ## Prerequisites
 
-- Installed HCL Volt MX Iris
-- An active HCL DX deployment
-- Access to credentials and hostname for DX
-- An existing or new Volt MX Web App project
+To follow this guide, you'll need:
 
-## Step 1: Create or Use a Web App Project in Iris
+* **HCL Volt MX Iris** installed.
+* An active **HCL DX deployment**.
+* Access to **credentials and hostname** for your DX environment.
+* An existing or new **Volt MX Web App project**.
 
-### 1. Open HCL Volt MX Iris.
-### 2. Create a new Web App project or open an existing one.
+## Instructions
 
-For more on creating and managing projects in Iris, refer to:  
-[Create, Migrate, or Import a Project](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/CreateMigrateOrImportProject.html)
+### Step 1: Create or Use a Web App Project in Iris
 
-## Step 2: Configure HCL DX Host in Iris
+1.  Open **HCL Volt MX Iris**.
+2.  **Create a new Web App project** or **open an existing one**.
 
-### 1. In the Iris project settings, configure the **DX host details**.
-### 2. Example settings may include:
+    For more on creating and managing projects in Iris, refer to: [Create, Migrate, or Import a Project](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/CreateMigrateOrImportProject.html)
 
-- Hostname of the DX deployment
-- Port and protocol (e.g., `https://dx-hostname.com`)
+### Step 2: Configure HCL DX Host in Iris
 
-![DX Host Configuration](./assets/image1.png)
+1.  In the Iris project settings, configure the **DX host details**.
+2.  Example settings may include:
+    * Hostname of the DX deployment
+    * Port and protocol (e.g., `https://dx-hostname.com`)
 
-## Step 3: Build and Publish the Volt MX Portlet
+    ![DX Host Configuration](./assets/image1.png)
 
-### 1. From the **Build** menu, select **Build and Publish Web**.
+### Step 3: Build and Publish the Volt MX Portlet
 
-![Build Web](./assets/image5.png)
+1.  From the **Build** menu, select **Build and Publish Web**.
 
-### 2. In the **Post Build Actions**, choose:
-- **Build and Publish Portlet to DX**
-- **Clean Build**
+    ![Build Web](./assets/image5.png)
 
-![Build Options](./assets/image2.png)
+2.  In the **Post Build Actions**, choose:
+    * **Build and Publish Portlet to DX**
+    * **Clean Build**
 
-### 3. Click **Build** to generate and deploy the portlet to DX.
+    ![Build Options](./assets/image2.png)
 
-ℹFor more information, refer to:  
-[Publishing a Web App in Volt MX Iris](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/WebPublish.html#overview)
+3.  Click **Build** to generate and deploy the portlet to DX.
 
-## Step 4: Add the Portlet to a DX Page
+    ℹ For more information, refer to: [Publishing a Web App in Volt MX Iris](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Iris/iris_user_guide/Content/WebPublish.html#overview)
 
-### 1. Log in to the HCL DX admin console.
-### 2. Enable **Edit Mode** from the site toolbar.
-### 3. Navigate to the page where you want to place the portlet.
-### 4. Click the **Add page components and applications** icon.
+### Step 4: Add the Portlet to a DX Page
 
-![Add Component](./assets/image3.png)
+1.  Log in to the **HCL DX admin console**.
+2.  Enable **Edit Mode** from the site toolbar.
+3.  Navigate to the page where you want to place the portlet.
+4.  Click the **Add page components and applications** icon.
 
-### 5. Under the **Applications** tab, use the search bar to locate the deployed Volt MX portlet.
-### 6. Click the **Add (+)** icon next to the desired portlet.
+    ![Add Component](./assets/image3.png)
 
-![Select Portlet](./assets/image4.png)
+5.  Under the **Applications** tab, use the search bar to locate the deployed Volt MX portlet.
+6.  Click the **Add (+)** icon next to the desired portlet.
 
-### 7. Exit **Edit Mode** and verify that the portlet renders correctly on the page.
+    ![Select Portlet](./assets/image4.png)
 
-## Optional: Enable SSO for the Portlet
+7.  Exit **Edit Mode** and verify that the portlet renders correctly on the page.
+
+### Optional: Enable SSO for the Portlet
 
 If your Volt MX app contains a login page but you want to use **SSO via HCL DX**, follow the steps in the related guide:
 
