@@ -8,7 +8,7 @@ A "custom JSP" field is available on some element types when added to an authori
 
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
-A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: [my.custom.key];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
+A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: \[my.custom.key];myfile where my.custom.key is a constant within the Web Content Manager configuration service.
 
 **Custom bean and EditorBean API:**
 
@@ -336,4 +336,3 @@ document.getElementById('<%=customItem.getFieldName()%>_mycustomuser').value;
 
 <INPUT id='<%=customItem.getFieldName()%>_mycustomuser' value="<%=fvalue%>">
 ```
-
