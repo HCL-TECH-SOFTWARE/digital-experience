@@ -39,6 +39,11 @@ To enable SSO, ensure you have:
     quit
     ```
 
+    Where:
+    
+    - `<OAuthProviderName>` is the OAuth provider name (typically OAuthConfig).
+    - `<ProviderConfigFile>` is the full path to the OAuth provider configuration file. Download and use the [DXProvider.xml](./DXProvider.xml) configuration file which includes Auto Authorize setup for the VoltMX client.
+
 3.  **Verify the configuration file**
 
     ```bash
