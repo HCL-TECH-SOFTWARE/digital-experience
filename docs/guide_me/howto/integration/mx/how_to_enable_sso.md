@@ -166,8 +166,10 @@ To enable SSO, ensure you have:
 
 3.  **Click "Test login" and confirm the OAuth login screen appears.**
 
+    ![alt text](./assets/image-6.png)
+
     !!! note
-        If SSL errors occur, import the DX SSL certificate into WebSphere using: `Security > SSL certificate and key management > Retrieve from port`.
+        If the test login fails due to an SSL handshake error about a missing certification path, add the certificates for the HCL DX host in the administrator console. Go to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates > Retrieve from port**. Enter the HCL DX host, port, and alias. Click **Retrieve signer information** and then **Save**.
 
 4.  **Enable SSO in Volt MX**
 
@@ -201,8 +203,6 @@ To enable SSO, ensure you have:
 
     * Deploy the Iris application to HCL DX. For more information, see [How to Deploy Volt MX portlet into HCL DX](./how_to_integrate_mx_portlet_to_dx.md).
     * After deploying the application, when the user goes to a web page, a window appears asking for permission to allow the client Volt MX to access the data. Click **Yes** to allow the portlet to login for single sign-on.
-
-    ![alt text](./assets/image-6.png)
 
 ## Result
 
