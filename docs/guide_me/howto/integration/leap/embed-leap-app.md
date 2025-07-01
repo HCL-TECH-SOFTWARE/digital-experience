@@ -14,7 +14,7 @@ These steps will enable you to embed a Leap application onto a DX site using Lea
 
 2\. Ensure that you can [access Leap and DX from the same domain name](./how-to-integrate-leap.md) and that [single sign-on is enabled](./enable-sso-leap-dx.md).
 
-3\. **Create a library** in DX and edit the shared settings of Authoring so that your new library is visible.
+3\. We now need to **create a library** in DX. To create a new library, go to Practitioner Studio > Web Content > Web Content Libraries > Create New Library. Enable viewing it in Authoring by going to Web Content > Authoring > Preferences > Edit Shared Settings > Library Selection. Add your new library to the Selected Libraries box then press OK.
 
 4\. **Create a new Presentation template** in the new Library. Enter the following in the field labeled "Presentation Template Options": `[Element context="current" type="content" key="html"]`
 
