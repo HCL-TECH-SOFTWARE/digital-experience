@@ -6,7 +6,7 @@
 
 ## Introduction
 
-These steps will enable you to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding). It is recommended that you have basic knowledge of DX to properly implement this; the following HCL Software U lessons may help: [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction), [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner) and [HDX-DEV-100 HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-dev-100-dx-developer-beginner). This HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) introduces how to make Leap applications. 
+These steps will enable you to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding). HCL Software U tutorial content related to this material are linked at the bottom of the page. 
 
 ## Instructions: 
 
@@ -57,3 +57,9 @@ Leap.onReady = function() {
 <img src="../../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
 
 8\. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created under "Page Components". Click on the Site Area, then you should find the Content you created. Add that Content to the page to **embed your Leap app**. 
+
+!!!note
+    Recommended knowledge to properly implement this are as follows: 
+    - Familiarity with the basic functions of DX, as covered in [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction), [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner)
+    - Familiarity with the Web Content Authoring tool as covered in this [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=414). 
+    - Creating Leap apps, as introduced in this HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821). 
