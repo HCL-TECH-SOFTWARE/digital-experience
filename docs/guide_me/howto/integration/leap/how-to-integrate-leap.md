@@ -18,19 +18,12 @@ Follow the links for detailed steps.
 
 3\. Install your Leap helm chart into your cluster.
 
-4\. By default the HAProxy Service is deployed as a `LoadBalancer` Service type. Set `networking.haproxy.serviceType` to `ClusterIP` in the custom values if you use DX with an Ingress as described in the next step.
-```yaml
-### DX helm values
-networking:
-  haproxy:
-      serviceType: ClusterIP
-      ssl: false
-```
+!!!note
+    By default the HAProxy Service is deployed as a `LoadBalancer` Service type. Set `networking.haproxy.serviceType` to `ClusterIP` in the custom values if you use DX with an Ingress as described in the next step.
 
-5\. [Configure either Ingress or Gateway API for external traffic routing](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md). 
+4\. [Configure either Ingress or Gateway API for external traffic routing](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md). 
 
-
-6\. Access Leap via `https://<your-domain-name>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
+5\. Access Leap via `https://<your-domain-name>/apps` and follow the on-screen instructions to eventually open the Leap interface shown below:
 
 ![](../../../../assets/Leap_homepage.png)
 !!!tip 
