@@ -12,9 +12,62 @@ There are several ways to integrate HCL Leap applications into HCL Digital Exper
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
-There is an option to integrate HCL Leap applications with HCL DX by using the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html){target="_blank"} in the HCL Leap documentation.
+These steps will enable you to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding). HCL Software U tutorial content related to this material are linked at the bottom of this section. 
 
-With this method, you can use a Content Template to allow a business user to select the application and form ID. These details are then used in a Presentation Template with the JavaScript API to call the right Leap application and form.
+1\. Create the Leap application that you plan to integrate, if you haven't done so. 
+
+2\. Ensure that you can [access Leap and DX from the same domain name](../installation/index.md) and that [single sign-on is enabled](../configuration/index.md#enabling-ltpa-sso-between-hcl-leap-and-hcl-dx-in-kubernetes).
+
+3\. We now need to **create a library** in DX. To create a new library, go to Practitioner Studio > Web Content > Web Content Libraries > Create New Library. Enable viewing it in Authoring by going to Web Content > Authoring > Preferences > Edit Shared Settings > Library Selection. Add your new library to the Selected Libraries box then press OK.
+
+4\. **Create a new Presentation template** in the new Library. Enter the following in the field labeled "Presentation Template Options": `[Element context="current" type="content" key="html"]`
+
+5\. **Create an authoring template/content template**. Under Manage Elements, add an HTML element. Set the content template's default presentation template to the presentation template you made in the previous step:
+  
+<img src="../../../../../assets/dx-leap-integration-html-ct.png" alt="default presentation template" width="600" height="1000">
+
+6\. **Create a site area** using the default template. Under the Properties tab > Profile > Keywords, add `ibm.portal.toolbar.NewContent`. This will make your site area visible under your DX site's Edit Mode.
+
+<img src="../../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
+
+7\. Inside the Site Area you created, create the Content based on your content template. For the HTML value, use the script below, replacing `{appId}` and `{formId}` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
+```
+<div id="[Plugin:ScriptPortletNamespace]leapDiv" style="width: 100%"></div>
+
+<script src="/apps/api/leap.js" data-leap-config="{overwriteExistingDojoConfig: true}"></script>
+
+<script>
+Leap.onReady = function() {
+    let prefSecMod =  'anon';
+
+    [Plugin:NotEquals text1="[Plugin:EvaluateEL value="${wp.user.uid}"]" text2=""]
+    prefSecMod =  'secure';
+    [/Plugin:NotEquals]
+
+    let launchParams =  {
+        'appId': '{appId}',
+        'formId': '{formId}',
+        'locale': navigator.language,
+        'targetId': '[Plugin:ScriptPortletNamespace]leapDiv',
+        'prefSecMode': prefSecMod
+    };
+
+    console.log('### launchParams:', launchParams);
+
+    Leap.launch(launchParams);
+};
+</script> 
+```
+<img src="../../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
+
+8\. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created under "Page Components". Click on the Site Area, then you should find the Content you created. Add that Content to the page to **embed your Leap app**. 
+
+!!!note
+    Recommended knowledge to properly implement this are as follows:
+     
+    - Familiarity with the basic functions of DX, as covered in [HDX-INTRO](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction), [HDX-BU-100 HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner)
+    - Familiarity with the Web Content Authoring tool as covered in this [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=414). 
+    - Creating Leap apps, as introduced in this HCL Software U [lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821). 
 
 ### Integrating HCL Leap applications with Web Application Bridge
 
