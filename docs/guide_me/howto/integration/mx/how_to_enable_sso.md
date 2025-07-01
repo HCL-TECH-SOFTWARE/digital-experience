@@ -94,8 +94,30 @@ To enable SSO, ensure you have:
 
 2.  **Edit the XML to add Volt MX:**
 
-    ```xml
-    <client id="voltmx" component="OAuthConfig" secret="a2e3d8c3-uuid-value" displayname="Volt MX" redirect="https://<VOLT_MX_HOST>/auth/dx/<BASE64_DX_HOST>/callback" enabled="true"/>
+    ```sh
+    vi /opt/HCL/wp_profile/config/cells/dockerCell/oauth20/base.clients.xml
+    ```
+
+    ```
+    <client id="voltmx" component="<OAUTH_PROVIDER_NAME>" secret="<OAUTH_SECRET>" displayname="Volt MX" redirect="https://<VOLT_MX_HOST>/auth/dx/<BASE_64_ENCODED_DX_HOSTNAME>/callback" enabled="true">
+    </client>
+    ```
+
+    Where:
+
+      - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
+
+      - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
+      
+      - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment. [Redirect URL](#adding-a-new-application-in-volt-mx-foundry) should be available in Volt MX Foundry (for example, voltmx-env.com).
+
+      - `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64 (dx-hostname) encoded string.
+
+    For example:
+
+    ```
+    <client id="voltmx" component="OAuthConfig" secret="a2e3d8c3-7875-4512-a0da-8b5fd61f2245" displayname="Volt MX" redirect="https://<voltmx-env.com>/authService/100000002/oauth2/callback" enabled="true">
+    </client>
     ```
 
 ### Step 4: Install the OAuth Application
