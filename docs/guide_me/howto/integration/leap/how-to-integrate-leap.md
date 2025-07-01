@@ -22,9 +22,9 @@ Follow the links for detailed steps.
 ```yaml
 ### DX helm values
 networking:
-    haproxy:
-        serviceType: ClusterIP
-        ssl: false
+  haproxy:
+      serviceType: ClusterIP
+      ssl: false
 ```
 
 5\. [Configure either Ingress or Gateway API for external traffic routing](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md). 
