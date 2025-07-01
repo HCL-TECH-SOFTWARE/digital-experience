@@ -53,7 +53,7 @@ configuration:
       
       iii\. Click LTPA.
       
-      iv.\ In the Cross-cell single sign-on section, enter values for the following fields:
+      iv\. In the Cross-cell single sign-on section, enter values for the following fields:
          
        - Password – Enter and confirm a secure password. You will require this password later.
          
