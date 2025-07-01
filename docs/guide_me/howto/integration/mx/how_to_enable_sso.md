@@ -143,6 +143,8 @@ To enable SSO, ensure you have:
 
 1.  **Create an Application in Volt MX Foundry.**
 
+    For instructions, refer to [How to Add Applications](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html){target="_blank"}.
+
 2.  **Configure Identity Service**
 
     * Type: OAuth
