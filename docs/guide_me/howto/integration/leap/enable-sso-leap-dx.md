@@ -12,12 +12,12 @@ This guide shows you how to setup LTPA single sign-on between DX and Leap. These
  
 1\. Ensure both DX and Leap use an identical user registry configuration.
  
-2\. Ensure both DX and Leap use the same RealmName (e.g., defaultWIMFileBasedRealm).
+2\. Ensure both DX and Leap use the same realm name (e.g., defaultWIMFileBasedRealm).
   
-   - For DX, you may set the realm name via the WAS Console, at Security > Global Security > User Account Repository > Realm Name, as shown in the following image:
+   - For DX, you may check the realm name as follows: go to the WAS Console (your-domain.com/ibm/console). Go to Security > Global Security > User Account Repository > Realm Name, as shown in the following image:
 ![](../../../../assets/dx-leap-integration-realm.png)
   
-   - For Leap, you may set a custom override file where the realm name specified is the same as in DX; note where the realm name `defaultWIMFileBasedRealm` appears in the following example:
+   - For Leap, you may use the configOverrideFiles parameter in your Helm chart's values.yaml file to ensure that the realm name is the same as in DX. In this example, DX uses the realm name "defaultWIMFileBasedRealm", so we set Leap's realm name to that as well. Note where the realm name `defaultWIMFileBasedRealm` appears in the following example:
 
 ```yaml
 configuration:
@@ -35,6 +35,9 @@ configuration:
           </basicRegistry>
         </server>
 ```
+
+!!!note
+    For more information regarding Leap's configOverrideFiles parameter, refer to [this documentation](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html?h=configoverridefile).
  
 3\. Ensure both sides use the same DNS domain (xyz.com).
  
