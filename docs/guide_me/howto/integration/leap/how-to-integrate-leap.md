@@ -18,7 +18,7 @@ Follow the links for detailed steps.
 
 3\. Install your Leap helm chart into your cluster.
 
-4\. If there's only one external IP available you may have to set networking.haproxy.serviceType to `ClusterIP` and networking.haproxy.ssl to `false` in your DX values file. Do a helm upgrade with this configuration to detach the external IP from HAProxy and make it available to Ingress on the next step.
+4\. By default the HAProxy Service is deployed as a `LoadBalancer` Service type. Set `networking.haproxy.serviceType` to `ClusterIP` in the custom values if you use DX with an Ingress as described in the next step.
 ```yaml
 ### DX helm values
 networking:
