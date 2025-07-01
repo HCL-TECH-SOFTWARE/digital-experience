@@ -17,7 +17,7 @@ Before you begin, ensure you have:
 
 * A working **HCL Digital Experience environment**.
 * An **HCL Volt MX Foundry project and application**.
-* **DDC installation** [installation guide](./../../../../extend_dx/integration/mx/installation/index.md) and **configuration** [configuration guide](./../../../../extend_dx/integration/mx/configuration/index.md) completed.
+* Completed [installation](./../installation/index.md) and [configuration](./configuration/index.md)
 * (Optional) **Ingress configured** for separate hostname/subdomain routing.
 
 ## Instructions
@@ -48,10 +48,10 @@ To avoid this:
 
 Refer to:
 
-- [Content provider profile](./../../../../extend_dx/integration/wab/wab/h_wab_provider.md)
-- [Profile policy](./../../../../extend_dx/integration/wab/wab/h_wab_policy.md)
-- [Request/response setup](./../../../../extend_dx/integration/wab/wab/h_wab_response.md)
-- [SSO for providers](./../../../../extend_dx/integration/wab/wab/h_wab_auth.md)
+- [Content provider profile](./../../wab/wab/h_wab_provider.md)
+- [Profile policy](./../../wab/wab/h_wab_policy.md)
+- [Request/response setup](./../../wab/wab/h_wab_response.md)
+- [SSO for providers](./../../wab/wab/h_wab_auth.md)
 
 #### **Create the Profile:**
 
@@ -64,7 +64,7 @@ Refer to:
 
 ### Step 2: Create a Web Dock Application
 
-Guide: [Web Dock Application](./../../../../extend_dx/integration/wab/wab/h_wab_dock.md)
+Guide: [Web Dock Application](./../../wab/wab/h_wab_dock.md)
 
 #### **Create the Dock App:**
 
@@ -84,6 +84,8 @@ Guide: [Web Dock Application](./../../../../extend_dx/integration/wab/wab/h_wab_
 ## Result
 
 Your Volt MX app will now render within the DX page.
+
+## Support
 
 Support for this feature is not available in the HCL Support Center. For questions and issues, reach out either in the [DXers - The HCL DX User Group](https://ptb.discord.com/channels/787019554173485067/992504153328861184){target="_blank"} on Discord or in the [HCL DX forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=02c5dcf01b32f70cc1f9759d1e4bcb43){target="_blank"}.
 

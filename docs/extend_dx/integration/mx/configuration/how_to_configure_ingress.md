@@ -1,4 +1,4 @@
-# How to Deploy HCL DX and HCL Volt MX within the Same Kubernetes Environment
+# How to Configure Ingress HCL DX and Volt MX Foundry
 
 ## Applies to
 
@@ -6,16 +6,16 @@
 
 ## Introduction
 
-This guide explains how to deploy **HCL DX** and **HCL Volt MX** within the same Kubernetes environment and set up the ingress and routes to be accessed on the same host.
+This guide explains how configure ingress and routes for **HCL DX** and **HCL Volt MX** to be accessed on the same host.
 
 ## Prerequisites
 
 Before you begin, ensure you have:
 
-* A **Kubernetes cluster**.
-* **DX and MX Helm charts** ready for deployment.
+- A **Kubernetes cluster**.
+* **DX and MX Helm charts**.
 * **TLS certificates** for your domain.
-* **NGINX Ingress Controller** (or another ingress controller of your choice).
+* **Ingress Controller** (NGINX or another ingress controller of your choice).
 
 ## Instructions
 
@@ -60,6 +60,8 @@ While DX can run without ingress, integrating it with MX requires exposing both 
                 port:
                   name: haproxy
     ```
+
+For more information, refer to the [optional Ingress documentation](./../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md).
 
 ### Step 4: Configure Ingress for Volt MX Foundry
 
@@ -107,6 +109,9 @@ Next, configure Volt MX to use the same ingress controller and domain.
     ```
 
     Make sure this is accessible and correctly routed via the shared ingress.
+
+!!! important
+    If Ingress is enabled for HCL DX, modify the upload size restriction by running `kubectl -n <namespace> edit ingress/custom-routes`. Add `nginx.ingress.kubernetes.io/proxy-body-size: <size-restriction>m` to increase the upload size restriction. Make sure to specify your preferred size in the `<size-restriction>` value.  For example, to increase the restriction to 8 MB, add `nginx.ingress.kubernetes.io/proxy-body-size: 8m`.
 
 ## Result
 

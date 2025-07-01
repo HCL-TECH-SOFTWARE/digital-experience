@@ -1,2 +1,4 @@
 nav:
   - index.md
+  - how_to_configure_ingress.md
+  - how_to_enable_sso.md

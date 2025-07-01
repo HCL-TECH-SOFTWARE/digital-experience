@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This guide explains how to integrate **HCL DX APIs** into **HCL Volt MX Foundry** using the **HCL DX Content Adapter**. This enables Volt MX users to consume WCM REST V2 endpoints via custom integration services.
+This guide explains how to integrate **HCL DX APIs** into **HCL Volt MX Foundry** using the new HCL DX [Content Adapter](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/CustomDataConfig.html)), available starting with CF218. This adapter allows Volt MX users to consume WCM REST V2 endpoints through custom integration services, providing access to all available DX Experience API endpoints with predefined request and response schemas.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To follow this guide, ensure you have:
 2.  Go to: `API Management > Custom Data Adapters > Import`
 3.  Upload the adapter manually.
 
-    ![alt text](./assets/MXImportAdapter.png)
+    ![alt text](./MXImportAdapter.png)
 
     !!!note
         Ensure the adapter version matches your HCL DX deployment version.
@@ -65,14 +65,14 @@ To follow this guide, ensure you have:
 4.  Choose the OAuth Identity Provider configured earlier under **Authentication**.
 5.  Click **Save & Add Operation**.
 
-    ![alt text](./assets/MXServiceCreation.png)
+    ![alt text](./MXServiceCreation.png)
 
 ### Step 5: Add and Test Operations
 
 1.  After creating the service, click **Add Operation** to select available endpoints from WCM REST V2.
 2.  Configure request parameters and click **Save and Fetch response** to test.
 
-    ![Test Operation](./assets/MXTestOperation.png)
+    ![Test Operation](./MXTestOperation.png)
 
 3.  Log in using your identity provider credentials.
 4.  Confirm the response returns valid data.
@@ -86,6 +86,10 @@ You now have access to DX Experience APIs within Volt MX through the custom cont
 * [WCM V2 API Documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/)
 * [Configure Integration Service](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/ConfigureIntegrationService.html)
 * [Advanced Configurations](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Advanced_Configurations.html)
+
+## Support
+
+Support for this feature is not available in the HCL Support Center. For questions and issues, reach out either in the [DXers - The HCL DX User Group](https://ptb.discord.com/channels/787019554173485067/992504153328861184) on Discord, the [HCL DX forum](https://support.hcltechsw.com/community?id=community_forum&sys_id=02c5dcf01b32f70cc1f9759d1e4bcb43) or in the [Volt MX Marketplace Forum](https://support.hcltechsw.com/community?id=community_topic&sys_id=941a3aabdbb43010cc426275ca961923).
 
 ## HCLSoftware U learning materials
 

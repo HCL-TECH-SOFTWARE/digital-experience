@@ -1,1 +1,0 @@
-# How-to Integrate and Extend HCL Digital Experience with HCL Leap and HCL Volt MX

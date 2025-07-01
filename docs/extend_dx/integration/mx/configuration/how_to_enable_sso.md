@@ -64,13 +64,13 @@ To enable SSO, ensure you have:
 
 2.  **Navigate to: `Security > Global security > Trust association > Interceptors`**
 
-    ![alt text](./assets/image.png)
+    ![alt text](./image.png)
 
-    ![alt text](./assets/image-1.png)
+    ![alt text](./image-1.png)
 
 3.  **Ensure `com.ibm.ws.security.oauth20.tai.OAuthTAI` exists.**
 
-    ![alt text](./assets/image-2.png)
+    ![alt text](./image-2.png)
 
 4.  **If not, click New and add the class:**
 
@@ -82,7 +82,7 @@ To enable SSO, ensure you have:
         provider_1.filter=Authorization%=Bearer
         ```
 
-    ![alt text](./assets/image-3.png)
+    ![alt text](./image-3.png)
 
 ### Step 3: Register the OAuth Client
 
@@ -162,11 +162,11 @@ To enable SSO, ensure you have:
 
     * Client ID / Secret: Use values from the OAuth client registration.
 
-    ![alt text](./assets/image-4.png)
+    ![alt text](./image-4.png)
 
 3.  **Click "Test login" and confirm the OAuth login screen appears.**
 
-    ![alt text](./assets/image-6.png)
+    ![alt text](./image-6.png)
 
     !!! note
         If the test login fails due to an SSL handshake error about a missing certification path, add the certificates for the HCL DX host in the administrator console. Go to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates > Retrieve from port**. Enter the HCL DX host, port, and alias. Click **Retrieve signer information** and then **Save**.
@@ -175,7 +175,7 @@ To enable SSO, ensure you have:
 
     * Go to Identity Service > More Actions > Enable SSO
 
-    ![alt text](./assets/image-5.png)
+    ![alt text](./image-5.png)
 
 ### Step 6: Enable SSO in Iris App
 
@@ -201,7 +201,7 @@ To enable SSO, ensure you have:
 
 2.  **Deploy Iris app to DX**
 
-    * Deploy the Iris application to HCL DX. For more information, see [How to Deploy Volt MX portlet into HCL DX](./how_to_integrate_mx_portlet_to_dx.md).
+    * Deploy the Iris application to HCL DX. For more information, see [How to Deploy Volt MX portlet into HCL DX](./../example/how_to_integrate_mx_portlet_to_dx.md).
     * After deploying the application, when the user goes to a web page, a window appears asking for permission to allow the client Volt MX to access the data. Click **Yes** to allow the portlet to login for single sign-on.
 
 ## Result

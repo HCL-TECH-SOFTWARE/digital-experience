@@ -1,5 +1,5 @@
 nav:
   - index.md
-  - integrate_voltmx_into_dx.md
-  - dx_apis_in_foundry.md
-  - mx_portlet_in_dx.md
+  - how_to_integrate_mx_data_to_dx.md
+  - how_to_integrate_dx_api_mx.md
+  - how_to_integrate_mx_portlet_to_dx.md

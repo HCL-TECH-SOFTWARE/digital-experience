@@ -33,19 +33,19 @@ To follow this guide, you'll need:
     * Hostname of the DX deployment
     * Port and protocol (e.g., `https://dx-hostname.com`)
 
-    ![DX Host Configuration](./assets/image1.png)
+    ![DX Host Configuration](./image1.png)
 
 ### Step 3: Build and Publish the Volt MX Portlet
 
 1.  From the **Build** menu, select **Build and Publish Web**.
 
-    ![Build Web](./assets/image5.png)
+    ![Build Web](./image5.png)
 
 2.  In the **Post Build Actions**, choose:
     * **Build and Publish Portlet to DX**
     * **Clean Build**
 
-    ![Build Options](./assets/image2.png)
+    ![Build Options](./image2.png)
 
 3.  Click **Build** to generate and deploy the portlet to DX.
 
@@ -58,12 +58,12 @@ To follow this guide, you'll need:
 3.  Navigate to the page where you want to place the portlet.
 4.  Click the **Add page components and applications** icon.
 
-    ![Add Component](./assets/image3.png)
+    ![Add Component](./image3.png)
 
 5.  Under the **Applications** tab, use the search bar to locate the deployed Volt MX portlet.
 6.  Click the **Add (+)** icon next to the desired portlet.
 
-    ![Select Portlet](./assets/image4.png)
+    ![Select Portlet](./image4.png)
 
 7.  Exit **Edit Mode** and verify that the portlet renders correctly on the page.
 
@@ -71,7 +71,7 @@ To follow this guide, you'll need:
 
 If your Volt MX app contains a login page but you want to use **SSO via HCL DX**, follow the steps in the related guide:
 
-[How to Enable SSO Between HCL DX and Volt MX](./how_to_enable_sso.md)
+[How to Enable SSO Between HCL DX and Volt MX](./../configuration/how_to_enable_sso.md)
 
 ## Result
 
