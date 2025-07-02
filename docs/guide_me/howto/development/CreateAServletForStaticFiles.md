@@ -1,4 +1,4 @@
-# Detailed step by step instructions to create a servlet to serve static files from HCL DX Portal Server using Rational Application Developer
+# Create a servlet to serve static files using Rational Application Developer
 
 ## Applies to
 
@@ -12,11 +12,17 @@ In some situations a separate servlet url context is required to serve static fi
 
 1) Open Rational Application Developer (RAD). In this case version 9.7 was used.
 
-2) File > New > Web Project > Project name = "myServlet" > Select "Simple" Project Template > Select "Java EE" Programming Model > Next > Accept defaults under "Deployment" project settings > Finish
+2) Go to File > New > Web Project
 
-3) In the left column of RAD, right mouse on "myServlet" > New > Servlet > (Java package name is arbitrary, for example "com.hcl.myservlet") > Class name = "myClass" > Finish
+3) Set Project name = "myServlet"
 
-4) Expand myServlet > Java Resources > src > com.hcl.myservlet > click on myClass.java > Add this line of code to the doGet method in myClass.java :
+4) Select "Simple" Project Template > Select "Java EE" Programming Model > Next
+
+5) Accept defaults under "Deployment" project settings and click Finish
+
+6) In the left column of RAD, right mouse on "myServlet" and select > New > Servlet > (Java package name is arbitrary, for example "co7.hcl.myservlet") Set Class name = "myClass". Click Finish
+
+7) Expand myServlet > Java Resources > src > com.hcl.myservlet.  Click on myClass.java. Add this line of code to the doGet method in myClass.java :
 
     ```java
     "
@@ -24,9 +30,9 @@ In some situations a separate servlet url context is required to serve static fi
     "
     ```
 
-5) In the left column of RAD, expand myServlet > right mouse on "WebContent" > New > File > File name = "index.html" > select the "source" tab and paste these contents into the lower pane: "Hello from the myServlet index.html"
+8) In the left column of RAD, expand myServlet > right mouse on "WebContent" > New > File. Set the File name = "index.html". Select the "source" tab and paste these contents into the lower pane: "Hello from the myServlet index.html"
 
-6) In the left column of RAD, expand myServlet > WebContent > Right mouse on WEB-INF > new file > Name = "web.xml" > click on the "source" tab in the right pane (for the contents of web.xml) > paste in these contents :
+9) In the left column of RAD, expand myServlet > WebContent > Right mouse on WEB-INF > new file.  Set the Name = "web.xml".  Click on the "source" tab in the right pane (for the contents of web.xml) > paste in these contents :
 
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -64,15 +70,15 @@ In some situations a separate servlet url context is required to serve static fi
     </web-app>
 ```
 
-7) In RAD upper left > File > Save
+10) In RAD upper left > File > Save
 
-8) In the left column of RAD, right mouse on "myServletEar" > Export > Ear file > select a destination on your local hard drive eg: c:\temp\myServletEar.ear > Finish > answer Yes to any prompts to save changes
+11) In the left column of RAD, right mouse on "myServletEar" > Export > Ear file.  Select a destination on your local hard drive eg: c:\temp\myServletEar.ear.  Click Finish. Answer Yes to any prompts to save changes
 
-9) Login to your WebSphere Admin Console > Applications > Application Types > WebSphere Enterprise Applications > Install > Choose file > select c:\temp\myServletEar.ear > Next > Fast path > Next > accept defaults > Next > accept defaults > Next > accept defaults > Next > Finish > save to Master Configuration
+12) Login to your WebSphere Admin Console and go to Applications > Application Types > WebSphere Enterprise Applications > Install.  Choose file.  Select c:\temp\myServletEar.ear Click Next > Fast path > Next > accept defaults > Next > accept defaults > Next > accept defaults > Next > Finish. Click save to Master Configuration.
 
-10) Locate "myServlet" under Applications in WebSphere Admin Console > click the box next to "myServlet" > click the "Start" button
+13) Locate "myServlet" under Applications in WebSphere Admin Console.  Click the box next to "myServlet" .  Click the "Start" button.
 
-11) Open a new private browser window and paste in these urls (modified for your portal server host:port) :
+14) Open a new private browser window and paste in these urls (modified for your portal server host:port) :
 
 `http://host:port/myServlet/myClass`
 
@@ -86,4 +92,4 @@ eg if you copy myfile.txt to that location, you can render the file using url:
 
 `http://host:port/myServlet/myfile.txt`
 
-Note also the context used in the url is the same as the project name.
+Note the context used in the url is the same as the project name.
