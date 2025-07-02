@@ -124,7 +124,10 @@ $ helm install foundry apps -f values.yaml -n <namespace> --timeout 10m
 ```
 
 The deployment will take time as container images are downloaded and applications initialize.
-
+!!!tips
+        - Some values are empty by default in the MX values.yaml file, so if you forget to set them, you may encounter the following error:`Error: INSTALLATION FAILED: values don't meet the specifications of the schema(s) in the following chart(s)...` followed by a list of unset (or incorrectly set) parameters. In that case, please refer to the [MX docs](https://help.hcl-software.com/voltmx/v9.5/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#installation) for guidance on how to set them according to your specific case.
+        - In case you get the following error `Error: INSTALLATION FAILED: failed pre-install: 1 error occurred: * timed out waiting for the condition`, you may need to do further investigation--such as running `kubectl describe` on a failing pod, or running `kubectl logs` on related pods--to determine the actual cause. 
+        - Make sure to create the `hclImagePullSecret` before running `helm install`, otherwise the image pull will fail.
 ## Result
 
 You have now successfully installed HCL Volt MX Foundry
