@@ -25,7 +25,7 @@ To enable SSO, ensure you have:
 1.  **Access the DX Core Pod**
 
     ```bash
-    kubectl exec -it hcl-dx-dev1-core-0 core -n hcl-dx-dev1 -- sh
+    kubectl exec -it <core-pod> core -n <namespace> -- sh
     ```
 
 2.  **Run the wsadmin utility to create the OAuth provider**
