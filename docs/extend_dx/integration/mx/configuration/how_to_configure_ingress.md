@@ -91,11 +91,6 @@ Next, configure Volt MX to use the same ingress controller and domain.
 
     Confirm DX is reachable using the appropriate URL:
 
-    * **Without HAProxy container:**
-        ```
-        https://<localhost>:10202/hcl/dxconnect/processHandler/version
-        ```
-    * **With HAProxy container:**
         ```
         https://<host-name>/hcl/dxconnect/processHandler/version
         ```
