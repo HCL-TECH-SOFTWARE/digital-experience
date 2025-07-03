@@ -1,0 +1,7 @@
+title: Monitor syndication
+nav:
+    - index.md
+    - wcm_syndication_failed.md
+    - wcm_syndication_pending.md
+    - wcm_syndication.md
+    - wcm_syndication_monitoring
