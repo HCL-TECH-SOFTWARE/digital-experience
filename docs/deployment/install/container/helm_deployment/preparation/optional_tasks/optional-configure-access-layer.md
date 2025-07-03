@@ -23,7 +23,7 @@ In the `values.yaml` file, HAProxy `serviceType` is set to `loadBalancer` by def
 
 ```yaml
 networking:
-haproxy:
+  haproxy:
     serviceType: ClusterIP
 ```
 
@@ -58,22 +58,22 @@ haproxy:
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
-    name: nginx-ingress
+      name: nginx-ingress
     spec:
-    ingressClassName: nginx
-    tls:
-    - secretName: dx-tls-cert
-    rules:
-    - host: your-kube-deployment.com
+      ingressClassName: nginx
+      tls:
+      - secretName: dx-tls-cert
+      rules:
+      - host: your-kube-deployment.com
         http:
-        paths:
-        - path: /
+          paths:
+          - path: /
             pathType: Prefix
             backend:
-            service:
+              service:
                 name: <release-name>-haproxy
                 port:
-                name: haproxy
+                  name: haproxy
     ```
 
 #### Advanced configuration
@@ -148,7 +148,7 @@ Refer to the following steps to configure the optional Gateway API in a Kubernet
 
     ```yml
     networking:
-    haproxy:
+      haproxy:
         serviceType: ClusterIP
         ssl: false
     ```
@@ -175,22 +175,22 @@ Refer to the following steps to configure the optional Gateway API in a Kubernet
     apiVersion: gateway.networking.k8s.io/v1
     kind: Gateway
     metadata:
-    name: gateway
+      name: gateway
     spec:
-    gatewayClassName: nginx
-    listeners:
-    - name: http
+      gatewayClassName: nginx
+      listeners:
+      - name: http
         port: 80
         protocol: HTTP
         hostname: your-kube-deployment.com
-    - name: https
+      - name: https
         port: 443
         protocol: HTTPS
         hostname: your-kube-deployment.com
         tls:
-        mode: Terminate
-        certificateRefs:
-        - kind: Secret
+          mode: Terminate
+          certificateRefs:
+          - kind: Secret
             name: dx-tls-cert
     ```
 
@@ -202,21 +202,21 @@ Refer to the following steps to configure the optional Gateway API in a Kubernet
     apiVersion: gateway.networking.k8s.io/v1
     kind: HTTPRoute
     metadata:
-    name: dx-http-route
+      name: dx-http-route
     spec:
-    parentRefs:
-    - name: gateway
+      parentRefs:
+      - name: gateway
         sectionName: https
-    hostnames:
-    - your-kube-deployment.com
-    rules:
-    - matches:
+      hostnames:
+      - your-kube-deployment.com
+      rules:
+      - matches:
         - path:
             type: PathPrefix
             value: /
         backendRefs:
         - name: <release-name>-haproxy
-        port: 80
+          port: 80
     ```
 
 6. Apply the HTTPRoutes resources using the `kubectl apply -f dx-http-route.yaml` command.
