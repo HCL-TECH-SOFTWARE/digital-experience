@@ -1,15 +1,27 @@
-# Monitoring syndication
+# Monitor syndication
 
-After you set up a syndication relationship, you can monitor the progress of the data replication between syndicators and subscribers for details.
+After you set up a syndication relationship, you can monitor the progress of data replication between syndicators and subscribers.
 
-## Testing syndication connection
+## Test the syndication connection
 
-To test if your syndicator and subscriber can connect to each other, click **Test Connection**. If the connection fails, investigate the cause of the connection failure.
+To test whether your syndicator and subscriber can connect to each other, click **Test Connection**. If the connection fails, investigate the cause.
 
-## Syndicator and subscriber status
+## Monitor syndicator and subscriber status
 
-You can also monitor the status of individual syndicators and subscribers:
+You can monitor the status of individual syndicators and subscribers:
 
-<!--
-**Parent topic:**[How to manage syndicators and subscribers](../panel_help/wcm_syndication.md)-->
+* [Manage syndicators and subscribers](../manage_synd_subs/wcm_syndication_monitoring/wcm_syndication.md)  
+  Use syndication to transfer data between HCL Web Content Manager instances.
+
+
+   * [Manage pending items](../manage_synd_subs/wcm_syndication_monitoring/wcm_syndication_pending.md)  
+     After you configure a syndication relationship, monitor pending items on a syndicator. Pending items are items updated since the last syndication.
+
+
+   * [Manage failed items](../manage_synd_subs/wcm_syndication_monitoring/wcm_syndication_failed.md)  
+     Sometimes items fail to syndicate. Use the failed items view to review them and re-run syndication after you resolve the issues.
+
+
+
+
 
