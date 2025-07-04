@@ -81,7 +81,7 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
     !!!note
         For more information regarding Leap's `configOverrideFiles` parameter, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html?h=configoverridefile).
 
-3. Ensure both DX and Leap use the same DNS domain (for example, `xyz.com`).
+3. Ensure both DX and Leap use the same DNS domain. Refer to [these steps](../installation/index.md#steps-to-create-a-basic-leapdx-installation) for details..
 
 4. Ensure LTPA cookies flow only over HTTPS.
 
