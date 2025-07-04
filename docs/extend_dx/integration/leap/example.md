@@ -67,7 +67,7 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
     1. In your library, click **New > Site Area > Default Site Area Template**.
     2. Under **Name**, enter the name of your site area.
     3. Click **Properties > Profile**.
-    4. Under **Keywords**, add the following parameter to make your site area visible when in your DX site's **Edit Mode**.
+    4. Under **Keywords**, add the following parameter to make your site area is visible when in your DX site's **Edit Mode**.
 
         ```
         ibm.portal.toolbar.NewContent
@@ -77,7 +77,18 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
 
     <img src="../../../../assets/dx-leap-integration-siteareakeyword.png" alt="keyword property" width="400" height="800">
 
-7. Inside the site area you created, create the Content based on your content template. For the HTML value, use the script below, replacing `{appId}` and `{formId}` with the appropriate values, depending on your app. The Launch link of your Leap app should have the details you need; refer to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, that is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
+7. Create the **Content** based on your content template. 
+
+    1. In your library, click **Content**.
+    2. You should see the site area you created. Click on it.
+    3. Inside your site area, click **New > Content** and select the content template you previously created.
+    4. Under **Name**, enter the name of your site area.
+    5. Open Leap in a different tab and get the **Launch link** for your app. 
+    6. Compare your Launch link to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, and note your `appId` and `formId`. That is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
+
+    <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
+
+    7. Go back to the Content you're creating. Under **html**, paste the script below:
 
     ```
     <div id="[Plugin:ScriptPortletNamespace]leapDiv" style="width: 100%"></div>
@@ -106,8 +117,8 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
     };
     </script> 
     ```
-
-    <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
+    
+    8. In the script you pasted, replace `{appId}` and `{formId}` with the appId and formId you obtained from your Launch link.
 
 8. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created under "Page Components". Click on the Site Area, then you should find the Content you created. Add that Content to the page to **embed your Leap app**.
 
