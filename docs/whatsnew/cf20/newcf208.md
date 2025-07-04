@@ -27,7 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 ## Kubernetes deployment HA Proxy option to configure Ingress 
 
 === "Containers"                                                                                                    
-    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for more information. -->
+    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for more information. -->
 
 ## Web Content Manager Author options now include Tiny MCE
 
