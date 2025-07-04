@@ -4,7 +4,7 @@ This section provides an overview of the possibilities offered by the integratio
 
 ## Showing HCL Leap data on HCL DX pages
 
-In this example, you can integrate data from HCL Leap to your HCL DX pages using the Digital Data Connector. For more information, see [Digital Data Connector](../../ddc/index.md). <!--which example are we referring to in this?-->
+In this example, you can integrate data from HCL Leap to your HCL DX pages using the Digital Data Connector. For more information, see [Digital Data Connector](../../ddc/index.md).
 
 ## Integrating the HCL Leap application in HCL DX
 

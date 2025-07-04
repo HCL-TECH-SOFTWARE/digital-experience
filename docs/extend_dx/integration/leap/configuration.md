@@ -40,7 +40,7 @@ You can use an [optional Ingress](../../../deployment/install/container/helm_dep
 
 Refer to the following steps to enable Lightweight Third-Party Authentication (LTPA) Single Sign-On (SSO) between Leap and DX in Kubernetes. These steps are based on [a community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4){target="_blank"} in HCLSoftware Community.
 
-1. Ensure both DX and Leap use an identical user registry configuration. <!--Do we have specific steps for this? Or can we link it to a doc that explains this step?-->
+1. Ensure both DX and Leap use an identical user registry configuration.
 
 2. Ensure both DX and Leap use the same realm name.
   
@@ -81,7 +81,7 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
     !!!note
         For more information regarding Leap's `configOverrideFiles` parameter, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html?h=configoverridefile).
 
-3. Ensure both DX and Leap use the same DNS domain (for example, `xyz.com`). <!--Do we have specific steps for this? Or can we link it to a doc that explains this step?-->
+3. Ensure both DX and Leap use the same DNS domain (for example, `xyz.com`).
 
 4. Ensure LTPA cookies flow only over HTTPS.
 
