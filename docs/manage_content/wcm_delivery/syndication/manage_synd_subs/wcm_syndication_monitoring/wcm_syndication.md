@@ -1,3 +1,3 @@
-# Managing syndicators and subscribers | HCL Digital Experience
+# How to manage syndicators and subscribers
 
-Syndication transports data from one HCL Web Content Manager instance to another.
+Syndication transports data from one instance of HCL Web Content Manager to another.
