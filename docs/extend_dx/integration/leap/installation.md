@@ -8,7 +8,7 @@ Refer to the following steps to install HCL Leap, with its default settings, on 
 
 2. In the cluster, [retrieve the Leap image and create the `leap-harbor` secret](https://opensource.hcltechsw.com/leap-doc/latest/helm_load_images.html#retrieve-leap-container-image){target="_blank"}.
 
-3. Install your Leap Helm chart into your cluster.
+3. Install your Leap Helm chart into your cluster by running `helm install <your-leap-release-name> <path-to-leap-image> -n <your-dx-namespace>`. You can give it any release name you want, but it's best to make it descriptive, like "leap-release" or "leap-deployment".
 
     !!!note
         By default, the HAProxy service is deployed as a `LoadBalancer` service type. Set `networking.haproxy.serviceType` to `ClusterIP` in the `values.yaml` file if you use DX with an Ingress as described in the next step.
