@@ -85,9 +85,6 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
     4. Under **Name**, enter the name of your site area.
     5. Open Leap in a different tab and get the **Launch link** for your app. 
     6. Compare your Launch link to the pattern `sample-hostname.com/.../app/<appId>/launch/index.html?form=<formId>`, and note your `appId` and `formId`. That is, your appId should come after the word "app" in your link, whereas the formId should come after "form=".
-
-    <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
-
     7. Go back to the Content you're creating. Under **html**, paste the script below:
 
     ```
@@ -120,7 +117,16 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
     
     8. In the script you pasted, replace `{appId}` and `{formId}` with the appId and formId you obtained from your Launch link.
 
-8. Go to your DX site. Upon enabling Edit Mode, and clicking the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">) you should now be able to see the Site Area you created under "Page Components". Click on the Site Area, then you should find the Content you created. Add that Content to the page to **embed your Leap app**.
+    <img src="../../../../assets/dx-leap-integration-content.png" alt="appId and formId" width="600" height="1000">
+
+8. Embed your Leap app.
+    
+    1. Go to your DX site. 
+    2. Enable **Edit Mode** by clicking on the **Edit Mode** toggle on the upper left of the page.
+    3. Click on the Add page components and applications button (<img src="../../../../assets/dx-leap-integration-addicon.png" alt="add icon" width="25" style="vertical-align: middle;">). You should now be able to see the site area you created under "Page Components". 
+    4. Click on your site area. You should now see the Content you created. 
+    5. Add your content to the page by dragging it to your preferred location.
+    6. You have now embedded your Leap app into your DX page.
 
 ### Integrating HCL Leap applications with Web Application Bridge
 
