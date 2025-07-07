@@ -2,9 +2,12 @@
 
 This section provides an overview of the possibilities offered by the integration of HCL Volt MX Foundry and HCL Digital Experience (DX). The following examples show options to integrate HCL Volt MX into HCL DX pages and to use HCL DX APIs in Volt MX Foundry.
 
--   **[How to Use HCL DX APIs in HCL Volt MX Foundry](./how_to_integrate_mx_data_to_dx.md)**
--   **[How to Integrate Volt MX Data and Applications into HCL DX](./how_to_integrate_mx_data_to_dx.md)**
--   **[How to Deploy HCL Volt MX Portlets into HCL DX](./how_to_integrate_mx_portlet_to_dx.md)**
+- **[Using HCL DX APIs in HCL Volt MX Foundry](./integrate_dx_api_mx.md)**  
+This topic explains how to integrate HCL DX APIs into HCL Volt MX Foundry using the new HCL DX Content Adapter.
+- **[Integrating Volt MX data and applications into HCL DX](./integrate_mx_data_to_dx.md)**  
+This guide explains how to display Volt MX Foundry data on HCL DX pages using Digital Data Connector (DDC) and embed a Volt MX web application directly into an HCL DX page using the Web Application Bridge (WAB).
+- **[Deploying HCL Volt MX portlets into HCL DX](./integrate_mx_portlet_to_dx.md)**  
+This guide shows you how to generate a Volt MX portlet using Iris, deploy it into HCL Digital Experience (DX), and verify that the portlet renders correctly on a DX page.
 
 ## HCLSoftware U learning materials
 
@@ -15,4 +18,3 @@ For an introduction and a demo on how to integrate DX with HCL Volt MX as a deve
 HCL Volt MX for Developers Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_Integration_with_HCL_Volt_MX_for_Developers.pdf){target="_blank"}.
 
 You can also use the dedicated course [HCL Volt MX Integration with HCL DX](https://hclsoftwareu.hcltechsw.com/courses/course/hvmx-int-hdx-integrate-hcl-volt-mx-with-hcl-digital-experience){target="_blank"}. This course explains the benefits of integrating HCL Volt MX with HCL DX and provides integration guidance for business users, developers, and administrators.
-

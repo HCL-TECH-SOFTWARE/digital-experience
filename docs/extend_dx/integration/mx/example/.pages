@@ -1,5 +1,5 @@
 nav:
   - index.md
-  - how_to_integrate_mx_data_to_dx.md
-  - how_to_integrate_dx_api_mx.md
-  - how_to_integrate_mx_portlet_to_dx.md
+  - integrate_mx_data_to_dx.md
+  - integrate_dx_api_mx.md
+  - integrate_mx_portlet_to_dx.md
