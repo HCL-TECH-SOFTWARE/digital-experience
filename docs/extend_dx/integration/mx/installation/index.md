@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This guide explains how to deploy HCL Volt MX Foundry to an existing Kubernetes cluster using Helm. This is the recommended method for production-grade, containerized installations on-premise or in the cloud.
+This guide explains how to deploy HCL Volt MX Foundry to an existing Kubernetes cluster using Helm.
 
 ## Prerequisites
 

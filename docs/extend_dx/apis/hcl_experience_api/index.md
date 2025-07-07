@@ -38,7 +38,7 @@ The HCL Experience API describes a high-level API through which the following sp
 
 It is recommended that developers building solutions for HCL DX 9.5 running on Kubernetes automatically use the HCL Experience API for the scenarios that are covered.
 
-The HCL Experience API is a component of the HCL DX offerings. HCL DX offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
+The HCL Experience API is a component of the HCL DX offerings. HCL DX offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"}.
 
 !!!note
     Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Web Content Manager](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/index.md) functions.

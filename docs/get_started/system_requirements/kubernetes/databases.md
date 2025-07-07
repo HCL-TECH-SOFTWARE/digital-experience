@@ -2,6 +2,9 @@
 
 This topic details the database versions and platforms tested and supported by specific HCL Digital Experience (DX) 9.5 Kubernetes deployments.
 
+!!!note
+    All databases require Extended Architecture (XA) transactions using a two-phase commit protocol (2PC) and Distributed Transaction Coordinator (DTC) to be enabled.
+
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Apache Derby|10.11*<br/>|9.5|
