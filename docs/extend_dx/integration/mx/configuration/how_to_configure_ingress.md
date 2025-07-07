@@ -44,15 +44,15 @@ This section details how to implement a generic Ingress on your Kubernetes clust
 
     For more details on these values, refer to the [HCL Volt MX Foundry Configuration documentation](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmxfoundry_containers_helm/Content/Installing_Containers_With_Helm.html#configuration){target="_blank"}.
 
-### Option 2: Implement Gateway API for HCL DX and HCL Volt MX Foundry
+## Option 2: Implement Gateway API for HCL DX and HCL Volt MX Foundry
 
 This section describes how to configure the optional Gateway API for DX and MX. The Gateway API serves as a routing mechanism that allows both products to operate under a unified hostname, improving deployment efficiency and management.
 
-#### Prerequisites
+### Prerequisites
 
 * Ensure you have set up the Gateway API for HCL DX by following the guidelines in the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md#gateway-api-implementation-for-dx-deployments).
 
-#### Instructions
+### Instructions
 
 1.  **Define a new Gateway API resource for Volt MX Foundry (MX) or extend the existing DX Gateway configuration to include MX routes.**
 
@@ -149,7 +149,7 @@ This section describes how to configure the optional Gateway API for DX and MX. 
     * Within `rules`, the `matches` block defines the criteria for routing, such as a `PathPrefix` (for example, `/authService` and `/mfconsole`).
     * The `backendRefs` section specifies the target backend service (such as `voltmx-foundry-identity`, `voltmx-foundry-console`) and port where matching requests are directed.
 
-### Verify the Deployment
+## Verify the Deployment
 
 After configuring the Access Layer, follow these steps to verify your deployment:
 
