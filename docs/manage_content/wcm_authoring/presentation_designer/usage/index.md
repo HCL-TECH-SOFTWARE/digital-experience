@@ -11,3 +11,5 @@ This section provides information on how to use the styling options available in
 This section provides steps on how to edit presentation templates in Presentation Designer.
 -   **[Canvas settings](../usage/canvas_settings.md)**  
 This section provides information on how to use the canvas settings in Presentation Designer.
+-   **[Default and override styling](../usage/default_and_override_styles.md)**  
+This section provides information on how to use the default and override styling in Presentation Designer.

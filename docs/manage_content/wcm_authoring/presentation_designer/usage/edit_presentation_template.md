@@ -43,7 +43,14 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_in_Presentation_Designer.png)
 
-2. Drag and drop a **static container element** on the canvas then enter the following values in the **Style** panel.
+2. There are two types of indicators to determine if the user can drop an element.
+    User is allowed to drop the element
+    img1
+
+    User is not allowed to drop the element
+    img2
+
+3. Drag and drop a **static container element** on the canvas then enter the following values in the **Style** panel.
     
       **Dimensions**
 
@@ -59,11 +66,11 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Container_with_Styles.png)
 
-3. Add a **static grid element** inside the container.
+4. Add a **static grid element** inside the container.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Grid.png)
 
-4. Click the **Style** panel and enter the following values to create a **1 x 2 grid**. The content section template needs a **1 x 2 grid** to display an image on the first column and the details on the second column.
+5. Click the **Style** panel and enter the following values to create a **1 x 2 grid**. The content section template needs a **1 x 2 grid** to display an image on the first column and the details on the second column.
 
       **Layout**
 
@@ -86,30 +93,30 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Apply_Grid_Styles.png)
 
-5. Click the **Add Items** panel and set the element **Source** to **Content elements**.
+6. Click the **Add Items** panel and set the element **Source** to **Content elements**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Search_Content_Template.png)
 
-6.  In the **Content template** field, search and select the content template prepared in [Prerequisites](#prerequisites).
+7.  In the **Content template** field, search and select the content template prepared in [Prerequisites](#prerequisites).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Content_Template.png)
 
-7. Drag and drop the following elements on the **grid**: 
+8. Drag and drop the following elements on the **grid**: 
     1. The **Project Image** (Image Content Element) in the first column. 
     2. The **Project Title** (Text Content Element) in the second column.
     3. The **Project Description** (Rich Text Content Element) in the second column.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Content_Elements_in_Grid.png)
 
-8. Add a **static container element** inside the second column of the **grid**. This will serve as the container for the project details.
+9. Add a **static container element** inside the second column of the **grid**. This will serve as the container for the project details.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Add_Container_in_Grid.png)
 
-9. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the **static container element**.
+10. Drag and drop the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element) inside the **static container element**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Content_Elements_in_Container.png)
 
-10. Select the **static container element** and enter the following values in the **Style** panel:
+11. Select the **static container element** and enter the following values in the **Style** panel:
 
       **Dimensions**
 
@@ -125,7 +132,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Move_Items_and_Apply_Container_Style.png)
 
-11. Select the **Project Title** (Text Content Element) and enter the following values in the **Style** panel:
+12. Select the **Project Title** (Text Content Element) and enter the following values in the **Style** panel:
 
       **Typography**
 
@@ -140,11 +147,11 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Text_Content_Element_with_Styles.png)
 
-12. Drag and drop a **static text element** in between the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element).
+13. Drag and drop a **static text element** in between the **Project Title** (Text Content Element) and **Project Description** (Rich Text Content Element).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Static_Text_Element.png)
 
-13. Enter "General Information" in the **static text element** then add the following values in the **Style** panel:
+14. Enter "General Information" in the **static text element** then add the following values in the **Style** panel:
     
       **Typography**
 
@@ -159,11 +166,11 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Input_Text_Content_and_Apply_Styles.png)
 
-14. In the **Add Items** panel, set the element **source** to **Property tag** then drag and drop the **Last modified date** property tag under the **Project Description** (Rich Text Content Element).
+15. In the **Add Items** panel, set the element **source** to **Property tag** then drag and drop the **Last modified date** property tag under the **Project Description** (Rich Text Content Element).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Property_Tag_Date.png)
 
-15. Click **Save** to confirm your changes to the presentation template. The message "Presentation Template saved successfully." appears on the screen.
+16. Click **Save** to confirm your changes to the presentation template. The message "Presentation Template saved successfully." appears on the screen.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Save_Presentation_Template.png)
 
@@ -171,7 +178,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Markup_Generated.png)
 
-16. Click the **Back** button to return to the Authoring portlet and [preview the presentation template](#previewing-the-presentation-template).
+17. Click the **Back** button to return to the Authoring portlet and [preview the presentation template](#previewing-the-presentation-template).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Click_Back_Button.png)
 

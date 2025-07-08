@@ -44,3 +44,14 @@ The following image shows the zoom level options in Presentation Designer.
 The following image shows an example of a canvas when the **Fit to window** zoom option is selected.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Zoom_Fit_to_Window.png)
+
+## Responsive Canvas setting
+
+The Canvas setting in the Presentation Designer adapts to different window sizes to ensure usability and accessibility. 
+
+- **Ellipsis Button Appearance:** When the window width is reduced, an ellipsis button (`...`) appears in the header. Clicking this button reveals options for width, height, zoom, and rotate settings.
+img1 
+- **Modal for Predefined Resolutions:**  If the window width is further reduced, predefined resolutions for Desktop, Tablet, and Phone will also be included in the modal.
+img2
+- **Message Display Below 800 Pixels:** When the window width is reduced below 800 pixels, a message is displayed to inform the user that the This application requires a minimum window width of 800 pixels to display correctly. Please resize your browser window or adjust your display settings.
+img3
