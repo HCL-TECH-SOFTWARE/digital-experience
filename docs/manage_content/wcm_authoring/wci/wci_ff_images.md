@@ -4,28 +4,34 @@ The Web Content Integrator has an image-processing feature, which allows images 
 
 ## Image-processing configuration
 
-The following parameters can be set in the WCMConsumerPlugin.properties file:
+The following parameters can be set in the `WCMConsumerPlugin.properties` file:
 
--   **Enable and disable image processing**
+- **Enable and disable image processing**
 
-    By default, image processing is enabled. To disable image processing set the property: disable.img.processing=true
+    By default, image processing is enabled. To disable it, set the property `disable.img.processing=true`.
 
-    If image processing is enabled, then the URLs specified in the "src" attributes of the image tags must not contain a query string because everything after a question mark is ignored when the image component is created.
+If image processing is enabled, do not include query strings in the `src` attributes of `<img>` tags. The system ignores everything after a question mark when it creates the image component.
 
-    For example, `<img src="http://<host_name>/program/path?param1=hello&param2=a.jpg" ...>` and `<img src="http://<host_name>/program/path?param1=world&param2=b.jpg" ...>` both creates or updates the same image component named "program.path".
+For example:
 
--   **Enable and disable embedded rich text images**
+- `<img src="http://<host_name>/program/path?param1=hello&param2=a.jpg" ...>`
+- `<img src="http://<host_name>/program/path?param1=world&param2=b.jpg" ...>`
 
-    Images can be embedded directly into the rich text elements instead of first creating an image component. This function makes images within rich text elements that are consumed by the Web Content Integrator be processed identically to images added to rich text elements in the authoring UI. By default embedded rich text images are disabled. To enable them, set the properties:
+Both URLs create or update the same image component, named `program.path`.
 
-    -   disable.img.processing=false
-    -   richtext.embedded.images.enabled=true
+-   **Enable and disable embedded rich text images**:
+    Images can be embedded directly into rich text elements instead of first creating a separate image component. This function ensures that images within rich text elements consumed by the Web Content Integrator process identically to images added through the authoring UI.
+
+    By default, embedded rich text images are disabled. To enable them, set these properties:
+
+    -   `disable.img.processing=false`
+    -   `richtext.embedded.images.enabled=true`
 
 ## Absolute image source URLs
 
-Images within HTML and rich text elements can be specified by using absolute HTTP URLs within the image source attribute. The Web Content Integrator processes absolute image source URLs as specified in the feed.
+You can specify images within HTML and rich text elements using absolute HTTP URLs in the `src` attribute. The Web Content Integrator processes these URLs exactly as specified in the feed.
 
-Example feed item:
+The following example shows an absolute image source URL in a feed item:
 
 ```
 <item>
@@ -44,11 +50,11 @@ Example feed item:
       </ibmwcm:value>
     </ibmwcm:element>
   </item>
-```
 
+```
 ## Relative image source URLs
 
-Images within HTML and rich text elements can be specified by using relative HTTP URLs within the image source attribute and a base URL from the link element of the item. The Web Content Integrator processes relative image source URLs as a concatenation of the item's link element and image source attributes in the HTML.
+ou can specify images within HTML and rich text elements using relative HTTP URLs in the src attribute. The link element of the item provides the base URL. The Web Content Integrator processes relative image source URLs by concatenating the item's link element and the image's src attributes in the HTML
 
 Example feed item:
 
@@ -74,110 +80,56 @@ Example feed item:
 
 ## How to use both absolute and relative image source URLs
 
-Images within HTML and rich text elements can be specified by using a combination of relative and absolute HTTP URLs within the image source attributes. The Web Content Integrator processes relative image source URLs as a concatenation of the item's link element and image source attributes in the HTML. The Web Content Integrator processes absolute image source URLs as specified in the feed.
 
-Example feed item:
+Images within HTML and rich text elements can use a combination of relative and absolute HTTP URLs in the `src` attribute.  
+
+
+- The Web Content Integrator processes **relative image source URLs** by combining the item's `<link>` element with the relative path.  
+- It processes **absolute image source URLs** exactly as specified in the feed.
+
+
+### Example feed item
+
 
 ```
 <item>
-    <title>RichText Component With Image 3</title>
-    <pubDate>Thu, 30 Mar 2011 16:00:00 EDT</pubDate>
-    <guid>Image_Example_3</guid>
-    <link>http://wci-feed-server</link>
-    <ibmwcm:action>add</ibmwcm:action>
-    <ibmwcm:itemType>Component</ibmwcm:itemType>
-    <ibmwcm:element>
-      <ibmwcm:type>rich text</ibmwcm:type>
-      <ibmwcm:value>
-         <![CDATA[
-         <p>Image 1:</p><img src="http://www.ibm.com/favicon.ico"/>
-         <p>Image 2:</p><img src="/img/f/fish.jpg"/>
-         <p>Image 3:</p><img src="/img/g/grapes.jpg"/>
-         ]]>
-      </ibmwcm:value>
-    </ibmwcm:element>
-  </item>
+   <title>RichText Component With Image 3</title>
+   <pubDate>Thu, 30 Mar 2011 16:00:00 EDT</pubDate>
+   <guid>Image_Example_3</guid>
+   <link>http://wci-feed-server</link>
+   <ibmwcm:action>add</ibmwcm:action>
+   <ibmwcm:itemType>Component</ibmwcm:itemType>
+   <ibmwcm:element>
+     <ibmwcm:type>rich text</ibmwcm:type>
+     <ibmwcm:value>
+        <![CDATA[
+        <p>Image 1:</p><img src="http://www.ibm.com/favicon.ico"/>
+        <p>Image 2:</p><img src="/img/f/fish.jpg"/>
+        <p>Image 3:</p><img src="/img/g/grapes.jpg"/>
+        ]]>
+     </ibmwcm:value>
+   </ibmwcm:element>
+</item>
 ```
 
 ## Expected results for a rich text component
 
-Example rich text component feed item:
-
-```
-<item>
-    <title>RichText Component With Image 4</title>
-    <pubDate>Thu, 30 Mar 2011 16:00:00 EDT</pubDate>
-    <guid>Image_Example_4</guid>
-    <ibmwcm:action>add</ibmwcm:action>
-    <ibmwcm:itemType>Component</ibmwcm:itemType>
-    <ibmwcm:element>
-      <ibmwcm:type>rich text</ibmwcm:type>
-      <ibmwcm:value>
-         <![CDATA[
-         <p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg"/>
-         ]]>
-      </ibmwcm:value>
-    </ibmwcm:element>
-  </item>
-```
-
--   **Rich text component with image processing disabled:**
-
-    -   A rich text component named: "RichText Component With Image 4" is created in the feed library.
-    -   HTML Source of the rich text Component: `<p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg">`
-    -   The rich text HTML is not modified.
-    -   The image source is unmanaged because Web Content Manager cannot detect a broken image source.
-
--   **Rich text component with image processing enabled:**
-
-    -   A rich text component named: "RichText Component With Image 4" is created in the feed library.
-    -   An Image Component that is named "img.l.leaf.jpg" is created in the feed library
-    -   HTML Source of the rich text Component: `<p>Image 1:</p><img src="/wps/wcm/myconnect/[IMAGE COMPONENT ID]/leaf.jpg?MOD=AJPERES">`
-    -   The image source is replaced with a URL pointing to the newly created image.
-    -   The image source is managed by Web Content Manager and is updated as the image component is updated.
-
--   **Rich text component with embedded images enabled:**
-
-    -   A rich text component named: "RichText Component With Image 4" is created in the feed library.
-    -   HTML Source of the rich text Component: `<p>Image 1:</p><img src="/wps/wcm/myconnect/[RT COMPONENT UUID]/1/img.l.leaf.jpg?MOD=AJPERES">`
-    -   The rich text HTML is modified replacing the image source with a URL for the image that is embedded within the rich text Component.
-    -   The image source is managed by Web Content Manager and is updated as the rich text changes.
-
-## Expected results for a HTML component
-
 Example feed item:
 
 ```
 <item>
-    <title>HTML Component With Image 1</title>
-    <pubDate>Thu, 30 Mar 2011 16:00:00 EDT</pubDate>
-    <guid>Image_Example_5</guid>
-    <ibmwcm:action>add</ibmwcm:action>
-    <ibmwcm:itemType>Component</ibmwcm:itemType>
-    <ibmwcm:element>
-      <ibmwcm:type>html</ibmwcm:type>
-      <ibmwcm:value>
-         <![CDATA[
-         <p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg"/>
-         ]]>
-      </ibmwcm:value>
-    </ibmwcm:element>
-  </item>
+   <title>RichText Component With Image 4</title>
+   <pubDate>Thu, 30 Mar 2011 16:00:00 EDT</pubDate>
+   <guid>Image_Example_4</guid>
+   <ibmwcm:action>add</ibmwcm:action>
+   <ibmwcm:itemType>Component</ibmwcm:itemType>
+   <ibmwcm:element>
+     <ibmwcm:type>rich text</ibmwcm:type>
+     <ibmwcm:value>
+        <![CDATA[
+        <p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg"/>
+        ]]>
+     </ibmwcm:value>
+   </ibmwcm:element>
+</item>
 ```
-
--   **HTML element with image processing disabled**
-
-    -   HTML Component that is named "HTML Component With Image 1" is created in the feed library.
-    -   HTML Source of the HTML Component: `<p>Image 1:</p><img src="http://wci-feed-server/img/l/leaf.jpg"/>`
-    -   The HTML is not modified.
-    -   The image source is unmanaged because Web Content Manager cannot detect a broken image source.
-    
--   **HTML element with image processing enabled**
-
-    -   HTML Component that is named "HTML Component With Image 1" is created in the feed library.
-    -   Image Component that is named "img.l.leaf.jpg" is created in the feed library
-    -   HTML Source of the HTML Component: `<p>Image 1:</p><img src="<Component id="[IMAGE COMPONENT ID]" name="img test 1/img.l.leaf.jpg" format="url"/>"/>`
-    -   The image source is replaced with a component tag that points to the newly created image.
-    -   The image source is managed by Web Content Manager and is updated as the image component is updated.
-
-
