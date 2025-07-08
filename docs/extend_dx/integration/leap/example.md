@@ -18,13 +18,12 @@ You can integrate HCL Leap applications into HCL DX in two ways:
 
     - [HCL Digital Experience Introduction course](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction){target="_blank"} and [HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner){target="_blank"}
     - [Web Content Development](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=414){target="_blank"}
-    - [Building Simple Forms](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821){target="_blank"}
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
 Refer to the following steps to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding){target="_blank"}.
 
-1. Create the Leap application that you plan to integrate, if you haven't done so.
+1. Create the Leap application that you plan to integrate, if you haven't done so. If you're new to creating Leap apps [this HCL Software U lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) may help.
 
 2. Ensure that you can [access Leap and DX from the same domain name](./installation.md) and [Single Sign-On (SSO) is enabled](./configuration.md#enabling-ltpa-sso-between-hcl-leap-and-hcl-dx-in-kubernetes).
 
