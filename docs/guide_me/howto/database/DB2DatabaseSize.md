@@ -17,6 +17,7 @@ Typically these databases have the schema names: WPREL and WPJCR
 To determine the size of these databases on a Windows server, open a DB2 command window, then enter:
 
 C:\Program Files\IBM\SQLLIB\BIN>db2 connect to WPREL user yourUserid using yourPassword
+
 C:\Program Files\IBM\SQLLIB\BIN>db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
 
 **Value of output parameters for WPREL**
@@ -36,9 +37,11 @@ Return Status = 0
 ```
 
 C:\Program Files\IBM\SQLLIB\BIN>db2 disconnect wprel
+
 DB20000I The SQL DISCONNECT command completed successfully.
 
 C:\Program Files\IBM\SQLLIB\BIN>db2 connect to WPJCR user yourUserid using yourPassword
+
 C:\Program Files\IBM\SQLLIB\BIN>db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
 
 **Value of output parameters for WPJCR**
