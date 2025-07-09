@@ -49,7 +49,7 @@ The following image shows how the default style options work in Presentation Des
     2. Location of the Default Style and the Default Style Name: pd_default_stylesheet
     ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_location.png)
 
-# Override Stylesheet -> dito na
+# Override Stylesheet
 
 The **Override Stylesheet** allows users to customize styles for specific elements, enabling precise adjustments to meet unique design requirements. Together, these stylesheets offer a powerful mechanism for managing presentation aesthetics effectively.
 
