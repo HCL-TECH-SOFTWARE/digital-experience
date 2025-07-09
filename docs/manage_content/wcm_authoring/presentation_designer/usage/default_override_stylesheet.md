@@ -10,7 +10,11 @@ The following image shows how the default style options work in Presentation Des
 
 1. From the initial render of the Presentation Designer, a default style is loaded in the head of the HTML.
 
+    HTML head for default stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_html_head.png)
+        
+    Element styles for the default stylesheet:
+    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_element_inspect.png)
 
 2. For each element, there is a corresponding classname for the default style.
 
@@ -73,9 +77,13 @@ The following image shows how the override style options work in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_created.png)
 
-5. To validate the override style, you can visit the header.
+5. To validate the override style, you can inspect and visit the header and the element.
 
+    HTML head for override stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_html_head.png)
+    
+    Element styles for the override stylesheet:
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_element_inspect.png)
 
 6. The override style can be located based on the current libraries of the presentation designer.
 
