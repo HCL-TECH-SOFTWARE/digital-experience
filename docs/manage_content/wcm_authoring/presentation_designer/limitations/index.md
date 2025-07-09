@@ -14,13 +14,14 @@ Take note of the following limitations when using Presentation Designer:
     - Using external CSS. All styles are applied as inline styles and different orientations through breakpoints are not yet supported. For more information, refer to the [Styling Options in Presentation Designer](../../presentation_designer/usage/styling_options.md) topic.
     - Multiple stylesheet not yet supported
     - Blueprint Templates not yet supported
-    - The Static Element Grid currently does not support row and column spans in override stylesheet.
-    - An override stylesheet component can only be used in the PT it saved from.
-    - Link to the associated stylesheet component will be included in the snackbar.
-    - Adding breakpoints for media queries is not yet supported.
 
 - The following features are not fully supported:
     - Right-to-Left layout, with certain elements not fully optimized for languages that require this layout.
     - WCM tags and their attributes. Presentation Designer is currently supporting different user elements. For more information, see the [User Elements in Presentation Designer](../../presentation_designer/usage/user_elements.md) topic.
     - Translation to other languages. English is the default language used in Presentation Designer.
     - The fixed position style of the user element may result in overlap with the header under certain conditions, rather than remaining within the intended canvas boundary. This behavior is observed when setting the element's position to fixed with a top value of 10px in the styling properties. The overlap occurs because the canvas utilizes a root div structure integrated with the document's HTML markup, meaning boundaries may not be fully isolated. While using an iframe could more effectively isolate boundaries, this option is currently not implemented.
+    - Adding breakpoints for media queries is not yet supported.
+    - The Paragraph format and Text decoration are not yet supported due to the structure of these elements and how they are applied in Presentation Designer
+    - The Static Element Grid currently does not support row and column spans in override stylesheet.
+    - An override stylesheet component can only be used in the PT it saved from.
+    - Link to the associated stylesheet component will be included in the snackbar.
