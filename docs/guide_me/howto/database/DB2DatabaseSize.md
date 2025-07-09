@@ -1,63 +1,97 @@
-# How to determine Portal database size when using DB2
+# Determine Portal database size when using DB2
+
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+
+> HCL Digital Experience 8.5 and later
+
 
 ## Introduction
 
-This article provides instructions for determining the size of the portal databases.
 
-## Instructions
+Use this article to learn how to determine the size of your portal databases when running on DB2.
 
-The most common/default installation options taken are to create two Portal Databases: Release and JCR
 
-Typically these databases have the schema names: WPREL and WPJCR
+## Overview
 
-To determine the size of these databases on a Windows server, open a DB2 command window, then enter:
 
-C:\Program Files\IBM\SQLLIB\BIN>db2 connect to WPREL user yourUserid using yourPassword
+A typical installation creates two portal databases:
 
-C:\Program Files\IBM\SQLLIB\BIN>db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
 
-**Value of output parameters for WPREL**
---------------------------
+- Release database (`WPREL`)
+- JCR database (`WPJCR`)
 
-```text
-Parameter Name : SNAPSHOTTIMESTAMP
-Parameter Value : 2016-09-07-12.12.14.623000
+The instructions below show how to check the size of these databases on a Windows server.
 
-Parameter Name : DATABASESIZE
-Parameter Value : 346398720
+## Steps
 
-Parameter Name : DATABASECAPACITY
-Parameter Value : 118578155520
+1. Open a DB2 command window.
 
-Return Status = 0
-```
+2. Connect to the Release database (`WPREL`):
 
-C:\Program Files\IBM\SQLLIB\BIN>db2 disconnect wprel
+    ```cmd
+    db2 connect to WPREL user yourUserid using yourPassword
+    ```
+3. Run the following command to get the database size:
 
-DB20000I The SQL DISCONNECT command completed successfully.
+    ```cmd
+    db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
+    ```
+4. Example output:
 
-C:\Program Files\IBM\SQLLIB\BIN>db2 connect to WPJCR user yourUserid using yourPassword
+    ```text
+    Parameter Name  : SNAPSHOTTIMESTAMP
+    Parameter Value : 2016-09-07-12.12.14.623000
 
-C:\Program Files\IBM\SQLLIB\BIN>db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
+    Parameter Name  : DATABASESIZE
+    Parameter Value : 346398720
 
-**Value of output parameters for WPJCR**
---------------------------
+    Parameter Name  : DATABASECAPACITY
+    Parameter Value : 118578155520
 
-```text
-Parameter Name : SNAPSHOTTIMESTAMP
-Parameter Value : 2016-09-07-12.07.43.052000
+    Return Status = 0
+    ```
+5. Disconnect from the database:
 
-Parameter Name : DATABASESIZE
-Parameter Value : 3045539840
+    ```cmd
+    db2 disconnect WPREL
+    ```
 
-Parameter Name : DATABASECAPACITY
-Parameter Value : 121392439296
+6. Connect to the JCR database (`WPJCR`):
 
-Return Status = 0
-```
+    ```cmd
+    db2 connect to WPJCR user yourUserid using yourPassword
+    ```
 
-In the results above we see the size of the Release Database is 346398720 (346 Meg) and the size of the JCR Database is 3045539840 (3 Gig). Note this is for a Portal test server with limited content i.e. no web content libraries with a significant number of items.
+7. Run the same command:
+
+    ```cmd
+    db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
+    ```
+
+8. Example output:
+
+    ```text
+    Parameter Name  : SNAPSHOTTIMESTAMP
+    Parameter Value : 2016-09-07-12.07.43.052000
+
+    Parameter Name  : DATABASESIZE
+    Parameter Value : 3045539840
+
+    Parameter Name  : DATABASECAPACITY
+    Parameter Value : 121392439296
+
+    Return Status = 0
+    ```
+
+9. Disconnect from the database:
+
+    ```cmd
+    db2 disconnect WPJCR
+    ```
+
+!!! note
+    - The `DATABASESIZE` value is in bytes.
+    - In this example, the Release database size is about **346 MB**, and the JCR database size is about **3 GB**.
+    - These values are from a test server with limited content. Production environments may have significantly larger databases.

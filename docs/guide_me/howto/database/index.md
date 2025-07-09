@@ -1,9 +1,15 @@
 # Database
 
-This section includes how-to documents that belong to the database topics
+This section provides how-to documents related to database topics within HCL Digital Experience.
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
+## Additional Resources
 
-- **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)**
+For comprehensive technical education on HCL Digital Experience 9.5 and other HCL Software products, access the latest materials on [HCL Software U](https://hclsoftwareu.hcltechsw.com/). HCL Software U offers structured learning paths organized by practitioner role, ensuring relevant content for administrators, developers, and other users.
 
-This section will eventually include how-to articles about database-related content in HCL Digital Experience (DX).
+You may also find the following resource helpful:
+
+* **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)** - Provides a foundational overview of the HCL Digital Experience product.
+
+## Future Content
+
+This section is under development and will be expanded to include more in-depth how-to articles covering various database-related topics specific to HCL Digital Experience (DX) environments.

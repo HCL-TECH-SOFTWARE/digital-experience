@@ -1,7 +1,5 @@
-title: Database
-nav:
-    - index.md
-    - DB2DatabaseSize.md
+site_name: Database
 
 nav:
-    - index.md
+  - index.md
+  - DB2DatabaseSize.md
