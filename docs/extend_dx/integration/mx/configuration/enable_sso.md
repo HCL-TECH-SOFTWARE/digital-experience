@@ -103,7 +103,7 @@ To enable SSO, ensure you have:
 
         - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
         - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
-        - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment. [Redirect URL](#adding-a-new-application-in-volt-mx-foundry) should be available in Volt MX Foundry (for example, `voltmx-env.com`).
+        - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment.
         - `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64-encoded string of the DX hostname.
 
         For example:
@@ -136,9 +136,11 @@ To enable SSO, ensure you have:
 
     1. Create an application in Volt MX Foundry.
 
-        For instructions, refer to [How to Add Applications](https://opensource.hcltechsw.com/volt-mx-docs/95/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html){target="_blank"}.
+        For instructions, refer to [How to Add Applications](https://help.hcl-software.com/voltmx/v9.5/Foundry/voltmx_foundry_user_guide/Content/Adding_Applications.html){target="_blank"}.
 
     2. Configure the Identity Service settings:
+
+        For instructions, refer to [Configure Identity Service](https://help.hcl-software.com/voltmx/v9.5/Foundry/voltmx_foundry_user_guide/Content/ConfigureIdentiryService.html){target="_blank"}.
 
         - Type: OAuth
         - Authorize Endpoint:
@@ -178,9 +180,18 @@ To enable SSO, ensure you have:
 
         ![alt text](./image-5.png)
 
+    For more information on Volt MX Foundry identity services, refer to [Configure Identity Service](https://help.hcl-software.com/voltmx/v9.5/Foundry/voltmx_foundry_user_guide/Content/ConfigureIdentiryService.html){target="_blank"}.
+
+    !!!note
+        If VoltMX and HCL DX environments are hosted on separate instances, there might be issues with Cross-Origin Resource Sharing (CORS). For more information, see the topic [CORS Configuration](https://help.hcl-software.com/voltmx/v9.2/Foundry/vmf_integrationservice_admin_console_userguide/Content/Runtime_Configuration.html#cors-configuration){target="_blank"}.
+
 6. Enable SSO in the Iris application.
 
-    1. Create login form in Iris, add the following code to form init:
+    1. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Getting started with Iris](https://help.hcl-software.com/voltmx/v9.5/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}.
+
+    2. Create login form in Iris using the guide reffered in [Getting started with Iris](https://help.hcl-software.com/voltmx/v9.5/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}. 
+    
+    3. Add the following code to form init:
 
         ```javascript
         if (!VMXFoundry) return;
@@ -200,7 +211,7 @@ To enable SSO, ensure you have:
         );
         ```
 
-    2. Deploy the Iris application to HCL DX.
+    4. Deploy the Iris application to HCL DX.
 
         For more information, see [How to Deploy Volt MX portlet into HCL DX](../example/integrate_mx_portlet_to_dx.md).
 

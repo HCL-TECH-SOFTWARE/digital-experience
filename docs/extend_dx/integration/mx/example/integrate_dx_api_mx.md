@@ -32,7 +32,7 @@ Refer to the following steps to integrate HCL DX APIs into HCL Volt MX Foundry u
     2. Go to **API Management > Custom Data Adapters > Import**
     3. Upload the adapter manually.
 
-        ![alt text](./MXImportAdapter.png)
+        ![alt text](./../../../../images/MXImportAdapter.png)
 
         !!!note
             Ensure the adapter version matches your HCL DX deployment version.
@@ -60,14 +60,14 @@ Refer to the following steps to integrate HCL DX APIs into HCL Volt MX Foundry u
     4. Choose the OAuth Identity Provider configured earlier under **Authentication**.
     5. Click **Save & Add Operation**.
 
-        ![alt text](./MXServiceCreation.png)
+        ![alt text](./../../../../images/MXServiceCreation.png)
 
 5. Add and test operations.
 
     1. Click **Add Operation** to select available endpoints from WCM REST V2.
     2. Configure request parameters and click **Save and Fetch response** to test.
 
-        ![Test Operation](./MXTestOperation.png)
+        ![Test Operation](./../../../../images/MXTestOperation.png)
 
     3. Log in using your identity provider credentials.
     4. Confirm the response returns valid data.

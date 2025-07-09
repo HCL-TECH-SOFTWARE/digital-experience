@@ -37,7 +37,7 @@ To follow this guide, ensure you have:
 
     2. In the **Post Build Actions**, choose:
         - **Build and Publish Portlet to DX**
-        - **Clean Build**
+        - Check the **Clean Build** box.
 
         ![Build Options](./image2.png)
 
