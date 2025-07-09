@@ -97,14 +97,14 @@ To enable SSO, ensure you have:
     3. Add the following client definitions to the file to add Volt MX:
 
         ```
-        <client id="voltmx" component="<OAUTH_PROVIDER_NAME>" secret="<OAUTH_SECRET>" displayname="Volt MX" redirect="https://<VOLT_MX_HOST>/auth/dx/<BASE_64_ENCODED_DX_HOSTNAME>/callback" enabled="true">
+        <client id="voltmx" component="<OAUTH_PROVIDER_NAME>" secret="<OAUTH_SECRET>" displayname="Volt MX" redirect="https://<VOLT_MX_HOST>/<CALLBACK_URL_ENDPOINT>" enabled="true">
         </client>
         ```
 
         - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
         - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
         - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment.
-        - `<BASE_64_ENCODED_DX_HOSTNAME>` is a base64-encoded string of the DX hostname.
+        - `<CALLBACK_URL_ENDPOINT>` endpoint found in the **Callback URL** under [Indentity Service](#image-section) configuration page.
 
         For example:
 
@@ -157,7 +157,7 @@ To enable SSO, ensure you have:
 
         - Client ID / Secret: Use values from the OAuth client registration.
 
-        ![alt text](./image-4.png)
+        ![alt text](./image-4.png){#image-section}
 
     3. Click **Test login** and confirm the OAuth login screen appears.
 
