@@ -54,7 +54,7 @@ The following example shows an absolute image source URL in a feed item:
 ```
 ## Relative image source URLs
 
-ou can specify images within HTML and rich text elements using relative HTTP URLs in the src attribute. The link element of the item provides the base URL. The Web Content Integrator processes relative image source URLs by concatenating the item's link element and the image's src attributes in the HTML
+You can specify images within HTML and rich text elements using relative HTTP URLs in the src attribute. The link element of the item provides the base URL. The Web Content Integrator processes relative image source URLs by concatenating the item's link element and the image's src attributes in the HTML
 
 Example feed item:
 
