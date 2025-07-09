@@ -6,7 +6,7 @@
 
 ## Introduction
 
-If the portal database on HCL Digital Experience becomes huge it might be possible that some sql-queries taking more time to complete, which then ends up in hanging threads like:
+If the portal database on HCL Digital Experience becomes very large it might be possible that some sql-queries take more time to complete, which can result in hanging threads like:
 
 ```log
 [Timestamp] 0000005c TimeoutManage I CWWTR0124I: When the timeout occurred the thread with which the transaction is, or was most recently, associated was Thread[WebContainer : 23,5,main]. The stack trace of this thread when the timeout occurred was:
@@ -48,10 +48,10 @@ Furthermore HCL suggests to enable the following trace-string on HCL Digital Exp
 
 Please trace with 10 historical trace-files and a trace-file size of 100 MB.
 
-With the detailed traces it is possible to determine the exact sql-queries that are causing the problem. A common problem of such hanging threads is that the database is not optimized right now.
+With the detailed traces it is possible to determine the exact sql-queries that are causing the problem. A common problem of such hanging threads is that the database is not optimized.
 
 There is a way to make the database "reopt all queries" without adding them individually to a configuration file. This is achieved by using the DB2Binder utility for the connection. Example of the command for further reference (performed on the db2 server):
 
 `/home/db2inst1/sqllib/java/jdk64/jre/bin/java -cp ~/sqllib/java/db2jcc4.jar com.ibm.db2.jcc.DB2Binder -url jdbc:db2://localhost:50000/WPSDB -user db2inst1 -password XXXXX -collection NULLID -action replace -reopt ALWAYS -blocking ALL`
 
-Executing the command on db2 server side can help to get out a much better performance.
+Executing the command on the db2 server side can help to achieve a much better performance.
