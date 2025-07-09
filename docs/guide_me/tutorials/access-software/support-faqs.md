@@ -143,20 +143,11 @@ To copy the link to the article, use the Copy Permalink button at the bottom lef
 
 ## References
 
-What is the HCL License & Delivery Portal (FlexNet Portal)?
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344>
+- What is My HCLSoftware?
+<https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011>
 
-How to register to HCL Software portals - eCommerce, License & Delivery, Customer Support
+- How to register to HCL Software portals - eCommerce, License & Delivery, Customer Support
 <https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0069114>
-
-How to reset your password on HCL License & Delivery Portal  
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0089935>
-
-How to Add a New User to an Account on HCL License & Delivery Portal  
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0072851>
-
-How to find HCL Product Releases in HCL License & Delivery Portal
-<https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0010149>
 
 ## HCLSoftware U learning materials
 

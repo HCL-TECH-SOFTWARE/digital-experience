@@ -18,7 +18,7 @@ Attributes:
 
     Parameters: None
 
-    Returns: An iterator with [Module](../themeopt_el_bean_module.md) objects; it is never null.
+    Returns: An iterator with [Module](./index.md) objects; it is never null.
 
 -   **capabilities**
 
@@ -69,6 +69,6 @@ Attributes:
 
         String representing the module. Must be in the format `<module name>` or `<module name>/<module version>`.
 
-    Returns: [Module](../themeopt_el_bean_module.md). Can be null if it is not found.
+    Returns: [Module](./index.md). Can be null if it is not found.
 
 

@@ -27,9 +27,9 @@ You can determine whether portlets automatically load their dependent capabiliti
 To decrease the response time of your portal, a template parser resolves which modules are needed and collects all of the modules that are enabled by the current profile. Parts of the content are parsed and displayed as soon as possible.
 -   **[Writing modules](../the_module_framework/writing_module/index.md)**  
 You can define global or theme-specific contributions that contain a theme module, which applies to different scopes through theme profiles. A module defines its contributions by using a plugin.xml or JSON file.
--   **[Theme Optimization Analyzer](../the_module_framework/themeopt_analyzer/)**  
+-   **[Theme Optimization Analyzer](../the_module_framework/themeopt_analyzer/index.md)**  
 Use the Theme Optimization Analyzer to view, but not edit, all parts of the theme optimization framework inside of HCL Digital Experience.
--   **[Troubleshooting modular themes](../the_module_framework/troubleshooting_modular_themes/)**  
+-   **[Troubleshooting modular themes](../the_module_framework/troubleshooting_modular_themes/index.md)**  
 You can debug your modules to improve performance.
 -   **[Specify profiles](../the_module_framework/specify_profiles/index.md)**  
 You can specify the profiles that you want to use two different ways depending on whether you are an administrator or a user. Profiles help define which modules are used to render a page.
@@ -42,6 +42,9 @@ To add or remove a module, update the profile that is used to render a page for 
 -   **[ConfigEngine tasks for creating a new profile based on a template and an existing profile in the system](themeopt_configengine_profile.md)**  
 You can extend the theme module framework with a new ConfigEngine task.
 
+## HCLSoftware U learning materials
+
+To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information"
     - [Module framework for IBM MobileFirst](../../../extend_dx/integration/ibm_mobilefirst/module_framework_mobilefirst/index.md)

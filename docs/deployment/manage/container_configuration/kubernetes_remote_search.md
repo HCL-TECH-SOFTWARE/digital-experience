@@ -1,6 +1,6 @@
 # Configure Remote Search
 
-This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, please see [Remote search service](../../../../build_sites/search/remotesearch/)
+This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, see [Remote search service](../../../build_sites/search/remotesearch/index.md)
 
 ## Introduction
 
@@ -12,12 +12,12 @@ From release CF211 onwards, you can either use the automated configuration contr
 The configuration is a one-off process. Once you have Remote Search configured, the settings that were changed are persisted in the corresponding Pods Persistent Volumes and will persist after future updates to newer CF releases of HCL Digital Experience.
 
 !!!warning
-    If you have configured search collections already and want them and their index backed up, see the topic [Exporting and importing search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp/) for further information.  
+    If you have configured search collections already and want them and their index backed up, see the topic [Exporting and importing search collections](../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md) for further information.  
 
     The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.
 
 !!!warning
-    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../../security/people/authentication/updating_userid_pwd/wpsadmin) for more information.
+    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../security/people/authentication/updating_userid_pwd/wpsadmin.md) for more information.
 
 !!!warning
     If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:
@@ -47,7 +47,7 @@ Before you can leverage the automated configuration, you need to be aware on cer
 
 ### Configuration properties
 
-To leverage the automated configuration, you will need to adjust the `custom-values.yaml` that you are using for your Helm deployment. (See [Custom value files](../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/#custom-value-files)).
+To leverage the automated configuration, you will need to adjust the `custom-values.yaml` that you are using for your Helm deployment. See [Custom value files](../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#custom-value-files).
 
 Inside your `custom-values.yaml` you can configure the following section to leverage Remote Search automated configuration:
 
@@ -254,7 +254,7 @@ kubectl cp dx-core-0:/home/dx_user/LTPAKeyExported ./LTPAKeyExported -c core -n 
 ### Configure the Remote Search Pod
 
 !!!note
-    Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the **core** pod and the WebSphere Application Server running in the **remote-search** pod. See the topics [Single sign-on for authentication using LTPA cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies) and [Creating a single-sign on domain between HCL Portal and the remote search service](../../../build_sites/search/remotesearch/sso_portal_rss.md) for pre-requisites and instructions for setting up SSO.
+    Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the **core** pod and the WebSphere Application Server running in the **remote-search** pod. See the topics [Single sign-on for authentication using LTPA cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies){target="_blank"} and [Creating a single-sign on domain between HCL Portal and the remote search service](../../../build_sites/search/remotesearch/sso_portal_rss.md) for pre-requisites and instructions for setting up SSO.
 
 Copy the LTPA Key exported from DX Core into the Remote Search Pod:
 
@@ -309,7 +309,7 @@ rm -f /opt/app/configInProgress
 
 #### New Search Service
 
-Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html)<!-- (../../9.0/admin-system/create_search_service.md) --> for more information.
+Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](../../../build_sites/search/remotesearch/cfg_remotesearch_service/create_search_service.md)<!-- (../../9.0/admin-system/create_search_service.md) --> for more information.
 
 For **Search Services** configuration, the following values are used:
 
@@ -349,7 +349,7 @@ The resulting hostname for pod 0 looks like this: `dx-deployment-core-0.dx-deplo
 
 ##### Portal Search Collection
 
-Use the following parameters to create a [Portal search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
+Use the following parameters to create a [Portal search collection](../../../build_sites/search/remotesearch/cfg_remotesearch_service/create_search_coll.md)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
 
 |Parameter|Value|
 |---------|-----|
@@ -383,7 +383,7 @@ In the `Security` panel, use the specified DX Core Pod hostname, along with the 
 
 ##### JCR Search Collection
 
-Use the following parameters to create a Content Source [JCR search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html)<!-- (../admin-system/srtcfg_jcr_colls.md) -->.
+Use the following parameters to create a Content Source [JCR search collection](../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)<!-- (../admin-system/srtcfg_jcr_colls.md) -->.
 
 |Parameter|Value|
 |---------|-----|

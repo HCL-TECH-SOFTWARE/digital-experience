@@ -13,11 +13,11 @@ HCL Leap builds dynamic forms and applications with a web-based interface. From 
 
 Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Leap.
 
--   **[Install HCL Digital Experience and HCL Leap using Helm](../leap/installation/)**  
+-   **[Install HCL Digital Experience and HCL Leap using Helm](../leap/installation/index.md)**  
 
--   **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration/)**  
+-   **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration/index.md)**  
 
--   **[Test the integration using example integrations](../leap/example/)**  
+-   **[Test the integration using example integrations](../leap/example/index.md)**  
 
 ## HCLSoftware U learning materials
 

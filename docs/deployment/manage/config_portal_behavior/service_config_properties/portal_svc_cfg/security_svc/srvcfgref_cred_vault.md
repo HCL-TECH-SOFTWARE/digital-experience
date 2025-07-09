@@ -62,6 +62,6 @@ You can define the following properties for each Vault Adapter Implementation Ty
         If you set this property to `true`, the `manageresources` property is ignored. If you omit this property, it will default to `true` .
 
 ???+ info "Related information" 
-    -   [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface)
+    -   [Working with the XML configuration interface](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)
     -   [XML Syntax for exporting and importing credential vault data](../../../../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/cmdline_syntax/xml_syntax_export_import_creds/index.md)
 

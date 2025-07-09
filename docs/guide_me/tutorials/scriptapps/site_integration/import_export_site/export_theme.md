@@ -32,7 +32,7 @@
            ```
 
 !!!info "Notes on parameters:"
-    1. xmlFile should be pointing to your theme metadata export xml during [setup](index.md#Theme-metadata-export-xml).
+    1. xmlFile should be pointing to your theme metadata export xml during [setup](index.md#theme-metadata-export-xml).
     2. Ensure to place your correct credentials in the `{DXUSERNAME}` and `{DXPASSWORD}`.
 
 !!!success "Output"
@@ -168,10 +168,10 @@
            ```
 
     !!!info "Notes on parameters:"
-         1. `xmlFile` should be pointing to the xml exported in this [step](#1-export-the-theme-metadata).
+         1. `xmlFile` should be pointing to the xml exported in this [step](#exporting-the-theme-metadata).
          2. `themeName` should be what is the theme name.
             - `"Woodburn Insurance"` if you are on Woodburn Insurance Demo
-         3. `themePath` should be pointing to the zip exported in this [step](#2-undeploy-theme).
+         3. `themePath` should be pointing to the zip exported in this [step](#exporting-theme-source-code).
          4. Ensure to place your correct credentials in the `{DXUSERNAME}` and `{DXPASSWORD}`.
 
 3. The output should look similar to this.

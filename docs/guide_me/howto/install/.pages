@@ -1,0 +1,6 @@
+title: Install
+
+nav:
+    - index.md
+    - DeployOnAzure.md
+    - RunIIMAsDifferentUser.md

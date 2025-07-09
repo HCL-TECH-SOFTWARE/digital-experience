@@ -58,7 +58,7 @@ The Web Content Viewer provides a plug-point for context processor plug-ins that
 
 For more information about plugin.xml files or the extension framework, refer to the Eclipse Extension Point Framework documentation.
 
-The JAR file that implements the extension plug-in must be in a directory that is part of the class path of the Web Content Viewer. Create a new shared library that contains the custom resource bundle files by using the WebSphere® Application Server administrative console. Creating a new shared library that contains the resource bundle allows a clean separation of the custom resource bundle code from the base HCL Portal code. When the shared library is created, you need to add it to the class path of HCL Portal application server classloader. For details about creating shared libraries and adding shared libraries to the classloader's class path, refer to the [Shared library collection](http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.base.doc/info/aes/ae/ucws_rsharedlib.html) topic in the WebSphere Application Server information center.
+The JAR file that implements the extension plug-in must be in a directory that is part of the class path of the Web Content Viewer. Create a new shared library that contains the custom resource bundle files by using the WebSphere® Application Server administrative console. Creating a new shared library that contains the resource bundle allows a clean separation of the custom resource bundle code from the base HCL Portal code. When the shared library is created, you need to add it to the class path of HCL Portal application server classloader. For details about creating shared libraries and adding shared libraries to the classloader's class path, refer to the [Shared library collection](https://www.ibm.com/docs/en/was/9.0.5?topic=libraries-shared-library-collection){target="_blank”} topic in the WebSphere Application Server information center.
 
 To select the context processor plug-ins that are run during rendering of web content items through the Web Content Viewer, click the name of the context processor plug-in in the box that lists all found plug-ins. To clear a plug-in, hold down the control key and click the name of the plug-in. If more than one plug-in is selected, the processing order of the plug-ins is not defined.
 
@@ -89,12 +89,14 @@ With the **Scope tag cloud results** settings, you can limit the results that ar
 
     Specify the timeout in milliseconds for the asynchronous web content rendering request. After the specified time, Web Content Manager renders a message to indicate that the timeout occurred. To disable the timeout check, set the timeout to `0`.
 
-
 ## Locked settings
 
 You can lock settings in the **Configure** mode of the viewer. When a setting is locked, a lock icon is displayed in the **Edit Shared Settings** mode of the viewer, and no **Edit** link is available.
 
+## HCLSoftware U learning materials
+
+To learn how to turn UI design into DX web design and develop reusable components with different configuration options, go to the [Introduction lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3461){target="_blank”}. Details about communication between portlets and page components, debugging, and development best practices are also available.
+
 ???+ info "Related information"
     - [Configuring the validation of friendly URLs for web content](../../deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/validate_friendlyurl/configure_validate_friendly_urls.md)
     - [Friendly URL for web content example](../../deliver_webcontent_on_dx/customizing_content/friendlyurl_wcmviewer/wcm_config_wcmviewer_friendlyexample.md)
-

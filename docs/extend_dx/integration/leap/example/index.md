@@ -12,7 +12,7 @@ There are several ways to integrate HCL Leap applications into HCL Digital Exper
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
-There is an option to integrate HCL Leap applications with HCL DX by using the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html) in the HCL Leap documentation.
+There is an option to integrate HCL Leap applications with HCL DX by using the embedded JavaScript API. For instructions, refer to [Embedding API](https://help.hcltechsw.com/Leap/9.3/ref_embedding_api.html){target="_blank"} in the HCL Leap documentation.
 
 With this method, you can use a Content Template to allow a business user to select the application and form ID. These details are then used in a Presentation Template with the JavaScript API to call the right Leap application and form.
 
@@ -23,23 +23,23 @@ Web Application Bridge uses reverse proxy technology to integrate web-based cont
 !!!warning
     As described in [Troubleshooting the Web Application Bridge](../../wab/trouble_wab.md), the Web Application Bridge exposes the proxied application on the same context root as the original **Resource path**. This can cause overlaps in the routing if the application (in this case Leap) is deployed and exposed on the same host as HCL Digital Experience.
 
-    To prevent this, use and configure an [Ingress Controller](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) to expose the applications on different host names or subdomains.
+    To prevent this, use and configure an [Ingress Controller](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) to expose the applications on different host names or subdomains.
 
 
 1. Create Content Provider Profiles.
 
     For information on how to create content provider profiles, policies, and connections, refer to the following:
 
-      - [Content provider profile](../../wab/wab/h_wab_provider)
-      - [Content provider profile policy](../../wab/wab/h_wab_policy)
-      - [Content provider policy requests and responses](../../wab/wab/h_wab_response)
-      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth)
+      - [Content provider profile](../../wab/wab/h_wab_provider.md)
+      - [Content provider profile policy](../../wab/wab/h_wab_policy.md)
+      - [Content provider policy requests and responses](../../wab/wab/h_wab_response.md)
+      - [Content provider policy single sign-on](../../wab/wab/h_wab_auth.md)
 
     Follow these steps to create the profile:
 
       1. In the **Profile Host**, you can set a **Unique profile title** (for example `Leap Content Provider Profile`).
       2. For the **Hostname or IP address**, enter `http://hostname:port/` which is the host (and port, if required) of the Leap environment. 
-        If the Leap deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records) can be used here to only access the application through the Web Application Bridge proxy. 
+        If the Leap deployment is deployed in the same Kubernetes cluster as HCL Digital Experience, the [Kubernetes Service DNS name](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#a-aaaa-records){target="_blank"} can be used here to only access the application through the Web Application Bridge proxy. 
       3. **Save** the content provider profile.
 
 2. Create Web Dock Applications. 

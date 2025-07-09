@@ -2,3 +2,6 @@ title: Database
 nav:
     - index.md
     - DB2DatabaseSize.md
+
+nav:
+    - index.md
