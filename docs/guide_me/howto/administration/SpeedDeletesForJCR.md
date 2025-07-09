@@ -10,11 +10,11 @@ When the clearVersions task deletes a lot of versions, it may leave the associat
 
 `SELECT COUNT(1) FROM <jcr>.ICMSTJCRREMOVEHLP`
 
-If the count is coming down too slowly, how to speed it up?
+If the count is coming down too slowly, how can you speed it up?
 
 ## Instructions
 
-This Config Engine task will purge the pending deletes in much larger batches:
+This Config Engine task can be used to purge the pending deletes in much larger batches by increasing the value of the batchSize parameter:
 
 `./ConfigEngine.sh jcr-complete-asynchronous-deletes -DbatchSize=5000`
 
@@ -47,4 +47,4 @@ If the job completes successfully, then this SQL will return 0:
 
 To re-enable the background delete, simply delete the property from the Custom Properties and restart the Portal nodes.
 
-Note this should be performed only after finishing all runs of clearVersions and only then if the count in the `ICMSTJCRREMOVEHLP` table is high ( > 100,000) and that it is taking to long to come down.
+Note this should be performed only after finishing all runs of clearVersions and only then if the count in the `ICMSTJCRREMOVEHLP` table is high ( > 100,000) and that it is taking too long to come down.
