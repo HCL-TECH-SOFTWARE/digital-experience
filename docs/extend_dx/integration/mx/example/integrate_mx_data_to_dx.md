@@ -15,9 +15,7 @@ Before you begin, ensure you have:
 
 1. Follow the guide in [Connecting to HCL Volt MX Foundry through DDC](./../../../../extend_dx/ddc/integrating_voltmx_foundry/index.md).
 
-2. Complete installation and configuration prerequisites.
-
-3. Use DDC to bind Foundry data services to DX content presentation.
+2. Use DDC to bind Foundry data services to DX content presentation.
 
 ### Embedding Volt MX web applications in HCL DX using WAB
 
