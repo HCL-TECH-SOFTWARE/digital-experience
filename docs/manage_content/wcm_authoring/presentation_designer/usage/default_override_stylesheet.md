@@ -10,7 +10,7 @@ The following image shows how the default style options work in Presentation Des
 
 1. From the initial render of the Presentation Designer, a default style is loaded in the head of the HTML.
 
-    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_initial_render.png)
+    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_html_head.png)
 
 2. For each element, there is a corresponding classname for the default style.
 
@@ -55,13 +55,35 @@ The **Override Stylesheet** allows users to customize styles for specific elemen
 
 The following image shows how the override style options work in Presentation Designer.
 
-1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it will apply to all devices. If the style is set for **Tablet**, it will apply changes only to tablets and mobile devices. If the style is set for **Mobile**, it will apply changes only to mobile devices.
-However, if there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
-2. The classname of the element will apply when there is an edited style.
-3. After saving the presentation designer, it will automatically create an override stylesheet.
-4. The override style can be located based on the current libraries of the presentation designer.
-5. The naming of the override style will be based on the presentation designer: pd_Test2_override_c45455
-6. The override style has its own class name naming convention for each element: pd-override-Text-2e7740
-7. To validate the override style, you can visit the header.
+1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it will apply to all devices. If the style is set for **Tablet**, it will apply changes only to tablets and mobile devices. If the style is set for **Mobile**, it will apply changes only to mobile devices. However, if there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
+
+2. The classname for the override stylesheet on the selected element will apply when a style is edited.
+
+    After drop the element:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_drop_element.png)
+
+    After adding a style on that element:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_after_changing_style.png)
+
+3. For each element, there is a corresponding classname convention. For example: pd-override-[Element]-[(6)uuid].
+
+4. After saving the presentation designer, it will automatically create an override stylesheet.
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_created.png)
+
+5. To validate the override style, you can visit the header.
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_html_head.png)
+
+6. The override style can be located based on the current libraries of the presentation designer.
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_path.png)
+
+7. The naming of the override style will be based on the presentation designer: `pd_[Presentation template name]_override_[(6)uuid]`
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_location.png)
+
 
 

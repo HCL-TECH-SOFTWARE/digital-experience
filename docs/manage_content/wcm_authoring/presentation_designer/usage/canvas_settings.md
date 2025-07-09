@@ -49,7 +49,7 @@ The following image shows an example of a canvas when the **Fit to window** zoom
 
 The Canvas setting in the Presentation Designer adapts to different window sizes to ensure usability and accessibility. 
 
-- **Ellipsis Button Appearance:** When the window width is reduced to 1280px or below, an ellipsis button (...) appears in the header.
+- **Ellipsis Button Appearance:** When the window width is reduced below 1280 pixels, an ellipsis button (...) appears in the header.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis.png)
 
