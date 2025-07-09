@@ -31,7 +31,7 @@ The instructions below show how to check the size of these databases on a Window
 2. Connect to the Release database (`WPREL`):
 
     ```cmd
-    db2 connect to WPREL user yourUserid using yourPassword
+    db2 connect to WPREL user <yourUserid> using <yourPassword>
     ```
 3. Run the following command to get the database size:
 
@@ -61,7 +61,7 @@ The instructions below show how to check the size of these databases on a Window
 6. Connect to the JCR database (`WPJCR`):
 
     ```cmd
-    db2 connect to WPJCR user yourUserid using yourPassword
+    db2 connect to WPJCR user <yourUserid> using <yourPassword>
     ```
 
 7. Run the same command:
