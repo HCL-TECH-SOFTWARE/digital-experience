@@ -43,12 +43,14 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_in_Presentation_Designer.png)
 
-2. There are two types of indicators to determine if the user can drop an element.
-    User is allowed to drop the element
-    img1
+2. There are two types of indicators to determine if the user can drop an element or not:
+    1. User is allowed to drop the element
 
-    User is not allowed to drop the element
-    img2
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_success.png)
+
+    2. User is not allowed to drop the element
+
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_fail.png)
 
 3. Drag and drop a **static container element** on the canvas then enter the following values in the **Style** panel.
     
