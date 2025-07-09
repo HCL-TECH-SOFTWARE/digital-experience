@@ -22,27 +22,37 @@ Before you begin, ensure you have:
 !!!important
     If DX and Volt MX are on the same host, routing conflicts may occur. To avoid conflicts, use a Kubernetes Ingress controller and assign separate subdomains or hostnames. For more information, refer to [Configure Access Layer for DX deployment](./../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
 
-1. Create a content provider profile. For more information on how to create a content provider profile, refer to [Content provider profile](./../../wab/wab/h_wab_provider.md), [Profile policy](./../../wab/wab/h_wab_policy.md), [Request/response setup](./../../wab/wab/h_wab_response.md), and [SSO for providers](./../../wab/wab/h_wab_auth.md). 
+1. Create a content provider profile. For more information about content provider profile, refer to [Content provider profile](./../../wab/wab/h_wab_provider.md), [Profile policy](./../../wab/wab/h_wab_policy.md), [Request/response setup](./../../wab/wab/h_wab_response.md), and [SSO for providers](./../../wab/wab/h_wab_auth.md). 
 
-    1. Set a unique title (for example, `MX Foundry Content Provider Profile`).
-    2. Set your hostname or IP (for example, `http://<mx-host>:<port>/`). Use the Kubernetes Service DNS name if the profile is in the same cluster.
-    3. Save the profile.
-
+    1.  **Log in to HCL Digital Experience** as an administrator.
+    2.  Navigate to the **Administration**
+    3.  In the Administration sidebar, expand **Applications**.
+    4.  Click on **Virtual Application Manager**.
+    5.  On the "Virtual Web Application Manager" page, click the **"Create New Content Provider Profile"** button.
+        1. Set a unique title (for example, `MX Foundry Content Provider Profile`).
+        2. Set your hostname or IP (for example, `http://<mx-host>:<port>/`). Use the Kubernetes Service DNS name if the profile is in the same cluster.
+        3. Click the **"Save"** button at the bottom of the form to create and save the content provider profile. You should see it listed in the "Content Provider Profiles" table.
+    6. Optional: Configure Profile Policy and SSO
+   
 2. Create a Web Dock Application. For more information on how to create a Web Dock Application, refer to [Web Dock Application](./../../wab/wab/h_wab_dock.md).
 
+    1. On the "Virtual Web Application Manager" page, click the **"Web Dock Applications"** button.
     1. In your Web Dock Application, configure the following settings:
         1. Title: `MX Foundry Application`
         2. Provider profile: `MX Foundry Content Provider Profile`
-        3. Resource Path: `/apps/myExampleApp`
+        3. Resource Path (path to the MX Foundry application to display): `/apps/myExampleApp`
     2. Save the application.
 
 3. Add the Web Dock Application to a DX page.
 
     1. Log into HCL DX and toggle **Edit Mode**.
-    2. Navigate to the desired page or create a new one.
-    3. Open the **Add Components** panel.
+    2. Navigate to the desired page or create a new one. To create a new page, click the menu icon on the right of the Web Dock Application to open the Context menu. You can create either a child or a sibling page.
+    3. Click the plus icon on the left navigation panel to **Add page components and applications** to the page
     4. Under **Applications**, search for your Web Dock App **MX Foundry Application**
     5. Click **Add To Page**.
+
+!!!note
+    For more information about WAB, refer to [Using the Web Application Bridge](./../../wab/wab/index.md)
 
 Your Volt MX app will now render within the DX page.
 
