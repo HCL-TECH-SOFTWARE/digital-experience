@@ -228,17 +228,3 @@ Unused caches use a minimal amount of memory so it is not recommended to lower t
 
 For some cache types, performance will improve if the cache size is a prime number due to a lower probability of cache collisions. For such cache types, the actual size is increased at runtime to the next prime number equal or greater than the size specified.
 
-## People Service
-
-!!! Note
-    The People Service mentioned in this topic is the old People Service application, not the [People Service](../../../../extend_dx/integration/people_service/index.md) application made available starting in CF224.
-
-People Service is used when assigning user and group permissions for WCM resources through the People Picker portlet. In certain cases, the selection of users and groups may be slow and can be improved by reducing the default search attributes used by the service. For example, People Picker expects four attributes. To improve search performance, it’s possible to configure the same attribute four times since only one is needed.
-```
-Attribute: pickerPeopleSearchAttribute
-```
-
-** **Value:** `cn,cn,cn,cn`
-<!--what are the specific steps/actions users need to do here?-->
-
-For more information about defining Search attributes in HCL DX, refer to [Search - Portlet repository](../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/portlet_repo/search_ptlt_rep.md).
