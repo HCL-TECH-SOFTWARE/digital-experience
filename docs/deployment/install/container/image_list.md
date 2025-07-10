@@ -2,9 +2,9 @@
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images.
 
-You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do), in the **HCL_Portal_8.5_9.0_9.5_CFs** download package entry and in the **HCL_DX_9.5_Container_Updates** download package entry for HCL Digital Experience Cloud Native 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} for HCL DX 9.5 entitlements.
 
-Video: [How to upload HCL Digital Experience 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
+Video: [How to upload HCL DX 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
 ## HCL DX 9.5 CF228
 

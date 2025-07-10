@@ -359,9 +359,10 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
-        -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
+        -   A one-time license agreement prompt is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
         -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
         -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
+        -   The [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md) process involves indexing all existing assets while revalidating stale indexes. For more information on how to trigger DAM Reindexing, refer to [DXClient commands](#dxclient-commands).
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
         - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
@@ -623,7 +624,7 @@ Use the following command to display the Help information for a specific command
 dxclient help [command]
 ```
 
-Use the following command to skip prompt of click-through license acceptance agreement:
+Use the following command to skip the license acceptance prompt:
 
 ```bash
 dxclient accept-license
@@ -860,6 +861,12 @@ Use this command to sync a local WCM Design Library with the DX server. Succeedi
 
 ```bash
 dxclient livesync push-wcm-design-library [options]
+```
+
+Use this command to trigger [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md):
+
+```bash
+    dxclient trigger-dam-reindex [options]
 ```
 
 ## Limitations
