@@ -799,11 +799,8 @@ The cache scales with the number of distinct tags (actually tag names) that user
 
 This cache stores information about all the tag names that have already been used to tag resources. The set of tags being maintained as part of this cache is independent from any resource information.
 
-The cache is primarily being used by WebSphere Portal's tagging and rating type-ahead feature. As the user starts typing a tag name, one or more possible matches for the entered text fragment are being searched for and immediately shown to the user. This immediate feedback allows users to select one of the listed options rather than having to type the entire word or phrase they were looking for. A user can also choose a closely related option from the presented list. Thus, the type-ahead feature allows users to explore the tag space as they type. This can make it easier to find the correct term they want to use as the tag.
-
-Another advantage of the type-ahead feature is that it reduces tag space littering ([refer to the knowledge center](https://your-knowledge-center-link.com) for more detailed information).<!--!link not working-->
-
-
+The cache is primarily being used by WebSphere Portal's tagging and rating type-ahead feature. As the user starts typing a tag name, one or more possible matches for the entered text fragment are being searched for and immediately shown to the user. This immediate feedback allows users to select one of the listed options rather than having to type the entire word or phrase they were looking for. A user can also choose a closely related option from the presented list. Thus, the type-ahead feature allows users to explore the tag space as they type. This can make it easier to find the correct term they want to use as the tag [Hints and tips for developers and portal administrators](../../../../../../build_sites/tagging_rating/hints_tips_tag_rate/tag_rate_ref_hintip_4admins.md)
+.
 The cache scales with the number of distinct tags (actually tag names) in the system. The cache is accessed and a new entry is added whenever a new tag is brought into the system, or when available tags are being queried (by text fragments). Thus, a reasonable size for this cache depends on the amount of distinct tag names available.
 
 
