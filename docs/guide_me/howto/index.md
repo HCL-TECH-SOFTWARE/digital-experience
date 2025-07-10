@@ -1,5 +1,5 @@
 
-# How-to Articles
+# How-To Articles
 
 # How-To
 
