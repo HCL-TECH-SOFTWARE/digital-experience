@@ -22,6 +22,10 @@ Take note of the following limitations when using Presentation Designer:
     - The fixed position style of the user element may result in overlap with the header under certain conditions, rather than remaining within the intended canvas boundary. This behavior is observed when setting the element's position to fixed with a top value of 10px in the styling properties. The overlap occurs because the canvas utilizes a root div structure integrated with the document's HTML markup, meaning boundaries may not be fully isolated. While using an iframe could more effectively isolate boundaries, this option is currently not implemented.
     - Adding breakpoints for media queries is not yet supported.
     - The Paragraph format and Text decoration are not yet supported due to the structure of these elements and how they are applied in Presentation Designer
-    - The Static Element Grid currently does not support row and column spans in override stylesheet.
     - An override stylesheet component can only be used in the PT it saved from.
     - Link to the associated stylesheet component will be included in the snackbar.
+    - The Static Grid Element currently does not support the following four styling properties in the override stylesheet:
+        1. Rows
+        2. Columns
+        3. Row span
+        4. Column span
