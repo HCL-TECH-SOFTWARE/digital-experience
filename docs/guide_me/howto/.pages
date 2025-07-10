@@ -1,4 +1,10 @@
+
 title: How-to Articles
+
+nav:
+    - index.md
+    - database
+title: How-to articles
 
 nav:
   - index.md
