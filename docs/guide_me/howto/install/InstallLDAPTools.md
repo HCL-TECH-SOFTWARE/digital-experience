@@ -6,31 +6,30 @@
 
 ## Introduction
 
-It's very common for HCL Digital Experience (DX) to perform searches and modifications on `LDAP` servers. This article describes how to install `IBM SDS Client tools` version 6.4.0.27 (June 2023).
+It's very common for HCL Digital Experience (DX) to perform searches and modifications on LDAP servers. This article describes how to install IBM SDS Client tools version 6.4.0.27 (June 2023).
 
-IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Directory Server`), is very common in `DX` environments. This article provides detailed steps to install the following `IBM SDS Client tools`:
+IBM's LDAP, known as Security Directory Server (SDS) (formerly Tivoli Directory Server), is very common in DX environments. This article provides detailed steps to install the following **IBM SDS Client tools**:
 
-* `idsldapadd`
-* `idsldapchangepwd`
-* `idsldapdelete`
-* `idsldapexop`
-* `idsldapmodify`
-* `idsldapmodrdn`
-* `idsldapsearch`
-* `idsldaptrace`
+* idsldapadd
+* idsldapchangepwd
+* idsldapdelete
+* idsldapexop
+* idsldapmodify
+* idsldapmodrdn
+* idsldapsearch
+* idsldaptrace
 
 !!! note "Check for Newer Version"
-    Check the product offerings for a more recent version.
-    
+    Check the product offerings for a more recent version.  
 
 ## Instructions
 
-1.  [Install IBM Security Directory Server](https://www.ibm.com/docs/en/sva/11.0.0?topic=configuration-security-directory-server-installation){target="_blank"}
+1. [Install IBM Security Directory Server](https://www.ibm.com/docs/en/sva/11.0.0?topic=configuration-security-directory-server-installation){target="_blank"}
 
     !!! note "Server Installation Note"
         First, install IBM Security Directory Server. This is needed only for testing. You can install the Client Tools without the server installed.
 
-2.  Instantiate the necessary environment variables (change them appropriately):
+2. Instantiate the necessary environment variables (change them appropriately):
 
     ```bash
     SDS64="<your server's IP address>"
@@ -40,25 +39,25 @@ IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Direc
     export SDS64 PORT DN PASSWORD
     ```
 
-3.  Download the latest SDS64 fixes from Flexnet or IBM, and copy the files to the directory `/mnt/install/portal95/sds64/fixes`.
-    For this article, version 6.4.0.27 is used, for which the following files need to be downloaded:
+3. Download the latest SDS64 fixes from Flexnet or IBM, and copy the files to the directory `/mnt/install/portal95/sds64/fixes`.
+   For this article, version 6.4.0.27 is used, for which the following files need to be downloaded:
 
     * `6.4.0.27-ISS-ISDS-LinuxX64-IF0027.tar.gz`
     * `8.0.55.29-ISS-GSKIT-LinuxX64-FP0029.tar.gz`
 
-4.  Create a temporary directory:
+4. Create a temporary directory:
 
     ```bash
     mkdir -p /tmp/sds64/fixes
     ```
 
-5.  Copy the SDS64 Client Packages into the directory `/tmp/sds64/fixes`:
+5. Copy the SDS64 Client Packages into the directory `/tmp/sds64/fixes`:
 
     ```bash
     cp /mnt/install/portal95/sds64/fixes/*ISS* /tmp/sds64/fixes
     ```
 
-6.  Unpack the downloaded files:
+6. Unpack the downloaded files:
 
     ```bash
     cd /tmp/sds64/fixes
@@ -66,13 +65,13 @@ IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Direc
     tar xvf *ISS-GSKIT-LinuxX64*
     ```
 
-7.  Install the ISDS license:
+7. Install the ISDS license:
 
     ```bash
     /tmp/sds64/fixes/*-ISS-ISDS-LinuxX64-*/license/idsLicense -q
     ```
 
-8.  Verify the license status (a "0" indicates success) and install the license RPM:
+8. Verify the license status (a "0" indicates success) and install the license RPM:
 
     ```bash
     /tmp/sds64/fixes/*-ISS-ISDS-LinuxX64-*/license/idsLicense -t
@@ -80,7 +79,7 @@ IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Direc
     rpm -ivh /tmp/sds64/fixes/*-ISS-ISDS-LinuxX64-*/images/idsldap-license64-6.4.0-*.x86_64.rpm
     ```
 
-9.  Install the GSKit:
+9. Install the GSKit:
 
     ```bash
     rpm -ivh /tmp/sds64/fixes/*-ISS-GSKIT-LinuxX64-*/64/gsk*64*rpm
@@ -112,4 +111,4 @@ IBM's `LDAP`, known as `Security Directory Server (SDS)` (formerly `Tivoli Direc
 
     ```bash
     idsldapsearch -B -D $DN -w $PASSWORD -h $SDS64 -p $PORT -s sub objectclass=*
-    ```
+    ```  

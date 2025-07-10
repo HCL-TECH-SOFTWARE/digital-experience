@@ -2,8 +2,7 @@
 
 Learn how to use HCL Digital Experience with all it's features.
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. This platform offers technical education for the HCL Software portfolio, organized by practitioner role. For more information, see the [HCL Digital Experience section on HCL Software U](https://hclsoftwareu.hcltechsw.com/).
-
+Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. This platform offers technical education for the HCL Software portfolio, organized by practitioner role. For more information, see the [HCL Digital Experience section on HCL Software U](https://hclsoftwareu.hcltechsw.com/).  
 
 ## How-To Articles
 
@@ -64,4 +63,4 @@ Troubleshoot issues affecting your HCL DX environment.
 Perform upgrade tasks in your HCL DX environment.
 
 * **[Web Content Manager Library Management](./wcmlibrarymanagement/index.md)**
-Perform WCM Library Management tasks, such as importing and exporting, in your HCL DX environment.
+Perform WCM Library Management tasks, such as importing and exporting, in your HCL DX environment.  

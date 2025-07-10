@@ -1,4 +1,4 @@
-# Removing or Hiding the "X-Powered-By" Header in HCL Digital Experience
+# Removing or hiding the "X-Powered-By" header in HCL Digital Experience
 
 ## Applies to
 
@@ -10,7 +10,7 @@ Some web applications in HCL Digital Experience include the `X-Powered-By` heade
 
 ## Instructions
 
-Two options are available:
+Two options are available to remove or hide the `X-Powered-By` header.
 
 ### Option 1: Configure `server.xml`
 
@@ -18,15 +18,15 @@ Set the parameter `disableXPoweredBy` to `true` in the `server.xml` file, then r
 
 ### Option 2: Administrative Console Configuration
 
-1.  In the administrative console, navigate to **Servers > Server Types > WebSphere application servers > `<server_name>` > Web Container Settings > Web container**.
-2.  Under **Additional Properties**, click on **Custom Properties**.
-3.  On the **Custom Properties** page, click on the **New** button.
-4.  On the settings page, enter the following values:
+1. In the administrative console, navigate to **Servers > Server Types > WebSphere application servers > `<server_name>` > Web Container Settings > Web container**.
+2. Under **Additional Properties**, click on **Custom Properties**.
+3. On the **Custom Properties** page, click on the **New** button.
+4. On the settings page, enter the following values:
     * **Property Name:** `com.ibm.ws.webcontainer.disablexPoweredBy`
     * **Value:** `true`
-5.  Click on **Apply** or **OK**.
-6.  Click on **Save** on the console taskbar to save your configuration changes.
-7.  Restart the server.
+5. Click on **Apply** or **OK**.
+6. Click on **Save** on the console taskbar to save your configuration changes.
+7. Restart the server.
 
 ---
 
