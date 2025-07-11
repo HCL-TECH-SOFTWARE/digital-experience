@@ -122,19 +122,19 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
 
         ```yaml
         configuration:
-        leap:  
-            configOverrideFiles:
-            mycustomoverride: |
-                <server description="leapServer">
-                <federatedRepository id="leapRepo">
-                    <primaryRealm name="defaultWIMFileBasedRealm" allowOpIfRepoDown="true">
-                    <participatingBaseEntry name="o=defaultWIMFileBasedRealm" />
-                    </primaryRealm>
-                </federatedRepository>
-                <basicRegistry id="leapRegistry" realm="defaultWIMFileBasedRealm" ignoreCaseForAuthentication="true">
-                    <user id="<my-user-id>" name="uid=<my-uid>,o=defaultWIMFileBasedRealm" password="<my-password>" />
-                </basicRegistry>
-                </server>
+            leap:  
+                configOverrideFiles:
+                    mycustomoverride: |
+                        <server description="leapServer">
+                        <federatedRepository id="leapRepo">
+                            <primaryRealm name="defaultWIMFileBasedRealm" allowOpIfRepoDown="true">
+                            <participatingBaseEntry name="o=defaultWIMFileBasedRealm" />
+                            </primaryRealm>
+                        </federatedRepository>
+                        <basicRegistry id="leapRegistry" realm="defaultWIMFileBasedRealm" ignoreCaseForAuthentication="true">
+                            <user id="<my-user-id>" name="uid=<my-user-id>,o=defaultWIMFileBasedRealm" password="<my-password>" />
+                        </basicRegistry>
+                        </server>
         ```
 
     2. Perform a Helm upgrade to apply your changes.
@@ -173,29 +173,35 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
             1. Under **Password**, enter and confirm a secure password. You will require this password later.
             2. Under **Fully qualified key file name**, specify a name for the file that holds the exported keys (for example, `ltpa.keys`).
         4. Click **Export keys**.
-    2. Copy the content of the exported LTPA key file into a local file named `ltpa.keys` in your current folder. This file will be used to create the Kubernetes secret.
-    3. Run the following command in your local machine's terminal to create the Kubernetes secret:
+    2. Look for the exported `ltpa.keys` in your DX core pod.
+        1. In your cluster, run `kubectl exec -it <your-dx-core-pod-name> -- sh`.
+        2. Run `find / -name ltpa.keys` to find the location of the ltpa.keys file, e.g. `/opt/HCL/profiles/prof_95_CF229/ltpa.keys`.
+        3. Run `cat <ltpa.keys-location>` to print the file's contents into the terminal.
+    3. Copy the content of the exported LTPA key file into a file named `ltpa.keys` in your cluster. This file will be used to create the Kubernetes secret.
+    4. Exit the DX Core pod shell by running `exit`.
+    5. Run the following command in your cluster to create the Kubernetes secret:
 
         ```
-        kubectl create secret generic my-custom-ltpa-key --from-file=./ltpa.keys --namespace=<namespace>
+        kubectl create secret generic my-custom-ltpa-key --from-file=/path/to/ltpa.keys --namespace=<namespace>
         ```
 
-    4. Update `ltpa-key` in the Leap custom Helm `values.yaml` file:
+    6. Update `ltpa-key` in the Leap custom Helm `values.yaml` file, then run a helm upgrade:
 
         ```yaml
         configuration: 
-        leap: 
-            customSecrets: 
-            ltpa-key: my-custom-ltpa-key
+            leap: 
+                customSecrets: 
+                    ltpa-key: my-custom-ltpa-key
         ```
 
-    5. Update the LTPA `keysFileName` and `keysPassword` parameters by adding this line to the `configOverrideFiles` section of your `values.yaml` file: 
+    7. Look for `ltpa.keys` in your Leap pod (steps are similar to those that you did to find it in the DX pod). Check that its contents are the same as the ltpa.keys exported in DX. Note the location of the ltpa.keys file for the next step.
+    8. Update the LTPA `keysFileName` and `keysPassword` parameters by adding this line to the `configOverrideFiles` section of your Leap `values.yaml` file: 
 
         ```
         <ltpa keysFileName="/path/to/ltpa.keys" keysPassword="<myLtpaKeyPassword>" />
         ```
 
-    6. Perform a Helm upgrade to apply your changes.
+    9. Perform a Helm upgrade to apply your changes.
 
     !!! note
         For more details on using custom secrets as key file, refer to [Using custom secrets as key file](https://opensource.hcltechsw.com/leap-doc/latest/helm_admin_customsecret.html?h=ltpa#using-custom-secrets-as-key-file){target="_blank"}.
@@ -205,9 +211,9 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
     ```yaml
     ### Leap custom values file
     configuration:
-    leap:  
+      leap:  
         configOverrideFiles:
-        mycustomoverride: |
+          mycustomoverride: |
             <server description="leapServer">
             <webAppSecurity ssoRequiresSSL="true"/>
             <ltpa keysFileName="/path/to/ltpa.keys" keysPassword="<myLtpaKeyPassword>" />
