@@ -8,7 +8,19 @@ You can integrate data from HCL Leap to your HCL DX pages using the Digital Data
 
 ## Integrating the HCL Leap application in HCL DX
 
-You can integrate HCL Leap applications into HCL DX in two ways:
+By default, the embedding of Leap apps isn't allowed. Set the following properties in the custom Leap values.yaml file to allow it for all domains:
+
+```yaml
+configuration:
+    leap:
+        leapProperties: |
+            ibm.nitro.NitroConfig.embedDomainWhitelist.enabled = false
+```
+
+!!!note
+    Read about the `embedDomainWhitelist` property in the [Leap docs](https://opensource.hcltechsw.com/leap-doc/latest/co_configuration_properties.html#embedDomainWhitelist) for details on how to enable embedding for only some select domains.
+
+After setting the above property, you can now integrate HCL Leap applications into HCL DX in two ways:
 
 - [Using the embedded JavaScript API](#integrating-hcl-leap-applications-using-the-embedded-javascript-api)
 - [Using the Web Application Bridge (WAB)](#integrating-hcl-leap-applications-with-web-application-bridge)
