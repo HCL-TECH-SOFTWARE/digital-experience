@@ -100,6 +100,8 @@ The following YAML file demonstrates how to define a Gateway API `HTTPRoute` res
 Refer to the following steps to enable Lightweight Third-Party Authentication (LTPA) Single Sign-On (SSO) between Leap and DX in Kubernetes. These steps are based on [a community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4){target="_blank"} in HCLSoftware Community.
 
 1. Ensure both DX and Leap use an identical user registry configuration.
+    - For DX, please refer to the doc on [User Registry Options](/docs/get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_ureg_ov.md) for details.
+    - For Leap, please refer to [the Leap documentation](https://opensource.hcltechsw.com/leap-doc/latest/helm_configure_ldap.html) for details.
 
 2. Ensure both DX and Leap use the same realm name.
   
