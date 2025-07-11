@@ -12,11 +12,11 @@ If you are deploying the HCL DX 9.5 CF228 Container update release, the package 
 
 ### HCL DX 9.5 CF228 DXClient files
 
-```shell
-hcl-dxclient-image-v95_CF228_20250606-1747.zip
-hcl-dxclient-v95_CF228_20250606-1747.zip
 ```
-
+hcl-dx-deployment-v2.37.3_20250702-1442.tgz
+hcl-dx-remote-search-image-v95_CF228_20250701-1951.tar.gz
+hcl-dx-core-image-v95_CF228_20250701-1951.tar.gz
+```
 ### hcl-dx-kubernetes-v95-CF228.zip
 
 ```shell
