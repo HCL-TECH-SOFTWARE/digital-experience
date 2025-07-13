@@ -92,3 +92,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+
+## New Access Layer Updates in DX Deployments
+
+Significant updates have been implemented within the **access layers** of HCL Digital Experience (DX) deployments. A key change involves the transition from **Ambassador to HAProxy**. This strategic replacement provides a more robust and efficient foundation, making it considerably easier for administrators to deploy and manage a **custom Access Layer**. Such a custom layer can now readily handle advanced network demands, including intricate **traffic routing**, secure **proxying**, and a wide array of similar specialized use cases that require fine-grained control over inbound and outbound connections to your DX instance. For more information,  see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for more information. 
