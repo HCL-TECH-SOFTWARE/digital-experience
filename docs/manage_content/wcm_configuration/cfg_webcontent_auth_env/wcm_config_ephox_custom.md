@@ -329,6 +329,33 @@ These customization steps only apply to Web content in-place editing with the Ti
 
     To revert to the default editor toolbar, remove the property `inplaceEdit.toolbarConfigForRichText` and restart the server.
 
+
+## Using a custom TinyMCE editor configuration with in-place editing
+
+These customization steps only apply to Web content in-place editing with the TinyMCE editor.
+
+1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
+
+2. Click **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
+
+3. Click **Custom properties** to update the configuration properties.
+
+4. Edit or create the property `inplaceEdit.enhancedRichTextConfig`, and set its value to match the desired configuration. Currently three TinyMCE configuration options are supported: valid_children, toolbar, toolbar_mode. The value must be in an array format.
+
+    Sample value:
+
+    - Multiple TinyMCE options in an array that allow for the HTML style element to be part of a div and to use sliding mode to accommodate any overflowing toolbar buttons.
+
+        ```bash
+        [ 'valid_children: +div[style]', 'toolbar_mode: sliding' ]
+        ```
+
+5. Save your changes.
+
+6. Restart the Portal server to apply your changes.
+
+    To revert to the default editor toolbar, remove the property `inplaceEdit.enhancedRichTextConfig` and restart the server.
+
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
     - [TinyMCE Documentation](https://www.tiny.cloud/docs/tinymce/6/){target="_blank"}
