@@ -1,6 +1,6 @@
-# Enabling SSO between HCL DX and HCL Volt MX Foundry
+# Enabling SSO between HCL DX and HCL Volt MX Foundry Apps
 
-This topic explains how to enable Single Sign-On (SSO) between HCL Digital Experience (DX) and HCL Volt MX Foundry, where DX acts as the OAuth 2.0 service provider.
+This topic explains how to enable Single Sign-On (SSO) between HCL Digital Experience (DX) and HCL Volt MX Foundry applications, where DX acts as the OAuth 2.0 service provider.
 
 ## Prerequisites
 
@@ -189,7 +189,7 @@ To enable SSO, ensure you have:
 
     1. Ensure the Iris is connected to the Foundry application which contains the SSO configurations. For more information on how to create an application, refer to [Getting started with Iris](https://help.hcl-software.com/voltmx/v9.5/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}.
 
-    2. Create login form in Iris using the guide reffered in [Getting started with Iris](https://help.hcl-software.com/voltmx/v9.5/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}. 
+    2. Create login form in Iris using the guide referred in [Getting started with Iris](https://help.hcl-software.com/voltmx/v9.5/Iris/iris_tutorials/Content/Module/getting_started_iris.html){target="_blank"}. 
     
     3. Add the following code to form init:
 
