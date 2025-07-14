@@ -12,8 +12,11 @@ Take note of the following limitations when using Presentation Designer:
     - Reusing of styles from a theme.
     - Adding any script or custom markup.
     - Using external CSS. All styles are applied as inline styles and different orientations through breakpoints are not yet supported. For more information, refer to the [Styling Options in Presentation Designer](../../presentation_designer/usage/styling_options.md) topic.
-    - Multiple stylesheet not yet supported
-    - Blueprint Templates not yet supported
+    - Blueprint Presentation Templates are not yet supported:
+
+        Add this to the markup `<!-- BluePrint Template -->` and then open the Presentation Designer:
+
+        ![](../../../../assets/HCL_Presentation_Designer_Blueprint_snackbar.png)
 
 - The following features are not fully supported:
     - Right-to-Left layout, with certain elements not fully optimized for languages that require this layout.
@@ -21,11 +24,34 @@ Take note of the following limitations when using Presentation Designer:
     - Translation to other languages. English is the default language used in Presentation Designer.
     - The fixed position style of the user element may result in overlap with the header under certain conditions, rather than remaining within the intended canvas boundary. This behavior is observed when setting the element's position to fixed with a top value of 10px in the styling properties. The overlap occurs because the canvas utilizes a root div structure integrated with the document's HTML markup, meaning boundaries may not be fully isolated. While using an iframe could more effectively isolate boundaries, this option is currently not implemented.
     - Adding breakpoints for media queries is not yet supported.
-    - The Paragraph format and Text decoration are not yet supported due to the structure of these elements and how they are applied in Presentation Designer
-    - An override stylesheet component can only be used in the PT it saved from.
-    - Link to the associated stylesheet component will be included in the snackbar.
+    - The Paragraph format and Text decoration are not dynamically set based on media-query due to the structure of these elements and how they are applied in Presentation Designer
+    - An override stylesheet component should only be used for the presentation template it was created for.
+    - A link to the associated override stylesheet component will be included in the snackbar, allowing the user to verify where the override style is saved.
     - The Static Grid Element currently does not support the following four styling properties in the override stylesheet:
         1. Rows
         2. Columns
         3. Row span
         4. Column span
+    - Multiple stylesheet not yet supported
+        1. Proper handling of multiple stylesheets.
+        2. Aside from the Default and Override stylesheets, any other stylesheets imported through the following methods are not fully supported:
+            1. External stylesheets
+            2. Style tags
+        3. CSS Selectors or CSS Rules:
+
+            The following fundamental selector types are fully supported:
+
+            1. Basic Selector types:
+                1. Type Selectors.
+                2. Class Selectors.
+
+            The following fundamental selector types are currently not supported:
+
+            1. Basic Selector types:
+                1. ID Selectors.
+                2. Universal Selector.
+            2. Combinators.
+            3. Attribute Selectors.
+            4. Pseudo-classes.
+            5. Pseudo-elements.
+            6. At-Rules.
