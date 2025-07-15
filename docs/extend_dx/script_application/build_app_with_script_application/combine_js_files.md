@@ -1,5 +1,5 @@
 ---
-title: Combine Local JavaScript Files
+title: Combine local JavaScript files
 ---
 
 # Combine local JavaScript files when you import applications

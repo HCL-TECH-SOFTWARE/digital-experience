@@ -130,7 +130,7 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../images/Core_Friendly_Url_Cache.png){ width="1000" }
 
-- Adjusted JVM Heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
+- Adjusted JVM heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
       ![](../../../images/Core_JVM_Tuning.png){ width="1000" }
 
@@ -157,6 +157,35 @@ The following list contains details about the tuning and enhancements done to th
 
      - For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
 
+Modifications were also made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 10,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
+
+|  |  | Request | Request | Limit | Limit |
+|---|---|---:|---|---|---|
+| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
+| contentComposer | 1 | 100 | 128 | 100 | 128 |
+| **core** | **7** | **5600** | **8192** | **5600** | **8192** |
+| **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
+| imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
+| **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
+| **persistenceNode** | **2** | **1200** | **2048** | **1200** | **2048** |
+| **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
+| **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
+| runtimeController | 1 | 100 | 256 | 100 | 256 |
+| **haproxy** | **2** | **2000** | **1024** | **2000** | **1024** |
+| licenseManager | 1 | 100 | 300 | 100 | 300 |
+| **Total** | **24**| **56000** | **79532** | **56000** | **79532** |
+
+!!!note
+     Values in bold are tuned Helm values while the rest are default minimal values.
+
+For convenience, these values were added to the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
+
+1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+
+2. Extract the `hcl-dx-deployment-XXX.tgz` file.
+
+3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/medium-config-values.yaml` and copy the `medium-config-values.yaml` file.
+
 ## Results
 
 The initial test runs were conducted on an AWS-distributed Kubernetes setup with one master and three worker nodes. The system successfully handled concurrent user loads of 1,000, 2,500, 4,000, and 5,000 users, with a low error rate (< 0.0001%). At 8,000 users, error rates increased dramatically and the response times went up. For a response time to be considered optimal, it should be under one second.
@@ -182,41 +211,29 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the OpenLDAP pod is not for production use.
+- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
-!!!note
-     Do not size your JVM Heap size larger than the allotted memory for the pod.
+### Recommended heap size configuration
 
-Modifications were made to the initial Helm chart configuration during the tests. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 10,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
-
-|  |  | Request | Request | Limit | Limit |
-|---|---|---:|---|---|---|
-| **Component** | **No. of pods** | **cpu (m)<br>** | **memory (Mi)<br>** | **cpu (m)<br>** | **memory (Mi)<br>** |
-| contentComposer | 1 | 100 | 128 | 100 | 128 |
-| **core** | **7** | **5600** | **8192** | **5600** | **8192** |
-| **digitalAssetManagement** | **4** | **1000** | **2048** | **1000** | **2048** |
-| imageProcessor | 1 | 200 | 2048 | 200 | 2048 |
-| **openLdap** | **1** | **500** | **2048** | **500** | **2048** |
-| **persistenceNode** | **2** | **1200** | **2048** | **1200** | **2048** |
-| **persistenceConnectionPool** | **2** | **700** | **1024** | **700** | **1024** |
-| **ringApi** | **2** | **2000** | **512** | **2000** | **512** |
-| runtimeController | 1 | 100 | 256 | 100 | 256 |
-| **haproxy** | **2** | **2000** | **1024** | **2000** | **1024** |
-| licenseManager | 1 | 100 | 300 | 100 | 300 |
-| **Total** | | **56000** | **79532** | **56000** | **79532** |
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
 
 !!!note
-     Values in bold are tuned Helm values while the rest are default minimal values.
+     Do not set your JVM heap size larger than the allotted memory for the pod.
 
-For convenience, these values were added to the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
+- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
+      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
+      - This eliminates the overhead of heap expansion and improves performance consistency.
 
-1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+- Ensure the Kubernetes pod resource limits match the JVM heap settings
+      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
+      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
 
-2. Extract the `hcl-dx-deployment-XXX.tgz` file.
-
-3. In the extracted folder, navigate to `hcl-dx-deployment/value-samples/medium-config-values.yaml` and copy the `medium-config-values.yaml` file.
+- Determine the final memory requirements based on load testing
+      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
+      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
+      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
 
 ???+ info "Related information"
     - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)

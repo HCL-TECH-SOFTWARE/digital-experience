@@ -2,6 +2,8 @@
 
 Search V2 replaces the existing Search feature in HCL Digital Experience (DX). This feature introduces a new search interface along with a new backend service that utilizes OpenSearch to provide a seamless search experience.
 
+You can use Search V2 both in DX Core and [DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"}. A full container deployment is required to use Search V2.
+
 ## Overview
 
 Search V2 is made for, but is not limited to, the following sample use cases:

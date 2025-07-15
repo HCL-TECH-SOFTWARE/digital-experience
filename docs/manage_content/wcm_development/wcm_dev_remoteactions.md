@@ -1,4 +1,4 @@
-# How to use remote actions
+# Using remote actions
 
 Remote actions are used to trigger actions from the HCL Web Content Manager application.
 

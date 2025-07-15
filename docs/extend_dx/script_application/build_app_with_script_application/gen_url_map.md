@@ -1,5 +1,5 @@
 ---
-title: Generating a URL Map
+title: Generating a URL map
 ---
 
 # Generating a URL Map from local application paths to runtime Web Content Manager URLs

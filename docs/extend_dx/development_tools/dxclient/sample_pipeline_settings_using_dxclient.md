@@ -1,8 +1,8 @@
 # Sample Pipeline Settings using DXClient
 
-A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
+A CI/CD pipeline can help automate processes in the development and test cycle, including code deployment to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, and the export and import of Web Content Manager (WCM) libraries can be automated.
 
-A sample pipeline code that uses container version of DXclient for a combined task run of deploying portlet, theme and script application is made available under the samples folder in the DXClient root folder. Developers and administrators can also use [this sample](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy){target="_blank"} as a basis for Jenkins automation server jobs.
+You can find a sample pipeline code under the samples folder in the DXClient root folder. This code uses a container version of DXClient to deploy the portlet, theme, and script application. Developers and administrators can also use [this sample](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy){target="_blank"} as a basis for Jenkins automation server jobs.
 
 ## Parameters for installing DXClient
 
@@ -14,17 +14,17 @@ A sample pipeline code that uses container version of DXclient for a combined ta
 |`ARTIFACT_PATH`|URL (except filenames) for artifacts to be deployed|Artifacts fetched through curl|
 |`ARTIFACT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access artifact URLs|
 
-## Parameters of DX Server Configuration
+## DX Server configuration parameters
 
 |Parameter|Value|Notes|
 |---------|-----|-----|
 |`DX_HOST`|Host name or IP address of DX server|Artifacts will be deployed to this server|
 |`DX_PROTOCOL`|Protocol to connect to DX server|http or https|
-|`DX_PORT`|Port to connect to DX serve|Port for the DX main profile|
+|`DX_PORT`|Port to connect to DX server|Port for the DX main profile|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet. The route only changes in Open Shift Kubernetes Environment. Otherwise, this parameter should be same as DX_HOST|Hostname for the DX Configuration Wizard profile|
-|`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX config wizard profile|
-|`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server config wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet. The route only changes in OpenShift Kubernetes environment. Otherwise, this parameter should be same as DX_HOST|Hostname for the DX Config Wizard profile|
+|`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Config Wizard profile|
+|`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name and password credentials needed to access DX server Config Wizard profile|
 
 ## Deploy portlet
 
@@ -78,7 +78,7 @@ This sample shows how to install the DXClient tool in a pipeline and deploy a Sc
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file2.png)
 ![Sample pipeline for the DXClient node package file](../../../images/dxclient-sample-pipeline-using-node-zip-file3.png)
 
-## Other Sample Pipeline Settings
+## Other sample pipeline settings
 
 ### Restore script application
 
@@ -115,7 +115,7 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 |`DX_PROTOCOL`|Protocol to connect to DX server|HTTP or HTTPS|
 |`DX_HOST`|Host name or IP address of DX server|Artifacts will be deployed to this server|
 |`DX_PORT`|Port to connect to DX server|Port for the DX main profile|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes Environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile. Default to 10202|
 |`APPLICATION_FILE`|File name of EAR application to deploy|Required for EAR deployment|
 |`APPLICATION_NAME`|Application name for the EAR file to deploy|Required for EAR deployment|
@@ -135,7 +135,7 @@ This sample shows how to restart the DX Core server using the DXClient tool in a
 |`TOOL_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access tool package URL|
 |`DX_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core server|
 |`DXCONNECT_CREDENTIALS_ID`|Credentials ID in Jenkins store|User name/password credentials needed to access DX Core Server Configuration Wizard profile|
-|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes Environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
+|`DXCONNECT_HOST`|Host name or IP address of the DXConnect servlet \(route change only in case of Open Shift Kubernetes environment. For other case, this parameter should be same as DX\_HOST\)|Hostname for the DX Configuration Wizard profile|
 |`DXCONNECT_PORT`|Port to connect to DXConnect servlet|Port for the DX Configuration Wizard profile. Default to 10202|
 |`DX_PROFILE_PATH`|Profile path of the DX Core server|Required for restarting the DX Core server|
 
@@ -169,4 +169,3 @@ To learn how to use staging tools such as DXClient, Syndication, XMLAccess, Rele
 
 ???+ info "Related information" 
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](./sample_pipeline_settings_using_dxclient.md)

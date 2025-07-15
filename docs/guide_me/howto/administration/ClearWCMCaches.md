@@ -55,3 +55,8 @@ Make sure to replace `<task-name>` with one of the following available tasks:
     ```
 
     Replace `<password1>` and `<password2>` with your Portal administration and WebSphere Application Server administration password respectively.  
+
+???+ info "Related information"
+    - [Cache parameters](../../../manage_content/wcm_configuration/custom_caching/wcm_dev_caching_cache-parameters.md)
+    - [Caching options](../../../manage_content/wcm_configuration/cfg_webcontent_delivery_env/caching_options/index.md)
+    - [Performance Tuning Guide for Traditional Deployments](../../performance_tuning/traditional_deployments.md)

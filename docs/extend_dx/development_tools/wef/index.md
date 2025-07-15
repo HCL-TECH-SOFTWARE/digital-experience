@@ -31,7 +31,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 !!!note
     HCL WEF 8.5.1 cannot be installed on Mac OS.
 
-1. Obtain HCL Web Experience Factory v8.5.1 from your HCL Software License Portal entitlements. HCL WEF 8.5.1 is included in all HCL Digital Experience 8.5 offering entitlements. See the [Getting the Software](../../../get_started/download/software_licensing_portal/index.md#getting-the-software) Help Center topic for more information.
+1. Obtain HCL Web Experience Factory v8.5.1 from your [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} entitlements. HCL WEF 8.5.1 is included in all HCL Digital Experience 8.5 offering entitlements. See the [Getting the Software](../../../get_started/download/software_licensing_portal/index.md#getting-the-software) Help Center topic for more information.
 
 2. Unzip the downloaded `hcl-dx-wef-v8.5.1_2022XXXX.zip` file. The extracted file components contains:
 
