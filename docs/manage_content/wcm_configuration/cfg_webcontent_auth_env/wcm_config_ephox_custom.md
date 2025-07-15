@@ -332,7 +332,7 @@ These customization steps only apply to Web content in-place editing with the Ti
 
 ## Using a custom TinyMCE editor configuration with in-place editing
 
-These customization steps only apply to Web content in-place editing with the TinyMCE editor.
+These customization steps only apply to web content in-place editing with the TinyMCE editor.
 
 1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
