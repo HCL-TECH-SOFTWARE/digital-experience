@@ -120,3 +120,7 @@ Discussions  how to display Volt MX Foundry data on HCL DX pages using Digital D
 ###  Deploying HCL Volt MX portlets into HCL DX
 
 For details on how to generate a Volt MX portlet using Iris, deploy it into HCL Digital Experience (DX), and verify that the portlet renders correctly on a DX page. Go to [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+
+## integration of HCL Leap with the existing Digital Experience (DX) environment.
+
+Integrate HCL Leap with HCL Digital Experience to improve agility, user experience, and automate processes within a unified digital platform.
