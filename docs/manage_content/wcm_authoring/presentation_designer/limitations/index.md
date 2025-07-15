@@ -26,7 +26,6 @@ Take note of the following limitations when using Presentation Designer:
     - Adding breakpoints for media queries is not yet supported.
     - The Paragraph format and Text decoration are not dynamically set based on media-query due to the structure of these elements and how they are applied in Presentation Designer
     - An override stylesheet component should only be used for the presentation template it was created for.
-    - A link to the associated override stylesheet component will be included in the snackbar, allowing the user to verify where the override style is saved.
     - The Static Grid Element currently does not support the following four styling properties in the override stylesheet:
         1. Rows
         2. Columns
@@ -38,20 +37,11 @@ Take note of the following limitations when using Presentation Designer:
             1. External stylesheets
             2. Style tags
         3. CSS Selectors or CSS Rules:
-
-            The following fundamental selector types are fully supported:
-
-            1. Basic Selector types:
-                1. Type Selectors.
-                2. Class Selectors.
-
-            The following fundamental selector types are currently not supported:
-
-            1. Basic Selector types:
-                1. ID Selectors.
-                2. Universal Selector.
-            2. Combinators.
-            3. Attribute Selectors.
-            4. Pseudo-classes.
-            5. Pseudo-elements.
-            6. At-Rules.
+            Having these selector types in any stylesheet components used in the Presentation Template may result in unknown side effects when the Presentation Template is opened and updated using the Presentation Designer.
+            1. ID Selectors.
+            2. Universal Selector.
+            3. Combinators.
+            4. Attribute Selectors.
+            5. Pseudo-classes.
+            6. Pseudo-elements.
+            7. At-Rules.
