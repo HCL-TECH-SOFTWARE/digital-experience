@@ -64,7 +64,9 @@ The following image shows how the default style options work in Presentation Des
 
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_download.png)
 
-    3. Locate the downloaded file and open it.
+    3. Locate the downloaded file and open it. 
+    
+        This contains the CSS data inside the default stylesheet.
 
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_downloaded_file.png)
 
@@ -116,5 +118,7 @@ The following image shows how the override style options work in Presentation De
         ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_download.png)
 
     3. Locate the downloaded file and open it.
+
+        This contains the CSS data inside the override stylesheet.
 
         ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_downloaded_file.png)
