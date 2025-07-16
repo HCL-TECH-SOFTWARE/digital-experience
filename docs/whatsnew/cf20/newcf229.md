@@ -79,20 +79,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
 - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
 
-## New Access Layer Updates in DX Deployments
-
-=== "Containers"
-    Significant updates have been implemented within the **access layers** of HCL Digital Experience (DX) deployments. A key change involves the transition from **Ambassador to HAProxy**. This strategic replacement provides a more robust and efficient foundation, making it considerably easier for administrators to deploy and manage a **custom Access Layer**. Such a custom layer can now readily handle advanced network demands, including intricate **traffic routing**, secure **proxying**, and a wide array of similar specialized use cases that require fine-grained control over inbound and outbound connections to your DX instance. For more information, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
-
-    See the following documents:
-
-- [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
-- [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
-- [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
-- [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
-- [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
-- [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
-
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
 === "Containers"
