@@ -22,19 +22,21 @@ Both options are free to use and available starting from CF221. For details, see
 
 The MHS portal offers two installation methods:
 
-1. **Container Package**
-      - Fully packaged container with all dependencies included
-      - Works with Docker or Podman (OCI-compliant runtimes)
-      - Available since HCL DX 9.5 CF196
-      - [Full installation instructions](#installing-dxclient-using-the-container-package-from-the-mhs-portal)
+**Option 1: Container Package**
 
-!!!warning
+- Fully packaged container with all dependencies included
+- Works with Docker or Podman (OCI-compliant runtimes)
+- Available since HCL DX 9.5 CF196
+- [Full installation instructions](#installing-dxclient-using-the-container-package-from-the-mhs-portal)
+
+!!! warning
     Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
 
-2. **Native JavaScript Package**
-      - Requires manual installation of Node.js and npm dependencies
-      - More flexible but requires more setup
-      - [Full installation instructions](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal)
+**Option 2: Native JavaScript Package**
+
+- Requires manual installation of Node.js and npm dependencies
+- More flexible but requires more setup
+- [Full installation instructions](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal)
 
 !!!important "Version Numbering and Licensing"
     Since CF221, DXClient uses a new versioning format that matches CF numbers (e.g., "221.0.0" instead of "1.29.0").
@@ -46,6 +48,8 @@ The MHS portal offers two installation methods:
 ### Latest Updates (CF229)
 
 For CF229, we have upgraded few NPM Libraries for Code Maintanence. These changes have no impact on the current workings of DXClient.
+
+For a complete history of features added in each release, see the [Feature Release History](#feature-release-history) section.
 
 ### Architecture
 
@@ -113,16 +117,18 @@ This method is preferred for CI/CD automation scenarios.
 
 **Installation Steps:**
 
-1. Pull the Docker image:
-   ```bash
-   docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
-   ```
+**Step 1: Pull the Docker image**
+```bash
+docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+```
 
-2. Download and configure DXClient scripts:
-   - Get scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
-   - Follow instructions in the repository for setup and usage
+**Step 2: Download and configure DXClient scripts**
+
+- Get scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
+- Follow instructions in the repository for setup and usage
 
 **Resource Links:**
+
 - [HCL DX Open Harbor Repository](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}
 - [DXClient Scripts GitHub Repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
 
@@ -131,18 +137,20 @@ This method is preferred for CI/CD automation scenarios.
 The container package provides a fully packaged OCI-compliant container with all dependencies included.
 
 **Prerequisites:**
+
 - Docker or Podman (any OCI-compliant container runtime)
 - HCL DX 9.5 CF196 or higher entitlement
 - MHS portal access
 
-!!!warning
+!!! warning
     Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
 
 **Installation Steps:**
 
-**Step 1. Prepare your environment**
-      - Navigate to your desired working directory
-      - If upgrading from Node.js version, uninstall it first:
+**Step 1: Prepare your environment**
+
+- Navigate to your desired working directory
+- If upgrading from Node.js version, uninstall it first:
    
 === "Linux and Apple macOS"
     ```bash
@@ -154,12 +162,14 @@ The container package provides a fully packaged OCI-compliant container with all
     make_unlink.bat
     ```
 
-**Step 2. Download and extract the package**
-      - Download DXClient.zip (DXClient_VX_XXXXXXXX-XXXX.zip) from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
-      - Extract the zip file
+**Step 2: Download and extract the package**
 
-**Step 3. Configure container runtime (optional)**
-      - Default is Docker. To use another runtime:
+- Download DXClient.zip (DXClient_VX_XXXXXXXX-XXXX.zip) from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
+- Extract the zip file
+
+**Step 3: Configure container runtime (optional)**
+
+- Default is Docker. To use another runtime:
    
 === "Linux and Apple macOS"
     ```bash
@@ -173,34 +183,34 @@ The container package provides a fully packaged OCI-compliant container with all
     # Example: set CONTAINER_RUNTIME=podman
     ```
 
-**Step 4. Load the container image**
+**Step 4: Load the container image**
 
 === "Linux and Apple macOS"
-  ```bash
-  docker load < dxclient.tar.gz
-  ```
+    ```bash
+    docker load < dxclient.tar.gz
+    ```
 
 === "Microsoft Windows"
-  ```batch
-  docker load -i dxclient.tar.gz
-  ```
+    ```batch
+    docker load -i dxclient.tar.gz
+    ```
 
-**Step 5. Add to PATH (optional)**
+**Step 5: Add to PATH (optional)**
    
 === "Linux and Apple macOS"
-  ```bash
-  export PATH=<working-directory>/bin:$PATH
-  ```
+    ```bash
+    export PATH=<working-directory>/bin:$PATH
+    ```
 
 === "Microsoft Windows"
-  ```batch
-  set PATH=<working-directory>\bin;%PATH%
-  ```
+    ```batch
+    set PATH=<working-directory>\bin;%PATH%
+    ```
 
-    !!! note
-      These PATH changes are temporary. For permanent changes, update your system's environment variables.
+!!! note
+    These PATH changes are temporary. For permanent changes, update your system's environment variables.
 
-**Step 6. Set file permissions**
+**Step 6: Set file permissions**
 
 === "Linux and Apple macOS"
     ```bash
@@ -210,54 +220,56 @@ The container package provides a fully packaged OCI-compliant container with all
 === "Microsoft Windows"
     Set appropriate permissions through Properties > Security tab
 
-**Step 7. Verify installation**
-   ```bash
-   dxclient -V
-   ```
+**Step 7: Verify installation**
+```bash
+dxclient -V
+```
 
-**Step 8. Configure storage volume**
-      - A `store` folder is automatically created as shared volume
-      - To use a different volume directory:
+**Step 8: Configure storage volume**
+
+- A `store` folder is automatically created as shared volume
+- To use a different volume directory:
       
 === "Linux and Apple macOS"
-      ```bash
-      export VOLUME_DIR=myCustomStore
-      ```
+    ```bash
+    export VOLUME_DIR=myCustomStore
+    ```
 
 === "Microsoft Windows"
-      ```batch
-      set VOLUME_DIR=myCustomStore
-      ```
+    ```batch
+    set VOLUME_DIR=myCustomStore
+    ```
 
-      !!!warning "Windows Note"
-          Do not enclose the VOLUME_DIR value in quotes on Windows systems.
+!!! warning "Windows Note"
+    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
 
-**Step 9. Set volume permissions**
+**Step 9: Set volume permissions**
 
 === "Linux and Apple macOS"
-      ```bash
-      chmod 755 <working-directory>/<VOLUME_DIR>
-      ```
+    ```bash
+    chmod 755 <working-directory>/<VOLUME_DIR>
+    ```
 
 === "Microsoft Windows"
-      Set appropriate permissions through Properties > Security tab
+    Set appropriate permissions through Properties > Security tab
 
-**Step 10. Configure timezone (optional)**
+**Step 10: Configure timezone (optional)**
     
 === "Linux and Apple macOS"
-      ```bash
-      export Timezone=Asia/Kolkata
-      ```
+    ```bash
+    export Timezone=Asia/Kolkata
+    ```
 
 === "Microsoft Windows"
-      ```batch
-      SET Timezone=Asia/Kolkata
-      ```
+    ```batch
+    SET Timezone=Asia/Kolkata
+    ```
 
 **Post-Installation:**
-      - Configuration files are located in `<working-directory>/<VOLUME_DIR>`
-      - Sample configurations available in `<working-directory>/samples/sample-configurations`
-      - For automation server integration, refer to included sample pipeline
+
+- Configuration files are located in `<working-directory>/<VOLUME_DIR>`
+- Sample configurations available in `<working-directory>/samples/sample-configurations`
+- For automation server integration, refer to included sample pipeline
 
 ### Installing Using the Native JavaScript Package from MHS Portal
 
@@ -265,29 +277,31 @@ The container package provides a fully packaged OCI-compliant container with all
     This method is legacy. The container package is recommended from CF196 onwards.
 
 **Prerequisites:**
+
 - Node.js LTS or newer
 - HCL DX 9.5 CF19 or higher entitlement
 - MHS portal access
 
 **Installation Steps:**
 
-**Step 1. Prepare your environment**
-    - If upgrading from previous version, uninstall it first:
+**Step 1: Prepare your environment**  
+If upgrading from previous version, uninstall it first:
     
 === "Linux and Apple macOS"
     ```bash
-      make unlink
+    make unlink
     ```
 === "Microsoft Windows"
     ```batch
-      make_unlink.bat
+    make_unlink.bat
     ```
 
-**Step 2. Download and extract the package**
-    - Download DXClient.zip from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
-    - Extract the zip file
+**Step 2: Download and extract the package**
 
-**Step 3. Install dependencies**
+- Download DXClient.zip from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
+- Extract the zip file
+
+**Step 3: Install dependencies**
 
 === "Linux and Apple macOS"
     ```bash
@@ -299,7 +313,7 @@ The container package provides a fully packaged OCI-compliant container with all
     make_install.bat
     ```
 
-**Step 4. Link the application (optional)**
+**Step 4: Link the application (optional)**
 
 === "Linux and Apple macOS"
     ```bash
@@ -308,18 +322,18 @@ The container package provides a fully packaged OCI-compliant container with all
 
 === "Microsoft Windows"
     ```bash
-      make_link.bat
+    make_link.bat
     ```
 
-    !!!note
-        - Skip linking on automation servers to avoid dependency conflicts
-        - Without linking, use:
-          - Linux/macOS: `./bin/dxclient`
-          - Windows: `node bin/dxclient`
+!!! note
+    - Skip linking on automation servers to avoid dependency conflicts
+    - Without linking, use:
+      - Linux/macOS: `./bin/dxclient`
+      - Windows: `node bin/dxclient`
           
-**Step 5. Configure storage volume (optional)**
-    - A `store` folder is automatically created
-    - To use a different volume directory:
+**Step 5: Configure storage volume (optional)**
+- A `store` folder is automatically created
+- To use a different volume directory:
    
 === "Linux and Apple macOS"
     ```bash
@@ -331,10 +345,10 @@ The container package provides a fully packaged OCI-compliant container with all
     set VOLUME_DIR=myCustomStore
     ```
 
-    !!!warning "Windows Note"
-      Do not enclose the VOLUME_DIR value in quotes on Windows systems.
+!!! warning "Windows Note"
+    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
 
-**Step 6. Set volume permissions**
+**Step 6: Set volume permissions**
 
 === "Linux and Apple macOS"
     ```bash
@@ -343,6 +357,65 @@ The container package provides a fully packaged OCI-compliant container with all
 
 === "Microsoft Windows"
     Set appropriate permissions through Properties > Security tab
+
+### Upgrading DXClient
+
+DXClient can be upgraded to newer versions without first uninstalling the previous version. This simplifies the upgrade process and ensures minimal disruption to your development or CI/CD workflows.
+
+#### Upgrading from NPM Registry
+
+```bash
+# For local installation
+npm update @hcl-software/dxclient
+
+# For global installation
+npm update -g @hcl-software/dxclient
+```
+
+#### Upgrading Container Package from Harbor Repository
+
+```bash
+# Pull the latest version
+docker pull hclcr.io/dx-public/dxclient:LATEST_TAG
+```
+
+#### Upgrading MHS Container Package
+
+1. Download the new DXClient.zip package from the MHS portal
+2. Extract the files to your working directory (can be the same as your existing installation)
+3. Load the new container image:
+
+=== "Linux and Apple macOS"
+    ```bash
+    docker load < dxclient.tar.gz
+    ```
+
+=== "Microsoft Windows"
+    ```batch
+    docker load -i dxclient.tar.gz
+    ```
+
+#### Upgrading MHS JavaScript Package
+
+1. Download the new DXClient.zip package from the MHS portal
+2. Extract the files to your working directory (can be the same as your existing installation)
+3. Update dependencies:
+
+=== "Linux and Apple macOS"
+    ```bash
+    make install
+    ```
+
+=== "Microsoft Windows"
+    ```batch
+    make_install.bat
+    ```
+
+!!!note "Configuration Preservation"
+    When upgrading, your existing configurations in the `store` directory (or custom `VOLUME_DIR`) are preserved, so you don't need to reconfigure DXClient after upgrading.
+
+!!!tip "Version Verification"
+    After upgrading, verify the new version with `dxclient -V` to ensure the upgrade was successful.
 
 ### Uninstalling DXClient
 
@@ -357,7 +430,7 @@ npm uninstall [-g] @hcl-software/dxclient
 
 #### Uninstalling MHS JavaScript Package
 
-1. Run the uninstall command:
+**Step 1: Run the uninstall command**
 
 === "Linux and Apple macOS"
     ```bash
@@ -369,7 +442,7 @@ npm uninstall [-g] @hcl-software/dxclient
     make_uninstall.bat
     ```
 
-2. Optionally, unlink the package:
+**Step 2: Optionally, unlink the package**
 
 === "Linux and Apple macOS"
     ```bash
@@ -642,10 +715,13 @@ Common command arguments can be pre-configured inside the config.json file avail
 
 Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. This is to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
 
-1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
+**Step 1: Obtain the certificate**  
+Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
 
-2. Add the certificate using one of the following methods:
-   1. Use the `NODE_EXTRA_CA_CERTS` environment variable. `NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
+**Step 2: Add the certificate using one of the following methods**
+
+**Method A: Using NODE_EXTRA_CA_CERTS environment variable**  
+`NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
 
 === "Linux and Apple macOS"
       ```
@@ -657,7 +733,8 @@ Starting CF226, DXClient no longer ignores certificates that cannot be properly 
       set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
       ```
 
-   2. Add certificate to the truststore on your operating system.
+**Method B: Adding certificate to the system truststore**  
+Add the certificate to the truststore on your operating system.
 
 !!!important
     In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting `NODE_TLS_REJECT_UNAUTHORIZED` to `0`, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
@@ -939,18 +1016,48 @@ Use this command to trigger [DAM Reindexing](../../../manage_content/digital_ass
 
 ### Known Limitations
 
-- For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
+**1. Hybrid Deployment Hostname Management**
 
-- Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
+When using hybrid deployments (where on-premises DX Core and Kubernetes DX Services use different hostnames), you must specify the appropriate hostname based on the specific DXClient command:
 
-- Currently, the maximum input file size allowed in DXClient is 256 MB.
+- For DAM-related tasks (like `manage-dam-staging`): Use the Kubernetes hostname
+- For DX Core tasks (like `deploy-portlet`): Use the on-premises DX Core hostname
+
+**2. Bin Folder Permissions**
+
+For DXClient v1.26.0 and above (since CF217), you must set full access permissions to the bin folder to properly execute DXClient commands. See the installation instructions for details on setting appropriate permissions.
+
+**3. File Size Limitation**
+
+The maximum input file size that DXClient can handle is 256 MB. Files larger than this limit will not be processed correctly.
 
 ### Additional Notes
 
-- The attribute `-dxConnectHostname` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-hostname` wherever necessary.
-- The attribute `-targetServerHostname`, `-targetServerPort`,`-targetServerUsername`,`-targetServerPassword` & `-targetServerProfileName` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-targetHostname`, `-targetDxConnectPort`,`-targetDxConnectUsername`,`-targetDxConnectPassword` & `-targetDxProfileName` respectively wherever necessary.
-- If deploying or importing huge CICD artifacts using DXClient to the Kubernetes environment, you might receive failure or request pending messages while you run the ceratin tasks. This might happen because of the connection getting closed by the load balancer due to timeout before the response is ready. In such situations, before re-triggering the request, we advise you to check your target server to verify if the artifact has been deployed/imported or the server is up, as the request was already triggered from the client-side. In cases of request pending you are expected to receive a `requestId` which you can use to check the status of response later. For troubleshooting tips, refer to [Troubleshooting known issues](troubleshooting_dxclient.md#troubleshooting-known-issues).
-- As of CF213, the property `DXCONNECT_MAX_MEMORY_SIZE_MB` in DXC_ConfigSettings Resource Environment Provider has been removed. Refer [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect) for more details.
+**1. Deprecated Parameters**
+
+The following parameters have been deprecated or removed:
+
+- `-dxConnectHostname` (deprecated since CF202, removed in CF210)  
+  **Use instead:** `-hostname` wherever needed
+
+- `-targetServerHostname` → Use `-targetHostname` instead
+- `-targetServerPort` → Use `-targetDxConnectPort` instead
+- `-targetServerUsername` → Use `-targetDxConnectUsername` instead
+- `-targetServerPassword` → Use `-targetDxConnectPassword` instead
+- `-targetServerProfileName` → Use `-targetDxProfileName` instead
+
+**2. Large File Deployments in Kubernetes**
+
+When deploying large CICD artifacts to Kubernetes environments, you may encounter connection timeouts. If you receive "failure" or "request pending" messages:
+
+- Check your target server first to verify if the deployment actually succeeded
+- For "request pending" messages, note the `requestId` to check status later
+- See [Troubleshooting known issues](troubleshooting_dxclient.md#troubleshooting-known-issues) for resolution steps
+
+**3. Resource Environment Provider Changes**
+
+As of CF213, the property `DXCONNECT_MAX_MEMORY_SIZE_MB` in DXC_ConfigSettings has been removed.
+For more information, see [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect)
 
 ## Learning Resources
 
