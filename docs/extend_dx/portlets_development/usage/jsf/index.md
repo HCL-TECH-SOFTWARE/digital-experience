@@ -49,6 +49,8 @@ Be aware of the following limitations and best coding practices when running the
     -   `import com.ibm.faces20.portlet.httpbridge.PortletFacesContextWrapper;`
     -   `import com.ibm.faces20.portlet.util.BridgeConfigUtils;`
     -   `import com.ibm.faces20.portlet.FaceletPortletViewHandler;`
+	
+-  Set org.apache.myfaces.RESOURCE_HANDLER_CACHE_ENABLED=false in the web.xml of any application which has a mix of authenticated and anonymous users accessing the content on the page.
 
 
 ???+ info "Related information"
