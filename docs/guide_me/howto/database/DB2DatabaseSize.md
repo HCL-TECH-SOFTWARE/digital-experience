@@ -96,3 +96,4 @@ The instructions below show how to check the size of these databases on a Window
     - In this example, the Release database size is about **346 MB**, and the JCR database size is about **3 GB**.
     - These values are from a test server with limited content. Production environments may have significantly larger databases.
 
+
