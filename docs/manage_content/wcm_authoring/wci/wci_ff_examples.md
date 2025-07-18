@@ -11,7 +11,7 @@ This section provides examples that illustrate how to represent various item typ
 ## Site area feed
 
 
-This example shows an RSS feed that creates a site area in Web Content Manager.
+This example shows an RSS feed that creates a site area in the Web Content Manager.
 
 
 ```
@@ -81,7 +81,7 @@ This example shows an RSS feed that creates a top-level taxonomy category in Web
 
 ## Category feed
 
-This example shows an RSS feed that creates a second-level category under an existing taxonomy in Web Content Manager.
+This example shows an RSS feed that creates a second-level category under an existing taxonomy in the Web Content Manager.
 
 ```
 <?xml version="1.0"?>
@@ -118,7 +118,7 @@ This example shows an RSS feed that creates a second-level category under an exi
 ## Component feed
 
 
-This example shows an RSS feed that creates a reusable HTML component in Web Content Manager.
+This example shows an RSS feed that creates a reusable HTML component in the Web Content Manager.
 
 
 ```
@@ -157,7 +157,7 @@ All rights reserved.</span>]]>
 
 ## Content feed
 
-This example shows an RSS feed that creates a content item in Web Content Manager.
+This example shows an RSS feed that creates a content item in the Web Content Manager.
 
 ```
 <?xml version="1.0"?>
