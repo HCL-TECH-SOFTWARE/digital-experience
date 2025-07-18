@@ -53,4 +53,4 @@ After the installation, a **Generate (G)** option prompts you to generate a resp
 
 #### Apply an iFix in console mode (Alternative/Confirmation)
 
-The same prompt also offers the Update **(U)** option to apply the fix. Use this option to install the iFix using console mode or through a response file.  
+The same prompt also offers the Update **(U)** option to apply the fix. Use this option to install the iFix using the console mode or through a response file.  
