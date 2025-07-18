@@ -10,7 +10,7 @@ This article describes how to troubleshoot or debug `JDBC` datasources in HCL Di
 
 ## Instructions
 
-Troubleshooting `JDBC` database-related problems can be complicated and might lead to performance issues when enabling detailed `JDBC` driver traces. It is suggested to start the analysis by troubleshooting `SQL` queries.
+Troubleshooting `JDBC` database-related problems can be complicated and might lead to performance issues when enabling detailed `JDBC` driver traces. It is suggested to start the analysis by troubleshooting the `SQL` queries.
 
 ### Troubleshooting SQL Queries
 
