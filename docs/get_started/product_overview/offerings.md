@@ -31,7 +31,7 @@ For more information, watch this video: [Introducing HCL Digital Experience Clou
 
 ## HCL Digital Experience Compose
 
-HCL Digital Experience (DX) Compose is a lightweight, fast performing, cloud–only digital experience platform for delivering content-centric and transactional experiences. DX Compose includes a core container called WebEngine that is built on the Open Liberty platform and operates on certified Kubernetes platforms. This architecture supports fast startup and execution times to deliver high performance DX sites, and is capable of using the latest Java Development Kit (JDK) and Java 2 Enterprise Edition (J2EE) levels.
+The HCL Digital Experience (DX) Compose is a lightweight, fast performing, cloud–only digital experience platform for delivering content-centric and transactional experiences. DX Compose includes a core container called WebEngine that is built on the Open Liberty platform and operates on certified Kubernetes platforms. This architecture supports fast startup and execution times to deliver high performance DX sites, and is capable of using the latest Java Development Kit (JDK) and Java 2 Enterprise Edition (J2EE) levels.
 
 DX Compose supports site design and web content authoring features such as Web Content Management (WCM), Personalization, secure and role-based delivery, virtual portals, Script Applications, Digital Asset Management (DAM), and Content Composer. Integration capabilities are also available, including custom Script Applications, HCL Volt Foundry services, and HCL Leap, and support for open-standards APIs.
 
