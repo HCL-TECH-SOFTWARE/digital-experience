@@ -12,4 +12,4 @@ You may also find the following resource helpful:
 
 ## Future Content
 
-This section is under development and will be expanded to include more in-depth how-to articles covering various database-related topics specific to HCL Digital Experience (DX) environments.
+This section is under development and will expanded to include more in-depth how-to articles covering various database-related topics specific to HCL Digital Experience (DX) environments.
