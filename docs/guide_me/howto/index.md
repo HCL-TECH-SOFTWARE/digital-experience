@@ -48,11 +48,11 @@ This section contains How-to articles to help you learn how to use **HCL Digital
 - **[Tools](./tools/index.md)**  
   Learn how to use tools such as XMLAccess, DXClient, and WCM Support Tools.
 - **[Troubleshooting](./troubleshooting/index.md)**  
-  Learn how to troubleshoot issues in HCL DX.
+  Learn how to troubleshoot issues in the HCL DX.
 - **[Upgrade](./upgrade/index.md)**  
   Learn how to upgrade your HCL DX environment.
 - **[Web Content Manager Library Management](./wcmlibrarymanagement/index.md)**  
-  Learn how to import and export WCM libraries.
+  Learn how to import and export the WCM libraries.
 
 ---
 
@@ -61,6 +61,3 @@ This section contains How-to articles to help you learn how to use **HCL Digital
 - **[Getting Started with HCL Digital Experience](../../get_started/product_overview/index.md)**
 
 ---
-
-
-
