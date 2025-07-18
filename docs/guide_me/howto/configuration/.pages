@@ -8,4 +8,5 @@ nav:
     - ConfigureRAD.md
     - EnableImageFormats.md
     - RemoveStateInformationFromURL.md
+    - HideXPoweredByHeader.md
 

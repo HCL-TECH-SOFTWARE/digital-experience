@@ -63,6 +63,6 @@ To follow this guide, ensure you have:
 
 5. (Optional) Enable SSO for the portlet
 
-    If your Volt MX app contains a login page but you want to use SO using HCL DX, follow the steps in [How to Enable SSO Between HCL DX and Volt MX](../configuration/enable_sso.md).
+    If your Volt MX app contains a login page but you want to use SSO using HCL DX, follow the steps in [How to Enable SSO Between HCL DX and Volt MX](../configuration/enable_sso.md).
 
 You have successfully deployed and verified the HCL Volt MX portlet in HCL DX.
