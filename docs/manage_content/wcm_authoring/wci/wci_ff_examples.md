@@ -81,7 +81,7 @@ This example shows an RSS feed that creates a top-level taxonomy category in Web
 
 ## Category feed
 
-This example shows an RSS feed that creates a second-level category under an existing taxonomy in Web Content Manager.
+This example shows an RSS feed that creates a second-level category under an existing taxonomy in the Web Content Manager.
 
 ```
 <?xml version="1.0"?>
