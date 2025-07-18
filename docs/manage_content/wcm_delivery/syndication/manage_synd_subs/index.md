@@ -15,7 +15,7 @@ Although syndication is configured to run automatically by default, from time to
 -   **[Monitoring syndication](../manage_synd_subs/wcm_syndication_monitoring.md)**  
 After you set up a syndication relationship, you can monitor the progress of the data replication between syndicators and subscribers for details.
 -   **[Delegated access for syndication](wcm_syndication_delegated_access.md)**  
-After you set up a syndication relationship, you can allow users with Editor access to administer syndication.
+After you set up a syndication relationship, you can allow users with Editor access to administer the syndication.
 
 
 ???+ info "Related information"

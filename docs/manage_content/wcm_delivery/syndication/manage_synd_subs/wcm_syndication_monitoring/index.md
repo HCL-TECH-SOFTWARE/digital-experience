@@ -14,7 +14,7 @@ You can monitor the status of individual syndicators and subscribers:
   Use syndication to transfer data between HCL Web Content Manager instances.
 
    * [Manage pending items](../wcm_syndication_monitoring/wcm_syndication_pending.md)  
-     Pending items are those updated on the syndicator since the last syndication.
+     The pending items are those updated on the syndicator since the last syndication.
 
    * [Manage failed items](../wcm_syndication_monitoring/wcm_syndication_failed.md)  
      Sometimes items fail to syndicate. Use the failed items view to review them and re-run syndication after you resolve the issues.
