@@ -15,7 +15,7 @@ You can monitor the status of individual syndicators and subscribers:
 
 
    * [Manage pending items](../manage_synd_subs/wcm_syndication_monitoring/wcm_syndication_pending.md)  
-     After you configure a syndication relationship, monitor pending items on a syndicator. Pending items are items updated since the last syndication.
+     After you configure a syndication relationship, monitor pending items on a syndicator. The pending items are items updated since the last syndication.
 
 
    * [Manage failed items](../manage_synd_subs/wcm_syndication_monitoring/wcm_syndication_failed.md)  
