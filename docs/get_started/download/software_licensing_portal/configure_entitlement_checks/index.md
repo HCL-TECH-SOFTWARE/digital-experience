@@ -20,7 +20,7 @@ If you deploy DX to supported Kubernetes platforms, you must specify certain ent
 
 Review the following [HCL DX Cloud Native 9.5](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) entitlement validation check scenarios to see responses when entitlement-validation attempts fail.
 
-HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve HCL Software License Portal entitlement checks for the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies that your purchased product subscription period is valid. If your subscription lapses, you must renew the subscription with HCL. For example, if you purchase a DX Cloud Native 9.5 Tier 2 part on May 30, 2025, the entitlement period is valid until May 30, 2026.
+HCL’s approach is to conduct automated license validation for all products. This kind of license validation is called an entitlement check. The following information highlights all scenarios that involve [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} entitlement checks for the [HCL DX Cloud Native 9.5 Tier 1 – 7](../../../product_overview/offerings.md#hcl-digital-experience-cloud-native) offering deployments. An entitlement check verifies that your purchased product subscription period is valid. If your subscription lapses, you must renew the subscription with HCL. For example, if you purchase a DX Cloud Native 9.5 Tier 2 part on May 30, 2025, the entitlement period is valid until May 30, 2026.
 
 ### Entitlement-check scenarios
 

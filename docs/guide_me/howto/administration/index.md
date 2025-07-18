@@ -2,6 +2,8 @@
 
 This section includes how-to articles about administration in HCL Digital Experience (DX).
 
+- **[How to change the redirect URL for Login, Logout, and Session Timeout](./RedirectTimeout.md)**  
+Learn how to redirect a user to a different page after a successful login or logout, or after a session timeout.
 - **[How to clear WCM caches with ConfigEngine task](./ClearWCMCaches.md)**  
 Learn how to clear Web Content Manager (WCM) caches using the ConfigEngine task.
 - **[How to clear WebSphere Dynacache caches](./ClearWebSphereDynacache.md)**  
@@ -12,3 +14,5 @@ Learn about long Portal URLs and how to decode them.
 Learn how to tune WCM to reduce your query time.
 - **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.
+- **[How to use java script to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
+Learn how to use java script to find and replace text on a Portal page.  

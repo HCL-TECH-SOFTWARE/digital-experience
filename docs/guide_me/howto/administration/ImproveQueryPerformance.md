@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document describes tuning tips to improve the performance of Web Content Manager (WCM) queries in HCL Digital Experience (DX).
+This article describes tuning tips to improve the performance of Web Content Manager (WCM) queries in HCL Digital Experience (DX).
 
 ## Instructions
 

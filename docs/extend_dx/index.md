@@ -19,3 +19,7 @@ The Screen Flow Manager helps operators, developers, and dialog modelers to deve
 The Portlet Application Archive lets you bundle various artifacts that are part of your deployment into a single archive for deployment including versioning.
 - **[APIs](apis/index.md)**  
 HCL DX provides a multitude of APIs for REST based access as well as Java, RMI and others.
+
+## HCLSoftware U learning materials
+
+To get an introduction to development for HCL DX, go to [HCL DX for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D412){target="_blank"}. Ensure you setup the DXClient that allows you to develop locally using the [DXClient for Beginners Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank”}.
