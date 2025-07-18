@@ -7,7 +7,7 @@ Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software
 
 - **[Getting Started with HCL Digital Experience](../../get_started/product_overview/index.md)**
 
-# How-to articles
+# How-to Articles
 
 This section contains How-to articles to help you learn how to use HCL Digital Experience (DX) and all its features. The How-to articles are classified into the following topics:
 
