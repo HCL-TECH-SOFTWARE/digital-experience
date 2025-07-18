@@ -9,4 +9,4 @@ This section includes how-to articles about install-related content in HCL Digit
     Explains how to run the IBM Installation Manager (IIM) as a different user than the one who installed it.
 
 * **[How to Install IBM SDS 6.4.0.27 LDAP Client Tools on Linux](./InstallLDAPTools.md)**  
-    Provides steps to install IBM SDS Client tools version 6.4.0.27 (released June 2023) on Linux.  
+    Provides steps to install the IBM SDS Client tools version 6.4.0.27 (released June 2023) on Linux.  

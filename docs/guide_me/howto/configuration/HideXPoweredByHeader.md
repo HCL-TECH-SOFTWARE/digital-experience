@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Some web applications in HCL Digital Experience include the `X-Powered-By` header in responses on certain pages. This header reveals sensitive server information. This document describes how to remove or hide the `X-Powered-By` header.
+There are Some web applications in HCL Digital Experience include the `X-Powered-By` header in responses on certain pages. This header reveals sensitive server information. This document describes how to remove or hide the `X-Powered-By` header.
 
 ## Instructions
 

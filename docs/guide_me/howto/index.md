@@ -82,7 +82,7 @@ Configure your HCL DX database.
 Develop applications, portlets, JavaServer Pages (JSP), JavaScript (JS), Web Application Builder (WAB), Web Experience Factory (WEF), Web Services, and more on your HCL DX environment.
 
 * **[Digital Asset Management](./dam/index.md)**
-Perform Digital Asset Management (DAM) tasks in your HCL DX environment.
+Perform the Digital Asset Management (DAM) tasks in your HCL DX environment.
 
 * **[Install](./install/index.md)**
 Install HCL DX software and features.
