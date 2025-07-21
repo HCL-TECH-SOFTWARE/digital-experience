@@ -16,7 +16,7 @@ DXClient offers three installation options, each with different benefits dependi
 - **NpmJS Registry**: Simplest option for local developers and administrators
 - **Harbor Container Repository**: Best for CI/CD automation pipelines
 
-Both options are free to use and available starting from CF221. For details, see [Public and Free Installation Options](#public-and-free-dxclient-installation-options).
+Both options are free to use and available starting from CF221. For details, see [Public and Free Installation Options](#public-and-free-dxclient-installation-options(CF221+))
 
 ### From My HCLSoftware (MHS) Portal
 
@@ -27,7 +27,7 @@ The MHS portal offers two installation methods:
 - Fully packaged container with all dependencies included
 - Works with Docker or Podman (OCI-compliant runtimes)
 - Available since HCL DX 9.5 CF196
-- [Full installation instructions](#installing-dxclient-using-the-container-package-from-the-mhs-portal)
+- [Full installation instructions](#installing-using-the-container-package-from-mhs-portal)
 
 !!! warning
     Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
@@ -36,7 +36,7 @@ The MHS portal offers two installation methods:
 
 - Requires manual installation of Node.js and npm dependencies
 - More flexible but requires more setup
-- [Full installation instructions](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal)
+- [Full installation instructions](#installing-using-the-native-javascript-package-from-mhs-portal)
 
 !!!important "Version Numbering and Licensing"
     Since CF221, DXClient uses a new versioning format that matches CF numbers (e.g., "221.0.0" instead of "1.29.0").
@@ -74,7 +74,7 @@ The following image illustrates the DXClient Architecture diagram:
     - **For enterprise deployments**: Use MHS Container Package
     - **For specialized needs**: Use MHS Native JavaScript Package
 
-### Public and Free Installation Options (CF221+)
+### Public and Free Installation Options(CF221+)
 
 Starting from CF221, DXClient offers two free installation options that don't require MHS portal access.
 
@@ -328,12 +328,12 @@ If upgrading from previous version, uninstall it first:
 !!! note
     - Skip linking on automation servers to avoid dependency conflicts
     - Without linking, use:
-      - Linux/macOS: `./bin/dxclient`
-      - Windows: `node bin/dxclient`
+            - Linux/macOS: `./bin/dxclient`
+            - Windows: `node bin/dxclient`
           
 **Step 5: Configure storage volume (optional)**
-- A `store` folder is automatically created
-- To use a different volume directory:
+    - A `store` folder is automatically created
+    - To use a different volume directory:
    
 === "Linux and Apple macOS"
     ```bash
@@ -491,7 +491,7 @@ dxclient version-compat
         -  Livesync is enabled for Style-sheet Components under WCM Design Library.
 
     -   HCL DX 9.5 CF226 release: **V226.0.0
-        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation-for-secure-connections)
+        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation)
 
     -   HCL DX 9.5 CF225 release: **V225.0.0
         -  Livesync is enabled for Presentation Template under WCM Design Library.
@@ -501,16 +501,16 @@ dxclient version-compat
         - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
-        -   A one-time license agreement prompt is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
-        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
+        -   A one-time license agreement prompt is enabled. To skip the prompt, use the [accept-license](#information-commands) command.
+        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options(CF221+)).
         -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
-        -   The [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md) process involves indexing all existing assets while revalidating stale indexes. For more information on how to trigger DAM Reindexing, refer to [DXClient commands](#dxclient-commands).
+        -   The [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md) process involves indexing all existing assets while revalidating stale indexes. For more information on how to trigger DAM Reindexing, refer to [DXClient commands](#core-commands).
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
-        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
+        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments)
     
     -   HCL DX 9.5 CF216 release: **V1.25.0
-        -   [Shows version compatibility details between DX Core and DXClient](#dxclient-information-commands)
+        -   [Shows version compatibility details between DX Core and DXClient](#information-commands)
         -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
         -   [Delete staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#delete-staging-mismatch)
 
@@ -613,55 +613,55 @@ Common command arguments can be pre-configured inside the `config.json` file. Wh
 
 ```json
 {
-    "name":"config.json",
-    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
-    "dxProtocol": "",
-    "dxConnectProtocol": "https",
-    "hostname": "",
-    "dxPort": "",
-    "dxSoapPort": "10033",
-    "dxConnectPort": "10202",
-    "dxContextRoot":"/wps",
-    "contenthandlerPath": "/wps/mycontenthandler",
-    "projectContext": "",
-    "virtualPortalContext": "",
-    "xmlConfigPath": "/wps/config",
-    "damAPIPort": "",
-    "ringAPIPort": "",
-    "damAPIVersion": "v1",
-    "ringAPIVersion": "v1",
-    "dxConnectHostname": "",
-    "dxConnectUsername": "",
-    "dxConnectPassword": "",
-    "dxUsername": "",
-    "dxPassword": "",
-    "dxProfileName": "",
-    "dxProfilePath": "",
-    "dxWASUsername": "",
-    "dxWASPassword": "",
-    "enableLogger": true,
-    "enableBackup": "false",
-    "lastModifiedAfter": "",
-    "restoreAsPublished": false,
-    "targetHostname": "",
-    "targetDxConnectPort": "",
-    "targetDxConnectUsername":"",
-    "targetDxConnectPassword":"",
-    "targetDxProfileName": "",
-    "targetServerHostname": "",
-    "targetServerPort": "",
-    "targetServerUsername":"",
-    "targetServerPassword":"",
-    "targetServerProfileName": "",
-    "vaultUsername": "",
-    "vaultPassword": "",
-    "wcmContentName": "",
-    "wcmContentId": "",
-    "wcmContentPath": "",
-    "wcmSiteArea": "",
-    "wcmLibraryId": "",
-    "wcmLibraryName": "",
-    "wcmProjectName": ""
+  "name":"config.json",
+  "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
+  "dxProtocol": "",
+  "dxConnectProtocol": "https",
+  "hostname": "",
+  "dxPort": "",
+  "dxSoapPort": "10033",
+  "dxConnectPort": "10202",
+  "dxContextRoot":"/wps",
+  "contenthandlerPath": "/wps/mycontenthandler",
+  "projectContext": "",
+  "virtualPortalContext": "",
+  "xmlConfigPath": "/wps/config",
+  "xmlAccessMaxFileSizeMB": 256,
+  "damAPIPort": "",
+  "ringAPIPort": "",
+  "damAPIVersion": "v1",
+  "ringAPIVersion": "v1",
+  "dxConnectUsername": "",
+  "dxConnectPassword": "",
+  "dxUsername": "",
+  "dxPassword": "",
+  "dxProfileName": "wp_profile",
+  "dxProfilePath": "/opt/HCl/wp_profile",
+  "dxWASUsername": "",
+  "dxWASPassword": "",
+  "enableLogger": true,
+  "enableBackup": "false",
+  "lastModifiedAfter": "",
+  "restoreAsPublished": false,
+  "targetHostname": "",
+  "targetDxConnectPort": "",
+  "targetDxConnectUsername":"",
+  "targetDxConnectPassword":"",
+  "targetDxProfileName": "",
+  "targetServerHostname": "",
+  "targetServerPort": "",
+  "targetServerUsername":"",
+  "targetServerPassword":"",
+  "targetServerProfileName": "",
+  "vaultUsername": "",
+  "vaultPassword": "",
+  "wcmContentName": "",
+  "wcmContentId": "",
+  "wcmContentPath": "",
+  "wcmSiteArea": "",
+  "wcmLibraryId": "",
+  "wcmLibraryName": "",
+  "wcmProjectName": ""
 }
 
 ```
