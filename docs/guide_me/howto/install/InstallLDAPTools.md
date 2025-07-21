@@ -6,7 +6,7 @@
 
 ## Introduction
 
-It's very common for HCL Digital Experience (DX) to perform searches and modifications on LDAP servers. This article describes how to install IBM SDS Client tools version 6.4.0.27 (June 2023).
+It is very common for HCL Digital Experience (DX) to perform searches and modifications on LDAP servers. This article describes how to install IBM SDS Client tools version 6.4.0.27 (June 2023).
 
 IBM's LDAP, known as Security Directory Server (SDS) (formerly Tivoli Directory Server), is very common in DX environments. This article provides detailed steps to install the following **IBM SDS Client tools**:
 

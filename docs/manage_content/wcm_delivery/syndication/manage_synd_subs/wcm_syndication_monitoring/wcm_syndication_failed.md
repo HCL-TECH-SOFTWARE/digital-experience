@@ -8,9 +8,9 @@ Occasionally, items fail to syndicate. Use the failed items view to review the l
 
 The failed items view shows each failed item for the selected syndicator and provides details to help you fix each issue.
 
-The **Root** and **Impact** columns help identify the root cause of a syndication failure and any secondary items it affects. Fixing the root cause often resolves failures of impacted items.
+The **Root** and **Impact** columns help identify the root cause of a syndication failure and any secondary items it affects. Fixing the root cause often resolves failures of the impacted items.
 
-You can also use the **Important Items** tab to prioritize critical items.
+You can also use the **Important Items** tab to prioritize the critical items.
 
 After you fix the issues:
 - Select **Retry** to initiate syndication for individual items.

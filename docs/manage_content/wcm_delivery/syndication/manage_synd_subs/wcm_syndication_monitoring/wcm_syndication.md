@@ -63,7 +63,7 @@ To set up syndication between web content libraries on two HCL Web Content Manag
 
 **Referenced libraries**  
 If content from one library (Library A) uses items from another library (Library B), include both libraries in the syndicator.  
-Otherwise, items in Library A that reference Library B won't syndicate, and errors will occur.
+Otherwise, items in Library A that reference Library B will not syndicate, and errors will occur.
 
 **Adding libraries after initial syndication**  
 If you add a library to a syndicator after the first syndication, select **Rebuild** to force the new library to syndicate immediately.
