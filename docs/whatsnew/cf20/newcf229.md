@@ -69,9 +69,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New Access Layer Updates in DX Deployments
 
 === "Containers"
-    Significant updates have been implemented within the **access layers** of HCL Digital Experience (DX) deployments. A key change involves the transition from **Ambassador to HAProxy**. This strategic replacement provides a more robust and efficient foundation, making it considerably easier for administrators to deploy and manage a **custom Access Layer**. Such a custom layer can now readily handle advanced network demands, including intricate **traffic routing**, secure **proxying**, and a wide array of similar specialized use cases that require fine-grained control over inbound and outbound connections to your DX instance. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as our internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
 
-    See the following documents:
+The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, we've introduced new documentation for the Gateway API, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+
+See the following documents:
+
 - [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
 - [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
 - [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)

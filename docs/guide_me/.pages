@@ -2,7 +2,6 @@ title: Guide Me
 nav:
     - index.md
     - Tutorials: tutorials
-    - How-to: howto
     - How-to articles: howto
     - wpsdirstr.md
     - cleanup_wcm.md
