@@ -592,7 +592,10 @@ Location: [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/theme/wp.theme
 
 |Module|Description|
 |------|-----------|
-|jquery\_1\_10\_2|Provides jQuery v1.10.2 core resources.|
+|jquery\_1\_12\_2|Provides jQuery v1.12.2 core resources.|
+|jquery\_3\_4\_1|Provides jQuery v3.4.1 core resources.|
+|jquery\_3\_5\_1|Provides jQuery v3.5.1 core resources.|
+
 
 ## Modularized Page Builder
 
