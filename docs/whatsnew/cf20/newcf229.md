@@ -14,6 +14,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Cancel Ongoing Bulk/ Individual uploads via Progress bar
+- DAM - Collection sorting based on different sorting criteria
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -88,6 +90,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [WebSphere Application Server 9.0.5.23](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.40](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - No iFixes
+
+### Digital Asset Management - Cancel Ongoing Uploads via Progress bar
+
+=== "Containers"
+    Cancel all/ Cancel uploading button is added in the progress bar to stop bulk/ individual ongoing upload. For more details, see [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
+### Digital Asset Management - Collection sorting
+
+=== "Containers"
+    Collection sorting feature is added in DAM. For more details, see []().
+
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
