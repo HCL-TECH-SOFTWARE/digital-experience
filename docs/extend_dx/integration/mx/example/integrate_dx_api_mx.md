@@ -41,9 +41,14 @@ Refer to the following steps to integrate HCL DX APIs into HCL Volt MX Foundry u
 
     1. Use an [OIDC Identity Provider](./../../../../deployment/manage/security/people/authentication/oidc/index.md) for authentication in DX.
     2. Update WCM REST V2 API settings:
-        1. Log in to the WebSphere Integrated Solutions Console as an administrator.
-        2. Navigate to **Security > Global security > Web and SIP Security > Trust Association > Interceptors > HTTPBasicAuthTAI**.
-        3. Remove or clear `urlWhiteList` if it contains `/wps/mycontenthandler*`.
+
+        !!! warning
+            The integration steps outlined in Section 3 require careful setup of HCL DX environments. This setup also affects WebDAV and syndication features, so exercise caution. The process will be refined in future releases.
+
+        - Log in to the WebSphere Integrated Solutions Console as an administrator.
+        - Navigate to **Security > Global security > Web and SIP Security > Trust Association > Interceptors > HTTPBasicAuthTAI**.
+        - Remove or clear `urlWhiteList` if it contains `/wps/mycontenthandler*`.
+
     3. Restart WebSphere or all DX core pods.
 
     This enables Volt MX to authenticate against the same identity provider used by DX.
