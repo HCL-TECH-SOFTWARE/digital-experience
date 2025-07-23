@@ -19,20 +19,15 @@ While the core feed format is simple, requiring only a few elements for each ite
 
 For more detailed information on the feed format, refer to the following resources:
 
-* **[Example Feeds](../wci/wci_ff_examples.md)**
+- **[Example Feeds](../wci/wci_ff_examples.md)**  
     View example feeds demonstrating how to represent different item types within a feed.
-
-* **[Feed Format Overview](../wci/wci_ff_overview.md)**
+- **[Feed Format Overview](../wci/wci_ff_overview.md)**  
     Learn that RSS 2.0 is an XML dialect, and all RSS files must comply with the [XML 1.0 specification](https://www.w3.org/TR/REC-xml/) from the World Wide Web Consortium (W3C). RSS feed files typically use the `.rss` or `.xml` extension, though the Web Content Integrator does not require specific file naming conventions.
-
-* **[How to Handle Embedded Links](../wci/wci_ff_links.md)**
+- **[How to Handle Embedded Links](../wci/wci_ff_links.md)**  
     Discover how to use the `link` tag in your feed to convert embedded links (to images, files, or other content) into links to Web Content Manager items during feed processing.
-
-* **[Processing Images](../wci/wci_ff_images.md)**
+- **[Processing Images](../wci/wci_ff_images.md)**  
     Understand the Web Content Integrator's image-processing feature, which creates image components from images referenced in HTML and rich text elements.
-
-* **[RSS Namespace Extension for the Feed Service](../wci/rss_for_feed/index.md)**
+- **[RSS Namespace Extension for the Feed Service](../wci/rss_for_feed/index.md)**  
     Explore how to use the RSS namespace extension to exchange control information between your feed producer and consumer applications.
-
-* **[Web Content Feed Management](../wci/webcontentfeed_mgmt/index.md)**
+- **[Web Content Feed Management](../wci/webcontentfeed_mgmt/index.md)**  
     Learn how to create a feed configuration within HCL Digital Experience to access a feed you've created on your source server.
