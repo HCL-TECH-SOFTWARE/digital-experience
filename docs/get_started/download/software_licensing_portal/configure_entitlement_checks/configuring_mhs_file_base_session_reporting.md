@@ -37,7 +37,7 @@ java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-ex
 ```
 
 !!!note
-    The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
+    As of CF229, the `productFeatureIdName` parameter has been removed as a command-line parameter. The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ### Example
 
