@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DAM - Cancel Ongoing Bulk/ Individual uploads via Progress bar
 - DAM - Collection sorting based on different sorting criteria
+- New Access Layer Updates in DX Deployments
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -49,8 +50,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
 === "On-Premises"
-     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
-.
+     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md). 
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -66,6 +67,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### New Access Layer Updates in DX Deployments
+
+=== "Containers"
+    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as our internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
+
+The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, we've introduced new documentation for the Gateway API, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+
+See the following documents:
+
+- [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
+- [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
+- [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
+- [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
+- [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
+- [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
@@ -107,3 +124,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+
+
+
