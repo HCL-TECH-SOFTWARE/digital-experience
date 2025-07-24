@@ -88,6 +88,6 @@ Search results are generated based on the keywords or phrases entered in the sea
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation.png)
 
-3. After confirming the deletion, a success alert message will be displayed.
+3. After confirming the deletion, a success message will be displayed.
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Success.png)
