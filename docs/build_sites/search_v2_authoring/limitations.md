@@ -31,4 +31,4 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Delete
 
-- When an item is deleted, it might still show up in search results. This is because WCM doesn't instantly push deletion updates. The item will appear until the next crawler run updates the search index.
+- When an item is deleted, it might still show up in search results. This is because WCM doesn't instantly push deletion updates. The item will appear until the next [crawler](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/search/searching_local_portal/srccrwlindxsite/) run updates the search index.
