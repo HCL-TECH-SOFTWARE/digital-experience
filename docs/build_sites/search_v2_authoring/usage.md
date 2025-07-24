@@ -78,16 +78,16 @@ Search results are generated based on the keywords or phrases entered in the sea
 
 ## Delete feature
 
-- To delete an items from the search result please follow the below steps: 
+- *To delete an item from the search results, please follow the steps below:*
 
-1. To delete an item, hover over the result then click **More > Delete**.
+1. Hover over the search result item you want to delete, then click **More > Delete**.
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_menu.png)
 
-2. On the confirmation page the item which will be deleted from the search result will be displayed with a warning messages.
+2. On the confirmation page, the item to be deleted will be displayed along with a warning message. To proceed with deletion, click on the Delete button.
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation.png)
 
-3. After delete confirmation the success alert message will display.
+3. After confirming the deletion, a success alert message will be displayed.
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Success.png)
