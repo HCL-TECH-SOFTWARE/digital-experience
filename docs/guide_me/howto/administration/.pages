@@ -1,0 +1,12 @@
+title: Administration
+
+nav:
+  - index.md
+  - APIToCountWCMItems.md
+  - ClearWCMCaches.md
+  - ClearWebSphereDynacache.md
+  - DataSourceTracing.md
+  - DecodeLongURLs.md
+  - ImproveQueryPerformance.md
+  - RedirectTimeout.md
+  - UseJavaScriptToReplaceText.md

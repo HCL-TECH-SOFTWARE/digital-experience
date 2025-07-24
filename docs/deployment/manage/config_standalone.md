@@ -33,4 +33,4 @@ Use your selected roadmap and the Configuration Wizard to complete a new environ
     -   [Enable federated security](../manage/security/people/authentication/user_registry/cw_ldap.md)
     -   [Accessing the Configuration Wizard](../../deployment/manage/portal_admin_tools/cfg_wizard/configuration/cw_run.md)
     -   [Updating DB2 self-tuning memory manager (STMM settings)](../manage/migrate/next_steps/post_mig_activities/mig_post_cf.md)
-
+    -   [How to change cell and node names in a standalone HCL DX environment](../../guide_me/howto/configuration/ChangeCellandNodeName.md)

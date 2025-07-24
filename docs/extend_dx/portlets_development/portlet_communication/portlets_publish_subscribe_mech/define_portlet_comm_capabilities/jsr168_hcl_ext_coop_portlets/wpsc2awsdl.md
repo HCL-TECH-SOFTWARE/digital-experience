@@ -2,7 +2,7 @@
 
 WSDL is often used in the context of web services, in order to define interfaces implemented by a web service. The elements in the WSDL used by click-to-action are described, along with extensions to the <binding\> element and the WSDL Extensions schema.
 
-Usually, a SOAP binding is used to specify the concrete realization of the interface by a web service which supports the SOAP protocol. The following shows how Click-to-Action uses some of the elements in the WSDL document. The [extensions to the <binding\> element](wpsc2awsdl.md#bind_ext) are described and the complete [schema for WSDL Extensions](wpsc2awsdl.md#wsdl_ext_schema) is provided.
+Usually, a SOAP binding is used to specify the concrete realization of the interface by a web service which supports the SOAP protocol. The following shows how Click-to-Action uses some of the elements in the WSDL document. The [extensions to the <binding\> element](wpsc2awsdl.md#extensions-to-the-binding-element) are described and the complete [schema for WSDL Extensions](wpsc2awsdl.md#wsdl-extension-schema) is provided.
 
 -   <types\>
 
@@ -41,14 +41,14 @@ Usually, a SOAP binding is used to specify the concrete realization of the inter
 
     Further, the boundTo attribute may be used to specify where the parameter will be bound. Choices are request-parameter, request-attribute, session-attribute, or action-attribute.
 
-    The <binding\> element includes cooperative portlet extensions, which are described in [Extensions to the <binding\> element](wpsc2awsdl.md#bind_ext).
+    The <binding\> element includes cooperative portlet extensions, which are described in [Extensions to the <binding\> element](wpsc2awsdl.md#extensions-to-the-binding-element).
 
 
 If you are familiar with WSDL, you might notice that the service section \(enclosed by the <service\> element in WSDL\) is not used in the C2A action declaration file. This is because the file is associated with a specific portlet implementing the operations defined in the file through external means \(an entry in the portlet.xml file associated with the portlet\).
 
 ## Extensions to the <binding\> element
 
-The <binding\> element has been extended to support cooperative portlets. Each extension element is prefixed with `portlet:`, which refers to the C2A namespace, `http://www.ibm.com/wps/c2a`. The `portlet:` prefix is used to identify the extension elements in this section, but a different name may be used for the prefix as long as it refers to the C2A namespace. See [WSDL Extension Schema](wpsc2awsdl.md#wsdl_ext_schema).
+The <binding\> element has been extended to support cooperative portlets. Each extension element is prefixed with `portlet:`, which refers to the C2A namespace, `http://www.ibm.com/wps/c2a`. The `portlet:` prefix is used to identify the extension elements in this section, but a different name may be used for the prefix as long as it refers to the C2A namespace. See [WSDL Extension Schema](wpsc2awsdl.md#wsdl-extension-schema).
 
 -   <portlet:binding\>
 

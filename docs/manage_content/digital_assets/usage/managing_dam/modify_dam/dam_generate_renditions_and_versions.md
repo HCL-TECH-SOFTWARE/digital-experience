@@ -1,4 +1,4 @@
-# Generate renditions and versioning
+# Generating renditions and versioning
 
 Learn more how to view, edit, and manage media asset renditions and versions with HCL Digital Asset Management \(DAM\).
 

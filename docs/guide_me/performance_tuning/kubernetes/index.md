@@ -32,6 +32,9 @@ Refer to the following definition of terms used throughout the performance tests
 - Unauthenticated user:  A Portal “Anonymous User” role.
 - OpenLDAP:  An open-source implementation of LDAP (Lightweight Directory Access Protocol). All authenticated Users are added to OpenLDAP.
 
+!!!note
+    Deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+
 **Metrics**
 
 - Average response time: The average time taken to receive a response from the server for all the requests made during the test.
