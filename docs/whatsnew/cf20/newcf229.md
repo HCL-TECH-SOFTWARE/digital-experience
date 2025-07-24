@@ -94,12 +94,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Digital Asset Management - Cancel Ongoing Uploads via Progress bar
 
 === "Containers"
-    Cancel all/ Cancel uploading button is added in the progress bar to stop bulk/ individual ongoing upload. For more details, see [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+    Upload progress bar now includes controls to cancel uploads that are in progress. You can cancel individual file or folder uploads using "Cancel Uploading" button next to each in progress item or use the "Cancel All" button to stop all pending items at once. For more details, see [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
 
 ### Digital Asset Management - Collection sorting
 
 === "Containers"
-    Collection sorting feature is added in DAM. For more details, see []().
+    To find collection more efficiently, you can now sort collections and their contents. Sorting options are available for root-level collections and for the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more details, see [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
+
 
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
