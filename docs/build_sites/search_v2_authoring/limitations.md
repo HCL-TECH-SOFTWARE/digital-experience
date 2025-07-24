@@ -31,4 +31,4 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Delete
 
-- After deletion, the item may still appear in the search results because WCM does not support push functionality for deletions. The deleted item will be displayed as a disabled row until the next crawler run updates the index.
+- When an item is deleted, it might still show up in search results. This is because WCM doesn't instantly push deletion updates. The item will appear until the next crawler run updates the search index.
