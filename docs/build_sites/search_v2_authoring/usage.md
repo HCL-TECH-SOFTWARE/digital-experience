@@ -75,3 +75,19 @@ Search results are generated based on the keywords or phrases entered in the sea
 - If the search engine is down or unavailable, the following message is displayed.
 
     ![](../../assets/HCL_SearchV2_Authoring_search_engine_down.png)
+
+## Delete feature
+
+- To delete an items from the search result please follow the below steps: 
+
+1. To delete an item, hover over the result then click **More > Delete**.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_menu.png)
+
+2. On the confirmation page the item which will be deleted from the search result will be displayed with a warning messages.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation.png)
+
+3. After delete confirmation the success alert message will display.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_Success.png)

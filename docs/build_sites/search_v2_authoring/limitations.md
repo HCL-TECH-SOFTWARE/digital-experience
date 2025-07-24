@@ -28,3 +28,7 @@ Take note of the following limitations when using Search V2 Authoring:
     See the keyboard navigation setting for Safari.
 
     ![](../../assets/HCL_Search_Browser_Firefox_Settings.png){: style="height:600px"}
+
+## Delete
+
+- Upon delete, the deleted item may still show up in results since WCM has no push functionality after "deleting an item" - we show the deleted item as disabled row until the next time crawler runs.
