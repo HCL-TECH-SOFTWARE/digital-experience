@@ -81,7 +81,7 @@ Search results are generated based on the keywords or phrases entered in the sea
 - *To delete an item from the search results, please follow the steps below:*
 
 1. Hover over the search result item you want to delete, then click **More > Delete**.
-
+    
     ![](../../assets/HCL_SearchV2_Authoring_Delete_menu.png)
 
 2. On the confirmation page, the item to be deleted will be displayed along with a warning message. To proceed with deletion, click on the Delete button.
