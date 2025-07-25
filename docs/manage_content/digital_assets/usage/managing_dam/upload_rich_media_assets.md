@@ -99,7 +99,7 @@ The progress bar gives you full control to terminate any ongoing upload, from a 
 
 To help you find assets more efficiently, you can sort collections and their contents in both Grid and List views. Your sorting preferences are saved and persist as you navigate between these views. A dedicated icon allows you to switch between ascending and descending order for your selected sort criteria.
 
-**Root Collectino Sort**
+**Root Collection Sort**
 
 When viewing the top-level root collections, you can sort them by the following criteria: 
 
@@ -136,7 +136,9 @@ List View
 
 !!! note
 
-    - In the List view, sorting applies only to the items currently visible on the page.
+    - Collections are always displayed before assets. This behavior is consistent in both Grid and List views.
+    - List view table sort will not sort the entire items. It sorts only the items that available on the page.
+    - The sort order you select is saved as you navigate through your collections. For example, if you sort the root collections by 'Name,' then click into a sub-collection and later return, the root collections will still be sorted by 'Name.' This persistence applies to sorting at any level, whether at the root or within a nested collection.
 
 ### Configuration to change the `maxBulkUploadWithoutWarning` value
 
