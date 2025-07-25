@@ -74,18 +74,18 @@ The progress bar gives you full control to terminate any ongoing upload, from a 
 
 **Cancel Individual Upload**
 
-    - A Cancel Uploading button is available next to each file or folder when the upload is in progress.
-    - Clicking the Cancel Uploading button stops the upload of that specific item.
-    - The item's status will update to "Cancelled" in the progress bar item list.
+- A Cancel Uploading button is available next to each file or folder when the upload is in progress.
+- Clicking the Cancel Uploading button stops the upload of that specific item.
+- The item's status will update to "Cancelled" in the progress bar item list.
 
 ![cancel uploading button](../../../../images/cancel_individual_upload_button.png)
 
 **Cancel All Uploads**
 
-    - The Cancel all button is enabled in the progress bar header when any file or folder upload is in progress.
-    - Clicking Cancel all button terminates all pending uploads at once.
-    - Cancelled items will display a Cancelled status in the progress bar item list.
-    - Click the View upload details arrow to see the status of all uploaded and cancelled items.
+- The Cancel all button is enabled in the progress bar header when any file or folder upload is in progress.
+- Clicking Cancel all button terminates all pending uploads at once.
+- Cancelled items will display a Cancelled status in the progress bar item list.
+- Click the View upload details arrow to see the status of all uploaded and cancelled items.
 
 ![cancel all button](../../../../images/cancel_all_button.png)
 
@@ -103,9 +103,9 @@ To help you find assets more efficiently, you can sort collections and their con
 
 When viewing the top-level root collections, you can sort them by the following criteria: 
 
-    - Date: The last modified date of the collection.
-    - Name: The name of the collection.
-    - Count: The number of items inside the collection.
+- Date: The last modified date of the collection.
+- Name: The name of the collection.
+- Count: The number of items (assets and collections) inside the collection.
 
 Grid View
 ![root collection sort grid view](../../../../images/default_root_collection_sort_grid_view.png)
@@ -118,14 +118,14 @@ List View
 
 When you are inside a collection, you can sort its contents (both sub-collections and assets) by the following criteria:
 
-    - Date: last modfied date of collection. This is the default sort order (descending). 
-    - Name: The name of the asset or sub-collection.
-    - Count/Size:
-        - Sub-collections are sorted by the number of items they contain. 
-        - Assets are sorted by their file size. 
-    - Type: This option groups items first, then sorts them: 
-        - Assets are grouped by category (e.g., Images, Videos, then Documents), then sorted by file extension, and finally by name. 
-        - Sub-collections are sorted by name.
+- Date: last modfied date of collection. This is the default sort order (descending). 
+- Name: The name of the asset or sub-collection.
+- Count/Size:
+    - Sub-collections are sorted by the number of items (assets and collections) they contain. 
+    - Assets are sorted by their file size. 
+- Type: This option groups items first, then sorts them: 
+    - Assets are grouped by category (e.g., Images, Videos, then Documents), then sorted by file extension, and finally by name. 
+    - Sub-collections are sorted by name.
 
 Grid View
 ![sub collection sort grid view](../../../../images/default_sub_collection_sort_grid_view.png)
@@ -134,7 +134,7 @@ List View
 ![sub collection sort list view](../../../../images/default_sub_collection_sort_list_view.png)
 
 
-!!! note
+!!! notes
 
     - Collections are always displayed before assets. This behavior is consistent in both Grid and List views.
     - List view table sort will not sort the entire items. It sorts only the items that available on the page.
