@@ -71,12 +71,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - Cancel ongoing uploads through the progress bar
 
 === "Containers"
-    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#cancelling-uploads).
 
 ### DAM - Collection sorting
 
 === "Containers"
-    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
 
 ### New Access Layer Updates in DX Deployments
 
