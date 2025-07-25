@@ -93,3 +93,10 @@ Search results are generated based on the keywords or phrases entered in the sea
 3. After confirming the deletion, a success message will be displayed.
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Success.png)
+
+4. If the deletion failed, then the following messages will be displayed.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_failure.png)
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
+
+
