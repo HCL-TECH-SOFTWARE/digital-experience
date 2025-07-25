@@ -31,6 +31,6 @@ For an introduction and a demo on how to use Web Application Bridge, go to [Web 
 
 ???+ info "Related information"
     - [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
-    - [Sample integrations of HCL Leap with HCL Digital Experience](../leap/example/index.md)
+    - [Sample integrations of HCL Leap with HCL Digital Experience](../leap/example.md)
     - [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../mx/example/index.md)
 

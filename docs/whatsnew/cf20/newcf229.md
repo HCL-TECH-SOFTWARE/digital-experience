@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
+- TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -48,7 +49,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
 === "On-Premises"
-     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md). 
+     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
+
+### TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
+
+=== "Containers"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
+
+=== "On-Premises"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -69,18 +78,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New Access Layer Updates in DX Deployments
 
 === "Containers"
-    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as our internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
+    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
 
-The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, we've introduced new documentation for the Gateway API, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+    The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
 
-See the following documents:
+    See the following documents:
 
-- [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
-- [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
-- [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
-- [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
-- [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
-- [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+    - [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
+    - [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
+    - [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
+    - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
+    - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
+    - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
@@ -109,6 +118,3 @@ See the following documents:
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
-
-
-
