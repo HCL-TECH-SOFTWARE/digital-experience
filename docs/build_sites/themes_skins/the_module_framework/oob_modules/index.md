@@ -306,7 +306,7 @@ These modules provide the Web Application Integrator.
 
 
 !!! note
-    WAI functionality is no longer a tested path. We recommend using HCL DX Script Portlets and HCL DX APIs to integrate content from other systems.
+    WAI functionality is no longer a tested path. It is recommended to use HCL DX Script Portlets and HCL DX APIs to integrate content from other systems.
 
 
 **Location:** [`PortalServer_root`](../../../../guide_me/wpsdirstr.md)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/WEB-INF/lib/ic4_wai.jar!/plugin.xml
