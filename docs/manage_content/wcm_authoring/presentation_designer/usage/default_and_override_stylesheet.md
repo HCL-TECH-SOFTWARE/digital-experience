@@ -1,24 +1,22 @@
-# Default and Override Stylesheets in Presentation Designer
+# Default and Override stylesheets in Presentation Designer
 
-In Presentation Designer, stylesheets play a crucial role in defining the appearance and behavior of elements within a presentation. There are two types of stylesheets that work together to ensure flexibility and consistency in design: the **Default Stylesheet** and the **Override Stylesheet**. Currently we support the handling of type selectors and class selectors.
+In Presentation Designer, stylesheets play a crucial role in defining the appearance and behavior of elements within a presentation. There are two types of stylesheets that work together to ensure flexibility and consistency in design: the **Default stylesheet** and the **Override stylesheet**. These stylesheets support the handling of type selectors and class selectors.
 
-## Default Stylesheet
+## Default stylesheet
 
-The **Default Stylesheet** provides a foundational set of styles that are automatically applied to various elements, ensuring a consistent look and feel across the presentation. Default stylesheet also support the type selectors and class selectors
-
-The following image shows how the default style options work in Presentation Designer.
+The **Default Stylesheet** provides a foundational set of styles that are automatically applied to various elements, ensuring a consistent look and feel across the presentation. Default stylesheet support type selectors and class selectors. The default style options in Presentation Designer work as follows:
 
 1. From the initial render of the Presentation Designer, a default style is loaded in the head of the HTML:
 
-    HTML head for default stylesheet.
+    - HTML head for default stylesheet:
 
-    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_html_head.png)
+        ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_html_head.png)
 
-    Element styles for the default stylesheet.
+    - Element styles for the default stylesheet:
 
-    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_element_inspect.png)
+        ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_element_inspect.png)
 
-2. For each element, there is a corresponding classname for the default style.
+2. Each element has a corresponding classname for the default style.
 
     | Element                     | Default Classname                  | CSS Values                                                                 |
     |-----------------------------|------------------------------------|----------------------------------------------------------------------------|
@@ -46,78 +44,70 @@ The following image shows how the default style options work in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_create.png)
 
-4. The default style can be located within the current libraries of the Presentation Designer:
-
-    The default style is determined based on the location of the presentation template.
+4. The default style can be located within the current libraries of the Presentation Designer and is determined based on the location of the presentation template:
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_paths.png)
 
-    Location of the Default Style and the Default Style Name: pd_default_stylesheet.
+    For example, the location of the default style and default style name is **pd_default_stylesheet**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_locations.png)
 
-5. To validate the styles set in the default stylesheet, you can download it by following these steps:
+5. To validate the styles set in the default stylesheet:
 
-    1. Select the file and click Edit.
-    2. Select the pd_default_stylesheet.css. This will download the file.
+    1. Select the file and click **Edit**.
+    2. Click **pd_default_stylesheet.css** to download the file.
 
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_download.png)
 
-    3. Locate the downloaded file and open it. 
-
-        This contains the CSS data inside the default stylesheet.
+    3. Locate the downloaded file and open it. This contains the CSS data inside the default stylesheet.
 
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_downloaded_file.png)
 
-## Override Stylesheet
+## Override stylesheet
 
-The **Override Stylesheet** allows users to customize styles for specific elements, enabling precise adjustments to meet unique design requirements. Together, these stylesheets offer a powerful mechanism for managing presentation aesthetics effectively.
+The **Override stylesheet** allows users to customize styles for specific elements, enabling precise adjustments to meet unique design requirements. Together, the Default and Override stylesheets offer a powerful mechanism for managing presentation aesthetics effectively. The override style options in Presentation Designer work as follows:
 
-The following image shows how the override style options work in Presentation Designer.
+1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it will apply to all devices. If the style is set for **Tablet**, it will apply changes to tablets and mobile devices only. If the style is set for **Mobile**, it will apply changes to mobile devices only. If there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
 
-1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it will apply to all devices. If the style is set for **Tablet**, it will apply changes only to tablets and mobile devices. If the style is set for **Mobile**, it will apply changes only to mobile devices. However, if there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
+2. The classname for the override stylesheet on the selected element will apply when a style is edited. For example:
 
-2. The classname for the override stylesheet on the selected element will apply when a style is edited.
+    After dropping the element:
 
-    After drop the element:
-
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_newly_drop_element.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_drop_element.png)
 
     After adding a style on that element:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_after_changing_style.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_after_changing_style.png)
 
-3. For each element, there is a corresponding classname convention. For example: pd-override-\[Element]-\[(6)uuid].
+3. For each element, there is a corresponding classname convention. For example, `pd-override-[Element]-[(6)uuid]`.
 
 4. After saving the presentation designer, it will automatically create an override stylesheet:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_created.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_created.png)
 
-5. To validate the override style, you can inspect and visit the header and the element.
+5. To validate the override style, you can inspect and visit the header and the element. For example:
 
     HTML head for override stylesheet:
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_html_head.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_html_head.png)
 
     Element styles for the override stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_element_inspect.png)
 
-6. The override style can be located based on the current libraries of the presentation designer:
+6. The override style can be located based on the current libraries of the Presentation Designer:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_path.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_path.png)
 
-7. The naming of the override style will be based on the presentation designer: `pd_[Presentation template name]_override_[(6)uuid]`:
+7. The naming of the override style will be based on the Presentation Designer (`pd_[Presentation template name]_override_[(6)uuid]`):
 
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_location.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_location.png)
 
-8. To validate the styles set in the default stylesheet, you can download it by following these steps:
+8. To validate the styles set in the default stylesheet:
 
-    1. Select the file and click Edit.
-    2. Select the pd_Override stylesheet test_override_a074b2.css. This will download the file.
+    1. Select the file and click **Edit**.
+    2. Click **pd_Override stylesheet test_override_a074b2.css** to download the file.
 
         ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_download.png)
 
-    3. Locate the downloaded file and open it.
-
-        This contains the CSS data inside the override stylesheet.
+    3. Locate the downloaded file and open it. This contains the CSS data inside the override stylesheet.
 
         ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_downloaded_file.png)
