@@ -292,14 +292,14 @@ If you have customized the WCM Advanced Editor, Textbox.io, you may need to migr
 3. Copy any custom JSP functions from your `tbio_config.jsp` to your new `tiny_config.jsp` file. 
 4. Copy any custom JSP variables from your old `tbio_config.jsp` file to your new `tiny_config.jsp` file. Do not overwrite the new variables or their new values, especially the `contextRoot`. 
 5. If you previously customized your toolbar with custom toolbar groups in `tbio_config.jsp`, those can be copied as-is along with the helper functions to `flatten` the toolbar groups into a single array.
-5. Rewrite your custom plugins to use the TinyMCE `PluginManager` API.
-6. Copy your configuration key-value pairs from the `config` object defined in `tbio_config.jsp` directly to the `tinyconfig` object in `tiny_config.jsp`. 
+6. Rewrite your custom plugins to use the TinyMCE `PluginManager` API.
+7. Copy your configuration key-value pairs from the `config` object defined in `tbio_config.jsp` directly to the `tinyconfig` object in `tiny_config.jsp`. 
 
 After creating the `tiny_config.jsp` customization file, follow the steps listed under [Using a custom configuration with the TinyMCE editor in the WCM authoring portlet](./wcm_config_ephox_custom.md#using-a-custom-configuration-with-the-tinymce-editor-in-the-wcm-authoring-portlet) to apply your customizations to the Enhanced Editor.
 
 ## Using a custom TinyMCE editor toolbar with in-place editing
 
-These customization steps only apply to Web content in-place editing with the TinyMCE editor.
+These customization steps only apply to web content in-place editing with the TinyMCE editor.
 
 1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
 
@@ -328,6 +328,32 @@ These customization steps only apply to Web content in-place editing with the Ti
 6. Restart the Portal server to apply your changes.
 
     To revert to the default editor toolbar, remove the property `inplaceEdit.toolbarConfigForRichText` and restart the server.
+
+## Using a custom TinyMCE editor configuration with in-place editing
+
+These customization steps only apply to web content in-place editing with the TinyMCE editor.
+
+1. Log in to the WebSphere® Integrated Solutions Console as an administrator.
+
+2. Click **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
+
+3. Click **Custom properties** to update the configuration properties.
+
+4. Edit or create the property `inplaceEdit.enhancedRichTextConfig`, and set its value to match the desired configuration. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format.
+
+    Sample value:
+
+    - Multiple TinyMCE options in an array that allow for the HTML style element to be part of a div and to use sliding mode to accommodate any overflowing toolbar buttons.
+
+        ```bash
+        [ 'valid_children: +div[style]', 'toolbar_mode: sliding' ]
+        ```
+
+5. Save your changes.
+
+6. Restart the Portal server to apply your changes.
+
+    To revert to the default editor toolbar, remove the property `inplaceEdit.enhancedRichTextConfig` and restart the server.
 
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

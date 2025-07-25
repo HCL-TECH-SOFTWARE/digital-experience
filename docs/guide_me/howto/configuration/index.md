@@ -14,3 +14,5 @@ Learn how to configure the IBM Rational Application Developer (RAD) for use in H
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.
+- **[Removing or hiding the "X-Powered-By" header in HCL Digital Experience](./HideXPoweredByHeader.md)**  
+Lean how to remove or hiding the "X-Powered-By" header.  
