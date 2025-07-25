@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
+- Notice of deprecation of the Woodburn Studio demo site
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -81,6 +82,14 @@ See the following documents:
 - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
 - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
 - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+
+### Notice of deprecation of Woodburn Studio
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
