@@ -44,11 +44,11 @@ The **Default Stylesheet** provides a foundational set of styles that are automa
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_create.png)
 
-4. The default style can be located within the current libraries of the Presentation Designer and is determined based on the location of the presentation template:
+4. The default style is found in the Presentation Designer libraries. Its location is determined based on the location of the presentation template:
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_paths.png)
 
-    For example, the location of the default style and default style name is **pd_default_stylesheet**:
+    For example, the default style is located in the following path with the default style name **pd_default_stylesheet**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_locations.png)
 
@@ -81,7 +81,7 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 
 3. For each element, there is a corresponding classname convention. For example, `pd-override-[Element]-[(6)uuid]`.
 
-4. After saving the presentation designer, it will automatically create an override stylesheet:
+4. After saving the Presentation Designer, it will automatically create an override stylesheet:
 
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_created.png)
 
@@ -93,11 +93,11 @@ The **Override stylesheet** allows users to customize styles for specific elemen
     Element styles for the override stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_element_inspect.png)
 
-6. The override style can be located based on the current libraries of the Presentation Designer:
+6. The override style is found in the Presentation Designer libraries. Its location is determined based on presentation template's location:
 
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_path.png)
 
-7. The naming of the override style will be based on the Presentation Designer (`pd_[Presentation template name]_override_[(6)uuid]`):
+7. The naming of the override style will be based on the following template: `pd_[Presentation template name]_override_[(6)uuid]`. For example:
 
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_location.png)
 
