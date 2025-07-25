@@ -13,13 +13,13 @@ Presentation Designer is ideal for, but not limited to, the following sample use
 
 Refer to the following pages for more information:
 
-- **[Access Presentation Designer](../presentation_designer/access/index.md)**<br>
+- **[Access Presentation Designer](../presentation_designer/access.md)**<br>
 This section provides the steps on how to access the Presentation Designer and details on the user interface.
 
 - **[Using Presentation Designer](../presentation_designer/usage/index.md)**<br>
 This section provides information on how to edit presentation templates and how to utilize user elements and styling options in Presentation Designer.
 
-- **[Presentation Designer limitations](../presentation_designer/limitations/index.md)**<br>
+- **[Presentation Designer limitations](../presentation_designer/limitations.md)**<br>
 This section lists the current limitations when using Presentation Designer.
 
 ## HCLSoftware U learning materials

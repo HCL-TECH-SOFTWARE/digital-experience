@@ -2,7 +2,7 @@
 
 With canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used canvas settings for the user in the browser. These settings include the width, height, zoom level, canvas orientation, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
 
-To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
+To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access.md)** topic.
 
 To learn how to use the different user elements in Presentation Designer, refer to the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
 
@@ -51,16 +51,16 @@ The Canvas setting in the Presentation Designer adapts to different window sizes
 
 - **Ellipsis Button Appearance:** When the window width is reduced below 1280 pixels, an ellipsis button (...) appears in the header.
 
-![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis.png)
 
-Clicking this button reveals options for width, height, zoom, and rotate settings.
+    Clicking this button reveals options for adjusting the width, height, zoom, and rotate settings.
 
-![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_dimension.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_dimension.png)
 
-- **Modal for Predefined Resolutions:**  If the window width is further reduced, predefined resolutions for Desktop, Tablet, and Phone will also be included in the modal.
+- **Modal for Predefined Resolutions:**  If the window width is further reduced, predefined resolutions for desktop, tablet, and phone will also be included in the modal.
 
-![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_predefined.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_predefined.png)
 
-- **Message Display Below 800 Pixels:** When the window width is reduced below 800 pixels, a message is displayed to inform the user that the This application requires a minimum window width of 800 pixels to display correctly. Please resize your browser window or adjust your display settings.
+- **Message Display Below 800 Pixels:** If the window width is reduced below 800 pixels, the following message is displayed:
 
-![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_message.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_message.png)

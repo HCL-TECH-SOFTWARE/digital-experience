@@ -4,12 +4,10 @@ This section describes how to edit a presentation template in Presentation Desig
 
 To provide a comprehensive example, the goal is to have a **Content Section** presentation template for a **project page** which displays an **image of the project**, the **project title**, and **general information** by utilizing the capabilities of Presentation Designer.
 
-
 ## Prerequisites
 
 -   Create a **content template** with image, text, and rich text elements. The image element is for the Project Image, the text element is for the Project Title, and the rich text element is for the Project Description. For more information on how to create a content template, see [Author Content Templates](../../../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_templates/author_content_templates.md).
-    
-    
+
       See the following sample content template:
 
        ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Template.png)
@@ -28,12 +26,11 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
        *Text elements (Text and Rich Text)*:
        ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Content_Item_Text_Elements.png)
 
--   Create a blank **presentation template** in the Authoring portlet. For detailed steps, see [Accessing Presentation Designer](../access/index.md).
+-   Create a blank **presentation template** in the Authoring portlet. For detailed steps, see [Accessing Presentation Designer](../access.md).
 
        See the following sample presentation template:
 
        ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Presentation_Template_Empty_Markup.png)
-
 
 ## Editing a presentation template
 
@@ -43,17 +40,20 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_in_Presentation_Designer.png)
 
-2. There are two types of indicators to determine if the user can drop an element or not:
-    1. User is allowed to drop the element
+2. Drag and drop a **static container element** on the canvas.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_success.png)
+    There are two types of indicators to determine if the user can drop an element or not:
 
-    2. User is not allowed to drop the element
+    - User is allowed to drop the element:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_fail.png)
+        ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_success.png)
 
-3. Drag and drop a **static container element** on the canvas then enter the following values in the **Style** panel.
-    
+    - User is not allowed to drop the element:
+
+        ![](../../../../assets/HCL_Presentation_Designer_Canvas_drag_and_drop_indicator_fail.png)
+
+3. Enter the following values in the **Style** panel:
+
       **Dimensions**
 
       - **Width**: 1015px
@@ -99,7 +99,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Search_Content_Template.png)
 
-7.  In the **Content template** field, search and select the content template prepared in [Prerequisites](#prerequisites).
+7. In the **Content template** field, search and select the content template prepared in [Prerequisites](#prerequisites).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Content_Template.png)
 
@@ -154,7 +154,7 @@ Refer to the following steps to edit a presentation template in Presentation Des
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Static_Text_Element.png)
 
 14. Enter "General Information" in the **static text element** then add the following values in the **Style** panel:
-    
+
       **Typography**
 
       - **Paragraph format**: Normal
@@ -184,7 +184,6 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Click_Back_Button.png)
 
-
 ## Previewing the presentation template
 
 Use the **Preview** feature from the **Authoring portlet** to check the presentation template you edited in Presentation Designer.
@@ -213,38 +212,33 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
 
-
 ### Sample presentation templates
 
 With Presentation Designer, you can create a wide range of custom designs and template layouts tailored to your needs. The intuitive drag-and-drop interface, combined with real-time styling, helps content managers take full control of their designs. This section contains images showing possible presentation templates you can build using Presentation Designer.
 
--   **Hero Banner**
+- **Hero Banner**
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Hero_Banner.png)
 
-
--   **Cards with Image**
+- **Cards with Image**
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Cards_with_Image.png)
-
 
 - **Content Section**
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Content_Section.png)
 
-    *Preview:*
+    See the preview of the rendered page:
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
 
-
--   **Recent Items Template**
+- **Recent Items Template**
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Recent_Items.png)
 
-    *Preview:*
+    See the preview of the rendered page:
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Recent_Items_Preview.png)
 
-
 ???+ info "Related information"
-    - [Presentation Designer UI](../access/index.md#the-presentation-designer-ui)
+    - [Presentation Designer UI](../access.md#the-presentation-designer-ui)
     - [User Elements](../usage/user_elements.md)
     - [Styling Options](../usage/styling_options.md)

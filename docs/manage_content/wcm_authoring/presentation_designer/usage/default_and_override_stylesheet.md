@@ -2,8 +2,7 @@
 
 In Presentation Designer, stylesheets play a crucial role in defining the appearance and behavior of elements within a presentation. There are two types of stylesheets that work together to ensure flexibility and consistency in design: the **Default Stylesheet** and the **Override Stylesheet**. Currently we support the handling of type selectors and class selectors.
 
-
-# Default Stylesheet
+## Default Stylesheet
 
 The **Default Stylesheet** provides a foundational set of styles that are automatically applied to various elements, ensuring a consistent look and feel across the presentation. Default stylesheet also support the type selectors and class selectors
 
@@ -13,11 +12,11 @@ The following image shows how the default style options work in Presentation Des
 
     HTML head for default stylesheet.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_html_head.png)
-        
+    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_html_head.png)
+
     Element styles for the default stylesheet.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_element_inspect.png)
+    ![](../../../../assets/HCL_Presentation_Designer_default_stylesheet_element_inspect.png)
 
 2. For each element, there is a corresponding classname for the default style.
 
@@ -43,11 +42,11 @@ The following image shows how the default style options work in Presentation Des
     | Property tag text element   | pd-property-tag-text-defclass      | color: #5c5a5a; <br> width: 100%; <br> padding-left: 2px; <br> display: inline-block; <br> position: relative; <br> line-height: unset; |
     | Property tag datetime       | pd-property-tag-date-time-defclass | color: #5c5a5a; <br> width: 100%; <br> padding-left: 2px; <br> display: inline-block; <br> position: relative; <br> line-height: unset; |
 
-2. After saving the Presentation Designer, it will automatically create a default stylesheet.
+3. After saving the Presentation Designer, it will automatically create a default stylesheet.
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_create.png)
 
-3. The default style can be located within the current libraries of the Presentation Designer:
+4. The default style can be located within the current libraries of the Presentation Designer:
 
     The default style is determined based on the location of the presentation template.
 
@@ -57,7 +56,7 @@ The following image shows how the default style options work in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_locations.png)
 
-4. To validate the styles set in the default stylesheet, you can download it by following these steps:
+5. To validate the styles set in the default stylesheet, you can download it by following these steps:
 
     1. Select the file and click Edit.
     2. Select the pd_default_stylesheet.css. This will download the file.
@@ -65,12 +64,12 @@ The following image shows how the default style options work in Presentation Des
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_download.png)
 
     3. Locate the downloaded file and open it. 
-    
+
         This contains the CSS data inside the default stylesheet.
 
         ![](../../../../assets/HCL_Presentation_Designer_Default_stylesheet_downloaded_file.png)
 
-# Override Stylesheet
+## Override Stylesheet
 
 The **Override Stylesheet** allows users to customize styles for specific elements, enabling precise adjustments to meet unique design requirements. Together, these stylesheets offer a powerful mechanism for managing presentation aesthetics effectively.
 
@@ -88,7 +87,7 @@ The following image shows how the override style options work in Presentation De
 
     ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_after_changing_style.png)
 
-3. For each element, there is a corresponding classname convention. For example: pd-override-[Element]-[(6)uuid].
+3. For each element, there is a corresponding classname convention. For example: pd-override-\[Element]-\[(6)uuid].
 
 4. After saving the presentation designer, it will automatically create an override stylesheet:
 
@@ -98,7 +97,7 @@ The following image shows how the override style options work in Presentation De
 
     HTML head for override stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_html_head.png)
-    
+
     Element styles for the override stylesheet:
     ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_element_inspect.png)
 
