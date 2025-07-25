@@ -834,16 +834,8 @@ Module capabilities enable the use of modules in the theme.
 ## HCLSoftware U learning materials
 
 
-To learn how to further develop WebDAV-based DX themes, see the  
-[**Theme Development** lesson in the *HCL Digital Experience for Developers (Intermediate)* course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}.
+To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank"}.
 
-
-You can try it out using the following lab materials:
-
-- [**Theme Development Lab** (PDF)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"}
-
-
-- [**Theme Development Lab Resources** (ZIP)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank"}
 
 
 ???+ info "Related information"
@@ -853,7 +845,4 @@ You can try it out using the following lab materials:
     - [Simple modules](../../the_module_framework/writing_module/simple_modules/index.md)
     - [Customizing the CSS styles of social lists](../../../social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_css_social_list/index.md)
     - [Understanding the Portal 8.5 modularized theme](../../../create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md)
-
-
-
 
