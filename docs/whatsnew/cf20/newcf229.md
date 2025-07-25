@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
+- Blueprint design system
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -81,6 +82,14 @@ See the following documents:
 - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
 - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
 - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+
+### Blueprint design system
+
+=== "Containers"
+    The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/).
+
+=== "On-Premises"
+    The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/).
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
