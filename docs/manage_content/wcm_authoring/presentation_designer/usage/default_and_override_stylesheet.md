@@ -4,7 +4,7 @@ In Presentation Designer, stylesheets play a crucial role in defining the appear
 
 ## Default stylesheet
 
-The **Default Stylesheet** provides a foundational set of styles that are automatically applied to various elements, ensuring a consistent look and feel across the presentation. Default stylesheet support type selectors and class selectors. The default style options in Presentation Designer work as follows:
+The **Default stylesheet** provides a foundational set of styles that are automatically applied to various elements, ensuring a consistent look and feel across the presentation. Default stylesheet support type selectors and class selectors. The default style options in Presentation Designer work as follows:
 
 1. From the initial render of the Presentation Designer, a default style is loaded in the head of the HTML:
 
