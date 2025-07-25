@@ -68,6 +68,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - Cancel ongoing uploads through the progress bar
+
+=== "Containers"
+    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
+### DAM - Collection sorting
+
+=== "Containers"
+    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
 ### New Access Layer Updates in DX Deployments
 
 === "Containers"
@@ -107,16 +117,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [WebSphere Application Server 9.0.5.23](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.40](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - No iFixes
-
-### DAM - Cancel ongoing uploads through the progress bar
-
-=== "Containers"
-    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
-
-### DAM - Collection sorting
-
-=== "Containers"
-    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
