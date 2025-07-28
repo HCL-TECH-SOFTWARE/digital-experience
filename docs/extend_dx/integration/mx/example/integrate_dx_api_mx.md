@@ -47,7 +47,7 @@ Refer to the following steps to integrate HCL DX APIs into HCL Volt MX Foundry u
 
         1. Log in to the WebSphere Integrated Solutions Console as an administrator.
         2. Navigate to **Security > Global security > Web and SIP Security > Trust association > Interceptors > com.ibm.portal.auth.tai.HTTPBasicAuthTAI**.
-        3. **Update** the `urlWhiteList` property if it includes the value `/wps/mycontenthandler*`; otherwise, **delete** the `urlWhiteList` if it solely contains the value `/wps/mycontenthandler*`.
+        3. **Remove** the value `/wps/mycontenthandler*` from the `urlWhiteList` property if it is present along with other values. If `/wps/mycontenthandler*` is the only value in `urlWhiteList`, **delete** the entire `urlWhiteList`.
         4. Click **Apply**.
         5. Click **Save** at the top of the console messages.
 
