@@ -80,7 +80,7 @@ Search results are generated based on the keywords or phrases entered in the sea
 
     ![](../../assets/HCL_SearchV2_Authoring_search_engine_down.png)
 
-## Delete feature
+## Deleting an item from the result
 
 - *To delete an item from the search results, please follow the steps below:*
 
