@@ -84,10 +84,16 @@ Search results are generated based on the keywords or phrases entered in the sea
     
     ![](../../assets/HCL_SearchV2_Authoring_Delete_menu.png)
 
-2. On the confirmation page, the item to be deleted will be displayed along with a warning message. To proceed with deletion, click the Delete button. There are separate warnings for different item types: Site Area and Library have distinct warnings, while other types have a different warning, as shown in the images below.
+2. On the confirmation page, the item to be deleted will be displayed along with a warning message. To proceed with deletion, click the Delete button. There warning message may vary for different item types, as shown in the images below.
+
+    **For Site Areas and Libraries**
+
+    ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation2.png)
+
+    **For all other item types**
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation.png)
-    ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation2.png)
+
 
 
 3. After confirming the deletion, a success message will be displayed.
