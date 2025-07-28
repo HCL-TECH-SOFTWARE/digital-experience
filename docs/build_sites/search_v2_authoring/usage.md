@@ -68,7 +68,7 @@ Search results are generated based on the keywords or phrases entered in the sea
 
 12. To delete an item, hover over the result then click **More > Delete**.
 
-    [Deleting an items from the result](./usage.md#delete-feature)
+    For more information, see [Deleting an item from the result](./usage.md#delete-feature)
  
 ## Other search result scenarios
 
