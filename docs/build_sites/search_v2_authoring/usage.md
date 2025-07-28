@@ -82,7 +82,7 @@ Search results are generated based on the keywords or phrases entered in the sea
 
 ## Deleting an item from the result
 
-- *To delete an item from the search results, please follow the steps below:*
+- The Delete feature is available from CF229 onwards. To delete an item from the search results, please follow the steps below:
 
 1. Hover over the search result item you want to delete, then click the triple dots overflow icon to open **More** actions menu. Click Delete from the menu items that pop out.
     
