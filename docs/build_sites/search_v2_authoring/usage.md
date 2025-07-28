@@ -66,6 +66,10 @@ Search results are generated based on the keywords or phrases entered in the sea
 
     ![](../../assets/HCL_SearchV2_Authoring_preview.png "Click on Preview option to open the item in a new tab under Preview mode")
 
+12. To delete an item, hover over the result then click **More > Delete**.
+
+    [Deleting an items from the result](./usage.md#delete-feature)
+ 
 ## Other search result scenarios
 
 - If the search term yields no results, the following message is displayed.
