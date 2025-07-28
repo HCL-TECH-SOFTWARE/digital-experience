@@ -68,8 +68,8 @@ Search results are generated based on the keywords or phrases entered in the sea
 
 12. To delete an item, hover over the result then click **More > Delete**.
 
-    For more information, see [Deleting an item from the result](./usage.md#delete-feature)
- 
+    For more information, see [Deleting an item from the result](./usage.md#deleting-an-item-from-search-results).
+
 ## Other search result scenarios
 
 - If the search term yields no results, the following message is displayed.
@@ -80,33 +80,34 @@ Search results are generated based on the keywords or phrases entered in the sea
 
     ![](../../assets/HCL_SearchV2_Authoring_search_engine_down.png)
 
-## Deleting an item from the result
+## Deleting an item from search results
 
-- The Delete feature is available from CF229 onwards. To delete an item from the search results, please follow the steps below:
+Starting from CF229, you can now delete items from the search results. To delete an item, refer to the following steps:
 
-1. Hover over the search result item you want to delete, then click the triple dots overflow icon to open **More** actions menu. Click Delete from the menu items that pop out.
-    
+1. Hover over the search result item you want to delete, then click **More > Delete**.
+
     ![](../../assets/HCL_SearchV2_Authoring_Delete_menu.png)
 
-2. On the confirmation page, the item to be deleted will be displayed along with a warning message. To proceed with deletion, click the Delete button. The warning message varies for different item types, as shown in the images below.
+2. On the confirmation page, review the item to be deleted and its warning message. To proceed, click **Delete**.
 
-    **For Site Areas and Libraries**
+    A different warning will appear depending on the item type.
+
+    Warning for site areas and libraries:
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation2.png)
 
-    **For all other item types**
+    Warning for all other item types:
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Confirmation.png)
 
-
-
-3. After confirming the deletion, a success message will be displayed.
+    After confirming the deletion, a success message will be displayed:
 
     ![](../../assets/HCL_SearchV2_Authoring_Delete_Success.png)
 
-4. If the deletion failed, then the following messages will be displayed.
+    If the deletion failed, one of the following messages will be displayed:
 
-    ![](../../assets/HCL_SearchV2_Authoring_Delete_failure.png)
-    ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
+    - Failed due to existing references to the item
+        ![](../../assets/HCL_SearchV2_Authoring_Delete_failure.png)
 
-
+    - Failed due to non-existing item
+        ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
