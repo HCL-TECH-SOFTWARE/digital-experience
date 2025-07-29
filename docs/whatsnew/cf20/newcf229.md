@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
 - Blueprint design system
+- Notice of deprecation of the Woodburn Studio demo site
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -15,6 +16,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Search V2 Authoring - Deleting items from search results now available
+- DAM - Cancel ongoing uploads through the progress bar
+- DAM - Collection sorting
 - New Access Layer Updates in DX Deployments
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -59,6 +63,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
 
+### Notice of deprecation of the Woodburn Studio demo site
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -75,21 +87,36 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Search V2 Authoring - Deleting items from search results now available
+
+=== "Containers"
+    In Search V2 Authoring, you can now delete items from the search results. The item will be removed during the next crawler run that updates the search index. For more information, refer to [Using Search V2 Authoring - Deleting an item from search results](../../build_sites/search_v2_authoring/usage.md#deleting-an-item-from-search-results).
+
+### DAM - Cancel ongoing uploads through the progress bar
+
+=== "Containers"
+    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#cancelling-uploads).
+
+### DAM - Collection sorting
+
+=== "Containers"
+    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
+
 ### New Access Layer Updates in DX Deployments
 
 === "Containers"
-    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as our internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
+    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
 
-The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, we've introduced new documentation for the Gateway API, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+    The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
 
-See the following documents:
+    See the following documents:
 
-- [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
-- [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
-- [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
-- [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
-- [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
-- [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+    - [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
+    - [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
+    - [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
+    - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
+    - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
+    - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 

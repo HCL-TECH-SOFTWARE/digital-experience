@@ -1,5 +1,8 @@
 # Preventing automatic update of Woodburn Studio pages
 
+!!! warning
+    The Woodburn Studio demo site will be deprecated starting August 05, 2025 and will reach End of Support (EOS) on August 04, 2026.
+
 If a user has disabled or modified the OOB \(Out Of Box\) sample Woodburn Studio pages, then they may not wish those pages to get reset or reactivated when applying a Cumulative Fix \(CF\).
 
 To prevent this, a new property can be set in `wkplc.properties` during the [applyCF](../../deployment/install/traditional/cf_install/index.md) process, as follows.
