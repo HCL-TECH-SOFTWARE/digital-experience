@@ -6,6 +6,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
+- TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
+- Presentation Designer - Default and Override stylesheets now available
 - Blueprint design system
 - Notice of deprecation of the Woodburn Studio demo site
 - Notice of deprecation of the CKEditor Rich Text Editor
@@ -55,6 +57,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
      In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
+### Presentation Designer - Default and Override stylesheets now available
+
+=== "Containers"
+    Default and Override stylesheets have been added to Presentation Designer. The Default stylesheet provides a foundational set of styles that are automatically applied to various elements while the Override stylesheet allows users to customize styles for specific elements. These stylesheets support the handling of type selectors and class selectors. For more information, refer to [Default and Override stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md).
+
+=== "On-Premises"
+    Default and Override stylesheets have been added to Presentation Designer. The Default stylesheet provides a foundational set of styles that are automatically applied to various elements while the Override stylesheet allows users to customize styles for specific elements. These stylesheets support the handling of type selectors and class selectors. For more information, refer to [Default and Override stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md).
+
 ### Blueprint design system
 
 === "Containers"
@@ -79,6 +89,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
+### TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
+
+=== "Containers"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
+
+=== "On-Premises"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -97,7 +115,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Search V2 Authoring - Deleting items from search results now available
 
-=== "Containers"
     In Search V2 Authoring, you can now delete items from the search results. The item will be removed during the next crawler run that updates the search index. For more information, refer to [Using Search V2 Authoring - Deleting an item from search results](../../build_sites/search_v2_authoring/usage.md#deleting-an-item-from-search-results).
 
 ### DAM - Cancel ongoing uploads through the progress bar
@@ -113,6 +130,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Access Layer updates in DX Deployments
 
 === "Containers"
+   
     The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
 
     The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
