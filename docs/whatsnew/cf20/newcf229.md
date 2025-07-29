@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
+- Blueprint design system
 - Notice of deprecation of the Woodburn Studio demo site
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -53,6 +54,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
      In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
+
+### Blueprint design system
+
+=== "Containers"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
+
+=== "On-Premises"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
 
 ### Notice of deprecation of the Woodburn Studio demo site
 
