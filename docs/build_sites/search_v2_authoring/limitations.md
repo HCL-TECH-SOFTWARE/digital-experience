@@ -28,3 +28,9 @@ Take note of the following limitations when using Search V2 Authoring:
     See the keyboard navigation setting for Safari.
 
     ![](../../assets/HCL_Search_Browser_Firefox_Settings.png){: style="height:600px"}
+
+## Delete
+
+- When an item is deleted, it might still show up in search results as the Web Content Manager (WCM) does not instantly push deletion updates. The item will appear until the next [crawler run](../search/searching_local_portal/srccrwlindxsite.md) updates the search index.
+
+- The Delete feature is disabled if the user is working on a project.
