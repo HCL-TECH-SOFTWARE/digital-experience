@@ -1,6 +1,4 @@
 title: Upgrade
-
 nav:
   - Home: index.md
-  - Command-line syntax for IIM: CommandLineIIM.md
-  
+  - How to use command-line syntax for installing Fixes with IBM Installation Manager: CommandLineIIM.md
