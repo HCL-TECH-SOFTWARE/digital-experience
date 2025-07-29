@@ -57,6 +57,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
      In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
+### TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
+
+=== "Containers"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
+
+=== "On-Premises"
+    Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
+
 ### Presentation Designer - Default and Override stylesheets now available
 
 === "Containers"
