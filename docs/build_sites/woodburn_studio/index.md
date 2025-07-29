@@ -1,5 +1,8 @@
 # The Woodburn Studio demo site
 
+!!! warning
+    The Woodburn Studio demo site will be deprecated starting August 05, 2025 and will reach End of Support (EOS) on August 04, 2026.
+
 Woodburn Studio is a website that demonstrates the use of some popular HCL Digital Experience features.
 
 Included in HCL Digital Experience 9.5, Woodburn Studio is a demo site for a fictional organization. Its intent is to show some of the capabilities that exist within HCL Digital Experience.
