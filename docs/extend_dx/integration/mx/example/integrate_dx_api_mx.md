@@ -43,7 +43,7 @@ Refer to the following steps to integrate HCL DX APIs into HCL Volt MX Foundry u
     2. Update WCM REST V2 API settings:
 
         !!! warning
-            The integration steps outlined in Section 3 require careful setup of HCL DX environments. This setup also affects WebDAV and syndication features, so exercise caution. The process will be refined in future releases.
+            The following integration steps require careful setup of HCL DX environments. This setup also affects WebDAV and syndication features, so exercise caution. The process will be refined in future releases.
 
         1. Log in to the WebSphere Integrated Solutions Console as an administrator.
         2. Navigate to **Security > Global security > Web and SIP Security > Trust association > Interceptors > com.ibm.portal.auth.tai.HTTPBasicAuthTAI**.
