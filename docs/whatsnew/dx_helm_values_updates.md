@@ -4,14 +4,16 @@
 
 ### CF229
 
-* Newly Added Keys: 
+**Added Keys:**
+
 | Key | Default Value |
 |-----|---------------|
 | configuration.persistence.ssl | false |
 | incubator.configuration.persistence.dbInitByDam | true |
 | incubator.configuration.digitalAssetManagement.newDbManagement | false |
 
-* Removed Keys:
+**Removed Keys:**
+
 | Key |
 |-----|
 | hclFlexnetID |
@@ -24,7 +26,8 @@
 | configuration.licenseManager.licenseServerId |
 | configuration.licenseManager.licenseFeatureNameWithVersion |
 
-* Changed Values:
+**Changed Values:**
+
 | Key | Old Value | New Value |
 |-----|-----------|-----------|
 | incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false | true |
@@ -35,7 +38,8 @@
 
 ### CF228
 
-### Newly Added Keys:
+**Added Keys:**
+
 | Key | Default Value |
 |-----|---------------|
 | networking.haproxy.affinityCookieDomain | [] |
@@ -46,10 +50,12 @@
 | configuration.webEngine.wabEnabled | false |
 | incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false |
 
-### Removed Keys:
+**Removed Keys:**
+
 None
 
-### Changed Values:
+**Changed Values:**
+
 | Key | Old Value | New Value |
 |-----|-----------|-----------|
 | probes.remoteSearch.readinessProbe.failureThreshold | 120 | 2 |
@@ -60,7 +66,7 @@ None
 
 ### CF227
 
-### Newly Added Keys:
+**Added Keys:**
 
 | Key   | Default Value  |
 |-------|----------------|
@@ -71,10 +77,12 @@ None
 |   configuration.digitalAssetManagement.nodeRequestTimeoutInMinutes  | 15 |
 |   incubator.configuration.dxPicker.renderPickerSearch  | false |
 
-### Removed Keys:
+**Removed Keys:**
+
 None
 
-### Changed Values:
+**Changed Values:**
+
 | Key   | Old Value  | New Value  |
 |-------|------------|------------|
 | configuration.webEngine.dbTypeProperties.db2.DbLibrary | /opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar  | /opt/openliberty/wlp/usr/svrcfg/templates/jars/db2/db2jcc4.jar |
@@ -83,7 +91,8 @@ None
 
 ### CF226
 
-### Newly Added Keys:
+**Added Keys:**
+
 | Key   | Default Value  |
 |-------|----------------|
 |   configuration.digitalAssetManagement.allowEditorToCreateCollections | true  |
@@ -93,9 +102,12 @@ None
 |   peopleservice.configuration.search.middleware.enabled   | false |
 |   peopleservice.configuration.search.contentSourceId    | "" |
 
-### Removed Keys:
+**Removed Keys:**
+
 None
-### Changed Values:
+
+**Changed Values:**
+
 | Key   | Old Value  | New Value  |
 |-------|------------|------------|
 | logging.damPluginGoogleVision.level.0  | api:server-v0:*=info  | api:server-v1:*=info |
@@ -107,7 +119,8 @@ None
 
 ### CF225
 
-### Newly Added Keys:
+**Added Keys:**
+
 | Key   | Default Value  |
 |-------|----------------|
 |   volumes.webEngine.customPVCs    |       []         |
@@ -116,17 +129,20 @@ None
 |   configuration.licenseManager.mhsDeploymentKey   | ""   |
 |   global.serviceAccountName    | ""    |
 
-### Removed Keys:
+**Removed Keys:**
+
 None
 
-### Changed Values:
+**Changed Values:**
+
 None
 
 
 
 ### CF224
 
-### Newly Added Keys:
+**Added Keys:**
+
 | Key   | Default Value  |
 |-------|----------------|
 |   hostAliases.contentComposer   |       []         |
@@ -354,7 +370,8 @@ None
 | environment.pod.webEngine | [] |
 | maintenanceMode.webEngine | false |
 
-### Removed Keys:
+**Removed Keys:**
+
 | Key   | Default Value  |
 |-------|----------------|
 | incubator.resources.webEngine.requests.cpu | 2000m |
@@ -455,7 +472,8 @@ None
 | incubator.configuration.webEngine.contentAI.className | "" |
 | incubator.configuration.core.presentationDesigner.enabled | false |
 
-### Changed Values:
+**Changed Values:**
+
 | Key   | Old Value  | New Value  |
 |-------|------------|------------|
 | configuration.searchMiddleware.pushAdminUser | pushAdmin | pushadmin |
