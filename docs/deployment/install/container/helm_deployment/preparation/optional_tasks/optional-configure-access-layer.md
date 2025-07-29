@@ -1,4 +1,4 @@
-# Configure Access Layer for DX deployment
+# Configuring Access Layer for DX deployments
 
 With HAProxy replacing Ambassador in HCL Digital Experience (DX) deployments, it is easier to use a custom Access Layer in front of DX to handle advanced requirements for routing, proxying, and other similar use cases. This document explains how to leverage an external Access Layer alongside HAProxy as the internal reverse proxy and load balancer. Sample configurations for some Access Layer controllers and steps to implement them in a Kubernetes environment are also provided.
 

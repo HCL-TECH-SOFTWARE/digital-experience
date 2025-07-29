@@ -19,7 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Access Layer updates in DX Deployments
+- Access Layer updates in DX deployments
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
 - Search V2 Authoring - Deleting items from search results now available
@@ -113,22 +113,19 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Access Layer updates in DX Deployments
+### Access Layer updates in DX deployments
 
 === "Containers"
 
-    The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
+The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
 
-    The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services. For more details, see [Configure Access Layer for DX deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services.
 
-    See the following documents:
+For more information, refer to the following topics:
 
-    - [Configuring the Access Layer for HCL DX and Volt MX Foundry](../../extend_dx/integration/mx/configuration/configure_access_layer.md)
-    - [Enabling SSO between HCL DX and HCL Volt MX Foundry](../../extend_dx/integration/mx/configuration/enable_sso.md)
-    - [Considerations and limitations](../../extend_dx/integration/mx/considerations.md)
-    - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
-    - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
-    - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
+- [Configuring Access Layer for DX deployments](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md)
+- [Configuring HCL Leap for integration with HCL DX](../../extend_dx/integration/leap/configuration.md)
+- [Configuring HCL Volt MX Foundry for integration with HCL DX](../../extend_dx/integration/mx/configuration/index.md)
 
 ### DAM - Cancel ongoing uploads through the progress bar
 
