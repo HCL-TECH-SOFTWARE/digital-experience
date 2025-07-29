@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
 - Blueprint design system
 - Notice of deprecation of the Woodburn Studio demo site
+- Notice of deprecation of the CKEditor Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -19,8 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - Search V2 Authoring - Deleting items from search results now available
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
-- New Access Layer Updates in DX Deployments
-- Notice of deprecation of the CKEditor Rich Text Editor
+- Access Layer updates in DX Deployments
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 - WAS, JDK, and iFix versions
@@ -71,6 +71,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
+### Notice of deprecation of the CKEditor Rich Text Editor
+
+=== "Containers"
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -102,7 +110,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
 
-### New Access Layer Updates in DX Deployments
+### Access Layer updates in DX Deployments
 
 === "Containers"
     The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
@@ -117,11 +125,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Using HCL DX APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md)
     - [Integrating Volt MX data and applications into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_data_to_dx.md)
     - [Deploying HCL Volt MX portlets into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md)
-
-### Notice of deprecation of the CKEditor Rich Text Editor
-
-=== "Containers"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
