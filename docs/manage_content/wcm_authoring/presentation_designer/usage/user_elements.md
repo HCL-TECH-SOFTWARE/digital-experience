@@ -3,7 +3,7 @@
 User elements refer to any element that you can edit or drag and drop onto the canvas. This section provides information on the different element types and how to use them in Presentation Designer
 
 
-To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
+To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access.md)** topic.
 
 To know the different styling options available in Presentation Designer, refer to the **[Styling Options in Presentation Designer](../usage/styling_options.md)** topic.
 
