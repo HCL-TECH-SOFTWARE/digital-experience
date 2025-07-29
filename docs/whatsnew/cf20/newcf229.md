@@ -118,7 +118,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm Values Updates
 
 === "Containers"
-    Any properties that were added, removed, or changed in this release are documented in [this table](../dx_helm_values_updates.md#cf229).
+    Any properties that were added, removed, or changed to the Helm values in HCL DX for this release are documented in [DX Helm Values Updates](../dx_helm_values_updates.md#cf229).
 
 ### Access Layer updates in DX deployments
 
