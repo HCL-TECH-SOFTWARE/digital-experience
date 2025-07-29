@@ -58,10 +58,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint design system
 
 === "Containers"
-    The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
 
 === "On-Premises"
-    The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
 
 ### Notice of deprecation of the Woodburn Studio demo site
 
