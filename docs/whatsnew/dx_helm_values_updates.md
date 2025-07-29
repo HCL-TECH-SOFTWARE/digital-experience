@@ -1,5 +1,129 @@
 # DX Helm Values Updates
 
+
+
+### CF229
+
+* Newly Added Keys: 
+| Key | Default Value |
+|-----|---------------|
+| configuration.persistence.ssl | false |
+| incubator.configuration.persistence.dbInitByDam | true |
+| incubator.configuration.digitalAssetManagement.newDbManagement | false |
+
+* Removed Keys:
+| Key |
+|-----|
+| hclFlexnetID |
+| hclFlexnetURL |
+| networking.licenseCertSecret |
+| security.licenseManager.licenseManagerUser |
+| security.licenseManager.licenseManagerPassword |
+| security.licenseManager.customLicenseManagerSecret |
+| security.licenseManager.customFlexnetLicenseManagerPrivateKeySecret |
+| configuration.licenseManager.licenseServerId |
+| configuration.licenseManager.licenseFeatureNameWithVersion |
+
+* Changed Values:
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false | true |
+| peopleservice.networking.contextRoot.api | dx/api/people/v1 | /dx/api/people/v1 |
+| peopleservice.networking.contextRoot.ui | dx/ui/people | /dx/ui/people |
+
+
+
+### CF228
+
+### Newly Added Keys:
+| Key | Default Value |
+|-----|---------------|
+| networking.haproxy.affinityCookieDomain | [] |
+| configuration.digitalAssetManagement.maxBulkUploadWithoutWarning | 100 |
+| configuration.runtimeController.leaderElection.leaseExpiryTime | 15 |
+| configuration.runtimeController.leaderElection.leasePollingTime | 5 |
+| configuration.webEngine.transientUserRegistry.enabled | false |
+| configuration.webEngine.wabEnabled | false |
+| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false |
+
+### Removed Keys:
+None
+
+### Changed Values:
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| probes.remoteSearch.readinessProbe.failureThreshold | 120 | 2 |
+| probes.remoteSearch.readinessProbe.periodSeconds | 60 | 30 |
+| configuration.licenseManager.licenseServerUri | - | https://api.hcltechsw.com |
+
+
+
+### CF227
+
+### Newly Added Keys:
+
+| Key   | Default Value  |
+|-------|----------------|
+|   scaling.replicas.runtimeController | 1 |
+|   networking.haproxy.alwaysEnableSessionAffinity   | false |
+|   configuration.digitalAssetManagement.aclCacheTtl | 10 |
+|   configuration.digitalAssetManagement.authCacheTtl  | 600  |
+|   configuration.digitalAssetManagement.nodeRequestTimeoutInMinutes  | 15 |
+|   incubator.configuration.dxPicker.renderPickerSearch  | false |
+
+### Removed Keys:
+None
+
+### Changed Values:
+| Key   | Old Value  | New Value  |
+|-------|------------|------------|
+| configuration.webEngine.dbTypeProperties.db2.DbLibrary | /opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar  | /opt/openliberty/wlp/usr/svrcfg/templates/jars/db2/db2jcc4.jar |
+
+
+
+### CF226
+
+### Newly Added Keys:
+| Key   | Default Value  |
+|-------|----------------|
+|   configuration.digitalAssetManagement.allowEditorToCreateCollections | true  |
+|   configuration.persistence.host   | "" |
+|   configuration.webEngine.customKeystoreSecrets | {} |
+|   configuration.webEngine.customTruststoreSecrets  | {}  |
+|   peopleservice.configuration.search.middleware.enabled   | false |
+|   peopleservice.configuration.search.contentSourceId    | "" |
+
+### Removed Keys:
+None
+### Changed Values:
+| Key   | Old Value  | New Value  |
+|-------|------------|------------|
+| logging.damPluginGoogleVision.level.0  | api:server-v0:*=info  | api:server-v1:*=info |
+| logging.damPluginKaltura.level.0  | api:server-v0:*=info  | api:server-v1:*=info |
+| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin |
+| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v0/googleVisionAI  | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI |
+
+
+
+### CF225
+
+### Newly Added Keys:
+| Key   | Default Value  |
+|-------|----------------|
+|   volumes.webEngine.customPVCs    |       []         |
+|   probes.core.livenessProbe.customProbeURL    | "" |
+|   configuration.licenseManager.customMhsDeploymentKeySecret    | "" |
+|   configuration.licenseManager.mhsDeploymentKey   | ""   |
+|   global.serviceAccountName    | ""    |
+
+### Removed Keys:
+None
+
+### Changed Values:
+None
+
+
+
 ### CF224
 
 ### Newly Added Keys:
@@ -337,125 +461,3 @@
 | configuration.searchMiddleware.pushAdminUser | pushAdmin | pushadmin |
 | configuration.searchMiddleware.pushAdminPassword | adminPush | adminpush |
 | incubator.configuration.digitalAssetManagement.renderNewUI | false | true |
-
-
-
-### CF225
-
-### Newly Added Keys:
-| Key   | Default Value  |
-|-------|----------------|
-|   volumes.webEngine.customPVCs    |       []         |
-|   probes.core.livenessProbe.customProbeURL    | "" |
-|   configuration.licenseManager.customMhsDeploymentKeySecret    | "" |
-|   configuration.licenseManager.mhsDeploymentKey   | ""   |
-|   global.serviceAccountName    | ""    |
-
-### Removed Keys:
-None
-
-### Changed Values:
-None
-
-
-
-### CF226
-
-### Newly Added Keys:
-| Key   | Default Value  |
-|-------|----------------|
-|   configuration.digitalAssetManagement.allowEditorToCreateCollections | true  |
-|   configuration.persistence.host   | "" |
-|   configuration.webEngine.customKeystoreSecrets | {} |
-|   configuration.webEngine.customTruststoreSecrets  | {}  |
-|   peopleservice.configuration.search.middleware.enabled   | false |
-|   peopleservice.configuration.search.contentSourceId    | "" |
-
-### Removed Keys:
-None
-### Changed Values:
-| Key   | Old Value  | New Value  |
-|-------|------------|------------|
-| logging.damPluginGoogleVision.level.0  | api:server-v0:*=info  | api:server-v1:*=info |
-| logging.damPluginKaltura.level.0  | api:server-v0:*=info  | api:server-v1:*=info |
-| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin |
-| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v0/googleVisionAI  | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI |
-
-  
-
-### CF227
-
-### Newly Added Keys:
-
-| Key   | Default Value  |
-|-------|----------------|
-|   scaling.replicas.runtimeController | 1 |
-|   networking.haproxy.alwaysEnableSessionAffinity   | false |
-|   configuration.digitalAssetManagement.aclCacheTtl | 10 |
-|   configuration.digitalAssetManagement.authCacheTtl  | 600  |
-|   configuration.digitalAssetManagement.nodeRequestTimeoutInMinutes  | 15 |
-|   incubator.configuration.dxPicker.renderPickerSearch  | false |
-
-### Removed Keys:
-None
-
-### Changed Values:
-| Key   | Old Value  | New Value  |
-|-------|------------|------------|
-| configuration.webEngine.dbTypeProperties.db2.DbLibrary | /opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar  | /opt/openliberty/wlp/usr/svrcfg/templates/jars/db2/db2jcc4.jar |
-
-
-
-### CF228
-
-### Newly Added Keys:
-| Key | Default Value |
-|-----|---------------|
-| networking.haproxy.affinityCookieDomain | [] |
-| configuration.digitalAssetManagement.maxBulkUploadWithoutWarning | 100 |
-| configuration.runtimeController.leaderElection.leaseExpiryTime | 15 |
-| configuration.runtimeController.leaderElection.leasePollingTime | 5 |
-| configuration.webEngine.transientUserRegistry.enabled | false |
-| configuration.webEngine.wabEnabled | false |
-| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false |
-
-### Removed Keys:
-None
-
-### Changed Values:
-| Key | Old Value | New Value |
-|-----|-----------|-----------|
-| probes.remoteSearch.readinessProbe.failureThreshold | 120 | 2 |
-| probes.remoteSearch.readinessProbe.periodSeconds | 60 | 30 |
-| configuration.licenseManager.licenseServerUri | - | https://api.hcltechsw.com |
-
-
-
-### CF229
-
-### Newly Added Keys:
-| Key | Default Value |
-|-----|---------------|
-| configuration.persistence.ssl | false |
-| incubator.configuration.persistence.dbInitByDam | true |
-| incubator.configuration.digitalAssetManagement.newDbManagement | false |
-
-### Removed Keys:
-| Key |
-|-----|
-| hclFlexnetID |
-| hclFlexnetURL |
-| networking.licenseCertSecret |
-| security.licenseManager.licenseManagerUser |
-| security.licenseManager.licenseManagerPassword |
-| security.licenseManager.customLicenseManagerSecret |
-| security.licenseManager.customFlexnetLicenseManagerPrivateKeySecret |
-| configuration.licenseManager.licenseServerId |
-| configuration.licenseManager.licenseFeatureNameWithVersion |
-
-### Changed Values:
-| Key | Old Value | New Value |
-|-----|-----------|-----------|
-| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false | true |
-| peopleservice.networking.contextRoot.api | dx/api/people/v1 | /dx/api/people/v1 |
-| peopleservice.networking.contextRoot.ui | dx/ui/people | /dx/ui/people |
