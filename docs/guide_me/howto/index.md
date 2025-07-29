@@ -1,3 +1,6 @@
+
+# How-To
+
 # HCL Digital Experience How-To Guides
 
 Learn how to use HCL Digital Experience with all it's features.
@@ -176,5 +179,5 @@ Perform WCM Library Management tasks, such as importing and exporting, in your H
 
 # How-To Articles
 
-@@ -61,6 +127,3 @@ This section contains How-to articles to help you learn how to use **HCL Digital
+ This section contains How-to articles to help you learn how to use **HCL Digital
 - **[Getting Started with HCL Digital Experience](../../get_started/product_overview/index.md)**

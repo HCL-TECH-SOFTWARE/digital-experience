@@ -135,7 +135,7 @@ function setRichTextValue(theText)
 
 This example is used to create a selection list of predefined options.
 
-```
+```jsp
 <%@ taglib uri="/WEB-INF/tld/portlet.tld" prefix="portletAPI" %>
 <%@ page import="com.ibm.workplace.wcm.api.authoring.CustomItemBean" %>
 

@@ -12,7 +12,7 @@ Refer to the following steps to implement a generic Ingress on your Kubernetes c
 
 #### Prerequisites
 
-Ensure you follow the guidelines provided in the [optional Ingress documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md#ingress-implementation-for-dx-deployments) to set up Ingress for DX.
+Ensure you follow the guidelines provided in the [optional Ingress documentation](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md#ingress-implementation-for-dx-deployments) to set up Ingress for DX.
 
 #### Implementing Ingress for HCL DX and HCL Leap
 
@@ -57,7 +57,7 @@ Refer to the following steps to configure the optional Gateway API for DX and Le
 
 #### Prerequisites
 
-Ensure you follow the guidelines provided in the [optional Gateway API documentation](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md#gateway-api-implementation-for-dx-deployments) to set up the Gateway API for HCL DX.
+Ensure you follow the guidelines provided in the [optional Gateway API documentation](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md#gateway-api-implementation-for-dx-deployments) to set up the Gateway API for HCL DX.
 
 #### Implementing Gateway API for HCL DX and HCL Leap
 
@@ -142,7 +142,7 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
     !!!note
         For more information regarding Leap's `configOverrideFiles` parameter, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html?h=configoverridefile).
 
-3. Ensure both DX and Leap use the same DNS domain. Refer to [these steps](./installation.md#steps-to-create-a-basic-leapdx-installation) for details.
+3. Ensure both DX and Leap use the same DNS domain. Refer to [these steps](./installation.md) for details.
 
 4. Ensure LTPA cookies flow only over HTTPS.
 
