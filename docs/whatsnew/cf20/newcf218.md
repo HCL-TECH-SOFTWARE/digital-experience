@@ -88,10 +88,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### HCL DX Content Adapter in HCL Volt MX Marketplace
 
 === "Containers"
-    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/dx_apis_in_foundry.md).
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md).
 
 === "On-Premises"
-    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/dx_apis_in_foundry.md).
+    A new custom data adapter called HCL DX Content Adapter is now available. With HCL DX Content Adapter, you can use WCM V2 REST APIs in HCL Volt MX Foundry. You can access DX Experience APIs and create services in HCL Volt MX Foundry with predefined request and response schemas. For more information, see [Using HCL DX Experience APIs in HCL Volt MX Foundry](../../extend_dx/integration/mx/example/integrate_dx_api_mx.md).
 
 ### New documentation for OIDC in HCL DX
 
