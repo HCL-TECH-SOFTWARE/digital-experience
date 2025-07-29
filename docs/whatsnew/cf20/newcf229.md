@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - My HCLSoftware delivery portal
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
 - TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
+- Notice of deprecation of the Woodburn Studio demo site
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -15,6 +16,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Search V2 Authoring - Deleting items from search results now available
+- DAM - Cancel ongoing uploads through the progress bar
+- DAM - Collection sorting
 - New Access Layer Updates in DX Deployments
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -59,6 +63,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     Additional configuration options for web content in-place editing are now available for the TinyMCE Enhanced Rich Text Editor. Currently, the following TinyMCE configuration options are supported: `valid_children`, `toolbar`, and `toolbar_mode`. The value must be in an array format. For more information, refer to [Using a custom TinyMCE editor configuration with in-place editing](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#using-a-custom-tinymce-editor-configuration-with-in-place-editing).
 
+### Notice of deprecation of the Woodburn Studio demo site
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -74,6 +86,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### Search V2 Authoring - Deleting items from search results now available
+
+=== "Containers"
+    In Search V2 Authoring, you can now delete items from the search results. The item will be removed during the next crawler run that updates the search index. For more information, refer to [Using Search V2 Authoring - Deleting an item from search results](../../build_sites/search_v2_authoring/usage.md#deleting-an-item-from-search-results).
+
+### DAM - Cancel ongoing uploads through the progress bar
+
+=== "Containers"
+    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the **Cancel Uploading** button next to each in-progress item. You can also use the **Cancel All** button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#cancelling-uploads).
+
+### DAM - Collection sorting
+
+=== "Containers"
+    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
 
 ### New Access Layer Updates in DX Deployments
 
