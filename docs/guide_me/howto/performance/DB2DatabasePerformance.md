@@ -1,4 +1,4 @@
-# How to improve HCL DX database performance on a IBM DB2 database?
+# How to improve HCL DX database performance on a IBM DB2 database
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-If the portal database on HCL Digital Experience becomes very large it might be possible that some sql-queries take more time to complete, which can result in hanging threads like:
+If the portal database on HCL Digital Experience (DX) becomes very large, some SQL queries may take more time to complete, which can result in hanging threads such as:
 
 ```log
 [Timestamp] 0000005c TimeoutManage I CWWTR0124I: When the timeout occurred the thread with which the transaction is, or was most recently, associated was Thread[WebContainer : 23,5,main]. The stack trace of this thread when the timeout occurred was:
@@ -30,9 +30,15 @@ com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.pmiExecuteQuery(WSJdbcPrepared
 com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeQuery(WSJdbcPreparedStatement.java:747)
 ```
 
+This article describes the different options you can try to improve the performance of the HCL DX database.
+
 ## Instructions
 
-Before tuning any settings HCL highly recommends to further debug the performance problem. That can be done by executing the following db2 commands:
+Refer to the following options to improve HCL DX database performance:
+
+### Option 1: Debug performance issue
+
+Before tuning any settings, it is recommended to further debug the performance problem. Run the following DB2 commands:
 
 ```log
 db2 "call monreport.dbsummary(300)"
@@ -42,16 +48,18 @@ db2 get db cfg
 db2support . -d <dbname> -c -g -s -o db2support_primary.zip
 ```
 
-Furthermore HCL suggests to enable the following trace-string on HCL Digital Experience server side:
+### Option 2: Enable tracing
+
+It is recommended to enable the following trace-string on the HCL DX server:
 
 `*=info:WAS.j2c=all:RRA=all:Transaction=all`
 
-Please trace with 10 historical trace-files and a trace-file size of 100 MB.
+Trace with 10 historical trace-files and a trace-file size of 100 MB.
 
-With the detailed traces it is possible to determine the exact sql-queries that are causing the problem. A common problem of such hanging threads is that the database is not optimized.
+With the detailed traces, it is possible to determine the exact SQL queries that are causing the problem. A common cause of hanging threads is an unoptimized database.
 
-There is a way to make the database "reopt all queries" without adding them individually to a configuration file. This is achieved by using the DB2Binder utility for the connection. Example of the command for further reference (performed on the db2 server):
+### Option 3: Use the DB2Binder utility
+
+You can make the database "reopt all queries" without adding them individually to a configuration file by using the DB2Binder utility for the connection. To do this, run the following command on the DB2 server:
 
 `/home/db2inst1/sqllib/java/jdk64/jre/bin/java -cp ~/sqllib/java/db2jcc4.jar com.ibm.db2.jcc.DB2Binder -url jdbc:db2://localhost:50000/WPSDB -user db2inst1 -password XXXXX -collection NULLID -action replace -reopt ALWAYS -blocking ALL`
-
-Executing the command on the db2 server side can help to achieve a much better performance.

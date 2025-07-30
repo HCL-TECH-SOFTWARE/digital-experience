@@ -1,52 +1,36 @@
-# How to Determine portal database size when using DB2
-
+# How to determine portal database size when using DB2
 
 ## Applies to
 
-
 > HCL Digital Experience 8.5 and later
-
 
 ## Introduction
 
-
-This article describes how to determine the size of your portal databases when using DB2.
-
-
-## Overview
-
-
 A typical installation creates the following portal databases:
-
 
 - Release database (`WPREL`)
 - JCR database (`WPJCR`)
 
-The steps below show how to check the size of these databases on a Windows server.
+This article describes how to check the size of your portal databases on a Windows server when using DB2.
 
+## Instructions
 
-## Steps
-
+To check the size of your portal databases, refer to the following steps:
 
 1. Open a DB2 command window.
-
-
-2. Connect to the Release database (`WPREL`):
-
+2. Connect to the Release database (`WPREL`) using the following command:
 
     ```cmd
     db2 connect to WPREL user <yourUserid> using <yourPassword>
     ```
 
-3. Run the following command to retrieve the database size:
-
+3. Retrieve the database size using the following command:
 
     ```cmd
     db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
     ```
 
-4. Review the output:
-
+4. Review the output. For example:
 
     ```text
     Parameter Name  : SNAPSHOTTIMESTAMP
@@ -64,29 +48,25 @@ The steps below show how to check the size of these databases on a Windows serve
     Return Status = 0
     ```
 
-5. Disconnect from the Release database:
-
+5. Disconnect from the Release database using the following command:
 
     ```cmd
     db2 disconnect WPREL
     ```
 
-6. Connect to the JCR database (`WPJCR`):
-
+6. Connect to the JCR database (`WPJCR`) using the following command:
 
     ```cmd
     db2 connect to WPJCR user <yourUserid> using <yourPassword>
     ```
 
-7. Run the same command:
-
+7. Retrieve the database size using the following command:
 
     ```cmd
     db2 "CALL GET_DBSIZE_INFO(?, ?, ?, -1)"
     ```
 
-8. Review the output:
-
+8. Review the output. For example:
 
     ```text
     Parameter Name  : SNAPSHOTTIMESTAMP
@@ -104,16 +84,14 @@ The steps below show how to check the size of these databases on a Windows serve
     Return Status = 0
     ```
 
-9. Disconnect from the JCR database:
-
+9. Disconnect from the JCR database using the following command:
 
     ```cmd
     db2 disconnect WPJCR
     ```
 
 !!! note
-    - The `DATABASESIZE` value is reported in bytes.
-    - In this example:
+    - The `DATABASESIZE` value is reported in bytes. In this example:
       - The Release database size is approximately **346 MB**.
       - The JCR database size is approximately **3 GB**.
     - These values are from a test server with limited content. Production environments typically have much larger databases.
