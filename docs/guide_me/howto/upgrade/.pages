@@ -1,6 +1,4 @@
 title: Upgrade
-
 nav:
   - Home: index.md
-  - Command-line syntax for IIM: CommandLineIIM.md
-  
+  - CommandLineIIM.md

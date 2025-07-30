@@ -2,7 +2,6 @@ title: Administration
 
 nav:
   - index.md
-  - APIToCountWCMItems.md
   - ClearWCMCaches.md
   - ClearWebSphereDynacache.md
   - DataSourceTracing.md
@@ -10,3 +9,4 @@ nav:
   - ImproveQueryPerformance.md
   - RedirectTimeout.md
   - UseJavaScriptToReplaceText.md
+  - APIToCountWCMItems.md
