@@ -8,48 +8,49 @@ DXClient can take artifacts developed locally and deploy them to HCL DX servers 
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-## Installation Options
+## Installation options
 
 DXClient offers three installation options, each with different benefits depending on your use case:
 
-### Free Public Repositories (Recommended)
+### Free Public Repositories (recommended)
+
 - **NpmJS Registry**: Simplest option for local developers and administrators
 - **Harbor Container Repository**: Best for CI/CD automation pipelines
 
-Both options are free to use and available starting from CF221. For details, see [Public and Free Installation Options](#public-and-free-dxclient-installation-options(CF221+))
+Both options are free to use and available starting from CF221. For more information, refer to [Public and free installation options](#public-and-free-installation-options).
 
-### From My HCLSoftware (MHS) Portal
+### My HCLSoftware (MHS) portal
 
-The MHS portal offers two installation methods:
+The MHS portal offers two installation methods: [Container Package](#container-package) and [Native JavaScript Package](#native-javascript-package).
 
-**Option 1: Container Package**
+#### Container Package
 
 - Fully packaged container with all dependencies included
 - Works with Docker or Podman (OCI-compliant runtimes)
 - Available since HCL DX 9.5 CF196
-- [Full installation instructions](#installing-using-the-container-package-from-mhs-portal)
+- To install the Container Package, refer to [Installing using the container package from MHS portal](#installing-using-the-container-package-from-mhs-portal)
 
 !!! warning
     Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
 
-**Option 2: Native JavaScript Package**
+#### Native JavaScript Package
 
 - Requires manual installation of Node.js and npm dependencies
 - More flexible but requires more setup
-- [Full installation instructions](#installing-using-the-native-javascript-package-from-mhs-portal)
+- To install the Native JavaScript Package, refer to [Installing using the Native JavaScript Package from MHs portal](#installing-using-the-native-javascript-package-from-mhs-portal)
 
 !!!important "Version Numbering and Licensing"
-    Since CF221, DXClient uses a new versioning format that matches CF numbers (e.g., "221.0.0" instead of "1.29.0").
-    
-    All versions now require accepting a license agreement, which can be done using the `accept-license` command. See [DXClient information commands](#dxclient-information-commands) for details.
+    Since CF221, DXClient uses a new versioning format that matches CF numbers (for example, "221.0.0" instead of "1.29.0").
+
+    All versions now require accepting a license agreement, which can be done using the `accept-license` command. For more information, refer to [DXClient information commands](#dxclient-information-commands).
 
 ## What's New and Release History
 
-### Latest Updates (CF229)
+### Latest updates
 
-For CF229, we have upgraded few NPM Libraries for Code Maintanence. These changes have no impact on the current workings of DXClient.
+For CF229, a few NPM libraries have been upgraded for code maintenance. These changes have no impact on the current workings of DXClient.
 
-For a complete history of features added in each release, see the [Feature Release History](#feature-release-history) section.
+For a complete history of features added in each release, refer to the [Feature Release History](#feature-release-history) section.
 
 ### Architecture
 
@@ -57,15 +58,17 @@ The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
-## Installation Guide
+## Installation guide
+
+Choose the installation method that best suits your needs from the following:
 
 ### Installation Methods Comparison
 
 | Method | Source | Best For | Prerequisites | Ease of Use | Recommended For |
 |--------|--------|----------|--------------|-------------|-----------------|
 | **NPM Registry** | Free Public Repository | Local development | Node.js | ★★★★★ | Developers and admins who need quick setup |
-| **Harbor Container** | Free Public Repository | CI/CD pipelines | Docker/Podman | ★★★★☆ | Automation environments and DevOps |
-| **MHS Container Package** | MHS Portal | Enterprise use | Docker/Podman | ★★★★☆ | Production environments with license |
+| **Harbor Container** | Free Public Repository | CI/CD pipelines | Docker or Podman | ★★★★☆ | Automation environments and DevOps |
+| **MHS Container Package** | MHS Portal | Enterprise use | Docker or Podman | ★★★★☆ | Production environments with license |
 | **MHS Native JavaScript** | MHS Portal | Custom setups | Node.js | ★★★☆☆ | Legacy or specialized environments |
 
 !!!tip "Quick Decision Guide"
@@ -74,18 +77,22 @@ The following image illustrates the DXClient Architecture diagram:
     - **For enterprise deployments**: Use MHS Container Package
     - **For specialized needs**: Use MHS Native JavaScript Package
 
-### Public and Free Installation Options(CF221+)
+### Public and free installation options
 
-Starting from CF221, DXClient offers two free installation options that don't require MHS portal access.
+Starting from CF221, you can install DXClient without requiring MHS portal access. You can install it using the NpmJS registry or the container image in the Harbor repository.
 
-#### Installing from NpmJS Registry
+#### Installing using the NpmJS registry
 
 This method is recommended for local developers and administrators due to its simplicity.
 
-**Prerequisites:**
+**Prerequisites**
+
 - Node.js LTS or newer
 
-**Installation:**
+**Installation**
+
+To install DXClient using the NpnJS registry, run the following command:
+
 ```bash
 # Install locally in current project
 npm install @hcl-software/dxclient
@@ -94,7 +101,10 @@ npm install @hcl-software/dxclient
 npm install -g @hcl-software/dxclient
 ```
 
-**Verification:**
+**Verification**
+
+To verify the installation, run the following command:
+
 ```bash
 # For local installation
 npx dxclient -V
@@ -103,40 +113,43 @@ npx dxclient -V
 dxclient -V
 ```
 
-**Uninstallation:**
+**Uninstallation**
+
+To uninstall DXClient, run the following command:
+
 ```bash
 npm uninstall @hcl-software/dxclient
 ```
 
-#### Installing Using the Container Image in Harbor Repository
+#### Installing using the container image in the Harbor repository
 
 This method is preferred for CI/CD automation scenarios.
 
-**Prerequisites:**
+**Prerequisites**
+
 - Docker or another OCI-compliant container runtime
 
-**Installation Steps:**
+**Installation**
 
-**Step 1: Pull the Docker image**
-```bash
-docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
-```
+1. Pull the Docker image using the following command:
 
-**Step 2: Download and configure DXClient scripts**
+    ```bash
+    docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+    ```
 
-- Get scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
-- Follow instructions in the repository for setup and usage
+2. Download and configure the DXClient scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}. 
+3. Follow the instructions in the repository to set up and use DXClient.
 
-**Resource Links:**
+For more information, refer to the following repositories:
 
 - [HCL DX Open Harbor Repository](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}
 - [DXClient Scripts GitHub Repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
 
-### Installing Using the Container Package from MHS Portal
+### Installing using the Container Package from MHS Portal
 
 The container package provides a fully packaged OCI-compliant container with all dependencies included.
 
-**Prerequisites:**
+**Prerequisites**
 
 - Docker or Podman (any OCI-compliant container runtime)
 - HCL DX 9.5 CF196 or higher entitlement
@@ -145,218 +158,209 @@ The container package provides a fully packaged OCI-compliant container with all
 !!! warning
     Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
 
-**Installation Steps:**
+**Installation**
 
-**Step 1: Prepare your environment**
+1. Prepare your environment.
 
-- Navigate to your desired working directory
-- If upgrading from Node.js version, uninstall it first:
-   
-=== "Linux and Apple macOS"
+    - Navigate to your desired working directory.
+    - If you are upgrading from the Node.js version, uninstall it first using the following command:
+
+    === "Linux and Apple macOS"
+        ```bash
+        make unlink
+        ```
+
+    === "Microsoft Windows"
+        ```batch
+        make_unlink.bat
+        ```
+
+2. Download and extract the DXClient .zip file (`DXClient_VX_XXXXXXXX-XXXX.zip`) from [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
+3. (Optional) Configure container runtime. The default container runtime is Docker.
+
+    To use another runtime, run the following command:
+
+    === "Linux and Apple macOS"
+        ```bash
+        export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+        # Example: export CONTAINER_RUNTIME=podman
+        ```
+
+    === "Microsoft Windows"
+        ```batch
+        set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+        # Example: set CONTAINER_RUNTIME=podman
+        ```
+
+4. Load the container image using the following command:
+
+    === "Linux and Apple macOS"
+        ```bash
+        docker load < dxclient.tar.gz
+        ```
+
+    === "Microsoft Windows"
+        ```batch
+        docker load -i dxclient.tar.gz
+        ```
+
+5. Add the DXClient `bin` directory to your system's `PATH` environment variable.
+
+    === "Linux and Apple macOS"
+        ```bash
+        export PATH=<working-directory>/bin:$PATH
+        ```
+
+    === "Microsoft Windows"
+        ```batch
+        set PATH=<working-directory>\bin;%PATH%
+        ```
+
+    !!! note
+        These `PATH` changes are temporary. For permanent changes, update your system's environment variables.
+
+6. Set file permissions using the following command:
+
+    === "Linux and Apple macOS"
+        ```bash
+        chmod 755 <working-directory>/bin
+        ```
+
+    === "Microsoft Windows"
+        Set the appropriate permissions in **Properties > Security**.
+
+7. Verify the installation using the following command:
+
     ```bash
-    make unlink
+    dxclient -V
     ```
 
-=== "Microsoft Windows"
-    ```batch
-    make_unlink.bat
-    ```
+8. Configure storage volume.
 
-**Step 2: Download and extract the package**
+    A `store` folder is automatically created as shared volume. To use a different volume directory, run the following command:
 
-- Download DXClient.zip (DXClient_VX_XXXXXXXX-XXXX.zip) from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
-- Extract the zip file
+    === "Linux and Apple macOS"
+        ```bash
+        export VOLUME_DIR=myCustomStore
+        ```
 
-**Step 3: Configure container runtime (optional)**
+    === "Microsoft Windows"
+        ```batch
+        set VOLUME_DIR=myCustomStore
+        ```
 
-- Default is Docker. To use another runtime:
-   
-=== "Linux and Apple macOS"
-    ```bash
-    export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-    # Example: export CONTAINER_RUNTIME=podman
-    ```
+    !!! warning
+        Do not enclose the `VOLUME_DIR` value in quotes on Windows systems.
 
-=== "Microsoft Windows"
-    ```batch
-    set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-    # Example: set CONTAINER_RUNTIME=podman
-    ```
+9. Set volume permissions.
 
-**Step 4: Load the container image**
+    === "Linux and Apple macOS"
+        ```bash
+        chmod 755 <working-directory>/<VOLUME_DIR>
+        ```
 
-=== "Linux and Apple macOS"
-    ```bash
-    docker load < dxclient.tar.gz
-    ```
+    === "Microsoft Windows"
+        Set the appropriate permissions in **Properties > Security**.
 
-=== "Microsoft Windows"
-    ```batch
-    docker load -i dxclient.tar.gz
-    ```
+10. (Optional) Configure the timezone using the following command:
 
-**Step 5: Add to PATH (optional)**
-   
-=== "Linux and Apple macOS"
-    ```bash
-    export PATH=<working-directory>/bin:$PATH
-    ```
+    === "Linux and Apple macOS"
+        ```bash
+        export Timezone=Asia/Kolkata
+        ```
 
-=== "Microsoft Windows"
-    ```batch
-    set PATH=<working-directory>\bin;%PATH%
-    ```
+    === "Microsoft Windows"
+        ```batch
+        SET Timezone=Asia/Kolkata
+        ```
+
+**Post-installation**
+
+- Configuration files are located in `<working-directory>/<VOLUME_DIR>`.
+- Sample configurations available in `<working-directory>/samples/sample-configurations`.
+- For automation server integration, refer to the included sample pipeline.
+
+### Installing using the Native JavaScript Package from MHS Portal
 
 !!! note
-    These PATH changes are temporary. For permanent changes, update your system's environment variables.
+    This is a legacy method. The container package is recommended from CF196 onwards.
 
-**Step 6: Set file permissions**
-
-=== "Linux and Apple macOS"
-    ```bash
-    chmod 755 <working-directory>/bin
-    ```
-
-=== "Microsoft Windows"
-    Set appropriate permissions through Properties > Security tab
-
-**Step 7: Verify installation**
-```bash
-dxclient -V
-```
-
-**Step 8: Configure storage volume**
-
-- A `store` folder is automatically created as shared volume
-- To use a different volume directory:
-      
-=== "Linux and Apple macOS"
-    ```bash
-    export VOLUME_DIR=myCustomStore
-    ```
-
-=== "Microsoft Windows"
-    ```batch
-    set VOLUME_DIR=myCustomStore
-    ```
-
-!!! warning "Windows Note"
-    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
-
-**Step 9: Set volume permissions**
-
-=== "Linux and Apple macOS"
-    ```bash
-    chmod 755 <working-directory>/<VOLUME_DIR>
-    ```
-
-=== "Microsoft Windows"
-    Set appropriate permissions through Properties > Security tab
-
-**Step 10: Configure timezone (optional)**
-    
-=== "Linux and Apple macOS"
-    ```bash
-    export Timezone=Asia/Kolkata
-    ```
-
-=== "Microsoft Windows"
-    ```batch
-    SET Timezone=Asia/Kolkata
-    ```
-
-**Post-Installation:**
-
-- Configuration files are located in `<working-directory>/<VOLUME_DIR>`
-- Sample configurations available in `<working-directory>/samples/sample-configurations`
-- For automation server integration, refer to included sample pipeline
-
-### Installing Using the Native JavaScript Package from MHS Portal
-
-!!! note
-    This method is legacy. The container package is recommended from CF196 onwards.
-
-**Prerequisites:**
+**Prerequisites**
 
 - Node.js LTS or newer
 - HCL DX 9.5 CF19 or higher entitlement
 - MHS portal access
 
-**Installation Steps:**
+**Installation**
 
-**Step 1: Prepare your environment**  
-If upgrading from previous version, uninstall it first:
-    
-=== "Linux and Apple macOS"
-    ```bash
-    make unlink
-    ```
-=== "Microsoft Windows"
-    ```batch
-    make_unlink.bat
-    ```
+1. Prepare your environment. If you are upgrading from previous version, uninstall it first using the following command:
 
-**Step 2: Download and extract the package**
+    === "Linux and Apple macOS"
+        ```bash
+        make unlink
+        ```
+    === "Microsoft Windows"
+        ```batch
+        make_unlink.bat
+        ```
 
-- Download DXClient.zip from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
-- Extract the zip file
+2. Download and extract the DXClient .zip file (`DXClient_VX_XXXXXXXX-XXXX.zip`) from the [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
+3. Install DXClient dependencies using the following command:
 
-**Step 3: Install dependencies**
+    === "Linux and Apple macOS"
+        ```bash
+        make install
+        ```
 
-=== "Linux and Apple macOS"
-    ```bash
-    make install
-    ```
+    === "Microsoft Windows"
+        ```bash
+        make_install.bat
+        ```
 
-=== "Microsoft Windows"
-    ```bash
-    make_install.bat
-    ```
+4. (Optional) Link the application using the following command:
 
-**Step 4: Link the application (optional)**
+    === "Linux and Apple macOS"
+        ```bash
+        make link
+        ```
 
-=== "Linux and Apple macOS"
-    ```bash
-    make link
-    ```
+    === "Microsoft Windows"
+        ```bash
+        make_link.bat
+        ```
 
-=== "Microsoft Windows"
-    ```bash
-    make_link.bat
-    ```
+    !!! note
+        - Skip linking on automation servers to avoid dependency conflicts
+        - Without linking, use:
+                - Linux/macOS: `./bin/dxclient`
+                - Windows: `node bin/dxclient`
 
-!!! note
-    - Skip linking on automation servers to avoid dependency conflicts
-    - Without linking, use:
-            - Linux/macOS: `./bin/dxclient`
-            - Windows: `node bin/dxclient`
-          
-**Step 5: Configure storage volume (optional)**
-    - A `store` folder is automatically created
-    - To use a different volume directory:
-   
-=== "Linux and Apple macOS"
-    ```bash
-    export VOLUME_DIR=myCustomStore
-    ```
+5. (Optional) Configure storage volume.
 
-=== "Microsoft Windows"
-    ```batch
-    set VOLUME_DIR=myCustomStore
-    ```
+A `store` folder is automatically created. To use a different volume directory, run the following command:
 
-!!! warning "Windows Note"
-    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
+    === "Linux and Apple macOS"
+        ```bash
+        export VOLUME_DIR=myCustomStore
+        ```
 
-**Step 6: Set volume permissions**
+    === "Microsoft Windows"
+        ```batch
+        set VOLUME_DIR=myCustomStore
+        ```
 
-=== "Linux and Apple macOS"
-    ```bash
-    chmod 755 <working-directory>/<VOLUME_DIR>
-    ```
+    !!! warning
+        Do not enclose the `VOLUME_DIR` value in quotes on Windows systems.
 
-=== "Microsoft Windows"
-    Set appropriate permissions through Properties > Security tab
+6. Set volume permissions using the following command:
+
+    === "Linux and Apple macOS"
+        ```bash
+        chmod 755 <working-directory>/<VOLUME_DIR>
+        ```
+
+    === "Microsoft Windows"
+        Set the appropriate permissions in **Properties > Security**.
 
 ### Upgrading DXClient
 
