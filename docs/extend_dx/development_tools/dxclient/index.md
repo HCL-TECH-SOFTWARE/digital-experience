@@ -1,355 +1,497 @@
 # DXClient
 
+## Overview
+
 DXClient is a command line tool featuring a single, unified interface to all HCL Digital Experience (DX) automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes. Administrators can manage WCM libraries, PZN rules, shared libraries, etc. 
 
 DXClient can take artifacts developed locally and deploy them to HCL DX servers independently of whether these are deployed on-premises platforms in standalone, cluster, or farm-topologies, or in a container environment.
 
 DXClient is meant to be the one-stop, platform-independent solution that lets you integrate HCL DX with any automation infrastructure of your choice.
 
-DXClient comes with multiple deployment options:
+## Installation Options
 
-- DXClient is free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options).
+DXClient offers three installation options, each with different benefits depending on your use case:
 
-- In the My HCLSoftware (MHS) portal, one option is to deploy using the DXClient container package. DXClient is packaged as a container that you can run using OCI-based runtimes such as Docker or Podman. It is available as a container image from HCL DX 9.5 CF196 and later releases. For more information, see [DXClient installation using container package](#installing-dxclient-using-the-container-package-from-the-mhs-portal).
+### Free Public Repositories (Recommended)
+- **NpmJS Registry**: Simplest option for local developers and administrators
+- **Harbor Container Repository**: Best for CI/CD automation pipelines
 
-!!!warning
-    Recent changes to Podman introduced by RedHat have caused a compatibility issue with the container implementation of DXClient. HCL is currently investigating how this might be resolved. Until further notice, Docker is recommended for using the DXClient container implementation.
+Both options are free to use and available starting from CF221. For details, see [Public and Free Installation Options](#public-and-free-dxclient-installation-options(CF221+))
 
-- An alternative option in the MHS portal is to deploy DXClient as native JavaScript code. Users who want to use this deployment option must install their own Node.js and Node Package Manager (npm) runtime environment in the correct version. Users must also install the required dependencies. For more information, see [DXClient installation using native js package](#installing-dxclient-using-the-native-javascript-package-from-hcl-software-portal).
+### From My HCLSoftware (MHS) Portal
 
-!!!important "Information about DXClient versions and distribution"
-    DXClient is now free to download and install through [NpmJS and Harbor repositories](#public-and-free-dxclient-installation-options). After openly distributing DXClient, the versioning format of DXClient is now changed from 1.xx.x to <CFNumber\>.x.x. For example, the version of DXClient in the previous release was "1.29.0". Starting CF221, the versioning format uses the corresponding CF number of the DX deployment, making the DXClient version for CF221 "221.0.0". 
+The MHS portal offers two installation methods:
 
-    HCL DX also introduces a license agreement which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](#dxclient-information-commands).
+**Option 1: Container Package**
 
-## Architecture
+- Fully packaged container with all dependencies included
+- Works with Docker or Podman (OCI-compliant runtimes)
+- Available since HCL DX 9.5 CF196
+- [Full installation instructions](#installing-using-the-container-package-from-mhs-portal)
+
+!!! warning
+    Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
+
+**Option 2: Native JavaScript Package**
+
+- Requires manual installation of Node.js and npm dependencies
+- More flexible but requires more setup
+- [Full installation instructions](#installing-using-the-native-javascript-package-from-mhs-portal)
+
+!!!important "Version Numbering and Licensing"
+    Since CF221, DXClient uses a new versioning format that matches CF numbers (e.g., "221.0.0" instead of "1.29.0").
+    
+    All versions now require accepting a license agreement, which can be done using the `accept-license` command. See [DXClient information commands](#dxclient-information-commands) for details.
+
+## What's New and Release History
+
+### Latest Updates (CF229)
+
+For CF229, we have upgraded few NPM Libraries for Code Maintanence. These changes have no impact on the current workings of DXClient.
+
+For a complete history of features added in each release, see the [Feature Release History](#feature-release-history) section.
+
+### Architecture
 
 The following image illustrates the DXClient Architecture diagram:
 
 ![HCL DXclient Architecture diagram](../../../images/HCLDXClient_Architecture_Diagram.png)
 
-## Public and free DXClient installation options 
+## Installation Guide
 
-The following options to install DXClient are available starting CF221. Both options are free to use.
+### Installation Methods Comparison
 
-- [Install DXClient from the NpmJS public registry.](#installing-or-uninstalling-dxclient-from-npmjs-registry)
+| Method | Source | Best For | Prerequisites | Ease of Use | Recommended For |
+|--------|--------|----------|--------------|-------------|-----------------|
+| **NPM Registry** | Free Public Repository | Local development | Node.js | ★★★★★ | Developers and admins who need quick setup |
+| **Harbor Container** | Free Public Repository | CI/CD pipelines | Docker/Podman | ★★★★☆ | Automation environments and DevOps |
+| **MHS Container Package** | MHS Portal | Enterprise use | Docker/Podman | ★★★★☆ | Production environments with license |
+| **MHS Native JavaScript** | MHS Portal | Custom setups | Node.js | ★★★☆☆ | Legacy or specialized environments |
 
-- [Install DXClient from the container image in the public Harbor repository.](#installing-dxclient-using-the-container-image-in-the-harbor-repository)
+!!!tip "Quick Decision Guide"
+    - **For personal development**: Use NPM Registry installation
+    - **For CI/CD pipelines**: Use Harbor Container Repository
+    - **For enterprise deployments**: Use MHS Container Package
+    - **For specialized needs**: Use MHS Native JavaScript Package
 
-### Installing or uninstalling DXClient from NpmJS registry
-          
-Starting from CF221, you can install or uninstall DXClient from the NpmJS registry. This option is recommended for local developers and admins.
+### Public and Free Installation Options(CF221+)
 
-- To install the latest version of DXClient, use the `npm install @hcl-software/dxclient` command.
+Starting from CF221, DXClient offers two free installation options that don't require MHS portal access.
 
-- To install DXClient globally, use the `npm install -g @hcl-software/dxclient` command.
+#### Installing from NpmJS Registry
 
-- To uninstall DXClient, use the `npm uninstall @hcl-software/dxclient` command.
+This method is recommended for local developers and administrators due to its simplicity.
 
-### Installing DXClient using the container image in the Harbor repository
+**Prerequisites:**
+- Node.js LTS or newer
 
-The DXClient container package is preferred for CI/CD automation scenarios. Refer to the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"} for more information.
+**Installation:**
+```bash
+# Install locally in current project
+npm install @hcl-software/dxclient
 
-1. Pull the Docker image from [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"} using the following command:
+# OR install globally for system-wide access
+npm install -g @hcl-software/dxclient
+```
 
+**Verification:**
+```bash
+# For local installation
+npx dxclient -V
+
+# For global installation
+dxclient -V
+```
+
+**Uninstallation:**
+```bash
+npm uninstall @hcl-software/dxclient
+```
+
+#### Installing Using the Container Image in Harbor Repository
+
+This method is preferred for CI/CD automation scenarios.
+
+**Prerequisites:**
+- Docker or another OCI-compliant container runtime
+
+**Installation Steps:**
+
+**Step 1: Pull the Docker image**
+```bash
+docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+```
+
+**Step 2: Download and configure DXClient scripts**
+
+- Get scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
+- Follow instructions in the repository for setup and usage
+
+**Resource Links:**
+
+- [HCL DX Open Harbor Repository](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}
+- [DXClient Scripts GitHub Repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}
+
+### Installing Using the Container Package from MHS Portal
+
+The container package provides a fully packaged OCI-compliant container with all dependencies included.
+
+**Prerequisites:**
+
+- Docker or Podman (any OCI-compliant container runtime)
+- HCL DX 9.5 CF196 or higher entitlement
+- MHS portal access
+
+!!! warning
+    Recent changes to Podman introduced by RedHat have caused compatibility issues with DXClient container implementation. Docker is currently recommended until this is resolved.
+
+**Installation Steps:**
+
+**Step 1: Prepare your environment**
+
+- Navigate to your desired working directory
+- If upgrading from Node.js version, uninstall it first:
+   
+=== "Linux and Apple macOS"
+    ```bash
+    make unlink
     ```
-     docker pull hclcr.io/dx-public/dxclient:IMAGE_TAG
+
+=== "Microsoft Windows"
+    ```batch
+    make_unlink.bat
     ```
 
-2. Download DXClient scripts from the [HCL-TECH-SOFTWARE GitHub repository](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts){target="_blank"}. In this repository, you can find the installation and usage details, and the latest scripts for using the containerized version of DXClient which is openly distributed in [HCL DX Open Harbor](https://hclcr.io/harbor/projects/95/repositories/dxclient/artifacts-tab){target="_blank"}.
+**Step 2: Download and extract the package**
 
-## Installing DXClient using the container package from the MHS portal
+- Download DXClient.zip (DXClient_VX_XXXXXXXX-XXXX.zip) from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
+- Extract the zip file
 
-The container package provides a fully packaged OCI-compliant container that contains everything to successfully run DXClient. You may use any container runtime that implements OCI Runtime Specification (for example, Docker or Podman).
+**Step 3: Configure container runtime (optional)**
 
-In addition, the package includes scripts for all operating systems that make it simpler to work with the container image. These scripts handle the storage for the container and sync input files with the container itself.
+- Default is Docker. To use another runtime:
+   
+=== "Linux and Apple macOS"
+    ```bash
+    export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+    # Example: export CONTAINER_RUNTIME=podman
+    ```
 
-!!!note
-    When you upgrade to use the container image DXClient, you must first uninstall the Node.js DXClient.
+=== "Microsoft Windows"
+    ```batch
+    set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
+    # Example: set CONTAINER_RUNTIME=podman
+    ```
 
-1. Navigate to the `<working-directory>` folder where you wish to use the DXClient from.
+**Step 4: Load the container image**
 
-2. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your HCL DX 9.5 CF196 or higher entitlements on the [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
+=== "Linux and Apple macOS"
+    ```bash
+    docker load < dxclient.tar.gz
+    ```
 
-    !!! note
-        If you are upgrading from the node to container image version of DXClient, you must first uninstall or unlink the current version using the following command before installing the newer version.
+=== "Microsoft Windows"
+    ```batch
+    docker load -i dxclient.tar.gz
+    ```
 
-        === "Linux and Apple macOS"
-            ```bash
-            make unlink
-            ```
-            
-        === "Microsoft Windows"
-            ```bash
-            make_unlink.bat
-            ```
+**Step 5: Add to PATH (optional)**
+   
+=== "Linux and Apple macOS"
+    ```bash
+    export PATH=<working-directory>/bin:$PATH
+    ```
 
-3. Extract the DXClient.zip file.
-
-    !!! note
-        The default OCI runtime for DXClient is docker. If you wish to use any other OCI runtime, run the following command before proceeding further.
-
-        === "Linux and Apple macOS"
-            ```bash
-            export CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-                
-            # For example: export CONTAINER_RUNTIME=podman
-            ```
-
-        === "Microsoft Windows"
-            ```batch
-            set CONTAINER_RUNTIME=<YOUR_CONTAINER_RUNTIME>
-                
-            :: For example: set CONTAINER_RUNTIME=podman
-            ```
-
-4. Load `dxclient.tar.gz` image.
-
-    === "Linux and Apple macOS"
-        ```bash
-        docker load < dxclient.tar.gz
-        ```
-
-    === "Microsoft Windows"
-        ```batch
-        docker load -i dxclient.tar.gz
-        ```
-
-5. Optional: Add DXClient to your PATH.
-     Open terminal and add path to the DXClient bin directory to your PATH variable to be able to call DXClient from any directory. If you plan to run multiple versions of DXClient on the same system in parallel, you may want to skip this step.
-
-    === "Linux and Apple macOS"
-        ```bash
-        export PATH=<working-directory>/bin:$PATH
-        ```
-
-    === "Microsoft Windows"
-        Open command prompt, add `dxclient.bat` script in the bin directory to the PATH variable, to call DXClient from any directory.
-
-        ```batch
-        set PATH=<working-directory>\bin;%PATH%
-        ```
-
-    !!! note
-        You will lose these changes by closing the terminal/command prompt. If you set in system path permanently, kindly take the necessary steps to remove it.
-
-6. Set appropriate read and execute permissions as per user/group/owner.
-
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/bin
-
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
-
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/bin` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
-
-7. Run `dxclient -V` to verify that the required version of DXClient command line is installed.
-
-8. A folder named `store` will be created in your working directory. This is the shared volume location of your container. If you require to create a new volume directory for a different configuration, set the `VOLUME_DIR` to the desired directory name and run your task. For example:
-
-    === "Linux and Apple macOS"
-        ```bash
-        export VOLUME_DIR=storeForScriptApplication
-
-        # or if you want spaces in its value, enclosed it in double quotes ("")
-        export VOLUME_DIR="store for script application"
-        ```
-
-    === "Microsoft Windows"
-        ```batch
-        set VOLUME_DIR=storeForScriptApplication
-
-        :: or if you want spaces in its value
-        set VOLUME_DIR=store for script application
-        ```
-
-        !!!warning
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This will produce unwanted errors when executing DXClient commands.
-
-     The `VOLUME_DIR` will require read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
-
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/<VOLUME_DIR>
-
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
-
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
-
-9. You can find the configuration, logger, output, and sample files under location  `<working-directory>/<VOLUME_DIR>`.
-
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json) or kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.
-
-10. Refer to the sample pipeline provided to find out how to integrate the container image in the automation server.
-
-11. By default, the logs will be available in UTC format. If needed, synchronize your local timezone from host to container using an environment variable as shown in the example below.
-
-    Example usage:
-
-    === "Linux and Apple macOS"
-        ```bash
-        export Timezone=Asia/Kolkata
-        ```
-
-    === "Microsoft Windows"
-        ```batch
-        SET Timezone=Asia/Kolkata
-        ```
-
-## Installing DXClient using the native JavaScript package from HCL Software portal
+=== "Microsoft Windows"
+    ```batch
+    set PATH=<working-directory>\bin;%PATH%
+    ```
 
 !!! note
-    You are encouraged to use the DXClient container image package from CF196 onwards for easier installation.
+    These PATH changes are temporary. For permanent changes, update your system's environment variables.
 
-1. Complete the following steps to install the DXClient tool in your local development workstation or automation server.
+**Step 6: Set file permissions**
 
-    !!! note
-        If you are upgrading from CF19, CF191, or later releases, you should first unlink the current version using the following command before installing the newer version.
+=== "Linux and Apple macOS"
+    ```bash
+    chmod 755 <working-directory>/bin
+    ```
 
-        === "Linux and Apple macOS"
-            ```bash
-            make unlink
-            ```
+=== "Microsoft Windows"
+    Set appropriate permissions through Properties > Security tab
 
-        === "Microsoft Windows"
-            ```batch
-            make_unlink.bat
-            ```
+**Step 7: Verify installation**
+```bash
+dxclient -V
+```
 
-2. Ensure that a long-term support (LTS) version of Node.js or a later version is installed in the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
+**Step 8: Configure storage volume**
 
-3. Download the DXClient.zip file (DXClient_VX_XXXXXXXX-XXXX.zip) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
+- A `store` folder is automatically created as shared volume
+- To use a different volume directory:
+      
+=== "Linux and Apple macOS"
+    ```bash
+    export VOLUME_DIR=myCustomStore
+    ```
 
-4. Extract the DXClient.zip file.
+=== "Microsoft Windows"
+    ```batch
+    set VOLUME_DIR=myCustomStore
+    ```
 
-5. From the extracted folder, run the following command.
+!!! warning "Windows Note"
+    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
 
-    === "Linux and Apple macOS"
-        ```bash
-        make install
-        ```
+**Step 9: Set volume permissions**
 
-    === "Microsoft Windows"
-        ```bash
-        make_install.bat
-        ```
+=== "Linux and Apple macOS"
+    ```bash
+    chmod 755 <working-directory>/<VOLUME_DIR>
+    ```
 
-6. Optional: Run the following command to link your application to the local npm module in your machine. Refer to the following Notes section before you proceed.
+=== "Microsoft Windows"
+    Set appropriate permissions through Properties > Security tab
 
-    === "Linux and Apple macOS"
-        ```bash
-        make link
-        ```
+**Step 10: Configure timezone (optional)**
+    
+=== "Linux and Apple macOS"
+    ```bash
+    export Timezone=Asia/Kolkata
+    ```
 
-    === "Microsoft Windows"
-        ```bash
-        make_link.bat
-        ```
+=== "Microsoft Windows"
+    ```batch
+    SET Timezone=Asia/Kolkata
+    ```
 
-    !!! note
-        -   Avoid using this command when scripting deployments from an automation server (for example, in pipelines) as there is a chance of picking up the wrong dependencies during tool version upgrades.
-        -   If the `link` command is not used (such as on automation servers), then use the following command to run the application:
+**Post-Installation:**
 
-        === "Linux and Apple macOS"
-            ```bash
-            ./bin/dxclient
-            ```
+- Configuration files are located in `<working-directory>/<VOLUME_DIR>`
+- Sample configurations available in `<working-directory>/samples/sample-configurations`
+- For automation server integration, refer to included sample pipeline
 
-        === "Microsoft Windows"
-            ```bash
-            node bin/dxclient
-            ```
+### Installing Using the Native JavaScript Package from MHS Portal
 
-7. A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable `VOLUME_DIR` to the desired directory name and run your task. For example:
+!!! note
+    This method is legacy. The container package is recommended from CF196 onwards.
 
-    === "Linux and Apple macOS"
-        ```bash
-        export VOLUME_DIR=storeForScriptApplication
+**Prerequisites:**
 
-        # or if you want spaces in its value, enclose it in double quotes ("")
-        export VOLUME_DIR="store for script application"
-        ```
+- Node.js LTS or newer
+- HCL DX 9.5 CF19 or higher entitlement
+- MHS portal access
 
-    === "Microsoft Windows"
-        ```batch
-        set VOLUME_DIR=storeForScriptApplication
+**Installation Steps:**
 
-        :: or if you want spaces in its value
-        set VOLUME_DIR=store for script application
-        ```
+**Step 1: Prepare your environment**  
+If upgrading from previous version, uninstall it first:
+    
+=== "Linux and Apple macOS"
+    ```bash
+    make unlink
+    ```
+=== "Microsoft Windows"
+    ```batch
+    make_unlink.bat
+    ```
 
-        !!!important
-            Do not enclose the value of `VOLUME_DIR` in double quotes ("") in Windows. This produces errors when executing DXClient commands.
+**Step 2: Download and extract the package**
 
-     The `VOLUME_DIR` requires read and write access permissions. Set appropriate permissions for the `VOLUME_DIR` as per user/group/owner.
+- Download DXClient.zip from [MHS portal](https://my.hcltechsw.com/){target="_blank"}
+- Extract the zip file
 
-    === "Linux and Apple macOS"
-        ```bash
-        chmod xxx <working-directory>/<VOLUME_DIR>
+**Step 3: Install dependencies**
 
-        # where xxx is a 3-digit number where each digit can be anything from 0 to 7.
-        # Ref: https://wiki.archlinux.org/title/File_permissions_and_attributes#Numeric_method
-        ```
+=== "Linux and Apple macOS"
+    ```bash
+    make install
+    ```
 
-    === "Microsoft Windows"
-        1. Right click `<working-directory>/<VOLUME_DIR>` directory > "Properties" > "Security" Tab.
-        2. Set the appropriate permission for the folder.
+=== "Microsoft Windows"
+    ```bash
+    make_install.bat
+    ```
 
-8. You can find the configuration, logger, and output files under `<working-directory>/<VOLUME_DIR>`.
+**Step 4: Link the application (optional)**
 
-    Common command arguments can be pre-configured inside the config.json file available under the `<working-directory>/<VOLUME_DIR>` folder. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or Kubernetes (default-config-kube.json) platforms is also available under <working-directory>/samples/sample-configurations for reference. If you want to override any of the parameters in the config.json, add them in your command line.           
+=== "Linux and Apple macOS"
+    ```bash
+    make link
+    ```
 
-## Uninstalling DXClient using the JavaScript package
+=== "Microsoft Windows"
+    ```bash
+    make_link.bat
+    ```
 
--   To uninstall the DXClient tool, perform the following commands:
+!!! note
+    - Skip linking on automation servers to avoid dependency conflicts
+    - Without linking, use:
+            - Linux/macOS: `./bin/dxclient`
+            - Windows: `node bin/dxclient`
+          
+**Step 5: Configure storage volume (optional)**
+    - A `store` folder is automatically created
+    - To use a different volume directory:
+   
+=== "Linux and Apple macOS"
+    ```bash
+    export VOLUME_DIR=myCustomStore
+    ```
 
-    === "Linux and Apple macOS"
-        ```bash
-        make clean
-        ```
+=== "Microsoft Windows"
+    ```batch
+    set VOLUME_DIR=myCustomStore
+    ```
 
-    === "Microsoft Windows"
-        ```bash
-        make_uninstall.bat
-        ```
+!!! warning "Windows Note"
+    Do not enclose the VOLUME_DIR value in quotes on Windows systems.
 
--   Optional: To unlink the DXClient tool, perform the following commands:
+**Step 6: Set volume permissions**
 
-    === "Linux and Apple macOS"
-        ```bash
-        make unlink
-        ```
-    === "Microsoft Windows"
-        ```bash
-        make_unlink.bat
-        ```
+=== "Linux and Apple macOS"
+    ```bash
+    chmod 755 <working-directory>/<VOLUME_DIR>
+    ```
 
-## Verifying your DXClient installation
+=== "Microsoft Windows"
+    Set appropriate permissions through Properties > Security tab
 
-Successful installation of the DXClient tool can be checked by using the "`dxclient -V`" command, which should show the version of the DXClient tool installed.
+### Upgrading DXClient
 
-Once installed, commands can be executed using the DXClient tool to perform CI/CD actions on HCL DX 9.5 servers.
+DXClient can be upgraded to newer versions without first uninstalling the previous version. This simplifies the upgrade process and ensures minimal disruption to your development or CI/CD workflows.
+
+#### Upgrading from NPM Registry
+
+```bash
+# For local installation
+npm update @hcl-software/dxclient
+
+# For global installation
+npm update -g @hcl-software/dxclient
+```
+
+#### Upgrading Container Package from Harbor Repository
+
+```bash
+# Pull the latest version
+docker pull hclcr.io/dx-public/dxclient:LATEST_TAG
+```
+
+#### Upgrading MHS Container Package
+
+1. Download the new DXClient.zip package from the MHS portal
+2. Extract the files to your working directory (can be the same as your existing installation)
+3. Load the new container image:
+
+=== "Linux and Apple macOS"
+    ```bash
+    docker load < dxclient.tar.gz
+    ```
+
+=== "Microsoft Windows"
+    ```batch
+    docker load -i dxclient.tar.gz
+    ```
+
+#### Upgrading MHS JavaScript Package
+
+1. Download the new DXClient.zip package from the MHS portal
+2. Extract the files to your working directory (can be the same as your existing installation)
+3. Update dependencies:
+
+=== "Linux and Apple macOS"
+    ```bash
+    make install
+    ```
+
+=== "Microsoft Windows"
+    ```batch
+    make_install.bat
+    ```
+
+!!!note "Configuration Preservation"
+    When upgrading, your existing configurations in the `store` directory (or custom `VOLUME_DIR`) are preserved, so you don't need to reconfigure DXClient after upgrading.
+
+!!!tip "Version Verification"
+    After upgrading, verify the new version with `dxclient -V` to ensure the upgrade was successful.
+
+### Uninstalling DXClient
+
+#### Uninstalling from NPM Registry
+```bash
+npm uninstall [-g] @hcl-software/dxclient
+```
+
+#### Uninstalling MHS Container Package
+- Remove the container image using your container runtime
+- Delete the extracted files and directories
+
+#### Uninstalling MHS JavaScript Package
+
+**Step 1: Run the uninstall command**
+
+=== "Linux and Apple macOS"
+    ```bash
+    make clean
+    ```
+
+=== "Microsoft Windows"
+    ```bash
+    make_uninstall.bat
+    ```
+
+**Step 2: Optionally, unlink the package**
+
+=== "Linux and Apple macOS"
+    ```bash
+    make unlink
+    ```
+    
+=== "Microsoft Windows"
+    ```bash
+    make_unlink.bat
+    ```
+
+### Verifying Your DXClient Installation
+
+After installation, verify that DXClient is properly installed and ready for use:
+
+```bash
+dxclient -V
+```
+
+This should show the version of DXClient that you installed.
+
+Next, accept the license agreement (required once per installation):
+
+```bash
+dxclient accept-license
+```
+
+Check version compatibility with your DX Core installation:
+
+```bash
+dxclient version-compat
+```
 
 !!! important
-    The DXClient version is mostly forward and backward compatible with the DX CF versions. However, in some cases, it might not work as expected if the CF versions are different. Make sure that the CF versions of both DXClient and DX Core are the same in your installation.
-    You can use "`dxclient version-compat`" to check version compatibility between DX Core and DXClient.
+    For optimal compatibility, ensure that the CF versions of both DXClient and DX Core match in your installation. While generally compatible across versions, some features may require specific version alignment.
+
+## Feature Release History
 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
+
+    -   HCL DX 9.5 CF229 release: **V229.0.0
+        -  NPM Libraries upgrade for Code maintanence.(#What-is-new?)
 
     -   HCL DX 9.5 CF227 release: **V227.0.0
         -  Livesync is enabled for Style-sheet Components under WCM Design Library.
 
     -   HCL DX 9.5 CF226 release: **V226.0.0
-        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation-for-secure-connections)
+        -  [Enabled TLS certificate validation while using DXClient.](#configuring-tls-certificate-validation)
 
     -   HCL DX 9.5 CF225 release: **V225.0.0
         -  Livesync is enabled for Presentation Template under WCM Design Library.
@@ -359,15 +501,16 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         - Livesync is enabled for HTML Components under WCM Design Library.
 
     -   HCL DX 9.5 CF221 release: **V221.0.0
-        -  A one time license agreement click-through is enabled. To skip the prompt, use the [accept-license](#dxclient-information-commands) command.
-        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options).
+        -   A one-time license agreement prompt is enabled. To skip the prompt, use the [accept-license](#information-commands) command.
+        -   DXClient is now openly distributed in [NpmJS and Harbor repository](#public-and-free-dxclient-installation-options(CF221+)).
         -   In [DAM Staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) tasks, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are now deprecated and should no longer be used.
+        -   The [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md) process involves indexing all existing assets while revalidating stale indexes. For more information on how to trigger DAM Reindexing, refer to [DXClient commands](#core-commands).
 
     -   HCL DX 9.5 CF219 release: **V1.28.0 
-        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments-in-dxclient)
+        - [Enabled multiple environment configuration in node version](#configuring-multiple-environments)
     
     -   HCL DX 9.5 CF216 release: **V1.25.0
-        -   [Shows version compatibility details between DX Core and DXClient](#dxclient-information-commands)
+        -   [Shows version compatibility details between DX Core and DXClient](#information-commands)
         -   [Resync DAM Staging environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md)
         -   [Delete staging mismatch](../../../manage_content/digital_assets/configuration/staging_dam/dam_staging_mismatch.md#delete-staging-mismatch)
 
@@ -462,73 +605,68 @@ Once installed, commands can be executed using the DXClient tool to perform CI/C
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
-## Additional information
+## Configuration Guide
 
-- The attribute `-dxConnectHostname` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-hostname` wherever necessary.
-- The attribute `-targetServerHostname`, `-targetServerPort`,`-targetServerUsername`,`-targetServerPassword` & `-targetServerProfileName` has been deprecated (since CF202) and removed (since CF210) and must be replaced with `-targetHostname`, `-targetDxConnectPort`,`-targetDxConnectUsername`,`-targetDxConnectPassword` & `-targetDxProfileName` respectively wherever necessary.
-- If deploying or importing huge CICD artifacts using DXClient to the Kubernetes environment, you might receive failure or request pending messages while you run the ceratin tasks. This might happen because of the connection getting closed by the load balancer due to timeout before the response is ready. In such situations, before re-triggering the request, we advise you to check your target server to verify if the artifact has been deployed/imported or the server is up, as the request was already triggered from the client-side. In cases of request pending you are expected to receive a `requestId` which you can use to check the status of response later. For troubleshooting tips, refer to [Troubleshooting known issues](troubleshooting_dxclient.md#troubleshooting-known-issues).
-- As of CF213, the property `DXCONNECT_MAX_MEMORY_SIZE_MB` in DXC_ConfigSettings Resource Environment Provider has been removed. Refer [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect) for more details.
-
-## Configuring DXClient
+### Basic Configuration
 
 Common command arguments can be pre-configured inside the `config.json` file. When first executing any DXClient command, such as `dxclient -V`, a store directory is created in the local working directory. The active `config.json` file is in the store directory located below your working directory at `store/config.json`. After the file is created, you can update the values in the `store/config.json` file. DXClient commands executed in the original working directory will use those values for DXClient commands. A sample configuration file that can be used on on-premises platforms in standalone, cluster (default-config.json), or kubernetes (default-config-kube.json) platforms is also available under `<working-directory>/samples/sample-configurations` for reference. If you want to override any of the parameters in the `store/config.json` file, add them in your command line.
 
 ```json
 {
-    "name":"config.json",
-    "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
-    "dxProtocol": "",
-    "dxConnectProtocol": "https",
-    "hostname": "",
-    "dxPort": "",
-    "dxSoapPort": "10033",
-    "dxConnectPort": "10202",
-    "dxContextRoot":"/wps",
-    "contenthandlerPath": "/wps/mycontenthandler",
-    "projectContext": "",
-    "virtualPortalContext": "",
-    "xmlConfigPath": "/wps/config",
-    "damAPIPort": "",
-    "ringAPIPort": "",
-    "damAPIVersion": "v1",
-    "ringAPIVersion": "v1",
-    "dxConnectHostname": "",
-    "dxConnectUsername": "",
-    "dxConnectPassword": "",
-    "dxUsername": "",
-    "dxPassword": "",
-    "dxProfileName": "",
-    "dxProfilePath": "",
-    "dxWASUsername": "",
-    "dxWASPassword": "",
-    "enableLogger": true,
-    "enableBackup": "false",
-    "lastModifiedAfter": "",
-    "restoreAsPublished": false,
-    "targetHostname": "",
-    "targetDxConnectPort": "",
-    "targetDxConnectUsername":"",
-    "targetDxConnectPassword":"",
-    "targetDxProfileName": "",
-    "targetServerHostname": "",
-    "targetServerPort": "",
-    "targetServerUsername":"",
-    "targetServerPassword":"",
-    "targetServerProfileName": "",
-    "vaultUsername": "",
-    "vaultPassword": "",
-    "wcmContentName": "",
-    "wcmContentId": "",
-    "wcmContentPath": "",
-    "wcmSiteArea": "",
-    "wcmLibraryId": "",
-    "wcmLibraryName": "",
-    "wcmProjectName": ""
+  "name":"config.json",
+  "desc":"The attributes in this file are used for configuration purpose and those must not be deleted.",
+  "dxProtocol": "",
+  "dxConnectProtocol": "https",
+  "hostname": "",
+  "dxPort": "",
+  "dxSoapPort": "10033",
+  "dxConnectPort": "10202",
+  "dxContextRoot":"/wps",
+  "contenthandlerPath": "/wps/mycontenthandler",
+  "projectContext": "",
+  "virtualPortalContext": "",
+  "xmlConfigPath": "/wps/config",
+  "xmlAccessMaxFileSizeMB": 256,
+  "damAPIPort": "",
+  "ringAPIPort": "",
+  "damAPIVersion": "v1",
+  "ringAPIVersion": "v1",
+  "dxConnectUsername": "",
+  "dxConnectPassword": "",
+  "dxUsername": "",
+  "dxPassword": "",
+  "dxProfileName": "wp_profile",
+  "dxProfilePath": "/opt/HCl/wp_profile",
+  "dxWASUsername": "",
+  "dxWASPassword": "",
+  "enableLogger": true,
+  "enableBackup": "false",
+  "lastModifiedAfter": "",
+  "restoreAsPublished": false,
+  "targetHostname": "",
+  "targetDxConnectPort": "",
+  "targetDxConnectUsername":"",
+  "targetDxConnectPassword":"",
+  "targetDxProfileName": "",
+  "targetServerHostname": "",
+  "targetServerPort": "",
+  "targetServerUsername":"",
+  "targetServerPassword":"",
+  "targetServerProfileName": "",
+  "vaultUsername": "",
+  "vaultPassword": "",
+  "wcmContentName": "",
+  "wcmContentId": "",
+  "wcmContentPath": "",
+  "wcmSiteArea": "",
+  "wcmLibraryId": "",
+  "wcmLibraryName": "",
+  "wcmProjectName": ""
 }
 
 ```
 
-### Configuring multiple environments in DXClient
+### Configuring Multiple Environments
 
 A folder named `store` is created in your working directory. This is the default location for configuration, logger, and output files. If you require to create a new configuration, set the environment variable VOLUME_DIR to the desired directory name and run your task. For example:
 
@@ -573,31 +711,37 @@ Common command arguments can be pre-configured inside the config.json file avail
 !!!note
     You must create the config.json in each `<VOLUME_DIR>` folder to set up multiple configurations. Otherwise, the system picks up the configurations specified in the default config.json available under `dist/configuration` in node version.
 
-### Configuring TLS certificate validation for secure connections
+### Configuring TLS Certificate Validation
 
 Starting CF226, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. This is to improve security and maintain best practices in development and production environments. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation.
 
-1. Obtain the certificate. Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
+**Step 1: Obtain the certificate**  
+Ensure you have the `.pem` certificate file that you wish to add to the truststore. It must contain the key and certificate files.
 
-2. Add the certificate using one of the following methods:
-    1. Use the `NODE_EXTRA_CA_CERTS` environment variable. `NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
+**Step 2: Add the certificate using one of the following methods**
 
-        === "Linux and Apple macOS"
-            ```
-            export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
-            ```
+**Method A: Using NODE_EXTRA_CA_CERTS environment variable**  
+`NODE_EXTRA_CA_CERTS` provides a secure way to add custom trusted certificates. To use the `NODE_EXTRA_CA_CERTS` environment variable, you need to specify the path to a PEM file that contains the key and certificate details. Configure this variable in your local or production environment using the following command:
 
-        === "Microsoft Windows"
-            ```
-            set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
-            ```
+=== "Linux and Apple macOS"
+      ```
+      export NODE_EXTRA_CA_CERTS=/Users/myUser/my-cert.pem
+      ```
 
-    2. Add certificate to the truststore on your operating system.
+=== "Microsoft Windows"
+      ```
+      set NODE_EXTRA_CA_CERTS=C:\Users\myUser\my-cert.pem
+      ```
+
+**Method B: Adding certificate to the system truststore**  
+Add the certificate to the truststore on your operating system.
 
 !!!important
     In local or development environments, you may want to disable this security feature to allow connections to services with self-signed or invalid certificates. By setting `NODE_TLS_REJECT_UNAUTHORIZED` to `0`, you can bypass certificate validation. This can be useful for testing, but it should never be used in production environments because it can expose your application to potential security risks.
 
-## DXClient information commands
+## Command Reference
+
+### Information Commands
 
 To display Help documents, check the DXClient version and compatibility, and accept license information for DXClient, refer to the following commands.
 
@@ -623,7 +767,7 @@ Use the following command to display the Help information for a specific command
 dxclient help [command]
 ```
 
-Use the following command to skip prompt of click-through license acceptance agreement:
+Use the following command to skip the license acceptance prompt:
 
 ```bash
 dxclient accept-license
@@ -638,7 +782,7 @@ Use the following command to show version compatibility details between DX Core 
 dxclient version-compat [options]
 ```
 
-## DXClient commands
+### Core Commands
 
 Command syntax conventions:
 
@@ -862,33 +1006,65 @@ Use this command to sync a local WCM Design Library with the DX server. Succeedi
 dxclient livesync push-wcm-design-library [options]
 ```
 
-## Limitations
+Use this command to trigger [DAM Reindexing](../../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md):
 
-- For hybrid deployments in which two different hostnames are used for the on-premises DX Core and Kubernetes DX Services, there are no options to enter both the hostnames. You must consider the DXClient function being used and enter the appropriate hostname. For example, for DAM tasks such as `manage-dam-staging`, you must enter the Kubernetes hostname. For DX Core tasks such as `deploy-portlet` you must enter the on-premises DX Core hostname.
+```bash
+    dxclient trigger-dam-reindex [options]
+```
 
-- Starting CF217 (DXClient v1.26.0 and above), it is required to set full access to the bin folder to execute DXClient commands.
+## Limitations and Troubleshooting
 
-- Currently, the maximum input file size allowed in DXClient is 256 MB.
+### Known Limitations
 
-## HCLSoftware U learning materials
+**1. Hybrid Deployment Hostname Management**
 
-To get an introduction to development for HCL DX, go to [HCL DX for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D412){target="_blank"}. Ensure you setup the DXClient that allows you to develop locally using the [DXClient for Beginners Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank”}.
+When using hybrid deployments (where on-premises DX Core and Kubernetes DX Services use different hostnames), you must specify the appropriate hostname based on the specific DXClient command:
 
-For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+- For DAM-related tasks (like `manage-dam-staging`): Use the Kubernetes hostname
+- For DX Core tasks (like `deploy-portlet`): Use the on-premises DX Core hostname
 
-To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+**2. Bin Folder Permissions**
 
-???+ info "Related information"
-    - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)
-    - [DXClient Artifact Types](../dxclient/dxclient_artifact_types/index.md)
-    - [Troubleshooting DXClient](troubleshooting_dxclient.md)
-    - [DXConnect](dxconnect.md)
-    - [Sample Pipeline Settings using DXClient](./sample_pipeline_settings_using_dxclient.md)
-    - [Using DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md)
-    - [Create or update credential vault slot](../dxclient/dxclient_artifact_types/credentialvaultslot.md)
-    - [Personalization rules](../dxclient/dxclient_artifact_types/personalization.md)
-    - [Portlets](../dxclient/dxclient_artifact_types/portlets.md)
-    - [Themes](../dxclient/dxclient_artifact_types/themes.md)
-    - [Script applications](../dxclient/dxclient_artifact_types/scriptapplications.md)
-    - [Resource environment provider](../dxclient/dxclient_artifact_types/resourceenvironments.md)
-    - [DAM Indexing](../../../manage_content/digital_assets/configuration/dam_indexing/index.md)
+For DXClient v1.26.0 and above (since CF217), you must set full access permissions to the bin folder to properly execute DXClient commands. See the installation instructions for details on setting appropriate permissions.
+
+**3. File Size Limitation**
+
+The maximum input file size that DXClient can handle is 256 MB. Files larger than this limit will not be processed correctly.
+
+### Additional Notes
+
+**1. Deprecated Parameters**
+
+The following parameters have been deprecated or removed:
+
+- `-dxConnectHostname` (deprecated since CF202, removed in CF210)  
+  **Use instead:** `-hostname` wherever needed
+
+- `-targetServerHostname` → Use `-targetHostname` instead
+- `-targetServerPort` → Use `-targetDxConnectPort` instead
+- `-targetServerUsername` → Use `-targetDxConnectUsername` instead
+- `-targetServerPassword` → Use `-targetDxConnectPassword` instead
+- `-targetServerProfileName` → Use `-targetDxProfileName` instead
+
+**2. Large File Deployments in Kubernetes**
+
+When deploying large CICD artifacts to Kubernetes environments, you may encounter connection timeouts. If you receive "failure" or "request pending" messages:
+
+- Check your target server first to verify if the deployment actually succeeded
+- For "request pending" messages, note the `requestId` to check status later
+- See [Troubleshooting known issues](troubleshooting_dxclient.md#troubleshooting-known-issues) for resolution steps
+
+**3. Resource Environment Provider Changes**
+
+As of CF213, the property `DXCONNECT_MAX_MEMORY_SIZE_MB` in DXC_ConfigSettings has been removed.
+For more information, see [DXC_ConfigSettings](dxconnect.md#resource-environment-provider-property-for-dxconnect)
+
+## Learning Resources
+
+### HCLSoftware U Learning Materials
+
+To get an introduction to development for HCL DX, go to [HCL DX for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D412){target="_blank"}. Ensure you setup the DXClient that allows you to develop locally using the [DXClient for Beginners Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank"}.
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.

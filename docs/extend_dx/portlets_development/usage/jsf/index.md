@@ -1,13 +1,10 @@
 # Support for JavaServer Faces 2.2
 
-HCL Digital Experience (DX) 8.5 and 9.5 includes the HCL Portlet 2.0 Bridge for JSF 2.2. The bridge provides customers an interface to developing and running JSF Portlets.
-
-!!! note
-    Refer to [JavaServer Faces implementation](../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_post_jsf.md) for information about HCL DX JSF Bridge.
+HCL Digital Experience (DX) 8.5 and 9.5 includes the HCL Portlet 2.0 Bridge for JavaServer Faces (JSF) 2.2. The bridge provides customers an interface to develop and run JSF Portlets. For more information about the HCL DX JSF Bridge, refer to [JavaServer Faces implementation](../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_post_jsf.md).
 
 ## Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0
 
-Be aware of the following limitations and best coding practices when running the bridge on WAS 9.0:
+Be aware of the following limitations and best coding practices when running the bridge on WebSphere Application Server (WAS) 9.0:
 
 -  Not all new JSF 2.2 functionality is supported by the HCL Portlet 2.0 Bridge for JSF 2.2. Following list of features are currently not supported:
     -  Resource Library Contract
@@ -50,7 +47,7 @@ Be aware of the following limitations and best coding practices when running the
     -   `import com.ibm.faces20.portlet.util.BridgeConfigUtils;`
     -   `import com.ibm.faces20.portlet.FaceletPortletViewHandler;`
 
+- Set `org.apache.myfaces.RESOURCE_HANDLER_CACHE_ENABLED=false` in the `web.xml` of any application whose content is accessed by both authenticated and anonymous users.
 
 ???+ info "Related information"
     - [JavaServer Faces implementation](../../../../deployment/manage/migrate/next_steps/post_mig_activities/addon_integration_task/mig_post_jsf.md)
-
