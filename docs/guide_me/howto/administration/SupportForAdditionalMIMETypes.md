@@ -39,6 +39,8 @@ Depending on the use case, you may need to set `imageresourcecmpnt.allowedmimety
 
 1. In the WAS admin console, navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
 
+<!-- What is the next step?-->
+
 This step is required for all file types to be rendered through File Resource Components.
 
     <AppServer_root>\java\jre\lib\content-types.properties
