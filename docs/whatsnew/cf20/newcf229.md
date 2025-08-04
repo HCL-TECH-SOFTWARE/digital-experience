@@ -19,9 +19,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Access Layer updates in DX deployments
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
+- Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - Search V2 Authoring - Deleting items from search results now available
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -113,20 +113,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Access Layer updates in DX deployments
-
-=== "Containers"
-
-The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
-
-The Ingress documentation has been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services.
-
-For more information, refer to the following topics:
-
-- [Configuring Access Layer for DX deployments](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md)
-- [Configuring HCL Leap for integration with HCL DX](../../extend_dx/integration/leap/configuration.md)
-- [Configuring HCL Volt MX Foundry for integration with HCL DX](../../extend_dx/integration/mx/configuration/index.md)
-
 ### DAM - Cancel ongoing uploads through the progress bar
 
 === "Containers"
@@ -136,6 +122,22 @@ For more information, refer to the following topics:
 
 === "Containers"
     You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
+
+### Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
+
+=== "Containers"
+
+The Access Layer documentation has been thoroughly revised to provide clearer guidance on integrating an external Access Layer with HAProxy, which continues to serve as the internal reverse proxy and load balancer. This update details how to effectively leverage external access solutions for robust traffic management.
+
+The Ingress documentation has also been updated to reflect current best practices and address common configuration scenarios. Additionally, new documentation for the Gateway API has been introduced, offering it as an optional, modern alternative to Ingress for managing external access to cluster services.
+
+For more information, refer to the following topics:
+
+- [Configuring Access Layer for DX deployments](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md)
+- [Configuring HCL Leap for integration with HCL DX](../../extend_dx/integration/leap/configuration.md)
+- [Configuring HCL Volt MX Foundry for integration with HCL DX](../../extend_dx/integration/mx/configuration/index.md)
+- [Installing HCL Leap to integrate with HCL Digital Experience](../../extend_dx/integration/leap/installation.md)
+- [Installing HCL Volt MX Foundry to Kubernetes with Helm](../../extend_dx/integration/mx/installation.md)
 
 ### Search V2 Authoring - Deleting items from search results now available
 
