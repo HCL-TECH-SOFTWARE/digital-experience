@@ -45,13 +45,13 @@ The same values can be used when setting the property name `mimetype.list`.
 
 In addition to that, please also verify all mimetype settings in all files that belong to the file resource component rendering. For example in the following files:
 
-- <AppServer_root>\java\jre\lib\content-types.properties
+- `<AppServer_root>\java\jre\lib\content-types.properties`
 
-- <wp_profile_root>\config\cells\<cellName>\virtualhosts.xml
+- `<wp_profile_root>\config\cells\<cellName>\virtualhosts.xml`
 
-- <wp_profile_root>\PortalServer\config\convertors.xml
+- `<wp_profile_root>\PortalServer\config\convertors.xml`
 
-- Web.xml
+- `Web.xml`
 
 For more information, refer to the following articles:
 
