@@ -52,10 +52,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint design system
 
 === "Containers"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
 
 === "On-Premises"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://pages.github.com/HCL-TECH-SOFTWARE/dx-blueprint-storybook/){target="_blank"}.
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
 
 ### Presentation Designer - Default and Override stylesheets now available
 
