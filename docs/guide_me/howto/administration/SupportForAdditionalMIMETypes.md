@@ -38,12 +38,17 @@ For Javascript files, refer to the following steps:
 Depending on the use case, you may need to set `imageresourcecmpnt.allowedmimetypes` or `mimetype.list` in the WAS admin console:
 
 1. In the WAS admin console, navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
+2. Click **New...**.
+3. Under **Name**, enter `imageresourcecmpnt.allowedmimetypes`
+4. Under **Value**, enter the value of the MIME type you want to allow. For example, `image/gif,image/jpeg` allows GIF and JPEG MIME types. For more information, refer to [Defining valid mime types for the image element](../../../manage_content/wcm_configuration//cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}.
 
-2. Set the property name: `imageresourcecmpnt.allowedmimetypes` and then adjust the values for your needs. For example the value `image/gif,image/jpeg`to allow the mimetypes GIF and JPEG. For details, please check [Defining valid mime types for the image element](../../../manage_content/wcm_configuration//cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}
+    !!!note
+        The same values can be used when setting the property name `mimetype.list`.
 
-The same values can be used when setting the property name `mimetype.list`.
+5. Click **Apply**.
+6. Click **Save** at the top of the console messages.
 
-In addition to that, please also verify all mimetype settings in all files that belong to the file resource component rendering. For example in the following files:
+Additionally, verify all mimetype settings in all the files that belong to the file resource component rendering. For example:
 
 - `<AppServer_root>\java\jre\lib\content-types.properties`
 
