@@ -14,7 +14,7 @@ To add support for additional MIME types, refer to the following options:
 
 ### Image files
 
-For image files such as JPEG 2000 (JP2), JPEG XR (JXR), Scalable Vector Graphics (SVG), and Web Picture (WEBP), refer to [How to enable support for additional image formats in HCL Web Content Manager](../configuration/EnableImageFormats.md).
+For image files such as JPEG 2000 (JP2), JPEG XR (JXR), Scalable Vector Graphics (SVG), and Web Picture (WEBP), refer to [How to enable support for additional image formats in HCL Web Content Manager](../configuration/EnableImageFormats.md){target="_blank"}.
 
 ### Microsoft Office files
 
@@ -39,21 +39,23 @@ Depending on the use case, you may need to set `imageresourcecmpnt.allowedmimety
 
 1. In the WAS admin console, navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
 
-<!-- What is the next step?-->
+2. Set the property name: `imageresourcecmpnt.allowedmimetypes` and then adjust the values for your needs. For example the value `image/gif,image/jpeg`to allow the mimetypes GIF and JPEG. For details, please check [Defining valid mime types for the image element](../../../manage_content/wcm_configuration//cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}
 
-This step is required for all file types to be rendered through File Resource Components.
+The same values can be used when setting the property name `mimetype.list`.
 
-    <AppServer_root>\java\jre\lib\content-types.properties
+In addition to that, please also verify all mimetype settings in all files that belong to the file resource component rendering. For example in the following files:
 
-    <wp_profile_root>\config\cells\<cellName>\virtualhosts.xml
+    * <AppServer_root>\java\jre\lib\content-types.properties
 
-    <wp_profile_root>\PortalServer\config\convertors.xml
+    * <wp_profile_root>\config\cells\<cellName>\virtualhosts.xml
+
+    * <wp_profile_root>\PortalServer\config\convertors.xml
 
     * Web.xml
 
 For more information, refer to the following articles:
 
-- [Web content authoring options - Defining valid mime types for the image element](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element)
+- [Web content authoring options - Defining valid mime types for the image element](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}
 - [PI63742: ADD JAVASCRIPT MIMETYPE EXTENSION TYPE FOR RESOURCES WITHIN WCM](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0061304){target="_blank"}
 - [How to be able to use SVG formatted files in HCL Web Content Manager](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0078940){target="_blank"}.
 
