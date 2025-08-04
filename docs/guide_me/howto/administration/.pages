@@ -1,6 +1,6 @@
 title: Administration
 
-av:
+nav:
   - index.md
   - APIToCountWCMItems.md
   - ClearWCMCaches.md
