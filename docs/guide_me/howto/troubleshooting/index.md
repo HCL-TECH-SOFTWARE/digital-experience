@@ -1,13 +1,7 @@
-
-# DX Troubleshooting
-
-This section include how-to documents that belong to Troubleshooting topics.
-
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
-
-- **[Getting Started with HCL Digital Experience](../../../get_started/product_overview/index.md)**  
-This provides an overview of the HCL Digital Experience (DX) where you learn the market trends, what, why, and how HCL Digital Experience is the right solution for you.
-
 # Troubleshooting
 
-This section will eventually include how-to articles about enabling tracing, capturing an HTTP Archive (HAR), capturing a Fiddler, and other troubleshooting-related content in HCL Digital Experience (DX).
+This section includes how-to articles about troubleshooting categories in HCL Digital Experience (DX).
+
+[Web browser](./web-browser/index.md)
+
+Learn how to troubleshoot web browser issues in HCL DX.

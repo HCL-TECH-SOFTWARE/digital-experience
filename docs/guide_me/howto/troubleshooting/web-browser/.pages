@@ -1,3 +1,5 @@
-title: Troubleshooting web-browser problems
+site_name: Troubleshooting web browser problems
+
 nav:
-    - collecting_fiddler_har.md
+- index.md
+- collecting_fiddler_har.md

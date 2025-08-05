@@ -1,10 +1,5 @@
+site_name: Troubleshooting
 
-title: DX troubleshooting
 nav:
 - index.md
--  web-browser
-
-title: Troubleshooting
-
-nav:
-    - index.md
+- web-browser
