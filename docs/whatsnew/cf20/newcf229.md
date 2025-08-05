@@ -133,7 +133,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Configuring HCL Leap for integration with HCL DX](../../extend_dx/integration/leap/configuration.md)
     - [Configuring HCL Volt MX Foundry for integration with HCL DX](../../extend_dx/integration/mx/configuration/index.md)
     - [Installing HCL Leap to integrate with HCL Digital Experience](../../extend_dx/integration/leap/installation.md)
-    - [Installing HCL Volt MX Foundry to Kubernetes with Helm](../../extend_dx/integration/mx/installation.md)
+    - [Installing HCL Volt MX Foundry to integrate with HCL Digital Experience](../../extend_dx/integration/mx/installation.md)
 
 ### DAM - Cancel ongoing uploads through the progress bar
 
