@@ -1,20 +1,23 @@
 Title: DXClient Artifact Types
 nav:
+    - Applications: deployapplication.md
+    - Credential Vault Slot: credentialvaultslot.md
+    - Digital Asset Management: dam_artifacts
     - index.md
-    - portlets.md
-    - scriptapplications.md
-    - xmlaccess.md
-    - themes.md
-    - deployapplication.md
     - dxcoreserver.md
-    - wcmlibraries.md
-    - wcm_mls_export_import.md
-    - syndicatorsandsubscribers.md
-    - credentialvaultslot.md
-    - sharedlibrary.md
-    - DAM artifacts: dam_artifacts
-    - personalization.md
-    - resourceenvironments.md
-    - virtualportals.md
-    - versionCompat.md
     - livesync.md
+    - personalization.md
+    - portlets.md
+    - resourceenvironments.md
+    - scriptapplications.md
+    - sharedlibrary.md
+    - themes.md
+    - Themes - LiveSync Pull and Push: extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync/#livesync-push-theme
+    - versionCompat.md
+    - Virtual Portal Management: virtualportals.md
+    - Web Content - Exporting and importing libraries: wcmlibraries.md
+    - Web Content - LiveSync Pull and Push: extend_dx/development_tools/dxclient/dxclient_artifact_types/livesync/#livesync-pull-wcm-design-library
+    - Web Content - Managing Syndicators and Subscribers: syndicatorsandsubscribers.md
+    - Web Content - Translating library content: wcm_mls_export_import.md
+    - xmlaccess.md
+    

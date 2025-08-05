@@ -28,9 +28,8 @@ flowchart TD
   E[Setup Custom Configuration];
   F[Setup Persistent Volumes];
   G[Configure Networking];
-  H[Configure Certificate];
-  I[Optional tasks];
-  J[Install DX]
+  H[Optional tasks];
+  I[Install DX]
 
   A --> B1;
   B1 --> B2;
@@ -39,10 +38,9 @@ flowchart TD
   D --> E;
   E --> F;
   F --> G;
-  G --> H;
-  H --> J;
-  C ----> |Optional| I;
-  I --> J;
+  G --> I;
+  C ----> |Optional| H;
+  H --> I;
 
   click B1 "../preparation/get_the_code/configure_harbor_helm_repo/"
   click B2 "../preparation/get_the_code/prepare_load_images/"
@@ -50,9 +48,8 @@ flowchart TD
   click E "../preparation/mandatory_tasks/prepare_configuration/"
   click F "../preparation/mandatory_tasks/prepare_persistent_volume_claims/"
   click G "../preparation/mandatory_tasks/prepare_configure_networking/"
-  click H "../preparation/mandatory_tasks/prepare_ingress_certificate/"
-  click I "../preparation/optional_tasks/optional_internal_networking/"
-  click J "../helm_install_commands/"
+  click H "../preparation/optional_tasks/optional_internal_networking/"
+  click I "../helm_install_commands/"
 
 
 

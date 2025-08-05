@@ -2,13 +2,14 @@
 
 HCL Digital Experience (DX) is a solid and reliable platform that can help deliver the vital services of your organization. It is designed for scaling and flexibility, supports authentication for security and personalization, and eases the integration of multiple and varied applications. Intelligence-agency-grade encryption and cross-system authentication keep your business-critical functions safe. Your teams can easily create, manage, and deliver powerful digital experiences that counts.
 
--   [Container (Kubernetes) Platform](../deployment/install/container/index.md) - Learn how to deploy HCL Digital Experience as a cloud-native platform and optimize business-critical digital experiences for your customers.
-
--   [Traditional Platform](../deployment/install/traditional/index.md) - Learn how to deploy HCL Digital Experience as a non-containerized application and optimize web content and applications to deliver a differentiated and personalized experiences for your customers.
-
--   [Hybrid Platform](../deployment/install/hybrid/index.md) - This section describes how to install HCL Digital Experience 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
-
--   [(Docker) Development Platform](../deployment/install/docker-compose.md) - HCL Digital Experience 9.5 provides scripts for deployments using Docker Compose for non-production purposes.
+- **[Container (Kubernetes) Platform](../deployment/install/container/index.md)**  
+Learn how to deploy HCL DX as a cloud-native platform and optimize business-critical digital experiences for your customers.
+- **[Traditional Platform](../deployment/install/traditional/index.md)**  
+Learn how to deploy HCL DX as a non-containerized application and optimize web content and applications to deliver a differentiated and personalized experiences for your customers.
+- **[Hybrid Platform](../deployment/install/hybrid/index.md)**  
+This section describes how to install HCL DX 9.5 Container Update CF198 and later Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms using the Helm deployment method.
+- **[(Docker) Development Platform](../deployment/install/docker-compose.md)**  
+HCL DX 9.5 provides scripts for deployments using Docker Compose for non-production purposes.
 
 To learn more about deploying HCL DX using Helm, Docker, and Docker Compose, watch the following videos:
 

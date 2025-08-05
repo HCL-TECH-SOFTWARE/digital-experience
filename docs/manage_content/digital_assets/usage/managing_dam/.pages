@@ -1,5 +1,6 @@
 title: Managing DAM 
 nav:
+    - index.md
     - Upload Media Assets: upload_rich_media_assets.md
     - Manage Media Assets: manage_media_assets.md
     - Export or Import DAM: dam_exim.md
@@ -8,4 +9,5 @@ nav:
     - Manage Collections: manage_collections.md
     - Modify Media Assets: modify_dam
     - Access control management: dam_access_control.md
+    - Access Control Cache: dam_access_control_cache.md
    
