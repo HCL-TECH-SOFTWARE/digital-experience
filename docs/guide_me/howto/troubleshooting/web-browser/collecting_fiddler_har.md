@@ -1,4 +1,4 @@
-# How to collect a Fiddler trace (HAR-file)?
+# How to collect a Fiddler trace (HAR-file)
 
 ## Applies to
 
@@ -6,9 +6,11 @@
 
 ## Introduction
 
-There will be instances where HCL Support will request a Fiddler/HAR file to investigate a product issue. Please follow the instructions below.  
+To help us investigate a product issue, HCL Support might ask you for a Fiddler trace or a HAR file. Use the following instructions to create one.
 
 ## Instructions
+
+To create Fiddler trace or an HAR file, refer the following steps:
 
 ### Steps using Fiddler  
 
@@ -17,49 +19,48 @@ There will be instances where HCL Support will request a Fiddler/HAR file to inv
 2. [Configure Fiddler](https://docs.telerik.com/fiddler/configure-fiddler/tasks/configurefiddler){target="_blank"}
 
     !!! Note  
-        If the target site will be accessed over HTTPS, make sure to follow the steps discussed in the article linked below to decrypt the traffic. [Configure Fiddler Classic to Decrypt HTTPS Traffic](http://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/DecryptHTTPS){target="_blank"}
+        If the target site uses HTTPS, make sure to  [Configure Fiddler Classic to Decrypt HTTPS Traffic](http://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/DecryptHTTPS){target="_blank"} to capture the traffic.
 
-3. Enable any tracing on the Portal Server requested by HCL Support (skip step if no tracing requested).  
+3. If requested by HCL Support, enable tracing on the Portal Server.  
 
-4. Open browser and clear all browser cache (or open a private/incognito tab).  
+4. Open the browser and clear the cache, or open a private or incognito tab. 
 
-5. Open Fiddler to start capturing traffic.  
+5. Open Fiddler.  
 
-6. If browser console output requested by HCL Support, open the browser console (usually F12).  
+6. If requested by HCL Support, open the browser console (usually by pressing **F12**).
 
 7. Reproduce the issue in your browser.  
 
-8. Once issue is reproduced, save the Fiddler session (`File -> Save -> All Sessions`).  
+8. Once the issue is reproduced, save the Fiddler session (**File > Save > All Sessions**).  
 
-9. This will produce a file with the extension `.SAZ`. Please upload file to your Case with HCL Support for review.  
+9. This creates a file with a `.saz` extension. Upload the file to your case with HCL Support.  
 
-10. If HCL Support requested additional logs, please upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a [wpcollector output](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012545){target="_blank"}.  
+10. If HCL Support requested additional logs, upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a [wpcollector output](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012545){target="_blank"}.  
 
-11. If HCL Support requested the browser console text, please copy the text to a file (navigate to Console tab in Developer tools then do a right click and select copy console messages or save as option depending on the browser) and upload to Case for review.  
+11. If requested by HCL Support, copy the browser console text to a file. To do this, go to the Console tab in Developer Tools, right-click, and select **Copy console messages** (or a similar save option, depending on your browser). Upload the file to your case.  
 
-If Fiddler cannot be installed in your environment, you can provide similar data with your browser's built in tools.  
+If you cannot install Fiddler in your environment, you can use your browser’s built-in tools to provide similar data.  
 
-### Steps to create a HAR file in the web-browser
+### Creating a HAR file in a web-browser
 
 1. Enable any tracing on the Portal Server requested by HCL Support (skip step if no tracing requested).  
 
 2. Open browser and clear all browser cache (or open a private/incognito tab).  
 
-3. Open browser `Developer Tools -> Network` tab (menu option will vary depending on browser being used).  
+3. Open your browser’s **Developer Tools** and select the **Network** tab.  
 
-4. Select the option to collect entire session. For example, in Chrome: 'Preserve log', in Firefox: 'Persist Logs'.  
+4. Enable the option to preserve the log, such as **Preserve log** in Chrome or **Persist Logs** in Firefox.
 
 5. Reproduce the issue in your browser.  
 
-6. Once issue is reproduced, save the session as a HAR file.  
-   Using Chrome and Microsoft Edge browser: Click on the `Export HAR (sanitized)...` button under the Network tab. See screenshot:  
-   ![image sample](./images/har_export_button.png)  
-   Using Firefox: Right-click and select `Save all as HAR`.  
+6. After you reproduce the issue, save the session as a HAR file.
+    - **In Chrome and Microsoft Edge:** Click the **Export HAR (sanitized)...** button under the **Network** tab.
+     **In Firefox:** Right-click and select **Save all as HAR**.  
 
-7. This will produce a file with the extension .HAR. Please upload to your Case with HCL Support for review.  
+7. This creates a file with a `.har` extension. Upload the file to your case with HCL Support.  
 
-8. If HCL Support requested additional logs, please upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a [wpcollector output](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012545){target="_blank"}.  
-
-9. If HCL Support requested the browser console text, please copy the text to a file (navigate to Console tab in Developer tools then do a right click and select copy console messages or save as option depending on the browser) and upload to Case for review.  
+8. If HCL Support requested additional logs, upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a [wpcollector output](URL_TO_WPCOLLECTOR_DOCUMENTATION){target="_blank"}.
+9. If requested by HCL Support, copy the browser console text to a file. To do this, go to the **Console** tab in **Developer Tools**, right-click, and select **Copy console messages** (or a similar save option, depending on your browser). Upload the file to your case.
+  
 
 Also see HCL Digital Experience: [Getting an HAR Log](https://www.youtube.com/watch?v=9ct26dCrHqk){target="_blank"}
