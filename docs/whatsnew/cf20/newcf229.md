@@ -20,9 +20,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Access Layer updates in DX deployments
+- Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
-- Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - Search V2 Authoring - Deleting items from search results now available
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -124,16 +124,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, refer to [Configuring Access Layer for DX deployments](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
 
-### DAM - Cancel ongoing uploads through the progress bar
-
-=== "Containers"
-    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the Cancel Uploading button next to each in-progress item. You can also use the Cancel All button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#cancelling-uploads).
-
-### DAM - Collection sorting
-
-=== "Containers"
-    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
-
 ### Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 
 === "Containers"
@@ -144,6 +134,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Configuring HCL Volt MX Foundry for integration with HCL DX](../../extend_dx/integration/mx/configuration/index.md)
     - [Installing HCL Leap to integrate with HCL Digital Experience](../../extend_dx/integration/leap/installation.md)
     - [Installing HCL Volt MX Foundry to Kubernetes with Helm](../../extend_dx/integration/mx/installation.md)
+
+### DAM - Cancel ongoing uploads through the progress bar
+
+=== "Containers"
+    The upload progress bar now includes controls to cancel uploads that are in-progress. You can cancel individual file or folder uploads using the Cancel Uploading button next to each in-progress item. You can also use the Cancel All button to stop all pending items at once. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#cancelling-uploads).
+
+### DAM - Collection sorting
+
+=== "Containers"
+    You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
 
 ### Search V2 Authoring - Deleting items from search results now available
 
