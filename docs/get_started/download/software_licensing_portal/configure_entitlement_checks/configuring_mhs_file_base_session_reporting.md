@@ -37,7 +37,7 @@ java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-ex
 ```
 
 !!!note
-    The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
+    As of CF229, the `productFeatureIdName` parameter has been removed as a command-line parameter. The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ### Example
 
@@ -108,7 +108,7 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar Us
 To save the generated metrics to a file, use the following command:
 
 ```sh
-kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
+kubectl exec -it <release name>-license-manager-0 -n <namespace> -- java -jar UserSessionReporting.jar GenerateMetricFile <YYYY-MM-DD> <YYYY-MM-DD> <deploymentId> > /tmp/{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics
 ```
 
 The timestamp in the usage metrics file should be earlier than the start date. The timestamp is formatted as `{YYYY-MM-DDTHH-MM-SS UTC}_usage.metrics`. For example, `2024-06-24T02-50-00_usage.metrics`.

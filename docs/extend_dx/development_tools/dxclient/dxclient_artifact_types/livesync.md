@@ -460,6 +460,7 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 - The LiveSync Pull and Push WCM Design Library feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ).
+- When using LiveSync Push WCM Design Library to bulk push supported components, server issues might occur due to the high volume of requests being sent. For large-scale transfers of WCM design libraries, it's recommended to use the [dxclient wcm-library-export | wcm-library-import](./wcmlibraries.md) commands instead, which are optimized for bulk operations.
 - Concurrent user issues:
     - If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system. No local indication of any deletion will be available. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server.
     - If a concurrent user renames any file from the WCM library on the DX server during the LiveSync process between the local and DX servers, those files will not be restored from the local system. No local indication of any deletion will be available.

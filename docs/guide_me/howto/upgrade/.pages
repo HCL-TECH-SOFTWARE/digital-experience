@@ -1,4 +1,4 @@
 title: Upgrade
-
 nav:
-    - index.md
+  - Home: index.md
+  - CommandLineIIM.md
