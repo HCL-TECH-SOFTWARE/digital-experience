@@ -12,5 +12,7 @@ Learn how to clear WebSphere Dynacache caches using the sample JSP code.
 Learn about long Portal URLs and how to decode them.
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune WCM to reduce your query time.
+- **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
+Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.

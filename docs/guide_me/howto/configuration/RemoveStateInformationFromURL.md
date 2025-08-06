@@ -16,7 +16,7 @@ The text after `/portal` in the URL is a generated encoded string from the Porta
 
 ## Instructions
 
-To remove state information from URLs, refer to the following options:
+Refer to the following options you can try to remove state information from URLs:
 
 ### Option 1: Configure Portal properties
 

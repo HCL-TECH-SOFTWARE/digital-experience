@@ -1,4 +1,4 @@
-# How to increase the transaction timeouts for HCL Digital Experience?
+# How to increase the duration of transaction timeouts in HCL DX
 
 ## Applies to
 
@@ -6,50 +6,60 @@
 
 ## Introduction
 
-HCL Digital Experience is using the IBM WebSphere Application Server runtime to handle transactions that belong to the HCL Digital Experience server. During runtime transaction related errors may occur like:
+HCL Digital Experience (DX) uses the IBM WebSphere Application Server runtime to handle transactions that belong to the HCL DX server. During runtime, transaction-related errors may occur due to incorrect transaction timeout settings. For example:
 
-```log
-CNTR0019E: EJB threw an unexpected (non-declared) exception during invocation of method ..... Exception data:
-com.ibm.websphere.csi.CSITransactionRolledbackException: Transaction rolled back; nested exception is:
-javax.transaction.TransactionRolledbackException: Transaction is ended due to timeout
-```
+- An unexpected (non-declared) exception
 
-or:
+    ```log
+    CNTR0019E: EJB threw an unexpected (non-declared) exception during invocation of method ..... Exception data:
+    com.ibm.websphere.csi.CSITransactionRolledbackException: Transaction rolled back; nested exception is:
+    javax.transaction.TransactionRolledbackException: Transaction is ended due to timeout
+    ```
 
-```log
-javax.transaction.RollbackException: Transaction marked for rollback by external component.  
-Possible timeout, increase transaction timeout value and try again.
-```
+- A rollback exception
 
-Most of the time the errors are related to wrong transaction timeout settings.
+    ```log
+    javax.transaction.RollbackException: Transaction marked for rollback by external component.  
+    Possible timeout, increase transaction timeout value and try again.
+    ```
 
 ## Instructions
 
-Transaction Timeout Settings can be set as following:
+Refer to the following steps to configure your transaction timeout:
 
-1) Login into the IBM Integrated Solutions Console (WAS admin-console).
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
+2. Navigate to  **Servers > Server Types > WebSphere application servers > WebSphere_Portal > Container Services > Transaction service**.
+3. Set the following properties (in seconds):
 
-2) Navigate to  `Server > Application servers > WebSphere_Portal > Container Services > Transaction service`
+    - Total transaction lifetime timeout: 120
+    - Maximum transaction timeout: 120
 
-3) Typically the transaction timeouts can be changed as following:
+    Setting either value to 0 sets the timeout to infinite (no timeout).
 
-    Total transaction lifetime timeout default: 120
+4. Click **OK**.
+5. Click **Save** at the top of the console messages.
+6. Restart your HCL DX server.
 
-    Maximum transaction timeout default: 120
+If you want to increase the Client inactivity timeout (for example, to 1200 seconds), you also need to set `wcm.transaction.timeout` to 1200:
 
-    Time is in seconds so 1200 seconds = 20 minutes
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
+3. Create or modify the **wcm.transaction.timeout** property.
 
-4) As soon as the values are changed click to the `Ok` and `Save to master configuration` button and restart the server
+    If the property does not exist:
 
-Setting either value to 0 sets the timeout to infinite i.e. no timeout
+    1. Click **New...**.
+    2. Under **Name**, enter **wcm.transaction.timeout**.
+    3. Under **Value**, enter Client inactivity timeout you set (for example, 1200).
+    4. Click **Apply**.
 
-Some users will also increase Client inactivity timeout to 1200 seconds on that same screen.
+    If the property already exists:
 
-They will also set `wcm.transaction.timeout` to 1200 as following:
+    1. Locate and click **wcm.transaction.timeout**.
+    2. Under **Value**, enter Client inactivity timeout you set (for example, 1200).
+    3. Click **Apply**.
 
-1. In the IBM Integrated Solutions Console (WAS admin-console) navigate to `Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties`
+4. Click **Save** at the top of the console messages.
 
-2. Check for the custom property `wcm.transaction.timeout` and it's value.
-
-Additional information about transaction timeout settings can also be found on IBM's web-page  
-[How does the transaction timeout behave when I have a lot of applications deployed that need to have different timeouts](https://www.ibm.com/mysupport/s/question/0D50z000062kegeCAA/how-does-the-transaction-timeout-behave-when-i-have-a-lot-of-applications-deployed-that-need-to-have-different-timeouts?language=en_US)  
+For more information refer to
+[How does the transaction timeout behave when I have a lot of applications deployed that need to have different timeouts](https://www.ibm.com/mysupport/s/question/0D50z000062kegeCAA/how-does-the-transaction-timeout-behave-when-i-have-a-lot-of-applications-deployed-that-need-to-have-different-timeouts?language=en_US){target="_blank"}.
