@@ -12,7 +12,7 @@ By default, HCL Digital Experience (DX) log file messages are displayed using th
 
 You can change the display language of HCL DX log files using Java properties. These properties must be added to the **Generic Java Virtual Machine (JVM) arguments** before restarting the target JVM. Refer to the following steps to change the display language of HCL DX log files:
 
-1. Log on to IBM WebSphere Integrated Solutions Console.  
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
 
 2. Navigate to **Servers > Server Types > WebSphere application servers**.
 
