@@ -168,13 +168,13 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 ## Registering for DAM staging
 
 !!! note
-    For hybrid deployments, refer to the ["Setting up staging for hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
+    For hybrid deployments, refer to [Setting up staging for hybrid deployments](#setting-up-staging-for-hybrid-deployments).
 
 Use the `manage-dam-staging register-dam-subscriber` command to register the subscriber for DAM staging.
 
 -   **Command description**
 
-    You can **register** a subscriber for DAM staging with the following command:
+    Use the following command to register a subscriber for DAM staging:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber
@@ -182,7 +182,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register the sub
 
 -   **Help command**
 
-    The following command shows the help information for `manage-dam-staging register-dam-subscriber` command usage:
+    Use the following command to show the help information for the `manage-dam-staging register-dam-subscriber` command:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber -h
@@ -287,7 +287,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
 
 -   **Command description**
 
-    You can **deregister** a subscriber for DAM staging with the following command:
+    Use the following command to deregister a subscriber for DAM staging:
 
     ```
     dxclient manage-dam-staging deregister-dam-subscriber
@@ -295,7 +295,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
 
 -   **Help command**
 
-    The following command shows the help information for `manage-dam-staging deregister-dam-subscriber` command usage:
+    Use the following command to show the help information for the `manage-dam-staging deregister-dam-subscriber` command:
 
     ```
     dxclient manage-dam-staging deregister-dam-subscriber -h
