@@ -4,7 +4,7 @@ HCL DX provides web content and digital asset management capabilities that allow
 
 ## What is it For?
 
-Web content and digital assets are critical components of a digital experience. You should use HCL DX to manage web content that you plan to either integrate into websites delivered by DX or access from remote, headless clients such as mobile apps. You should use HCL DX to manage web-ready digital assets, either for direct integration into your applications or for use in web content.
+Web content and digital assets are critical components of a digital experience. You should use HCL Digital Experience (DX) to manage web content that you plan to either integrate into websites delivered by DX or access from remote, headless clients such as mobile apps. You should use HCL DX to manage web-ready digital assets, either for direct integration into your applications or for use in web content.
 
 ## Who Should Use It?
 
@@ -12,16 +12,22 @@ HCL web content management and digital asset management facilities are primarily
 
 Web developers can also use the features of HCL DX to extend content and asset management capabilities, or to access content and assets via the product APIs. Development of sites on HCL DX is covered in the [Building Sites](../build_sites/index.md) section.
 
-## More Information
+- **[Author Web Content](wcm_authoring/index.md)**  
+Learn how to use HCL DX to create web content.
+- **[Deliver Web Content](wcm_delivery/index.md)**  
+Learn how to use HCL DX to deliver web content.
+- **[Configure Web Content Manager](wcm_configuration/index.md)**  
+Learn how to configure HCL DX content management services,
+- **[Extend Web Content Manager](wcm_development/index.md)**  
+Learn how to extend content management capabilities, for example by developing templates and plugins
+- **[Digital Asset Management](digital_assets/index.md)**  
+Learn about the features and capabilities of HCL Digital Asset Management (DAM).
+- **[Personalization](pzn/index.md)**  
+Learn about the features and capabilities of the built-in Personalization system in HCL DX.
 
-This section describes several key features in more depth:
+## HCLSoftware U learning materials
 
-* [Author Web Content](wcm_authoring/index.md) describes how to use HCL DX to create web content.
-* [Deliver Web Content](wcm_delivery/index.md) describes how to use HCL DX to deliver web content.
-* [Configure Web Content Manager](wcm_configuration/index.md) describes how to configure HCL DX content management services,
-* [Extend Web Content Manager](wcm_development/index.md) describes how to extend content management capabilities, for example by developing templates and plugins
-* [Digital Asset Management](digital_assets/index.md) provides a comprehensive description of the digital asset management capabilities.
-* [Personalization](pzn/index.md) provides a comprehensive description of the built-in personalization system.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
 
 <!--
 Web Content Manager is a comprehensive solution for creating, managing, and delivering content on your website.

@@ -21,7 +21,7 @@ You can log in to either of the following portals using your HCLSoftware ID:
     - File description for the HCL DX Early Access Program Milestone 1 Open Liberty portlet container: **HCL DX EAP M1 LPC image**
     - File name: **dx-lpc-kubernetes-CF217.zip**
 
-- You can download the **HCL DX Early Access Program** components from your HCL Digital Experience entitlements in the [MyHCLSoftwarePortal](https://my.hcltechsw.com). Go to the **HCL Digital Experience offering section** and click the **Early Access Program** download package entry.
+- You can download the **HCL DX Early Access Program** components from your HCL Digital Experience entitlements in the [My HCLSoftware portal](https://my.hcltechsw.com). Go to the **HCL Digital Experience offering section** and click the **Early Access Program** download package entry.
 
     **Milestone 2**
 

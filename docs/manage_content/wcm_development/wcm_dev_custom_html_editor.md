@@ -1,10 +1,12 @@
-# How to create a custom HTML editor integration
+# Creating a custom HTML editor integration
 
 You can use custom HTML editors in all HTML fields of the authoring interface or specific HTML elements that are defined in an authoring template. Custom HTML fields are used to integrate third-party editors into the authoring interface.
 
 A custom HTML field is JSP that is rendered in place of the standard HTML field of the authoring interface. The custom field is composed of a number of pieces that together work to identify the field that is being modified, register the customization with the authoring interface, access standard HTML field dialogs, and update values when the time comes to commit changes. The `com.ibm.workplace.wcm.api.authoring.HTMLEditorBean`, that is available in the JSP, provides basic field metadata such as the name and whether the field is editable. The `ibm.wcm.ui.html.HTMLEditor` JavaScript library defines the client-side framework that integrates the custom field on the authoring interface. Each integration must implement its own HTMLEditor.
 
-**Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
+**Storing JSP files:**
+
+JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: `[my.custom.key];myfile` where my.custom.key is a constant within the Web Content Manager configuration service.
 

@@ -1,2 +1,4 @@
 nav:
   - index.md
+  - configure_access_layer.md
+  - enable_sso.md

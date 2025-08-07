@@ -1,5 +1,5 @@
 ---
-title: Add Existing Script Application to a Page
+title: Add an existing Script Application to a page
 ---
 
 # Adding an existing Script Application from the toolbar

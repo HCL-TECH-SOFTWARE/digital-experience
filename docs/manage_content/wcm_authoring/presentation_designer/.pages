@@ -1,6 +1,6 @@
 title: Presentation Designer
 nav:
     - index.md
-    - Access Presentation Designer: access
+    - Access Presentation Designer: access.md
     - Usage: usage
-    - Limitations: limitations
+    - Limitations: limitations.md

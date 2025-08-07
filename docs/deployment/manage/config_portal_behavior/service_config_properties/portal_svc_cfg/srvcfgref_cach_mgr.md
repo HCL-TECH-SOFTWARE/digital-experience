@@ -74,6 +74,5 @@ For information on the available caches, refer to the *HCL Digital Experience Pe
 ???+ info "Related information" 
     -   [Configuring the maximum number of items loaded from HCL Connections](../../../../../build_sites/social_rendering/cfg_global_settings_social_rendering/soc_rendr_cfg_connct_item_limit.md)
     -   [HCL Digital Experience Performance Tuning Guide](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074411)
-    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
+    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
     -   [Shared database domains](../../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
-
