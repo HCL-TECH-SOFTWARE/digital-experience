@@ -232,7 +232,7 @@ dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea "Script A
 If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:
 
 ```
-dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea "Script Application Library/Script Applications/" -wcmContentName DemoScriptApplication --mainHtmlFile {dir}/index.html
+dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea "Script Application Library/Script Applications/" -wcmContentName DemoScriptApplication --mainHtmlFile  /temp/DemoScriptApplication/index.html
 ```
 
 If all required options are configured in the config.json at the /dist/src/configuration path of the DXClient tool, then execute:
