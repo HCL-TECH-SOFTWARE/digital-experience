@@ -2,8 +2,6 @@
 title: Troubleshooting
 ---
 
-# Script Application Troubleshooting
-
 This section provides solutions that can help you solve issues with Script Applications.
 
 - **Preview does not render changes.**
@@ -35,3 +33,7 @@ This section provides solutions that can help you solve issues with Script Appli
     `EJQHH0011E: The content at path location Script Portlet Library/Script Portlet Library Site Area/Untitled could not be found in the repository.`
 
     To resolve this issue, run the portal configuration engine task that imports the Web Content Manager libraries that CF09 installs to virtual portals that you create after you installed CF09. For more information, read [Build applications with the Script Application](build_app_with_script_application/index.md).
+
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

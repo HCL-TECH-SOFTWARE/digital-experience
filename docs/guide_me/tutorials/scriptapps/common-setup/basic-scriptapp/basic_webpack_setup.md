@@ -16,14 +16,15 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 
 !!! note
     Migration to [Webpack](https://webpack.js.org/) is optional and is intended as a preparation for advanced deployments. The sample WebPack configuration that is included below is intended for quick deployments, which combines all dependencies along with actual application files.
-    
+
     For optimal loading of multiple Script Applications in a single page, custom Webpack bundling is needed. For more information, see [Optimized Script Applications](../optimized-scriptapps/index.md).
 
 ## How To Migrate Apps to use Webpack and Deploy as Script Application
 
 Here are the steps on how to migrate React applications to use [Webpack](https://webpack.js.org/) as a bundler and then prepare it for deployments to DX to become a Script Application.
 
-1. Create a webpack.common.js file. Update the main entry section to point to the correct index js/ts file .
+1. Create a webpack.common.js file. Update the main entry section to point to the correct index js/ts file.
+
    ```js
    const MiniCssExtractPlugin = require("mini-css-extract-plugin");
    const svgToMiniDataURI = require('mini-svg-data-uri');
@@ -87,6 +88,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
    ```
 
 2. Create a webpack.dev.js file. Update the template, filename, favicon and manifest in the HTMLWebPackPlugin section (you may remove filename, favicon and manifest if your project does not have them).
+
    ```js
    const path = require('path');
    const common = require('./webpack.common');
@@ -116,6 +118,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
    ```
 
 3. Create a webpack.dx-scriptapp.js file. Update the template in the HTMLWebPackPlugin section.
+
    ```js
    const path = require("path");
    const common = require("./webpack.common");
@@ -168,11 +171,15 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
    ```
 
 4. Update your project's package.json file.
+
     - If a homepage value is set in package.json, replace it with "./".
+
     ```js
       "homepage": "./",
     ```
+
     - Add the dxclient parameters as config. Double-check and update the config values as needed.
+
     ```json
     {
         ...
@@ -191,7 +198,9 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
         ...
     }
     ```
+
     - Modify the start and build scripts to use the webpack config files. Also, add the four(4) deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config.
+
     ```json
     {
         ...
@@ -207,7 +216,9 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
         ...
     }
     ```
+
     - Add devDependencies required for the WebPack library and its plugins.
+
     ```json
     {
         ...
@@ -234,6 +245,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
     ```
 
 5. Test your React App in local browser:
+
     ```bash
         cd <app-folder>
         npm install
@@ -241,6 +253,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
     ```
 
 6. Build your application as-usual:
+
     ```bash
         cd <app-folder>
         npm install
@@ -284,3 +297,7 @@ Here are the steps on how to migrate React applications to use [Webpack](https:/
 8. Check the DXClient logs in store/logs/logger.log file within your workspace.
 9. Prepare your target DX page that will host the Script Application. Follow this [link](../post-deployment/prepare_dx_page.md).
 10. Add the Script Application (note the wcmContentName in the package.json config) into the target DX test page. Follow this [link](../post-deployment/add_scriptapp_to_page.md).
+
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

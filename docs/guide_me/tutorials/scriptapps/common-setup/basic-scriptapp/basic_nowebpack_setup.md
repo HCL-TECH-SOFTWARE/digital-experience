@@ -22,6 +22,7 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 ## How To Bundle and Deploy React Applications to DX
 
 1. Update the `package.json` project file to configure the dxclient parameters. Double-check and update the configuration values as needed. Also, add the deploy-dx-app lines as-is among the scripts. The variables in the scripts will automatically pick up the values from environment variables and config.
+
     ```json
     {
         ...
@@ -46,7 +47,9 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         ...
     }
     ```
+
 2. Update the `package.json` project file. Make sure the contentRoot folder specified in the dxclient config matches your app's build folder:
+
     ```js
       "config": {
         "dxclient": {
@@ -56,16 +59,22 @@ This guide describes the steps on how to deploy a built React app into DX to bec
         }
        },
     ```
+
 3. Update the `package.json` project file. Add the homepage line to exactly "./" to make the app load properly in DX. If there is an existing homepage value, replace it with "./". You'll encounter http 404 errors when this step is skipped.
+
     ```js
       "homepage": "./",
     ```
+
 4. Use a unique HTML DOM root id in your application to avoid overwriting other DX Script Applications during rendering.
     - sample-app/public/index.html
+
       ```
         <div id="root-cf5708ac"></div>
       ```
+
     - sample-app/src/index.jsx
+
       ```
         const root = ReactDOM.createRoot(document.getElementById('root-cf5708ac'));
       ```
@@ -123,3 +132,6 @@ This guide describes the steps on how to deploy a built React app into DX to bec
 9. Prepare your target DX page that will host the Script Application. Follow this [link](../post-deployment/prepare_dx_page.md).
 10. Add the Script Application (note the wcmContentName in the package.json config) into the target DX test page. Follow this [link](../post-deployment/add_scriptapp_to_page.md).
 
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

@@ -1,4 +1,4 @@
-# Pre-requisites
+# Prerequisites
 
 ## HCL DXClient
 
@@ -13,14 +13,14 @@ If you have replaced the default context root of your DX installation, you shoul
        "contenthandlerPath": "/wps/mycontenthandler",
        "xmlConfigPath": "/wps/config",
    ```
-## Node JS and NPM
-Install a Long Term Support (LTS) version of [Node.js](https://nodejs.org/en/download/).
 
+## Node JS and NPM
+
+Install a Long Term Support (LTS) version of [Node.js](https://nodejs.org/en/download/).
 
 ## Java Runtime Engine
 
 Java Runtime Engine with a Long Term Support (LTS) version is needed to be able to run the Gradle wrapper in the DX Module projects. Java version 17 is recommended.
-
 
 ## Script Application Placeholder
 
@@ -29,7 +29,8 @@ Add the 'Script Application Library' to the list of visible libraries in your DX
   ![Library Selection](images/02LibrarySelection.png)
   ![Script Application Library](images/03ScriptApplicationLibrary.png)
 
-## Clone The Portal 8.5 Theme to form a Test Theme 
+## Clone The Portal 8.5 Theme to form a Test Theme
+
 !!! note "The Portal 8.5 Theme is part of the HCL DX releases starting CF205. This theme has some out-of-the-box DX Modules to support ReactJS ScriptApps and will help out in [basic deployments](how_to/01_basic_deployments.md). There's no assurance that the steps detailed in this tutorial will work with versions prior to CF205, but you may try cloning an existing theme and then build and deploy your own DX Modules following these [steps](how_to/02_dependencies_as_module.md)."
 
 Copy the Portal 8.5 theme.
@@ -40,18 +41,17 @@ Assign a name for the theme.
 Click the **Done** button.
   ![Done Button](images/04CopyToTheme4.png)
 
-## For Quick Build and Deploy, Use Out-Of-the-Box React Modules In your DX Theme 
+## For Quick Build and Deploy, Use Out-Of-the-Box React Modules In your DX Theme
 
 !!! note "Skip this part if you're bundling and deploying your own shared libraries as a [DX Module](common-setup/optimized-scriptapps/dependencies_as_module.md)."
 
 !!! note "Out-of-the-box React modules is only available in HCL DX for release build starting CF205. You will not be able to do [basic deployments](how_to/01_basic_deployments.md) for release builds prior to CF205, you will have to build your own [DX Modules](common-setup/optimized-scriptapps/dependencies_as_module.md) as part of the [optimized builds](how_to/04_apps_sharing_dependencies.md) procedure."
 
-For standalone ScriptApps, make sure that the React modules that are delivered with DX images are included in the site's DX Theme profile. They are pre-configured only in the profile_deferred_react.json of the Portal 8.5 Theme. You will need to copy the module IDs over if you'll be using another DX Theme and profile combination. 
+For standalone ScriptApps, make sure that the React modules that are delivered with DX images are included in the site's DX Theme profile. They are pre-configured only in the profile_deferred_react.json of the Portal 8.5 Theme. You will need to copy the module IDs over if you'll be using another DX Theme and profile combination.
 
 - "wp_react_16_10_2",
 - "wp_react_dom_16_10_2",
 - "wp_react_router_dom_512"
-
 
 ![Select Theme](./images/04Themes.png)
 Select **Themes** from the Practitioner Studio Menu.
@@ -60,3 +60,7 @@ Select **Themes** from the Practitioner Studio Menu.
 Click **Edit theme**.
 
 ![Edit the configured Module IDs in the theme profile](./images/06ModuleIDs.png)
+
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

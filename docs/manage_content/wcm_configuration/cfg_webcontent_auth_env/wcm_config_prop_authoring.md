@@ -234,7 +234,7 @@ The default in-place editing mode can be overridden in EditableElement tags by u
 
 From CF208 onwards, the TinyMCE editor can be used as the embedded editor, and the CK editor is used as the in-place editor. To use TinyMCE as the in-place editor, add this setting:
 
--   `inplaceEdit.defaultRichTextEditor=TinyMCE`
+- `inplaceEdit.defaultRichTextEditor=TinyMCE`
 
 ## Default css styles for in-place editable fields
 
@@ -246,7 +246,7 @@ As many classes as required are added to this setting, which is separated by spa
 
 You should base your custom classes on the default stylesheet at [AppServer\_root](../../../guide_me/wpsdirstr.md)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css.
 
-!!! note 
+!!! note
     Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.
 
 If you need to use the default css class as well, add it to the list of classes. For example: `inplaceEdit.defaultClasses=wcm-default-inplace-editable class1 class2`
@@ -255,18 +255,20 @@ If you need to use the default css class as well, add it to the list of classes.
 
 By default, only managers have access to the **Apply Template** option. To allow all users to apply a new authoring template to content items they have edit access to, change this setting to false:
 
--   `wcm.authoringui.onlyShowApplyTemplateButtonForManagers=false`
+- `wcm.authoringui.onlyShowApplyTemplateButtonForManagers=false`
 
 ## Enabling content creation without a content template
 
 To enable the creation of content items without using a content template when you use the web content authoring page from the applications menu, add the following setting:
 
--   `wcm.authoringui.noContentTemplateOptionEnabled=true`
+- `wcm.authoringui.noContentTemplateOptionEnabled=true`
 
 Content items that are created by using this option have no content template accessible by the user. This option is useful when there is a need for content to store data, such as configuration parameters, but not be rendered in a website.
 
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
-
