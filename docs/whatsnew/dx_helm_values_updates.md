@@ -1,7 +1,6 @@
-# DX Helm Values Updates
+# DX Helm values updates
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
-
 
 ### CF229
 
@@ -35,8 +34,6 @@ This page summarizes Helm values updates across DX releases. Each table below de
 | peopleservice.networking.contextRoot.api | dx/api/people/v1 | /dx/api/people/v1 |
 | peopleservice.networking.contextRoot.ui | dx/ui/people | /dx/ui/people |
 
-
-
 ### CF228
 
 **Added Keys:**
@@ -63,8 +60,6 @@ None
 | probes.remoteSearch.readinessProbe.periodSeconds | 60 | 30 |
 | configuration.licenseManager.licenseServerUri | - | https://api.hcltechsw.com |
 
-
-
 ### CF227
 
 **Added Keys:**
@@ -87,8 +82,6 @@ None
 | Key   | Old Value  | New Value  |
 |-------|------------|------------|
 | configuration.webEngine.dbTypeProperties.db2.DbLibrary | /opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar  | /opt/openliberty/wlp/usr/svrcfg/templates/jars/db2/db2jcc4.jar |
-
-
 
 ### CF226
 
@@ -116,8 +109,6 @@ None
 | configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin  | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin |
 | configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v0/googleVisionAI  | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI |
 
-
-
 ### CF225
 
 **Added Keys:**
@@ -137,8 +128,6 @@ None
 **Changed Values:**
 
 None
-
-
 
 ### CF224
 
@@ -352,9 +341,9 @@ None
 | configuration.webEngine.ldap.port | "" |
 | configuration.webEngine.ldap.serverType | Custom |
 | configuration.webEngine.ldap.id | dx_ldap |
-| configuration.webEngine.ldap.attributeMappingLdap | ["mail", "title", "userPassword"] |
-| configuration.webEngine.ldap.attributeMappingPortal | ["ibm-primaryEmail", "ibm-jobTitle", "password"] |
-| configuration.webEngine.ldap.attributeNonSupported | ["certificate", "members"] |
+| configuration.webEngine.ldap.attributeMappingLdap | \["mail", "title", "userPassword"] |
+| configuration.webEngine.ldap.attributeMappingPortal | \["ibm-primaryEmail", "ibm-jobTitle", "password"] |
+| configuration.webEngine.ldap.attributeNonSupported | \["certificate", "members"] |
 | configuration.webEngine.tuning.authoring | true |
 | configuration.webEngine.ltpa.customLtpaSecret | "" |
 | configuration.webEngine.exposeConfigurationConsole | true |
@@ -455,9 +444,9 @@ None
 | incubator.configuration.webEngine.ldap.port | "" |
 | incubator.configuration.webEngine.ldap.serverType | CUSTOM |
 | incubator.configuration.webEngine.ldap.id | dx_ldap |
-| incubator.configuration.webEngine.ldap.attributeMappingLdap | ["mail", "title", "userPassword"] |
-| incubator.configuration.webEngine.ldap.attributeMappingPortal | ["ibm-primaryEmail", "ibm-jobTitle", "password"] |
-| incubator.configuration.webEngine.ldap.attributeNonSupported | ["certificate", "members"] |
+| incubator.configuration.webEngine.ldap.attributeMappingLdap | \["mail", "title", "userPassword"] |
+| incubator.configuration.webEngine.ldap.attributeMappingPortal | \["ibm-primaryEmail", "ibm-jobTitle", "password"] |
+| incubator.configuration.webEngine.ldap.attributeNonSupported | \["certificate", "members"] |
 | incubator.configuration.webEngine.tuning.authoring | true |
 | incubator.configuration.webEngine.ltpa.version | "" |
 | incubator.configuration.webEngine.ltpa.enabled | false |

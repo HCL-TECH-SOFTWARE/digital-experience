@@ -19,7 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Helm Values Updates
+- Helm values updates
 - Access Layer updates in DX deployments
 - Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - DAM - Cancel ongoing uploads through the progress bar
@@ -115,10 +115,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Helm Values Updates
+### Helm values updates
 
 === "Containers"
-    Any properties that were added, removed, or changed to the Helm values in HCL DX for this release are documented in [DX Helm Values Updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
 
 ### Access Layer updates in DX deployments
 
