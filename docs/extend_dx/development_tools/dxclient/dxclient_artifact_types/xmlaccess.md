@@ -13,7 +13,7 @@ XMLAccess file : This XML file must contain the configuration update or export o
 **Command**
 
 ```
-dxclient xmlaccess -xmlFile <path>
+dxclient xmlaccess --xmlFile <path>
 ```
 
 **Help command**
@@ -29,43 +29,49 @@ dxclient xmlaccess -h
 Use this attribute to specify the protocol with which to connect to the DX server (wp_profile):
 
 ```
--dxProtocol <value>
+--dxProtocol <value>
 ```
 
 Use this attribute to specify the hostname of the target DX server:
 
 ```
--hostname <value>
+--hostname <value>
 ```
 
 Use this attribute to specify the port on which to connect to the DX server (`wp_profile`):
 
 ```
--dxPort <value>
+--dxPort <value>
 ```
 
 Use this attribute to specify the path to DX configuration endpoint (e.g. /wps/config):
 
 ```
--xmlConfigPath <value>
+--xmlConfigPath <value>
 ```
 
 Use this attribute to specify the username to authenticate with the DX server (`wp_profile`):
 
 ```
--dxUsername <value>
+--dxUsername <value>
 ```
 
 Use this attribute to specify the password for the user in the `dxUsername` attribute:
 
 ```
--dxPassword <value>
+--dxPassword <value>
 ```
 
 Use this attribute to specify the local path to the XMLAccess file:
 
 ```
--xmlFile <Absolute or relative path to xmlaccess input file>
+--xmlFile <Absolute or relative path to xmlaccess input file>
+```
+
+Use this attribute to if you want to specify the filename of output file:
+
+```
+--xmlAccessOutputFileName <filename>.xml
 ```
 
 Command options passed through the command line overrides values set in the config.json file.
@@ -75,7 +81,7 @@ Log files from command execution can be found in the logs directory of the DXCli
 !!! example
 
     ```
-    dxclient xmlaccess -xmlFile <xml-file-with-path>
+    dxclient xmlaccess --xmlFile <xml-file-with-path>
     ```
 
 !!! note 
