@@ -226,7 +226,7 @@ dxclient deploy-scriptapplication pull
 For Script Application Push, if the Script Application is extracted to a folder named temp at the root of the DXClient machine:
 
 ```
-dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea "Script Application Library/Script Application/" -wcmContentName DemoScriptApplication
+dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea "Script Application Library/Script Application/" -wcmContentName DemoScriptApplication  --mainHtmlFile index.html
 ```
 
 If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:
