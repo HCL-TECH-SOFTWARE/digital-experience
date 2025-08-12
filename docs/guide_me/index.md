@@ -17,4 +17,5 @@ This section contains various performance tuning guides for deployments in Conta
 - **[Tips for searching the Help Center](./search_tips.md)**  
 This section contains tips on how to improve your search results and find the information you need in the HCL DX Help Center.
 - **[Glossary](./glossary.md)**  
-This section contains the different terms and definitions used in the HCL DX Help Center.
+
+This section contains the different terms and definitions used in the HCL DX Help Center.  
