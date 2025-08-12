@@ -1,6 +1,6 @@
-# DXClient Artifact Types
+# DXClient artifact types
 
-This section provides information about the artifact types that are currently supported by the DXClient tool.
+This topic provides information about the artifact types that are currently supported by the DXClient tool.
 
 **Limitations:**
 

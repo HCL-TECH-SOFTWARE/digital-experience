@@ -6,9 +6,11 @@
 
 ## Introduction
 
-Sometimes, it is easier to clear WCM caches from the command line than using the user interface, especially when debugging stale content issues. With the [ConfigEngine](../../../deployment/manage/portal_admin_tools/index.md#overview-of-configengine) command, you have the option to clear all WCM caches or clear individual WCM caches.
+Sometimes, it is easier to clear WCM caches from the command line than using the user interface, especially when debugging stale content issues. This article describes how to clear all WCM caches or clear individual WCM caches using the [ConfigEngine](../../../deployment/manage/portal_admin_tools/index.md#overview-of-configengine) command.
 
 ## Instructions
+
+Refer to the following steps to clear WCM caches using ConfigEngine:
 
 ### Clearing all WCM caches
 

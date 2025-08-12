@@ -1,6 +1,6 @@
-# Sample Pipeline Settings using DXClient
+# Sample pipeline settings using DXClient
 
-A CI/CD pipeline can help automate processes in the development and test cycle, including code deployment to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, and the export and import of Web Content Manager (WCM) libraries can be automated.
+A CI/CD pipeline can help automate processes in the development and test cycle, including code deployment to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tool to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, and the export and import of Web Content Manager (WCM) libraries can be automated.
 
 You can find a sample pipeline code under the samples folder in the DXClient root folder. This code uses a container version of DXClient to deploy the portlet, theme, and script application. Developers and administrators can also use [this sample](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy){target="_blank"} as a basis for Jenkins automation server jobs.
 

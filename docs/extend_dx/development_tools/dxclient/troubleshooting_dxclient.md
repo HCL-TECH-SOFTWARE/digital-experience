@@ -27,9 +27,6 @@ To enable log tracing in DXConnect you will need to access ConfigWizard admin co
 !!!note
     Refer to [Configure Core Sidecar Logging](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_core_sidecar_log.md) on how to configure to fetch logs from Core Server in containerized environments.
 
-???+ info "Related information"
-    -   [DXClient](../dxclient/index.md)
-
 ## Troubleshooting known issues
 
 - In case of failure in running tasks due timeout issues in kubernetes environment, change the load balancer time out setting from 60 seconds to as per your requirement.
