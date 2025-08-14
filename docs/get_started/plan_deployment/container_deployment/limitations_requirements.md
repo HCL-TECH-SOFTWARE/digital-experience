@@ -68,7 +68,7 @@ To deploy HCL Digital Experience 9.5 CF200 to the supported Kubernetes platforms
 !!!note
     - Every Kubernetes node requires some memory for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services and HCL DX. The overall requested amount of resources might vary based on disabled and enabled applications.
     - The overall sums for CPU and memory include all components of HCL DX. In most cases, you only want to deploy a subset of all components. Therefore, the minimal system requirements decrease accordingly.
-    - This configuration outlines the minimum requirements. For production environments or higher workloads, scale to small, medium, or larger configurations as appropriate. If you encounter performance issues, increase resource allocations as needed. For guidance on optimizing your deployment, see the [Performance Tuning Guide](../../../guide_me/performance_tuning/kubernetes/index.md).
+    - This configuration outlines the minimum requirements. For production environments or higher workloads, scale to small, medium, or larger configurations as appropriate. If you encounter performance issues, increase resource allocations as needed. For guidance on optimizing your deployment, see the [Performance Tuning Guide](../../../guide_me/guides/performance_tuning/kubernetes/index.md).
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request and limit** | **Container Memory request and limit** |
 |---|---|---|---|---|---|

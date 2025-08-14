@@ -20,6 +20,8 @@ Set up your delivery environment by installing web content viewers and enabling 
 With custom caching, you can overrule the default caching parameters of a site by using the `cache` and `expire` parameters in URLs and HCL WCM tags.
 - **[Web Content Manager configuration](wcm_svc_cfg/index.md)**  
 Configuration services for HCL WCM contain settings for the general operation of the web content system such as messaging, pre-rendering, and searching.
+- **[Cleaning up WCM items]()
+Clean up old Web Content Manager (WCM) items to improve system performance.
 
 ## HCLSoftware U learning materials
 

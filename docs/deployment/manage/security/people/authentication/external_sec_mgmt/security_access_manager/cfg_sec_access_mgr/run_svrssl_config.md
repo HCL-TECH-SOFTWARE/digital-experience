@@ -10,7 +10,7 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 []()
 
-1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter the following parameters in the wkplc\_comp.properties file; go to the AMJRTE connection parameters heading:
 
@@ -40,7 +40,7 @@ The PdPerm.properties file configures the Access Manager Java Run Time Environme
 
 3.  Save your changes to the properties file.
 
-4.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+4.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 5.  Run the following task to create the PdPerm.properties file:
 

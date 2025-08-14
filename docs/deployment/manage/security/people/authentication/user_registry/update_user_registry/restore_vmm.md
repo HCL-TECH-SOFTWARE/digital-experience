@@ -4,7 +4,7 @@ If your business changes or your user registry configuration is inoperable, run 
 
 1.  Before you configure security, use the IBM® WebSphere® Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=clt-backupconfig-command) for information.
 
-2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Open the wkplc.properties file with a text editor.
 
@@ -20,7 +20,7 @@ If your business changes or your user registry configuration is inoperable, run 
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to restore the default repository:
 

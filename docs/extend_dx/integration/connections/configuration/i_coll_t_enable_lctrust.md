@@ -10,7 +10,7 @@ Retrieve the certificate for the HCL Connections server. Then, import the SSL ce
 
 2.  Save the certificate as a PEM certificate. Save it to the portal server in the directory where IBM® WebSphere® Application Server was installed.
 
-    For example: [AppServer\_root](../../../../guide_me/wpsdirstr.md)
+    For example: [AppServer\_root](../../../../guide_me/glossary/wpsdirstr.md)
 
 3.  Import the saved certificate to the portal server.
 

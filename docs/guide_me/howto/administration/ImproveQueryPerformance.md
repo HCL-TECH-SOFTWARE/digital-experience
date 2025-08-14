@@ -12,7 +12,7 @@ This article describes tuning tips to improve the performance of Web Content Man
 
 Refer to the following options you can try to reduce your query time:
 
-- Run the `runstats` and `reorg` commands on the database, preferably with DX server not running. For more information on these commands, refer to the [HCL DX Performance Tuning Guides](../../performance_tuning/index.md).
+- Run the `runstats` and `reorg` commands on the database, preferably with DX server not running. For more information on these commands, refer to the [HCL DX Performance Tuning Guides](../../guides/performance_tuning/index.md).
 
 - Isolate the query in a JCR trace using the following command:
 
@@ -26,7 +26,7 @@ Refer to the following options you can try to reduce your query time:
 
     - [Web content maintenance](https://help.hcl-software.com/digital-experience/8.5/admin-system/web-content-maintenance.html){target="_blank"}  
     - [Portal server performance tuning tool](../../../deployment/manage/tune_servers/wp_tune_tool.md)
-    - [HCL DX Performance Tuning Guides](../../performance_tuning/index.md)
+    - [HCL DX Performance Tuning Guides](../../guides/performance_tuning/index.md)
 
 - Reduce the size of the WCM database. Delete unneeded content or libraries. Run `clearVersions` to prune unneeded versions.
 

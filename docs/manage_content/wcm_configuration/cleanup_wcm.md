@@ -26,7 +26,7 @@ Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-
 
 ## Versions
 
-Use the clear versions tool to eliminate versions. For more information, see [Clearing version history](../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_clear_versions.md).
+Use the clear versions tool to eliminate versions. For more information, see [Clearing version history](./wcm_adm_tools/wcm_admin_clear_versions.md).
 
 With the clear versions tool, you can specify how many versions you want to keep or the timestamp before which all versions should be deleted. It is also recommended to change the default policy in WCMConfigService to not create versions automatically but to set it to manual to let the user decide which versions to keep.
 
@@ -42,7 +42,7 @@ While there is no out-of-the-box tool to delete published projects, you can use 
 
 Another option is to delete them through the WCM Authoring portlet. Go to **Project > Published** to display all published projects. Select the projects for deletion and click **Delete Project**.
 
-You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
+You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](./wcm_adm_tools/wcm_config_clean_tasks.md).
 
 ## References to users and groups that no longer exist
 
@@ -55,11 +55,11 @@ Sample scenarios:
 
 In such cases, you should change the user or group references made in an item to refer to the new user or group.
 
-Administrators can also use the member fixer task to check whether any users or groups referenced in the WCM items were renamed or deleted, and fix these references. The member fixer task checks all of the items in a specified library for references to users and groups that no longer exist in the current user repository. When run in report mode, it reports all the references to members. When run in fix mode, these references can be fixed, either by replacing them with references to members that exist, or by removing the references. For more information, see [How to use the member fixer task](../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)
+Administrators can also use the member fixer task to check whether any users or groups referenced in the WCM items were renamed or deleted, and fix these references. The member fixer task checks all of the items in a specified library for references to users and groups that no longer exist in the current user repository. When run in report mode, it reports all the references to members. When run in fix mode, these references can be fixed, either by replacing them with references to members that exist, or by removing the references. For more information, see [How to use the member fixer task](./wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)
 
 ## Item history
 
-Administrators can use the clear history tool to clear the history of an item. For more information, see [Clearing item history](../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_clear_history.md).
+Administrators can use the clear history tool to clear the history of an item. For more information, see [Clearing item history](./wcm_adm_tools/wcm_admin_clear_history.md).
 
 ## Deleted items
 
@@ -67,7 +67,7 @@ When items are deleted, they are not completely removed to give users the chance
 
 Use the following sample JSP file to clean up drafts that are no longer needed. You can adjust the file to go against different libraries and to have a "last changed" check. Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeContent.jsp` located in the wcm_maintenance folder.
 
-You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_clean_tasks.md).
+You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](./wcm_adm_tools/wcm_config_clean_tasks.md).
 
 ## Unused items
 
