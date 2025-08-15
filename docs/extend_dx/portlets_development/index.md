@@ -25,4 +25,4 @@ For an introduction and a demo on how to use Java portlets, go to [Java Portlet 
 
 
 ???+ info "Related information"
-    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/tutorials/Portletdevelopmentutilitiesandpagecreationsamples.md)
+    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/howto/development/Portletdevelopmentutilitiesandpagecreationsamples.md)
