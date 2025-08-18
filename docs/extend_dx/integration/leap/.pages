@@ -1,6 +1,6 @@
 title: HCL Leap
 nav:
     - index.md
-    - Installation: installation
-    - Configuration: configuration
-    - Sample integrations: example
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Sample integrations: example.md

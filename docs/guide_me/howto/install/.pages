@@ -3,3 +3,7 @@ title: Install
 nav:
     - index.md
     - DeployOnAzure.md
+    - InstallLDAPTools.md
+    - RunIIMAsDifferentUser.md
+    - InstallLDAPTools.md
+    

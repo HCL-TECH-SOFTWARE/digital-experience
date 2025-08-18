@@ -10,7 +10,7 @@ This document provides the sample code for using the PUMA API within a WCM JSP c
 
 ## Instructions
 
-To use the sample code, refer to the following steps:
+Refer to the following steps To use the sample code:
 
 1. Create a file named `puma.jsp` in the `<wp_profile_root>\installedApps\<yourCellName>\PA_WCMLRingPortJSR286.ear\ilwwcm-localrende.war\jsp\html>` directory.
 

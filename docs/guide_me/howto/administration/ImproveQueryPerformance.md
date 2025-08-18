@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This document describes tuning tips to improve the performance of Web Content Manager (WCM) queries in HCL Digital Experience (DX).
+This article describes tuning tips to improve the performance of Web Content Manager (WCM) queries in HCL Digital Experience (DX).
 
 ## Instructions
 
-To reduce your query time, refer to the following options you can try:
+Refer to the following options you can try to reduce your query time:
 
 - Run the `runstats` and `reorg` commands on the database, preferably with DX server not running. For more information on these commands, refer to the [HCL DX Performance Tuning Guides](../../performance_tuning/index.md).
 

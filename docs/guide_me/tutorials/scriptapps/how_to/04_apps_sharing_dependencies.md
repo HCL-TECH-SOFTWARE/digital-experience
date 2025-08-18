@@ -11,20 +11,25 @@ hide: tags
 
 # Deploy Multiple Script Applications with Shared Dependencies
 
-### What You Will Learn In This Tutorial
+## What You Will Learn In This Tutorial
+
 - Creation of a Gradle project to simplify working with shared libraries in HCL Digital Experience (DX).
 - Update bundling of new or existing NPM based projects to exclude dependencies and use the libraries in a DX Module.
 - Combine DX Module and Script Applications Projects.
 
-### Where To Get The Sample Code
-!!!tip "Sample codes are available in [GitHub: Deploy Multiple DX ScriptApps with Shared Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/04AppsWithSharedDependencies)."
+## Where To Get The Sample Code
 
-## Pre-Requisites
-!!!tip "Pre-Requisites"
+!!!tip
+    Sample codes are available in [GitHub: Deploy Multiple DX ScriptApps with Shared Dependencies](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/04AppsWithSharedDependencies).
+
+## Prerequisites
+
+!!!tip
     See the detailed information [here](../pre_requisites.md).
 
 ## How to Bundle Dependencies as DX Modules
-!!!tip "Bundle Dependencies as DX Modules"
+
+!!!tip
     Follow the detailed steps [here](../common-setup/optimized-scriptapps/dependencies_as_module.md).
 
     Quick Notes:
@@ -35,23 +40,28 @@ hide: tags
     - Take note of all the output locations and filenames of the DLL manifest, for each of the submodules defined, in the DLLPlugin portion of their `DxModule/<SubModule>/webpack.<dxmodules>.js` files. 
 
 ## Important Things to Note
-!!!note "Important Things To Note"
+
+!!!note
     Check the information [here](../common-setup/post-deployment/important_things_to_note.md).
 
 ## How To Build and Deploy DX Modules
-!!!tip "Build and Deploy DX Modules"
+
+!!!tip
     Follow the steps [here](../common-setup/build-and-deploy/build_and_deploy_dx_modules.md).
 
 ## Optional: How to Manually Upload the DXModule EAR File
-!!!tip "Manual EAR File Upload"
+
+!!!tip
     Follow the steps [here](../common-setup/build-and-deploy/manual_ear_upload.md).
 
 ## How To Verify A Successful Deployment and Link a DX Module to a DX Theme
-!!!tip "Verify A Successful Deployment and Link a DX Module to a DX Theme"
+
+!!!tip
     Follow the steps [here](../common-setup/post-deployment/verify_link_module_to_theme.md).
 
 ## How To Bundle and Deploy a Script Application Without Its Dependencies
-!!!tip "Script Applications Sharing Dependencies"
+
+!!!tip
     For each of your script applications, follow the detailed steps [here](../common-setup/optimized-scriptapps/sharing_dependencies.md).
 
     Quick Notes:
@@ -60,9 +70,11 @@ hide: tags
     - Make sure the contentRoot setting in `package.json` matches the build or distribution folder.
 
 ## How To Build and Deploy Script Applications
-!!!tip "Build and Deploy Script Applications"
+
+!!!tip
     Follow the steps [here](../common-setup/build-and-deploy/build_and_deploy_scriptapps.md).
 
 ## Optional: How to Build and Deploy the DXModule and All Script Applications
-!!!tip "Build and Deploy the DX Module and All ScriptApps"
+
+!!!tip
     Follow the steps [here](../common-setup/build-and-deploy/build_and_deploy_all.md).

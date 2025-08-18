@@ -10,9 +10,9 @@ Configure your HCL Digital Experience (DX) installation to leverage OpenID Conne
 
 The scope of this document is limited to automating DX LDAP and transient user's authentication with OIDC considering Keycloak as the OpenID Provider (OP).
 
-This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md).
+This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-websphere-for-oidc.md).
 
-This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-webshpere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
+This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-websphere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
 
 Currently, the scope of this work covers kube-based DX deployments only. It is not supported or suggested to be used for other deployment types.
 

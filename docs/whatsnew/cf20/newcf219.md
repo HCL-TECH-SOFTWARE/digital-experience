@@ -93,10 +93,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - Multiple environment configuration option in node version
 
 === "Containers"
-    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/index.md#configuring-multiple-environments-in-dxclient). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-source-code-package) is also updated to include instructions on configuring multiple environments. 
+    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-multiple-environments). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/installing_dxclient.md) is also updated to include instructions on configuring multiple environments.
 
 === "On-Premises"
-    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/index.md#configuring-multiple-environments-in-dxclient). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-source-code-package) is also updated to include instructions on configuring multiple environments. 
+    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-multiple-environments). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/installing_dxclient.md) is also updated to include instructions on configuring multiple environments.
 
 ### New documentation about searching the DX Help Center
 

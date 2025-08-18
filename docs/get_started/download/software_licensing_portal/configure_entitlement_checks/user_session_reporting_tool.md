@@ -19,7 +19,7 @@ This section provides information about the functionalities and use cases of the
 
 ## Availability and system compatibility
 
-The User Session Reporting Tool (UserSessionReporting-v1.2.0.zip and later) is available in the [HCL DX Core offering](../../software_licensing_portal/index.md) you have purchased entitlements to in the [HCL Software License Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}. For example:
+The User Session Reporting Tool (UserSessionReporting-v2.1.0.zip and later) is available in the [HCL DX Core offering](../../software_licensing_portal/index.md) you have purchased entitlements to in the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"}. For example:
 
 - HCL Portal Server 9.5
 - HCL Web Content Manager 9.5
@@ -178,14 +178,17 @@ The tool also allows you to omit specific logs or requests from the session coun
 
 The following is a sample command for running the User Session Reporting Tool using all the parameters provided:
 
+!!!note
+    As of CF229, the `productFeatureIdName` parameter has been removed as a command-line parameter. The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
+
 ```cmd
 java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate>
 
 # Example
-java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 
 
 # Example for multiple exludeIP and excludeSessionKey
-java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeIP "192.168.245.143" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" -productFeatureIdName HCL_DX_CloudNative 2022-07-22 2025-07-28 
+java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeIP "192.168.245.143" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" -excludeSessionKey "192.168.243.137 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 
 
 ```
 
