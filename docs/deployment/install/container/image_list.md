@@ -14,7 +14,7 @@ If you are deploying the HCL DX 9.5 CF229 Container update release, the package 
 
 ```
 hcl-dxclient-image-v95_20250813-1935.zip
-hcl-dxclient-v95_CF229_202850813-1935.zip
+hcl-dxclient-v95_CF229_20250813-1935.zip
 ```
 ### hcl-dx-kubernetes-v95-CF229.zip
 
