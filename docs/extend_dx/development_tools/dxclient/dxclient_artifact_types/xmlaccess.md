@@ -44,7 +44,7 @@ Use this attribute to specify the port on which to connect to the DX server (`wp
 --dxPort <value>
 ```
 
-Use this attribute to specify the path to DX configuration endpoint (e.g. /wps/config):
+Use this attribute to specify the path to DX configuration endpoint (e.g. `/wps/config`):
 
 ```
 --xmlConfigPath <value>
@@ -68,13 +68,13 @@ Use this attribute to specify the local path to the XMLAccess file:
 --xmlFile <Absolute or relative path to xmlaccess input file>
 ```
 
-Use this attribute to if you want to specify the filename of output file:
+Use this attribute to specify the name of the output XML file:
 
 ```
 --xmlAccessOutputFileName <filename>.xml
 ```
 
-Command options passed through the command line overrides values set in the config.json file.
+Command options passed through the command line overrides values set in the `config.json` file.
 
 Log files from command execution can be found in the logs directory of the DXClient installation.
 
