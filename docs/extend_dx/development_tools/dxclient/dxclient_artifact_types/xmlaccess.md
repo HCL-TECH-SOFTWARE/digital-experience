@@ -62,7 +62,7 @@ Use this attribute to specify the password for the user in the `dxUsername` attr
 --dxPassword <value>
 ```
 
-Use this attribute to specify the local path to the XMLAccess file:
+Use this attribute to specify the local path to the `xmlaccess` input file:
 
 ```
 --xmlFile <Absolute or relative path to xmlaccess input file>
