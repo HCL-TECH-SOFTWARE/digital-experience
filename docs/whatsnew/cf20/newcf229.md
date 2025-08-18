@@ -1,4 +1,4 @@
-# What's new in CF229
+# What's new in CF229 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF229 on supported platforms:
 
