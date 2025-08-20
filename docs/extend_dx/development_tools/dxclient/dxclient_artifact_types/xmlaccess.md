@@ -44,7 +44,7 @@ Use this attribute to specify the port on which to connect to the DX server (`wp
 --dxPort <value>
 ```
 
-Use this attribute to specify the path to DX configuration endpoint (e.g. `/wps/config`):
+Use this attribute to specify the path to DX configuration endpoint (for example, `/wps/config`):
 
 ```
 --xmlConfigPath <value>
