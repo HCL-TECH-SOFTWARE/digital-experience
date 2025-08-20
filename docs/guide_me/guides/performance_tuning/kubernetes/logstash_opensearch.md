@@ -93,7 +93,7 @@ Make sure that you have the following:
 
     - `Filter`: This processes the incoming data. The example uses the `mutate` filter to modify events.
 
-        - `Update`: This updates the [host][name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
+        - `Update`: This updates the \[host]\[name] field of the event to the value of the KUBE_HOSTNAME environment variable. This is useful for dynamically setting the hostname based on the environment where Logstash is running.
 
     - `Output Configuration`: The `opensearch` output plugin is configured to send logs to an OpenSearch server. The `hosts` parameter specifies the `server's protocol`, `hostname`, and `port`. Additionally, the `logs index`, `user`, and `password` parameters are provided for authentication. SSL encryption is enabled (`ssl => true`), with certificate verification disabled (`ssl_certificate_verification => false`). This configuration ensures logs are sent to the correct OpenSearch endpoint.
 
@@ -144,7 +144,7 @@ This section contains recommendations for monitoring and debugging log data.
 - Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
         
-    ![](../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
+    ![](../../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
     
     Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server SystemOut format.
 

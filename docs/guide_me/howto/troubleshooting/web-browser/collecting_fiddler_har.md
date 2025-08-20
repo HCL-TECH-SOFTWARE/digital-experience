@@ -59,7 +59,7 @@ If you cannot install Fiddler in your environment, you can use your browser’s 
 
 7. This creates a file with a `.har` extension. Upload the file to your case with HCL Support.  
 
-8. If HCL Support requested additional logs, upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a [wpcollector output](URL_TO_WPCOLLECTOR_DOCUMENTATION){target="_blank"}.
+8. If HCL Support requested additional logs, upload the `<wp_profile_root>\logs\WebSphere_Portal` logs directory or a `wpcollector` output.
 9. If requested by HCL Support, copy the browser console text to a file. To do this, go to the **Console** tab in **Developer Tools**, right-click, and select **Copy console messages** (or a similar save option, depending on your browser). Upload the file to your case.
   
 !!! info "Additional Information"

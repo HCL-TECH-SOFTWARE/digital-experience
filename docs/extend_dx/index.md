@@ -8,7 +8,7 @@ Techniques and features to bring in existing applications to your DX site.
 - **[Development Tools](development_tools/index.md)**  
 HCL DX includes development assets such as DX client and more.
 - **[Script Application Development](script_application/index.md)**  
-Develop applications for HCL DX using client-side frameworks such as React, Angular and more. See also the [Script Application tutorial](../guide_me/tutorials/scriptapps/index.md) for step-by-step instructions about developing Script Applications.
+Develop applications for HCL DX using client-side frameworks such as React, Angular and more. See also the [Script Application tutorial](./script_application/scriptapps/index.md) for step-by-step instructions about developing Script Applications.
 - **[Digital Data Connector](ddc/index.md)**  
 You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components.
 - **[Portlet Development](portlets_development/index.md)**  

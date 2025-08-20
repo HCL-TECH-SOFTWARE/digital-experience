@@ -16,7 +16,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     1.  Open a command prompt.
 
-    2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
     3.  Run the following task:
 
@@ -116,7 +116,7 @@ A property extension database stores attributes that the LDAP directory does not
 
 6.  Complete the following steps to define the DbDriver and DbLibrary parameter values:
 
-    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
     2.  Open the wkplc\_dbtype.properties file with a text editor.
 
@@ -129,7 +129,7 @@ A property extension database stores attributes that the LDAP directory does not
 
 7.  Specify values for the data source parameters in the wp\_add\_LA.properties file:
 
-    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory.
+    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory.
 
     2.  Open the wp\_add\_LA.properties file with a text editor.
 
@@ -159,7 +159,7 @@ A property extension database stores attributes that the LDAP directory does not
 
 8.  Change the value for the com.ibm.SOAP.requestTimeout parameter:
 
-    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\properties directory.
+    1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\properties directory.
 
     2.  Open the soap.client.props with a text editor.
 
@@ -179,7 +179,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     4.  Open a command prompt.
 
-    5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
     6.  Run the following task to create the local Deployment Manager WebSphere variable that is used to access the database JAR files:
 
@@ -214,7 +214,7 @@ A property extension database stores attributes that the LDAP directory does not
 
     If you are not on a remote deployment manager, continue to the next step.
 
-    1.  Copy the following two files from the Portal server to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/ directory location on the remote deployment manager server:
+    1.  Copy the following two files from the Portal server to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/ directory location on the remote deployment manager server:
 
         !!!note
             If the directory does not exist on the remote server, create it now.
@@ -222,7 +222,7 @@ A property extension database stores attributes that the LDAP directory does not
         -   /etc/wim/setup/lookaside/bootstrap.sql
         -   /etc/wim/setup/lookaside/keys.sql
 
-    2.  Copy the following database files from the Portal server to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/database/ directory on the remote deployment manager server:
+    2.  Copy the following database files from the Portal server to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/work/was/wim/lookaside/database/ directory on the remote deployment manager server:
 
         !!!note
             If the directory does not exist on the remote server, create it now.

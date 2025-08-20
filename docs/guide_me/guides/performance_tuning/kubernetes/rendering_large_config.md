@@ -36,33 +36,33 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
       - Node details
 
-      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../images/C5.2xlarge.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../images/c5_large_cpu_info.png){ width="1000" }
+      ![](../../../../images/c5_large_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 - **c5.4xlarge worker nodes**
 
       - Node details
       
-      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
       
-      ![](../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
+      ![](../../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
+      ![](../../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../images/c5_4xlarge_volume_info.png){ width="600" }
+      ![](../../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 ### DB2 instance
 
@@ -72,17 +72,17 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to 
 
 - DB2 details
 
-      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 ### Load Balancer setup
 
@@ -98,17 +98,17 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary 
 
 - Instance details
 
-      ![](../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 !!!note
       Ramp-up time is five virtual users every two seconds. The test duration includes the ramp-up time plus one hour at the peak load of concurrent users.
@@ -176,7 +176,7 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 

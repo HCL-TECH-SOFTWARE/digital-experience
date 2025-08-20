@@ -188,6 +188,6 @@ For an introduction and a demo on DX deployment, go to [Deployment for Beginners
 To learn how to do a traditional installation, go to [Deployment for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will also learn about additional installation tasks that apply to both container-based and traditional deployments using the Configuration Wizard, DXClient, ConfigEngine, and more. You can try it out using the [Deployment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab.pdf){target="_blank"} and corresponding [Deployment Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"  
-    -   [Language support](../deployment/manage/portal_admin_tools/language_support/index.md)
-    -   [System event logging](../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md)
+    -   [Language support](../../deployment/manage/portal_admin_tools/language_support/index.md)
+    -   [System event logging](../../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md)
 

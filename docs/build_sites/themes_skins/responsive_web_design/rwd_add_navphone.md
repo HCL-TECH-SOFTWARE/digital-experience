@@ -36,7 +36,7 @@ You can have the navigation and portal navigation open individually or at the sa
 
 ## Mobile navigation markup
 
-The mobile navigation markup for both smartphone and tablet is created by the mobileNavigation.jsp file of the theme, found at [PortalServer\_root](../../../guide_me/wpsdirstr.md)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots. The mobileNavigation.jsp file is controlled by the mobile navigation dynamic spot in theme.html: dyn-cs:id:85theme\_mobileNavigation
+The mobile navigation markup for both smartphone and tablet is created by the mobileNavigation.jsp file of the theme, found at [PortalServer\_root](../../../guide_me/glossary/wpsdirstr.md)/theme/wp.theme.themes/default85/installedApps/DefaultTheme85.ear/DefaultTheme85.war/themes/html/dynamicSpots. The mobileNavigation.jsp file is controlled by the mobile navigation dynamic spot in theme.html: dyn-cs:id:85theme\_mobileNavigation
 
 The navigation on mobile devices is rendered by the mobileNavigation.jsp file. Therefore, the primary, secondary, breadcrumb, and side navigation that is used on the desktop do not produce any output for a mobile device. The navigation is rendered for mobile, but is hidden when the page loads. On a tablet, the arrow button in the banner can be tapped to reveal the navigation. On a smartphone, the user can scroll up to see the first-level navigation pages. Since smartphones have little real estate, site designers might want to hide certain first-level pages, such as Administration, for these devices. Add the `com.ibm.portal.mobile.Hidden` metadata to the page to hide certain first-level pages. By default, the Administration, Application, and Tag Center pages are hidden.
 
