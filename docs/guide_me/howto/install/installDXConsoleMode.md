@@ -386,32 +386,32 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
 2. Listing installed features by using imcl commands
 
-   a. Open a command-line utility.  
+    a. Open a command-line utility.  
 
-   b. Navigate to the the tools directory of the Installation Manager.  
+    b. Navigate to the the tools directory of the Installation Manager.  
 
-   c. Run the command to list installed features:  
+    c. Run the command to list installed features:  
         `./imcl listInstalledPackages -long`  
         For example:  
         ```command
-            cd /opt/IBM/InstallationManager/eclipse/tools/
-            ./imcl listInstalledPackages -long
+        cd /opt/IBM/InstallationManager/eclipse/tools/
+        ./imcl listInstalledPackages -long
         ```  
         ![alt text](Images/image33.png)  
 
 In case of problems during the installation, please collect the following data and contact HCL® Support:  
-[Collecting Data: Installation of HCL® Portal 8.5 on Multiplatforms](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013608){target="_blank"}.
+[Collecting Data: Installation of HCL® Portal 8.5 on Multiplatforms.](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013608){target="_blank"}
 
 **Related documentation:**  
 
-[Can not apply HCL® DX Portal cumulative fixes with IIM (IBM® Installation Manager) version 1.10.0](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0117388){target="_blank"}.  
+[Can not apply HCL® DX Portal cumulative fixes with IIM (IBM® Installation Manager) version 1.10.0.](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0117388){target="_blank"}  
 
-[ConfigEngine errors when updating WebSphere Application Server to Fixpack v9.0.5.19 & v8.5.5.25](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0112396){target="_blank"}.  
+[ConfigEngine errors when updating WebSphere Application Server to Fixpack v9.0.5.19 & v8.5.5.25.](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0112396){target="_blank"}  
 
-[How to determine if a Portal CF upgrade was successful?](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0077962){target="_blank"}.  
+[How to determine if a Portal CF upgrade was successful?](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0077962){target="_blank"}  
 
-[HCL® Digitial Experience - Perform CF Upgrade with Console in HCL® Portal](https://youtu.be/hpmOpfkWNY8?si=W78UFLPYSMMC7wP8){target="_blank"}.  
+[HCL® Digitial Experience - Perform CF Upgrade with Console in HCL® Portal.](https://youtu.be/hpmOpfkWNY8?si=W78UFLPYSMMC7wP8){target="_blank"}  
 
-[Unable to Install HCL® Portal V8.5/9/9.5 on WAS 9.x.x.x](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0075918){target="_blank"}.  
+[Unable to Install HCL® Portal V8.5/9/9.5 on WAS 9.x.x.x.](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0075918){target="_blank"}  
 
-[Can I add WCM functions to an existing install of the Portal Server 8.5 offering?](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0077941){target="_blank"}.  
+[Can I add WCM functions to an existing install of the Portal Server 8.5 offering?](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0077941){target="_blank"}  
