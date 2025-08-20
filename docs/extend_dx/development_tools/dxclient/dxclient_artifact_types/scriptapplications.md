@@ -11,7 +11,7 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 **Required Files**:
 
-The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Application, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Application, refer to the [Build applications with the Script Application](../../../script_application/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
 
 **Command**
 
@@ -226,7 +226,7 @@ dxclient deploy-scriptapplication pull
 For Script Application Push, if the Script Application is extracted to a folder named temp at the root of the DXClient machine:
 
 ```
-dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea "Script Application Library/Script Application/" -wcmContentName DemoScriptApplication
+dxclient deploy-scriptapplication push --contentRoot /temp --wcmSiteArea "Script Application Library/Script Application/" --wcmContentName DemoScriptApplication  --mainHtmlFile index.html
 ```
 
 If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:

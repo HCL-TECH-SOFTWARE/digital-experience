@@ -16,6 +16,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Helm values updates
+- Guide Me section restructured
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 - WAS, JDK, and iFix versions
@@ -41,12 +43,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
-
-=== "Containers"
-    In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
-
-=== "On-Premises"
-     In the User Session Reporting Tool, `productFeatureIdName` has been removed as a command-line parameter. The `productFeatureId` will now be read from the License Manager’s environment variable instead of being passed in the command. For more information, refer to [Configuring MHS file-based session reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md).
 
 ### DXClient - New `xmlAccessOutputFileName` parameter added
 
@@ -87,6 +83,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### Helm values updates
+
+=== "Containers"
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+
+### Guide Me section restructured
+
+=== "Containers"
+    The Guide Me section has been restructured to include three main subtopics: Guides, How-to articles, and Glossary. For more information, refer to [Guide Me](../../guide_me/index.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

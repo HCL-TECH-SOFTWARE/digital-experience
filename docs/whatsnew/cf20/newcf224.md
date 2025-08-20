@@ -137,7 +137,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for rendering in the upper limit of a single-node configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
+    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

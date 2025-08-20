@@ -1,4 +1,4 @@
-# What's new in CF229
+# What's new in CF229 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF229 on supported platforms:
 
@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Helm values updates
 - Access Layer updates in DX deployments
 - Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - DAM - Cancel ongoing uploads through the progress bar
@@ -113,6 +114,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### Helm values updates
+
+=== "Containers"
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
 
 ### Access Layer updates in DX deployments
 
