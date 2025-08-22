@@ -14,7 +14,7 @@ A report is a list of items that matches a set or combined sets of criteria. Con
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**, then select **Content Reporting** from the Practitioner Studio navigator.
 
-2.  Close the sidebar. On the **Search Criteria** section, select the appropriate criteria to generate a report of matching contents.
+2.  Collapse the sideNav. On the **Search Criteria** section, select the appropriate criteria to generate a report of matching contents.
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Dropdown.png)
 
     !!!note
