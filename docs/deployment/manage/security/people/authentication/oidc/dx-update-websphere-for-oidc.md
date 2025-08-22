@@ -145,7 +145,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
 1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
-2. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
+2. Navigate to **Security > Global security > User account repository > Configure > </LDAP_ID>**
 
 3. Set the field for **Federated repository properties for login** to `mail`.
 
@@ -159,7 +159,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
         This requires a manual update of the file, make sure to back the file up as this will corrupt your instance.
 
     ```sh
-    kubectl exec -it dx-deployment-core-0 bash -n dxns
+    kubectl exec -it dx-deployment-core-0 bash -n <your-namespace>
 
     cd /opt/HCL/wp_profile/config/cells/dockerCell/wim/config/
     # Create a backup
