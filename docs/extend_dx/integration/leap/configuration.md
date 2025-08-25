@@ -240,7 +240,9 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
 1. Install and configure your IdP.
 
-    IdPs serve as the single point of truth for credential inputs and create a client for each product. Optionally, you can customize the IdP access UI. Refer to [IdP Customization and Consideration](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md) for more information.
+    1. Create a client for each product. IdPs serve as the single point of truth for credential inputs.
+
+    2. (Optional) Customize the IdP access UI. Refer to [IdP Customization and Consideration](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md) for more information.
 
 2. Enable OIDC in HCL DX.
 
