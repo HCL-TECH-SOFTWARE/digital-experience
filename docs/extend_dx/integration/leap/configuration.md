@@ -323,7 +323,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
         - `userLookups`: Set this to `false` to disable user lookups, which is not available when configured with OIDC.
         - `userGroups`: Set this to `false` to disable group lookups, which is not available when configured with OIDC.
-        - `postLogoutRedirectURL`: Set this to the URL to which Leap will redirect the browser after a user chooses to log out. This is necessary to complete the loop with the OIDC IdP.
+        - `postLogoutRedirectURL`: Set this to the URL to which Leap will redirect the browser after a user logs out. This is necessary to complete the loop with the OIDC IdP.
 
         ```yaml
         configuration:
@@ -334,8 +334,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
                     ibm.nitro.LogoutServlet.postLogoutRedirectURL=https://myOIDCServer.com/realms/Leap/protocol/openid-connect/logout?client_id=hcl-leap-oidc-client&post_logout_redirect_uri=https://myLeapServer.com/apps/secure/org/ide/manager.html
         ```
 
-        !!!note
-            For more details on setting Leap properties, refer to [Leap properties](https://opensource.hcltechsw.com/leap-doc/latest/helm_leap_properties.html){target="_blank"}.
+        For more details on setting Leap properties, refer to [Leap properties](https://opensource.hcltechsw.com/leap-doc/latest/helm_leap_properties.html){target="_blank"}.
 
     5. Perform a Helm upgrade to apply your changes.
 
