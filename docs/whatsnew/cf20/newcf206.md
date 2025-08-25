@@ -54,7 +54,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Since the sample application is platform agnostic, the same code can be run as a portlet or mobile app, allowing reuse over multiple devices and platforms. [Access the application here](https://github.com/HCL-TECH-SOFTWARE/sample-react-script-application).
 
-    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../guide_me/tutorials/scriptapps/index.md)
+    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../extend_dx/script_application/scriptapps/index.md)
 
 === "On-Premises"
 
@@ -62,7 +62,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Since the sample application is platform agnostic, the same code can be run as a portlet or mobile app, allowing reuse over multiple devices and platforms. [Access the application here](https://github.com/HCL-TECH-SOFTWARE/sample-react-script-application).
 
-    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../guide_me/tutorials/scriptapps/index.md)
+    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../extend_dx/script_application/scriptapps/index.md)
 
 ## The new HCL Digital Experience Help Center
 

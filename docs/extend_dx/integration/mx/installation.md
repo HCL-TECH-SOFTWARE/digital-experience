@@ -1,6 +1,6 @@
-# Installing HCL Volt MX Foundry to Kubernetes with Helm
+# Installing HCL Volt MX Foundry to integrate with HCL Digital Experience
 
-This topic explains how to deploy HCL Volt MX Foundry to an existing Kubernetes cluster using Helm. This is the recommended method for production-grade, containerized installations on-premise or in the cloud.
+This topic explains how to integrate HCL Volt MX Foundry with HCL Digital Experience (DX). To do so, you must deploy HCL Volt MX Foundry to an existing Kubernetes cluster using Helm. This is the recommended method for production-grade, containerized installations on-premise or in the cloud.
 
 ## Prerequisites
 

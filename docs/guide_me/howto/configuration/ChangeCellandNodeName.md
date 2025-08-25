@@ -10,7 +10,7 @@ When you install HCL Digital Experience (DX), a wp_profile is created with a cel
 
 ## Instructions  
 
-To change the cell name and node name in a standalone DX environment, refer to the following steps:  
+Refer to the following steps to change the cell name and node name in a standalone DX environment:  
 
 1. Open the command line window and go to the `<WAS_HOME>/profiles/<profile_name>/bin` directory.  
 

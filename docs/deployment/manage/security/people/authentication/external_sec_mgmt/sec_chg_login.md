@@ -43,7 +43,7 @@ Complete the following steps to change the login and logout pages:
     -   In eTrust SiteMinder, the Web Agent configuration object contains a property named LogoffUri where you can supply a URL to terminate the eTrust SiteMinder login session
     Complete the following steps to enable HCL Portal to execute the external security manager logoff URL after completing its logoff command:
 
-    1.  Specify the following values in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/config/ConfigService.properties file:
+    1.  Specify the following values in the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/PortalServer/config/ConfigService.properties file:
 
         -   redirect.logout=true
         -   redirect.logout.ssl=false or true, depending on your environment
@@ -54,9 +54,9 @@ Complete the following steps to change the login and logout pages:
 
         |Operating system|Task|
         |----------------|----|
-        |Windows™:|ConfigEngine.bat update-properties -DWasPassword=password from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
-        |AIX®SolarisLinux™:|./ConfigEngine.sh update-properties -DWasPassword=password from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
-        |z/OS®:|Perform the following steps:<br>1.  Open a UNIX System Services (z/OS UNIX System Services) command prompt.<br> 2. Run the ./ConfigEngine.sh update-properties -DWasPassword=password task from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
+        |Windows™:|ConfigEngine.bat update-properties -DWasPassword=password from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory|
+        |AIX®SolarisLinux™:|./ConfigEngine.sh update-properties -DWasPassword=password from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory|
+        |z/OS®:|Perform the following steps:<br>1.  Open a UNIX System Services (z/OS UNIX System Services) command prompt.<br> 2. Run the ./ConfigEngine.sh update-properties -DWasPassword=password task from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
 
     3.  Restart the WebSphere\_Portal server on the standalone server or on each cluster member.
 

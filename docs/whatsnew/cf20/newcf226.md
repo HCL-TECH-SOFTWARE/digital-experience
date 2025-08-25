@@ -57,10 +57,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - TLS certificate validation
 
 === "Containers"
-    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation. For more information, see [Configuring TLS certificate validation for secure connections](../../extend_dx/development_tools/dxclient/index.md#configuring-tls-certificate-validation-for-secure-connections).
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation. For more information, see [Configuring TLS certificate validation for secure connections](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-tls-certificate-validation).
 
 === "On-Premises"
-    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation. For more information, see [Configuring TLS certificate validation for secure connections](../../extend_dx/development_tools/dxclient/index.md#configuring-tls-certificate-validation-for-secure-connections).
+    To improve security and maintain best practices in development and production environments, DXClient no longer ignores certificates that cannot be properly validated when using Transport Layer Security (TLS) connections. You can validate and trust custom certificates such as self-signed or third-party CAs without entirely disabling validation. For more information, see [Configuring TLS certificate validation for secure connections](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-tls-certificate-validation).
 
 ### DXClient - New limitations for LiveSync
 

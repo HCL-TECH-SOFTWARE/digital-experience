@@ -82,7 +82,7 @@ These are the levels of navigation that is provided in a theme:
 
 ## Navigation content spots
 
-The content spot IDs map to wp\_dynamicContentSpots\_85 module subcontributions in the [PortalServer\_root](../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml file.
+The content spot IDs map to wp\_dynamicContentSpots\_85 module subcontributions in the [PortalServer\_root](../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml file.
 
 |Name|Value|
 |----|-----|
@@ -92,7 +92,7 @@ The content spot IDs map to wp\_dynamicContentSpots\_85 module subcontributions 
 |`85theme_sideNav`|mvc:res:\{war:context-root\}/themes/html/dynamicSpots/sideNavigation.jsp?startLevel=2,smartphone@,tablet@|
 |`85theme_mobileNav`|mvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/mobileNavigation.jspmvc:smartphone/tablet@res:\{war:context-root\}/themes/html/dynamicSpots/lazyMobileNavigation.jsp?context=\{war:context-root\}|
 
-The subcontribution URI value indicates which JSP is loaded in the spot. For the three horizontal navigation spots, the same navigation.jsp file is used with a different parameter passed to the JSP. The navigation.jsp file is in the [PortalServer\_root](../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots folder. The parameter is a key of `type` with three possible values:
+The subcontribution URI value indicates which JSP is loaded in the spot. For the three horizontal navigation spots, the same navigation.jsp file is used with a different parameter passed to the JSP. The navigation.jsp file is in the [PortalServer\_root](../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots folder. The parameter is a key of `type` with three possible values:
 
 -   **top**
 

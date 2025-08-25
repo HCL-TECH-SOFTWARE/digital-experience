@@ -1,3 +1,7 @@
 # Troubleshooting
 
-This section will eventually include how-to articles about enabling tracing, capturing an HTTP Archive (HAR), capturing a Fiddler, and other troubleshooting-related content in HCL Digital Experience (DX).
+This section includes how-to articles about troubleshooting categories in HCL Digital Experience (DX).
+
+[Web browser](./web-browser/index.md)
+
+Learn how to troubleshoot web browser issues in HCL DX.
