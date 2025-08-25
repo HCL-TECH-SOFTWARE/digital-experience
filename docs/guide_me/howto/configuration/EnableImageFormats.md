@@ -14,15 +14,17 @@ HCL Digital Experience (DX) does not support certain image formats out-of-the-bo
 
 For JP2 images, refer to the following steps:
 
-1. In the WebSphere Integrated Solutions Console (WAS admin console), navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
 
-2. Create the `extensiontype.jp2` property:
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+
+3. Create the `extensiontype.jp2` property:
     1. Click **New...**.
     2. Under **Name**, enter `extensiontype.jp2`.
     3. Under **Value**, enter `image/jp2`.
     4. Click **Apply**.
 
-3. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
+4. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
 
     If the property does not exist:
 
@@ -37,14 +39,14 @@ For JP2 images, refer to the following steps:
     2. Under **Value**, enter `image/jp2`.
     3. Click **Apply**.
 
-4. Modify the `image.initialFileExtensions` property:
+5. Modify the `image.initialFileExtensions` property:
     1. Locate and click **image.initialFileExtensions**.
     2. Under **Value**, add `JP2` to the existing comma-separated list of extensions.
     3. Click **Apply**.
 
-5. Click **Save** at the top of the console messages.
+6. Click **Save** at the top of the console messages.
 
-6. Configure the MIME type for JP2:
+7. Configure the MIME type for JP2:
     1. Navigate to **Environment** > **Virtual hosts**.
     2. Click the virtual host where WebSphere Portal is installed (for example, **default_host**).
     3. Under **Additional Properties**, click **MIME Types**.
@@ -56,21 +58,23 @@ For JP2 images, refer to the following steps:
         4. Click **OK**.
         5. Click **Save** at the top of the console messages.
 
-7. Restart the WebSphere Application Server.
+8. Restart the WebSphere Application Server.
 
 ### JXR
 
 For JXR images, refer to the following steps:
 
-1. In the WebSphere Integrated Solutions Console (WAS admin console), navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
 
-2. Create the `extensiontype.jxr` property:
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+
+3. Create the `extensiontype.jxr` property:
     1. Click **New...**.
     2. Under **Name**, enter `extensiontype.jxr`.
     3. Under **Value**, enter `image/jxr`.
     4. Click **Apply**.
 
-3. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
+4. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
 
     If the property does not exist:
 
@@ -85,14 +89,14 @@ For JXR images, refer to the following steps:
     2. Under **Value**, enter `image/jxr`.
     3. Click **Apply**.
 
-4. Modify the `image.initialFileExtensions` property:
+5. Modify the `image.initialFileExtensions` property:
     1. Locate and click **image.initialFileExtensions**.
     2. Under **Value**, add `JXR` to the existing comma-separated list of extensions.
     3. Click **Apply**.
 
-5. Click **Save** at the top of the console messages.
+6. Click **Save** at the top of the console messages.
 
-6. Configure the MIME type for JXR:
+7. Configure the MIME type for JXR:
     1. Navigate to **Environment** > **Virtual hosts**.
     2. Click the virtual host where WebSphere Portal is installed (for example, **default_host**).
     3. Under **Additional Properties**, click **MIME Types**.
@@ -104,21 +108,23 @@ For JXR images, refer to the following steps:
         4. Click **OK**.
         5. Click **Save** at the top of the console messages.
 
-7. Restart the WebSphere Application Server.
+8. Restart the WebSphere Application Server.
 
 ### SVG
 
 For SVG images, refer to the following steps:
 
-1. In the WebSphere Integrated Solutions Console (WAS admin console), navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
 
-2. Create the `extensiontype.svg` property:
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+
+3. Create the `extensiontype.svg` property:
     1. Click **New...**.
     2. Under **Name**, enter `extensiontype.svg`.
     3. Under **Value**, enter `image/svg+xml`.
     4. Click **Apply**.
 
-3. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
+4. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
 
     If the property does not exist:
 
@@ -133,14 +139,14 @@ For SVG images, refer to the following steps:
     2. Under **Value**, enter `image/svg+xml`.
     3. Click **Apply**.
 
-4. Modify the `image.initialFileExtensions` property:
+5. Modify the `image.initialFileExtensions` property:
     1. Locate and click **image.initialFileExtensions**.
     2. Under **Value**, add `SVG` to the existing comma-separated list of extensions.
     3. Click **Apply**.
 
-5. Click **Save** at the top of the console messages.
+6. Click **Save** at the top of the console messages.
 
-6. Configure the MIME type for SVG:
+7. Configure the MIME type for SVG:
     1. Navigate to **Environment** > **Virtual hosts**.
     2. Click the virtual host where WebSphere Portal is installed (for example, **default_host**).
     3. Under **Additional Properties**, click **MIME Types**.
@@ -152,21 +158,23 @@ For SVG images, refer to the following steps:
         4. Click **OK**.
         5. Click **Save** at the top of the console messages.
 
-7. Restart the WebSphere Application Server.
+8. Restart the WebSphere Application Server.
 
 ### WEBP
 
 For WEBP images, refer to the following steps:
 
-1. In the WebSphere Integrated Solutions Console (WAS admin console), navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
 
-2. Create the `extensiontype.webp` property:
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfig_Service > Custom properties**.
+
+3. Create the `extensiontype.webp` property:
     1. Click **New...**.
     2. Under **Name**, enter `extensiontype.webp`.
     3. Under **Value**, enter `image/webp`.
     4. Click **Apply**.
 
-3. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
+4. Create or modify the `imageresourcecmpnt.allowedmimetypes` property:
 
     If the property does not exist:
 
@@ -181,14 +189,14 @@ For WEBP images, refer to the following steps:
     2. Under **Value**, enter `image/webp`.
     3. Click **Apply**.
 
-4. Modify the `image.initialFileExtensions` property:
+5. Modify the `image.initialFileExtensions` property:
     1. Locate and click **image.initialFileExtensions**.
     2. Under **Value**, add `WEBP` to the existing comma-separated list of extensions.
     3. Click **Apply**.
 
-5. Click **Save** at the top of the console messages.
+6. Click **Save** at the top of the console messages.
 
-6. Configure the MIME type for WEBP:
+7. Configure the MIME type for WEBP:
     1. Navigate to **Environment** > **Virtual hosts**.
     2. Click the virtual host where WebSphere Portal is installed (for example, **default_host**).
     3. Under **Additional Properties**, click **MIME Types**.
@@ -200,4 +208,4 @@ For WEBP images, refer to the following steps:
         4. Click **OK**.
         5. Click **Save** at the top of the console messages.
 
-7. Restart the WebSphere Application Server.
+8. Restart the WebSphere Application Server.

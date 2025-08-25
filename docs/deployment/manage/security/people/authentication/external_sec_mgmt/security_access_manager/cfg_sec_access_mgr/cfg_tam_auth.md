@@ -91,7 +91,7 @@ HCL Digital Experience and IBM WebSphere Application Server support the Trust As
 5.  **Clustered environments:** Complete this step on all nodes.
 
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Digital Experience node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -185,7 +185,7 @@ HCL Digital Experience and IBM WebSphere Application Server support the Trust As
 6.  If you are using junctions that require a Trust Association Interceptor in WebSphere Application Server, you must install and configure the TAI if it was not already set up. To configure the Security Access Manager Trust Association Interceptor (TAI++), complete the following steps:
 
 
-    1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory. Enter the following parameters under the WebSphere Application Server WebSEAL TAI parameters heading:
+    1.  Use a text editor to open the wkplc\_comp.properties file in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory. Enter the following parameters under the WebSphere Application Server WebSEAL TAI parameters heading:
 
 
     2.  Add the TAMTAIName parameter to the WebSphere Application Server WebSEAL TAI section.

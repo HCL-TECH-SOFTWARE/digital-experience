@@ -1,13 +1,14 @@
 title: Administration
 
-av:
-  - index.md
-  - APIToCountWCMItems.md
-  - ClearWCMCaches.md
-  - ClearWebSphereDynacache.md
-  - DataSourceTracing.md
-  - DecodeLongURLs.md
-  - ImproveQueryPerformance.md
-  - RedirectTimeout.md
-  - SupportForAdditionalMIMETypes.md
-  - UseJavaScriptToReplaceText.md
+nav:
+    - index.md
+    - APIToCountWCMItems.md
+    - ClearWCMCaches.md
+    - ClearWebSphereDynacache.md
+    - DataSourceTracing.md
+    - DecodeLongURLs.md
+    - IncreaseTransactionTimeout.md
+    - ImproveQueryPerformance.md
+    - RedirectTimeout.md
+    - SupportForAdditionalMIMETypes.md
+    - UseJavaScriptToReplaceText.md
