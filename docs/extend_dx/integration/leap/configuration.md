@@ -259,7 +259,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
         !!!note
             The SSL certificate (`.crt`) and public key (`.key`) should be in PKCS12 format.
 
-    2. After copying the .key and .crt to the kubernetes image, create a secret using the following command:
+    2. After copying the `.key` and `.crt` to the Kubernetes image, create a secret using the following command:
 
         ```bash
         kubectl -n <namespace> create secret tls <tls_secret> --key="/tmp/oidc.key" --cert="/tmp/oidc.crt"
