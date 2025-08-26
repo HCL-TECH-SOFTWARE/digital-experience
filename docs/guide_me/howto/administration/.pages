@@ -12,3 +12,4 @@ nav:
     - RedirectTimeout.md
     - SupportForAdditionalMIMETypes.md
     - UseJavaScriptToReplaceText.md
+    - SystemReportForCompare.md

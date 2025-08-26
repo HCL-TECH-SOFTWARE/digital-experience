@@ -22,3 +22,5 @@ Learn how to use JavaScript to find and replace text on a Portal page.
 Learn how to troubleshoot Java Database Connectivity (JDBC) datasources using SQL queries.
 - **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.
+- **[How to generate a system report for comparison of different DX environments](SystemReportForCompare.md)**  
+Learn how to create a system report to check DX configuration settings and to compare settings with other DX environments.  
