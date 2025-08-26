@@ -39,5 +39,5 @@ You can also access the Search V2 UI through the Woodburn Studio homepage search
 - To access the Search V2 UI from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
     ![](../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
 
-- To access the Search V2 UI from Practitioner Studio, go to the Practitioner Studio homepage then click the **Open search** icon on the top-left corner of the side navigation panel. The **Search Site** search field will appear, allowing you to utilize its search functionality.
+- To access the Search V2 UI from Practitioner Studio, go to the Practitioner Studio homepage, where you can find the search option in the top toolbar.
     ![](../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
