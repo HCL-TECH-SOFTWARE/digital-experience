@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -46,18 +47,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
 === "Containers"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Notice of deprecation of the Woodburn Studio demo site
 
 === "Containers"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -67,7 +68,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
     To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
-    
+
 ### Automatically apply 9.5 from a later CF installation
 
 === "On-Premises"
@@ -79,6 +80,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+
+### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
+
+=== "Containers"
+    You can now enable Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol when integrating HCL DX with HCL Leap. This approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. For more information, refer to [Configuring HCL Leap for integration with HCL DX - Implementing OIDC SSO](../../extend_dx/integration/leap/configuration.md#implementing-oidc-sso).
 
 ### Guide Me section restructured
 
