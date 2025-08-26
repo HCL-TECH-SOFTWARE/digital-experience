@@ -303,7 +303,6 @@ Each header entry supports the following properties:
 
 - **name**: The name of the HTTP header to be added
 - **value**: The value that should be set for the header
-- **overwriteExisting**: A boolean flag indicating whether to replace an existing header with the same name (`true`) or to add the header as an additional header even if one already exists (`false`)
 
 Example configuration in your `custom-values.yaml`:
 
@@ -313,10 +312,8 @@ networking:
     customHeader:
       - name: X-Content-Type-Options
         value: nosniff
-        overwriteExisting: true
       - name: Referrer-Policy
         value: no-referrer
-        overwriteExisting: false
 ```
 
 ### Removing Headers
