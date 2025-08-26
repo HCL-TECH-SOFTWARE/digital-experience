@@ -1,0 +1,5 @@
+site_name: Troubleshooting
+
+nav:
+- index.md
+- web-browser

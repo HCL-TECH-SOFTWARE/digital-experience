@@ -6,7 +6,7 @@ Learn how to use the Sample Content UI application for HCL Experience API.
 
 The Sample Content UI is a sample application to show developers how the HCL Experience API can be used to build compelling user interfaces using modern technologies. The core UI frameworks being used in the Sample Content UI are React and Redux.
 
-The Sample Content UI offers simple create, update and delete functionalities for HCL Digital Experience web content management articles and solely uses the HCL Experience API to connect to an HCL Digital Experience instance.
+The Sample Content UI offers simple create, update and delete functionalities for HCL Digital Experience (DX) web content management articles and solely uses the HCL Experience API to connect to an HCL DX instance.
 
 The frameworks used in the Sample Content UI are:
 
@@ -24,7 +24,7 @@ This shows how to create a new content:
 -   **[Sample Content UI prerequisites | HCL Experience API](../openapi_prerequisites.md)**  
 There are certain prerequisites that need to be followed before Sample Content UI application can be used.
 -   **[Getting started with Sample Content UI | HCL Experience API](./getting_started_sample_api.md)**  
-Learn how to get started with the Sample Content UI application on HCL Digital Experience 9.5.
+Learn how to get started with the Sample Content UI application on HCL DX 9.5.
 
 ## HCLSoftware U learning materials
 

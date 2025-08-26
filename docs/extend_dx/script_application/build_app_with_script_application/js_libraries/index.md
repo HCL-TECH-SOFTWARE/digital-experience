@@ -1,0 +1,17 @@
+# Third-party JavaScript libraries
+
+You can easily use third-party JavaScript libraries from a Script Application.
+
+Any page-level global JavaScript code can be added to the portal theme. Load JavaScript frameworks and libraries on portal pages that require them by including them in profiles and modules. Do not load frameworks by individual applications. When you load frameworks and libraries through profiles and modules, you can easily share them and avoid colliding and reloading libraries across multiple applications on the page.
+
+- **[Import applications that include links to JavaScript frameworks](import_app_that_links_to_js_framework.md)**  
+To use a JavaScript framework or library from an application, use portal theme modules to load the shared JavaScript. Do not load them from the application.
+
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
+
+???+ info "Related information"
+    - [Understanding the Portal Version 8.5 modularized theme](../../../../build_sites/create_sites/website_building_blocks/themes_profiles_skins/themeopt_defaultparts.md)
+    - [The module framework](../../../../build_sites/themes_skins/the_module_framework/index.md)
+    - [Adding jQuery to a theme](../../../../build_sites/themes_skins/customizing_theme/add_jquery_to_theme/index.md)

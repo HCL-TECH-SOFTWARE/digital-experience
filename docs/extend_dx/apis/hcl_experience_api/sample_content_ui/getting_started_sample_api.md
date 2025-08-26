@@ -6,7 +6,7 @@ Learn how to get started with the Sample Content UI application on HCL Digital E
 
 Follow the steps to get started with Sample Content UI application:
 
-1.  Go to [HCL Software License Portal page](https://www.hcltech.com/software/support/release) and download the Sample Content UI application files.
+1.  Go to [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} and download the Sample Content UI application files.
 
     !!! note
         You will find the sample file inside the CF package: HCL DX 9.5 CFXXX (eg. HCL DX 9.5 CF199) and called hcl-dx-experience-api-sample-ui-vX.X.X.XXXXXXXX-XXX.zip (eg. hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip).

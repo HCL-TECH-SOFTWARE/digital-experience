@@ -10,4 +10,7 @@ HCL People Service can be configured to federate multiple user directories so it
 
 People Service supports user directories compatible with the LDAP protocol such as OpenLDAP and Active Directory. To utilize these directories, People Service requires appropriate configuration and mapping of user properties. This is a one-time setup that needs to be done during the initial configuration of the service.
 
+!!!note
+    Deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+
 Companies frequently store user data in additional or adjacent systems that may not necessarily be compatible with the LDAP protocol. In such cases, People Service can be extended to support custom user directories. It defines a RESTful API schema that custom directories need to follow in order to be integrated with People Service. This allows the service to access user data from a wide range of systems and applications. For more information about custom directories, refer to [Custom RESTful directories](./custom_restful_directories.md).

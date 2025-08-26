@@ -20,7 +20,7 @@ Please be aware that configuring OIDC as the authentication protocol has certain
 
 - Only repository users of the IdP can authenticate through OIDC. Users in other repositories, such as administrative users in the file registry, must bypass OIDC to authenticate.
 
-- This procedure requires that the IdP and HCL DX leverage the same user repository for authentication. Alternatively, you can use Transient Users setup to authenticate, for more details please refer to [Integrating with Transient Users with OpenID Connect](https://opensource.hcltechsw.com/digital-experience/latest/deployment/manage/security/people/authentication/integrate_oid/index.html).
+- This procedure requires that the IdP and HCL DX leverage the same user repository for authentication. Alternatively, you can use Transient Users setup to authenticate, for more details please refer to [Integrating with Transient Users with OpenID Connect](../integrate_oid/index.md).
 
 - Creating users or allowing them to sign up through DX is blocked due to the user management being relocated to the IdP as the primary orchestrator.
 
@@ -49,13 +49,13 @@ Alternatively, you can refer to [Automating OIDC configuration for HCL Digital E
 
 ### Updating WebSphere to support OIDC Authentication for DX
 
-Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-webshpere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. And second being [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
+Setting up OIDC for DX consists of two sides, the first is [Updating WebSphere to support OIDC Authentication for DX](dx-update-websphere-for-oidc.md) for configuring WebSphere Application Server to act as an OpenID Connect Relying Party. And second being [Adjusting the DX Login flow for OIDC](./dx-integration.md) to redirect the user to an IdP login page for authentication.
 
 Additionally, you can further extend this for Transient Users. For more information, see [Additional configuration options](#additional-configuration-options) section.
 
 ### Additional configuration options
 
-- [Updating WebSphere to support OIDC Authentication for DX with Transient Users](./transient-users/dx-update-webshpere-for-oidc-transient-users.md)
+- [Updating WebSphere to support OIDC Authentication for DX with Transient Users](./transient-users/dx-update-websphere-for-oidc-transient-users.md)
 
     This provides information on how you can configure OIDC Authentication for DX using Transient Users, who are trusted and verified by an IdP. These trusted and verified users do not require a local, registered Portal user account.
 
