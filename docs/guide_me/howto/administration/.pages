@@ -3,6 +3,7 @@ title: Administration
 nav:
     - index.md
     - APIToCountWCMItems.md
+    - ClearOSGIandTempFiles.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
     - DataSourceTracing.md
