@@ -1,4 +1,4 @@
-# How-to choice the correct JDBC driver
+# How to choose the correct JDBC driver
 
 ## Applies to
 
@@ -6,51 +6,50 @@
 
 ## Introduction
 
-HCL Digital Experience is a stack product running on IBM traditional WebSphere Application server. The support statement for Java Database Connectivity (JDBC) drivers is similar like described in the traditional WebSphere Application server system requirements pages:
+HCL Digital Experience (DX) is a stack product running on IBM traditional WebSphere Application Server (WAS). Java Database Connectivity (JDBC) driver vendors such as Oracle, Microsoft, and IBM develop JDBC drivers for specific Java versions. Those drivers are usually backward compatible, so they can always be used to connect to older database server versions as well. Ensure that the driver is certified for the specific Java runtime version. For example, if your DX environment is running on Java 7, you need to run a JDBC driver that is certified for Java 7.
 
-[WebSphere Application Server 8.5.x - System Requirements](https://www.ibm.com/support/pages/node/318365){target="_blank"}
+It is possible that JDBC drivers running properly on Java 6 may not run correctly in newer Java versions due to changed API calls that may lead to unexpected runtime behaviors. To avoid incompatibility, database vendors certify their JDBC drivers for specific Java versions. For example, Oracle provides a `ojdbc6.jar` JDBC driver file to run the Oracle JDBC driver on Java 6, `ojdbc7.jar` for Java 7, and so on. For Microsoft, it is named `mssql-jdbc-6.4.0.jre7.jar` for Java 7 and `mssql-jdbc-6.4.0.jre8.jar` for Java 8.
 
-[WebSphere Application Server 9.0.5.x - System Requirements](https://www.ibm.com/support/pages/system-requirements-websphere-application-server-v905){target="_blank"}
+!!! Important
+    It is highly recommended to use only JDBC drivers that are certified for the specific HCL DX Java runtime version, preferably the latest certified version. Before running any JDBC driver on HCL DX, read  the JDBC driver vendor support information to ensure you select the correct driver.
 
-For which in general the following support statement is given:
+HCL DX supports any JDBC driver that is compliant with the JDBC specification 4.0 or earlier. A detailed system requirement information about all supported databases can be found at: [System requirements](../../../get_started/system_requirements/index.md){target="_blank"}.
 
-HCL Digital Experience supports any JDBC driver that is compliant with the JDBC specification 4.0 or earlier. A detailed system requirement information about all supported databases can be found at:
+For more information, refer to the following topics:
 
-[System requirement | HCL Digital Experience](../../../get_started/system_requirements/index.md){target="_blank"}
+- [WebSphere Application Server 8.5.x - System Requirements](https://www.ibm.com/support/pages/node/318365){target="_blank"}
+- [WebSphere Application Server 9.0.5.x - System Requirements](https://www.ibm.com/support/pages/system-requirements-websphere-application-server-v905){target="_blank"}
+
+In this article, you will learn how to choose the correct JDBC driver for your specific HCL DX environment.
 
 ## Instructions
 
-JDBC driver vendors like Oracle, Microsoft and IBM usually developing JDBC drivers for specific java versions. Those drivers are usually backward compatible for which the newest driver then always can be used to connect to older database server versions as well. Important is to ensure that the driver is certified for the specific java runtime version! Which means that when Digital Experience is running on Java 7, it also requires to run a JDBC driver that is certified for java 7. When Digital Experience is running on java 8, the Java 8 certified JDBC driver needs to be used and so on.
+There are three applicable JDBC vendors for HCL DX: IBM DB2, Microsoft, and Oracle. Choose the JDBC drivers that best fit the needs of your specific HCL DX environment:
 
-### Background information
+- [IBM DB2 JDBC drivers](#ibm-db2-jdbc-drivers)
+- [Microsoft JDBC drivers](#microsoft-jdbc-drivers)
+- [Oracle JDBC drivers](#oracle-jdbc-drivers)
 
-It is possible that JDBC drivers that running fine on java 6 are not running correctly anymore on newer java versions like java 7 or java 8. That may happen, because API calls in newer java versions sometimes change for which old drivers are not running correctly anymore and that finally lead to unexpected runtime behaviors. Avoiding incompatibility, database vendors certify their jdbc drivers for specific java versions. For example Oracle provides a `ojdbc6.jar` JDBC driver file for running the Oracle JDBC driver on java 6. They are using a `ojdbc7.jar` file for running the driver on java 7 and so on. A similar jar-file naming will be used for Microsoft JDBC drivers. For example a jdbc driver that can be run on java 7 is named `mssql-jdbc-6.4.0.jre7.jar`, while the java 8 drivers name is `mssql-jdbc-6.4.0.jre8.jar`.
+### IBM DB2 JDBC drivers
 
-### Support Statement and best practice
+You can download the IBM DB2 JDBC drivers in
+[DB2 JDBC Driver Versions and Downloads](https://www.ibm.com/support/pages/db2-jdbc-driver-versions-and-downloads){target="_blank"}.
 
-HCL highly recommend to use only jdbc drivers that are certified for the specific HCL Digital Experience java runtime version. Best practice is to use the latest certified java version driver! Before running any JDBC driver on HCL Digital Experience, please read first the JDBC driver vendor support information to ensure selecting the correct driver.
+Read the driver support matrix and their certified Java versions in
+[JDBC Driver and Database Version Compatibility](https://www.ibm.com/support/pages/jdbc-driver-and-database-version-compatibility){target="_blank"}.
 
-### Information about Oracle JDBC drivers
+### Microsoft JDBC drivers
 
-Oracle JDBC Drivers for the different java versions can be downloaded on page:
-[Oracle Database JDBC driver and Companion Jars Downloads](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html){target="_blank"}
+You can download the Microsoft JDBC drivers in
+[Download Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15){target="_blank"}.
 
-Please check the `Driver Support Matrix` first to ensure downloading the correct driver. For details, see:
+Read the driver support matrix and their certified Java versions in
+[Microsoft JDBC Driver support lifecycle matrix and policy](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix?view=sql-server-ver15){target="_blank"}.
 
-[Frequently Asked Questions](https://www.oracle.com/database/technologies/faq-jdbc.html){target="_blank"}
+### Oracle JDBC drivers
 
-### Information about Microsoft JDBC drivers
+You can download the Oracle JDBC drivers in
+[Oracle Database JDBC driver and Companion Jars Downloads](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html){target="_blank"}.
 
-Microsoft JDBC Drivers can be downloaded on page:
-[Download Microsoft JDBC Driver for SQL Server](https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15){target="_blank"}
-
-The Driver Support Matrix for Microsoft JDBC Drivers and their certified java versions can be found on page:
-[Microsoft JDBC Driver support lifecycle matrix and policy](https://learn.microsoft.com/en-us/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix?view=sql-server-ver15){target="_blank"}
-
-### Information about IBM DB2 JDBC Drivers
-
-IBM JDBC Drivers can be downloaded on page:
-[DB2 JDBC Driver Versions and Downloads](https://www.ibm.com/support/pages/db2-jdbc-driver-versions-and-downloads){target="_blank"}
-
-The Driver Support Matrix information can be found on page:
-[JDBC Driver and Database Version Compatibility](https://www.ibm.com/support/pages/jdbc-driver-and-database-version-compatibility){target="_blank"}
+Read the driver support matrix and their certified Java versions in
+[Frequently Asked Questions](https://www.oracle.com/database/technologies/faq-jdbc.html){target="_blank"}.
