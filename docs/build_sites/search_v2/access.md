@@ -21,9 +21,9 @@ See the Search V2 user interface below.
 
 ![](../../assets/HCL_Search_Landing_Page.png "HCL Search Landing Page")
 
-## The Search V2 UI
+## The Search V2 UI(Search page)
 
-The Search V2 UI has the following components:
+The Search V2 UI(Search page) has the following components:
 
 ![](../../assets/HCL_Search_03_End_user_Search_Results.png)
 
@@ -32,12 +32,12 @@ The Search V2 UI has the following components:
 -   **Search Output** - This section displays the search results, with each result having its own title and description. Depending on your content source, search results may also provide detailed context. You can also click the title of a search result to open it in a new tab.
 -   **Pagination** - This section lists the number of pages you can view to check the search results.
 
-## Other ways of accessing the Search V2 UI
+## Other ways of accessing the Search V2 UI(Search page)
 
-You can also access the Search V2 UI through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can utilize the search results or initiate a new search. For more information, refer to [Using Search V2](./usage.md).
+You can also access the Search V2 UI(Search page) through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can use the search results or initiate a new search. For more information, refer to [Using Search V2](./usage.md).
 
-- To access the Search V2 UI from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
+- To access the Search V2 UI(Search page) from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
     ![](../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
 
-- To access the Search V2 UI from Practitioner Studio, go to the Practitioner Studio homepage, where you can find the search option in the top toolbar.
+- To access the Search V2 UI(Search page) from Practitioner Studio, go to the Practitioner Studio homepage, where you can find the search option in the top toolbar.
     ![](../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
