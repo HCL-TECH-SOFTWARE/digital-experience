@@ -123,6 +123,8 @@ HCL DX 9.5 requires JDK 7.0* or later for installation.
 
 *The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).
 
+*Customers that are still using JDK 7.0 with WAS 8.5.5 will only be able to use the out-of-the-box, default CKEditor provided with HCL Digital Experience (DX).
+
 ## Databases
 
 !!!note
