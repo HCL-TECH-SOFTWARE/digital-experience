@@ -13,9 +13,9 @@ After configuring the image in your HCL DX 9.5 CF224 deployment, you can access 
 
 ## Accessing Search V2 from Practitioner Studio
 
-To access Search V2 from the Practitioner Studio, log in to your HCL Digital Experience 9.5 platform, and select **Search** from the Practitioner Studio homepage.
+To access Search V2 from Practitioner Studio, log in to your HCL Digital Experience 9.5 platform, and perform a search from the Practitioner Studio homepage by entering your query and pressing Enter.
 
-![](../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
+![](../../assets/HCL_DX_95_Practitioner_Studio_search.png "Log in to HCL Digital Experience 9.5")
 
 See the Search V2 user interface below.
 
