@@ -92,5 +92,3 @@ plugins:
   - mike:
       canonical_version: latest
       alias_type: redirect
-  - git-revision-date-localized:
-      type: date
