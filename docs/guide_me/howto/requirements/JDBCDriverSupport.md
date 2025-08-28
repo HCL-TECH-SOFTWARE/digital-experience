@@ -6,6 +6,8 @@
 
 ## Introduction
 
+In this article, you will learn how to choose the correct JDBC driver for your specific HCL DX environment.
+
 HCL Digital Experience (DX) is a stack product running on IBM traditional WebSphere Application Server (WAS). Java Database Connectivity (JDBC) driver vendors such as Oracle, Microsoft, and IBM develop JDBC drivers for specific Java versions. Those drivers are usually backward compatible, so they can always be used to connect to older database server versions as well. Ensure that the driver is certified for the specific Java runtime version. For example, if your DX environment is running on Java 7, you need to run a JDBC driver that is certified for Java 7.
 
 It is possible that JDBC drivers running properly on Java 6 may not run correctly in newer Java versions due to changed API calls that may lead to unexpected runtime behaviors. To avoid incompatibility, database vendors certify their JDBC drivers for specific Java versions. For example, Oracle provides a `ojdbc6.jar` JDBC driver file to run the Oracle JDBC driver on Java 6, `ojdbc7.jar` for Java 7, and so on. For Microsoft, it is named `mssql-jdbc-6.4.0.jre7.jar` for Java 7 and `mssql-jdbc-6.4.0.jre8.jar` for Java 8.
@@ -19,8 +21,6 @@ For more information, refer to the following topics:
 
 - [WebSphere Application Server 8.5.x - System Requirements](https://www.ibm.com/support/pages/node/318365){target="_blank"}
 - [WebSphere Application Server 9.0.5.x - System Requirements](https://www.ibm.com/support/pages/system-requirements-websphere-application-server-v905){target="_blank"}
-
-In this article, you will learn how to choose the correct JDBC driver for your specific HCL DX environment.
 
 ## Instructions
 
