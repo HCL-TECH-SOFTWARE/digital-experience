@@ -20,7 +20,7 @@ To resolve this problem, edit the content source, select the **General Parameter
 
 ## Memory required for crawls
 
-Depending on your Portal Search environment, crawling can require large amounts of memory. Therefore, before you start a crawl, make sure that HCL Portal has enough free memory. Memory shortage can cause a corrupted search collection and eventually lead to a system freeze.
+Depending on your Portal Search environment, crawling can require large amounts of memory. Therefore, before you start a crawl, make sure that HCL Digital Experience (DX) has enough free memory. Memory shortage can cause a corrupted search collection and eventually lead to a system freeze.
 
 To resolve this problem, raise the limit of the number of open files by using the `ulimit` command as root administrator.
 
@@ -55,7 +55,7 @@ Furthermore, these time limits influence other status indicators given in the Ma
 Clicking **Start Crawler** updates the contents of the content source by a new run of the crawler. During the run, the icon changes to **Stop Crawler**. You can click to end the run. Portal Search refreshes different content sources as follows:
 
 -   For website content sources, documents that were indexed before and still exist in the content source are updated. Documents that were indexed before, but no longer exist are retained in the search collection. Documents that are new in the content source are indexed and added to the collection.
--   For HCL Portal sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
+-   For HCL DX sites, the crawl adds all pages and portlets to the content source. It deletes portlets and static pages from the content source that were removed from the portal. The crawl works similarly to the option **Regather documents from Content Source**.
 -   For HCL Web Content Manager sites, Portal Search uses an incremental crawling method. In additions to added and updated content, the Seedlist explicitly specifies deleted content. In contrast, clicking **Regather documents from Content Source** starts a full crawl. It does not continue from the last session, and it is not incremental.
 -   For content sources created with the seedlist provider option, a crawl on a remote system that supports incremental crawling, such as HCL Connections, behaves like a crawl on a Web Content Manager site.
 

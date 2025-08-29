@@ -27,10 +27,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Sample integrations of HCL Leap
 
 === "Containers"
-    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example.md) for more information.
 
 === "On-Premises"
-    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example/index.md) for more information.
+    A new document presenting configuration instructions to display [HCL Leap](https://help.hcltechsw.com/Leap/welcome/index.html) apps in Digital Experience site pages is now available. See the Help Center topic [Sample integrations of HCL Leap with HCL Digital Experience](../../extend_dx/integration/leap/example.md) for more information.
 
 ### Sample integrations of HCL Volt MX Foundry and Iris
 
@@ -104,5 +104,5 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
 

@@ -1,0 +1,10 @@
+title: HCL People Service
+nav:
+    - index.md
+    - Deployment: deployment
+    - Administration: administration
+    - Integration: integration
+    - People Service API: api
+    - User guides: user_guides
+    - limitations.md
+    - ...

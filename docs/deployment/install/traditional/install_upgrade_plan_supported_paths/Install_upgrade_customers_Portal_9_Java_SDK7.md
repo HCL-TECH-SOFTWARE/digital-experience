@@ -1,9 +1,10 @@
-# Installation and upgrade for customers running on Portal 9.0 on WAS 8.5/9.0 and Java SDK 7.0
+# Installation and upgrade for customers running on DX 9.0 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0
 
-This guide shows how to upgrade your HCL Portal 9.0 environment to HCL Portal 9.5 and either staying at IBM WebSphere Application Server ND 8.5.x or migrating the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.
+This guide shows how to upgrade your HCL Digital Experience (DX) 9.0 environment to HCL DX 9.5. Information on how to migrate the WAS layer to IBM WebSphere Application Server ND Version 9.0.5.x is also available.
 
 ## Preparing the environment
-Before you install HCL Digital Experience, review the [hardware and software requirements](../../../../get_started/system_requirements/index.md) to ensure that you have the supported versions of prerequisite and co-requisite software and the required hardware.
+
+Before you install HCL Digital Experience (DX), review the [hardware and software requirements](../../../../get_started/system_requirements/index.md) to ensure that you have the supported versions of prerequisite and co-requisite software and the required hardware.
 
 Make sure to also review the [detailed requirements article](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013514) to ensure that your system meets or exceeds the minimum requirements provided by HCL.
 
@@ -73,8 +74,8 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
 Read the installation instructions and additional system consideration before applying a cumulative fix to a stand-alone, cluster, remote search and farm portal installation or to roll back the cumulative fix.
 
-    !!! note
-        There are several different methods to install the cumulative fix as stated on [Combined Cumulative Fix Strategy](../../traditional/cf_install/index.md) page. The sample procedure below is using a Graphical User Interface.
+!!! note
+    There are several different methods to install the cumulative fix as stated on [Combined Cumulative Fix Strategy](../../traditional/cf_install/index.md) page. The sample procedure below is using a Graphical User Interface.
 
 Portal now needs to be upgraded to CF17 to support the installation of HCL Portal 9.5.
 
@@ -188,7 +189,7 @@ Make sure the server is stopped before doing the following steps:
 
 This completes the upgrade to HCL Portal 9.5 standalone.
 
-## Optional: Migrate your IBM WebSphere Application Server to 9.0.5
+## (Optional) Migrate your IBM WebSphere Application Server to 9.0.5
 
 WebSphere Application Server 9.0.5 is only supported on HCL Digital Experience 9.5. You should first upgrade to HCL Portal 9.5 before you migrate to IBM WebSphere Application Server 9.0.5.
 
@@ -207,4 +208,4 @@ Starting with HCL Digital Experience Combined fix pack 12, you can change your S
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461).
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

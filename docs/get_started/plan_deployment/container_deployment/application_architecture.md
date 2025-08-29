@@ -85,11 +85,83 @@ The Runtime Controller incorporates runtime management functions for the entire 
 
 This matrix shows which HCL DX applications have dependencies on other applications. The matrix also shows sub-dependencies. For example, if an application uses Ring API, it also depends on an operational DX 9.5 Core instance.
 
-![HCL DX 9.5 Helm deployment application dependencies](../../../images/HCL%20DX%209.5%20Helm%20deployment%20application%20dependencies.png "HCL DX 9.5 Helm deployment application dependencies")
+<table>
+    <tr>
+      <td colspan="7"><center><b>Application</b></center></td>
+    </tr>
+    <tr>
+      <td><td>
+      <td><b>Core</b></td>
+      <td><b>Ring API</b></td>
+      <td><b>CC<b></td>
+      <td><b>DAM</b></td>
+      <td><b>PER</b></td>
+      <td><b>IMG</b></td>
+    </tr>
+      <tr>
+      <td rowspan="7"><center><b>Dependency</b></center></td>
+    </tr>
+    <tr>
+      <td><b>Core</b></td>
+      <td></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td><b>Ring API</b></td>
+      <td></td>
+      <td></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td><b>CC</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td><b>DAM</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td><b>PER</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td></td>
+      <td></td>
+    </tr>
+      <tr>
+      <td><b>IMG</b></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><center><span>&#10003;</span></center></td>
+      <td></td>
+      <td></td>
+    </tr>
+</table>
+<!--
+![HCL DX 9.5 Helm deployment application dependencies](../../../images/HCL%20DX%209.5%20Helm%20deployment%20application%20dependencies.png "HCL DX 9.5 Helm deployment application dependencies") -->
 
 Application names are defined as follows:
 
-|Short name|Full Name|
+|Short name|Full name|
 |---------|---------|
 |Core|HCL DX 9.5 Core|
 |Ring API|Ring API|
@@ -98,7 +170,7 @@ Application names are defined as follows:
 |PER|Persistence|
 |IMG|Image Processor|
 
-???info "Related information"
+???+info "Related information"
     -   [HCL DX Experience API](../../../extend_dx/apis/hcl_experience_api/index.md)
     -   [Content Composer](../../../manage_content/wcm_authoring/content_composer/index.md)
     -   [Digital Asset Management](../../../manage_content/digital_assets/index.md)

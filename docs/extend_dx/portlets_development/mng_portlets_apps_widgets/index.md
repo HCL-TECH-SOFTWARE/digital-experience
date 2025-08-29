@@ -26,9 +26,9 @@ Web modules can be deleting or uninstalled in Manage Web Modules and portlet app
 When you access a portlet in HCL Digital Experience, the portal appends an anchor to the portlet URL. If several portlets are arranged vertically on a page, this appended anchor forces the browser to scroll down to the portlet rather than display the start of the page. You might prefer to have the start of the page that is displayed, even if the link that was clicked points to a portlet, which is placed further down on the page. To achieve this, you can disable the anchors.
 -   **[Managing iWidgets in your portal](../mng_portlets_apps_widgets/managing_iwidgets/index.md)**  
 You can add iWidgets to your HCL Digital Experience.
--   **[Portlet management](portlet_management)**  
+-   **[Portlet management](portlet_management/index.md)**  
 Manage the portlets and Web services that the site uses.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on developing Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784). To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf).
+For an introduction and a demo on developing Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2784){target="_blank"}. To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf){target="_blank"}.

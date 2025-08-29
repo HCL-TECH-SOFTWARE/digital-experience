@@ -15,12 +15,12 @@ Configure the communication between HCL Portal and your HCL Domino web server.
 
 4.  Web 2.0 REST features in portal might require an enabled PUT and DELETE method. If your web server has these methods disabled, complete one of the following options:
 
-    -   Enable HTTP tunneling to simulate PUT and DELETE requests, which means that POST requests are used instead. See the [Switch for tunneling of HTTP methods](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/extend_dx/apis/puma_spi/remote_rest_service_for_puma/remote_puma_rest_svc_implementation/uprof_rest_wp_tnlhttp) link for information.
+    -   Enable HTTP tunneling to simulate PUT and DELETE requests, which means that POST requests are used instead. See the [Switch for tunneling of HTTP methods](../../../../extend_dx/apis/puma_spi/remote_rest_service_for_puma/remote_puma_rest_svc_implementation/uprof_rest_wp_tnlhttp.md) link for information.
     -   Follow the instructions for your web server to enable PUT and DELETE requests.
     
 5.  Start the web server.
 
-6.  If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read [Providing short vanity URLs](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short).
+6.  If you want to use the short version of vanity URLs, add a rewrite rule to your web server. For more information, read [Providing short vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md).
 
 
 

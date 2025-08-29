@@ -1,6 +1,6 @@
 # Configure Remote Search
 
-This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, please see [Remote search service](../../../../build_sites/search/remotesearch/)
+This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments. This guidance is for containerized deployments running on Kubernetes. If you are looking for guidance on configuration of Remote Search for non-containerized deployments, see [Remote search service](../../../build_sites/search/remotesearch/index.md)
 
 ## Introduction
 
@@ -12,12 +12,12 @@ From release CF211 onwards, you can either use the automated configuration contr
 The configuration is a one-off process. Once you have Remote Search configured, the settings that were changed are persisted in the corresponding Pods Persistent Volumes and will persist after future updates to newer CF releases of HCL Digital Experience.
 
 !!!warning
-    If you have configured search collections already and want them and their index backed up, see the topic [Exporting and importing search collections](../../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp/) for further information.  
+    If you have configured search collections already and want them and their index backed up, see the topic [Exporting and importing search collections](../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/srtexpimp.md) for further information.  
 
     The process of configuring Remote Search will include deleting the default Search Service and its corresponding Search collections.
 
 !!!warning
-    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../../security/people/authentication/updating_userid_pwd/wpsadmin) for more information.
+    If you change your administrative user password, you have to adjust the security configuration of your Search Collection Sources, otherwise they cannot be crawled. Refer to [Changing the HCL Digital Experience administrator password](../security/people/authentication/updating_userid_pwd/wpsadmin.md) for more information.
 
 !!!warning
     If you see that the Remote Search Service in the DX Search Administration is unavailable after a DX Remote Search Pod restart, it may be required to restart DX Core as well. You can use the following command to perform a ripple restart of all DX Core Pods:
@@ -47,7 +47,7 @@ Before you can leverage the automated configuration, you need to be aware on cer
 
 ### Configuration properties
 
-To leverage the automated configuration, you will need to adjust the `custom-values.yaml` that you are using for your Helm deployment. (See [Custom value files](../../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration/#custom-value-files)).
+To leverage the automated configuration, you will need to adjust the `custom-values.yaml` that you are using for your Helm deployment. See [Custom value files](../../install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#custom-value-files).
 
 Inside your `custom-values.yaml` you can configure the following section to leverage Remote Search automated configuration:
 
@@ -254,7 +254,7 @@ kubectl cp dx-core-0:/home/dx_user/LTPAKeyExported ./LTPAKeyExported -c core -n 
 ### Configure the Remote Search Pod
 
 !!!note
-    Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the **core** pod and the WebSphere Application Server running in the **remote-search** pod. See the topics [Single sign-on for authentication using LTPA cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies) and [Creating a single-sign on domain between HCL Portal and the remote search service](../../../build_sites/search/remotesearch/sso_portal_rss.md) for pre-requisites and instructions for setting up SSO.
+    Before configuring the remote search pod, you must set up single sign-on (SSO) between the WebSphere Application Server running in the **core** pod and the WebSphere Application Server running in the **remote-search** pod. See the topics [Single sign-on for authentication using LTPA cookies](https://www.ibm.com/docs/en/was/9.0.5?topic=authentication-single-sign-using-ltpa-cookies){target="_blank"} and [Creating a single-sign on domain between HCL Portal and the remote search service](../../../build_sites/search/remotesearch/sso_portal_rss.md) for pre-requisites and instructions for setting up SSO.
 
 Copy the LTPA Key exported from DX Core into the Remote Search Pod:
 
@@ -309,7 +309,7 @@ rm -f /opt/app/configInProgress
 
 #### New Search Service
 
-Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_service.html)<!-- (../../9.0/admin-system/create_search_service.md) --> for more information.
+Create a new search service and use the following values for a Remote Search services configuration to a Kubernetes container deployment. See the section on [Creating a new search service](../../../build_sites/search/remotesearch/cfg_remotesearch_service/create_search_service.md)<!-- (../../9.0/admin-system/create_search_service.md) --> for more information.
 
 For **Search Services** configuration, the following values are used:
 
@@ -332,9 +332,24 @@ For **Search Services** configuration, the following values are used:
 
 Based on the previously created Remote Search service, create a **Portal Search Collection** and a **JCR Search Collection** using the following parameters.
 
+##### Selecting the right host for the search collections
+
+When you run crawlers, it is important that they always use the pod to retrieve their data because the seedlist providers are not shared between pods. In the following examples, a placeholder for the host is used. Replace this placeholder with the correct host name.
+
+The host is composed of the deployment name used in the `helm install` command and the namespace. The port number is the secure port of the DX Core pod and is `10042` by default.
+
+This is the pattern for the hostname: `<dx-deployment>-core-<n>.<dx-deployment>-core.<namespace>.svc.cluster.local`.
+
+The following example shows you how to replace the placeholder with the correct hostname and port number:
+
+- Deployment name: `dx-deployment`
+- Namespace: `dxns`
+
+The resulting hostname for pod 0 looks like this: `dx-deployment-core-0.dx-deployment-core.dxns.svc.cluster.local`.
+
 ##### Portal Search Collection
 
-Use the following parameters to create a [Portal search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/create_search_coll.html)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
+Use the following parameters to create a [Portal search collection](../../../build_sites/search/remotesearch/cfg_remotesearch_service/create_search_coll.md)<!-- (../../9.0/admin-system/create_search_coll.md) -->.
 
 |Parameter|Value|
 |---------|-----|
@@ -344,7 +359,7 @@ Use the following parameters to create a [Portal search collection](https://help
 !!!note
     The `Search collection location` is relative to the remote search container. Furthermore, one places the collection in the **profile** of the Remote Search server because the profile of the remote search server is persisted. One obviously wants the search indexes persisted across restarts.
 
-Create the two following Content Sources:
+Create the following Content Sources:
 
 ###### Portal Content Source
 
@@ -352,29 +367,23 @@ Create the two following Content Sources:
 |---------|-----|
 |Content Source Type|Portal Site|
 |Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core-service:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments&Range=100`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
-
-!!!tip
-    Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ###### WCM Content Source
 
 |Parameter|Value|
 |---------|-----|
-|Content Source Type|Seedlist provider|
-|Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core-service:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
+|Content Source Type|WCM Site|
+|Content Source Name|WCM Content Source|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042//wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
-
-!!!tip
-    Note: The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server.  Adjust this according to your deployment configuration.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 ##### JCR Search Collection
 
-Use the following parameters to create a Content Source [JCR search collection](https://help.hcltechsw.com/digital-experience/9.5/admin-system/srtcfg_jcr_colls.html)<!-- (../admin-system/srtcfg_jcr_colls.md) -->.
+Use the following parameters to create a Content Source [JCR search collection](../../../build_sites/search/portal_search/administer_portal_search/setup_search_collections/jcr_search_collections/index.md)<!-- (../admin-system/srtcfg_jcr_colls.md) -->.
 
 |Parameter|Value|
 |---------|-----|
@@ -392,13 +401,12 @@ Create the following Content Source:
 |---------|-----|
 |Content Source Type|Seedlist provider|
 |Content Source Name|Portal Content Source|
-|Collect documents linked from this URL|`https://dx-core:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
+|Collect documents linked from this URL|`https://<dx-core-pod-hostname>:10042/wps/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`|
 
-In the `Security` panel, use the DX Core Service name (e.g., `dx-core`) as the host name, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
+In the `Security` panel, use the specified DX Core Pod hostname, along with the username `wpsadmin` and the associated password for `wpsadmin`. You can also specify Realm as CrawlerUsersRealm.
 
 !!!note "Notes"
     - Click the **create** button to create the security realm definition inside the frame where you first entered the data. This action ensures that you have the security realm defintion before saving the content source.
-    - The host `dx-core` and port `10042` are the Kubernetes service host and the port for DX Core. In this case, 10042 is the HttpQueueInboundDefaultSecure port on the HCL DX 9.5 server. Adjust this according to your deployment configuration.
     - The parsing of the `SeedlistId` positional parameter in this URL uses an index of the virtual portal being crawled. In this case, 1 (in 2 places) represents the base virtual portal.
 
 

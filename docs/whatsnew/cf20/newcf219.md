@@ -74,12 +74,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
 
-    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md).
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../extend_dx/script_application/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 === "On-Premises"
     You can now use React 17 and 18 modules in your own theme. For information about adding or removing modules, see [Adding or removing a module from a profile](../../build_sites/themes_skins/the_module_framework/add_remove_oob_modules/index.md).
 
-    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../guide_me/tutorials/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
+    Developers can integrate React [Script Applications](../../extend_dx/script_application/index.md) and [portlets](../../extend_dx/portlets_development/index.md) into DX pages that are developed with recent React versions. <!-- However, note that you must not use portlets with different React versions on the same page.-->For information on how to manage DX modules manually, see [Dependencies as DX Modules](../../extend_dx/script_application/scriptapps/common-setup/optimized-scriptapps/dependencies_as_module.md). 
 
 ### DXClient - Update on required access roles
 
@@ -93,18 +93,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - Multiple environment configuration option in node version
 
 === "Containers"
-    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/index.md#configuring-multiple-environments-in-dxclient). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-source-code-package) is also updated to include instructions on configuring multiple environments. 
+    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-multiple-environments). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/installing_dxclient.md) is also updated to include instructions on configuring multiple environments.
 
 === "On-Premises"
-    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/index.md#configuring-multiple-environments-in-dxclient). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-source-code-package) is also updated to include instructions on configuring multiple environments. 
+    You can configure multiple environments in the node version of DXClient. For more information, see [Configuring multiple environments in DXClient](../../extend_dx/development_tools/dxclient/configuring_dxclient.md#configuring-multiple-environments). [Installing DXClient using the source code package](../../extend_dx/development_tools/dxclient/installing_dxclient.md) is also updated to include instructions on configuring multiple environments.
 
 ### New documentation about searching the DX Help Center
 
 === "Containers"
-    A new topic containing tips on how to improve your search and find the information you need in the HCL DX Help Center is now available. For more information, see [Tips for searching the Help Center](../../guide_me/search_tips.md).
+    A new topic containing tips on how to improve your search and find the information you need in the HCL DX Help Center is now available. For more information, see [Tips for searching the Help Center](../../guide_me/glossary/search_tips.md).
 
 === "On-Premises"
-    A new topic containing tips on how to improve your search and find the information you need in the HCL DX Help Center is now available. For more information, see [Tips for searching the Help Center](../../guide_me/search_tips.md).
+    A new topic containing tips on how to improve your search and find the information you need in the HCL DX Help Center is now available. For more information, see [Tips for searching the Help Center](../../guide_me/glossary/search_tips.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -163,4 +163,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

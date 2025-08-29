@@ -5,13 +5,16 @@ Learn how to configure the AI analysis feature for WCM Content in a traditional,
 !!!note
 	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
 
+Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
+Starting CF224, AI Workflows and AI Translation are available.
+
 ## Content AI provider overview
 
 ### OpenAI ChatGPT overview
 
-OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground), you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
+OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground){target="_blank"}, you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
-For privacy and API availability and other conditions, see the [OpenAI](https://openai.com) website or contact the OpenAI team.
+For privacy and API availability and other conditions, see the [OpenAI](https://openai.com){target="_blank"} website or contact the OpenAI team.
 
 ## Configure the engine task for enabling content AI analysis
 
@@ -24,7 +27,7 @@ To enable content AI analysis:
     !!!note
         - Possible values for the ```ContentAIProvider``` parameter are ```OPEN_AI``` or ```CUSTOM```.
         - If the ```ContentAIProvider``` value is set as ```OPEN_AI```, the value set for the parameter ```CustomAIClassName``` is ignored.
-        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the custom content AI provider implementation class in the ```CustomAIClassName``` parameter . For example, enter ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-ai-class-for-custom-content-ai-provider) for more information about how to implement a custom content AI provider class.
+        - If ```ContentAIProvider``` value is set as ```CUSTOM```, set the custom content AI provider implementation class in the ```CustomAIClassName``` parameter . For example, enter ```com.ai.sample.CustomerAI```. Refer to [Configuring AI Class for Custom Content AI Provider](./wcm_ai_analysis.md#configuring-an-ai-class-for-a-custom-content-ai-provider) for more information about how to implement a custom content AI provider class.
         - Depending on the ```ContentAIProvider``` value, set the correct API key of the respective provider in the ```ContentAIProviderAPIKey``` parameter.
 
 2. Validate that all the required configurations are added.
@@ -45,7 +48,7 @@ To enable content AI analysis:
 
 Only administrators can configure an AI class to use a custom content AI provider.
 
-1. Write the Custom Content AI Provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration``` interface.
+1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration```. Optionally, starting CF224, you can also implement the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
 	1. Create the JAR file.
 
@@ -61,9 +64,10 @@ Only administrators can configure an AI class to use a custom content AI provide
 	import java.util.ArrayList;
 	import java.util.List;
 	import com.hcl.workplace.wcm.restv2.ai.IAIGeneration;
+	import com.hcl.workplace.wcm.restv2.ai.IAITranslation;
 	import com.ibm.workplace.wcm.rest.exception.AIGenerationException;
 
-	public class CustomerAI implements IAIGeneration {
+	public class CustomerAI implements IAIGeneration, IAITranslation {
 
 		@Override
 		public String generateSummary(List<String> values) throws AIGenerationException {
@@ -83,6 +87,12 @@ Only administrators can configure an AI class to use a custom content AI provide
 		public Sentiment generateSentiment(List<String> values) throws AIGenerationException {
 			// Call the custom AI Service to get the custom AI generated sentiment
 			return Sentiment.POSITIVE;
+		}
+
+		public String translate(String value, Locale language) throws AIGenerationException
+		{
+			// Call the custom AI Service to translate the value
+			return "translated";
 		}
 
 	}

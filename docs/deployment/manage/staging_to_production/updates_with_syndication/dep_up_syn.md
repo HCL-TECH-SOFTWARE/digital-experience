@@ -24,12 +24,16 @@ If managed pages are enabled and you are using syndication as part of the stagin
 
 The ExportManagedPagesRelease.xml file or a Portal Application Archive (PAA) file is available for exporting all artifacts except pages and wires. For details on using this file, see *Staging artifacts that are not transferred by syndication* or *Creating a differential release*.
 
+## HCLSoftware U learning materials
 
-**Related information**  
-[Administering vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/index.md)<br>
-[Syndication](../../../../manage_content/wcm_delivery/syndication/index.md)<br>
-[Syndication relationships](../../../../manage_content/wcm_delivery/syndication/wcm_syndication_overview.md)<br>
-[Staging artifacts that are not transferred by syndication](../../staging_to_production/updates_with_syndication/dep_up_syn_staging.md)<br>
-[Creating the differential release](../../staging_to_production/creating_deploying_diff_release/dep_diff.md)<br>
-[The XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
 
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+
+???+ info "Related information" 
+    - [Administering vanity URLs](../../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/index.md)<br>
+    - [Syndication](../../../../manage_content/wcm_delivery/syndication/index.md)<br>
+    - [Syndication relationships](../../../../manage_content/wcm_delivery/syndication/wcm_syndication_overview.md)<br>
+    - [Staging artifacts that are not transferred by syndication](../../staging_to_production/updates_with_syndication/dep_up_syn_staging.md)<br>
+    - [Creating the differential release](../../staging_to_production/creating_deploying_diff_release/dep_diff.md)<br>
+    - [The XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)

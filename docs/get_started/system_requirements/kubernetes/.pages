@@ -1,3 +1,4 @@
 nav:
     - kubernetes-runtime.md
     - databases.md
+    - imds_limit.md

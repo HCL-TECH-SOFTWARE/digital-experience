@@ -1,6 +1,6 @@
 # Dynamic list-rendering contexts
 
-The Digital Data Connector \(DDC\) for HCL Portal makes it possible to dynamically set or modify the list-rendering context. For this purpose, it supports a defined set of public render parameters.
+The Digital Data Connector \(DDC\) for HCL Digital Experience allows you to dynamically set or modify the list-rendering context. For this purpose, it supports a defined set of public render parameters.
 
 The Web Content Viewer portlet registers these parameters. This registration makes read and write access to these parameters possible in two ways:
 

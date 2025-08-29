@@ -2,5 +2,19 @@
 
 This section provides an overview of the possibilities offered by the integration of HCL Volt MX Foundry and HCL Digital Experience (DX). The following examples show options to integrate HCL Volt MX into HCL DX pages and to use HCL DX APIs in Volt MX Foundry.
 
--   **[Integrating Volt MX data or applications into HCL DX](./integrate_voltmx_into_dx.md)**
--   **[Using HCL DX APIs in HCL Volt MX Foundry](./dx_apis_in_foundry.md)**
+- **[Using HCL DX APIs in HCL Volt MX Foundry](./integrate_dx_api_mx.md)**  
+This topic explains how to integrate HCL DX APIs into HCL Volt MX Foundry using the new HCL DX Content Adapter.
+- **[Integrating Volt MX data and applications into HCL DX](./integrate_mx_data_to_dx.md)**  
+This guide explains how to display Volt MX Foundry data on HCL DX pages using Digital Data Connector (DDC) and embed a Volt MX web application directly into an HCL DX page using the Web Application Bridge (WAB).
+- **[Deploying HCL Volt MX portlets into HCL DX](./integrate_mx_portlet_to_dx.md)**  
+This guide shows you how to generate a Volt MX portlet using Iris, deploy it into HCL Digital Experience (DX), and verify that the portlet renders correctly on a DX page.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to integrate DX with HCL Volt MX as a business user, go to [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747){target="_blank"}. To try it out yourself, refer to [DX Integration with
+HCL Volt MX for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Volt_MX_for_Business_Users.pdf){target="_blank"}.
+
+For an introduction and a demo on how to integrate DX with HCL Volt MX as a developer, go to [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458){target="_blank"}. To try it out yourself, refer to [DX Integration with
+HCL Volt MX for Developers Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_Integration_with_HCL_Volt_MX_for_Developers.pdf){target="_blank"}.
+
+You can also use the dedicated course [HCL Volt MX Integration with HCL DX](https://hclsoftwareu.hcltechsw.com/courses/course/hvmx-int-hdx-integrate-hcl-volt-mx-with-hcl-digital-experience){target="_blank"}. This course explains the benefits of integrating HCL Volt MX with HCL DX and provides integration guidance for business users, developers, and administrators.

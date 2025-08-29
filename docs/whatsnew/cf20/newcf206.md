@@ -54,7 +54,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Since the sample application is platform agnostic, the same code can be run as a portlet or mobile app, allowing reuse over multiple devices and platforms. [Access the application here](https://github.com/HCL-TECH-SOFTWARE/sample-react-script-application).
 
-    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../guide_me/tutorials/scriptapps/index.md)
+    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../extend_dx/script_application/scriptapps/index.md)
 
 === "On-Premises"
 
@@ -62,7 +62,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Since the sample application is platform agnostic, the same code can be run as a portlet or mobile app, allowing reuse over multiple devices and platforms. [Access the application here](https://github.com/HCL-TECH-SOFTWARE/sample-react-script-application).
 
-    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../guide_me/tutorials/scriptapps/index.md)
+    For more information on how to deploy a Sample React App, refer to the following How-to guide: [Deploy a ReactJS App as a Script Application](../../extend_dx/script_application/scriptapps/index.md)
 
 ## The new HCL Digital Experience Help Center
 
@@ -70,4 +70,4 @@ At HCL, we are continuously improving the quality and overall user experience of
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

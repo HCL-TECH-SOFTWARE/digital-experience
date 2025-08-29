@@ -15,7 +15,7 @@ DXConnect has to be installed manually on on-premise environments.
 
 DXConnect requires the `cw_profile` Administrator security role to access the application servlet APIs.
 
-## DXConnect Installation (only applicable for on-premises installations)
+## Installing DXConnect (only applicable for on-premises installations)
 
 To install DXConnect under Configuration Wizard server, you must issue the command to the ConfigEngine script present under 'wp_profile'.
 Navigate to the ConfigEngine script location under 'wp_profile':
@@ -74,6 +74,12 @@ In Kube Environments:
 ```
 https://YOUR_KUBE_ENV_NAME.com:10203/ibm/console
 ```
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [DXClient](../dxclient/index.md)

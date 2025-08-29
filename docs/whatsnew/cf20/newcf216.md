@@ -137,10 +137,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Digital Asset Management - Extending the trust store
 
 === "Containers"
-    DX 9.5 Container Update CF216 adds capability to add additional certificate authorities to the trust store. This enables support for custom plugins running with self-signed certificates. For more information, see [Add additional CA to the DAM trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-dam-custom-cert.md).
+    DX 9.5 Container Update CF216 adds capability to add additional certificate authorities to the trust store. This enables support for custom plugins running with self-signed certificates. For more information, see [Add additional CA to the DAM trust store](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
 
 

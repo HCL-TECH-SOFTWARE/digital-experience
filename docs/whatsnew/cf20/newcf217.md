@@ -81,18 +81,18 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Updated documentation on locating and downloading DX products
 
 === "Containers"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-releases) are also updated. 
+    [Locating and Downloading DX Products](../../get_started/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [HCL DX Offerings and Key Components and Entitlements](../../get_started/access-software/locating-downloads.md#hcl-dx-offerings-and-key-components-and-entitlements) and [HCL DX Cumulative Fix Releases](../../get_started/access-software/locating-downloads.md#hcl-dx-cumulative-fix-releases) are also updated.
 
 === "On-Premises"
-    [Locating and Downloading DX Products](../../guide_me/tutorials/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [Package name according to DX Offering](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-according-to-dx-offering) and [Package name for DX Cumulative Fixes and Docker Releases](../../guide_me/tutorials/access-software/locating-downloads.md#package-name-for-dx-cumulative-fixes-and-docker-releases) are also updated. 
+    [Locating and Downloading DX Products](../../get_started/access-software/locating-downloads.md) has updated steps on how to locate DX products in the License & Delivery Portal site. The lists of packages in [HCL DX Offerings and Key Components and Entitlements](../../get_started/access-software/locating-downloads.md#hcl-dx-offerings-and-key-components-and-entitlements) and [HCL DX Cumulative Fix Releases](../../get_started/access-software/locating-downloads.md#hcl-dx-cumulative-fix-releases) are also updated.
 
 ### Updated documentation for setting up OIDC in HCL DX
 
 === "Containers"
-    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
+    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-websphere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
 
 === "On-Premises"
-    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-webshpere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
+    [Configuring OIDC for HCL Digital Experience](../../deployment/manage/security/people/authentication/oidc/index.md) now provides detailed steps on how to [configure DX with OIDC and transient users](../../deployment/manage/security/people/authentication/oidc/transient-users/dx-update-websphere-for-oidc-transient-users.md). The available JAAS login module for transient users is refined to support common transient user setups and scenarios. ConfigEngine tasks and administrative portlets are also added to ease the deployment and configuration of transient user capabilities.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -124,7 +124,7 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### License Manager - Secure License Server communication
 
 === "Containers"
-    For customers deploying HCL DX Cloud Native 9.5 on Kubernetes for entitlement checking, documentation on how to secure communication between HCL DX Cloud Native 9.5 and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [Securing License Server communication for License Manager application](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md#securing-license-server-communication-for-license-manager-application).
+    For customers deploying HCL DX Cloud Native 9.5 on Kubernetes for entitlement checking, documentation on how to secure communication between HCL DX Cloud Native 9.5 and the HCL License Server (cloud or local) using a public and private keypair is now available. For more information, see [HCL Digital Experience Cloud Native 9.5 entitlement checks and usage reporting](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md).
 
 ### HCL Digital Experience Cloud - New offering
 
@@ -141,4 +141,4 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

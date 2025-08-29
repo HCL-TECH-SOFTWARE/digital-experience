@@ -6,7 +6,7 @@ title: Accessing list-rendering attributes and list properties
 
 
 
-To generate your list designs with Digital Data Connector \(DDC\) for HCL Portal, you can access individual list-rendering context attributes and list properties.
+To generate your list designs with Digital Data Connector \(DDC\) for HCL Digital Experience, you can access individual list-rendering context attributes and list properties.
 
 When you set a new list-rendering context, you can use the attribute parameter to add arbitrary name-value pairs to that list-rendering context. You can then extract these name-value pairs from the list-rendering context at other places by using the \[Plugin:ListRenderingContext action="getAttribute"\] tag. If you use this technique in nested contexts, it always addresses the currently active list-rendering context. For example, you can establish a list-rendering context such as the following one:
 

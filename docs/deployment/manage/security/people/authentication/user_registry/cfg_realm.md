@@ -8,7 +8,7 @@ In a stand-alone server environment, you can complete this task when the servers
 
 1.  Use the WebSphere Application Server backupConfig task to create and store a backup of the HCL Portal configuration. Read [backupConfig command](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=clt-backupconfig-command) for information.
 
-2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Enter a value for the following parameters in the VMM realm configuration section:
 
@@ -22,7 +22,7 @@ In a stand-alone server environment, you can complete this task when the servers
 
 4.  Save your changes.
 
-5.  Open a command line and change to the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+5.  Open a command line and change to the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to add a realm to the Virtual Member Manager configuration:
 
@@ -155,6 +155,11 @@ In a stand-alone server environment, you can complete this task when the servers
     5.  Stop and restart all necessary servers to propagate your changes.
 
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
+
+To learn how to manage multiple DX sites, go to [Multi-Site Management](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will learn when and how to create and manage base, true, and virtual portals in which you may run one or more DX sites. You can also try it out using the [Multi-Site Management Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Multi-Site_Management_Lab.pdf){target="_blank"}.
 
 ???+ info "Related information"
     - [Managing the user population for virtual portals](../../../../../../build_sites/virtual_portal/vp_planning/advppln_mgupop.md)

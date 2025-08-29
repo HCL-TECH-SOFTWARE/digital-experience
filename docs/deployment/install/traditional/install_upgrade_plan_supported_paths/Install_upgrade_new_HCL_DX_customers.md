@@ -69,7 +69,7 @@ Additional guidance is available here: [Step-by-step guide on downloading HCL Di
 
 3. Navigate to the **SETUP** folder, there should be a Product folder that holds the files and repositories for WAS 9.0.x, JDK 8.0.x, Portal 8.5.0.0, CF17 for Portal 8.5, Portal 9.5, and iFix PI59896. ![](../../../../images/Portal_95_new_user_files_installation.png)
 
-## Installing HCL Digital Experience 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager
+## Installing HCL DX 8.5 with IBM WebSphere Application Server ND Version 9.0.5 and JDK Version 8 using the IBM Installation Manager
 
 This guide was written using Windows as the base operating system, however the steps/concepts listed in this guide are independent of the operating system. The only significant difference is that for Windows, you must use the batch file commands instead of the UNIX shell commands listed in this guide.
 
@@ -343,4 +343,4 @@ This completes the upgrade to HCL Portal 9.5 standalone.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461).
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

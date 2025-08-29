@@ -6,9 +6,9 @@ This section provides the steps on using DDC for HCL Portal framework to integra
 
 Ensure that the your Volt MX Foundry application is configured correctly according to [this guide](./configuring_voltmx_foundry_to_connect_to_ddc.md).
 
-To learn how to manage your sites and applications as a business user, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747).
+To learn how to manage your sites and applications as a business user, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747){target="_blank"}.
 
-To learn further customization for integration as a developer, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458).
+To learn further customization for integration as a developer, refer to the HCLSoftware U course [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458){target="_blank"}.
 
 ## Creating a mapping for the DDC plug-in for the list-rendering profile
 
@@ -118,7 +118,7 @@ Steps to create Presentation Template are as follows:
 
     ![](../../../assets/DDC_presentation_template_using_params.png "DDC Presentation Template with attribute sourceParams")
 
-###  Creating a Content Template
+### Creating a Content Template
 
 Under Authoring Templates, create a Content Template.
 
@@ -200,7 +200,7 @@ Under Authoring Templates, create a Content Template.
               ```
         - Footer: `</ul>`
         !!!note
-            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#steps-to-create-the-list-rendering-profile-are-as-follows). For example, `ddcDemo.ItemAttribute.fullname`.
+            The `attributeName` used here is the last part of the `itemAttribute` you have specified in your [list rendering profile](#creating-the-list-rendering-profile). For example, `ddcDemo.ItemAttribute.fullname`.
 
         ![](../../../assets/WCM_List_Markup.png "Use HTML to define how list results are presented to your site visitors, including a header, footer, and separator.")
 
@@ -276,8 +276,8 @@ Now you can use all the WCM artifacts that you created on a portal page.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to integrate DX with HCL Volt MX as a business user, go to [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747). To try it out yourself, refer to [DX Integration with
-HCL Volt MX for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Volt_MX_for_Business_Users.pdf).
+For an introduction and a demo on how to integrate DX with HCL Volt MX as a business user, go to [DX Integration with HCL Volt MX for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D747){target="_blank"}. To try it out yourself, refer to [DX Integration with
+HCL Volt MX for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Volt_MX_for_Business_Users.pdf){target="_blank"}.
 
-For an introduction and a demo on how to integrate DX with HCL Volt MX as a developer, go to [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458). To try it out yourself, refer to [DX Integration with
-HCL Volt MX for Developers Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_Integration_with_HCL_Volt_MX_for_Developers.pdf).
+For an introduction and a demo on how to integrate DX with HCL Volt MX as a developer, go to [DX Integration with HCL Volt MX for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1458){target="_blank"}. To try it out yourself, refer to [DX Integration with
+HCL Volt MX for Developers Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_Integration_with_HCL_Volt_MX_for_Developers.pdf){target="_blank"}.

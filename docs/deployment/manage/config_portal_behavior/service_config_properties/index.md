@@ -99,6 +99,12 @@ By alternative, you can also set the properties in the properties files and then
 
 Your service configuration properties updates are now in effect.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
+
+To learn how to do a traditional installation, go to [Deployment for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will also learn about additional installation tasks that apply to both container-based and traditional deployments using the Configuration Wizard, DXClient, ConfigEngine, and more. You can try it out using the [Deployment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab.pdf){target="_blank"} and corresponding [Deployment Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab_Resources.zip){target="_blank"}.
+
 ???+ info "Related information"  
     -   [Using a page navigation element](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/page_nav_element/index.md)
     -   [Creating category selection trees](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/taxonomy_element/wcm_dev_elements_taxonomy_selectiontrees.md)
@@ -132,9 +138,9 @@ Your service configuration properties updates are now in effect.
     -   [Synchronizing scopes when items change](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_item.md)
     -   [Synchronizing scopes after syndication](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_synd.md)
     -   [Scheduling scope synchronization](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/syn_scope/wcm_tagrate_syncscope_sched.md)
-    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg.html)
+    -   [Configuring Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_cfg.html)
     -   [Configuring Tivoli Federated Identity Manager with SAML for single sign-on to SAP NetWeaver Portal](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_cfg_tfimsaml_sso.html)
-    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/9.5/admin-system/sap_int_perf_tun.html)
+    -   [Performance tuning for Integrator for SAP](https://help.hcltechsw.com/digital-experience/8.5/admin-system/sap_int_perf_tun.html)
     -   [Portlet load monitoring properties](../../../../build_sites/site_analytics/portlet_load_monitoring/plmt_configuration.md)
     -   [Enabling site analysis logging](../../monitoring/analyze_portal_usage/serverside_site_data/adsaconf_tsk_nbl.md)
     -   [Auditing](../../monitoring/sec_audit.md)

@@ -1,6 +1,7 @@
 title: HCL Volt MX Foundry
 nav:
   - index.md
-  - Installation: installation
+  - Installation: installation.md
   - Configuration: configuration
   - Sample integrations: example
+  - Considerations: considerations.md

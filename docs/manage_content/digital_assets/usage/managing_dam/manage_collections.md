@@ -20,7 +20,7 @@ Collection unique-names are the unique identifier for each collection which can 
 
 ## How can the user change the collection unique-names?
 
-Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection information panel.
+Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection Properties panel.
 
 ![](../../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
 ![](../../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
@@ -34,28 +34,26 @@ While creating or editing a collection, DAM checks for any duplication of the un
 
 When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
 
-![](../../../../images/EditCollectionError_friendlyUrl_1.png "Edit collection duplicate unique name"){ width=45% }
-![](../../../../images/EditCollectionError_friendlyUrl_2.png "Edit collection suggestion click"){ width=50% }
-
 ## Browsing and searching for media assets in a collection
 
 Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 1. From the HCL Digital Experience 9.5 DAM user interface, click **Collections**. The HCL DAM user user interface allows you to see previews of media assets for a specified collection. For example, a curated set of media assets are grouped in a collection named **Furniture Gallery** as shown below.
 
-    ![Digital Asset Management user interface](../../../../images/dam_upload_media_collections.png)
+    ![Digital Asset Management user interface](../../../../images/dam_root_collections_page.png)
 
-    Following options are displayed in Collections interface:
+    The following options are displayed in Collections interface:
 
-    - **Create Collection** - Create a new collection or a new nested collection (when used inside an existing collection)
-    - **View information** - Opens the Information panel and shows Access Control
+    - **Create collection** - Create a new collection or a new nested collection (when used inside an existing collection).
+    - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
 
-        ![Information Panel](../../../../images/dam_collections_interface_view_information.png)
+        ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
-        - **Information** - Allows you to update the Collection name and description.
-        - **Access Control** - Allows you to set who can access the media assets in the Collection.
+        - **Properties** tab - Allows you to update the name and description.
+        - **Access control** tab - Allows you to set who can access the media assets in the collection.
 
-    - **Delete Collection** - Deletes the selected Collection.
+    - **Move** - Moves the selected collection into another location.
+    - **Delete** - Deletes the selected collection.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
@@ -110,19 +108,19 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, hover over a collection and click the **Information** icon \(small i\).
+1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
 
-    ![DAM Collection Information](../../../../images/dam_collection_information.png)
+    ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
-2. On the **Information** panel, edit the **Collection name** and **Description** as applicable.
+2. On the **Properties** panel, edit the **Name** and **Description** as applicable.
 3. Click **Save** to save changes.
 
 ## Manage user access permissions of a media asset collection
 
 **Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo)
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Information** \(small i\).
-2. Click **Access**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
+2. Click **Access control**.
 3. Assign levels for other users to access media items stored within the collection by clicking **Add user**.
 
     ![Access Control > Add user](../../../../images/dam_access_panel.png)
@@ -136,19 +134,12 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
     ![Assign access rights > All](../../../../images/dam_access_control_assign_member_access_rights_all.png)
 
 6. Click **Add users and groups** to save changes.
-7. Once added, you can specify additional users for the selected access right. Select the access right to add a member or groups. For this example, click **Add Administrator**.
-
-    ![Add Administrator](../../../../images/dam_access_control_assign_member_access_rights_add_administrator.png)
-
-    ![Assign access rights > Select](../../../../images/dam_access_control_assign_member_access_rights_select.png)
-
-8. Once done, click **Add users and groups** to save changes.
 
 ## Deleting a collection
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Delete**.
-2. A pop-up message displays to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
-3. Click **Delete** to proceed with deleting the collection.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Delete**.
+A message appears to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
+3. Click **Delete collection** to delete the collection.
 
 ## Moving a collection
 
@@ -157,11 +148,11 @@ Refer to the following steps if you want to move a collection from one location 
 !!! note 
     If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, hover over a collection and click **Move collection**.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move**.
 
     ![Move collection option](../../../../images/Move_collection_option.png)
 
-    A dialog box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection if a subcollection is present.
+    A dialog box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection.
 
     ![Move collection dialog box](../../../../images/move_collection.png)
 

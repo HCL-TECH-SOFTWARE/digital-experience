@@ -1,19 +1,10 @@
 # Guide Me
 
-Do you need guidance?
-This section include tutorials, performance tuning guides, tips and tricks and how-To documents with simple samples.  
+This section contains detailed instructions, guides, best practices, and reference materials to assist you in using, configuring, and tuning your HCL Digital Experience (DX) environment.
 
-Access the latest HCL Digital Experience 9.5 Education Materials on HCL Software U. The HCL Software U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/) section of the HCL Software U for more information.
-
--   **[Getting Started with HCL Digital Experience](gettingstartedwithDX.md)**  
-This provides an overview of the HCL Digital Experience (DX) where you learn the market trends, what, why, and how HCL Digital Experience is the right solution for you.
-
--   **[Access Software and Support](../tutorials/access-software/register-for-access.md)**  
-This guide describes a comprehensive procedure to successfully Register and Access the HCL Software License & Delivery site, Locate and Download DX products and steps on how to open a support ticket in case you encounter any issue with getting the software.
-
--   **[Script Applications](scriptapps/index.md)**  
-This section contains instructions to bundle and deploy Script Applications.
-
-- **[Portlet Development Utilities and Page creation samples on HCL GitHub](Portletdevelopmentutilitiesandpagecreationsamples.md)**
-    
-    This section provides information and samples to build custom Java Portlets using maven archetype and samples to automate creating pages and pages from templates. Developers also will be shown up in how to use DXClient to deploy those resources.
+- **[Guides](./guides/index.md)**  
+This section contains instructional materials and code samples to assist you in getting started with HCL DX. Information about performing specific tasks such as deploying script applications and creating pages from templates are also available.
+- **[How-to articles](./howto/index.md)**  
+This section contains how-to articles classified into different categories that will help you learn how to use HCL DX and all of its features.
+- **[Glossary](./glossary/index.md)**  
+This section contains the different terms and definitions used in the HCL DX Help Center.  

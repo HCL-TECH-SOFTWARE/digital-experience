@@ -31,6 +31,9 @@ Example 1: Creating a page; note that this page has no layout or content defined
                 <model:title>
                     <base:nls-string xml:lang="en">test page - testpage_1183548505593</base:nls-string>
                 </model:title>
+                <model:metadata name="com.ibm.portal.friendly.name">
+                    <base:value xsi:type="base:String" value="test-page"/>
+                </model:metadata>
             </portal:content-page>
         </atom:content>
         <thr:in-reply-to href="cm:oid:6_000000000000000000000000A0" ref="cm:oid:6_000000000000000000000000A0" 

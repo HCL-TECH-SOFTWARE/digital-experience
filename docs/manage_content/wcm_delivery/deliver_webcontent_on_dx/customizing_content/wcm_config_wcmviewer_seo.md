@@ -51,7 +51,7 @@ With the **Page Display Title** field in the portlet settings for the viewer, yo
         ```
 
         !!! note
-                  Beginning with CF221, if the `meta.tag.name.suffix` value starts with `og:`, it is treated as an Open Graph protocol and the attribute key is set to `property` instead of `name` by default.
+            Beginning with CF221, if the `meta.tag.name.suffix` value starts with `og:`, it is treated as an Open Graph protocol and the attribute key is set to `property` instead of `name` by default.
 
         If you want to specify an attribute other than the name attribute, you can define the attribute name with the following format:
 

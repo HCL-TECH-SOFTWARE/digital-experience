@@ -1,6 +1,6 @@
 # Integrating with web applications
 
-The Web Application Bridge uses reverse proxy technology to integrate web-based content providers (for example, Microsoft SharePoint server, [HCL Leap](../leap/example/index.md#integrating-hcl-leap-applications-with-web-application-bridge), and [HCL Volt MX Iris](../mx/example/index.md#integrating-an-hcl-volt-mx-iris-application-into-hcl-digital-experience-pages)) with HCL Digital Experience. Administrators must first define the virtual web applications or content providers. A lightweight iFrame portlet renders the content from the backend applications. Users can then access the iFrame on a page without requiring direct network access to the backend application. A special engine maps Uniform Resource Identifier (URIs) on the iFrame portlet to real URIs from the content providers.
+The Web Application Bridge uses reverse proxy technology to integrate web-based content providers (for example, Microsoft SharePoint server, [HCL Leap](../leap/example.md#integrating-hcl-leap-applications-with-web-application-bridge), and [HCL Volt MX Iris](../mx/example/index.md)) with HCL Digital Experience. Administrators must first define the virtual web applications or content providers. A lightweight iFrame portlet renders the content from the backend applications. Users can then access the iFrame on a page without requiring direct network access to the backend application. A special engine maps Uniform Resource Identifier (URIs) on the iFrame portlet to real URIs from the content providers.
 
 The intention of the Web Applications Bridge is to support the complex and heterogeneous web applications. Ensure that the web applications are constructed with common practices and function according to industry accepted standards. Since there are no rigorous industry standards, it is impossible to verify that the Web Application Bridge can work with any arbitrary web application. You might need to customize the Web Application Bridge or change the web application to ensure success. The Web Applications Bridge was designed to integrate Microsoft Sharepoint into your website. However, you can integrate with other products. The Web Application Bridge is routinely enhanced to support integration with other products and systems per demand.
 
@@ -24,9 +24,11 @@ You can have multiple web dock applications that point to different hosts on the
 -   **[Troubleshooting the Web Application Bridge](trouble_wab.md)**  
 The troubleshooting information is useful for planning and implementing your Web Application Bridge integration (WAB).
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Web Application Bridge, go to [Web Application Bridge](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2956){target="_blank"}. To try it out yourself, refer to [Web Application Bridge Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Web_Application_Bridge_Lab.pdf){target="_blank"}.
 
 ???+ info "Related information"
     - [Providing short vanity URLs](../../../manage_content/wcm_delivery/vanity_url/adm_vanity_url/van_url_short.md)
-    - [Sample integrations of HCL Leap with HCL Digital Experience](../leap/example/index.md)
+    - [Sample integrations of HCL Leap with HCL Digital Experience](../leap/example.md)
     - [Sample integrations of HCL Volt MX Foundry and Iris with HCL Digital Experience](../mx/example/index.md)
-

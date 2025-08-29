@@ -10,4 +10,5 @@ nav:
     - sec_cust_names.md
     - adusrgrp_nested.md
     - sec_subman.md
+    - custom_login_portlet.md
     - adxmltsk_del_usrs_grps.md

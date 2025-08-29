@@ -9,7 +9,7 @@ In a stand-alone server environment, you can complete the following task when th
     !!!note
         If you are instructed to open a properties file, they are ASCII files. Open them with the appropriate tool.
 
-2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Open the wkplc.properties file with a text editor.
 
@@ -26,7 +26,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 6.  Open a command prompt.
 
-7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 8.  Run the following task to delete the old entity types before you add the RDN attribute as the only entry in the RDN list:
 

@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Web Content Manager - Drafts not exposed with WebDAV for WCM
 - Web Content Manager - New query parameter in WCM Multilingual Solution API
+- Web Content Manager REST API V2 - New APIs
 - Huddo Boards integration with HCL DX
 - HCL Commerce integration with HCL DX
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -13,7 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 8.5 and 9.0 Versions**
 
 - End of Support Announced for Digital Experience v8.5 and 9
-- Change in the application of 9.5 during 8.5/9.0 installation for CF221
+- Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Version**
 
@@ -26,7 +27,6 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Access control for nested collections
 - Digital Asset Management - PostgreSQL version upgrade
 - Added guidance for upgrading a Helm deployment
-- New guidance for performance sizing for rendering with maximum throughput on a single node
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Notice of deprecation of automated Pod restart on ConfigMap updates
 
@@ -49,6 +49,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The query parameter `updateSource=true` is now available for the [Translated Content API](../../manage_content/wcm_development/wcm_dev_api/wcm_mls_api.md#translated-content-api).
+
+### Web Content Manager REST API V2 - New APIs
+
+=== "Containers"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
+
+=== "On-Premises"
+    APIs for searching for items with no owner or no author and specifying item options for search results are now available. For more information, see [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 ### Huddo Boards integration with HCL DX
 
@@ -81,10 +89,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
     
-### DX upgrades starting CF221 automatically applies 9.5 to an 8.5/9.0 installation
+### Automatically apply 9.5 from a later CF installation
 
 === "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that starting with the next DX release, CF221, 9.5 is applied by default unless you set `install_95=false`.
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Version
 
@@ -125,22 +133,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available. 
 
-### New guidance for performance sizing for rendering with maximum throughput on a single node
-
-=== "Containers"
-    Results of DX sizing tests for rendering with maximum throughput on a single node are now available. This guidance presents the important KPIs and discusses how adjustments to the pod configuration can make significant improvements in the responsiveness of the system. For more information, see the topic [Performance-sizing guidance for rendering with maximum throughput on a single node](../../get_started/plan_deployment/container_deployment/rm_container/dx_performance_small_cfg.md#performance-sizing-guidance-for-rendering-with-maximum-throughput-on-a-single-node).
-
-
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
 
-###  Notice of deprecation of automated Pod restart on ConfigMap updates
+### Notice of deprecation of automated Pod restart on ConfigMap updates
 
 === "Containers"
     Starting with the next DX release, CF221, Runtime Controller will not restart Pods automatically when a ConfigMap is changed manually. For production deployments, always use the Helm custom values and `helm upgrade` to change configuration. Using Helm upgrade for configuration changes triggers the appropriate restart processes. For development and testing when a ConfigMap is changed, you have to restart the appropriate Pod manually. For more information, see [Container configuration](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) and [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

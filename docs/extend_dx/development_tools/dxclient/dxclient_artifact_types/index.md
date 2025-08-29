@@ -1,6 +1,6 @@
-# DXClient Artifact Types
+# DXClient artifact types
 
-This section provides information about the artifact types that are currently supported by the DXClient tool.
+This topic provides information about the artifact types that are currently supported by the DXClient tool.
 
 **Limitations:**
 
@@ -18,9 +18,15 @@ The following list shows some of the deprecated parameters and the new parameter
     !!! note
         The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+
 ???+ Info "Related information"
     - [How to translate WCM library content using export and import WCM with DXClient](wcm_mls_export_import.md)
     - [DXClient](../index.md)
-    - [Sample Pipelines for use with HCL DXClient and Automation servers](../sample_pipelines_for_use_with_dx_client_and_automation_servers.md)
+    - [Sample Pipeline Settings using DXClient](../sample_pipeline_settings_using_dxclient.md)
     - [How to manage syndicators and subscribers](https://help.hcltechsw.com/digital-experience/digital-experience/8.5/panel_help/wcm_syndication.html)
     - [DAM Assets Export and Import (EXIM)](../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md)

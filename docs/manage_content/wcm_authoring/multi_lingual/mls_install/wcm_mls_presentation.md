@@ -1,4 +1,4 @@
-# Multilingual presentation Multilingual Solution
+# Multilingual presentation layer
 
 Localizing the presentation layer in your site involves deciding which parts of the presentation layer need to be localized, and then separating out those pieces into components that can be localized.
 

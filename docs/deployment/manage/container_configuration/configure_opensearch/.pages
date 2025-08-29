@@ -1,6 +1,7 @@
-title: Configuring OpenSearch
+title: Search V2 backend configuration
 nav:
   - index.md
   - architectural_overview.md
-  - configure_a_wcm_contentsource_api.md
+  - configure_a_contentsource_api.md
+  - configure_a_crawler_api.md
   - run_search_queries_api.md

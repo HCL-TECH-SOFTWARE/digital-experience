@@ -4,7 +4,7 @@ If the preferred language of the crawler user ID does not match the language of 
 
 Therefore, set the preferred language of the portal site crawler user ID to match the language of the portal site search collection that it crawls. If you do this after you started a crawl on the portal site search collection, you need to reset the portal site collection. Refer to the topic about Resetting the default search collection.
 
-If your portal site is multilingual and your users use different languages to search HCL Portal, set the portal site collections up as described under the topic about Crawling a multilingual portal site.
+If your portal site is multilingual and your users use different languages to search HCL Digital Experience, set the portal site collections up as described under the topic about Crawling a multilingual portal site.
 
 
 ???+ info "Related information"

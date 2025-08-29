@@ -12,4 +12,5 @@ nav:
     - optional_labels_annotations.md
     - optional_experimental_features.md
     - optional_install_new_search.md
+    - optional_changing_portal_uri_in_kubernetes.md
     - ...

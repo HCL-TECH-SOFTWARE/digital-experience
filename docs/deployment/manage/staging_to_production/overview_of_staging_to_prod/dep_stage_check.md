@@ -214,18 +214,24 @@ The following list contains all portal components that are not handled by the in
 
     These artifacts are included by default in your initial or differential release PAA. A vanity URL is a portal artifact that is stored with the portal page that it targets. Vanity URLs are managed and stored in the Web Content Manager Portal Site library. Therefore, if you want to stage your portal to production, it is not enough to stage the portal pages by using the portal XML configuration interface (XMLAccess). You must transfer data on both the portal and the Web Content Manager side.
 
-**Related information**  
-[Staging-server topology for Web Content Manager](../../../../manage_content/wcm_delivery/syndication/staging_wcm/index.md)<br>
-[Web content testing environments](../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_uat.md)<br>
-[Publishing personalization rules](../../../../manage_content/pzn/publishing_pzn_rules/index.md)<br>
-[Working with the XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
-[XML configuration reference](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
-[Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
-[Deleting a web content library](../../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/wcm_config_wcmlibrary_delete.md)<br>
-[Using the XML configuration interface to work with virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/advp_xml.md)<br>
-[How to configure a web content staging environment](../../../../manage_content/wcm_delivery/syndication/staging_wcm/wcm_config_prop_staging.md)<br>
-[Administering managed pages](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/index.md)<br>
-[Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)<br>
-[Staging Personalization rules to production](../../../..//manage_content/pzn/pzn_stage_prod.md<br>
-[Exporting and importing web content libraries](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/index.md)
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+
+???+ info "Related information"
+    - [Staging-server topology for Web Content Manager](../../../../manage_content/wcm_delivery/syndication/staging_wcm/index.md)<br>
+    - [Web content testing environments](../../../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_cms_server_uat.md)<br>
+    - [Publishing personalization rules](../../../../manage_content/pzn/publishing_pzn_rules/index.md)<br>
+    - [Working with the XML configuration interface](../../../manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/index.md)<br>
+    - [XML configuration reference](../../../manage/portal_admin_tools/xml_config_interface/xml_config_ref/adxmlref.md)<br>
+    - [Exporting and importing a web content library](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/wcm_config_wcmlibrary_export.md)<br>
+    - [Deleting a web content library](../../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/wcm_config_wcmlibrary_delete.md)<br>
+    - [Using the XML configuration interface to work with virtual portals](../../../../build_sites/virtual_portal/vp_reference/vp_command_ref/advp_xml.md)<br>
+    - [How to configure a web content staging environment](../../../../manage_content/wcm_delivery/syndication/staging_wcm/wcm_config_prop_staging.md)<br>
+    - [Administering managed pages](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/index.md)<br>
+    - [Exporting content from the filestore](../../../../build_sites/themes_skins/developing_theme/dev_op_overview/manual_packaging_themes/themeopt_move_expfilestore.md)<br>
+    - [Staging Personalization rules to production](../../../..//manage_content/pzn/pzn_stage_prod.md)<br>
+    - [Exporting and importing web content libraries](../../../../manage_content/wcm_configuration/wcm_adm_tools/wcmlibrary_export/index.md)
 

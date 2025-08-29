@@ -1,4 +1,4 @@
-# Lifecycle and synchronization Multilingual Solution
+# Lifecycle and synchronization
 
 Workflow is used to keep the base site and localized sites synchronized. The creation, modification, publishing, expiry, deletion, and moving of site areas and content can be synchronized across locales by using a workflow.
 

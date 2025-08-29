@@ -1,4 +1,4 @@
-# Deletion synchronization extension Multilingual Solution
+# Deletion synchronization extension
 
 This extension ensures that the base item and any draft localized items are deleted at the same time.
 

@@ -1,13 +1,15 @@
 # Search
 
-Use the Digital Experience Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your Digital Experience platform.
+Use the Digital Experience (DX) Portal Search feature to search for text that is displayed in websites that are created by HCL Web Content Manager and additional web sources integrated to your DX platform. 
+
+There are two types of search in HCL DX: DX Search and Search V2. DX Search can be used in DX Core and is available in containers, hybrid, and on-premises deployments. For full container deployments, you can use [Search V2](../search_v2/index.md).
 
 
 1.  [HCL Digital Experience Portal Search](../search/portal_search/index.md)  
 Use HCL Digital Experience Portal Search to facilitate indexing content sources and searching for information. You can administer search services, search collections, and search scopes, as well as enhance the search experience of your portal site with the portal search portlets. Refer to the topics below for additional information.
-2.  [Configuring DX Search](cfg_dx_search)<br>
+2.  [Configuring DX Search](./cfg_dx_search/index.md)<br>
 This topic provides the steps to set up and configure DX Search, HCL DX's own search service.
-3.  [Improving search quality](improving_search_quality)<br>
+3.  [Improving search quality](./improving_search_quality/index.md)<br>
 This topic provides information on how you can improve search quality in HCL DX and Web Content Manager Search.
 4.  [Searching pages](mp_search_pages.md)  
 By selecting a search type in Manage Pages, you can quickly locate and work with pages, labels, or URLs.
@@ -18,7 +20,7 @@ Users can search the tag space by using the browser search box.
 7.  [Planning and preparing for Portal Search](../search/planning_portal_search/index.md)  
 Learn about some planning considerations and first steps that you need to apply before working with Portal Search.
 8.  [Indexing web content](../search/indexing_webcontent/index.md)  
-To search for web content, your content must first be indexed by the HCL Portal search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
+To search for web content, your content must first be indexed by the HCL DX search engine. When the content is indexed, you can run searches by using the search center or by using a search component. If you search for documents in the WebSphere Portal search center, be aware that you see search results for published documents only. Unpublished pending changes in a project are not included in the results.
 11.  [Language and region support in Portal Search](../search/language_region_support/index.md)  
 Depending on your portal environment and your users, you might want to make multilingual content available and searchable in your portal.
 12. [Crawling web content with search seedlists](../search/crawling_webcontent_seedbase/index.md)  
@@ -32,6 +34,9 @@ If you plan to develop a custom search form, you might want to redirect search r
 18. [Remote search service](../search/remotesearch/index.md)  
 You can configure the search portlets for local operation, or you can configure them for remote search service. Depending on your configuration, remote search service might have performance benefits by offloading and balancing system load.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Search for business users, go to [Search](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2804){target="_blank"}. To try it out yourself, refer to [Search Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Search_Lab.pdf){target="_blank"}.
 
 ???+ info "Related information"
     -   [Search REST API specification](../search/search-rest-api/index.md)

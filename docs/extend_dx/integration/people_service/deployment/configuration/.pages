@@ -1,0 +1,5 @@
+title: Configuration parameters
+nav:
+  - index.md
+  - ldap_configuration.md
+  - oidc_configuration.md

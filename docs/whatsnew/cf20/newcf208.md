@@ -27,7 +27,7 @@ The following features and updates are available to customers installing HCL Dig
 ## Kubernetes deployment HA Proxy option to configure Ingress 
 
 === "Containers"                                                                                                    
-    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-ingress.md) for more information. -->
+    DX 9.5 Container Update CF208 adds an option to configure an ingress in front of HA Proxy.  See the [Configure Ingress For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md) for more information. -->
 
 ## Web Content Manager Author options now include Tiny MCE
 
@@ -129,4 +129,4 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys) section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=) section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

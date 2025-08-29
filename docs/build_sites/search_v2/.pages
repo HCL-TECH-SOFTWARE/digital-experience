@@ -1,0 +1,9 @@
+title: Search V2
+nav:
+    - index.md
+    - Installing Search V2: installation.md
+    - Accessing Search V2: access.md
+    - Using Search V2: usage.md
+    - Limitations of Search V2: limitations.md
+    - Components of Search V2: components.md
+    - Customizations for Search V2: customizations.md

@@ -15,7 +15,7 @@ Integrate Huddo Boards with HCL Digital Experience.
 -   **[Unified Task List](unified_task_list/index.md)**  
 Use the Unified Task List portlet to integrate with business process solutions such as IBM Process Server, WebSphere Lombardi Edition, and other enterprise resource planning software.
 -   **[Web Application Bridge](../integration/wab/index.md)**  
-Use the Web Application Bridge to integrate with web applications such as Sharepoint, HCL Leap, and HCL Volt MX Iris.
+Use the Web Application Bridge to integrate with web applications such as Sharepoint, HCL Leap, and HCL Iris.
 -   **[Digital Data Connector](../ddc/index.md)**  
 You can use the Digital Data Connector (DDC) for HCL Portal framework to integrate data from external data sources on your portal pages by using HCL Web Content Manager presentation components.
 -   **[Java Connector Architecture](fea_ai.md)**  
