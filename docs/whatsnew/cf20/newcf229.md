@@ -104,7 +104,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
-    HCLSoftware has announced that support for HCL Digital Experience versions 8.5 and 9 will end. We encourage you to upgrade to HCL Digital Experience version 9.5, which is delivered as a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+    HHCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
     o accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can consider options to sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. 
     
