@@ -22,12 +22,20 @@ To run wpcollector, please follow the steps, below:
 2. On a machine that is configured to access your OpenShift/Kubernetes cluster, get a pod listing of your Portal deployment project/namespace:
 
     **OpenShift:**  
-    Execute command: `oc project`  
+    Execute command:  
+
+    ```shell
+    oc project
+    ```
 
     Example output:  
     `Using project "dx-191" on server "https://api.lab.dx.com:6443".`
 
-    Execute command: `oc get pods`
+    Execute command:  
+
+    ```shell
+    oc get pods
+    ```
 
     ```shell
     NAME                                READY          STATUS            RESTARTS            AGE  
@@ -43,7 +51,11 @@ To run wpcollector, please follow the steps, below:
 
     **Kubernetes:**  
 
-    Execute command: `kubectl get pods -n dx-191`  
+    Execute command:  
+
+    ```shell
+    kubectl get pods -n dx-191
+    ```
 
     ```shell
     NAME                                READY          STATUS            RESTARTS            AGE
