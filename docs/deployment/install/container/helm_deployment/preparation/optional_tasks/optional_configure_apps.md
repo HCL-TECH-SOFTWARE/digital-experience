@@ -4,9 +4,9 @@
 
 ### Supported LDAP configuration
 
-You can specify a LDAP configuration that can be used by HCL Digital Experience 9.5.
+You can specify a LDAP configuration that can be used by HCL Digital Experience (DX) 9.5.
 
-The Helm chart provides a `ldap` section under the `configuration` and `core` section. This section can be used to configure a `none`, `dx` or `other` LDAP. This defaults to none, so there is no LDAP configured.
+The Helm chart provides a `ldap` section under the `configuration` and `core` section. This section can be used to configure a `none`, `dx` or `other` LDAP. This defaults to `none`, so there is no LDAP configured.
 
 If you adjust this to `other`, you can configure an external LDAP that you want to connect to. Core is then configured to use this LDAP.
 
@@ -14,7 +14,7 @@ Currently, the configuration capability is quite limited. For more complex confi
 
 **Example Configuration**
 
-You can use the following syntax in your custom-values.yaml file to adjust LDAP settings:
+You can use the following syntax in your `custom-values.yaml` file to adjust LDAP settings:
 
 ```yaml
 # Application configuration
@@ -61,10 +61,9 @@ configuration:
 
 Refer to the following Help Center documentation for more information about LDAP and Configuration Wizard configuration:
 
--   [Configuration Wizard](../../../../../manage/portal_admin_tools/cfg_wizard/index.md)
--   [Enable federated security](../../../../../manage/security/people/authentication/user_registry/cw_ldap.md)
--   [Troubleshooting: Enable federated security option](../../../../../manage/troubleshooting/troubleshooting_configwizard/cw_ldap.md)
-
+- [Configuration Wizard](../../../../../manage/portal_admin_tools/cfg_wizard/index.md)
+- [Enable federated security](../../../../../manage/security/people/authentication/user_registry/cw_ldap.md)
+- [Troubleshooting: Enable federated security option](../../../../../manage/troubleshooting/troubleshooting_configwizard/cw_ldap.md)
 
 ### Authoring/Rendering configuration
 
@@ -72,7 +71,7 @@ You can choose if the environment you deploy is configured as a WCM authoring or
 
 As default, this defaults to true. The deployment is configured as an authoring environment.
 
-If you want to adjust this to deploy a rendering environment, you can use the following syntax in your custom-values.yaml file:
+If you want to adjust this to deploy a rendering environment, you can use the following syntax in your `custom-values.yaml` file:
 
 ```yaml
 # Application configuration
@@ -85,7 +84,8 @@ configuration:
       authoring: true
 ```
 
-### Expose IBM WebSphere Application Server Solution Console 
+### Expose IBM WebSphere Application Server Solution Console
+
 Refer to the following code sample to configure the server and expose the port `10203`, which will be placed under `configuration.core.exposeConfigurationConsole`:
 
 ```yaml
@@ -99,14 +99,15 @@ configuration:
 
 When `Admin Console` is enabled by setting its property to `true`, the IBM WebSphere Application Server Solution Console becomes available on port `10203`, as shown in the following example:
 
-```
+```url
 https://yourhost:10203/ibm/console/
 ```
 
 Admin Console can be disabled by setting the property to `false`.
+
 ### Configuration Wizard configuration
 
-Although the Config Wizard is started together with the Core application by default, you can set the value to 'false' to change the default behavior
+Although the Config Wizard is started together with the Core application by default, you can set the value to `false` to change the default behavior
 If `configWizard` is set to `true`, then the Configuration Wizard, IBM WebSphere Application Server Solution Console, and DXConnect are also accessible on port `10203`.
 
 If you want to adjust this setting, you can use the following syntax in your file:
@@ -125,15 +126,15 @@ configuration:
 
 ### Replacing Document Conversion Services with Apache Tika
 
-Beginning with HCL Digital Experience release 205,[Document Conversion Services](../../../../../../manage_content/wcm_authoring/dcs/index.md), which is used by [HCL Digital Experience Portal Search](../../../../../../build_sites/search/portal_search/index.md) and [HCL Digital Experience Remote Search](../../../../../manage/container_configuration/kubernetes_remote_search.md) is not distributed or supported by HCL. Oracle functionality is replaced by [Apache Tika](https://tika.apache.org/){:target="_blank"}, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, see the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article.
+Starting from HCL DX CF205,[Document Conversion Services](../../../../../../manage_content/wcm_authoring/dcs/index.md), which is used by [HCL Digital Experience Portal Search](../../../../../../build_sites/search/portal_search/index.md) and [HCL Digital Experience Remote Search](../../../../../manage/container_configuration/kubernetes_remote_search.md) is not distributed or supported by HCL. Oracle functionality is replaced by [Apache Tika](https://tika.apache.org/){:target="_blank"}, which is included in the HCL DX CF205 and later offering. For additional information on DCS services available in CF205 and later, refer to the [Replacement of Document Conversion Services component](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0096908){:target="_blank"} knowledge article.
 
 !!!important
-    Do not change the default configuration if you do not have a backup of the Oracle DCS files in your environment. For instructions on how to backup the DCS files in a version prior to CF205, please refer to [Creating a backup of DCS files](../../../../../../manage_content/wcm_authoring/dcs/dcs_backup.md){:target="_blank"}.
+    Do not change the default configuration if you do not have a backup of the Oracle DCS files in your environment. For instructions on how to backup the DCS files in a version prior to CF205, refer to [Creating a backup of DCS files](../../../../../../manage_content/wcm_authoring/dcs/dcs_backup.md){:target="_blank"}.
 
-    The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, please follow the following instructions to manually configure the deployment:
+The settings in this section are only applied during an upgrade from one CF version to another. To run the configuration manually at any other time, follow the following instructions to manually configure the deployment:
 
-    - [Replacing Document Conversion Services with Apache Tika](../../preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika)
-    - [Configure Oracle DCS](../../../../../../manage_content/wcm_authoring/dcs/configuration/index.md)
+- [Replacing Document Conversion Services with Apache Tika](../../preparation/optional_tasks/optional_configure_apps.md#replacing-document-conversion-services-with-apache-tika)
+- [Configure Oracle DCS](../../../../../../manage_content/wcm_authoring/dcs/configuration/index.md)
 
 |configureTika|disableStellentDCS|Result|
 |---------|-----------|-------------|
@@ -159,7 +160,7 @@ configuration:
 
 If you choose to deploy the OpenLDAP container in your deployment, you can change country, organization and suffix, that may be configured in OpenLDAP for use.
 
-Use the following syntax in your custom-values.yaml file to adjust the configuration:
+Use the following syntax in your `custom-values.yaml` file to adjust the configuration:
 
 ```yaml
 # Application configuration
@@ -174,17 +175,28 @@ configuration:
     suffix: "dc=dx,dc=com"
 ```
 
+!!!note
+    Deployment of the OpenLDAP container in a production environment is not supported. This optional process of deploying OpenLDAP is solely intended for non-production environments to help one get started with HCL DX 9.5 container environment deployment. For production environments, use a production-quality LDAP with security hardening, firewall protection, and other security measures. For production use, Administrators can choose to deploy their organization's LDAP (and possibly mirror the contents of that enterprise LDAP back to this newly deployed LDAP) or connect to an already defined LDAP server, database, or custom user registry.
+
+To use the OpenLDAP container in a Docker (non-Kubernetes) environment, include the following statement in the Docker run command for this image. For example:
+
+```docker
+docker run -e LOCAL=true -p 1389:1389 -p 1636:1636 -p 1666:1666 -v dx-openldap-certs:/var/dx-openldap/certs -v 
+dx-openldap-slapd.d:/var/dx-openldap/etc/openldap/slapd.d -v dx-openldap-ldap:/var/dx-openldap/ldap 
+--name dx_openldap hcl/dx/openldap:v1.0.0-release_20200622_1592846796
+```
+
 ## Remote Search configuration
 
 You can configure whether the Remote Search configuration through the IBM WebSphere Application Server Solution Console is exposed as an additional port on HAProxy or not. This defaults to true.
 
 If set to true, you can access the Solution Console using:
 
-```
+```url
 https://yourhost:9043/ibm/console
 ```
 
-Use the following syntax in your custom-values.yaml file:
+Use the following syntax in your `custom-values.yaml` file:
 
 ```yaml
 # Application configuration

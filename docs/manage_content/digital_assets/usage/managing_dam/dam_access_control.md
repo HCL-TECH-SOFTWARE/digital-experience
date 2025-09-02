@@ -1,4 +1,4 @@
-# DAM Access Control Management
+# DAM access control management
 
 This topic describes the details of Digital Access Management (DAM) access control, its features and limitations and also on how to assign permission to Users through the DAM user interface.
 
@@ -38,7 +38,7 @@ From the DAM perspective, each individual root-level collection and child collec
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
 
-The following Helm configuration allows users with the Editor role to create collections in DAM. By default, both Administrator and Editor roles can create collections. To disable Editors from creating collections, set `allowEditorToCreateCollections` to `false`. This configuration is set to `true` by default.
+The following Helm configuration allows users with the Editor role to create collections in DAM. By default, both Administrator and Editor roles can create collections. To disable Editors from creating collections, set `allowEditorToCreateCollections` to `false` in the `custom-values.yaml` file. This configuration is set to `true` by default.
 
 ```
 # Application Configuration
@@ -47,7 +47,7 @@ configuration:
     allowEditorToCreateCollections: true
 ```
 
-See the [Out of the box access](#Out-of-the-box-access) section, to understand how the default access works for a collection.
+See the [Out of the box access](./dam_access_control.md#out-of-the-box-access) section, to understand how the default access works for a collection.
 
 !!! note
     The Manager Role is not exposed in DAM UI currently.
@@ -71,7 +71,8 @@ In DAM, the user can assign permission to a collection tree at the root level if
 ## Nested collection permissions
 
 !!! note
-    While upgrading from pre-CF220 to CF220 or later, resources are created for all the existing nested collections through migration. It is recommended to deregister DAM Staging before upgrading the environments. You can re-enable DAM staging after completing the upgrade. For more information, see [Registering or deregistering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#registering-or-deregistering-for-dam-staging).
+    While upgrading from pre-CF220 to CF220 or later, resources are created for all the existing nested collections through migration. It is recommended to deregister DAM Staging before upgrading the environments. You can re-enable DAM staging after completing the upgrade. For more information, see [Registering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#registering-for-dam-staging) and
+    [Deregistering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#deregistering-for-dam-staging).
 
 A nested collection inherits the permission from its root collection by default. In the following screenshot, the Editor permission is inherited from the root collection.
 

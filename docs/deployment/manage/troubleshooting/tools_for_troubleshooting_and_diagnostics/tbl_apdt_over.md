@@ -1,74 +1,76 @@
 # Data collection and symptom analysis
 
-There is one method to collect data and analyze symptoms for problem determination scenarios. You run a task that can collect and optionally send the data for you. Starting with HCL Digital Experience version 8.5, there is now a task to collect the configuration wizard logs. This task is only necessary if the wizard fails before the steps to create the wp\_profile/ConfigEngine instance.
+There is one method to collect data and analyze symptoms for problem determination scenarios. You run a task that can collect and optionally send the data for you. Starting with HCL Digital Experience (DX) version 8.5, there is now a task to collect the configuration wizard logs. This task is only necessary if the wizard fails before the steps to create the `wp\_profile/ConfigEngine` instance.
 
--   **wpcollector tool**
+## Using the wpcollector tool
 
-    Complete the following steps:
+Complete the following steps to collect and transfer data using the `wpcollector` tool:
 
-    1.  If the support team requested tracing, enable it now as instructed and then re-create the problem. If no tracing is requested, skip to the next step.
-    2.  Open a command prompt and change to the wp_profile_root/PortalServer/bin/ directory.
+1.  If the support team requested tracing, enable it now as instructed and then re-create the problem. If no tracing is requested, skip to the next step.
 
-        !!!attention
-            You must run the wpcollector task from the wp_profile_root/PortalServer/bin/ directory. If you run the task from a different directory, the task fails.
+2.  Open a command prompt and change to the `wp_profile_root/PortalServer/bin/` directory.
 
-    3.  Run the following script to collect data:
-        -   AIX® and Linux™: `./wpcollector.sh`
-        -   Windows™: wpcollector.bat
+    !!!attention
+        You must run the `wpcollector` task from the `wp_profile_root/PortalServer/bin/` directory. If you run the task from a different directory, the task fails.
 
-    4.  If you did not automatically FTP your results, locate the wp.mustgather.zip file or the pmr-wp.mustgather-timestamp.zip file in the wp_profile_root/filesForAutoPD/ directory. Follow the instructions in "Exchanging information with IBM Technical Support for problem determination" to manually FTP your results.
-    
-    !!!note "Restriction"
-        If you try to extract the wp.mustgather.zip file, some collections might not expand properly if the path name exceeds the 256 character limitation.
+3.  Run the following script to collect data:
+    -   AIX® and Linux™: `./wpcollector.sh`
+    -   Windows™: `wpcollector.bat`
 
--   **cwcollector tool**
+4.  Locate the `wp.mustgather.zip` file in the `wp_profile_root/filesForAutoPD/` directory. Follow the instructions in [HTTPS and SFTP upload and download instructions](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064){target="_blank"} to FTP your results to your HCL case number.
 
-    Complete the following steps if the configuration wizard failed before it created the wp\_profile/ConfigEngine instance:
+!!!note "Restriction"
+    If you try to extract the `wp.mustgather.zip` file, some collections might not expand properly if the path name exceeds the 256 character limitation.
 
-    1.  Open a command prompt and change to the AppServer_root/ConfigEngine directory.
-    2.  Run the following task to collect the configuration wizard logs:
+## Using the cwcollector tool
 
-        !!!note "Tip"
-            The logs are compressed and placed into the AppServer_root/filesForAutoPD directory.
+Complete the following steps if the configuration wizard failed before it created the `wp\_profile/ConfigEngine` instance:
 
-        -   AIX®: `./ConfigEngine.sh collect-cw-logs -DPortalBinaryLocation=/usr/IBM/WebSphere/PortalServer -DWasPassword=password`
-        -   Linux™: `./ConfigEngine.sh collect-cw-logs -DPortalBinaryLocation=/opt/IBM/WebSphere/PortalServer -DWasPassword=password`
-        -   Windows™: `ConfigEngine.bat collect-cw-logs -DPortalBinaryLocation=C:/IBM/WebSphere/PortalServer -DWasPassword=password`
+1.  Open a command prompt and change to the `AppServer_root/ConfigEngine` directory.
+2.  Run the following task to collect the configuration wizard logs:
 
-        !!!attention
-            If the collect-cw-logs task fails, run the stopserver server1 command from the AppServer_root/bin directory. Then, rerun the collect-cw-logs task.
+    !!!note "Tip"
+        The logs are compressed and placed into the `AppServer_root/filesForAutoPD` directory.
 
-    3.  If you did not automatically FTP your results, locate the cw.mustgather.zip file or the pmr-cw.mustgather-timestamp.zip file in the AppServer_root/filesForAutoPD directory. Follow the instructions in "Exchanging information with IBM Technical Support for problem determination" to manually FTP your results.
+    -   AIX®: `./ConfigEngine.sh collect-cw-logs -DPortalBinaryLocation=/usr/IBM/WebSphere/PortalServer -DWasPassword=password`
+    -   Linux™: `./ConfigEngine.sh collect-cw-logs -DPortalBinaryLocation=/opt/IBM/WebSphere/PortalServer -DWasPassword=password`
+    -   Windows™: `ConfigEngine.bat collect-cw-logs -DPortalBinaryLocation=C:/IBM/WebSphere/PortalServer -DWasPassword=password`
 
--   **Troubleshooting:**
+    !!!attention
+        If the collect-cw-logs task fails, run the `stopserver server1` command from the AppServer_root/bin directory. Then, rerun the `collect-cw-logs` task.
 
-    If the wpcollector task cannot process due to too many files, then flags can be set to collect a subset of all the files.
+3.  Locate the `cw.mustgather.zip` file in the `AppServer_root/filesForAutoPD` directory. Follow the instructions in [HTTPS and SFTP upload and download instructions](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064){target="_blank"} to FTP your results to your HCL case number.
 
-    `-Dskip.XXX.XXXX= true can be set to not include files.`
+## Troubleshooting
 
-    "collect-was-common-files-for-PD" flag="skip.was.collection"
+If the `wpcollector` task cannot process due to too many files, the following flags can be set to collect a subset of all the files.
 
-    "collect-portal-common-files-for-PD" flag="skip.wp.collection"
+!!!note
+    `-Dskip.XXX.XXXX= true` can be set to not include files.
 
-    "collect-wp_profile-common-files-for-PD" flag="skip.profile.collection"
+```
+"collect-was-common-files-for-PD" flag="skip.was.collection"
 
-    "action-remove-password-from-prop-files" flag="skip.remove.pwd"
+"collect-portal-common-files-for-PD" flag="skip.wp.collection"
 
-    "transfer-autopd-data" flag="skip.file.transfer"
+"collect-wp_profile-common-files-for-PD" flag="skip.profile.collection"
 
-    "collect-trace-logs" flag = "skip.trace.collection"
+"action-remove-password-from-prop-files" flag="skip.remove.pwd"
 
-    "collect_wps_information" flag ="skip.wps.collection"
+"transfer-autopd-data" flag="skip.file.transfer"
 
-    "collect_cisa_inventory_info" flag ="skip.cisa.collection"
+"collect-trace-logs" flag = "skip.trace.collection"
 
-    "collect-response-file" flag="skip.resp.file.collection"
+"collect_wps_information" flag ="skip.wps.collection"
 
-    "collect-iim-install-data" flag ="skip.iim.data"
+"collect_cisa_inventory_info" flag ="skip.cisa.collection"
 
+"collect-response-file" flag="skip.resp.file.collection"
 
+"collect-iim-install-data" flag ="skip.iim.data"
+```
 
 ???+ info "Related information"  
     -   [Portal version and history information](../../../manage/troubleshooting/tools_for_troubleshooting_and_diagnostics/wp_history.md)
     -   [Logging and tracing](../../../manage/troubleshooting/logging_and_tracing/index.md)
-    - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+    -   [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

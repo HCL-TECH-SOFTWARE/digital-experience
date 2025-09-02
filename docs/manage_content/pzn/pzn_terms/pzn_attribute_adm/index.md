@@ -1,10 +1,10 @@
-# Attribute Based Administration
+# Attribute-based administration
 
-Attribute based administration provides a facility to customize the layout of a page for individual authenticated users by using rules to show or hide pages or portlets.
+Attribute-based administration provides a facility to customize the layout of a page for individual authenticated users by using rules to show or hide pages or portlets.
 
 Portal Personalization rules can be used to control whether a page is displayed in the site navigation; this is managed by choosing a rule appropriate for the user attribute you want to enable to see the page. If the rule returns true, the page or portlet will be shown, otherwise, it will be hidden.
 
-Attribute Based Administration is only available for authenticated users. If Personalization is not installed or is not enabled in the properties settings, you will not see this option. For anonymous users, all pages are shown.
+Attribute-based administration is only available for authenticated users. If Personalization is not installed or is not enabled in the properties settings, you will not see this option. For anonymous users, all pages are shown.
 
 ## Access Control and Visibility Rules
 

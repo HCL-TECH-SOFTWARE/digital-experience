@@ -6,7 +6,7 @@ The HCL Digital Experience site analysis log is:
 
 ```
 
-[wp\_profile\_root](../../../../guide_me/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/sa_date_time.log
+[wp\_profile\_root](../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/logs/HCL Portal and HCL Web Content Manager/sa_date_time.log
 
 ```
 

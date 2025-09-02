@@ -4,7 +4,7 @@ Each PAA file is a structured ZIP compression file. Because the Solution install
 
 At the top level of a PAA file is the root directory. There are no restrictions on the name of this directory; however, use something that is unique and does not clash with other registered PAA files or assemblies. There must be only one root directory in a PAA file. The name of this directory is significant because it is the reference name for your PAA content. It is the same value as the `assemblyName` when you create the assembly level sdd.xml file. Read [The sdd.xml file](../sdd.xml_file/index.md) for information.
 
-You can find a sample top-level directory in the [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/doc/paa-samples/sample1.paa file. The root directory contains the documentation and components directories and an sdd.xml file.
+You can find a sample top-level directory in the [PortalServer\_root](../../../../../guide_me/glossary/wpsdirstr.md)/doc/paa-samples/sample1.paa file. The root directory contains the documentation and components directories and an sdd.xml file.
 
 The sdd.xml file has the following roles:
 

@@ -1,5 +1,8 @@
 # Filtering the Results of a WCM Navigator Component
 
+!!! warning
+    The Woodburn Studio demo site will be deprecated starting August 05, 2025 and will reach End of Support (EOS) on August 04, 2026.
+
 This document describes how to filter WCM navigator component results and uses the Woodburn Studio site as an example of when this type of filtering might be needed.
 
 A WCM navigator component is designed to run through the WCM artifacts located under a site area or content item and to display those resources. Under certain circumstances, it might be necessary to filter the results of the navigator component to control what is displayed.

@@ -2,9 +2,7 @@
 title: Limitations
 ---
 
-# Script Application Limitations
-
-Learn about limitations to the Script Application.
+Learn about the limitations of the Script Application.
 
 - **Setting portlet preferences in edit mode is not supported**
 
@@ -39,3 +37,7 @@ Learn about limitations to the Script Application.
 - **The Script Application Editor is not fully accessible, but impaired users have good alternative options.**
 
     Users who require accessible Script Application editing capabilities can use their preferred external accessible editors to develop and maintain the HTML, JS, and CSS artifacts locally. They can then publish the resulting applications to a site area in a Web Content Manager library for use as Script Application instances. To publish and update externally developed single page applications to a Web Content Manager library, they can use a command line utility that Script Application provides. They can use it from the command line or from build automation scripts. For more information about the Script Application command line interface, read [Script Application command line application overview](https://help.hcltechsw.com/digital-experience/9.5/script-portlet/cmd_line_push_ovr.html?hl=script%2Capplication%2Ccommand%2Cline%2Capplication%2Coverview%2Chcl%2Cdigital%2Cexperience). Alternatively, for quick simple edits by using a browser, the Web Content Manager authoring portlet provides an accessible alternative experience to the Script Application browser-based editor. When a user puts a portal page in edit mode and tabs to a Script Application window, the portal shows a separate **Accessible Editor** option. When the user clicks **Accessible Editor**, the portal starts the Web Content Manager authoring portlet to edit that Script Application instance.
+
+## HCLSoftware U learning materials
+
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

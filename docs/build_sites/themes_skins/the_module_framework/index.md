@@ -27,9 +27,9 @@ You can determine whether portlets automatically load their dependent capabiliti
 To decrease the response time of your portal, a template parser resolves which modules are needed and collects all of the modules that are enabled by the current profile. Parts of the content are parsed and displayed as soon as possible.
 -   **[Writing modules](../the_module_framework/writing_module/index.md)**  
 You can define global or theme-specific contributions that contain a theme module, which applies to different scopes through theme profiles. A module defines its contributions by using a plugin.xml or JSON file.
--   **[Theme Optimization Analyzer](../the_module_framework/themeopt_analyzer/)**  
+-   **[Theme Optimization Analyzer](../the_module_framework/themeopt_analyzer/index.md)**  
 Use the Theme Optimization Analyzer to view, but not edit, all parts of the theme optimization framework inside of HCL Digital Experience.
--   **[Troubleshooting modular themes](../the_module_framework/troubleshooting_modular_themes/)**  
+-   **[Troubleshooting modular themes](../the_module_framework/troubleshooting_modular_themes/index.md)**  
 You can debug your modules to improve performance.
 -   **[Specify profiles](../the_module_framework/specify_profiles/index.md)**  
 You can specify the profiles that you want to use two different ways depending on whether you are an administrator or a user. Profiles help define which modules are used to render a page.

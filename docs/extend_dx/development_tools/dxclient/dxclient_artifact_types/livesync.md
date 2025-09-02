@@ -5,13 +5,14 @@ This topic provides information about syncing WebDAV-based theme or WCM Design L
 It is recommended that you use the node version of the DXClient while working with LiveSync. LiveSync is supported in scaled DX environment setups.
 
 !!! note
-    You can trigger all LiveSync commands from within the target local theme path.
-    Starting CF223, LiveSync Pull and Push commands for WCM Design Library are available for HTML and Folder Components.
+    - You can trigger all LiveSync commands from within the target local paths.
+    - Starting CF223, HTML and Folder Components are supported in LiveSync Pull and Push commands for WCM Design Library.
+    - Starting CF225, Presentation Templates are supported in LiveSync Pull and Push commands for WCM Design Library.
+    - Starting CF227, Style-sheet Components are supported in LiveSync Pull and Push commands for WCM Design Library.
 
 ## LiveSync Push Theme
 
 This command will sync your WebDAV based theme files into DX Server. Then, it will watch for succeeding changes within the given `themePath` and immediately reflect the changes in the DX server.
-
 
 -   **Command description**
 
@@ -444,24 +445,30 @@ The LiveSync Push WCM Design Library command synchronizes changes in your local 
 - While multiple developers can use LiveSync on the same server, LiveSync restricts concurrent theme editing to one developer at a time. If another user is currently working on the same theme being pushed, LiveSync will not allow that user's changes to be pushed. Concurrent usage of this command on the same theme or using it along with [Theme Editor](../../../../build_sites/themes_skins/customizing_theme/theme_editor_portlet.md), or WebDav, is not supported.
 - Sequential usage of LiveSync on a single theme with different client operating systems (i.e., Windows and Mac) is not supported.
 - Case sensitivity for naming files and folders is not supported.
--  If files from Themes are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. LiveSync does not support bidirectional synchronization, therefore, any local updates to the deleted files will result in a **File not found** error.
+- If files from Themes are deleted from the DX server while the LiveSync process is in progress, the files will not be restored from the local system. LiveSync does not support bidirectional synchronization, therefore, any local updates to the deleted files will result in a **File not found** error.
    To resolve the **File not found** error, push your local files back to the theme. Note that this action overrides the existing files on the server. To proceed, stop the sync and push the files again. If a full replacement is not required, stop the sync and manually add the files again to the theme on the server.
 
 ### WCM Design Library
 
-- Supported WCM types: Presentation Template, HTML Component, and Folder Component.
+- Supported WCM types: Presentation Template, HTML Component, Folder Component, Style-sheet Component.
+- Style-sheet Component file types and extension limitations:
+    - All CSS files will be considered as a style-sheet components.
+    - HTML-based style-sheet components cannot be created locally using DXClient.
+    - Any other file type of style-sheet component is not supported.
 - Moving and renaming of files are equivalent to deleting the original components and creating an entirely new set of components.
 - If a published component has a draft version, the feature will pull and push into the draft version.
 - The LiveSync Push WCM Design Library feature only works on a WCM Design Library previously pulled by the LiveSync Pull WCM Design Library feature.
 - The LiveSync Pull and Push WCM Design Library feature only allows the following special characters for the file name, folder name, and library name : $, -,  _,  !, ( ).
+- When using LiveSync Push WCM Design Library to push supported components in bulk, server issues might occur due to the high volume of requests being sent. For large-scale transfers of WCM design libraries, it is recommended to use the [`dxclient wcm-library-export | wcm-library-import`](./wcmlibraries.md) commands instead, which are optimized for bulk operations.
 - Concurrent user issues:
-    a. If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system. No local indication of any deletion will be available. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server.
-    b. If a concurrent user renames any file from the WCM library on the DX server during the LiveSync process between the local and DX servers, those files will not be restored from the local system. No local indication of any deletion will be available.
-    c. If a concurrent user pushes a stylesheet for a component that is under a recently deleted folder, it will be pushed but will be placed directly under components folder as the orginal folder no longer exists.
+    - If any files from the WCM library are deleted from the DX server by a concurrent user during the LiveSync process between the local and DX servers, the files will not be restored from the local system. No local indication of any deletion will be available. If the deleted file is modified locally, it results in a **File not found** error. In this scenario, you cannot push the local files back to the DX server.
+    - If a concurrent user renames any file from the WCM library on the DX server during the LiveSync process between the local and DX servers, those files will not be restored from the local system. No local indication of any deletion will be available.
+    - If a concurrent user pushes a stylesheet for a component that is under a recently deleted folder, it will be pushed but will be placed directly under components folder as the original folder no longer exists.
 
-LiveSync is a unidirectional process that only happens from your local system to the DX server. 
-To resolve/prevent these errors, you must stop the sync, manually add the local file to the DX server, and pull the WCM library.
+    LiveSync is a unidirectional process that only happens from your local system to the DX server. To resolve these errors, you must stop the sync, manually add the local file to the DX server, and pull the WCM library.
 
 ## HCLSoftware U learning materials
 
-To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
+For an introduction and demo on how to develop an HCL DX theme, go to [Theme Development for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D413){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Theme_Development_Resources.zip){target="_blank"}.
+
+To learn how to further develop WebDAV-based DX themes, go to [Theme Development for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.

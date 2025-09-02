@@ -1,6 +1,6 @@
 # Site Manager
 
-The Site Manager provides access to common content authoring tools and shows a complete view of the the site’s navigation. Without leaving the context of the website, content authors can access a customization shelf that contains applications and content that can be added to the page, as well as access to configuration options. The same interface provides access to workflow and project capabilities.
+The Site Manager provides access to common content authoring tools and shows a complete view of the site’s navigation. Without leaving the context of the website, content authors can access a customization shelf that contains applications and content that can be added to the page, as well as access to configuration options. The same interface provides access to workflow and project capabilities.
 
 If you want to author web content with the Site Manager, you must add a page component that uses web content or add the Web Content Viewer portlet with the site toolbar. For more information, see [Adding reusable page components to your page](../../../build_sites/create_sites/adding_pages_content_more/toolbar_add_comp.md) and [Displaying Content with Web Content Viewers](../../wcm_delivery/deliver_webcontent_on_dx/displaying_content/index.md). 
 

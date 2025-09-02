@@ -15,7 +15,7 @@ Use this approach if your organization has the following interests and plans:
 
 ## HCL Digital Experience 9.5 package contents
 
-The HCL Digital Experience 9.5 image files, available through the HCL DX 9.5 Container Update releases, can be downloaded from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
+The HCL Digital Experience 9.5 image files, available through the HCL DX 9.5 Container Update releases, can be downloaded from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"}.
 
 Refer to the [HCL Digital Experience 9.5 Container Deployment](index.md) topic for additional guidance, including the latest HCL DX 9.5 image file listings, deployment, staging, maintenance, and customization guides.
 
