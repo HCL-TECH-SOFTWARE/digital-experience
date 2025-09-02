@@ -7,7 +7,9 @@ You can use WebDAV to work with the portal themes.
 WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point for the access and management of hierarchical data. For example, in content management systems. WebDAV stores the data in collections. You can work with the data in a user interface view that is similar to that of a file system. A folder represents a WebDAV collection. Various tools are available for integrating WebDAV resources into the client file system. Users can use these tools to view and modify resources that they can access with WebDAV.
 
 !!! note
-    The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
+    - The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the links information for information.
+    - The WebDAV documentation stating that HTTPS is not enabled must be updated to reflect that it is now enabled.
+
 
 You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:
 

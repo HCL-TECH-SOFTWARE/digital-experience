@@ -9,7 +9,8 @@ Examples of such services are:
 - WebDAV for Web Content Manager.
 
 !!! note
-    WebDAV does not support secure connections, such as, HTTPS. For specific WebDAV client version compatibility, refer to the detailed systems requirements documentation and the topic *Using HCL DX File Sync*.
+    - WebDAV does not support secure connections, such as, HTTPS. For specific WebDAV client version compatibility, refer to the detailed systems requirements documentation and the topic *Using HCL DX File Sync*.
+    - The WebDAV documentation stating that HTTPS is not enabled must be updated to reflect that it is now enabled.
 
 - **[Configuring the WebDAV file store](webdav_cfg_filestore.md)**  
 By default only administrative users can perform write operations on specific folders of the WebDAV file store. This affects public and user owned folders. You can enable write access for all authenticated users on WebDAV file stores folders.
