@@ -75,7 +75,7 @@ When using WebDAV with web content, be aware of the following considerations.
 
 - **[Web content items in the WebDAV tree](wcm_webdav_tree.md)**  
 The WebDAV tree that contains your web content items begins at the WebDAV root /libraries/, which displays all libraries to which you have access. All web content items within the libraries are organized with folders and files.
-- **[Metadata and access control for web content items in WebDAV](wcm_webdav_tree.md)**  
+- **[Metadata and access control for web content items in WebDAV](wcm_webdav_metadata.md)**  
 WebDAV uses XML files to represent metadata and access control information for a web content item. You can change an item's metadata and access control settings by modifying these files, and you can specify settings for multiple files by copying the XML files to their appropriate locations in the WebDAV tree.
 - **[Creating taxonomies and categories with WebDAV](wcm_webdav_createtax.md)**  
 Taxonomies and categories are profiling methods that are used to group content items, and you can work with taxonomies and categories directly through WebDAV. Taxonomies and categories are represented in WebDAV as folders, and you can set up your taxonomy by creating and nesting folders.
