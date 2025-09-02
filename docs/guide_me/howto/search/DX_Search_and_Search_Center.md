@@ -29,33 +29,43 @@ This article is structured as a workflow sample that include different parts:
 
 ### Step 2: Create a sample document that contains metadata
 
-1. Go to **Web Content > Authoring > Web Content > Content > Articles**.
+1. In the Portal menu click to the home icon (Open applications menu) and then to **Web Content** to open the Content Composer.
 
-2. Click **New > Content > Select from all Content Templates...**.
+2. On the left side menu of the Content Composer click to **Authering**
 
-3. Select the **Article** content template then click **OK**.
+3. Click **New > Content > Select from all Content Templates...**.  
 
-4. Enter the following:  
+    ![Create an Article](./images/create_article.png)  
+
+4. On the **New Content** window navigate to **Web Content**
+
+5. Select the **Article** content template then click **OK**.
+
+    ![New content](./images/new_content.png)  
+
+6. Enter the following:  
 
     - **Name:** MyTestArticle  
     - **Display title:** MyTitle  
     - **Description:** MyDescription  
 
-5. Under **Properties** tab, click **Show Hidden Fields**.
+7. Under **Properties** tab, click **Show Hidden Fields**.  
 
-6. In the Authors section click to **add Authors**. In the next window search for the **Test User 1** and then add it.
+8. In the Authors section click to **add Authors**. In the next window search for the **Test User 1** and then add it.
 
-7. On the properties tab scroll down and expand the **Profile** section
+9. On the properties tab scroll down and expand the **Profile** section
 
-8. In the Keyword section it is possible to include specific keywords that later can be used to find the page by filtering for keywords. In this sample workflow add the keyword **mykeyword**.
+10. In the Keyword section it is possible to include specific keywords that later can be used to find the page by filtering for keywords. In this sample workflow add the keyword **mykeyword**.
 
-9. Click to **Save and Close**. The Test-page should look like the following:
+11. Click to **Save and Close**.  
 
-![Sample Article](./images/Article_Sample.png)  
+     **Sample page:**  
 
-**Properties Sections:**  
+     ![Sample Article](./images/Article_Sample.png)  
 
-![Properties Sections](./images/Article_Sample_Properties.png)  
+     **Properties Sections:**  
+
+     ![Properties Sections](./images/Article_Sample_Properties.png)  
 
 ### Step 3: Check the configuration settings of the Classic search feature
 
@@ -87,7 +97,7 @@ When a user enters more than one search term, the HCL DX search engine applies a
 
 2. Check all parameters on all configuration pages to find out, if you have already set the parameter "DEFAULT_SEARCH_OPERATOR" to the value "AND". If it is not set yet, please add the parameter name and value under the "Service parameters" section and click the "Add Parameter" button. Then save the changes by clicking to the "OK" button. See sample screenshot:  
 
-    ![Properties Sections](./images/Default_Search_Operator.png) 
+    ![Properties Sections](./images/Default_Search_Operator.png)  
 
     For details, please check: [Changing the default query operator from 'OR' to 'AND'](https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search/improving_search_quality/Optionsavailabletoimprovesearchquality/ChangedefaultqueryoperatorfromORtoAND/){:target=”_blank”}  
 
@@ -98,7 +108,7 @@ In the Search Service Configuration page it is also possible to do some tuning f
 1. Check, if the "boostingSettings" parameter is already set in the Default Search Service. If it is not set, please add the following:
 
     Parameter name: boostingSettings  
-    value: {"phraseBoost": {"Enabled":"true"}, "fieldBoost": [{"field":"title", "boost": 3.0} , {"field":"description", "boost":3.0}, {"field":"keywords", "boost":2.0}]}
+    value: `{"phraseBoost": {"Enabled":"true"}, "fieldBoost": [{"field":"title", "boost": 3.0} , {"field":"description", "boost":3.0}, {"field":"keywords", "boost":2.0}]}`
 
 2. Save the changes by clicking to the **"OK"** button.  
 
@@ -128,7 +138,7 @@ By default, the meta elements title, keywords, and description of documents are 
 
     ![Properties Sections](./images/collections_configure_content_sources.png)  
 
-    In the **Documents** column of the table, the new number, or number of changed documents can be found. It may still show 0 in the column, if the crawler has not run yet. With the start of the crawler you may see then that the number increases to 1 due to the WCM document that was created in [Part 2](#part2). Make sure that the new document is already crawled by clicking the **start Crawler** button at minimum once.  
+    In the **Documents** column of the table, the new number, or number of changed documents can be found. It may still show 0 in the column, if the crawler has not run yet. With the start of the crawler you may see then that the number increases to 1 due to the WCM document that was created in [Step 2](#step-2-create-a-sample-document-that-contains-metadata). Make sure that the new document is already crawled by clicking the **start Crawler** button at minimum once.  
 
 ### Step 8: Use the Search Center to search for the newly created Document
 
