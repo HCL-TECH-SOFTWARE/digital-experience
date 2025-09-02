@@ -33,7 +33,7 @@ To clear the temporary files:
     ```
 
     Before deleting the temporary files, please also read:  
-    [Things to know before deleting temporary, cache and log files in WebSphere Application Server](https://www.ibm.com/support/pages/things-know-deleting-temporary-cache-and-log-files-websphere-application-server)  
+    [Things to know before deleting temporary, cache and log files in WebSphere Application Server](https://www.ibm.com/support/pages/things-know-deleting-temporary-cache-and-log-files-websphere-application-server){target="_blank"}  
 
 ### Clearing the OSGi class caches of DX profiles
 
@@ -88,7 +88,7 @@ For Windows 2008, Windows 2012, or Windows 2016:
 
 When all JVMs are stopped, delete the content of that `javasharedresources` folder.  
 
-Source: [How to clear the WebSphere class caches](https://www.ibm.com/support/pages/how-clear-websphere-class-caches)
+Source: [How to clear the WebSphere class caches](https://www.ibm.com/support/pages/how-clear-websphere-class-caches){target="_blank"}
 
 !!!note
     - Never delete the cache while any of the JVMs are running and using the cache. The server has to be stopped before clearing the cache.
