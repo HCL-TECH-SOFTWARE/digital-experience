@@ -18,7 +18,5 @@ Learn how to tune WCM to reduce your query time.
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[How to troubleshoot JDBC datasources](./DataSourceTracing.md)**  
-Learn how to troubleshoot Java Database Connectivity (JDBC) datasources using SQL queries.
 - **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.
