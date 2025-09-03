@@ -92,6 +92,10 @@ Click the **View upload details** arrow to see the status of all uploaded and ca
     - The cancel-all function does not affect items that have already finished uploading from server. It only cancels items that are currently pending or in progress.
     - The progress bar accurately shows the number of successfully uploaded items compared to the total number of items in the initial queue.
 
+## Limitations
+
+When a folder upload is cancelled, any completed assets remain and the partially created collection is retained. Re-uploading the same folder is blocked with a "Collection name already exists" message until the existing collection is deleted from DAM.
+
 ## Sorting root and nested collections
 
 To help you find assets more efficiently, you can sort collections and their contents in both Grid and List views. Your sorting preferences are saved and persist as you navigate between these views. A dedicated icon allows you to switch between ascending and descending order for your selected sort criteria.
