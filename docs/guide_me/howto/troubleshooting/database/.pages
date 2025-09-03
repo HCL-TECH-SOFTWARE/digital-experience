@@ -1,0 +1,5 @@
+site_name: Troubleshooting database / datasource problems
+
+nav:
+- index.md
+- DataSourceTracing.md
