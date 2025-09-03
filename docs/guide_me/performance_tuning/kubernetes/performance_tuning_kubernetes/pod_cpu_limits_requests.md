@@ -1,6 +1,6 @@
 # Optimizing Pod CPU Limits and Requests in Kubernetes
 
-When tuning performance in Kubernetes, properly configuring CPU requests and limits for pods is essential. A pod(the smallest deployable unit in Kubernetes) can contain one or more containers. CPU requests define the minimum amount of CPU guaranteed to a pod, ensuring it has the resources it needs to operate reliably. CPU limits, on the other hand, set an upper bound on how much CPU the pod can consume, preventing it from impacting other workloads.
+When tuning performance in Kubernetes, properly configuring CPU requests and limits for pods is essential. A pod (the smallest deployable unit in Kubernetes) can contain one or more containers. CPU requests define the minimum amount of CPU guaranteed to a pod, ensuring it has the resources it needs to operate reliably. CPU limits, on the other hand, set an upper bound on how much CPU the pod can consume, preventing it from impacting other workloads.
 
 To optimize performance, adjust CPU requests and limits based on the specific demands of your application. Increasing CPU requests provides more guaranteed resources, improving stability under sustained load. Raising CPU limits allows a pod to utilize additional CPU during peak periods, enhancing performance when needed. However, it is important to strike a balance—overprovisioning can lead to inefficient resource usage and reduced cluster capacity.
 
