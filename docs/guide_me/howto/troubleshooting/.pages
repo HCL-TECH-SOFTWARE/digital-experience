@@ -2,5 +2,5 @@ site_name: Troubleshooting
 
 nav:
 - index.md
-- web-browser
-- database
+- Web-browser: web-browser
+- Databases / Datasources: database

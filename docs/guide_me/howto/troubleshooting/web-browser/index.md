@@ -1,4 +1,4 @@
-# Web browser
+# Web-browser
 
 This section includes how-to articles about troubleshooting web browser issues in HCL Digital Experience (DX).
 
