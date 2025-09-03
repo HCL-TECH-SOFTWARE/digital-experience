@@ -4,7 +4,7 @@ In our lab environment, our clients and servers were on the same LAN segment, so
 
 ## Social Rendering
 
-ocial rendering enables Portal page editors to feature social data hosted on a remote IBM Connections server in the context of Portal pages.
+Social rendering enables Portal page editors to feature social data hosted on a remote IBM Connections server in the context of Portal pages.
 
 As social rendering is based on the WCM Rendering Portlet, the same performance tunings for WCM rendering should be applied.
 
