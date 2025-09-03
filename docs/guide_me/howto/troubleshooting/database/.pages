@@ -1,4 +1,4 @@
-site_name: Troubleshooting database / datasource problems
+site_name: Troubleshooting databases and datasources problems
 
 nav:
 - index.md

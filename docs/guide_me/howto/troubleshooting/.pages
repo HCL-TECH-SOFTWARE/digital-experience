@@ -3,4 +3,4 @@ site_name: Troubleshooting
 nav:
 - index.md
 - Web-browser: web-browser
-- Databases / Datasources: database
+- Databases and Datasources: database
