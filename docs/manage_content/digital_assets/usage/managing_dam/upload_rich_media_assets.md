@@ -94,7 +94,7 @@ Click the **View upload details** arrow to see the status of all uploaded and ca
 
 ## Limitations
 
-When a folder upload is cancelled, any completed assets remain and the partially created collection is retained. Re-uploading the same folder is blocked with a "Collection name already exists" message until the existing collection is deleted from DAM.
+When a folder upload is cancelled, any completed assets remain and the partially created collection is retained. Re-uploading the same folder will not complete. An error message will be seen until the existing collection is deleted from DAM.
 
 ## Sorting root and nested collections
 
