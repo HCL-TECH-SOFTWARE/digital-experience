@@ -8,7 +8,7 @@ To configure transient users, refer to the following steps:
 
 1. **For Remote Dmgr only**: Copy this JAR file from the Portal server `<PortalServer_root>/base/wp.user.impl/lib/wp.user.connections.jar to the <AppServer_root>/lib` directory of the remote Dmgr.
 
-2. Run the following task from the [wp_profile_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)\ConfigEngine directory with the appropriate parameters. Complete this step only on the primary node.
+2. Run the following task from the [wp_profile_root](../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\ConfigEngine directory with the appropriate parameters. Complete this step only on the primary node.
 
     - AIX®: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`
     - HP-UX: `./ConfigEngine.sh enable-transient-user -DWasUserId=username -DWasPassword=password`

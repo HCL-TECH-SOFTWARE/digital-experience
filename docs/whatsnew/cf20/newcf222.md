@@ -68,10 +68,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for cleaning up WCM items
 
 === "Containers"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../manage_content/wcm_configuration/cleanup_wcm.md) for more information.
 
 === "On-Premises"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../manage_content/wcm_configuration/cleanup_wcm.md) for more information.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -108,12 +108,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New sizing guidance for rendering in a medium configuration
 
 === "Containers"    
-    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/performance_tuning/kubernetes/rendering_medium_config.md).
+    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_medium_config.md).
 
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/guides/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

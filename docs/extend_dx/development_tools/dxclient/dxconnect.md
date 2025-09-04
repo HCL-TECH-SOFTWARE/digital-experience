@@ -15,7 +15,7 @@ DXConnect has to be installed manually on on-premise environments.
 
 DXConnect requires the `cw_profile` Administrator security role to access the application servlet APIs.
 
-## DXConnect Installation (only applicable for on-premises installations)
+## Installing DXConnect (only applicable for on-premises installations)
 
 To install DXConnect under Configuration Wizard server, you must issue the command to the ConfigEngine script present under 'wp_profile'.
 Navigate to the ConfigEngine script location under 'wp_profile':

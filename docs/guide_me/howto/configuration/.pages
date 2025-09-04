@@ -6,4 +6,7 @@ nav:
     - ChangeCellandNodeName.md
     - ChangeDisplayLanguage.md
     - ConfigureRAD.md
+    - EnableImageFormats.md
+    - IntegrateLDAP.md
     - RemoveStateInformationFromURL.md
+    - HideXPoweredByHeader.md

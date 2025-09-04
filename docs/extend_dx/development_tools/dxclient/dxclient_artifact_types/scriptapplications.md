@@ -1,17 +1,17 @@
-# Script Applications
+# Script Application
 
-This topic provides information about the deployment, undeployment, and restoration of Script Applications.
+This topic provides information about the deployment, undeployment, and restoration of Script Application.
 
-## Deploy Script Applications
+## Deploy Script Application
 
-The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Applications between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a Script Application to or from a Script Application instance stored in a Web Content Manager library on the server.
+The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Application between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a Script Application to the command pushes or pulls the files that make up a Script Application instance stored in a Web Content Manager library on the server.
 
 !!! note
-    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Applications using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
+    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Application using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
 
 **Required Files**:
 
-The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Applications, refer to the [Build applications with the Script Application](../../../../guide_me/tutorials/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Application, refer to the [Build applications with the Script Application](../../../script_application/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
 
 **Command**
 
@@ -47,8 +47,8 @@ dxclient deploy-scriptapplication push -h
 
 !!! notes
     1. At least one of (a) `wcmContentId`, (b) `wcmContentPath` or (c) both `wcmContentName` and `wcmSiteArea` must be specified. If multiple options are provided, then the priority order goes as follows: (a), then (b), and then (c).
-    2. Use `wcmContentId` only if you are updating an existing Script Application instance. For new Script Applications, specify either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea`.
-    3. `mainHtmlFile` is mandatory.
+    2. Use `wcmContentId` only if you are updating an existing Script Application instance. For new Script Application, specify either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea`.
+    3. `mainHtmlFile` parameter is mandatory for the push command. You must specify the location of the main HTML file that serves as the entry point for the Script Application. This is relative to your input in either prebuiltZip or contentRoot.
     4. The outputfile for pull is generated inside store/outputFiles/sp-pull-output.
     5. When `prebuiltZip` is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
     6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new Script Application to the project, use either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
@@ -226,13 +226,13 @@ dxclient deploy-scriptapplication pull
 For Script Application Push, if the Script Application is extracted to a folder named temp at the root of the DXClient machine:
 
 ```
-dxclient deploy-scriptapplication push -contentRoot /temp -wcmSiteArea "Script Application Library/Script Applications/" -wcmContentName DemoScriptApplication
+dxclient deploy-scriptapplication push --contentRoot /temp --wcmSiteArea "Script Application Library/Script Application/" --wcmContentName DemoScriptApplication  --mainHtmlFile index.html
 ```
 
 If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:
 
 ```
-dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea "Script Application Library/Script Applications/" -wcmContentName DemoScriptApplication
+dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea "Script Application Library/Script Application/" -wcmContentName DemoScriptApplication --mainHtmlFile  /temp/DemoScriptApplication/index.html
 ```
 
 If all required options are configured in the config.json at the /dist/src/configuration path of the DXClient tool, then execute:
@@ -241,7 +241,7 @@ If all required options are configured in the config.json at the /dist/src/co
 dxclient deploy-scriptapplication push
 ```
 
-## Undeploy Script Applications
+## Undeploy Script Application
 
 The `undeploy-scriptapplication` command is used to remove a Script Application from a target HCL DX 9.5 CF192 or later servers.
 
@@ -441,4 +441,6 @@ dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip).
+For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip){target="_blank"}.
+
+To learn more about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

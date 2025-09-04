@@ -6,11 +6,11 @@
 
 ## Introduction  
 
-When you install HCL Digital Experience (DX), a wp_profile is created with a cell name and a node name by default. In some scenarios, it is required to change the cell name and node name after installation. This document provides instructions on how to change these names.  
+When you install HCL Digital Experience (DX), a wp_profile is created with a cell name and a node name by default. In some scenarios, it is required to change the cell name and node name after installation. This article provides instructions on how to change these names.  
 
 ## Instructions  
 
-To change the cell name and node name in a standalone DX environment, refer to the following steps:  
+Refer to the following steps to change the cell name and node name in a standalone DX environment:  
 
 1. Open the command line window and go to the `<WAS_HOME>/profiles/<profile_name>/bin` directory.  
 

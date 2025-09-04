@@ -1,6 +1,6 @@
 # Adjusting the DX Login flow for OIDC
 
-Once you have configured WebSphere Application Server to act as an OpenID Connect Relying Party, this would allow HCL Digital Experience (DX) to trust authentication assertions towards your Identity Provider (IdP). Detailed steps are outlined in [Updating WebSphere to support OIDC Authentication for DX](./dx-update-webshpere-for-oidc.md).
+Once you have configured WebSphere Application Server to act as an OpenID Connect Relying Party, this would allow HCL Digital Experience (DX) to trust authentication assertions towards your Identity Provider (IdP). Detailed steps are outlined in [Updating WebSphere to support OIDC Authentication for DX](./dx-update-websphere-for-oidc.md).
 
 This document provides instructions to adjust the user log in flow within DX. Whenever a user tries to access a protected resource, they will be redirected to IdPs log in page for authentication and asked to enter their credentials. After the user is authenticated successfully they are redirected back to DX.
 
