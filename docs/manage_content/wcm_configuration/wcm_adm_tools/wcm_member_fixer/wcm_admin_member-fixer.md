@@ -41,10 +41,8 @@ If custom mapping is required you must perform the following steps to map the us
         `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary"`
 
     !!!note
-        An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
-
-    !!!note
-        Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
+        - An administrator user name and password is not required if you have already specified the portal administrator username and password using the `PortalAdminId` and `PortalAdminPwd` settings in the `wkplc.properties` file.
+        - Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
 
     A detailed report containing the updates that will be made for each item will be shown in the SystemOut.log file located in wp_profile_root\logs\HCL Portal and HCL Web Content Manager.
 
@@ -126,9 +124,10 @@ To prevent your session timing out before the task has finished, you can append 
 
 ## Setting DNs to specify lowercase or mixed case
 
-You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter:  
-    - Setting the value to `lower` changes all DX references to lowercase.
-    - Setting the value to `update` changes all DX references to match exactly what the LDAP returns.
+You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter: 
+
+- Set the value to `lower` to change all DX references to lowercase.
+- Set the value to `update` to change all DX references to match exactly what the LDAP returns.
 
 Any DN that gets updated by the member fixer task will be stored according to this parameter value.
 
