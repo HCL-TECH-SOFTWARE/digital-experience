@@ -47,24 +47,24 @@ The following features and updates are available to customers installing HCL Dig
 ## New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
 
 === "Containers"
-     
+
     These guides detail how to build and package Digital Experience solutions using React, and Javascript as Script Applications and DX Modules. The latest update includes:
 
-    -   New Site integration tutorial section that details how to import and export parts of a DX site plus other integration solutions. See [Site Integration](../../guide_me/tutorials/scriptapps/site_integration/index.md) for more information. 
+    -   New Site integration tutorial section that details how to import and export parts of a DX site plus other integration solutions. See [Site Integration](../../extend_dx/script_application/scriptapps/site_integration/index.md) for more information. 
 
-    - The Woodburn insurance site showcases the use of micro-frontends in HCL Digital Experience. Access the documentation and link to the sample site here: [Woodburn insurance sample site](../../guide_me/tutorials/scriptapps/samples/woodburn_insurance_demo/index.md)
+    - The Woodburn insurance site showcases the use of micro-frontends in HCL Digital Experience. Access the documentation and link to the sample site here: [Woodburn insurance sample site](../../extend_dx/script_application/scriptapps/samples/woodburn_insurance_demo/index.md)
     
-    You can also access the **DX ScriptApps How-To Guides** Tutorials and Samples on the [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps).
+    You can also access the **DX ScriptApps How-To Guides** Tutorials and Samples on the [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps){target="_blank"}.
 
 === "On-Premises"
 
     These guides detail how to build and package Digital Experience solutions using React, and Javascript as Script Applications and DX Modules. The latest update includes:
 
-    -   New Site integration tutorial section that details how to import and export parts of a DX site plus other integration solutions. See [Site Integration](../../guide_me/tutorials/scriptapps/site_integration/index.md) for more information. 
+    -   New Site integration tutorial section that details how to import and export parts of a DX site plus other integration solutions. See [Site Integration](../../extend_dx/script_application/scriptapps/site_integration/index.md) for more information. 
 
-    - The Woodburn insurance site showcases the use of micro-frontends in HCL Digital Experience. Access the documentation and link to the sample site here: [Woodburn insurance sample site](../../guide_me/tutorials/scriptapps/samples/woodburn_insurance_demo/index.md)
+    - The Woodburn insurance site showcases the use of micro-frontends in HCL Digital Experience. Access the documentation and link to the sample site here: [Woodburn insurance sample site](../../extend_dx/script_application/scriptapps/samples/woodburn_insurance_demo/index.md)
     
-    You can also access the **DX ScriptApps How-To Guides** Tutorials and Samples on the [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps).
+    You can also access the **DX ScriptApps How-To Guides** Tutorials and Samples on the [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps){target="_blank"}.
 
 ## Web Content Manager Apply Content Template API update 
 

@@ -12,9 +12,9 @@ To provide a custom Cascading Style Sheets (CSS) theme module, there are two opt
 ### Adding a custom CSS theme module with styling overrides
 
 1. Create a new module under Practitioner Studio.
-    1. Connect to the Core theme section using WebDav. There are two options:
-        - Open the theme resources from your Digital Experience (DX) system using WebDace to adjust some resources. For more information, see [Using WebDAV file store](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md).
-        - You can also use the DxClient tool to connect to the Core theme section. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+    1. Connect to the Core theme section using WebDAV. There are two options:
+        - Open the theme resources from your Digital Experience (DX) system using WebDAV to adjust some resources. For more information, see [Using WebDAV file store](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md).
+        - You can also use the DXClient tool to connect to the Core theme section. For more information, see the topics [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [Themes artifacts](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/themes.md).
 
     2. Create a new theme module.
         1. Open the `PractitionerStudio` theme.
@@ -58,9 +58,9 @@ To provide a custom Cascading Style Sheets (CSS) theme module, there are two opt
 2. Apply your desired changes to the stylings you downloaded. Make sure to use a formatting tool to get a formatted version of the CSS content.
 
 3. In Practitioner Studio, create a new module.
-    1. Connect to the Core theme section using WebDav. There are two options:
-        - Open the theme resources from your Digital Experience (DX) system using WebDace to adjust some resources. For more information, see [Using WebDAV file store](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md).
-        - You can also use the DxClient tool to connect to the Core theme section. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
+    1. Connect to the Core theme section using WebDAV. There are two options:
+        - Open the theme resources from your Digital Experience (DX) system using WebDAV to adjust some resources. For more information, see [Using WebDAV file store](../../manage_content/wcm_delivery/webdav/administer_webdav/mash_webdav_store.md).
+        - You can also use the DXClient tool to connect to the Core theme section. For more information, see the topics [DXClient](../../extend_dx/development_tools/dxclient/index.md) and [Themes artifacts](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/themes.md).
 
     2. Create a new theme module.
         1. Open the `PractitionerStudio` theme.

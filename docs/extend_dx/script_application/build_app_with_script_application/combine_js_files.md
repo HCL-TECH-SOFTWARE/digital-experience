@@ -1,5 +1,5 @@
 ---
-title: Combine Local JavaScript Files
+title: Combine local JavaScript files
 ---
 
 # Combine local JavaScript files when you import applications
@@ -18,7 +18,9 @@ To proceed, you must ensure that the importer or push service can find a set of 
 
 Choose one of the following options to enable combining of sibling local script references when the application is pushed or imported.
 
--   To enable resource combining for one application only, add a `data-scriptportlet-combine-urls="true"` directive attribute on the `<html>` element of the main page before you push or import the application to the server.
--   To enable resource combining for all pushed and imported applications, you can set the Script Application configuration property `scriptportlet.import.combine.urls=true` to `true`. For details about how to do this, read [Custom configuration properties for Script Applications](../script_application_security/import_export_config.md).
+- To enable resource combining for one application only, add a `data-scriptportlet-combine-urls="true"` directive attribute on the `<html>` element of the main page before you push or import the application to the server.
+- To enable resource combining for all pushed and imported applications, you can set the Script Application configuration property `scriptportlet.import.combine.urls=true` to `true`. For details about how to do this, read [Custom configuration properties for Script Applications](../script_application_security/import_export_config.md).
 
+## HCLSoftware U learning materials
 
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

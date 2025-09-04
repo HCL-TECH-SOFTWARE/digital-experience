@@ -6,7 +6,7 @@ You must bind your theme to the context root of the web application for your the
 
 Refer to the following steps to bind your theme using the command line.
 
-1. In the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin, create the file `input.xml` with the following contents:
+1. In the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\bin, create the file `input.xml` with the following contents:
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -21,7 +21,7 @@ Refer to the following steps to bind your theme using the command line.
     </request>
     ```
 
-2. From a command line, switch to the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\bin directory and run the following XMLAccess command to export all skin and theme definitions to a file called `output.xml`.
+2. From a command line, switch to the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\bin directory and run the following XMLAccess command to export all skin and theme definitions to a file called `output.xml`.
 
     ```
     xmlaccess -user admin userid -password admin password -url hostname:10039/wps/config -in input.xml -out output.xml

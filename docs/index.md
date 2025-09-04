@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf225.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf230.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
@@ -52,11 +52,11 @@ hide:
 
     ---
 
-    The DX Help Center contains a section for tutorials and how-to guides to help you use DX.
+    The DX Help Center contains a section for guides and how-to articles to help you use DX.
 
     ---
 
-    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/tutorials/index.md)
+    [:octicons-arrow-right-24: Go to Guide Me](./guide_me/index.md)
 
 -   :material-school:{ .lg .middle } __HCLSoftware U__
 
@@ -88,7 +88,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to Community Forums](https://support.hcltechsw.com/community){target="_blank"}
+    [:octicons-arrow-right-24: Go to Community Forums](https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25){target="_blank"}
 
 -   :material-account-group:{ .lg .middle } __DXers User Group__
 

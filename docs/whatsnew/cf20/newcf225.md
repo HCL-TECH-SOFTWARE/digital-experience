@@ -9,7 +9,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- Extended Support option now available for DX versions 8.5 and 9.0 
+- Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Container Version**
@@ -69,7 +69,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New sizing guidance for rendering in a large configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering in a large Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a large-sized Kubernetes configuration](../../guide_me/performance_tuning/kubernetes/rendering_large_config.md).
+    Results of DX sizing tests for rendering in a large Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a large-sized Kubernetes configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_large_config.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

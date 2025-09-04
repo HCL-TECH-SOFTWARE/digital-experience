@@ -1,0 +1,62 @@
+# How to use the `RUNSTATS` and `REORG` commands
+
+## Applies to
+
+> HCL Digital Experience 8.5 and higher
+
+## Introduction
+
+This article describes how you can use the `RUNSTATS` and `REORG` commands to optimize DB2 database performance for your HCL Digital Experience (DX) environment.
+
+- The [`DB2 RUNSTATS`](https://www.ibm.com/docs/en/db2/11.5?topic=commands-runstats){target="_blank"} command updates statistics in the DB2 system catalog about the characteristics of a table, associated indexes, or statistical views.
+- The [`REORG TABLE`](https://www.ibm.com/docs/en/db2/11.5?topic=commands-reorg-table){target="_blank"} command reorganizes a table by reconstructing the rows to eliminate fragmented data, and by compacting information.  
+
+## Instructions
+
+### `DB2 RUNSTATS` on wide table only
+
+```text
+DB2 RUNSTATS ON TABLE JCR.ICMUTSWIDE0 FOR INDEXES ALL
+```
+
+```text
+DB2 RUNSTATS ON TABLE JCR.ICMUTSWIDE0 FOR INDEXES <indexname>  
+```
+
+Make sure to replace `<indexname>` with the actual index name.  
+
+If the command fails, you must drop and recreate the index.  
+
+### `DB2 RUNSTATS` command for all tables in the JCR schema
+
+```text
+ DB2 RUNSTATS ON TABLE JCR. ON ALL COLUMNS WITH DISTRIBUTION ON ALL COLUMNS EXCLUDING XML COLUMNS AND SAMPLED DETAILED INDEXES ALL ALLOW WRITE ACCESS ;
+```
+
+### `DB2 RUNSTATS` commands
+
+There are two `RUNSTATS` commands that can be used. The first command is used to create the `runstats.db2` file which contains all `DB2 RUNSTATS` commands for all tables. The second command uses the DB2 command processor to run these commands. You can run these commands on each DX database. It is recommended to run these commands on the JCR and release database data population after significant content population or changes.  
+
+```text
+ db2 -x -r "runstats.db2" "select rtrim(concat('runstats on table',concat(rtrim(tabSchema),concat('.',concat(rtrim(tabname),' on all columns with distribution on all columns and sampled detailed indexes all allow write access'))))) from syscat.tables where type='T'"  
+```
+
+```text
+ db2 -v -f "runstats.db2"`  
+```
+
+### `DB2 REORGCHK` commands
+
+There is a technique that has the same convenience of the [REORGCHK](https://www.ibm.com/docs/en/db2/11.5?topic=commands-reorgchk){target="_blank"} command and provides the detailed statistics preferred by the optimizer.
+
+- To determine which tables may benefit from reorganization, run the command:  
+
+    ```text
+     DB2 REORGCHK CURRENT STATISTICS ON TABLE ALL > "reorgchk.txt"  
+    ```
+
+- For tables that require reorganization, use the following command to reorganize the table based on its primary key:
+
+    ```text
+     DB2 REORG TABLE tableschema.tablename`  
+    ```

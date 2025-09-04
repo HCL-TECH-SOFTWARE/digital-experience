@@ -25,6 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
+- Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -75,10 +76,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Support for portlets built and published by Volt MX Iris
 
 === "Containers"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/enable_sso.md).
 
 === "On-Premises"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/enable_sso.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -136,12 +137,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for rendering in the upper limit of a single-node configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
+    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
+
+### Removal of automated Pod restart on ConfigMap updates
+
+=== "Containers"
+    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
     
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
