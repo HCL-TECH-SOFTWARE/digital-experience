@@ -1,4 +1,4 @@
-# How to enable HTTP Security, HttpOnly and SameSite DX Cookies in kubernetes?
+# How to enable HTTP Security, HttpOnly, and SameSite DX Cookies in Kubernetes
 
 ## Applies to
 
