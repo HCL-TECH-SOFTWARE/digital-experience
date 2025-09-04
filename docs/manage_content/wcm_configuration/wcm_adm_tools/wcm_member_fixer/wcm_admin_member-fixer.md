@@ -56,7 +56,7 @@ If custom mapping is required you must perform the following steps to map the us
 
     |Condition description|Command to correct condition|
     |---------------------|----------------------------|
-    |Nonexistent users or groups have alternate distinguished names (DNs) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command. <br/> -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.|
+    |Nonexistent users or groups have alternate Distinguished Names (DNs) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command. <br/> -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.|
     |If users or groups have invalid distinguished names (DNs) the report lists these as "invalid". This means the distinguished name doesn't exist and there is no alternate distinguished name available.|    -   To remove references to users and groups that have invalid distinguished names append -DinvalidDn=remove to the command. <br/> -   To update references to users and groups that have invalid distinguished names with the portal administrator user distinguished name, append -DinvalidDn=update to the command.|
     |Users or groups have been found with mismatched unique IDs.|    -   To fix the mismatched unique IDs append -DmismatchedId=update to the command. <br/> -   To remove references to users and groups with mismatched unique IDs append -DmismatchedId=remove to the command.|
 
@@ -124,9 +124,13 @@ When running this task on a virtual portal you must add either `-DVirtualPortalH
 
 To prevent your session timing out before the task has finished, you can append the option `-DsessionTimeOut=timeOut` to the command. This sets the number of seconds in which the task must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories you should increase this setting. For example: `-DsessionTimeOut=36000`, which is 10 hours.
 
-## Parameter to set to specify lowercase or mixed case for DNs
+## Setting DNs to specify lowercase or mixed case
 
-You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter.  The choice is between making the DX reference all lower case ("lower") -OR- making the DX reference match exactly what the LDAP returns ("update"). Any DN that gets updated by the Member Fixer task will be stored according to this parameter value.
+You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter:  
+    - Setting the value to `lower` changes all DX references to lowercase.
+    - Setting the value to `update` changes all DX references to match exactly what the LDAP returns.
+
+Any DN that gets updated by the member fixer task will be stored according to this parameter value.
 
 ## Examples
 
