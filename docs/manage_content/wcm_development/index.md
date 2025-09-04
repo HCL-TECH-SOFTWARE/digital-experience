@@ -38,3 +38,7 @@ Translated text can be stored in a content item or site area. The translated tex
 WCM supports event notifications such as item state changes, or services starting and stopping. These notifications can be delivered as messages to the Java messaging service.  
 - **[AI analyzer API for content](./wcm_rest_v2_ai_analysis/index.md)**  
 Starting from CF213, a new WCM REST v2 API is available for sentiment analysis of content, keyword extraction from content, and auto summarization of content element.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
