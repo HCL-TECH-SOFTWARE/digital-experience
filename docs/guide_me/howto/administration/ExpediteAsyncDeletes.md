@@ -1,4 +1,4 @@
-# How to expedite the processing of asynchronous deletes in JCR database
+# How to expedite the processing of asynchronous deletes in the JCR database
 
 ## Applies to
 

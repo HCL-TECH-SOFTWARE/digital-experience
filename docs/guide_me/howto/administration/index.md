@@ -16,7 +16,7 @@ Learn about long Portal URLs and how to decode them.
 Learn how to tune WCM to reduce your query time.
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
-- **[How to expedite the processing of asynchronous deletes in JCR database](./ExpediteAsyncDeletes.md)**  
+- **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
