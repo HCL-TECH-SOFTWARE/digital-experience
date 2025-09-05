@@ -1,4 +1,4 @@
-# Get UUID and PATH of WCM Content Objects, by Text Content, using the Command Line
+# How to get the UUID and Path of WCM content objects using a command Line
 
 ## Applies to
 
@@ -6,41 +6,39 @@
 
 ## Introduction
 
-Sometimes, you need the UUID and/or the PATH  of a given Content Object in WCM.
+There may be instances where you need the Universally Unique Identifier (UUID) or path of a given content object in the Web Content Manager (WCM). You can use the XPath Query Analyzer of WCM Support Tools portlet to get them.
 
-You can use the "WCM Support Tools" portlet > "XPath Query Analyzer" to get them.
-
-But on some occasions, it would be easy to get the UUID and/or the PATH through the Command Line (Linux bash), using REST and some linux tools, like CURL, GREP, PERL, etc.
+However on some occasions, it may be easier to get the UUID or path through the Linux bash command line using REST and some linux tools such as `curl`, `grep`, and `Perl`. This article describes how you can get the UUID or path of a WCM content object using a command line.
 
 ## Instructions
 
-First, be sure you have **"curl"** and **"perl"** installed.
+Before you begin, ensure you have the `curl` and `Perl` command-line tools installed. You can install them using `yum`, `dnf`, or `apt`, depending on your linux distribution.
 
-If you don't have, you can install them using **"yum"**, **"dnf"** or **"apt"**, depending on your linux distribution.
+1. Define the following environment variables. Change these variables according to your environment.
 
-Start by defining some environment variables.
+    - The name of the WCM object you want the UUID:
 
-**Change these variables, according to your environment.**
+        ```
+        WCM_CONTENT_STRING=**"ensure"**
+        ```
 
-1) The name of the WCM object you want the UUID:
+    - Some other DX needed values:
 
-    WCM_CONTENT_STRING=**"ensure"**
+        ```
+        WPS_ADMIN_USR="wpsadmin"  
+        WPS_ADMIN_PWD="wpsadmin"  
+        WP_PROFILE_HOME="/opt/IBM/WebSphere/wp_profile"  
+        HOSTNAME=hostname -f  
+        PORT=grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2
+        ```
 
-2) Some other DX needed values:
-
-    WPS_ADMIN_USR=**"wpsadmin"**  
-    WPS_ADMIN_PWD=**"wpsadmin"**  
-    WP_PROFILE_HOME=**"/opt/IBM/WebSphere/wp_profile"**  
-    HOSTNAME=**hostname -f**  
-    PORT=**grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2**
-
-3) Now that all needed variables have been set up, let's get the UUID of the WCM Object, as defined above, in "WCM_CONTENT_STRING ":
+2. Run the following command to get the UUID of the WCM Object in `WCM_CONTENT_STRING`:
 
 ```text
     curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?type=Content&options=item-path&textcontains=$WCM_CONTENT_STRING" 2>/dev/null | egrep -v 'query?options|CDATA' | egrep 'title xml|<id>|wcm:name xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<title>|Title: |g' | sed '1,1d'
 ```
 
-**As a result, you will see something like:**
+Refer to the following output of the command:
 
 ```text
     UUID: d446124e-4f03-485c-899f-d486d6b65dc7

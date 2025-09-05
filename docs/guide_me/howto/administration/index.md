@@ -10,13 +10,15 @@ Learn how to redirect a user to a different page after a successful login or log
 Learn how to clear Web Content Manager (WCM) caches using the ConfigEngine task.
 - **[How to clear WebSphere Dynacache caches](./ClearWebSphereDynacache.md)**  
 Learn how to clear WebSphere Dynacache caches using the sample JSP code.
+- **[How to count WCM items and versions using the WCM API sample code](./APIToCountWCMItems.md)**  
+Learn about the WCM API sample code to count WCM items and versions.
 - **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
 Learn about long Portal URLs and how to decode them.
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune WCM to reduce your query time.
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
+- **[How to get the UUID and Path of WCM content objects using a command Line](./GetUUIDAndPathOfContent.md)**
+Learn how to obtain the UUID and Path of WCM content objects through the Linux bash command line.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[WCM API sample code to count WCM items and versions](./APIToCountWCMItems.md)**  
-Learn about the WCM API sample code to count WCM items and versions.
