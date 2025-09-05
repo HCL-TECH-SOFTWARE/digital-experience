@@ -8,9 +8,14 @@
 
 This article provides the steps to enable different HTTP-related security flags and attributes in your HCL Digital Experience (DX) environment through the IBM WebSphere Application Server (WAS) and NGINX Ingress controller. The following security flags and attributes will be discussed:
 
-1. Cookie with a Secure flag
-2. Cookie With a HttpOnly flag
-3. Cookie with a SameSite attribute
+**1. Cookie with a Secure flag**  
+    "A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS). They cannot be transmitted over unencrypted connections (i.e. HTTP).   This makes the cookie less likely to be exposed to cookie theft via eavesdropping. A cookie is made secure by adding the Secure flag to the cookie." ***(source: [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie){target="_blank"})***  
+
+**2. Cookie With a HttpOnly flag**  
+    "An http-only cookie cannot be accessed by client-side APIs, such as JavaScript. This restriction eliminates the threat of cookie theft via cross-site scripting (XSS). However, the cookie remains vulnerable to cross-site tracing (XST) and cross-site request forgery (CSRF) attacks. A cookie is given this characteristic by adding the HttpOnly flag to the cookie." ***(source: [Http-only cookie](https://en.wikipedia.org/wiki/HTTP_cookie){target="_blank"})***  
+
+**3. Cookie with a SameSite attribute**  
+    "In 2016 Google Chrome version 51 introduced a new kind of cookie with attribute SameSite with possible values of Strict, Lax or None. With attribute SameSite=Strict, the browsers would only send cookies to a target domain that is the same as the origin domain. This would effectively mitigate cross-site request forgery (CSRF) attacks. With SameSite=Lax, browsers would send cookies with requests to a target domain even it is different from the origin domain, but only for safe requests such as GET (POST is unsafe) and not third-party cookies (inside iframe). Attribute SameSite=None would allow third-party (cross-site) cookies, however, most browsers require secure attribute on SameSite=None cookies." ***(source: [Same-site cookie](https://en.wikipedia.org/wiki/HTTP_cookie){target="_blank"})***  
 
 ## Instructions
 
