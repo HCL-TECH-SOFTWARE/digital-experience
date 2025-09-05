@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides the steps to enable different HTTP-related security flags and attributes in your HCL Digital Experience (DX) environment through the IBM WebSphere Application Server (WAS) and NGINX Ingress controller. The following security flags and attributes will be discussed:
+This article provides the steps to enable different HTTP-related security flags and attributes in your HCL Digital Experience (DX) environment through the IBM WebSphere Application Server (WAS) and NGINX Ingress controller. The following security flags and attributes will be discussed:  
 
 **1. Cookie with a Secure flag**  
     "A secure cookie can only be transmitted over an encrypted connection (i.e. HTTPS). They cannot be transmitted over unencrypted connections (i.e. HTTP).   This makes the cookie less likely to be exposed to cookie theft via eavesdropping. A cookie is made secure by adding the Secure flag to the cookie." ***(source: [HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie){target="_blank"})***  
