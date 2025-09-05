@@ -1,4 +1,4 @@
-# How to enable HTTP Security, HttpOnly, and SameSite DX Cookies in Kubernetes
+# How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX
 
 ## Applies to
 
@@ -6,59 +6,62 @@
 
 ## Introduction
 
-This document provide information to enable different http related security flags / attributes in the HCL Digital Experience environment (In the IBM Application Server and Nginx/Ingress controller). The following security flags and attribues will be discussed:
+This article provides the steps to enable different HTTP-related security flags and attributes in your HCL Digital Experience (DX) environment through the IBM WebSphere Application Server (WAS) and NGINX Ingress controller. The following security flags and attributes will be discussed:
 
-1. Cookie with Secure Flag
-2. Cookie With HttpOnly flag
-3. Cookie with SameSite Attribute
+1. Cookie with a Secure flag
+2. Cookie With a HttpOnly flag
+3. Cookie with a SameSite attribute
 
 ## Instructions
 
-There are different places in the HCL Digital Experience Environment to enable these security flags / attributes.
+You can enable the security flags and attributes through the following:
 
-### Enable Secure, HTTPOnly and the SameSite attribute in WebSphere Application Server
+- IBM WAS
+- NGINX Ingress
+- NGINX Ingress Enterprise
 
-1. Open the IBM Integrated Solutions Console (WAS admin console) in your web-browser.
+### Enabling through the WebSphere Application Server
 
-2. Navigate to **Security > Global Security > Web and SIP security > Single sign-on (SSO)**.
+1. In IBM WAS, navigate to **Security > Global Security > Web and SIP security > Single sign-on (SSO)**.
+2. Tick the `Enabled` checkbox to enable SSL.
+3. Tick the `Set security cookies to HTTPOnly to help prevent cross-site scripting attacks` checkbox
+4. Click **Apply**.
+5. Click **Save** at the top of the console messages.
+6. Configure the `JSESSIONID` cookie:
 
-    a) Select `Enabled` (Enable SSL)
+    1. Navigate to **Server > Server Types > Web application servers > <\server_name> > Web Container Settings > Web container > Session management > Enable cookies**  
+    2. Tick the `Restrict cookies to HTTPS sessions` checkbox.
+    3. Tick the  `Set session cookies to HTTPOnly to help prevent cross-site scripting attacks` checkbox.
+    4. Click **Apply**.
+    5. Click **Save** at the top of the console messages.
 
-    b) Select `Set security cookies to HTTPOnly to help prevent cross-site scripting attacks`
+### Enabling through NGINX Ingress
 
-    c) Save the changes
+1. In your `custom-values.yaml` file, set the following parameters:
 
-3. For JSESSIONID:
+    ```yaml
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+    annotations:
+        nginx.ingress.kubernetes.io/proxy-cookie-path: |
+        / "/; HTTPOnly; Secure; SameSite=strict"
+    ```
 
-    a) Navigate to **Application servers > <server_name> > Web container > Session management > Cookies**  
+2. Perform a Helm upgrade to apply your changes.
 
-    b) Select `Restrict cookies to HTTPS sessions`
+### Enabling through NGINX Ingress Enterprise
 
-    c) Select `Set session cookies to HTTPOnly to help prevent cross-site scripting attacks`
+1. In your `custom-values.yaml` file, set the following parameters:
 
-### Setting the HTTPOnly and Secure Flags in ingress
+    ```yaml
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+    name: cafe-ingress-with-annotations
+    annotations:
+        nginx.org/server-snippets: |
+        proxy_cookie_path / "/; secure; HttpOnly; SameSite=strict";
+    ```
 
-In the custom-values.yaml file set:
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-cookie-path: |
-      / "/; HTTPOnly; Secure; SameSite=strict"
-```
-
-### Setting the HTTPOnly and Secure Flags in ingress for Enterprise Niginx org
-
-In the custom-values.yaml file set:
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: cafe-ingress-with-annotations
-  annotations:
-    nginx.org/server-snippets: |
-      proxy_cookie_path / "/; secure; HttpOnly; SameSite=strict";
-```
+2. Perform a Helm upgrade to apply your changes.
