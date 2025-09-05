@@ -5,7 +5,6 @@ nav:
     - APIToCountWCMItems.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
-    - DataSourceTracing.md
     - DecodeLongURLs.md
     - IncreaseTransactionTimeout.md
     - ImproveQueryPerformance.md

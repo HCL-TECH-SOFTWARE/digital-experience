@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
+- DXClient - New `xmlAccessOutputFileName` parameter added
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of the Woodburn Studio demo site
 
@@ -43,6 +44,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
+
+### DXClient - New `xmlAccessOutputFileName` parameter added
+
+=== "Containers"
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+
+=== "On-Premises"
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
