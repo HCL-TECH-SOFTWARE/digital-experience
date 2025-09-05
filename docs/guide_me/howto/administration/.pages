@@ -9,6 +9,6 @@ nav:
     - IncreaseTransactionTimeout.md
     - ImproveQueryPerformance.md
     - RedirectTimeout.md
-    - SpeedDeletesForJCR.md <!--rename-->
+    - ExpediteAsyncDeletes.md
     - SupportForAdditionalMIMETypes.md
     - UseJavaScriptToReplaceText.md
