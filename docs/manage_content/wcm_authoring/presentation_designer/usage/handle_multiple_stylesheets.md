@@ -48,7 +48,7 @@ Refer to the following steps to add a stylesheet component to a presentation tem
     Presentation Template with custom classes:
     ![](../../../../assets/HCL_Presentation_Designer_edit_sample_presentation_template_custom_classes.png)
 
-## Handle multiple stylesheets in Presentation Designer
+## Handling multiple stylesheets
 
 Presentation Designer will automatically load the stylesheets and apply styles to the elements on the canvas. The stylesheets are loaded in a specific order to determine which styles take precedence. 
 
@@ -200,3 +200,17 @@ Example:
 
 This rule creates a "drop cap" effect. For any text element with ```class="intro-paragraph"```, the very first letter will be made larger, bold, and blue, standing out from the rest of the text:
 ![](../../../../assets/HCL_Presentation_Designer_handle_multiple_stylesheets_selector_sample_pseudo_element.png)
+
+### At-rule
+
+An At-Rule is a special instruction used in CSS to define behavior or convey metadata. It always begins with an "at" symbol (@) followed by an identifier.
+
+Example:
+
+    @media (max-width: 1023px) {
+        .subtitle-class {
+            font-size: 14px;
+        }
+    }
+
+The @media rule is the foundation of responsive design. It works by creating a conditional block of styles that the browser will only apply if certain conditions about the device are met, most commonly the screen width. For a detailed example showing the applied styles for desktop, tablet, and mobile views, refer to the **[Handling multiple stylesheets](#handling-multiple-stylesheets)** topic.
