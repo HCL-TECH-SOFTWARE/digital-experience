@@ -6,6 +6,12 @@ This API reference can help you customize an instance of your Script Application
 
 The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference the `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:ScriptPortletNamespace]`. To make it easier to use this object, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
 
+!!! important
+    When developing locally, you can use the `__SPNS__` placeholder for the namespace.  
+    The placeholder is automatically translated when you import or push to the DX server. For details, see [Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
+
+    You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
+
 ## spHelper field summary
 
 -   **`spHelper.renderingLocale`**
@@ -31,7 +37,6 @@ The `spHelper` provides the functions and variables that are related to a specif
 -   **`spHelper.userSn`**
 
     Get the user's surname from LDAP.
-
 
 ## Method summary
 
@@ -123,16 +128,13 @@ The `spHelper` provides the functions and variables that are related to a specif
         ```
         ["true", "true", "true", "true", "true", "true", "true", "true"]
         ```
-
+    
+            
     -   **Returns**
 
         `{Promise}` A promise that resolves to `{preferenceData: Object}` on success and `{error: Error}` on error. The `preferenceData` is the same data that was passed into this function. The errorText is a string that contains the information about the Error. For example, the error "ERR0001:Preference data is not available in this context" results when the code is run in the preview view or the dependency on the `'wp_client_ext'` is missing.
 
-        !!! important
-            When developing locally, you can use the `__SPNS__` placeholder for the namespace.  
-            The placeholder is automatically translated when you import or push to the DX server. For details, see [Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
 
-            You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
 
 ## HCLSoftware U learning materials
 
