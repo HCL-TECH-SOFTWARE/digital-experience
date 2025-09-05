@@ -8,7 +8,7 @@ The `spHelper` provides the functions and variables that are related to a specif
 
 !!! important
     When developing locally, you can use the `__SPNS__` placeholder for the namespace.  
-    The placeholder is automatically translated when you import or push to the DX server. For details, see [Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
+    The placeholder is automatically translated when you import or push to the DX server. For details, see [Add tokens to generate the unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
 
     You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
     
