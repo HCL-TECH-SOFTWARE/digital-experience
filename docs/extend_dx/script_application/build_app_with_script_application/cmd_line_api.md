@@ -128,6 +128,12 @@ The `spHelper` provides the functions and variables that are related to a specif
 
         `{Promise}` A promise that resolves to `{preferenceData: Object}` on success and `{error: Error}` on error. The `preferenceData` is the same data that was passed into this function. The errorText is a string that contains the information about the Error. For example, the error "ERR0001:Preference data is not available in this context" results when the code is run in the preview view or the dependency on the `'wp_client_ext'` is missing.
 
+        !!! important
+            When developing locally, you can use the `__SPNS__` placeholder for the namespace.  
+            The placeholder is automatically translated when you import or push to the DX server. For details, see [Add tokens to generate unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
+
+            You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
+
 ## HCLSoftware U learning materials
 
 To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
