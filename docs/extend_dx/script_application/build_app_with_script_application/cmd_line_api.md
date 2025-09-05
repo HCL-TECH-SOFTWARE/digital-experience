@@ -4,7 +4,7 @@ This API reference can help you customize an instance of your Script Application
 
 ## Namespace `spHelper`
 
-The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:ScriptPortletNamespace]`. To make it easier to use this object, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
+The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference the `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:ScriptPortletNamespace]`. To make it easier to use this object, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
 
 !!! important
     When developing locally, you can use the `__SPNS__` placeholder for the namespace.  
