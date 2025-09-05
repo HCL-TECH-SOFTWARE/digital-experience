@@ -34,3 +34,7 @@ You can customize or replace both integrations with your preferred solutions.
 ## Extensibility
 
 DAM supports user-defined custom renditions and transformations for images. This feature can be used to integrate with third-party plug-ins for custom asset processing. For example, custom renditions and transformations can be used for resizing, cropping, rotating, or custom operations, while supporting default and custom renditions.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Digital Asset Management, go to [Digital Assets](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D302){target="_blank"}. To try it out yourself, refer to [Digital Asset Management Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Digital_Asset_Management_Lab.pdf){target="_blank"} and corresponding [Digital Asset Management Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Digital_Asset_Management_Lab_Resources.zip).

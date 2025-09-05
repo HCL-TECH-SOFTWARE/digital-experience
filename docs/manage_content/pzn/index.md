@@ -60,23 +60,34 @@ When complex filtering is required, a rule-based system may work better than col
 |If price points are low, all quite dissimilar, or the products offered have a wide range of user appeal.|Collaborative|The wide variance fits the collaborative filtering approach. Collaborative filtering also lowers the risk of making "bad" recommendations.|
 |When not much information is gathered about the user, but the user can be identified, possibly by a login or cookie.|Collaborative|In this case, user attributes on which to base rules may be lacking. Collaborative filtering can compare the user's experiences on the site to other users.|
 
-1.  [How a site is personalized](../pzn/pzn_how_site_personalized.md)  
+- **[Targeted content and Portal Personalization](./pzn_intro.md)**  
+Targeted content provides you with a way to deliver multiple pieces of content to different audiences. Targeted content matches the best content with the most appropriate group by using segments. Segments help you split your audience into meaningful groups with different interests or characteristics.
+- **[Personalization](./personalization/index.md)**  
+Personalization can recognize a specific site visitor based on a profile and determine characteristics of a user based on previous purchases, products or pages viewed, or other attributes. If a visitor belongs to a particular geographic region, content specific to that region can be targeted to the visitor. The page is assembled with the personalized information, and the visitor sees a personalized page.
+- **[How a site is personalized](../pzn/pzn_how_site_personalized.md)**  
 Use this topic to understand how to define a personalized list of new articles for a website, such as a section of an intranet site for targeted employee bulletins or where the content of the site is tailored to the particular user.
-2.  [Personalization terms](../pzn/pzn_terms/index.md)  
+- **[Personalization terms](../pzn/pzn_terms/index.md)**  
 The concepts and principles for working with Portal Personalization require an understanding of terminology.
-3.  [The Personalization interface](../pzn/pzn_portlets.md)  
+- **[The Personalization interface](../pzn/pzn_portlets.md)**  
 The Portal Personalization user interface consists of three portlets: the Personalization Navigator, Personalization Editor, and the Personalized List.
-4.  [Publishing personalization rules](../pzn/publishing_pzn_rules/index.md)  
+- **[Publishing personalization rules](../pzn/publishing_pzn_rules/index.md)**  
 HCL Digital Experience Personalization sends published rules across HTTP to a servlet which resides on each personalization server.
-5.  [The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)  
+- **[The Web Content resource collection](../pzn/pzn_wcm_rescoll.md)**  
 The Web Content resource collection allows you to write rules that select lists of content from the HCL Web Content Manager.
-6.  [The Portal User resource collection](../pzn/pzn_usr_rescoll.md)  
+- **[The Portal User resource collection](../pzn/pzn_usr_rescoll.md)**  
 The Portal User resource collection uses public APIs provided by HCL Digital Experience to access user information.
-7.  [Developing a personalized portlet](../pzn/pzn_portlet/index.md)  
+- **[Developing a personalized portlet](../pzn/pzn_portlet/index.md)**  
 This exercise demonstrates how to use Personalization features of HCL Digital Experience and Rational Application Developer to build your first personalized portlet. Your final result is a working portlet that uses Personalization rules and content spots to display personal news based on user attributes \(or profiles\).
-8. [Personalization programming reference](../pzn/pzn_programming_ref/index.md)  
+- **[Personalization programming reference](../pzn/pzn_programming_ref/index.md)**  
 HCL Digital Experience provides the programming model, processes, and APIs for the Personalization rules and resource engines.
-9. [Personalization APIs](../pzn/pzn_apis/index.md)  
+- **[Personalization APIs](../pzn/pzn_apis/index.md)**  
+Personalization APIs in HCL DX supports the ability to recognize a specific site visitor and determine their characteristics based on previous purchases, products or pages viewed, or other attributes based on a user profile. Personalization then selects content that is appropriate for that profile.
+- **[Personalization-Unica Integration](./pzn_unica_integration/index.md)**  
+Unica Campaign is a web-based solution that enables you to design, run, and analyze direct marketing campaigns. Users can create segments in Unica Campaigns and Segment Central.
+- **[Staging Personalization rules to production](./pzn_stage_prod.md)**  
+Learn how about the different methods of moving Personalization rules from a staging system to a production system.
+- **[Enable logging](./pzn_enable_logging_runtime_server.md)**  
+Learn how to create and set up the Feedback database and enable logging on the runtime server that hosts Feedback data.
 
 ## HCLSoftware U learning materials
 

@@ -1,6 +1,6 @@
 # wp.moduleList
 
-The module list bean accesses modules that are part of the modularized theme architecture. You can query individual modules and their attributes and identify of the currently used modules within the scope of the currently selected and rendered page and theme.
+The module list bean accesses modules that are part of the modularized theme architecture. You can query individual modules and their attributes and identify the currently used modules within the scope of the currently selected and rendered page and theme.
 
 Attributes:
 
@@ -37,6 +37,6 @@ Attributes:
 
         String representing the module. Must be in the format `<module name>` or `<module name>/<module version>`.
 
-    Returns: [Module](themeopt_el_bean_module.md). It can be null if it is not found.
+    Returns: [Module](../module_list/current_module_list/index.md). It can be null if it is not found.
 
 
