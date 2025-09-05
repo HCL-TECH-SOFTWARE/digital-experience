@@ -26,7 +26,7 @@ Web modules can be deleting or uninstalled in Manage Web Modules and portlet app
 When you access a portlet in HCL Digital Experience, the portal appends an anchor to the portlet URL. If several portlets are arranged vertically on a page, this appended anchor forces the browser to scroll down to the portlet rather than display the start of the page. You might prefer to have the start of the page that is displayed, even if the link that was clicked points to a portlet, which is placed further down on the page. To achieve this, you can disable the anchors.
 -   **[Managing iWidgets in your portal](../mng_portlets_apps_widgets/managing_iwidgets/index.md)**  
 You can add iWidgets to your HCL Digital Experience.
--   **[Portlet management](portlet_management)**  
+-   **[Portlet management](portlet_management/index.md)**  
 Manage the portlets and Web services that the site uses.
 
 ## HCLSoftware U learning materials
