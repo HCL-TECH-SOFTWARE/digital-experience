@@ -10,7 +10,7 @@ This article provides the steps to enable different HTTP-related security flags 
 
 1. Cookie with a Secure flag: Allows a cookie to only be transmitted over an encrypted connection (for example, HTTPS).
 2. Cookie With a HttpOnly flag: Prevents a cookie from being accessed by client-side APIs such as JavaScript.
-3. Cookie with a SameSite attribute: Controls where a browser sends cookies. Possible values are `Strict`, `Lax`, or `None`.
+3. Cookie with a SameSite attribute: Controls where a browser sends cookies. Possible values are `strict`, `lax`, or `none`.
 
 ## Instructions
 
