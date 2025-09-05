@@ -38,12 +38,11 @@ The `spHelper` provides the functions and variables that are related to a specif
 
     Get the user's surname from LDAP.
 
-
 ## Method summary
 
 -   **`spHelper.getPortletPreference()`**
 
-    Retrieves the values for the portlet preference that is used for Script Applications.
+    Retrieves the values for the portlet preference that is used for the Script Applications.
 
     ```
     // Sample using the Promise object calling the then function for the promise object
@@ -129,10 +128,13 @@ The `spHelper` provides the functions and variables that are related to a specif
         ```
         ["true", "true", "true", "true", "true", "true", "true", "true"]
         ```
-
+    
+            
     -   **Returns**
 
         `{Promise}` A promise that resolves to `{preferenceData: Object}` on success and `{error: Error}` on error. The `preferenceData` is the same data that was passed into this function. The errorText is a string that contains the information about the Error. For example, the error "ERR0001:Preference data is not available in this context" results when the code is run in the preview view or the dependency on the `'wp_client_ext'` is missing.
+
+
 
 ## HCLSoftware U learning materials
 
