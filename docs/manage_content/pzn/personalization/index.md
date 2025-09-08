@@ -48,3 +48,9 @@ A content spot is a placeholder for a personalization rule on a web page. When y
 You can publish selected rules or the full workspaces from the personalization navigator. Before you publish, you must define the publishing server.
 - **[Personalization](../personalization/personalization_2/index.md)**  
 Personalization allows a portal or website to choose which content appears for particular site visitors. For example, a site that uses Personalization can show different news articles to managers than to regular employees, or different information to valued customers.
+
+## HCLSoftware U learning materials
+
+To learn about some of the content targeting capabilities of HCL DX, go to [Content Targeting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D304){target="_blank"}.
+
+For an introduction and a demo on how to use Personalization, go to [Personalization](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2803){target="_blank"}. To try it out yourself, refer to [Personalization Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Personalization_Lab.pdf){target="_blank"} and corresponding [Personalization Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Personalization_Lab_Resouces.zip){target="_blank"}.
