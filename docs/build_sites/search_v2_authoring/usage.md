@@ -124,7 +124,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enable.png)
 
-3. To close the advance search filter panel, click the **close icon**.
+3. To close the advanced search filter panel, click the **close icon**.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)
 
