@@ -116,7 +116,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
 - The Advanced Search Filter feature allows users to refine search results using multiple filter conditions. It provides a simple way to narrow down large sets of data by applying filters such as Author, Status, and Last Modified.
 
-1. To access the advance search filters, click the **filter icon** at the top-right corner of the page.
+1. To access the advanced search filters, click the **filter icon** at the top-right corner of the page.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Panel_Enable.png)
 
