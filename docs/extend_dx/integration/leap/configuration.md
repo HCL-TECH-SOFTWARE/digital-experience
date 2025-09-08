@@ -338,7 +338,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
     5. Perform a Helm upgrade to apply your changes.
 
-    6. Restart the Leap pod. After restarting the Leap pod, accessing Leap should redirect you to authenticate using your OIDC IdP.
+    6. Restart the Leap pod. After restarting the Leap pod, accessing Leap should redirect you to authenticate using your OIDC IdP. <!--Steps to restart the Leap pod?-->
 
         For example, the following screenshot shows an authentication page accessed using Keycloak:
 
