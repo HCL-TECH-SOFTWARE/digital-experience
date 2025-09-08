@@ -9,5 +9,4 @@ nav:
     - DecodeLongURLs.md
     - ImproveQueryPerformance.md
     - IncreaseTransactionTimeout.md
-    - GetUUIDAndPathOfContent.md
     - UseJavaScriptToReplaceText.md

@@ -8,23 +8,23 @@
 
 There may be instances where you need the Universally Unique Identifier (UUID) or path of a given content object in the Web Content Manager (WCM). You can use the XPath Query Analyzer of WCM Support Tools portlet to get them.
 
-However on some occasions, it may be easier to get the UUID or path through the Linux bash command line using REST and some linux tools such as `curl`, `grep`, and `Perl`. This article describes how you can get the UUID or path of a WCM content object using a command line.
+However on some occasions, it may be easier to get the UUID or path through the Linux bash command line using REST and some linux tools such as **curl**, **grep**, and **Perl**. This article describes how you can get the UUID or path of a WCM content object using a command line.
 
 ## Instructions
 
-Before you begin, ensure you have the `curl` and `Perl` command-line tools installed. You can install them using `yum`, `dnf`, or `apt`, depending on your linux distribution.
+Before you begin, ensure you have the **curl** and **Perl** command-line tools installed. You can install them using **yum**, **dnf**, or **apt**, depending on your linux distribution.
 
 1. Define the following environment variables. Change these variables according to your environment.
 
     - The name of the WCM object you want the UUID:
 
-        ```
-        WCM_CONTENT_STRING=**"ensure"**
+        ```variables
+        WCM_CONTENT_STRING="ensure"
         ```
 
     - Some other DX needed values:
 
-        ```
+        ```variables
         WPS_ADMIN_USR="wpsadmin"  
         WPS_ADMIN_PWD="wpsadmin"  
         WP_PROFILE_HOME="/opt/IBM/WebSphere/wp_profile"  
@@ -32,9 +32,9 @@ Before you begin, ensure you have the `curl` and `Perl` command-line tools insta
         PORT=grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2
         ```
 
-2. Run the following command to get the UUID of the WCM Object in `WCM_CONTENT_STRING`:
+2. Run the following command to get the UUID of the WCM Object in **WCM_CONTENT_STRING**:
 
-```text
+```shell
     curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?type=Content&options=item-path&textcontains=$WCM_CONTENT_STRING" 2>/dev/null | egrep -v 'query?options|CDATA' | egrep 'title xml|<id>|wcm:name xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<title>|Title: |g' | sed '1,1d'
 ```
 
