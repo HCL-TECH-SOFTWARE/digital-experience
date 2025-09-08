@@ -34,3 +34,7 @@ Take note of the following limitations when using Search V2 Authoring:
 - When an item is deleted, it might still show up in search results as the Web Content Manager (WCM) does not instantly push deletion updates. The item will appear until the next [crawler run](../search/searching_local_portal/srccrwlindxsite.md) updates the search index.
 
 - The Delete feature is disabled if the user is working on a project.
+
+## Advance Search Filter
+
+- When searching by **Attribute → Type**, the query must be an **exact match** and **correctly spelled**.
