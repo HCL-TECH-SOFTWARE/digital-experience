@@ -1,4 +1,4 @@
-# Integrating transient users with OpenID Connect
+# How to integrate transient users with OpenID Connect
 
 ## Applies to
 
