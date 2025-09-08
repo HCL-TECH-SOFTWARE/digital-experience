@@ -112,7 +112,7 @@ Starting from CF229, you can now delete items from the search results. To delete
     - Failed due to non-existing item
         ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
 
-## Advance Search Feature
+## Advanced Search Feature
 
 - The Advance Search Filter feature allows users to refine search results using multiple filter conditions. It provides a simple way to narrow down large sets of data by applying filters such as Author, Status, and Last Modified.
 
