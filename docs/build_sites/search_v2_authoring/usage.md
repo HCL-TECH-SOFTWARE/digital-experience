@@ -111,3 +111,91 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     - Failed due to non-existing item
         ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
+
+## Advance Search Feature
+
+- The Advance Search Filter feature allows users to refine search results using multiple filter conditions. It provides a simple way to narrow down large sets of data by applying filters such as Author, Status, and Last Modified.
+
+1. To access the advance search filters, click the **filter icon** at the top-right corner of the page.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Panel_Enable.png)
+
+2. By default, the advance search filters are **disabled**. Click the **toggle button** to enable them.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enable.png)
+
+3. To close the advance search filter panel, click the **close icon**.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)
+
+4. Once enabled, the screen will display two input fields: **Select an attribute** and **Add search filter**.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enabled_Screen.png)
+
+5. Users can select an attribute from the dropdown list, which contains four options: **Description, Title, Type, and All attributes**. By default, **All attributes** will be selected.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Select_Attribute.png)
+
+6. A filter can be added using the **Add search filter** dropdown. Available filters are **Author, Status, and Last Modified**.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter.png)
+
+7. Selecting **Author** from the dropdown adds an Author filter. To remove it, click the **remove** button.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter_Author.png)
+
+8. To search for an author, type at least **3 characters** in the Author multi-select field.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Users.png)
+
+9. After typing 3 characters, a list of suggested users will appear. Select the desired author from the list.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Users.png)
+
+10. To search for groups, type at least **3 characters** in the same multi-select field.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Groups.png)
+
+11. After selecting users or groups, click the **Apply** button. The results will display as shown below.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
+
+12. To add a **Status filter**, select **Status** from the Add search filter dropdown.
+
+   ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Filter.png)
+
+13. Once the Status filter is applied, results will be updated as shown below.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Applied.png)
+
+14. To add a **Last Modified filter**, select **Last Modified** from the Add search filter dropdown.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified.png)
+
+15. Select a **Start Date** in the Last Modified field.
+
+   ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Start_Date.png)
+
+16. Select an **End Date** in the Last Modified field.
+
+   ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_End_Date.png)
+
+17. After selecting the Start Date and End Date, click **Apply** to view the filtered results.
+
+   ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Applied.png)
+
+18. To clear all applied filters and reset the results, click the **Clear button**.
+
+   ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Clear.png)
+
+19. Users can apply **two filters together** (e.g., Author + Status). The results will only display records that match both conditions.
+
+     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Author_And_Status.png)
+
+20. Users can also apply **all three filters** (Author, Status, and Last Modified) at the same time. The results will display records that satisfy **all selected filters**.
+
+     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_All_Filters.png)
+
+21. At any point, filters can be removed individually using the **remove button** next to each filter, or reset entirely using the **Clear button**.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Remove_And_Clear.png)
