@@ -199,3 +199,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 21. At any point, filters can be removed individually using the **remove button** next to each filter, or reset entirely using the **Clear button**.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Remove_And_Clear.png)
+
+22. Users can turn off the **toggle switch** at any time to disable the Advanced Search Filter. Once turned off, all previously applied filters will be removed and no longer affect the search results.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Disabled.png)
