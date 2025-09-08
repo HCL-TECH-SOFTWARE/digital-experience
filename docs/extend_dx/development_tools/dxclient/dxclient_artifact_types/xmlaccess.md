@@ -68,7 +68,7 @@ Use this attribute to specify the local path to the `xmlaccess` input file:
 --xmlFile <Absolute or relative path to xmlaccess input file>
 ```
 
-Starting from CF230, Use this attribute to specify the name of the output XML file:
+Starting from CF230, use this attribute to specify the name of the output XML file:
 
 ```
 --xmlAccessOutputFileName <filename>.xml
