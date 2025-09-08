@@ -8,7 +8,7 @@
 
 If a user successfully logged in to your website, they will be redirected to another page (for example, the main landing page or welcome page). This redirection also applies when a user logs out or when their session times out.
 
-In this article, you will learn how to change the redirect URL for Login, Logout, and Session Timeout.
+This article describes the steps to change the redirect URL for Login, Logout, and Session Timeout.
 
 ## Instructions
 
