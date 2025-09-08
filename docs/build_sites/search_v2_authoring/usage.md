@@ -120,7 +120,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Panel_Enable.png)
 
-2. By default, the advance search filters are **disabled**. Click the **toggle button** to enable them.
+2. By default, the advanced search filters are **disabled**. Click the **toggle button** to enable them.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enable.png)
 
