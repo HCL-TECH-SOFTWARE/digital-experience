@@ -8,7 +8,6 @@ WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point fo
 
 !!! note
     - The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the links information for information.
-    - The WebDAV documentation stating that HTTPS is not enabled must be updated to reflect that it is now enabled.
 
 
 You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:

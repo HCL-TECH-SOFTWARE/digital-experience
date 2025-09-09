@@ -41,8 +41,6 @@ To enable this WAR file, adapt the application.xml files of the deployed Enterpr
 
 !!! note
     - Depending on how your web server is set up, this change might cause all requests to be routed to the web server plug-in. In this case, refer to your web server documentation for information about how to route only OPTIONS requests to the plug-in.
-    - The WebDAV documentation stating that HTTPS is not enabled must be updated to reflect that it is now enabled.
-
 
 <!---
 ???+ info "Related information"

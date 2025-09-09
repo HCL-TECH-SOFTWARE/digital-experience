@@ -8,7 +8,6 @@ For specific WebDAV client version compatibility, refer to the detailed systems 
     -   Numerous other WebDAV clients are available that you can use for WebDAV access. HCL supports the use of these WebDAV clients; however, HCL does not provide fixes or give support for issues found to be specific to a particular WebDAV client.
     -   Some WebDAV clients have specific restrictions, for example a limit to the size or number of files that you can handle when using WebDAV, or a read only restriction. These restrictions usually have security reasons. If you encounter issues when working with WebDAV, consult the documentation and forums for your WebDAV client.
     -   Use [HCL Digital Experience File Sync](https://github.com/hcl-dx/dxsync) to synchronize any WebDAV-based HCL Digital Experience theme with your local workstation.
-    -   The WebDAV documentation stating that HTTPS is not enabled must be updated to reflect that it is now enabled.
 
 When you use a Web server to work with WebDAV, complete the following steps:
 
