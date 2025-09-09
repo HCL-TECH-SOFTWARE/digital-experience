@@ -48,10 +48,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - New `xmlAccessOutputFileName` parameter added
 
 === "Containers"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file, providing you with an additional customization option for your Continuous Integration and Continuous Deliver (CI/CD) automations. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
 
 === "On-Premises"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file, providing you with an additional customization option for your Continuous Integration and Continuous Deliver (CI/CD) automations. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
