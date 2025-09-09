@@ -114,7 +114,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
 ## Advanced Search Feature
 
-- The Advanced Search Filter feature allows users to refine search results using multiple filter conditions. It provides a simple way to narrow down large sets of data by applying filters such as Author, Status, and Last Modified.
+- Beginning with CF230, the Advanced Search Filter feature enables users to refine search results by applying multiple filter criteria, such as Author, Status, and Last Modified. This functionality helps efficiently narrow down large data sets.
 
 1. To access the advanced search filters, click the **filter icon** at the top-right corner of the page.
 
