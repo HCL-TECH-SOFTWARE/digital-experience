@@ -22,3 +22,5 @@ Learn how to tune WCM to reduce your query time.
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
+- **[How to customize the error behavior when accessing WCM resources](./customize404AND403WCM.md)**  
+Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when accessing WCM resources.  
