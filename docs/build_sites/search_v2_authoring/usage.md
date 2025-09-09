@@ -136,7 +136,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter.png)
 
-6. Selecting **Author** from the dropdown adds an Author filter. To remove it, click the **remove** button.
+6. When you select the **Author** filter, you can search for authors by users or groups. Use the available attributes in the attribute list to find users and groups as needed. To remove the Author filter, click the **remove** button next to the 'Author' label.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter_Author.png)
 
