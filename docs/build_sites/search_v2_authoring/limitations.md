@@ -38,3 +38,5 @@ Take note of the following limitations when using Search V2 Authoring:
 ## Advance Search Filter
 
 - When using **Attribute → Type** in search, the query must be spelled correctly and match the value exactly.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png){: style="height:600px"}

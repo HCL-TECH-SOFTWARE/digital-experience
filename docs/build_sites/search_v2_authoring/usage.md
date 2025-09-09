@@ -144,39 +144,39 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
-10. After selecting users or groups, click the **Apply** button. The results will display as shown below.
+8. After selecting users or groups, click the **Apply** button. The results will display as shown below.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
-11. To add a **Status filter**, select **Status** from the Add search filter dropdown.
+9. To add a **Status filter**, select **Status** from the Add search filter dropdown.
 
    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Filter.png)
 
-12. Once the Status filter is applied, results will be updated as shown below.
+10. Once the Status filter is applied, results will be updated as shown below.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Applied.png)
 
-13. To add a **Last Modified filter**, select **Last Modified** from the Add search filter dropdown.
+11. To add a **Last Modified filter**, select **Last Modified** from the Add search filter dropdown.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified.png)
 
-14. Select a **Start Date** in the Last Modified field.
+12. Select a **Start Date** in the Last Modified field.
 
    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Start_Date.png)
 
-15. Select an **End Date** in the Last Modified field.
+13. Select an **End Date** in the Last Modified field.
 
    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_End_Date.png)
 
-16. After selecting the Start Date and End Date, click **Apply** to view the filtered results.
+14. After selecting the Start Date and End Date, click **Apply** to view the filtered results.
 
    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Applied.png)
 
-17. To clear all applied filters and reset the results, click the **Clear button**.
+15. To clear all applied filters and reset the results, click the **Clear button**.
 
    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Clear.png)
 
-18. To close the advanced search filter panel, click the **close icon**.
+16. To close the advanced search filter panel, click the **close icon**.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)
 
@@ -184,10 +184,10 @@ You can combine multiple filters to refine your search results even further. For
 
      ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_All_Filters.png)
 
-21. At any point, filters can be removed individually using the **remove button** next to each filter, or reset entirely using the **Clear button**.
+17. At any point, filters can be removed individually using the **remove button** next to each filter, or reset entirely using the **Clear button**.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Remove_And_Clear.png)
 
-22. Users can turn off the **toggle switch** at any time to disable the Advanced Search Filter. Once turned off, all previously applied filters will be removed and no longer affect the search results.
+18. Users can turn off the **toggle switch** at any time to disable the Advanced Search Filter. Once turned off, all previously applied filters will be removed and no longer affect the search results.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Disabled.png)
