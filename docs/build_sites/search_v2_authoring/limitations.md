@@ -37,4 +37,4 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Advance Search Filter
 
-- When searching by **Attribute → Type**, the query must be an **exact match** and **correctly spelled**.
+- When using **Attribute → Type** in search, the query must be spelled correctly and match the value exactly.
