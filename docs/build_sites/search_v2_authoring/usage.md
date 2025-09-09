@@ -188,11 +188,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)
 
-19. Users can apply **two filters together** (e.g., Author + Status). The results will only display records that match both conditions.
-
-     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Author_And_Status.png)
-
-20. Users can also apply **all three filters** (Author, Status, and Last Modified) at the same time. The results will display records that satisfy **all selected filters**.
+You can combine multiple filters to refine your search results even further. For example, applying the **Author**, **Status**, and **Last Modified** filters together will display only those records that meet all selected criteria, helping you quickly find the most relevant content.
 
      ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_All_Filters.png)
 
