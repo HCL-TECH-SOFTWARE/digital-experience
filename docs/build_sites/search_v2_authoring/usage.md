@@ -132,7 +132,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Select_Attribute.png)
 
-5. A filter can be added using the **Add search filter** dropdown. Available filters are **Author, Status, and Last Modified**.
+5. To add a filter, open the **Add search filter** dropdown and select from **Author**, **Status**, or **Last Modified**. Only filters that have not already been selected will appear in the list.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter.png)
 
