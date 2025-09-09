@@ -124,7 +124,7 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enable.png)
 
-3. Once enabled, the screen will display two input fields: **Select an attribute** and **Add search filter**.
+3. After enabling, user can choose an attribute from the **Select an attribute** dropdown and a filter from the **Add search filter** dropdown.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enabled_Screen.png)
 
