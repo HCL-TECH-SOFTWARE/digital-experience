@@ -140,17 +140,9 @@ Starting from CF229, you can now delete items from the search results. To delete
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter_Author.png)
 
-7. To search for an author, type at least **3 characters** in the Author multi-select field.
+7. To search for a user or group, begin by typing at least **3 characters** in the user or group field. You can refine your search by selecting specific attributes, such as user roles or group types. As you enter text, a dynamic list of matching users or groups will appear—simply choose the desired option from the suggestions to add it to your filter.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Users.png)
-
-8. After typing 3 characters, a list of suggested users will appear. Select the desired author from the list.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Users.png)
-
-9. To search for groups, type at least **3 characters** in the same multi-select field.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Groups.png)
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
 10. After selecting users or groups, click the **Apply** button. The results will display as shown below.
 
