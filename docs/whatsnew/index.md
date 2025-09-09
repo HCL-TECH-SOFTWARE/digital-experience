@@ -8,3 +8,7 @@ Find out the latest features, enhancements, and fixes included in the most recen
 - **[CF17 to CF173](cf17/new_cf173.md)**
 - **[Deprecated features](deprecated_features.md)**
 - **[Unsupported features](unsupported_features.md)**
+
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
