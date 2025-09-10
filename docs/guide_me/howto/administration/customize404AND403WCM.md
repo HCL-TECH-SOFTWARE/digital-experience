@@ -7,7 +7,7 @@
 ## Introduction
 
 This article describes the procedure to customize the default HTTP-404 and HTTP-403 error codes that might been noticed when using the WCM servlet.
-Depend on the scenario, you will receive a different error message. This article applies to the following scenarios:
+Depending on the scenario, you will receive a different error message. This article applies to the following scenarios:
 
 1. Non-existent WCM URL.  
     For example: `http://hostname/wps/wcm/non-existent`  
