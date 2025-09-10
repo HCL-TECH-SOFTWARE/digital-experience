@@ -37,8 +37,12 @@ The Search V2 Authoring UI has the following components:
 - **Search Field** - This section includes an input field for entering your query.
 - **Search Data Grid** - This section displays the search results in a table with columns headers for Title, Name, Status, Authors, Last modified, and Location. Hovering over a column header reveals a sort icon, allowing you to sort the results in ascending or descending order. Each row includes an edit icon to open the item in Edit mode and a three-dot icon to reveal additional options such as Read mode or Preview mode.
 - **Pagination** - This section displays the current number of rows per page and the total number of pages for the search results. You can adjust the number of rows displayed per page or navigate to the next, previous, first, or last page.
-**Advance Search Filter** – This section enables users to efficiently narrow search results by selecting relevant attributes and applying multiple filters. Users can toggle the panel, choose attributes such as Description, Title, Type, or All, and add filters for Author, Status, or Last Modified. Filters can be combined for precise results, managed individually, and reset or applied as needed.
+- **Advance Search Filter** – The Advanced Search Filter panel helps users narrow down search results. It has a toggle to enable or disable it, a header with a close icon, and an Attribute Selector to choose the search scope: Description, Title, Type, or the default All attributes.
+Users can add specific filters from the Add Search Filter dropdown, including:
 
-!!! note
-    - When searching by **Author**, you must type at least three characters to begin searching for users or groups.
-    - When filtering by **Type**, the search requires the exact spelling and an exact match for the type value.
+    - **Author**: Search for users or groups by typing at least three characters.
+    - **Status**: Filter by Draft, Published, or Archived.
+    - **Last Modified**: Select from preset date ranges or define a custom range.
+
+Applied filters appear in the panel and can be removed individually or all at once with the Clear button. The Apply button refreshes results based on the applied filters. The system only displays items that match all selected conditions.
+

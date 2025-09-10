@@ -37,6 +37,7 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Advance Search Filter
 
-- When using **Attribute → Type** in search, the query must be spelled correctly and match the value exactly.
+- When searching by **Author**, you must type at least three characters to begin searching for users or groups.
+- The search function is not case-sensitive, but it is sensitive to spelling errors.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png){: style="height:600px"}
