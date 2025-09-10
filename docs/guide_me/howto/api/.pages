@@ -1,4 +1,5 @@
-title: API
+title: API  
 
-nav:
+nav:  
     - index.md
+    - SampleJSPtoConvertAfileToBase64EncodedFformat.md
