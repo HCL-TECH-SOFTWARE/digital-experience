@@ -8,17 +8,17 @@ To learn about Default stylesheet and Override stylesheet in Presentation Design
 
 1. Prepare a custom **Cascading Style Sheet (CSS)**. This is a plain text file containing all design rules, saved with a ```.css``` extension. The file should contain standard CSS rules to define the appearance of content. A rule consists of a selector (to target an element) and style properties. This can include new custom classes or styles targeting default Presentation Designer classes.
 
-      See the following sample css file:
+      See the following sample CSS file:
 
        ![](../../../../assets/HCL_Presentation_Designer_sample_stylesheet.png)
 
-2. Create a **stylesheet component** in Authoring and upload the custom css file. It should be located in the same library as the presentation template. For more information on stylesheet component, see [Using a style sheet element](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/stylesheet_element/index.md).
+2. Create a **stylesheet component** in Authoring and upload the custom CSS file. It should be located in the same library as the presentation template. For more information on stylesheet component, see [Using a style sheet element](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/elements/stylesheet_element/index.md).
 
       See the following sample stylesheet component:
 
        ![](../../../../assets/HCL_Presentation_Designer_sample_stylesheet_component.png)
 
-3. Any existing **Presentation Template** where the stylesheet component will be added. It should be located in the same library as the stylesheet component.
+3. Any existing **Presentation Template** to which the stylesheet component will be added. It should be located in the same library as the stylesheet component.
 
       See the following sample presentation template:
 
@@ -92,7 +92,7 @@ Presentation Designer will automatically load the stylesheets and apply styles t
 
 The sample below explains the CSS selectors supported in Presentation Designer and used in the sample stylesheet. It also describes the visual effect each rule will have on elements within the presentation template.
 
-- Sample css file:
+- Sample CSS file:
     ![](../../../../assets/HCL_Presentation_Designer_handle_multiple_stylesheets_selector_sample_file.png)
 
 - Sample stylesheet component:
