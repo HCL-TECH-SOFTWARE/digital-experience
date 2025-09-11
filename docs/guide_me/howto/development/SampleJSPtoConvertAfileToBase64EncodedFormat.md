@@ -1,4 +1,4 @@
-# Sample JSP to convert a file to base64 encoded format
+# How to convert a file to base64 encoded format
 
 ## Applies to
 
@@ -10,14 +10,10 @@ This document describes a sample JSP code that can be used to convert a file (fo
 
 ## Instructions
 
-!!!Important
-    **DISCLAIMER OF WARRANTIES:**
+???+ info "DISCLAIMER OF WARRANTIES"  
     The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ```java
-
-   
-
 <%@page session="false" contentType="text/html" pageEncoding="ISO-8859-1" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.*" %>
@@ -52,4 +48,4 @@ if (path != null) {
 }
 ```
 
-Please also check the [Free Formater](https://www.freeformatter.com/base64-encoder.html)  web site to decode a base64 encoded stream.
+Please also check the [Free Formater](https://www.freeformatter.com/base64-encoder.html){target="_blank"} web site to decode a base64 encoded stream.

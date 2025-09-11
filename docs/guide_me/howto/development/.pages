@@ -4,3 +4,4 @@ nav:
     - index.md
     - CodeToPrintUserAndHostname.md
     - Portletdevelopmentutilitiesandpagecreationsamples.md
+    - SampleJSPtoConvertAfileToBase64EncodedFormat.md
