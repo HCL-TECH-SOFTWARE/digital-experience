@@ -1,5 +1,5 @@
 nav:
   - Home: index.md
   - Enable HTTP security, HttpOnly, and SameSite cookies: enable_http_security_http_only_samesite_K8.md
-  - Implement SAML for Portal: implementsaml_portal.md
+  - How to implement SAML in HCL Digital Experience: implementsaml_portal.md
   - Transient users with OpenID Connect: transient_users_with_OpenID_Connect.md
