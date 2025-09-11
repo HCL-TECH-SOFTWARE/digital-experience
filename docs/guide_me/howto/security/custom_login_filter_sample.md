@@ -6,11 +6,11 @@
 
 ## Introduction
 
-HCL Digital Experience does not offer a feature yet to find out concurrent user sessions and to avoid that users can login to HCL Digital Experience more than once at a time using different Web-Browser sessions. There is already a feature request open to that topic. For details, please check:
+HCL Digital Experience does not offer a feature yet to determine the number of concurrent user sessions and to prevent users from loging into HCL Digital Experience more than using different Web-Browser sessions. There is already a feature request open for this topic. For details, please check:
 
 [Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"}
 
-This document describes sample code that can be used to find out concurrent user sessions in HCL Digital Experience. It can also be used to get an idea in how to filter users and to avoid that one and the same user can login more than once to HCL Digital Experience.
+This document describes sample code that can be used to determine the number of concurrent user sessions in HCL Digital Experience. It can also be used to see how you can filter users and prevent the same user from loging in more than once to HCL Digital Experience.
 
 ## Instructions
 
@@ -31,15 +31,15 @@ The sample code includes java source-code and their binaries as following:
 
 3. A user filter java class (**com.hcl.portal.Userlist.java**) which is developed using the java singleton pattern to ensure that just one java object instance exit to store the user data.  
 
-The demo shows up a sample to use custom login and logout filters in HCL Digital Experience to find out concurrent user sessions. For details, please also check [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md){target="_blank"}  
+The code sample demonstrates how to use custom login and logout filters in HCL Digital Experience to find the number of concurrent user sessions. For details, please also check [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md){target="_blank"}  
 
 ### Process flow of this sample-code
 
-Once the custom login and logout filter is in place, concurrent users can be filtered for which a user that is already logged in to the portal, directly will be redirected to the login page.  
+Once the custom login and logout filter is in place, concurrent users can be filtered. A user that is already logged in to the portal, will be redirected to the logout page.  
 
 **Sample process flow:**  
 
-1. The user wpsadmin user is logging in into HCL Digital Experience the first time using Google Chrome web-browser. The SystemOut.log should show messages like:
+1. The wpsadmin user is logging in into HCL Digital Experience for the first time using Google Chrome web-browser. The SystemOut.log should show messages like:
 
     ```text
     Custom Portal Login Filter at login called!
@@ -51,7 +51,7 @@ Once the custom login and logout filter is in place, concurrent users can be fil
     </UserList>
     ```
 
-2. A second web-browser (for example Microsoft Edge) will be opened and then the wpsadmin user try to login with that web-browser as well. Because the wpsadmin user is already logged in using the Google Chrome web-browser, the login will be rejected by the Login-Filter and the user will be redirected to the login-page, again.  
+2. A second web-browser (for example Microsoft Edge) is opened and then the wpsadmin user tries to login with that web-browser as well. Because the wpsadmin user is already logged in using the Google Chrome web-browser, the login will be rejected by the Login-Filter and the user will be redirected to the login-page, again.  
 
     ```text
     Custom Portal Login Filter at login called!
@@ -59,7 +59,7 @@ Once the custom login and logout filter is in place, concurrent users can be fil
     User is already logged in! Redirecting to logout page.
     ```
 
-3. As soon as the wspadmin user will be logged out in Google Chrome, it is then also possible to login using the same user by using Microsoft Edge. During logout the following messages will be printed out:  
+3. Once the wspadmin user is logged out in Google Chrome, it is then possible for the wpsadmin user to login using Microsoft Edge. During logout the following messages will be printed out:  
 
     ```text
     The following user logs out: wpsadmin
@@ -68,7 +68,7 @@ Once the custom login and logout filter is in place, concurrent users can be fil
 
 ### Installation Procedure
 
-1. Add the **concurrentUserFilters.jar** file into the portal classpath. At best copy the jar-file into directory `<PortalServer_root>\shared\app`.  
+1. Add the **concurrentUserFilters.jar** file to the portal classpath. Copy the jar-file into the directory `<PortalServer_root>\shared\app`.  
 
 2. Register the Authentication Filter in the IBM Integrated Solutions Console (Admin-Console).  
     a. Open the Web-Browser and access URL: `https://<hostname>:<port>/ibm/console`  
@@ -84,11 +84,11 @@ Once the custom login and logout filter is in place, concurrent users can be fil
         **Name:** `login.explicit.filterchain`  
         **Value:** `com.hcl.portal.CustomPortalLoginFilter`  
         ![Custom Filters](./files/custom_login_filter_sample/admin_console_custom_filters.png)  
-    h. Click to the **OK** button and save the changes to the Master Configuration.
+    h. Click the **OK** button and save the changes to the Master Configuration.
 
 3. Restart the Portal Server  
 
-4. Run tests by using two different web-browser to login to HCL Digital Experience using one and the same user in both web-browsers.  
+4. Run tests by using two different web-browsers to login to HCL Digital Experience using the same user in both web-browsers.  
 
 ### Sample Code
 
