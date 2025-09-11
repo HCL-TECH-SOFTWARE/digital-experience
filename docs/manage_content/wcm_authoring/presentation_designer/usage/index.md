@@ -11,6 +11,6 @@ This section provides steps on how to edit presentation templates in Presentatio
 - **[Canvas settings](../usage/canvas_settings.md)**  
 This section provides information on how to use the canvas settings in Presentation Designer.
 - **[Default and override stylesheet](../usage/default_and_override_stylesheet.md)**  
-This section provides information on how to use the default and override stylesheet in Presentation Designer.
+This section introduces how to use the Default and Override stylesheets in Presentation Designer to manage styling for presentation templates.
 - **[Handle multiple stylesheets](../usage/handle_multiple_stylesheets.md)**  
-This section provides information on how to handle multiple stylesheets in Presentation Designer.
+This section explains how to manage multiple stylesheets in Presentation Designer to customize presentation templates effectively.
