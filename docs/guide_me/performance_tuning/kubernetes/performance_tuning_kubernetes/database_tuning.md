@@ -70,7 +70,7 @@ db2 runstats on table tableschema.tablename on all columns with distribution on 
 These options allow the optimizer to determine optimal access plans for complex SQL. A simpler, more convenient technique for recomputing catalog statistics is: 
 
 ```
-db2 reorgchk update statistics on table allƒ√
+db2 reorgchk update statistics on table all
 ```
 
 This command not only counts and records catalog statistics but also generates a report that can help identify table organization issues. However, in our experience, it sometimes provides insufficient information for the optimizer to choose an efficient access plan for complex SQL queries—especially those involving the JCR database.
