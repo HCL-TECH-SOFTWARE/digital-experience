@@ -7,4 +7,4 @@ Learn about the sample code for using the PUMA API within a WCM JSP component to
 - **[Portlet development utilities and page creation samples](./Portletdevelopmentutilitiesandpagecreationsamples.md)**  
 Learn about the sample codes for portlet development utilities and page creation.  
 - **[How to convert a file to base64 encoded format.](./SampleJSPtoConvertAfileToBase64EncodedFormat.md)**  
-Learn how to convert a file to base64 encoded format using JSP code.  
+Learn how to convert a file to base64 encoded format using JSP code  
