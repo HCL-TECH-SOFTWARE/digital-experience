@@ -104,7 +104,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 Authoring - Advanced search filters now available
 
 === "Containers"
-    You can now apply additional search options to refine your search results and narrow down large data sets more efficiently. These options include filters include Author, Status, and Last Modified, and attributes such as Description, Title, and Type. For more information, refer to [Using Search V2 Authoring - Advanced Search Filter](../../build_sites/search_v2_authoring/usage.md#advanced-search-filter).
+    You can now apply additional search options to refine your search results and narrow down large data sets more efficiently. These options include filters such as Author, Status, and Last Modified, and attributes such as Description, Title, and Type. For more information, refer to [Using Search V2 Authoring - Advanced Search Filter](../../build_sites/search_v2_authoring/usage.md#advanced-search-filter).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
