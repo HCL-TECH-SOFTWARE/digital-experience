@@ -6,5 +6,5 @@ This section includes how-to articles about applications, portlets, JavaServer P
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[Portlet development utilities and page creation samples](./Portletdevelopmentutilitiesandpagecreationsamples.md)**  
 Learn about the sample codes for portlet development utilities and page creation.  
-- **[How to convert a file to base64 encoded format.](./SampleJSPtoConvertAfileToBase64EncodedFormat.md)**  
-Learn how to convert a file to base64 encoded format using JSP code  
+- **[How to convert a file to base64 encoded format](./SampleJSPtoConvertAfileToBase64EncodedFormat.md)**  
+Learn how to convert a file to base64 encoded format using JSP code.  
