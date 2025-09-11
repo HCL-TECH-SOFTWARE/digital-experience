@@ -112,82 +112,58 @@ Starting from CF229, you can now delete items from the search results. To delete
     - Failed due to non-existing item
         ![](../../assets/HCL_SearchV2_Authoring_Delete_failure2.png)
 
-## Advanced Search Feature
+## Advanced Search Filter
 
-- Beginning with CF230, the Advanced Search Filter feature enables users to refine search results by applying multiple filter criteria, such as Author, Status, and Last Modified. This functionality helps efficiently narrow down large data sets.
+Beginning with CF230, the Advanced Search Filter feature allows you to refine search results by applying multiple filter criteria, such as Author, Status, and Last Modified. This functionality helps efficiently narrow down large data sets.
 
-1. To access the advanced search filters, click the **filter icon** at the top-right corner of the page.
+1. To access the advanced search filters, click the **View filters** icon at the top-right corner of the page.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Panel_Enable.png)
 
-2. By default, the advanced search filters are **disabled**. Click the **toggle button** to enable them.
+2. By default, the advanced search filters are disabled. Click the **Advanced search** toggle to enable them.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enable.png)
 
-3. After enabling, user can choose an attribute from the **Select an attribute** dropdown and a filter from the **Add search filter** dropdown.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Enabled_Screen.png)
-
-4. Users can select an attribute from the dropdown list, which contains four options: **Description, Title, Type, and All attributes**. By default **All attributes** will be selected.
+3. In the **Select an attribute** dropdown, choose an attribute, then click **Apply**. Available attributes include **Description**, **Title**, **Type**, or **All attributes**. By default, **All attributes** is selected.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Select_Attribute.png)
 
-5. To add a filter, open the **Add search filter** dropdown and select from **Author**, **Status**, or **Last Modified**. Only filters that have not already been selected will appear in the list.
+4. In the **Add search filter** dropdown, choose the filters you want to use, then click **Apply**. Available filters include **Author**, **Status**, and **Last Modified**. You can choose multiple filters at once. Filters you have already selected will not appear on the list.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter.png)
 
-6. When you select the **Author** filter, you can search for authors by users or groups. Use the available attributes in the attribute list to find users and groups as needed. To remove the Author filter, click the **remove** button next to the 'Author' label.
+    1. Select the **Author** filter to search for authors by users or groups. Use the available attributes in the attribute list to find users and groups as needed.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter_Author.png)
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Add_Filter_Author.png)
 
-7. To search for a user or group, begin by typing at least **3 characters** in the user or group field. You can refine your search by selecting specific attributes, such as user roles or group types. As you enter text, a dynamic list of matching users or groups will appear—simply choose the desired option from the suggestions to add it to your filter.
+        To search for a user or group, enter at least three characters in the user or group field. You can refine your search by selecting specific attributes, such as user roles or group types. A dynamic list of matching users or groups will appear as you enter characters. Choose your desired option from the suggestions to add it to your filter.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
-8. After selecting users or groups, click the **Apply** button. The results will display as shown below.
+    2. Select the **Status** filter to search for documents based on their status (for example, **Published**).
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Filter.png){: style="height:600px"}
 
-9. To add a **Status filter**, select **Status** from the Add search filter dropdown.
+        In the following example, the **Published** filter is used:
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Filter.png){: style="height:600px"}
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Applied.png)
 
-10. Once the Status filter is applied, results will be updated as shown below.
+    3. Select the **Last Modified** filter to search for documents in a date range based on when they were last modified. Enter the **Start** and **End** dates.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Applied.png)
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Start_Date.png){: style="height:600px"}
 
-11. To add a **Last Modified filter**, select **Last Modified** from the Add search filter dropdown.
+        In the following example, the date range **07/01/2025** to **09/09/2025** is used:
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified.png)
+        ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Applied.png){: style="height:600px"}
 
-12. Select a **Start Date** in the Last Modified field.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Start_Date.png){: style="height:600px"}
-
-13. Select an **End Date** in the Last Modified field.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_End_Date.png){: style="height:600px"}
-
-14. After selecting the Start Date and End Date, click **Apply** to view the filtered results.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Last_Modified_Applied.png){: style="height:600px"}
-
-15. To clear all applied filters and reset the results, click the **Clear button**.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Clear.png){: style="height:600px"}
-
-16. To close the advanced search filter panel, click the **close icon**.
-
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)
-
-17. You can combine multiple filters to refine your search results even further. For example, applying the **Author**, **Status**, and **Last Modified** filters together will display only those records that meet all selected criteria, helping you quickly find the most relevant content.
+5. You can combine multiple filters to refine your search results even further. For example, applying the **Author**, **Status**, and **Last Modified** filters together will only display the records that meet those criteria, helping you quickly find the most relevant content.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_All_Filters.png)
 
-18. At any point, filters can be removed individually using the **remove button** next to each filter, or reset entirely using the **Clear button**.
+6. Remove filters individually by clicking **Remove** next to each filter, or remove them all by clicking the **Clear** button.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Remove_And_Clear.png)
 
-19. Users can turn off the **toggle switch** at any time to disable the Advanced Search Filter. Once turned off, all previously applied filters will be removed and no longer affect the search results.
+7. Close the Advanced Search Filter panel by clicking the **X** icon.
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Disabled.png)
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Close.png)

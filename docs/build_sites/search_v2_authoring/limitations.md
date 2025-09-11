@@ -35,9 +35,9 @@ Take note of the following limitations when using Search V2 Authoring:
 
 - The Delete feature is disabled if the user is working on a project.
 
-## Advance Search Filter
+## Advanced Search Filter
 
-- When searching by **Author**, you must type at least three characters to begin searching for users or groups.
+- When filtering results by **Author**, you must type at least three characters to begin searching for users or groups.
 - The search function is not case-sensitive, but it is sensitive to spelling errors.
 
     ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png){: style="height:600px"}
