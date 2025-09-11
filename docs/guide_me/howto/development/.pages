@@ -2,3 +2,8 @@ title: Development
 nav:
     - index.md
     - CreateAServletForStaticFiles.md
+
+nav:
+    - index.md
+    - CodeToPrintUserAndHostname.md
+    - Portletdevelopmentutilitiesandpagecreationsamples.md

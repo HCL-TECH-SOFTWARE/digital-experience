@@ -156,6 +156,6 @@ To learn how to monitor, troubleshoot, and contact Support about issues you enco
     -   [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     -   [Portal service configuration](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
     -   [Localizer Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_localizer.md)
-    -   [Directory structure](../../../../guide_me/wpsdirstr.md)
+    -   [Directory structure](../../../../guide_me/glossary/wpsdirstr.md)
     -   [WebSphere Application Server 8.5.:Log and trace settings](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/utrb_logtrace.html)
 

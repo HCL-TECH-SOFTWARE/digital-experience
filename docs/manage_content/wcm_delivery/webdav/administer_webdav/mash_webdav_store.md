@@ -7,7 +7,8 @@ You can use WebDAV to work with the portal themes.
 WebDAV is defined by RFC2518 as an HTTP extension framework with a plug point for the access and management of hierarchical data. For example, in content management systems. WebDAV stores the data in collections. You can work with the data in a user interface view that is similar to that of a file system. A folder represents a WebDAV collection. Various tools are available for integrating WebDAV resources into the client file system. Users can use these tools to view and modify resources that they can access with WebDAV.
 
 !!! note
-    The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the related links for information.
+    - The HTTP Basic Authentication Trust Association Interceptor (TAI) must be enabled to use WebDAV in HCL Portal. This TAI is enabled by default. See the links information for information.
+
 
 You can obtain the entry point URL to the WebDAV file store from the service document under the URL /wps/mycontenthandler/!ut/p/model/service-document. The service document contains the top-level access point as follows:
 
@@ -296,10 +297,10 @@ WebDAV file store supports the following HTTP methods:
 
     This method is used to move or rename resources or folders, that is WebDAV collections.
 
+## HCLSoftware U learning materials
 
+To learn how to further develop WebDAV-based DX themes, go to the [Theme Development lesson in the HCL Digital Experience for Developers (Intermediate) course](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3462){target="_blank"}. You can try it out using the [Theme Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development.pdf){target="_blank"} and corresponding [Theme Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Theme_Development_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information"
     - [Enabling HTTP Basic Authentication for simple clients](../../../../deployment/manage/security/people/authentication/basic_auth/index.md)
     - [Embedding the HCL Portal 8.5 site toolbar dynamically without a dynamic content spot](../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/enable_func_migrated_themes/add_85_toolbar/themeopt_cust_toolbar_dynamic_embedding.md)
-
-

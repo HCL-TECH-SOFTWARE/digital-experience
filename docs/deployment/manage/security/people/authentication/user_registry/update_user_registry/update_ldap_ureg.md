@@ -16,7 +16,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 There are separate tasks to update these attributes.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -37,7 +37,7 @@ There are separate tasks to update these attributes.
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to validate your LDAP server settings:
 

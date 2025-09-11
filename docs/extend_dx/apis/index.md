@@ -38,25 +38,17 @@ Models provide information that is needed by HCL to perform tasks such as conten
 **[Portal Access Control interfaces](../apis/portal_access_control_interfaces/index.md)**  
 Portal Access Control provides interfaces for retrieving and modifying and access control information of portal resources, such as portlets or pages.
 
-
 **[User and group management](../apis/puma_spi/index.md)**  
 The Portal User Management Architecture (PUMA) System programming interface (SPI) provides interfaces for accessing the profiles of a portal User or Group.
-
 
 **[URL generation in HCL Portal](../apis/url_generation/index.md)**  
 Generating Portal URLs correctly is one of the most important tasks in programming a HCL Portal based application. There are several programming tools and techniques available for generating HCL Portal URLs in custom code. The following section introduces the programming tools available and discusses when it is most appropriate to use each of the tools.
 
-
-**[Portal v8.5 API Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html)**
+**[Portal v8.5 API Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/index.html)**  
 Reference copy of the Portal Version 8.5.0. API, javadocs, and other specifications.
 
-
-**[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**
+**[Portal v8.5 SPI Specifications](https://help.hcltechsw.com/digital-experience/8.5/dev/javadoc/vrm/850/spi_docs/index.html)**  
 Reference copy of the Portal Version 8.5.0. SPI, javadocs, and other specifications.
-
-## HCLSoftware U learning materials
-
-For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777){target="_blank"}. To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf){target="_blank"}.
 
 ???+ info "Related Information"
     - **[Developing themes and skins](../../build_sites/themes_skins/index.md)**  
@@ -78,3 +70,10 @@ For an introduction and a demo on using DX for developers, go to [DX for Develop
     - **[Personalization APIs](../..//manage_content/pzn/pzn_apis/index.md)**  
     Portlet load monitoring provides an API for accessing the monitoring data. You can use this API to write custom code to access that data.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+
+To learn how to get started with the development aspects of HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777){target="_blank"}. To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf){target="_blank"}.

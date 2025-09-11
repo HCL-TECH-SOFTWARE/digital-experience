@@ -76,10 +76,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Support for portlets built and published by Volt MX Iris
 
 === "Containers"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/enable_sso.md).
 
 === "On-Premises"
-    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/mx_portlet_in_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/index.md#enabling-sso-between-hcl-dx-and-volt-mx).
+    With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/enable_sso.md).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -137,7 +137,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for rendering in the upper limit of a single-node configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
+    Results of DX sizing tests for rendering with the upper limit in a single-node Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Guidance for rendering with the upper limit in a single-node configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_small_config.md#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

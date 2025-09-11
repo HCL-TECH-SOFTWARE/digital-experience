@@ -1,14 +1,12 @@
-# Script Application Improvements
+# Script Application improvements
 
 In CF201, some improvements are made to the Script Applications. You can now upload minified content, use a new configuration task to set the required WCM properties for script applications such as React or Angular, and make use of the new **Deferred with React** theme profile.
 
-## Introduction
-
 The following improvements were made for the Script Application on CF201:
 
--   The issue with uploading minified content is fixed so you can now use production builds of an SPA
--   A new configuration task is available to configure WCM properties required to run SPAs like React or Angular in script applications: `ConfigEngine.sh|bat enable-wcm-spa-script-app-properties`
--   Out of the box react profile in the 8.5 theme: **Deferred with React**.
+- The issue with uploading minified content is fixed so you can now use production builds of an SPA
+- A new configuration task is available to configure WCM properties required to run SPAs like React or Angular in script applications: `ConfigEngine.sh|bat enable-wcm-spa-script-app-properties`
+- Out of the box react profile in the 8.5 theme: **Deferred with React**.
 
 ## Fix for minified content processing
 
@@ -26,4 +24,6 @@ To disable run: `ConfigEngine.sh|bat disable-wcm-spa-script-app-properties`
 
 A new **Deferred with React** theme profile was added that includes React v16 which can be used on pages contain React script applications.
 
+## HCLSoftware U learning materials
 
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

@@ -1,0 +1,9 @@
+title: Using Microsoft Visual Studio Code
+nav:
+    - index.md
+    - pzn_demoprereq.md
+    - install_pers_offers_portlet.md
+    - review_pers_offers_project.md
+    - import_pzn_rules_portal.md
+    - test_pers_offers_portlet.md
+    - uninstall_pers_offers_and_resources.md

@@ -52,7 +52,7 @@ An administrator can edit the WCM REST SERVICE virtual resource. Click the **Adm
 !!! note
     Proper library permissions must be configured to be able to create the content.
 
-The same access control checks also apply to the HCL Digital Experience Version 2 REST APIs. Reference the Help Center topic [HCL Digital Experience Version 2 REST APIs](https://help.hcltechsw.com/digital-experience/8.5/wcm/dx_v2_rest_api.html) for more information.
+The same access control checks also apply to the HCL Digital Experience Version 2 REST APIs. Reference the Help Center topic [REST service for Web Content Manager v2](../wcm_rest_v2/index.md) for more information.
 
 |Header|Header|
 |------|------|

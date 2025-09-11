@@ -14,4 +14,5 @@ You can tailor the caching behavior of your web content environment by changing 
 -   **[Data cache configuration](wcm_config_delivery_caching_data.md)**  
 Data caching is used to cache data that is retrieved by the HCL Web Content Manager application from external sources that use connect tags or by requests that are made through URLs. 
 
-
+???+ info "Related information"
+    - [How to clear WCM caches with ConfigEngine task](../../../../guide_me/howto/administration/ClearWCMCaches.md)

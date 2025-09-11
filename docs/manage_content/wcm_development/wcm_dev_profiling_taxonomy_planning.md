@@ -1,4 +1,4 @@
-# Taxonomies, Categories, and keywords
+# Taxonomies, categories, and keywords
 
 The combination of taxonomy and categories enables control what displays in menus.
 
@@ -38,4 +38,6 @@ When building a hierarchy of taxonomies and categories, it is important to consi
 |If you base a menu on a mid-level category, all content that is profiled with the mid-level category or its descendants or its ancestors appear in the menu.|A menu based on Interest Rates displays content that is profiled with any of the following: <br> -   Financial <br>    -   Interest Rates <br>        -   Personal <br>        -   Business <br>        -   Corporate|
 |If you base a menu on a bottom-level category, all content that is profiled with the bottom-level category or its ancestors are returned by the menu.|A menu based on Business displays content that is profiled with any of the following: <br> -   Financial <br>    -   Interest Rates <br>        -   Business|
 
+## HCLSoftware U learning materials
 
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

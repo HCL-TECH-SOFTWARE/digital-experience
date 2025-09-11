@@ -6,6 +6,8 @@ nav:
     - Practitioner Studio: practitioner_studio
     - Manage site settings: portal_settings
     - Site Builder: sitebuilder
+    - blueprint.md
+    - nex_haven.md
     - Woodburn Studio: woodburn_studio
     - Search: search
     - Tagging and Rating: tagging_rating

@@ -1,4 +1,4 @@
-# Script Application Security Overview
+# Script Application security overview
 
 The default security configuration of the Script Application places limits on which portal users and groups can access the editor and import features. You can customize these limits.
 

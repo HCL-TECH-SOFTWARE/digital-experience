@@ -8,34 +8,36 @@ The Script Application makes it easy to develop portlets with HTML, JavaScript, 
 
 The following key HCL DX features are available with the Script Application:
 
--   Content targeting based on devices or locations.
--   Access to user login information.
--   Adaptive design that uses conditional rendering.
--   Access to shared render parameters, portlet preferences, and live text.
+- Content targeting based on devices or locations.
+- Access to user login information.
+- Adaptive design that uses conditional rendering.
+- Access to shared render parameters, portlet preferences, and live text.
 
 The Script Application has the following advantages:
 
--   Users have more autonomy and less dependence on central IT for portlet development, which decreases the time to market.
--   Users need less skill to be productive HCL DX developers.
--   Users control access and workflow processes in enterprise settings.
--   Users can create reusable assets and contents.
--   Users can render existing portlets, such as those developed with HCL Experience Factory or IBM Rational Application Developer, on a page with portlets by using Script Application.
+- Users have more autonomy and less dependence on central IT for portlet development, which decreases the time to market.
+- Users need less skill to be productive HCL DX developers.
+- Users control access and workflow processes in enterprise settings.
+- Users can create reusable assets and contents.
+- Users can render existing portlets, such as those developed with HCL Experience Factory or IBM Rational Application Developer, on a page with portlets by using Script Application.
 
 **Video**: [Start building your first HCL Digital Experience Script Application in minutes](https://hclsw.co/dx-scriptapp-webinar)
 
--   **[Build applications with the Script Application](build_app_with_script_application/index.md)**  
+- **[Build applications with the Script Application](build_app_with_script_application/index.md)**  
 You can take any existing web page, pick out individual parts, and enter them into corresponding tabs in the Script Application Editor.
--   **[DXClient](../../extend_dx/development_tools/dxclient/index.md)**  
+- **[DXClient](../../extend_dx/development_tools/dxclient/index.md)**  
 DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks. It helps developers manage several DX tasks such as uploading one or more portlets, Script Applications, and themes.
--   **[Script Application Security Overview](script_application_security/index.md)**  
+- **[Script Application Security Overview](script_application_security/index.md)**  
 The default security configuration of the Script Application places limits on which portal users and groups can access the editor and import features.
--   **[Tutorial](../../guide_me/tutorials/scriptapps/index.md)**  
-This section contains step-by-step instructions to bundle and deploy Script Applications. 
--   **[Limitations](limitations.md)**  
-Learn about limitations to the Script Application.
--   **[Troubleshooting](troubleshooting.md)**  
+- **[Bundling and deploying Script Applications](./scriptapps/index.md)**  
+This section contains step-by-step instructions to bundle and deploy Script Applications.
+- **[Limitations](limitations.md)**  
+This section describes the limitations of the Script Application.
+- **[Troubleshooting](troubleshooting.md)**  
 This section provides solutions that can help you solve issues with Script Applications.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_for_Beginners.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip).
+For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip){target="_blank"}.
+
+To learn more about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
