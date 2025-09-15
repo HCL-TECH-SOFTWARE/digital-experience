@@ -140,7 +140,7 @@ Beginning with CF230, the Advanced Search Filter feature allows you to refine se
 
         ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
-    2. Select the **Status** filter to search for documents based on their status (for example, **Published**).
+    2. Select the **Status** filter to search for documents based on their status. Available Status filters include **Draft**, **Published**, and **Expired**.
 
         ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Status_Filter.png){: style="height:600px"}
 
