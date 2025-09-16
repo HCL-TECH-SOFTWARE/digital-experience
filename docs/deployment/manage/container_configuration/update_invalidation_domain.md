@@ -2,9 +2,7 @@
 title: Change the Domain/Schema For Dynacache Invalidation Table in the Database
 ---
 # Introduction
-HCL DX Portal relies heavily on a type of hashmap known as a "dynacache". A dynacache is an instance of a Java object as a "DistributedMap" or "com.ibm.websphere.cache.DistributedMap" if one prefers the fully qualified class name.
-
-A dynacache is merely a cluster aware HashMap. That means that if a particular instance of a dynacache changes (say on one cluster member in a WebSphere Application Server cluster), all other cluster members are made aware of that change.
+HCL DX Portal relies heavily on a type of hashmap known as a "dynacache". A dynacache is an instance of the Java object "DistributedMap" or "com.ibm.websphere.cache.DistributedMap" if one prefers the fully qualified class name. A dynacache is merely a cluster aware HashMap. That means that if a particular instance of a dynacache changes (say on one cluster member in a WebSphere Application Server cluster), all other cluster members are made aware of that change.
 
 However, in Kubernetes, there are no WebSphere Application Server clusters. All DX Portal instances are running as non-clustered WebSphere Application Server instances. But the dynacaches in these instances need to know if a dynacache in a particular DX Portal instances running changes a dynacache value. In Kubernetes, this is achieved thru the use a database table named "INVALIDATION_TABLE". 
 
