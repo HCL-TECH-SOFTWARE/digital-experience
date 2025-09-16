@@ -8,8 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
-- Notice of deprecation of the CKEditor Rich Text Editor
-- Notice of deprecation of the Woodburn Studio demo site
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -21,9 +19,13 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
-- Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Removal of automated Pod restart on ConfigMap updates
 - WAS, JDK, and iFix versions
+
+**Notices of deprecation**
+
+- Removal of automated Pod restart on ConfigMap updates (8.5 and 9.0)
+- CKEditor Rich Text Editor (9.5)
+- Woodburn Studio demo site (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -54,22 +56,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
-
-### Notice of deprecation of the CKEditor Rich Text Editor
-
-=== "Containers"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Notice of deprecation of the Woodburn Studio demo site
-
-=== "Containers"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -102,16 +88,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The Guide Me section has been restructured to include three main subtopics: Guides, How-to articles, and Glossary. For more information, refer to [Guide Me](../../guide_me/index.md).
 
-### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-
-=== "Containers"
-    Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-
-### Removal of automated Pod restart on ConfigMap updates
-
-=== "Containers"
-    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-
 ### WAS, JDK, and iFix versions
 
 === "Containers"
@@ -120,6 +96,29 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [WebSphere Application Server 9.0.5.24](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.45](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - iFix PH66674
+
+## Notices of deprecation
+
+### Removal of automated Pod restart on ConfigMap updates (8.5 and 9.0)
+
+=== "Containers"
+    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
+
+### CKEditor Rich Text Editor (9.5)
+
+=== "Containers"
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+### Woodburn Studio demo site (9.5)
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
