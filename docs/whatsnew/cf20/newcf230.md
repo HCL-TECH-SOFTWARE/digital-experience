@@ -2,8 +2,6 @@
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF230 on supported platforms:
 
-<!---Which notices of deprecation should we remove? What is the criteria for removing these notices?-->
-
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
