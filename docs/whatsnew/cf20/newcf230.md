@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
+- Presentation Designer - Applying multiple stylesheet components is now available
 
 **Digital Experience 8.5 and 9.0 Versions**
 
