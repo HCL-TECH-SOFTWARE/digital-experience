@@ -1,3 +1,4 @@
+title: Security
 nav:
   - Home: index.md
   - Enable HTTP security, HttpOnly, and SameSite cookies: enable_http_security_http_only_samesite_K8.md
