@@ -6,7 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
-- Presentation Designer - Applying multiple stylesheet components is now available
+- Presentation Designer - Handle multiple stylesheet components
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -55,6 +55,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+
+### Presentation Designer - Handle multiple stylesheets components
+
+=== "Containers"
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
+
+=== "On-Premises"
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
