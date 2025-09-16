@@ -4,7 +4,7 @@ title: Change the Domain/Schema For Dynacache Invalidation Table in the Database
 # Introduction
 HCL DX Portal relies heavily on a type of hashmap known as a "dynacache". A dynacache is an instance of the Java object "DistributedMap" or "com.ibm.websphere.cache.DistributedMap" if one prefers the fully qualified class name. A dynacache is merely a cluster aware HashMap. That means that if a particular instance of a dynacache changes (say on one cluster member in a WebSphere Application Server cluster), all other cluster members are made aware of that change.
 
-However, in Kubernetes, there are no WebSphere Application Server clusters. All DX Portal instances are running as non-clustered WebSphere Application Server instances. But the dynacaches in these instances need to know if a dynacache in a particular DX Portal instances running changes a dynacache value. In Kubernetes, this is achieved thru the use a database table named "INVALIDATION_TABLE". 
+However, in Kubernetes, there are no WebSphere Application Server clusters. All DX Portal instances are running as non-clustered WebSphere Application Server instances. But the dynacaches in these instances need to know if a dynacache in a particular DX Portal instances changes a dynacache value. In Kubernetes, this is achieved thru the use a database table named "INVALIDATION_TABLE". 
 
 By default, the database INVALIDATION_TABLE resides in the the "RELEASE" domain/schema. However, there may be use cases whereby this table would be better stored in one of the other 3 domain/schemas (e.g. "JCR", "COMMUNITY" or "CUSTOMIZATION"). Changing the location of this table can (only) be achieved in the kubernetes helm chart of the HCL DX Portal.
 
@@ -22,9 +22,9 @@ Changing the Domain/Schema of the invalidation table from the default of "RELEAS
 ```
 helm upgrade -n dxns -f install-deploy-values.yaml dx-deployment  ./install-hcl-dx-deployment
 ```
-where "dxns" is the name space, "install-deploy-values.yaml" is the yaml file with the change, "dx-deployment" is the DX deployment value and "install-hcl-dx-deployment" is the directory containing the helm chart.
+where "dxns" is the name space for this deployment, "install-deploy-values.yaml" is the yaml file with the change, "dx-deployment" is the DX deployment value and "install-hcl-dx-deployment" is the directory containing the helm chart.
 
-Running the "helm upgrade" command will delete the pod(s) and restart it(them) with the updated domain/schema.
+Running the "helm upgrade" command will delete the pod(s) and restart the portal pod with the updated domain/schema.
 
 Consult the page "[Upgrading Helm Deployment](../../install/container/helm_deployment/update_helm_deployment.md)" for more details on doing a "helm upgrade".
 
