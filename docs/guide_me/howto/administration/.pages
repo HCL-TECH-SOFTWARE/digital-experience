@@ -1,13 +1,13 @@
 title: Administration
-
 nav:
     - index.md
-    - APIToCountWCMItems.md
+    - SupportForAdditionalMIMETypes.md
+    - RedirectTimeout.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
+    - APIToCountWCMItems.md
     - DecodeLongURLs.md
-    - IncreaseTransactionTimeout.md
+    - ExpediteAsyncDeletes.md
     - ImproveQueryPerformance.md
-    - RedirectTimeout.md
-    - SupportForAdditionalMIMETypes.md
+    - IncreaseTransactionTimeout.md
     - UseJavaScriptToReplaceText.md

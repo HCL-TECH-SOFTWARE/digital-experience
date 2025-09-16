@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
+- Presentation Designer - Applying multiple stylesheet components is now available
 - Notice of deprecation of the CKEditor Rich Text Editor
 - Notice of deprecation of the Woodburn Studio demo site
 
@@ -49,10 +50,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - New `xmlAccessOutputFileName` parameter added
 
 === "Containers"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file, providing you with an additional customization option for your Continuous Integration and Continuous Deliver (CI/CD) automations. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
 
 === "On-Premises"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file, providing you with an additional customization option for your Continuous Integration and Continuous Deliver (CI/CD) automations. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+
+### Presentation Designer - Applying multiple stylesheets components now available
+
+=== "Containers"
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Applying multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
+
+=== "On-Premises"
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Applying multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
 
 ### Notice of deprecation of the CKEditor Rich Text Editor
 
