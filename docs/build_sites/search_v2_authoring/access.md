@@ -46,3 +46,20 @@ The Search V2 Authoring UI has the following components:
     - **Last Modified**: Select from preset date ranges or define a custom range.
 
 Applied filters appear in the panel and can be removed individually or all at once with the Clear button. The Apply button refreshes results based on the applied filters. The system only displays items that match all selected conditions.
+
+- **Troubleshooting/Logging/Tracing via DX tracings** - With the following tracing string the full loging could be enabled for the whole search V2 application. DEBUG is also showing the ERROR and INFO log level. INFO is also showing the ERROR log level.
+
+    - **Full logging** hcl.logging.search-v2.DEBUG.client.*=all
+    - **Logging only for all search V2 components** hcl.logging.search-v2.DEBUG.client.ui.*=all
+    - **Logging only for all AC web-componets** hcl.logging.search-v2.DEBUG.client.web-components-lib.*=all
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Logs.png)
+
+- **Troubleshooting/Logging/Tracing DX session storage** - With the following session storage entry the logging could be enabled for the whole search V2 application. DEBUG is also showing the ERROR and INFO log level. INFO is also showing the ERROR log level.
+
+    - **Full logging** Key: debug Value: DEBUG:client:*
+    - **Logging only for all search V2 components** Key: debug Value: DEBUG:client:ui:*
+    - **Logging only for all AC web-componets** Key: debug Value: DEBUG:client:web-components-lib:*
+
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Filter_Logs_Using_Session_Storage.png)
