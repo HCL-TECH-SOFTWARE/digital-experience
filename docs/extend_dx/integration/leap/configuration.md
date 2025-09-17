@@ -338,7 +338,13 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
     5. Perform a Helm upgrade to apply your changes.
 
-    6. Delete the Leap pod with `kubectl -n <namespace> delete pod <leap-pod-name>`. Since Leap was instealled with a Helm chart, a new pod will be created automatically. Afterwards, accessing Leap should redirect you to authenticate using your OIDC IdP.
+    6. Delete the Leap pod using the following command:
+
+        ```
+        kubectl -n <namespace> delete pod <leap-pod-name>
+        ```
+
+        Since Leap was installed with a Helm chart, a new pod will be created automatically. Afterwards, accessing Leap should redirect you to authenticate using your OIDC IdP.
 
         For example, the following screenshot shows an authentication page accessed using Keycloak:
 
