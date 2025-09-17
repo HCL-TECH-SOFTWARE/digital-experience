@@ -138,10 +138,10 @@ Beginning with CF230, the Advanced Search Filter feature allows you to refine se
 
         To search for a user or group, enter at least three characters in the user or group field. You can refine your search by selecting specific attributes, such as user roles or group types. A dynamic list of matching users or groups will appear as you enter characters. Choose your desired option from the suggestions to add it to your filter.
 
-        !!! note
-            [Creating new users and groups](https://help.hcl-software.com/digital-experience/9.5/CF229/deployment/manage/security/people/authorization/users_and_groups/adctnewu/)
+        For more information creating and adding user and group attributes, refer to the following topics:
 
-            [Or adding attributes to the schema so that DX can map it correctly to customer's user registry](https://help.hcl-software.com/digital-experience/9.5/CF229/deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes/)
+            - [Creating new users and groups](../../deployment/manage/security/people/authorization/users_and_groups/adctnewu.md)
+            - [Adding attributes](../../deployment/manage/security/people/authentication/user_registry/vmm_atts/add_attributes.md)
 
         ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Author_Filter.png)
 
