@@ -18,5 +18,5 @@ Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LD
 Learn how to remove state information from page URLs.
 - **[How to remove or hide the X-Powered-By header in HCL DX](./HideXPoweredByHeader.md)**  
 Learn how to remove or hide the X-Powered-By header.
-- **[How to Add Additional WebSphere Realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
-Learn how to add additional WebSphere Realms for Virtual Portals.
+- **[How to add additional security realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
+Learn how to add additional security realms for Virtual Portals.

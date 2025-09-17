@@ -1,4 +1,4 @@
-# How to Add Additional WebSphere Realms for Virtual Portals
+# How to add additional security realms for Virtual Portals
 
 ## Applies to
 
@@ -6,24 +6,32 @@
 
 ## Introduction
 
-This article describes how to create additional WebSphere realms to be used when creating virtual portals for a specific user base, for example, users within a secondary LDAP server.
+This article describes how to create additional security realms when creating Virtual Portals for a specific user base. For example, users within a secondary LDAP server.
 
 ## Instructions
 
-The following steps are an example of how to configure a realm within WebSphere that references a secondary LDAP server:
+The following steps are an example of how to configure a realm that references a secondary LDAP server:
 
-1. Login to the WebSphere Admin console as an administrator.
+1. Login to the IBM Integrated Solutions Console (admin console) as an administrator.
 
-2. Go to Security > Security domains and click on the "New" button.
+2. Navigate to **Security > Security domains** and click on the **New** button.
 
-3. Provide a name for the new security domain such as SecondLDAP, click on OK, and Save.
+3. Provide a name for the new security domain such as SecondLDAP, click on **OK**, and **Save**.
 
-4. Go into the security domain, expand the User Realm attribute, select Customize for this domain > Realm type > Standalone LDAP registry and click on the "Configure" button.
+4. Go into the security domain.
 
-5. Provide a realm name as well as the details of the secondary LDAP server (i.e. type of LDAP server, hostname of the LDAP server).
+5. Expand the **User Realm** attribute.
 
-6. Confirm that the configuration is correct by clicking on the "Test Connection" button.
+6. Select **Customize for this domain**
 
-7. Synchronize the Portal node(s).
+7. For the **Realm type** select  **Standalone LDAP registry** and click on the **Configure** button.
 
-The new realm should now be available when creating a virtual portal.
+8. Provide a realm name as well as the details of the secondary LDAP server (i.e. type of LDAP server, hostname of the LDAP server).
+
+9. Confirm that the configuration is correct by clicking on the **Test Connection** button.
+
+10. On a clustered environment, synchronize the changes with all DX nodes.  
+
+11. Restart the DX environment
+
+The new security realm should now be available when creating a Virtual Portal.
