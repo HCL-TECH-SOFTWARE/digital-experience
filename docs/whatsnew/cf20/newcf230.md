@@ -18,6 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
+- Search V2 Authoring - Advanced search filters
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -94,6 +95,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Guide Me section has been restructured to include three main subtopics: Guides, How-to articles, and Glossary. For more information, refer to [Guide Me](../../guide_me/index.md).
+
+### Search V2 Authoring - Advanced search filters
+
+=== "Containers"
+    You can now apply additional search options to refine your search results and narrow down large data sets more efficiently. These options include filters such as Author, Status, and Last Modified, and attributes such as Description, Title, and Type. For more information, refer to [Using Search V2 Authoring - Advanced Search Filter](../../build_sites/search_v2_authoring/usage.md#advanced-search-filter).
 
 ### WAS, JDK, and iFix versions
 
