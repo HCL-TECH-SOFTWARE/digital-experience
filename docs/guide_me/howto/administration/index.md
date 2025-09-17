@@ -1,6 +1,6 @@
 # Administration
 
-This section includes how-to articles about administration in HCL Digital Experience (DX).
+This section includes how-to articles about administration in HCL Digital Experience (DX).  
 
 - **[How to add MIME types to the DX server](./SupportForAdditionalMIMETypes.md)**  
 Learn how to add support for additional MIME types to your DX server.  
@@ -19,8 +19,6 @@ Learn how to expedite the purging of pending deletes when running the `clearVers
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune WCM to reduce your query time.  
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
-Learn how to increase the duration of transaction timeouts to reduce timeout errors.
+Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page. 
-- **[How to Identify New Managed Pages in DX](./IdentifyNewManagedPages.md)**  
-Learn how to identify new managed pages in DX. 
+Learn how to use JavaScript to find and replace text on a Portal page.  
