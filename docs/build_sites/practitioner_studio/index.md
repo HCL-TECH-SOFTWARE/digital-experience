@@ -3,6 +3,9 @@
 Practitioner Studio is a newly designed user experience for HCL Digital Experience. Please see the following pages to understand how the new navigation is organized.
 
 !!! note
+    During migration, custom-created authoring pages can lose their portlets because the migration tool doesn't automatically save them. To prevent this, simply export the custom authoring page before migration and import it again after the process is complete.
+
+!!! note
     With HCL Digital Experience 9.5 Container Update CF192 and later, the following issues are experienced with use of the Safari web browser \(Version 13.0.5 \(15608.5.11\). These issues, which were found in **Web Content** from the Practitioner Studio side navigator, will be resolved in a later software update:
 
 - List navigation is not accessible using keyboard
