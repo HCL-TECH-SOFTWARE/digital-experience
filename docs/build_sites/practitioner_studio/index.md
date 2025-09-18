@@ -19,6 +19,13 @@ In time, this interface also serves as the launching point for newly developed f
 
 Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
+### Enhanced Practitioner Studio and Toolbar
+
+The Practitioner Studio and Toolbar in HCL Digital Experience have been significantly enhanced to provide a more intuitive and efficient user experience. The updated interface introduces a modern side navigation UI, making it easier for users to access key features and administration tasks. The improved navigation structure groups related functions together, streamlining workflows and reducing the time needed to locate commonly used tools.
+
+These enhancements focus on usability and design, ensuring that both new and experienced users can quickly adapt to the updated layout. The side navigation offers clear pathways to essential areas such as web content, site templates, themes, personalization, and administration. With these updates, users benefit from a consistent look and feel across the platform, improved accessibility, and a more productive environment for managing digital experiences.
+
+![Practitioner Studio](../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
 
 - **[Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md)**  
 Learn how to enable, configure and disable Practitioner Studio on the latest version of HCL Digital Experience.
