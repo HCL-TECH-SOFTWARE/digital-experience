@@ -6,63 +6,26 @@ This section provides the steps on how to access HCL DAM and use it as a central
 - **[Managing DAM](./managing_dam/index.md)**  
 This section provides topics on how to manage, upload, import, export, and modify your DAM media assets.
 
-## Upload, update, use, and search digital assets
 
-After you create your access-controlled collection, you can upload digital assets, update them, and search for them.
 
-### Upload assets
+## Digital Asset Search
+### Overview
 
-1. Drag and drop your files into the upload area, or select one of the **Upload** options.  
-2. Browse to the **Lab Resources** folder on your desktop at `HDX-BU-100 Digital Asset Management Resources`.  
-3. Select all files in the folder, and then select **Open**.  
-4. In the status bar, select the **View upload details** icon to see the status and size of the uploaded assets.  
+DX Digital Asset Search helps you quickly find and retrieve digital assets across multiple repositories. You can search by keywords, metadata, or content to locate the right asset when you need it. The unified search experience streamlines content management and makes assets easier to discover and reuse in your applications.
 
-Your assets are now uploaded to the DAM collection. You can view the resource details or close the details window by selecting **X**.
+### Steps
 
-### Update an image asset
+1. Find your assets by using full-text search on the name, description, keywords, or all of them.  
+   ![Search example](search1.png)
 
-1. Find the file **DX Banner.png**, open its menu, and select **Edit**.  
-2. Select the **Properties** icon, and then add metadata to make the asset easier to find and reuse:  
-    - Title  
-    - Description  
-    - Alternate text  
-    - Keywords (optional)  
+2. Sort and order the results.  
+   ![Sort example](search2.png)
 
-   Review any automatically generated keywords, if configured.  
-3. Expand the **URL** section. Note the UUID and friendly URLs. Add a custom URL, for example `https://dx.sbx0000.play.hclsofy.com/dx/api/dam/custom/dxbanner.png`. This generates a link.  
 
-4. On the left, review the automatically generated renditions for **Desktop**, **Smartphone**, and **Tablet**.  
-5. Select **View smartphone rendition**. The image is reduced to 121 KB (from 1.6 MB).  
-6. To crop the smartphone rendition:  
-    - Select the **Crop** icon.  
-    - Choose the aspect ratio, width, and height.  
-    - Drag the selection to the desired area.  
-    - Select **Apply**.  
-7. Select **Save**. The updated rendition shows a new file size.  
+## DX Picker Overview
 
-### Review versions
-
-1. Select the **Versions** icon.  
-2. Open the details for each version to see who made changes and when. You can also view older versions.  
-3. From the **More** menu, select **Compare with current version**.  
-4. Download a version or make an older version current.  
-
-### Mark as a favorite
-
-To help locate the asset later, mark it as a favorite by selecting the **Favorite** icon.  
-
-### Search and view assets
-
-1. In the search bar, enter **dx**, and then press **Enter**. Results include all collections and assets containing “dx.”  
-2. Use the **Filter** menu to refine results.  
-3. Change the view options:  
-    - Select the **Grid view** (default) or **List view** icon.  
-    ![list view](listview.png)
-    - Apply different sort options.  
-
----
-
-**Congratulations!** You’ve uploaded, updated, and searched for assets in a DAM collection.  
+The Digital Asset Content Picker provides a consistent interface that you can use in any application to search for and select an asset. This unified experience makes it easier to find, preview, and insert digital assets without switching tools or workflows. For more details, refer to [Using DX Pcker](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/dx_picker/usage/).
+![Alt text](search3.png)
 
 ## HCLSoftware U learning materials
 
