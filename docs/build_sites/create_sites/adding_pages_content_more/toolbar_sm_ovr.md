@@ -1,27 +1,30 @@
 # Exploring site toolbar and site manager
 
-
-
 Site toolbar and site manager provide quick access to common content author tools as well as a complete view of your site's navigation. Without leaving the context of your website, content authors can create and modify pages and content items, create vanity URLs for promotions, and much more.
 
-![Screen capture of the authoring user interface that highlights the action bar, site toolbar, and site manager access.](../../../images/new_toolbar_overlay.jpg)
+![Screen capture of the authoring user interface that highlights the action bar, site toolbar, and site manager access.](../../../images/new_toolbar_overlay.png)
+
+!!! note
+    If you notice two search bars—one located in the action bar and another one below to the action bar section—both provide the same search functionality. Refer to the image below for a visual example.
+
+![Screen capture showing two search bars, one in the action bar and one below the action bar section.](../../../images/two_searchbars.png)
 
 ## Action Bar
 
 The action bar functions as the entry point into the site toolbar and site manager. The action bar is also where content authors can enable editing and information modes. Additionally, you can preview your site, access projects, and more.
 
-![Screen capture of the action bar that highlights edit mode and information mode. Both modes are activated.](../../../images/AB_EditInfo_on_final.jpg)
+![Screen capture of the action bar that highlights edit mode and information mode. Both modes are activated.](../../../images/AB_EditInfo_on_final.png)
 
 -   **1 Edit Mode**
 
     To begin, turn on edit mode. Edit mode must be on to edit pages and content items in the website. When you turn on edit mode, site toolbar and site manager open automatically.
 
--   **2 Information mode**
+-   **2 User Profile**
 
-    If you are new to the site toolbar, turn on information mode. Information mode controls the user assistance in the user interface. When information mode is on, inline user assistance and hover help is available for many controls. After you are familiar with the site toolbar, you can turn off information mode.
+    Use the Profile menu to view your user profile details, access impersonation options, toggle information mode, and log out of the site.
 
 
-![Screen capture of the action bar that highlights the Projects menu and the preview menu.](../../../images/AB_project_preview.jpg)
+![Screen capture of the action bar that highlights the Projects menu and the preview menu.](../../../images/AB_project_preview.png)
 
 -   **3 Projects**
 
@@ -32,7 +35,7 @@ The action bar functions as the entry point into the site toolbar and site manag
     Use the preview menu to make sure that your changes display as intended. You can preview your site as an authenticated user or as an unauthenticated site visitor.
 
 
-![Screen capture of the action bar that highlights the icon that is used to access site toolbar and site manager.](../../../images/AB_toolbar.jpg)
+![Screen capture of the action bar that highlights the icon that is used to access site toolbar and site manager.](../../../images/AB_toolbar.png)
 
 -   **5 Site toolbar and site manager access**
 
@@ -47,7 +50,7 @@ Site manager provides content authors and administrators with a comprehensive vi
 
 Site manager tree view provides more than a central user interface for managing pages and content items. You can also complete common actions such as creating, editing, and deleting pages and content items. You can also move, copy, and paste pages and content items from the site manager tree view. To access these functions, hover over a page or content item in site manager tree view and click the context menu icon ![Screen capture of the context menu](../../../images/toolbar_context_menu.jpg) for that page or content item. The following image shows how to access the context menu for a page in site manager.
 
-![Screen capture of the site manager tree view that highlights the context menu for a page.](../../../images/sm_cm.jpg)
+![Screen capture of the site manager tree view that highlights the context menu for a page.](../../../images/sm_cm.png)
 
 The context menu displays different options, depending on whether you are viewing the context menu for a page or a content item.
 
