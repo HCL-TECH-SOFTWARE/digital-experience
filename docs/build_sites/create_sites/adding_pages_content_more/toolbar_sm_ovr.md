@@ -5,7 +5,7 @@ Site toolbar and site manager provide quick access to common content author tool
 ![Screen capture of the authoring user interface that highlights the action bar, site toolbar, and site manager access.](../../../images/new_toolbar_overlay.png)
 
 !!! note
-    If you notice two search bars—one located in the action bar and another one below to the action bar section—both provide the same search functionality. Refer to the image below for a visual example.
+    Since the toolbar now contains a centralized search input, themes that included search input will now have a duplicated search functionality. Refer to the image below for a visual example.
 
 ![Screen capture showing two search bars, one in the action bar and one below the action bar section.](../../../images/two_searchbars.png)
 
