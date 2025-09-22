@@ -15,8 +15,6 @@ The Administration pages have been reorganized to improve usability. Two new sec
 - **Production:** This section includes applications designed to streamline essential administrative tasks for managing the portal.
 - **Content Management:** This section provides access to applications commonly used for general administration of Web Content Management.
 
-![Practitioner Studio](../../assets/HCL_DX_95_Practitioner_Studio_interface.png)
-
 ## Overview
 
 Practitioner Studio provides a modern and streamlined user experience for HCL Digital Experience.
