@@ -17,7 +17,8 @@ The following instructions can be used to generate such a configuration report.
 Refer to the following steps to generate the `.cfg` file to be be used as input in generating the IBM WAS report. On a clustered environment, this only needs to be done on the Deployment Manager (`Dmgr`).
 
 !!!note
-    Repeat these steps on additional servers if you wish to compare their settings.
+    - These steps must be done on the HCL DX server-side.
+    - Repeat these steps on additional servers if you wish to compare their settings.
 
 1. Download latest release of the [WebSphere Application Server Configuration Comparison Tool](https://github.com/IBM/websphere-cct/releases){target="_blank"} (for example, `cct-YYYYMMDD.tar.gz`).
 
@@ -52,6 +53,9 @@ For more detailed instructions on how to generate a `.cfg` file for the WCCT rep
 ### Generating a WCCT report from a `.cfg` file
 
 Refer to the following steps to generate the WCCT report using the `.cfg` file you generated in the previous section.
+
+!!!note
+    These steps must be done on the client-side.
 
 1. Download the [Microsoft Windows Installer (MSI)](https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi){target="_blank"}.  
 
