@@ -42,6 +42,9 @@ For a complete history of features added in each release, refer to the [Feature 
 !!!note
     Refer to the list of features that were released in the following HCL DX 9.5 releases:
 
+    -   HCL DX 9.5 CF230 release: **V230.0.0
+        -  XMLAccess parameter [`xmlAccessOutputFileName`](./dxclient_artifact_types/xmlaccess.md) added for filename for the XMLAccess output.
+
     -   HCL DX 9.5 CF229 release: **V229.0.0
         -  [NPM libraries are upgraded](#whats-new-and-release-history) for code maintenance.
 

@@ -4,14 +4,17 @@ A search element is used to display the results of a search query. A search elem
 
 To create a search form, you must:
 
-1.  create a search query by using an HTML element
-2.  create a search results view by using a search component
+1. create a search query by using an HTML element
+2. create a search results view by using a search component
 
 You reference both the HTML element and search component in a single presentation template. The search component is only rendered after a search query is run by a user.
 
--   **[Search query examples](./howto_create_search_query/wcm_dev_search_form_query_examples.md)**  
+!!! Limitation
+    The search element feature only works in [Search V1](../../../../../../build_sites/search/index.md), not [Search V2](../../../../../../build_sites/search_v2/index.md).
+
+- **[Search query examples](./howto_create_search_query/wcm_dev_search_form_query_examples.md)**  
 These are examples of search queries you can create by using an HTML element.
--   **[Search result examples](./howto_display_search_results/wcm_dev_search_form_results_examples.md)**  
+- **[Search result examples](./howto_display_search_results/wcm_dev_search_form_results_examples.md)**  
 These are examples of how to design your search results.
 
 ## HCLSoftware U learning materials
