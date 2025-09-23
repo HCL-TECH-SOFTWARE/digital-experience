@@ -6,4 +6,4 @@ nav:
     - SupportForRedHat.md
     - RunIIMAsDifferentUser.md
     - InstallLDAPTools.md
-    
+    - InstallandConfigureAnDXCluster.md
