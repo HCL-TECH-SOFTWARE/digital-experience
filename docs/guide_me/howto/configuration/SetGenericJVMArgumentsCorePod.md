@@ -6,23 +6,25 @@
 
 ## Introduction
 
-When running HCL Digital Experience in a containerized environment, most of the configuration settings need to be set in the helm-chart (values.yaml file) before a helm-upgrade need to be done to get them activated. Because HCL Digital Experience does not offer parameters for setting the generic jvm arguments for the core-pod in the helm-chart, the parameters need to be specified differently. This document provides detailed steps to set generic jvm arguments for the dx-core pod in a HCL DX containerized environment.  
+In a containerized HCL Digital Experience environment, most configuration settings must be defined in the Helm chart (`values.yaml`) before you run a Helm upgrade to apply them. Because the Helm chart does not provide parameters for setting generic JVM arguments on the dx-core pod, you must configure them differently.  
+
+This article describes how to set generic JVM arguments for the dx-core pod in a containerized HCL DX environment.  
 
 ## Instructions
 
-If additional generic jvm arguments need to be added to the dx-core pod wp_profile/WebSpherePortal JVM the following procedure applies:  
+To add generic JVM arguments to the dx-core pod wp_profile/WebSpherePortal JVM, follow these steps:  
 
 1. Install or Update the HCL Digital Experience environment using the helm chart. Details can be found at URL: [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md){target="_blank"}.  
 
 2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as following:  
 
-    a. Open a web-browser and access the IBM Integrated Solutions Console (admin console). (For example: `http://<DX_HOSTNAME>/ibm/console`)  
-    b. Login as administrator.  
-    c. In the Administration Console click **Servers**.  
-    d. Expand Server Type, then click **WebSphere application servers**.  
-    e. Click to the name of the server.  
-    f. Expand **Java and Process Management**, then click **Process Definition**.  
-    g. Under the **Additional Properties** section, click **Java Virtual Machine**.  
-    h. Scroll down and locate the textbox for **Generic JVM arguments**.  
-    i. Add the additional generic jvm arguments at the end of all values that are already specified by using a blank-character as separator.  
-    j. Once changes are saved to the master configuration, the core-pod(s) require a restart for the arguments to take effect.  
+    1. Open a web-browser and access the IBM Integrated Solutions Console (admin console). (For example: `http://<DX_HOSTNAME>/ibm/console`)  
+    2. Login as administrator.  
+    3. In the Administration Console click **Servers**.  
+    4. Expand Server Type, then click **WebSphere application servers**.  
+    5. Select the server name.  
+    6. Expand **Java and Process Management**, then click **Process Definition**.  
+    7. Under the **Additional Properties** section, click **Java Virtual Machine**.  
+    8. Scroll down and locate the textbox for **Generic JVM arguments**.  
+    9. Add the additional generic jvm arguments at the end of all values that are already specified by using a space as separator.  
+    10. Once changes are saved to the master configuration, the core-pod(s) require a restart for the arguments to take effect.  
