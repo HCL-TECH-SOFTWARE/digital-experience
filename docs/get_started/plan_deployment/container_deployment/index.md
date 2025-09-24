@@ -2,7 +2,7 @@
 
 This topic provides administrators with a high-level overview and important prerequisite guidance to help them prepare container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 
-Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../../../deployment/install/container/helm_deployment/overview.md) by using Helm charts. A Helm chart deployment provides administrators a larger degree of transparency in deployment operations than the operator-based deployment, which is also available by using the HCL DX dxctl process.
+Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators can deploy HCL DX 9.5 CF196 and later images to [supported container platforms](../../../deployment/install/container/helm_deployment/overview.md) by using Helm charts. A Helm chart deployment provides administrators a larger degree of transparency in deployment operations than the operator-based deployment.
 
 ## Overview
 
@@ -92,5 +92,3 @@ For an introduction and a demo on DX staging, go to [Staging for Beginners](htt
 
 To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
-<!-- ??? info "Related information"
-    - [HCL DX dxctl process](../operator-based/dxtools_dxctl.md) -->
