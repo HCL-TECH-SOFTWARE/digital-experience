@@ -25,9 +25,9 @@ This article describes how to identify newly created managed pages in an HCL Dig
     /opt/IBM/WebSphere/wp_profile/PortalServer/bin/xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /opt/IBM/WebSphere/PortalServer/doc/xml-samples/Export.xml -out result.xml
     ```  
 
-2. Use the following grep command to extract content-node entries and pipe the output to a new XML file. This file is the base export.  
+2. Use the following `grep` command to extract content-node entries and pipe the output to a new XML file. This file is the base export.  
 
-    Example:
+    For example:
 
     ```shell
     grep content-node >> new_pages_base.xml
@@ -35,9 +35,9 @@ This article describes how to identify newly created managed pages in an HCL Dig
 
 3. Over time, new pages might be created in your HCL DX environment. To identify them, repeat steps 1 and 2 to generate a new XML file.  
 
-4. Use the **diff** command to compare the XML files generated in the previous steps. The comparison produces a list of new pages.  
+4. Use the `diff` command to compare the XML files generated in the previous steps. The comparison produces a list of new pages.  
 
-    Example:  
+    For example:  
 
     ```shell
     diff old_pages_base.xml >> new_pages_base.xml
