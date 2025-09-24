@@ -11,5 +11,6 @@ nav:
     - ExpediteAsyncDeletes.md
     - ImproveQueryPerformance.md
     - IncreaseTransactionTimeout.md
-    - UseJavaScriptToReplaceText.md
     - SystemReportForCompare.md
+    - UseJavaScriptToReplaceText.md
+
