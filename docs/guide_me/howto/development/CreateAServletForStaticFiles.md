@@ -24,7 +24,7 @@ In some cases, you might need a separate servlet URL context to serve static fil
     4. Select the **Java EE** programming model.  
     5. Select **Next**.  
     6. Accept the defaults under **Deployment project settings**.  
-    7. Select **Finish**.        
+    7. Select **Finish**.  
 
 3. Create a servlet class:  
 
@@ -38,7 +38,7 @@ In some cases, you might need a separate servlet URL context to serve static fil
 
     1. Expand **myServlet > Java Resources > src > com.hcl.myservlet**.  
     2. Open **myClass.java**.  
-    3. In the `doGet` method, add the following line:    
+    3. In the `doGet` method, add the following line:  
 
         ```java
         response.getWriter().print("Hello from myServlet");
@@ -51,7 +51,7 @@ In some cases, you might need a separate servlet URL context to serve static fil
     3. Select **New > File**.  
     4. Enter the file name: `index.html`.  
     5. Open the **Source** tab.  
-    6. Paste the following content:     
+    6. Paste the following content:  
 
         ```html
         Hello from the myServlet index.html
@@ -64,7 +64,8 @@ In some cases, you might need a separate servlet URL context to serve static fil
     3. Select **New > File**.  
     4. Enter the file name: `web.xml`.  
     5. Open the **Source** tab.  
-    6. Paste the following content:      
+    6. Paste the following content:  
+
         ```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
@@ -136,22 +137,22 @@ In some cases, you might need a separate servlet URL context to serve static fil
     1. Open a new **private browser window**.  
     2. Enter the following URLs (replace `host:port` with your portal server values):  
 
-      ```
+      ```URL
       http://host:port/myServlet/myClass
       http://host:port/myServlet/index.html
       ```
 
 6. Serve additional files:  
 
-    1. Copy additional files to the following directory on the portal server:    
+    1. Copy additional files to the following directory on the portal server:  
 
-        ```
-        ...\<profile root>\installedApps\(Cell_Name)\myServletEar.ear\myServlet.war\
+        ```shell
+        <wp_profile_root>\installedApps\(Cell_Name)\myServletEar.ear\myServlet.war\
         ```
 
         For example, if you copy `myfile.txt` to that location, you can access it at:  
 
-        ```
+        ```URL
         http://host:port/myServlet/myfile.txt
         ```
 
