@@ -21,6 +21,8 @@ Learn how to expedite the purging of pending deletes when running the `clearVers
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune WCM to reduce your query time.  
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
-Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
+Learn how to increase the duration of transaction timeouts to reduce timeout errors.
+- **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
+Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
