@@ -122,4 +122,4 @@ Total session usage: 34739664
 ############################################################
 ```
 
-Optionally, you can import the the locally created `.txt` or `.csv` file into a spreadsheet or other reporting tools for visualization and further analysis.
+Optionally, you can import the locally created `.txt` or `.csv` file into a spreadsheet or other reporting tools for visualization and further analysis.

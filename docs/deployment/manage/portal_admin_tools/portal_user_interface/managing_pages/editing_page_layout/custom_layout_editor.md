@@ -20,7 +20,7 @@ There is a profile in every theme which enumerates all the modules that are used
 
 Make these changes to every profile in the theme for the pages based on that theme to have access to the **Customizable Layout**.
 
-Also, add the following line to the the XMLAccess deployment file for a custom theme:
+Also, add the following line to the XMLAccess deployment file for a custom theme:
 
 ```
 <parameter name="ibm.portal.shelf.layout.json.layoutEditor" type="string" update="set"><![CDATA[dav:fs-type1/system/layouts.json]]></parameter>

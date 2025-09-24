@@ -1,4 +1,4 @@
-# Portlet development utilities and page creation samples
+# How to access portlet development utilities and page creation samples
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Developers can access a new repository of portlet development utilities to automate creating pages and pages from templates. Developers also have the option to deploy through DXClient. The git repository also contains samples using the DX Java API as a custom maven archetype to create a new JSR286 portlet that can also be deployed using DXClient.
+You can access a new repository of portlet development utilities to automate creating pages and pages from templates. You also have the option to deploy through DXClient. The git repository contains samples using the DX Java API as a custom maven archetype to create a new JSR286 portlet that can also be deployed using DXClient.
 
 ## Instructions
 
