@@ -18,27 +18,27 @@ In some cases, you might need a separate servlet URL context to serve static fil
 
 2. Create a new web project:  
 
-    - Go to **File > New > Web Project**.  
-    - Enter the project name: `myServlet`.  
-    - Select the **Simple** project template.  
-    - Select the **Java EE** programming model.  
-    - Select **Next**.  
-    - Accept the defaults under **Deployment project settings**.  
-    - Select **Finish**.  
+    1. Go to **File > New > Web Project**.  
+    2. Enter the project name: `myServlet`.  
+    3. Select the **Simple** project template.  
+    4. Select the **Java EE** programming model.  
+    5. Select **Next**.  
+    6. Accept the defaults under **Deployment project settings**.  
+    7. Select **Finish**.        
 
 3. Create a servlet class:  
 
-    - In the **Project Explorer**, right-click **myServlet**.  
-    - Select **New > Servlet**.  
-    - For **Java package**, enter a package name, for example: `com.hcl.myservlet`.  
-    - For **Class name**, enter: `myClass`.  
-    - Select **Finish**.  
+    1. In the **Project Explorer**, right-click **myServlet**.  
+    2. Select **New > Servlet**.  
+    3. For **Java package**, enter a package name, for example: `com.hcl.myservlet`.  
+    4. For **Class name**, enter: `myClass`.  
+    5. Select **Finish**.  
 
 4. Add servlet code:  
 
-    - Expand **myServlet > Java Resources > src > com.hcl.myservlet**.  
-    - Open **myClass.java**.  
-    - In the `doGet` method, add the following line:  
+    1. Expand **myServlet > Java Resources > src > com.hcl.myservlet**.  
+    2. Open **myClass.java**.  
+    3. In the `doGet` method, add the following line:    
 
         ```java
         response.getWriter().print("Hello from myServlet");
@@ -46,12 +46,12 @@ In some cases, you might need a separate servlet URL context to serve static fil
 
 5. Create a static HTML file:  
 
-    - In the **Project Explorer**, expand **myServlet**.  
-    - Right-click **WebContent**.  
-    - Select **New > File**.  
-    - Enter the file name: `index.html`.  
-    - Open the **Source** tab.  
-    - Paste the following content:  
+    1. In the **Project Explorer**, expand **myServlet**.  
+    2. Right-click **WebContent**.  
+    3. Select **New > File**.  
+    4. Enter the file name: `index.html`.  
+    5. Open the **Source** tab.  
+    6. Paste the following content:     
 
         ```html
         Hello from the myServlet index.html
@@ -59,12 +59,12 @@ In some cases, you might need a separate servlet URL context to serve static fil
 
 6. Create the `web.xml` file:  
 
-    - In the **Project Explorer**, expand **myServlet > WebContent**.  
-    - Right-click **WEB-INF**.  
-    - Select **New > File**.  
-    - Enter the file name: `web.xml`.  
-    - Open the **Source** tab.  
-    - Paste the following content:  
+    1. In the **Project Explorer**, expand **myServlet > WebContent**.  
+    2. Right-click **WEB-INF**.  
+    3. Select **New > File**.  
+    4. Enter the file name: `web.xml`.  
+    5. Open the **Source** tab.  
+    6. Paste the following content:      
         ```xml
             <?xml version="1.0" encoding="UTF-8"?>
             <web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
@@ -104,40 +104,46 @@ In some cases, you might need a separate servlet URL context to serve static fil
 ## Deploy and test the servlet
 
 1. Save your project:  
-    - In the upper-left corner of **Rational Application Developer (RAD)**, select **File > Save**.  
+
+    1. In the upper-left corner of **Rational Application Developer (RAD)**, select **File > Save**.  
 
 2. Export the EAR file:  
-    - In **Project Explorer**, right-click `myServletEar`.  
-    - Select **Export > EAR file**.  
-    - Choose a destination on your local drive (for example, `C:\temp\myServletEar.ear`).  
-    - Select **Finish**.  
-    - If prompted, select **Yes** to save changes.  
+
+    1. In **Project Explorer**, right-click `myServletEar`.  
+    2. Select **Export > EAR file**.  
+    3. Choose a destination on your local drive (for example, `C:\temp\myServletEar.ear`).  
+    4. Select **Finish**.  
+    5. If prompted, select **Yes** to save changes.  
 
 3. Install the EAR file in WebSphere Admin Console:  
-    - Log in to the **WebSphere Admin Console**.  
-    - Go to **Applications > Application Types > WebSphere Enterprise Applications > Install**.  
-    - Select **Choose file**, then browse to `C:\temp\myServletEar.ear`.  
-    - Select **Next > Fast path > Next**.  
-    - Accept the defaults and continue selecting **Next** until the **Finish** option appears.  
-    - Select **Finish**.  
-    - Save the configuration to the **Master Configuration**.  
+
+    1. Log in to the **WebSphere Admin Console**.  
+    2. Go to **Applications > Application Types > WebSphere Enterprise Applications > Install**.  
+    3. Select **Choose file**, then browse to `C:\temp\myServletEar.ear`.  
+    4. Select **Next > Fast path > Next**.  
+    5. Accept the defaults and continue selecting **Next** until the **Finish** option appears.  
+    6. Select **Finish**.  
+    7. Save the configuration to the **Master Configuration**.  
 
 4. Start the application:  
-    - In **WebSphere Admin Console**, locate `myServlet` under **Applications**.  
-    - Select the check box next to `myServlet`.  
-    - Select **Start**.  
+
+    1. In **WebSphere Admin Console**, locate `myServlet` under **Applications**.  
+    2. Select the check box next to `myServlet`.  
+    3. Select **Start**.  
 
 5. Test the servlet:  
-    - Open a new **private browser window**.  
-    - Enter the following URLs (replace `host:port` with your portal server values):  
 
-        ```
-        http://host:port/myServlet/myClass
-        http://host:port/myServlet/index.html
-        ```
+    1. Open a new **private browser window**.  
+    2. Enter the following URLs (replace `host:port` with your portal server values):  
+
+      ```
+      http://host:port/myServlet/myClass
+      http://host:port/myServlet/index.html
+      ```
 
 6. Serve additional files:  
-    - Copy additional files to the following directory on the portal server:  
+
+    1. Copy additional files to the following directory on the portal server:    
 
         ```
         ...\<profile root>\installedApps\(Cell_Name)\myServletEar.ear\myServlet.war\
