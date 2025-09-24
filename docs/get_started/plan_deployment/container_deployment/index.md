@@ -2,7 +2,7 @@
 
 This topic provides administrators with a high-level overview and important prerequisite guidance to help them prepare container environments for later deployments of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 
-Administrators can deploy HCL DX 9.5 images to [supported container platforms](../../../deployment/install/container/helm_deployment/overview.md) using Helm charts. A Helm chart deployment provides administrators a larger degree of transparency in deployment operations than the operator-based deployment.
+Administrators can deploy HCL DX 9.5 images to [supported container platforms](../../../deployment/install/container/helm_deployment/overview.md) using Helm charts. A Helm chart deployment provides administrators a larger degree of transparency in deployment operations than the older operator-based deployments.
 
 ## Overview
 
