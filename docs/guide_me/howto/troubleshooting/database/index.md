@@ -1,4 +1,4 @@
-# Databases and Datasources
+# Databases and datasources
 
 This section includes how-to articles about troubleshooting databases and datasources issues in HCL Digital Experience (DX).
 
