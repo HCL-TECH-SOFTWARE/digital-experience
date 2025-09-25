@@ -8,6 +8,7 @@ Links to more information on the replacement for those items listed for deprecat
 
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
+|Dependent Products|Java JDK 7.x|Future Digital Experience releases will remove support for JDK 7.x|All customers must use JDK 8.0|October 01, 2025|
 |Setting up a website|Woodburn Studio demo site|Future Digital Experience 9.5 releases will have it as an inactive site until it is fully removed from the product upon reaching End of Support (EOS) on August 04, 2026|August 05, 2025|
 |Manage Content|CKEditor Rich Text Editor component in HCL DX|The CKEditor Rich Text Editor component in the HCL Digital Experience software will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. |August 05, 2025|
 |HCL DX Software Version|HCL Digital Experience Version 8.5 and 9 solutions|On June 30, 2023, HCL announces End of Support dates for HCL DX product release versions 8.5 and 9, effective on June 30, 2025. Customers should upgrade to HCL DX release version 9.5, by following the [upgrade steps in the Help Center](../deployment/install/traditional/install_upgrade_plan_supported_paths/index.md). For more information, please refer to the [HCL Software Lifecycle site](https://www.hcltechsw.com/resources/product-release/product-lifecycle-table?productFamily=digital%20experience), Digital Experience category.|June 30, 2025|
@@ -105,7 +106,9 @@ HCL Digital Experience 9.5 requires JDK 7.0 or later for installation.
 |Prerequisite|Prerequisite minimum, and Supported versions|Product Minimum|
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|7.0 and later maintenance releases|8.5|
-||7.1 and later maintenance releases|8.5|  
+||7.1 and later maintenance releases|8.5|
+
+As of CF230 JDK 7.x is deprecated and support will be removed in a future release. All customers should ensure that they are using JDK 8.0.
 
 ### Databases
 
