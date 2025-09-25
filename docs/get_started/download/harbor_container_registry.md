@@ -69,9 +69,9 @@ Refer to the following table to identify which Helm chart version corresponds to
 | 2.34.0                    | 2.23.0                | CF225      |
 | 2.35.0                    | 2.24.0                | CF226      |
 | 2.36.0                    | 2.25.0                | CF227      |
-|                           |                       | CF228      |
+| 2.37.3                    | 2.26.0                | CF228      |
 | 2.40.0                    | 2.27.0                | CF229      |
-| 2.41.0                    |                       | CF230      |
+| 2.41.0                    | 2.28.0                | CF230      |
 
 After downloading the Helm charts, the next step is [Retagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images) as part of your deployment process.
 
