@@ -7,7 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
 - Presentation Designer - Handle multiple stylesheet components
-- Toolbar and Practitioner Studio - Updated UI
+- HCL DX Action Bar and Practitioner Studio UI updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -66,13 +66,19 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
 
-### Practitioner Studio - Updated toolbar and UI
+### HCL DX Action Bar and Practitioner Studio UI updates
 
 === "Containers"
-    The Practitioner Studio toolbar and UI in HCL DX have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to [Practitioner Studio](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar) and [Exploring the Site Toolbar and Site Manager](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md).
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
 
 === "On-Premises"
-    The Practitioner Studio toolbar and UI in HCL DX have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to [Practitioner Studio](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar) and [Exploring the Site Toolbar and Site Manager](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md).
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
 
 ## Digital Experience 8.5 and 9.0 Versions
 
