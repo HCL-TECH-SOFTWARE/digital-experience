@@ -6,6 +6,59 @@ You can obtain the HCL DX 9.5 container update and supported OS releases from yo
 
 Video: [How to upload HCL DX 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF230
+
+If you are deploying the HCL DX 9.5 CF230 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF230 DXClient files
+
+```
+hcl-dxclient-image-v95_CF230_20250922-1245.zip
+hcl-dxclient-v95_CF230_20250922-1244.zip
+```
+
+### hcl-dx-kubernetes-v95-CF230.zip
+
+```shell
+HCL DX notices V9.5 CF230.txt
+hcl-dx-content-composer-image-v1.43.0_20250922-1241.tar.gz
+hcl-dx-core-image-v95_CF230_20250923-2349.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20250922-1235.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20250922-1235.tar.gz
+hcl-dx-deployment-v2.41.0_20250924-1733.tgz
+hcl-dx-digital-asset-manager-image-v1.42.0_20250922-1244.tar.gz
+hcl-dx-file-processor-image-v2.0.0_20250922-1241.tar.gz
+hcl-dx-haproxy-image-v1.26.0_20250922-1242.tar.gz
+hcl-dx-image-processor-image-v1.43.0_20250922-1244.tar.gz
+hcl-dx-license-manager-image-v95_CF230_20250922-1237.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20250922-1237.tar.gz
+hcl-dx-openldap-image-v2.6.8_20250922-1237.tar.gz
+hcl-dx-opensearch-image-v2.0.0_20250922-1233.tar.gz
+hcl-dx-people-service-image-v1.0.0_20250922-1234.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.40.0_20250922-1247.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.38.0_20250922-1248.tar.gz
+hcl-dx-persistence-node-image-v1.30_20250922-1248.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20250922-1238.tar.gz
+hcl-dx-remote-search-image-v95_CF230_20250923-2349.tar.gz
+hcl-dx-ringapi-image-v1.43.0_20250922-1249.tar.gz
+hcl-dx-runtime-controller-image-v95_CF230_20250922-1239.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20250922-1232.tar.gz
+hcl-dx-search-v2.28.0_20250923-1517.tgz
+```
+
+### HCL Digital Experience File package listings (supported OS platforms)
+
+This section presents the latest available HCL DX File package listings for supported OS platforms.
+
+|File name| Folder name|
+|---------|------------|
+|HCL-DX-CF230_Express_Update|HCL-DX-CF230_Express_Update.zip|
+|HCL-DX-CF230_RemoteSearch_Update|HCL-DX-CF230_RemoteSearch_Update.zip|
+|HCL-DX-CF230_Server_Update|HCL-DX-CF230_Server_Update.zip|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+<!--
 ## HCL DX 9.5 CF229
 
 If you are deploying the HCL DX 9.5 CF229 Container update release, the package name and images are as follows.
@@ -57,7 +110,7 @@ This section presents the latest available HCL DX File package listings for supp
 
 See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
-<!--
+
 ## HCL DX 9.5 CF228
 
 If you are deploying the HCL DX 9.5 CF228 Container update release, the package name and images are as follows.
