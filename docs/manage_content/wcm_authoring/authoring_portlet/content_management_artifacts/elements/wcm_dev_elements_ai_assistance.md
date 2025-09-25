@@ -91,3 +91,7 @@ Starting CF224, you can use AI Workflow Actions to generate keywords, summary, o
 You can then use the selected workflow action or actions inside a workflow stage. See the following example:
 
 ![](../../../../../assets/HCL_Authoring_Portlet_Custom_Workflow_Stage.png){ width="1200" }
+
+## Limitations
+
+AI Translate may remove HTML table attributes, and therefore does not handle content within tables accurately. 
