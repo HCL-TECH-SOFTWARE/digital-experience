@@ -9,9 +9,9 @@ The Site Toolbar and Site Manager provide quick access to common content author 
 
 ![Screen capture showing two search bars, one in the action bar and one below the action bar section.](../../../images/two_searchbars.png)
 
-## Action bar
+## Action Bar
 
-The action bar functions as the entry point into the Site Toolbar and Site Manager, where you can preview your site, access projects, and more. It is also where content authors can enable editing and information modes.
+The Action Bar functions as the entry point into the Site Toolbar and Site Manager, where you can preview your site, access projects, and more. It is also where content authors can enable editing and information modes.
 
 ![Screen capture of the action bar that highlights edit mode and information mode. Both modes are activated.](../../../images/AB_EditInfo_on_final.png)
 
