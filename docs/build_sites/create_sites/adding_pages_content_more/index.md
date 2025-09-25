@@ -33,7 +33,7 @@ As a content author, your goal is to visualize the best way to organize informat
 -   Start with a tour of the site toolbar and site manager. Familiarize yourself with creating pages and content in the context of your site navigation in *Exploring site toolbar and site manager*.
 -   Then, learn the details of how to set up your site.-->
 
--   **[Exploring site toolbar and site manager](toolbar_sm_ovr.md)**  
+-   **[Exploring the Site Toolbar and Site Manager](toolbar_sm_ovr.md)**  
 Site toolbar and site manager provide quick access to common content author tools as well as a complete view of your site's navigation. Without leaving the context of your website, content authors can create and modify pages and content items, create vanity URLs for promotions, and much more.
 -   **[Projects: Organizing and coordinating changes to your site](../adding_pages_content_more/projects_organizing_coord_chgs_site/index.md)**  
 Projects organize related updates to the published site and simplify the publication process. You can think of projects as folders that contain related draft updates to the published site. Content owners create projects from project templates. Content authors contribute updates to the projects that content owners create. Updates could include moving a page in the site navigation, creating a new page, adding content to a page, and more. When content authors are ready, they can send their content for approval and publishing.
