@@ -180,7 +180,7 @@ You can define the display properties of field and elements that are displayed o
 
 ## Using the reset and apply button
 
-When display properties are edited , click **Reset** to return the display properties to the values entered the last time the authoring template was saved.
+When the display properties are edited , click **Reset** to return the display properties to the values entered the last time the authoring template was saved.
 
 Click **Apply** to apply values that are entered in the properties fields. For example, apply the width of the field to the value entered in "field width" field.
 
