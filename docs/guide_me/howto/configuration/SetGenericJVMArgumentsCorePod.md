@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL DX 8.5 and higher
+> HCL Experience 8.5 and higher
 
 ## Introduction
 
