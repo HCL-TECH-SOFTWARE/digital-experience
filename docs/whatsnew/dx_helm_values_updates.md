@@ -11,6 +11,26 @@ This page summarizes Helm values updates across DX releases. Each table below de
 | configuration.digitalAssetManagement.enableCollectionMove |
 | configuration.digitalAssetManagement.enableAssetMoveRename |
 
+### CF230
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| networking.haproxy.customHeader | [] |
+| networking.haproxy.deleteHeader | [] |
+| incubator.configuration.searchMiddleware.version | v2 |
+| incubator.configuration.searchMiddleware.contextRoot.api | /dx/api/search |
+| incubator.configuration.searchMiddleware.contextRoot.pickerUI | /dx/ui/search/picker |
+
+**Removed Keys:**
+
+None
+
+**Changed Values:**
+
+None
+
 ### CF229
 
 **Added Keys:**
