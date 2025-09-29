@@ -13,7 +13,7 @@ Learn how to configure the IBM Rational Application Developer (RAD) for use in H
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.
 - **[How to integrate HCL DX with LDAP](./IntegrateLDAP.md)**  
-Learn how to integrate HCL DX with LDAP.
+Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LDAP).
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.
 - **[How to remove or hide the X-Powered-By header in HCL DX](./HideXPoweredByHeader.md)**  

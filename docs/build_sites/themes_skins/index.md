@@ -21,7 +21,7 @@ Use the theme artifacts to package a theme for staging to production.
 Device classes are used in HCL Digital Experience (DX) as an abstraction for common properties for the device of a client. For instance, tablet computers can be grouped into a device class tablets, since they share a form factor and possibly other traits such as touch interface, or additional hardware sensors.
 -   **[Responsive Web Design](../themes_skins/responsive_web_design/index.md)**  
 Responsive Web Design provides content parity between mobile devices and desktop channels, which enhances user experience and brand consistency. Seamless changes in screen size, from small to large, are now possible while the order of the content is maintained. Content maintenance is simplified by having one site that is represented by one set of assets.
--   **[Directory structure](../../guide_me/wpsdirstr.md)**  
+-   **[Directory structure](../../guide_me/glossary/wpsdirstr.md)**  
 The topic shows the naming conventions that are used to denote the location of files on the servers and the types of resources you can find in those directories.
 
 ## HCLSoftware U learning materials

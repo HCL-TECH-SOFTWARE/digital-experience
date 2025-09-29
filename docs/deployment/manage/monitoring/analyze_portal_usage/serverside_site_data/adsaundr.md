@@ -11,7 +11,7 @@ The HCL Digital Experience site analysis log information is collected in the fol
 
 ```
 
-where [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md) is the HCL Digital Experience root directory and date\_time is the date and time when the file was created. The current \(active\) log file is named **sa.log**. As explained in the previous section, the dateFormat parameter determines the interval at which the file is created.
+where [wp\_profile\_root](../../../../../guide_me/glossary/wpsdirstr.md) is the HCL Digital Experience root directory and date\_time is the date and time when the file was created. The current \(active\) log file is named **sa.log**. As explained in the previous section, the dateFormat parameter determines the interval at which the file is created.
 
 The site analysis log uses the NCSA Combined log format, which is a combination of NCSA Common log format and three additional fields: the referrer field, the user\_agent field, and the cookie field. The following example displays a sample entry in the site analysis log. The table describes each field of the log format:
 

@@ -96,7 +96,7 @@ Examples:
     [Plugin:Locale key="direction"]
     ```
 
--   To write the the string representation of the preferred supported locale of the request as defined by IETF BCP 47 to your web content, such as "en", use the key attribute with the value xmlLocale:
+-   To write the string representation of the preferred supported locale of the request as defined by IETF BCP 47 to your web content, such as "en", use the key attribute with the value xmlLocale:
 
     ```
     [Plugin:Locale key="xmlLocale"]

@@ -180,7 +180,7 @@ To register this portlet service, add the following property names and values to
 |`sample.portletservice.HelloServiceImpl2.message`|`Greetings`|
 
 !!!note "Tip"
-    To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../../../guide_me/wpsdirstr.md)/bin directory, lists all portlet service entries in JNDI:
+    To check whether your service has been registered successfully, use the application server dumpNamespace tool. The following command, run from the [AppServer\_root](../../../guide_me/glossary/wpsdirstr.md)/bin directory, lists all portlet service entries in JNDI:
     
     ```
 

@@ -95,9 +95,13 @@ The following YAML file demonstrates how to define a Gateway API `HTTPRoute` res
 - Within `rules`, the `matches` block defines the path prefix condition (such as `/apps`)
 - The `backendRefs` section specifies the target backend service and port where Leap is hosted.
 
-## Enabling LTPA SSO between HCL Leap and HCL DX in Kubernetes
+## Enabling SSO between HCL Leap and HCL DX in Kubernetes
 
-Refer to the following steps to enable Lightweight Third-Party Authentication (LTPA) Single Sign-On (SSO) between Leap and DX in Kubernetes. These steps are based on [a community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4){target="_blank"} in HCLSoftware Community.
+You can enable Single Sign-On (SSO) between HCL Leap and HCL DX in Kubernetes using the [Lightweight Third-Party Authentication (LTPA)](#implementing-ltpa-sso) or the modern [OpenID Connect (OIDC)](#implementing-oidc-sso) protocol.
+
+### Implementing LTPA SSO
+
+This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using LTPA. The process works by sharing a single LTPA encryption key between the DX and Leap pods. By storing this common key in a Kubernetes Secret, both applications can trust each other's login tokens, allowing users to sign in once and access both platforms seamlessly. The following steps are based on [a community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4){target="_blank"} from the HCLSoftware Community:
 
 1. Ensure both DX and Leap use an identical user registry configuration.
     - For DX, please refer to the doc on [User Registry Options](../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_ureg_ov.md) for details.
@@ -229,3 +233,119 @@ Refer to the following steps to enable Lightweight Third-Party Authentication (L
     ```
 
 6. Restart HCL Leap and HCL DX. You should now be able to log in to DX and open Leap without having to log in again.
+
+### Implementing OIDC SSO
+
+This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/) approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. Refer to the following steps:
+
+1. Install and configure your IdP.
+
+    1. Create a client for each product. IdPs serve as the single point of truth for credential inputs.
+
+    2. (Optional) Customize the IdP access UI. Refer to [IdP Customization and Consideration](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md) for more information.
+
+2. Enable OIDC in HCL DX.
+
+    Refer to [Updating WebSphere to support OIDC Authentication for DX](./../../../deployment/manage/security/people/authentication/oidc/dx-update-websphere-for-oidc.md) to enable OIDC on the HCL DX Websphere Application Server.
+
+3. Enable OIDC in HCL Leap.
+
+    Leap can be configured to leverage OIDC as the primary authentication mechanism, turning it into a Relying Party (RP) to the specific IdP. RP is an application that relies on a third-party (such as an IdP) for authentication. When OIDC is used, the user and group lookup feature of Leap is not available and must be disabled as part of the configuration.
+
+    1. Configure the OIDC IdP, which will serve as the OIDC provider.
+
+        As part of the configuration process for your identify provider, you will have created or obtained a digital certificate for configuring HTTPS. This certificate will also need to be deployed to Leap so that the two servers can communicate with each other.
+
+        !!!note
+            The SSL certificate (`.crt`) and public key (`.key`) should be in PKCS12 format.
+
+    2. After copying the `.key` and `.crt` to the Kubernetes image, create a secret using the following command:
+
+        ```bash
+        kubectl -n <namespace> create secret tls <tls_secret> --key="/tmp/oidc.key" --cert="/tmp/oidc.crt"
+        ```
+
+        This secret can be referenced in the `values.yaml` file using the following configuration:
+
+        ```yaml
+        configuration:
+            leap:
+                customCertificateSecrets:
+                    keycloakCert: <tls_secret>
+        ```
+
+    3. Add the OIDC definition as a server customization in the `values.yaml` file.
+
+        The properties that you need to specify may differ based on your identity provider. For additional information, refer to [Open Liberty documentation on OIDC](https://openliberty.io/docs/latest/reference/config/openidConnectClient.html){target="_blank"}
+
+        Before moving on, verify that the `discoveryEndpointURL` property is valid by opening the URL in a browser prior to entering it in the `values.yaml` file and updating the `clientSecret` with the proper value obtained from your IdP.
+
+        Example of an OIDC definition:
+
+        ```yaml
+        # Enter appropriate values for <your-oidc-id>, <your-client-id>, <your-client-secret>, <your-oidc-server>. You may have to refer to your identity provider's configuration.
+        configuration:
+            leap:
+                configOverrideFiles:
+                    openIdConnect: |
+                        <server description="leapServer">
+                        <openidConnectClient id="<your-oidc-id>"
+                            clientId="<your-client-id>"
+                            clientSecret="<your-client-secret>"
+                            signatureAlgorithm="RS256"
+                            authFilterRef="interceptedAuthFilter"
+                            mapIdentityToRegistryUser="false"
+                            httpsRequired="true"
+                            scope="openid"
+                            userIdentityToCreateSubject="preferred_username"
+                            discoveryEndpointUrl="https://<your-oidc-server>/realms/<your-realm-name>/.well-known/openid-configuration">
+                        </openidConnectClient>
+                        <authFilter id="interceptedAuthFilter">
+                            <requestUrl id="authRequestUrl" matchType="contains" urlPattern="/apps/secure|/apps/secured"/>
+                        </authFilter>
+                        <httpEndpoint id="defaultHttpEndpoint"
+                            host="*"
+                            httpPort="9080"
+                            httpsPort="9443">
+                            <samesite none="*" />
+                        </httpEndpoint>
+                        </server>
+        ```
+
+        For more details on defining a server customization, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html){target="_blank"}.
+
+        !!!important
+            The openIdConnectClient redirects to `https://<your-domain>/oidcclient/redirect/<your-oidc-id>` after authentication. Make sure that your valid redirect URIs includes an entry that matches this, and that you're using a different id than what you're using for DX. You may also have to modify your Ingress/Gateway API configuration so that `/oidcclient/redirect/<your-oidc-id>` redirects to the Leap service.
+
+    4. Add the following config properties related to OIDC in the `values.yaml` file.
+
+        The following properties must be set to complete the OIDC configuration:
+
+        - `userLookups`: Set this to `false` to disable user lookups, which is not available when configured with OIDC.
+        - `userGroups`: Set this to `false` to disable group lookups, which is not available when configured with OIDC.
+        - `postLogoutRedirectURL`: Set this to the URL to which Leap will redirect the browser after a user logs out. This is necessary to complete the loop with the OIDC IdP.
+
+        ```yaml
+        configuration:
+            leap:
+                leapProperties: |
+                    ibm.nitro.NitroConfig.userLookup=false
+                    ibm.nitro.NitroConfig.userGroups=false
+                    ibm.nitro.LogoutServlet.postLogoutRedirectURL=https://myOIDCServer.com/realms/Leap/protocol/openid-connect/logout?client_id=hcl-leap-oidc-client&post_logout_redirect_uri=https://myLeapServer.com/apps/secure/org/ide/manager.html
+        ```
+
+        For more details on setting Leap properties, refer to [Leap properties](https://opensource.hcltechsw.com/leap-doc/latest/helm_leap_properties.html){target="_blank"}.
+
+    5. Perform a Helm upgrade to apply your changes.
+
+    6. Delete the Leap pod using the following command:
+
+        ```
+        kubectl -n <namespace> delete pod <leap-pod-name>
+        ```
+
+        Since Leap was installed with a Helm chart, a new pod will be created automatically. Afterwards, accessing Leap should redirect you to authenticate using your OIDC IdP.
+
+        For example, the following screenshot shows an authentication page accessed using Keycloak:
+
+        ![](../../../assets/Keycloak-Login.png)

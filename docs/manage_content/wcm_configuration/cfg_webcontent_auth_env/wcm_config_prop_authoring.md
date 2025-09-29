@@ -244,7 +244,7 @@ This class can be overridden by adding the following setting: `inplaceEdit.defau
 
 As many classes as required are added to this setting, which is separated by spaces.
 
-You should base your custom classes on the default stylesheet at [AppServer\_root](../../../guide_me/wpsdirstr.md)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css.
+You should base your custom classes on the default stylesheet at [AppServer\_root](../../../guide_me/glossary/wpsdirstr.md)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css.
 
 !!! note
     Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value.
