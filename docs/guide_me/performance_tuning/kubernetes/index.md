@@ -164,6 +164,49 @@ After completing the authoring steps, the anonymous and authenticated portal use
 
 These performance tests are primarily focused on DAM API. Client-side rendering, such as browser-based rendering, is excluded from the tests.
 
+## JVM Heap and Pod Resource Guidelines (Performance Runs)
+
+During performance testing, aligning JVM heap settings with pod resource limits ensures consistent performance and avoids unexpected memory issues.
+
+### Memory Requests and Limits
+
+* Set the pod's **requested memory** (`requests.memory`) equal to the **memory limit** (`limits.memory`).
+* This guarantees the container receives a fixed memory allocation, preventing memory overcommit and potential OOM (Out Of Memory) errors.
+
+### JVM Heap Size Alignment
+
+* The JVM heap (`-Xms` / `-Xmx`) should be **smaller than the pod memory limit**.
+* Keep headroom for:
+
+  * Non-heap memory (Metaspace, thread stacks, direct buffers)
+  * Sidecar containers (if any)
+  * Additional JVM processes (e.g., `server1`)
+
+### Equal Minimum and Maximum Heap
+
+* Set `-Xms` = `-Xmx` (in this case, 4 GB) for performance runs.
+* This prevents dynamic heap expansion, eliminating overhead and ensuring stable, predictable performance.
+
+### Determine Final Memory Requirements
+
+* Conduct local testing with your specific portlets, pages, and customizations.
+* Perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
+* Memory requirements depend on Service Level Agreements (SLAs) and transaction rates.
+* A minimum of 3.5 GB is recommended, but higher allocations may be necessary depending on actual usage patterns.
+
+### Example of Recommended Configuration for Performance Runs (Core pod)
+
+* **Pod Memory (requests & limits):** 8 GB
+* **JVM Heap (`-Xms` / `-Xmx`):** 4 GB ( maximum 6 GB )
+* **CPU (requests & limits):** 5.6 CPUs
+* This leaves **~4 GB of memory headroom** for non-heap usage and container overhead, ensuring stability during load testing.
+
+## Key Benefits
+
+* Avoids OOM (Out Of Memory) errors during high-load scenarios.
+* Provides stable JVM performance.
+* Prevents performance degradation caused by memory contention.
+
 ???+ info "Related information"
     - For details about the environments used, test results, and recommendations for each configuration, refer to the following pages:
         - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
