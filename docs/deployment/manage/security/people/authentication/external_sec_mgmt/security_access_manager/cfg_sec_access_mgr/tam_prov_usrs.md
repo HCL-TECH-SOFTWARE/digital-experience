@@ -80,7 +80,7 @@ You can configure Security Access Manager for authentication, authorization, and
 5.  **Clustered environments:** Complete this step on all nodes.
 
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Portal node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -173,9 +173,9 @@ You can configure Security Access Manager for authentication, authorization, and
 6.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
 
-    -   AIX HP-UX Linux Solaris: [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   IBM i: [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   Windows: [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
+    -   AIX HP-UX Linux Solaris: [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   IBM i: [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   Windows: [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
 
     **Clustered environments:** Complete this step on all nodes.
 
@@ -242,7 +242,7 @@ You can configure Security Access Manager for authentication, authorization, and
 8.  Save your changes to the properties file.
 
 
-9.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+9.  Open a command prompt and change to the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 
 10. Run the following task to enable Security Access Manager authentication, authorization, and the credential vault:

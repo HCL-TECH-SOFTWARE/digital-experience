@@ -17,7 +17,7 @@ Co-packaged software is identified in HCL DX 9.5 download documents, which are a
 
 ## Getting the software
 
-You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../../guide_me/tutorials/access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
+You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
 
 HCL DX V9.5 for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal can apply those credentials to optionally access the Docker components of DX v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information. 
 
@@ -83,4 +83,4 @@ Follow this installation path to deploy DX from an existing HCL DX 8.5 or 9.0 sy
 Beginning with [HCL Digital Experience 9.5 Container Update CF207](../../../whatsnew/cf20/newcf207.md), you must specify certain entitlement check parameters in your [HCL Digital Experience Cloud Native 9.5 Tier 1 – 7](../../product_overview/offerings.md#hcl-digital-experience-cloud-native) installations to accomplish entitlement checks with the HCL Software delivery portals. See [HCL Digital Experience Cloud Native 9.5 Entitlement Checks](../software_licensing_portal/configure_entitlement_checks/index.md) for more information.
 
 ???+ info "Related information"
-    - [Locating and Downloading DX Products](../../../guide_me/tutorials/access-software/locating-downloads.md)
+    - [Locating and Downloading DX Products](../../access-software/locating-downloads.md)

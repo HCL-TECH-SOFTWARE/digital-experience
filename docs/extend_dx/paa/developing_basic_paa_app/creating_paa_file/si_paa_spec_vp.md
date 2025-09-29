@@ -9,7 +9,7 @@ No additional configuration steps are needed when you create the PAA file. The S
 
 If you deploy a PAA file to more than one Virtual Portal, some components are not deployed on the other Virtual Portals. Therefore, items such as Libraries are not created on the second Virtual Portal. Choose one of the following options to deploy a PAA file:
 
--   Open the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md)/paa/paaName/components.properties file. Set the components that you want to deploy to true. Then, run the deploy-paa task.
+-   Open the [wp\_profile\_root](../../../../guide_me/glossary/wpsdirstr.md)/paa/paaName/components.properties file. Set the components that you want to deploy to true. Then, run the deploy-paa task.
 -   Run the deploy-paa task with the -DforceDeploy=true option. This parameter tells the Solution Installer to ignore the components.properties file.
 
 

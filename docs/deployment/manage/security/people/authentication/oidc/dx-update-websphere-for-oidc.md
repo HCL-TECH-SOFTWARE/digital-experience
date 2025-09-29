@@ -14,11 +14,11 @@ Follow the tasks to execute this configuration:
 ## Installing OpenID Connect
 
 1. Make sure that your OIDC runtime is up to date.
-   
+
     If an interim fix is available for your fix pack, install the OIDC interim fix for the latest OIDC runtime. See [Obtaining WebSphere OpenID Connect (OIDC) latest version](https://www.ibm.com/support/pages/node/290565).
 
 2. Install the OpenID Connect application by using the python script.
-   
+
     1. Navigate to the `app_server_root/bin` directory.
     2. Run the script `installOIDCRP.py` for each profile on which the OpenID Connect RP is to be installed.
 
@@ -36,7 +36,7 @@ Follow the tasks to execute this configuration:
     ...
     ADMA5013I: Application WebSphereOIDCRP installed successfully.
     ```
-    
+
     For more information, see [Configuring an OpenID Connect Relying Party](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=users-configuring-openid-connect-relying-party).
 
 3. Open the ISC and go to **Applications > Application types > Enterprise Applications > WebsphereOIDCRP >  Manage modules**.
@@ -145,7 +145,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
 
 1. Go to the IBM WebSphere Application Server Integrated Solutions Console.
 
-2. Navigate to **Security > Global security > User account repository > Configure > <LDAP_ID>**
+2. Navigate to **Security > Global security > User account repository > Configure > </LDAP_ID>**
 
 3. Set the field for **Federated repository properties for login** to `mail`.
 
@@ -159,7 +159,7 @@ Follow the steps, to set the log in property to `mail` to match the identity att
         This requires a manual update of the file, make sure to back the file up as this will corrupt your instance.
 
     ```sh
-    kubectl exec -it dx-deployment-core-0 bash -n dxns
+    kubectl exec -it dx-deployment-core-0 bash -n <your-namespace>
 
     cd /opt/HCL/wp_profile/config/cells/dockerCell/wim/config/
     # Create a backup
