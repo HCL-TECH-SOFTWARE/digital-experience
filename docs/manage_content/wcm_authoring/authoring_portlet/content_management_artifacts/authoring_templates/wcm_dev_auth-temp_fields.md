@@ -190,9 +190,13 @@ If you create a text provider plug-in for a multi-locale site, you can select a 
 
 - The text provider displays different field labels for each configured language.  
 - The value that you enter in **Field label** is only used if a corresponding label is not available from the selected text provider.  
-- The same behavior applies to **Field help text**: the entered value is used only if the text provider does not supply a value.  
+- The same behavior applies to **Field help text**: the entered value is used only if the text provider does not supply a value.
 
-![Text Provider](../../../../../images/textprovider.png)
+
+![Text Provider](../../../../../images/textprovider.png){ width="50%" }
+
+!!! note
+    The screenshot includes an option available only in the Content Template. It lets you enable the selection of a text provider in the content created with that template.
 
 For more information, refer to [Storing translated text in a content item or site area](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_development/wcm_dev_storing_translated_text/0){target="_blank"} and [Creating a Text Provider class](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_development/wcm_custom_plugin/wcm_dev_api_text_provider/){target="_blank"}.
 
