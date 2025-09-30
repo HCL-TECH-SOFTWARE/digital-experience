@@ -6,6 +6,13 @@ This guide explains how you can use the standardized configuration sharing featu
 
 Configuration sharing allows one product (the "producer") to share its configuration securely with other products (the "consumers") using Kubernetes Secrets. This is an opt-in feature: you control which products share and consume configuration.
 
+**Key Benefits:**
+- Seamless integration between HCL products without manual configuration.
+- Independent deployment lifecycles for each product.
+- Reduced configuration effort and operational overhead.
+- Each product only consumes relevant configuration data.
+- No single point of failure; products operate independently if shared config is missing.
+
 For more technical details, see [Design: ConfigMap/Secret Sharing for Co-Deployment](./design-sharing-config-secret-co-deployment.md).
 
 ---
@@ -24,7 +31,7 @@ The system uses native Kubernetes features, so no extra components are required.
    This tells the product to participate in configuration sharing.
 
 2. **Producer Creates Secret**  
-   The producer product (for example, DX) will automatically create a Kubernetes Secret named `<product-name>-shared-config-v<major>` (e.g., `dx-shared-config-v1`). This Secret contains the shared configuration.
+   The producer product (for example, DX) will automatically create a Kubernetes Secret named `<product-name>-shared-config-v<major>` (e.g., `dx-shared-config-v1`). This Secret contains the shared configuration. The major version is only incremented for breaking changes to the configuration schema.
 
 3. **Consumer Mounts Secret**  
    Any consumer product can be configured to look for this Secret and mount it as a volume. This is optional—if the producer is not deployed, the consumer will still start normally.
@@ -155,7 +162,7 @@ If you want your product to consume shared configuration:
          max: v2
    ```
 
-2. **Add the Volume to Your Deployment**  
+2. **Define the Volume to Mount the Secret**  
    In your deployment YAML:
    ```yaml
    spec:
@@ -183,25 +190,3 @@ If you want your product to consume shared configuration:
 
 4. **Access the Shared Data**  
    Each key in the Secret becomes a file in the mount path. For example, if the Secret contains `core.ltpa`, you can read it from `/etc/config/shared/dx/core.ltpa`.
-
----
-
-## Frequently Asked Questions
-
-**Q: What happens if the producer is not deployed?**  
-A: The consumer will start normally. The shared configuration is optional.
-
-**Q: Can I add more keys to the shared configuration?**  
-A: Yes. Edit the shared Secret template in your Helm chart and add new keys under `stringData`.
-
-**Q: How do I know which version of the shared config to use?**  
-A: Specify the version in your values.yaml under `consumeSharedConfigs`.
-
-**Q: Is this secure?**  
-A: The configuration is stored in Kubernetes Secrets, which are designed for sensitive data. Follow your organization’s security best practices for managing Secrets.
-
----
-
-## Support
-
-If you have questions or need help with configuration sharing, contact HCL support or refer to the product documentation for more details.
