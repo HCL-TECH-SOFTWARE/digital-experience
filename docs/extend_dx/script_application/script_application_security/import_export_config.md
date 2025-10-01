@@ -20,3 +20,6 @@ If you edit the Script Application Configuration Properties component directly i
 3.  Edit the properties that you want to change and save the file.
 
 4.  If you upgrade your portal to another version or with a Combined Cumulative Fix, check to see whether any items you overrode were changed by default. Change the text component and save the component.
+
+!!! important
+    With the recommended DXClient approach, you must manage this at the Web Content level, as described in [Web Content Manager set SVG to disabled by default](https://help.hcl-software.com/digital-experience/9.5/CF230/whatsnew/cf20/newcf208/#web-content-manager-set-svg-to-disabled-by-default). For more details about using SVG files, see [Script Applications](https://help.hcl-software.com/digital-experience/9.5/CF228/extend_dx/development_tools/dxclient/dxclient_artifact_types/scriptapplications/){target="_blank"}. 
