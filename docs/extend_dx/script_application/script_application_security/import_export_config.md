@@ -2,7 +2,7 @@
 
 ## Default Import Properties for Script Applications
 
-When importing Script Applications, only specific file types are allowed by default. These properties define which extensions can be uploaded as part of the application package. Each property is case-insensitive.
+When importing the Script Applications, only specific file types are allowed by default. These properties define which extensions can be uploaded as part of the application package. Each property is case-insensitive.
 
 ### Default properties
 
