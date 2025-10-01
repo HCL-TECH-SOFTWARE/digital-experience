@@ -41,7 +41,7 @@ and [WCMConfigService configuration reference](https://help.hcl-software.com/dig
 ![Afileresourcecmpnt](../../../images/image.png){ width="300" }
 
 While images are explicitly managed through `imageresourcecmpnt.allowedmimetypes`, it is less clear how other file types (HTML, JavaScript, CSS) are controlled at the WCM level.  
-Logically, a similar property such as `fileresourcecmpnt.allowedmimetypes` should exist to manage these file types. The default Script Application import properties listed above remain the primary way to manage HTML, script, and style files.  
+Logically, a similar property such as `fileresourcecmpnt.allowedmimetypes` should exist to manage these file types. However, the default Script Application import properties listed above remain as the primary way to manage HTML, script, and style files.  
 
 ### Best Practices for Overriding Properties
 
