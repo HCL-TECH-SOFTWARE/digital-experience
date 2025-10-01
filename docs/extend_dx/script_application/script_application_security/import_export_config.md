@@ -1,4 +1,4 @@
-# Custom Configuration Properties for Script Applications 
+# Custom Configuration Properties for Script Applications  
 
 ## Default Import Properties for Script Applications
 
