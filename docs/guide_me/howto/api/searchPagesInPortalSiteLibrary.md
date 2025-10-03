@@ -1,4 +1,4 @@
-# How to use WCM API to search for pages in the Portal site library
+# How to use the WCM API to search for pages in the Portal site library
 
 ## Applies to
 
@@ -6,16 +6,16 @@
 
 ## Introduction
 
-Normal WCM Authoring search does not work for pages in the Portal site library.
+Normal WCM Authoring search doesn’t work for pages in the Portal site library.
 
-The page title is in regular text as expected, but the page name is in the form of an object id.
+The page title appears as regular text, but the page name is displayed as an object ID.
 
 ## Instructions
 
-The following JSP code will display the page name and path when the page title is entered.
+The following JSP sample code displays the page name and path when you enter the page title.
 
 ???+ info "Disclaimer of warranties"
-    The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+    The following code sample was created by HCL Corporation. It is provided solely to help you develop your applications. This sample is provided as is, without warranties of any kind. HCL is not liable for any damages that result from your use of this sample, even if HCL has been advised of the possibility of such damages.
 
 ```java
   <%@page session="false" contentType="text/html" pageEncoding="ISO-8859-1" %>  
