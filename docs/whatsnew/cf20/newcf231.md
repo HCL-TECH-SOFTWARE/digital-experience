@@ -1,13 +1,10 @@
-# What's new in CF230
+# What's new in CF231
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF230 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF231 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
-- DXClient - New `xmlAccessOutputFileName` parameter added
-- Presentation Designer - Handle multiple stylesheet components
-- HCL DX Action Bar and Practitioner Studio UI updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -17,9 +14,6 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
-- Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
-- Guide Me section restructured
-- Search V2 Authoring - Advanced search filters
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -50,36 +44,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### DXClient - New `xmlAccessOutputFileName` parameter added
-
-=== "Containers"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
-
-=== "On-Premises"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
-
-### Presentation Designer - Handle multiple stylesheets components
-
-=== "Containers"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
-
-=== "On-Premises"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
-
-### HCL DX Action Bar and Practitioner Studio UI updates
-
-=== "Containers"
-    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
-
-    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
-
-=== "On-Premises"
-    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
-
-    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -101,29 +65,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
 
-### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
-
-=== "Containers"
-    You can now enable Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol when integrating HCL DX with HCL Leap. This approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. For more information, refer to [Configuring HCL Leap for integration with HCL DX - Implementing OIDC SSO](../../extend_dx/integration/leap/configuration.md#implementing-oidc-sso).
-
-### Guide Me section restructured
-
-=== "Containers"
-    The Guide Me section has been restructured to include three main subtopics: Guides, How-to articles, and Glossary. For more information, refer to [Guide Me](../../guide_me/index.md).
-
-### Search V2 Authoring - Advanced search filters
-
-=== "Containers"
-    You can now apply additional search options to refine your search results and narrow down large data sets more efficiently. These options include filters such as Author, Status, and Last Modified, and attributes such as Description, Title, and Type. For more information, refer to [Using Search V2 Authoring - Advanced Search Filter](../../build_sites/search_v2_authoring/usage.md#advanced-search-filter).
-
 ### WAS, JDK, and iFix versions
 
 === "Containers"
-    HCL DX 9.5 CF230 contains the following:
+    HCL DX 9.5 CF231 contains the following:
 
-    - [WebSphere Application Server 9.0.5.24](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.45](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - iFix PH66674
+    - [WebSphere Application Server 9.0.5.25](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit 8.0.8.51](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - iFix PH67137
+    - iFix PH67817
 
 ## Notices of deprecation
 
