@@ -4,7 +4,7 @@ This guide explains how you can use the standardized configuration sharing featu
 
 ## Overview
 
-Configuration sharing allows one product (the "producer") to share its configuration securely with other products (the "consumers") using Kubernetes Secrets. This is an opt-in feature: you control which products share and consume configuration.
+Configuration sharing allows one product (the "producer") to share its configuration securely with other products (the "consumers") using Kubernetes Secrets. This is an opt-in feature where you control which products share and consume configuration.
 
 **Key Benefits:**
 - Seamless integration between HCL products without manual configuration.
@@ -25,11 +25,11 @@ The system uses native Kubernetes features, so no extra components are required.
 ### Producer & Consumer Flow
 
 1. **Enable Sharing**  
-   In the Helm values.yaml file for your product, set:
-   ```yaml
-   enableConfigurationSharing: true
-   ```
-   This tells the product to participate in configuration sharing.
+    In the Helm values.yaml file for your product, set:
+    ```yaml
+    enableConfigurationSharing: true
+    ```
+    This enables your product to use shared configurations in the namespace.
 
 2. **Producer Creates Secret**  
    The producer product (for example, DX) will automatically create a Kubernetes Secret named `<product-name>-shared-config-v<major>` (e.g., `dx-shared-config-v1`). This Secret contains the shared configuration. The major version is only incremented for breaking changes to the configuration schema.
@@ -52,47 +52,56 @@ As of now, the following DX configuration is shared:
 
 - **Helm Values:**  
   Enable or disable sharing in your values.yaml:
-  ```yaml
-  enableConfigurationSharing: false
-  ```
+    ```yaml
+    # Enable or disable configuration sharing between DX applications
+    enableConfigurationSharing: false
+    ```
 
 - **DX Core:**  
   Shares LTPA and SSL configuration:
-  ```yaml
-  apiVersion: v1
-  kind: Secret
-  metadata:
-    name: dx-shared-config-v1
-    labels:
-      app: dx
-      component: core
-  type: Opaque
-  stringData:
-    ltpa: |-
-      enabled: <value>
-      privateKey: <value>
-      publicKey: <value>
-      customLtpaSecret: <value>
-    ssl: <value>
-  ```
+    ```yaml
+    {{- if and .Values.incubator.enableConfigurationSharing (eq (include "hcl-dx-deployment.coreEnabled" .) "true") }}
+    apiVersion: v1
+    kind: Secret
+    metadata:
+        name: dx-shared-config-v1
+        labels:
+            app: dx
+            component: core
+    type: Opaque
+    stringData:
+        # LTPA configuration for Core
+        ltpa: |-
+            enabled: {{ .Values.configuration.core.ltpa.enabled | quote }}
+            privateKey: {{ .Values.configuration.core.ltpa.privateKey | quote }}
+            publicKey: {{ .Values.configuration.core.ltpa.publicKey | quote }}
+            customLtpaSecret: {{ .Values.configuration.core.ltpa.customLtpaSecret | quote }}
+        # SSL configuration for Core
+        ssl: {{ .Values.configuration.core.ssl | quote }}
+    {{- end }}
+    ```
 
 - **DX WebEngine:**  
   Shares its own LTPA configuration and any custom secrets:
-  ```yaml
-  apiVersion: v1
-  kind: Secret
-  metadata:
-    name: dx-shared-config-v1
-    labels:
-      app: dx
-      component: webengine
-  type: Opaque
-  stringData:
-    ltpa: |-
-      customLtpaSecret: <value>
-    customSecrets: |-
-      <custom secrets>
-  ```
+    ```yaml
+    {{- if and .Values.incubator.enableConfigurationSharing (eq (include "hcl-dx-deployment.webEngineEnabled" .) "true") }}
+    apiVersion: v1
+    kind: Secret
+    metadata:
+        name: dx-shared-config-v1
+        labels:
+            app: dx
+            component: webengine
+    type: Opaque
+    stringData:
+        # LTPA configuration for WebEngine
+        ltpa: |-
+            customLtpaSecret: {{ .Values.configuration.webEngine.ltpa.customLtpaSecret | quote }}
+        # Custom secrets for WebEngine
+        customSecrets: |-
+            {{- toYaml .Values.configuration.webEngine.customSecrets | nindent 4 }}
+    {{- end }}
+    ```
 
 Each key is prefixed with the component name to avoid conflicts (e.g., `core.ltpa`, `webengine.ltpa`).
 
@@ -102,92 +111,149 @@ Each key is prefixed with the component name to avoid conflicts (e.g., `core.ltp
 
 ### As a Producer (Share Your Product’s Configuration)
 
-If you want your product to share its configuration:
+The below steps can be followed for your application (e.g., "Leap", "MX") to share its own configuration with other HCL products
 
-1. **Create the Helm Template File**  
-   In your product’s Helm chart, add a new template file (e.g., `templates/<product>-shared-secret.yaml`).
+In your product’s Helm chart, add two new template files: `templates/dx-shared-config-core.yaml` and `templates/dx-shared-config-webengine.yaml`.  
+These files will store the shared configuration values for the DX Core and DX WebEngine components, respectively.
 
 2. **Use the Producer Template**  
    Example:
-   ```yaml
-   {{- if .Values.enableConfigurationSharing }}
-   apiVersion: v1
-   kind: Secret
-   metadata:
-     name: <product>-shared-config-v1
-     labels:
-       app: <product>
-       component: shared-config
-   type: Opaque
-   stringData:
-     # Add your shared keys here
-   {{- end }}
-   ```
+    ```yaml
+    # This single, unified Secret contains shared configuration for the application.
+    # It is only created if enableConfigurationSharing is true in the values.yaml.
+    {{- if .Values.enableConfigurationSharing }}
+    apiVersion: v1
+    kind: Secret
+    metadata:
+        # The name is dynamically generated from the chart name, e.g., "leap-shared-config-v1"
+        name: <application>-shared-config-v1
+        labels:
+            app: <application>
+            component: shared-config
+    type: Opaque
+    stringData:
+        # Add your application's shared keys here
+        # Example:
+        # my-component.some-key: {{ .Values.path.to.value | quote }}
+    {{- end }}
+    ```
 
 3. **Add Your Configuration Data**  
-   Example for DX:
+   Example for DX configuration data:
    ```yaml
-   stringData:
-     ltpa: |-
-       enabled: <value>
-       privateKey: <value>
-       publicKey: <value>
-       customLtpaSecret: <value>
-     ssl: <value>
-   ```
+    stringData:
+        # example LTPA configuration for DX
+        ltpa: |-
+            enabled: {{ .Values.configuration.core.ltpa.enabled | quote }}
+            privateKey: {{ .Values.configuration.core.ltpa.privateKey | quote }}
+            publicKey: {{ .Values.configuration.core.ltpa.publicKey | quote }}
+            customLtpaSecret: {{ .Values.configuration.core.ltpa.customLtpaSecret | quote }}
+        # example SSL configuration for DX
+        ssl: {{ .Values.configuration.core.ssl | quote }}
 
 4. **Enable the Feature in values.yaml**  
-   ```yaml
-   enableConfigurationSharing: true
-   ```
+   Ensure the master feature flag exists in your chart's values.yaml file and is set to false by default. This makes the feature safely opt-in.
 
+    ```yaml
+    # values.yaml
+    # enableConfigurationSharing: Enables the creation of the <chart-name>-shared-config-v1 secret
+    # to share configuration with other HCL products in the same namespace.
+    enableConfigurationSharing: false
+    ```
+
+---
+
+### Add New Keys to an Existing Producer
+
+Use this guide to add more configuration keys to an already-existing producer, like DX.
+
+**Locate the Existing Shared Secret Template and add the keys:**
+
+Find the Helm template file that defines the shared secret for the producer application (e.g., for DX, this might be `templates/dx-shared-config-core.yaml` and `templates/dx-shared-config-webengine.yaml`) and follow the Steps to Add Your Keys
+
+    ```yaml
+    stringData:
+        # example LTPA configuration for DX
+        ltpa: |-
+            enabled: {{ .Values.configuration.core.ltpa.enabled | quote }}
+            privateKey: {{ .Values.configuration.core.ltpa.privateKey | quote }}
+            publicKey: {{ .Values.configuration.core.ltpa.publicKey | quote }}
+            customLtpaSecret: {{ .Values.configuration.core.ltpa.customLtpaSecret | quote }}
+        # example SSL configuration for DX
+        ssl: {{ .Values.configuration.core.ssl | quote }}
+        # add more keys here for additional configuration to be shared
+        #
+        #
+    ```
 ---
 
 ### As a Consumer (Use Shared Configuration)
 
-If you want your product to consume shared configuration:
+To enable your product to use shared configuration, update your application to consume the shared Secret created by a producer.
 
 1. **Specify Which Shared Config to Use**  
-   In your values.yaml:
-   ```yaml
-   consumeSharedConfigs:
-     - name: dx-shared-config
-       version: v1
-   ```
-   You can also specify a version range:
-   ```yaml
-   consumeSharedConfigs:
-     - name: dx-shared-config
-       version:
-         min: v1
-         max: v2
-   ```
+   
+   For more explicit control, a consuming product should specify which version of shared configurations to mount. For example:
+    ```yaml
+    consumeSharedConfigs:
+        - name: <application>-shared-config
+        version: v1
+    ```
+
+   This can prevent unintended interruptions if new products are deployed later that also share configurations. The consumer can explicitly define which shared ConfigMap/Secret to mount, ensuring it only consumes the intended configuration.
+   We can also allow for a version range to be specified, such as:
+    ```yaml
+    consumeSharedConfigs:
+        - name: dx-shared-config
+        version: 
+            min: v1
+            max: v2
+    ```
 
 2. **Define the Volume to Mount the Secret**  
-   In your deployment YAML:
-   ```yaml
-   spec:
-     template:
-       spec:
-         volumes:
-           - name: dx-shared-config-volume
-             secret:
-               secretName: dx-shared-config-v1
-               optional: true
-   ```
+    
+    - name: A local name for the volume (e.g., <application>-config-volume).
+    - secretName: The exact name of the producer's secret (e.g., <application>>-shared-config-v1).
+    - optional: true: This is critical. It tells Kubernetes to proceed without error if the secret doesn't exist, ensuring your application can start even if the producer is not deployed.
+
+    ```yaml
+    # ... inside your deployment.yaml ...
+    spec:
+    template:
+        spec:
+        volumes:
+            # ---- START: ADD THE SHARED SECRET VOLUME ----
+            - name: <application>>-shared-config-volume # Or any name you choose
+            secret:
+                secretName: <application>-shared-config-v1 # The producer's secret name
+                optional: true # IMPORTANT: This makes the dependency optional
+            # ---- END: SHARED SECRET VOLUME ----
+            # ... other existing volumes ...
+    ```
 
 3. **Mount the Volume in Your Container**  
-   ```yaml
-   spec:
-     template:
-       spec:
-         containers:
-           - name: <your-product>
-             volumeMounts:
-               - name: dx-shared-config-volume
-                 mountPath: /etc/config/shared/dx
-                 readOnly: true
-   ```
+   
+    - name: Must match the volume name from Step 2.
+    - mountPath: The directory path inside the container where the secret's data will appear as files (e.g., /etc/config/shared/<application>).
+    - readOnly: true: A security best practice, as your application should not write to the shared config.
+
+    ```yaml
+    # ... inside your deployment.yaml ...
+    spec:
+    template:
+        spec:
+        containers:
+            - name: <application>
+            # ... other container properties ...
+            volumeMounts:
+                # ---- START: MOUNT THE SHARED VOLUME ----
+                - name: <application>-shared-config-volume # Must match the volume name
+                mountPath: /etc/config/shared/<application> # The path inside your container
+                readOnly: true
+                # ---- END: MOUNT THE SHARED VOLUME ----
+                # ... other existing volume mounts ...
+    ```
 
 4. **Access the Shared Data**  
-   Each key in the Secret becomes a file in the mount path. For example, if the Secret contains `core.ltpa`, you can read it from `/etc/config/shared/dx/core.ltpa`.
+   Once the volume is mounted, each key from the producer's stringData becomes a file inside your specified mountPath.
+   For example, if the dx-shared-config-v1 secret contains the key core.ltpa, your application can access its contents by reading the file at: /etc/config/shared/dx/core.ltpa.
