@@ -168,13 +168,3 @@ Refer to the following steps if you want to move a collection from one location 
     - If you want to move the collection to root level, do not select any collection in the dialog box. Just click the **Move here** button to move the collection to the root level.
 
 3. Click **View Location** to navigate inside the collection.
-
-### Configuration for enabling the Move Collection feature
-
-The Move Collection feature can be enabled or disabled through the helm. By default, this feature is enabled.
-
-```yaml
-configuration:
-  digitalAssetManagement:
-    enableCollectionMove: true
-```
