@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document describes a sample JSP code that can be used to convert a file (for example an PNG image file) to base64 encoded format.
+This document describes a sample JSP code that you can use to convert a file (for example, a PNG image file) to base64 encoded format.
 
 ## Instructions
 
@@ -48,4 +48,4 @@ if (path != null) {
 }
 ```
 
-Please also check the [Free Formater](https://www.freeformatter.com/base64-encoder.html){target="_blank"} web site to decode a base64 encoded stream.
+You can also check the [Free Formater](https://www.freeformatter.com/base64-encoder.html){target="_blank"} website to decode a base64 encoded stream.

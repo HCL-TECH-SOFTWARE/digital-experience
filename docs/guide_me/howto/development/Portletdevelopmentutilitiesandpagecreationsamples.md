@@ -1,4 +1,4 @@
-# Portlet development utilities and page creation samples
+# How to access portlet development utilities and page creation samples
 
 ## Applies to
 
