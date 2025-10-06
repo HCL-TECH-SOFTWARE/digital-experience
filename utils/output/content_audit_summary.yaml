@@ -1,0 +1,20 @@
+total_files: 4239
+files_with_front_matter: 448
+files_without_front_matter: 3791
+files_with_id: 331
+files_with_title: 428
+files_with_tags: 20
+files_without_tags: 4219
+files_without_description: 4239
+files_with_id_but_no_title: 0
+files_with_title_but_no_id: 97
+files_with_both_id_and_title: 331
+files_with_neither_id_nor_title: 3811
+files_with_suggested_title: 3809
+files_without_front_matter_but_with_suggested_title: 3789
+character_count:
+  min: 81
+  q1: 1293
+  median: 2369
+  q3: 4326
+  max: 117265
