@@ -1,12 +1,12 @@
-# Performance Sizing Guide for Kubernetes Deployments
+# Performance sizing guide for Kubernetes deployments
 
-This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of these sizing guides is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. Additionally, this guide provides tuning recommendations for Kubernetes pods based on their specific workloads, such as rendering-intensive tasks.
+This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. These sizing guides identify the optimal Kubernetes configurations for small, medium, and large DX workloads. Additionally, this guide provides tuning recommendations for Kubernetes pods based on their specific workloads, such as rendering-intensive tasks.
 
 For the performance guidance deployments to support Kubernetes container platforms, refer to [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 
 ## Introduction
 
-In DX performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance evaluates configurations supporting 1,000, 10,000, and 30,000 virtual users for small, medium, and large setups, respectively.
+DX performance testing determines container sizing and the relationships between DX components. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This guide evaluates configurations that support 1,000 (small), 10,000 (medium), and 30,000 (large) virtual users.
 
 The key performance indicators in these tests are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of small, medium, and large DX configurations and offer insights into the system's capacity to handle varying loads. This sizing guidance demonstrates how strategic adjustments can result in significant performance improvements.
 
@@ -18,7 +18,7 @@ Refer to the following definition of terms used throughout the performance tests
 
 - Concurrent user: The number of virtual users actively sending requests to the target application simultaneously.
 
-- Thread Groups: Concurrent users are simulated using Thread Groups and are configured using the Threads (Users), the Ramp-up Period, and the Loop Count.
+- Thread groups: Concurrent users are simulated using thread groups and are configured using the threads (Users), the ramp-up period, and the loop count.
     - Number of Threads (Users): The number of concurrent users.
     - Ramp-up Period: The time taken to start all the Threads (Users).
     - Loop Count: The number of iterations each user performs.
@@ -29,7 +29,7 @@ Refer to the following definition of terms used throughout the performance tests
         This means JMeter will simulate loading 100 users over 10 seconds, leading to approximately 10 users per second.
 
 - Authenticated user: A Portal “User” role.
-- Unauthenticated user:  A Portal “Anonymous User” role.
+- Unauthenticated user:  A Portal “unauthenticated user” role.
 - OpenLDAP:  An open-source implementation of LDAP (Lightweight Directory Access Protocol). All authenticated Users are added to OpenLDAP.
 
 !!!note
@@ -164,7 +164,7 @@ After completing the authoring steps, the anonymous and authenticated portal use
 
 These performance tests are primarily focused on DAM API. Client-side rendering, such as browser-based rendering, is excluded from the tests.
 
-## JVM Heap and Pod Resource Guidelines (Performance Runs)
+## JVM heap and pod resource guidelines (performance runs)
 
 During performance testing, aligning JVM heap settings with pod resource limits ensures consistent performance and avoids unexpected memory issues.
 
@@ -208,7 +208,7 @@ During performance testing, aligning JVM heap settings with pod resource limits 
 * Prevents performance degradation caused by memory contention.
 
 ???+ info "Related information"
-    - For details about the environments used, test results, and recommendations for each configuration, refer to the following pages:
+    - For details about the environments used, test results, and recommendations for each configuration, see the following pages:
         - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
         - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
         - [Sizing guidance for rendering in a large-sized Kubernetes configuration](rendering_large_config.md)
