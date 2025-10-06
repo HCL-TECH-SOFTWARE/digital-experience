@@ -2,11 +2,11 @@
 title: Rendering - Medium-Sized Configuration
 ---
 
-# Sizing guidance for rendering in a medium-sized Kubernetes configuration
+# Sizing guidance for rendering in a medium Kubernetes configuration
 
-This topic provides the details of the environments used for rendering in a medium-sized Kubernetes configuration. You can also find the test results and recommendations for medium configurations on this page.
+This topic describes the environments used for rendering in a medium Kubernetes configuration. It also includes test results and recommendations. You can also find the test results and recommendations for medium configurations on this page.
 
-## Methodology
+## Methodology for testing
 
 This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
@@ -18,7 +18,7 @@ The following table contains the rendering scenario details for a medium configu
 | -------------------- | ------------------ | -------------------- | ----------------------------- |
 | 10,000 users         | 200                | 25,000               |    80                         |
 
-For more information about the setup of test data, refer to the following sections:
+For more information about the setup of test data, See the following sections:
 
 - [WCM default test data](./index.md#wcm-default-test-data)
 - [DAM default test data](./index.md#dam-default-test-data)
@@ -30,7 +30,7 @@ This section provides details for the Kubernetes cluster, JMeter agents, LDAP, a
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with one c5.xlarge master node and four c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. Refer to the following node setup details:
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.xlarge master node and 4 c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. See the following node setup details:
 
 - **c5.large master node**
 
@@ -66,7 +66,7 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
 ### DB2 instance
 
-The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to the following DB2 setup details:
+The tests used a c5.2xlarge remote DB2 instance for the core database. See the following DB2 setup details:
 
 **c5.2xlarge remote DB2 instance**
 
@@ -86,7 +86,7 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to 
 
 ### JMeter agents
 
-To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate c5.2xlarge JMeter instances was used. Refer to the following JMeter setup details:
+To run the tests, a distributed AWS/JMeter agents setup consisting of one primary and eight subordinate c5.2xlarge JMeter instances was used. See the following JMeter setup details:
 
 **c5.2xlarge JMeter instance**
 
@@ -117,7 +117,7 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../../images/Core_Tuning_LTPA.png){ width="1000" }
 
-- Updated the WCM object cache for rendering. Refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) for more information.
+- Updated the WCM object cache for rendering. See the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) for more information.
 
       ![](../../../../images/Core_WCM_Object_Cache_list.png){ width="1000" }
 
@@ -201,7 +201,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance.
 
 !!!note
-     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
 
 ### Recommendations
 
@@ -211,13 +211,13 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, See [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
 ### Recommended heap size configuration
 
-To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. See the following best practices when tuning memory allocation.
 
 !!!note
      Do not set your JVM heap size larger than the allotted memory for the pod.

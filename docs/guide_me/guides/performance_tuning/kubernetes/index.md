@@ -6,7 +6,7 @@ For the performance guidance deployments to support Kubernetes container platfor
 
 ## Introduction
 
-DX performance testing determines container sizing and the relationships between DX components. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This guide evaluates configurations that support 1,000 (small), 10,000 (medium), and 30,000 (large) virtual users.
+DX Performance testing identifies the optimal Kubernetes configurations for different DX workload levels, from small to large setups.
 
 The key performance indicators in these tests are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of small, medium, and large DX configurations and offer insights into the system's capacity to handle varying loads. This sizing guidance demonstrates how strategic adjustments can result in significant performance improvements.
 
@@ -14,7 +14,7 @@ The sizing tests examined rendering scenarios for the Web Content Manager (WCM),
 
 ## Definition of terms
 
-Refer to the following definition of terms used throughout the performance tests and sizing guidances:
+The following terms are used throughout the performance tests and sizing guides:
 
 - Concurrent user: The number of virtual users actively sending requests to the target application simultaneously.
 
@@ -32,7 +32,7 @@ Refer to the following definition of terms used throughout the performance tests
 - Unauthenticated user:  A Portal “unauthenticated user” role.
 - OpenLDAP:  An open-source implementation of LDAP (Lightweight Directory Access Protocol). All authenticated Users are added to OpenLDAP.
 
-!!!note
+!!! note
     Deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 **Metrics**
@@ -173,7 +173,7 @@ During performance testing, aligning JVM heap settings with pod resource limits 
 * Set the pod's **requested memory** (`requests.memory`) equal to the **memory limit** (`limits.memory`).
 * This guarantees the container receives a fixed memory allocation, preventing memory overcommit and potential OOM (Out Of Memory) errors.
 
-### JVM Heap Size Alignment
+### JVM heap size alignment
 
 * The JVM heap (`-Xms` / `-Xmx`) should be **smaller than the pod memory limit**.
 * Keep headroom for:
