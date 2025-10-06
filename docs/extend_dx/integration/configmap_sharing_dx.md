@@ -1,5 +1,8 @@
 # Co-Deployment Configuration Sharing
 
+!!!attention
+    This configuration sharing capability is currently in *incubator* status and is **not ready for production use**. Features in the incubator phase are experimental, subject to change, and intended for evaluation and feedback only. For more information, see [Incubator Features Definition](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
+
 This guide explains how you can use the standardized configuration sharing feature between HCL products (such as DX, LEAP, and MX) deployed in the same Kubernetes namespace. The goal is to simplify integration, reduce manual configuration, and create a single source of truth for common settings.
 
 ## Overview
@@ -12,11 +15,6 @@ Configuration sharing allows one product (the "producer") to share its configura
 - Reduced configuration effort and operational overhead.
 - Each product only consumes relevant configuration data.
 - No single point of failure; products operate independently if shared config is missing.
-
-
-**Incubator Feature:**  
-This configuration sharing capability is currently in *incubator* status and is **not ready for production use**. Features in the incubator phase are experimental, subject to change, and intended for evaluation and feedback only. For more information, see [Incubator Features Definition](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
-
 
 ## How It Works
 
