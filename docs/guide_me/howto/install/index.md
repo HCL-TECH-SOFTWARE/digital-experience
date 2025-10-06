@@ -10,5 +10,5 @@ Learn how to run HCL Digital Experience (DX) 8.5 or 9.0 on Red Hat Linux (RHEL) 
 Learn how to run the IBM Installation Manager (IIM) as a different user than the one who installed it.
 - **[How to install IBM SDS 6.4.0.27 LDAP Client Tools on Linux](./InstallLDAPTools.md)**  
 Learn how to install the IBM SDS Client tools version 6.4.0.27 (released June 2023) on Linux.  
-- **[How to install and configure an HCL Digital Experience v9.5 Cluster](./InstallandConfigureAnDXCluster.md)**  
-Learn how to install and configure an HCL Digital Experience v9.5 Cluster.  
+- **[How to install and configure an HCL Digital Experience 9.5 Cluster](./InstallandConfigureAnDXCluster.md)**  
+Learn how to install and configure an HCL Digital Experience 9.5 Cluster.  
