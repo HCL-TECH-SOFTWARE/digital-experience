@@ -35,4 +35,7 @@ Reapplying an authoring template is required when the following kinds of changes
     
 5.  Click **OK**.
 
+!!!note
+    Changes to the default content of an element will not be propagated to existing content items. The content that was defined will remain intact.  
+
 
