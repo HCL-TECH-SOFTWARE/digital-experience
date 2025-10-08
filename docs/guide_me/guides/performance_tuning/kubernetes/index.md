@@ -185,8 +185,8 @@ This configuration ensures that the container receives a fixed memory allocation
 
 ### Equal minimum and maximum heap
 
-* Set `-Xms` = `-Xmx` (in this case, 4 GB) for performance runs.
-* This prevents dynamic heap expansion, eliminating overhead and ensuring stable, predictable performance.
+Set `-Xms` and `-Xmx` to the same value (for example, `4g`) for performance runs.  
+This setting prevents dynamic heap expansion, reduces overhead, and ensures stable, predictable performance.
 
 ### Determine Final Memory Requirements
 
