@@ -196,7 +196,7 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 * Memory requirements depend on Service Level Agreements (SLAs) and transaction rates.
 * A minimum of 3.5 GB is recommended, but higher allocations may be necessary depending on actual usage patterns.
 
-### Example of Recommended Configuration for Performance Runs (Core pod)
+### Example: recommended configuration for performance runs)
 
 | Resource type | Setting | Notes |
 |----------------|----------|-------|
