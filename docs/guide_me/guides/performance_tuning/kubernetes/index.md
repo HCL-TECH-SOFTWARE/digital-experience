@@ -188,7 +188,7 @@ This configuration ensures that the container receives a fixed memory allocation
 Set `-Xms` and `-Xmx` to the same value (for example, `4g`) for performance runs.  
 This setting prevents dynamic heap expansion, reduces overhead, and ensures stable, predictable performance.
 
-### Determine Final Memory Requirements
+### Determine final memory requirements
 
 * Conduct local testing with your specific portlets, pages, and customizations.
 * Perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
