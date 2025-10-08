@@ -209,7 +209,7 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 * Prevents performance degradation caused by memory contention.
 
 ???+ info "Related information"
-    - For details about the environments used, test results, and recommendations for each configuration, see the following pages:
+    - For details about the environments used, test results, and recommendations for each configuration, see the following topics:
         - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
         - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
         - [Sizing guidance for rendering in a large-sized Kubernetes configuration](rendering_large_config.md)
