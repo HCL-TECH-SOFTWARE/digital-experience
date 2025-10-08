@@ -1111,7 +1111,7 @@ The library includes a `localization.ts` utility that provides:
 - `setCurrentDirection(locale)`: Updates the document's `dir` attribute to match the locale's directionality.
 
 ## 3. Dynamic UI Text
-Component UI strings, such as placeholders and labels, are set dynamically. For example, a method like `this.getMessage('input.textfield.placeholder.type.to.search')` is used to fetch the correct translation for the current language. The `getMessage` method is already defined the base Lit element `dx-ac-base-element` from which we extend all atomic components.
+Component UI strings, such as placeholders and labels, are set dynamically. For example, a method like `this.getMessage('input.textfield.placeholder.type.to.search')` is used to fetch the correct translation for the current language. The `getMessage` method is already defined in the base Lit element `dx-ac-base-element` from which we extend all atomic components.
 
 ## 4. Locale Awareness via DOM
 Components automatically detect the user's language context by checking the `lang` attribute on the nearest parent DOM element. This ensures that each component displays text in the appropriate language and direction.
