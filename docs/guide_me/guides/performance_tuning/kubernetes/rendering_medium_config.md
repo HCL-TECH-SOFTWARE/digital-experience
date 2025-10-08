@@ -33,7 +33,10 @@ This section provides details for the Kubernetes cluster, JMeter agents, LDAP, a
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.xlarge master node and 4 c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. See the following node setup details:
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured.  
+In AWS/Native Kubernetes, the tests were run on EC2 instances with one `c5.xlarge` master node and four `c5.4xlarge` worker nodes.  
+Testing began with `c5.2xlarge` worker nodes and transitioned to `c5.4xlarge` nodes after analyzing the results.  
+See the following node setup details:
 
 - **c5.large master node**
 
