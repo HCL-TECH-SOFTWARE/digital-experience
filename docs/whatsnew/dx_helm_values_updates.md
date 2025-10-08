@@ -2,6 +2,15 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+### CF231
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| configuration.digitalAssetManagement.enableCollectionMove |
+| configuration.digitalAssetManagement.enableAssetMoveRename |
+
 ### CF230
 
 **Added Keys:**
