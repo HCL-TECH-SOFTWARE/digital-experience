@@ -163,7 +163,9 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance. Any changes should be closely monitored to ensure precise tracking of resource utilization.
+Several factors can affect DX performance in Kubernetes.  
+Changes to the number of running nodes, the number of pods, or the capacity of individual pods can improve HCL DX performance.  
+Monitor these changes closely to ensure accurate tracking of resource utilization.
 
 !!!note
      For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
