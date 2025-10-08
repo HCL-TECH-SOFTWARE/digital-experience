@@ -8,7 +8,10 @@ This topic describes the environments used for rendering in a medium Kubernetes 
 
 ## Methodology for testing
 
-This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets.  
+The activity used a rendering setup enabled in AWS/Native Kubernetes, where Kubernetes was installed directly on Amazon Elastic Compute Cloud (EC2) instances.  
+A combined run rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was as follows: WCM content (40%), DAM assets (30%), and DX pages and portlets (30%).  
+All systems were prepopulated before running the rendering tests.
 
 To achieve the 10,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with three worker nodes. The number of worker nodes and pods were increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
@@ -30,7 +33,10 @@ This section provides details for the Kubernetes cluster, JMeter agents, LDAP, a
 
 ### AWS/Native Kubernetes
 
-The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured. In AWS/Native Kubernetes, the tests were executed in EC2 instances with 1 c5.xlarge master node and 4 c5.4xlarge worker nodes. The test started with c5.2xlarge worker nodes and moved to c5.4xlarge worker nodes after analyzing test results. See the following node setup details:
+The Kubernetes platform ran on an Amazon EC2 instance with the DX images installed and configured.  
+In AWS/Native Kubernetes, the tests were run on EC2 instances with one `c5.xlarge` master node and four `c5.4xlarge` worker nodes.  
+Testing began with `c5.2xlarge` worker nodes and transitioned to `c5.4xlarge` nodes after analyzing the results.  
+See the following node setup details:
 
 - **c5.large master node**
 
@@ -198,7 +204,8 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance.
+Several factors can affect the performance of HCL Digital Experience (DX) in Kubernetes.  
+Adjusting the number of running nodes, the number of pods, and the capacity of individual pods can help improve DX performance.
 
 !!!note
      For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
@@ -209,9 +216,12 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 
 - To increase the throughput for the HAProxy and RingAPI containers, increase their CPU allocations. Note that increasing the number of pods does not increase throughput.
 
-- To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
+- To improve performance for the DAM and persistence-node pods, increase the CPU limits first.  
+  Then, increase the number of pod replicas. Increasing the number of pods also improves DAM throughput.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, See [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+- To support a higher number of authenticated users during testing, increase the OpenLDAP pod values.  
+The deployment of the OpenLDAP container in a production environment isn’t supported.  
+For more information, see [Configure applications – OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 

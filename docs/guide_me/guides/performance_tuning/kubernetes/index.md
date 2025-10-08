@@ -176,12 +176,14 @@ This configuration ensures that the container receives a fixed memory allocation
 
 ### JVM heap size alignment
 
-* The JVM heap (`-Xms` / `-Xmx`) should be **smaller than the pod memory limit**.
-* Keep headroom for:
+The JVM heap (`-Xms` and `-Xmx`) should be smaller than the pod’s memory limit.  
+Leave headroom for:
 
-  * Non-heap memory (Metaspace, thread stacks, direct buffers)
-  * Sidecar containers (if any)
-  * Additional JVM processes (e.g., `server1`)
+
+  - Non-heap memory (Metaspace, thread stacks, direct buffers)
+- Sidecar containers (if any)
+- Additional JVM processes (for example, `server1`)
+
 
 ### Equal minimum and maximum heap
 
@@ -190,23 +192,28 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 
 ### Determine final memory requirements
 
-* Conduct local testing with your specific portlets, pages, and customizations.
-* Perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-* Memory requirements depend on Service Level Agreements (SLAs) and transaction rates.
-* A minimum of 3.5 GB is recommended, but higher allocations may be necessary depending on actual usage patterns.
+- Conduct local testing with your specific portlets, pages, and customizations.  
+- Perform synthetic load testing using tools such as **JMeter** to simulate realistic usage scenarios.  
+- Adjust memory allocations based on service-level agreements (SLAs) and transaction rates.
 
-### Example of Recommended Configuration for Performance Runs (Core pod)
+A minimum of **3.5 GB** of heap memory is recommended. Higher allocations may be required depending on actual usage patterns.
 
-* **Pod Memory (requests & limits):** 8 GB
-* **JVM Heap (`-Xms` / `-Xmx`):** 4 GB ( maximum 6 GB if 8GB of pod memory )
-* **CPU (requests & limits):** 5.6 CPUs
-* This leaves **~4 GB of memory headroom** for non-heap usage and container overhead, ensuring stability during load testing.
+### Example: recommended configuration for performance runs)
 
-## Key Benefits
+| Resource type | Setting | Notes |
+|----------------|----------|-------|
+| **Pod memory (`requests` and `limits`)** | 8 GB | Fixed allocation |
+| **JVM heap (`-Xms` / `-Xmx`)** | 4 GB (up to 6 GB if pod memory is 8 GB) | Leaves sufficient headroom |
+| **CPU (`requests` and `limits`)** | 5.6 CPUs | Recommended for stable performance |
 
-* Avoids OOM (Out Of Memory) errors during high-load scenarios.
-* Provides stable JVM performance.
-* Prevents performance degradation caused by memory contention.
+This configuration leaves approximately **4 GB** of memory headroom for non-heap usage and container overhead, ensuring stability during load testing.
+
+
+## Key benefits
+
+- Prevents out-of-memory (OOM) errors during high-load scenarios  
+- Provides stable JVM performance  
+- Reduces performance degradation caused by memory contention
 
 ???+ info "Related information"
     - For details about the environments used, test results, and recommendations for each configuration, see the following topics:

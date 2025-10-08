@@ -122,7 +122,11 @@ The following tuning changes were applied to the DX Core:
 - Increased the LTPA token timeout from 120 minutes to 600 minutes for the rendering tests.
 
 !!!note
-      For DAM, no tuning details are mentioned in this topic except for the pod resources like CPU and memory limits for all pods related to DAM, such as ring-api, persistence-node, persistence-connection-pool, and core. Since DAM uses `Node.js`, you can monitor CPU and memory usage using Prometheus and Grafana. Based on your observations, you can modify memory requests and limits in Kubernetes accordingly.
+      For DAM, this topic doesn’t include specific tuning details other than pod resource configurations, such as CPU and memory limits for all pods related to DAM.  
+These include `ring-api`, `persistence-node`, `persistence-connection-pool`, and `core`.  
+
+Because DAM uses `Node.js`, you can monitor CPU and memory usage with Prometheus and Grafana.  
+Based on your observations, adjust the memory requests and limits in Kubernetes as needed.
 
 Modify the initial Helm chart configuration as follows. The following table outlines the pod count and limits for each pod. After applying these values, the setup showed significantly improved responsiveness. These changes allowed the system to handle 30,000 concurrent users with a substantial reduction in average response time and a minimal error rate.
 
@@ -163,7 +167,9 @@ For the Core pod, increasing the CPU limit gave a boost to performance, but this
 
 ## Conclusion
 
-There are several factors that can affect the performance of DX in Kubernetes. Changes in the number of running nodes, number of pods, and the capacity of individual pods can improve HCL DX performance. Any changes should be closely monitored to ensure precise tracking of resource utilization.
+Several factors can affect DX performance in Kubernetes.  
+Changes to the number of running nodes, the number of pods, or the capacity of individual pods can improve HCL DX performance.  
+Monitor these changes closely to ensure accurate tracking of resource utilization.
 
 !!!note
      For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
