@@ -183,7 +183,7 @@ This configuration ensures that the container receives a fixed memory allocation
   * Sidecar containers (if any)
   * Additional JVM processes (e.g., `server1`)
 
-### Equal Minimum and Maximum Heap
+### Equal minimum and maximum heap
 
 * Set `-Xms` = `-Xmx` (in this case, 4 GB) for performance runs.
 * This prevents dynamic heap expansion, eliminating overhead and ensuring stable, predictable performance.
