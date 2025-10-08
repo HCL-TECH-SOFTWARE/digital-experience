@@ -11,4 +11,4 @@ nav:
     - Web Application Bridge: wab
     - Java Connector Architecture: fea_ai.md
     - Integrate IBM MobileFirst: ibm_mobilefirst
-    - Co-Deployment Configuration Sharing: configmap_sharing_dx.md
+    - Configuration Sharing for co-deployments : configmap_sharing_dx.md
