@@ -203,7 +203,7 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 * **CPU (requests & limits):** 5.6 CPUs
 * This leaves **~4 GB of memory headroom** for non-heap usage and container overhead, ensuring stability during load testing.
 
-## Key Benefits
+## Key benefits
 
 - Prevents out-of-memory (OOM) errors during high-load scenarios  
 - Provides stable JVM performance  
