@@ -180,9 +180,10 @@ The JVM heap (`-Xms` and `-Xmx`) should be smaller than the pod’s memory limit
 Leave headroom for:
 
 
-  * Non-heap memory (Metaspace, thread stacks, direct buffers)
-  * Sidecar containers (if any)
-  * Additional JVM processes (e.g., `server1`)
+  - Non-heap memory (Metaspace, thread stacks, direct buffers)
+- Sidecar containers (if any)
+- Additional JVM processes (for example, `server1`)
+
 
 ### Equal minimum and maximum heap
 
