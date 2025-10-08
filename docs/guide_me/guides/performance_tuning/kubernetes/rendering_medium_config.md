@@ -212,7 +212,9 @@ There are several factors that can affect the performance of DX in Kubernetes. C
 - To improve performance for the DAM and persistence-node pods, increase the CPU limits first.  
   Then, increase the number of pod replicas. Increasing the number of pods also improves DAM throughput.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, See [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+- To support a higher number of authenticated users during testing, increase the OpenLDAP pod values.  
+The deployment of the OpenLDAP container in a production environment isn’t supported.  
+For more information, see [Configure applications – OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
