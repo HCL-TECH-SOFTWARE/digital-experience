@@ -205,9 +205,9 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 
 ## Key Benefits
 
-* Avoids OOM (Out Of Memory) errors during high-load scenarios.
-* Provides stable JVM performance.
-* Prevents performance degradation caused by memory contention.
+- Prevents out-of-memory (OOM) errors during high-load scenarios  
+- Provides stable JVM performance  
+- Reduces performance degradation caused by memory contention
 
 ???+ info "Related information"
     - For details about the environments used, test results, and recommendations for each configuration, see the following pages:
