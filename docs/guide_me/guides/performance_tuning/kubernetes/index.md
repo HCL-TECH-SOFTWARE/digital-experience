@@ -191,10 +191,11 @@ This setting prevents dynamic heap expansion, reduces overhead, and ensures stab
 
 ### Determine final memory requirements
 
-* Conduct local testing with your specific portlets, pages, and customizations.
-* Perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-* Memory requirements depend on Service Level Agreements (SLAs) and transaction rates.
-* A minimum of 3.5 GB is recommended, but higher allocations may be necessary depending on actual usage patterns.
+- Conduct local testing with your specific portlets, pages, and customizations.  
+- Perform synthetic load testing using tools such as **JMeter** to simulate realistic usage scenarios.  
+- Adjust memory allocations based on service-level agreements (SLAs) and transaction rates.
+
+A minimum of **3.5 GB** of heap memory is recommended. Higher allocations may be required depending on actual usage patterns.
 
 ### Example: recommended configuration for performance runs)
 
