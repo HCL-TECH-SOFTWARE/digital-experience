@@ -176,8 +176,9 @@ This configuration ensures that the container receives a fixed memory allocation
 
 ### JVM heap size alignment
 
-* The JVM heap (`-Xms` / `-Xmx`) should be **smaller than the pod memory limit**.
-* Keep headroom for:
+The JVM heap (`-Xms` and `-Xmx`) should be smaller than the pod’s memory limit.  
+Leave headroom for:
+
 
   * Non-heap memory (Metaspace, thread stacks, direct buffers)
   * Sidecar containers (if any)
