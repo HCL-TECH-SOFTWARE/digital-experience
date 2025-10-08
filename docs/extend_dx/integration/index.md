@@ -22,6 +22,9 @@ You can use the Digital Data Connector (DDC) for HCL DX framework to integrate d
 A portal provides access to content, data, and services that are located throughout the enterprise. These services include predefined connectors and portlets, and tools for creating additional connectors and portlets.
 - **[IBM MobileFirst](ibm_mobilefirst/index.md)**  
 Integrate HCL DX with MobileFirst to provide multi-channel support to your web communities.
+- **[Configuration Sharing for co-deployments](./configmap_sharing_dx.md)**  
+Use the standardized Configuration Sharing feature between HCL products (such as DX, Leap, and MX) deployed within the same Kubernetes namespace.
+
 <!--
 **Parent topic:**[Product capabilities](../overview/intr_ovr.md) -->
 
