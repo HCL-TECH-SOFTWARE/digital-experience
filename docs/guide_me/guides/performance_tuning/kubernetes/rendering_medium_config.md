@@ -8,7 +8,10 @@ This topic describes the environments used for rendering in a medium Kubernetes 
 
 ## Methodology for testing
 
-This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Cloud Compute (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
+This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets.  
+The activity used a rendering setup enabled in AWS/Native Kubernetes, where Kubernetes was installed directly on Amazon Elastic Compute Cloud (EC2) instances.  
+A combined run rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was as follows: WCM content (40%), DAM assets (30%), and DX pages and portlets (30%).  
+All systems were prepopulated before running the rendering tests.
 
 To achieve the 10,000 concurrent users mark, an initial set of runs was done with a lower number of users on a multiple node setup with varying numbers of worker nodes. The tests started with three worker nodes. The number of worker nodes and pods were increased as needed to achieve the desired load with an acceptable error rate (< 0.01%). After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
