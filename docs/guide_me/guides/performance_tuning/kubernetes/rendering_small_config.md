@@ -159,25 +159,6 @@ This performance tuning guide aims to understand how the ratios of key pod limit
 
 - To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
-### Recommended heap size configuration
-
-To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
-
-!!!note
-     Do not set your JVM heap size larger than the allotted memory for the pod.
-
-- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
-      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
-      - This eliminates the overhead of heap expansion and improves performance consistency.
-
-- Ensure the Kubernetes pod resource limits match the JVM heap settings
-      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
-      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
-
-- Determine the final memory requirements based on load testing
-      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
-      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
 
 ## Guidance for rendering with the upper limit in a single-node configuration
 
@@ -335,19 +316,7 @@ To ensure optimal performance and stability of HCL DX on Kubernetes, it is essen
 
 !!!note
      Do not set your JVM heap size larger than the allotted memory for the pod.
-
-- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
-      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
-      - This eliminates the overhead of heap expansion and improves performance consistency.
-
-- Ensure the Kubernetes pod resource limits match the JVM heap settings
-      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
-      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
-
-- Determine the final memory requirements based on load testing
-      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
-      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
+     Please refer guidelines here [JVM Heap and Pod Resource Guidelines](./index.md#jvm-heap-and-pod-resource-guidelines-performance-runs)
 
 ???+ info "Related information"
     - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
