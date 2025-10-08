@@ -168,7 +168,7 @@ These performance tests are primarily focused on DAM API. Client-side rendering,
 
 During performance testing, align JVM heap settings with pod resource limits to ensure consistent performance and prevent unexpected memory issues.
 
-### Memory Requests and Limits
+### Memory requests and limits
 
 Set the pod’s `requests.memory` value equal to its `limits.memory` value.  
 This configuration ensures that the container receives a fixed memory allocation and prevents memory overcommit or out-of-memory (OOM) errors.
