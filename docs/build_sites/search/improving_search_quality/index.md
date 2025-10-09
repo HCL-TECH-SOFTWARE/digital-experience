@@ -4,7 +4,7 @@
 
 This topic provides information on how you can improve search quality in HCL Digital Experience and Web Content Manager Search.
 
-The quality of search is based primarily on the relevance scoring methods within HCL Digital Experience and the Web Content Manager Search component. The search applies standard relevance calculation provided by the underlying open source [Lucene search engine](http://http//lucene.apache.org). 
+The quality of search is based primarily on the relevance scoring methods within HCL Digital Experience and the Web Content Manager Search component. The search applies standard relevance calculation provided by the underlying open source [Lucene search engine](https://lucene.apache.org){target="_blank"}. 
 
 In general, terms are based on standard scoring **“tf x idf”** (term frequency times inverted document frequency). The structure of information provided in a document is not considered. For example, whether a keyword is found in the 'title' or any other structural element of the document. When a keyword appears in the title, it is assumed that this keyword is significant for this document as opposed to that same keyword appearing only in the document's regular body text. This section describes what search quality tuning options are available to improve the search quality.
  

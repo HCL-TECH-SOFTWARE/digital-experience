@@ -24,7 +24,6 @@ The following features and updates are available to customers installing HCL Dig
 - New sizing guidance for rendering in a small configuration
 - New topic for configuring IMDS hop limit in Amazon EKS v1.30
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of customized OpenLDAP container in a later CF
 - Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
@@ -102,12 +101,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for configuring a content source to gather documents from a single pod
 
 === "Containers"
-    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#content-source-from-a-single-core-pod) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
+    The topic [Configure Remote Search](../../deployment/manage/container_configuration/kubernetes_remote_search.md#new-search-collections) is updated to include information on how to configure a content source to gather documents from a single pod. You can use the URL to index both Portal and WCM content sources.
 
 ### New sizing guidance for rendering in a small configuration
 
 === "Containers"
-    Results of DX sizing tests for rendering in a small Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/performance_tuning/kubernetes/rendering_small_config.md).
+    Results of DX sizing tests for rendering in a small Kubernetes configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes small configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_small_config.md).
 
 ### New topic for configuring IMDS hop limit in Amazon EKS v1.30
 
@@ -118,13 +117,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-    
-### Notice of deprecation of customized OpenLDAP container in a later CF
-
-=== "Containers"
-    Note that in a later CF, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
-
-    This statement is not a guarantee of future releases or their features.
     
 ### Removal of automated Pod restart on ConfigMap updates
 

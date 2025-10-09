@@ -3,3 +3,6 @@ nav:
     - User elements: user_elements.md
     - Styling options: styling_options.md
     - Edit presentation template: edit_presentation_template.md
+    - Canvas settings: canvas_settings.md
+    - Default and Override stylesheet: default_and_override_stylesheet.md
+    - Handle multiple stylesheets: handle_multiple_stylesheets.md

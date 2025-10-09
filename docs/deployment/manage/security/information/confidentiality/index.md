@@ -2,7 +2,7 @@
 
 Data confidentiality is about protecting data against unintentional, unlawful, or unauthorized access, disclosure, or theft.
 
--   **[Configuring SSL](../confidentiality/configuring_ssl)**  
+-   **[Configuring SSL](../confidentiality/configuring_ssl/index.md)**  
 Authentication is a basic security concept that ensures  users can prove their identity.
 -   **[Securing LTPA keys on a production environment](../confidentiality/ltpa.md)**  
 The Lightweight Third Party Authentication (LTPA) key holds cryptographic keys that secure the user authentication session and cookies. 

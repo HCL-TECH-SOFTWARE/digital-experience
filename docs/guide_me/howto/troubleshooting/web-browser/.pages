@@ -1,0 +1,5 @@
+site_name: Troubleshooting web browser problems
+
+nav:
+- index.md
+- collecting_fiddler_har.md

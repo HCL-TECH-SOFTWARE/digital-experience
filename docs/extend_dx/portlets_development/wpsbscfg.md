@@ -326,5 +326,5 @@ For an introduction and a demo on developing Java portlets, go to [Java Portlet 
     - [Standard portlet API](../portlets_development/standard_portlet_api/index.md)
     - [Portlet Development Reference](../portlets_development/portlet_dev_ref/index.md)
     - [About the XML configuration interface](../../deployment/manage/portal_admin_tools/xml_config_interface/adxmlabt.md)
-    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/tutorials/Portletdevelopmentutilitiesandpagecreationsamples.md)
+    - [Portlet development utilities and page creation samples on HCL GitHub](../../guide_me/howto/development/Portletdevelopmentutilitiesandpagecreationsamples.md)
 

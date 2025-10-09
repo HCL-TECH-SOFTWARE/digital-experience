@@ -6,7 +6,7 @@ Install Computer Associates eTrust SiteMinder Trust Association Interceptor \(TA
 
 Complete the following steps to configure eTrust SiteMinder for authentication and authorization:
 
-1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/properties directory.
+1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/properties directory.
 
     **Clustered environments:** Complete this step on all nodes.
 
@@ -19,10 +19,10 @@ Complete the following steps to configure eTrust SiteMinder for authentication a
 
 3.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
-    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
-    -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
-    -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine\\properties
-    -   z/OS®: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
+    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
+    -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
+    -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine\\properties
+    -   z/OS®: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine/properties
 
 4.  Update the Namespace management parameters in the wkplc\_comp.properties file
 
@@ -71,10 +71,10 @@ Complete the following steps to configure eTrust SiteMinder for authentication a
 
 7.  Run the following task to configure eTrust SiteMinder for authentication and authorization:
 
-    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
-    -   IBM i: ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
-    -   Windows: ConfigEngine.bat enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine directory
-    -   z/OS:./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
+    -   AIX HP-UXLinux Solaris: ./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
+    -   IBM i: ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
+    -   Windows: ConfigEngine.bat enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine directory
+    -   z/OS:./ConfigEngine.sh enable-sm-all from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory
 
     **Clustered environments:** Complete this step on all nodes.
 

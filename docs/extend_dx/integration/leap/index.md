@@ -13,11 +13,12 @@ HCL Leap builds dynamic forms and applications with a web-based interface. From 
 
 Follow the installation and configuration steps to integrate HCL Digital Experience to work with HCL Leap.
 
--   **[Install HCL Digital Experience and HCL Leap using Helm](../leap/installation/)**  
-
--   **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration/)**  
-
--   **[Test the integration using example integrations](../leap/example/)**  
+- **[Install HCL Digital Experience and HCL Leap using Helm](../leap/installation.md)**  
+Learn how to Install HCL DX and HCL Leap using Helm. Both products can be installed in the same Kubernetes cluster using the same Kubernetes namespace.
+- **[HCL Leap configuration for the integration with HCL Digital Experience](../leap/configuration.md)**  
+Learn how to configure the integration of HCL Leap with the existing HCL DX environment.
+- **[Test the integration using example integrations](../leap/example.md)**  
+Learn about the possibilities offered by the integration of HCL Leap and HCL DX.
 
 ## HCLSoftware U learning materials
 

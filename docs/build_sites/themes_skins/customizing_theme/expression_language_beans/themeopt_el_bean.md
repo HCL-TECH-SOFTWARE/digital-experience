@@ -98,17 +98,13 @@ You can access the PortalBean \(wp\) with the following items. Append the follow
 
     The module list bean accesses modules that are part of the modularized theme architecture. You can query individual modules and their attributes and identify of the currently used modules within the scope of the currently selected and rendered page and theme.
 
-    -   **[Module](../expression_language_beans/module_list/themeopt_el_bean_module.md)**
+    -   **[Module](./module_list/current_module_list/index.md)**
 
         Represents one individual module.
 
     -   **[CurrentModuleList](../expression_language_beans/module_list/current_module_list/themeopt_el_bean_mod_current_list.md)**
 
         The current module list always represents the list of modules within the scope of the current request, which is the currently selected page and theme. This module iterates through all modules, locate individual modules and query their capabilities. This is especially useful for portlet developers to check whether certain capabilities are available on the page or not.
-
-        -   **[Module](../expression_language_beans/module_list/themeopt_el_bean_module.md)**
-
-            Represents one individual module.
 
         -   **[ModuleCapabilitiesList](../expression_language_beans/module_list/current_module_list/module_capabilities_list/index.md)**
 

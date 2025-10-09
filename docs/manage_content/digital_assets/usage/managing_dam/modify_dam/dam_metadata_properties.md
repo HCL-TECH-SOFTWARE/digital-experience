@@ -1,4 +1,4 @@
-# Edit the metadata of a media asset
+# Editing the metadata of a media asset
 
 This section shows how to edit the embedded metadata of a media asset in HCL Digital Asset Management \(DAM\).
 

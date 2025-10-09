@@ -147,11 +147,15 @@ The current value is TRANSACTION_REPEATABLE_READ.
 
 ```
 
+## HCLSoftware U learning materials
+
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
+
 ???+ info "Related information"  
     -   [Starting and stopping servers, deployment managers, and node agents](../../../../deployment/manage/stopstart.md)
     -   [Setting service configuration properties](../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     -   [Portal service configuration](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/index.md)
     -   [Localizer Service](../../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_localizer.md)
-    -   [Directory structure](../../../../guide_me/wpsdirstr.md)
+    -   [Directory structure](../../../../guide_me/glossary/wpsdirstr.md)
     -   [WebSphere Application Server 8.5.:Log and trace settings](https://www.ibm.com/docs/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/utrb_logtrace.html)
 

@@ -23,7 +23,6 @@ The following features and updates are available to customers installing HCL Dig
 - New sizing guidance for rendering in a medium configuration
 - Documentation for using Logstash to push pod logs to OpenSearch
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
-- Notice of deprecation of customized OpenLDAP container in a later CF
 - Removal of automated Pod restart on ConfigMap updates
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959) for the list of software fixes, including Container Update releases.
@@ -69,10 +68,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New guidance for cleaning up WCM items
 
 === "Containers"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../manage_content/wcm_configuration/cleanup_wcm.md) for more information.
 
 === "On-Premises"
-    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../guide_me/cleanup_wcm.md) for more information.
+    The amount of Web Content Manager (WCM) items can accumulate over time. To maintain good system performance, it is recommended to clean up old items that are no longer needed. See the new topic [Cleaning up WCM items](../../manage_content/wcm_configuration/cleanup_wcm.md) for more information.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -109,24 +108,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New sizing guidance for rendering in a medium configuration
 
 === "Containers"    
-    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/performance_tuning/kubernetes/rendering_medium_config.md).
+    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_medium_config.md).
 
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/guides/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-    
-### Notice of deprecation of customized OpenLDAP container in a later CF
-
-=== "Containers"
-    Note that in a later CF, HCL DX will no longer build and ship its custom OpenLDAP container and will instead use an open source container. By using the robust and well-maintained Bitnami&copy; OpenLDAP image, HCL DX can focus on delivering enhanced features and support without the overhead of maintaining its customized container. This shift is to provide you with more reliable and up-to-date solutions for your test environments. The new alternative, Bitnami&copy;, will be provided but will not ship with the release. Sample LDIF (LDAP data interchange format) files for your OpenLDAP configuration will also be available.
-
-    This statement is not a guarantee of future releases or their features.
     
 ### Removal of automated Pod restart on ConfigMap updates
 
