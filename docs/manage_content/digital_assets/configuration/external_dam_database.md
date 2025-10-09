@@ -11,13 +11,13 @@ Before configuring the external database, ensure the following:
 - **Database Setup**: 
   - Create the `dxmediadb` and `dx_user` databases.
   - Create `<damUser>` and `<dbUser>` roles with their respective passwords.
-  - The `dx_user` role must have the same password as the role name.
   - Grant all privileges on the `dxmediadb` database to `<dbUser>`.
   - Assign the `<damUser>` role to `<dbUser>` with the admin option.
   - Set `<damUser>` as the owner of the `dxmediadb` database.
 
     !!! note
         Obtain the credentials for `damUser` and `dbUser` from the `security.digitalAssetManagement` section in the custom values YAML file.
+- **SSL**: Pem file is used for SSL. Create a generic secret with name as `custom-db-ssl-cert` in helm chart for the DAM container to access the pem while connecting to the database.
 
 ## Configuring DAM to Use the External Database
 
@@ -30,8 +30,9 @@ After ensuring the database is set up, configure DAM to connect to the external 
 
 ### 2. **Update the Custom Values YAML File**
    - Open the custom values YAML file for editing.
-   - Set the replica count for `persistence-connection-pool` and `persistence-node` to 0.
+   - Set the `persistence` under `applications` to false.
    - Modify the database hostname in the `configuration.persistence.host` field to point to the external database.
+   - Modify the ssl to true
 
 ### 3. **Run Helm Upgrade**
    After making the necessary changes, upgrade the Helm release with the following command:
@@ -64,13 +65,12 @@ You can create a PostgreSQL instance in various ways, including through cloud pr
     Inside the container, run the following SQL commands to create the `dxmediadb`, `dx_user` databases, and the required roles:
     ```sql
     CREATE DATABASE dxmediadb;
-    CREATE DATABASE dx_user;
-    CREATE ROLE <damUser> WITH LOGIN PASSWORD '<password>';
-    CREATE ROLE <dbUser> WITH CREATEROLE LOGIN PASSWORD '<password>';
-    CREATE ROLE dx_user WITH CREATEROLE LOGIN PASSWORD 'dx_user';
-    GRANT ALL PRIVILEGES ON DATABASE dxmediadb TO <dbUser>;
-    GRANT <damUser> TO <dbUser> WITH ADMIN OPTION;
-    ALTER DATABASE dxmediadb OWNER TO <damUser>;
+    CREATE ROLE <dxuser> with CREATEROLE login PASSWORD '<password>';
+    CREATE USER <damuser> WITH LOGIN PASSWORD '<password>';
+    ALTER DATABASE dxmediadb OWNER TO <damuser>;
+    GRANT CREATE ON DATABASE dxmediadb TO <dxuser>;
+    GRANT <damuser> TO <dxuser> WITH ADMIN OPTION;
+    CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
     ```
 
 4. **Exit the Container**:
