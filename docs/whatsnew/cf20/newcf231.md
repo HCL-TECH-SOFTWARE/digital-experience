@@ -75,6 +75,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - iFix PH67137
     - iFix PH67817
 
+### External database support for Digital Asset Management
+
+=== "Containers"
+    Configuring External database for Digital Asset Management is available under [External database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
+
 ## Notices of deprecation
 
 ### CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
