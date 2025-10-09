@@ -1,5 +1,5 @@
 ---
-title: Rendering - Medium-Sized Configuration
+title: Rendering - Medium Configuration
 ---
 
 # Sizing guidance for rendering in a medium Kubernetes configuration

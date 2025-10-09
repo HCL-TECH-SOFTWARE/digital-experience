@@ -6,7 +6,7 @@ For the performance guidance deployments to support Kubernetes container platfor
 
 ## Introduction
 
-DX Performance testing identifies the optimal Kubernetes configurations for different DX workload levels, from small to large setups.
+DX performance testing identifies the optimal Kubernetes configurations for different DX workload levels, from small to large setups.
 
 The key performance indicators in these tests are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of small, medium, and large DX configurations and offer insights into the system's capacity to handle varying loads. This sizing guidance demonstrates how strategic adjustments can result in significant performance improvements.
 
@@ -164,14 +164,13 @@ After completing the authoring steps, the anonymous and authenticated portal use
 
 These performance tests are primarily focused on DAM API. Client-side rendering, such as browser-based rendering, is excluded from the tests.
 
-## JVM heap and pod resource guidelines (performance runs)
+# JVM heap and pod resource guidelines for performance runs
 
 During performance testing, align JVM heap settings with pod resource limits to ensure consistent performance and prevent unexpected memory issues.
 
 ### Memory requests and limits
 
-Set the pod’s `requests.memory` value equal to its `limits.memory` value.  
-This configuration ensures that the container receives a fixed memory allocation and prevents memory overcommit or out-of-memory (OOM) errors.
+Set the pod’s `requests.memory` value equal to its `limits.memory` value. This configuration ensures that the container receives a fixed memory allocation and prevents memory overcommit or out-of-memory (OOM) errors.
 
 
 ### JVM heap size alignment
@@ -187,36 +186,34 @@ Leave headroom for:
 
 ### Equal minimum and maximum heap
 
-Set `-Xms` and `-Xmx` to the same value (for example, `4g`) for performance runs.  
-This setting prevents dynamic heap expansion, reduces overhead, and ensures stable, predictable performance.
+### JVM heap size alignment
+- Ensure the JVM heap (`-Xms` and `-Xmx`) is smaller than the pod’s memory limit.  
+- Leave headroom for:
+      - Non-heap memory (Metaspace, thread stacks, direct buffers)
+      - Sidecar containers (if any)
+      - Additional JVM processes (for example, `server1`)
+- Set `-Xms` and `-Xmx` to the same value (for example, 4GB) for performance runs.  This setting prevents dynamic heap expansion, reduces overhead, and ensures stable, predictable performance.
 
 ### Determine final memory requirements
 
 - Conduct local testing with your specific portlets, pages, and customizations.  
-- Perform synthetic load testing using tools such as **JMeter** to simulate realistic usage scenarios.  
+- Perform synthetic load testing using tools such as JMeter to simulate realistic usage scenarios.  
 - Adjust memory allocations based on service-level agreements (SLAs) and transaction rates.
 
-A minimum of **3.5 GB** of heap memory is recommended. Higher allocations may be required depending on actual usage patterns.
+A minimum of 3.5 GB of heap memory is recommended. Higher allocations may be required depending on actual usage patterns.
 
-### Example: recommended configuration for performance runs)
+### Recommended configuration for performance runs
 
 | Resource type | Setting | Notes |
 |----------------|----------|-------|
-| **Pod memory (`requests` and `limits`)** | 8 GB | Fixed allocation |
-| **JVM heap (`-Xms` / `-Xmx`)** | 4 GB (up to 6 GB if pod memory is 8 GB) | Leaves sufficient headroom |
-| **CPU (`requests` and `limits`)** | 5.6 CPUs | Recommended for stable performance |
+| Pod memory (`requests` and `limits`) | 8 GB | Fixed allocation |
+| JVM heap (`-Xms` / `-Xmx`) | 4 GB (up to 6 GB if pod memory is 8 GB) | Leaves sufficient headroom |
+| CPU (`requests` and `limits`) | 5.6 CPUs | Recommended for stable performance |
 
-This configuration leaves approximately **4 GB** of memory headroom for non-heap usage and container overhead, ensuring stability during load testing.
-
-
-## Key benefits
-
-- Prevents out-of-memory (OOM) errors during high-load scenarios  
-- Provides stable JVM performance  
-- Reduces performance degradation caused by memory contention
+This configuration leaves approximately 4 GB of memory headroom for non-heap usage and container overhead, ensuring stability during load testing.
 
 ???+ info "Related information"
     - For details about the environments used, test results, and recommendations for each configuration, see the following topics:
-        - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
-        - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
-        - [Sizing guidance for rendering in a large-sized Kubernetes configuration](rendering_large_config.md)
+        - [Sizing guidance for rendering in a small Kubernetes configuration](rendering_small_config.md)
+        - [Sizing guidance for rendering in a medium Kubernetes configuration](rendering_medium_config.md)
+        - [Sizing guidance for rendering in a large Kubernetes configuration](rendering_large_config.md)

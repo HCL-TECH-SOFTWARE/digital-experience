@@ -1,5 +1,5 @@
 ---
-title: Rendering - Large-Sized Configuration
+title: Rendering - Large Configuration
 ---
 
 # Sizing guidance for rendering in a large Kubernetes configuration
@@ -10,7 +10,7 @@ This topic provides the details of the environments used for rendering in a larg
 
 This sizing activity rendered scenarios for the Web Content Manager (WCM), Digital Asset Management (DAM), and HCL Digital Experience (DX) pages and portlets. This activity used a rendering setup enabled in AWS/Native-Kubernetes, where Kubernetes is installed directly in Amazon Elastic Compute Cloud (EC2) instances. A combination run was performed that rendered WCM content, DAM assets, and DX pages and portlets. The load distribution was WCM content (40%), DAM assets (30%), and DX pages and portlets (30%). All systems were pre-populated before performing the rendering tests.
 
-To reach 30,000 concurrent users, testing started with a smaller load on a multinode setup. The number of worker nodes and pods was scaled as needed to meet the load with an error rate below 0.01%. After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
+To reach 30,000 concurrent users, testing started with a smaller load on a multi-node setup. The number of worker nodes and pods was scaled as needed to meet the load with an error rate below 0.01%. After establishing the number of nodes, further steps were taken to optimize the limits on the available resources for each pod, as well as the ratios of key pods to each other.
 
 The following table contains the rendering scenario details for a large configuration. 
 
@@ -198,8 +198,8 @@ To ensure optimal performance and stability of HCL DX on Kubernetes, it is essen
 
 !!!note
      Do not set your JVM heap size larger than the allotted memory for the pod.
-     Please refer guidelines here [JVM Heap and Pod Resource Guidelines](./index.md#jvm-heap-and-pod-resource-guidelines-performance-runs)
+     See [JVM Heap and Pod Resource Guidelines](./index.md#jvm-heap-and-pod-resource-guidelines-performance-runs)
 
 
 ???+ info "Related information"
-    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) 
