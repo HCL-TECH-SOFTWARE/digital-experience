@@ -54,7 +54,7 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **id** | String | Indicates the unique identifier for the button element. | Auto-generated (UUID) |
     | **disabled** | Boolean | Indicates whether the button is disabled. | `false` |
     | **imgurl** | String | The URL of the image to be displayed as the icon of a button. | undefined |
-    | **buttontext** | String | Displays text on a button.| undefined |
+    | **buttontext** | String | Displays text on a button. | undefined |
     | **endicon** | Boolean | Determines whether the image is displayed as an end icon instead of a start icon. | `false` |
     | **focused** | Boolean | Indicates whether the button currently has focus. This property is managed internally. | `false` |
     | **variant** | String | Specifies the button's visual style. Possible values are `contained`, `text`, and `outlined`. | 'contained' |
@@ -65,7 +65,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-button` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **button** | Represents the main button element. It is the default part for the button and is styled based on the button's state (such as `disabled` and `focused`) and `variant` (such as `contained`, `outlined`, or `text`). |
     | **button-disabled** | Represents the button in a disabled state when the `disabled` property is set to `true`. |
@@ -109,7 +109,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-input-select` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **div** | Represents the outermost container `<div>` of the `dx-input-select` component. This part can be styled to control the overall layout and appearance of the component. |
     | **label** | Represents the `<label>` element of the `dx-input-select` component. This part can be styled to control the appearance of the label text displayed above or beside the dropdown. |
@@ -125,7 +125,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attribute is responsible for determining the appropriate CSS for the `dx-list` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **unordered-list** | Represents the `<ul>` element rendered by the `dx-list` component. It is the main container for the list items. |
 
@@ -138,7 +138,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-switch` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **switch-label** | Represents the label element of the switch component. It is the container for the input and slider elements. |
     | **switch-label-disabled** | Represents the label element of the switch component if the `isDisabled` property is set to `true`. |
@@ -166,7 +166,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-anchor` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **result-title** | Applies specific styles or behaviors for result titles in the UI. Used when the anchor tag represents a result title. |
     | **pagination-index-disabled** | Applies styles or behaviors indicating that the pagination link is not clickable. Used when the anchor tag is part of a pagination component and the `disabled` property is set to `true`. |
@@ -186,7 +186,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-chip` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **chip-div** | Represents the main container `<div>` for the `dx-chip` component. It serves as the root element for styling and interaction. |
     | **chip-name** | Represents the `<span>` element that displays the name of the chip. It is used to style the text content of the chip's name. |
@@ -202,7 +202,7 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **label** | String, undefined | Specifies the label displayed above the textfield. | undefined |
     | **placeholder** | String | Specifies the placeholder text displayed inside the textfield. | '' |
     | **disabled** | Boolean | Indicates whether the textfield is disabled. | `false` |
-    | **clearIconUrl**| String | Specifies the URL or name of the icon used to clear the input. | '' |
+    | **clearIconUrl** | String | Specifies the URL or name of the icon used to clear the input. | '' |
     | **actionIconUrl** | String | Specifies the URL or name of the icon used for an action (for example, search). | undefined |
     | **field** | DxSearchInputFieldType, String | Specifies a field identifier for the input that is useful in custom events or associating it with specific data. You can use the `DxSearchInputFieldType` string `queryString` or provide your own field name. | '' |
     | **hassearchedbefore** | Boolean | Indicates if a search has been performed before. | `false` |
@@ -210,7 +210,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-input-textfield` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **div** | Represents the outermost container of the textfield component. |
     | **label** | Represents the label element for the input field. It is used when the `label` property is provided. |
@@ -233,7 +233,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-input-textfield` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **ITEM_TYPE_AVATAR_EXPORT_PARTS** | Represents the part names exported from the internal dx-avatar component, allowing you to style or access sub-elements of the avatar from outside the shadow DOM. Typical parts may include icon, image, background, or label. |
 
@@ -241,7 +241,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-search-center-layout` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **header-container** | Represents the container for the header section of the layout. |
     | **header** | Represents the header content itself, which is populated through the `dx-header` slot. |
@@ -258,21 +258,21 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**disabled** | Boolean | Determines if the button is disabled. | `false` |
-    |**outlined** | Boolean | Indicates whether the button should be rendered with an outlined style. | `false` |
-    |**selectedValue** | String | Specifies the currently selected value of the toggle button. | '' |
-    |**iconUrls** | String\[] | Array of URLs for the icons displayed on the buttons. | [] |
-    |**values** | String\[] | Array of values corresponding to each button's selection state. | [] |
-    |**singleButton** | Boolean | Renders a single toggle button if set to `true`. Otherwise, it renders two buttons. | `false` |
-    |**toggleOn** | Boolean | Indicates if the single toggle button is in the "on" state. | `false` |
-    |**showBadge** | Boolean | Displays a badge on the single toggle button if set to `true`. | `false` |
-    |**singleButtonTitle** | String | Specifies the title attribute for the single toggle button. | '' |
-    |**singleButtonAria** | String | Specifies the Aria-label for the single toggle button. | '' |
-    |**icon** | TemplateResult | Specifies the icon template for the single toggle button. | undefined |
+    | **disabled** | Boolean | Determines if the button is disabled. | `false` |
+    | **outlined** | Boolean | Indicates whether the button should be rendered with an outlined style. | `false` |
+    | **selectedValue** | String | Specifies the currently selected value of the toggle button. | '' |
+    | **iconUrls** | String\[] | Array of URLs for the icons displayed on the buttons. | [] |
+    | **values** | String\[] | Array of values corresponding to each button's selection state. | [] |
+    | **singleButton** | Boolean | Renders a single toggle button if set to `true`. Otherwise, it renders two buttons. | `false` |
+    | **toggleOn** | Boolean | Indicates if the single toggle button is in the "on" state. | `false` |
+    | **showBadge** | Boolean | Displays a badge on the single toggle button if set to `true`. | `false` |
+    | **singleButtonTitle** | String | Specifies the title attribute for the single toggle button. | '' |
+    | **singleButtonAria** | String | Specifies the ARIA label for the single toggle button. | '' |
+    | **icon** | TemplateResult | Specifies the icon template for the single toggle button. | undefined |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-toggle-button` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **toggle-button-div** | Represents the outer container `<div>` of the toggle button component. |
     | **toggle-button-div-outlined** | Represents the outer container `<div>` of the toggle button component if the `outlined` property is set to `true`. |
@@ -295,7 +295,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-snackbar` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **snackbar-container** | Represents the main container for the snackbar. |
     | **snackbar-icon-container** | Represents the container that holds the icon or progress indicator. |
@@ -309,26 +309,26 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**show** | Boolean | Controls the visibility of the tooltip. | `false` |
-    |**tooltiptext** | String or undefined | Specifies the text content to display inside the tooltip. | `undefined` |
-    |**tooltipSize** | String | Specifies the size variant of the tooltip (for example, small or large). | `tooltip-small` |
-    |**tooltipType** | String | Specifies the type of tooltip (for example, single-line or multi-line). | `tooltip-single-line` |
-    |**placement** | String| Specifies the preferred placement of the tooltip (for example, top, bottom, left, or right). | `tooltip-bottom` |
-    |**gap** | Number | Specifies the gap in pixels between the tooltip and the target element. | 4 |
-    |**multiLineMaxWidth** | Number | Specifies the maximum width for multi-line tooltips in pixels. | 300 |
-    |**viewportPadding** | Number | Specifies the padding from the viewport edge in pixels. | 4 |
-    |**minimumWidth** | Number | Specifies the minimum width of the tooltip in pixels. | 0 |
-    |**isRTL** | Boolean | Enables RTL layout support. | `false` |
-    |**componentId** | String | Specifies the unique identifier for the tooltip instance. | Auto-generated (UUID) |
-    |**effectivePlacement** | String | Specifies the actual placement used after viewport or target checks. | undefined |
-    |**effectiveType** | String | Specifies the actual type (single-line or multi-line) after sizing logic. | undefined |
-    |**softMargin** | Number | Specifies the margin used for placement calculations. | 8 |
-    |**isTargetVisible** | Boolean | Determines whether the target element is visible in the viewport. | `true` |
-    |**rafId** | Number or null | Specifies the `RequestAnimationFrame` ID for position updates. | null |
+    | **show** | Boolean | Controls the visibility of the tooltip. | `false` |
+    | **tooltiptext** | String or undefined | Specifies the text content to display inside the tooltip. | `undefined` |
+    | **tooltipSize** | String | Specifies the size variant of the tooltip (for example, small or large). | `tooltip-small` |
+    | **tooltipType** | String | Specifies the type of tooltip (for example, single-line or multi-line). | `tooltip-single-line` |
+    | **placement** | String| Specifies the preferred placement of the tooltip (for example, top, bottom, left, or right). | `tooltip-bottom` |
+    | **gap** | Number | Specifies the gap in pixels between the tooltip and the target element. | 4 |
+    | **multiLineMaxWidth** | Number | Specifies the maximum width for multi-line tooltips in pixels. | 300 |
+    | **viewportPadding** | Number | Specifies the padding from the viewport edge in pixels. | 4 |
+    | **minimumWidth** | Number | Specifies the minimum width of the tooltip in pixels. | 0 |
+    | **isRTL** | Boolean | Enables RTL layout support. | `false` |
+    | **componentId** | String | Specifies the unique identifier for the tooltip instance. | Auto-generated (UUID) |
+    | **effectivePlacement** | String | Specifies the actual placement used after viewport or target checks. | undefined |
+    | **effectiveType** | String | Specifies the actual type (single-line or multi-line) after sizing logic. | undefined |
+    | **softMargin** | Number | Specifies the margin used for placement calculations. | 8 |
+    | **isTargetVisible** | Boolean | Determines whether the target element is visible in the viewport. | `true` |
+    | **rafId** | Number or null | Specifies the `RequestAnimationFrame` ID for position updates. | null |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-tooltip` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **tooltip-root** | Represents the root element of the tooltip component. Useful for styling the overall tooltip container. |
     | **tooltip-text** | Represents the element containing the tooltip text. This part is combined with the effective type, size, and placement for more granular styling (for example, single-line, multi-line, small, large, top, or bottom). |
@@ -347,7 +347,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-avatar` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **avatar-div** | Represents the part attribute for the outer div element when the `type` property is set to `avatar-rounded`. It is used to style the container of the rounded avatar. |
     | **avatar-div-circular** | Represents the part attribute for the outer div element when the `type` property is set to `avatar-circular`. It is used to style the container of the circular avatar. |
@@ -371,7 +371,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-header` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **header** | Represents the main container of the header component. |
     | **sub-header-start** | Represents the left side of the header, typically used for navigation or back buttons. |
@@ -388,13 +388,13 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**key** | String | A unique key for the list item that is typically used to identify it within a list. | '' |
-    |**isSelected** | Boolean | Used to track whether the list item is selected. | `false` |
-    |**role** | String | Specifies the ARIA role for the list item, such as `menuitem`. |'' |
+    | **key** | String | A unique key for the list item that is typically used to identify it within a list. | '' |
+    | **isSelected** | Boolean | Used to track whether the list item is selected. | `false` |
+    | **role** | String | Specifies the ARIA role for the list item, such as `menuitem`. |'' |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-list-item` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **menu-item** | This part is applied when the `role` property of the list item is set to `menuitem`. It represents a menu item in a list. |
     | **list-item-selected** | This part is applied when the `isSelected` property is set to `true`. It indicates that the list item is currently selected. |
@@ -423,7 +423,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-badge` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **badge_text** |Represents the badge text when the text direction is left-to-right (LTR). |
     | **badge_text-rtl** |Represents the badge text when the text direction is right-to-left (RTL). |
@@ -438,7 +438,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-badge` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **breadcrumbs-item** | Applied to the `<li>` element representing a breadcrumb item. |
     | **disabled** | Added to the `<li>` element when the breadcrumb item is disabled. |
@@ -454,24 +454,24 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
-    |**handleBreadcrumbClick** | | Optional callback function invoked when a breadcrumb item is clicked (except disabled items). | undefined |
-    |**exportParts** | String | Comma-separated list of part names for styling with ::part. Used internally for style encapsulation. | Computed from enum |
+    | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
+    | **handleBreadcrumbClick** | | Optional callback function invoked when a breadcrumb item is clicked (except disabled items). | undefined |
+    | **exportParts** | String | Comma-separated list of part names for styling with ::part. Used internally for style encapsulation. | Computed from enum |
 
     The following PathType Interface properties are used in `dx-breadcrumbs` and `dx-breadcrumbs-item`:
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**title** | String | Specifies the display text for the breadcrumb item.| undefined |
-    |**parentId** | String | Specifies the optional parent identifier for hierarchical data. | undefined |
-    |**link** | String | Specifies the URL or route for navigation. | undefined |
-    |**icon** | TemplateResult | Defines the custom icon template to render. | undefined |
-    |**iconName** | String | Specifies the predefined icon name (for example `HOME` or `INFORMATION`). | undefined |
-    |**disabled** | Boolean | Disables the breadcrumb item if set to `true`. | undefined |
+    | **title** | String | Specifies the display text for the breadcrumb item. | undefined |
+    | **parentId** | String | Specifies the optional parent identifier for hierarchical data. | undefined |
+    | **link** | String | Specifies the URL or route for navigation. | undefined |
+    | **icon** | TemplateResult | Defines the custom icon template to render. | undefined |
+    | **iconName** | String | Specifies the predefined icon name (for example `HOME` or `INFORMATION`). | undefined |
+    | **disabled** | Boolean | Disables the breadcrumb item if set to `true`. | undefined |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-breadcrumbs` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **breadcrumbs-container** | Represents the main container for the breadcrumbs navigation. |
     | **breadcrumbs-list** | Represents the list element that holds all breadcrumb items. |
@@ -482,25 +482,25 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**isLoading** | String | Indicates whether the data grid is in a loading state. | `false` |
-    |**colDef** | String | Represents the column definitions for the data grid. | '' |
-    |**hasMiddlewareError** | String | Indicates if there is a middleware error. | `false` |
-    |**hasContentSourceAvailable** | String | Indicates if content sources are available. | `false` |
-    |**checkboxSelection** | String | Indicates if checkbox selection is enabled. | `false` |
-    |**useCase** | String | Represents the use case for the data grid, such as authoring. | '' |
-    |**tableHover** | String | Indicates if table hover effects are enabled. | `false` |
-    |**invalidColDef** | Boolean| Indicates if the column definition (`colDef`) is invalid. | `false` |
-    |**onHover** | Boolean| Indicates if a header is being hovered over. | `true` |
-    |**onRowHover** | Boolean | Indicates if a row is being hovered over. | `false` |
-    |**enchantedOutputContext** | EnchantedOutputContextType | Context object for enchanted output, consumed from `enchantedOutputContext`. | undefined |
-    |**currentHoverField** | String | Indicates the field currently being hovered over in the header. | '' |
-    |**currentHoverRow** | Number | Indicates the index of the row currently being hovered over. | NaN |
-    |**selectAll** | Boolean | Indicates whether the "Select All" checkbox is checked. | `false` |
-    |**programmaticClick** | Boolean | Indicates if a programmatic click is being handled. It is used to avoid triggering hover events. | `false` |
+    | **isLoading** | String | Indicates whether the data grid is in a loading state. | `false` |
+    | **colDef** | String | Represents the column definitions for the data grid. | '' |
+    | **hasMiddlewareError** | String | Indicates if there is a middleware error. | `false` |
+    | **hasContentSourceAvailable** | String | Indicates if content sources are available. | `false` |
+    | **checkboxSelection** | String | Indicates if checkbox selection is enabled. | `false` |
+    | **useCase** | String | Represents the use case for the data grid, such as authoring. | '' |
+    | **tableHover** | String | Indicates if table hover effects are enabled. | `false` |
+    | **invalidColDef** | Boolean| Indicates if the column definition (`colDef`) is invalid. | `false` |
+    | **onHover** | Boolean| Indicates if a header is being hovered over. | `true` |
+    | **onRowHover** | Boolean | Indicates if a row is being hovered over. | `false` |
+    | **enchantedOutputContext** | EnchantedOutputContextType | Context object for enchanted output, consumed from `enchantedOutputContext`. | undefined |
+    | **currentHoverField** | String | Indicates the field currently being hovered over in the header. | '' |
+    | **currentHoverRow** | Number | Indicates the index of the row currently being hovered over. | NaN |
+    | **selectAll** | Boolean | Indicates whether the "Select All" checkbox is checked. | `false` |
+    | **programmaticClick** | Boolean | Indicates if a programmatic click is being handled. It is used to avoid triggering hover events. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-data-grid` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **table-row-header-container** | Represents the container for the table header row. |
     | **table-select-all-checkbox** | Represents the checkbox for selecting all rows in the header row. |
@@ -553,61 +553,61 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-data-grid-generic` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | --- | --- |
-    | **table-container** | The main container for the data grid table. |
-    | **table-row-header-container** | The `<tr>` element for the table header row. |
-    | **table-row-body-container** | A table row in the body. |
-    | **table-row-body-container-selected** | A selected table row. |
-    | **table-row-body-container-hovered** | A hovered table row. |
-    | **table-select-all-checkbox** | The header cell containing the select-all checkbox. |
-    | **table-header-container** | The main container for each table header cell. |
-    | **table-header-container-child** | Child container inside a table header cell. |
-    | **table-header-text-parent** | Parent container for the header text. |
-    | **table-header-text** | The actual header text span. |
-    | **table-sort-button-container** | Container for the sort buttons in the header. |
-    | **table-header-icon-button** | The sort icon button in the header. |
-    | **table-header-asc-sort-button** | Sort button for ascending order. |
-    | **table-header-desc-sort-button** | Sort button for descending order. |
-    | **table-header-asc-sort-button-hidden** | Hidden state for ascending sort button. |
-    | **table-header-desc-sort-button-hidden** | Hidden state for descending sort button. |
-    | **table-header-sort-button** | Active sort button. |
-    | **table-column-separator** | Container for the column separator line. |
-    | **table-column-separator-hr** | The horizontal rule element for the column separator. |
-    | **table-body-container** | The main container for the table body (rows and loading/empty/error states). |
-    | **table-select-checkbox-container** | Container for the row selection checkbox. |
-    | **table-select-checkbox** | The row selection checkbox itself. |
-    | **table-cell-container** | Container for a table cell. |
-    | **table-cell-text** | The main text span in a table cell. |
-    | **table-cell-link** | The link element in a table cell (if the cell is a link). |
-    | **table-action-buttons-container** | Container for action buttons in a row. |
-    | **table-action-icon-button** | An action icon button in a row. |
-    | **table-action-icon-button-menu** | An action icon button that opens a menu. |
-    | **table-action-icon-button-hidden** | Hidden state for an action icon button. |
-    | **table-cell-icon-button** | An icon button inside a table cell. |
-    | **table-cell-text-action** | A text action button inside a table cell. |
-    | **table-header-menu-item** | A menu item in the table header. |
-    | **table-result-label** | Label for empty or error states in the table body. |
-    | **table-result-description** | Description for empty or error states in the table body. |
-    | **table-loading-text** | Text shown when the table is loading. |
-    | **table-column-authoring-{index}** | Authoring-specific column part, with {index} replaced by the column index. |
-    | **table-column-authoring-{index}-div** | Authoring-specific column div, with {index} replaced by the column index. |
-    | **table-column-authoring-{index}-div-0/1/2/3/4** | Nested divs for authoring columns, for layout and styling, with {index} replaced by the column index |
-    | **table-column-picker-{index}** | Picker-specific column part, with {index} replaced by the column index. |
-    | **table-column-authoring-div-{index}** | Authoring mode cell content wrapper, index-specific. |
+    | **table-container** | Represents the main container for the data grid table. |
+    | **table-row-header-container** | Represents the `<tr>` element for the table header row. |
+    | **table-row-body-container** | Represents a table row in the body. |
+    | **table-row-body-container-selected** | Represents a selected table row. |
+    | **table-row-body-container-hovered** | Represents a hovered table row. |
+    | **table-select-all-checkbox** | Represents the header cell containing the select-all checkbox. |
+    | **table-header-container** | Represents the main container for each table header cell. |
+    | **table-header-container-child** | Represents a child container inside a table header cell. |
+    | **table-header-text-parent** | Represents the parent container for the header text. |
+    | **table-header-text** | Represents the actual header text span. |
+    | **table-sort-button-container** | Represents the container for the sort buttons in the header. |
+    | **table-header-icon-button** | Represents the sort icon button in the header. |
+    | **table-header-asc-sort-button** | Represents the sort button for ascending order. |
+    | **table-header-desc-sort-button** | Represents the sort button for descending order. |
+    | **table-header-asc-sort-button-hidden** | Represents the hidden state for ascending sort button. |
+    | **table-header-desc-sort-button-hidden** | Represents the hidden state for descending sort button. |
+    | **table-header-sort-button** | Represents the active sort button. |
+    | **table-column-separator** | Represents the container for the column separator line. |
+    | **table-column-separator-hr** | Represents the horizontal rule element for the column separator. |
+    | **table-body-container** | Represents the main container for the table body (rows and loading, empty, or error states). |
+    | **table-select-checkbox-container** | Represents the container for the row selection checkbox. |
+    | **table-select-checkbox** | Represents the row selection checkbox. |
+    | **table-cell-container** | Represents the container for a table cell. |
+    | **table-cell-text** | Represents the main text span in a table cell. |
+    | **table-cell-link** | Represents the link element in a table cell if the cell is a link. |
+    | **table-action-buttons-container** | Represents the container for action buttons in a row. |
+    | **table-action-icon-button** | Represents an action icon button in a row. |
+    | **table-action-icon-button-menu** | Represents an action icon button that opens a menu. |
+    | **table-action-icon-button-hidden** | Represents the hidden state for an action icon button. |
+    | **table-cell-icon-button** | Represents an icon button inside a table cell. |
+    | **table-cell-text-action** | Represents the text action button inside a table cell. |
+    | **table-header-menu-item** | Represents a menu item in the table header. |
+    | **table-result-label** | Represents the label for empty or error states in the table body. |
+    | **table-result-description** | Represents the description for empty or error states in the table body. |
+    | **table-loading-text** | Represents the text shown when the table is loading. |
+    | **table-column-authoring-{index}** | Represents the authoring-specific column part. `{index}` is replaced by the column index. |
+    | **table-column-authoring-{index}-div** | Represents the authoring-specific column div. `{index}` is replaced by the column index. |
+    | **table-column-authoring-{index}-div-0/1/2/3/4** | Represents the nested divs for authoring columns for layout and styling. `{index}` is replaced by the column index. |
+    | **table-column-picker-{index}** | Represents the picker-specific column part. `{index}` is replaced by the column index. |
+    | **table-column-authoring-div-{index}** | Represents the authoring mode cell content wrapper, which is index-specific. |
 
 - **dx-dialog:** This component is designed to represent a reusable dialog or modal element with customizable content, title, and actions.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**open** | Boolean | Determines whether the dialog is visible or hidden. This property is reflected to the DOM, so any changes to it are also reflected in the corresponding HTML attribute.| `false` |
-    |**dialogTitle** | String | The title text displayed in the dialog header (if not overridden by slot).| A localized string for the generic label |
-    |**size** | String | Sets the dialog size. Accepts values from DialogSizes enum (XL, SM).| 'xl' |
-    |**overrideTitle** | Boolean | Determines whether the default title is overridden by custom content provided through a slot.| `false` |
+    | **open** | Boolean | Determines whether the dialog is visible or hidden. This property is reflected to the DOM, so any changes to it are also reflected in the corresponding HTML attribute. | `false` |
+    | **dialogTitle** | String | Specifies the title text displayed in the dialog header (if not overridden by slot). | A localized string for the generic label |
+    | **size** | String | Sets the dialog size. Accepts values from `DialogSizes` enum (for example, XL or SM). | 'xl' |
+    | **overrideTitle** | Boolean | Determines whether the default title is overridden by custom content provided through a slot. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-dialog` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **dialog-root** |Represents the root container of the dialog component. It wraps the entire dialog structure. |
     | **backdrop** |Represents the backdrop layer behind the dialog. It is used to block interaction with the rest of the page and provides a visual overlay. |
@@ -626,7 +626,7 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-header-layout` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **main-header** |Represents the main container for the header layout. It acts as the root wrapper for all header sections. |
     | **header-start-container** |Represents the container for the start section of the header. This section is typically used for elements such as logos or navigation menus. |
@@ -642,100 +642,100 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**size** | String | Specifies the size of the icon button.| 'small' |
-    |**withPadding** | Boolean | Determines whether the button should have padding.| `false` |
-    |**imgurl** | String | Specifies the URL of the image to be used in the button.| '' |
-    |**icon** | TemplateResult | Lit template for rendering a custom icon.| undefined |
-    |**disabled** | Boolean | Disables the button if set to `true`.| `false` |
-    |**inverseColor** | Boolean | Applies an inverse color scheme if set to `true`.| `false` |
+    | **size** | String | Specifies the size of the icon button. | 'small' |
+    | **withPadding** | Boolean | Determines whether the button should have padding. | `false` |
+    | **imgurl** | String | Specifies the URL of the image to be used in the button. | '' |
+    | **icon** | TemplateResult | Defines the Lit template for rendering a custom icon. | undefined |
+    | **disabled** | Boolean | Disables the button if set to `true`. | `false` |
+    | **inverseColor** | Boolean | Applies an inverse color scheme if set to `true`. | `false` |
 
     The following CSS part attribute is responsible for determining the appropriate CSS for the `dx-icon-button` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **BUTTON_PARTS** | Exposes the internal parts of the `dx-button` component so they can be styled externally. It accepts a comma-separated list of part names. |
 
-- **dx-datepicker:** The `dx-datepicker` is a custom web component built with LitElement, designed to provide a highly accessible, localized, and feature-rich date picker input for web applications. It supports keyboard navigation, localization, custom date formats, and accessibility features such as ARIA labels. The component allows users to select dates through an input field or an interactive calendar popup, with support for year selection, validation, and custom helper text. It is suitable for use in forms and complex UI scenarios where robust date input is required.
+- **dx-datepicker:** This custom web component, built with LitElement, provides a highly accessible, localized, and feature-rich date picker input for web applications. It supports keyboard navigation, localization, custom date formats, and accessibility features such as ARIA labels. The component allows users to select dates through an input field or an interactive calendar popup, with support for year selection, validation, and custom helper text. It is suitable for use in forms and complex UI scenarios where robust date input is required.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **name** | String | Name of the datepicker, used for form submission.|'datepicker' |
-    | **label** | String | Label for the datepicker, displayed above the input. | 'Label' |
-    | **showInputAction** | Boolean | Toggle to show or hide an action next to the input label. | `false` |
-    | **helperIconTooltip** | String | Tooltip text for the helper icon next to the label. | 'Label helper tooltip' |
-    | **requiredField** | Boolean | Shows or hides the required field asterisk next to the label.| `false` |
+    | **name** | String | Specifies the name of the datepicker, used for form submission. |'datepicker' |
+    | **label** | String | Specifies the label for the datepicker, displayed above the input. | 'Label' |
+    | **showInputAction** | Boolean | Controls whether to show or hide an action next to the input label. | `false` |
+    | **helperIconTooltip** | String | Provides the tooltip text for the helper icon next to the label. | 'Label helper tooltip' |
+    | **requiredField** | Boolean | Determines whether to show or hide the required field asterisk next to the label. | `false` |
     | **open** | Boolean | Opens the datepicker calendar on page load if set to `true`. | `false` |
-    | **hideHelperText** | Boolean | Hides the helper text below the input.| `false` |
-    | **showRemoveLabel** | Boolean | Shows or hides a "remove" label action. | `false` |
-    | **value** | Number | The current value of the datepicker (as a Unix timestamp in ms). | 0 |
+    | **hideHelperText** | Boolean | Hides the helper text below the input. | `false` |
+    | **showRemoveLabel** | Boolean | Controls whether to show or hide a "remove" label action. | `false` |
+    | **value** | Number | Specifies the current value of the datepicker (as a Unix timestamp in ms). | 0 |
     | **disabled** | Boolean | Disables the datepicker input and actions. | `false` |
-    | **field** | String | Additional field identifier, used in events. | '' |
+    | **field** | String | Specifies an additional field identifier, used in events. | '' |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-datepicker` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **datepicker-root** |The root container of the datepicker component. |
-    | **datepicker-div-label-and-action** |Wrapper for the label and any action elements (like remove label or input action). |
-    | **datepicker-div-label** |Container for the label and required asterisk. |
-    | **datepicker-label-text** |The main label text for the datepicker. |
-    | **datepicker-label-text-disabled** |The label text when the input is disabled. |
-    | **datepicker-label-text-invalid** |The label text when the input is invalid. |
-    | **datepicker-label-required** |The asterisk indicating a required field. |
-    | **datepicker-remove-label** |The "remove" label/button for removing the field. |
-    | **datepicker-remove-label-disabled** |The "remove" label/button when disabled. |
-    | **datepicker-div-form** |Wrapper for the input and calendar icon. |
-    | **datepicker-div-input** |Container for the input field. |
-    | **datepicker-div-input-invalid** |Input container when the value is invalid. |
-    | **datepicker-div-input-disabled** |Input container when disabled. |
-    | **datepicker-input** |The input field for date entry. |
-    | **datepicker-input-rtl** |The input field in right-to-left layout. |
-    | **datepicker-div-icon** |Container for the calendar icon button. |
-    | **datepicker-div-calendar-button** |The button to open/close the calendar. |
-    | **datepicker-invalid-text** |The error message text for invalid input. |
-    | **datepicker-invalid-text-rtl** |The error message text in RTL layout. |
-    | **datepicker-help-text** |The helper text below the input. |
-    | **datepicker-help-text-rtl** |The helper text in RTL layout. |
-    | **datepicker-calendar** |The calendar popup container. |
-    | **datepicker-calendar-header** |The header of the calendar (month/year and navigation). |
-    | **datepicker-calendar-div-year** |Container for the year and year selection button. |
-    | **datepicker-calendar-div-year-span** |The span showing the current month and year. |
-    | **datepicker-calendar-year-view-button** |The button to toggle year selection view. |
-    | **datepicker-calendar-year-view-button-rtl** |The year view button in RTL layout. |
-    | **datepicker-calendar-div-month** |Container for month navigation buttons. |
-    | **datepicker-calendar-month-prev** |Button to go to the previous month. |
-    | **datepicker-calendar-month-prev-rtl** |Previous month button in RTL layout. |
-    | **datepicker-calendar-month-next** |Button to go to the next month. |
-    | **datepicker-calendar-month-next-rtl** |Next month button in RTL layout. |
-    | **datepicker-calendar-days** |Row containing the day-of-week labels. |
-    | **datepicker-calendar-day-label** |Each day-of-week label. |
-    | **datepicker-calendar-dates** |Container for all date buttons. |
-    | **datepicker-calendar-date-span** |Wrapper for each date button. |
-    | **datepicker-calendar-dates-button** |The button for each date. |
-    | **datepicker-calendar-dates-button-selected** |The selected date button. |
-    | **datepicker-calendar-dates-today-span** |The indicator for today's date. |
-    | **datepicker-calendar-dates-today-span-rtl** |Today's date indicator in RTL layout. |
-    | **datepicker-calendar-dates-empty-div** |Empty div for calendar grid alignment. |
-    | **datepicker-calendar-year-selection** |Container for the year selection view. |
-    | **datepicker-calendar-year-selection-years** |Container for the list of year buttons. |
-    | **datepicker-calendar-year-selection-year-div** |Wrapper for each year button. |
-    | **datepicker-calendar-year-selection-year-button** |Button for each year. |
-    | **datepicker-calendar-year-selection-year-button-selected** |Selected year button. |
-    | **datepicker-calendar-footer** |Footer of the calendar (contains "Today" button). |
-    | **datepicker-calendar-footer-button** |The "Today" button in the calendar footer. |
+    | **datepicker-root** | Represents the root container of the datepicker component. |
+    | **datepicker-div-label-and-action** | Represents the wrapper for the label and any action elements (such as the remove label or input action). |
+    | **datepicker-div-label** | Represents the container for the label and required asterisk. |
+    | **datepicker-label-text** | Represents the main label text for the datepicker. |
+    | **datepicker-label-text-disabled** | Represents the label text when the input is disabled. |
+    | **datepicker-label-text-invalid** | Represents the label text when the input is invalid. |
+    | **datepicker-label-required** | Represents the asterisk indicating a required field. |
+    | **datepicker-remove-label** | Represents the "remove" label or button for removing the field. |
+    | **datepicker-remove-label-disabled** | Represents the "remove" label or button when disabled. |
+    | **datepicker-div-form** | Represents the rapper for the input and calendar icon. |
+    | **datepicker-div-input** | Represents the container for the input field. |
+    | **datepicker-div-input-invalid** | Represents the input container when the value is invalid. |
+    | **datepicker-div-input-disabled** | Represents the input container when disabled. |
+    | **datepicker-input** | Represents the input field for date entry. |
+    | **datepicker-input-rtl** | Represents the input field in right-to-left (RTL) layout. |
+    | **datepicker-div-icon** | Represents the container for the calendar icon button. |
+    | **datepicker-div-calendar-button** | Represents the button to open or close the calendar. |
+    | **datepicker-invalid-text** | Represents the error message text for invalid input. |
+    | **datepicker-invalid-text-rtl** | Represents the error message text in RTL layout. |
+    | **datepicker-help-text** | Represents the helper text below the input. |
+    | **datepicker-help-text-rtl** | Represents the helper text in RTL layout. |
+    | **datepicker-calendar** | Represents the calendar popup container. |
+    | **datepicker-calendar-header** | Represents the header of the calendar (month or year and navigation). |
+    | **datepicker-calendar-div-year** | Represents the container for the year and year selection button. |
+    | **datepicker-calendar-div-year-span** | Represents the span showing the current month and year. |
+    | **datepicker-calendar-year-view-button** | Represents the button to toggle year selection view. |
+    | **datepicker-calendar-year-view-button-rtl** | Represents the year view button in RTL layout. |
+    | **datepicker-calendar-div-month** | Represents the container for month navigation buttons. |
+    | **datepicker-calendar-month-prev** | Represents the button to go to the previous month. |
+    | **datepicker-calendar-month-prev-rtl** | Represents the previous month button in RTL layout. |
+    | **datepicker-calendar-month-next** | Represents the button to go to the next month. |
+    | **datepicker-calendar-month-next-rtl** | Represents the next month button in RTL layout. |
+    | **datepicker-calendar-days** | Represents the row containing the day-of-week labels. |
+    | **datepicker-calendar-day-label** | Represents each day-of-week label. |
+    | **datepicker-calendar-dates** | Represents the container for all date buttons. |
+    | **datepicker-calendar-date-span** | Represents the wrapper for each date button. |
+    | **datepicker-calendar-dates-button** | Represents the button for each date. |
+    | **datepicker-calendar-dates-button-selected** | Represents the selected date button. |
+    | **datepicker-calendar-dates-today-span** | Represents the indicator for today's date. |
+    | **datepicker-calendar-dates-today-span-rtl** | Represents the indicator for today's date in RTL layout. |
+    | **datepicker-calendar-dates-empty-div** | Represents the empty div for calendar grid alignment. |
+    | **datepicker-calendar-year-selection** | Represents the container for the year selection view. |
+    | **datepicker-calendar-year-selection-years** | Represents the container for the list of year buttons. |
+    | **datepicker-calendar-year-selection-year-div** | Represents the wrapper for each year button. |
+    | **datepicker-calendar-year-selection-year-button** | Represents the button for each year. |
+    | **datepicker-calendar-year-selection-year-button-selected** | Represents the button for the selected year. |
+    | **datepicker-calendar-footer** | Represents the footer of the calendar, which contains the "Today" button. |
+    | **datepicker-calendar-footer-button** | Represents the "Today" button in the calendar footer. |
 
 - **dx-menu:** This component is designed to represent a dropdown menu that can be anchored to a target element and toggled open or closed.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**open** | Boolean | Indicates whether the menu is open or closed.| `false` |
-    |**menuDelay** | Number | Specifies the delay (in milliseconds) before the menu opens or closes.| `false` |
-    |**componentId** | String | A unique identifier for the component generated using UUID.| 300 |
-    |**openMenu** | Boolean| Tracks the current state of the menu (open or closed).| `false` |
+    | **open** | Boolean | Indicates whether the menu is open or closed. | `false` |
+    | **menuDelay** | Number | Specifies the delay (in milliseconds) before the menu opens or closes. | `false` |
+    | **componentId** | String | A unique identifier for the component generated using UUID. | 300 |
+    | **openMenu** | Boolean| Tracks the current state of the menu (open or closed). | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-menu` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
     | **menu-root** | Represents the root container of the menu. It is the main wrapper for the menu content. |
     | **backdrop** | Represents the backdrop element behind the menu. It is used to detect clicks outside the menu to trigger the menu to close. |
@@ -747,201 +747,201 @@ ACs are the smallest possible building blocks of the search functionality. These
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**text** | String	| Represents the text content of the menu item.|	'' |
-    |**value** | String	| Represents the value associated with the menu item.|	'' |
-    |**menuObject** | Object | An object containing additional data for the menu item.|	{} |
+    | **text** | String | Represents the text content of the menu item. | '' |
+    | **value** | String | Represents the value associated with the menu item. | '' |
+    | **menuObject** | Object | Represents an object containing additional data for the menu item. | {} |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-menu-item` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **text-root** | This part is applied to the root container of the text within the menu item. It is used to wrap the text and handle mouse events like `mouseenter` for tooltips. |
-    | **text** | This part is applied to the actual text content of the menu item. It represents the visible text displayed to the user. |
-    | **LIST_ITEM_PARTS**  (Exported through the `exportparts` attribute) | This is a collection of parts exported from the `dx-list-item` component. These parts are made available for external styling and customization. |
+    | **text-root** | Applied to the root container of the text within the menu item. It is used to wrap the text and handle mouse events like `mouseenter` for tooltips. |
+    | **text** | Applied to the actual text content of the menu item. It represents the visible text displayed to the user. |
+    | **LIST_ITEM_PARTS** | A collection of parts exported from the `dx-list-item` component through the `exportparts` attribute. These parts are made available for external styling and customization. |
 
 - **dx-multiple-select-chip:** This component defines the properties for a multiple select chip component. This component is designed to allow users to select multiple options from a dropdown list, with each selection displayed as a chip. It supports features such as disabling the component, showing avatars, displaying the count of selected chips, handling empty options, and more. The component is highly configurable through its properties, making it suitable for various use cases where multi-selection is required in a user interface.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**disabled** | Boolean | Disables the input and all interactions.| `false` |
-    |**showHelperText** | Boolean | Shows helper text below the input.| `false` |
-    |**helperText** | String | Helper text to display below the input.| '' |
-    |**name** | String | Name attribute for the input.| 'multiple-select' |
-    |**selectedValues** | OptionData\[] | Array of selected option objects.| [] |
-    |**options** | OptionData\[] | Array of available option objects.| [] |
-    |**field** | String | Field type or identifier.| '' |
-    |**showRemoveLabel** | Boolean | Shows a "remove" label for the field.| `false` |
-    |**emptyOptions** | Boolean | Allows adding new values not in the options list.| `false` |
-    |**clearIcon** | Boolean | Shows a clear icon on each chip.| `true` |
-    |**error** | Boolean | Marks the input as having an error.| `false` |
-    |**customWidth** | String | undefined | Custom width for the component (e.g., '300px').| undefined |
-    |**placeholder** | String | undefined | Placeholder text for the input.| Localized default |
-    |**label** | String | undefined | Label for the input.| Localized default |
-    |**toggleDropDown** | Boolean | Whether the dropdown is open.| `false` |
-    |**listItems** | HTMLElement[] | List of dropdown item elements.| undefined |
-    |**currentFocusedItem** | HTMLElement[] | Currently focused dropdown item.| undefined |
-    |**inputValue** | String | Current value in the input field.| '' |
-    |**onInputHover** | Boolean | Whether the input is being hovered.| `false` |
-    |**isInputFocused** | Boolean | Whether the input is focused.| `false` |
-    |**isClearAllIconFocused** | Boolean | Whether the clear-all icon is focused.| `false` |
+    | **disabled** | Boolean | Disables the input and all interactions. | `false` |
+    | **showHelperText** | Boolean | Shows helper text below the input. | `false` |
+    | **helperText** | String | Displays a helper text below the input. | '' |
+    | **name** | String | Specifies the name attribute for the input. | 'multiple-select' |
+    | **selectedValues** | OptionData\[] | Defines an array of selected option objects. | [] |
+    | **options** | OptionData\[] | Defines an array of available option objects. | [] |
+    | **field** | String | Specifies the field type or identifier. | '' |
+    | **showRemoveLabel** | Boolean | Shows a "remove" label for the field. | `false` |
+    | **emptyOptions** | Boolean | Allows the addition of new values not in the options list. | `false` |
+    | **clearIcon** | Boolean | Shows a clear icon on each chip. | `true` |
+    | **error** | Boolean | Marks the input as having an error. | `false` |
+    | **customWidth** | String | undefined | Specifies the custom width for the component (for example, '300px'). | undefined |
+    | **placeholder** | String | undefined | Specifies the placeholder text for the input. | Localized default |
+    | **label** | String | undefined | Specifies the Label for the input. | Localized default |
+    | **toggleDropDown** | Boolean | Controls whether the dropdown is open. | `false` |
+    | **listItems** | HTMLElement[] | Specifies the list of dropdown item elements. | undefined |
+    | **currentFocusedItem** | HTMLElement[] | Specifies the currently focused dropdown item. | undefined |
+    | **inputValue** | String | Specifies the current value in the input field. | '' |
+    | **onInputHover** | Boolean | Controls whether the input is being hovered. | `false` |
+    | **isInputFocused** | Boolean | Controls whether the input is focused. | `false` |
+    | **isClearAllIconFocused** | Boolean | Controls whether the clear-all icon is focused. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-multiple-select-chip` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **top-container-div** | The main container for the entire multi-select component. |
-    | **multiple-select-div-label-and-remove** | Container for the label and (optionally) the remove label button. |
-    | **label** | The main label for the multi-select input. |
+    | **top-container-div** | Represents the main container for the entire multi-select component. |
+    | **multiple-select-div-label-and-remove** | Represents the container for the label and (optionally) the remove label button. |
+    | **label** | Represents the main label for the multi-select input. |
     | **multiple-select-label-disabled** | Applied to the label when the component is disabled. |
     | **label-focus** | Applied to the label when the input is focused. |
-    | **multiple-select-remove-label** | The "remove" label/button for the component. |
+    | **multiple-select-remove-label** | Represents the "remove" label or button for the component. |
     | **multiple-select-remove-label-disabled** | Applied to the remove label when disabled. |
-    | **input-container** | The container for the input field and chips. |
+    | **input-container** | Represents the container for the input field and chips. |
     | **input-container-disabled** | Applied to the input container when disabled. |
-    | **chip-and-input-container** | Container for the chips and the input field. |
-    | **input-field** | The actual input field for typing/selecting options. |
-    | **input-text** | The input text field part. |
+    | **chip-and-input-container** | Represents the container for the chips and the input field. |
+    | **input-field** | Represents the actual input field for typing or selecting options. |
+    | **input-text** | Represents the input text field part. |
     | **multiple-select-input-default** | Applied to the input when it has a value. |
-    | **clear-and-icon-container** | Container for the clear-all icon and dropdown toggle button. |
-    | **Clear** | The clear-all button/icon. |
-    | **clear-all-icon** | The visible clear-all icon part. |
-    | **clear-all-icon-hidden** | The hidden state for the clear-all icon. |
-    | **list-item-content** | Container for the content inside each list item. |
-    | **checkmark** | The checkmark icon for selected options. |
-    | **checkmark-placeholder** | Placeholder for the checkmark when not selected. |
-    | **list-items** | The text/content of each list item. |
-    | **no-list-item** | The list item shown when there are no options. |
-    | **list-item-no-content** | The content inside the "no options" list item. |
-    | **helper-text** | The helper text shown below the input. |
+    | **clear-and-icon-container** | Represents the container for the clear-all icon and dropdown toggle button. |
+    | **Clear** | Represents the clear-all button or icon. |
+    | **clear-all-icon** | Represents the visible clear-all icon part. |
+    | **clear-all-icon-hidden** | Represents the hidden state for the clear-all icon. |
+    | **list-item-content** | Represents the container for the content inside each list item. |
+    | **checkmark** | Represents the checkmark icon for selected options. |
+    | **checkmark-placeholder** | Represents the placeholder for the checkmark when not selected. |
+    | **list-items** | Represents the text or content of each list item. |
+    | **no-list-item** | Represents the list item shown when there are no options. |
+    | **list-item-no-content** | Represents the content inside the "no options" list item. |
+    | **helper-text** | Represents the helper text shown below the input. |
     | **CHIP_PARTS** | Exported to the dx-chip for styling its internal parts. |
     | **BUTTON_PARTS** | Exported to the dropdown toggle button for styling. |
     | **ICON_BUTTON_EXPORT_PARTS** | Exported to the clear-all icon button for styling. |
     | **LIST_PARTS.UNORDERED_LIST** | Exported to the list container for styling the dropdown list. |
 
-- **dx-panel:** This component is a customizable side panel web component built with Lit, designed for use in modern web applications. It provides a modal-like sliding panel that can be positioned on the left or right of the viewport. The panel supports a header with a title, an accessible ARIA label, a close button, and slots for custom content. It is ideal for displaying additional information, forms, or navigation without navigating away from the main view.
+- **dx-panel:** This customizable side panel web component, built with Lit, is designed for use in modern web applications. It provides a modal-like sliding panel that can be positioned on the left or right of the viewport. The panel supports a header with a title, an accessible ARIA label, a close button, and slots for custom content. It is ideal for displaying additional information, forms, or navigation without navigating away from the main view.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**open** | Boolean | Controls the visibility of the panel. The panel is shown if this is set to `true`.| `false` |
-    |**position** | String | Sets the panel's position.| left |
-    |**headerTitle** | String | The title text displayed in the panel header.| '' |
-    |**ariaLabel** | String | ARIA label for accessibility, describes the panel for screen readers.| '' |
+    | **open** | Boolean | Controls the visibility of the panel. The panel is shown if this is set to `true`. | `false` |
+    | **position** | String | Sets the panel's position. | left |
+    | **headerTitle** | String | Specifies the title text displayed in the panel header. | '' |
+    | **ariaLabel** | String | Specifies the ARIA label for accessibility and describes the panel for screen readers. | '' |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-panel` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **panel-container** | The main container of the panel, representing the dialog surface. |
-    | **panel-header** | The header section of the panel, containing the title, center slot, and close button. |
-    | **panel-title** | The area within the header that displays the panel's title text. |
-    | **panel-close-button** | The close button in the header, allowing users to dismiss the panel. |
-    | **panel-content** | The main content area of the panel, where slotted content is rendered. |
+    | **panel-container** | Represents the main container of the panel (the dialog surface). |
+    | **panel-header** | Represents the header section of the panel, containing the title, center slot, and close button. |
+    | **panel-title** | Represents the area within the header that displays the panel's title text. |
+    | **panel-close-button** | Represents the close button in the header, allowing users to dismiss the panel. |
+    | **panel-content** | Represents the main content area of the panel, where slotted content is rendered. |
 
-- **dx-theme-inspector:** This component is a web component designed to visually inspect and display the color palette and theme variables used in an application. It renders tables showing all available color shades, theme properties, and their values for both light and dark modes. This component is useful for developers and designers to verify and document the color and theme configuration in a UI system.
-
-    | **Properties** | **type** | **Description** | **Default** |
-    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**_themePropertiesDelimiter** | String | Delimiter used to split theme property keys for parsing theme variables.|	'ZZZ' |
-    |**_themePrefix** | String | Prefix used to identify theme-related keys in the theme object.| 'theme' |
-    |**_shadeKeys** | Number\[] | List of numeric shade keys for standard color palettes.| \[100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1000_80, 1100] |
-    |**_colorKeys** | String\[] | List of color names to display in the palette table.| \['GREY', 'BLACK', 'BLUE', 'GREEN', 'HCLSOFTWAREBLUE', ...] |
-    |**_blackKeys** | String\[] | List of shade keys for the BLACK color palette.| \['100P', '87P', '60P', '55P', ...] |
-    |**_whiteKeys** | String\[] | List of shade keys for the WHITE color palette.| \['100P', '93P', '80P', '70P', ...] |
-    |**_hclSoftwareBlueKeys** | String\[] | List of shade keys for the HCLSOFTWAREBLUE color palette.| \['01', '02', '03', '04', ...] |
-    |**_theme** | ThemeType | The theme object containing all color and theme variables.| undefined |
-
-- **dx-table-pagination:** This component is a web component provides a customizable and accessible pagination control for data tables. It allows users to navigate through large datasets by selecting the number of rows per page and moving between pages using navigation buttons. The component supports both left-to-right (LTR) and right-to-left (RTL) layouts, and emits events when the page or row size changes, enabling seamless integration with data-driven applications.
+- **dx-theme-inspector:** This web component visually inspects and displays the color palette and theme variables used in an application. It renders tables showing all available color shades, theme properties, and their values for both light and dark modes. It is useful for developers and designers to verify and document the color and theme configuration in a UI system.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**disabled** | Boolean	| Disables the pagination controls when set to `true`.| `false` |
-    |**currentPage** | Number | The current active page (1-based index).| left |
-    |**totalCount** | Number | The total number of items in the dataset.| '' |
-    |**rowSize** | Number | The number of rows to display per page.| '' |
-    |**options** | String[] | The selectable options for rows per page.| '' |
-    |**pagesCount** | Number | The total number of pages, calculated from totalCount and rowSize.| '' |
-    |**currentPageState** | Number | Internal state for the current page.| '' |
-    |**rowSizeState** | Number | Internal state for the selected row size.| '' |
-    |**rowMessage** | String | The message describing the current page range (e.g., "1-10 of 100").| '' |
-    |**hasPreviousPage** | Boolean | Indicates if there is a previous page available.| `true` |
-    |**hasNextPage** | Boolean | Indicates if there is a next page available.| `true` |
-    |**isRTL** | Boolean | Indicates if the layout is right-to-left.| `true` |
+    | **_themePropertiesDelimiter** | String | Delimiter used to split theme property keys for parsing theme variables. | 'ZZZ' |
+    | **_themePrefix** | String | Prefix used to identify theme-related keys in the theme object. | 'theme' |
+    | **_shadeKeys** | Number\[] | List of numeric shade keys for standard color palettes. | \[100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1000_80, 1100] |
+    | **_colorKeys** | String\[] | List of color names to display in the palette table. | \['GREY', 'BLACK', 'BLUE', 'GREEN', 'HCLSOFTWAREBLUE', ...] |
+    | **_blackKeys** | String\[] | List of shade keys for the BLACK color palette. | \['100P', '87P', '60P', '55P', ...] |
+    | **_whiteKeys** | String\[] | List of shade keys for the WHITE color palette. | \['100P', '93P', '80P', '70P', ...] |
+    | **_hclSoftwareBlueKeys** | String\[] | List of shade keys for the HCLSOFTWAREBLUE color palette. | \['01', '02', '03', '04', ...] |
+    | **_theme** | ThemeType | The theme object containing all color and theme variables. | undefined |
+
+- **dx-table-pagination:** This web component provides a customizable and accessible pagination control for data tables. It allows users to navigate through large datasets by selecting the number of rows per page and moving between pages using navigation buttons. The component supports both left-to-right (LTR) and right-to-left (RTL) layouts, and emits events when the page or row size changes, enabling seamless integration with data-driven applications.
+
+    | **Properties** | **type** | **Description** | **Default** |
+    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
+    | **disabled** | Boolean | Disables the pagination controls when set to `true`. | `false` |
+    | **currentPage** | Number | Specifies the current active page (1-based index). | left |
+    | **totalCount** | Number | Specifies the total number of items in the dataset. | '' |
+    | **rowSize** | Number | Specifies the number of rows to display per page. | '' |
+    | **options** | String[] | Defines the selectable options for rows per page. | '' |
+    | **pagesCount** | Number | Calculates the total number of pages from `totalCount` and `rowSize`. | '' |
+    | **currentPageState** | Number | Indicates the internal state for the current page. | '' |
+    | **rowSizeState** | Number | Indicates the internal state for the selected row size. | '' |
+    | **rowMessage** | String | Specifies the message describing the current page range (for example, "1-10 of 100"). | '' |
+    | **hasPreviousPage** | Boolean | Indicates if there is a previous page available. | `true` |
+    | **hasNextPage** | Boolean | Indicates if there is a next page available. | `true` |
+    | **isRTL** | Boolean | Indicates if the layout is RTL. | `true` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-table-pagination` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **container** | The main container for the pagination component. |
-    | **rows-section** | The section containing the row size selector and row description. |
-    | **rows-description** | The span displaying the current rows description (e.g., "1-10 of 100"). |
-    | **pages-section** | The section containing the page navigation controls. |
-    | **pages-nav-button** | Applied to each navigation button (first, previous, next, last page). |
-    | **pages-description** | The span displaying the current page and total pages (e.g., "1 / 10"). |
+    | **container** | Represents the main container for the pagination component. |
+    | **rows-section** | Represents the section containing the row size selector and row description. |
+    | **rows-description** | Represents the span displaying the current rows description (for example, "1-10 of 100"). |
+    | **pages-section** | Represents the section containing the page navigation controls. |
+    | **pages-nav-button** | Applied to each navigation button (first, previous, next, or last page). |
+    | **pages-description** | Represents the span displaying the current page and total pages (for example, "1 / 10"). |
 
-- **dx-preview:** This component is web component provides a modal preview interface for digital assets such as images and videos. It supports navigation between multiple items, zoom controls for images, rendition selection, download and select actions, and error handling for unsupported file types. The component is highly configurable and emits custom events for integration with parent applications.
+- **dx-preview:** This web component provides a modal preview interface for digital assets such as images and videos. It supports navigation between multiple items, zoom controls for images, rendition selection, download and select actions, and error handling for unsupported file types. The component is highly configurable and emits custom events for integration with parent applications.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**open** | Boolean | Whether the preview modal is open.| `false` |
-    |**items** | PreviewItem\[] | Array of items to preview. Each item contains id, title, type, renditions, and fileExtension.| [] |
-    |**customHeaderTitle** | String | null | Custom title for the preview header. If not set, uses the current item's title.| null |
-    |**component** | TemplateResult | String | Custom content to render instead of the default preview.| '' |
-    |**isPreviousButtonDisabled** | Boolean | Disables the previous navigation button if set to `true`.| undefined |
-    |**isNextButtonDisabled** | Boolean | Disables the next navigation button if set to `true`.| undefined |
-    |**renditionLabel** | String | Label for the rendition select dropdown.| '' |
-    |**selectButtonTitle** | String | Text for the select button.| '' |
-    |**initialItemIndex** | Number | index of the item to show initially. | 0 |
-    |**currentItemIndex** | Number | Index of the currently displayed item. | 0 |
-    |**zoomPercentage** | Number | Current zoom percentage for image preview. | 100 |
-    |**zoomOutDisable** | Boolean | Whether the zoom out button is disabled. | `false` |
-    |**zoomInDisable** | Boolean | Whether the zoom in button is disabled. | `false` |
-    |**zoomToFitPercentage** | Number | Calculated zoom percentage to fit the image in the container. | `false` |
-    |**selectedRenditionId** | String | null | ID of the currently selected rendition. | null |
-    |**currentDisplaySource** | String | null | Source URL of the currently displayed asset (image/video). | null |
-    |**isLoading** | Boolean | Whether the preview is loading. | `true` |
-    |**hasError** | Boolean | Whether there is an error displaying the preview. | `false` |
+    | **open** | Boolean | Controls whether the preview modal is open. | `false` |
+    | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | [] |
+    | **customHeaderTitle** | String | null | Specifies a custom title for the preview header. If not set, uses the current item's title. | null |
+    | **component** | TemplateResult | String | Provides custom content to render instead of the default preview. | '' |
+    | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | undefined |
+    | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | undefined |
+    | **renditionLabel** | String | Specifies the label for the rendition select dropdown. | '' |
+    | **selectButtonTitle** | String | Specifies the text for the select button. | '' |
+    | **initialItemIndex** | Number | Specifies the index of the item to show initially. | 0 |
+    | **currentItemIndex** | Number | Indicates the index of the currently displayed item. | 0 |
+    | **zoomPercentage** | Number | Specifies the current zoom percentage for image preview. | 100 |
+    | **zoomOutDisable** | Boolean | Indicates whether the zoom out button is disabled. | `false` |
+    | **zoomInDisable** | Boolean | Indicates whether the zoom in button is disabled. | `false` |
+    | **zoomToFitPercentage** | Number | Specifies the calculated zoom percentage required to fit the image in the container. | `false` |
+    | **selectedRenditionId** | String | null | Indicates the ID of the currently selected rendition. | null |
+    | **currentDisplaySource** | String | null | Specifies the source URL of the currently displayed asset (image or video). | null |
+    | **isLoading** | Boolean | Indicates whether the preview is loading. | `true` |
+    | **hasError** | Boolean | Indicates whether there is an error displaying the preview. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-preview` component and its elements based on the component's state and properties.
 
-    | **Part** | **Description**|
+    | **Part** | **Description** |
     | -------------- | ---------|
-    | **preview-backdrop** | The backdrop overlay for the preview modal. |
-    | **preview-container** | The main container for the preview dialog. |
-    | **preview-header** | The header section of the preview dialog. |
-    | **preview-header-start-actions** | Container for the left-side header actions (e.g., back button). |
-    | **preview-header-title** | Displays the title of the current item or custom header. |
-    | **preview-header-middle-actions** | Middle section of the header, used for rendition selection (if applicable). |
-    | **preview-header-rendition-label** | Label for the rendition select dropdown. |
-    | **preview-header-rendition-input-select** | The rendition select dropdown itself. |
-    | **preview-header-end-actions** | Container for right-side header actions (e.g., download, select button). |
-    | **preview-header-select-button** | The "Select" button in the header. |
-    | **preview-header-divider** | Divider line below the header. |
-    | **preview-item-container** | The main area where the previewed item (image/video/unsupported) is shown. |
-    | **preview-item-previous-button-container** | Container for the previous navigation button. |
-    | **preview-item-previous-button** | The previous navigation button itself. |
-    | **preview-item-next-button-container** | Container for the next navigation button. |
-    | **preview-item-next-button** | The next navigation button itself. |
-    | **preview-item-content** | Container for the main content (image, video, or unsupported message). |
-    | **preview-item-image** | The image element for image previews. |
-    | **preview-item-video-container** | Container for video previews. |
-    | **preview-item-video** | The video element for video previews. |
-    | **preview-item-unsupported-container** | Container for unsupported file type message. |
-    | **preview-item-unsupported-message-container** | Container for unsupported message text. |
-    | **preview-item-unsupported-message-title** | title for unsupported file type. |
-    | **preview-item-unsupported-message-description** | Description for unsupported file type. |
-    | **preview-zoom-container** | Container for zoom controls (shown for images). |
-    | **preview-zoom-controls** | The zoom control button group. |
-    | **ICON_BUTTON_EXPORT_PARTS** | All button-related parts for icon buttons. |
-    | **PREVIEW_NAV_BUTTONS_EXPORT_PARTS** | Parts for navigation buttons. |
-    | **PREVIEW_ZOOM_BUTTONS_EXPORT_PARTS** | Parts for zoom in/out buttons.|
-    | **PREVIEW_ZOOM_PERCENT_BUTTON_EXPORT_PARTS** | Parts for the zoom percentage button.|
-    | **PREVIEW_RENDITION_SELECT_EXPORT_PARTS** | Parts for the rendition select dropdown.|
-    | **ITEM_TYPE_AVATAR_EXPORT_PARTS** | Parts for the item type avatar.|
-    | **TOOLTIP_EXPORT_PARTS** | Parts for tooltips.|
+    | **preview-backdrop** | Represents the backdrop overlay for the preview modal. |
+    | **preview-container** | Represents the main container for the preview dialog. |
+    | **preview-header** | Represents the header section of the preview dialog. |
+    | **preview-header-start-actions** | Represents the container for the left-side header actions (for example, the back button). |
+    | **preview-header-title** | Represents the element that displays the title of the current item or custom header. |
+    | **preview-header-middle-actions** | Represents the middle section of the header, used for rendition selection (if applicable). |
+    | **preview-header-rendition-label** | Represents the label for the rendition select dropdown. |
+    | **preview-header-rendition-input-select** | Represents the rendition select dropdown itself. |
+    | **preview-header-end-actions** | Represents the container for the right-side header actions (for example, download or select button). |
+    | **preview-header-select-button** | Represents the "Select" button in the header. |
+    | **preview-header-divider** | Represents the divider line below the header. |
+    | **preview-item-container** | Represents the main area where the previewed item (image, video, or unsupported file type) is shown. |
+    | **preview-item-previous-button-container** | Represents the container for the previous navigation button. |
+    | **preview-item-previous-button** | Represents the previous navigation button itself. |
+    | **preview-item-next-button-container** | Represents the container for the next navigation button. |
+    | **preview-item-next-button** | Represents the next navigation button itself. |
+    | **preview-item-content** | Represents the container for the main content (image, video, or unsupported message). |
+    | **preview-item-image** | Represents the image element used for image previews. |
+    | **preview-item-video-container** | Represents the container for video previews. |
+    | **preview-item-video** | Represents the video element used for video previews. |
+    | **preview-item-unsupported-container** | Represents the container for the unsupported file type message. |
+    | **preview-item-unsupported-message-container** | Represents the container for the unsupported message text. |
+    | **preview-item-unsupported-message-title** | Represents the title for the unsupported file type message. |
+    | **preview-item-unsupported-message-description** | Represents the description for the unsupported file type message. |
+    | **preview-zoom-container** | Represents the container for zoom controls (shown for images). |
+    | **preview-zoom-controls** | Represents the zoom control button group. |
+    | **ICON_BUTTON_EXPORT_PARTS** | Represents all button-related parts for icon buttons. |
+    | **PREVIEW_NAV_BUTTONS_EXPORT_PARTS** | Represents the parts for navigation buttons. |
+    | **PREVIEW_ZOOM_BUTTONS_EXPORT_PARTS** | Represents the parts for zoom in or zoom out buttons. |
+    | **PREVIEW_ZOOM_PERCENT_BUTTON_EXPORT_PARTS** | Represents the parts for the zoom percentage button. |
+    | **PREVIEW_RENDITION_SELECT_EXPORT_PARTS** | Represents the parts for the rendition select dropdown. |
+    | **ITEM_TYPE_AVATAR_EXPORT_PARTS** | Represents the parts for the item type avatar. |
+    | **TOOLTIP_EXPORT_PARTS** | Represents the parts for tooltips. |
 
 ### Functional Composite Components
 
-Functional Composite Components (FCC) combine ACs to deliver higher-level functionality, such as displaying search results or managing pagination. Refer to the table below each component for the list of compatible properties associated with them. 
+Functional Composite Components (FCC) combine ACs to deliver higher-level functionality, such as displaying search results or managing pagination. Refer to the table below each component for the list of compatible properties associated with them.
 
 - **dx-circular-progress:** This component is a customizable radial progress bar that uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress. 
 
@@ -956,18 +956,18 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**field** | String | The field name for the search input. | '' |
-    |**queryString** | String | The query string value for the search input. | '' |
+    | **field** | String | The field name for the search input. | '' |
+    | **queryString** | String | The query string value for the search input. | '' |
     | **disabled** | Boolean | Indicates whether the input field is disabled. | `false` |
-    |**label** | String | The label for the input field. | '' |
-    |**placeholder** | String | The placeholder text for the input field. | '' |
+    | **label** | String | The label for the input field. | '' |
+    | **placeholder** | String | The placeholder text for the input field. | '' |
 
 - **dx-search-output-item-attribute:** This component is a flexible and reusable element that you can use to display specific attributes of search results. By consuming the `outputContext`, it dynamically renders different types of information, such as links, document types, and descriptions based on the attribute specified. This allows the component to be integrated into larger search result display systems with different content sources and attributes.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**attribute** | String | The attribute to fetch from the search result item. | '' |
-    |**index** | String |The index of the search item in the result list. | '' |
+    | **attribute** | String | The attribute to fetch from the search result item. | '' |
+    | **index** | String |The index of the search item in the result list. | '' |
     | **outputContext** | OutputContextType | Consumed from context and contains the search result data. This property is internally managed by the component and should not be used. | undefined |
 
 - **dx-fcc-base-element:** This is a base class in the FCC framework that integrates the Broadcast Channel API for component communication and ensures no shadow DOM is used. It also cleans up resources when components are disconnected.
@@ -976,49 +976,49 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**field** | String | The field associated with the input. | '' |
-    |**contentSources** | DxSearchGetContentSource\[] | List of content sources fetched from the service. This property is internally managed by the component and should not be used. To be converted to internal state in the next release. | [] |
-    | **scope** | String\[] | The current selected scope or content source. This property is internally managed by the component and should not be used. To be converted to internal state in the next release.| \['All Sources'] |
-    |**disabled** | Boolean | Indicates whether the input is disabled. | `false` |
-    |**label** | String | The label for the input field. | '' |
-    |**placeholder** | String | The placeholder text for the input field. | '' |
+    | **field** | String | The field associated with the input. | '' |
+    | **contentSources** | DxSearchGetContentSource\[] | List of content sources fetched from the service. This property is internally managed by the component and should not be used. To be converted to internal state in the next release. | [] |
+    | **scope** | String\[] | The current selected scope or content source. This property is internally managed by the component and should not be used. To be converted to internal state in the next release. | \['All Sources'] |
+    | **disabled** | Boolean | Indicates whether the input is disabled. | `false` |
+    | **label** | String | The label for the input field. | '' |
+    | **placeholder** | String | The placeholder text for the input field. | '' |
 
 - **dx-search-output-pagination:** This flexible pagination component supports multiple pagination types, including infinite scroll and numbered pagination, and can handle different languages and locales. It also allows debouncing scroll events and a clean separation of concerns, making it efficient and maintainable.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**outputConfig** | Object | Contains the search configuration, including the current page, page size, total number of items, and a function to load a new page (`loadPage`). It is injected from the `outputContext`. This property is internally managed by the component and should not be used. | {} |
-    |**type** | SEARCH_PAGINATION_TYPE_ENUM | Defines the type of pagination. Sample values include `numbered-pagination`, `show-more-button`, or `infinite-scroll`.|''|
+    | **outputConfig** | Object | Contains the search configuration, including the current page, page size, total number of items, and a function to load a new page (`loadPage`). It is injected from the `outputContext`. This property is internally managed by the component and should not be used. | {} |
+    | **type** | SEARCH_PAGINATION_TYPE_ENUM | Defines the type of pagination. Sample values include `numbered-pagination`, `show-more-button`, or `infinite-scroll`. |''|
 
 - **dx-search-input-button:** This customizable search button component uses the Broadcast Channel to trigger search actions on click. It supports properties to disable the button and change its text. Debouncing is also used to optimize search requests, making it a reusable UI element for web applications.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **disabled** | Boolean | Indicates whether the button is disabled. | `false` |
-    |**buttontext** | String | Custom text to display on the button. Reverts to default localized text if not provided. |	'' |
+    | **buttontext** | String | Custom text to display on the button. Reverts to default localized text if not provided. |	'' |
 
 - **dx-search-input-type:** This dynamic dropdown component allows you to select document types in a search interface. Built with LitElement for efficient rendering and reactivity, it fetches searchable fields from a backend service, updates the selected document type, and communicates changes using `searchChannel` to update search parameters.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**field** | String | The field name for the search input. | '' |
-    |**documentObjectType** | String | The selected document object type. | '' |
+    | **field** | String | The field name for the search input. | '' |
+    | **documentObjectType** | String | The selected document object type. | '' |
     | **disabled** | Boolean | Indicates whether the search input is disabled. | `false` |
-    |**label** | String | The label text for the search input. | '' |
-    |**placeholder** | String | The placeholder text for the search input. | '' |
-    |**options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
+    | **label** | String | The label text for the search input. | '' |
+    | **placeholder** | String | The placeholder text for the search input. | '' |
+    | **options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
 
 - **dx-search-output:** This search result display component integrates with backend search services. It manages various search states such as loading, results, no results, or error, and updates the UI dynamically based on search parameters. It is designed for applications that require real-time search with pagination, filtering, and error handling.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    |**templateItemId** | String | The ID of the template element used to render individual search results. | '' |
-    |**templatePaginationId** | String | The ID of the pagination template element used for paginated search results. | '' |
+    | **templateItemId** | String | The ID of the template element used to render individual search results. | '' |
+    | **templatePaginationId** | String | The ID of the pagination template element used for paginated search results. | '' |
     | **searchValue** |String | The current search query or keyword entered by the user. | '' |
-    |**documentObjectType** | String | The attribute in the document object being searched. | '' |
-    |**scope** | String\[] | A list of content source IDs that limit the search query. | [] |
-    |**searchResults** | DxSearchResults | Contains the search results, including hit count, individual hits, and scores. | { hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
-    |**isLoading** | Boolean | A flag that indicates whether search results are being loaded. | `false` |
+    | **documentObjectType** | String | The attribute in the document object being searched. | '' |
+    | **scope** | String\[] | A list of content source IDs that limit the search query. | [] |
+    | **searchResults** | DxSearchResults | Contains the search results, including hit count, individual hits, and scores. | { hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
+    | **isLoading** | Boolean | A flag that indicates whether search results are being loaded. | `false` |
 
 ## Theme modules
 
@@ -1092,22 +1092,27 @@ Search V2 utilizes the Broadcast Channel API for its components. The Broadcast C
 
 This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.
 
-# Localization Strategy for AC Web Components
+## Localization strategy for AC web components
 
 This document outlines the localization (i18n) strategy used in the AC web components library, with examples from the `dx-input-textfield` component.
 
-## 1. Lit Localization Integration
+### Lit localization integration
+
 AC components leverage the `@localized()` decorator from the `@lit/localize` package. This integration enables seamless language switching and translation support for all web components built with Lit.
 
-## 2. Custom Localization Helpers
+### Custom localization helpers
+
 The library includes a `localization.ts` utility that provides:
+
 - `getCurrentDirection()`: Detects the text direction (left-to-right or right-to-left) based on the current locale or document settings.
 - `isLTR()`: Checks if the current direction is left-to-right.
 - `getCurrentLocale()`: Retrieves the active locale from the nearest DOM element with a `lang` attribute, or falls back to a default.
 - `setCurrentDirection(locale)`: Updates the document's `dir` attribute to match the locale's directionality.
 
-## 3. Dynamic UI Text
+### Dynamic UI text
+
 Component UI strings, such as placeholders and labels, are set dynamically. For example, a method like `this.getMessage('input.textfield.placeholder.type.to.search')` is used to fetch the correct translation for the current language. The `getMessage` method is already defined in the base Lit element `dx-ac-base-element` from which we extend all atomic components.
 
-## 4. Locale Awareness through DOM
+### Locale awareness through DOM
+
 Components automatically detect the user's language context by checking the `lang` attribute on the nearest parent DOM element. This ensures that each component displays text in the appropriate language and direction.
