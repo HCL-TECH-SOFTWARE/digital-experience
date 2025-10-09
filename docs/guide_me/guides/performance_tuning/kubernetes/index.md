@@ -164,7 +164,7 @@ After completing the authoring steps, the anonymous and authenticated portal use
 
 These performance tests are primarily focused on DAM API. Client-side rendering, such as browser-based rendering, is excluded from the tests.
 
-# JVM heap and pod resource guidelines for performance runs
+## JVM heap and pod resource guidelines for performance runs
 
 During performance testing, align JVM heap settings with pod resource limits to ensure consistent performance and prevent unexpected memory issues.
 
