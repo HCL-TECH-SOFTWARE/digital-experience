@@ -18,6 +18,8 @@ Follow these steps to view/edit the embedded metadata of a media asset:
 3.  To edit, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
 4.  Select and click any of the following right side menu options to view/edit the media asset metadata:
     -   **Properties** – Presents asset name, title, type, size, description and options to preview the display of the image media asset. You can also view/edit the **Name**, **Description**, **Alternate text**, **Custom URL**, and **Keywords** of the media asset. Note that **Alternate text** is for headless DAM rendering only and not passed to the Web Content Manager (WCM). Press **Enter** to confirm new keywords added.
+    -   **Embedded Metadata (Read-Only)** – This section displays the following metadata embedded in supported image assets, including details like created on, focal length, shutter speed, aperture, ISO, metering, flash, white balance, exposure time, sensitivity type, exposure mode, digital zoom ratio, contrast, saturation, sharpness, serial number, lens info, lens model, DPI, camera make, and camera model. All displayed embedded metadata is read-only and cannot be modified.
+![Embedded metadata](../../../../../images/Embedded_metatadata.png)
     -   **Insights** - Displays the Collection folder location\(s\) where this image is placed, and the last associated modification dates.
     -   **Versions** - Presents multiple versions of the asset that have been saved. You can also use this feature to view versions of media asset renditions.
 5.  Click **Save**. A notification shows that the media asset information is updated successfully.
