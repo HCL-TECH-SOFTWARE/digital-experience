@@ -37,9 +37,6 @@ To manually update a syndication relationship:
             !!! note
                 The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
 
-            !!! note
-                The **Rebuild with mirror** option will not automatically cascade through all subscribers downstream of the syndicator. You might need to repeat the **Rebuild with mirror** action on subscribers further down the syndication chain to synchronize all servers.
-
             **Restriction:** Don't use the **Rebuild with mirror** option if other syndicator pairs feed into any of the libraries that are being rebuilt.
 
             !!! note
