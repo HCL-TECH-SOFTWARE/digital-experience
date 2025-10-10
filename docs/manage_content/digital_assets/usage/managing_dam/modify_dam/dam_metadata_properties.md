@@ -4,23 +4,23 @@ This section shows how to edit the embedded metadata of a media asset in HCL Dig
 
 !!! notes
 
-    -   Embedded metadata is supported only for image/jpeg MIME type.
+    -   Embedded metadata is supported only for image or JPEG MIME type.
     -   Embedded metadata properties show only the available meta information for a selected media asset.
 
-## View/edit the embedded metadata of a media asset
+## View or edit the embedded metadata of a media asset
 
-Follow these steps to view/edit the embedded metadata of a media asset:
+Follow these steps to view or edit the embedded metadata of a media asset:
 
-1.  Click **Collection**.
-2.  Click a media asset to see its embedded metadata.
-3.  To edit, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
-4.  Select and click any of the following right side menu options to view/edit the media asset metadata:
-    -   **Properties** – Presents asset name, title, type, size, description and options to preview the display of the image media asset. You can also view/edit the **Name**, **Description**, **Alternate text**, **Custom URL**, and **Keywords** of the media asset. Note that **Alternate text** is for headless DAM rendering only and not passed to the Web Content Manager (WCM). Press **Enter** to confirm new keywords added.
-    -   **Embedded Metadata (Read-Only)** – This section displays the embedded metadata extracted from the image's EXIF (Exchangeable Image File Format) parameters, including details like created on, focal length, shutter speed, aperture, ISO, metering, flash, white balance, exposure time, sensitivity type, exposure mode, digital zoom ratio, contrast, saturation, sharpness, serial number, lens info, lens model, DPI, camera make, and camera model. All displayed embedded metadata is read-only and cannot be modified.
+1. Click **Collection**.
+2. Click a media asset to see its embedded metadata.
+3. To edit, click the **More actions** menu of a media asset and click **Edit** \(pencil icon\).
+4. Select and click any of the following right side menu options to view or edit the media asset metadata:
+    - **Properties**: Presents asset name, title, type, size, description and options to preview the display of the image media asset. You can also view/edit the **Name**, **Description**, **Alternate text**, **Custom URL**, and **Keywords** of the media asset. Note that **Alternate text** is for headless DAM rendering only and not passed to the Web Content Manager (WCM). Press **Enter** to confirm new keywords added.
+    - **Embedded Metadata (Read-Only)**: This section displays the embedded metadata extracted from the image's EXIF (Exchangeable Image File Format) parameters, including details such as Created On, Focal Length, Shutter Speed, Aperture, ISO, Metering, Flash, White Balance, Exposure Time, Sensitivity Type, Exposure Mode, Digital Zoom Ratio, Contrast, Saturation, Sharpness, Serial Number, Lens Info, Lens Model, DPI, Camera Make, and Camera Model. All of this displayed embedded metadata is read-only and cannot be modified.
 ![Embedded metadata](../../../../../images/Embedded_metatadata.png)
-    -   **Insights** - Displays the Collection folder location\(s\) where this image is placed, and the last associated modification dates.
-    -   **Versions** - Presents multiple versions of the asset that have been saved. You can also use this feature to view versions of media asset renditions.
-5.  Click **Save**. A notification shows that the media asset information is updated successfully.
+    - **Insights**: Displays the Collection folder location\(s\) where this image is placed, and the last associated modification dates.
+    - **Versions**: Presents multiple versions of the asset that have been saved. You can also use this feature to view versions of media asset renditions.
+5. Click **Save**. A notification shows that the media asset information is updated successfully.
 
 ![View and edit media asset keywords](../../../../../images/View_and_edit_media_asset_keywords.png)
 
@@ -30,9 +30,9 @@ Beginning with HCL Digital Experience 9.5 Container Update CF205, using a custom
 
 ![Leverage integration with Google Vision API image tagging on DAM assets](../../../../../images/View_and_edit_media_asset_keywords.png)
 
-**Pre-requisites:**
+**Prerequisites:**
 
-1. An entitlement to [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api). 
+1. An entitlement to [Google Vision API](https://cloud.google.com/vision/docs/detect-labels-image-api).
 2. Configuration of the Digital Asset Management extension capability to integrate Google Vision image tagging. For more information, see [Configure DAM extension to Google Vision API](../../../configuration/dam_extensibility/dam_image_tagging.md).digital_assets/configuration/dam_extensibility/dam_image_tagging
 
 ## Keyword details
@@ -53,5 +53,3 @@ Keyword details feature showcases data on both user-added and plugin-generated k
 - **Added by users**: The user can view the manually added keywords and the count.
 
 - **Keywords added by plugin**: The user can view keywords generated by the plugin based on the relevance percentage(Percentage indicating how likely the image contains an object related to the keyword according to the plugin) and the count.
-
-
