@@ -1,4 +1,4 @@
-# How to add additional security realms for Virtual Portals
+# How to add additional security realms for virtual portals
 
 ## Applies to
 
