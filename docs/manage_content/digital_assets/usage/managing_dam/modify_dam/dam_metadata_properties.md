@@ -3,9 +3,8 @@
 This section shows how to edit the embedded metadata of a media asset in HCL Digital Asset Management \(DAM\).
 
 !!! notes
-
-    -   Embedded metadata is supported only for image or JPEG MIME type.
-    -   Embedded metadata properties show only the available meta information for a selected media asset.
+    - Embedded metadata is supported only for image/jpeg MIME type.
+    - Embedded metadata properties show only the available meta information for a selected media asset.
 
 ## View or edit the embedded metadata of a media asset
 
