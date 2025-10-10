@@ -47,9 +47,9 @@ Replace `<path-to-your-ssl-pem-crt-file>` with the actual path to your SSL certi
 ### 3\. Update the Custom Values YAML File
 
   - Open your custom values YAML file for editing.
-  - Set the `persistence` field under `applications` to **false**.
+  - Set the `persistence` field under `applications` to **false**. (This disables the persistence node and persistence pool node)
   - Modify the database hostname in the `configuration.persistence.host` field to point to your external database.
-  - If applicable, set the `ssl` field to **true**.
+  - If applicable, set the `configuration.persistence.ssl` field to **true**.
 
 ### 4\. Run Helm Upgrade
 
