@@ -1,21 +1,42 @@
 # Script Application
 
-This topic provides information about the deployment, undeployment, and restoration of Script Application.
+This topic provides information about managing Script Applications with DXClient, including deployment, undeployment, and restoration operations.
+
+## Overview
+
+Script Applications allow you to deploy modern web applications on HCL DX. The DXClient tool provides commands to:
+
+- Deploy new Script Applications to your DX server
+- Update existing Script Applications
+- Download Script Applications from the server
+- Undeploy (remove) Script Applications
+- Restore previous versions of Script Applications
+
+While DXClient manages the deployment lifecycle of Script Applications, you can also use the [Create DX Script App Tool](../../create_script_apps/create-and-deploy-script-app.md) to quickly scaffold modern React applications specifically designed for HCL DX.
 
 ## Deploy Script Application
 
-The `deploy-scriptapplication` command is used with the DXClient tool to push or pull Script Application between a local development workstation or automation server and DX 9.5 CF19 or later servers. The command will push or pull the files that make up a Script Application to the command pushes or pulls the files that make up a Script Application instance stored in a Web Content Manager library on the server.
+The `deploy-scriptapplication` command lets you push or pull Script Applications between your local environment and DX 9.5 CF19 or later servers. It handles transferring all files that make up a Script Application to or from a Web Content Manager library on the server.
+
+**Before You Begin**
 
 !!! note
-    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Application using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md). 
+    You must assign both Editor and Reviewer access to the Script Application Library for the user to deploy Script Applications using DXClient. For more details, refer to [Granting access to the Script Application Library](../../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md).
 
 **Required Files**:
 
-The Script Application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same (identified by the `prebuiltZip` or `contentRoot` attributes respectively). For more information on Script Application, refer to the [Build applications with the Script Application](../../../script_application/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+For the `push` command, you'll need one of the following:
+- A **ZIP file** containing your Script Application (use the `prebuiltZip` parameter)
+- An **extracted folder** containing your Script Application files (use the `contentRoot` parameter)
 
-**Command**
+!!! tip "Quick Start with create-dx-script-app"
+    To quickly scaffold a modern Script Application, use the [create-dx-script-app](../../create_script_apps/create-and-deploy-script-app.md) tool. This tool helps you create production-ready React applications with JavaScript or TypeScript that integrate seamlessly with HCL DX and includes built-in deployment capabilities.
 
-This command invokes the `deploy-scriptapplication` command inside the DXClient tool to either push or pull a Script Application:
+For more information on creating Script Applications, refer to the [Build applications with the Script Application](../../../script_application/scriptapps/common-setup/basic-scriptapp/basic_nowebpack_setup.md) topics in the HCL DX Help Center.
+
+**Command Structure**
+
+The base command for Script Application management:
 
 ```
 dxclient deploy-scriptapplication
@@ -23,424 +44,252 @@ dxclient deploy-scriptapplication
 
 **Subcommands**
 
-Use this command to create or update the content of a Script Application on the HCL DX server:
+| Subcommand | Description | Example |
+|------------|-------------|---------|
+| `push` | Create or update a Script Application on the DX server | `dxclient deploy-scriptapplication push [options]` |
+| `pull` | Download a Script Application from the DX server | `dxclient deploy-scriptapplication pull [options]` |
 
-```
-push [options]
-```
+**Getting Help**
 
-Use this command to download the content of a Script Application from the HCL DX server:
-
-```
-pull [options]
-```
-
-**Help command**
-
-This command shows the help document on the `deploy-scriptapplication` command:
+For detailed help on any command:
 
 ```
 dxclient deploy-scriptapplication pull -h
-
 dxclient deploy-scriptapplication push -h
 ```
 
-!!! notes
-    1. At least one of (a) `wcmContentId`, (b) `wcmContentPath` or (c) both `wcmContentName` and `wcmSiteArea` must be specified. If multiple options are provided, then the priority order goes as follows: (a), then (b), and then (c).
-    2. Use `wcmContentId` only if you are updating an existing Script Application instance. For new Script Application, specify either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea`.
-    3. `mainHtmlFile` parameter is mandatory for the push command. You must specify the location of the main HTML file that serves as the entry point for the Script Application. This is relative to your input in either prebuiltZip or contentRoot.
-    4. The outputfile for pull is generated inside store/outputFiles/sp-pull-output.
-    5. When `prebuiltZip` is specified, the main HTML file path must be relative to the top-level directory in the compressed file.
-    6. Use `wcmContentId` to add or update an existing Script Application into an active project. If you are adding a new Script Application to the project, use either (a) `wcmContentPath` or (b) both `wcmContentName` and `wcmSiteArea` along with `projectContext`.
+!!! important "Key Requirements"
+    - **Identifying Content:** You must specify at least one of:
+      - `wcmContentId` (for updating existing Script Applications)
+      - `wcmContentPath` (full path to the content)
+      - Both `wcmContentName` AND `wcmSiteArea` (name and location)
+    
+    - **For New Applications:** Use either `wcmContentPath` OR both `wcmContentName` and `wcmSiteArea`
+    
+    - **Main HTML File:** The `mainHtmlFile` parameter is mandatory for the `push` command
+      - For `prebuiltZip`: Path should be relative to the top-level directory in the ZIP
+      - For `contentRoot`: Path should be relative to that directory
+    
+    - **Project Integration:** When adding to an active project, include `projectContext` with the appropriate content identifiers
+    
+    - **Pull Output:** Files from the `pull` command are saved to `store/outputFiles/sp-pull-output`
 
-**Options for the `pull` subcommand**
+### Options for the `pull` subcommand
 
-Use this attribute to specify the protocol with which to connect to the DX server:
+| Option | Description | Example |
+|--------|-------------|---------|
+| `-dxProtocol <value>` | Protocol to connect to the DX server | `-dxProtocol https` |
+| `-hostname <value>` | Hostname of the target DX server | `-hostname mydxserver.com` |
+| `-dxPort <value>` | Port to connect to the DX server | `-dxPort 10039` |
+| `-contenthandlerPath <value>` | Path to content handler servlet | `-contenthandlerPath /wps/mycontenthandler` |
+| `-virtualPortalContext <value>` | Virtual portal context containing the Script App | `-virtualPortalContext myportal` |
+| `-projectContext <value>` | Portal project context for publication management | `-projectContext myproject` |
+| `-dxUsername <value>` | Username for DX server authentication | `-dxUsername admin` |
+| `-dxPassword <value>` | Password for authentication | `-dxPassword password` |
+| `-wcmContentId <value>` | WCM content ID of the Script App | `-wcmContentId 12345` |
 
-```
--dxProtocol <value>
-```
+### Options for the `push` subcommand
 
-Use this attribute to specify the hostname of the target DX server:
+| Option | Description | Example |
+|--------|-------------|---------|
+| `-dxProtocol <value>` | Protocol to connect to the DX server | `-dxProtocol https` |
+| `-hostname <value>` | Hostname of the target DX server | `-hostname mydxserver.com` |
+| `-dxPort <value>` | Port to connect to the DX server | `-dxPort 10039` |
+| `-contenthandlerPath <value>` | Path to content handler servlet | `-contenthandlerPath /wps/mycontenthandler` |
+| `-virtualPortalContext <value>` | Virtual portal context for the Script App | `-virtualPortalContext myportal` |
+| `-projectContext <value>` | Portal project context for publication management | `-projectContext myproject` |
+| `-dxUsername <value>` | Username for DX server authentication | `-dxUsername admin` |
+| `-dxPassword <value>` | Password for authentication | `-dxPassword password` |
+| `-wcmContentId <value>` | WCM content ID of the Script App | `-wcmContentId 12345` |
+| `-wcmSiteArea <value>` | Site area containing the Script App | `-wcmSiteArea "Script App Library/Apps"` |
+| `-wcmContentName <value>` | Name of the Script App content item | `-wcmContentName MyScriptApp` |
+| `-wcmContentPath <value>` | Full WCM path of the Script App | `-wcmContentPath "/Script App Library/MyApp"` |
+| `-wcmContentTitle <value>` | Title of the Script App content item | `-wcmContentTitle "My Application"` |
+| `-mainHtmlFile <value>` | Main HTML file name in the Script App | `-mainHtmlFile index.html` |
+| `-prebuiltZip <value>` | Path to Script App ZIP file | `-prebuiltZip /temp/MyApp.zip` |
+| `contentRoot <value>` | Path to Script App directory | `contentRoot /temp/MyApp` |
 
-```
--hostname <value>
-```
+> **Note:** Command options passed through the command line will override values set in the config.json file.
 
-Use this attribute to specify the port on which to connect to the DX server:
+### Command Examples
 
-```
--dxPort <value>
-```
+#### Pull Examples
 
-Use this attribute to specify the path to the content handler servlet on DX server (example: `/wps/mycontenthandler`):
-
-```
--contenthandlerPath <value>
-```
-
-Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:
-
-```
--virtualPortalContext <value>
-```
-
-Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:
-
-```
--projectContext <value>
-```
-
-Use this attribute to specify the username to authenticate with the DX server:
-
-```
--dxUsername <value>
-```
-
-Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-```
--dxPassword <value>
-```
-
-Use this attribute to specify the WCM content ID of the Script Application content item:
-
-```
--wcmContentId <value>
-```
-
-**Options for the `push` subcommand**
-
-Use this attribute to specify the protocol with which to connect to the DX server:
-
-```
--dxProtocol <value>
-```
-
-Use this attribute to specify the hostname of the target DX server:
-
-```
--hostname <value>
-```
-
-Use this attribute to specify the port on which to connect to the DX server:
-
-```
--dxPort <value>
-```
-
-Use this attribute to specify the path to the content handler servlet on the DX server (e.g. /wps/mycontenthandler):
-
-```
--contenthandlerPath <value>
-```
-
-Use this attribute to specify the context of the virtual portal that should receive the Script Application instance being pushed, if any:
-
-```
--virtualPortalContext <value>
-```
-
-Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:
-
-```
--projectContext <value>
-```
-
-Use this attribute to specify the username to authenticate with the DX server:
-
-```
--dxUsername <value>
-```
-
-Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-```
--dxPassword <value>
-```
-
-Use this attribute to specify the WCM ID of the Script Application content item:
-
-```
--wcmContentId <value>
-```
-
-Use this attribute to specify the `SiteArea` containing the Script Application content item:
-
-```
--wcmSiteArea <value>
-```
-
-Use this attribute to specify the name of the Script Application content item to be created or updated:
-
-```
--wcmContentName <value>
-```
-
-Use this attribute to specify the full WCM path of the Script Application content item to be created or updated:
-
-```
--wcmContentPath <value>
-```
-
-Use this attribute to set or update the title of the Script Application content item:
-
-```
--wcmContentTitle <value>
-```
-
-Use this attribute to specify the main HTML file name that is present within the Script Application:
-
-```
--mainHtmlFile <value>
-```
-
-Use this attribute to specify the absolute or relative path to the Script Application's content as a ZIP file:
-
-```
--prebuiltZip <value>
-```
-
-Use this attribute to specify the absolute or relative path to the Script Application's content in a directory:
-
-```
-contentRoot <value>
-```
-
-Command options passed through the command line will override values set in the config.json file.
-
-**Example:**
-
-For Script Application Pull:
-
+**Pull using content ID:**
 ```
 dxclient deploy-scriptapplication pull -wcmContentId <wcmContentId>
 ```
 
-If all required options are configured in config.json of the DX Client tool, then execute:
-
+**Pull using config file settings:**
 ```
 dxclient deploy-scriptapplication pull
 ```
 
-For Script Application Push, if the Script Application is extracted to a folder named temp at the root of the DXClient machine:
+#### Push Examples
 
+**Push from a directory:**
 ```
 dxclient deploy-scriptapplication push --contentRoot /temp --wcmSiteArea "Script Application Library/Script Application/" --wcmContentName DemoScriptApplication  --mainHtmlFile index.html
 ```
 
-If the Script Application is available as a .zip file in a folder named temp on the DXClient tool location, execute:
-
+**Push from a ZIP file:**
 ```
 dxclient deploy-scriptapplication push -prebuiltZip /temp/DemoScriptApplication.zip -wcmSiteArea "Script Application Library/Script Application/" -wcmContentName DemoScriptApplication --mainHtmlFile  /temp/DemoScriptApplication/index.html
 ```
 
-If all required options are configured in the config.json at the /dist/src/configuration path of the DXClient tool, then execute:
+**Push using config file settings:**
 
+!!! tip "Automated Creation & Deployment"
+    For an even simpler workflow, you can use the [create-dx-script-app](../../create_script_apps/create-and-deploy-script-app.md) tool to both create and deploy Script Applications in one streamlined process. It supports auto-deployment to DX via DXClient.
 ```
 dxclient deploy-scriptapplication push
 ```
 
 ## Undeploy Script Application
 
-The `undeploy-scriptapplication` command is used to remove a Script Application from a target HCL DX 9.5 CF192 or later servers.
+The `undeploy-scriptapplication` command removes a Script Application from a target HCL DX 9.5 CF192 or later server.
 
-**Required file**
-
-This command invokes the `undeploy-scriptapplication` tool inside the DXClient. The `undeploy-scriptapplication` dxtool uses the provided files and execute the `undeploy scriptapplication` task.
-
-**Command**
+### Command Syntax
 
 ```
 dxclient undeploy-scriptapplication -wcmContentId <value>
 ```
 
-**Help command**
-
-This command shows the help information for `undeploy-scriptapplication` command usage:
+### Getting Help
 
 ```
 dxclient undeploy-scriptapplication -h
 ```
 
-**Command options**
+### Command Options
 
-Use this attribute to specify the protocol with which to connect to the DX server:
+| Option | Description | Example |
+|--------|-------------|---------|
+| `-dxProtocol <value>` | Protocol to connect to the DX server | `-dxProtocol https` |
+| `-hostname <value>` | Hostname of the target DX server | `-hostname mydxserver.com` |
+| `-dxPort <value>` | Port to connect to the DX server | `-dxPort 10039` |
+| `-contenthandlerPath <value>` | Path to content handler servlet | `-contenthandlerPath /wps/mycontenthandler` |
+| `-virtualPortalContext <value>` | Virtual portal context containing the Script App | `-virtualPortalContext myportal` |
+| `-projectContext <value>` | Portal project context for publication management | `-projectContext myproject` |
+| `-dxUsername <value>` | Username for DX server authentication | `-dxUsername admin` |
+| `-dxPassword <value>` | Password for authentication | `-dxPassword password` |
+| `-wcmContentId <value>` | WCM content ID of the Script App | `-wcmContentId 12345` |
+| `-f` | Force delete the Script Application | `-f` |
 
-```
--dxProtocol <value>
-```
+> **Note:** Command options passed through the command line will override values set in the config.json file.
 
-Use this attribute to specify the hostname of the target DX server:
+### Examples
 
-```
--hostname <value>
-```
-
-Use this attribute to specify the port on which to connect to the DX server:
-
-```
--dxPort <value>
-```
-
-Use this attribute to specify the path to the content handler servlet on DX server (example, `/wps/mycontenthandler`):
-
-```
--contenthandlerPath <value>
-```
-
-Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:
-
-```
--virtualPortalContext <value>
-```
-
-Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:
-
-```
--projectContext <value>
-```
-
-Use this attribute to specify the username to authenticate with the DX server:
-
-```
--dxUsername <value>
-```
-
-Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-```
--dxPassword <value>
-```
-
-Use this attribute to specify the WCM content ID of the Script Application content item:
-
-```
--wcmContentId <value>
-```
-
-Use this tag to forcefully delete the Script Application:
-
-```
--f
-```
-
-Command options passed through the command line will override values set in the config.json file.
-
-Log files from command execution can be found in the logs directory of the DXClient installation.
-
-**Example:**
-
+**Standard undeployment:**
 ```
 dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id>
+```
+
+**Forced undeployment:**
+```
 dxclient undeploy-scriptapplication -wcmContentId <wcm-content-id> -f
 ```
 
 ## Restore Script Application
 
-The `restore-scriptapplication` command is used to restore a Script Application into one of its previous versions present in the target HCL DX 9.5 CF 19 or later servers.
+The `restore-scriptapplication` command restores a Script Application to a previous version from the target HCL DX 9.5 CF 19 or later server.
 
-**Required file**
-
-This command invokes the restore-scriptapplication tool inside the DXClient. The restore-scriptapplication dxtool uses the provided files and execute the restore scriptapplication task.
-
-**Command**
+### Command Syntax
 
 ```
 dxclient restore-scriptapplication -wcmContentId <value> -versionName <version-name>
 ```
 
-**Help command**
-
-This command shows the help information for `restore-scriptapplication` command usage:
+### Getting Help
 
 ```
 dxclient restore-scriptapplication -h
 ```
 
-**Command options**
+### Command Options
 
-Use this attribute to specify the protocol with which to connect to the DX server:
+| Option | Description | Example |
+|--------|-------------|---------|
+| `-dxProtocol <value>` | Protocol to connect to the DX server | `-dxProtocol https` |
+| `-hostname <value>` | Hostname of the target DX server | `-hostname mydxserver.com` |
+| `-dxPort <value>` | Port to connect to the DX server | `-dxPort 10039` |
+| `-contenthandlerPath <value>` | Path to content handler servlet | `-contenthandlerPath /wps/mycontenthandler` |
+| `-virtualPortalContext <value>` | Virtual portal context containing the Script App | `-virtualPortalContext myportal` |
+| `-projectContext <value>` | Portal project context for publication management | `-projectContext myproject` |
+| `-dxUsername <value>` | Username for DX server authentication | `-dxUsername admin` |
+| `-dxPassword <value>` | Password for authentication | `-dxPassword password` |
+| `-wcmContentId <value>` | WCM content ID of the Script App | `-wcmContentId 12345` |
+| `-versionName <value>` | Version name to restore | `-versionName "1.0"` |
+| `-restoreAsPublished <value>` | Restore as draft or published version | `-restoreAsPublished true` |
 
-```
--dxProtocol <value>
-```
+> **Note:** Command options passed through the command line will override values set in the config.json file.
 
-Use this attribute to specify the hostname of the target DX server:
-
-```
--hostname <value>
-```
-
-Use this attribute to specify the port on which to connect to the DX server:
-
-```
--dxPort <value>
-```
-
-Use this attribute to specify the path to the content handler servlet on DX server (example, `/wps/mycontenthandler`):
-
-```
--contenthandlerPath <value>
-```
-
-Use this attribute to specify the context of the virtual portal that contains the Script Application instance that you want to retrieve, if any:
-
-```
--virtualPortalContext <value>
-```
-
-Use this attribute to specify the context of the portal project that manages the publication of changes to the Script Application instance, if any:
-
-```
--projectContext <value>
-```
-
-Use this attribute to specify the username to authenticate with the DX server:
-
-```
--dxUsername <value>
-```
-
-Use this attribute to specify the password for the user in the `dxUsername` attribute:
-
-```
--dxPassword <value>
-```
-
-Use this attribute to specify the WCM content ID of the Script Application content item:
-
-```
--wcmContentId <value>
-```
-
-Use this attribute to specify the versionName for the Script Application:
-
-```
--versionName <value>
-```
-
-Use this attribute to specify the restore as a draft or replace the published version of Script Application:
-
-```
--restoreAsPublished <value>
-```
-
-Command options passed through the command line will override values set in the config.json file.
-
-Log files from command execution can be found in the logs directory of the DXClient installation.
-
-**Example:**
+### Example
 
 ```
 dxclient restore-scriptapplication -wcmContentID <wcm-content-id> -versionName <version-name> -restoreAsPublished <restore-as-published>
 ```
 
+## Troubleshooting
+
+If you encounter issues when working with Script Applications in DXClient, check these common problems and solutions:
+
+### Site Area Issues
+
+- **Ensure wcmSiteArea exists**
+  
+  Before deploying Script Applications to the virtual portal, ensure that the specified `wcmSiteArea` exists.
+  
+  **Solution:** Create a new site area or use an existing one in your target environment.
+
+- **Handling virtualPortalContext**
+  
+  If the `virtualPortalContext` is provided but not present in DX, the Script Application will default to the base portal.
+  
+  **Solution:** Verify the virtual portal name is correct or accept deployment to the base portal.
+
+### Permission Problems
+
+- **User Access Rights**
+  
+  The user specified in `dxUsername` must have both Editor and Reviewer access to the Script Application Library.
+  
+  **Solution:** Check and update user permissions in the DX Portal.
+
+### Path and File Issues
+
+- **File Path Formatting**
+  
+  When using `prebuiltZip`, make sure the `mainHtmlFile` path is relative to the top-level directory in the ZIP file.
+  For `contentRoot`, the path should be relative to that directory.
+  
+  **Solution:** Verify paths are correctly formatted based on your content source.
+
+- **Content ID Not Found**
+  
+  If using `wcmContentId` for updates and receiving a "not found" error, the content ID may be incorrect.
+  
+  **Solution:** Verify that the content ID is correct and that the content exists in the specified location.
+
+### Debugging Tips
+
+- Check the logs directory in your DXClient installation for detailed error messages
+- Verify connection parameters (hostname, port, protocol)
+- Ensure your authentication credentials are correct
+
 ???+ info "Related information"
     - [DXClient](../index.md)
+    - [Create DX Script App Tool](../../create_script_apps/create-and-deploy-script-app.md) - Tool for scaffolding modern React applications for HCL DX
 
-## HCLSoftware U learning materials
+## HCLSoftware U Learning Materials
 
-For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. To try it out yourself, refer to [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip){target="_blank"}.
+For an introduction and a demo on how to use Script Application, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D415){target="_blank"}. 
 
-To learn more about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
+**Beginner Resources:**
+- [Script Application Lab (Basic)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application.pdf){target="_blank"} 
+- [Script Application Lab Resources (Basic)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Script_Application_Lab_Resources.zip){target="_blank"}
+
+**Advanced Resources:**
+- [Script Application (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"} 
+- [Script Application Lab (Advanced)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} 
+- [Script Application Lab Resources (Advanced)](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}
