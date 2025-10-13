@@ -14,6 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -64,6 +65,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+
+### Search V2 - New Atomic Components and supported CSS part attributes available
+
+=== "Containers"
+    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs have also been updated to support additional CSS part attributes. For more information, refer to [Search V2 - Atomic Components](../../build_sites/search_v2/components.md#atomic-components).
 
 ### WAS, JDK, and iFix versions
 
