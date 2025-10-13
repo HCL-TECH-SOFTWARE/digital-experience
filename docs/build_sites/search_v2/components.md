@@ -27,7 +27,7 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **Properties** | **type** | **Description** | **Default** |
     | ------------ | ------------- | ------------ | --------------|
     | **id** | String | A unique identifier for the component instance. This property is automatically assigned using a UUID generator when the component is instantiated. | Generated UUID value |
-    | **localization** | Map<string,string\> | | undefined |
+    | **localization** | Map<string,string\> | Localization map for template messages. Used for internationalization. | undefined |
 
 - **dx-accordion:** This customizable web component provides an expandable and collapsible accordion UI element. It supports optional checkboxes, secondary text, and left-to-right (LTR) or right-to-left (RTL) layouts. The component is accessible, keyboard-navigable, and supports both outlined and no-outline visual styles. It is suitable for displaying grouped content sections that users can expand or collapse as needed.
 
@@ -180,7 +180,7 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **name** | String | Specifies the name or label of the chip. | '' |
     | **count** | Number | Represents a numeric count associated with the chip. | 0 |
     | **showChipCount** | Boolean | Determines whether `count` should be displayed alongside the chip name. | `false` |
-    | **showChipCount** | Boolean | Determines whether `count` should be displayed alongside the chip name. | `false` |
+    | **showAvatar** | Boolean | Determines Whether to display an avatar icon at the start of the chip. | `false` |
     | **clearIcon** | Boolean | Determines whether to display a clear (remove) icon slot at the end of the chip. | `false` |
     | **disabled** | Boolean | Disables the chip, making it non-interactive and visually distinct. | `false` |
 
@@ -455,8 +455,8 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
-    | **handleBreadcrumbClick** | | Optional callback function invoked when a breadcrumb item is clicked (except disabled items). | undefined |
-    | **exportParts** | String | Comma-separated list of part names for styling with ::part. Used internally for style encapsulation. | Computed from enum |
+    | **handleBreadcrumbClick** | Function | Optional callback function invoked when a breadcrumb item is clicked (except disabled items). | undefined |
+    | **exportParts** | String | exportParts is a comma-separated list of part names that enables style encapsulation and customization for breadcrumb items from outside the component. |
 
     The following PathType Interface properties are used in `dx-breadcrumbs` and `dx-breadcrumbs-item`:
 
@@ -774,9 +774,9 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **emptyOptions** | Boolean | Allows the addition of new values not in the options list. | `false` |
     | **clearIcon** | Boolean | Shows a clear icon on each chip. | `true` |
     | **error** | Boolean | Marks the input as having an error. | `false` |
-    | **customWidth** | String | undefined | Specifies the custom width for the component (for example, '300px'). | undefined |
-    | **placeholder** | String | undefined | Specifies the placeholder text for the input. | Localized default |
-    | **label** | String | undefined | Specifies the Label for the input. | Localized default |
+    | **customWidth** | String or undefined | Specifies the custom width for the component (for example, '300px'). | undefined |
+    | **placeholder** | String or undefined | Specifies the placeholder text for the input. | Localized default |
+    | **label** | String or undefined | Specifies the Label for the input. | Localized default |
     | **toggleDropDown** | Boolean | Controls whether the dropdown is open. | `false` |
     | **listItems** | HTMLElement[] | Specifies the list of dropdown item elements. | undefined |
     | **currentFocusedItem** | HTMLElement[] | Specifies the currently focused dropdown item. | undefined |
@@ -885,7 +885,7 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **open** | Boolean | Controls whether the preview modal is open. | `false` |
     | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | [] |
     | **customHeaderTitle** | String | null | Specifies a custom title for the preview header. If not set, uses the current item's title. | null |
-    | **component** | TemplateResult | String | Provides custom content to render instead of the default preview. | '' |
+    | **component** | TemplateResult or String | Provides custom content to render instead of the default preview. | '' |
     | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | undefined |
     | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | undefined |
     | **renditionLabel** | String | Specifies the label for the rendition select dropdown. | '' |
@@ -896,8 +896,8 @@ ACs are the smallest possible building blocks of the search functionality. These
     | **zoomOutDisable** | Boolean | Indicates whether the zoom out button is disabled. | `false` |
     | **zoomInDisable** | Boolean | Indicates whether the zoom in button is disabled. | `false` |
     | **zoomToFitPercentage** | Number | Specifies the calculated zoom percentage required to fit the image in the container. | `false` |
-    | **selectedRenditionId** | String | null | Indicates the ID of the currently selected rendition. | null |
-    | **currentDisplaySource** | String | null | Specifies the source URL of the currently displayed asset (image or video). | null |
+    | **selectedRenditionId** | String or null | Indicates the ID of the currently selected rendition. | null |
+    | **currentDisplaySource** | String or null | Specifies the source URL of the currently displayed asset (image or video). | null |
     | **isLoading** | Boolean | Indicates whether the preview is loading. | `true` |
     | **hasError** | Boolean | Indicates whether there is an error displaying the preview. | `false` |
 
