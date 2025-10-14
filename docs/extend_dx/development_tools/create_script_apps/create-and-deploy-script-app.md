@@ -155,7 +155,7 @@ This command will:
 2. Upload the built application to the Script Application Library
 3. Place it in the site area specified in your environment configuration
 
-Under the hood, the deployment process uses DXClient's Script Application deployment capabilities. For more detailed information about DXClient's Script Application commands, options, and requirements, refer to the [DXClient Script Application documentation](../../dxclient/dxclient_artifact_types/scriptapplications.md).
+Under the hood, the deployment process uses DXClient's Script Application deployment capabilities. For more detailed information about DXClient's Script Application commands, options, and requirements, refer to the [DXClient Script Application documentation](../dxclient/dxclient_artifact_types/scriptapplications.md).
 
 ## Part 3: Integrating the Store Locator in the Nex Haven Site
 
@@ -269,7 +269,7 @@ If you encounter issues during development:
 ## Resources
 
 - [create-dx-script-app Repository](https://git.cwp.pnp-hcl.com/websphere-portal-incubator/create-dx-script-app)
-- [DXClient Script Application Documentation](../../dxclient/dxclient_artifact_types/scriptapplications.md)
+- [DXClient Script Application Documentation](../dxclient/dxclient_artifact_types/scriptapplications.md)
 - [Nex Haven Site Documentation](https://help.hcl-software.com/digital-experience/9.5/latest/build_sites/nex_haven/)
 - [DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/)
 - [Script Application Security](../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md)
