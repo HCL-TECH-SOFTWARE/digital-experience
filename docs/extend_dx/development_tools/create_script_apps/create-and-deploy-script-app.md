@@ -29,7 +29,7 @@ Before you begin, make sure you have the following
 
 Refer to the following steps to create a new Script Application using the `create-dx-script-app` tool.
 
-1. Create a new Script Application project using the npm create command:
+1. Create a new Script Application project using the following command:
 
     ```bash
     npm create dx-script-app
