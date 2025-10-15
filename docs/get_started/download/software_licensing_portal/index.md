@@ -1,10 +1,6 @@
----
-title: Software licensing portals
----
-
 # Downloading and installing HCL DX from a software licensing portal
 
-HCL Digital Experience (DX) software is now available through the new [My HCLSoftware (MHS)](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal, in parallel to the existing [HCL Software License and Download portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"} delivered in FlexNet.
+HCL Digital Experience (DX) software is now available through the [My HCLSoftware (MHS)](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal.
 
 !!!note
     The MHS portal will replace the HCLSoftware License and Download portal as of June 30, 2025. For more information, refer to [Announcing HCLSoftware Download site and Licensing mechanism changes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0112538){target="_blank"}.
@@ -13,11 +9,9 @@ To change your entitlement server from FlexNet to MHS portal, see the instructio
 
 New customers, or those with new deployments, must register at the MHS portal and download their entitled HCL DX packages there to avoid any need to convert later.
 
-Co-packaged software is identified in HCL DX 9.5 download documents, which are available in your entitlements in the [HCL Software License and Download Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}.
-
 ## Getting the software
 
-You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, see the [Step-by-step guide on downloading HCL Digital Experience products](../../access-software/register-for-access.md){:target="_blank"} and watch the video tutorial about [How to download HCL Digital Experience Software from the License Server](https://youtu.be/ze0ZhLlXwfU){:target="_blank"}.
+You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){:target="_blank"}. For more guidance, refer to [Locating and Downloading DX Products](../../../get_started/access-software/locating-downloads.md).
 
 HCL DX V9.5 for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){:target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal can apply those credentials to optionally access the Docker components of DX v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information. 
 
