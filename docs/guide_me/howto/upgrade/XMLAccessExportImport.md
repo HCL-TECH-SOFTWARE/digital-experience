@@ -1,4 +1,4 @@
-# How to use XML Access to export and import Portal pages
+# How to use XML Access to export and import portal pages
 
 ## Applies to
 
