@@ -24,11 +24,12 @@ The process is managed automatically by the products' Helm charts once the featu
 
     - The Secret follows a strict, well-known naming convention: `<product-name>-shared-config-v<major>`.
     - For example, HCL DX creates a Secret named `dx-shared-config-v1`.
-    - The major version (`v1`) only increments if there are important changes to the configuration schema.
-    - The Secret contains integration-critical settings, such as Lightweight Third-Party Authentication (LTPA) and Secure Sockets Layer (SSL) configurations, provided by the DX Core and WebEngine components.
+    - The major version (`v1`) only increments if there are **breaking changes** to the configuration schema.
+    - The Secret contains integration-critical settings, such as Lightweight Third-Party Authentication (LTPA) and Secure Sockets Layer (SSL) configurations, provided by the DX Core and WebEngine components. For **custom secrets**, only the secret's **name** is shared; each consumer product must then independently look up the actual custom secret.
+    - The shared Secret will be **recreated** during a **Helm upgrade** if the values setting the configuration within it have **changed** (e.g., a password update).
 
         !!!note
-            The data in the Secret is labeled (for example, `core.ltpa`, `webengine.ltpa`) to prevent configuration conflicts between components.
+            The data in the Secret is labeled (for example, `core.ltpa`, `webengine.ltpa`) to prevent configuration conflicts between components. The shared Secret does **not decode** any other secrets; it is a fresh secret containing information from the producer's Helm `values.yaml` file.
 
 2. The consumer uses the shared Secret.
 
@@ -60,7 +61,7 @@ The entire mechanism is controlled via feature flags in your product's Helm `val
     ```yaml
     consumeSharedConfigs:
         - name: dx-shared-config  # The name of the producer's shared secret
-        version: v1            # The version of the schema it expects
+          version: v1            # The version of the schema it expects
     ```
 
     Alternatively, you can specify a `version` range the consumer is compatible with:
@@ -68,7 +69,7 @@ The entire mechanism is controlled via feature flags in your product's Helm `val
     ```yaml
     consumeSharedConfigs:
         - name: dx-shared-config
-        version: 
+          version: 
             min: v1
             max: v2
     ```
