@@ -6,10 +6,10 @@ HCL DX Portal relies heavily on a type of hashmap known as a `dynacache`. A dyna
 
 However, in Kubernetes, there are no WebSphere Application Server clusters. All DX Portal instances are running as non-clustered WebSphere Application Server instances. But the dynacaches in these instances need to know if a dynacache in a different DX Portal instances (for example in a different pod) changes a dynacache value. In Kubernetes, this is achieved thru the use a database table named `INVALIDATION_TABLE`. 
 
-By default, the database INVALIDATION_TABLE resides in the the `RELEASE` domain/schema. However, there may be use cases whereby this table would be better stored in one of the other 3 domain/schemas (e.g. `JCR`, `COMMUNITY` or `CUSTOMIZATION`). Changing the location of this table can (only) be achieved in the kubernetes helm chart of the HCL DX Portal.
+By default, the database INVALIDATION_TABLE resides in the the `RELEASE` domain/schema. However, there may be use cases whereby this table would be better stored in one of the other 3 domain/schemas (e.g. `JCR`, `COMMUNITY` or `CUSTOMIZATION`). Changing the domain/schema of this table can (only) be achieved in the kubernetes helm chart of the HCL DX Portal.
 
 # How DX Portal Determines the Location of Invalidation Table
-HCL DX Portal will examine the WebSphere Application Server REP (Resource Environment Provider) called `WP_ConfigService`. It will retrieve the value for the custom property `db.cache.invalidation.domain`. It will use that value as the domain/schema for the invalidation table in all DX Portal code using a dynacache.
+HCL DX Portal will examine the WebSphere Application Server REP (Resource Environment Provider) named `WP_ConfigService`. It will retrieve the value for the property `db.cache.invalidation.domain`. It will use that value as the domain/schema for the invalidation table in all DX Portal code using a dynacache.
 
 As mentioned in the introduction, the default domain/schema for this table is `RELEASE`. This default value is also found in the helm chart `values.yaml` as `invalidationDomain: RELEASE`.
 
