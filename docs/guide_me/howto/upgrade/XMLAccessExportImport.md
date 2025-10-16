@@ -46,7 +46,7 @@ XML Access (XML Configuration Service) is a command-line batch-processing utilit
         The downloaded xml file (pageExport.xml) now should contain all required information to restore the entire Home portal page later again.  
 
 6. Delete the Home page using the **delete** icon shown in the image below.  
-
+### Delete the portal page
     ![alt text](./images/XMLAccessExportImport_image-5.png)  
 
 7. On the pop-up window with the question *"Are you sure you want to delete Home? All pages below Home will be deleted."* Click **Ok**.  
