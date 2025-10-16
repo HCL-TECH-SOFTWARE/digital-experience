@@ -21,17 +21,13 @@ Before you can use Search V2, complete the following prerequisites:
 
 Refer to the following pages for more information:
 
-- **[Installing Search V2](./installation.md)**<br>
+- **[Installing Search V2](./installation.md)**  
 This section provides a high-level overview of the architecture and the steps to install, enable, and update Search V2.
-
-- **[Accessing Search V2](./access.md)**<br>
+- **[Accessing Search V2](./access.md)**  
 This section provides the steps on how to access the Search V2 portlet.
-
-- **[Using Search V2](./usage.md)**<br>
+- **[Using Search V2](./usage.md)**  
 This section provides a guide on generating results using the Search V2.
-
-- **[Limitations of Search V2](./limitations.md)**<br>
+- **[Limitations of Search V2](./limitations.md)**  
 This section lists the current limitations of Search V2.
-
-- **[Components of Search V2](./components.md)**<br>
+- **[Components of Search V2](./components/index.md)**  
 This section provides a guide on using web components from Search V2 to customize new or existing theme pages.
