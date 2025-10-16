@@ -6,65 +6,67 @@
 
 ## Introduction
 
-XML Access (XML Configuration Service) is a command-line batch-processing utility for exporting & importing various portal configuration. It can export specific pages, complete or partial configuration from one portal to another. By default, HCL DX provides a set of standard XML samples with the installation binaries. The samples can be found in the directory `<PortalServer_root>/doc/xml-samples`.  
+XML Access (XML Configuration Service) is a command-line batch utility that you can use to export and import portal configurations. You can export specific pages, partial configurations, or complete environments from one portal to another.
 
-**XML Access features and potential use-cases:**  
+By default, HCL Digital Experience provides a set of standard XML samples with the installation binaries. You can find these samples in the following directory:  
+`<PortalServer_root>/doc/xml-samples`
 
-With XML Access it is possible to:  
+## XML Access features and use cases
 
-* transfer all or part of a Portal configuration including user data from one system to another.
-* backing up the configuration of certain Environments, before loading new configurations.
-* updating existing portlets when a new WAR file is provided by development.
-* overwrite objects referred to 'artifacts' or 'resources' that it finds on the target systems with the values specified in the XML file.
-* close the gap of missing objects. Objects not present in the target system but defined in the XML will be created during an xml access import.  
-* greatly eases the duplication of a portal environment from server A to server B.
-* update pages & portlets without losing user customization. User customization to a page or a portlet is retained because the object IDs are retained.
+You can use XML Access to:
+
+- Transfer all or part of a portal configuration, including user data, from one system to another.  
+- Back up the configuration of specific environments before applying new configurations.  
+- Update existing portlets when a new WAR file is provided by development.  
+- Overwrite artifacts or resources on the target system with the values defined in the XML file.  
+- Create missing objects that are defined in the XML file but not present in the target system.  
+- Simplify duplication of a portal environment from one server to another.  
+- Update pages and portlets without losing user customizations. Customizations are retained because object IDs remain unchanged.
 
 ## Instructions
 
-XML Access (XML Configuration Service) is a command-line batch-processing utility for exporting & importing various portal configurations. In this article it will be described how to export and import portal pages using this utility. For that the article describes detailed steps in how to export the Home portal page. Then the Home portal page will be deleted and finally it will be imported / restored again using the XML Access utility.  
+XML Access (XML Configuration Service) is a command-line batch utility that you can use to export and import portal configurations.  
+
+This section explains how to use XML Access to export and import portal pages. The example shows how to export the **Home** portal page, delete it, and then restore it by importing the previously exported XML file.   
 
 ### Detailed steps
 
-1. Login as administrator in HCL Portal Server Console.  
+1. Sign in to the HCL Portal Server as an administrator.  
 
-2. Navigate to **Administration -> Portal User Interface -> Content Root**.  
+2. Go to **Administration > Portal User Interface > Content Root**.  
 
-3. Click on the **Export Page** icon as shown below for the portal page Home.  
+3. Select the **Export Page** icon for the **Home** portal page.  
 
-    ![alt text](./images/XMLAccessExportImport_image-8.png)  
+    ![Export the Home page](./images/XMLAccessExportImport_image-8.png)  
 
-4. Below popup window will opened. Click **Yes** to Export the page Hierarchy of Home portal page.  
+4. In the pop-up window, select **Yes** to export the page hierarchy for the Home portal page.  
 
-    ![alt text](./images/XMLAccessExportImport_image-7.png)  
+    ![Confirm export of Home page hierarchy](./images/XMLAccessExportImport_image-7.png)  
 
-5. Click Save to store the exported file to your local file system.  
+5. Select **Save** to download the exported file to your local system.  
 
-    ![alt text](./images/XMLAccessExportImport_image-6.png)  
+    ![Save exported page file](./images/XMLAccessExportImport_image-6.png)  
 
-    !!!note
-        The downloaded xml file (pageExport.xml) now should contain all required information to restore the entire Home portal page later again.  
+    !!! note  
+        The downloaded XML file (`pageExport.xml`) contains all the information required to restore the **Home** portal page later.  
 
-6. Delete the Home page using the **delete** icon shown in the image below.  
-### Delete the portal page
-    ![alt text](./images/XMLAccessExportImport_image-5.png)  
+6. Delete the **Home** page by selecting the **Delete** icon.  
 
-7. On the pop-up window with the question *"Are you sure you want to delete Home? All pages below Home will be deleted."* Click **Ok**.  
+    ![Delete the portal page](./images/XMLAccessExportImport_image-5.png)  
 
-    ![alt text](./images/XMLAccessExportImport_image-4.png)  
+7. In the confirmation dialog, select **OK** to confirm deletion of the **Home** page and all its subpages.  
 
-8. With that action the **Home** page is not showing on **Open Site Menu** anymore.
+    ![Confirm delete action](./images/XMLAccessExportImport_image-4.png)  
 
-    ![alt text](./images/XMLAccessExportImport_image-3.png)  
+8. Verify that the **Home** page no longer appears in the **Open Site Menu**.  
 
-9. Now to recreate the same Portal Page again, import the XML which was exported earlier by navigating to **Administration > Portal Settings > Import XML > Browse > Import** as shown below.  
+    ![Home page removed from Open Site Menu](./images/XMLAccessExportImport_image-3.png)  
 
-    ![alt text](./images/XMLAccessExportImport_image-2.png)  
+9. To recreate the **Home** portal page, import the previously exported XML file.  
+   Go to **Administration > Portal Settings > Import XML**, then select **Browse** and **Import**.  
 
-10. You will receive successful message as shown below once the import process is successfully completed.  
+    ![Import XML file](./images/XMLAccessExportImport_image-2.png)  
 
-    ![alt text](./images/XMLAccessExportImport_image-1.png)  
+10. Wait for the success message that confirms the import process completed successfully.  
 
-11. Finally check, if the **Home page** is restored correctly again by navigating to **Open Site Menu -> Home**.
-
-    ![alt text](./images/XMLAccessExportImport_image.png)  
+    ![Import successful message](./images/XMLAccessExportImport_image-1.png)    
