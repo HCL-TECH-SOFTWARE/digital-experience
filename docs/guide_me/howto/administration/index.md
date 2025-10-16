@@ -26,5 +26,3 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[How to create a custom Login Portlet for HCL Portal and set credential vault?](./CustomLoginPortlet.md)**  
-Learn how to create a custom login portlet for HCL Portal if the base portlet is not in the format you want, or if you want to add additional checking to the login. This article will tell you how to accomplish this and how to add user credentials to the credential vault upon login.
