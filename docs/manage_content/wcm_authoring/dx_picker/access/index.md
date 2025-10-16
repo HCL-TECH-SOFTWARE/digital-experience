@@ -1,20 +1,6 @@
-# Accessing DX Picker
+# Access for HCL DX Picker
+
 This section provides steps on how to access the DX Picker in a custom web application.
-
-## Prerequisite
-
-DX Picker must be installed and configured in HCL Digital Experience 9.5 release update CF214 or higher. For instructions on installing DX Picker on supported environments, see the [DX Picker Installation](../installation/index.md) topic.
-
-!!! important
-    To prevent CORS issue and be able to access DX Picker in a custom web application, it is required to add the host of the custom web application in the list of origins of the RingAPI service.
-    ```
-        ringApi:
-        # CORS Origin configuration for Ring API, array of elements
-        corsOrigin: []
-    ```
-
-
-## Accessing DX Picker
 
 !!! note
     You must have **User** access to use DX Picker. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
@@ -28,7 +14,7 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
         <head>...</head>
         <body>
           // Import the dx-picker.js inside 
-          <script src="https://<DX_HOSTNAME>/dx/ui/picker/dx-picker.js"></script>
+          <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
         </body>
       </html>
     ```
@@ -42,7 +28,7 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
           // Insert the tag inside your code
           <dx-picker></dx-picker>
 
-          <script src="https://<DX_HOSTNAME>/dx/ui/picker/dx-picker.js"></script>
+          <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
         </body>
       </html>
     ```
@@ -56,13 +42,9 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
         <head>
           <script>
             function toggleDxPicker() {
-              const dxPicker = document.getElementById('dx-picker-id')
+                const dxPicker = document.getElementById('dx-picker-id')
 
-              if (dxPicker) {
-                const isOpen = dxPicker.getAttribute('open') === String(true);
-
-                dxPicker.setAttribute('open', !isOpen)
-              }
+                if (dxPicker) dxPicker.toggleDialog();
             }
           </script>
         </head>
@@ -73,7 +55,35 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
           // Insert the tag inside your code
           <dx-picker id="dx-picker-id"></dx-picker>
 
-          <script src="https://<DX_HOSTNAME>/dx/ui/picker/dx-picker.js"></script>
+          <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
+        </body>
+      </html>
+    ```
+
+4.  You can change the `content source` by adding `source` attribute to `dx-picer`.
+
+    !!! note
+        If no source attribute is use, **DAM** is the default content source.
+    
+    ```html
+      <html>
+        <head>
+          <script>
+            function toggleDxPicker() {
+                const dxPicker = document.getElementById('dx-picker-id')
+
+                if (dxPicker) dxPicker.toggleDialog();
+            }
+          </script>
+        </head>
+        <body>
+          // Add toggleDxPicker to the button
+          <button onclick="toggleDxPicker()">Open Picker</button>
+
+          // Insert the tag inside your code
+          <dx-picker id="dx-picker-id" source='["dam", "wcm", "jcr", "portal"]'></dx-picker>
+
+          <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
         </body>
       </html>
     ```
@@ -103,25 +113,37 @@ window.addEventListener('message', (event) => {
 The following are the current events available in the DX Picker:
 
 - `HCL-DX-PICKER-SELECT` - Triggered when selecting an item.
+- `HCL-DX-PICKER-PREVIEW-SELECT` - Triggered when selecting an item from Preview.
 
-    This event contains the following object:
+    These events contains the following object:
 
     ```json
     {
       "type": "HCL-DX-PICKER-SELECT",
       "detail": {
-        "source": "dam",
-        "items": [
+        "items":
           {
-            "id": string,
-            "name": string,
-            "size": string,
-            "path": string,
-            "thumbnail": string,
-            "assertType": string,
-            "mediaType": string
+            "_index": string,
+            "_id": string,
+            "_score": number,
+            "_source": {
+                "selectedRendition": DxDocumentObjectAssetRendition,
+                "created": string | number,
+                "updated": string | number,
+                "documentObject": DxDocumentObject,
+                "type": string,
+                "lastIndexed": number,
+                "acls": string[],
+                "firstIndexed": number,
+                "tags": string[],
+                "title": string,
+                "description": string,
+                "dataUri": string,
+                "text": string,
+                "link": string,
+                "tagsText": string
+            }
           }
-        ]
       }
     }
     ```

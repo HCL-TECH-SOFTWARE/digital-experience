@@ -2,11 +2,6 @@
 
 Take note of the following limitations when using HCL DX Picker:
 
-- Only assets from Digital Asset Management (DAM) can be selected.
-- Updates on DAM are not reflected immediately in DX Picker.
-- Users cannot select multiple assets at the same time.
-- Using DX Picker in a Virtual Portal deployment pattern is currently not supported. 
-- Users cannot use the DX Picker to upload a DAM asset.
-- Previewing an asset is currently not supported.
-- Search functionality is currently not available.
-- Friendly URLs of the DAM assets cannot be displayed at this time.
+- Only objects from DAM, WCM, JCR and Portal can be selected.
+- Updates on objects in the content sources are not reflected immediately in DX Picker.
+- Users cannot select multiple objects at the same time.
