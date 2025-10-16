@@ -6,20 +6,20 @@
 
 ## Introduction
 
-You may want to create a custom login portlet for HCL DX, if the base portlet is not in the format you want or if you want to add additional checking to the login. This article will tell you how to accomplish this and how to add user credentials to the credential vault upon login.
+HCL Digital Experience allows to create custom login portlets. You may want to use that, if the base portlet is not in the format you want, or if you want to add additional checking to the login. This article provides detailed steps showing how to build such a custom login portlet and how to add user credentials to the credential vault upon login.
 
 ## Instructions
 
-In HCL DX v8.5 and later, there is a portlet service that allows you to log into Portal. This service still takes advantage of the LoginUserAuth in the login process. You can also write your own Login portlet and handle any validation or processing before or after the login process.
+In HCL DX v8.5 and later, there is a portlet service that allows users to log into Portal. This service still takes advantage of the LoginUserAuth in the login process. It is possible to develop a own login portlet and handle any validation or processing before or after the login process.
 
-To use this service with any IDE like Microsoft Visual Studio or Rational Application Developer (RAD), you must be sure to add the following to your build path as an external jar:
+To use this service with any IDE like Microsoft Visual Studio or Rational Application Developer (RAD), it is needed to add the following to the build path as an external jar:
 
 ```files
 wp.auth.cmd.jar
 wp.auth.base.jar
 ```
 
-You can find these two jar files in the `<PortalServer_root>\base\wp.auth.base\shared\app` and `<PortalServer_root>\base\wp.auth.cmd\shared\app` directories in your HCL Portal install.
+These two jar files can be found in the `<PortalServer_root>\base\wp.auth.base\shared\app` and `<PortalServer_root>\base\wp.auth.cmd\shared\app` directories of your HCL DX installation binaries.
 
 The first portlet service is the following:
 
@@ -34,7 +34,7 @@ psh = (PortletServiceHome) ctx.lookup(LoginHome.JNDI_NAME);
 loginHome = (LoginHome) psh.getPortletService(LoginHome.class);
 ```
 
-Then, in your processAction method, you can log the user in using the following code:
+Then in the processAction method of your custom login portlet add the following code to let users logging in into the DX Portal.  
 
 ```java
 LoginService loginService = (LoginService) loginHome.getLoginService(request, response);  
@@ -49,7 +49,8 @@ try {
     }  
 ```
 
-You must also add a login form to the JSP page which has already been done and is in the first portlet provided.
+It is also required to add a login form to the JSP page which has already been done and is included in the first portlet provided at the end of the this article. See:
+[CustomLoginPortlet.war](./files/CustomLoginPortlet/CustomLoginPortlet.war){target="_blank"}  
 
 At this point, the user would be logged in or not, depending on the response from the LoginService. Remember that once you call the login service method, the control will not return to your portlet code, if the user is logged in because Portal will do a redirect to the proper Portal page (unless there is an authentication error or a Finally block).
 
@@ -61,7 +62,7 @@ PortletServiceHome cvsHome = (PortletServiceHome)ctx.lookup("portletservice/com.
 vaultService = (CredentialVaultService)cvsHome.getPortletService (CredentialVaultService.class);
 ```
 
-Then it is needed to add a finally block because a user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs, or if you have a finally block. Otherwise, the code does a redirect and sends you to the correct portal page.
+Then it is needed to add a finally block because a user cannot access the credential vault before authentication. After the user is in the LoginService, the service only returns to the portlet code if a failure condition occurs, or if a finally block ins present that can be executed. Otherwise, the code does a redirect to the correct portal page.
 
 Now the processAction method looks like this:
 
@@ -83,7 +84,7 @@ try {
               }
 ```
 
-The setCredential method takes care of actually accessing the credential vault and setting this value. In this example, we are using a Shared User slot, so that this slot is shared across all portlets this user has access to, and there is one secret per user. The full code for this is in the included samples attached below:
+The setCredential method takes care of actually accessing the credential vault and setting this value. In this example, a Shared User slot is used, so that this slot is shared across all portlets the user has access to, and there is one secret per user. The full code for this is in the included samples attached below:
 
 [CustomLoginPortlet.war](./files/CustomLoginPortlet/CustomLoginPortlet.war){target="_blank"}  
 [LoginPortletWithCV.war](./files/CustomLoginPortlet/LoginPortletWithCV.war){target="_blank"}  
