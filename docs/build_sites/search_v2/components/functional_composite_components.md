@@ -56,7 +56,8 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | **disabled** | Boolean | Indicates whether the search input is disabled. | `false` |
     | **label** | String | The label text for the search input. | '' |
     | **placeholder** | String | The placeholder text for the search input. | '' |
-    | **options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
+    | **selectedValue** | String | The currently selected value in the dropdown. | '' |
+    | **options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. | `[]` |
 
 - **dx-search-output:** This search result display component integrates with backend search services. It manages various search states such as loading, results, no results, or error, and updates the UI dynamically based on search parameters. It is designed for applications that require real-time search with pagination, filtering, and error handling.
 
@@ -64,8 +65,3 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **templateItemId** | String | The ID of the template element used to render individual search results. | '' |
     | **templatePaginationId** | String | The ID of the pagination template element used for paginated search results. | '' |
-    | **searchValue** |String | The current search query or keyword entered by the user. | '' |
-    | **documentObjectType** | String | The attribute in the document object being searched. | '' |
-    | **scope** | String\[] | A list of content source IDs that limit the search query. | [] |
-    | **searchResults** | DxSearchResults | Contains the search results, including hit count, individual hits, and scores. | { hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
-    | **isLoading** | Boolean | A flag that indicates whether search results are being loaded. | `false` |
