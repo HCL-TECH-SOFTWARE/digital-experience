@@ -4,13 +4,24 @@ This section details the basic usage of the HCL DX Picker.
 
 ## Using DX Picker
 
+!!! note
+    You must have at least **User** access to use DX Picker. You also need to have access to the content source to display the items from the content source unless it has anonymous access. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
+
+The content sources available for DX Picker are the following:
+
+- **DAM**
+- **WCM**
+- **JCR**
+- **People**
+- **Portal**
+
 When you open DX Picker with a default `content source`, the list of collections from the Digital Asset Management is displayed.
 
   ![](../../../../assets/HCL_DX_Picker_DAM_Initial_View.png)
 
-When you open DX Picker with a multiple `content source`, the list of objects from the content sources are displayed.
+When you open DX Picker with a different `content source type`, the list of objects from the content source are displayed.
 
-  ![](../../../../assets/HCL_DX_Picker_All_Sources_Initial_View.png)
+  ![](../../../../assets/HCL_DX_Picker_Configure_Source_Initial_View.png)
 
 The details shown are the following:
 
@@ -31,11 +42,13 @@ Clicking on a collection row directs the user inside that collection. The list o
 ### Selecting an asset
 
 Clicking on an asset row enables the select button on the lower right corner of the screen. The **Select** button allows users to select a particular asset.
-<!-- change picture here -->
+
+!!! note
+    Any items from the content source can be selected.
 
   ![](../../../../assets/HCL_DX_Picker_Select_Asset.png)
 
-Selecting an asset triggers the following event:
+Selecting an item triggers the following event:
 
     HCL-DX-PICKER-SELECT
 
@@ -46,7 +59,6 @@ To open the image in Preview mode, click the eye icon next to the asset name.
   ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Button.png)
 
 The following actions can be done when in Preview mode:
-<!-- change picture here -->
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Component.png)
 
@@ -68,9 +80,12 @@ The following actions can be done when in Preview mode:
 
     To select an asset, click the **Select** button. 
 
+    !!! note
+        Changing the rendition will change the `selectedRendition`.
+
     Selecting an asset from Preview triggers the following event:
 
-    HCL-DX-PICKER-PREVIEW-SELECT
+        HCL-DX-PICKER-PREVIEW-SELECT
 
 4. Navigate between assets.
 
@@ -79,3 +94,12 @@ The following actions can be done when in Preview mode:
 5. Zoom in and out of an image.
 
     To inspect the image, click the zoom in and zoom out buttons. 
+
+### Using Search
+
+To search an object, type in the search input and click the search button or press `Enter`. Only common fields such as **title**, **description**, **type**, **tags** (keywords are from DAM), **userid** (creator/owner) and **text** (extracted from content/wcm items) may be specifically searched for now.
+
+!!! note
+    Navigation with **DAM Collections** and Selecting **Object** is possible in the search results.
+
+  ![](../../../../assets/HCL_DX_Picker_Search_Result.png)
