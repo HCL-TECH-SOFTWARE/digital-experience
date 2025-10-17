@@ -1,6 +1,6 @@
 # Configuring an External Database for DAM
 
-The Digital Asset Management (DAM) framework uses **PostgreSQL** as its default persistence backend. This guide explains how to externalize the DAM database to a cloud or self-hosted PostgreSQL environment.
+The Digital Asset Management (DAM) uses an internal **PostgreSQL** service as its default persistence backend. This guide explains how to utilize an external PostgreSQL database from a cloud provider or self-hosted environment.
 
 -----
 
@@ -9,7 +9,7 @@ The Digital Asset Management (DAM) framework uses **PostgreSQL** as its default 
 Before configuring the external database, make sure you have the following:
 
   - **PostgreSQL Version**: The external database must be running **PostgreSQL version 16**.
-  - **Network Connectivity**: Ensure there's network access between your DX application and the external PostgreSQL database.
+  - **Network Connectivity**: Ensure there's network access between your Digital Asset Management application and the external PostgreSQL database.
   - **Database Setup**: You need to set up the necessary database, roles, and permissions. You will need to create the following:
       - The `dxmediadb` and `dx_user` databases.
       - The `<damUser>` and `<dbUser>` roles with their respective passwords.
@@ -20,7 +20,6 @@ Before configuring the external database, make sure you have the following:
 !!! note
     You can get the credentials for `damUser` and `dbUser` from the `security.digitalAssetManagement` section in your custom values YAML file. Refer digitalAssetManagement section in [security configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#adjusting-default-credentials)
 
-  - **SSL**: If you're using SSL, you'll need to create a generic secret named `custom-db-ssl-cert` in the Helm chart. This allows the DAM container to access the `.pem` or `.crt` file when connecting to the database.
 
 -----
 
