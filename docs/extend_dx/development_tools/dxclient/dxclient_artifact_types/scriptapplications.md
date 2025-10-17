@@ -264,6 +264,10 @@ Review the following common issues and solutions:
 
 - If you are using `wcmContentId` for updates and received a "not found" error, the content ID may be incorrect. Verify that the content ID is correct and that the content exists in the specified location.
 
+**projectContext issues**
+- If the projectContext is present, the content will be pushed to the specified site area with a draft status.
+- If the projectContext is not present, it will be pushed to the specified site area with a publish status.
+
 **Debugging tips**
 
 - Check the logs directory in your DXClient installation for detailed error messages.
