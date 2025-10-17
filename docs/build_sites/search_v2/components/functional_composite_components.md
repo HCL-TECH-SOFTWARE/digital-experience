@@ -2,15 +2,6 @@
 
 Functional Composite Components (FCC) combine ACs to deliver higher-level functionality, such as displaying search results or managing pagination. Refer to the table below each component for the list of compatible properties associated with them.
 
-- **dx-circular-progress:** This component is a customizable radial progress bar that uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress. 
-
-    | **Properties** | **type** | **Description** | **Default** |
-    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **size** | Number | The diameter of the circular progress element. | 100 |
-    | **strokewidth** | Number| The width of the circle's stroke. | 4 |
-    | **trailcolor** | String | The color of the inactive portion (trail) of the circle. | #D6D6D6 |
-    | **valuecolor** | String | The color of the active portion of the circle. | #0550DC |
-
 - **dx-search-input-query:** This component allows you to customize a set of properties related to search input such as disabling the input and defining placeholder and label text. It also checks the URL for existing query parameters on load, making it ideal for dynamic search-driven applications.
 
     | **Properties** | **type** | **Description** | **Default** |
