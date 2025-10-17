@@ -7,7 +7,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | ------------ | ------------- | ------------ | --------------|
     | **id** | String | Specifies the unique identifier for the component instance. This property is automatically assigned using a UUID generator when the component is instantiated. | Generated UUID value |
-    | **localization** | Map<string,string\> | Specifies the localization map for template messages used for internationalization. | undefined |
+    | **localization** | Map<string,string\> | Specifies the localization map for template messages used for internationalization. | `undefined` |
 
 - **dx-accordion:** This customizable web component provides an expandable and collapsible accordion UI element. It supports optional checkboxes, secondary text, and left-to-right (LTR) or right-to-left (RTL) layouts. The component is accessible, keyboard-navigable, and supports both outlined and no-outline visual styles. It is suitable for displaying grouped content sections that users can expand or collapse as needed.
 
@@ -17,31 +17,32 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **disabled** | Boolean | Disables the accordion interaction when set to `true`. | `false` |
     | **showSecondaryText** | Boolean | Shows secondary text below the main label if set to `true`. | `false` |
     | **type** | `outlined` or `no-outline` | Sets the visual style of the accordion: outlined or no outline. | `outlined` |
+    | **open** | Boolean | Controls whether the accordion is expanded. | `false` |
+    | **label** | String | Main label text for the accordion header. | '' |
+    | **secondaryText** | String | Secondary text displayed if showSecondaryText is enabled. | '' |
 
 - **dx-alert:** This customizable alert component, built with Lit, displays important messages to users with different severity levels and visual styles. It supports various alert types such as info, error, warning, and success, and can be styled as contained or outlined. It also allows you to set a custom width and message.
 
     | **Properties** | **type** | **Description** | **Default** |
     | ------------ | ------------- | ------------ | --------------|
-    | **message** | String | The message text to display inside the alert. | '' |
-    | **width** | Number | The width of the alert in pixels. | 240 |
-    | **variant** | String | The visual style of the alert. Possible values are `contained` and `outlined` | `contained` |
-    | **severity** | String | The severity level of the alert. Possible values are `info`, `error`, `warning`, and `success` | `info` |
+    | **message** | String | Specifies the message text to display inside the alert. | '' |
+    | **width** | Number | Indicates the width of the alert in pixels. | `240` |
+    | **variant** | String | Determines the visual style of the alert. Possible values are `contained` and `outlined` | `contained` |
+    | **severity** | String | Determines the severity level of the alert. Possible values are `info`, `error`, `warning`, and `success` | `info` |
 
 - **dx-button:** This customizable button component comes with internationalization support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **id** | String | Indicates the unique identifier for the button element. | Auto-generated (UUID) |
     | **disabled** | Boolean | Indicates whether the button is disabled. | `false` |
-    | **imgurl** | String | The URL of the image to be displayed as the icon of a button. | undefined |
-    | **buttontext** | String | Displays text on a button. | undefined |
+    | **imgurl** | String | The URL of the image to be displayed as the icon of a button. | `undefined` |
+    | **icon** | TemplateResult | Specifies the template for a custom icon (for example, SVG or enchanted icon). | `undefined` |
+    | **buttontext** | String | Displays text on a button. | `undefined` |
     | **endicon** | Boolean | Determines whether the image is displayed as an end icon instead of a start icon. | `false` |
-    | **focused** | Boolean | Indicates whether the button currently has focus. This property is managed internally. | `false` |
-    | **variant** | String | Specifies the button's visual style. Possible values are `contained`, `text`, and `outlined`. | 'contained' |
+    | **variant** | String | Specifies the button's visual style. Possible values are `contained`, `text`, and `outlined`. | `contained` |
     | **withPadding** | Boolean | Indicates whether the button should have padding. | `false` |
     | **inverseColor** | Boolean | Uses the inverse color scheme for the button. | `false` |
     | **size** | `small` or `medium` | Specifies the size of the button (affects icon size and padding). | `small` |
-    | **localization** | Map<string, string\> or undefined | Specifies the localization map for button text and attributes. | undefined |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-button` component and its elements based on the component's state and properties.
 
@@ -74,18 +75,15 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **label** | String | The label displayed for the dropdown. Defaults to a context-based message if not provided. | '' |
     | **disabled** | Boolean | Indicates whether the `dx-input-select` component is disabled. | `false` |
-    | **selectedValue** | String | The currently selected value. | undefined |
-    | **selectedId** | String | The id of the currently selected option. | undefined |
-    | **options** | String, String\[], OptionData\[] | List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties. | [] |
+    | **selectedValue** | String | The currently selected value. | `undefined` |
+    | **selectedId** | String | The id of the currently selected option. | `undefined` |
+    | **options** | String, String\[], OptionData\[] | List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties. | `[]` |
     | **field** | DxSearchInputFieldType, String | The type of the input field used to determine default labels or handle specific behaviors. You can use `DxSearchInputFieldType` strings such as `contentSource` or `documentObjectType` or leave it blank. | '' |
-    | **toggleDropDown** | Boolean | Indicates whether the dropdown is open or closed. | `false` |
-    | **listItems** | HTMLElement[], undefined | A list of HTMLElement items in the dropdown. | undefined |
-    | **currentFocusedItem** | HTMLElement, undefined | The item currently focused in the dropdown. | undefined |
     | **hiddenLabel** | Boolean | Hides the label when set to `true`. | `false` |
     | **hiddenIcon** | Boolean | Hides the dropdown icon when set to `true`. | `false` |
     | **showRemoveLabel** | Boolean | Shows a "remove" label for clearing the selection. | `false` |
+    | **placeholder** | String or undefined | Specifies the placeholder text shown when no value is selected. | `undefined` |
     | **alwaysShowPlaceholder** | Boolean | Shows the placeholder text when set to `true`, even when a value is selected. | `false` |
-    | **placeholder** | String or undefined | Specifies the placeholder text shown when no value is selected. | undefined |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-input-select` component and its elements based on the component's state and properties.
 
@@ -142,7 +140,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **value** | Number | Represents a custom numeric value associated with the anchor. Ensure to use case-specific values. | 0 |
     | **mode** | String | Specifies the mode of the anchor, controlling its behavior and styling. You can use the mode values `pagination` or `result-title`, or leave it blank. | '' |
     | **imgurl** | String | Specifies the URL of an image to be displayed inside the anchor if no text label is provided. |'' |
-    | **target** | String | Specifies where to open the linked document. Sample values include `_blank` or `_self`. | undefined |
+    | **target** | String | Specifies where to open the linked document. Sample values include `_blank` or `_self`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-anchor` component and its elements based on the component's state and properties.
 
@@ -158,7 +156,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **name** | String | Specifies the name or label of the chip. | '' |
-    | **count** | Number | Represents a numeric count associated with the chip. | 0 |
+    | **count** | Number | Represents a numeric count associated with the chip. | `0` |
     | **showChipCount** | Boolean | Determines whether `count` should be displayed alongside the chip name. | `false` |
     | **showAvatar** | Boolean | Determines whether to display an avatar icon at the start of the chip. | `false` |
     | **clearIcon** | Boolean | Determines whether to display a clear (remove) icon slot at the end of the chip. | `false` |
@@ -173,20 +171,30 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **chip-count** | Represents the `<span>` element that displays the count of the chip when the locale is left-to-right (LTR). It is used to style the count value in LTR layouts. |
     | **chip-count-rtl** | Represents the `<span>` element that displays the count of the chip when the locale is right-to-left (RTL). It is used to style the count value in RTL layouts. |
 
+- **dx-circular-progress:** This customizable radial progress bar uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress.
+
+    | **Properties** | **type** | **Description** | **Default** |
+    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
+    | **size** | Number | Specifies the diameter of the circular progress element. | `100` |
+    | **strokewidth** | Number| Specifies the width of the circle's stroke. | `4` |
+    | **trailcolor** | String | Specifies the color of the inactive portion (trail) of the circle. | `#D6D6D6` |
+    | **valuecolor** | String | Specifies the color of the active portion of the circle. | `#0550DC` |
+
+    The `dx-circular-progress` component does not currently use any part attributes in its implementation.
+
 - **dx-input-textfield:** This component allows you to create rich input fields with enhanced user experience such as search bars or forms. You can also use it for fields where text input with optional icons and labels is required.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **value** | String | Specifies the current value of the textfield. | '' |
-    | **type** | String | Specifies the input type. Sample values include `text`, `password`, or `email`. | 'text' |
-    | **label** | String, undefined | Specifies the label displayed above the textfield. | undefined |
+    | **type** | String | Specifies the input type. Sample values include `text`, `password`, or `email`. | `text` |
+    | **label** | String, undefined | Specifies the label displayed above the textfield. | `undefined` |
     | **placeholder** | String | Specifies the placeholder text displayed inside the textfield. | '' |
     | **disabled** | Boolean | Indicates whether the textfield is disabled. | `false` |
     | **clearIconUrl** | String | Specifies the URL or name of the icon used to clear the input. | '' |
-    | **actionIconUrl** | String | Specifies the URL or name of the icon used for an action (for example, search). | undefined |
+    | **actionIconUrl** | String | Specifies the URL or name of the icon used for an action (for example, search). | `undefined` |
     | **field** | DxSearchInputFieldType, String | Specifies a field identifier for the input that is useful in custom events or associating it with specific data. You can use the `DxSearchInputFieldType` string `queryString` or provide your own field name. | '' |
     | **hassearchedbefore** | Boolean | Indicates if a search has been performed before. | `false` |
-    | **tempValueHolder** | String | Temporarily holds the value of the input field to restore it under certain conditions (for example, when the user clears the field but does not confirm the change). | '' |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-input-textfield` component and its elements based on the component's state and properties.
 
@@ -241,14 +249,14 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **disabled** | Boolean | Determines if the button is disabled. | `false` |
     | **outlined** | Boolean | Indicates whether the button should be rendered with an outlined style. | `false` |
     | **selectedValue** | String | Specifies the currently selected value of the toggle button. | '' |
-    | **iconUrls** | String\[] | Array of URLs for the icons displayed on the buttons. | [] |
-    | **values** | String\[] | Array of values corresponding to each button's selection state. | [] |
+    | **iconUrls** | String\[] | Array of URLs for the icons displayed on the buttons. | `[]` |
+    | **values** | String\[] | Array of values corresponding to each button's selection state. | `[]` |
     | **singleButton** | Boolean | Renders a single toggle button if set to `true`. Otherwise, it renders two buttons. | `false` |
     | **toggleOn** | Boolean | Indicates if the single toggle button is in the "on" state. | `false` |
     | **showBadge** | Boolean | Displays a badge on the single toggle button if set to `true`. | `false` |
     | **singleButtonTitle** | String | Specifies the title attribute for the single toggle button. | '' |
     | **singleButtonAria** | String | Specifies the ARIA label for the single toggle button. | '' |
-    | **icon** | TemplateResult | Specifies the icon template for the single toggle button. | undefined |
+    | **icon** | TemplateResult | Specifies the icon template for the single toggle button. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-toggle-button` component and its elements based on the component's state and properties.
 
@@ -299,12 +307,6 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **viewportPadding** | Number | Specifies the padding from the viewport edge in pixels. | 4 |
     | **minimumWidth** | Number | Specifies the minimum width of the tooltip in pixels. | 0 |
     | **isRTL** | Boolean | Enables RTL layout support. | `false` |
-    | **componentId** | String | Specifies the unique identifier for the tooltip instance. | Auto-generated (UUID) |
-    | **effectivePlacement** | String | Specifies the actual placement used after viewport or target checks. | undefined |
-    | **effectiveType** | String | Specifies the actual type (single-line or multi-line) after sizing logic. | undefined |
-    | **softMargin** | Number | Specifies the margin used for placement calculations. | 8 |
-    | **isTargetVisible** | Boolean | Determines whether the target element is visible in the viewport. | `true` |
-    | **rafId** | Number or null | Specifies the `RequestAnimationFrame` ID for position updates. | null |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-tooltip` component and its elements based on the component's state and properties.
 
@@ -318,12 +320,13 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **variant** | String | Sets the avatar's visual variant. Possible values are `avatar-letter`, `avatar-icon`, or `avatar-img`. |undefined |
-    | **imgUrl** | String | Indicates the URL of the image to be displayed as the avatar when the `variant` is set to `avatar-img`. | undefined |
-    | **iconUrl** | String | Indicates the URL of the icon to be displayed as the avatar when the `variant` is set to `avatar-icon`. | undefined |
-    | **color** | String | Specifies the color theme for the avatar. | undefined |
-    | **avatarText** | String | Specifies the text to be displayed in the avatar when the `variant` is set to `avatar-letter`. | undefined |
-    | **type** | String | Sets the shape of the avatar. Possible values are `avatar-rounded` or `avatar-circular`. | undefined |
+    | **variant** | String | Sets the avatar's visual variant. Possible values are `avatar-letter`, `avatar-icon`, or `avatar-img`. | `undefined` |
+    | **imgUrl** | String | Indicates the URL of the image to be displayed as the avatar when the `variant` is set to `avatar-img`. | `undefined` |
+    | **iconUrl** | String | Indicates the URL of the icon to be displayed as the avatar when the `variant` is set to `avatar-icon`. | `undefined` |
+    | **color** | String | Specifies the color theme for the avatar. | `undefined` |
+    | **iconTemplate** | TemplateResult or String | Custom icon template or SVG string for icon template avatars. | `undefined` |
+    | **avatarText** | String | Specifies the text to be displayed in the avatar when the `variant` is set to `avatar-letter`. | `undefined` |
+    | **type** | String | Sets the shape of the avatar. Possible values are `avatar-rounded` or `avatar-circular`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-avatar` component and its elements based on the component's state and properties.
 
@@ -347,7 +350,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **showBackIcon** | Boolean | Determines whether the back icon is shown. | `false` |
     | **isSideNavOpen** | Boolean | Indicates whether the side navigation is open. | `false` |
     | **disabled** | Boolean | Determines whether certain components in the header are disabled. | `false` |
-    | **variant** | String | Specifies the predetermined structure and styling of the header according to its use-case. You can use the value `header-endUser`. | undefined |
+    | **variant** | String | Specifies the predetermined structure and styling of the header according to its use-case. You can use the value `header-endUser`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-header` component and its elements based on the component's state and properties.
 
@@ -387,7 +390,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **color** | String | The color of the SVG icon. If `useCurrentColor` is set to `false`, this color will be applied directly to the SVG's fill. | '' |
     | **size** | String | The size of the icon. Used for both width and height. | '' |
     | **useCurrentColor** | Boolean | Determines whether the icon will inherit the color of the parent element's color property (using CSS currentColor). | `false` |
-    | **icon** | TemplateResult | The SVG icon content passed as a template to render the icon. | undefined |
+    | **icon** | TemplateResult | The SVG icon content passed as a template to render the icon. | `undefined` |
 
 - **dx-authoring-item-type-avatar:** This component allows you to display an avatar image based on the `itemType` property that determines the type of item for which the avatar is rendered.
 
@@ -412,8 +415,8 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **path** | PathType Object | Defines the breadcrumb item data, including title, link, icon, iconName, and state. | undefined |
-    | **partProp** | String | Specifies the custom part attribute for styling or identification. | undefined |
+    | **path** | PathType Object | Defines the breadcrumb item data, including title, link, icon, iconName, and state. | `undefined` |
+    | **partProp** | String | Specifies the custom part attribute for styling or identification. | `undefined` |
     | **key** | String | Specifies the unique key for the breadcrumb item, which is essential for list rendering. | '' |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-badge` component and its elements based on the component's state and properties.
@@ -435,19 +438,18 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
-    | **handleBreadcrumbClick** | Function | Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items). | undefined |
-    | **exportParts** | String | Specifies a comma-separated list of part names that enables style encapsulation and customization for breadcrumb items from outside the component. |Computed from enum |
+    | **handleBreadcrumbClick** | Function | Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items). | `undefined` |
 
     The following PathType Interface properties are used in `dx-breadcrumbs` and `dx-breadcrumbs-item`:
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **title** | String | Specifies the display text for the breadcrumb item. | undefined |
-    | **parentId** | String | Specifies the optional parent identifier for hierarchical data. | undefined |
-    | **link** | String | Specifies the URL or route for navigation. | undefined |
-    | **icon** | TemplateResult | Defines the custom icon template to render. | undefined |
-    | **iconName** | String | Specifies the predefined icon name (for example `HOME` or `INFORMATION`). | undefined |
-    | **disabled** | Boolean | Disables the breadcrumb item if set to `true`. | undefined |
+    | **title** | String | Specifies the display text for the breadcrumb item. | `undefined` |
+    | **parentId** | String | Specifies the optional parent identifier for hierarchical data. | `undefined` |
+    | **link** | String | Specifies the URL or route for navigation. | `undefined` |
+    | **icon** | TemplateResult | Defines the custom icon template to render. | `undefined` |
+    | **iconName** | String | Specifies the predefined icon name (for example `HOME` or `INFORMATION`). | `undefined` |
+    | **disabled** | Boolean | Disables the breadcrumb item if set to `true`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-breadcrumbs` component and its elements based on the component's state and properties.
 
@@ -467,16 +469,10 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **hasMiddlewareError** | String | Indicates if there is a middleware error. | `false` |
     | **hasContentSourceAvailable** | String | Indicates if content sources are available. | `false` |
     | **checkboxSelection** | String | Indicates if checkbox selection is enabled. | `false` |
-    | **useCase** | String | Represents the use case for the data grid, such as authoring. | '' |
+    | **customTableHeaderPart** | String | Custom part name for table header styling. | '' |
+    | **customTableCellPart** | String | Custom part name for table cell styling. | '' |
+    | **specialFields** | String\[] | List of special fields for custom rendering or actions. | `[]` |
     | **tableHover** | String | Indicates if table hover effects are enabled. | `false` |
-    | **invalidColDef** | Boolean| Indicates if the column definition (`colDef`) is invalid. | `false` |
-    | **onHover** | Boolean| Indicates if a header is being hovered over. | `true` |
-    | **onRowHover** | Boolean | Indicates if a row is being hovered over. | `false` |
-    | **enchantedOutputContext** | EnchantedOutputContextType | Context object for enchanted output, consumed from `enchantedOutputContext`. | undefined |
-    | **currentHoverField** | String | Indicates the field currently being hovered over in the header. | '' |
-    | **currentHoverRow** | Number | Indicates the index of the row currently being hovered over. | NaN |
-    | **selectAll** | Boolean | Indicates whether the "Select All" checkbox is checked. | `false` |
-    | **programmaticClick** | Boolean | Indicates if a programmatic click is being handled. It is used to avoid triggering hover events. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-data-grid` component and its elements based on the component's state and properties.
 
@@ -525,7 +521,8 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **isLoading** | String | Indicates if the grid is in a loading state. | `false` |
     | **hasMiddlewareError** | String | Indicates if there is a middleware error. | `false` |
     | **hasContentSourceAvailable** | String | Indicates if a content source is available. | `false` |
-    | **useCase** | String | Specifies a custom use-case identifier for grid behavior. | '' |
+    | **customTableHeaderPart** | String | Custom part name for table header cells (for styling/export parts). | '' |
+    | **customeTableCellPart** | String | Custom part name for table body cells (for styling/export parts). | '' |
     | **specialFields** | String\[] | Defines a list of special fields for custom rendering or logic. | [] |
     | **isRowClickable** | Boolean | Enables row click events for selection or navigation. | `false` |
     | **tableHover** | String | Enables table hover effect. | `false` |
@@ -581,8 +578,8 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **open** | Boolean | Determines whether the dialog is visible or hidden. This property is reflected to the DOM, so any changes to it are also reflected in the corresponding HTML attribute. | `false` |
-    | **dialogTitle** | String | Specifies the title text displayed in the dialog header (if not overridden by slot). | A localized string for the generic label |
-    | **size** | String | Sets the dialog size. Accepts values from `DialogSizes` enum (for example, XL or SM). | 'xl' |
+    | **dialogTitle** | String | Specifies the title text displayed in the dialog header (if not overridden by slot). | `A localized string for the generic label` |
+    | **size** | String | Sets the dialog size. Accepts values from `DialogSizes` enum (for example, XL or SM). | `xl` |
     | **overrideTitle** | Boolean | Determines whether the default title is overridden by custom content provided through a slot. | `false` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-dialog` component and its elements based on the component's state and properties.
@@ -625,7 +622,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **size** | String | Specifies the size of the icon button. | 'small' |
     | **withPadding** | Boolean | Determines whether the button should have padding. | `false` |
     | **imgurl** | String | Specifies the URL of the image to be used in the button. | '' |
-    | **icon** | TemplateResult | Defines the Lit template for rendering a custom icon. | undefined |
+    | **icon** | TemplateResult | Defines the Lit template for rendering a custom icon. | `undefined` |
     | **disabled** | Boolean | Disables the button if set to `true`. | `false` |
     | **inverseColor** | Boolean | Applies an inverse color scheme if set to `true`. | `false` |
 
@@ -709,9 +706,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **open** | Boolean | Indicates whether the menu is open or closed. | `false` |
-    | **menuDelay** | Number | Specifies the delay (in milliseconds) before the menu opens or closes. | `false` |
-    | **componentId** | String | A unique identifier for the component generated using UUID. | 300 |
-    | **openMenu** | Boolean| Tracks the current state of the menu (open or closed). | `false` |
+    | **menuDelay** | Number | Specifies the delay (in milliseconds) before the menu opens or closes. | `300` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-menu` component and its elements based on the component's state and properties.
 
@@ -729,7 +724,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **text** | String | Represents the text content of the menu item. | '' |
     | **value** | String | Represents the value associated with the menu item. | '' |
-    | **menuObject** | Object | Represents an object containing additional data for the menu item. | {} |
+    | **menuObject** | Object | Represents an object containing additional data for the menu item. | `{}` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-menu-item` component and its elements based on the component's state and properties.
 
@@ -746,24 +741,17 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **disabled** | Boolean | Disables the input and all interactions. | `false` |
     | **showHelperText** | Boolean | Shows helper text below the input. | `false` |
     | **helperText** | String | Displays a helper text below the input. | '' |
-    | **name** | String | Specifies the name attribute for the input. | 'multiple-select' |
-    | **selectedValues** | OptionData\[] | Defines an array of selected option objects. | [] |
-    | **options** | OptionData\[] | Defines an array of available option objects. | [] |
+    | **name** | String | Specifies the name attribute for the input. | `multiple-select` |
+    | **selectedValues** | OptionData\[] | Defines an array of selected option objects. | `[]` |
+    | **options** | OptionData\[] | Defines an array of available option objects. | `[]` |
     | **field** | String | Specifies the field type or identifier. | '' |
     | **showRemoveLabel** | Boolean | Shows a "remove" label for the field. | `false` |
     | **emptyOptions** | Boolean | Allows the addition of new values not in the options list. | `false` |
     | **clearIcon** | Boolean | Shows a clear icon on each chip. | `true` |
     | **error** | Boolean | Marks the input as having an error. | `false` |
-    | **customWidth** | String or undefined | Specifies the custom width for the component (for example, '300px'). | undefined |
-    | **placeholder** | String or undefined | Specifies the placeholder text for the input. | Localized default |
-    | **label** | String or undefined | Specifies the Label for the input. | Localized default |
-    | **toggleDropDown** | Boolean | Controls whether the dropdown is open. | `false` |
-    | **listItems** | HTMLElement[] | Specifies the list of dropdown item elements. | undefined |
-    | **currentFocusedItem** | HTMLElement[] | Specifies the currently focused dropdown item. | undefined |
-    | **inputValue** | String | Specifies the current value in the input field. | '' |
-    | **onInputHover** | Boolean | Controls whether the input is being hovered. | `false` |
-    | **isInputFocused** | Boolean | Controls whether the input is focused. | `false` |
-    | **isClearAllIconFocused** | Boolean | Controls whether the clear-all icon is focused. | `false` |
+    | **customWidth** | String or undefined | Specifies the custom width for the component (for example, '300px'). | `undefined` |
+    | **placeholder** | String or undefined | Specifies the placeholder text for the input. | `Localized default` |
+    | **label** | String or undefined | Specifies the Label for the input. | `Localized default` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-multiple-select-chip` component and its elements based on the component's state and properties.
 
@@ -803,7 +791,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **open** | Boolean | Controls the visibility of the panel. The panel is shown if this is set to `true`. | `false` |
-    | **position** | String | Sets the panel's position. | left |
+    | **position** | String | Sets the panel's position. | `left` |
     | **headerTitle** | String | Specifies the title text displayed in the panel header. | '' |
     | **ariaLabel** | String | Specifies the ARIA label for accessibility and describes the panel for screen readers. | '' |
 
@@ -817,35 +805,17 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **panel-close-button** | Represents the close button in the header, allowing users to dismiss the panel. |
     | **panel-content** | Represents the main content area of the panel, where slotted content is rendered. |
 
-- **dx-theme-inspector:** This web component visually inspects and displays the color palette and theme variables used in an application. It renders tables showing all available color shades, theme properties, and their values for both light and dark modes. It is useful for developers and designers to verify and document the color and theme configuration in a UI system.
-
-    | **Properties** | **type** | **Description** | **Default** |
-    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **_themePropertiesDelimiter** | String | Delimiter used to split theme property keys for parsing theme variables. | 'ZZZ' |
-    | **_themePrefix** | String | Prefix used to identify theme-related keys in the theme object. | 'theme' |
-    | **_shadeKeys** | Number\[] | List of numeric shade keys for standard color palettes. | \[100, 150, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1000_80, 1100] |
-    | **_colorKeys** | String\[] | List of color names to display in the palette table. | \['GREY', 'BLACK', 'BLUE', 'GREEN', 'HCLSOFTWAREBLUE', ...] |
-    | **_blackKeys** | String\[] | List of shade keys for the BLACK color palette. | \['100P', '87P', '60P', '55P', ...] |
-    | **_whiteKeys** | String\[] | List of shade keys for the WHITE color palette. | \['100P', '93P', '80P', '70P', ...] |
-    | **_hclSoftwareBlueKeys** | String\[] | List of shade keys for the HCLSOFTWAREBLUE color palette. | \['01', '02', '03', '04', ...] |
-    | **_theme** | ThemeType | The theme object containing all color and theme variables. | undefined |
+- **dx-theme-inspector:** This web component visually inspects and displays the color palette and theme variables used in an application. It renders tables showing all available color shades, theme properties, and their values for both light and dark modes. It is useful for developers and designers to verify and document the color and theme configuration in a UI system.This component does not expose any properties to be set from outside. All configuration is internal and handled via state or theme utilities.
 
 - **dx-table-pagination:** This web component provides a customizable and accessible pagination control for data tables. It allows users to navigate through large datasets by selecting the number of rows per page and moving between pages using navigation buttons. The component supports both left-to-right (LTR) and right-to-left (RTL) layouts, and emits events when the page or row size changes, enabling seamless integration with data-driven applications.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **disabled** | Boolean | Disables the pagination controls when set to `true`. | `false` |
-    | **currentPage** | Number | Specifies the current active page (1-based index). | left |
+    | **currentPage** | Number | Specifies the current active page (1-based index). | `left` |
     | **totalCount** | Number | Specifies the total number of items in the dataset. | '' |
-    | **rowSize** | Number | Specifies the number of rows to display per page. | '' |
-    | **options** | String[] | Defines the selectable options for rows per page. | '' |
-    | **pagesCount** | Number | Calculates the total number of pages from `totalCount` and `rowSize`. | '' |
-    | **currentPageState** | Number | Indicates the internal state for the current page. | '' |
-    | **rowSizeState** | Number | Indicates the internal state for the selected row size. | '' |
-    | **rowMessage** | String | Specifies the message describing the current page range (for example, "1-10 of 100"). | '' |
-    | **hasPreviousPage** | Boolean | Indicates if there is a previous page available. | `true` |
-    | **hasNextPage** | Boolean | Indicates if there is a next page available. | `true` |
-    | **isRTL** | Boolean | Indicates if the layout is RTL. | `true` |
+    | **rowSize** | Number | Specifies the number of rows to display per page. | `undefined` |
+    | **options** | String\[] | Defines the selectable options for rows per page. | `['10', '25', '50', '100'] (from DEFAULT_ROWS_OPTIONS)` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-table-pagination` component and its elements based on the component's state and properties.
 
@@ -866,20 +836,11 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | [] |
     | **customHeaderTitle** | String | Specifies a custom title for the preview header. If not set, uses the current item's title. | null |
     | **component** | TemplateResult or String | Provides custom content to render instead of the default preview. | '' |
-    | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | undefined |
-    | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | undefined |
+    | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | `undefined` |
+    | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | `undefined` |
     | **renditionLabel** | String | Specifies the label for the rendition select dropdown. | '' |
     | **selectButtonTitle** | String | Specifies the text for the select button. | '' |
-    | **initialItemIndex** | Number | Specifies the index of the item to show initially. | 0 |
-    | **currentItemIndex** | Number | Indicates the index of the currently displayed item. | 0 |
-    | **zoomPercentage** | Number | Specifies the current zoom percentage for image preview. | 100 |
-    | **zoomOutDisable** | Boolean | Indicates whether the zoom out button is disabled. | `false` |
-    | **zoomInDisable** | Boolean | Indicates whether the zoom in button is disabled. | `false` |
-    | **zoomToFitPercentage** | Number | Specifies the calculated zoom percentage required to fit the image in the container. | `false` |
-    | **selectedRenditionId** | String or null | Indicates the ID of the currently selected rendition. | null |
-    | **currentDisplaySource** | String or null | Specifies the source URL of the currently displayed asset (image or video). | null |
-    | **isLoading** | Boolean | Indicates whether the preview is loading. | `true` |
-    | **hasError** | Boolean | Indicates whether there is an error displaying the preview. | `false` |
+    | **initialItemIndex** | Number | Specifies the index of the item to show initially. | `0` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-preview` component and its elements based on the component's state and properties.
 

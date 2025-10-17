@@ -2,15 +2,6 @@
 
 Functional Composite Components (FCC) combine ACs to deliver higher-level functionality, such as displaying search results or managing pagination. Refer to the table below each component for the list of compatible properties associated with them.
 
-- **dx-circular-progress:** This component is a customizable radial progress bar that uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress. 
-
-    | **Properties** | **type** | **Description** | **Default** |
-    | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **size** | Number | The diameter of the circular progress element. | 100 |
-    | **strokewidth** | Number| The width of the circle's stroke. | 4 |
-    | **trailcolor** | String | The color of the inactive portion (trail) of the circle. | #D6D6D6 |
-    | **valuecolor** | String | The color of the active portion of the circle. | #0550DC |
-
 - **dx-search-input-query:** This component allows you to customize a set of properties related to search input such as disabling the input and defining placeholder and label text. It also checks the URL for existing query parameters on load, making it ideal for dynamic search-driven applications.
 
     | **Properties** | **type** | **Description** | **Default** |
@@ -27,7 +18,7 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **attribute** | String | The attribute to fetch from the search result item. | '' |
     | **index** | String |The index of the search item in the result list. | '' |
-    | **outputContext** | OutputContextType | Consumed from context and contains the search result data. This property is internally managed by the component and should not be used. | undefined |
+    | **outputContext** | OutputContextType | Consumed from context and contains the search result data. This property is internally managed by the component and should not be used. | `undefined` |
 
 - **dx-fcc-base-element:** This is a base class in the FCC framework that integrates the Broadcast Channel API for component communication and ensures no shadow DOM is used. It also cleans up resources when components are disconnected.
 
@@ -65,7 +56,8 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | **disabled** | Boolean | Indicates whether the search input is disabled. | `false` |
     | **label** | String | The label text for the search input. | '' |
     | **placeholder** | String | The placeholder text for the search input. | '' |
-    | **options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. |	[] |
+    | **selectedValue** | String | The currently selected value in the dropdown. | '' |
+    | **options** | OptionData\[] | The list of options for the input select dropdown. This property is internally managed by the component and should not be used. | `[]` |
 
 - **dx-search-output:** This search result display component integrates with backend search services. It manages various search states such as loading, results, no results, or error, and updates the UI dynamically based on search parameters. It is designed for applications that require real-time search with pagination, filtering, and error handling.
 
@@ -73,8 +65,3 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **templateItemId** | String | The ID of the template element used to render individual search results. | '' |
     | **templatePaginationId** | String | The ID of the pagination template element used for paginated search results. | '' |
-    | **searchValue** |String | The current search query or keyword entered by the user. | '' |
-    | **documentObjectType** | String | The attribute in the document object being searched. | '' |
-    | **scope** | String\[] | A list of content source IDs that limit the search query. | [] |
-    | **searchResults** | DxSearchResults | Contains the search results, including hit count, individual hits, and scores. | { hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } } |
-    | **isLoading** | Boolean | A flag that indicates whether search results are being loaded. | `false` |
