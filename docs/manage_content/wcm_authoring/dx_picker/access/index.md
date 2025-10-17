@@ -3,11 +3,14 @@
 This section provides steps on how to access the DX Picker in a custom web application.
 
 !!! note
-    You must have **User** access to use DX Picker. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
+    You must have at least **User** access to use DX Picker. You also need to have access to the content source to display the items from the content source unless it has anonymous access. Refer to [Working with resource permissions](../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
 To use the DX Picker, you must have the DX Picker Web Component imported in your HTML page.
 
 1.  Add the DX Picker script as one of the dependencies in your HTML page.
+
+    !!! note
+        The `src url` is now different from the previous version of DX Picker.
 
     ```html
       <html>
@@ -33,9 +36,9 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
       </html>
     ```
 
-3.  Open DX Picker by setting the `open` attribute of the picker to `true`.
+3.  Open DX Picker by calling `toggleDialog` function.
 
-    You can assign an id to the `dx-picker` tag and add an onclick handler button that sets the `open` attribute to `true`.
+    You can assign an id to the `dx-picker` tag and add an onclick handler button that calls the `toggleDialog` function.
     
     ```html
       <html>
@@ -63,7 +66,7 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
 4.  You can change the `content source` by adding `source` attribute to `dx-picer`.
 
     !!! note
-        If no source attribute is use, **DAM** is the default content source.
+        The list of content source available for DX Picker are **dam**, **wcm**, **jcr**, **portal** and **people**. Only one content source can be configured to DX Picker. If no source attribute is provided, **dam** is the default content source.
     
     ```html
       <html>
@@ -81,7 +84,7 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
           <button onclick="toggleDxPicker()">Open Picker</button>
 
           // Insert the tag inside your code
-          <dx-picker id="dx-picker-id" source='["dam", "wcm", "jcr", "portal"]'></dx-picker>
+          <dx-picker id="dx-picker-id" source='["dam"]'></dx-picker>
 
           <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
         </body>
@@ -116,10 +119,11 @@ The following are the current events available in the DX Picker:
 - `HCL-DX-PICKER-PREVIEW-SELECT` - Triggered when selecting an item from Preview.
 
     These events contains the following object:
-
+    !!! note
+        This is the updated object that will be receive from DX Picker. The `documentObject` varies depending on the content source used. For more information about the `documentObject` parameter, see [Indexed documents](../../../../deployment/manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
     ```json
     {
-      "type": "HCL-DX-PICKER-SELECT",
+      "type": "HCL-DX-PICKER-SELECT" | "HCL-DX-PICKER-PREVIEW-SELECT",
       "detail": {
         "items":
           {
@@ -127,21 +131,35 @@ The following are the current events available in the DX Picker:
             "_id": string,
             "_score": number,
             "_source": {
-                "selectedRendition": DxDocumentObjectAssetRendition,
-                "created": string | number,
-                "updated": string | number,
-                "documentObject": DxDocumentObject,
-                "type": string,
-                "lastIndexed": number,
-                "acls": string[],
-                "firstIndexed": number,
-                "tags": string[],
-                "title": string,
-                "description": string,
-                "dataUri": string,
-                "text": string,
-                "link": string,
-                "tagsText": string
+              "created": string | number,
+              "updated": string | number,
+              "documentObject": Object,
+              "type": string,
+              "lastIndexed": number,
+              "acls": string[],
+              "firstIndexed": number,
+              "tags": string[],
+              "title": string,
+              "description": string,
+              "dataUri": string,
+              "text": string,
+              "link": string,
+              "selectedRendition": {
+                "renditionType": string,
+                "binaryUrl": string,
+                "thumbnailUrl": string,
+                "fileSize": number,
+                "metadata": {
+                  "height": number,
+                  "width": number,
+                  "aspectRatio": number,
+                  "alternateText": string,
+                  "state": string,
+                  "embeddedMetadata": {
+                    "DPI": string
+                  }
+                }
+              }
             }
           }
       }
