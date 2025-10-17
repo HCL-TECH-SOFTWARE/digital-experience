@@ -254,6 +254,8 @@ Review the following common issues and solutions:
 
 - If the `virtualPortalContext` is provided but not present in DX, the Script Application will default to the base portal. Verify the virtual portal name is correct or accept deployment to the base portal.
 
+- If the Project Context is valid/present, the application will be pushed to the specified site area with a draft status; otherwise, it will be pushed with a publish status.
+
 **Permission issues**
 
 - The user specified in `dxUsername` must have both Editor and Reviewer access to the Script Application Library. Check and update user permissions in the DX Portal.
@@ -263,10 +265,6 @@ Review the following common issues and solutions:
 - When using `prebuiltZip`, make sure the `mainHtmlFile` path is relative to the top-level directory in the ZIP file. For `contentRoot`, the path should be relative to that directory. Verify paths are correctly formatted based on your content source.
 
 - If you are using `wcmContentId` for updates and received a "not found" error, the content ID may be incorrect. Verify that the content ID is correct and that the content exists in the specified location.
-
-**projectContext issues**
-- If the projectContext is present, the content will be pushed to the specified site area with a draft status.
-- If the projectContext is not present, it will be pushed to the specified site area with a publish status.
 
 **Debugging tips**
 
