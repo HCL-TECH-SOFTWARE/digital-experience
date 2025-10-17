@@ -437,7 +437,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
+    | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | `[]` |
     | **handleBreadcrumbClick** | Function | Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items). | `undefined` |
 
     The following PathType Interface properties are used in `dx-breadcrumbs` and `dx-breadcrumbs-item`:
@@ -517,13 +517,13 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **data** | DxDataGridContextType | Defines the data context for the grid, including items, pagination, sorting, and selection. | {} |
-    | **columns** | DxDataGridColDef\[] | Defines an array of column definitions specifying field, header, actions, and rendering options. | [] |
+    | **columns** | DxDataGridColDef\[] | Defines an array of column definitions specifying field, header, actions, and rendering options. | `[]` |
     | **isLoading** | String | Indicates if the grid is in a loading state. | `false` |
     | **hasMiddlewareError** | String | Indicates if there is a middleware error. | `false` |
     | **hasContentSourceAvailable** | String | Indicates if a content source is available. | `false` |
     | **customTableHeaderPart** | String | Custom part name for table header cells (for styling/export parts). | '' |
     | **customeTableCellPart** | String | Custom part name for table body cells (for styling/export parts). | '' |
-    | **specialFields** | String\[] | Defines a list of special fields for custom rendering or logic. | [] |
+    | **specialFields** | String\[] | Defines a list of special fields for custom rendering or logic. | `[]` |
     | **isRowClickable** | Boolean | Enables row click events for selection or navigation. | `false` |
     | **tableHover** | String | Enables table hover effect. | `false` |
     | **checkboxSelection** | String | Enables row selection using checkboxes when set to `true`. | `false` |
@@ -833,7 +833,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **open** | Boolean | Controls whether the preview modal is open. | `false` |
-    | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | [] |
+    | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | `[]` |
     | **customHeaderTitle** | String | Specifies a custom title for the preview header. If not set, uses the current item's title. | null |
     | **component** | TemplateResult or String | Provides custom content to render instead of the default preview. | '' |
     | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | `undefined` |
