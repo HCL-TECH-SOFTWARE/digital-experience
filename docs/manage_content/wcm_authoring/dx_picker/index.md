@@ -1,8 +1,8 @@
 # HCL DX Picker
 
-The HCL DX Picker is a web component that allows users to view and select a `documentObject` from various content sources and use it in their custom web application.
+The HCL DX Picker is a web component that allows users to view and select item from various content sources and use it in their custom web application.
 
-Refer to the follwing pages for more information:
+Refer to the following pages for more information:
 
 - **[Prerequisite for HCL DX Picker](../dx_picker/prerequisite/index.md)**<br>
 This section contains prerequisite to use the HCL DX Picker.

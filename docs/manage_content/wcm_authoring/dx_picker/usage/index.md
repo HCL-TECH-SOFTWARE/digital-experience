@@ -12,10 +12,8 @@ The content sources available for DX Picker are the following:
 - **DAM**
 - **WCM**
 - **JCR**
-- **People**
-- **Portal**
 
-When you open DX Picker with a default `content source`, the list of collections from the Digital Asset Management is displayed.
+When you open DX Picker with a default `content source`, the list of root collections from the Digital Asset Management is displayed.
 
   ![](../../../../assets/HCL_DX_Picker_DAM_Initial_View.png)
 
@@ -30,18 +28,10 @@ The details shown are the following:
 - **Type** - Type of object shown.
 - **Tags** - Tags or Keywords associated with the object.
 - **Last modified date** - Date when the object was last updated.
-
-### Navigating collections
-
-Clicking on a collection row directs the user inside that collection. The list of items inside a collection is shown.
-!!! note
-    Navigation is only possible with **DAM Collections**.
-
-  ![](../../../../assets/HCL_DX_Picker_Collection_View.png)
  
-### Selecting an asset
+### Selecting an item
 
-Clicking on an asset row enables the select button on the lower right corner of the screen. The **Select** button allows users to select a particular asset.
+Clicking on an item row enables the select button on the lower right corner of the screen. The **Select** button allows users to select a particular item.
 
 !!! note
     Any items from the content source can be selected.
@@ -52,9 +42,29 @@ Selecting an item triggers the following event:
 
     HCL-DX-PICKER-SELECT
 
-### Previewing an asset
+#### Navigating collections
 
-To open the image in Preview mode, click the eye icon next to the asset name.
+Clicking on a collection row directs the user inside that collection. The list of items inside a collection is shown.
+!!! note
+    Navigation is only possible with non-empty **DAM Collections**.
+
+  ![](../../../../assets/HCL_DX_Picker_Collection_View.png)
+
+### Using Search
+
+To search for an item, type a keyword in the search textbox and click the search button or press `Enter`. Only fields such as **title**, **description**, **type**, **tags** (keywords are from DAM), **userid** (creator/owner) and **text** (extracted from content/wcm items) may be specifically searched for now.
+
+!!! note
+    Navigation with **DAM Collections** and Selecting **item** is possible in the search results.
+
+  ![](../../../../assets/HCL_DX_Picker_Search_Result.png)
+
+### Previewing an item
+
+To open an item in Preview mode, hover on the row and click the eye icon beside the item title.
+
+!!! note
+    Only DAM supported images and video files are available for Preview.
 
   ![](../../../../assets/HCL_DX_Picker_Asset_Preview_Button.png)
 
@@ -69,37 +79,31 @@ The following actions can be done when in Preview mode:
     
     For more information on renditions, refer to [Renditions](../../renditions/index.md).
 
-2. Download an image.
+2. Download the item.
 
-    To download the previewed image, click the download icon.
+    To download the previewed item, click the download icon.
 
     !!!note
-        Only the source image is downloaded. Renditions are not included when downloading images.
+        For images with renditions only the selected one will be downloaded.
 
-3. Select an image. 
+3. Select an item. 
 
-    To select an asset, click the **Select** button. 
+    To select an item, click the **Select** button. 
 
     !!! note
-        Changing the rendition will change the `selectedRendition`.
+        Changing the rendition will change the `selectedRendition` inside the `_source` property refer to [Picker Events](../access/index.md#picker-events).
 
-    Selecting an asset from Preview triggers the following event:
+    Selecting an item from Preview triggers the following event:
 
         HCL-DX-PICKER-PREVIEW-SELECT
 
-4. Navigate between assets.
+4. Navigate between item.
 
-    To navigate other assets inside a collection, click the previous and next buttons.  
+    To navigate to the other supported file formats inside the collection, click the previous and next buttons.  
 
-5. Zoom in and out of an image.
+5. Zoom controls.
+
+    !!! note
+        This functionality is only available for images.
 
     To inspect the image, click the zoom in and zoom out buttons. 
-
-### Using Search
-
-To search an object, type in the search input and click the search button or press `Enter`. Only common fields such as **title**, **description**, **type**, **tags** (keywords are from DAM), **userid** (creator/owner) and **text** (extracted from content/wcm items) may be specifically searched for now.
-
-!!! note
-    Navigation with **DAM Collections** and Selecting **Object** is possible in the search results.
-
-  ![](../../../../assets/HCL_DX_Picker_Search_Result.png)

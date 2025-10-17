@@ -63,10 +63,10 @@ To use the DX Picker, you must have the DX Picker Web Component imported in your
       </html>
     ```
 
-4.  You can change the `content source` by adding `source` attribute to `dx-picer`.
+4.  You can change the `content source type` by adding `source` attribute to `dx-picker`.
 
     !!! note
-        The list of content source available for DX Picker are **dam**, **wcm**, **jcr**, **portal** and **people**. Only one content source can be configured to DX Picker. If no source attribute is provided, **dam** is the default content source.
+        The list of content source type available for DX Picker are **dam**, **wcm** and **jcr**. Only one content source can be configured to DX Picker. If no source attribute is provided, **dam** is the default content source type.
     
     ```html
       <html>
@@ -120,7 +120,8 @@ The following are the current events available in the DX Picker:
 
     These events contains the following object:
     !!! note
-        This is the updated object that will be receive from DX Picker. The `documentObject` varies depending on the content source used. For more information about the `documentObject` parameter, see [Indexed documents](../../../../deployment/manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
+        This is the updated object that will be received from DX Picker. The `documentObject` varies depending on the content source used. For more information about the `documentObject` parameter, see [Indexed documents](../../../../deployment/manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
+
     ```json
     {
       "type": "HCL-DX-PICKER-SELECT" | "HCL-DX-PICKER-PREVIEW-SELECT",
@@ -144,7 +145,7 @@ The following are the current events available in the DX Picker:
               "dataUri": string,
               "text": string,
               "link": string,
-              "selectedRendition": {
+              "selectedRendition": { //This is only available for DAM content source.
                 "renditionType": string,
                 "binaryUrl": string,
                 "thumbnailUrl": string,
