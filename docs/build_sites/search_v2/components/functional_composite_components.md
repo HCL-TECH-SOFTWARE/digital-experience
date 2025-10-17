@@ -18,7 +18,7 @@ Functional Composite Components (FCC) combine ACs to deliver higher-level functi
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **attribute** | String | The attribute to fetch from the search result item. | '' |
     | **index** | String |The index of the search item in the result list. | '' |
-    | **outputContext** | OutputContextType | Consumed from context and contains the search result data. This property is internally managed by the component and should not be used. | undefined |
+    | **outputContext** | OutputContextType | Consumed from context and contains the search result data. This property is internally managed by the component and should not be used. | `undefined` |
 
 - **dx-fcc-base-element:** This is a base class in the FCC framework that integrates the Broadcast Channel API for component communication and ensures no shadow DOM is used. It also cleans up resources when components are disconnected.
 

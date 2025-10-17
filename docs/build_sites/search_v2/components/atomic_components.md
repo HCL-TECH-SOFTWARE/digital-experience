@@ -7,7 +7,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | ------------ | ------------- | ------------ | --------------|
     | **id** | String | Specifies the unique identifier for the component instance. This property is automatically assigned using a UUID generator when the component is instantiated. | Generated UUID value |
-    | **localization** | Map<string,string\> | Specifies the localization map for template messages used for internationalization. | undefined |
+    | **localization** | Map<string,string\> | Specifies the localization map for template messages used for internationalization. | `undefined` |
 
 - **dx-accordion:** This customizable web component provides an expandable and collapsible accordion UI element. It supports optional checkboxes, secondary text, and left-to-right (LTR) or right-to-left (RTL) layouts. The component is accessible, keyboard-navigable, and supports both outlined and no-outline visual styles. It is suitable for displaying grouped content sections that users can expand or collapse as needed.
 
@@ -25,21 +25,21 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
 
     | **Properties** | **type** | **Description** | **Default** |
     | ------------ | ------------- | ------------ | --------------|
-    | **message** | String | The message text to display inside the alert. | '' |
-    | **width** | Number | The width of the alert in pixels. | `240` |
-    | **variant** | String | The visual style of the alert. Possible values are `contained` and `outlined` | `contained` |
-    | **severity** | String | The severity level of the alert. Possible values are `info`, `error`, `warning`, and `success` | `info` |
+    | **message** | String | Specifies the message text to display inside the alert. | '' |
+    | **width** | Number | Indicates the width of the alert in pixels. | `240` |
+    | **variant** | String | Determines the visual style of the alert. Possible values are `contained` and `outlined` | `contained` |
+    | **severity** | String | Determines the severity level of the alert. Possible values are `info`, `error`, `warning`, and `success` | `info` |
 
 - **dx-button:** This customizable button component comes with internationalization support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **disabled** | Boolean | Indicates whether the button is disabled. | `false` |
-    | **imgurl** | String | The URL of the image to be displayed as the icon of a button. | undefined |
-    | **icon** | TemplateResult | Template for a custom icon (e.g., SVG or enchanted icon). | undefined |
-    | **buttontext** | String | Displays text on a button. | undefined |
+    | **imgurl** | String | The URL of the image to be displayed as the icon of a button. | `undefined` |
+    | **icon** | TemplateResult | Specifies the template for a custom icon (for example, SVG or enchanted icon). | `undefined` |
+    | **buttontext** | String | Displays text on a button. | `undefined` |
     | **endicon** | Boolean | Determines whether the image is displayed as an end icon instead of a start icon. | `false` |
-    | **variant** | String | Specifies the button's visual style. Possible values are `contained`, `text`, and `outlined`. | 'contained' |
+    | **variant** | String | Specifies the button's visual style. Possible values are `contained`, `text`, and `outlined`. | `contained` |
     | **withPadding** | Boolean | Indicates whether the button should have padding. | `false` |
     | **inverseColor** | Boolean | Uses the inverse color scheme for the button. | `false` |
     | **size** | `small` or `medium` | Specifies the size of the button (affects icon size and padding). | `small` |
@@ -140,7 +140,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **value** | Number | Represents a custom numeric value associated with the anchor. Ensure to use case-specific values. | 0 |
     | **mode** | String | Specifies the mode of the anchor, controlling its behavior and styling. You can use the mode values `pagination` or `result-title`, or leave it blank. | '' |
     | **imgurl** | String | Specifies the URL of an image to be displayed inside the anchor if no text label is provided. |'' |
-    | **target** | String | Specifies where to open the linked document. Sample values include `_blank` or `_self`. | undefined |
+    | **target** | String | Specifies where to open the linked document. Sample values include `_blank` or `_self`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-anchor` component and its elements based on the component's state and properties.
 
@@ -171,14 +171,14 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **chip-count** | Represents the `<span>` element that displays the count of the chip when the locale is left-to-right (LTR). It is used to style the count value in LTR layouts. |
     | **chip-count-rtl** | Represents the `<span>` element that displays the count of the chip when the locale is right-to-left (RTL). It is used to style the count value in RTL layouts. |
 
-- **dx-circular-progress:** This component is a customizable radial progress bar that uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress. 
+- **dx-circular-progress:** This customizable radial progress bar uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress.
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **size** | Number | The diameter of the circular progress element. | `100` |
-    | **strokewidth** | Number| The width of the circle's stroke. | `4` |
-    | **trailcolor** | String | The color of the inactive portion (trail) of the circle. | `#D6D6D6` |
-    | **valuecolor** | String | The color of the active portion of the circle. | `#0550DC` |
+    | **size** | Number | Specifies the diameter of the circular progress element. | `100` |
+    | **strokewidth** | Number| Specifies the width of the circle's stroke. | `4` |
+    | **trailcolor** | String | Specifies the color of the inactive portion (trail) of the circle. | `#D6D6D6` |
+    | **valuecolor** | String | Specifies the color of the active portion of the circle. | `#0550DC` |
 
     The `dx-circular-progress` component does not currently use any part attributes in its implementation.
 
@@ -187,12 +187,12 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **value** | String | Specifies the current value of the textfield. | '' |
-    | **type** | String | Specifies the input type. Sample values include `text`, `password`, or `email`. | 'text' |
-    | **label** | String, undefined | Specifies the label displayed above the textfield. | undefined |
+    | **type** | String | Specifies the input type. Sample values include `text`, `password`, or `email`. | `text` |
+    | **label** | String, undefined | Specifies the label displayed above the textfield. | `undefined` |
     | **placeholder** | String | Specifies the placeholder text displayed inside the textfield. | '' |
     | **disabled** | Boolean | Indicates whether the textfield is disabled. | `false` |
     | **clearIconUrl** | String | Specifies the URL or name of the icon used to clear the input. | '' |
-    | **actionIconUrl** | String | Specifies the URL or name of the icon used for an action (for example, search). | undefined |
+    | **actionIconUrl** | String | Specifies the URL or name of the icon used for an action (for example, search). | `undefined` |
     | **field** | DxSearchInputFieldType, String | Specifies a field identifier for the input that is useful in custom events or associating it with specific data. You can use the `DxSearchInputFieldType` string `queryString` or provide your own field name. | '' |
     | **hassearchedbefore** | Boolean | Indicates if a search has been performed before. | `false` |
 
@@ -320,12 +320,12 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
-    | **variant** | String | Sets the avatar's visual variant. Possible values are `avatar-letter`, `avatar-icon`, or `avatar-img`. |undefined |
-    | **imgUrl** | String | Indicates the URL of the image to be displayed as the avatar when the `variant` is set to `avatar-img`. | undefined |
-    | **iconUrl** | String | Indicates the URL of the icon to be displayed as the avatar when the `variant` is set to `avatar-icon`. | undefined |
-    | **color** | String | Specifies the color theme for the avatar. | `undefine` |
+    | **variant** | String | Sets the avatar's visual variant. Possible values are `avatar-letter`, `avatar-icon`, or `avatar-img`. | `undefined` |
+    | **imgUrl** | String | Indicates the URL of the image to be displayed as the avatar when the `variant` is set to `avatar-img`. | `undefined` |
+    | **iconUrl** | String | Indicates the URL of the icon to be displayed as the avatar when the `variant` is set to `avatar-icon`. | `undefined` |
+    | **color** | String | Specifies the color theme for the avatar. | `undefined` |
     | **iconTemplate** | TemplateResult or String | Custom icon template or SVG string for icon template avatars. | `undefined` |
-    | **avatarText** | String | Specifies the text to be displayed in the avatar when the `variant` is set to `avatar-letter`. | undefined |
+    | **avatarText** | String | Specifies the text to be displayed in the avatar when the `variant` is set to `avatar-letter`. | `undefined` |
     | **type** | String | Sets the shape of the avatar. Possible values are `avatar-rounded` or `avatar-circular`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-avatar` component and its elements based on the component's state and properties.
@@ -350,7 +350,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **showBackIcon** | Boolean | Determines whether the back icon is shown. | `false` |
     | **isSideNavOpen** | Boolean | Indicates whether the side navigation is open. | `false` |
     | **disabled** | Boolean | Determines whether certain components in the header are disabled. | `false` |
-    | **variant** | String | Specifies the predetermined structure and styling of the header according to its use-case. You can use the value `header-endUser`. | undefined |
+    | **variant** | String | Specifies the predetermined structure and styling of the header according to its use-case. You can use the value `header-endUser`. | `undefined` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-header` component and its elements based on the component's state and properties.
 
@@ -438,7 +438,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **Properties** | **type** | **Description** | **Default** |
     | -------------- | ---------| -----------------------------------------------------------------------|--------------|
     | **paths** | Array<PathType\> | Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType). | [] |
-    | **handleBreadcrumbClick** | Function | Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items). | undefined |
+    | **handleBreadcrumbClick** | Function | Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items). | `undefined` |
 
     The following PathType Interface properties are used in `dx-breadcrumbs` and `dx-breadcrumbs-item`:
 
@@ -622,7 +622,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **size** | String | Specifies the size of the icon button. | 'small' |
     | **withPadding** | Boolean | Determines whether the button should have padding. | `false` |
     | **imgurl** | String | Specifies the URL of the image to be used in the button. | '' |
-    | **icon** | TemplateResult | Defines the Lit template for rendering a custom icon. | undefined |
+    | **icon** | TemplateResult | Defines the Lit template for rendering a custom icon. | `undefined` |
     | **disabled** | Boolean | Disables the button if set to `true`. | `false` |
     | **inverseColor** | Boolean | Applies an inverse color scheme if set to `true`. | `false` |
 
@@ -815,7 +815,7 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **currentPage** | Number | Specifies the current active page (1-based index). | `left` |
     | **totalCount** | Number | Specifies the total number of items in the dataset. | '' |
     | **rowSize** | Number | Specifies the number of rows to display per page. | `undefined` |
-    | **options** | String[] | Defines the selectable options for rows per page. | `['10', '25', '50', '100'] (from DEFAULT_ROWS_OPTIONS)` |
+    | **options** | String\[] | Defines the selectable options for rows per page. | `['10', '25', '50', '100'] (from DEFAULT_ROWS_OPTIONS)` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-table-pagination` component and its elements based on the component's state and properties.
 
@@ -836,11 +836,11 @@ Atomic Components (ACs) are the smallest possible building blocks of the search 
     | **items** | PreviewItem\[] | Defines the array of items to preview. Each item contains `id`, `title`, `type`, `renditions`, and `fileExtension`. | [] |
     | **customHeaderTitle** | String | Specifies a custom title for the preview header. If not set, uses the current item's title. | null |
     | **component** | TemplateResult or String | Provides custom content to render instead of the default preview. | '' |
-    | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | undefined |
-    | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | undefined |
+    | **isPreviousButtonDisabled** | Boolean | Indicates whether the previous navigation button is disabled. | `undefined` |
+    | **isNextButtonDisabled** | Boolean | Indicates whether the next navigation button is disabled. | `undefined` |
     | **renditionLabel** | String | Specifies the label for the rendition select dropdown. | '' |
     | **selectButtonTitle** | String | Specifies the text for the select button. | '' |
-    | **initialItemIndex** | Number | Specifies the index of the item to show initially. | 0 |
+    | **initialItemIndex** | Number | Specifies the index of the item to show initially. | `0` |
 
     The following CSS part attributes are responsible for determining the appropriate CSS for the `dx-preview` component and its elements based on the component's state and properties.
 
