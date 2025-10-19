@@ -10,15 +10,7 @@ Before configuring the external database, make sure you have the following:
 
   - **PostgreSQL Version**: The external database must be running **PostgreSQL version 16**.
   - **Network Connectivity**: Ensure there's network access between your Digital Asset Management application and the external PostgreSQL database.
-  - **Database Setup**: You need to set up the necessary database, roles, and permissions. You will need to create the following:
-      - The `dxmediadb` and `dx_user` databases.
-      - The `<damUser>` and `<dbUser>` roles with their respective passwords.
-      - Grant all privileges on the `dxmediadb` database to `<dbUser>`.
-      - Assign the `<damUser>` role to `<dbUser>` with the admin option.
-      - Set `<damUser>` as the owner of the `dxmediadb` database.
-
-!!! note
-    You can get the credentials for `damUser` and `dbUser` from the `security.digitalAssetManagement` section in your custom values YAML file. Refer digitalAssetManagement section in [security configuration](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#adjusting-default-credentials)
+  - **Database Setup**: Set up a database for DAM. Create roles and provide permissions for those roles to the database. Refer to [Create the Database and Roles](#steps-for-preparing-the-database) section
 
 
 -----
@@ -39,15 +31,20 @@ Replace `<path-to-your-ssl-pem-crt-file>` with the actual path to your SSL certi
 
 ### 2\. Back Up and Import Your Existing Database
 
+
   - First, export the database dump from your current persistence node. For guidance, see the [Backup Persistence](../../digital_assets/dam_backup_restore_image.md#backup-persistence) section.
   - Import this database dump into your external database instance.
-  - Finally, verify that the database connection works using the `<damUser>` credentials.
+
+!!! note
+    All authoring operations on the DAM must be suspended during the database export and import procedure. Failure to do so will introduce invalid data into the external database. The ideal way is to scale down the replica to 0 for `digitalAssetManagement` under `scaling.replicas` in `values.yaml`
+
 
 ### 3\. Update the Custom Values YAML File
 
   - Open your custom values YAML file for editing.
-  - Set the `persistence` field under `applications` to **false**. (This disables the persistence node and persistence pool node)
+  - Set the `persistence` field under `applications` to **false**. (This disables the persistence node and persistence pool node). Ensure this field remains enabled for any other services (e.g., people service) that still require persistence functionality. 
   - Modify the database hostname in the `configuration.persistence.host` field to point to your external database.
+  - Modify the database name in the `configuration.persistence.databaseName` field to point to your database name.
   - If applicable, set the `configuration.persistence.ssl` field to **true**.
 
 ### 4\. Run Helm Upgrade
@@ -68,11 +65,11 @@ This section provides a general example of the **required steps** to prepare any
 1.  **Create the Database and Roles**: Connect to your PostgreSQL instance and create the necessary database, roles, and permissions. Use SQL commands similar to the following:
 
     ```sql
-    CREATE DATABASE dxmediadb;
+    CREATE DATABASE <database>;
     CREATE ROLE <dxuser> WITH CREATEROLE login PASSWORD '<password>';
     CREATE USER <damuser> WITH LOGIN PASSWORD '<password>';
-    ALTER DATABASE dxmediadb OWNER TO <damuser>;
-    GRANT CREATE ON DATABASE dxmediadb TO <dxuser>;
+    ALTER DATABASE <database> OWNER TO <damuser>;
+    GRANT CREATE ON DATABASE <database> TO <dxuser>;
     GRANT <damuser> TO <dxuser> WITH ADMIN OPTION;
     CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
     ```
@@ -82,9 +79,9 @@ This section provides a general example of the **required steps** to prepare any
     If this is a fresh deployment, if you choose to use a single credential, use the below SQL Commands:
 
     ```sql
-    CREATE DATABASE dxmediadb;
+    CREATE DATABASE <database>;
     CREATE ROLE <userid> with CREATEROLE login PASSWORD '<password>';
-    GRANT CREATE ON DATABASE dxmediadb TO <userid>;
+    GRANT CREATE ON DATABASE <database> TO <userid>;
     CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
     ```
 
@@ -97,11 +94,11 @@ This section provides a general example of the **required steps** to prepare any
 
 3.  **Import the Database Dump**:
 
-      - Use the appropriate tools for your environment (e.g., `psql`) to import the database dump into the `dxmediadb`. 
+      - Use the appropriate tools for your environment (e.g., `psql`) to import the database dump into the `<database>`. 
 
 4.  **Verify the Import**:
 
-      - Log in to the `dxmediadb` using the `<damUser>` credentials to confirm that the data has been imported correctly.
+      - Log in to the `<database>` using the `<damUser>` credentials to confirm that the data has been imported correctly.
 
 5.  **Connect DAM to the External Database**:
 
