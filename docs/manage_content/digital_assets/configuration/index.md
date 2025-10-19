@@ -22,3 +22,5 @@ This section provides steps to configure DAM with a content delivery network (CD
 This section discusses the regeneration of missing renditions and versions and the cleanup of incomplete records that must be deleted.
 - **[DAM Indexing](./dam_indexing/index.md)**  
 This section describes how you can use DAM as a datasource of the Search service.
+- **[Configure External Database for DAM](./external_dam_database.md)**  
+This section describes how to configure external database for DAM.

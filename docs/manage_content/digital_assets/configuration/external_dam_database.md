@@ -1,4 +1,4 @@
-# Configuring an External Database for DAM
+# Configure External Database for DAM
 
 The Digital Asset Management (DAM) uses an internal **PostgreSQL** service as its default persistence backend. This guide explains how to utilize an external PostgreSQL database from a cloud provider or self-hosted environment.
 
