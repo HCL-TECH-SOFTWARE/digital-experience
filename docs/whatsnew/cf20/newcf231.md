@@ -13,6 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - External database support now available
 - Helm values updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
@@ -60,6 +61,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - External database support now available
+
+=== "Containers"
+    You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
 
 ### Helm values updates
 
