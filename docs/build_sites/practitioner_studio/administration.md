@@ -1,7 +1,11 @@
-# Portal administration
+#  Administration
 
 Use the Portal administration portlets that are provided with HCL Digital Experience to do various day-to-day administration tasks.
 
+- [**HCL Web Content Manager Support Tools**](../../deployment/manage/troubleshooting/wcm_support_tools.md)<br>
+    Learn how to use the HCL Web Content Manager (WCM) Support Tools portlet to investigate and analyze information related to the WCM Java Content Repository (JCR) nodes.
+- [**Managing syndicators and subscribers**](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)<br>
+    Learn how to transport data from one instance of HCL Web Content Manager to another.
 <!--- 
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
 Use Manage Pages to create, edit, activate, order, and delete pages and external web pages and labels.
