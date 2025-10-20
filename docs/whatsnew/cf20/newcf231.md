@@ -13,6 +13,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - External database support now available
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -60,6 +61,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - External database support now available
+
+=== "Containers"
+    You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
+
 ### Helm values updates
 
 === "Containers"
@@ -74,11 +80,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Java Development Kit 8.0.8.51](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - iFix PH67137
     - iFix PH67817
-
-### External database support for Digital Asset Management
-
-=== "Containers"
-    Configuring External database for Digital Asset Management is available under [External database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
 
 ## Notices of deprecation
 
