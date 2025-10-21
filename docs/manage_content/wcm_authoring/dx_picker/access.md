@@ -3,7 +3,7 @@
 This section provides steps on how to access the HCL Digital Experience (DX) Picker feature in a custom web application.
 
 !!! note
-    -  You must have at least User access to use DX Picker. You must also have access to the content source to display items, unless it has anonymous access. For more information, refer to [Working with resource permissions](../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md).
+    - You must have at least User access to use DX Picker. You must also have access to the content source to display items, unless it has anonymous access. For more information, refer to [Working with resource permissions](../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md).
     - To use the DX Picker, you must have the DX Picker web component imported in your HTML page.
 
 1. Add the DX Picker script as one of the dependencies in your HTML page using the following script:

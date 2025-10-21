@@ -1,4 +1,4 @@
-# Limitations
+# Limitations of DX Picker
 
 Refer to the following limitations when using HCL DX Picker:
 

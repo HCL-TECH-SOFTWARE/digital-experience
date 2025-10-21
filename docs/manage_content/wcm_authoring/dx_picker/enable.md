@@ -56,4 +56,4 @@ To prevent Cross-Origin Resource Sharing (CORS) issues and access DX Picker in a
 
 ## Disabling DX Picker
 
-Once Search V2 is disabled, DX Picker will also be disabled. For reference check [Search V2](../../../build_sites/search_v2/index.md).
+Disabling Search V2 also disables DX Picker. For more information on disabling Search V2, refer to [Installing and Deploying Search V2](../../../build_sites/search_v2/installation.md).

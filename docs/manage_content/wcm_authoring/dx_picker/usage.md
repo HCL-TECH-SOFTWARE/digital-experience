@@ -93,7 +93,7 @@ You can perform the following actions in Preview mode:
     To select an item, click the **Select** button.
 
     !!! note
-        Changing the rendition will change the `selectedRendition` inside the `_source` property. For more information, refer to [Picker Events](./access/index.md#picker-events).
+        Changing the rendition will change the `selectedRendition` inside the `_source` property. For more information, refer to [Picker Events](./access.md#dx-picker-events).
 
     Selecting an item from Preview triggers the [`HCL-DX-PICKER-PREVIEW-SELECT`](./access.md#dx-picker-events) event.
 

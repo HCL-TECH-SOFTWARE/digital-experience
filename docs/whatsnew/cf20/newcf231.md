@@ -14,9 +14,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- DX Picker with Search V2 - New URL, configurations, and additional prerequisites
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
-- DX Picker with Search V2 - New URL, configurations and additional prerequisites.
 
 **Notices of deprecation**
 
@@ -61,6 +61,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### DX Picker with Search V2 - Updated installation, deployment, and content sources
+
+=== "Containers"
+    The Picker feature of HCL DX has been updated to provide a more efficient installation and deployment process. Additionally, Java Content Repository (JCR) and Web Content Manager (WCM) are now available as content sources alongside Digital Asset Management (DAM). For more information, refer to the following topics:
+
+    - [Enabling and disabling DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md)
+    - [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md)
+    - [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md)
+    - [Limitations of DX Picker](../../manage_content/wcm_authoring/dx_picker/limitations.md)
 
 ### Helm values updates
 
