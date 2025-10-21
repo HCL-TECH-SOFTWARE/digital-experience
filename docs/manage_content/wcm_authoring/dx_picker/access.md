@@ -115,7 +115,7 @@ window.addEventListener('message', (event) => {
 There are three events available in the DX Picker:
 
 - `HCL-DX-PICKER-SELECT`: Triggered when selecting an item.
-- `HCL-DX-PICKER-PREVIEW-SELECT`: Triggered when selecting an item from Preview.
+- `HCL-DX-PICKER-PREVIEW-SELECT`: Triggered when selecting an item from **Preview**.
 
     These events contain the following object:
 
@@ -167,7 +167,7 @@ There are three events available in the DX Picker:
     }
     ```
 
-- `HCL-DX-PICKER-CLOSE` - Triggered when the Cancel button is clicked.
+- `HCL-DX-PICKER-CLOSE` - Triggered when the **Cancel** button is clicked.
 
     This event contains the following object:
 

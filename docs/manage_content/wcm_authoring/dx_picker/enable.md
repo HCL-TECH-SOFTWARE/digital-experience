@@ -3,7 +3,7 @@
 This section describes how to enable or disable the HCL Digital Experience (DX) Picker feature.
 
 !!! important
-    Before enabling DX Picker, ensure to install and enable [Search V2](../../../build_sites/search_v2/index.md) and the content source you want to use such as [Digital Asset Management (DAM)](../../digital_assets/index.md), [Java Content Repository (JCR)](../../../build_sites/search/cfg_dx_search/search_service_params/jcr_srrcfgsrvc.md), or [Web Content Manager (WCM)](../../../manage_content/wcm_authoring/authoring_portlet/index.md)
+    Before enabling DX Picker, ensure to install and enable [Search V2](../../../build_sites/search_v2/index.md) and the content source you want to use such as [Digital Asset Management (DAM)](../../digital_assets/index.md), [DAM Indexing](../../../manage_content/digital_assets/configuration/dam_indexing/index.md), [Java Content Repository (JCR)](../../../build_sites/search/cfg_dx_search/search_service_params/jcr_srrcfgsrvc.md), or [Web Content Manager (WCM)](../../../manage_content/wcm_authoring/authoring_portlet/index.md)
 
 ## Enabling DX Picker
 
@@ -56,6 +56,4 @@ To prevent Cross-Origin Resource Sharing (CORS) issues and access DX Picker in a
 
 ## Disabling DX Picker
 
-Refer to the following steps to disable DX Picker.
-
-1. 
+Once Search V2 is disabled, DX Picker will also be disabled. For reference check [Search V2](../../../build_sites/search_v2/index.md).
