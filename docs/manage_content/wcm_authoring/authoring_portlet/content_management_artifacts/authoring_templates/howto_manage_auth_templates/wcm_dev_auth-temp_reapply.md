@@ -36,4 +36,5 @@ Reapplying an authoring template is required when the following kinds of changes
 5. Click **OK**.
 
 !!!note
-    Changes to the default content of an element will not be propagated to existing content items. The content that was defined will remain intact.  
+    - Changes to the default content of an element will not be propagated to existing content items. The content that was defined will remain intact.
+    - When the default content is removed, the new changes may be applied. For example, if you change the digital asset source of an image from “Uploading using file browser” with a selected image to "HCL DAM," that selected image will remain in the existing content. However, if you delete it in your content, you can select a new one from DAM.
