@@ -75,35 +75,18 @@ You can perform the following actions in Preview mode:
 
   ![](../../../assets/HCL_DX_Picker_Asset_Preview_Component.png)
 
-1. View image renditions.
+1. To choose the rendition of the image you want to view, click the dropdown and select the specific rendition. For more information on renditions, refer to [Renditions](../renditions/index.md).
 
-    To choose the rendition of the image you want to view, click the dropdown and select the specific rendition.
+2. To download the previewed item, click the **Download** icon. For images with renditions, only the selected rendition is downloaded.
 
-    For more information on renditions, refer to [Renditions](../renditions/index.md).
+3. To select an item, click the **Select** button.
 
-2. Download the item.
+    - Changing the rendition will change the `selectedRendition` inside the `_source` property. For more information, refer to [Picker Events](./access.md#dx-picker-events).
+    - Selecting an item from Preview triggers the [`HCL-DX-PICKER-PREVIEW-SELECT`](./access.md#dx-picker-events) event.
 
-    To download the previewed item, click the **Download** icon.
+4. To navigate to the other supported file formats inside the collection, click the **Previous** and **Next** buttons.  
 
-    !!!note
-        For images with renditions, only the selected rendition is downloaded.
-
-3. Select an item.
-
-    To select an item, click the **Select** button.
-
-    !!! note
-        Changing the rendition will change the `selectedRendition` inside the `_source` property. For more information, refer to [Picker Events](./access.md#dx-picker-events).
-
-    Selecting an item from Preview triggers the [`HCL-DX-PICKER-PREVIEW-SELECT`](./access.md#dx-picker-events) event.
-
-4. Navigate between items.
-
-    To navigate to the other supported file formats inside the collection, click the **Previous** and **Next** buttons.  
-
-5. Zoom in or out.
-
-    To inspect the image, click the **Zoom In** and **Zoom Out** buttons.
+5. To inspect the image, click the **Zoom In** and **Zoom Out** buttons.
 
     !!! note
         This functionality is only available for images.
