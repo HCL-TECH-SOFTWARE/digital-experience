@@ -35,7 +35,7 @@ Clicking on an item row enables the **Select** button on the lower right corner 
 
 Selecting an item triggers the [`HCL-DX-PICKER-SELECT`](./access.md#dx-picker-events) event.
 
-### Navigating collections
+## Navigating collections
 
 Select a collection row to open the collection and view its list of items.
 
@@ -44,7 +44,7 @@ Select a collection row to open the collection and view its list of items.
 
   ![](../../../assets/HCL_DX_Picker_Collection_View.png)
 
-### Using Search
+## Using Search
 
 To search for an item, enter a keyword in the search textbox and select the Search button or press Enter.
 
@@ -62,7 +62,7 @@ The search function currently scans the following fields:
 
   ![](../../../assets/HCL_DX_Picker_Search_Result.png)
 
-### Previewing an item
+## Previewing an item
 
 To open an item in **Preview** mode, hover on the row and click the eye icon beside the item title.
 
