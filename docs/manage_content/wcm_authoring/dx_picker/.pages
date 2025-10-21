@@ -1,6 +1,10 @@
 title: DX Picker
 nav:
     - index.md
+    - enable.md
+    - access.md
+    - usage.md
+    - limitations.md
     - Prerequisite: prerequisite
     - Access DX Picker: access
     - Usage: usage

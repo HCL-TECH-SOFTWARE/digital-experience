@@ -4,14 +4,11 @@ The HCL DX Picker is a web component that allows users to view and select item f
 
 Refer to the following pages for more information:
 
-- **[Prerequisite for HCL DX Picker](../dx_picker/prerequisite/index.md)**<br>
+- **[Enabling and disabling HCL DX Picker](enable.md)**  
 This section contains prerequisite to use the HCL DX Picker.
-
-- **[Access DX Picker](../dx_picker/access/index.md)**<br>
+- **[Accessing DX Picker](./access.md)**  
 This section provides steps on how to access HCL DX Picker.
-
-- **[Usage of HCL DX Picker](../dx_picker/usage/index.md)**<br>
+- **[Using DX Picker](./usage.md)**  
 This sections shows how the DX Picker can be used.
-
-- **[Limitations](../dx_picker/limitations/index.md)**<br>
+- **[Limitations](./limitations.md)**  
 This section lists the current limitations of HCL DX Picker.
