@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
+- DX Picker with Search V2 - New URL, configurations and additional prerequisites.
 
 **Notices of deprecation**
 
