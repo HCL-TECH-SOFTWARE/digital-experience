@@ -89,7 +89,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DX Picker - Updated installation instructions for hybrid and Kubernetes deployments
 
 === "Containers"
-    Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/installation/index.md) for more information. 
+    Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md) for more information.
 
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber

@@ -14,6 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - DAM - External database support now available
+- DX Picker integration with Search V2
 - Helm values updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
@@ -66,6 +67,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
+
+### DX Picker integration with Search V2
+
+=== "Containers"
+    The DX Picker feature is now integrated in Search V2. This integration lets you search and select items from multiple content sources, including Java Content Repository (JCR) and Web Content Manager (WCM), in addition to Digital Asset Management (DAM). Installation and deployment methods have also been streamlined for efficiency. For more information, refer to the following topics:
+
+    - [Enabling and disabling DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md)
+    - [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md)
+    - [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md)
+    - [Limitations of DX Picker](../../manage_content/wcm_authoring/dx_picker/limitations.md)
 
 ### Helm values updates
 
