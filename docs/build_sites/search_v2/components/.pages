@@ -1,0 +1,5 @@
+title: Components of Search V2
+nav:
+    - atomic_components.md
+    - functional_composite_components.md
+    - index.md

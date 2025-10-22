@@ -170,16 +170,6 @@ Refer to the following steps to modify the name of a media asset.
 
 Another way to modify the name of a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name** of the media asset in this panel, along with the **Title** and **Description**. Click **Save**.
 
-### Configuration for enabling the asset rename and move feature
-
-The asset move and renaming feature can be enabled or disabled through the helm. By default, this feature is enabled.
-
-```yaml
-configuration:
-  digitalAssetManagement:
-    enableAssetMoveRename: true
-```
-
 ## Changing duplicate asset names using DAM
 
 If an asset happens to have the same name with another asset in a collection, a rename dialogue will be shown when editing an asset.

@@ -1,10 +1,10 @@
 ---
-title: Rendering - Small-Sized Configuration
+title: Rendering - Small Configuration
 ---
 
-# Sizing guidance for rendering in a small-sized Kubernetes configuration
+# Sizing guidance for rendering in a small Kubernetes configuration
 
-This topic provides the details of the environments used for rendering in a small-sized Kubernetes configuration and for [rendering with the upper limit in a single-node Kubernetes configuration](#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration). You can also find the test results and recommendations for small configurations on this page.
+This topic provides the details of the environments used for rendering in a small Kubernetes configuration and for [rendering with the upper limit in a single-node Kubernetes configuration](#guidance-for-rendering-with-the-upper-limit-in-a-single-node-configuration). You can also find the test results and recommendations for small configurations on this page.
 
 ## Methodology
 
@@ -155,29 +155,10 @@ This performance tuning guide aims to understand how the ratios of key pod limit
 
 ### Recommendations
 
-- For a small-sized workload in AWS, start the Kubernetes cluster with a single node with at least a c5.2xlarge instance to support a load of 1,000 users. Currently, default CPU and memory values in the [Helm chart](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations) are the minimum values for DX to work.
+- For a small workload in AWS, start the Kubernetes cluster with a single node with at least a c5.2xlarge instance to support a load of 1,000 users. Currently, default CPU and memory values in the [Helm chart](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md#containerization-requirements-and-limitations) are the minimum values for DX to work.
 
 - To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
-### Recommended heap size configuration
-
-To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
-
-!!!note
-     Do not set your JVM heap size larger than the allotted memory for the pod.
-
-- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
-      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
-      - This eliminates the overhead of heap expansion and improves performance consistency.
-
-- Ensure the Kubernetes pod resource limits match the JVM heap settings
-      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
-      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
-
-- Determine the final memory requirements based on load testing
-      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
-      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
 
 ## Guidance for rendering with the upper limit in a single-node configuration
 
@@ -331,23 +312,7 @@ The following table outlines the pod count and limits for each pod. After applyi
 
 ### Recommended heap size configuration
 
-To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices when tuning memory allocation.
-
-!!!note
-     Do not set your JVM heap size larger than the allotted memory for the pod.
-
-- Ensure your minimum heap size (`-Xms`) is equal to your maximum heap size (`-Xmx`). 
-      - Setting the minimum and maximum heap sizes to the same value prevents the JVM from dynamically requesting additional memory (`malloc()`). 
-      - This eliminates the overhead of heap expansion and improves performance consistency.
-
-- Ensure the Kubernetes pod resource limits match the JVM heap settings
-      - The requested memory (`requests.memory`) should match the limit (`limits.memory`) in the pod specification.
-      - This ensures that the container is allocated a fixed memory block and prevents unexpected memory reallocation, which could lead to performance degradation or out-of-memory (OOM) errors.
-
-- Determine the final memory requirements based on load testing
-      - To determine the optimal memory configuration, you should conduct local testing with your specific portlets, pages, and customizations. You should also perform synthetic load testing using tools like JMeter to simulate realistic usage scenarios.
-      - The required memory is highly dependent on Service Level Agreements (SLAs) and transaction rates.
-      - A minimum of 3.5GB is recommended, but higher memory allocations may be necessary depending on actual usage patterns.
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
     - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
