@@ -8,7 +8,8 @@
 
 Currently, HCL Digital Experience (DX) does not offer a feature to determine the number of concurrent user sessions and prevent users from logging into HCL DX through different web browser at the same time.
 
-There is already a feature request open for this topic. For details, please check: [Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"} <!--do customers need to know this-->
+!!!note
+    A feature request for this topic is available at [Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"}.
 
 This article provides the sample code that you can use to determine the number of concurrent user sessions in HCL DX. You can also use it to see how you can filter users and prevent the same user from logging in more than once to HCL DX.
 
