@@ -6,5 +6,5 @@ This section includes how-to articles about issues related to login, Portal Acce
 Learn how to enable HTTP-related security flags and attributes in your HCL DX environment.  
 - **[How to integrate transient users with OpenID Connect](./transient_users_with_OpenID_Connect.md)**  
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
-- **[How to create a custom Login/Logout filter in HCL Digital Experience](custom_login_filter_sample.md)**  
-Learn how to create a custom Login/Logout filter in HCL Digital Experience.  
+- **[How to create a custom login or logout filter in HCL DX](custom_login_filter_sample.md)**  
+Learn how to create a custom login or logout filter to determine the number of concurrent user sessions and prevent the same user from logging in more than once to HCL DX.

@@ -1,4 +1,4 @@
-# How to create a custom Login/Logout filter in HCL Digital Experience
+# How to create a custom login or logout filter in HCL DX
 
 ## Applies to
 
@@ -6,52 +6,67 @@
 
 ## Introduction
 
-HCL Digital Experience does not offer a feature yet to determine the number of concurrent user sessions and to prevent users from loging into HCL Digital Experience more than using different Web-Browser sessions. There is already a feature request open for this topic. For details, please check:
+Currently, HCL Digital Experience (DX) does not offer a feature to determine the number of concurrent user sessions and prevent users from logging into HCL DX through different web browser at the same time.
 
-[Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"}
+There is already a feature request open for this topic. For details, please check: [Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"} <!--do customers need to know this-->
 
-This document describes sample code that can be used to determine the number of concurrent user sessions in HCL Digital Experience. It can also be used to see how you can filter users and prevent the same user from loging in more than once to HCL Digital Experience.
+This article provides the sample code that you can use to determine the number of concurrent user sessions in HCL DX. You can also use it to see how you can filter users and prevent the same user from logging in more than once to HCL DX.
 
 ## Instructions
 
-???+ info "DISCLAIMER OF WARRANTIES"
-    The following code is sample code created by HCL Corp.  
-    This sample code is provided to you solely for the purpose of assisting you in the development of your applications.  
-    The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.  
+Refer to the following steps to download and use the sample code to create a login or logout filter:
 
-### Download the sample code
+1. Download the [currentUserFilters.zip](./files/custom_login_filter_sample/concurrentUserFilters.zip){target="_blank"} file containing the filter code and the binary JAR file.
 
-Download the following sample code (jar-file): [currentUserFilters.zip](./files/custom_login_filter_sample/concurrentUserFilters.zip){target="_blank"}  
+    The sample code includes the following classes:
 
-The sample code includes java source-code and their binaries as following:  
+    - Custom login filter class: `com.hcl.portal.CustomPortalLoginFilter.java`
+    - Custom logout filter class: `com.hcl.portal.CustomPortalLogoutFilter.java`
+    - User filter class: `com.hcl.portal.Userlist.java` (This Java singleton class stores user data to track concurrent sessions)
 
-1. A HCL DX custom login filter class (**com.hcl.portal.CustomPortalLoginFilter.java**)  
+    !!!note
+        This code sample demonstrates using custom filters to find the number of concurrent user sessions. For more information, refer to [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md){target="_blank"}.
 
-2. A HCL DX custom logout filter class (**com.hcl.portal.CustomPortalLogoutFilter.java**)  
+2. Copy the `concurrentUserFilters.jar` file into the portal classpath:
 
-3. A user filter java class (**com.hcl.portal.Userlist.java**) which is developed using the java singleton pattern to ensure that just one java object instance exit to store the user data.  
+    1. Locate the downloaded `concurrentUserFilters.jar` file.
+    2. Copy the file into the directory `<PortalServer_root>\shared\app`.
 
-The code sample demonstrates how to use custom login and logout filters in HCL Digital Experience to find the number of concurrent user sessions. For details, please also check [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md){target="_blank"}  
+3. Register the authentication filter in the WebSphere Integrated Solutions Console.
 
-### Process flow of this sample-code
+    1. Open a web browser and go to `https://<hostname>:<port>/ibm/console`.  
+    2. Navigate to **Resources > Resource Environment > Resource Environment Providers**.  
+    3. Click **WP AuthenticationService > Custom properties**.  
+    4. Select **logout.explicit.filterchain**.  
+    5. Change the property's value to `com.ibm.wps.auth.impersonation.impl.ImpersonationLogoutFilter;com.hcl.portal.CustomPortalLogoutFilter`, then click **Apply**.
+    6. Go back to **Custom properties**, then click **New...**.
+    7. Add the following property then click **Apply**:  
+        - **Name:** `login.explicit.filterchain`  
+        - **Value:** `com.hcl.portal.CustomPortalLoginFilter`  
+        ![Custom Filters](./files/custom_login_filter_sample/admin_console_custom_filters.png)  
+    8. Click **Save** at the top of the console messages.
 
-Once the custom login and logout filter is in place, concurrent users can be filtered. A user that is already logged in to the portal, will be redirected to the logout page.  
+4. Restart the HCL DX server.
 
-**Sample process flow:**  
+5. Test the filter by logging in to HCL DX as the same user in two different web browsers.
 
-1. The wpsadmin user is logging in into HCL Digital Experience for the first time using Google Chrome web-browser. The SystemOut.log should show messages like:
+### Filtering concurrent users sample
+
+The custom login and logout filters enable concurrent user filtering. If a user is already signed in to the portal, the system redirects the user to the logout page upon a second sign-in attempt. The following scenario details the expected behavior after the filters are enabled.
+
+1. The wpsadmin user signs in to HCL DX using Google Chrome for the first time. The `SystemOut.log` displays the following information:
 
     ```text
     Custom Portal Login Filter at login called!
     Login-User is: wpsadmin
     Added user wpsadmin to the list.
-    The followig users are already logged in (UserList):
+    The following users are already logged in (UserList):
     <UserList>
     wpsadmin
     </UserList>
     ```
 
-2. A second web-browser (for example Microsoft Edge) is opened and then the wpsadmin user tries to login with that web-browser as well. Because the wpsadmin user is already logged in using the Google Chrome web-browser, the login will be rejected by the Login-Filter and the user will be redirected to the login-page, again.  
+2. The wpsadmin user attempts to sign in using a second web browser (for example, Microsoft Edge). Because wpsadmin is already signed in using Google Chrome, the login filter rejects the second attempt and redirects the user to the logout page.
 
     ```text
     Custom Portal Login Filter at login called!
@@ -59,40 +74,29 @@ Once the custom login and logout filter is in place, concurrent users can be fil
     User is already logged in! Redirecting to logout page.
     ```
 
-3. Once the wspadmin user is logged out in Google Chrome, it is then possible for the wpsadmin user to login using Microsoft Edge. During logout the following messages will be printed out:  
+3. The wpsadmin user signs out in Google Chrome. The user can now sign in using Microsoft Edge. During the logout process, the following messages print:
 
     ```text
     The following user logs out: wpsadmin
     Remove user from userlist: wpsadmin
     ```
 
-### Installation Procedure
+### Sample codes
 
-1. Add the **concurrentUserFilters.jar** file to the portal classpath. Copy the jar-file into the directory `<PortalServer_root>\shared\app`.  
+This section contains the sample code for the following custom filter classes:
 
-2. Register the Authentication Filter in the IBM Integrated Solutions Console (Admin-Console).  
-    a. Open the Web-Browser and access URL: `https://<hostname>:<port>/ibm/console`  
-    b. In the IBM Integrated Solutions Console navigate to **Resources > Resource Environment > Resource Environment Providers**.  
-    c. Click to **WP AuthenticationService**  
-    d. Click to **Custom Properties**.  
-    e. Click to the **New...** button.  
-    f. Change the following existing property:  
-        **Name:** `logout.explicit.filterchain`  
-        **Value:** `com.ibm.wps.auth.impersonation.impl.ImpersonationLogoutFilter;com.hcl.portal.CustomPortalLogoutFilter`  
+- [`CustomPortalLoginFilter`](#customportalloginfilter)
+- [`CustomPortalLogoutFilter`](#customportallogoutfilter)
+- [`Userlist`](#userlist)
 
-    g. Add the following property:  
-        **Name:** `login.explicit.filterchain`  
-        **Value:** `com.hcl.portal.CustomPortalLoginFilter`  
-        ![Custom Filters](./files/custom_login_filter_sample/admin_console_custom_filters.png)  
-    h. Click the **OK** button and save the changes to the Master Configuration.
+???+ info "DISCLAIMER OF WARRANTIES"
+    The following code is sample code created by HCL Corp.  
+    This sample code is provided to you solely for the purpose of assisting you in the development of your applications.  
+    The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
-3. Restart the Portal Server  
+#### `CustomPortalLoginFilter`
 
-4. Run tests by using two different web-browsers to login to HCL Digital Experience using the same user in both web-browsers.  
-
-### Sample Code
-
-**Source-Code of class CustomPortalLoginFilter:**  
+The following code snippet contains the source code for the `CustomPortalLoginFilter` class.
 
 ```java
 package com.hcl.portal;
@@ -162,7 +166,9 @@ public class CustomPortalLoginFilter implements ExplicitLoginFilter {
  }
 ```
 
-**Source-Code of class CustomPortalLogoutFilter:**  
+#### `CustomPortalLogoutFilter`
+
+The following code snippet contains the source code for the `CustomPortalLogoutFilter` class.
 
 ```java
 package com.hcl.portal;
@@ -214,7 +220,9 @@ public class CustomPortalLogoutFilter implements ExplicitLogoutFilter{
 }
 ```
 
-**Source-Code of class Userlist:**  
+#### `Userlist`
+
+The following code snippet contains the source code for the `Userlist` class.
 
 ```java
 package com.hcl.portal;
