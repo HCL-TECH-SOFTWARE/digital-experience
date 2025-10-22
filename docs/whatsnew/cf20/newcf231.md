@@ -86,7 +86,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 - New Atomic Components and supported CSS part attributes available
 
 === "Containers"
-    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes. Additionally, state fields have been removed for ACs.
+    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes.
 
     |New ACs|Updated ACs|Updated FCCs|
     |-----|-----|-----|
