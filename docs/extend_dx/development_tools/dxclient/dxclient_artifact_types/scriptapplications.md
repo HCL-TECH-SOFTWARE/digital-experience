@@ -13,7 +13,7 @@ Script Applications allow you to deploy modern web applications on HCL DX. The D
 - Restore previous versions of Script Applications
 
 !!!tip "Create DX Script Application"
-    While DXClient manages the deployment lifecycle of Script Applications, you can also use the [`create-dx-script-app`](../../create_script_apps/create-and-deploy-script-app.md) tool to quickly scaffold modern React applications specifically designed for HCL DX. It helps you create production-ready React applications with JavaScript or TypeScript that integrate seamlessly with HCL DX and includes built-in deployment capabilities.
+    While DXClient manages the deployment lifecycle of Script Applications, you can also use the [`create-dx-script-app`](../../create_script_apps/create-and-deploy-script-app.md) tool to quickly generate modern React applications specifically designed for HCL DX. It helps you create production-ready React applications with JavaScript or TypeScript that integrate seamlessly with HCL DX and includes built-in deployment capabilities.
 
 ## Deploy Script Application
 

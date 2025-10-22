@@ -104,15 +104,23 @@ Refer to the following steps to build and deploy the Store Locator sample:
 
 3. Configure your environment by editing the `.env.local` file with your DX server details:
 
-    ```env
-    DX_TARGET=https://your-dx-server.com/wps/portal
-    DX_PROTOCOL=https
-    DX_HOSTNAME=your-dx-hostname
-    DX_PORT=443
-    DX_USERNAME=your-username
-    DX_PASSWORD=your-password
-    DX_SITE_AREA=/Nex Haven/About Us  # Target site area in Nex Haven
-    ```
+    1. Navigate to your project directory using the following command:
+
+        ```bash
+        cd your-project-name
+        ```
+
+    2. Open the `.env.local` file in your project and configure your HCL DX connection settings:
+
+        ```env
+        DX_TARGET=https://your-dx-server.com/wps/portal
+        DX_PROTOCOL=https
+        DX_HOSTNAME=your-dx-hostname
+        DX_PORT=443
+        DX_USERNAME=your-username
+        DX_PASSWORD=your-password
+        DX_SITE_AREA=/Nex Haven/About Us  # Target site area in Nex Haven
+        ```
 
 4. (Optional) Test your application locally before deploying using the following command:
 
@@ -152,7 +160,7 @@ Refer to the following steps to integrate the Store Locator sample application i
     1. In the **Nex Haven** site, navigate to the **About Us** page.
     2. Toggle **Edit Mode** to **ON**.
     3. Find an appropriate section to add the Store Locator application.
-    4. Add the deployed Store Locator Script Application.
+    4. Drag and drop the deployed Store Locator Script Application.
 
 2. Enhance integration with using the Text Break component:
 
