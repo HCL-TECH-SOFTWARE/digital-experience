@@ -179,7 +179,7 @@ dx-input-textfield::part(input) {
 You can override styles by targeting the component's class names or part attribute. You can override other components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
 
 !!! note
-    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components.md#atomic-components).    
+    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components/atomic_components.md).
 
 ```css
 /* for dx-button */
