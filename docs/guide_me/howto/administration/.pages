@@ -3,6 +3,7 @@ nav:
     - index.md
     - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
+    - ClearOSGIandTempFiles.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
     - APIToCountWCMItems.md
@@ -10,4 +11,6 @@ nav:
     - ExpediteAsyncDeletes.md
     - ImproveQueryPerformance.md
     - IncreaseTransactionTimeout.md
+    - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
+

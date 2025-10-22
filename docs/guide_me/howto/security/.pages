@@ -1,6 +1,7 @@
 title: Security
 nav:
     - index.md
+    - AddAdditionalWASRealms.md
+    - custom_login_filter_sample.md
     - enable_http_security_http_only_samesite_K8.md
     - transient_users_with_OpenID_Connect.md
-    - custom_login_filter_sample.md

@@ -1,17 +1,14 @@
 # HCL DX Picker
 
-The DX Picker is a web component that allows users to view and select an asset from Digital Asset Management and use it in their custom web application.
+The HCL DX Picker is a web component that allows users to view and select item from various content sources and use it in their custom web application.
 
-Refer to the follwing pages for more information:
+Refer to the following pages for more information:
 
-- **[Install HCL DX Picker](../dx_picker/installation/index.md)**<br>
-This section contains steps to install and deploy HCL DX Picker.
-
-- **[Access DX Picker](../dx_picker/access/index.md)**<br>
-This section provides steps on how to access HCL DX Picker.
-
-- **[Usage of HCL DX Picker](../dx_picker/usage/index.md)**<br>
-This sections shows how the DX Picker can be used.
-
-- **[Limitations](../dx_picker/limitations/index.md)**<br>
-This section lists the current limitations of HCL DX Picker.
+- **[Enabling and disabling DX Picker](enable.md)**  
+This section contains prerequisite to use the DX Picker feature.
+- **[Accessing DX Picker](./access.md)**  
+This section provides steps on how to access DX Picker.
+- **[Using DX Picker](./usage.md)**  
+This section shows how you can use the DX Picker feature.
+- **[Limitations of DX Picker](./limitations.md)**  
+This section lists the current limitations of DX Picker.
