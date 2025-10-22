@@ -9,7 +9,7 @@
 Currently, HCL Digital Experience (DX) does not offer a feature to determine the number of concurrent user sessions and prevent users from logging into HCL DX through different web browser at the same time.
 
 !!!note
-    A feature request for this topic is available at [Create setting to block user multisession.](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"}.
+    A feature request for this topic is available at [Create setting to block user multisession](https://dx-ideas.hcltechsw.com/ideas/DX-I-140){target="_blank"}.
 
 This article provides the sample code that you can use to determine the number of concurrent user sessions in HCL DX. You can also use it to see how you can filter users and prevent the same user from logging in more than once to HCL DX.
 
@@ -17,7 +17,7 @@ This article provides the sample code that you can use to determine the number o
 
 Refer to the following steps to download and use the sample code to create a login or logout filter:
 
-1. Download the [currentUserFilters.zip](./files/custom_login_filter_sample/concurrentUserFilters.zip){target="_blank"} file containing the filter code and the binary JAR file.
+1. Download the [currentUserFilters.zip](./files/concurrentUserFilters.zip){target="_blank"} file containing the filter code and the binary JAR file.
 
     The sample code includes the following classes:
 
@@ -26,7 +26,7 @@ Refer to the following steps to download and use the sample code to create a log
     - User filter class: `com.hcl.portal.Userlist.java` (This Java singleton class stores user data to track concurrent sessions)
 
     !!!note
-        This code sample demonstrates using custom filters to find the number of concurrent user sessions. For more information, refer to [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md){target="_blank"}.
+        This code sample demonstrates using custom filters to find the number of concurrent user sessions. For more information, refer to [Configuring authentication filters](../../../deployment/manage/config_portal_behavior/auth_filters/index.md).
 
 2. Copy the `concurrentUserFilters.jar` file into the portal classpath:
 
@@ -44,7 +44,7 @@ Refer to the following steps to download and use the sample code to create a log
     7. Add the following property then click **Apply**:  
         - **Name:** `login.explicit.filterchain`  
         - **Value:** `com.hcl.portal.CustomPortalLoginFilter`  
-        ![Custom Filters](./files/custom_login_filter_sample/admin_console_custom_filters.png)  
+        ![Custom Filters](./files/admin_console_custom_filters.png)  
     8. Click **Save** at the top of the console messages.
 
 4. Restart the HCL DX server.
