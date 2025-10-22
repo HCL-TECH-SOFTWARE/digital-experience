@@ -30,9 +30,7 @@ Example:
 ```
 imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/svg+xml,image/tiff,image/tif,image/webp
 ```
-For more details about configuring allowed image formats, see  
-[Enable image formats in WCM](https://help.hcl-software.com/digital-experience/9.5/CF230/guide_me/howto/configuration/EnableImageFormats/#jp2){target="_blank"}  
-and [WCMConfigService configuration reference](https://help.hcl-software.com/digital-experience/9.5/CF230/manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config/){target="_blank"}.
+For more details about configuring allowed image formats, see [Enable image formats in WCM](https://help.hcl-software.com/digital-experience/9.5/CF230/guide_me/howto/configuration/EnableImageFormats/#jp2){target="_blank"} and [WCMConfigService configuration reference](https://help.hcl-software.com/digital-experience/9.5/CF230/manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config/){target="_blank"}.
 
 ---
 
