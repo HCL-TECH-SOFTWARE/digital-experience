@@ -37,7 +37,7 @@ Refer to the following steps to embed a Leap application onto a DX site using Le
 
 1. Create the Leap application that you plan to integrate, if you haven't done so. If you're new to creating Leap apps [this HCL Software U lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) may help.
 
-2. Ensure that you can [access Leap and DX from the same domain name](./installation.md) and [Single Sign-On (SSO) is enabled](./configuration.md#enabling-ltpa-sso-between-hcl-leap-and-hcl-dx-in-kubernetes).
+2. Ensure that you can [access Leap and DX from the same domain name](./installation.md) and [Single Sign-On (SSO) is enabled](./configuration.md#enabling-sso-between-hcl-leap-and-hcl-dx-in-kubernetes).
 
 3. Create a **Library** in DX.
 
