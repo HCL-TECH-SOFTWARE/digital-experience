@@ -1,12 +1,12 @@
-# Performance Sizing Guide for Kubernetes Deployments
+# Performance sizing guide for Kubernetes deployments
 
-This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. The goal of these sizing guides is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. Additionally, this guide provides tuning recommendations for Kubernetes pods based on their specific workloads, such as rendering-intensive tasks.
+This section provides sizing guides for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration. These sizing guides identify the optimal Kubernetes configurations for small, medium, and large DX workloads. Additionally, this guide provides tuning recommendations for Kubernetes pods based on their specific workloads, such as rendering-intensive tasks.
 
 For the performance guidance deployments to support Kubernetes container platforms, refer to [Containerization requirements and limitations](../../../../get_started/plan_deployment/container_deployment/limitations_requirements.md).
 
 ## Introduction
 
-In DX performance testing, it is important to determine both DX container sizing and the relationships between the components that make up DX. The goal of performance testing is to identify the optimal Kubernetes configurations for varying levels of DX demands, ranging from small to large setups. This sizing guidance evaluates configurations supporting 1,000, 10,000, and 30,000 virtual users for small, medium, and large setups, respectively.
+DX performance testing identifies the optimal Kubernetes configurations for different DX workload levels, from small to large setups.
 
 The key performance indicators in these tests are the number of concurrent users, the average response time, and throughput. These metrics serve as benchmarks for evaluating the performance of small, medium, and large DX configurations and offer insights into the system's capacity to handle varying loads. This sizing guidance demonstrates how strategic adjustments can result in significant performance improvements.
 
@@ -14,11 +14,11 @@ The sizing tests examined rendering scenarios for the Web Content Manager (WCM),
 
 ## Definition of terms
 
-Refer to the following definition of terms used throughout the performance tests and sizing guidances:
+The following terms are used throughout the performance tests and sizing guides:
 
 - Concurrent user: The number of virtual users actively sending requests to the target application simultaneously.
 
-- Thread Groups: Concurrent users are simulated using Thread Groups and are configured using the Threads (Users), the Ramp-up Period, and the Loop Count.
+- Thread groups: Concurrent users are simulated using thread groups and are configured using the threads (Users), the ramp-up period, and the loop count.
     - Number of Threads (Users): The number of concurrent users.
     - Ramp-up Period: The time taken to start all the Threads (Users).
     - Loop Count: The number of iterations each user performs.
@@ -29,10 +29,10 @@ Refer to the following definition of terms used throughout the performance tests
         This means JMeter will simulate loading 100 users over 10 seconds, leading to approximately 10 users per second.
 
 - Authenticated user: A Portal “User” role.
-- Unauthenticated user:  A Portal “Anonymous User” role.
+- Unauthenticated user:  A Portal “anonymous portal user” role.
 - OpenLDAP:  An open-source implementation of LDAP (Lightweight Directory Access Protocol). All authenticated Users are added to OpenLDAP.
 
-!!!note
+!!! note
     Deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 **Metrics**
@@ -164,8 +164,56 @@ After completing the authoring steps, the anonymous and authenticated portal use
 
 These performance tests are primarily focused on DAM API. Client-side rendering, such as browser-based rendering, is excluded from the tests.
 
+## JVM heap and pod resource guidelines for performance runs
+
+During performance testing, align JVM heap settings with pod resource limits to ensure consistent performance and prevent unexpected memory issues.
+
+### Memory requests and limits
+
+Set the pod’s `requests.memory` value equal to its `limits.memory` value. This configuration ensures that the container receives a fixed memory allocation and prevents memory overcommit or out-of-memory (OOM) errors.
+
+
+### JVM heap size alignment
+
+The JVM heap (`-Xms` and `-Xmx`) should be smaller than the pod’s memory limit.  
+Leave headroom for:
+
+
+  - Non-heap memory (Metaspace, thread stacks, direct buffers)
+- Sidecar containers (if any)
+- Additional JVM processes (for example, `server1`)
+
+
+### Equal minimum and maximum heap
+
+### JVM heap size alignment
+- Ensure the JVM heap (`-Xms` and `-Xmx`) is smaller than the pod’s memory limit.  
+- Leave headroom for:
+      - Non-heap memory (Metaspace, thread stacks, direct buffers)
+      - Sidecar containers (if any)
+      - Additional JVM processes (for example, `server1`)
+- Set `-Xms` and `-Xmx` to the same value (for example, 4GB) for performance runs.  This setting prevents dynamic heap expansion, reduces overhead, and ensures stable, predictable performance.
+
+### Determine final memory requirements
+
+- Conduct local testing with your specific portlets, pages, and customizations.  
+- Perform synthetic load testing using tools such as JMeter to simulate realistic usage scenarios.  
+- Adjust memory allocations based on service-level agreements (SLAs) and transaction rates.
+
+A minimum of 3.5 GB of heap memory is recommended. Higher allocations may be required depending on actual usage patterns.
+
+### Recommended configuration for performance runs
+
+| Resource type | Setting | Notes |
+|----------------|----------|-------|
+| Pod memory (`requests` and `limits`) | 8 GB | Fixed allocation |
+| JVM heap (`-Xms` / `-Xmx`) | 4 GB (up to 6 GB if pod memory is 8 GB) | Leaves sufficient headroom |
+| CPU (`requests` and `limits`) | 5.6 CPUs | Recommended for stable performance |
+
+This configuration leaves approximately 4 GB of memory headroom for non-heap usage and container overhead, ensuring stability during load testing.
+
 ???+ info "Related information"
-    - For details about the environments used, test results, and recommendations for each configuration, refer to the following pages:
-        - [Sizing guidance for rendering in a small-sized Kubernetes configuration](rendering_small_config.md)
-        - [Sizing guidance for rendering in a medium-sized Kubernetes configuration](rendering_medium_config.md)
-        - [Sizing guidance for rendering in a large-sized Kubernetes configuration](rendering_large_config.md)
+    - For details about the environments used, test results, and recommendations for each configuration, see the following topics:
+        - [Sizing guidance for rendering in a small Kubernetes configuration](rendering_small_config.md)
+        - [Sizing guidance for rendering in a medium Kubernetes configuration](rendering_medium_config.md)
+        - [Sizing guidance for rendering in a large Kubernetes configuration](rendering_large_config.md)

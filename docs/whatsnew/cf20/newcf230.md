@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
 - Presentation Designer - Handle multiple stylesheet components
+- HCL DX Action Bar and Practitioner Studio UI updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -34,7 +35,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### My HCLSoftware delivery portal
 
 === "Containers"
-    HCL DX software is now available through the new [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet, through June 30, 2025. For more information, refer to the following knowledge article and help center topics:
+    HCL DX software is available through the [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. For more information, refer to the following knowledge article and help center topics:
 
     - [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
@@ -42,7 +43,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
 === "On-Premises"
-    HCL DX software is now available through the new [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. This is in parallel to the existing HCL Software License Portal delivered in FlexNet, through June 30, 2025. For more information, refer to the following knowledge article and help center topics:
+    HCL DX software is available through the [My HCLSoftware portal](https://my.hcltechsw.com/){target="_blank"} for customers licensed for the HCL Digital Experience v9.5 offering. For more information, refer to the following knowledge article and help center topics:
 
     - [HCL Digital Experience offerings are now available for download from the MyHCLSoftware portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0120373){target="_blank"}
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
@@ -63,7 +64,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
 
 === "On-Premises"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
+
+### HCL DX Action Bar and Practitioner Studio UI updates
+
+=== "Containers"
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+
+=== "On-Premises"
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -72,7 +87,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
 
 ### Automatically apply 9.5 from a later CF installation
 
@@ -112,12 +127,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Notices of deprecation
 
-### Removal of automated Pod restart on ConfigMap updates (8.5 and 9.0)
-
-=== "Containers"
-    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-
-### CKEditor Rich Text Editor (9.5)
+### CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 
 === "Containers"
     The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
@@ -132,6 +142,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+### Removal of automated Pod restart on ConfigMap updates (9.5)
+
+=== "Containers"
+    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

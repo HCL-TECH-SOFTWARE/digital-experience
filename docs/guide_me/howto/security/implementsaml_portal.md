@@ -1,4 +1,4 @@
-# How to implement SAML in HCL Digital Experience
+# How to implement SAML in HCL DX
 
 ## Applies to
 
@@ -6,11 +6,11 @@
 
 ## Introduction
 
-Security Assertion Markup Language (SAML) is an OASIS standard for representing and exchanging user identity, authentication, and attribute information. SAML is widely used to enable cross-vendor single sign-on (SSO).  
+Security Assertion Markup Language (SAML) is an OASIS standard for representing and exchanging user identity, authentication, and attribute information. SAML is widely used to enable cross-vendor Single Sign-On (SSO).  
 
 HCL Digital Experience (DX) often runs in environments that include multiple integrated components. In these cases, SAML SSO is a common choice to provide a seamless user experience. Because HCL DX is based on WebSphere Application Server (WAS) middleware technology and uses the WAS security layer, SAML SSO is available in HCL DX through WAS.
 
-This article describes the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and the steps to implement it for HCL Digital Experience with a generic identity provider (IdP).  
+This article describes the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and the steps to implement it for HCL DX with a generic identity provider (IdP).  
 
 ### SAML 2.0 standard
 
@@ -64,11 +64,11 @@ To avoid requiring users to select the correct link for redirection to WAS, use 
 !!! note
     Most of the steps described in this document are included in WAS v8.5 InfoCenter, but here they are collected together in a single document, specific to HCL DX.
 
-The sample configuration provided is from a real-world experience with an F5 as IdP and a single-server installation of HCL Digital Experience.
+The sample configuration provided is from a real-world experience with an F5 as IdP and a single-server installation of HCL DX.
 
 ## Instructions
 
-Use the following instructions to implement SAML in HCL Digital Experience.  
+Use the following instructions to implement SAML in HCL DX.  
 
 ### Install the SAML ACS application
 
@@ -117,11 +117,11 @@ To use the WebSphere Application Server SAML service provider for single sign-on
 
 1. Start the WebSphere Application Server.  
 
-2. Start the **wsadmin** command-line utility from the `<AppServer_root>/bin` directory by entering:  
+2. Start the **wsadmin** command-line utility from the `<AppServer_root>/bin` directory by entering the following command:  
 
-   ```bash
-   /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
-   ```
+    ```bash
+    /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
+    ```
 
 3. At the wsadmin prompt, enter:  
 
@@ -129,17 +129,16 @@ To use the WebSphere Application Server SAML service provider for single sign-on
     AdminTask.importSAMLIdpMetadata('-idpMetadataFileName <IdPMetaDataFile> -idpId 1 -ssoId 1 -signingCertAlias <idpAlias>')
     ```
 
-    !!!note
-        - `<IdPMetaDataFile>` is the full path name of the IdP metadata file.  
-        - `<idpAlias>` is any alias name you specify for the imported certificate.  
+    - `<IdPMetaDataFile>` is the full path name of the IdP metadata file.  
+    - `<idpAlias>` is any alias name you specify for the imported certificate.  
 
-4. Save the configuration:  
+4. Save the configuration using the following command:  
 
     ```wsadmin
     AdminConfig.save()
     ```
 
-5. Exit the wsadmin command utility:  
+5. Exit the wsadmin command utility using the following command:  
 
     ```wsadmin
     quit
@@ -161,17 +160,16 @@ For each identity provider (IdP) used with your WebSphere Application Server ser
 
 ### Export data for IdP
 
-Each identity provider (IdP) used with your WebSphere Application Server service provider must be configured to add the service provider as a single sign-on (SSO) partner.  
-The procedure for adding a service provider partner to an IdP depends on the specific IdP. For instructions, see the documentation for your IdP.  
+Each identity provider (IdP) used with your WebSphere Application Server service provider must be configured to add the service provider as a single sign-on (SSO) partner. The procedure for adding a service provider partner to an IdP depends on the specific IdP. For instructions, see the documentation for your IdP.  
 
 If your IdP supports using a metadata file to add the service provider as a federation partner, you can use the **wsadmin** command-line utility to export the service provider metadata.  
 
 1. Start the WebSphere Application Server.  
 2. Start the **wsadmin** command-line utility from the `<AppServer_root>/bin` directory by entering:  
 
-   ```bash
-   /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
-   ```
+    ```bash
+    /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
+    ```
 
 3. At the wsadmin prompt, enter:  
 
@@ -179,15 +177,15 @@ If your IdP supports using a metadata file to add the service provider as a fede
     AdminTask.exportSAMLSpMetadata('-spMetadataFileName <SpMetaDataFile> -ssoId 1')
     ```
 
-- `<SpMetaDataFile>` is the full path name of the SP metadata file generated by the script.  
-- This file must be imported into your IdP.  
+    - `<SpMetaDataFile>` is the full path name of the SP metadata file generated by the script.  
+    - This file must be imported into your IdP.  
 
 ### Configure the WAS security context
 
 1. Log on to the WebSphere Application Server administrative console.  
 2. Click **Security > Global security > Web and SIP security > Trust association > com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor**.  
 
-   ![Enable trust association](./files/confwas_sec_context.jpg)  
+    ![Enable trust association](./files/confwas_sec_context.jpg)  
 
 3. Add the required custom properties to have the following data in place (some of them might already be there).  
 
@@ -215,11 +213,11 @@ The IdP passes the user ID to be authenticated in the SAML request. This ID must
 
 5. In **Federated repository properties for login**, check the attributes that are used for login. Add additional attributes if needed (separate multiple attributes with a semicolon).  
 
-    - Example: If the IdP passes the email address as the user ID, set the following value:  
+    For example, if the IdP passes the email address as the user ID, set the following value:  
 
-     ```properties
-     Federated repository properties for login = uid;mail
-     ```
+    ```properties
+    Federated repository properties for login = uid;mail
+    ```
 
 6. Click **OK**.  
 
