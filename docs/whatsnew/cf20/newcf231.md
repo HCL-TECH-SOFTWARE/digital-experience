@@ -13,6 +13,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - External database support now available
+- DX Picker integration with Search V2
 - Helm values updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
@@ -61,6 +63,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - External database support now available
+
+=== "Containers"
+    You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
+
+### DX Picker integration with Search V2
+
+=== "Containers"
+    The DX Picker feature is now integrated in Search V2. This integration lets you search and select items from multiple content sources, including Java Content Repository (JCR) and Web Content Manager (WCM), in addition to Digital Asset Management (DAM). Installation and deployment methods have also been streamlined for efficiency. For more information, refer to the following topics:
+
+    - [Enabling and disabling DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md)
+    - [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md)
+    - [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md)
+    - [Limitations of DX Picker](../../manage_content/wcm_authoring/dx_picker/limitations.md)
+
 ### Helm values updates
 
 === "Containers"
@@ -69,7 +86,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 - New Atomic Components and supported CSS part attributes available
 
 === "Containers"
-    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs have also been updated to support additional CSS part attributes. For more information, refer to [Search V2 - Atomic Components](../../build_sites/search_v2/components.md#atomic-components).
+    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes.
+
+    |New ACs|Updated ACs|Updated FCCs|
+    |-----|-----|-----|
+    |`dx-accordion`<br>`dx-alert`<br>`dx-breadcrumbs`<br>`dx-breadcrumbs-item`<br>`dx-data-grid-generic`<br>`dx-datepicker`<br>`dx-item-type-avatar`<br>`dx-multiple-select-chip`<br>`dx-panel`<br>`dx-preview`<br>`dx-snackbar`<br>`dx-theme-inspector`<br>`dx-tooltip`<br>|`dx-anchor`<br>`dx-avatar`<br>`dx-badge`<br>`dx-dialog`<br>`dx-header`<br>`dx-icon-button`<br>`dx-menu-item`<br>`dx-search-center-layout`<br>`dx-table-pagination`<br>`dx-toggle-button`<br>|`dx-circular-progress`*<br>`dx-search-input-type`<br>`dx-search-output`<br>|
+
+    \* Reclassified as an AC
+
+    For more information on the new and updated ACs, refer to [Atomic Components](../../build_sites/search_v2/components/atomic_components.md) and [Functional Composite Components](../../build_sites/search_v2/components/functional_composite_components.md).
 
 ### WAS, JDK, and iFix versions
 
