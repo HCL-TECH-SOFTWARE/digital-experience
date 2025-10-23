@@ -236,7 +236,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
 ### Implementing OIDC SSO
 
-This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/) approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. Refer to the following steps:
+This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/index.md) approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. Refer to the following steps:
 
 1. Install and configure your IdP.
 
@@ -338,7 +338,13 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
     5. Perform a Helm upgrade to apply your changes.
 
-    6. Restart the Leap pod. After restarting the Leap pod, accessing Leap should redirect you to authenticate using your OIDC IdP.
+    6. Delete the Leap pod using the following command:
+
+        ```
+        kubectl -n <namespace> delete pod <leap-pod-name>
+        ```
+
+        Since Leap was installed with a Helm chart, a new pod will be created automatically. Afterwards, accessing Leap should redirect you to authenticate using your OIDC IdP.
 
         For example, the following screenshot shows an authentication page accessed using Keycloak:
 

@@ -1,3 +1,9 @@
 # Generated files
 site/
 **/.DS_Store
+
+# Python virtual environments and related files
+venv/
+.venv/
+.python-version
+__pycache__/
