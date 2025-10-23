@@ -16,11 +16,26 @@ The DX Digital Asset Search helps you quickly find and retrieve digital assets a
 ### Steps
 
 1. Find your assets by using full-text search on the name, description, keywords, or all of them.  
-   ![Search example](search1.png)
+
+   <img src="./managing_dam/picker.png" alt="Asset picker window in Digital Asset Manager" width="600">
 
 2. Sort and order the results.  
-   ![Sort example](search2.png)
 
+   <img src="./managing_dam/sort1.png" alt="Sorting options in Digital Asset Manager" width="600">
+
+   Sort from newer to older:  
+
+   <img src="./managing_dam/sortnew2old.png" alt="Sorted from newer to older" width="20%">
+
+   Sort from older to newer:  
+
+   <img src="./managing_dam/sortold2new.png" alt="Sorted from older to newer" width="20%">
+
+3. Filter the assets.  
+
+   The filtering options let you filter assets by favorites, asset type, and asset size.  
+
+   <img src="./managing_dam/filter.png" alt="Filtering options in Digital Asset Manager" width="600">
 
 ## DX Picker Overview
 
