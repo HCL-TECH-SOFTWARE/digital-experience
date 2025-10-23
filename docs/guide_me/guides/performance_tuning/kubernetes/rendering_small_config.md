@@ -312,7 +312,7 @@ The following table outlines the pod count and limits for each pod. After applyi
 
 ### Recommended heap size configuration
 
-To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-performance-runs) when tuning memory allocation.
+To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-for-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
     - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
