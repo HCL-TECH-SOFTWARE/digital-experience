@@ -11,7 +11,7 @@ This section covers how to manage, upload, import, export, and modify your DAM m
 ## Digital Asset Search
 ### Overview
 
-The DX Digital Asset Search helps you quickly find and retrieve digital assets across multiple repositories. You can search by keywords, metadata, or content to locate the right asset when you need it. The unified search experience streamlines content management and makes assets easier to discover and reuse in your applications.
+The DX Digital Asset Search helps you quickly find and retrieve digital assets across multiple repositories. You can search by keyword, metadata, or content to locate the right asset when needed. The unified search experience streamlines content management and makes assets easier to discover and reuse in your applications.
 
 ### Steps
 
