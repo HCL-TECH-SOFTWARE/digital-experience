@@ -28,7 +28,7 @@ DXClient uses the MIME types configuration as documented in [Support for Additio
 
 ### Best Practices for Overriding Properties
 
-By default, you can upload only specific types of files by using the Script Application. The Script Application import feature does not scan uploaded files, so use caution before including other file types as part of an import.  
+By default, you can upload only specific file types by using the Script Application. The Script Application import feature does not scan uploaded files, so use caution before including other file types as part of an import.  
 
 If you want to add extra file types or change any other properties, use the procedure described later in this topic.
 
