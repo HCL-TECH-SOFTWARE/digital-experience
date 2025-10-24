@@ -2,10 +2,20 @@
 
 Use the Portal administration portlets that are provided with HCL Digital Experience to do various day-to-day administration tasks.
 
+- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
+    Learn how to use the HCL Content Composer to create and manage DX site content.
+- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md)<br>
+    Learn how to generate reports and update reported items in bulk.
 - [**HCL Web Content Manager Support Tools**](../../deployment/manage/troubleshooting/wcm_support_tools.md)<br>
     Learn how to use the HCL Web Content Manager (WCM) Support Tools portlet to investigate and analyze information related to the WCM Java Content Repository (JCR) nodes.
 - [**Managing syndicators and subscribers**](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)<br>
     Learn how to transport data from one instance of HCL Web Content Manager to another.
+- [**Managing web content libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
+    Learn how to organize and manage your web content.
+- [**Web Content Feed Management**](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)<br>
+    Learn how to create and manage feeds.
+
+
 <!--- 
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
 Use Manage Pages to create, edit, activate, order, and delete pages and external web pages and labels.
