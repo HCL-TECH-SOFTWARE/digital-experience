@@ -5,7 +5,7 @@ Site Builder is an application that you can use to create site templates or sect
 ## Prerequisites for using Site Builder
 
 - Site Builder is installed out of the box with HCL DX 8.5 CF08 or higher and HCL DX Compose 9.5 CF231 and higher.
-- Managed Pages must be enabled. See [Enabling managed pages](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md).
+- Managed Pages must be enabled for use with HCL DX v8.5 CF08 and higher. For more information, refer to [Enabling managed pages](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md). If you are using HCL DX Compose 9.5 CF231 and higher, this step is not required.
 
 !!! note
     Later versions of Content Template cannot be used to install Site Builder on HCL DX 8.5 CF08 or higher. The old Content Template version of Site Builder does not work on HCL DX 8.5 CF08 or higher.
