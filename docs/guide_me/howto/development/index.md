@@ -12,3 +12,5 @@ Learn how to create a custom login or logout filter to determine the number of c
 Learn how to create a servlet that serves static files.  
 - **[How to use the PUMA API within a WCM JSP component to print out the user and hostname sending the request](CodeToPrintUserAndHostname.md)**  
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
+- **[How to create a custom login portlet with credential vault handling in HCL DX](./CustomLoginPortlet.md)**  
+Learn how to create a custom login with credential vault handling in HCL DX.  
