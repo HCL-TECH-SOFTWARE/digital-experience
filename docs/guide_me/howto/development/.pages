@@ -1,8 +1,9 @@
 title: Development
 nav:
-    - index.md
-    - Portletdevelopmentutilitiesandpagecreationsamples.md
-    - SampleJSPtoConvertAfileToBase64EncodedFormat.md
-    - custom_login_filter_sample.md
-    - CreateAServletForStaticFiles.md
-    - CodeToPrintUserAndHostname.md
+
+  - index.md
+  - CreateAServletForStaticFiles.md
+  - CodeToPrintUserAndHostname.md
+  - Portletdevelopmentutilitiesandpagecreationsamples.md
+  - CustomLoginPortlet.md
+  
