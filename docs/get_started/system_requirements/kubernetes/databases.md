@@ -10,7 +10,7 @@ This topic details the database versions and platforms tested and supported by s
 |Apache Derby|10.11*<br/>|9.5|
 |DB2 on Amazon Relational Database Service|11.5** and later maintenance releases|9.5|
 |DB2 Published Cumulative Special Build (CSB)|12.1.0 and later maintenance releases|9.5|
-|DB2 Standard Edition|12.1.0** and later maintenance releases|9.5|
+|DB2 Standard Edition|12.1.0|9.5|
 |DB2 Standard and Advanced Edition|11.5** and later maintenance releases|9.5|
 |Microsoft SQL Server Enterprise and Standard Edition|2017, 2019, 2022, and later maintenance releases|9.5|
 |Oracle Database 19c|19c and later maintenance releases|9.5|
