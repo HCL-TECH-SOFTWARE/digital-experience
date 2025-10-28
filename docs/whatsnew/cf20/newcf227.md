@@ -87,7 +87,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Search V2 - Added supported CSS part attributes for each Atomic Component
 
 === "Containers"
-    Supported CSS part attributes have been added for each Atomic Component (AC) of Search V2. CSS part attributes are responsible for determining the appropriate CSS for each AC and its elements based on the component's state and properties. For more information, refer to [Components of Search V2 - Atomic Components](../../build_sites/search_v2/components.md#atomic-components).
+    Supported CSS part attributes have been added for each Atomic Component (AC) of Search V2. CSS part attributes are responsible for determining the appropriate CSS for each AC and its elements based on the component's state and properties. For more information, refer to [Components of Search V2 - Atomic Components](../../build_sites/search_v2/components/atomic_components.md).
 
 ### Search V2 Authoring - New Authoring Search interface
 

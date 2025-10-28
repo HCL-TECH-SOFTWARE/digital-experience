@@ -34,3 +34,10 @@ Take note of the following limitations when using Search V2 Authoring:
 - When an item is deleted, it might still show up in search results as the Web Content Manager (WCM) does not instantly push deletion updates. The item will appear until the next [crawler run](../search/searching_local_portal/srccrwlindxsite.md) updates the search index.
 
 - The Delete feature is disabled if the user is working on a project.
+
+## Advanced Search Filter
+
+- When filtering results by **Author**, you must type at least three characters to begin searching for users or groups.
+- The search function is not case-sensitive, but it is sensitive to spelling errors.
+
+    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png){: style="height:600px"}
