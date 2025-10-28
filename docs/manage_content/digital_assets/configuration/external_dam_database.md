@@ -18,7 +18,7 @@ After setting up the database, you can configure DAM to connect to the external 
 1. If your external database requires an SSL connection, create a Kubernetes Secret containing your SSL certificate file using the following command. This Secret will be mounted to the DAM container.
 
     ```bash
-    kubectl create secret generic custom-db-ssl-cert --from-file=<path-to-your-ssl-pem-crt-file>
+    kubectl -n <namespace> create secret generic custom-db-ssl-cert --from-file=<path-to-your-ssl-pem-crt-file>
     ```
 
     Replace `<path-to-your-ssl-pem-crt-file>` with the actual path to your SSL certificate file.
@@ -92,6 +92,34 @@ This section provides a general example of the required steps to prepare any ext
     1. If your database is SSL enabled, ensure you have created the necessary Secret.
     2. Update your custom values YAML file to point to the external database host and enable SSL.
     3. Perform a Helm upgrade to apply the changes.
+
+## Rollback options
+
+If you encounter issues after configuring DAM to use an external database, you can revert to the internal PostgreSQL persistence by following these steps:
+
+1. Revert your custom values YAML:
+
+      1. Open your custom values YAML file for editing.
+      2. Set the `persistence` field under `applications` back to `true` to re-enable the internal persistence and persistence pool nodes.
+      3. Set `configuration.persistence.host` to empty.
+      4. Set `configuration.persistence.databaseName` to `dxmediadb`
+      5. Set the `configuration.persistence.ssl` to `false`.
+
+2. Restore the database dump that you created in [Step 2 of Configuring DAM to use the external database](#configuring-dam-to-use-the-external-database) back into the internal PostgreSQL instance, especially if any data was written during the brief period the external database was active. If not, ignore this step. For more information on how to import the database, refer to [Restore persistence](../../digital_assets/dam_backup_restore_image.md#restore-persistence).
+
+3. If credentials have been updated for external database, ensure they are reverted back. For more information, refer to [Adjusting default credentials](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md#adjusting-default-credentials).
+
+4. Delete the secret using the following command:
+
+    ```bash
+    kubectl -n <namespace> delete secret custom-db-ssl-cert 
+    ```
+
+5. Perform a Helm upgrade using the following command:
+
+    ```bash
+    helm upgrade <release-name> <chart-path> -f <values-file>
+    ```
 
 ## Limitations
 
