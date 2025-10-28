@@ -27,21 +27,23 @@ In time, this interface also serves as the launching point for newly developed f
 
 Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
-- **[ Administration](../practitioner_studio/administration.md)**  
-Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
+- **[Administration](../practitioner_studio/administration.md)**  
+  Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
+
 - **[HCL Digital Asset Management (DAM)](../../manage_content/digital_assets/index.md)**  
-Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
-- **[Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md)**  
-Learn how to enable, configure and disable Practitioner Studio on the latest version of HCL DX.
- - **[Site templates](../practitioner_studio/site_templates.md)**  
-Site templates are configured and managed using Site Builder. If you choose not to enable Practitioner Studio, you can still manage Site
-- **[Web content](../practitioner_studio/web_content.md)**  
-Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL DX web content management.
- Templates using the Application navigation menu in the toolbar.
-- **[Themes](../practitioner_studio/themes.md)**  
-Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer in creating and developing theme web content.
+  Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
+
 - **[Personalization](../practitioner_studio/personalization.md)**  
-Learn how to configure your HCL DX portal site as an administrator.
+  Learn how to configure your HCL DX portal site as an administrator.
+
+- **[Site templates](../practitioner_studio/site_templates.md)**  
+  Site templates are configured and managed using Site Builder. If you choose not to enable Practitioner Studio, you can still manage site templates manually.
+- **[Themes](../practitioner_studio/themes.md)**
+Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer in creating and developing theme web content.
+
+- **[Web content](../practitioner_studio/web_content.md)**  
+  Learn more about managing libraries, creating, editing, or cleaning up data, and setting up syndication for HCL DX web content management.
+
 
 
 ## HCLSoftware U learning materials
