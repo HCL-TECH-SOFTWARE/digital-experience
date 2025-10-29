@@ -18,8 +18,7 @@ This topic details the database versions and platforms tested and supported by s
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|9.5|
 |Oracle on Amazon Relational Database Service|21c and later maintenance releases|9.5|
 
-**Notes:**
+**Notes**
 
-\* Apache Derby is not supported in a product environment.
-
-\*\* DB2 includes support for the DB2 pureScale component.
+- *Apache Derby* is not supported in a production environment.  
+- **DB2** includes support for the DB2 pureScale component.
