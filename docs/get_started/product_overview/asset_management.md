@@ -10,7 +10,16 @@ hide: tags
 
 HCL Digital Experience (DX) provides integrated Digital Asset Management (DAM) services, which are targeted at managing web-ready digital assets such as images or videos for use in content and sites built with HCL DX.
 
-View the demonstration of the HCL DX DAM features and capabilities in [HCL DX Digital Asset Management](https://hclsoftware.storylane.io/share/d6h8zcuwv68v){target="_blank"}.
+View the demonstration of the HCL DX DAM features and capabilities:
+
+<div>
+<script async src="https://js.storylane.io/js/v2/storylane.js">
+</script>
+<div class="sl-embed" style="position:relative;padding-bottom:calc(57.07% + 25px);width:100%;height:0;transform:scale(1)">
+<iframe loading="lazy" class="sl-demo" src="https://hclsoftware.storylane.io/demo/d6h8zcuwv68v?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;">
+</iframe>
+</div>
+</div>
 
 ## Content organization and access
 
