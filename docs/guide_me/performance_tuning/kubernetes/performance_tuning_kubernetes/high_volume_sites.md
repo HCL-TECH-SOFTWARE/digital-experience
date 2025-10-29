@@ -16,7 +16,33 @@ Increase the maximum heap size and the nursery size. See the Heap Size and Nurse
 | Minimum Heap Size (-Xms) | Maximum Heap (Xmx) | Nursery Size (Xmn) |
 | --- | --- | --- |
 | 5632 MB                      | 5632 MB                       | 2048 MB                   |
+# JVM Heap and Pod Memory Configuration in Kubernetes
 
+!!! note
+    Do not set the JVM heap size larger than the total memory allocated to the pod.
+
+## 1. Heap sizing
+
+Set both the minimum (`-Xms`) and maximum (`-Xmx`) heap size to the same value.  
+This configuration prevents dynamic heap expansion (`malloc()`), reducing overhead and improving performance consistency.
+
+The exact heap size depends on your environment and workload. Determine the optimal value through load testing with synthetic traffic tools such as **JMeter** or **LoadRunner** that simulate real usage patterns.
+
+## 2. Pod memory limits and JVM heap
+
+The Kubernetes pod memory limit must be greater than the JVM heap size because the JVM requires additional native memory for:
+
+- Metaspace (class metadata)
+- Thread stacks (typically 1–2 MB per thread)
+- JIT compiler and garbage collection structures
+- Shared libraries and runtime overhead
+
+## 3. Rule of thumb for pod memory requests
+
+Use the following guideline when configuring pod memory:
+Pod memory limit = JVM heap (Xmx) + native overhead + safety margin
+Native overhead typically ranges between **20–30%** of the heap size, but this can vary.  
+Add a **5–10% safety margin** to accommodate runtime fluctuations and prevent out-of-memory (OOM) kills.
 
 
 ## VMM Caches
