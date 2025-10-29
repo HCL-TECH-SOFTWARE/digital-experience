@@ -20,6 +20,6 @@ This topic details the database versions and platforms tested and supported by s
 
 **Notes:**
 
-\* Apache Derby is not supported in a production environment.
+\* Apache Derby is not supported in a product environment.
 
 \*\* DB2 includes support for the DB2 pureScale component.
