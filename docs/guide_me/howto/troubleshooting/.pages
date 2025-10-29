@@ -1,4 +1,6 @@
-title: Troubleshooting
+site_name: Troubleshooting
 
 nav:
-    - index.md
+- index.md
+- Web-browser: web-browser
+- Databases and Datasources: database

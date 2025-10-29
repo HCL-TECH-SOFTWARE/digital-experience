@@ -16,14 +16,14 @@ Monitoring log messages during the synchronization process is crucial for identi
 - **Error Logs:**
     - **Pipeline failed:** Indicates a critical failure in the streaming pipeline.
     - **Error fetching users from database:** Flags issues with retrieving data from the local repository.
-    - **Error processing user with id [GUID]:** Indicates problems that occur during individual user processing.
+    - **Error processing user with id \[GUID]:** Indicates problems that occur during individual user processing.
 
 - **Data Integrity Logs:**
-    - **Deleted profile image for user with id [GUID]:** Confirms that associated assets are being correctly managed.
-    - **Deleted user with id [GUID]:** Ensures that stale user data is correctly removed.
+    - **Deleted profile image for user with id \[GUID]:** Confirms that associated assets are being correctly managed.
+    - **Deleted user with id \[GUID]:** Ensures that stale user data is correctly removed.
 
 - **Performance and Metrics Logs:**
     - **Time lapsed for synchronization:** Provides insight into the duration of the process, which can be useful for performance tuning.
 
 ???+ info "Related information"
-    - [Logstash documentation](../../../../../guide_me/performance_tuning/kubernetes/logstash_opensearch.md)
+    - [Logstash documentation](../../../../../guide_me/guides/performance_tuning/kubernetes/logstash_opensearch.md)

@@ -1,4 +1,4 @@
-# WCM API sample code to count WCM items and versions
+# How to count WCM items and versions using the WCM API sample code
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document shows the WCM API sample code to count WCM items and versions in HCL Digital Experience (DX).
+This article shows the WCM API sample code to count WCM items and versions in HCL Digital Experience (DX).
 
 ## Instructions
 

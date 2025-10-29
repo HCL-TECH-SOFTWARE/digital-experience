@@ -1,7 +1,6 @@
 ---
-title: Exporting a usage report manually
+title: Tracking user session consumption and exporting usage reports 
 ---
-# Tracking user session consumption and exporting usage reports 
 
 ## Overview
 
@@ -40,21 +39,22 @@ Exporting the report in CSV format is the default option when exporting the usag
 
 To export the user session usage report, use the following command and include the start date and end date:
 
-```
+```shell
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD>
 ```
 
 You can send the result to a file using the following command:
 
-```
+```shell
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> > /tmp/output.csv
 ```
+
 !!!note
     The timestamps indicate the time in UTC format.
 
 ### Expected result
 
-```
+```shell
 month,sessions,gaps,environment
 2023-01,3685341,,UAT-ENV
 2023-02,3368446,,UAT-ENV
@@ -78,13 +78,13 @@ month,sessions,gaps,environment
 
 To export the user session usage report, use the following command and include the start date, end date, and `--pretty` option:
 
-```
+```shell
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty
 ```
 
 The result can be sent to a file using the following command:
 
-```
+```shell
 kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsageReport.sh <YYYY-MM-DD> <YYYY-MM-DD> --pretty > /tmp/output.txt
 ```
 
@@ -93,7 +93,7 @@ kubectl exec -it <release name>-license-manager-0 -n <namespace> -- sh exportUsa
 
 ### Expected result
 
-```
+```shell
 ############################################################
 Generating Session Usage Report from the Environment: UAT-ENV
 This can take a few minutes...
@@ -123,4 +123,4 @@ Total session usage: 34739664
 ############################################################
 ```
 
-Optionally, you can import the the locally created `.txt` or `.csv` file into a spreadsheet or other reporting tools for visualization and further analysis.
+Optionally, you can import the locally created `.txt` or `.csv` file into a spreadsheet or other reporting tools for visualization and further analysis.
