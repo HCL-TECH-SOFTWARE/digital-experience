@@ -3,7 +3,7 @@
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
 
-- [**Authoring portlet**](site_auth_portlet.md)<br>
+- [**Authoring portlet**](../../create_sites/authoring_tools/site_auth_portlet.md)<br>
     Learn how to to create and manage website content efficiently through the Authoring Portlet by using customizable authoring templates.
 - [**HCL Content Composer**](content_composer.md)<br>
     Learn how to  to create and manage of DX site content. 

@@ -1,10 +1,11 @@
 title: Web content
 nav:
     - index.md
-    - Authoring portlet: build_sites/practitioner_studio/web_content/site_auth_portlet.md
-    - Content Composer: manage_content/wcm_authoring/content_composer/index.md
-    - Content Reporting: manage_content/wcm_authoring/content_reporting/index.md
-    - Preview: manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent/index.md
-    - Web Content Libraries: manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md
+    - igital Assets: CF230/manage_content/digital_assets/index.md
+    - Authoring portlet: site_auth_portlet.md
+    - Content Composer: content_composer.md
+    - Content Reporting: content_reporting.md
+    - Preview: Preview.md
+    - Web Content Libraries: content_lbrary.md
     
 
