@@ -13,6 +13,13 @@ View the demonstration of the HCL DX DAM features and capabilities:
 </div>
 </div>
 
+You can also view this demo in other languages:
+
+- [French](https://hclsoftware.storylane.io/share/ifjmbab9jtjd){target="_blank"}
+- [German](https://hclsoftware.storylane.io/share/tmjuenicjgc2){target="_blank"}
+- [Italian](https://hclsoftware.storylane.io/share/bvotjblgynon){target="_blank"}
+- [Spanish](https://hclsoftware.storylane.io/share/6czrapx0cudz){target="_blank"}
+
 Follow these steps to install, configure, and use the HCL DX 9.5 DAM features.
 
 - **[Configure HCL Digital Asset Management](./configuration/index.md)**  
