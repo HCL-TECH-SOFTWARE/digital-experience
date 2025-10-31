@@ -8,7 +8,7 @@
 
 In a containerized HCL DX environment, most configuration settings must be defined in the Helm chart (`values.yaml`) before you run a Helm upgrade to apply them. Because the Helm chart does not provide parameters for setting generic JVM arguments on the dx-core pod, you must configure them differently.  
 
-This article describes how to set generic JVM arguments for the dx-core pod in a containerized HCL DX environment.  
+This documentation describes how to set generic JVM arguments for the dx-core pod in a containerized HCL DX environment.  
 
 ## Instructions
 
@@ -16,7 +16,7 @@ To add generic JVM arguments to the dx-core pod wp_profile/WebSpherePortal JVM, 
 
 1. Install or Update the HCL DX environment using the helm chart. Details can be found at URL: [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md){target="_blank"}.  
 
-2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as following:  
+2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as follows:  
 
     1. Open a web-browser and access the IBM Integrated Solutions Console (admin console). (For example: `http://<DX_HOSTNAME>/ibm/console`)  
     2. Login as administrator.  
