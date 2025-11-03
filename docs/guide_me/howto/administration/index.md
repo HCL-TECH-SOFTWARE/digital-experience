@@ -14,6 +14,8 @@ Learn how to clear Web Content Manager (WCM) caches using the ConfigEngine task.
 Learn how to clear WebSphere Dynacache caches using the sample JSP code.  
 - **[How to count WCM items and versions using the WCM API sample code](./APIToCountWCMItems.md)**  
 Learn about the WCM API sample code to count WCM items and versions.  
+- **[How to customize the error behavior when accessing WCM resources](./CustomizeErrorBehavior.md)**  
+Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when accessing WCM resources.  
 - **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
 Learn about long Portal URLs and how to decode them.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
