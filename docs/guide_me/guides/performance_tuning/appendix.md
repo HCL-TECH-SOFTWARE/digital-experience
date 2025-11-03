@@ -1,4 +1,4 @@
-# # Appendix
+# Appendix
 
 ## Appendix A: Where Cache-Control Headers Are Configured
 

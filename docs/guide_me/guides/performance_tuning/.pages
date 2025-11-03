@@ -1,5 +1,6 @@
 title: Performance Tuning Guides
 nav:
     - index.md
+    - appendix.md
     - kubernetes
-    - Traditional Deployments: traditional_deployments.md
+    #- Traditional Deployments: traditional_deployments.md
