@@ -34,11 +34,10 @@ Depending on the scenario, you will receive a different error message. This arti
 
 1. Open a command prompt or terminal session to access the HCL DX binaries.
 
-2. Create a temporary directory that the logged-in user can read from and write to. 
+2. Create a temporary directory and ensure the current user has read and write permissions.
 
     !!!note
-        An existing temporary directory (for example, `/tmp`) can be used, if the user has the required permissions.  
-        Throughout this example, the `/tmp` and `/tmp/wcm_expanded` directories are used.
+        The user can use an existing temporary directory (for example, `/tmp`) if they have the required permissions. Throughout this example, the `/tmp` and `/tmp/wcm_expanded` directories are used.
 
 3. Navigate to the `<wp_profile_root>/bin` directory.  
 
