@@ -6,6 +6,7 @@ nav:
     - ClearOSGIandTempFiles.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
+    - CustomizeErrorBehavior.md
     - APIToCountWCMItems.md
     - DecodeLongURLs.md
     - ExpediteAsyncDeletes.md
@@ -13,4 +14,3 @@ nav:
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
-
