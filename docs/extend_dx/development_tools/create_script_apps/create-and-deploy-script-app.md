@@ -32,7 +32,7 @@ Refer to the following steps to create a new Script Application using the `creat
 1. Create a new Script Application project using the following command:
 
     ```bash
-    npm create dx-script-app
+    npm i @hcl-software/create-dx-script-app
     ```
 
     This will launch an interactive wizard that guides you through project creation.
@@ -92,8 +92,8 @@ Refer to the following steps to build and deploy the Store Locator sample:
 1. Clone the repository using the following command:
 
     ```bash
-    git clone https://git.cwp.pnp-hcl.com/websphere-portal-incubator/create-dx-script-app.git
-    cd create-dx-script-app/samples/nex-haven-store-locator-sample
+    gh repo clone HCL-TECH-SOFTWARE/dx-create-script-app
+    cd dx-create-script-app/samples/nex-haven-store-locator-sample
     ```
 
 2. Install the required dependencies using the following command:
@@ -220,8 +220,8 @@ If you need to customize the `create-dx-script-app` tool itself, run the followi
 
 ```bash
 # Clone the repository
-git clone https://git.cwp.pnp-hcl.com/websphere-portal-incubator/create-dx-script-app.git
-cd create-dx-script-app/
+gh repo clone HCL-TECH-SOFTWARE/dx-create-script-app
+cd dx-create-script-app/
 
 # Install dependencies and build
 npm install
@@ -249,7 +249,7 @@ If you encounter issues during development:
 4. Check your browser console for JavaScript errors.
 
 ???+ info "Related information"
-    - [`create-dx-script-app` Repository](https://git.cwp.pnp-hcl.com/websphere-portal-incubator/create-dx-script-app){target="_blank"}
+    - [`create-dx-script-app` Repository](https://github.com/HCL-TECH-SOFTWARE/dx-create-script-app){target="_blank"}
     - [DXClient Script Application Documentation](../dxclient/dxclient_artifact_types/scriptapplications.md)
     - [Nex Haven Site Documentation](../../../build_sites/nex_haven.md)
     - [DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}
