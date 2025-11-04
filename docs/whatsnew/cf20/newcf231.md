@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - External database support now available
 - DX Picker integration with Search V2
 - Helm values updates
+- Performance Tuning Guide updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
 
@@ -91,6 +92,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+
+### Performance Tuning Guide updates
+
+=== "Containers"
+    An updated Performance Tuning Guide is now available for HCL DX deployments on Kubernetes. The guide provides recommendations for tuning key systems such as the application server, databases, directory servers, HAProxy, and Kubernetes components. It helps administrators establish baselines, monitor performance metrics, and apply optimizations to improve scalability and reliability in Kubernetes environments. For more details, refer to [Performance Tuning Guides](../../guide_me/guides/performance_tuning/index.md).
 
 ### Search V2 - New Atomic Components and supported CSS part attributes available
 
