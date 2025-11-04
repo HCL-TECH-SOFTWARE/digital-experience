@@ -42,33 +42,33 @@ See the following node setup details:
 
       - Node details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/ec2_c5_large_info.png){ width="1000" }
+      ![](../../../../../images/ec2_c5_large_info.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../../images/c5_large_cpu_info.png){ width="1000" }
+      ![](../../../../../images/c5_large_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../../images/c5_large_volume_info.png){ width="600" }
+      ![](../../../../../images/c5_large_volume_info.png){ width="600" }
 
 - **c5.4xlarge worker nodes**
 
       - Information
       
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
       
-      ![](../../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
+      ![](../../../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
+      ![](../../../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../../images/c5_4xlarge_volume_info.png){ width="600" }
+      ![](../../../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 ### DB2 instance
 
@@ -78,17 +78,17 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. See the f
 
 - DB2 details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 ### JMeter agents
 
@@ -98,17 +98,17 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of one primar
 
 - Instance details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 !!!note
       Ramp-up time is 1.5 seconds per user. The test duration includes the ramp-up time plus one hour at the peak load of concurrent users.
@@ -117,44 +117,44 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of one primar
 
 The following list contains details about the tuning and enhancements done to the DX Core during testing:
 
-- Defined the initial deployment as a rendering environment to trigger the tuning task for initial tuning. For more information, see [Portal server performance tuning tool](../../../../deployment/manage/tune_servers/wp_tune_tool.md).
+- Defined the initial deployment as a rendering environment to trigger the tuning task for initial tuning. For more information, see [Portal server performance tuning tool](../../../../../deployment/manage/tune_servers/wp_tune_tool.md).
 
 - Increased the LTPA token timeout from 120 minutes to 480 minutes for the rendering tests.
 
-      ![](../../../../images/Core_Tuning_LTPA.png){ width="1000" }
+      ![](../../../../../images/Core_Tuning_LTPA.png){ width="1000" }
 
-- Updated the WCM object cache for rendering. See the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) for more information.
+- Updated the WCM object cache for rendering. See the [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md) for more information.
 
-      ![](../../../../images/Core_WCM_Object_Cache_list.png){ width="1000" }
+      ![](../../../../../images/Core_WCM_Object_Cache_list.png){ width="1000" }
 
 
-      ![](../../../../images/WCM_Object_Cache_Instances.png){ width="1000" }
+      ![](../../../../../images/WCM_Object_Cache_Instances.png){ width="1000" }
 
-- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
+- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
-      ![](../../../../images/Core_Friendly_Url_Cache.png){ width="1000" }
+      ![](../../../../../images/Core_Friendly_Url_Cache.png){ width="1000" }
 
 - Adjusted JVM heap size from 3584 to 4096 under **Application servers > WebSphere_Portal > Process_definition > Java Virtual Machine**.
 
-      ![](../../../../images/Core_JVM_Tuning.png){ width="1000" }
+      ![](../../../../../images/Core_JVM_Tuning.png){ width="1000" }
 
 - Set the LDAP user cache attributes and search to 10,000.
 
-      ![](../../../../images/Core_DX_LDAP_User_Cache.png){ width="1000" }
+      ![](../../../../../images/Core_DX_LDAP_User_Cache.png){ width="1000" }
 
 - Disabled jcr.text.search under **Resource environment providers > JCR ConfigService Portal Content > Custom properties** because there is currently no authoring search functionality in these tests.
 
-      ![](../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
+      ![](../../../../../images/Core_Tuning_JCR_Text_Search_Disable.png)
 
 - Deleted JCRCollection1 and Default Search Collection in **Portal > Administration > Search > Search collections**.
 
-      ![](../../../../images/Core_Tuning_Delete_Search_Collections.png)
+      ![](../../../../../images/Core_Tuning_Delete_Search_Collections.png)
 
 - Logged level changes from info to severe in the WebSphere Application Server (WAS) for both configuration and run time.
 
-      ![](../../../../images/Core_Tuning_Log_Level_Details.png){ width="1000" }
+      ![](../../../../../images/Core_Tuning_Log_Level_Details.png){ width="1000" }
 
 - Tuned DB2 by executing DB2 Reorg and Runstats.
 
@@ -208,7 +208,7 @@ Several factors can affect the performance of HCL Digital Experience (DX) in Kub
 Adjusting the number of running nodes, the number of pods, and the capacity of individual pods can help improve DX performance.
 
 !!!note
-     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
 
 ### Recommendations
 
@@ -221,7 +221,7 @@ Adjusting the number of running nodes, the number of pods, and the capacity of i
 
 - To support a higher number of authenticated users during testing, increase the OpenLDAP pod values.  
 The deployment of the OpenLDAP container in a production environment isn’t supported.  
-For more information, see [Configure applications – OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+For more information, see [Configure applications – OpenLDAP configuration](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
@@ -230,4 +230,4 @@ For more information, see [Configure applications – OpenLDAP configuration](..
 To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-for-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
-    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md)

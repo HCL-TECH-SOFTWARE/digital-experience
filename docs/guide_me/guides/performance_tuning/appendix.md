@@ -7,9 +7,9 @@ The following table summarizes where to configure **cache-control headers** for 
 
 | Resource Type | Configuration Location |
 |---------------|-------------------------|
-| **Theme resources**<br>(served via Resource Aggregator) | [Deploying themes with cacheable resources](../../../../build_sites/themes_skins/manage_theme_capabilities/themeopt_mod_adminmod.md) |
-| **Adaptive page caching**<br>(adds cache headers to the primary HTML response) | [Adaptive Page Caching](hcl_dx_light/adaptive_page_cache.md) |
-| **WCM servlet content**<br>(e.g., images or files via `/wps/wcm/connect` or `/wps/wcm/myconnect`) | [WCM `browserCacheMaxAge`](wcm_tuning.md#wcm-browsercachemaxage) <br> [Web content cache types](../../../../manage_content/wcm_configuration/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_types.md) |
+| **Theme resources**<br>(served via Resource Aggregator) | [Deploying themes with cacheable resources](../../../build_sites/themes_skins/manage_theme_capabilities/themeopt_mod_adminmod.md) |
+| **Adaptive page caching**<br>(adds cache headers to the primary HTML response) | [Adaptive Page Caching](./kubernetes/hcl_dx_light/adaptive_page_cache.md) |
+| **WCM servlet content**<br>(e.g., images or files via `/wps/wcm/connect` or `/wps/wcm/myconnect`) | [WCM `browserCacheMaxAge`](./kubernetes/wcm_tuning.md#wcm-browsercachemaxage) <br> [Web content cache types](../../../manage_content/wcm_configuration/cfg_webcontent_delivery_env/caching_options/wcm_config_delivery_caching_types.md) |
 
 
 

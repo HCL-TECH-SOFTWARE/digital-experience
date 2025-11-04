@@ -54,7 +54,7 @@ There are different options to deploy DX:
  For details on how to deploy in a container environment, see:  
  [Kubernetes Deployment](../../../../get_started/plan_deployment/container_deployment/index.md)
 
- ![HCL DX Kubernetes Deployment Diagram](../HCL-DX-deployment-diagram-Kubernetes.png)
+ ![HCL DX Kubernetes Deployment Diagram](./HCL-DX-deployment-diagram-Kubernetes.png)
 
 The DX Core component is available to both deployment options. DX Core contains several functions which were originally available for traditional deployments. These functions are applicable to both traditional and container-based deployments.
 

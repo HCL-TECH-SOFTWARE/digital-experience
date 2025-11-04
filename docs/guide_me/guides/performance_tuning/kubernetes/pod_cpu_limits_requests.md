@@ -16,7 +16,7 @@ For the Core pod, increasing the CPU limit gave a boost to performance but this 
 
 For detailed information on the specific changes we made, including adjustments to CPU limits and requests, please refer to the Medium Configuration Sizing document. This document outlines the exact modifications and their impact on performance, providing a clear view of how we optimized the environment.
 
-For more information and results, see [Medium Config sizing](../rendering_medium_config.md).
+For more information and results, see [Medium Config sizing](./Kubernetes_Deployments/rendering_medium_config.md).
 
 ## Horizontal Pod Autoscaling
 
@@ -34,8 +34,8 @@ We have leveraged Horizontal Pod Autoscaling (HPA) to determine the appropriate 
 
 To enable HPA for a deployment, you would typically define a YAML configuration that specifies the target CPU utilization and minimum/maximum pod counts. For example:
 
-![alt text](../HorizontalPodAutoScalerLimits.png)
+![alt text](./HorizontalPodAutoScalerLimits.png)
 
-![alt text](../HPAdata.png)
+![alt text](./HPAdata.png)
 
 Horizontal Pod Autoscaling is an essential tool in Kubernetes for maintaining application performance and resource efficiency as demands change.

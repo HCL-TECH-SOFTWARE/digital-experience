@@ -35,9 +35,9 @@ HCL Portal and Web Content Manager 9.5 use **multiple database domains** to stor
 ##  Learn More
 
 
-- [Database Management Systems](../../../../deployment/manage/db_mgmt_sys/index.md) — Creating and configuring databases  
-- [Supported Databases](../../../../get_started/system_requirements/kubernetes/databases.md)  
-- [Shared Database Domains](../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
+- [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md) — Creating and configuring databases  
+- [Supported Databases](../../../get_started/system_requirements/kubernetes/databases.md)  
+- [Shared Database Domains](../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
 
 
 ---
