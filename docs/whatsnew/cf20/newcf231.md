@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
+- DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -46,6 +47,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
+
+### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
+
+=== "Containers"
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
+
+=== "On-Premises"
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
