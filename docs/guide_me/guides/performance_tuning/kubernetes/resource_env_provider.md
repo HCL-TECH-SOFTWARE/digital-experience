@@ -30,4 +30,4 @@
 
 !!! Note there may be multiple Providers listed in the console. If this is the case, make sure that the properties are being updated at the server level (Server=WebSphere_Portal), not the node level.
 
-![Server=WebSphere_Portal](../CustomProperties.jpg)
+![Server=WebSphere_Portal](./CustomProperties.jpg)

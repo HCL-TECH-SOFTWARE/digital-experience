@@ -4,7 +4,7 @@
 
 - **CPU Limits and Requests**: Ensure that your CPU limits and requests are appropriately configured. This helps in avoiding resource contention and ensuring your application has the necessary resources during peak loads. Refer sizing document for CPU limit and requests. 
 
-Refer to [Medium Config sizing](../rendering_medium_config.md) for more information.
+Refer to [Medium Config sizing](./Kubernetes_Deployments/rendering_medium_config.md) for more information.
 
 - **Memory Management**: Review and adjust memory allocations to prevent out-of-memory errors and ensure smooth operation. 
 

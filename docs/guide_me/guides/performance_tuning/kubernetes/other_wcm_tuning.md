@@ -45,7 +45,7 @@ In a rendering scenario that uses personalization, performance can be improved b
 
 There can be a performance impact when accessing site areas without default content set. The impact becomes larger as the number of content items under the site area grows. WCM has to parse all of the content items to see which should be the first by title. It is a best practice to set this on every site area even if site areas are not being referenced directly.
 
-![Default Content on Site Areas](../DefaultContentOnSiteAreas.jpg)
+![Default Content on Site Areas](./DefaultContentOnSiteAreas.jpg)
 **How to Set**
 
 In the **Web Content Authoring Page**:
@@ -84,7 +84,7 @@ In the **WebSphere Portal Administration Page**:
 
 4. Click **OK** to save the changes
 
-![Page-Level Access Control](../PageLevelAccessControl.jpg)
+![Page-Level Access Control](./PageLevelAccessControl.jpg)
 
 
 ### Asynchronous Web Content Rendering
@@ -104,7 +104,7 @@ To enable asynchronous rendering for a Web Content Viewer portlet:
 7. Check the box for **Asynchronous Web Content Rendering** to enable it.
 8. Click **OK** to save changes and exit the settings.
 
-![Asynchronous Web Content Rendering](../AsynchronousWebContentRendering.jpg)
+![Asynchronous Web Content Rendering](./AsynchronousWebContentRendering.jpg)
 
 For more configuration options, see:  
 [Improving page loading performance with asynchronous web content rendering](../../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/improving_asynch_render/index.md)

@@ -44,13 +44,13 @@ Portlet Fragment Caching leverages the underlying WebSphere Servlet Fragment Cac
 
 **WCM Rendering Portlet Configuration**
 
-![alt text](../../WCMRenderingPortletConfiguration.jpg)
+![alt text](../WCMRenderingPortletConfiguration.jpg)
 
 3. Select the appropriate Cache Scope and Cache Expiration for the portlet.
 
 **Portlet Cache Options**
 
-![alt text](../../PortalCacheOptions.jpg)
+![alt text](../PortalCacheOptions.jpg)
 
 ## Cache Scope
 

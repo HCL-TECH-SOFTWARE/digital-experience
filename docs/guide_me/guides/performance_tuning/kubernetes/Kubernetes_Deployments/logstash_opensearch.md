@@ -144,7 +144,7 @@ This section contains recommendations for monitoring and debugging log data.
 - Use OpenSearch Dashboards to visualize log data. Use available filters to check specific deployment host names and pod in the log data. The following image shows the filters you can use.
         
         
-    ![](../../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
+    ![](../../../../../images/OpenSearch-Dashboard-Filters.png){ width="1000" }
     
     Viewing data in this format is more user-friendly and helps you make quicker conclusions compared to a regular server SystemOut format.
 

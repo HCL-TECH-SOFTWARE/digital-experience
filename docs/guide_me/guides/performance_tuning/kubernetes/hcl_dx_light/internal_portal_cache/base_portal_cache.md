@@ -20,7 +20,7 @@ The cylinders represent cache instances. The gray caches are caches of the Porta
 (PUMA) component that are closely related to the caches of the Portal access control component. The PUMA caches contain information originating from the user registry. Portal access control uses these caches for user identification and group membership retrieval.
 
 TThe vertical axis represents the cache aggregation direction. Cache instances in higher layers leverage cache instances from lower layers to compute their values. For example, when computing effective permissions (entitlements) for a user (cached in the `ExplicitEntitlementsCache`), the Portal access control component leverages cache values from the `ChildResourcesCache` and `RoleMappingCache`.
-![alt text](../../../Portal%20Access%20Control%20Cache%20Hierarchy.png)
+![alt text](../../Portal%20Access%20Control%20Cache%20Hierarchy.png)
 
 **com.ibm.wps.ac.AccessControlUserContextCache**
 
@@ -274,7 +274,7 @@ The model component only caches data at a rather high aggregation level. As a re
 
 **Portal Model Cache Hierarchy**
 
-![alt text](../../../Portal%20Model%20Cache%20Hierarchy.png)
+![alt text](../../Portal%20Model%20Cache%20Hierarchy.png)
 
 **com.ibm.wps.model.admin.ListModelCache**
 

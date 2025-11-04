@@ -36,33 +36,33 @@ The Kubernetes platform ran on an Amazon EC2 instance with the DX images install
 
       - Node details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../../images/C5.2xlarge.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../../images/c5_large_cpu_info.png){ width="1000" }
+      ![](../../../../../images/c5_large_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 - **c5.4xlarge worker nodes**
 
       - Node details
       
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
       
-      ![](../../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
+      ![](../../../../../images/ec2_c5_4xlarge_info.png){ width="1000" }
 
       - Processor details
 
-      ![](../../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
+      ![](../../../../../images/c5_4xlarge_cpu_info.png){ width="1000" }
 
       - Volume details
 
-      ![](../../../../images/c5_4xlarge_volume_info.png){ width="600" }
+      ![](../../../../../images/c5_4xlarge_volume_info.png){ width="600" }
 
 ### DB2 instance
 
@@ -72,17 +72,17 @@ The tests used a c5.2xlarge remote DB2 instance for the core database. Refer to 
 
 - DB2 details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 ### Load Balancer setup
 
@@ -98,17 +98,17 @@ To run the tests, a distributed AWS/JMeter agents setup consisting of 1 primary 
 
 - Instance details
 
-      ![](../../../../images/Header-1-AWS-Med.png){ width="1000" }
+      ![](../../../../../images/Header-1-AWS-Med.png){ width="1000" }
 
-      ![](../../../../images/C5.2xlarge.png){ width="1000" }
+      ![](../../../../../images/C5.2xlarge.png){ width="1000" }
 
 - Processor details
 
-      ![](../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
+      ![](../../../../../images/Processor_Info_RemoteDB2_Med.png){ width="600" }
 
 - Volume details
 
-      ![](../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
+      ![](../../../../../images/Remote-DB2-Volume-Info-Med.png){ width="600" }
 
 !!!note
       Ramp-up time is 5 virtual users every 2 seconds. The test duration includes the ramp-up time plus one hour at the peak load of concurrent users.
@@ -172,7 +172,7 @@ Changes to the number of running nodes, the number of pods, or the capacity of i
 Monitor these changes closely to ensure accurate tracking of resource utilization.
 
 !!!note
-     For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md).
+     For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
 
 ### Recommendations
 
@@ -182,7 +182,7 @@ Monitor these changes closely to ensure accurate tracking of resource utilizatio
 
 - To boost performance for the DAM and persistence-node pods, increase the CPU limits first, then increase the number of pod replicas. Increasing the number of pods also increases throughput for DAM.
 
-- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
+- To hold more authenticated users for testing purposes, increase the OpenLDAP pod values. Note that the deployment of the OpenLDAP container in a production environment is not supported. For more information, refer to [Configure Applications - OpenLDAP configuration](../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_apps.md#openldap-configuration).
 
 - To optimize the Core container, increase the CPU allocation until the container saturates. After the optimal CPU level is determined, increase the number of pods to boost performance.
 
@@ -197,4 +197,4 @@ Monitor these changes closely to ensure accurate tracking of resource utilizatio
 To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-for-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
-    - [Performance Tuning Guide for Traditional Deployments](../traditional_deployments.md) 
+    - [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md) 

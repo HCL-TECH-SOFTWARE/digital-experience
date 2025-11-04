@@ -8,7 +8,7 @@ Each of these steps may require a substantial amount of processing time. The net
 
 ## Portal Caching Layers
 
-![Portal Caching Layers Diagram](../../PortalCachingLayers.png)
+![Portal Caching Layers Diagram](../PortalCachingLayers.png)
 
 In general, the closer the data is to an end user, the faster the response time and the more performant Portal will be. Caching requests at the front end will also reduce the number of requests that Portal itself actually has to serve. This will save CPU processing and allow higher overall throughput.
 
