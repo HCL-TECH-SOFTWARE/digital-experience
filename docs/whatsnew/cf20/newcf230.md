@@ -99,7 +99,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf230).
 
 ### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 
