@@ -345,6 +345,4 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
         kubectl -n <namespace> delete pod <leap-pod-name>
         ```
 
-        Since Leap was installed with a Helm chart, a new pod will be created automatically. Afterwards, accessing Leap should redirect you to authenticate using your OIDC IdP.
-
         After successful configuration, users accessing Leap will be redirected to your IdP's authentication page.
