@@ -1,4 +1,6 @@
-# Web content
+# Practitioner Studio
+
+## Web Content
 
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
@@ -13,6 +15,14 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
 - [**Managing web content libraries**](web_content_libraries.md)<br>
     Learn how to organize and manage your web content.
+
+## Digital Assets
+The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform for storing and managing rich media assets, enabling engaging and consistently branded experiences across digital channels in HCL DX.
+
+## Site Templates
+create [site templates](../site_templates.md) or section templates for use with HCL Digital Experience (DX).
+
+## 
 
 ## HCLSoftware U learning materials
 

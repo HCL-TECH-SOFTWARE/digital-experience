@@ -15,7 +15,11 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 - A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
 - The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
     - **Content Management**: This section provides access to applications used for the general administration of Web Content Management.
+    - **Digital Assets** This section introduces HCL Digital Asset Management (DAM), which lets you manage rich media assets in HCL DX sites to create consistent, engaging digital experiences. The feature is available starting with HCL DX 9.5 CF181 and later.
+    - **Themes**
     - **Production**: This section includes applications designed to streamline essential administrative tasks for managing the portal.
+    - **Site Templates** The Site Template (Site Builder) application lets you create site and section templates in HCL Digital Experience (DX).
+    - **Personalization** Personalization recognizes site visitors based on their profiles and behaviors to deliver targeted, region-specific content and a personalized page experience.
 
 ## Overview
 

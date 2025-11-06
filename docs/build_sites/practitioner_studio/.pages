@@ -1,10 +1,12 @@
 title: Practitioner Studio
 nav:
-    - index.md
-    - administration.md
-    - Digital Assets: manage_content/digital_assets/
-        - edit_my_profile.md
-    - personalization.md
-    - Themes: themes_skins
-    - Web content: web_content
-    - Working with Practitioner Studio: working_with_ps
+  - index.md
+  - administration.md
+  - dam.md
+      #- edit_my_profile.md
+  - personalization.md
+  - site_templates.md
+  - themes.md
+  - Web content: web_content
+  # - Working with Practitioner Studio: working_with_ps
+  - themes.md
