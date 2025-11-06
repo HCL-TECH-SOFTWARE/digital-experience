@@ -18,3 +18,5 @@ You can enable logging through client-side tracing using your browser's develope
     |Logging main components in DX Picker only|`debug`|`DEBUG:client:dx-picker:*`|
     |Logging all search V2 components only|`debug`|`DEBUG:client:ui:*`|
     |Logging all AC web components only*|`debug`|`DEBUG:client:web-components-lib:*`|
+
+    ![](../../assets/HCL_DX_Picker_Client_Side_Tracing.png)
