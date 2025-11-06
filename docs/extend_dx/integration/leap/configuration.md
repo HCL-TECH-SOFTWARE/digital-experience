@@ -237,7 +237,17 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
 ### Implementing OIDC SSO
 
-This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/index.md) approach connects directly to the preferred Identity Provider (IdP) such as Keycloak, Azure Active Directory (AD) or Okta. By configuring DX and Leap to trust your central IdP, users get a seamless "login once" experience and security is managed in a single place. Refer to the following steps:
+### Enable SSO between HCL DX and HCL Leap on Kubernetes
+
+This guide explains how to enable single sign-on (SSO) between HCL Digital Experience (DX)and HCL Leap on Kubernetes by using OpenID Connect (OIDC).  
+
+The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/index.md) method connects directly to your preferred identity provider (IdP), such as Keycloak, Azure Active Directory (AD), or Okta.  
+
+By configuring DX and Leap to trust your central IdP, users can sign in once and access both applications securely. Authentication and access control are managed in a single location.  
+
+#### Steps
+
+1. Choose and configure your IdP.
 
 1. Choose and configure your IdP.
 
