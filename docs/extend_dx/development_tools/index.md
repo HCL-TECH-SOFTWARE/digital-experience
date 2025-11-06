@@ -4,7 +4,7 @@ Learn more about the developer tools and features of HCL Digital Experience (DX)
 
 - **[DXClient](dxclient/index.md)**  
 DXClient is a command line tool featuring a single, unified interface to all HCL DX automation and CI/CD-related tasks.
-- **[Creating and Deploying DX Script Applications](create_script_apps/create-and-deploy-script-app.md)**  
+- **[Creating and deploying Script Applications](create-and-deploy-script-app.md)**  
 `create-dx-script-app` is a modular toolkit designed to generate modern React applications that integrate seamlessly with the HCL DX platform. It provides ready-made templates and configurations to accelerate your development workflow.
 - **[HCL DX Extensions](hcl_dx_extensions/index.md)**  
 The HCL DX Extensions feature for Visual Studio Code Editor provides a user interface experience for DX developers during the development life cycle. Through this extension, DX developers can do shorter coding cycles between local editing events to server rendering and validation.

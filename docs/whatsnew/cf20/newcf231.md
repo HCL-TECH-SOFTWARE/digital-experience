@@ -51,10 +51,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
 
 === "Containers"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
 
 === "On-Premises"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
