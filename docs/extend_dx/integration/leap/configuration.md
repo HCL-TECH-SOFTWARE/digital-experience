@@ -257,8 +257,8 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
         As part of the configuration process for your identity provider, you will have created or obtained a digital certificate for configuring HTTPS. This certificate will also need to be deployed to Leap so that the two servers can communicate with each other.
 
-        !!!note
-            The SSL certificate (`.crt`) and public key (`.key`) should be in PKCS12 format.
+        !!! note
+    The SSL certificate (`.crt`) and public key (`.key`) must be in PKCS12 format.
 
     2. After copying the `.key` and `.crt` to the Kubernetes image, create a secret using the following command:
 
