@@ -269,7 +269,7 @@ By configuring DX and Leap to trust your central IdP, users can sign in once and
 
     1. Configure the necessary certificates for secure OIDC communication.
 
-        As part of the configuration process for your identity provider, you will have created or obtained a digital certificate for configuring HTTPS. This certificate will also need to be deployed to Leap so that the two servers can communicate with each other.
+        As part of the identity provider configuration process, you must create or obtain a digital certificate for HTTPS. Deploy this certificate to Leap so that both servers can communicate securely.
 
         !!! note
     The SSL certificate (`.crt`) and public key (`.key`) must be in PKCS12 format.
