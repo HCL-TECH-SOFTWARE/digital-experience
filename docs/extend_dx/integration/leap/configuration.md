@@ -350,4 +350,4 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
         kubectl -n <namespace> delete pod <leap-pod-name>
         ```
 
-        After successful configuration, users accessing Leap will be redirected to your IdP's authentication page.
+        After you complete the configuration, users who access Leap are redirected to your IdP authentication page.
