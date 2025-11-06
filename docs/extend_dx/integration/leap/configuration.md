@@ -281,7 +281,7 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
     3. Add the OIDC definition as a server customization in the `values.yaml` file.
 
-        The properties that you need to specify will depend on your identity provider's configuration. For additional information, refer to [Open Liberty documentation on OIDC](https://openliberty.io/docs/latest/reference/config/openidConnectClient.html){target="_blank"}
+        The properties you need to specify depend on your identity provider configuration. For more information, see the [Open Liberty documentation on OIDC](https://openliberty.io/docs/latest/reference/config/openidConnectClient.html){target="_blank"}.
 
         Before proceeding, verify that the discovery endpoint URL (usually ending with `/.well-known/openid-configuration`) is valid by opening it in a browser. Then update the `values.yaml` file with appropriate values for client ID and secret obtained from your IdP.
 
