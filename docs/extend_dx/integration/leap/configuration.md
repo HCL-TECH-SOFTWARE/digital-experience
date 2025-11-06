@@ -320,7 +320,8 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
         For more details on defining a server customization, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html){target="_blank"}.
 
         !!!important
-            The openIdConnectClient redirects to `https://<your-domain>/oidcclient/redirect/<unique-oidc-id>` after authentication. Make sure that your valid redirect URIs in the IdP include an entry that matches this pattern, and that you're using a different ID than what you're using for DX. You may also need to modify your Ingress/Gateway API configuration so that `/oidcclient/redirect/<unique-oidc-id>` redirects to the Leap service.
+            !!! important
+    The `openIdConnectClient` redirects to `https://<your-domain>/oidcclient/redirect/<unique-oidc-id>` after authentication. Make sure the valid redirect URIs in your IdP include an entry that matches this pattern, and use a different ID than the one you use for DX. You might also need to update your Ingress or Gateway API configuration so that `/oidcclient/redirect/<unique-oidc-id>` redirects to the Leap service.
 
     4. Add the following config properties related to OIDC in the `values.yaml` file.
 
