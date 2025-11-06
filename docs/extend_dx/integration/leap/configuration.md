@@ -265,7 +265,7 @@ By configuring DX and Leap to trust your central IdP, users can sign in once and
 3. Enable OIDC in HCL Leap.
 3. Enable OIDC in HCL Leap.
 
-    Leap can be configured to leverage OIDC as the primary authentication mechanism, turning it into a Relying Party (RP) to your IdP. When OIDC is used, the user and group lookup feature of Leap is not available and must be disabled as part of the configuration.
+    You can configure Leap to use OIDC as the primary authentication mechanism, making it a relying party (RP) to your IdP. When OIDC is enabled, the user and group lookup features in Leap aren’t available and must be disabled as part of the configuration.
 
     1. Configure the necessary certificates for secure OIDC communication.
 
