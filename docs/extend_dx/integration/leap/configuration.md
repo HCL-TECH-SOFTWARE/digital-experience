@@ -95,7 +95,7 @@ The following YAML file demonstrates how to define a Gateway API `HTTPRoute` res
 - Within `rules`, the `matches` block defines the path prefix condition (such as `/apps`)
 - The `backendRefs` section specifies the target backend service and port where Leap is hosted.
 
-## Enabling SSO between HCL Leap and HCL DX in Kubernetes
+## Configuring HCL Leap for integration with HCL DX
 
 
 You can enable single sign-on (SSO) between HCL Leap and HCL Digital Experience (DX) in Kubernetes by using either the [Lightweight Third-Party Authentication (LTPA)](#implementing-ltpa-sso) protocol or the modern [OpenID Connect (OIDC)](#implementing-oidc-sso) protocol.
