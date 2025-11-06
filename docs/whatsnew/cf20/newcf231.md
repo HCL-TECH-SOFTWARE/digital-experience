@@ -14,6 +14,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Blueprint updates
 - DAM - External database support now available
 - DX Picker integration with Search V2
 - Helm values updates
@@ -52,10 +53,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
 
 === "Containers"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
 
 === "On-Premises"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create_script_apps/create-and-deploy-script-app.md).
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -72,6 +73,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF231. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### DAM - External database support now available
 
