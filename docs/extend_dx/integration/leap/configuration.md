@@ -98,7 +98,7 @@ The following YAML file demonstrates how to define a Gateway API `HTTPRoute` res
 ## Enabling SSO between HCL Leap and HCL DX in Kubernetes
 
 
-You can enable Single Sign-On (SSO) between HCL Leap and HCL DX in Kubernetes using the [Lightweight Third-Party Authentication (LTPA)](#implementing-ltpa-sso) or the modern [OpenID Connect (OIDC)](#implementing-oidc-sso) protocol.
+You can enable single sign-on (SSO) between HCL Leap and HCL Digital Experience (DX) in Kubernetes by using either the [Lightweight Third-Party Authentication (LTPA)](#implementing-ltpa-sso) protocol or the modern [OpenID Connect (OIDC)](#implementing-oidc-sso) protocol.
 
 ### Implementing LTPA SSO
 
