@@ -18,11 +18,11 @@ Make sure to also review the [detailed requirements article](https://support.hcl
 
 ## Getting the software
 
-Obtain the product software from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}.
+Obtain the product software from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){target="_blank"}.
 
-1. Sign in to the HCL Software Licensing Portal.
+1. Sign in to the [MHS portal](https://my.hcltechsw.com/){target="blank"}.
 
 2. Identify the HCL DX (Portal and or WCM) 8.5 offering you currently have so you can obtain the correct corresponding HCL DX 9.5 offering package.
 
