@@ -248,7 +248,11 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 2. Enable OIDC in HCL DX.
 
     Refer to [Updating WebSphere to support OIDC Authentication for DX](./../../../deployment/manage/security/people/authentication/oidc/dx-update-websphere-for-oidc.md) to enable OIDC on the HCL DX Websphere Application Server.
+1. Create a client registration for each product (DX and Leap). Your IdP serves as the single point of truth for credential input.
 
+2. (Optional) Customize the IdP access UI. For more information, see [IdP customization and considerations](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md).
+
+3. Enable OIDC in HCL Leap.
 3. Enable OIDC in HCL Leap.
 
     Leap can be configured to leverage OIDC as the primary authentication mechanism, turning it into a Relying Party (RP) to your IdP. When OIDC is used, the user and group lookup feature of Leap is not available and must be disabled as part of the configuration.
