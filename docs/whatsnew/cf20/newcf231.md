@@ -102,7 +102,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Performance Tuning Guide updates
 
 === "Containers"
-    An updated Performance Tuning Guide is now available for HCL DX deployments on Kubernetes. The guide provides recommendations for tuning key systems such as the application server, databases, directory servers, HAProxy, and Kubernetes components. It helps administrators establish baselines, monitor performance metrics, and apply optimizations to improve scalability and reliability in Kubernetes environments. For more details, refer to [Performance Tuning Guides](../../guide_me/guides/performance_tuning/index.md).
+    An updated Performance Tuning Guide is now available for HCL DX deployments on Kubernetes. The guide provides recommendations for tuning key systems such as the application server, databases, directory servers, HAProxy, and Kubernetes components. It helps administrators establish baselines, monitor performance metrics, and apply optimizations to improve scalability and reliability in Kubernetes environments. For more details, refer to [Performance Tuning Guides](../../guide_me/guides/performance_tuning/kubernetes/index.md).
 
 ### Search V2 - New Atomic Components and supported CSS part attributes available
 
