@@ -69,17 +69,35 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 
 1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it applies the change to all devices. If the style is set for **Tablet**, it applies the change to tablets and mobile devices only. If the style is set for **Mobile**, it applies the change to mobile devices only. If there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
 
-2. The classname for the override stylesheet on the selected element apply when a style is edited. For example:
+2. Override styles support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions.
 
-    After dropping the element:
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_canvas_direction_toggle.png)
 
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_drop_element.png)
+    Override classes follow the naming convention `pd-override-[Element]-[(6)uuid]`, where `[Element]` is the element type and `[(6)uuid]` is a 6-character unique identifier:
 
-    After adding a style on that element:
+    - **LTR classname convention**: `pd-override-[Element]-[(6)uuid]` (for example, `.pd-override-Text-d00c2b`)
+  
+    - **RTL classname convention**: `pd-override-[Element]-[(6)uuid]:dir(rtl)` (for example, `.pd-override-Text-d00c2b:dir(rtl)`)
 
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_after_changing_style.png)
+    - When the RTL toggle is enabled and style changes are made, the override class includes the `:dir(rtl)` pseudo-class selector. These styles only apply when the page or element is in RTL mode.
 
-3. For each element, there is a corresponding classname convention. For example, `pd-override-[Element]-[(6)uuid]`.
+    - When the RTL toggle is disabled (LTR mode) and style changes are made, the override class is created without the direction indicator. These base styles apply to both LTR and RTL by default.
+  
+    - RTL-specific styles (with `:dir(rtl)`) override the base styles only when the document is in RTL mode. If no RTL-specific styles are defined, the base LTR styles apply to both directions. Both sets of styles coexist in the same override stylesheet, allowing the same element to have different appearances based on the document's text direction.
+
+3. Override classes are applied to elements when styles are edited. The following example demonstrates how override classes are created and applied:
+
+    **Step 1**: When you first drop an element on the canvas, only the default class is applied. No override class exists yet:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_dropped_element.png)
+
+    **Step 2**: After adding style changes to the element (for example, changing font size and background color), you can now see that an override class has been added to the element:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_override_class_applied.png)
+
+    **Step 3**: You can apply independent styling for RTL by switching to RTL mode using the Canvas direction toggle and adding different style changes (for example, changing background color and text alignment). After applying these changes, the same override class is used but with the `:dir(rtl)` pseudo-class selector added to target RTL mode:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_pseudo_class.png)
 
 4. After saving the Presentation Designer, it automatically creates an override stylesheet:
 
@@ -88,26 +106,31 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 5. To validate the override style, you can inspect and visit the header and the element. For example:
 
     HTML head for override stylesheet:
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_html_head.png)
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_in_head.png)
 
     Element styles for the override stylesheet:
-    ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_element_inspect.png)
 
-6. The override style is found in the Presentation Designer libraries. Its location is determined based on presentation template's location:
+    LTR styles:
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_LTR_styles.png)
+
+    RTL styles:
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_styles.png)
+
+6. The override stylesheet is found in the Presentation Designer libraries. Its location is determined based on presentation template's location:
+
+    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_PT_path.png)
+
+7. The override stylesheet is named based on the following naming convention: `pd_[Presentation template name]_override_[(6)uuid]`. For example:
 
     ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_path.png)
 
-7. The override style is named based on the following naming convention: `pd_[Presentation template name]_override_[(6)uuid]`. For example:
-
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_location.png)
-
-8. To validate the styles set in the default stylesheet:
+8. To validate the styles set in the override stylesheet:
 
     1. Select the file and click **Edit**.
     2. Click **pd_Override stylesheet test_override_a074b2.css** to download the file.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_download.png)
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet.png)
 
-    3. Locate the downloaded file and open it. This contains the CSS data inside the override stylesheet.
+    3. Locate the downloaded file and open it. This contains the CSS data inside the override stylesheet, including both LTR and RTL styles (if RTL-specific styles were applied).
 
-        ![](../../../../assets/HCL_Presentation_Designer_Override_stylesheet_downloaded_file.png)
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_component.png)
