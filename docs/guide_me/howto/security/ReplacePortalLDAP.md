@@ -1,4 +1,4 @@
-# A Step-by-Step Guide - How to replace an LDAP in HCL DX
+# How to replace an LDAP in HCL DX
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This guide provides a comprehensive step-by-step approach to replace Portal's LDAP
+This guide provides a comprehensive step-by-step approach to replace an LDAP server configuration setting in HCL DX.
 
 1. Generating a complete XML export of system with the current LDAP
 2. Listing all your Virtual Portals

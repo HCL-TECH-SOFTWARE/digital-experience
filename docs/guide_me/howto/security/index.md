@@ -8,3 +8,5 @@ Learn how to enable HTTP-related security flags and attributes in your HCL DX en
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
 - **[How to add additional security realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
 Learn how to add additional security realms for Virtual Portals.  
+- **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
+This guide provides a comprehensive step-by-step approach to replace an LDAP in HCL DX.  
