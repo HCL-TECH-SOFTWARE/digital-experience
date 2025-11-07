@@ -18,5 +18,5 @@ Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LD
 Learn how to remove state information from page URLs.  
 - **[How to remove or hide the X-Powered-By header in HCL DX](./HideXPoweredByHeader.md)**  
 Learn how to remove or hide the X-Powered-By header.  
-- **[A Step-by-Step Guide - How to replace your HCL Portal's LDAP](./ReplacePortalLDAP.md)**  
-This guide provides a comprehensive step-by-step approach to replace Portal's LDAP
+- **[A Step-by-Step Guide - How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
+This guide provides a comprehensive step-by-step approach to replace an LDAP in HCL DX.  

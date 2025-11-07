@@ -1,4 +1,4 @@
-# A Step-by-Step Guide - How to replace your HCL Portal's LDAP
+# A Step-by-Step Guide - How to replace an LDAP in HCL DX
 
 ## Applies to
 
@@ -20,4 +20,4 @@ This guide provides a comprehensive step-by-step approach to replace Portal's LD
 
 ## Instructions
 
-[A Step-by-Step Guide - How to replace your HCL Portal´s LDAP](./download/How_To_Change_Portal_LDAP_v1.pdf){target="_blank"}
+[A Step-by-Step Guide - How to replace your HCL Portal´s LDAP](./files/ReplacePortalLDAP/How_To_Change_Portal_LDAP_v1.pdf){target="_blank"}  
