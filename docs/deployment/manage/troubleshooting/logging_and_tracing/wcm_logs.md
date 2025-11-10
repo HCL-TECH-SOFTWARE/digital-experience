@@ -1,36 +1,35 @@
-# HCL Web Content Manager tracing
+# HCL Web Content Manager Tracing
 
-Enable the use of WebSphere Application Server trace facilities to create trace information for Web Content Manager. This tracing can be enabled either permanently or for just the current HCL Digital Experience session.
+Use Application Server trace facilities to capture trace information for Web Content Manager. Tracing can be enabled either permanently or for the current HCL Digital Experience session only. HCL Web Content Manager uses IBM® WebSphere® Application Server trace facilities to generate trace data. Enable tracing when you need detailed output to help debug issues effectively.
 
-HCL Web Content Manager uses the IBM® WebSphere® Application Server trace facilities to create trace information. If you need detailed trace output of Web Content Manager to debug a problem, follow these steps:
 
 ## Enable static (extended) tracing
 
-Static tracing is recommended when there is a need to capture data, as it collects data from server startup until problem recreation.
+Static tracing captures data from server startup through problem recreation. Use this option when continuous trace data collection is required.
 
-1.  Log in to the Integrated Solutions Console as the WebSphere Application Server administrator.
-2.  Select **Troubleshooting > Logs and Traces > WebSphere_Portal >Diagnostic Trace**.
-3.  On the **Configuration** tab, ensure that the **Enable Log** checkbox is selected. On this same tab, increase the **Maximum File Size** and **Maximum Number of Historical Files** as needed to ensure that the tracing of the problem recreation is not overwritten due to the amount of traffic on the system and output of the tracing itself.
-4.  Click **Change Log Level Details** and enter the trace string based on the table below.
-5.  Click **OK** and save the changes.
-6.  Restart the **WebSphere_Portal** application server.
+1. Log in to the **Integrated Solutions Console** as the WebSphere Application Server administrator.  
+2. Select **Troubleshooting > Logs and Traces > WebSphere_Portal > Diagnostic Trace**.  
+3. On the **Configuration** tab, select the **Enable Log** checkbox. Adjust **Maximum File Size** and **Maximum Number of Historical Files** as needed to prevent trace data from being overwritten.  
+4. Click **Change Log Level Details**, and enter the required trace string from the table below.  
+5. Click **OK**, and save your changes.  
+6. Restart the **WebSphere_Portal** application server.
 
 ## Enable dynamic tracing
 
-Dynamic tracing can be used for situations that do not permit a server restart.
+Dynamic tracing can be used when restarting the server is not possible.
 
-1.  Log in to the Integrated Solutions Console as the Portal administrator.
-2.  Select **Administration > Portal Analysis > **Enable Tracing**. The Enable Tracing portlet appears.
-3.  Type the required trace string into the field **Append these trace settings** based on the table below.
-4.  Click the **Add** icon. Enable Tracing updates the field **Current trace settings**.
+1. Log in to the **Integrated Solutions Console** as the Portal administrator.  
+2. Select **Administration > Portal Analysis > Enable Tracing**. The **Enable Tracing** portlet appears.  
+3. Type the required trace string into the **Append these trace settings** field.  
+4. Click the **Add** icon. The portlet updates the **Current trace settings** field.
 
     !!!note
-        Restarting HCL Portal will remove traces that were set by using the Enable Tracing Administration portlet.
+    Restarting HCL Portal removes traces set using the **Enable Tracing** portlet.
 
 
 ## Trace Strings
 
-In HCL Digital Experience 9.5 and higher releases, the following trace strings are now available:
+HCL Digital Experience 9.5 and later provides the following trace strings for detailed debugging and analysis.
 
 |Issue|Trace String|
 |-----|------------|
@@ -68,12 +67,12 @@ The following table is the list of all trace strings available for HCL Digital E
 |Workflow|-   `com.ibm.workplace.wcm.api.*=finest`<br>-   `com.aptrix.pluto.workflow.*=finest`<br>-   `com.ibm.workplace.wcm.services.workflow.*=finest`|
 
 !!! warning "Warning"
-    Enabling general tracing can cause the server to become unresponsive because it may generate a large amount of log output in a short period of time, consuming disk space and system resources rapidly. To avoid this, always set the log scope only as wide as necessary for troubleshooting, and disable general tracing as soon as you have collected the required information.
+    Enabling general tracing can cause the server to become unresponsive because it may generate a large amount of log output in a short period of time, rapidly consuming disk space and system resources. To prevent this, always set the log scope as narrowly as necessary for troubleshooting, and disable general tracing as soon as you have collected the required information.
 
-The resulting traces of Virtual Member Manager are written below:
+The resulting traces for Virtual Member Manager are written to the following locations:
 
--   AIX® and Linux™: wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log
--   Windows™: wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log
+- **AIX® and Linux™:** `wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log`
+- **Windows™:** `wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log`
 
 ## HCLSoftware U learning materials
 
