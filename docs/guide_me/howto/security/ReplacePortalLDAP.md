@@ -1,4 +1,4 @@
-# How to replace an LDAP in HCL DX
+# How to Replace an LDAP in HCL DX
 
 ## Applies to
 
@@ -6,18 +6,20 @@
 
 ## Introduction
 
-This guide provides a comprehensive step-by-step approach to replace an LDAP server configuration setting in HCL DX.
+This article provides a step-by-step approach to replacing an LDAP server configuration in HCL DX.
 
-1. Generating a complete XML export of system with the current LDAP
-2. Listing all your Virtual Portals
-3. Adding the "InternalFileRepository" user repository
-4. Temporarily changing your admin user and group to your FileRegistry repository
-5. Removing the OLD LDAP
-6. Adding the new LDAP
-7. Running CleanupUsers to clear up the old LDAP entries
-8. Re-importing the Full XML Export
-9. Running MemberFixer with treatallUsersAsMissing
+## Steps
+
+1. Generate a complete XML export of the system with the current LDAP.  
+2. List all your virtual portals.  
+3. Add the `InternalFileRepository` user repository.  
+4. Temporarily change your admin user and group to your FileRegistry repository.  
+5. Remove the old LDAP.  
+6. Add the new LDAP.  
+7. Run `CleanupUsers` to clear old LDAP entries.  
+8. Re-import the full XML export.  
+9. Run `MemberFixer` with `treatAllUsersAsMissing`.
 
 ## Instructions
 
-[A Step-by-Step Guide - How to replace your HCL Portal´s LDAP](./files/ReplacePortalLDAP/How_To_Change_Portal_LDAP_v1.pdf){target="_blank"}  
+[Step-by-Step Guide: How to Replace Your HCL Portal's LDAP](./files/ReplacePortalLDAP/How_To_Change_Portal_LDAP_v1.pdf){target="_blank"}
