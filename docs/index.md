@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf230.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf232.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
@@ -32,7 +32,7 @@ hide:
 
     ---
 
-    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms. 
+    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms.
 
     ---
 

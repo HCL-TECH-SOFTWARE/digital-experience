@@ -2,6 +2,8 @@
 
 After the cumulative fix that includes the Script Application is installed, you can create and edit applications with the Script Application Editor, import items to existing applications, or upload content from the command line.
 
+- **[Creating and deploying Script Applications](../../development_tools/create-and-deploy-script-app.md)**  
+`create-dx-script-app` is a modular toolkit designed to generate modern React applications that integrate seamlessly with the HCL DX platform. It provides ready-made templates and configurations to accelerate your development workflow.
 - **[Script Application Editor](script_app_editor/index.md)**  
 You can create and edit applications with the Script Application Editor, import items to existing applications, or upload content from the command line.
 - **[Script Application Improvements](script_app_improvements.md)**  

@@ -4,7 +4,7 @@ In this section, you can find various performance tuning guides for deployments 
 
 -   **[Kubernetes Deployments](kubernetes/index.md)**  
 This topic provides sizing guidance for HCL Digital Experience (DX) rendering scenarios in a Kubernetes configuration.
--   **[Traditional Deployments](traditional_deployments.md)**  
+-   **[Traditional Deployments](kubernetes/Kubernetes_Deployments/traditional_deployments.md)**  
 This topic provides guidance for deployments to On-Premises (Traditional) platforms.
 
 ## HCLSoftware U learning materials
