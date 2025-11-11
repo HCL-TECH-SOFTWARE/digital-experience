@@ -67,7 +67,12 @@ The **Default stylesheet** provides a foundational set of styles that are automa
 
 The **Override stylesheet** allows users to customize styles for specific elements, enabling precise adjustments to meet unique design requirements. Together, the Default and Override stylesheets offer a powerful mechanism for managing presentation aesthetics effectively. The override style options in Presentation Designer work as follows:
 
-1. Override styles can be applied to different resolutions, and each resolution has its own style. If the style is set for **Desktop**, it applies the change to all devices. If the style is set for **Tablet**, it applies the change to tablets and mobile devices only. If the style is set for **Mobile**, it applies the change to mobile devices only. If there are specific changes to the style for a particular device, those changes will not take effect on other devices since the specific device already has a defined value for the style.
+1. Override styles can be applied to different resolutions, and each resolution has its own style.
+
+    - If the style is set for **Desktop**, it applies the change to all devices.
+    - If the style is set for **Tablet**, it applies the change to tablets and mobile devices only.
+    - If the style is set for **Mobile**, it applies the change to mobile devices only. 
+    - Changes specific to one device will not affect others, as each device already has a defined style value.
 
 2. Override styles support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions.
 
@@ -75,9 +80,9 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 
     Override classes follow the naming convention `pd-override-[Element]-[(6)uuid]`, where `[Element]` is the element type and `[(6)uuid]` is a 6-character unique identifier:
 
-    - **LTR classname convention**: `pd-override-[Element]-[(6)uuid]` (for example, `.pd-override-Text-d00c2b`)
+    - For LTR class names, use `pd-override-[Element]-[(6)uuid]` (for example, `.pd-override-Text-d00c2b`)
   
-    - **RTL classname convention**: `pd-override-[Element]-[(6)uuid]:dir(rtl)` (for example, `.pd-override-Text-d00c2b:dir(rtl)`)
+    - For RTL class names, use `pd-override-[Element]-[(6)uuid]:dir(rtl)` (for example, `.pd-override-Text-d00c2b:dir(rtl)`)
 
     - When the RTL toggle is enabled and style changes are made, the override class includes the `:dir(rtl)` pseudo-class selector. These styles only apply when the page or element is in RTL mode.
 
@@ -87,17 +92,17 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 
 3. Override classes are applied to elements when styles are edited. The following example demonstrates how override classes are created and applied:
 
-    **Step 1**: When you first drop an element on the canvas, only the default class is applied. No override class exists yet:
+    1. When you first drop an element on the canvas, only the default class is applied. No override class exists yet:
 
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_dropped_element.png)
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_newly_dropped_element.png)
 
-    **Step 2**: After adding style changes to the element (for example, changing font size and background color), you can now see that an override class has been added to the element:
+    2. After adding style changes to the element (for example, changing font size and background color), you can now see that an override class has been added to the element:
 
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_override_class_applied.png)
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_override_class_applied.png)
 
-    **Step 3**: You can apply independent styling for RTL by switching to RTL mode using the Canvas direction toggle and adding different style changes (for example, changing background color and text alignment). After applying these changes, the same override class is used but with the `:dir(rtl)` pseudo-class selector added to target RTL mode:
+    3. You can apply independent styling for RTL by switching to RTL mode using the Canvas direction toggle and adding different style changes (for example, changing background color and text alignment). After applying these changes, the same override class is used but with the `:dir(rtl)` pseudo-class selector added to target RTL mode:
 
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_pseudo_class.png)
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_pseudo_class.png)
 
 4. After saving the Presentation Designer, it automatically creates an override stylesheet:
 
@@ -110,11 +115,11 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 
     Element styles for the override stylesheet:
 
-    LTR styles:
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_LTR_styles.png)
+    - LTR styles:
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_LTR_styles.png)
 
-    RTL styles:
-    ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_styles.png)
+    - RTL styles:
+        ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_RTL_styles.png)
 
 6. The override stylesheet is found in the Presentation Designer libraries. Its location is determined based on presentation template's location:
 
@@ -127,6 +132,7 @@ The **Override stylesheet** allows users to customize styles for specific elemen
 8. To validate the styles set in the override stylesheet:
 
     1. Select the file and click **Edit**.
+
     2. Click **pd_Override stylesheet test_override_a074b2.css** to download the file.
 
         ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet.png)
