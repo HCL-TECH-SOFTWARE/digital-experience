@@ -12,3 +12,5 @@ This section provides steps on how to access DX Picker.
 This section shows how you can use the DX Picker feature.
 - **[Limitations of DX Picker](./limitations.md)**  
 This section lists the current limitations of DX Picker.
+- **[Troubleshooting DX Picker](./troubleshooting.md)**  
+This section shows how you can troubleshoot DX Picker issues.
