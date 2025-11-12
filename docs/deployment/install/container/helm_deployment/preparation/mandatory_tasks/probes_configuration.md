@@ -21,9 +21,9 @@ You can modify `liveness` and `readiness` probes such as the status thresholds a
 
 # Core probes configuration
 
-Core does offer additional flexibility for the probe configuration. In addition to the options listed above, Core provides a `customProbeURL` value as well as a configuration section for the `startup` probe.
+Core offers additional flexibility for the probe configuration. In addition to the options listed above, Core provides a `customProbeURL` value as well as a configuration section for the `startup` probe.
 
-If you want to configure probe target values, Core provides a `customProbeURL` value.  This is a relative URL that you can use to overwrite the default `liveness` probe target value.
+If you want to configure probe target values, Core provides a `customProbeURL` value. This is a relative URL that you can use to overwrite the default probe target values.
 
 ```yaml
 probes:
@@ -67,5 +67,4 @@ When the `customProbeURL` is empty, the default targets are used:
 
 
 !!!important
-    - Setting the `probeURL` to a path that is slow or unreliable can cause the pod to restart. Change the path only if it is necessary for your specific use case.
-    - Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `probeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) for more details on what to consider when defining a probe.
+    - Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `customProbeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) for more details on what to consider when defining a probe.
