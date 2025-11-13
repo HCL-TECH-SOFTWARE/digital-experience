@@ -13,11 +13,11 @@ It is not recommended to use Woodburn Studio for anything but a demo site. Woodb
 
 The Woodburn Studio demo site has a home page and several other microsites with one or more pages. Many of the elements are reused across the demo site, and they are styled for the page on which they appear.
 
-## Working with Woodburn Studio
+<!--## Working with Woodburn Studio
 
 Woodburn Studio is not deployed by default.
 
-You can deploy, configure, and disable Woodburn Studio the same way you deploy Practitioner Studio. Go to [Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md) for more information.
+You can deploy, configure, and disable Woodburn Studio the same way you deploy Practitioner Studio. Go to [Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md) for more information.-->
 
 !!! note
     Upon initial deployment, the HCL Digital Experience search indexes are not yet built. Therefore, search will not yield results for pages and content in the Woodburn Studio demonstration site until the search indexing services have run the first time. This will automatically occur with 24 hours of the initial deployment of DX.

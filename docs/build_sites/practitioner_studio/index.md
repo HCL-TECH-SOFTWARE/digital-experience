@@ -12,19 +12,21 @@ Practitioner Studio provides a modern user experience for HCL Digital Experience
 Starting from CF230, the Practitioner Studio toolbar and UI have undergone the following changes to enhance the user experience:
 
 - The toolbar now features a centralized search function, making it easier to locate content and tools.
+
 - A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
 - The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
 
-   - **Web Content**  
-  This section provides access to applications used for the general administration of Web Content Management.
+  - **Web Content**  
+    This section provides access to applications used for the general administration of Web Content Management.
 
   - **Digital Assets**  
     This section introduces HCL Digital Asset Management (DAM), which lets you manage rich media assets in HCL DX sites to create consistent, engaging digital experiences. The feature is available starting with HCL DX 9.5 CF181 and later.
 
   - **Site Templates**  
-    The Site Template (Site Builder) application lets you create site and section templates in HCL Digital Experience (DX).
+      The Site Template (Site Builder) application lets you create site and section templates in HCL Digital Experience (DX).
 
-  - **Themes**
+  - **Themes**  
+      Use the Theme Manager and WebDAV to easily create, customize, and manage themes that define the look, layout, and behavior of your HCL Digital Experience portal.
 
   - **Personalization**  
     Personalization recognizes site visitors based on their profiles and behaviors to deliver targeted, region-specific content and a personalized page experience.
@@ -34,13 +36,7 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 
 ## Overview
 
-Practitioner Studio provides a modern and streamlined user experience for HCL DX.
-
-There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation.
-
-In time, this interface also serves as the launching point for newly developed features.
-
-Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
+Practitioner Studio provides a modern and streamlined user experience for HCL DX. There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation. In time, this interface also serves as the launching point for newly developed features. Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
 - **[Administration](../practitioner_studio/administration.md)**  
   Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
