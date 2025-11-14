@@ -96,7 +96,7 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider defaultProvider=""]
         ```
 
-        Text Provider example:
+        For example:
 
         ```
         [Plugin:Localize provider="[Element key='Text Provider Name' format='id']" key="keyname2"]
