@@ -1,7 +1,26 @@
-title: Kubernetes Deployments
+title: Kubernetes performance tuning
 nav:
-    - index.md
-    - rendering_small_config.md
-    - rendering_medium_config.md
-    - rendering_large_config.md
-    - logstash_opensearch.md
+  - index.md
+  - base_portal.md
+  - database_tuning.md
+  - directory_server_tuning.md
+  - disable_tag_rate.md
+  - env_reco.md
+  - focus_areas.md
+  - hcl_dx_light
+  - high_volume_sites.md
+  - internationalization_service.md
+  - jsf.md
+  - Kubernetes_Deployments
+  - other_db_considerations.md
+  - other_portal_tuning.md
+  - other_tuning_considerations.md
+  - other_wcm_tuning.md
+  - pod_cpu_limits_requests.md
+  - resource_env_provider.md
+  - sec_fields.md
+  - tuning_portal_admin.md
+  - wab_tuning.md
+  - wcm_db_tuning.md
+  - wcm_tuning.md
+  - wef.md

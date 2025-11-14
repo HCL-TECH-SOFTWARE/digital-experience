@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Blueprint updates
 - Helm values updates
 - Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
@@ -96,10 +97,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf230).
 
 ### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 

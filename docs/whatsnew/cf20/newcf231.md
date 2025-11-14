@@ -1,10 +1,11 @@
-# What's new in CF231
+# What's new in CF231 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF231 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
+- DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -13,15 +14,18 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Blueprint updates
 - DAM - External database support now available
+- DX Picker integration with Search V2
 - Helm values updates
+- Performance Tuning Guide updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
 
-- Removal of automated Pod restart on ConfigMap updates (8.5 and 9.0)
-- CKEditor Rich Text Editor (9.5)
+- CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
+- Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
@@ -46,6 +50,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
+### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
+
+=== "Containers"
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
+
+=== "On-Premises"
+    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -62,20 +74,40 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF231. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
 ### DAM - External database support now available
 
 === "Containers"
     You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
 
+### DX Picker integration with Search V2
+
+=== "Containers"
+    The DX Picker feature is now integrated in Search V2. This integration lets you search and select items from multiple content sources, including Java Content Repository (JCR) and Web Content Manager (WCM), in addition to Digital Asset Management (DAM). Installation and deployment methods have also been streamlined for efficiency. For more information, refer to the following topics:
+
+    - [Enabling and disabling DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md)
+    - [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md)
+    - [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md)
+    - [Limitations of DX Picker](../../manage_content/wcm_authoring/dx_picker/limitations.md)
+
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf231).
+
+### Performance Tuning Guide updates
+
+=== "Containers"
+    An updated Performance Tuning Guide is now available for HCL DX deployments on Kubernetes. The guide provides recommendations for tuning key systems such as the application server, databases, directory servers, HAProxy, and Kubernetes components. It helps administrators establish baselines, monitor performance metrics, and apply optimizations to improve scalability and reliability in Kubernetes environments. For more details, refer to [Performance Tuning Guides](../../guide_me/guides/performance_tuning/kubernetes/index.md).
 
 ### Search V2 - New Atomic Components and supported CSS part attributes available
 
 === "Containers"
-    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes. Additionally, state fields have been removed for ACs.
+    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes.
 
     |New ACs|Updated ACs|Updated FCCs|
     |-----|-----|-----|
@@ -105,18 +137,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
-### Woodburn Studio demo site (9.5)
-
-=== "Containers"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
+
+### Woodburn Studio demo site (9.5)
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
