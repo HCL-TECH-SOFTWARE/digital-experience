@@ -19,9 +19,9 @@ You can modify `liveness` and `readiness` probes such as the status thresholds a
       timeoutSeconds: 30
 ```
 
-# Core probes configuration
+## Core probes configuration
 
-Core offers additional flexibility for the probe configuration. In addition to the options listed above, Core provides a `customProbeURL` value as well as a configuration section for the `startup` probe.
+Core offers additional flexibility for the probe configuration. In addition to the previously listed options, Core provides a `customProbeURL` value as well as a configuration section for the `startup` probe.
 
 If you want to configure probe target values, Core provides a `customProbeURL` value. This is a relative URL that you can use to overwrite the default probe target values.
 
@@ -35,7 +35,7 @@ probes:
       periodSeconds: 30
       successThreshold: 1
       timeoutSeconds: 10
-      # You may add a custom URL, e.g., "/sample/url". The leading slash is required. The URL defaults to "/ibm/console" when this is empty. 
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to "/ibm/console" when this is empty. 
       customProbeURL: ""
     # Readiness probe using the application shell based probe
     readinessProbe:
@@ -44,7 +44,7 @@ probes:
       periodSeconds: 30
       successThreshold: 1
       timeoutSeconds: 10
-      # You may add a custom URL, e.g., "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
       customProbeURL: ""
     # Startup probe using the application shell based probe
     startupProbe:
@@ -53,7 +53,7 @@ probes:
       periodSeconds: 10
       successThreshold: 1
       timeoutSeconds: 10
-      # You may add a custom URL, e.g., "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
       customProbeURL: ""
 ```
 
@@ -62,9 +62,8 @@ When the `customProbeURL` is empty, the default targets are used:
 | Probe Type   | Default Target Value        |
 |--------------|-----------------------------|
 | Liveness     | `/ibm/console`              |
-| Readiness    | Path created from `networking.core.contextRoot` and `.networking.core.home` (i.e., `/wps/portal`)    |
-| Startup      | Path created from `networking.core.contextRoot` and `.networking.core.home` (i.e., `/wps/portal`)    |
-
+| Readiness    | Path created from `networking.core.contextRoot` and `.networking.core.home` (for example, `/wps/portal`)    |
+| Startup      | Path created from `networking.core.contextRoot` and `.networking.core.home` (for example, `/wps/portal`)    |
 
 !!!important
-    - Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `customProbeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) for more details on what to consider when defining a probe.
+    Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `customProbeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. For more details on what to consider when defining a probe, refer to [Configure Liveness, Readiness and Startup Probes - Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes){target="_blank"}.
