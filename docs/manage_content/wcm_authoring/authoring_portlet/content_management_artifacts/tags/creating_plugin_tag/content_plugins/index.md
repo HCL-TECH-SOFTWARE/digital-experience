@@ -10,8 +10,13 @@ Content plug-ins are used with the current content item.
 
 -   **Copy Text plug-in**
 
-    -   This plug-in writes text once or multiple times.
-    -   The syntax of the plug-in is `[Plugin:CopyText text="" count="" separator="" format="trim | tolower | toupper" escape="xml | json | none"]`.
+    -   This plug-in allow to format and escape text.  
+    -   It writes the text once or multiple times.  
+    -   This plug-in writes text once or multiple times.  
+    -   The syntax of the plug-in is `[Plugin:CopyText text="" count="" separator="" format="trim | tolower | toupper" escape="xml | json | none"]`.  
+    -   If count is not provided, it is defaulted to "1".  
+    -   For example:  
+        -   '[Plugin:CopyText count='1' text='[Element context="autofill" type="content" key="body"]' escape='json'] escapes a Body rich text element to JSON.  
 
 -   **If List Index plug-in**
 
