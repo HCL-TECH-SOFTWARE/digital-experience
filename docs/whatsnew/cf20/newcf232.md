@@ -1,11 +1,11 @@
-# What's new in CF231 
+# What's new in CF232
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF231 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF232 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - My HCLSoftware delivery portal
-- DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
+- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -15,11 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Blueprint updates
-- DAM - External database support now available
-- DX Picker integration with Search V2
 - Helm values updates
-- Performance Tuning Guide updates
-- Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -50,13 +46,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 === "Containers"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 === "On-Premises"
-    You can now use the `create-dx-script-app` tool to create and deploy Script Applications for your HCL DX environment. This modular toolkit generates modern React applications that integrate seamlessly with the HCL DX platform, providing you with ready-made templates and configurations to accelerate your development workflow. For more information, refer to [Creating and Deploying DX Script Applications](../../extend_dx/development_tools/create-and-deploy-script-app.md).
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -74,53 +70,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Blueprint updates
+### Blueprint updates <!--Update for CF232-->
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF231. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
-
-### DAM - External database support now available
-
-=== "Containers"
-    You can now configure external databases for Digital Asset Management (DAM). For more information and a sample scenario, refer to [Configuring an external database for DAM](../../manage_content/digital_assets/configuration/external_dam_database.md).
-
-### DX Picker integration with Search V2
-
-=== "Containers"
-    The DX Picker feature is now integrated in Search V2. This integration lets you search and select items from multiple content sources, including Java Content Repository (JCR) and Web Content Manager (WCM), in addition to Digital Asset Management (DAM). Installation and deployment methods have also been streamlined for efficiency. For more information, refer to the following topics:
-
-    - [Enabling and disabling DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md)
-    - [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md)
-    - [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md)
-    - [Limitations of DX Picker](../../manage_content/wcm_authoring/dx_picker/limitations.md)
+    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf231).
-
-### Performance Tuning Guide updates
-
-=== "Containers"
-    An updated Performance Tuning Guide is now available for HCL DX deployments on Kubernetes. The guide provides recommendations for tuning key systems such as the application server, databases, directory servers, HAProxy, and Kubernetes components. It helps administrators establish baselines, monitor performance metrics, and apply optimizations to improve scalability and reliability in Kubernetes environments. For more details, refer to [Performance Tuning Guides](../../guide_me/guides/performance_tuning/kubernetes/index.md).
-
-### Search V2 - New Atomic Components and supported CSS part attributes available
-
-=== "Containers"
-    New Atomic Components (ACs) and their corresponding CSS part attributes are now available for Search V2. Existing ACs and Functional Composite Components (FCCs) have also been updated to support additional CSS part attributes.
-
-    |New ACs|Updated ACs|Updated FCCs|
-    |-----|-----|-----|
-    |`dx-accordion`<br>`dx-alert`<br>`dx-breadcrumbs`<br>`dx-breadcrumbs-item`<br>`dx-data-grid-generic`<br>`dx-datepicker`<br>`dx-item-type-avatar`<br>`dx-multiple-select-chip`<br>`dx-panel`<br>`dx-preview`<br>`dx-snackbar`<br>`dx-theme-inspector`<br>`dx-tooltip`<br>|`dx-anchor`<br>`dx-avatar`<br>`dx-badge`<br>`dx-dialog`<br>`dx-header`<br>`dx-icon-button`<br>`dx-menu-item`<br>`dx-search-center-layout`<br>`dx-table-pagination`<br>`dx-toggle-button`<br>|`dx-circular-progress`*<br>`dx-search-input-type`<br>`dx-search-output`<br>|
-
-    \* Reclassified as an AC
-
-    For more information on the new and updated ACs, refer to [Atomic Components](../../build_sites/search_v2/components/atomic_components.md) and [Functional Composite Components](../../build_sites/search_v2/components/functional_composite_components.md).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
 
 ### WAS, JDK, and iFix versions
 
 === "Containers"
-    HCL DX 9.5 CF231 contains the following:
+    HCL DX 9.5 CF232 contains the following:
 
     - [WebSphere Application Server 9.0.5.25](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.51](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
