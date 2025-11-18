@@ -74,7 +74,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Additional configuration options for DX Core probes
 
 === "Containers"
-    A new configuration section for the `startup` probe has been added in addition to the existing `liveness` and `readiness` probes. For more information, refer to [Core probes configuration](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md#core-probes-configuration).
+    The targets for the Core `readiness` and `startup` probes can now be configured for more flexibility. For more information, refer to [Core probes configuration](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md#core-probes-configuration).
 
 ### Blueprint updates <!--Update for CF232-->
 
