@@ -1,7 +1,3 @@
-title: How-to
-nav:
-    - index.md
-    - DX troubleshooting: troubleshooting
 title: How-to articles
 nav:
   - index.md
@@ -17,6 +13,7 @@ nav:
   - Migration: migration
   - Performance: performance
   - Personalization: personalization
+  - Requirements: requirements
   - Search: search
   - Security: security
   - Syndication: syndication
@@ -25,3 +22,4 @@ nav:
   - Troubleshooting: troubleshooting
   - Upgrade: upgrade
   - Web Content Manager Library Management: wcmlibrarymanagement
+  

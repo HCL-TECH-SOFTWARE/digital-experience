@@ -1,6 +1,9 @@
 title: Development
-
 nav:
-    - index.md
-    - CodeToPrintUserAndHostname.md
-    - Portletdevelopmentutilitiesandpagecreationsamples.md
+
+  - index.md
+  - CreateAServletForStaticFiles.md
+  - CodeToPrintUserAndHostname.md
+  - Portletdevelopmentutilitiesandpagecreationsamples.md
+  - CustomLoginPortlet.md
+  

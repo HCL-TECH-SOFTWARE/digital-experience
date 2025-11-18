@@ -14,12 +14,12 @@ Make sure that the `wkplc_dbdomain.properties` file is correct. The HCL DX upgra
 
 Edit the `(wp_profile root)/ConfigEngine/properties/wkplc_dbdomain.properties` file and ensure the following values are set correctly:
 
--   `release.DbPassword=(your database user password)`
--   `community.DbPassword=(your database user password)`
--   `customization.DbPassword=(your database user password)`
--   `jcr.DbPassword=(your database user password)`
--   `likeminds.DbPassword=(your database user password)`
--   `feedback.DbPassword=(your database user password)`
+- `release.DbPassword=(your database user password)`
+- `community.DbPassword=(your database user password)`
+- `customization.DbPassword=(your database user password)`
+- `jcr.DbPassword=(your database user password)`
+- `likeminds.DbPassword=(your database user password)`
+- `feedback.DbPassword=(your database user password)`
 
 If you do not want these password values removed after every run, make sure `PWordDelete=false` is set in `(wp_profile root)/ConfigEngine/properties/wkplc.properties`.
 
@@ -44,9 +44,10 @@ After making the needed changes to your custom-values.yaml file, use the follo
 helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 ```
 
--   The `your-namespace` is the namespace in which your HCL Digital Experience 9.5 deployment is installed and `your-release-name` is the Helm release name you used when installing.
--   The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you have updated.
--   The path/to/hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience Helm Chart that you extracted in the preparation steps.
+- The `your-namespace` is the namespace in which your HCL Digital Experience 9.5 deployment is installed and `your-release-name` is the Helm release name you used when installing.
+- The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you have updated.
+- The path/to/hcl-dx-deployment-vX.X.X\_XXXXXXXX-XXXX.tar.gz is the HCL Digital Experience Helm Chart that you extracted in the preparation steps.
 
+## HCLSoftware U learning materials
 
-
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

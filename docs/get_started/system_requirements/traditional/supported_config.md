@@ -97,7 +97,7 @@ HCL DX 9.5 requires the following capabilities and products to provide those cap
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
-|WebSphere Application Server|8.5.5.12 and later maintenance releases**|8.5|
+|WebSphere Application Server (WAS)|8.5.5.12 and later maintenance releases**|8.5|
 ||9.0.0.2 and later maintenance releases|9.0|
 ||9.0.5 and later maintenance releases**|9.0 CF17|
 
@@ -115,13 +115,14 @@ HCL DX 9.5 requires the following capabilities and products to provide those cap
 
 ### Java SDK
 
-HCL DX 9.5 requires JDK 7.0* or later for installation.
+HCL DX 9.5 requires Java Development Kit (JDK) version 7.0* or later for installation.
 
 |Prerequisite|Prerequisite minimum and supported versions|Product minimum|
 |----------|----------|----------|
 |IBM Runtime Environment, Java Technology Edition|8.0 and later maintenance releases|8.5|  
 
-*The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).
+\*The Enhanced Rich Text Editor, TinyMCE, requires Java 8 or later. For more details, see [Enhanced Rich Text Editor](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md#prerequisite).  
+\*Customers using JDK 7.0 with WAS 8.5.5 will only be able to use the out-of-the-box, default CKEditor provided with HCL DX.
 
 ## Databases
 
@@ -138,10 +139,11 @@ HCL DX 9.5 requires JDK 7.0* or later for installation.
 |Oracle Database 19c|19c and later maintenance releases|8.5|
 |Oracle Database 21c|21c and later maintenance releases|8.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|8.5|
+|Oracle on Amazon Relational Database Service|19c and later maintenance releases (acquired separately)|9.5|
 |Oracle on Amazon Relational Database Service|21c and later maintenance releases|8.5|
 
 \* Apache Derby is not supported in a product environment.  
-\* DB2 includes support for the DB2 pureScale component.  
+\*\* DB2 includes support for the DB2 pureScale component.  
 
 ## Collaboration
 
@@ -172,7 +174,7 @@ JDBC Drivers support forward compatibility for all maintenance levels and also n
 
 \*JDBC drivers are shipped as DB2 for z/OS APARs. You can check for the appropriate APAR/PTF numbers in the DB2 for z/OS Infocenter, 'Programming for DB2 > Programming for Java > Supported drivers for JDBC and SQLJ'. Obtain the PTFs from DB2 on z/OS support or IBMLINK. Version 3.58 and later are supported.
 
-\**Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
+\*\*Requires APAR PK93123 for DB2 on z/OS V9.1. You can obtain the fix from DB2 on z/OS support or IBMLINK.
 
 ***Oracle JDBC Driver Thin (type 4) Oracle JDBC Driver Thick, TAF (type 2) - Supported on Linux operating systems only.  
 

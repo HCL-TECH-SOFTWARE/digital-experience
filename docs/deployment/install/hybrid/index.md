@@ -13,28 +13,35 @@ The HCL Digital Experience 9.5 Hybrid deployment reference architecture and topi
 
 ## Prerequisites
 
--   The on-premises platform and the container platform must be at the same CF level.
--   HCL Digital Experience V9.5 CF198 or a higher release is deployed to supported on-premises platforms in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../../get_started/plan_deployment/traditional_deployment/roadmaps/index.md) topic for more information.
--   Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or a later installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
--   A common domain that uses an SSL connection is established for both the on-premise HCL DX 9.5 CF198 and higher on-premise environments and the target Red Hat Open Shift or Amazon EKS, Azure AKS, or Google GKE platform deployment to contain the cloud native components (HCL DX Experience API, Digital Asset Management and Content Composer).
+- The on-premises platform and the container platform must be at the same CF level.
+- HCL Digital Experience V9.5 CF198 or a higher release is deployed to supported on-premises platforms in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../../get_started/plan_deployment/traditional_deployment/roadmaps/index.md) topic for more information.
+- Practitioner Studio is enabled in the Digital Experience 9.5 CF198 or a later installation. See [How to enable Practitioner Studio](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for instructions.
+- A common domain that uses an SSL connection is established for both the on-premise HCL DX 9.5 CF198 and higher on-premise environments and the target Red Hat Open Shift or Amazon EKS, Azure AKS, or Google GKE platform deployment to contain the cloud native components (HCL DX Experience API, Digital Asset Management and Content Composer).
 
     For example, mytargetcloud.dx.com and myonprem.dx.com would have the same domain: dx.com.
 
--   Single sign-on must be enabled on HCL DX 9.5 CF198 or a higher on-premises environment. On DMGR or WAS Admin console, under **Security > Global Security > Web & SIP Security > Single Sign-On**, the **Enabled** box is checked and the **Domain name** is set to common domain.
+- Single sign-on must be enabled on HCL DX 9.5 CF198 or a higher on-premises environment. On DMGR or WAS Admin console, under **Security > Global Security > Web & SIP Security > Single Sign-On**, the **Enabled** box is checked and the **Domain name** is set to common domain.
 
     For example, dx.com.
 
--   A high-performance network connection is established between the HCL DX 9.5 CF19 and higher on-premises environment and the target DX Red Hat Open Shift or Kubernetes platform deployment.
+- A high-performance network connection is established between the HCL DX 9.5 CF19 and higher on-premises environment and the target DX Red Hat Open Shift or Kubernetes platform deployment.
 
--   **Volume Requirement**: Requires an AccessMode of `ReadWriteMany`. Refer to [Storage class and volume](../../manage/container_configuration/sample_storage_class_volume.md) for more information.
--   Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See [Backup and Restore](../../../deployment/manage/backup_restore//index.md) for additional information.
-    -   **Step 1: Configure Networking** between the on-premises DX 9.5 CF198 or later deployment so that the HCL DX 9.5 Container Update CF198 or later components are accessible externally from the Kubernetes or OpenShift platform cluster. Reference the [Configure networking](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) topic for more information.
+- **Volume Requirement**: Requires an AccessMode of `ReadWriteMany`. Refer to [Storage class and volume](../../manage/container_configuration/sample_storage_class_volume.md) for more information.
+- Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See [Backup and Restore](../../../deployment/manage/backup_restore//index.md) for additional information.
+    - **Step 1: Configure Networking** between the on-premises DX 9.5 CF198 or later deployment so that the HCL DX 9.5 Container Update CF198 or later components are accessible externally from the Kubernetes or OpenShift platform cluster. Reference the [Configure networking](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md) topic for more information.
 
-    -   **Step 2: Set the Core application deployment parameter** in your custom-values.yaml file to `false`. Refer to the [Planning your container deployment using Helm](../../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.
+    - **Step 2: Set the Core application deployment parameter** in your custom-values.yaml file to `false`. Refer to the [Planning your container deployment using Helm](../../../deployment/install/container/helm_deployment/preparation/index.md) topic for more information.
 
-    -   **Step 3: Proceed to configuration instructions** listed in this topic: [Helm deployment configuration](../../../deployment/install/container/helm_deployment/helm_install_commands.md).
+    - **Step 3: Proceed to configuration instructions** listed in this topic: [Helm deployment configuration](../../../deployment/install/container/helm_deployment/helm_install_commands.md).
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}. 
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
 
+To learn how to do a traditional installation, go to [Deployment for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will also learn about additional installation tasks that apply to both container-based and traditional deployments using the Configuration Wizard, DXClient, ConfigEngine, and more. You can try it out using the [Deployment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab.pdf){target="_blank"} and corresponding [Deployment Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab_Resources.zip){target="_blank"}.
+
+To learn how to manage multiple DX sites, go to [Multi-Site Management](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will learn when and how to create and manage base, true, and virtual portals in which you may run one or more DX sites. You can also try it out using the [Multi-Site Management Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Multi-Site_Management_Lab.pdf){target="_blank"}.
+
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
