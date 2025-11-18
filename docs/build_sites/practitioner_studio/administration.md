@@ -1,4 +1,4 @@
-#  Administration
+# Administration
 
 Use the Portal administration portlets that are provided with HCL Digital Experience to perform various day-to-day administration tasks.
 
