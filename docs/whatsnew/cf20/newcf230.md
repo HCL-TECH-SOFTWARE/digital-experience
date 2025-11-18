@@ -4,6 +4,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Blueprint updates
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
 - Presentation Designer - Handle multiple stylesheet components
@@ -16,7 +17,6 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Blueprint updates
 - Helm values updates
 - Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
@@ -32,6 +32,14 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+=== "On-Premises"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -96,11 +104,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
-
-### Blueprint updates
-
-=== "Containers"
-    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### Helm values updates
 
