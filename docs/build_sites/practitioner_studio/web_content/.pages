@@ -4,6 +4,6 @@ nav:
     - Authoring portlet: site_auth_portlet.md
     - Content Composer: content_composer.md
     - Content Reporting: content_reporting.md
-    - Preview: Preview.md
+    - Preview: preview.md
     - Web Content Libraries: content_lbrary.md
     - Digital Assets: manage_content/digital_assets/
