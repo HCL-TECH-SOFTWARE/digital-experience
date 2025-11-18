@@ -1,4 +1,4 @@
-# What's new in CF232
+# What's new in CF232 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF232 on supported platforms:
 
