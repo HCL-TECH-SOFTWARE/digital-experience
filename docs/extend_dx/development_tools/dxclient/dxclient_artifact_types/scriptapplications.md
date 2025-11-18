@@ -13,7 +13,7 @@ Script Applications allow you to deploy modern web applications on HCL DX. The D
 - Restore previous versions of Script Applications
 
 !!!tip "Create DX Script Application"
-    While DXClient manages the deployment lifecycle of Script Applications, you can also use the [`create-dx-script-app`](../../create_script_apps/create-and-deploy-script-app.md) tool to quickly generate modern React applications specifically designed for HCL DX. It helps you create production-ready React applications with JavaScript or TypeScript that integrate seamlessly with HCL DX and includes built-in deployment capabilities.
+    While DXClient manages the deployment lifecycle of Script Applications, you can also use the [`create-dx-script-app`](../../create-and-deploy-script-app.md) tool to quickly generate modern React applications specifically designed for HCL DX. It helps you create production-ready React applications with JavaScript or TypeScript that integrate seamlessly with HCL DX and includes built-in deployment capabilities.
 
 ## Deploy Script Application
 
@@ -145,7 +145,7 @@ Refer to the following sample use cases of the `deploy-scriptapplication push` c
     ```
 
 !!! tip "Automated Creation & Deployment"
-    For an even simpler workflow, you can use the [create-dx-script-app](../../create_script_apps/create-and-deploy-script-app.md) tool to both create and deploy Script Applications in one streamlined process. It supports auto-deployment to DX through DXClient.
+    For an even simpler workflow, you can use the [create-dx-script-app](../../create-and-deploy-script-app.md) tool to both create and deploy Script Applications in one streamlined process. It supports auto-deployment to DX through DXClient.
 
 ## Undeploy Script Application
 
@@ -274,7 +274,7 @@ Review the following common issues and solutions:
 
 ???+ info "Related information"
     - [DXClient](../index.md)
-    - [Create DX Script App Tool](../../create_script_apps/create-and-deploy-script-app.md)
+    - [Create DX Script App Tool](../../create-and-deploy-script-app.md)
 
 ## HCLSoftware U Learning Materials
 

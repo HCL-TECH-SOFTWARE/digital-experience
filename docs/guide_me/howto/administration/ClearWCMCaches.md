@@ -61,4 +61,4 @@ Make sure to replace `<task-name>` with one of the following available tasks:
 ???+ info "Related information"
     - [Cache parameters](../../../manage_content/wcm_configuration/custom_caching/wcm_dev_caching_cache-parameters.md)
     - [Caching options](../../../manage_content/wcm_configuration/cfg_webcontent_delivery_env/caching_options/index.md)
-    - [Performance Tuning Guide for Traditional Deployments](../../guides/performance_tuning/kubernetes/Kubernetes_Deployments/traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](../../../guide_me/guides/performance_tuning/traditional_deployments.md)

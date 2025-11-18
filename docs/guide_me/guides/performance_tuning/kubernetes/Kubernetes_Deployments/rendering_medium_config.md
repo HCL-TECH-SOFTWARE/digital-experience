@@ -130,7 +130,7 @@ The following list contains details about the tuning and enhancements done to th
 
       ![](../../../../../images/WCM_Object_Cache_Instances.png){ width="1000" }
 
-- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
+- Updated abspath, abspathreverse, processing, session, strategy, summary values, and WCM rendering values as per [Performance Tuning Guide for Traditional Deployments](../../../performance_tuning/traditional_deployments.md).
 
 - Added a new custom property under **Resource environment providers > WP CacheManagerService > Custom properties > cacheinstance.com.ibm.wps.resolver.friendly.cache.size**.
 
@@ -208,7 +208,7 @@ Several factors can affect the performance of HCL Digital Experience (DX) in Kub
 Adjusting the number of running nodes, the number of pods, and the capacity of individual pods can help improve DX performance.
 
 !!!note
-     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
+     For more information on OS tuning, Web Server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, See the [Performance Tuning Guide for Traditional Deployments](../../../performance_tuning/traditional_deployments.md).
 
 ### Recommendations
 
@@ -230,4 +230,4 @@ For more information, see [Configure applications – OpenLDAP configuration](..
 To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-for-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
-    - [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md)
+    - [Performance Tuning Guide for Traditional Deployments](../../../performance_tuning/traditional_deployments.md)

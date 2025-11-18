@@ -1,6 +1,6 @@
 ---
 id: create-and-deploy-script-app
-title: Creating and Deploying DX Script Applications
+title: Creating and deploying Script Applications
 ---
 
 This guide will walk you through the process of creating a modern script application for HCL Digital Experience (DX) using the `create-dx-script-app` tool, and then building and deploying a sample Store Locator Script Application.
@@ -146,7 +146,7 @@ Refer to the following steps to build and deploy the Store Locator sample:
 
     This command authenticates DXClient's access with your DX server, uploads the built application to the Script Application Library, and places it in the site area specified in your environment configuration.
 
-    The deployment process uses DXClient's Script Application deployment capabilities. For more detailed information about DXClient's Script Application commands, options, and requirements, refer to the [DXClient Script Application documentation](../dxclient/dxclient_artifact_types/scriptapplications.md).
+    The deployment process uses DXClient's Script Application deployment capabilities. For more detailed information about DXClient's Script Application commands, options, and requirements, refer to the [DXClient Script Application documentation](./dxclient/dxclient_artifact_types/scriptapplications.md).
 
 ## Integrating the Store Locator in the Nex Haven site
 
@@ -250,7 +250,7 @@ If you encounter issues during development:
 
 ???+ info "Related information"
     - [`create-dx-script-app` Repository](https://github.com/HCL-TECH-SOFTWARE/dx-create-script-app){target="_blank"}
-    - [DXClient Script Application Documentation](../dxclient/dxclient_artifact_types/scriptapplications.md)
-    - [Nex Haven Site Documentation](../../../build_sites/nex_haven.md)
+    - [DXClient Script Application Documentation](./dxclient/dxclient_artifact_types/scriptapplications.md)
+    - [Nex Haven Site Documentation](./../../build_sites/nex_haven.md)
     - [DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}
-    - [Script Application Security](../../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md)
+    - [Script Application Security](./../script_application/script_application_security/access_to_script_app_lib_sitearea/acc_lib.md)

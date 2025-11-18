@@ -172,7 +172,7 @@ Changes to the number of running nodes, the number of pods, or the capacity of i
 Monitor these changes closely to ensure accurate tracking of resource utilization.
 
 !!!note
-     For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md).
+     For more information on OS tuning, web server tuning, JSF best practices, and other performance tuning guidelines and recommendations for traditional deployments, refer to the [Performance Tuning Guide for Traditional Deployments](../../../performance_tuning/traditional_deployments.md).
 
 ### Recommendations
 
@@ -197,4 +197,4 @@ Monitor these changes closely to ensure accurate tracking of resource utilizatio
 To ensure optimal performance and stability of HCL DX on Kubernetes, it is essential for you to configure JVM heap memory and pod resource limits correctly. Refer to the following best practices in the [JVM heap and pod resource guidelines for performance runs](./index.md#jvm-heap-and-pod-resource-guidelines-for-performance-runs) when tuning memory allocation.
 
 ???+ info "Related information"
-    - [Performance Tuning Guide for Traditional Deployments](./traditional_deployments.md) 
+    - [Performance Tuning Guide for Traditional Deployments](../../../performance_tuning/traditional_deployments.md) 
