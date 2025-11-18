@@ -67,7 +67,9 @@ The following table is the list of all trace strings available for HCL Digital E
 |Workflow|-   `com.ibm.workplace.wcm.api.*=finest`<br>-   `com.aptrix.pluto.workflow.*=finest`<br>-   `com.ibm.workplace.wcm.services.workflow.*=finest`|
 
 !!! warning "Warning"
-    Enabling general tracing can cause the server to become unresponsive because it may generate a large amount of log output in a short period of time, rapidly consuming disk space and system resources. To prevent this, always set the log scope as narrowly as necessary for troubleshooting, and disable general tracing as soon as you have collected the required information.
+     Enabling general tracing can cause the server to become unresponsive, as it may generate a large amount of log output in a short period of time, rapidly consuming disk space and system resources. To prevent this, always set the log scope as narrowly as necessary for troubleshooting, and disable general tracing as soon as you have collected the required information.
+     
+     Note: The Kubernetes probe is configured by default to target the server's landing page. To reduce the impact of page loads on your site, you can adjust the [Probes configuration](../../../..//deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or change the landing page to one with a smaller footprint. This helps minimize resource consumption and improves overall site responsiveness during tracing and monitoring.
 
 The resulting traces for Virtual Member Manager are written to the following locations:
 
