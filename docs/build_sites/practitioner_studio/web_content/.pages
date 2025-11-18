@@ -1,5 +1,6 @@
 title: Web content
 nav:
+    - index.md
     - Authoring portlet: site_auth_portlet.md
     - Content Composer: content_composer.md
     - Content Reporting: content_reporting.md
