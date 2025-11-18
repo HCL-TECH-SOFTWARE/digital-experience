@@ -237,32 +237,18 @@ This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes 
 
 ### Implementing OIDC SSO
 
-### Enable SSO between HCL DX and HCL Leap on Kubernetes
-
-This guide explains how to enable single sign-on (SSO) between HCL Digital Experience (DX)and HCL Leap on Kubernetes by using OpenID Connect (OIDC).  
-
-The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/index.md) method connects directly to your preferred identity provider (IdP), such as Keycloak, Azure Active Directory (AD), or Okta.  
-
-By configuring DX and Leap to trust your central IdP, users can sign in once and access both applications securely. Authentication and access control are managed in a single location.  
-
-#### Steps
-
-1. Choose and configure your IdP.
+This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The [OIDC](./../../../deployment/manage/security/people/authentication/oidc/index.md) approach connects directly to your preferred Identity Provider (IdP). By configuring DX and Leap to trust your central IdP, users can sign in once and access both applications securely. Authentication and access control are managed in a single location.
 
 1. Choose and configure your IdP.
 
     1. Create a client registration for each product (DX and Leap). Your IdP will serve as the single point of truth for credential inputs.
 
-    2. (Optional) Customize the IdP access UI. Refer to [IdP Customization and Consideration](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md) for more information.
+    2. (Optional) Customize the IdP access UI. For more information, refer to [IdP Customization and Consideration](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md).
 
 2. Enable OIDC in HCL DX.
 
-    Refer to [Updating WebSphere to support OIDC Authentication for DX](./../../../deployment/manage/security/people/authentication/oidc/dx-update-websphere-for-oidc.md) to enable OIDC on the HCL DX Websphere Application Server.
-1. Create a client registration for each product (DX and Leap). Your IdP serves as the single point of truth for credential input.
+    To enable OIDC on HCL DX using the WebSphere Application Server, refer to [Updating WebSphere to support OIDC Authentication for DX](./../../../deployment/manage/security/people/authentication/oidc/dx-update-websphere-for-oidc.md).
 
-2. (Optional) Customize the IdP access UI. For more information, see [IdP customization and considerations](./../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations.md).
-
-3. Enable OIDC in HCL Leap.
 3. Enable OIDC in HCL Leap.
 
     You can configure Leap to use OIDC as the primary authentication mechanism, making it a relying party (RP) to your IdP. When OIDC is enabled, the user and group lookup features in Leap aren’t available and must be disabled as part of the configuration.
@@ -272,7 +258,7 @@ By configuring DX and Leap to trust your central IdP, users can sign in once and
         As part of the identity provider configuration process, you must create or obtain a digital certificate for HTTPS. Deploy this certificate to Leap so that both servers can communicate securely.
 
         !!! note
-    The SSL certificate (`.crt`) and public key (`.key`) must be in PKCS12 format.
+            The SSL certificate (`.crt`) and public key (`.key`) must be in PKCS12 format.
 
     2. After copying the `.key` and `.crt` to the Kubernetes image, create a secret using the following command:
 
@@ -291,7 +277,7 @@ By configuring DX and Leap to trust your central IdP, users can sign in once and
 
     3. Add the OIDC definition as a server customization in the `values.yaml` file.
 
-        The properties you need to specify depend on your identity provider configuration. For more information, see the [Open Liberty documentation on OIDC](https://openliberty.io/docs/latest/reference/config/openidConnectClient.html){target="_blank"}.
+        The properties you need to specify depend on your identity provider configuration. For more information, refer to the [Open Liberty documentation on OIDC](https://openliberty.io/docs/latest/reference/config/openidConnectClient.html){target="_blank"}.
 
         Before you begin, verify that the discovery endpoint URL (usually ending with `/.well-known/openid-configuration`) is valid by opening it in a browser. Then, update the `values.yaml` file with the client ID and secret that you obtained from your IdP.
 
@@ -330,8 +316,7 @@ By configuring DX and Leap to trust your central IdP, users can sign in once and
         For more details on defining a server customization, refer to [Open Liberty server customizations](https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html){target="_blank"}.
 
         !!!important
-            !!! important
-    The `openIdConnectClient` redirects to `https://<your-domain>/oidcclient/redirect/<unique-oidc-id>` after authentication. Make sure the valid redirect URIs in your IdP include an entry that matches this pattern, and use a different ID than the one you use for DX. You might also need to update your Ingress or Gateway API configuration so that `/oidcclient/redirect/<unique-oidc-id>` redirects to the Leap service.
+            The `openIdConnectClient` redirects to `https://<your-domain>/oidcclient/redirect/<unique-oidc-id>` after authentication. Make sure the valid redirect URIs in your IdP include an entry that matches this pattern, and use a different ID than the one you use for DX. You might also need to update your Ingress or Gateway API configuration so that `/oidcclient/redirect/<unique-oidc-id>` redirects to the Leap service.
 
     4. Add the following config properties related to OIDC in the `values.yaml` file.
 
