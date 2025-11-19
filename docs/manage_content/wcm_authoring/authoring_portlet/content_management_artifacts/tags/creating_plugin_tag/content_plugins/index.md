@@ -20,7 +20,7 @@ Content plug-ins are used with the current content item.
 
     For example:  
 
-    - `[Plugin:CopyText count='1' text='[Element context="autofill" type="content" key="body"]' escape='json']` escapes a Body rich text element to JSON.  
+    - `[Plugin:CopyText count='1' text='[Element context="autofill" type="content" key="body"]' escape='json']` escapes a body rich text element to JSON.  
 
 - **If List Index plug-in**
 
