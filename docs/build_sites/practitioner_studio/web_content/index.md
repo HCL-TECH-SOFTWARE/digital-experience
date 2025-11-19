@@ -11,9 +11,9 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
     Learn how to  to create and manage of DX site content. 
 - [**Content Reporting**](content_reporting.md)<br>
     Learn how to to generate reports and perform bulk updates on content items.
-- [**Preview**](mp_wcm_prevcontent.md)<br>
+- [**Preview**](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
-- [**Managing web content libraries**](web_content_libraries.md)<br>
+- [**Managing web content libraries**](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
 
 ## Digital Assets
