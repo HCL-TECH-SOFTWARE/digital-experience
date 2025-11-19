@@ -4,11 +4,11 @@ HCL Digital Asset Management (DAM) delivers a central platform to store and incl
 
 Follow these steps to install, configure, and use the HCL DX 9.5 DAM features.
 
-- **[Configure HCL Digital Asset Management](./configuration/index.md)**  
+- **[Configure HCL Digital Asset Management](../../manage_content/digital_assets/configuration/index.md)**  
 This section provides steps on how to configure HCL DAM for specific use.
-- **[Usage of HCL Digital Asset Management](./usage/index.md)**  
+- **[Usage of HCL Digital Asset Management](../../manage_content/digital_assets/usage/index.md)**  
 This section provides steps on upload, manage, and modify rich media assets and collections using HCL DAM.
-- **[Operations framework](./operation_framework.md)**  
+- **[Operations framework](../../manage_content/digital_assets/operation_framework.md)**  
 This section describes the operations framework in HCL DAM that allows it to run asynchronous background processes.
 - **[Back up and restore HCL Digital Asset Management](./dam_backup_restore_image.md)**  
 This section provides steps on how to backup and restore for DAM persistence and binaries in a Helm-based deployment.

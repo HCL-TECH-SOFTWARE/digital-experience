@@ -2,10 +2,10 @@
 
 Web Content Libraries help you organize Web Content. Use this section to learn how to create and manage them.
 
-- **[Create a content library](../../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/oob_content_createlib.md)**  
+- **[Create a content library](oob_content_createlib.md)**  
   You use the Administration portlets to create libraries. You can have multiple content libraries. To determine how many libraries you need, consider the type of site you are developing and who needs access to certain content. A minimum of two libraries is common—one for items required for the web content system and another for authoring content.
 
-- **[Set up access to libraries](../../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/oob_content_accesslib.md)**  
+- **[Set up access to libraries](oob_content_accesslib.md)**  
   You can grant and restrict access to libraries in several ways. There are five content roles—User, Contributor, Editor, Manager, and Administrator. Each role has specific access rights. You can associate individual users or groups with a role. There are three levels at which you can assign access: library, item type per library, and item level.
 
 - **[Defining roles within a library](wcm_configure_library_role.md)**  
@@ -25,5 +25,5 @@ Web Content Libraries help you organize Web Content. Use this section to learn h
 
 - **[Setting root access for all web content libraries](wcm_config_library_root_access.md)**  
   Learn how to set root access for all HCL Digital Experience web content libraries using the web content authoring portlet.
-  
+
 - [test](oob_content_accesslib.md)
