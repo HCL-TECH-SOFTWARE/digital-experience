@@ -73,7 +73,6 @@ Content plug-ins are used with the current content item.
     -   Placeholders in the text are replaced with the values of all optional parameters that are specified in the plug-in tag.
     -   From CF09, you can also use the tag alias of `Localize` for this tag. This can be more applicable when you use this tag purely to render localized text. For example: `[Plugin:Localize provider="translated" key="title"]`.
     -   If you intend to use the TextProvider plug-in tag more than once in a component design or presentation template design, you can specify the default text provider name path in one tag:
-
         ```
         [Plugin:TextProvider defaultProvider="library/sitearea/contentitem"]
         ```
@@ -85,7 +84,6 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider key="key1"]
         [Plugin:TextProvider key="key2"]
         [Plugin:TextProvider key="key3"]
-        
         ```
 
         The default provider is applied in all presentation template designs and component designs, including component designs that are included by using the tags, such as a component tag.
@@ -96,13 +94,24 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider defaultProvider=""]
         ```
 
-        For example:
+     **Use Localized Text from Text Providers**
 
+     You can retrieve localized text using the `Localize` plugin:
+     `[Plugin:Localize provider="<provider>" key="<key>" defaultValue="" param.0="" param.1="" param.X=""]` 
+
+     **When No Provider Is Specified**
+
+     If you do not set a provider, the plugin uses the Text Provider associated with the current content item’s title.
+
+     **Set a Default Provider**
+
+     If you use the plugin multiple times, you can set a default provider and omit the `provider` parameter in later calls.
+
+     For example:
         ```
-        [Plugin:Localize provider="[Element key='Text Provider Name' format='id']" key="keyname2"]
+            [Plugin:Localize defaultProvider="library/sitearea/contentitem"]
+            [Plugin:Localize key="keyname1"]
         ```
-
-
 ## Additional information
 
 These topics contain additional information for some of these plug-ins.
