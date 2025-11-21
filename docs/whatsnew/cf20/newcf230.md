@@ -1,4 +1,4 @@
-# What's new in CF230
+# What's new in CF230 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF230 on supported platforms:
 
