@@ -18,6 +18,8 @@ The following features and updates are available to customers installing HCL Dig
 - Additional configuration options for DX Core probes
 - HAProxy custom headers now available
 - Helm values updates
+- IQ chatbot for DX Help Center now available for testing
+- Language switcher for DX Help Center now available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -94,6 +96,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
+
+### IQ chatbot for DX Help Center now available for testing
+
+=== "Containers"
+    The IQ chatbot is now available for testing in the HCL DX Help Center. This chatbot aims to improve searchability in the DX Help Center. To try the chatbot yourself, go to the [HCL DX Help Center test site](https://help.hcl-software.com/digital-experience/9.5/sc-ls-test/){target="_blank"}.
+
+### Language switcher for HCL DX Help Center now available
+
+=== "Containers"
+    You can now translate the HCL DX Help Center in real-time to two additional languages: German and French. To switch languages, click the language switcher dropdown on the top-right corner of any DX Help Center page and select your desired language.
 
 ### WAS, JDK, and iFix versions
 
