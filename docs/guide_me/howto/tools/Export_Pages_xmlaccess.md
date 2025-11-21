@@ -1,4 +1,4 @@
-# How to export a single page individually or export page hierarchies?
+# How to Export a Single Page or a Page Hierarchy
 
 ## Applies to
 >
@@ -6,53 +6,48 @@
 
 ##  Introduction
 
-This guide provides detailed instructions to export a single page individually, excluding any page hierarchies or export the page and also page hierarchies.  
+This article provides step-by-step instructions for exporting a single page or a page hierarchy. You can export pages using the Manage Pages portlet or XMLAccess.  
 
 ## Instructions
 
-It is possible to export a page or page hierarchies by using the **Manage Pages** portlet or **xmlaccess**.  
+You can export a page or a page hierarchy using the Manage Pages portlet or XMLAccess.
 
 ### Option 1: Export via Manage Pages
 
-1. Login to the Portal as an portal administrator. (etc. wpsadmin user)  
-2. In the Portal menu, click to the **Home**- and then to the **Administration**-menu icon.  
-3. On the Administration page click to **Site Management** for navigating to the **Manage Pages**.  
-4. Locate the portal page that you want to export. (Clicking to the **Content Root** link and then go down in the page structure to the page that need to be exported.)  
+1. Sign in to the Portal as a portal administrator (for example, the `wpsadmin` user).  
+2. In the Portal menu, click **Home**, then click the **Administration** menu icon.  
+3. On the Administration page, click **Site Management** to access Manage Pages.  
+4. Locate the portal page you want to export. Navigate through the page structure from the Content Root link to the target page.  
 5. Click **Export** for that page.  
-6. The portlet is asking, if the entire page hierarchy, or only the selected page should be exported. Choose one of the following options:  
-    * Click **Yes** to export the entire page hierarchy.  
-    * Click **No** to export only the selected page.  
-    * Click **Cancel** to stop the export.  
-7. If you selected **Yes** or **No** in the previous step. The portlet opens a pop-up window to save the XML configuration file. Type a file name and select the location where the file should be saved.  
-8. When the export is complete, the portlet will show a success message.  
-9. On the "Download complete" screen, it is possible to click a **Open** button to view the newly saved XML configuration file. Check the content to ensure it does not contain a `<failure>` tag. If the file review should be skipped, close the extra window.  
+6. The portlet prompts you to export either the selected page or the entire page hierarchy. Choose one of the following options:  
+    * **Yes** – Export the entire page hierarchy.  
+    * **No** – Export only the selected page.  
+    * **Cancel** – Stop the export.  
+7. If you select **Yes** or **No**, a pop-up window opens to save the XML configuration file. Enter a file name and select a location.  
+8. When the export completes, the portlet displays a success message.  
+9. On the "Download complete" screen, you can click **Open** to view the saved XML file. Verify that it does not contain a `<failure>` tag. If review is skipped, close the window.  
 
 !!!note
-    For more information, please read:  
-    [Exporting pages or page hierarchies by using the Manage Pages portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_exp.md){target="_blank"}  
-    [Using XML Access to export and import Portal pages](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0075798){target="_blank"}  
+    For more information, see:  
+    [Exporting pages or page hierarchies using the Manage Pages portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_exp.md){target="_blank"}  
+    [Using XMLAccess to export and import Portal pages](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0075798){target="_blank"}  
 
 ### Option 2: Export via XMLAccess
 
-It is possible to use **XMLAccess** to export pages. Sample XML configuration files are located in `<PortalServer_root>/doc/xml-samples`.
+You can use XMLAccess to export pages. Sample XML configuration files are located in `<PortalServer_root>/doc/xml-samples`.
 
-For example, to use **ExportPage.xml**, the following procedure can be used:  
+To export a page using **ExportPage.xml**, follow these steps:
 
-1. Navigate to the location `<PortalServer_root>/doc/xml-samples`.
+1. Navigate to the `<PortalServer_root>/doc/xml-samples` directory:
 
-    For example:
+    ```bash
+    cd /opt/HCL/PortalServer/doc/xml-samples
+    ```
 
-     ```bash
-     cd /opt/HCL/PortalServer/doc/xml-samples
-     ```
-
-2. Do a copy (duplication) of the **ExportPage.xml** file (etc. **ExportPage1.xml**)
-
-3. Open the new file (etc. **ExportPage1.xml**) with an editor. 
-
-4. In the new file (etc. **ExportPage1.xml**), replace the default content `uniquename="ibm.portal.ssa.SamplePage"` with the unique name of the page that should be exported.  
-
-5. Run the following `xmlaccess` command to export the page:  
+2. Copy the **ExportPage.xml** file (for example, as ExportPage1.xml).  
+3. Open the copied file (**ExportPage1.xml**) in a text editor.  
+4. Replace the default content `uniquename="ibm.portal.ssa.SamplePage"` with the unique name of the page you want to export.  
+5. Run the following command to export the page:
 
     ```bash
     cd /opt/HCL/wp_profile/PortalServer/bin
@@ -60,29 +55,31 @@ For example, to use **ExportPage.xml**, the following procedure can be used:
     ```
 
     !!!note
-        Replace the tags `<your_username>, <your_password>, <ipAddress>, <port>, <your_input_file> and <your_result>` with your own values.  
-        For example:  
-        `./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /opt/HCLPortalServer/doc/xml-samples/ExportPage1.xml -out /tmp/result.xml`  
-        Best practice is to place the **result.xml** in a temporary, easily accessible location.  
-
-6. Import the `xmlaccess` output using a command.
-
-    * **Command:**  
-
+        Replace `<your_username>`, `<your_password>`, `<ipAddress>`, `<port>`, `<your_input_file>`, and `<your_result>` with your values.  
+        Example:  
         ```bash
-        ./xmlaccess.sh -user <your_username> -password <your_password> -url http://<ipAddress>:<port>/wps/config/ -in /tmp/<your_input_file>.xml -out <your_result>.xml
-        ```
+        ./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /opt/HCLPortalServer/doc/xml-samples/ExportPage1.xml -out /tmp/result.xml
+        ```  
+        Best practice: save the result.xmlin a temporary, easily accessible location.  
 
-        !!!note
-            Replace the tags `<your_username>, <your_password>, <ipAddress>, <port>, <your_input_file> and <your_result>` with your own values.  
-            For example:  
-            `./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /tmp/importFile.xml -out result_import.xml`  
+6. Import the XMLAccess output using the following command:
+
+    ```bash
+    ./xmlaccess.sh -user <your_username> -password <your_password> -url http://<ipAddress>:<port>/wps/config/ -in /tmp/<your_input_file>.xml -out <your_result>.xml
+    ```
+
+    !!!note
+        Replace `<your_username>`, `<your_password>`, `<ipAddress>`, `<port>`, `<your_input_file>`, and `<your_result>` with your values.  
+        Example:  
+        ```bash
+        ./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /tmp/importFile.xml -out result_import.xml
+        ```  
 
     * **or using the XML Import portlet:**  
 
         [Importing pages or page hierarchies by using the XML Import portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md){target="_blank"}  
 
-7. Verify the imported page's in the **Manage Page** portlet to confirm the result.
+7. Verify the imported page's in the **Manage Page portlet to confirm the result.
 
 If it is preferred to export a page hierarchy, use the `ExportSubTree.xml` sample for exporting subtree of the content hierarchy. This script exports the page customizer place with all contained pages.
 
