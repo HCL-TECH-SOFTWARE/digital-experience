@@ -137,7 +137,7 @@ For naming purposes this process calls the system that you are copying from, the
         You must also set up syndication between your source system virtual portals and the target system virtual portals. If managed pages are disabled, the libraries are shared across virtual portals.
 
 3. **Set Library Permissions:**
-    After the initial syndication run, manually set up the library permissions, as they are not syndicated.
+    After the initial syndication run, manually configure the library permissions because they are not syndicated automatically.
 
 4. **Regenerate Web Server Plugin (Optional):**
     If you have a web server, regenerate and propagate the web server plugin configuration.
