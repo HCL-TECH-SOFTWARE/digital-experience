@@ -1,4 +1,4 @@
-# A Step-by-Step guide to installing HCL DX 9.5 standalone in Linux
+# AHow to install HCL DX 9.5 standalone on Linux
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This guide provides step-by-step information for the setup and installation of a standalone HCL Digital Experience 9.5 environment in Linux using IBM® Installation Manager in console mode.
+This iarticle provides step-by-step instructions for setting up and installing a standalone HCL® Digital Experience 9.5 environment on Linux using IBM® Installation Manager in console mode.
 
 ### Overview
 
@@ -18,7 +18,7 @@ This guide provides step-by-step information for the setup and installation of a
 [VI. Install HCL Digital Experience v9.5](#vi-install-hcl-digital-experience-version-95)  
 
 !!!note  
-    A working installation of IBM® WebSphere® Application Server is required. Ensure that it is not used by another copy of HCL® Digital Experience. Before you install the HCL® Digital Experience package, install IBM® WebSphere SDK Java Technology Edition into the same directory where IBM® WebSphere Application Server is installed. The SDK Java version must be v8.0.3 or later.  
+    A working installation of IBM® WebSphere® Application Server is required. Make sure it is not being used by another instance of HCL® Digital Experience. Before installing the HCL® Digital Experience package, install IBM® WebSphere SDK Java Technology Edition in the same directory as IBM® WebSphere Application Server. The SDK Java version must be 8.0.3 or later.  
 
 **For a fresh full installation, follow this recommended installation path:**  
 
@@ -49,7 +49,7 @@ This guide provides step-by-step information for the setup and installation of a
 
 Before you install HCL® Digital Experience, you must review the hardware and software requirements to ensure you have the supported versions of prerequisite and corequisite software, as well as the necessary hardware.  
 
-Preparing your operating system for Installation  
+#### Preparing your operating system for Installation  
 
 [AIX: Preparing your operating system](../../../deployment/install/traditional/installing_dx/aix/prep_os-AIX.md){target="_blank"}  
 
@@ -64,9 +64,7 @@ Product software can be obtained from the [My HCLSoftware](https://my.hcltechsw.
 Additional guidance is available here: [Locating and Downloading DX Products](../../tutorials/access-software/locating-downloads.md){target="_blank"}  
 
 !!!note
-    There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.  
-
-Example package names for the different Portal 9.5 offerings are:  
+   There are several Portal 9.5 offerings. Your license determines which offerings appear as available to download. Example package names for the different Portal 9.5 offerings:  
 
 - HCL® Portal Express v9.5 Multiplatform  
 - HCL® Portal Server v9.5 Multiplatform  
@@ -74,7 +72,7 @@ Example package names for the different Portal 9.5 offerings are:
 - HCL® Portal Extend v9.5 Multiplatform  
 
 !!!note
-    The files above contain Installation Manager, WebSphere Application Server, Digital Experience and JDK. You also need to download the latest available Cumulative Fix (CF) in the My HCLSoftware to complete the software required to install Portal 9.5. Please check [Fixes integrated in ® Digital Experience 8.5.0.0, 9.0 and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.  
+    The files above include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the JDK. You must also download the latest Cumulative Fix (CF) from My HCLSoftware to complete the software required to install Portal 9.5. Please check [Fixes integrated in ® Digital Experience 8.5.0.0, 9.0 and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.  
 
 In My HCLSoftware, download the complete package for your chosen offering.  
 
@@ -105,7 +103,7 @@ In this guide, the offering **HCL® Portal Extend v9.5 Multiplatform** will be u
 
 **Preparing the files for Install**  
 
-Once you have the parts downloaded, create a parent folder wherein the files are to be extracted. You can name it as `SETUP` and extract the zip files to the created parent folder. As shown in the example below:
+After downloading the files, create a parent folder for extraction. Name the folder SETUP, and extract the ZIP files into it. For example:
 
 ![alt text](Images/image1.png)
 
@@ -113,7 +111,7 @@ Once you have the parts downloaded, create a parent folder wherein the files are
 
 ### Section 1 - Installing IBM® Installation Manager
 
-The IBM® Installation Manager (IIM) is a tool that you can use to install and maintain your software packages. Wizards guide you through the steps that you must take to install, modify, update, roll back, or uninstall your IBM® or HCL® products. In this guide the Installation Manager console mode will be used to install the Software.  
+The IBM® Installation Manager (IIM) is a tool for installing and maintaining software packages. Wizards guide you through the steps to install, modify, update, roll back, or uninstall your IBM® or HCL® products. This guide uses the Installation Manager console mode to install the software.  
 
 1. Open a terminal window and run:  
    `ping <hostname>`  
@@ -121,14 +119,14 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
 2. In the same terminal window, run:  
    `ping localhost`  
-   (to verify that the localhost settings are properly configured on your server.)  
+   This verifies that the localhost settings are properly configured on your server. 
 
 3. Linux/UNIX environments only:  
    Ensure ulimit is set to 10240 or higher by running the command:  
    `ulimit -n 10240`  
    in the command line.  
 
-4. Navigate to the `SETUP/IIM/<yourEnvironment>` folder. Where <yourEnvironment\> is the folder that best describes the operating system of the environment in which you are installing HCL® Digital Experience. For this guide the following is used: `SETUP/IIM/linux_x86_64`  
+4. Navigate to the SETUP/IIM/<yourEnvironment> folder. Replace <yourEnvironment> with the folder that matches your operating system. For this guide, use: `SETUP/IIM/linux_x86_64`  
 
 5. Install IBM® Installation Manager silently
 
@@ -196,7 +194,7 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
     ![alt text](Images/image7.png)  
 
-9. Review the packages that are going to be installed. Select Next, then select Install option and Finish.  
+9.Review the packages to be installed. Select **Next**, then select **Install**, and finally select **Finish**.
 
     ![alt text](Images/image8.png)  
 
@@ -204,7 +202,7 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
 ### IV. Installing HCL® Portal (WebSphere Portal) 8.5 Binaries and interim fix PI59896
 
-1. In the Preferences > Repositories, select option `R` (Restore Defaults) to remove the previous repositories.  
+1. In **Preferences > Repositories**, select option `R` (Restore Defaults) to remove the previous repositories.
 
 2. Add the repositories:  
 
@@ -232,7 +230,7 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
     ![alt text](Images/image11.png)
 
-5. Enter the user id and password for the ConfigWizard admin user. The user is used to access the configuration wizard, when additional configuration steps are needed later, after installation. For example when it is planed to do a database transfer or cluster creation, etc.
+5. Enter the user ID and password for the ConfigWizard admin user. This user is required to access the configuration wizard for additional tasks after installation, such as performing a database transfer or creating a cluster.
 
     ![alt text](Images/image12.png)
 
@@ -298,7 +296,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     ![alt text](Images/image21.png)
 
-11. Select Finish
+11. Select **Finish**
 
     At this point ONLY the Portal binaries have been updated to the latest CF. The Console only manages the binaries. It is also need to run a Portal script to upgrade the profile.
 
@@ -368,7 +366,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     ![alt text](Images/image30.png)
 
-7. When the installation is finished, you should now be able to verify that you can access your Portal in an internet browser by navigating to:  
+7. When the installation is complete, verify that you can access your Portal in an internet browser by navigating to:  
 
     `http://myportal.hcl.com:10039/wps/portal`  
 
