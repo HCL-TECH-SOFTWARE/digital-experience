@@ -6,22 +6,38 @@
 
 ##  Introduction
 
-For naming purposes this process calls the system that you are copying from, the "source" system and the system you are copying to, the "target" system.
+For naming purposes, this process refers to the system you are copying from as the “source” system and the system you are copying to as the “target” system.
 
 ## Instructions
 
-1. **Install/Upgrade Target Portal:**
-    Install or upgrade the target Portal to the same precise level as the source system.  Also upgrade the target to the WAS level of the source system. This step could include clustering if needed (you can also still cluster later). Basically, the target and source should have exactly the same Portal and WAS level and preferably be at the latest of both. It should also be noted that the target Portal should have a profile (and not just the Binaries) installed.
+1. ## Install or Upgrade the Target Portal
 
-2. **Configure Security:**
-    Configure security on the target Portal. This may involve using a different user repository from the source.
+- nstall or upgrade the target Portal to the same level as the source system.
+- Upgrade the target WebSphere Application Server (WAS) to match the source system.
+- If clustering is required, configure it now or later.
+- Ensure that the target Portal includes a profile and not just the binaries.
+- Both environments should run the same Portal and WAS versions, preferably at the latest levels.
 
-3. **Perform DBTransfer:**
-    DBTransfer to DB2, Oracle or SQLServer on the target Portal. The target could also be "Derby" if the target is a development system.
+## Configure Security
 
-4. **Install Extensions (if applicable):**
-    * **WCM Multilingual Extensions:** If needed, install these extensions. For Portal 8.5 and later, MLS is automatically installed, and you only need to run the configuration tasks.
-    * **Content Template Catalog (CTC):** Install the same version of CTC as on your source system.
+- Configure security on the target Portal.
+- You may use a different user repository than the source system.
+
+## Perform DBTransfer
+
+- Run DBTransfer on the target Portal to DB2, Oracle, or SQL Server.
+- If the target environment is for development, you may use Derby.
+
+## Install Extensions (If Applicable)
+
+### WCM Multilingual Extensions
+
+- Install these extensions if needed.
+- For Portal 8.5 and later, MLS is installed automatically; run only the configuration tasks.
+
+### Content Template Catalog (CTC)
+
+- Install the same CTC version that is installed on your source system.
 
 ## Exporting from the Source Portal
 
