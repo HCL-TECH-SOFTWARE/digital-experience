@@ -17,6 +17,7 @@ This topic details the database versions and platforms tested and supported by s
 |Oracle Database 21c|21c and later maintenance releases|9.5|
 |Oracle on Amazon Relational Database Service|12.2.0.1.0 and later maintenance releases|9.5|
 |Oracle on Amazon Relational Database Service|21c and later maintenance releases|9.5|
+|SQL Server on Amazon Relational Database Service|2022 and later maintenance releases|9.5|
 
 **Notes:**
 
