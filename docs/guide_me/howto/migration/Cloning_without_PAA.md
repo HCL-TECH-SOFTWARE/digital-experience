@@ -134,7 +134,7 @@ For naming purposes this process calls the system that you are copying from, the
     Set up syndication for the appropriate libraries between the source and target systems. This includes the Multi-Lingual configuration library.
 
     !!!note
-        You will need to set-up syndication as well between your source system virtual Portals to the target system virtual Portals (unless you have managed pages disabled - then the libraries are shared across virtual Portals).
+        You must also set up syndication between your source system virtual portals and the target system virtual portals. If managed pages are disabled, the libraries are shared across virtual portals.
 
 3. **Set Library Permissions:**
     After the initial syndication run, manually set up the library permissions, as they are not syndicated.
