@@ -177,22 +177,28 @@ Use the following command to [manage virtual portal](../dxclient/dxclient_artifa
 dxclient manage-virtual-portal [options]
 ```
 
-Use the following command to register subscriber:
+Use the following command to [register subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
 
 ```bash
 dxclient manage-dam-staging register-dam-subscriber [options]
 ```
 
-Use the following command to deregister subscriber:
+Use the following command to [deregister subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
 
 ```bash
 dxclient manage-dam-staging deregister-dam-subscriber  [options]
 ```
 
-Use the following command to trigger manual sync:
+Use the following command to trigger [manual sync](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
 
 ```bash
 dxclient manage-dam-staging trigger-staging  [options]
+```
+
+Use the following command to [update secrets](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
+
+```bash
+dxclient manage-dam-staging update-secrets  [options]
 ```
 
 Use the following command to create [credential vault](../dxclient/dxclient_artifact_types/credentialvaultslot.md) slot in the DX server:
@@ -237,7 +243,7 @@ Use this command to [import the translated content into DX](../dxclient/dxclient
 dxclient mls-import
 ```
 
-Use the `dx-core-configuration-reports` command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
+Use the [dx-core-configuration-reports](../dxclient/dxclient_artifact_types/dxcoreserver.md) command to get a summary of the configurations of a single DX server or both source and target DX servers, which users can use to compare.
 
 ```bash
 dxclient dx-core-configuration-reports [OPTIONS]

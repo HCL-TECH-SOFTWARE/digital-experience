@@ -205,6 +205,10 @@ There are three options to deploy a portlet into a target HCL DX server.
 
 10. Create a DX page and add the portlets deployed using the WAR file.
 
+!!! warning "Script Application Imports on Windows"
+    For Windows users encountering issues with script application imports, it is recommended to use DXClient for importing script applications. The use of the WEF tool for this purpose is currently under review.
+
 ### Import the exported WAR file using DXClient
 
 The HCL DXClient tool can also be used to import portlet WAR files to target Digital Experience Servers. Refer to the [DX Portlet Deploy](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md#deploy-portlets) Help Center topic to import the portlet WAR file using DXClient tool.
+
