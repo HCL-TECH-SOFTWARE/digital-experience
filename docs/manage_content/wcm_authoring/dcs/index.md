@@ -20,6 +20,8 @@ Beginning with Digital Experience 95 CF205 release, Oracle DCS service for Digit
 To balance processing power, you can run document conversion services on a remote IBM WebSphere Application Server that supports document conversion services. Enabling the delegation of document conversion services to a remote server requires steps on both HCL Digital Experience and the remote server.
 -   **[Files conversion supported by DCS](dcs_view_html.md)**  
 View a list of file types that are supported by DCS for conversion.
+-   **[Limitation for Authoring Search](../../../build_sites/search_v2_authoring/limitations.md)**  
+View a list of limitations for the authoring search.
 
 
 ???+ info "Related information"  

@@ -6,6 +6,12 @@ Take note of the following limitations when using Search V2 Authoring:
 
 - Advanced search filters are not currently supported.
 
+### Content and Indexing
+
+- Currently, the **authoring search** feature of **Document Conversion Services** only supports **JCR content**.
+
+- It does not support content stored in the **Digital Asset Management (DAM)** repository.
+
 ## Basic Actions
 
 - Currently, only Edit, Read, and Preview actions are available for search result items.
