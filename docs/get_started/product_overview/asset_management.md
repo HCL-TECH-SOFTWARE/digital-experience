@@ -6,9 +6,27 @@ tags:
 hide: tags
 ---
 
-# Digital Asset Management (DAM)
+# Digital Asset Management
 
-HCL DX provides integrated digital asset management services, which are targeted at managing web-ready digital assets such as images or videos for use in content and sites built with HCL DX.
+The Digital Asset Management (DAM) feature of HCL Digital Experience (DX) helps you centrally organize, share, and control all your digital assets. Use these assets in any UI design, content, sites, applications, or emails. DAM enables you to reduce costs, accelerate team workflows, and build content consistency.
+
+View the demonstration of the HCL DX DAM features and capabilities:
+
+<div>
+<script async src="https://js.storylane.io/js/v2/storylane.js">
+</script>
+<div class="sl-embed" style="position:relative;padding-bottom:calc(57.07% + 25px);width:100%;height:0;transform:scale(1)">
+<iframe loading="lazy" class="sl-demo" src="https://hclsoftware.storylane.io/demo/d6h8zcuwv68v?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;">
+</iframe>
+</div>
+</div>
+
+You can also view this demo in other languages:
+
+- [French](https://hclsoftware.storylane.io/share/ifjmbab9jtjd){target="_blank"}
+- [German](https://hclsoftware.storylane.io/share/tmjuenicjgc2){target="_blank"}
+- [Italian](https://hclsoftware.storylane.io/share/bvotjblgynon){target="_blank"}
+- [Spanish](https://hclsoftware.storylane.io/share/6czrapx0cudz){target="_blank"}
 
 ## Content organization and access
 

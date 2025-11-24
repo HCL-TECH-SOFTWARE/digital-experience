@@ -1,7 +1,7 @@
 # Configuration Sharing for co-deployments
 
 !!!warning
-    The Configuration Sharing feature is currently in **incubator** status and is **not ready for production-use**. Features in the incubator phase are experimental, subject to change, and intended for evaluation and feedback only. For more information, refer to [Experimental Features](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
+    The Configuration Sharing feature is currently in **Incubator** status and is **not ready for production use**. This feature is experimental, subject to change, and intended for information and evaluation. For more information, refer to [Experimental Features](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md). 
 
 This guide explains how you can use the standardized Configuration Sharing feature between HCL products such as HCL Digital Experience (DX), HCL Leap, and Volt MX Foundry (MX) deployed within the same Kubernetes namespace. This feature simplifies integration, reduces manual configuration, and creates a single source of truth for common settings.
 
@@ -24,11 +24,12 @@ The process is managed automatically by the products' Helm charts once the featu
 
     - The Secret follows a strict, well-known naming convention: `<product-name>-shared-config-v<major>`.
     - For example, HCL DX creates a Secret named `dx-shared-config-v1`.
-    - The major version (`v1`) only increments if there are important changes to the configuration schema.
-    - The Secret contains integration-critical settings, such as Lightweight Third-Party Authentication (LTPA) and Secure Sockets Layer (SSL) configurations, provided by the DX Core and WebEngine components.
+    - The major version (`v1`) only increments if there are breaking changes to the configuration schema.
+    - The Secret contains integration-critical settings, such as Lightweight Third-Party Authentication (LTPA) and Secure Sockets Layer (SSL) configurations, provided by the DX Core and WebEngine components. For custom Secrets, only the Secret's name is shared. Each consumer product independently looks up the actual custom Secret.
+    - The shared Secret will be recreated during a Helm upgrade if the values setting the configuration values within it have changed (for example, a password update).
 
         !!!note
-            The data in the Secret is labeled (for example, `core.ltpa`, `webengine.ltpa`) to prevent configuration conflicts between components.
+            The data in the Secret is labeled (for example, `core.ltpa`, `webengine.ltpa`) to prevent configuration conflicts between components. The shared Secret does not decode any other secrets. It is a fresh secret containing information from the producer's Helm `values.yaml` file.
 
 2. The consumer uses the shared Secret.
 
@@ -60,7 +61,7 @@ The entire mechanism is controlled via feature flags in your product's Helm `val
     ```yaml
     consumeSharedConfigs:
         - name: dx-shared-config  # The name of the producer's shared secret
-        version: v1            # The version of the schema it expects
+          version: v1            # The version of the schema it expects
     ```
 
     Alternatively, you can specify a `version` range the consumer is compatible with:
@@ -68,7 +69,7 @@ The entire mechanism is controlled via feature flags in your product's Helm `val
     ```yaml
     consumeSharedConfigs:
         - name: dx-shared-config
-        version: 
+          version: 
             min: v1
             max: v2
     ```

@@ -2,14 +2,29 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+### CF232
+
 ### CF231
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| configuration.digitalAssetManagement.newDbManagement | false |
+| configuration.persistence.databaseName | dxmediadb |
+| incubator.enableConfigurationSharing | false |
 
 **Removed Keys:**
 
 | Key |
 |-----|
-| configuration.digitalAssetManagement.enableCollectionMove |
 | configuration.digitalAssetManagement.enableAssetMoveRename |
+| configuration.digitalAssetManagement.enableCollectionMove |
+| incubator.configuration.digitalAssetManagement.newDbManagement |
+
+**Changed Values:**
+
+None
 
 ### CF230
 

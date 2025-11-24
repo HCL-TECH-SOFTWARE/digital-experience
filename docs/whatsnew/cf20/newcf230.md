@@ -1,9 +1,10 @@
-# What's new in CF230
+# What's new in CF230 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF230 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Blueprint updates
 - My HCLSoftware delivery portal
 - DXClient - New `xmlAccessOutputFileName` parameter added
 - Presentation Designer - Handle multiple stylesheet components
@@ -31,6 +32,14 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+=== "On-Premises"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -99,7 +108,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf230).
 
 ### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 
@@ -130,18 +139,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Woodburn Studio demo site (9.5)
 
 === "Containers"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
