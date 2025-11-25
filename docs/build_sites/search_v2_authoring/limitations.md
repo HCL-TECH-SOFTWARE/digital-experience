@@ -8,9 +8,9 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ### Content and Indexing
 
-- Currently, the **authoring search** feature of **Document Conversion Services** only supports **JCR content**.
+- Currently, the Authoring Search feature of Document Conversion Services only supports JCR content.
 
-- It does not support content stored in the **Digital Asset Management (DAM)** repository.
+- It does not support content stored in the Digital Asset Management (DAM) repository.
 
 ## Basic Actions
 
