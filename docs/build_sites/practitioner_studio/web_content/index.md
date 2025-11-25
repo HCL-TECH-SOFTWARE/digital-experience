@@ -22,7 +22,6 @@ The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform
 ## Site Templates
 Create [site templates](../site_templates.md) or section templates for use with HCL Digital Experience (DX).
 
-## 
 
 ## HCLSoftware U learning materials
 
