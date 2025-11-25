@@ -2,7 +2,7 @@
 
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
-!!! warning "Deprecated Parameters (CF221+)"
+!!! warning "Deprecated parameters (CF221+)"
     Starting from CF221, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are deprecated and should no longer be used in DAM staging commands.
 
 ## Differences between DAM staging and WCM syndication

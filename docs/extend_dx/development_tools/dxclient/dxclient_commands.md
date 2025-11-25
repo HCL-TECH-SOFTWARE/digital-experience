@@ -177,25 +177,25 @@ Use the following command to [manage virtual portal](../dxclient/dxclient_artifa
 dxclient manage-virtual-portal [options]
 ```
 
-Use the following command to [register subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
+Use the following command to [register subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#registering-for-dam-staging):
 
 ```bash
 dxclient manage-dam-staging register-dam-subscriber [options]
 ```
 
-Use the following command to [deregister subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
+Use the following command to [deregister subscriber](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#deregistering-for-dam-staging):
 
 ```bash
 dxclient manage-dam-staging deregister-dam-subscriber  [options]
 ```
 
-Use the following command to trigger [manual sync](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
+Use the following command to trigger [manual sync](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#managing-dam-staging):
 
 ```bash
 dxclient manage-dam-staging trigger-staging  [options]
 ```
 
-Use the following command to [update secrets](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md):
+Use the following command to [update secrets](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#updating-secrets-for-dam-staging):
 
 ```bash
 dxclient manage-dam-staging update-secrets  [options]

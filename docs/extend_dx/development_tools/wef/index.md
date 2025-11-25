@@ -20,6 +20,7 @@ Along with the release of HCL Digital Experience CF205, HCL has released an upda
 5. **Upgrading to HCL Web Experience Factory v8.5.1**: We recommend developers install HCL Web Experience Factory v8.5.1 as a fresh installation and migrate existing portlets developed using previous releases of Web Experience Factory following the steps below.
 
 For more information abou the latest HCL Web Experience Factory updates, refer to the following documentation:
+
 - [HCL Web Experience Factory Knowledge Base articles and technotes](https://support.hcltechsw.com/csm?id=kb_search&spa=1&language=en,ja&query=web%20experience%20factory)
 - [HCL Web Experience Factory Support Statements](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013647)
 
@@ -35,22 +36,22 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
 2. Unzip the downloaded `hcl-dx-wef-v8.5.1_2022XXXX.zip` file. The extracted file components contains:
 
-    -   A `win` folder for Windows platform
-    -   A `linux` folder for Linux platform
-    -   A ReadMe Textfile for instructions to run the software once installed.
+    - A `win` folder for Windows platform
+    - A `linux` folder for Linux platform
+    - A ReadMe Textfile for instructions to run the software once installed.
 
 3. Download or use any JDK or JRE v8 installed to your local machine.
 
 4. Navigate to the installed path:
 
-    -   For Windows platforms: From a command prompt, navigate to your `WEF-8.5.1/win` folder.
-    -   For Linux Platforms: From a terminal, navigate to your `WEF-8.5.1/linux` folder.
+    - For Windows platforms: From a command prompt, navigate to your `WEF-8.5.1/win` folder.
+    - For Linux Platforms: From a terminal, navigate to your `WEF-8.5.1/linux` folder.
 
 5. Run the script to replace `Variables` in `link` and `ini` files with Path strings.
 
-    -   For Windows platforms: From the command prompt, run the `run.bat` command.
+    - For Windows platforms: From the command prompt, run the `run.bat` command.
 
-    -   For Linux Platforms: From the terminal run the `sh run.sh` command. 
+    - For Linux Platforms: From the terminal run the `sh run.sh` command. 
     
         If successful, it prints the following message: 
         
@@ -60,7 +61,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
 6. (Optional) Update the `eclipse.ini` file.
 
-    -   For Windows platforms: Navigate to `WEF-8.5.1/win/eclipse`. Add the following as shown below:
+    - For Windows platforms: Navigate to `WEF-8.5.1/win/eclipse`. Add the following as shown below:
 
         ```
         -vm jre8-path\bin\javaw.exe
@@ -68,7 +69,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
         ![Update eclipse.ini file](../wef/_img/Update_eclipse.ini.png)
 
-    -   For Linux Platforms: Navigate to `WEF-8.5.1/linux/eclipse`. Add the following as shown below:
+    - For Linux Platforms: Navigate to `WEF-8.5.1/linux/eclipse`. Add the following as shown below:
 
         ```
         Copied to clipboard-vm jre8-path/bin
@@ -83,7 +84,7 @@ For more information abou the latest HCL Web Experience Factory updates, refer t
 
 8. After initial deployment, go to **Window > Open Perspective > Web Experience Factory** to change the IDE perspective.
 
-9.  Select **File > New Project > Web Experience Factory Project** to create a new Web Experience Factory project. Add tutorials as desired.
+9. Select **File > New Project > Web Experience Factory Project** to create a new Web Experience Factory project. Add tutorials as desired.
 
 10. Deploy/Publish it to HCL Digital Experience server directly or by using DXClient.
 
@@ -114,7 +115,7 @@ To work with portlets created with Web Experience Factory releases prior to V8.5
     "Workspace '<old-workspace-path>' was written with an older version of the product and will be updated. Updating the workspace can make it incompatiable with older versions of the product. Are you sure you want to continue with this workspace?"
     ```
 
-  The alert message is displayed because the Eclipse version is upgraded during the HCL Web Experience Factory 8.5.1 installation. It does not corrupt your workspace. Click OK to continue. This opens all the applications in the latest WEF v8.5.1 perspective but with errors thrown for the project version.
+    The alert message is displayed because the Eclipse version is upgraded during the HCL Web Experience Factory 8.5.1 installation. It does not corrupt your workspace. Click OK to continue. This opens all the applications in the latest WEF v8.5.1 perspective but with errors thrown for the project version.
 
 4. Go to **Window > Preferences > Java > Installed JREs**.
 
@@ -133,7 +134,7 @@ To work with portlets created with Web Experience Factory releases prior to V8.5
 
 2. Execute the keytool to import the certificates into the Java keystore of the current JRE that runs the HCL WEF v8.5.1 Designer (The keytool is pre-installed with Java. If unavailable, install it separately).
 
-    -   For Windows platforms:
+    - For Windows platforms:
 
         ```
         keytool.exe -import -trustcacerts -alias <alias-name> -file <path-to-the-certificate-file> -keystore <keystore> -storepass <password>
@@ -144,7 +145,7 @@ To work with portlets created with Web Experience Factory releases prior to V8.5
         keytool.exe -import -trustcacerts -alias default -file C:\Downloads\mylocal.der -keystore cacerts -storepass changeit
         ```
 
-    -   For Linux platforms:
+    - For Linux platforms:
 
         ```
         keytool -import -trustcacerts -alias <alias-name> -file <path-to-the-certificate-file> -keystore <keystore> -storepass <password>
@@ -180,7 +181,7 @@ There are three options to deploy a portlet into a target HCL DX server.
     ```
     Would you like to publish your project now? 
     ```
-    
+
     Click **Yes** to continue.
 
 ### Export and import through the DX Administration interface
@@ -206,9 +207,8 @@ There are three options to deploy a portlet into a target HCL DX server.
 10. Create a DX page and add the portlets deployed using the WAR file.
 
 !!! warning "Script Application Imports on Windows"
-    For Windows users encountering issues with script application imports, it is recommended to use DXClient for importing script applications. The use of the WEF tool for this purpose is currently under review.
+    Windows users encountering issues importing script applications should use DXClient for the import process. The use of the WEF tool for this purpose is currently under review.
 
 ### Import the exported WAR file using DXClient
 
 The HCL DXClient tool can also be used to import portlet WAR files to target Digital Experience Servers. Refer to the [DX Portlet Deploy](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/portlets.md#deploy-portlets) Help Center topic to import the portlet WAR file using DXClient tool.
-
