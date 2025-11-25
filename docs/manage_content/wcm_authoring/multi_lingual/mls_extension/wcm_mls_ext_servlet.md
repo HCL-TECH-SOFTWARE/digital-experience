@@ -11,8 +11,7 @@ This extension enables navigation between equivalent published content in differ
 
 To add localized rendering links to content items, reference the JSP component ML Configuration/JSP – ML Locale Nav either in the associated presentation template or in a component or element that is also referenced in the template.
 
-!!! tip
-    - See [Easily manage translated web content text with parameters](https://developer.ds.hcl-software.com/t/easily-manage-translated-web-content-text-with-parameters/172210){target="_blank"} if you want to manage multilingual text in your design.
+See [Easily manage translated web content text with parameters](https://developer.ds.hcl-software.com/t/easily-manage-translated-web-content-text-with-parameters/172210){target="_blank"} if you want to manage multilingual text in your design.
 
     
 ## How it works
