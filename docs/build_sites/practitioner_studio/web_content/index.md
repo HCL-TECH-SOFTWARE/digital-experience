@@ -20,7 +20,7 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
 The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform for storing and managing rich media assets, enabling engaging and consistently branded experiences across digital channels in HCL DX.
 
 ## Site Templates
-create [site templates](../site_templates.md) or section templates for use with HCL Digital Experience (DX).
+Create [site templates](../site_templates.md) or section templates for use with HCL Digital Experience (DX).
 
 ## 
 
