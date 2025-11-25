@@ -13,12 +13,6 @@ It is not recommended to use Woodburn Studio for anything but a demo site. Woodb
 
 The Woodburn Studio demo site has a home page and several other microsites with one or more pages. Many of the elements are reused across the demo site, and they are styled for the page on which they appear.
 
-<!--## Working with Woodburn Studio
-
-Woodburn Studio is not deployed by default.
-
-You can deploy, configure, and disable Woodburn Studio the same way you deploy Practitioner Studio. Go to [Working with Practitioner Studio](../practitioner_studio/working_with_ps/index.md) for more information.-->
-
 !!! note
     Upon initial deployment, the HCL Digital Experience search indexes are not yet built. Therefore, search will not yield results for pages and content in the Woodburn Studio demonstration site until the search indexing services have run the first time. This will automatically occur with 24 hours of the initial deployment of DX.
 
@@ -39,7 +33,6 @@ Go to [Configuring a crawler to search your local portal site](../search/searchi
 
 -   **[Filtering the results of a WCM Navigator Component](woodburn_studio_filtering_WCM.md)**  
 This document shows how to filter navigator component results and uses the Woodburn Studio site as an example of when this type of filtering might be needed.
--   **[Preventing automatic update of Woodburn Studio pages](../woodburn_studio/update_pages_optional.md)** 
 
 
 
