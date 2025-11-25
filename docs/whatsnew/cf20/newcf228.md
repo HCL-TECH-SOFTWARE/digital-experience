@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - DAM - New parameter for bulk upload warning
+- New How-to articles now available
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 - WAS, JDK, and iFix versions
@@ -78,6 +79,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now configure a warning to appear if the number of rich media assets intended for bulk upload exceeds a certain limit using the `maxBulkUploadWithoutWarning` parameter. You can configure this parameter in Helm. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from ServiceNow to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
