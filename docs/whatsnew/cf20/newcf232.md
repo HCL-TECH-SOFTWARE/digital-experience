@@ -5,8 +5,8 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
-- My HCLSoftware delivery portal
 - Presentation Designer - Direction-specific styling for bidirectional text layouts
+- My HCLSoftware delivery portal
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -18,8 +18,8 @@ The following features and updates are available to customers installing HCL Dig
 - Additional configuration options for DX Core probes
 - HAProxy custom headers now available
 - Helm values updates
-- IQ chatbot for DX Help Center now available for testing
 - Language switcher for DX Help Center now available
+- New How-to articles now available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -40,6 +40,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
+
+=== "Containers"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
+=== "On-Premises"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
 ### My HCLSoftware delivery portal
 
 === "Containers"
@@ -57,14 +65,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
-
-### Presentation Designer - Direction-specific styling for bidirectional text layouts
-
-=== "Containers"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
-=== "On-Premises"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -97,15 +97,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
 
-### IQ chatbot for DX Help Center now available for testing
-
-=== "Containers"
-    The IQ chatbot is now available for testing in the HCL DX Help Center. This chatbot aims to improve searchability in the DX Help Center. To try the chatbot yourself, go to the [HCL DX Help Center test site](https://help.hcl-software.com/digital-experience/9.5/sc-ls-test/){target="_blank"}.
-
 ### Language switcher for HCL DX Help Center now available
 
 === "Containers"
     You can now translate the HCL DX Help Center in real-time to two additional languages: German and French. To switch languages, click the language switcher dropdown on the top-right corner of any DX Help Center page and select your desired language.
+
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### WAS, JDK, and iFix versions
 

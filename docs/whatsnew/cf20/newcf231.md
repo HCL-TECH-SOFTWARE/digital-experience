@@ -18,6 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - External database support now available
 - DX Picker integration with Search V2
 - Helm values updates
+- New How-to articles now available
 - Performance Tuning Guide updates
 - Search V2 - New Atomic Components and supported CSS part attributes available
 - WAS, JDK, and iFix versions
@@ -101,6 +102,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf231).
+
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Performance Tuning Guide updates
 
