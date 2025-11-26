@@ -90,6 +90,34 @@ This section provides steps on how to access the HCL Digital Experience (DX) Pic
       </html>
     ```
 
+5. Add the `size` attribute to `dx-picker` to change the size of the dialog. Available sizes are `md` or `medium`, `lg` or `large`, and `xl` or `extra-large`.
+
+    !!! note
+        Values for size attribute is case-insensitive, meaning `MEDIUM` is the same with `medium` . If no size attribute is provided or invalid values are used, `md` is the default size.
+
+    ```html
+      <html>
+        <head>
+          <script>
+            function toggleDxPicker() {
+                const dxPicker = document.getElementById('dx-picker-id')
+
+                if (dxPicker) dxPicker.toggleDialog();
+            }
+          </script>
+        </head>
+        <body>
+          // Add toggleDxPicker to the button
+          <button onclick="toggleDxPicker()">Open Picker</button>
+
+          // Insert the tag inside your code
+          <dx-picker id="dx-picker-id" source='["dam"]' size="large"></dx-picker>
+
+          <script src="https://<DX_HOSTNAME>/dx/ui/search/picker/dx-picker.js" type="module"></script>
+        </body>
+      </html>
+    ```
+
 ## DX Picker events
 
 Interacting with the DX Picker triggers events which you can access by listening to the `message` event and inspecting the `data` object using the following code:
