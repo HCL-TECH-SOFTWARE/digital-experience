@@ -10,7 +10,7 @@ This section provides steps on how to configure HCL DAM for specific use.
 This section provides steps on upload, manage, and modify rich media assets and collections using HCL DAM.
 - **[Operations framework](../../manage_content/digital_assets/operation_framework.md)**  
 This section describes the operations framework in HCL DAM that allows it to run asynchronous background processes.
-- **[Back up and restore HCL Digital Asset Management](./dam_backup_restore_image.md)**  
+- **[Back up and restore HCL Digital Asset Management](../../manage_content/digital_assets/dam_backup_restore_image.md)**  
 This section provides steps on how to backup and restore for DAM persistence and binaries in a Helm-based deployment.
 - **[Limitations](../../manage_content/digital_assets/limitations/index.md)**  
 This section describes the limitations that currently exist in HCL DAM.
