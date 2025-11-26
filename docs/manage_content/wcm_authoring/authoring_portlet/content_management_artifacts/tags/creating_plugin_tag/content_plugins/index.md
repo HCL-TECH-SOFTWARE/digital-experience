@@ -98,20 +98,98 @@ Content plug-ins are used with the current content item.
 
      You can retrieve localized text using the `Localize` plugin:
      `[Plugin:Localize provider="<provider>" key="<key>" defaultValue="" param.0="" param.1="" param.X=""]` 
+     
 
-     **When No Provider Is Specified**
+Text providers can be managed by developers using National Language Support (NLS) files or directly as web content. When managed in Web Content, business users can easily translate and maintain text. To enable this, the text provider content items or site areas must include the keyword `ibm.wcm.TextProvider`.
+
+![Text Provider](textprovider1.png)
+
+![Text Provider2](textprovider2.png)
+
+Next, create a set of text elements for each language used on your site, using the appropriate language code (for example, `en` for English and `fr` for French). Enter the translated text in each field using the format:
+`keyname=translated-text`
+Use consistent key names for each language, following the Java Properties File Format.  
+
+Example: managing all translations for the intranet in English and French:
+
+**When No Provider Is Specified**
 
      If you do not set a provider, the plugin uses the Text Provider associated with the current content item’s title.
 
-     **Set a Default Provider**
+**Set a Default Provider**
 
-     If you use the plugin multiple times, you can set a default provider and omit the `provider` parameter in later calls.
+If you use the plugin multiple times, you can set a default provider and omit the `provider` parameter in later calls. For example:
 
-     For example:
-        ```
-            [Plugin:Localize defaultProvider="library/sitearea/contentitem"]
-            [Plugin:Localize key="keyname1"]
-        ```
+`[Plugin:Localize defaultProvider="library/sitearea/contentitem"]`
+`[Plugin:Localize key="keyname1"]`
+
+---
+
+### Using Text Providers in Your Design 
+
+You can use the **Content plugin Localize** or the **TextProvider tag** (Localize is an alias of TextProvider):
+`[Plugin:Localize provider=”” key=”” defaultValue=”” param.0=”” param.1=”” param.X=””]`
+or
+`[Plugin:TextProvider provider=”” key=”” defaultValue=”” param.0=”” param.1=”” param.X=””]`
+- **provider**: path to the Text Provider content, site area, or UUID  
+- **key**: name of the translated text key  
+- **defaultValue** (optional): value if no translation is found  
+- **param.X**: parameters by number, e.g., `param.0`, `param.1`
+
+Example:
+`[Plugin:Localize key=“welcome” provider=“library/sitearea/contentitem” defaultValue=“Hi”]`
+
+Parameters example:
+`[Plugin:Localize key=“welcomeUser” provider=“Global/Texts/MsgTranslations” param.0=“Bob” param.1=“3”]`
+- English locale: `Hello Bob, you have 3 new messages`  
+- French locale: `Bonjour Bob, vous avez 3 nouveaux messages`
+
+---
+### Managing Text Providers
+
+HCL Digital Experience Web Content Management supports multilingual content. You can manage multilingual texts in your design, such as Presentation Templates and Components, as well as in Script Applications or external applications, using text providers.
+
+#### How Text Providers Work
+
+Text providers store all translation strings and support parameters. For example, you can create a welcome message:
+`‘Hello, <first name>, you have <number of new messages> new messages`
+
+- `<first name>` is replaced with the user’s first name.  
+- `<number of new messages>` is replaced with the user’s unread message count.  
+- The message can be translated into any language, and parameters can be reordered for each language.
+
+![Example](exampletext_provider.png){ width="500" }<br>
+![Text Provider](textprovider2.png){ width="500" }<br>
+
+- You can use parameters with `{}` to reference parameter numbers.
+Text providers can be managed in two ways:
+
+1. By developers using National Language Support (NLS) files.  
+2. Directly in web content, where business users can translate and manage text easily.
+3. To manage text providers in web content, ensure the content items or site areas include the keyword:`ibm.wcm.TextProvider`
+![Text Provider](textprovider1.png){ width="500" }
+4. Next, create text elements for each language using the correct language code (for example, `en` for English, `fr` for French). Enter translated text in each field using the format:
+`keyname=translated-text`
+5. Use consistent key names for each language, following the Java Properties File Format. You can also use parameters with `{}` referencing parameter numbers.
+
+#### Using Text Providers in Your Design
+
+You can use the **Content plugin Localize** or the **TextProvider tag** (Localize is an alias for TextProvider):
+
+```text
+[Plugin:Localize provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]
+[Plugin:TextProvider provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]
+```
+### Localizing Fields
+
+Some fields support localized text. Click the **Localizations** link next to the field title to:
+
+- Select the content item or site area where the translated text is stored.  
+- Choose the key name.
+
+This allows content authors to automatically localize fields such as **Display Title**.
+![Text Provider](textprovider3.png)
+
 ## Additional information
 
 These topics contain additional information for some of these plug-ins.
@@ -123,9 +201,9 @@ Learn how to use the AnalyticsData rendering plug-in tag to inject microformats 
 -   **[Tagging and rating plug-ins for web content](../content_plugins/tagging_rating_plugins/index.md)**  
 Learn how to tag and rate portal resources, such as pages and portlets. You can also tag and rate content items that were generated with HCL Web Content Manager and are shown with the web content viewer. Two plug-in components are available to support the tagging and rating of content items in your web content system. You can add the `[Plugin:tags]` component and `[Plugin:ratings]` component in a presentation template to quickly integrate tagging and rating widgets into the current content item.
 
-!!! note
-    To illustrate how to use parameters in the text provider used by this plug-in, see [Easily manage localized web content text with parameters](https://developer.ds.hcl-software.com/t/easily-manage-localized-web-content-text-with-parameters/172210){target="_blank"}.
+
 
 ## HCLSoftware U learning materials
 
 To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+
