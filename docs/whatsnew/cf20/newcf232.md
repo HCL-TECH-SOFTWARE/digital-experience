@@ -21,6 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 - Language switcher for DX Help Center now available
 - New How-to articles now available
 - WAS, JDK, and iFix versions
+- Configure dialog size and persisting last known location to DX Picker
 
 **Notices of deprecation**
 
