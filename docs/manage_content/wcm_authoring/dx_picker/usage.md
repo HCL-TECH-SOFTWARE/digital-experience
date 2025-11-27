@@ -36,10 +36,10 @@ Clicking on an item row enables the **Select** button on the lower right corner 
 
   ![](../../../assets/HCL_DX_Picker_Select_Asset.png)
 
-Selecting an item triggers the [`HCL-DX-PICKER-SELECT`](./access.md#dx-picker-events) event. This action also saves the `last known location`, so that opening DX Picker again will automatically display the location of the last selected item.
+Selecting an item triggers the [`HCL-DX-PICKER-SELECT`](./access.md#dx-picker-events) event. The picker saves the selected item's last known location and displays it automatically when reopened.
 
 !!! note
-    The persisting last known location is `saved` until the session is ended or expires, after which it will reset to the default location.
+    The saved location persists until the session ends or expires. It then resets to the default location.
 
 ## Navigating collections
 

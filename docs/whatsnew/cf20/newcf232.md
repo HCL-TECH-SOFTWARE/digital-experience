@@ -16,12 +16,12 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Additional configuration options for DX Core probes
+- DX Picker - Configuring dialog size and persisting last known location
 - HAProxy custom headers now available
 - Helm values updates
 - Language switcher for DX Help Center now available
 - New How-to articles now available
 - WAS, JDK, and iFix versions
-- Configure dialog size and persisting last known location to DX Picker
 
 **Notices of deprecation**
 
@@ -87,6 +87,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The targets for the Core `readiness` and `startup` probes can now be configured for more flexibility. For more information, refer to [Core probes configuration](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md#core-probes-configuration).
+
+### DX Picker - Configuring dialog size and persisting last known location
+
+=== "Containers"
+    You can now add the `size` attribute to your `dx-picker` function to change dialog dimensions. You can set this attribute to:
+
+    - `md` or `medium`
+    - `lg` or `large`
+    - `xl` or `extra-large`
+    
+    Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
 
 ### HAProxy custom headers now available
 

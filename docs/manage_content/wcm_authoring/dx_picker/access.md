@@ -90,10 +90,14 @@ This section provides steps on how to access the HCL Digital Experience (DX) Pic
       </html>
     ```
 
-5. Add the `size` attribute to `dx-picker` to change the size of the dialog. Available sizes are `md` or `medium`, `lg` or `large`, and `xl` or `extra-large`.
+5. Add the `size` attribute to `dx-picker` to change the dialog dimensions. You can set this attribute to:
+
+    - `md` or `medium`
+    - `lg` or `large`
+    - `xl` or `extra-large`
 
     !!! note
-        Values for size attribute is case-insensitive, meaning `MEDIUM` is the same with `medium` . If no size attribute is provided or invalid values are used, `md` is the default size.
+        Values for `size` attribute is case-insensitive (`MEDIUM` is the same with `medium`). The size defaults to `md` if the attribute is omitted or invalid.
 
     ```html
       <html>
