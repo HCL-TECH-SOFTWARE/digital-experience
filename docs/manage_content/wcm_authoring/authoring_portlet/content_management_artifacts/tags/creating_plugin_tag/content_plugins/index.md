@@ -1,4 +1,4 @@
-# Content plug-ins
+# Content plug-ins 
 
 
 Content plug-ins are used with the current content item.
@@ -94,23 +94,11 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider defaultProvider=""]
         ```
 
-     **Use Localized Text from Text Providers**
+**Use Localized Text from Text Providers**
 
      You can retrieve localized text using the `Localize` plugin:
      `[Plugin:Localize provider="<provider>" key="<key>" defaultValue="" param.0="" param.1="" param.X=""]` 
      
-
-Text providers can be managed by developers using National Language Support (NLS) files or directly as web content. When managed in Web Content, business users can easily translate and maintain text. To enable this, the text provider content items or site areas must include the keyword `ibm.wcm.TextProvider`.
-
-![Text Provider](textprovider1.png)
-
-![Text Provider2](textprovider2.png)
-
-Next, create a set of text elements for each language used on your site, using the appropriate language code (for example, `en` for English and `fr` for French). Enter the translated text in each field using the format:
-`keyname=translated-text`
-Use consistent key names for each language, following the Java Properties File Format.  
-
-Example: managing all translations for the intranet in English and French:
 
 **When No Provider Is Specified**
 
@@ -125,7 +113,7 @@ If you use the plugin multiple times, you can set a default provider and omit th
 
 ---
 
-### Using Text Providers in Your Design 
+#### Using Text Providers in Your Design 
 
 You can use the **Content plugin Localize** or the **TextProvider tag** (Localize is an alias of TextProvider):
 `[Plugin:Localize provider=”” key=”” defaultValue=”” param.0=”” param.1=”” param.X=””]`
@@ -145,9 +133,15 @@ Parameters example:
 - French locale: `Bonjour Bob, vous avez 3 nouveaux messages`
 
 ---
-### Managing Text Providers
+#### Managing Multilingual Content with Text Providers
 
-HCL Digital Experience Web Content Management supports multilingual content. You can manage multilingual texts in your design, such as Presentation Templates and Components, as well as in Script Applications or external applications, using text providers.
+HCL Digital Experience Web Content Management supports multilingual content. You can use text providers to manage translated text in your designs, including Presentation Templates, Components, Script Applications, and external applications. Text providers can be maintained by developers using National Language Support (NLS) files or created directly as web content. When managed in Web Content, business users can easily translate and maintain the text. 
+
+Next, create a set of text elements for each language used on your site, using the appropriate language code (for example, `en` for English and `fr` for French). Enter the translated text in each field using the format:
+`keyname=translated-text`
+Use consistent key names for each language, following the Java Properties File Format.  
+
+Example: managing all translations for the intranet in English and French:
 
 #### How Text Providers Work
 
@@ -172,9 +166,7 @@ Text providers can be managed in two ways:
 `keyname=translated-text`
 5. Use consistent key names for each language, following the Java Properties File Format. You can also use parameters with `{}` referencing parameter numbers.
 
-#### Using Text Providers in Your Design
-
-You can use the **Content plugin Localize** or the **TextProvider tag** (Localize is an alias for TextProvider):
+You can use the Content plugin Localize or the TextProvider tag (Localize is an alias for TextProvider):
 
 ```text
 [Plugin:Localize provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]
