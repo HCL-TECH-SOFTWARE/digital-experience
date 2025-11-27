@@ -115,7 +115,7 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
 1. Open a terminal window and run:  
    `ping <hostname>`  
-   (where <hostname\> is your fully qualified hostname.)
+   Replace <hostname> with your fully qualified hostname.
 
 2. In the same terminal window, run:  
    `ping localhost`  
