@@ -234,7 +234,7 @@ The IBM® Installation Manager (IIM) is a tool that you can use to install and m
 
     ![alt text](Images/installDXConsoleMode/image12.png)
 
-6. Enter the user id and password for the Portal Admin user. This is your Admin user for logging into the Portal Administration page.
+6. Enter the user ID and password for the Portal Admin user. This account is used to log in to the Portal Administration page.
 
     ![alt text](Images/installDXConsoleMode/image13.png)
 
