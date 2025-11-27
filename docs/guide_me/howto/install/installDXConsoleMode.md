@@ -111,7 +111,7 @@ Once you have the parts downloaded, create a parent folder wherein the files are
 
 ### Section 1 - Installing IBM® Installation Manager
 
-The IBM® Installation Manager (IIM) is a tool that you can use to install and maintain your software packages. Wizards guide you through the steps that you must take to install, modify, update, roll back, or uninstall your IBM® or HCL® products. In this guide the Installation Manager console mode will be used to install the Software.  
+The IBM® Installation Manager (IIM) is a tool for installing and maintaining software packages. Wizards guide you through the steps to install, modify, update, roll back, or uninstall IBM® or HCL® products. This guide uses the Installation Manager console mode to install the software. 
 
 1. Open a terminal window and run:  
    `ping <hostname>`  
