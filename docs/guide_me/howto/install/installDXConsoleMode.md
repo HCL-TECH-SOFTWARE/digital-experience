@@ -241,7 +241,7 @@ The IBM® Installation Manager (IIM) is a tool for installing and maintaining so
 7. Select the option `I`. (Install)
 
     !!!note
-        The installation will take 30-60 minutes; don't be concerned if the Installation Manager seems to be stuck on one task for several minutes.
+        The installation takes 30–60 minutes. Do not be concerned if Installation Manager appears to be stuck on a task for several minutes.
 
     ![alt text](Images/installDXConsoleMode/image14.png)
 
