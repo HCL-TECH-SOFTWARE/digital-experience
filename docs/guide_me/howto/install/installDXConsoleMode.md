@@ -230,7 +230,7 @@ The IBM® Installation Manager (IIM) is a tool for installing and maintaining so
 
     ![alt text](Images/installDXConsoleMode/image11.png)
 
-5. Enter the user id and password for the ConfigWizard admin user. The user is used to access the configuration wizard, when additional configuration steps are needed later, after installation. For example when it is planed to do a database transfer or cluster creation, etc.
+5. Enter the user ID and password for the ConfigWizard admin user. This user is required to access the configuration wizard for additional configuration tasks after installation, such as performing a database transfer or creating a cluster.
 
     ![alt text](Images/installDXConsoleMode/image12.png)
 
