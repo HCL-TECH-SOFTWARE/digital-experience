@@ -26,6 +26,8 @@ Learn how to migrate content in your HCL DX environment.
 Learn how to improve the performance of your HCL DX environment.
 - **[Personalization](./personalization/index.md)**  
 Learn how to personalize content in your HCL DX environment.
+- **[Requirements](./requirements/index.md)**  
+Learn how to adhere to the requirements of your HCL DX environment.
 - **[Search](./search/index.md)**  
 Learn how to do specific Search tasks in your HCL DX environment.
 - **[Security](./security/index.md)**  
@@ -41,7 +43,7 @@ Learn how to troubleshoot issues affecting your HCL DX environment.
 - **[Upgrade](./upgrade/index.md)**  
 Learn how to do specific upgrade tasks in your HCL DX environment.
 - **[Web Content Manager Library Management](./wcmlibrarymanagement/index.md)**  
-Learn how to do specific WCM Library Management tasks such as importing and exporting in your HCL DX environment.
+Learn how to do specific Web Content Manager (WCM) Library Management tasks such as importing and exporting in your HCL DX environment.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
