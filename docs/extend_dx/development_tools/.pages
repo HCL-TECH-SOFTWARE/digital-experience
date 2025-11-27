@@ -2,6 +2,7 @@ title: Development Tools
 nav:
     - index.md
     - DXClient: dxclient
+    - Creating and deploying Script Applications: create-and-deploy-script-app.md
     - HCL DX Extensions: hcl_dx_extensions
     - Web Experience Factory: wef
     - WSRP services: wsrp

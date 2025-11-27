@@ -1,4 +1,4 @@
-# WCM API sample code to count WCM items and versions
+# How to count WCM items and versions using the WCM API sample code
 
 ## Applies to
 

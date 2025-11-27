@@ -7,9 +7,9 @@ In a stand-alone server environment, you can complete the following task when th
 !!!important
     Starting with HCL Portal Version 8.5, the stand-alone LDAP repository is deprecated. Change to the federated LDAP user repository.
 
-Use the wp\_security\_federated.properties helper file that is in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory. It ensures that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_security\_federated.properties helper file.
+Use the wp\_security\_federated.properties helper file that is in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory. It ensures that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_security\_federated.properties helper file.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -25,7 +25,7 @@ Use the wp\_security\_federated.properties helper file that is in the [wp\_profi
 
 4.  Open a command prompt.
 
-5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+5.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 6.  Run the following task to change the configuration to use a federated repository:
 

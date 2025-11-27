@@ -1,4 +1,4 @@
-# What's new in CF229 
+# What's new in CF229
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF229 on supported platforms:
 
@@ -24,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
+- New How-to articles now available
 - Search V2 Authoring - Deleting items from search results now available
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -106,7 +107,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+   To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article. [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"} Extended support will be offered from June 30, 2025 until June 30, 2026. 
     
 ### Automatically apply 9.5 from a later CF installation
 
@@ -150,6 +151,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
+
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Search V2 Authoring - Deleting items from search results now available
 

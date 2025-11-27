@@ -127,7 +127,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DX Picker - Previewing an asset
 
 === "Containers"
-    With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage/index.md).
+    With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md).
 
 ### Digital Asset Management - Moving a collection 
 

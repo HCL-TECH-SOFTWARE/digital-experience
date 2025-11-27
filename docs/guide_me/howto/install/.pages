@@ -3,7 +3,7 @@ title: Install
 nav:
     - index.md
     - DeployOnAzure.md
-    - InstallLDAPTools.md
+    - SupportForRedHat.md
     - RunIIMAsDifferentUser.md
     - InstallLDAPTools.md
     - installDXConsoleMode.md

@@ -16,14 +16,11 @@ Using OCI commands requires an initial login before you can run the pull command
 
   1. Log in to the Helm registry by using the following command:
 
-
     ```bash
     helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET> https://hclcr.io/
     ```
 
-
 2. Run the following OCI-based pull command:
-
 
     ```bash
     helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
@@ -34,9 +31,7 @@ Using OCI commands requires an initial login before you can run the pull command
         Running the pull command without the `--version` parameter downloads the latest Helm chart version.  
         To see the available Helm chart versions, refer to [Helm chart and CF versions](#helm-chart-and-cf-versions).
 
-
 3. After you run the pull command, verify that the Helm chart was downloaded to your local computer:
-
 
     ```bash
     # List directory contents to check successful pull
@@ -69,6 +64,10 @@ Refer to the following table to identify which Helm chart version corresponds to
 | 2.34.0                    | 2.23.0                | CF225      |
 | 2.35.0                    | 2.24.0                | CF226      |
 | 2.36.0                    | 2.25.0                | CF227      |
+| 2.37.3                    | 2.26.0                | CF228      |
+| 2.40.0                    | 2.27.0                | CF229      |
+| 2.41.0                    | 2.28.0                | CF230      |
+| 2.42.1                    | 2.29.0                | CF231      |
 
 After downloading the Helm charts, the next step is [Retagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images) as part of your deployment process.
 
