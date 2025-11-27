@@ -72,7 +72,7 @@ Example package names for the different Portal 9.5 offerings are:
 - HCL® Portal Extend v9.5 Multiplatform  
 
 !!!note
-    The files above contain Installation Manager, WebSphere Application Server, Digital Experience and JDK. You also need to download the latest available Cumulative Fix (CF) in the My HCLSoftware to complete the software required to install Portal 9.5. Please check [Fixes integrated in ® Digital Experience 8.5.0.0, 9.0 and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.  
+    The files above include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the JDK. You must also download the latest available Cumulative Fix (CF) from My HCLSoftware to complete the software required to install Portal 9.5. For details, see [Fixes integrated in HCL® Digital Experience 8.5.0.0, 9.0, and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.
 
 In My HCLSoftware, download the complete package for your chosen offering.  
 
