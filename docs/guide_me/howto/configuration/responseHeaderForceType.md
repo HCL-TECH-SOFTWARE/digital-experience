@@ -30,6 +30,6 @@ Header set Content-Disposition attachment
 </LocationMatch>
 ```
 
-Please notice that this requires that the PDF file be called in the URL, since location stanza's can only match against URL strings:  
-
-e.g `http://sitename/mycontent/was/my.pdf`  
+!!!note
+    This requires that the PDF file be called in the URL, since location stanza's can only match against URL strings:  
+    e.g `http://sitename/mycontent/was/my.pdf`  
