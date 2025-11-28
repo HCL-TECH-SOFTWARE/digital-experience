@@ -6,3 +6,5 @@ This section includes how-to articles about Web Content Manager (WCM) Authoring,
 Learn how to obtain the UUID and Path of WCM content objects through the Linux bash command line.  
 - **[How to identify new managed pages in HCL Digital Experience](./IdentifyNewManagedPages.md)**  
 Learn how to identify new managed pages in HCL Digital Experience.  
+- **[How to use Java Server Pages (JSPs) in WCM](./useJSPinWCM.md)**  
+Learn how to use Java Server Pages (JSPs) in WCM.  
