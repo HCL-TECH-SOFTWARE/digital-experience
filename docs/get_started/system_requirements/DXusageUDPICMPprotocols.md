@@ -1,4 +1,4 @@
-# HHCL DX Usage of UDP and ICMP Protocols
+# HCL DX Usage of UDP and ICMP Protocols
 
 On a default HCL DX installation, UDP transport chains are disabled. Some versions of HCL Sametime used UDP. However, on a running system, some UDP ports may appear as listening:
 
