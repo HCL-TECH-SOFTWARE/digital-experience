@@ -1,10 +1,10 @@
-# DX Content Picker for DAM  
+# DX Content Picker for DAM    
 
 ## Overview  
 
 The Digital Asset Content Picker provides a consistent interface you can use in any application to search for and select an asset. This unified experience makes it easier to find, preview, and insert digital assets without switching tools or workflows. For more information, see [Using DX Picker](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/dx_picker/usage/).  
 
-![Search example](search3.png)  
+![Search example](search_dam2.png)  
 
 ## HCLSoftware U learning materials
 
