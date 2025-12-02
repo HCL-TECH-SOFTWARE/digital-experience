@@ -11,8 +11,6 @@ This extension enables navigation between equivalent published content in differ
 
 To add localized rendering links to content items, reference the JSP component ML Configuration/JSP – ML Locale Nav either in the associated presentation template or in a component or element that is also referenced in the template.
 
-See [Easily manage translated web content text with parameters](https://developer.ds.hcl-software.com/t/easily-manage-translated-web-content-text-with-parameters/172210){target="_blank"} if you want to manage multilingual text in your design.
-
     
 ## How it works
 
@@ -21,11 +19,10 @@ See [Easily manage translated web content text with parameters](https://develope
 - A link is created for each matching localized content item that is displayed in the language of the current user.
 - This extension works for both servlet-rendering and portlet-rendering, in portlet-rendering it add links only for content displayed in the current portlet.
 
-Click the image to view the assigned Jira ticket.  
-[![HCL DX Logo](nav_switch.png)](https://hclsw-jirads.atlassian.net/browse/DXQ-45674?focusedCommentId=1111856&sourceType=mention){target="_blank"}
-
 !!! note
-    If you use ML Configuration/JSP – ML Portal Locale Switcher, localized navigation works as expected across the entire portal and isn’t limited to the current portlet.
+    If you use ML Configuration/JSP – he ML Portal Locale Switcher enables localized navigation across the entire portal, not just within the current portlet. For example, when English, Spanish, and French are configured, the portal displays English as the current language. Clicking Spanish updates your locale to Spanish, and the site displays content in Spanish: 
+    
+    [![HCL DX Logo](nav_switch.png)](https://hclsw-jirads.atlassian.net/browse/DXQ-45674?focusedCommentId=1111856&sourceType=mention){target="_blank"}
 
 
 
