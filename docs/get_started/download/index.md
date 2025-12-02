@@ -1,8 +1,8 @@
 # Download the HCL Digital Experience software
 
-New and existing users need to register [on the HCLSoftware portals](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0069114){target="_blank"} to download their entitled HCL Digital Experience (DX) packages from the [My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} portal site.
+New and existing users need to register [on the HCLSoftware portals](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0069114){target="_blank"} to download their entitled HCL Digital Experience (DX) packages from the [My HCLSoftware (MHS) portal](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} site.
 
-Co-packaged software entitlements are identified in the specific [HCL DX offering licenses](https://www.hcl-software.com/resources/license-agreements){target="_blank"} published on the HCL Software License site, and are presented within the DX offering download pages presented on the My HCLSoftware site. See the examples presented in [Locating and Downloading DX Products](../access-software/locating-downloads.md) for more information.
+Co-packaged software entitlements are identified in the specific [HCL DX offering licenses](https://www.hcl-software.com/resources/license-agreements){target="_blank"} published on the MHS portal, and are presented within the DX offering download pages presented on the My HCLSoftware site. See the examples presented in [Locating and Downloading DX Products](../access-software/locating-downloads.md) for more information.
 
 ## HCLSoftware U learning materials
 
