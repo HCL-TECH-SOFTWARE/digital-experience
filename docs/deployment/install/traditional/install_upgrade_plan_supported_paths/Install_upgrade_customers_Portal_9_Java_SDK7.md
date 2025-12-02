@@ -17,11 +17,12 @@ Make sure to also review the [detailed requirements article](https://support.hcl
 - [Preparing your Windows OS](../installing_dx/windows/prep_os-windows.md)
 
 ## Getting the software
-Product software can be obtained from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do).
+
+Product software can be obtained from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
 
-1. Sign in to the HCL Software Licensing Portal.
+1. Sign in to the [MHS portal](https://my.hcltechsw.com/){target="blank"}.
 
 2. Identify the Portal 9.5 offering you want to install.
 
