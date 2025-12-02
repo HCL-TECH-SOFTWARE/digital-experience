@@ -70,7 +70,7 @@ This table lists all trace strings available in HCL DX 8.5 and later.
 !!! warning "Warning"
     - Enabling general tracing can make the server unresponsive because it generates a large amount of log output quickly, which can consume disk space and system resources. To avoid this, set the log scope as narrowly as needed for troubleshooting, and turn off general tracing as soon as you have collected the necessary information.
 
-    - By default, the Kubernetes probe targets the server’s landing page. To reduce the impact of page loads on your site, adjust the [probes configuration](../../../..//deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or use a landing page with a smaller footprint. This reduces resource consumption and improves site responsiveness during tracing and monitoring.
+    - By default, the Kubernetes probe targets the server's landing page. To reduce the impact of page loads on your site, adjust the [Probes configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or change the landing page to one with a smaller footprint. Starting with CF229, the [out-of-the-box sample site](../../../../build_sites/blueprint.md) is configured as the default site. This site has a larger footprint as it demonstrates the new design system capabilities. It is recommended to move the sample site to a secondary position (or non-default location) to minimize resource consumption and improve responsiveness during tracing and monitoring.
 
 Virtual Member Manager writes the resulting traces to the following locations:
 
