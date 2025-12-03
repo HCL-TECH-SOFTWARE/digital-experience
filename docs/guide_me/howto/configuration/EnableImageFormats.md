@@ -1,4 +1,4 @@
-# How to enable support for additional image formats in HCL Web Content Manager 
+# How to enable support for additional image formats in HCL Web Content Manager  
 
 ## Applies to
 
