@@ -125,3 +125,11 @@ See the [HCL Discover Help Center](https://help.hcl-software.com/HCLDiscover/HD/
 For example:
 
 ![Review Digital Experience session replay from Discover](../../../images/Review%20Digital%20Experience%20session%20replay%20from%20Unica%20Discover%20DX-updated.png)
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how HCL DX and HCL Discover work together, go to [HCL DX and HCL Discover for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D956){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Discover_for_Business_Users.pdf){target="_blank"}.
+
+For an introduction and a demo on how to set up the integration between HCL DX and HCL Discover, go to [HCL DX and HCL Discover for Administrators](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1228){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Administrators Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-ADM_DX_Integration_with_HCL_Discover_for_Administrators.pdf){target="_blank"}.
+
+You may also use the dedicated course [HDE-INT-HDX HCL Discover Integration with HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/courses/course/hde-int-hdx-hcl-discover-integration-with-hcl-digital-experience){target="blank"}.
