@@ -6,9 +6,9 @@ This section includes information to set up integration of Digital Experience (D
 
 By integrating with HCL Discover you can:
 
--   Detect and address user struggles in real time.
--   Improve user experience, by capturing and analyzing behavioral data.
--   Obtain visibility into business impact and opportunities.
+- Detect and address user struggles in real time.
+- Improve user experience, by capturing and analyzing behavioral data.
+- Obtain visibility into business impact and opportunities.
 
 For more information, see the [HCL Discover product documentation](https://help.hcl-software.com/HCLDiscover/HD/index.html) and also the [guidebook](https://help.hcl-software.com/hcldiscoverguidebook/).
 
@@ -40,4 +40,4 @@ For an introduction and a demo on how HCL DX and HCL Discover work together, go 
 
 For an introduction and a demo on how to set up the integration between HCL DX and HCL Discover, go to [HCL DX and HCL Discover for Administrators](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1228){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Administrators Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-ADM_DX_Integration_with_HCL_Discover_for_Administrators.pdf){target="_blank"}.
 
-You may also use the dedicated course [HDE-INT-HDX HCL Discover Integration with HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/courses/course/hde-int-hdx-hcl-discover-integration-with-hcl-digital-experience).
+You may also use the dedicated course [HDE-INT-HDX HCL Discover Integration with HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/courses/course/hde-int-hdx-hcl-discover-integration-with-hcl-digital-experience){target="blank"}.
