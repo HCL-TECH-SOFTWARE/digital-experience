@@ -31,7 +31,7 @@ For JP2 images, refer to the following steps:
     1. Click **New...**.
     2. Under **Name**, enter `imageresourcecmpnt.allowedmimetypes`.
     3. Under **Value**, enter all required formats including `image/svg+xml`, for example:
-    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp,`**`image/svg+xml`**
+    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp`,**`image/svg+xml`**
     4. Click **Apply**.
 
     If the property already exists:
@@ -82,7 +82,7 @@ For JXR images, refer to the following steps:
     1. Click **New...**.
     2. Under **Name**, enter `imageresourcecmpnt.allowedmimetypes`.
     3. Under **Value**, enter all required formats including `image/svg+xml`, for example:
-    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp,`**`image/svg+xml`**
+    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp`,**`image/svg+xml`**
     4. Click **Apply**.
 
     If the property already exists:
@@ -133,7 +133,7 @@ For SVG images, refer to the following steps:
     1. Click **New...**.
 2. Under **Name**, enter `imageresourcecmpnt.allowedmimetypes`.
 3. Under **Value**, enter all required formats including `image/svg+xml`, for example:
-    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp,`**`image/svg+xml`**
+    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp`,**`image/svg+xml`**
 4. Click **Apply**.
 
     If the property already exists:
@@ -190,7 +190,7 @@ For WEBP images, refer to the following steps:
 
     1. Locate and click **imageresourcecmpnt.allowedmimetypes**.
     2. Under **Value**, enter all required formats including `image/svg+xml`, for example:
-    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp,`**`image/svg+xml`**
+    `imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/tiff,image/tif,image/webp`,**`image/svg+xml`**
     3. Click **Apply**.
 
 5. Modify the `image.initialFileExtensions` property:
