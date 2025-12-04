@@ -55,13 +55,13 @@ Before you install HCL® Digital Experience, you must review the hardware and so
 
 [Linux: Preparing your operating system](../../../deployment/install/traditional//installing_dx/linux/prep_os-linux.md){target="_blank"}  
 
-[Preparing your Windows OS](../../../deployment/install/traditional/installing_dx/windows/prep_os-windows.md){target="_blank"}  
+<!--[Preparing your Windows OS](../../../deployment/install/traditional/installing_dx/windows/prep_os-windows.md){target="_blank"}-->  
 
 ### II. Getting the Software  
 
 Product software can be obtained from the [My HCLSoftware](https://my.hcltechsw.com/){target="_blank"}  
 
-Additional guidance is available here: [Locating and Downloading DX Products](../../tutorials/access-software/locating-downloads.md){target="_blank"}  
+<!--Additional guidance is available here: [Locating and Downloading DX Products](../../../../docs/get_started/access-software/locating-downloads.md)-->  
 
 !!!note
    There are several Portal 9.5 offerings. Your license determines which offerings appear as available to download. Example package names for the different Portal 9.5 offerings:  
@@ -105,7 +105,7 @@ In this guide, the offering **HCL® Portal Extend v9.5 Multiplatform** will be u
 
 After downloading the files, create a parent folder for extraction. Name the folder SETUP, and extract the ZIP files into it. For example:
 
-![alt text](Images/image1.png)
+<!--![alt text](Images/image1.png)update image-->
 
 ### III. Installing IBM® WebSphere Application Server ND Version 9.0.5 and JDK v8.0.3 or later using the IBM® Installation Manager in console mode
 
@@ -162,7 +162,7 @@ The IBM® Installation Manager (IIM) is a tool for installing and maintaining so
     b. Select the option: `1` to configure Repositories.  
 
     Sample screenshot:  
-    ![alt text](Images/image2.png)  
+    <!--![alt text](image2.png) update location and filename of image--> 
 
 3. Select the option: `D` to add new repositories into the IBM® Installation Manager.  
 
@@ -174,29 +174,29 @@ The IBM® Installation Manager (IIM) is a tool for installing and maintaining so
 
     Then select the option: `A` to apply the changes and `R` to return to the Preferences Menu.
 
-    ![alt text](Images/image3.png)
+    <!--![alt text](Images/image3.png)update image-->
 
 5. Select the option: `1` to install software packages
 
-    ![alt text](Images/image4.png)
+     <!--![alt text](Images/image4.png)update image-->
 
 6. Select the following packages:  
     - IBM® WebSphere Application Server  
     - IBM® SDK, Java  
 
-    ![alt text](Images/image5.png)  
+    <!--![alt text](Images/image5.png)update image-->  
 
 7. Enter `N` for next and `A` to accept the terms.
 
-    ![alt text](Images/image6.png)
+     <!--![alt text](Images/image6.png)pdate image-->  
 
 8. Select the translations you wish to use  
 
-    ![alt text](Images/image7.png)  
+     <!--![alt text](Images/image7.png)update image-->    
 
 9.Review the packages to be installed. Select **Next**, then select **Install**, and finally select **Finish**.
 
-    ![alt text](Images/image8.png)  
+   <!-- ![alt text](Images/image8.png) update image-->
 
     The IBM® WebSphere Application Server and IBM® SDK, Java Installation completed successfully.  
 
@@ -218,39 +218,39 @@ The IBM® Installation Manager (IIM) is a tool for installing and maintaining so
 
     Then select the option: `A`. (Apply Change and Return to Preferences Menu).
 
-    ![alt text](Images/image9.png)
+    <!--![alt text](Images/image9.png)update image-->
 
 3. Return to Preferences Menu and select the option:  `1`. (Install software packages).
 
     Then select the packages: `Portal 8.5` and `IFPI59896`.
 
-    ![alt text](Images/image10.png)
+    <!--![alt text](Images/image10.png)update image-->
 
 4. Accept the terms. Then select next.
 
-    ![alt text](Images/image11.png)
+    <!--![alt text](Images/image11.png)update image-->
 
 5. Enter the user ID and password for the ConfigWizard admin user. This user is required to access the configuration wizard for additional tasks after installation, such as performing a database transfer or creating a cluster.
 
-    ![alt text](Images/image12.png)
+    <!--![alt text](Images/image12.png)update image-->
 
 6. Enter the user id and password for the Portal Admin user. This is your Admin user for logging into the Portal Administration page.
 
-    ![alt text](Images/image13.png)
+    <!--![alt text](Images/image13.png)update image-->
 
 7. Select the option `I`. (Install)
 
     !!!note
         The installation will take 30-60 minutes; don't be concerned if the Installation Manager seems to be stuck on one task for several minutes.
 
-    ![alt text](Images/image14.png)
+    <!--![alt text](Images/image14.png)update image-->
 
     When the installation is finished, select the option `F`. (Finish)  
     Verify that you can access your Portal and Configuration Wizard in an internet browser by navigating to:  
     `http://myportal.hcl.com:10039/wps/portal`  
     `http://myportal.hcl.com:10200/ibm/wizard`
 
-    ![alt text](Images/image15.png)  
+    <!--![alt text](Images/image15.png)update image-->  
 
     At the end of this section, you have successfully installed HCL® Portal v8.5 with IBM® WebSphere Application Server v9.0.5
 
@@ -274,27 +274,27 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
     For example:  
     `/home/administrator/Downloads/HCL-DX-CF228_Server_Update/WP8500CF228_Server/8500CF228/repository`
 
-    ![alt text](Images/image16.png)
+     <!--![alt text](Images/image16.png)update image-->
 
 6. Return to Preferences Menu and select the option `2`. (Update)
 
-    ![alt text](Images/image17.png)
+     <!--![alt text](Images/image17.png)update image-->
 
 7. Select the IBM® WebSphere Portal Server V8.5
 
-    ![alt text](Images/image18.png)
+     <!--![alt text](Images/image18.png)update image-->
 
 8. Select the CF version
 
-    ![alt text](Images/image19.png)
+     <!--![alt text](Images/image19.png)update image-->
 
 9. Accept the terms and select next.
 
-    ![alt text](Images/image20.png)
+     <!--![alt text](Images/image20.png)update image-->
 
 10. Select the option `U`. (Update)
 
-    ![alt text](Images/image21.png)
+     <!--![alt text](Images/image21.png)update image-->
 
 11. Select **Finish**
 
@@ -308,7 +308,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     `./applyCF.sh -DWasPassword=<PortalAdminPswd> -DPortalAdminPwd=<PortalAdminPswd>`
 
-    ![alt text](Images/image22.png)
+     <!--![alt text](Images/image22.png)update image-->
 
 13. At the end of this section, you have successfully installed Cumulative Fix for HCL® Portal v8.5 on IBM® WebSphere Application Server v9.0.5.
 
@@ -320,7 +320,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     Log in and check the 'About HCL® Digital Experience' and see if it reports the latest CF level.
 
-    ![alt text](Images/image24.png)
+     <!--![alt text](Images/image24.png)update image-->
 
 ### VI. Install HCL® Digital Experience Version 9.5
 
@@ -342,29 +342,29 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
      - Extend Offering: requires Extend and Server repositories  
      - Server Offering: requires Server repositories  
 
-     ![alt text](Images/image25.png)
+      <!--![alt text](Images/image25.png)update image-->
 
 2. Return to Preferences Menu and select the option `1`. (Install - Install software packages)
 
-    ![alt text](Images/image26.png)
+     <!--![alt text](Images/image26.png)update image-->
 
 3. Select the packages Portal 9.5
 
-    ![alt text](Images/image27.png)
+     <!--![alt text](Images/image27.png)update image-->
 
 4. Accept the terms and select next.  
 
-    ![alt text](Images/image28.png)
+     <!--![alt text](Images/image28.png)update image-->
 
 5. Enter your PortalAdminID and PortalAdminPswd for the Websphere Application Server credentials. Select the Validate Credentials.
 
     Wait a few minutes for validation to complete. Select Next.  
 
-    ![alt text](Images/image29.png)
+     <!--![alt text](Images/image29.png)update image-->
 
 6. Enter your PortalAdminID and PortalAdminPswd for the Portal Server credentials. Then select the option: `I`. (Install)
 
-    ![alt text](Images/image30.png)
+     <!--![alt text](Images/image30.png)update image-->
 
 7. When the installation is complete, verify that you can access your Portal in an internet browser by navigating to:  
 
@@ -372,7 +372,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     Check the 'About HCL® Digital Experience' to make sure it displays version 9.5.  
 
-    ![alt text](Images/image31.png)  
+     <!--![alt text](Images/image31.png)update image-->  
 
 **Additional verifications to ensure that the HCL® Digital Experience v9.5 standalone installation completed successfully:**
 
@@ -380,7 +380,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
 
     Enter `V` (View Installed Packages).
 
-    ![alt text](Images/image32.png)
+     <!--![alt text](Images/image32.png)pdate image-->
 
 2. Listing installed features by using imcl commands
 
@@ -395,7 +395,7 @@ HCL® Portal 8.5 now needs to be upgraded to Cumulative Fix 17 or a later CF to 
         cd /opt/IBM/InstallationManager/eclipse/tools/
         ./imcl listInstalledPackages -long
         ```  
-        ![alt text](Images/image33.png)  
+         <!--![alt text](Images/image33.png)pdate image-->  
 
 In case of problems during the installation, please collect the following data and contact HCL® Support:  
 [Collecting Data: Installation of HCL® Portal 8.5 on Multiplatforms.](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013608){target="_blank"}
