@@ -3,7 +3,7 @@
 
 ## Accessing DX 9.5 Container Images and Helm Charts
 
-The HCL Digital Experience (DX) 9.5 container images and Helm charts are available from the [HCL Harbor container repository](https://hclcr.io/){target="_blank"}.   If you have credentials for the HCL Software Licensing Portal, you can use them to access these DX 9.5 components.
+The HCL Digital Experience (DX) 9.5 container images and Helm charts are available from the [HCL Harbor container repository](https://hclcr.io/){target="_blank"}. If you have credentials for the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}, you can use them to access these DX 9.5 components.
  Starting with CF216, the Harbor repository uses a registry that follows [Open Container Initiative (OCI)](https://opencontainers.org/){target="_blank"} standards.   The Helm chart command has also been updated to comply with OCI standards.
 
 ## Pulling Helm charts using OCI commands
