@@ -1,6 +1,6 @@
 # Databases
 
-This article lists the database versions and platforms that are tested and supported for HCL Digital Experience (DX) 9.5 Kubernetes deployments.
+This topic lists the database versions and platforms that are tested and supported for HCL Digital Experience (DX) 9.5 Kubernetes deployments.
 
 #### Prerequisites
 
@@ -23,6 +23,5 @@ All supported database platforms must meet the following requirements:
 |Oracle on Amazon Relational Database Service|21c and later maintenance releases|9.5|
 |SQL Server on Amazon Relational Database Service|2022 and later maintenance releases|9.5|
 
-!!! note "Important"
-    - Apache Derby is not supported in production environments.
-    - DB2 supports the DB2 pureScale component.
+\* Apache Derby is not supported in a product environment.  
+\*\* DB2 includes support for the DB2 pureScale component.  
