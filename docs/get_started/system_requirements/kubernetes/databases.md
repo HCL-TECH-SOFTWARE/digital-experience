@@ -1,9 +1,13 @@
 # Databases
 
-This topic details the database versions and platforms tested and supported by specific HCL Digital Experience (DX) 9.5 Kubernetes deployments.
+This article lists the database versions and platforms that are tested and supported for HCL Digital Experience (DX) 9.5 Kubernetes deployments.
 
-!!!note
-    All databases require Extended Architecture (XA) transactions using a two-phase commit protocol (2PC) and Distributed Transaction Coordinator (DTC) to be enabled.
+#### Prerequisites
+
+All supported database platforms must meet the following requirements:
+
+- Extended Architecture (XA) transactions are enabled with a two-phase commit (2PC) protocol. 
+- The Distributed Transaction Coordinator (DTC) is enabled.
 
 |Supported software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
@@ -19,7 +23,6 @@ This topic details the database versions and platforms tested and supported by s
 |Oracle on Amazon Relational Database Service|21c and later maintenance releases|9.5|
 |SQL Server on Amazon Relational Database Service|2022 and later maintenance releases|9.5|
 
-**Notes:**
-
-- *Apache Derby* is not supported in a production environment.  
-- **DB2** includes support for the DB2 pureScale component.
+!!! note "Important"
+    - Apache Derby is not supported in production environments.
+    - DB2 supports the DB2 pureScale component.
