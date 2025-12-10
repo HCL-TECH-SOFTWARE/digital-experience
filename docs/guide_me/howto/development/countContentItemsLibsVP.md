@@ -6,22 +6,25 @@
 
 ## Introduction
 
-This sample code is used to count the number of content items (except for custom workflows) used in libraries stored on a Virtual Portal. This should work on virtual portals that are defined via URL context, but not via hostname.
+This sample code counts the number of content items (excluding custom workflows) used in libraries stored on a Virtual Portal. This utility supports virtual portals defined via a URL context, but not those defined via a hostname.
 
-???+ info "DISCLAIMER OF WARRANTIES"
-    The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting in troubleshooting current issues or developing your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages. Note that debug of custom applications is beyond the scope of the HCL Support Contract.
+!!! warning "Disclaimer"
+    HCL Corporation created this sample code to help you troubleshoot issues or develop applications. It is provided "AS IS," without warranty of any kind. HCL is not liable for any damages arising from your use of the sample code, even if HCL has been advised of the possibility of such damages. Debugging custom applications is beyond the scope of the HCL Support Contract.
 
 ## Instructions
 
-1. Create the following file on the file system of your HCL DX environment:
 
-    ```shell
+To count a large number of items, you might need to increase the **session timeout** setting on your server.
+
+Create a file named `countVP.jsp` in the following directory:
+
+```
     <wp_profile_root>\installedApps\(cell name)\wcm.ear\ilwwcm.war\jsp\html\countVP.jsp
-    ```
+```
 
-2. Copy and paste the code below into the file then modify `VirtualPortalName` with the name of your Virtual Portal.  
+2. Copy the following code into the file, and then replace `VirtualPortalName` with the name of your virtual portal.  
 
-    ```java
+```
     <%@page session="false" contentType="text/html" pageEncoding="ISO-8859-1" %>
 
     <%@ page import="com.ibm.workplace.wcm.api.*"%>
@@ -31,7 +34,7 @@ This sample code is used to count the number of content items (except for custom
 
     <br>
 
-    If counting a large number of items, you may need to increase the session timeout setting of your server. This can be done using the IBM WebSphere Application Server administration console. Navigate to:
+    To count a large number of items, you might need to increase the server session timeout setting. Use the IBM WebSphere Application Server administration console to go to:
 
     <br><br>Application Servers > WebSphere_Portal > Container Settings > Web Container Settings > Session Management. 
 
@@ -347,12 +350,12 @@ This sample code is used to count the number of content items (except for custom
        e.printStackTrace();
     }
     %>
-    ```
+```
 
-3. Invoke the jsp in the web-browser using URL:
+3. Open the JSP in a web browser at the following URL:
 
-    ```url
+```
      https://<hostname>:<port>/wps/wcm/jsp/html/countVP.jsp  
-    ```
+```
 
-4. Check the SystemOut.log file for the summary of items counted.  
+4. Review the `SystemOut.log` file for a summary of the counted items. 
