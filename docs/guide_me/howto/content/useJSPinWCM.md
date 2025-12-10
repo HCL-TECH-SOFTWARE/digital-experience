@@ -6,45 +6,43 @@
 
 ## Introduction
 
-This document describes an example for using Java Server Page (JSP) components in HCL Digital Experience with the Web Content Manager (WCM).  
+This article describes how to use Java Server Page (JSP) components in HCL Digital Experience with the Web Content Manager (WCM). 
 
-???+ info "DISCLAIMER OF WARRANTIES"
-    The following steps are sample steps created by HCL Corporation.
-    These steps and/or sample code is provided to you solely for the purpose of assisting you in the development of your applications.
-    The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+!!! warning "Disclaimer"
+    HCL Corporation created these sample steps and code to help you develop your applications. They are provided "AS IS," without warranty of any kind. HCL is not liable for any damages arising from your use of the sample code, even if HCL has been advised of the possibility of such damages.
 
-## Instructions
+## Creating and testing a JSP component 
 
-Sample steps for use of JSP component:  
+1. Create a JSP file named `hello.jsp` in the following directory:
 
-1. Create a JSP file with name **hello.jsp** in the following directory:
-
-    ```shell
+    ```
     <wp_profile_root>\installedApps\<cellName>\wcm.ear\ilwwcm.war\jsp\
     ```
 
-2. In the WCM authoring tool create a JSP component `hello` and use this in the `Path` field:  
+2. In the WCM authoring tool, create a JSP component named **hello**.  
 
     ```path
     /jsp/hello.jsp
     ```
 
-3. Edit a presentation template to be used for testing and use **Insert Tag** type **Component**.  
+3. Edit a presentation template to use for testing.  
 
 4. Select the **hello** JSP component.
 
-5. Preview a content item that uses the presentation template. Verify the JSP output is seen.
+5. Select **Insert Tag**, and then select **Component**.
+6.  Select the **hello** JSP component.
+7.  Preview a content item that uses the presentation template to verify that the JSP output appears.
 
-To render the JSP in a WCM Local Rendering Portlet on a page, copy the JSP to the following location:
+## Rendering the JSP in a Local Rendering Portlet
+To render the JSP in a WCM Local Rendering Portlet on a page, you must copy the JSP to the local rendering war file.
 
-```shell
+Copy the `hello.jsp` file to the following location:
+```
 <wp_profile_root>\installedApps\<cellName>\PA_WCMLRingPortJSR286.ear\ilwwcm-localrende.war\jsp
 ```
 
-### Additional FAQ
+## Frequently asked questions
 
-Question:  
-Is there any way to create JSP component as Dynamic web project and refer...in JSP component?  
+**Can I create a JSP component as a Dynamic web project and refer to it in a JSP component?**
 
-Answer:  
-Yes, you could create the JSP using Rational Tools but the JSP Component would be created with WCM.  
+Yes. You can create the JSP using Rational Tools, but you must create the JSP Component itself within WCM.
