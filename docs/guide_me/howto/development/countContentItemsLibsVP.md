@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This sample code is used to count the number of content items (except for custom workflows) used in libraries stored on an Virtual Portal. This should work on virtual portals that are defined via URL context and not via hostname.
+This sample code is used to count the number of content items (except for custom workflows) used in libraries stored on a Virtual Portal. This should work on virtual portals that are defined via URL context, but not via hostname.
 
 ???+ info "DISCLAIMER OF WARRANTIES"
     The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting in troubleshooting current issues or developing your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages. Note that debug of custom applications is beyond the scope of the HCL Support Contract.
