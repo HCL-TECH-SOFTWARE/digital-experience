@@ -6,7 +6,7 @@
 
 ## Introduction
 
-There might be situations in which HCL DX will be used along with IBM HTTP Server in front of the HCL DX environment. If you want to force then the IBM HTTP Server to modify the response header, there are settings that can be set on IBM HTTP-Server side to fulfill these requirements. For example, if the response-header of a PDF file request should be changed.  
+There might be situations in which HCL DX will be used along with IBM HTTP Server in front of the HCL DX environment. If you want to force  the IBM HTTP Server to modify the response header, there are settings that can be set on IBM HTTP-Server side to fulfill these requirements. For example, if the response-header of a PDF file request should be changed.  
 
 ## Instructions
 
@@ -21,7 +21,7 @@ Header set Content-Disposition attachment
 
 If the PDF is being served from a backend IBM WebSphere Application Server (Digital Experience Server) instead, using FilesMatch is not applicable.  
 
-In that case, it is needed to force a specific content type in the HTTP Server or it is possible to set a header for a WebSphere response. That can only be done using the Location Stanzas:  
+In that case, you will need to force a specific content type in the HTTP Server or you can set a header for a WebSphere response. That can only be done using the Location Stanzas:  
 
 ```xml
 <LocationMatch "\.(?i:pdf)$">
