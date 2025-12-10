@@ -47,4 +47,4 @@ Question:
 Is there any way to create JSP component as Dynamic web project and refer...in JSP component?  
 
 Answer:  
-Yes, you could create the JSP itself using Rational Tools but the JSP Component itself would be created with WCM.  
+Yes, you could create the JSP using Rational Tools but the JSP Component would be created with WCM.  
