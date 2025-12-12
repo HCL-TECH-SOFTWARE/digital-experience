@@ -11,3 +11,4 @@ nav:
     - RemoveStateInformationFromURL.md
     - HideXPoweredByHeader.md
     - SetGenericJVMArgumentsCorePod.md
+    - responseHeaderForceType.md
