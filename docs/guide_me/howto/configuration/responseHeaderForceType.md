@@ -6,30 +6,30 @@
 
 ## Introduction
 
-There might be situations in which HCL DX will be used along with IBM HTTP Server in front of the HCL DX environment. If you want to force  the IBM HTTP Server to modify the response header, there are settings that can be set on IBM HTTP-Server side to fulfill these requirements. For example, if the response-header of a PDF file request should be changed.  
+You might use HCL Digital Experience (DX) with IBM HTTP Server as a frontend. In this configuration, you might need to force IBM HTTP Server to modify the response header. For example, you might need to change the response header to ensure PDF files download correctly.  
 
 ## Instructions
 
-Using the following will only work if the PDF file is being served locally by the IBM HTTP Server. This will force the PDF to download as expected.
+### Modifying headers for local files
 
-```xml
+If IBM HTTP Server serves the PDF file locally, use the `<FilesMatch>` directive. This configuration forces the PDF to download as expected.
+
+```
 <FilesMatch "\.(?i:pdf)$">
 ForceType application/octet-stream
 Header set Content-Disposition attachment
 </FilesMatch>
 ```
 
-If the PDF is being served from a backend IBM WebSphere Application Server (Digital Experience Server) instead, using FilesMatch is not applicable.  
+### Modifying headers for backend files
+If a backend IBM WebSphere Application Server (Digital Experience Server) serves the PDF, the <FilesMatch> directive does not apply.  
 
-In that case, you will need to force a specific content type in the HTTP Server or you can set a header for a WebSphere response. That can only be done using the Location Stanzas:  
-
-```xml
+```
 <LocationMatch "\.(?i:pdf)$">
 ForceType application/octet-stream
 Header set Content-Disposition attachment
 </LocationMatch>
 ```
 
-!!!note
-    This requires that the PDF file be called in the URL, since location stanza's can only match against URL strings:  
-    e.g `http://sitename/mycontent/was/my.pdf`  
+!!! note
+    This configuration requires that the URL include the PDF filename, because location stanzas can match only against URL strings. For example: `http://sitename/mycontent/was/my.pdf`
