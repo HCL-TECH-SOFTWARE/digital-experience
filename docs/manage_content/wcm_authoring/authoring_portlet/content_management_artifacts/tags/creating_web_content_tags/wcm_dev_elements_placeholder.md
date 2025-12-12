@@ -169,7 +169,7 @@ To create a placeholder tag:
 
     - **Encode tag output**
 
-        If selected, the reserved HTML characters in the source are converted into character entities. For example, '<' is converted to '&lt;'. This method is useful if you would like to prevent users from adding malicious code, or if you want to prevent users from changing the look and feel of their text with HTML.
+        If selected, the reserved HTML characters in the source are converted into character entities. For example, `<` is converted to `&lt;`. This method is useful if you would like to prevent users from adding malicious code, or if you want to prevent users from changing the look and feel of their text with HTML.
 
     - **Do not encode tag output**
 
