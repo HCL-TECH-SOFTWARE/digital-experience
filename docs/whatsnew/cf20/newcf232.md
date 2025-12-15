@@ -20,7 +20,6 @@ The following features and updates are available to customers installing HCL Dig
 - German and French translations now available
 - HAProxy custom headers now available
 - Helm values updates
-- Language switcher for DX Help Center now available
 - New How-to articles now available
 - WAS, JDK, and iFix versions
 
@@ -114,11 +113,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
-
-### Language switcher for HCL DX Help Center now available
-
-=== "Containers"
-    You can now translate the HCL DX Help Center in real-time to two additional languages: German and French. To switch languages, click the language switcher dropdown on the top-right corner of any DX Help Center page and select your desired language.
 
 ### New How-to articles now available
 
