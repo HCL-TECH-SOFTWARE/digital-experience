@@ -21,8 +21,9 @@ View the demonstration of the HCL DX DAM features and capabilities:
 </div>
 </div>
 
-You can also view this demo in other languages:
+You can view this demo in the following languages:
 
+- [English](https://hclsoftware.storylane.io/share/d6h8zcuwv68v){target="_blank"}
 - [French](https://hclsoftware.storylane.io/share/ifjmbab9jtjd){target="_blank"}
 - [German](https://hclsoftware.storylane.io/share/tmjuenicjgc2){target="_blank"}
 - [Italian](https://hclsoftware.storylane.io/share/bvotjblgynon){target="_blank"}
