@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Additional configuration options for DX Core probes
 - DX Picker - Configuring dialog size and persisting last known location
+- German and French translations now available
 - HAProxy custom headers now available
 - Helm values updates
 - Language switcher for DX Help Center now available
@@ -98,6 +99,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `xl` or `extra-large`
     
     Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
+
+### German and French translations now available
+
+=== "Containers"
+    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
 
 ### HAProxy custom headers now available
 
