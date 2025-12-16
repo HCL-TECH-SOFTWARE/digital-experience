@@ -74,6 +74,6 @@ JSESSIONID ([Java Servlet specification](https://www.oracle.com/java/technologie
 - Consider setting HTTPOnly for any other cookies your application might leverage, at the [web container level](https://www.ibm.com/docs/en/was/9.0.5?topic=configuration-web-container-custom-properties#blockingjavascriptaccess). 
 
 - If the controls above prove insufficient for any application cookies, consider setting attributes at the web server (with [mod_headers.so](https://publib.boulder.ibm.com/httpserv/manual70/mod/mod_headers.html)): 
-    Header edit Set Cookie ^(.*)$ $1;HttpOnly;Secure
+    Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
     or
-    Header set Set Cookie HttpOnly;Secure
+    Header set Set-Cookie HttpOnly;Secure
