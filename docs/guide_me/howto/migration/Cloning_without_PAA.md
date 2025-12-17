@@ -1,4 +1,4 @@
-# Cloning a Portal 8.5, 9.0 and 9.5 environment without PAA
+# How to clone a Portal 8.5, 9.0, or 9.5 environment without PAA
 
 ## Applies to
 
@@ -6,11 +6,11 @@
 
 ##  Introduction
 
-For naming purposes, this process refers to the system you are copying from as the “source” system and the system you are copying to as the “target” system.
+For naming purposes, this process calls the system you are copying from the source system and the system you are copying to the target system.
 
 ## Instructions
 
-1. ## Install or Upgrade the Target Portal
+1. ## Installing or Upgrade ing the Target Portal
 
 - nstall or upgrade the target Portal to the same level as the source system.
 - Upgrade the target WebSphere Application Server (WAS) to match the source system.
@@ -18,17 +18,17 @@ For naming purposes, this process refers to the system you are copying from as t
 - Ensure that the target Portal includes a profile and not just the binaries.
 - Both environments should run the same Portal and WAS versions, preferably at the latest levels.
 
-## Configure Security
+## Configureing Security
 
 - Configure security on the target Portal.
 - You may use a different user repository than the source system.
 
-## Perform DBTransfer
+## Performing DBTransfer
 
 - Run DBTransfer on the target Portal to DB2, Oracle, or SQL Server.
 - If the target environment is for development, you may use Derby.
 
-## Install Extensions (If Applicable)
+## Installing Extensions (If Applicable)
 
 ### WCM Multilingual Extensions
 

@@ -1,4 +1,4 @@
-# A Step-by-Step guide to installing HCL DX 9.5 standalone in Linux
+# How to install HCL DX 9.5 standalone on Linux
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides step-by-step instructions for setting up and installing a standalone HCL Digital Experience 9.5 environment on Linux using IBM® Installation Manager in console mode.
+This article explains how to set up and install a standalone HCL Digital Experience 9.5 environment on Linux by using IBM® Installation Manager in console mode.
 
 ### Overview
 
@@ -18,7 +18,7 @@ This article provides step-by-step instructions for setting up and installing a 
 [VI. Install HCL Digital Experience v9.5](#vi-install-hcl-digital-experience-version-95)  
 
 !!!note  
-    A working installation of IBM® WebSphere® Application Server is required. Ensure it is not used by another instance of HCL® Digital Experience. Before installing the HCL® Digital Experience package, install IBM® WebSphere SDK Java Technology Edition in the same directory as IBM® WebSphere Application Server. The SDK Java version must be 8.0.3 or later.  
+    A working installation of IBM® WebSphere® Application Server is required. Make sure it is not used by another instance of HCL® Digital Experience. Before installing the HCL® Digital Experience package, install IBM® WebSphere SDK Java Technology Edition in the same directory as IBM® WebSphere Application Server. The SDK Java version must be 8.0.3 or later.  
 
 **For a fresh full installation, follow this recommended installation path:**  
 

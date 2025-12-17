@@ -1,4 +1,4 @@
-# How to Export a Single Page or a Page Hierarchy
+# How to export a single page or a page hierarchy
 
 ## Applies to
 >
@@ -6,13 +6,13 @@
 
 ##  Introduction
 
-This article provides step-by-step instructions for exporting a single page or a page hierarchy. You can export pages using the Manage Pages portlet or XMLAccess.  
+This article provides step-by-step instructions for exporting a single page or a page hierarchy. You can export pages by using the Manage Pages portlet or XMLAccess.  
 
 ## Instructions
 
 You can export a page or a page hierarchy using the Manage Pages portlet or XMLAccess.
 
-### Option 1: Export via Manage Pages
+### Option 1: Export ing via Manage Pages
 
 1. Sign in to the Portal as a portal administrator (for example, the `wpsadmin` user).  
 2. In the Portal menu, click **Home**, then click the **Administration** menu icon.  
@@ -32,7 +32,7 @@ You can export a page or a page hierarchy using the Manage Pages portlet or XMLA
     [Exporting pages or page hierarchies using the Manage Pages portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_exp.md){target="_blank"}  
     [Using XMLAccess to export and import Portal pages](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0075798){target="_blank"}  
 
-### Option 2: Export via XMLAccess
+### Option 2: Exporting  via XMLAccess
 
 You can use XMLAccess to export pages. Sample XML configuration files are located in `<PortalServer_root>/doc/xml-samples`.
 
