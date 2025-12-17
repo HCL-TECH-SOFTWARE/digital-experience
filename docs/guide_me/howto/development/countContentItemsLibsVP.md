@@ -1,7 +1,7 @@
 # How to count content items of a WCM library on Virtual Portals using Java and JSPs 
 
 ## Applies to
-
+ 
 > HCL Digital Experience 9.5 and higher
 
 ## Introduction
