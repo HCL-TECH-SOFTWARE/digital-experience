@@ -5,3 +5,4 @@ nav:
     - transient_users_with_OpenID_Connect.md
     - AddAdditionalWASRealms.md
     - ReplacePortalLDAP.md
+    - UnifiedTaskListLog4j.md
