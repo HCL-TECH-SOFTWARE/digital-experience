@@ -4,8 +4,6 @@ Take note of the following limitations when using Search V2 Authoring:
 
 ## Searchable Fields
 
-- Advanced search filters are not currently supported.
-
 ### Content and Indexing
 
 - Currently, the Authoring Search feature of Document Conversion Services only supports JCR content.

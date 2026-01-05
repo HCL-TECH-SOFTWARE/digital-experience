@@ -2,6 +2,14 @@
 
 Take note of the following limitations when using Search V2:
 
+## Searchable Fields
+
+### Content and Indexing
+
+- The only supported content source types right now are `wcm`, `portal`, and `people` (e.g. People Service).
+
+- It does not support content stored in the Digital Asset Management (DAM) repository.
+
 ## Pagination
 
 - The number of results shown per page is currently fixed at 50.
