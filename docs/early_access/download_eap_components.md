@@ -4,7 +4,7 @@ There are two ways to obtain the DX Early Access Program release code:
 
 You can log in to either of the following portals using your HCLSoftware ID:
 
-- You can download the **HCL DX Early Access Program** components from your HCL Digital Experience entitlements in the [HCL Software License Download Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do), in the **HCL Digital Experience Early Access** download package entry.
+- You can download the **HCL DX Early Access Program** components from your HCL Digital Experience entitlements in the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}, in the **HCL Digital Experience Early Access** download package entry.
 
     **Milestone 2**
 

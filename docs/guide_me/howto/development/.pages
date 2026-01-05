@@ -5,3 +5,6 @@ nav:
   - CreateAServletForStaticFiles.md
   - CodeToPrintUserAndHostname.md
   - Portletdevelopmentutilitiesandpagecreationsamples.md
+  - CustomLoginPortlet.md
+  - countContentItemsLibsVP.md
+  

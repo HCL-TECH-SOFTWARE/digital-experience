@@ -10,4 +10,5 @@ nav:
     - IntegrateLDAP.md
     - RemoveStateInformationFromURL.md
     - HideXPoweredByHeader.md
-
+    - SetGenericJVMArgumentsCorePod.md
+    - responseHeaderForceType.md
