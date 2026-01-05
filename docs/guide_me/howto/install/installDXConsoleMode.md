@@ -63,16 +63,15 @@ Product software can be obtained from the [My HCLSoftware](https://my.hcltechsw.
 
 <!--Additional guidance is available here: [Locating and Downloading DX Products](../../../../docs/get_started/access-software/locating-downloads.md)-->  
 
-!!!note
-   There are several Portal 9.5 offerings. Your license determines which offerings appear as available to download. Example package names for the different Portal 9.5 offerings:  
+!!! note
+    There are several Portal 9.5 offerings. Your license determines which offerings appear as available to download. Example package names for the different Portal 9.5 offerings:  
 
-- HCL® Portal Express v9.5 Multiplatform  
-- HCL® Portal Server v9.5 Multiplatform  
-- HCL® Portal Enable v9.5 Multiplatform  
-- HCL® Portal Extend v9.5 Multiplatform  
+    - HCL® Portal Express v9.5 Multiplatform  
+    - HCL® Portal Server v9.5 Multiplatform  
+    - HCL® Portal Enable v9.5 Multiplatform  
+    - HCL® Portal Extend v9.5 Multiplatform  
 
-!!!note
-    The files above include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the JDK. You must also download the latest Cumulative Fix (CF) from My HCLSoftware to complete the software required to install Portal 9.5. Please check [Fixes integrated in ® Digital Experience 8.5.0.0, 9.0 and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.  
+    The files above include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the JDK. You must also download the latest Cumulative Fix (CF) from My HCLSoftware to complete the software required to install Portal 9.5. Please check [Fixes integrated in HCL® Digital Experience 8.5.0.0, 9.0 and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.  
 
 In My HCLSoftware, download the complete package for your chosen offering.  
 
