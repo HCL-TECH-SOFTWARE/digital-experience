@@ -14,3 +14,5 @@ Learn how to create a servlet that serves static files.
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[How to create a custom login portlet with credential vault handling in HCL DX](./CustomLoginPortlet.md)**  
 Learn how to create a custom login with credential vault handling in HCL DX.  
+- **[How to count content items of a WCM library on Virtual Portals using Java and JSPs](./countContentItemsLibsVP.md)**  
+Learn how to count content items of a WCM library on Virtual Portals using Java and JSPs.  
