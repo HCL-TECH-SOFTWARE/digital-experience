@@ -1,18 +1,27 @@
-# Web content
+# Practitioner Studio
+
+## Web Content
 
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
 
-- [**Authoring portlet**](../create_sites/authoring_tools/site_auth_portlet.md)<br>
-    Learn how to use authoring templates to add content to your website.
-- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
-    Learn how to use the HCL Content Composer to create and manage DX site content.
-- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
-    Learn how o generate reports and perform bulk updates on reported items.
-- [**Preview**](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
+- [**Authoring portlet**](../../create_sites/authoring_tools/site_auth_portlet.md)<br>
+    Learn how to to create and manage website content efficiently through the Authoring Portlet by using customizable authoring templates.
+- [**HCL Content Composer**](content_composer.md)<br>
+    Learn how to  to create and manage of DX site content. 
+- [**Content Reporting**](content_reporting.md)<br>
+    Learn how to to generate reports and perform bulk updates on content items.
+- [**Preview**](../../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
-- [**Managing web content libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
+- [**Managing web content libraries**](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
+
+## Digital Assets
+The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform for storing and managing rich media assets, enabling engaging and consistently branded experiences across digital channels in HCL DX.
+
+## Site Templates
+Create [site templates](../site_templates.md) or section templates for use with HCL Digital Experience (DX).
+
 
 ## HCLSoftware U learning materials
 
