@@ -1,33 +1,45 @@
 # Limitations of Search V2
 
-Take note of the following limitations when using Search V2:
+Be aware of the following limitations when using Search V2.
 
-## Searchable Fields
+## Content sources and indexing
 
-### Content and Indexing
+Search V2 supports only the following content source types:
 
-- The only supported content source types right now are `wcm`, `portal`, and `people` (e.g. People Service).
+- **WCM**
+- **Portal**
+- **People** (for example, People Service)
 
-- It does not support content stored in the Digital Asset Management (DAM) repository.
+!!! note
+    Search V2 doesn't support content stored in the Digital Asset Management (DAM) repository.
 
 ## Pagination
 
-- The number of results shown per page is currently fixed at 50.
+Search results are limited to **50 items per page**. This value is fixed and cannot be changed.
 
-## Searchable Fields
+## Searchable fields
 
-- Only common fields such as title, description, type, and tags may be specifically searched for now. You can use the **All attributes** search parameter for a broader search range.
+You can search only common fields, such as:
+
+- **Title**
+- **Description**
+- **Type**
+- **Tags**
+
+To search across a broader range of attributes, use the **All attributes** search parameter.
 
 ## Localization
 
-- The Search user interface currently only supports the English localization.
+The Search user interface supports **English only**.
 
 ## Accessibility
 
-- To ensure full accessibility on the Search page, the user's browser-specific settings for keyboard navigation must be enabled.
+To ensure full accessibility on the Search page, you must enable keyboard navigation settings in your browser.
 
-    See the keyboard navigation setting for Firefox below.
-    ![](../../assets/HCL_Search_Browser_Safari_Settings.png)
+For more information, see:
 
-    See the keyboard navigation setting for Safari below.
-    ![](../../assets/HCL_Search_Browser_Firefox_Settings.png)
+- Keyboard navigation settings for **Firefox**  
+  ![](../../assets/HCL_Search_Browser_Firefox_Settings.png)
+
+- Keyboard navigation settings for **Safari**  
+  ![](../../assets/HCL_Search_Browser_Safari_Settings.png)
