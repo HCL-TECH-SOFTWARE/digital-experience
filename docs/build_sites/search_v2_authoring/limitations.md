@@ -1,47 +1,51 @@
-# Limitations of Search V2 Authoring
+# Search V2 Authoring Limitations
 
-Take note of the following limitations when using Search V2 Authoring:
+Review these limitations before you use Search V2 Authoring.
 
-## Searchable Fields
+## Content and indexing
 
-### Content and Indexing
+- Search V2 Authoring supports **JCR content only**.  
+- Content stored in the **Digital Asset Management (DAM)** repository is not supported.
 
-- Currently, the Authoring Search feature of Document Conversion Services only supports JCR content.
+## Basic actions
 
-- It does not support content stored in the Digital Asset Management (DAM) repository.
+You can perform only the following actions on search result items:
 
-## Basic Actions
+- **Edit**  
+- **Read**  
+- **Preview**
 
-- Currently, only Edit, Read, and Preview actions are available for search result items.
+## Bulk actions
 
-## Bulk Action
-
-- Bulk actions are not currently supported.
+- Bulk actions are not supported.
 
 ## Localization
 
-- The UI is only available in English.
+- The user interface is available in **English only**.
 
 ## Accessibility
 
-- To ensure full accessibility on the Search page, the user's browser-specific settings for keyboard navigation must be enabled.
+To ensure full accessibility on the Search page, users must enable keyboard navigation settings in their browser.
 
-    See the keyboard navigation setting for Firefox.
-    ![](../../assets/HCL_Search_Browser_Safari_Settings.png){: style="height:600px"}
+### Firefox
 
-    See the keyboard navigation setting for Safari.
+![Firefox keyboard navigation settings](../../assets/HCL_Search_Browser_Firefox_Settings.png)
 
-    ![](../../assets/HCL_Search_Browser_Firefox_Settings.png){: style="height:600px"}
+### Safari
 
-## Delete
+![Safari keyboard navigation settings](../../assets/HCL_Search_Browser_Safari_Settings.png)
 
-- When an item is deleted, it might still show up in search results as the Web Content Manager (WCM) does not instantly push deletion updates. The item will appear until the next [crawler run](../search/searching_local_portal/srccrwlindxsite.md) updates the search index.
+## Deletion
 
-- The Delete feature is disabled if the user is working on a project.
+!!! note "Important"
+    Web Content Manager (WCM) does not instantly push deletion updates.
 
-## Advanced Search Filter
+- Deleted items might appear in search results until the next [crawler run](../search/searching_local_portal/srccrwlindxsite.md) updates the search index.  
+- The **Delete** feature is disabled while you are working on a project.
 
-- When filtering results by **Author**, you must type at least three characters to begin searching for users or groups.
-- The search function is not case-sensitive, but it is sensitive to spelling errors.
+## Advanced search filters
 
-    ![](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png){: style="height:600px"}
+- When filtering results by **Author**, enter at least three characters to start searching for users or groups.  
+- Search is **not case-sensitive**, but it is sensitive to spelling errors.
+
+![Advanced search filter interface](../../assets/HCL_SearchV2_Authoring_Advance_Search_Site_Area_Template.png)
