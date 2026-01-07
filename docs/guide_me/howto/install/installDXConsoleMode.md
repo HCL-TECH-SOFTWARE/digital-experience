@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article explains how to set up and install a standalone HCL Digital Experience 9.5 environment on Linux by using IBM® Installation Manager in console mode.
+This article explains how to set up and install a standalone HCL Digital Experience 9.5 environment on Linux using the IBM® Installation Manager in console mode.
 
 ### Overview
 
