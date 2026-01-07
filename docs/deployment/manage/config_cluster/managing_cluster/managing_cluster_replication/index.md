@@ -18,7 +18,7 @@ Review the following information to manage replication:
     HCL Portal can use the WebSphere® Application Server capabilities to support HTTP session failover, which enables one node in a cluster to access information from the existing HTTP session in a failure in the cluster node originally handling that session. This capability is referred to as distributed sessions. WebSphere® Application Server provides two techniques that can be used for distributed sessions, either of which can be used in a HCL Portal cluster. Distributed session support is not enabled by default, so you must determine whether to provide this capability in your cluster. And, if so, which of the two techniques you use: memory-to-memory session replication and database session persistence.
 
     !!!warning
-        The memory-to-memory session application can lead to low memory conditions if failures cause replication to fail. This condition can occur because the local and backup sessions are stored in the JVM memory. Therefore, failures with replicating the session data can prevent freeing the memory that is allocated for the backup session.
+        The memory-to-memory session replication can lead to low memory conditions if failures cause replication to fail. This condition can occur because the local and backup sessions are stored in the JVM memory. Therefore, failures with replicating the session data can prevent freeing the memory that is allocated for the backup session.
 
     -   AIX®, Linux™ and Windows™:
         -   For general information, read [Session management support](https://www.ibm.com/docs/en/was/9.0.5?topic=sessions-session-management-support).
