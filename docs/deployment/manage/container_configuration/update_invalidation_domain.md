@@ -1,30 +1,40 @@
----
-title: Change the Domain/Schema For Dynacache Invalidation Table in the Database
----
-# Introduction
-HCL DX Portal relies heavily on a type of hashmap known as a `dynacache`. A dynacache is an instance of the Java object `DistributedMap` or `com.ibm.websphere.cache.DistributedMap` if one prefers the fully qualified class name. A dynacache is merely a cluster aware HashMap. That means that if a particular instance of a dynacache changes (say on one cluster member in a WebSphere Application Server cluster), all other cluster members are made aware of that change.
+# hanging the domain or schema for the dynacache invalidation table in the database 
 
-However, in Kubernetes, there are no WebSphere Application Server clusters. All DX Portal instances are running as non-clustered WebSphere Application Server instances. But the dynacaches in these instances need to know if a dynacache in a different DX Portal instances (for example in a different pod) changes a dynacache value. In Kubernetes, this is achieved thru the use a database table named `INVALIDATION_TABLE`. 
+## Introduction
 
-By default, the database INVALIDATION_TABLE resides in the the `RELEASE` domain/schema. However, there may be use cases whereby this table would be better stored in one of the other 3 domain/schemas (e.g. `JCR`, `COMMUNITY` or `CUSTOMIZATION`). Changing the domain/schema of this table can (only) be achieved in the kubernetes helm chart of the HCL DX Portal.
+HCL DX Portal relies on a type of hash map called a `dynacache`. A dynacache is an instance of the Java object `DistributedMap` or, if you prefer, the fully qualified class name `com.ibm.websphere.cache.DistributedMap`. A dynacache is cluster-aware, which means that when one instance changes (for example, on one cluster member in a WebSphere Application Server cluster), all other cluster members are notified of the change.
 
-# How DX Portal Determines the Location of Invalidation Table
-HCL DX Portal will examine the WebSphere Application Server REP (Resource Environment Provider) named `WP_ConfigService`. It will retrieve the value for the property `db.cache.invalidation.domain`. It will use that value as the domain/schema for the invalidation table in all DX Portal code using a dynacache.
+In Kubernetes, WebSphere Application Server clusters do not exist. All DX Portal instances run as non-clustered WebSphere Application Server instances. However, dynacaches in these instances still need to detect changes made by other DX Portal instances (for example, in different pods). In Kubernetes, this is achieved using a database table named `INVALIDATION_TABLE`.
 
-As mentioned in the introduction, the default domain/schema for this table is `RELEASE`. This default value is also found in the helm chart `values.yaml` as `invalidationDomain: RELEASE`.
+By default, the `INVALIDATION_TABLE` resides in the `RELEASE` domain or schema. In some deployments, it may be preferable to store this table in a different domain or schema, such as `JCR`, `COMMUNITY`, or `CUSTOMIZATION`. Changing the domain or schema of this table can only be done through the Kubernetes Helm chart for the HCL DX Portal.
 
-# Changing the Domain/Schema of the Invalidation Table`
-Changing the Domain/Schema of the invalidation table from the default of `RELEASE` involves two steps:
+## How DX Portal Determines the Location of the Invalidation Table
+
+HCL DX Portal examines the WebSphere Application Server REP (Resource Environment Provider) named `WP_ConfigService`. It retrieves the value of the property `db.cache.invalidation.domain` and uses it as the domain or schema for the `INVALIDATION_TABLE` in all DX Portal code that uses a dynacache.
+
+By default, the domain or schema for this table is `RELEASE`. This default is also defined in the Helm chart `values.yaml` as:
+
+```yaml
+invalidationDomain: RELEASE
+```
+## Changing the Domain or Schema of the Invalidation Table
+
+To change the domain or schema of the `INVALIDATION_TABLE` from the default `RELEASE`, follow these steps:
 
 1. Update the value of `invalidationDomain` in `values.yaml`.
-2. Run `helm upgrade` after changing the value. Assuming you have your specific helm values in a file called `install-deploy-values.yaml`, the helm upgrade command might be this:
+2. Run `helm upgrade` after making the change. Assuming your Helm values are in a file called `install-deploy-values.yaml`, the command might look like this:
 
+```bash
+helm upgrade -n dxns -f install-deploy-values.yaml dx-deployment ./install-hcl-dx-deployment
 ```
-helm upgrade -n dxns -f install-deploy-values.yaml dx-deployment  ./install-hcl-dx-deployment
-```
-where `dxns` is the name space for this deployment, `install-deploy-values.yaml` is the yaml file with the change, `dx-deployment` is the DX deployment value and `install-hcl-dx-deployment` is the directory containing the helm chart.
+Where:  
 
-Running the `helm upgrade` command will delete the pod(s) and restart the portal pod with the updated domain/schema.
+- `dxns` is the namespace for this deployment.  
+- `install-deploy-values.yaml` is the YAML file containing the configuration changes.  
+- `dx-deployment` is the DX deployment name.  
+- `install-hcl-dx-deployment` is the directory containing the Helm chart.
 
-Consult the page [Upgrading Helm Deployment](../../install/container/helm_deployment/update_helm_deployment.md) for more details on doing a `helm upgrade`.
+Running the `helm upgrade` command deletes the existing pods and restarts the portal pod with the updated domain or schema.
+
+For more information, see [Upgrading Helm Deployment](../../../deployment/install/container/helm_deployment/update_helm_deployment.md).
 
