@@ -36,9 +36,9 @@ You can export a page or a page hierarchy using the **Manage Pages portlet** or 
 
 ### Option 2: Export using XMLAccess
 
-You can use **XMLAccess** to export pages. Sample XML configuration files are located in `<PortalServer_root>/doc/xml-samples`.
+You can use **XMLAccess** to export portal pages. Sample XML configuration files are located in `<PortalServer_root>/doc/xml-samples`.
 
-#### To export a page using `ExportPage.xml`:
+#### Export a page by using `ExportPage.xml`
 
 1. Navigate to the XML samples directory:
 
@@ -46,50 +46,51 @@ You can use **XMLAccess** to export pages. Sample XML configuration files are lo
     cd /opt/HCL/PortalServer/doc/xml-samples
     ```
 
-2. Copy the **ExportPage.xml** file (for example, as `ExportPage1.xml`).  
+2. Copy the ExportPage.xml file (for example, name it `ExportPage1.xml`).  
 3. Open the copied file (`ExportPage1.xml`) in a text editor.  
-4. Replace the default content:
+4. Replace the default value:
 
     ```xml
     uniquename="ibm.portal.ssa.SamplePage"
     ```
 
-    with the unique name of the page you want to export.  
+    with the unique name of the page that you want to export.  
+
 5. Run the following command to export the page:
 
     ```bash
     cd /opt/HCL/wp_profile/PortalServer/bin
-    ./xmlaccess.sh -user <your_username> -password <your_password> -url http://<ipAddress>:<port>/wps/config/ -in /opt/HCLPortalServer/doc/xml-samples/<your_input_file>.xml -out /tmp/<your_result>.xml
+    ./xmlaccess.sh -user <username> -password <password> -url http://<ipAddress>:<port>/wps/config/ -in /opt/HCL/PortalServer/doc/xml-samples/<input_file>.xml -out /tmp/<output_file>.xml
     ```
 
-    !!!note
-        Replace `<your_username>`, `<your_password>`, `<ipAddress>`, `<port>`, `<your_input_file>`, and `<your_result>` with your values.  
+    !!! note
+        Replace `<username>`, `<password>`, `<ipAddress>`, `<port>`, `<input_file>`, and `<output_file>` with your values.
 
-        **Example:**  
+        **Example:**
         ```bash
-        ./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /opt/HCLPortalServer/doc/xml-samples/ExportPage1.xml -out /tmp/result.xml
-        ```  
+        ./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /opt/HCL/PortalServer/doc/xml-samples/ExportPage1.xml -out /tmp/result.xml
+        ```
 
-        **Best practice:** Save `result.xml` in a temporary, easily accessible location.  
+        Best practice: Save the output file in a temporary, easily accessible location.
 
-6. Import the XMLAccess output using the following command:
+6. Import the XMLAccess output by running the following command:
 
     ```bash
-    ./xmlaccess.sh -user <your_username> -password <your_password> -url http://<ipAddress>:<port>/wps/config/ -in /tmp/<your_input_file>.xml -out <your_result>.xml
+    ./xmlaccess.sh -user <username> -password <password> -url http://<ipAddress>:<port>/wps/config/ -in /tmp/<input_file>.xml -out <output_file>.xml
     ```
 
-    !!!note
-        Replace `<your_username>`, `<your_password>`, `<ipAddress>`, `<port>`, `<your_input_file>`, and `<your_result>` with your values.  
+    !!! note
+        Replace `<username>`, `<password>`, `<ipAddress>`, `<port>`, `<input_file>`, and `<output_file>` with your values.
 
-        **Example:**  
+        Example:
         ```bash
         ./xmlaccess.sh -user wpsadmin -password wpsadmin -url http://localhost:10039/wps/config/ -in /tmp/importFile.xml -out result_import.xml
-        ```  
+        ```
 
-    Or use the **XML Import portlet**:  
-    [Importing pages or page hierarchies using the XML Import portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md){target="_blank"}  
+    Alternatively, you can use the XML Import portlet:  
+    [Importing pages or page hierarchies using the XML Import portlet](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_admin_portlets_for_xml_config/adxmltsk_portlets_imp.md){target="_blank"}
 
-7. Verify the imported page in the **Manage Pages portlet** to confirm the result.
+7. Verify the imported page in the **Manage Pages** portlet.
 
 ---
 

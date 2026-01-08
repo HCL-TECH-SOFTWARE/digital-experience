@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article explains how to set up and install a standalone HCL Digital Experience 9.5 environment on Linux using the IBM® Installation Manager in console mode.
+This article describes how to install a standalone HCL Digital Experience (DX) 9.5 environment on Linux using IBM Installation Manager in console mode
 
 ### Overview
 
@@ -17,8 +17,8 @@ This article explains how to set up and install a standalone HCL Digital Experie
 [V. Upgrading HCL® Digital Experience (WebSphere Portal) v8.5 to the latest Cumulative Fix (CF)](#v-upgrading-hcl-portal-websphere-portal-v85-to-the-latest-cumulative-fix-cf)  
 [VI. Install HCL Digital Experience v9.5](#vi-install-hcl-digital-experience-version-95)  
 
-!!!note  
-    A working installation of IBM® WebSphere® Application Server is required. Ensure it is not used by another instance of HCL® Digital Experience. Before installing the HCL® Digital Experience package, install IBM® WebSphere SDK Java Technology Edition in the same directory as IBM® WebSphere Application Server. The SDK Java version must be 8.0.3 or later.  
+!!! note
+    You must have a working installation of IBM® WebSphere® Application Server that is not used by another HCL® Digital Experience instance. Before installing HCL® Digital Experience, install the IBM® WebSphere SDK Java™ Technology Edition in the same directory as WebSphere Application Server. The SDK Java version must be 8.0.3 or later.  
 
 **For a fresh full installation, follow this recommended installation path:**  
 
@@ -43,75 +43,75 @@ This article explains how to set up and install a standalone HCL Digital Experie
 
 ## Instructions
 
-### I. Preparing the Environment
+### I. Prepare the environment
 
-Before installing HCL® Digital Experience, please review the [hardware and software requirements.](../../../get_started/system_requirements/index.md){target="_blank"}  
+Before you install HCL® Digital Experience, review the [hardware and software requirements](../../../get_started/system_requirements/index.md){target="_blank"}.
 
-Preparing your operating system for Installation  
+Prepare your operating system:
 
-[AIX: Preparing your operating system](../../../deployment/install/traditional/installing_dx/aix/prep_os-AIX.md){target="_blank"}  
+- [AIX: Prepare the operating system](../../../deployment/install/traditional/installing_dx/aix/prep_os-AIX.md){target="_blank"}  
+- [Linux: Prepare the operating system](../../../deployment/install/traditional/installing_dx/linux/prep_os-linux.md){target="_blank"}  
+- [Windows: Prepare the operating system](../../../deployment/install/traditional/installing_dx/windows/prep_os-windows.md){target="_blank"}
 
-[Linux: Preparing your operating system](../../../deployment/install/traditional//installing_dx/linux/prep_os-linux.md){target="_blank"}  
+### II. Get the software
 
-[Preparing your Windows OS](../../../deployment/install/traditional/installing_dx/windows/prep_os-windows.md){target="_blank"}  
+You can download the product software from [My HCLSoftware](https://my.hcltechsw.com/){target="_blank"}.
 
-### II. Getting the Software  
+For additional guidance, see [Locating and downloading DX products](../../../get_started/access-software/locating-downloads.md){target="_blank"}.
 
-Product software can be obtained from the [My HCLSoftware](https://my.hcltechsw.com/){target="_blank"}  
+!!! note
+    HCL Digital Experience 9.5 is available in multiple offerings. Your license determines which offerings are available for download.
 
-Additional guidance can be found at page [Locating and Downloading DX Products](../../../get_started/access-software/locating-downloads.md){target="_blank"}  
-
-!!!note
-    There are several different Portal 9.5 offerings. Your license determines which offerings you will see listed as available to download.  
-
-Example package names for the different Portal 9.5 offerings are:  
+Example package names for the HCL Digital Experience 9.5 offerings include:
 
 - HCL® Portal Express v9.5 Multiplatform  
 - HCL® Portal Server v9.5 Multiplatform  
 - HCL® Portal Enable v9.5 Multiplatform  
 - HCL® Portal Extend v9.5 Multiplatform  
 
-!!!note
-    The files above include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the JDK. You must also download the latest available Cumulative Fix (CF) from My HCLSoftware to complete the software required to install Portal 9.5. For details, see [Fixes integrated in HCL® Digital Experience 8.5.0.0, 9.0, and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.
+!!! note
+    These packages include Installation Manager, WebSphere Application Server, HCL® Digital Experience, and the Java SDK. You must also download the latest available cumulative fix (CF) from My HCLSoftware to complete the Portal 9.5 installation. For details, see [Fixes integrated in HCL® Digital Experience 8.5.0.0, 9.0, and 9.5 combined cumulative fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"}.
 
-In My HCLSoftware, download the complete package for your chosen offering.  
+In My HCLSoftware, download the complete package for your selected offering.
 
-Available Offerings:  
+#### Available offerings
 
-***HCL® Portal Extend v9.5 Multiplatform:**  
+**HCL® Portal Extend v9.5 Multiplatform**
 
-HCL-Portal-95_Extend_SETUP-01-SL.zip (Setup IIM; WP85_Extend; WP85_Server; WP95 Extend/Server)  
-HCL-Portal-95_Extend_SETUP-02-SL.zip (IFPI59896 - 8.5.0.0-WP-Server-IFPI59896.zip)  
-HCL-Portal-95_Extend_SETUP-03.zip (WASND905)  
-HCL-Portal-95_Extend_SETUP-04.zip (JDK805)  
+- `HCL-Portal-95_Extend_SETUP-01-SL.zip` (Installation Manager; WP85 Extend; WP85 Server; WP95 Extend/Server)  
+- `HCL-Portal-95_Extend_SETUP-02-SL.zip` (IFPI59896 – 8.5.0.0-WP-Server-IFPI59896.zip)  
+- `HCL-Portal-95_Extend_SETUP-03.zip` (WASND905)  
+- `HCL-Portal-95_Extend_SETUP-04.zip` (JDK805)  
 
-***HCL® Portal Enable v9.5 Multiplatform:**  
+**HCL® Portal Enable v9.5 Multiplatform**
 
-HCL-Portal-95_Enable_SETUP-01-SL (Setup IIM; WP85 Enable/Server; WP95 Enable/Server)  
-HCL-Portal-95_Enable_SETUP-02-SL (IFPI59896 - 8.5.0.0-WP-Server-IFPI59896.zip)  
-HCL-Portal-95_Enable_SETUP-03 (WASND905)  
-HCL-Portal-95_Enable_SETUP-04  (JDK805)  
+- `HCL-Portal-95_Enable_SETUP-01-SL.zip` (Installation Manager; WP85 Enable/Server; WP95 Enable/Server)  
+- `HCL-Portal-95_Enable_SETUP-02-SL.zip` (IFPI59896 – 8.5.0.0-WP-Server-IFPI59896.zip)  
+- `HCL-Portal-95_Enable_SETUP-03.zip` (WASND905)  
+- `HCL-Portal-95_Enable_SETUP-04.zip` (JDK805)  
 
-***HCL® Portal v9.5 Server Multiplatform:**  
+**HCL® Portal Server v9.5 Multiplatform**
 
-HCL-Portal-95_Server_SETUP-01.zip (Setup IIM; WP85 Server; WP95 Server)  
-HCL-Portal-95_Server_SETUP-02.zip (IFPI59896 - 8.5.0.0-WP-Server-IFPI59896.zip)  
-HCL-Portal-95_Server_SETUP-03.zip (WASND905)  
-HCL-Portal-95_Server_SETUP-04.zip (JDK805)  
+- `HCL-Portal-95_Server_SETUP-01.zip` (Installation Manager; WP85 Server; WP95 Server)  
+- `HCL-Portal-95_Server_SETUP-02.zip` (IFPI59896 – 8.5.0.0-WP-Server-IFPI59896.zip)  
+- `HCL-Portal-95_Server_SETUP-03.zip` (WASND905)  
+- `HCL-Portal-95_Server_SETUP-04.zip` (JDK805)  
 
-In this guide, the offering **HCL® Portal Extend v9.5 Multiplatform** will be used.
+This guide uses **HCL® Portal Extend v9.5 Multiplatform** as the example offering.
 
-**Preparing the files for Install**  
+### Prepare the installation files
 
-Once you have the parts downloaded, create a parent folder wherein the files are to be extracted. You can name it as `SETUP` and extract the zip files to the created parent folder. As shown in the example below:
+After you download the files, create a parent directory and extract all packages into it. In this guide, the directory is named `SETUP`.
 
-![alt text](Images/installDXConsoleMode/image1.png)
+The following example shows the extracted directory structure:
+
+![Directory structure example](Images/installDXConsoleMode/image1.png)
 
 ### III. Installing IBM® WebSphere Application Server ND Version 9.0.5 and JDK v8.0.3 or later using the IBM® Installation Manager in console mode
 
 ### Section 1 - Installing IBM® Installation Manager
 
-The IBM® Installation Manager (IIM) is a tool for installing and maintaining software packages. Wizards guide you through the steps to install, modify, update, roll back, or uninstall IBM® or HCL® products. This guide uses the Installation Manager console mode to install the software. 
+IBM® Installation Manager (IIM) is a tool for installing and maintaining software packages. Wizards guide you through installing, modifying, updating, rolling back, or uninstalling IBM® or HCL® products. This guide uses Installation Manager **console mode**.
 
 1. Open a terminal window and run:  
    `ping <hostname>`  
