@@ -173,8 +173,17 @@ networking:
       # - "prefer-client-ciphers" - Prefer client's cipher order
       # - "ssl-min-ver TLSv1.2" - Set minimum TLS version to 1.2
       # - "ssl-max-ver TLSv1.3" - Set maximum TLS version to 1.3
-      # Example for modern security: ["no-sslv3", "no-tlsv10", "no-tlsv11", "no-tls-tickets"]
-      # Example for strict security: ["no-sslv3", "no-tlsv10", "no-tlsv11", "no-tlsv12", "ssl-min-ver TLSv1.3"]
+      # Example for modern security: 
+      #     - "no-sslv3"
+      #     - "no-tlsv10"
+      #     - "no-tlsv11"
+      #     - "no-tls-tickets"
+      # Example for strict security: 
+      #     - "no-sslv3"
+      #     - "no-tlsv10"
+      #     - "no-tlsv11"
+      #     - "no-tlsv12"
+      #     - "ssl-min-ver TLSv1.3"
       sslDefaultBindOptions: []
 ```
   
