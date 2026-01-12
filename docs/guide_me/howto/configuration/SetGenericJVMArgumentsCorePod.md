@@ -8,7 +8,7 @@
 
 In a containerized HCL DX environment, most configuration settings must be defined in the Helm chart (`values.yaml`) before you run a Helm upgrade to apply them. Because the Helm chart does not provide parameters for setting generic JVM arguments on the dx-core pod, you must configure them differently.  
 
-This documentation describes how to set generic JVM arguments for the dx-core pod in a containerized HCL DX environment.  
+This article describes how to set generic JVM arguments for the dx-core pod in a containerized HCL DX environment.  
 
 ## Instructions
 
