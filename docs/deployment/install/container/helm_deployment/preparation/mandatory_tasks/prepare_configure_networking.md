@@ -180,7 +180,6 @@ networking:
       #     - "no-tlsv12"
       #     - "ssl-min-ver TLSv1.3"
       sslDefaultBindOptions: []
-```
 
 This configuration is useful for scenarios where you want to use a custom Ingress Controller to expose the service. HAProxy remains active in this setup. The Ingress Controller handles incoming traffic and routes it to the HAProxy service
 
