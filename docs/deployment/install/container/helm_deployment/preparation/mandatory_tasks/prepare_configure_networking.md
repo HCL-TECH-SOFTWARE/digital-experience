@@ -8,7 +8,7 @@ If you deploy Core and all other applications within Kubernetes or OpenShift, us
 
 ## Configuring Core host
 
-In a full deployment, Core and all other applications share the same host. It is recommended to configure the host before you start the deployment. This approach requires that you know the fully qualified domain name (FQDN) or the IP address assigned by HAProxy in advance.
+In a full deployment, Core and all other applications share the same host. It is recommended to configure the host before you start the deployment. This approach requires that you know the Fully Qualified Domain Name (FQDN) or the IP address assigned by HAProxy in advance.
 
 If this information is available, define the host using the following syntax:
 
@@ -21,9 +21,9 @@ networking:
     host: "your-dx-instance.example.com"
   ```
 
-## Configuring Cross-origin Resource Sharing (CORS)
+## Configuring Cross-Origin Resource Sharing (CORS)
 
-The HCL DX 9.5 Helm chart lets you configure Cross-origin Resource Sharing (CORS) for all add-on applications to DX Core, such as Digital Asset Management or Ring API. This configuration enables other applications to access the APIs provided by these add-ons.
+The HCL DX 9.5 Helm chart allows you to configure Cross-Origin Resource Sharing (CORS) configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
 
 You can define a list of allowed hosts for a specific application using the following syntax in your `custom-values.yaml`:
 
@@ -43,7 +43,7 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 ## Configuring Hybrid Host
 
-In a [Hybrid](../../../../../../deployment/install/hybrid/index.md) deployment, configure the host for the on-premises DX Core under the `core` section. Configure the hosts for the other applications under the `addon` section. For example:
+In a [Hybrid](../../../../../../deployment/install/hybrid/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the `addon` section. For example:
 
 ```yaml
 networking:
@@ -78,7 +78,7 @@ networking:
 
 Refer to the original `values.yaml` for all available applications that can be configured. For more information, refer to [Planning your container deployment using Helm](../../../../container/index.md).
 
-Setting the add-on host is required for all hybrid deployments. Because the default uses relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must point to a single absolute hostname to avoid authentication issues. Configuring multiple hostnames in a hybrid deployment is not supported. Refer to [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
+Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. Refer to [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
 
 !!! note
     If your DX Core deployment uses a self-signed certificate or a certificate that is not publicly trusted, add the certificate to the trust store of the add-on applications. Refer to [Adding additional CA to the trust store of DAM or RingAPI](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md) for instructions.
@@ -89,7 +89,7 @@ To allow HAProxy to forward requests to your applications, you must provide a TL
 
 ## Configuring HAProxy networking
 
-HAProxy is deployed as a `LoadBalancer` service to handle incoming traffic and perform SSL offloading for HCL DX. The Helm chart lets you configure HAProxy and its services for flexible deployments, including support for custom `Ingress Controllers`.
+HAProxy is deployed with a `LoadBalancer` service to handle incoming traffic and perform SSL offloading for HCL DX. The Helm chart lets you configure HAProxy and its services for flexible deployments, including support for custom Ingress Controllers.
 
 |Parameter|Description| Type | Default value|
 |---------|-----------|-------------|------|
@@ -185,7 +185,7 @@ This configuration is useful for scenarios where you want to use a custom Ingres
 
 ## Using annotations to control HAProxy service behavior for different cloud providers
 
-The Helm chart lets you add annotations to the HAProxy service to control its behavior for different cloud providers. You can use these annotations to specify a load balancer type or configure other provider-specific settings. Add annotations in your `custom-values.yaml` file, as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations).
+The Helm chart allows you to add annotations to the HAProxy service to control the behavior of the service for different cloud providers. You can use this to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. You can add annotations in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations).
 
 Examples for such annotations are in an non-exhaustive list. Refer to the documentation provided by your cloud provider for more information:
 
