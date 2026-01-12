@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Experience 8.5 and higher
+> HCL Experience 9.5 and higher
 
 ## Introduction
 
@@ -16,7 +16,7 @@ To add generic JVM arguments to the dx-core pod wp_profile/WebSpherePortal JVM, 
 
 1. Install or Update the HCL DX environment using the helm chart. Details can be found at URL: [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md){target="_blank"}.  
 
-2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as following:  
+2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as follows:
 
     1. Open a web-browser and access the IBM Integrated Solutions Console (admin console). (For example: `http://<DX_HOSTNAME>/ibm/console`)  
     2. Login as administrator.  
