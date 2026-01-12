@@ -2,24 +2,17 @@
 
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
-- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
-    Learn how to use the HCL Content Composer to create and manage DX site content.
+
 - [**Authoring portlet**](../create_sites/authoring_tools/site_auth_portlet.md)<br>
     Learn how to use authoring templates to add content to your website.
-- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md)<br>
-    Learn how to generate reports and update reported items in bulk.
-- [**Previewing content on web content pages**](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
+- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
+    Learn how to use the HCL Content Composer to create and manage DX site content.
+- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
+    Learn how o generate reports and perform bulk updates on reported items.
+- [**Preview**](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
 - [**Managing web content libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
-- [**Managing syndicators and subscribers**](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)<br>
-    Learn how to transport data from one instance of HCL Web Content Manager to another.
-- [**Web Content Feed Management**](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)<br>
-    Learn how to create and manage feeds.
-- [**HCL Web Content Manager Support Tools**](../../deployment/manage/troubleshooting/wcm_support_tools.md)<br>
-    Learn how to use the HCL Web Content Manager (WCM) Support Tools portlet to investigate and analyze information related to the WCM Java Content Repository (JCR) nodes.
-- [**Creating more multilingual sites**](../../manage_content/wcm_authoring/multi_lingual/using_mls/wcm_mls_adding.md)<br>
-    Learn how to localize your sites to different languages.
 
 ## HCLSoftware U learning materials
 

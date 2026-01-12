@@ -1,13 +1,15 @@
-# What's new in CF230
+# What's new in CF230 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF230 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- My HCLSoftware delivery portal
+- Blueprint updates
 - DXClient - New `xmlAccessOutputFileName` parameter added
-- Presentation Designer - Handle multiple stylesheet components
 - HCL DX Action Bar and Practitioner Studio UI updates
+- My HCLSoftware delivery portal
+- New How-to articles now available
+- Presentation Designer - Handle multiple stylesheet components
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -32,6 +34,36 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+=== "On-Premises"
+    The HCL DX Blueprint design system has been updated for CF230. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/230.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### DXClient - New `xmlAccessOutputFileName` parameter added
+
+=== "Containers"
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+
+=== "On-Premises"
+    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+
+### HCL DX Action Bar and Practitioner Studio UI updates
+
+=== "Containers"
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+
+=== "On-Premises"
+    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
+
+    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
+    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+
 ### My HCLSoftware delivery portal
 
 === "Containers"
@@ -50,13 +82,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### DXClient - New `xmlAccessOutputFileName` parameter added
+### New How-to articles now available
 
 === "Containers"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 === "On-Premises"
-    You can now use the new `xmlAccessOutputFileName` parameter to specify the name of an output XML file. For more information, refer to [XMLAccess](../../extend_dx/development_tools/dxclient/dxclient_artifact_types/xmlaccess.md).
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Presentation Designer - Handle multiple stylesheets components
 
@@ -65,20 +97,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
-
-### HCL DX Action Bar and Practitioner Studio UI updates
-
-=== "Containers"
-    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
-
-    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
-
-=== "On-Premises"
-    The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
-
-    - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -99,7 +117,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf229).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf230).
 
 ### Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 
@@ -130,18 +148,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The CKEditor Rich Text Editor component in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The CKEditor Rich Text Editor component in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Woodburn Studio demo site (9.5)
 
 === "Containers"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Woodburn Studio demo site in HCL DX will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 

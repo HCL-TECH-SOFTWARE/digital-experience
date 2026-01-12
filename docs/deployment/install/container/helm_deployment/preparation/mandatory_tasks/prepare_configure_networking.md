@@ -1,6 +1,6 @@
 # Configure Networking
 
-This section explains what must be configured from a networking perspective to get HCL Digital Experience 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
+This section explains what must be configured from a networking perspective to get HCL Digital Experience (DX) 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
 
 ## Full Kubernetes or OpenShift deployment
 
@@ -27,7 +27,7 @@ If you do not know the hostname beforehand, you can leave it blank and run an ad
 
 ## Configure Cross Origin Resource Sharing (CORS)
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure CORS configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
+The HCL DX 9.5 Helm chart allows you to configure CORS configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
 
 You can define a list of allowed hosts for a specific application using the following syntax in your `custom-values.yaml`:
 
@@ -94,7 +94,7 @@ For HAProxy to allow forward requests to your applications, you must provide it 
 
 ## Configure HAProxy networking
 
-HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL Digital Experience. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL DX. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
 
 |Parameter|Description| Type | Default value|
 |---------|-----------|-------------|------|
@@ -109,6 +109,9 @@ HAProxy is deployed with a `LoadBalancer` type service to handle the incoming tr
 |`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
 |`affinityCookieSameSiteAttribute`|Sets the "SameSite" attribute for the DxSessionAffinity cookie to the values: `None`, `Lax`, `Strict`, or `""`. This should only be set on an HTTPS environment. | String |`""`|
 |`alwaysEnableSessionAffinity`|When enabled, HAProxy will insert the DxSessionAffinity cookie for all incoming requests, regardless of the presence of the cookie defined in the `sessionCookieName`. HAProxy only inserts a new affinity cookie if a valid DxSessionAffinity cookie is not already present. | Boolean |`false`|
+|`sslDefaultBindCiphers`|Default SSL/TLS cipher suites for TLS 1.2 and earlier. Specify a colon-separated list of cipher suites to use for SSL/TLS connections. If empty, HAProxy defaults will be used. See [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers). | String |`""`|
+|`sslDefaultBindCiphersuites`|TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers). Specify a colon-separated list of TLS 1.3 cipher suites. If empty, HAProxy defaults will be used. See [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers). | String |`""`|
+|`sslDefaultBindOptions`|SSL/TLS options for HAProxy global configuration. Common options include: `no-sslv3`, `no-tlsv10`, `no-tlsv11`, `no-tlsv12`, `no-tls-tickets`, `prefer-client-ciphers`, `ssl-min-ver`, `ssl-max-ver`. See [HAProxy Minimum TLS Version Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version). | Array |`[]`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -140,6 +143,47 @@ networking:
     # Set alwaysEnableSessionAffinity to ensure any session, even unauthenticated sessions, receives a DxSessionAffinity token and routes to a single
     # core pod for the lifetime of the session. Defaults to false.
     alwaysEnableSessionAffinity: false
+    # HAProxy global section SSL/TLS security configuration
+    # These settings define default SSL/TLS parameters in the HAProxy global section that apply to all bind lines
+    # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/
+    # ssl-default-bind-ciphers: Default SSL/TLS cipher suites for TLS 1.2 and earlier
+    # Specify a colon-separated list of cipher suites to use for SSL/TLS connections
+    # If empty, HAProxy defaults will be used
+    # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers
+    # Example for intermediate compatibility (Mozilla Intermediate):
+    # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384"
+    # Example for modern security (strong ciphers only):
+    # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305"
+    sslDefaultBindCiphers: ""
+    # ssl-default-bind-ciphersuites: TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers)
+    # Specify a colon-separated list of TLS 1.3 cipher suites
+    # If empty, HAProxy defaults will be used
+    # Example: "TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256"
+    sslDefaultBindCiphersuites: ""
+    # ssl-default-bind-options: SSL/TLS options for HAProxy global configuration
+    # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version
+    # Common options include:
+    # - "no-sslv3" - Disable SSLv3
+    # - "no-tlsv10" - Disable TLS 1.0
+    # - "no-tlsv11" - Disable TLS 1.1
+    # - "no-tlsv12" - Disable TLS 1.2 (only if using TLS 1.3 exclusively)
+    # - "no-tlsv13" - Disable TLS 1.3
+    # - "no-tls-tickets" - Disable TLS session tickets
+    # - "prefer-client-ciphers" - Prefer client's cipher order
+    # - "ssl-min-ver TLSv1.2" - Set minimum TLS version to 1.2
+    # - "ssl-max-ver TLSv1.3" - Set maximum TLS version to 1.3
+    # Example for modern security: 
+    #     - "no-sslv3"
+    #     - "no-tlsv10"
+    #     - "no-tlsv11"
+    #     - "no-tls-tickets"
+    # Example for strict security: 
+    #     - "no-sslv3"
+    #     - "no-tlsv10"
+    #     - "no-tlsv11"
+    #     - "no-tlsv12"
+    #     - "ssl-min-ver TLSv1.3"
+    sslDefaultBindOptions: []
 ```
   
 This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
@@ -179,7 +223,7 @@ To have your deployment and HAProxy to use the certificate, you must store it in
 The secret can be created using the following commands:
 
 !!!note
-    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL Digital Experience 9.5 to (the example uses `digital-experience`).
+    The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL DX 9.5 to (the example uses `digital-experience`).
 
 ```sh
 # Create secret with the name "dx-tls-cert"
@@ -241,7 +285,7 @@ spec:
 
 ## Configuring Content-Security-Policy Frame Options
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all other components, such as Digital Asset Management, Ring API, etc.
+The HCL DX 9.5 Helm chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all other components, such as Digital Asset Management, Ring API, etc.
 
 Setting `cspFrameAncestorsEnabled` to true adds `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications.
 
@@ -272,7 +316,7 @@ Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that 
 
 ## Configuring SameSite Cookie Attribute
 
-The HCL Digital Experience 9.5 Helm Chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
+The HCL DX 9.5 Helm chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
 
 !!!note
     This should only be set in an HTTPS environment to prevent unwanted behaviors.
@@ -290,3 +334,41 @@ networking:
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
+
+## HAProxy custom headers
+
+The HCL DX 9.5 Helm chart allows you to configure custom HTTP headers in the HAProxy configuration. You can add new headers and remove existing headers from responses generated by HAProxy.
+
+### Adding custom headers
+
+You can add custom HTTP headers to all responses from HAProxy using the `customHeader` property. This is useful for implementing security best practices or adding specific information to responses.
+
+Each header entry supports the following properties:
+
+- `name`: The name of the HTTP header to be added
+- `value`: The value that should be set for the header
+
+Example configuration in your `custom-values.yaml` file:
+
+```yaml
+networking:
+  haproxy:
+    customHeader:
+      - name: X-Content-Type-Options
+        value: nosniff
+      - name: Referrer-Policy
+        value: no-referrer
+```
+
+### Removing headers
+
+You can specify header names that should be removed from HAProxy responses using the `deleteHeader` property. This is useful for removing headers that might reveal internal information or that you do not wish to forward.
+
+Example configuration in your `custom-values.yaml` file:
+
+```yaml
+networking:
+  haproxy:
+    deleteHeader:
+      - X-Powered-By
+```

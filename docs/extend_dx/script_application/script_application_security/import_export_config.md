@@ -1,8 +1,8 @@
-# Custom Configuration Properties for Script Applications  
+# Custom Configuration Properties for Script Applications 
 
 ## Default Import Properties for Script Applications
-
-When importing the Script Applications, only specific file types are allowed by default. These properties define which extensions can be uploaded as part of the application package, and each property is not case-sensitive.
+ 
+When you import Script Applications, only specific file types are allowed by default. These properties define which file extensions can be uploaded as part of the application package. Each property is not case-sensitive.
 
 ### Default properties
 
@@ -21,27 +21,8 @@ When importing the Script Applications, only specific file types are allowed by 
 ---
 
 !!! important
-    With the **recommended DXClient approach**, file type management is handled differently. For example, support for **SVG files** is configured at the Web Content level, not through Script Application properties.  
-    See [Web Content Manager set SVG to disabled by default](https://help.hcl-software.com/digital-experience/9.5/CF230/whatsnew/cf20/newcf208/#web-content-manager-set-svg-to-disabled-by-default){target="_blank"}.
-
-If you still need to allow uploading of **SVG files** (or other image types) to Web Content Manager (WCM), update the `imageresourcecmpnt.allowedmimetypes` property in the **WCMConfigService** service by using the WebSphere® Integrated Solutions Console.  
-
-Example:
-```
-imageresourcecmpnt.allowedmimetypes=image/gif,image/png,image/jpeg,image/jpg,image/jpe,image/jfif,image/bmp,image/x-bmp,image/x-bitmap,image/x-xbitmap,image/x-win-bitmap,image/x-windows-bmp,image/ms-bmp,image/x-ms-bmp,application/bmp,application/x-bmp,application/x-win-bitmap,image/ico,image/svg+xml,image/tiff,image/tif,image/webp
-```
-For more details about configuring allowed image formats, see  
-[Enable image formats in WCM](https://help.hcl-software.com/digital-experience/9.5/CF230/guide_me/howto/configuration/EnableImageFormats/#jp2){target="_blank"}  
-and [WCMConfigService configuration reference](https://help.hcl-software.com/digital-experience/9.5/CF230/manage_content/wcm_configuration/wcm_svc_cfg/srvcfgwcmref_config/){target="_blank"}.
-
----
-
-### Note on other file types
-
-![Afileresourcecmpnt](../../../images/image.png){ width="300" }
-
-While images are explicitly managed through `imageresourcecmpnt.allowedmimetypes`, it is less clear how other file types (HTML, JavaScript, CSS) are controlled at the WCM level.  
-Logically, a similar property such as `fileresourcecmpnt.allowedmimetypes` should exist to manage these file types. However, the default Script Application import properties listed above remain as the primary way to manage HTML, script, and style files.  
+    With the [recommended DXClient](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/deployapplication.md) approach, file-type management works differently. See [How to add MIME types to the DX server](../../../guide_me/howto/administration/SupportForAdditionalMIMETypes.md)
+ 
 
 ### Best Practices for Overriding Properties
 
@@ -63,3 +44,5 @@ If you edit the Script Application Configuration Properties component directly i
 3.  Edit the properties that you want to change and save the file.
 
 4.  If you upgrade your portal to another version or with a Combined Cumulative Fix, check to see whether any items you overrode were changed by default. Change the text component and save the component.
+
+
