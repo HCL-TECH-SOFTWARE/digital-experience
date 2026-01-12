@@ -1,33 +1,29 @@
-# Configure Networking
+# Configure networking
 
-This section explains what must be configured from a networking perspective to get HCL Digital Experience (DX) 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
+This section describes the networking configuration required to run HCL Digital Experience (DX) 9.5 in a Kubernetes or OpenShift cluster and to make the deployment accessible from outside the cluster.
 
-## Full Kubernetes or OpenShift deployment
+## Deploying in a full Kubernetes or OpenShift environment
 
-If you deploy both Core and all other applications inside OpenShift or Kubernetes, this section shows you what needs to be configured.
+If you deploy Core and all other applications within Kubernetes or OpenShift, use the guidance in this section to configure the required networking components.
 
-## Core host
+## Configuring Core host
 
-In a full deployment, the host for both the Core and the other applications are the same.
+In a full deployment, Core and all other applications share the same host. It is recommended to configure the host before you start the deployment. This approach requires that you know the Fully Qualified Domain Name (FQDN) or the IP address assigned by HAProxy in advance.
 
-It is recommended to configure the host before you run the deployment. This is only possible if you know the fully qualified domain name (FQDN) or the IP address that the HAProxy assigns in your deployment beforehand.
-
-If that is the case, define the host using the following syntax:
+If this information is available, define the host using the following syntax:
 
 ```yaml
-# Networking specific configuration
+# Networking-specific configuration
 networking:
-  # Networking configuration specific to Core
+  # Core networking configuration
   core:
-    # Host of Core
-    host: "your-dx-instance.whateverdomain.com"
-```
+    # Core host
+    host: "your-dx-instance.example.com"
+  ```
 
-If you do not know the hostname beforehand, you can leave it blank and run an additional step later in the installation, which would retrieve the assigned hostname from HAProxy and configure all applications accordingly.
+## Configuring Cross-Origin Resource Sharing (CORS)
 
-## Configure Cross Origin Resource Sharing (CORS)
-
-The HCL DX 9.5 Helm chart allows you to configure CORS configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
+The HCL DX 9.5 Helm chart allows you to configure Cross-Origin Resource Sharing (CORS) configuration for all the `addon` to Core applications such as Digital Asset Management or Ring API. This allows you to access the APIs provided by those applications in other applications with ease.
 
 You can define a list of allowed hosts for a specific application using the following syntax in your `custom-values.yaml`:
 
@@ -44,11 +40,10 @@ networking:
 ```
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
-## Hybrid host
 
-**Configuring Hybrid Host**
+## Configuring Hybrid Host
 
-In a [Hybrid](../../../../../../deployment/install/hybrid/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the add-on section. See the following example:
+In a [Hybrid](../../../../../../deployment/install/hybrid/index.md) deployment, the host for the on-premise DX Core will be added in the core configuration section and the other applications host will be placed under the `addon` section. For example:
 
 ```yaml
 networking:
@@ -81,37 +76,37 @@ networking:
     ssl: true
 ```
 
-Refer to the original `values.yaml` for all available applications that can be configured. See the [Planning your container deployment using Helm](../../../../container/index.md) topic for details.
+Refer to the original `values.yaml` for all available applications that can be configured. For more information, refer to [Planning your container deployment using Helm](../../../../container/index.md).
 
-Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. See [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
+Setting the add-on host is required for all hybrid deployments. Given the default use of relative hostnames, you must set an absolute FQDN for hybrid deployments. API calls must still point to one absolute hostname to avoid authentication issues when making requests. With that, it is not supported to configure your HCL DX environment to support multiple hostnames if you are running a hybrid deployment. Refer to [Hybrid Deployment Installation](../../../../hybrid/index.md) for more details.
 
 !!! note
-    If your DX Core deployment is configured with a self-signed certificate or a certificate that is not publicly trusted, you must add the certificate to the trust store of the add-on applications. See [Adding additional CA to the trust store of DAM or RingAPI](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md) for more information.
+    If your DX Core deployment uses a self-signed certificate or a certificate that is not publicly trusted, add the certificate to the trust store of the add-on applications. Refer to [Adding additional CA to the trust store of DAM or RingAPI](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-additonal-ca.md) for instructions.
 
-## Configure HAProxy certificate
+## Configuring HAProxy certificate
 
-For HAProxy to allow forward requests to your applications, you must provide it with a TLS Certificate. This certificate is used for incoming/outgoing traffic from the outside of the Kubernetes or OpenShift cluster to your applications. HAProxy performs TLS offloading.
+To allow HAProxy to forward requests to your applications, you must provide a TLS certificate. This certificate secures incoming and outgoing traffic between the outside of your Kubernetes or OpenShift cluster and your applications. HAProxy performs TLS offloading.
 
-## Configure HAProxy networking
+## Configuring HAProxy networking
 
-HAProxy is deployed with a `LoadBalancer` type service to handle the incoming traffic as well as the SSL offloading for HCL DX. In addition, the Helm deployment offers adjustability for HAProxy and its services to allow for more flexible deployment and use of custom `Ingress Controllers`.
+HAProxy is deployed with a `LoadBalancer` service to handle incoming traffic and perform SSL offloading for HCL DX. The Helm chart lets you configure HAProxy and its services for flexible deployments, including support for custom Ingress Controllers.
 
 |Parameter|Description| Type | Default value|
 |---------|-----------|-------------|------|
-|`ssl` { width="20%" }  |Enable or disable SSL offloading in HAProxy. Depending on this setting, HAProxy handles either `HTTP` or `HTTPS` traffic. { width="40%" } | Boolean { width="20%" }| `true` { width="20%" }|
-|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types) of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` | `LoadBalancer` \| `ClusterIP` \| `NodePort` |`LoadBalancer`|
+|`ssl` { width="20%" }|Enable or disable SSL offloading in HAProxy. Depending on this setting, HAProxy handles either `HTTP` or `HTTPS` traffic. { width="40%" } | Boolean { width="20%" }| `true` { width="20%" }|
+|`serviceType`|Defines the Kubernetes [`ServiceType`](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types){target="_blank"} of the HAProxy service. Supported ServiceType includes `LoadBalancer`, `ClusterIP` and `NodePort` | `LoadBalancer` \| `ClusterIP` \| `NodePort` |`LoadBalancer`|
 |`servicePort`|This value is used to select the port exposed by the HAProxy service. Defaults to port `443` if `ssl` is set to `true`, otherwise, port `80` is used. | Number |`null`|
 |`serviceNodePort`|This value is used to select the node port exposed by the HAProxy service. Defaults to a port selected by Kubernetes if no value is set. | Number |`null`|
 |`strictTransportSecurity.enabled`|This value is used for HTTP Strict Transport Security (HSTS) to determine if it should be `enabled`. When enabled, this value requires SSL in DX or any proxy in front of the SSL. | Boolean |`true`|
 |`strictTransportSecurity.maxAge`|This value is used to set for how long the browser should remember the HSTS rule | Number |`31536000`|
 |`strictTransportSecurity.includeSubDomains`|If this optional parameter is specified, this rule applies to all of the site's subdomains as well. | Boolean |`false`|
-|`strictTransportSecurity.preload`|See [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security) for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, see [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1). | Boolean |`false`|
+|`strictTransportSecurity.preload`|For more information, refer to [Preloading Strict Transport Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security#preloading_strict_transport_security){target="_blank"} for details. When using preload, the max-age directive must be at least 31536000 (1 year), and the includeSubDomains directive must be present. This parameter is not part of the HSTS specification. For more information, refer to [Strict-Transport-Security HTTP Response Header Field](https://www.rfc-editor.org/rfc/rfc6797#section-6.1){target="_blank"}. | Boolean |`false`|
 |`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
 |`affinityCookieSameSiteAttribute`|Sets the "SameSite" attribute for the DxSessionAffinity cookie to the values: `None`, `Lax`, `Strict`, or `""`. This should only be set on an HTTPS environment. | String |`""`|
 |`alwaysEnableSessionAffinity`|When enabled, HAProxy will insert the DxSessionAffinity cookie for all incoming requests, regardless of the presence of the cookie defined in the `sessionCookieName`. HAProxy only inserts a new affinity cookie if a valid DxSessionAffinity cookie is not already present. | Boolean |`false`|
-|`sslDefaultBindCiphers`|Default SSL/TLS cipher suites for TLS 1.2 and earlier. Specify a colon-separated list of cipher suites to use for SSL/TLS connections. If empty, HAProxy defaults will be used. See [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers). | String |`""`|
-|`sslDefaultBindCiphersuites`|TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers). Specify a colon-separated list of TLS 1.3 cipher suites. If empty, HAProxy defaults will be used. See [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers). | String |`""`|
-|`sslDefaultBindOptions`|SSL/TLS options for HAProxy global configuration. Common options include: `no-sslv3`, `no-tlsv10`, `no-tlsv11`, `no-tlsv12`, `no-tls-tickets`, `prefer-client-ciphers`, `ssl-min-ver`, `ssl-max-ver`. See [HAProxy Minimum TLS Version Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version). | Array |`[]`|
+|`sslDefaultBindCiphers`|Default SSL/TLS cipher suites for TLS 1.2 and earlier. Specify a colon-separated list of cipher suites to use for SSL/TLS connections. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
+|`sslDefaultBindCiphersuites`|TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers). Specify a colon-separated list of TLS 1.3 cipher suites. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
+|`sslDefaultBindOptions`|SSL/TLS options for HAProxy global configuration. Common options include: `no-sslv3`, `no-tlsv10`, `no-tlsv11`, `no-tlsv12`, `no-tls-tickets`, `prefer-client-ciphers`, `ssl-min-ver`, `ssl-max-ver`. For more information, refer to [HAProxy Minimum TLS Version Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version){target="_blank"}. | Array |`[]`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -185,10 +180,10 @@ networking:
     #     - "ssl-min-ver TLSv1.3"
     sslDefaultBindOptions: []
 ```
-  
-This configuration is helpful for those who want to use a custom `Ingress Controller` to expose the service in a compatible way. Even then, HAProxy will still be active. The `Ingress Controller` will handle the incoming traffic and then route them to the HAProxy service.
 
-## Using annotations to control the HAProxy service behavior for different cloud providers
+This configuration is useful for scenarios where you want to use a custom Ingress Controller to expose the service. HAProxy remains active in this setup. The Ingress Controller handles incoming traffic and routes it to the HAProxy service
+
+## Using annotations to control HAProxy service behavior for different cloud providers
 
 The Helm chart allows you to add annotations to the HAProxy service to control the behavior of the service for different cloud providers. You can use this to configure the service to use a specific type of load balancer or to configure other settings specific to the cloud provider. You can add annotations in your `custom-values.yaml` as described [in the Annotations documentation](../optional_tasks/optional_labels_annotations.md#annotations).
 
@@ -198,9 +193,9 @@ Examples for such annotations are in an non-exhaustive list. Refer to the docume
 - [Google Kubernetes Engine - LoadBalancer Service parameters](https://cloud.google.com/kubernetes-engine/docs/concepts/service-load-balancer-parameters){target="_blank"}
 - [Azure Kubernetes Service - LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/#loadbalancer-annotations){target="_blank"}
 
-## Generate self-signed certificate
+## Generating a self-signed certificate
 
-**It is recommended that you use a properly signed certificate for HAProxy**. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
+It is recommended that you use a properly signed certificate for HAProxy. However, it is also possible to create and use a self-signed certificate, for example, for staging or testing environment.
 
 Creation of that certificate can be achieved using the following commands for OpenSSL:
 
@@ -214,13 +209,9 @@ openssl req -x509 -key my-key.pem -out my-cert.pem -days 365 -subj '/CN=my-cert'
 
 This provides you with a key and cert file that can be used in the next step, creation of the certificate to your deployment.
 
-## Use certificate
+## Using a certificate
 
-**Create secret**
-
-To have your deployment and HAProxy to use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret.
-
-The secret can be created using the following commands:
+To have your deployment and HAProxy to use the certificate, you must store it in the Kubernetes or OpenShift cluster as a secret. The secret can be created using the following commands:
 
 !!!note
     The secret name can be chosen by you and must be referenced in the next configuration step (the following example uses `dx-tls-cert`). The namespace is the Kubernetes namespace where you want to deploy HCL DX 9.5 to (the example uses `digital-experience`).
@@ -232,7 +223,7 @@ The secret can be created using the following commands:
 kubectl create secret tls dx-tls-cert --cert=my-cert.pem --key=my-key.pem -n digital-experience 
 ```
 
-## Configure secret in deployment
+## Configuring secret in deployment
 
 You need to make sure that the reference to the secret is set up correctly in your `custom-values.yaml`. Otherwise, HAProxy cannot answer HTTPS requests due to a missing certificate.
 
@@ -246,18 +237,18 @@ networking:
 ```
 
 !!! note
-    Verify you have entered the correct name.
+    Ensure you have entered the correct name.
 
-## OpenShift Passthrough
+## OpenShift passthrough
 
 Previous versions of the Helm chart had an `openShiftPassthrough` value that created an OpenShift `Route` resource automatically. This is deprecated and removed and from CF211, a `Route` resource must be created manually when required as part of the deployment.
 
-### Create the route resource manually
+### Creating a route resource manually
 
 If you want to deploy OpenShift manually using `Routes`, you need to create a `.yaml` file like below and any changes required can be made in that. To apply those changes in the OpenShift cluster, you can run `kubectl apply` and specify its namespace and location.
-For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) documentation.
+For more information, refer to the [OpenShift Route Configuration](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html){target="_blank"} documentation.
 
-In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Refer to the [OpenShift documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html) to select the appropriate value for your deployment. 
+In some versions of OpenShift, by default, sticky sessions for passthrough `Routes` are enabled in OpenShift using the source (IP) as identifier. To make sure traffic gets forwarded to all DX HAProxy Pods even when another proxy is used in front of it, the `Route` should be annotated as shown in the example below. Refer to the [OpenShift documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html){target="_blank"} to select the appropriate value for your deployment.
 
 ```yaml
 apiVersion: "route.openshift.io/v1"
@@ -283,13 +274,13 @@ spec:
 
 `<helm-deployment-name>` must be replaced with the name of the deployed Helm release.
 
-## Configuring Content-Security-Policy Frame Options
+## Configure Content-Security-Policy frame options
 
-The HCL DX 9.5 Helm chart allows you to configure **[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): frame-ancestors** for DX Core and all other components, such as Digital Asset Management, Ring API, etc.
+The HCL DX 9.5 Helm chart lets you configure **[Content Security Policy: frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors){target="_blank"} for DX Core and all other components, such as Digital Asset Management, Ring API, etc.
 
 Setting `cspFrameAncestorsEnabled` to true adds `content-security-policy: frame-ancestor 'self'` headers to the responses, enabling you to frame DX and other add-on applications.
 
-There is also an option to specify allowed URLs that can frame your application using the `cspFrameAncestorAllowedSourceURLs` property. Using this property is a way to mitigate clickjacking attacks. For more information, see: [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html).
+There is also an option to specify allowed URLs that can frame your application using the `cspFrameAncestorAllowedSourceURLs` property. Using this property is a way to mitigate clickjacking attacks. For more information, refer to [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html){target="_blank"}.
 
 You can define a list of allowed URLs for a specific application using the following syntax in your `custom-values.yaml`. This example uses `contentComposer`, but the same applies for other applications:
 
@@ -314,11 +305,11 @@ networking:
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
 
-## Configuring SameSite Cookie Attribute
+## Configuring the SameSite cookie attribute
 
-The HCL DX 9.5 Helm chart allows you to configure **[SameSite Cookie Attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite)** for DX Core. This configuration sets the `WASReqURL` Cookie Attributes `Secure` and `SameSite`.
+The HCL DX 9.5 Helm chart lets you configure the [SameSite cookie attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite){target="_blank"} for DX Core. This configuration sets the `WASReqURL` cookie attributes `Secure` and `SameSite`.
 
-!!!note
+!!! note
     This should only be set in an HTTPS environment to prevent unwanted behaviors.
 
 You can define the SameSite value in your `custom-values.yaml`:
@@ -335,13 +326,13 @@ networking:
 
 Refer to the HCL DX 9.5 `values.yaml` detail for all possible applications that can be configured.
 
-## HAProxy custom headers
+## Configuring HAProxy custom headers
 
-The HCL DX 9.5 Helm chart allows you to configure custom HTTP headers in the HAProxy configuration. You can add new headers and remove existing headers from responses generated by HAProxy.
+The HCL DX 9.5 Helm chart lets you configure custom HTTP headers in HAProxy. You can add new headers or remove existing headers from responses generated by HAProxy.
 
 ### Adding custom headers
 
-You can add custom HTTP headers to all responses from HAProxy using the `customHeader` property. This is useful for implementing security best practices or adding specific information to responses.
+Use the `customHeader` property to add custom HTTP headers to all responses from HAProxy. This is useful for enforcing security best practices or including specific information in responses.
 
 Each header entry supports the following properties:
 
