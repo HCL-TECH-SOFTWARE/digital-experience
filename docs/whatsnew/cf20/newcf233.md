@@ -1,4 +1,4 @@
-# What's new in CF233 
+# What's new in CF233
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF233 on supported platforms:
 
@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- New HAProxy security configuration parameters
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -82,6 +83,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf233).
+
+### New HAProxy security configuration parameters
+
+=== "Containers"
+    New HAProxy security configuration parameters are now available for use in HCL DX. These parameters allow you to specify colon-separated lists of cipher suites for SSL/TLS and TLS 1.3 connections, and HAProxy global configurations. The following parameters are now available:
+
+    - `sslDefaultBindCiphers`: SSL/TLS cipher suites for TLS 1.2 and earlier
+    - `sslDefaultBindCiphersuites`: SSL/TLS cipher suites for TLS 1.3
+    - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
 ### WAS, JDK, and iFix versions
 

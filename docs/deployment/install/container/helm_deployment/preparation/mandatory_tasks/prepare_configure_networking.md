@@ -104,9 +104,9 @@ HAProxy is deployed as a `LoadBalancer` service to handle incoming traffic and p
 |`sessionCookieName`|Available starting CF221. This parameter does not directly change the cookie name. Instead, you must set this value if the cookie name is changed in the [console](../../../../../manage/config_portal_behavior/http_sessn_cookie.md).| String |`JSESSIONID`|
 |`affinityCookieSameSiteAttribute`|Sets the "SameSite" attribute for the DxSessionAffinity cookie to the values: `None`, `Lax`, `Strict`, or `""`. This should only be set on an HTTPS environment. | String |`""`|
 |`alwaysEnableSessionAffinity`|When enabled, HAProxy will insert the DxSessionAffinity cookie for all incoming requests, regardless of the presence of the cookie defined in the `sessionCookieName`. HAProxy only inserts a new affinity cookie if a valid DxSessionAffinity cookie is not already present. | Boolean |`false`|
-|`security.sslDefaultBindCiphers`|Default SSL/TLS cipher suites for TLS 1.2 and earlier. Specify a colon-separated list of cipher suites to use for SSL/TLS connections. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
-|`security.sslDefaultBindCiphersuites`|TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers). Specify a colon-separated list of TLS 1.3 cipher suites. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
-|`security.sslDefaultBindOptions`|SSL/TLS options for HAProxy global configuration. Common options include: `no-sslv3`, `no-tlsv10`, `no-tlsv11`, `no-tlsv12`, `no-tls-tickets`, `prefer-client-ciphers`, `ssl-min-ver`, `ssl-max-ver`. For more information, refer to [HAProxy Minimum TLS Version Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version){target="_blank"}. | Array |`[]`|
+|`sslDefaultBindCiphers`|Default SSL/TLS cipher suites for TLS 1.2 and earlier. Specify a colon-separated list of cipher suites to use for SSL/TLS connections. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
+|`sslDefaultBindCiphersuites`|TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers). Specify a colon-separated list of TLS 1.3 cipher suites. If empty, HAProxy uses the default cipher suites. For more information, refer to [HAProxy TLS Ciphers Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers){target="_blank"}. | String |`""`|
+|`sslDefaultBindOptions`|SSL/TLS options for HAProxy global configuration. Common options include: `no-sslv3`, `no-tlsv10`, `no-tlsv11`, `no-tlsv12`, `no-tls-tickets`, `prefer-client-ciphers`, `ssl-min-ver`, `ssl-max-ver`. For more information, refer to [HAProxy Minimum TLS Version Documentation](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version){target="_blank"}. | Array |`[]`|
 
 !!!note
     If `ssl` is set to `true`, HAProxy will use the certificate that is supplied as a secret in `networking.tlsCertSecret`.
@@ -141,45 +141,45 @@ networking:
     # HAProxy global section SSL/TLS security configuration
     # These settings define default SSL/TLS parameters in the HAProxy global section that apply to all bind lines
     # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/
-    security:
-      # ssl-default-bind-ciphers: Default SSL/TLS cipher suites for TLS 1.2 and earlier
-      # Specify a colon-separated list of cipher suites to use for SSL/TLS connections
-      # If empty, HAProxy defaults will be used
-      # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers
-      # Example for intermediate compatibility (Mozilla Intermediate):
-      # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384"
-      # Example for modern security (strong ciphers only):
-      # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305"
-      sslDefaultBindCiphers: ""
-      # ssl-default-bind-ciphersuites: TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers)
-      # Specify a colon-separated list of TLS 1.3 cipher suites
-      # If empty, HAProxy defaults will be used
-      # Example: "TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256"
-      sslDefaultBindCiphersuites: ""
-      # ssl-default-bind-options: SSL/TLS options for HAProxy global configuration
-      # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version
-      # Common options include:
-      # - "no-sslv3" - Disable SSLv3
-      # - "no-tlsv10" - Disable TLS 1.0
-      # - "no-tlsv11" - Disable TLS 1.1
-      # - "no-tlsv12" - Disable TLS 1.2 (only if using TLS 1.3 exclusively)
-      # - "no-tlsv13" - Disable TLS 1.3
-      # - "no-tls-tickets" - Disable TLS session tickets
-      # - "prefer-client-ciphers" - Prefer client's cipher order
-      # - "ssl-min-ver TLSv1.2" - Set minimum TLS version to 1.2
-      # - "ssl-max-ver TLSv1.3" - Set maximum TLS version to 1.3
-      # Example for modern security: 
-      #     - "no-sslv3"
-      #     - "no-tlsv10"
-      #     - "no-tlsv11"
-      #     - "no-tls-tickets"
-      # Example for strict security: 
-      #     - "no-sslv3"
-      #     - "no-tlsv10"
-      #     - "no-tlsv11"
-      #     - "no-tlsv12"
-      #     - "ssl-min-ver TLSv1.3"
-      sslDefaultBindOptions: []
+    # ssl-default-bind-ciphers: Default SSL/TLS cipher suites for TLS 1.2 and earlier
+    # Specify a colon-separated list of cipher suites to use for SSL/TLS connections
+    # If empty, HAProxy defaults will be used
+    # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-tls-ciphers
+    # Example for intermediate compatibility (Mozilla Intermediate):
+    # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384"
+    # Example for modern security (strong ciphers only):
+    # "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305"
+    sslDefaultBindCiphers: ""
+    # ssl-default-bind-ciphersuites: TLS 1.3 cipher suites (specified separately from TLS 1.2 ciphers)
+    # Specify a colon-separated list of TLS 1.3 cipher suites
+    # If empty, HAProxy defaults will be used
+    # Example: "TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256"
+    sslDefaultBindCiphersuites: ""
+    # ssl-default-bind-options: SSL/TLS options for HAProxy global configuration
+    # Reference: https://www.haproxy.com/documentation/haproxy-configuration-tutorials/security/ssl-tls/client-side-encryption/#set-the-minimum-tls-version
+    # Common options include:
+    # - "no-sslv3" - Disable SSLv3
+    # - "no-tlsv10" - Disable TLS 1.0
+    # - "no-tlsv11" - Disable TLS 1.1
+    # - "no-tlsv12" - Disable TLS 1.2 (only if using TLS 1.3 exclusively)
+    # - "no-tlsv13" - Disable TLS 1.3
+    # - "no-tls-tickets" - Disable TLS session tickets
+    # - "prefer-client-ciphers" - Prefer client's cipher order
+    # - "ssl-min-ver TLSv1.2" - Set minimum TLS version to 1.2
+    # - "ssl-max-ver TLSv1.3" - Set maximum TLS version to 1.3
+    # Example for modern security: 
+    #     - "no-sslv3"
+    #     - "no-tlsv10"
+    #     - "no-tlsv11"
+    #     - "no-tls-tickets"
+    # Example for strict security: 
+    #     - "no-sslv3"
+    #     - "no-tlsv10"
+    #     - "no-tlsv11"
+    #     - "no-tlsv12"
+    #     - "ssl-min-ver TLSv1.3"
+    sslDefaultBindOptions: []
+```
 
 This configuration is useful for scenarios where you want to use a custom Ingress Controller to expose the service. HAProxy remains active in this setup. The Ingress Controller handles incoming traffic and routes it to the HAProxy service
 
