@@ -19,9 +19,9 @@ There are several offerings that are under the HCL DX product line according to 
 ||![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)|![HCL DX Logo](./images/HCL%20DX%20Logo.png)||
 |-----------|----|----|----|------------------------------------|----|----|
 |**DX Offering**||||**Included Entitlements and components**|||
-|HCL DX Cloud Native 9.5.x (Tiers 1 – 6)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* and MX Foundry\*|
-|HCL DX Cloud Native 9.5.x (Tier 7)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap*, MX Foundry, and HCL Discover\*|
-|HCL DX Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* |
+|HCL DX Cloud Native 9.5.x (Tiers 1 – 6)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)\*|HCL Leap\*\* and MX Foundry\*\*|
+|HCL DX Cloud Native 9.5.x (Tier 7)|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)\*|HCL Leap\*\*, MX Foundry\*\*, and HCL Discover\*\*|
+|HCL DX Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)\*|HCL Leap\*\*|
 |HCL Portal Enable|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Portal Express|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Portal Extend|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
@@ -29,11 +29,13 @@ There are several offerings that are under the HCL DX product line according to 
 |HCL Customer Experience Suite|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Employee Experience Suite|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL Web Content Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
-|HCL DX Cloud (Hosted)**|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)|HCL Leap\* and MX Foundry*|
+|HCL DX Cloud (Hosted)\*\*\*|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)\*|HCL Leap\*\* and MX Foundry\*\*|
 
-\* Entitlements provided for use with HCL DX deployments and may not be installed independently without acquiring a separate license. Reference entitlement use permissions in the HCL DX offering license files published on the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
+\* Refer to the [HCL Digital Experience Compose Evaluation](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0127651){target="_blank"} Use article for more details.
 
-\*\* Entitled DX Offering software provisioned for production deployment by the HCL Cloud Hosting team
+\*\* Entitlements provided for use with HCL DX deployments and may not be installed independently without acquiring a separate license. Reference entitlement use permissions in the HCL DX offering license files published on the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
+
+\*\*\* Entitled DX Offering software provisioned for production deployment by the HCL Cloud Hosting team.
 
 ### HCL DX Cumulative Fix Releases
 
