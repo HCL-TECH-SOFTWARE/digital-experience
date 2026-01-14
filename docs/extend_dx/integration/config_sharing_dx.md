@@ -46,31 +46,31 @@ The entire mechanism is controlled via feature flags in your product's Helm `val
 
 ### Enable the Producer by sharing the product's configuration.
 
-    Set the primary feature flag to `true` in the product's `values.yaml` file:
+Set the primary feature flag to `true` in the product's `values.yaml` file:
 
-    ```yaml
-    # values.yaml
-    # enableConfigurationSharing: Enables the creation of the <chart-name>-shared-config-v1 secret
-    # to share configuration with other HCL products in the same namespace.
-    enableConfigurationSharing: false  # Change this to true
-    ```
+```yaml
+# values.yaml
+# enableConfigurationSharing: Enables the creation of the <chart-name>-shared-config-v1 secret
+# to share configuration with other HCL products in the same namespace.
+enableConfigurationSharing: false  # Change this to true
+```
 
 ### Configure the Consumer product to look for a specific shared Secret by defining which version of the shared configuration it intends to use for greater control.
 
-    Set the `name`, `min` and `max` `version` of the `consumeSharedConfigs` parameter in the `values.yaml`:
+Set the `name`, `min` and `max` `version` of the `consumeSharedConfigs` parameter in the `values.yaml`:
 
-    ```yaml
-    consumeSharedConfigs:
-        - name: dx-shared-config
-          version: 
-            min: 1
-            max: 2
-    ```
+```yaml
+consumeSharedConfigs:
+    - name: dx-shared-config
+      version: 
+        min: 1
+        max: 2
+```
 
-    This explicit configuration helps prevent unintended integration issues if new products that also share configurations are deployed in the future.
+This explicit configuration helps prevent unintended integration issues if new products that also share configurations are deployed in the future.
 
 ## Confirming manually
 
 Once the consumer pod is running, you can access the shared configuration data inside the container.
 
-    The Secret is mounted to a path inside the container, such as `/mnt/shared-config/`. Each key from the shared Secret is exposed as a separate file at that mount path. For example, if the producer's shared Secret contains the key `ltpa.key`, the consumer application will read its contents from the file path: `/mnt/shared-config/dx-shared-config-v1/ltpa.key`.
+The Secret is mounted to a path inside the container, such as `/mnt/shared-config/`. Each key from the shared Secret is exposed as a separate file at that mount path. For example, if the producer's shared Secret contains the key `ltpa.key`, the consumer application will read its contents from the file path: `/mnt/shared-config/dx-shared-config-v1/ltpa.key`.
