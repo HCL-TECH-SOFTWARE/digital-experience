@@ -1,4 +1,4 @@
-# hanging the domain or schema for the dynacache invalidation table in the database 
+# Changing the domain or schema for the dynacache invalidation table in the database 
 
 ## Introduction
 
