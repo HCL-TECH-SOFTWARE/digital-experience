@@ -2,6 +2,9 @@
 
 Vanity URLs are stored as part of the page in the JCR database in the portal page site area of Web Content Manager. For performance reasons, the data is also stored in the HCL Portal database. When the data is modified, the portal synchronizes the data between both sides. However, under certain circumstances it can happen that the data is not synchronized. For such cases, the portal provides a configuration task that synchronizes the data.
 
+!!! note
+    Vanity URLs are not widely used because they require URL rewriting at the web server to support root-level URLs.
+
 For example, if the JCR database on the Web Content Manager side is restored, but the portal database is not restored, the data is not synchronized any more. The configuration task for synchronizing the data is sync-vanityurl-data. It reads the data that is stored in Web Content Manager and updates the HCL Portal database.
 
 -   **Syntax**
