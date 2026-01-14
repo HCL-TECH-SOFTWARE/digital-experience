@@ -43,17 +43,7 @@ To opt in and install DX v9.5, refer to the following instructions:
 		install_95=true ./applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>
 		```
 
-	- **For Windows:** Set the install_95 environment variable in the command prompt window where you will upgrade the Portal profile.
-
-		```bash
-		set install_95=true
-		```
-
-		From the <profile_root>/PortalServer/bin/ directory:
-
-		```batch
-		applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>
-		```
+	- **For Windows:** The 'install_95' flag can fail in Windows environments.  It is recommended to complete the CF upgrade according to [legacy instructions](https://help.hcl-software.com/digital-experience/9.5/latest/get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf/#:~:text=with%20CF17.-,Applying%20a%20CF,-To%20apply%20a) and then manually [upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079619) using the repositories packaged within the cumulative fix.
 
 After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
