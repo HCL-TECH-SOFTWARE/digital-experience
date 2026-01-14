@@ -25,7 +25,7 @@ The process is managed automatically by the products' Helm charts once the featu
     - The Secret follows a strict, well-known naming convention: `<product-name>-shared-config-v<major-version>`.
     - For example, HCL DX creates a Secret named `dx-shared-config-v1`.
     - The major version (`v1`) only increments if there are breaking changes to the configuration schema.
-    - The Secret contains integration related settings, such as Lightweight Third-Party Authentication (LTPA) Keys provided by the DX Core and WebEngine components.
+    - The Secret contains integration related settings, such as Lightweight Third-Party Authentication (LTPA) Keys provided by the DX Core component.
     - The shared Secret will be recreated during a Helm upgrade if the values setting the configuration values within it have changed (for example, a password update).
 
         !!!note
