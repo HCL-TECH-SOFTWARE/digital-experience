@@ -7,6 +7,6 @@ nav:
   - XML Access to Import or Export DAM: adxmldam.md
   - damschemas.md
   - Manage Collections: manage_collections.md
-  - Modify Media Assets: manage_content/digital_assets/usage/managing_dam/modify_dam
+  - Modify Media Assets: modify_dam
   - Access control management: dam_access_control.md
   - Access Control Cache: dam_access_control_cache.md
