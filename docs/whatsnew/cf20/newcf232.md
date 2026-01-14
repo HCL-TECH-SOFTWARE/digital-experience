@@ -1,10 +1,13 @@
-# What's new in CF232
+# What's new in CF232 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF232 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
+- Blueprint updates
 - My HCLSoftware delivery portal
+- New How-to articles now available
+- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -13,7 +16,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Blueprint updates
+- Additional configuration options for DX Core probes
+- DX Picker - Configuring dialog size and persisting last known location
+- German and French translations now available
+- HAProxy custom headers now available
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -26,6 +32,14 @@ The following features and updates are available to customers installing HCL Dig
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
+
+### Blueprint updates
+
+=== "Containers"
+    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+=== "On-Premises"
+    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -45,6 +59,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
+=== "On-Premises"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
+
+=== "Containers"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
+=== "On-Premises"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -61,10 +91,31 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Blueprint updates <!--Update for CF232-->
+### Additional configuration options for DX Core probes
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The targets for the Core `readiness` and `startup` probes can now be configured for more flexibility. For more information, refer to [Core probes configuration](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md#core-probes-configuration).
+
+### DX Picker - Configuring dialog size and persisting last known location
+
+=== "Containers"
+    You can now add the `size` attribute to your `dx-picker` function to change dialog dimensions. You can set this attribute to:
+
+    - `md` or `medium`
+    - `lg` or `large`
+    - `xl` or `extra-large`
+    
+    Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
+
+### German and French translations now available
+
+=== "Containers"
+    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
+### HAProxy custom headers now available
+
+=== "Containers"
+    You can now configure custom HTTP headers in the HAProxy configuration through the HCL DX 9.5 Helm chart. You can add new headers and remove existing headers from responses generated by HAProxy. For more information refer to [Configure Networking - HAProxy custom headers](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#haproxy-custom-headers).
 
 ### Helm values updates
 

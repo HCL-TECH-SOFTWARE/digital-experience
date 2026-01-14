@@ -65,7 +65,7 @@ For security purposes, if you need to limit the delete comments option to a spec
     ![Plugin Tag](../developing_managing_content/_img/plugin-tag.png)
 
     !!!note
-        You can specify the library you want to use for storing comments in the commentsLibrary field.
+        You can specify the library you want to use for storing comments in the commentsLibrary field. You need to add a site area called Comments in this library and all commments will be stored under this site area.
 
 6. Set up and view the Comments UI on the page. 
 

@@ -4,8 +4,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- My HCLSoftware delivery portal
 - Blueprint design system
+- My HCLSoftware delivery portal
+- New How-to articles now available
 - Presentation Designer - Default and Override stylesheets now available
 - TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
@@ -33,6 +34,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
+### Blueprint design system
+
+=== "Containers"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+
+=== "On-Premises"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+
 ### My HCLSoftware delivery portal
 
 === "Containers"
@@ -51,13 +60,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### Blueprint design system
+### New How-to articles now available
 
 === "Containers"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 === "On-Premises"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Presentation Designer - Default and Override stylesheets now available
 
