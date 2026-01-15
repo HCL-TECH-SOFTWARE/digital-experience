@@ -18,6 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Additional configuration options for DX Core probes
 - DX Picker - Configuring dialog size and persisting last known location
+- Dynacache invalidation domain configuration
 - German and French translations now available
 - HAProxy custom headers now available
 - Helm values updates
@@ -106,6 +107,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `xl` or `extra-large`
     
     Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
+
+### Dynacache invalidation domain configuration
+
+=== "Containers"
+    You can now change the domain or schema used for the dynacache invalidation table in DX. This table synchronizes dynacache updates across pods. By default, the `INVALIDATION_TABLE` is created in the `RELEASE` domain. To specify a different domain (such as `JCR`, `COMMUNITY`, or `CUSTOMIZATION`), override the `db.cache.invalidation.domain` property in the `ConfigService.properties` file. For more information, refer to [Changing the domain or schema for the dynacache invalidation table in the database](../../deployment/manage/container_configuration/update_invalidation_domain.md).
 
 ### German and French translations now available
 
