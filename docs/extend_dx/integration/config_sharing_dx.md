@@ -2,8 +2,8 @@
 
 !!!warning
     - The Configuration Sharing feature is currently in **Incubator** status and is **not ready for production use**. This feature can be subject to change, and is intended for information and evaluation. For more information, refer to [Experimental Features](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
-    - This feature requires at least version 9.3.13 of Leap.
-    - Enabling the feature is still possible and will fall back to the local configuration if Leap is not at the required version, not deployed in the same namespace, or if the shared Secret is missing.
+    - This feature requires HCL Leap version 9.3.13 or later.
+    - If HCL Leap is an earlier version, is in a different namespace, or the shared Secret is missing, the system falls back to the local configuration.
 
 This guide explains how you can use the standardized Configuration Sharing feature between HCL products such as HCL Digital Experience (DX), HCL Leap, and Volt MX Foundry (MX) deployed within the same Kubernetes namespace. This feature simplifies integration, reduces manual configuration, and creates a single source of truth for common settings.
 
