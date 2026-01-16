@@ -93,8 +93,6 @@ wget -qO/dev/null --user-agent=agent-string="Mozilla-Loader" --load-cookies /tmp
 !!! note
     - This is pseudo-code. It assumes you have created a custom portlet that calls `request.getQueryString()` to retrieve the user ID and begin the impersonation process.
     - The script logic works as follows:
-
-        1. The first command calls the custom portlet. The portlet initiates the session and returns an `LtpaToken2` cookie, which is saved to `impcookiefile.txt`.
-        2. The second command uses that token to access the standard Portal interface. This triggers the creation of a `JSESSIONID` for the impersonated user, which is also added to the cookie file.
-
-        This sequence allows you to accurately warm up caches for specific user IDs without requiring their passwords.
+        1. The first command calls the custom portlet. The portlet initiates the session and returns an `LtpaToken2` cookie, which is saved to `impcookiefile.txt`.  
+        2. The second command uses that token to access the standard Portal interface. This triggers the creation of a `JSESSIONID` for the impersonated user, which is also added to the cookie file.  
+    This sequence allows you to accurately warm up caches for specific user IDs without requiring their passwords.  
