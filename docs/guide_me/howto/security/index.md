@@ -10,5 +10,5 @@ Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL 
 Learn how to add additional security realms for Virtual Portals.  
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to uninstall the Unified Task List and Script Application Import portlets to avoid Log4j warnings from security scan tools](./UnifiedTaskListLog4j.md)**  
-Learn how to resolve a security issue with the Unified Task List portlet and the Script Application Import portlet which includes a version of log4j.jar that might be flagged by security scan tools as vulnerable. As described in security bulletin ["Is HCL Digital Experience vulnerable to CVE-2021-44228, Log4J 2 / Log4Shell?"](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0095489), these log4j vulnerabilities cannot be exploited in HCL Digital Experience.
+- **[How to uninstall the Unified Task List and Script Application Import Portlets to avoid Log4j warnings from security scan tools](./UnifiedTaskListLog4j.md)**  
+Learn how to resolve a security issue with the Unified Task List Portlet and the Script Application Import Portlet which includes a version of log4j.jar that might be flagged by security scan tools as vulnerable.  
