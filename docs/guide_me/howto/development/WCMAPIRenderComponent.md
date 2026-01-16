@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides an example demonstrating how the WCM API can be used to render a WCM component.
+This documentation provides an example demonstrating how the WCM API can be used to render a WCM component.
 
 ???+ info "DISCLAIMER OF WARRANTIES"
     The following enclosed code is sample code created by HCL Corporation.
