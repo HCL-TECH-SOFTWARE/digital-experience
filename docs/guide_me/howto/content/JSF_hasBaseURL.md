@@ -6,7 +6,7 @@
 
 ## Introduction
 
-When using JSF (AJAX) related Portlets with HCL Digital Experience, some AJAX requests may lead to unexpected behaviors for which a ajax-call can not be handled correctly on HCL Digital Experience server side. Most likely the problem is related to resource-caching issues inside of the JSF-framework used by HCL Digital Experience. This document describe the different kind of solutions that can be done to fix such caching related problems.  
+When using JSF (AJAX) related Portlets with HCL Digital Experience, some AJAX requests may lead to unexpected behaviors for which a ajax-call can not be handled correctly on HCL Digital Experience server side. Most likely the problem is related to resource-caching issues inside of the JSF-framework used by HCL Digital Experience. This document describes the different solutions that can be used to fix such caching related problems.  
 
 ## Instructions
 
@@ -16,9 +16,9 @@ In HCL Digital Experience it is possible to develop Java Server Faces Portlets t
 <f:ajax render="idform" execute="@form" />
 ```
 
-it is possible that AJAX-requests will not be handled correctly by the server. For example, when such a render button is pushed it is possible that the JSF-Portlet will just render the result once. Additional clicks to the button will not lead to a new rendering of the result. This kind of problems happen because of some known caching related problems in the JSF framework used by HCL Digital Experience. There are two ways to fix such kind of caching related problems.  
+it is possible that AJAX-requests will not be handled correctly by the server. For example, when a render button is pushed it is possible that the JSF-Portlet will just render the result once. Additional clicks to the button will not lead to a new rendering of the result. This kind of problem happens because of some known caching related problems in the JSF framework used by HCL Digital Experience. There are two ways to fix such caching related problems.  
 
-1. By adding the **com.ibm.portal.theme.hasBaseURL** property tag inside of the portal theme that is used by the portal page that contain such a JSF-Portlet
+1. By adding the **com.ibm.portal.theme.hasBaseURL** property tag inside of the portal theme that is used by the portal page that contains the JSF-Portlet
 
 2. By using the following property inside of the **portlet.xml** file located inside of the JSF-Portlet  
 
@@ -33,8 +33,8 @@ For details, please check document [org.apache.myfaces.RESOURCE_HANDLER_CACHE_EN
 
 ### Additional information about HCL Digital Experience Resource Caching
 
-HCL Digital Experience offer the option to add a **hasBaseURL** tag to portal pages and themes to do some kind of internal optimizations.  
-The **hasBaseURL** tag, in conjunction with **portal-core:stateBase**, inserts a base tag into a portal page document. This explicitly sets the base URL for any relative URLs in the document, rather than deferring to the browser to implicitly set the base URL to the value of **location.href**. In applications based on Digital Experience, this has historically been used mostly for search engine optimization (friendly URLs excluding navigational state information). There exist more information about that. For details, please refer to [Additional resources](#additional-resources) section in this document.  
+HCL Digital Experience offers the option to add a **hasBaseURL** tag to portal pages and themes to do some internal optimizations.  
+The **hasBaseURL** tag, in conjunction with **portal-core:stateBase**, inserts a base tag into a portal page document. This explicitly sets the base URL for any relative URLs in the document, rather than deferring to the browser to implicitly set the base URL to the value of **location.href**. In applications based on Digital Experience, this has historically been used mostly for search engine optimization (friendly URLs excluding navigational state information). You can find more information about that in the documentation. For details, please refer to [Additional resources](#additional-resources) section in this document.  
 
 Having a **base** tag in the document allows JSF to cache the relative resource URLs and serve them to both authenticated and anonymous users. With the **base** tag in the document, the relative resource URLs do not include `portal` or `myportal`, so problems with implicit logouts (**logout.user.onpublic**) or redirects to the login page can be avoided. For general information on the base tag, please check document:
 
@@ -42,7 +42,7 @@ Having a **base** tag in the document allows JSF to cache the relative resource 
 
 ### Steps to enable the hasBaseURL parameter in Portlets and Themes
 
-The following example describes detailed steps to add the hasBaseURL parameter inside of the Portal 8.5 Theme that will be shipped by default with HCL Digital Experience.
+The following example describes the detailed steps to add the hasBaseURL parameter inside of the Portal 8.5 Theme that will be shipped by default with HCL Digital Experience.
 
 1. In a temporary directory create a new file (for example ExportPortal85Theme.xml) and add the following content into that file:  
 
@@ -56,7 +56,7 @@ The following example describes detailed steps to add the hasBaseURL parameter i
     </request>
     ```
 
-2. Run the following xmlaccess command from directory `<wp_profile_root>\PortalServer\bin`:  
+2. Run the following xmlaccess command from the directory `<wp_profile_root>\PortalServer\bin`:  
 
     **On Linux/Unix:**
 
@@ -100,7 +100,7 @@ The following example describes detailed steps to add the hasBaseURL parameter i
 
 5. restart the HCL Digital Experience environment
 
-6. Create a page with the new modified Portal 8.5 theme and add a JSF Portlet on that page.  
+6. Create a page with the newly modified Portal 8.5 theme and add a JSF Portlet on that page.  
 
 ### Additional Resources
 
