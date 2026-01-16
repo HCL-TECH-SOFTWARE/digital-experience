@@ -1,4 +1,4 @@
-# Synchronizing the vanity URL database
+# Synchronizing the vanity URL database 
 
 Vanity URLs are staged between servers by using syndication of the Portal Site web content library. For more information about the Portal Site library, see [Content libraries](../../../../build_sites/create_sites/building_website/content_libraries/index.md). For details about which other components, besides vanity URLs, are syndicated, see [Pages](../../../../build_sites/create_sites/website_building_blocks/pages/index.md#versioning-and-syndication-of-pages).
 
