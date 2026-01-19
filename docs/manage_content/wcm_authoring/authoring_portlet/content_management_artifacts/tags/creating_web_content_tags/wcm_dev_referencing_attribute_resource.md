@@ -2,25 +2,24 @@
 title: Attribute resource tag
 ---
 
+Use the `attributeResource` tag to define the information returned by a search query.
 
-
-
-You use the attribute resource tag to define the information that is returned by a search query.
+!!!note
+    You can also use this tag within [List Appearances for Personalization components](../../../../../../extend_dx/ddc/plrf_tech_concepts.md) to surface Digital Data Connector (DDC) data.
 
 The format of an attribute resource tag:
 
-```
+```html
 [attributeResource attributeName="parameter" separator=" " format=" "]
 ```
 
 To create an attribute resource tag:
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-2.  Select **attribute resource** as the tag type.
+2. Select **attribute resource** as the tag type.
 
-3.  Click **OK** to add the tag to your navigator design.
-
+3. Click **OK** to add the tag to your navigator design.
 
 Once you add the tag to your design, you can also add the following parameters to the tag:
 
