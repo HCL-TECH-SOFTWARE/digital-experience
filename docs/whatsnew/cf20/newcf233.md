@@ -1,13 +1,12 @@
-# What's new in CF232 
+# What's new in CF233
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF232 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF233 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,12 +15,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Additional configuration options for DX Core probes
-- DX Picker - Configuring dialog size and persisting last known location
-- Dynacache invalidation domain configuration
-- German and French translations now available
-- HAProxy custom headers now available
 - Helm values updates
+- New HAProxy security configuration parameters
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -37,10 +32,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF233. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF233. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -68,14 +63,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
-### Presentation Designer - Direction-specific styling for bidirectional text layouts
-
-=== "Containers"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
-=== "On-Premises"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -92,46 +79,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### Additional configuration options for DX Core probes
-
-=== "Containers"
-    The targets for the Core `readiness` and `startup` probes can now be configured for more flexibility. For more information, refer to [Core probes configuration](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md#core-probes-configuration).
-
-### DX Picker - Configuring dialog size and persisting last known location
-
-=== "Containers"
-    You can now add the `size` attribute to your `dx-picker` function to change dialog dimensions. You can set this attribute to:
-
-    - `md` or `medium`
-    - `lg` or `large`
-    - `xl` or `extra-large`
-    
-    Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
-
-### Dynacache invalidation domain configuration
-
-=== "Containers"
-    You can now change the domain or schema used for the dynacache invalidation table in DX. This table synchronizes dynacache updates across pods. By default, the `INVALIDATION_TABLE` is created in the `RELEASE` domain. To specify a different domain (such as `JCR`, `COMMUNITY`, or `CUSTOMIZATION`), override the `db.cache.invalidation.domain` property in the `ConfigService.properties` file. For more information, refer to [Changing the domain or schema for the dynacache invalidation table in the database](../../deployment/manage/container_configuration/update_invalidation_domain.md).
-
-### German and French translations now available
-
-=== "Containers"
-    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
-
-### HAProxy custom headers now available
-
-=== "Containers"
-    You can now configure custom HTTP headers in the HAProxy configuration through the HCL DX 9.5 Helm chart. You can add new headers and remove existing headers from responses generated by HAProxy. For more information refer to [Configure Networking - HAProxy custom headers](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#haproxy-custom-headers).
-
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf233).
+
+### New HAProxy security configuration parameters
+
+=== "Containers"
+    New HAProxy security configuration parameters are now available for use in HCL DX. These parameters allow you to specify colon-separated lists of cipher suites for SSL/TLS and TLS 1.3 connections, and HAProxy global configurations. The following parameters are now available:
+
+    - `sslDefaultBindCiphers`: SSL/TLS cipher suites for TLS 1.2 and earlier
+    - `sslDefaultBindCiphersuites`: SSL/TLS cipher suites for TLS 1.3
+    - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
+
+    For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
 
 ### WAS, JDK, and iFix versions
 
 === "Containers"
-    HCL DX 9.5 CF232 contains the following:
+    HCL DX 9.5 CF233 contains the following:
 
     - [WebSphere Application Server 9.0.5.25](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.51](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)

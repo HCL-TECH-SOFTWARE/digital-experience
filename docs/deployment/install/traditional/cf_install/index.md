@@ -23,39 +23,31 @@ To opt in and install DX v9.5, refer to the following instructions:
 
 1. Provide the ConfigWizard administrator name and password values to the ConfigEngine.
 
-	Add the following two parameters to the <profile_root>/ConfigEngine/properties/wkplc.properties file.
-	```
-	config.wizard.profile.name=<config_wizard_administrator_name>
-	config.wizard.profile.password=<config_wizard_administrator_password>
-	```
+    Add the following two parameters to the `<profile_root>/ConfigEngine/properties/wkplc.properties` file.
 
-	Alternatively, you can add these parameters to the command line when running applyCF using the -D format.
-	```
-	-Dconfig.wizard.profile.name=<config_wizard_administrator_name>
-	-Dconfig.wizard.profile.password=<config_wizard_administrator_password>
-	```
+    ```
+    config.wizard.profile.name=<config_wizard_administrator_name>
+    config.wizard.profile.password=<config_wizard_administrator_password>
+    ```
 
-2. Run the applyCF script with the install_95 flag.
+    Alternatively, you can add these parameters to the command line when running `applyCF` using the `-D` format.
 
-	- **For Unix/Linux:** Pass the install_95 parameter to the command to upgrade the Portal profile.
+    ```
+    -Dconfig.wizard.profile.name=<config_wizard_administrator_name>
+    -Dconfig.wizard.profile.password=<config_wizard_administrator_password>
+    ```
 
-		From the <profile_root>/PortalServer/bin/ directory:
+2. Run the `applyCF` script with the `install_95` flag.
 
-		```bash
-		install_95=true ./applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>
-		```
+    - **For Unix/Linux:** Pass the `install_95` parameter to the command to upgrade the Portal profile.
 
-	- **For Windows:** Set the install_95 environment variable in the command prompt window where you will upgrade the Portal profile.
+        From the <profile_root>/PortalServer/bin/ directory:
 
-		```bash
-		set install_95=true
-		```
+        ```bash
+        install_95=true ./applyCF.sh -DPortalAdminPwd=<password> -DWasPassword=<password>
+        ```
 
-		From the <profile_root>/PortalServer/bin/ directory:
-
-		```batch
-		applyCF.bat -DPortalAdminPwd=<password> -DWasPassword=<password>
-		```
+    - **For Windows:** The `install_95` flag can fail in Windows environments.  It is recommended to complete the CF upgrade according to [legacy instructions](../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md) and then manually [upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079619){target="_blank"} using the repositories packaged within the cumulative fix.
 
 After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
