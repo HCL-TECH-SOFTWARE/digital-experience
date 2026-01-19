@@ -6,10 +6,16 @@ This topic describes the details of Digital Asset Management (DAM) Database Anal
 
 DAM Database Analysis is a tool that enables administrators to monitor and analyze their DAM system's health. This feature provides detailed metrics across multiple dimensions, helping you make informed decisions about resource allocation and storage optimization.
 
-The Database Analysis feature is accessible only to users with the Administrator role and provides real-time insights into database operations, media assets, and storage utilization.
-
 !!! note
     Database Analysis is available starting with HCL DX CF233. Only users with Administrator permissions can access these metrics through the DAM user interface or REST API.
+
+### Access Database Analysis through the DAM UI:
+
+1. Log in to HCL DX Portal with an account that has Administrator role for DAM
+2. Navigate to the Digital Asset Management application
+3. Click on the **Settings** panel icon
+4. Select **Database Analysis** from the administration options
+5. Expand the desired metric category accordion to view specific metrics
 
 ## Overview of Database Analysis Metrics
 
@@ -31,12 +37,7 @@ The Database Analysis feature organizes metrics into distinct categories, each s
 | Collections Missing Access Reference| Collections without proper access control configuration             | Yes                  | No            | No          |
 | Orphan Media Items                  | Media items not associated with any collection                      | Yes                  | No            | No          |
 
-Administrators can access all metric categories to gain complete visibility into their DAM deployment's performance and health.
-
 ![Database Analysis](../../../../images/Database_analysis.png)
-
-!!! note
-    The Administrator role is required to view Database Analysis metrics. Editor and User roles cannot access this functionality.
 
 ## Database Metrics
 
@@ -54,15 +55,7 @@ The following table describes the available database metrics:
 
 ![Database Metrics](../../../../images/Database_metrics.png)
 
-### Accessing Database Metrics
-
-Database metrics are accessible through the DAM user interface under the Database Analysis section. To view database metrics:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Database Metrics** accordion
-
-The database metrics are also available through the REST API endpoint:
+REST API endpoint for database metrics:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=database
@@ -91,22 +84,11 @@ The following table describes the available media metrics:
 
 ![Media Metrics](../../../../images/Media_metrics.png)
 
-### Accessing Media Metrics
-
-Media metrics are accessible through the DAM user interface under the Database Analysis section. To view media metrics:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Media Metrics** accordion
-
-The media metrics are also available through the REST API endpoint:
+REST API endpoint for media metrics:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=media
 ```
-
-!!! note
-    Media items not in collection represent orphaned assets that may need attention. Consider organizing these items into appropriate collections for better content management.
 
 ## Media Type Distribution
 
@@ -124,15 +106,7 @@ Percentage = (Type Count / Total Media Items) × 100
 
 This helps you quickly identify the dominant media types in your deployment.
 
-### Accessing Media Type Distribution
-
-Media type distribution is accessible through the DAM user interface under the Database Analysis section. To view media type distribution:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Media Type Distribution** accordion
-
-The media type distribution is also available through the REST API endpoint:
+REST API endpoint for media type distribution:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=mediatypes
@@ -161,15 +135,7 @@ This allows administrators to quickly identify:
 - Success rates for different operation types
 - Operations that may require troubleshooting
 
-### Accessing Operations Matrix
-
-The operations matrix is accessible through the DAM user interface under the Database Analysis section. To view the operations matrix:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Operations** accordion
-
-The operations matrix is also available through the REST API endpoint:
+REST API endpoint for operations matrix:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=operations
@@ -212,15 +178,7 @@ To resolve collections with missing access references:
 2. Use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set proper access references
 3. Verify permission inheritance is working correctly after updating
 
-### Accessing Collections Missing Access Reference
-
-This metric is accessible through the DAM user interface under the Database Analysis section. To view collections missing access references:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Collections Missing Access Reference** accordion
-
-The collections missing access reference are also available through the REST API endpoint:
+REST API endpoint for collections missing access reference IDs:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=missingreferenceid
@@ -245,14 +203,6 @@ For each orphan media item, the following information is displayed:
 | Name     | File name of the media item                          |
 | Created  | Date and time when the media item was uploaded       |
 
-### Accessing Orphan Media Items
-
-Orphan media items are accessible through the DAM user interface under the Database Analysis section. To view orphan media items:
-
-1. Navigate to the **Settings** panel in DAM
-2. Select **Database Analysis**
-3. Expand the **Orphan Media Items** accordion
-
 The orphan media items are also available through the REST API endpoint:
 
 ```
@@ -260,37 +210,4 @@ GET /dx/api/dam/v1/database-analysis?type=orphanmediaitems
 ```
 
 !!! note
-    Regularly monitoring and addressing orphan media items helps maintain a clean and well-organized DAM deployment. Consider establishing a periodic review process for orphan items.
-
-## Accessing Database Analysis
-
-Database Analysis is accessible exclusively to users with Administrator role through both the DAM user interface and the REST API.
-
-### Accessing Through DAM User Interface
-
-To access Database Analysis through the DAM UI:
-
-1. Log in to HCL DX Portal with an account that has Administrator role for DAM
-2. Navigate to the Digital Asset Management application
-3. Click on the **Settings** panel icon
-4. Select **Database Analysis** from the administration options
-5. Expand the desired metric category accordion to view specific metrics
-
-### Performance Considerations
-
-When accessing Database Analysis metrics:
-
-- Metrics are calculated in real-time upon request
-- Large deployments may experience slight delays during initial metric calculation
-- Use specific type parameters to retrieve only needed metrics for faster response times
-
-### Security Considerations
-
-Database Analysis provides sensitive information about your DAM deployment:
-
-- Only grant Administrator role to trusted users who need access to these metrics
-- Monitor Database Analysis API access through your system logs
-- Regularly review who has Administrator access to DAM
-
-!!! note
-    Database Analysis metrics do not contain individual media content or user data, but they do reveal system architecture and usage patterns. Protect access accordingly.
+    Orphan media items represent orphaned assets that may need attention. Consider organizing these items into appropriate collections for better content management.
