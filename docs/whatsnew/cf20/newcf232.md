@@ -1,12 +1,13 @@
-# What's new in CF232
+# What's new in CF232 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF232 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
-- Presentation Designer - Direction-specific styling for bidirectional text layouts
 - My HCLSoftware delivery portal
+- New How-to articles now available
+- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -17,10 +18,10 @@ The following features and updates are available to customers installing HCL Dig
 
 - Additional configuration options for DX Core probes
 - DX Picker - Configuring dialog size and persisting last known location
+- Dynacache invalidation domain configuration
+- German and French translations now available
 - HAProxy custom headers now available
 - Helm values updates
-- Language switcher for DX Help Center now available
-- New How-to articles now available
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -33,21 +34,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### Blueprint updates <!--Update for CF232-->
+### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
-
-### Presentation Designer - Direction-specific styling for bidirectional text layouts
-
-=== "Containers"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
-=== "On-Premises"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+    The HCL DX Blueprint design system has been updated for CF232. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -66,6 +59,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
+
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
+=== "On-Premises"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
+
+=== "Containers"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
+=== "On-Premises"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -99,6 +108,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     
     Additionally, DX Picker now saves the selected item's last known location and displays it automatically when reopened. This saved location persists until the session ends or expires. For more information, refer to [Accessing DX Picker](../../manage_content/wcm_authoring/dx_picker/access.md) and [Selecting an item](../../manage_content/wcm_authoring/dx_picker/usage.md#selecting-an-item).
 
+### Dynacache invalidation domain configuration
+
+=== "Containers"
+    You can now change the domain or schema used for the dynacache invalidation table in DX. This table synchronizes dynacache updates across pods. By default, the `INVALIDATION_TABLE` is created in the `RELEASE` domain. To specify a different domain (such as `JCR`, `COMMUNITY`, or `CUSTOMIZATION`), override the `db.cache.invalidation.domain` property in the `ConfigService.properties` file. For more information, refer to [Changing the domain or schema for the dynacache invalidation table in the database](../../deployment/manage/container_configuration/update_invalidation_domain.md).
+
+### German and French translations now available
+
+=== "Containers"
+    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
 ### HAProxy custom headers now available
 
 === "Containers"
@@ -108,16 +127,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
-
-### Language switcher for HCL DX Help Center now available
-
-=== "Containers"
-    You can now translate the HCL DX Help Center in real-time to two additional languages: German and French. To switch languages, click the language switcher dropdown on the top-right corner of any DX Help Center page and select your desired language.
-
-### New How-to articles now available
-
-=== "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### WAS, JDK, and iFix versions
 
