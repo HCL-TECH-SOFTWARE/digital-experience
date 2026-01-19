@@ -211,3 +211,11 @@ GET /dx/api/dam/v1/database-analysis?type=orphanmediaitems
 
 !!! note
     Orphan media items represent orphaned assets that may need attention. Consider organizing these items into appropriate collections for better content management.
+
+### Performance Considerations
+
+When accessing Database Analysis metrics:
+
+- Metrics are calculated in real-time upon request
+- Large deployments may experience slight delays during initial metric calculation
+- Use specific type parameters to retrieve only needed metrics for faster response times
