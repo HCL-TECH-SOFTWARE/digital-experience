@@ -1,8 +1,11 @@
-# Editable property tag
+---
+id: wcm_dev_item-details_property_edit
+title: Editable Property tag
+---
 
-An editable property tag is used to make fields and metadata from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.
+Use the Editable Property (`EditableProperty`) tag to enable inline editing for content fields and metadata. When the portal page is in Edit Mode, these properties become directly editable within the Web Content Viewer portlet.
 
-An example of the format of an editable property tag:
+See the format of an `EditableProperty` tag:
 
 ```
 [EditableProperty field=" " context=" " type=" " name=" " format=" " pre=" "
@@ -14,13 +17,15 @@ An example of the format of an editable property tag:
 !!! note
     This tag doesn't work correctly if basic or advanced rendering caches are enabled because authoring updates cannot immediately be displayed on the rendered page.
 
-To create an editable property tag:
+## Creating an Editable Property tag
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+To create an `EditableProperty` tag:
 
-2.  Select **EditableProperty** as the tag type.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a property type. This parameter is added to the tag as the field=" " parameter:
+2. Select **EditableProperty** as the tag type.
+
+3. Select a property type. This parameter is added to the tag as the field=" " parameter:
 
     !!! note
         Only these property types are editable:
@@ -34,7 +39,7 @@ To create an editable property tag:
         -   GeneralDateOne
         -   GeneralDateTwo
 
-4.  Select the item type and the context that is used to determine which item to reference:
+4. Select the item type and the context that is used to determine which item to reference:
 
     |Context and Item Type|type="auto"|type="content"|type="sitearea"|type="parent"|type="top"|
     |---------------------|-----------|--------------|---------------|-------------|----------|
@@ -42,10 +47,9 @@ To create an editable property tag:
     |**context="Current"**If selected, the context is set by the current item.|This parameter makes the property of the item currently being rendered editable when the page is in edit mode.|This parameter makes the property from the current content item editable when the page is in edit mode.If a site area is selected, then nothing is editable.|If the item currently being rendered is a site area, this parameter makes the property of the current site area editable when the page is in edit mode.If the item currently being rendered is a content item, this parameter makes the property of the parent site area editable when the page is in edit mode.|This parameter makes the property of the parent site area of the item currently being rendered editable when the page is in edit mode.|This parameter makes the property of the first item in the path of the item currently being rendered editable when the page is in edit mode.|
     |**context="Autofill"**Use this option when the item that is referenced is determined by the search parameters of a menu, navigator, or taxonomy component. If the tag is not used within a menu, navigator, or taxonomy component, the context reverts to the current item.|This parameter makes the property of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property from a content item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.If a site area is selected, then nothing is editable.|If the current item returned by a menu, navigator, or taxonomy component is a site area, then the property from the site area is editable when the page is in edit mode.If the current item returned by a menu, navigator, or taxonomy component is a content item, this parameter makes the property of the parent site area editable when the page is in edit mode.|This parameter makes the property of the parent item of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property of the first item in the path of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|
 
-5.  Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
+5. Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
 
-6.  Click **OK** to add the tag to your navigator design.
-
+6. Click **OK** to add the tag to your navigator design.
 
 When you add this tag to your design, you can also add the following parameters to the tag:
 

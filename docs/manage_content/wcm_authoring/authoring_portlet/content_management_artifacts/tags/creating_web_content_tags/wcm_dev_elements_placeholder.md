@@ -1,15 +1,19 @@
 ---
+id: wcm_dev_elements_placeholder
 title: Placeholder tag
 ---
-You use a placeholder tag to display metadata within an element or component design.
 
-This is the format of a placeholder tag:
+Use the `placeholder` tag to display metadata within an element or component design.
+
+See the format of a `placeholder` tag:
 
 ```
 [placeholder tag=" " htmlencode=" " start=" " end=" " ]
 ```
 
-To create a placeholder tag:
+## Creating a Placeholder tag
+
+To create a `placeholder` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
@@ -189,7 +193,7 @@ Once you add the tag to your design, you can also add the following parameters t
 
 **URL Component tag**
 
-The URL Component (URLCmpnt) tag is used to generate a URL to a site area or content item and can be used as an alternative to a placeholder when a URL is generated. This method is useful when you create links to web content displayed within rendering portlets. Refer to the [URL Component tag](../creating_web_content_tags/wcm_dev_item-details_url.md) page for more information.
+The URL Component (`URLCmpnt`) tag is used to generate a URL to a site area or content item and can be used as an alternative to a placeholder when a URL is generated. This method is useful when you create links to web content displayed within rendering portlets. Refer to the [URL Component tag](../creating_web_content_tags/wcm_dev_item-details_url.md) page for more information.
 
 ## HCLSoftware U learning materials
 

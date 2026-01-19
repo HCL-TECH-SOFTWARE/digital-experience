@@ -1,23 +1,27 @@
-# Indenting element designs
+---
+id: wcm_dev_elements_indents
+title: Indent Component tag
+---
 
-You use an indent tag to format element designs that require results to be indented.
+Use the Indent Component (`IndentCmpnt`) tag to format element designs that require results to be indented.
 
-This is an example of the format of an IndentCmpnt tag:
+See the format of an `IndentCmpnt` tag:
 
 ```
 [indentcmpnt repeat=" " offset=" " start=" " end=" " ]
 ```
 
-To create a IndentCmpnt tag:
+## Creating a Indent Component tag
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+To create a `IndentCmpnt` tag:
 
-2.  Select **Indent** as the tag type.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-3.  Select an offset level. The offset is used to determine how many times the repeat string is used for each indent. The offsets that are used are based on the number of nodes of the hierarchical content that is displayed. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
+2. Select **Indent** as the tag type.
 
-4.  Click **OK** to add the tag to your navigator design.
+3. Select an offset level. The offset is used to determine how many times the repeat string is used for each indent. The offsets that are used are based on the number of nodes of the hierarchical content that is displayed. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
 
+4. Click **OK** to add the tag to your navigator design.
 
 When you add the tag to your design, you can also add the following parameters to the tag:
 
@@ -35,6 +39,7 @@ For example:
 ```
 [indentcmpnt offset="0" repeat="&amp;nbsp;&amp;nbsp;"]
 ```
+
 ## HCLSoftware U learning materials
 
 To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

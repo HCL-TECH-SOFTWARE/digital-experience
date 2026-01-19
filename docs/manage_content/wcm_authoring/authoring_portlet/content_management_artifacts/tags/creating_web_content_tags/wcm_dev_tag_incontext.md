@@ -1,8 +1,11 @@
-# In Context tag
+---
+id: wcm_dev_tag_incontext
+title: In Context tag
+---
 
-The InContext tag renders a tag body within a specified rendering context. The new rendering context can be specified as a predefined context by using a UUID, or by path.
+Use the In Context (`InContext`) tag to render a tag body within a specified rendering context. You can specify the new rendering context as a predefined context using a UUID or path.
 
-The format of an `InContext` tag:
+See the format of an `InContext` tag:
 
 ```
 [InContext context=" "]
@@ -10,43 +13,45 @@ The format of an `InContext` tag:
 [/InContext]
 ```
 
+## Creating an In Context tag
+
 To create an `InContext` tag:
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-2.  Select **In Context** as the tag type.
+2. Select **In Context** as the tag type.
 
-3.  Select a context type:
+3. Select a context type:
 
-    -   **Autofill**
+    - **Autofill**
 
         Use this option when the element that is referenced is determined by the search parameters of a menu, navigator, or taxonomy component. If the tag is not used within a menu, navigator, or taxonomy component, the context reverts to the current item.
 
-    -   **Current**
+    - **Current**
 
         If selected, the context is set by the current item.
 
-    -   **Portal Context**
+    - **Portal Context**
 
         If selected, the context is set by the context of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
         Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
-    -   **Portal Mapping**
+    - **Portal Mapping**
 
         If selected, the context is set by the web content association of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
         Refer to [Web content associations](../../../../../wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_contentmap_about.md) for more information.
 
-    -   **Portlet Context**
+    - **Portlet Context**
 
         If selected, the context is set by context of the current web content viewer portlet. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-    -   **Selected**
+    - **Selected**
 
         If selected, the context is set by the selected item. You select an item by clicking **Select**. The selected item is added to the tag as the `uuid=" "` parameter. If the UUID or path parameter is specified, the context is always "selected", so you do not have to specify `context="Selected"`.
 
-4.  Click **OK** to add the tag to your navigator design.
+4. Click **OK** to add the tag to your navigator design.
 
 
 ## Usage examples

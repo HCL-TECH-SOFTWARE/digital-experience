@@ -1,13 +1,11 @@
 ---
+id: creating_web_content_tags/wcm_dev_tag_ifnotdefined
 title: If Not Defined tag
 ---
 
+Use the If Not Defined (`IfNotDefined`) tag to render fallback markup or default content when a specific element is empty. This is useful for displaying placeholder text or generic images if a field on a content item or site area does not contain a value.
 
-
-
-Use the If Not Defined tag to render something if an element is not defined on a content item or site area.
-
-The format of an If Not Defined tag:
+See the format of an `IfNotDefined` tag:
 
 ```
 [IfNotDefined context="" type="" key=""]
@@ -15,13 +13,15 @@ The format of an If Not Defined tag:
 [/IfNotDefined]
 ```
 
-To create an If Not Defined tag:
+## Creating an If Not Defined tag
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+To create an `IfNotDefined` tag:
 
-2.  Select **If Not Defined** as the tag type.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-3.  Select the source item type and context:
+2. Select **If Not Defined** as the tag type.
+
+3. Select the source item type and context:
 
     If not set, the item type is `content` and the context is `current`.
 
@@ -36,9 +36,9 @@ To create an If Not Defined tag:
 
     **Portal mapping versus portal context:** The portal mapping context is determined by the web content associations that are assigned to each page. This context is used for rendering when users first access a page. The context of the page can change when users interact with the content on the page. Each web content viewer on a page can be configured with an explicit context that overrides the rendering page context. The context of the portlet can also change if it is configured to receive links. When users click a link within the viewer that is configured to broadcast its links, the page context is updated. This new context is maintained until users click another link, or until users start a new session. When users start a new session, the original page context is used.
 
-4.  Click **Select authoring template** to select an appropriate authoring template. Select an element from the list of available elements. If this element is not defined, the markup that is entered within the If Not Defined tag is rendered. This parameter is added to the tag as the `key=" "` parameter:
+4. Click **Select authoring template** to select an appropriate authoring template. Select an element from the list of available elements. If this element is not defined, the markup that is entered within the If Not Defined tag is rendered. This parameter is added to the tag as the `key=" "` parameter:
 
-5.  Click **OK** to add the tag to your navigator design.
+5. Click **OK** to add the tag to your navigator design.
 
 ## HCLSoftware U learning materials
 

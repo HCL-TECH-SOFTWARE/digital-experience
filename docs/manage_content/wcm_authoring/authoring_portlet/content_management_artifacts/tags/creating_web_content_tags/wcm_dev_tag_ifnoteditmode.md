@@ -1,8 +1,11 @@
-# If Not Edit Mode tag
+---
+id: creating_web_content_tags/wcm_dev_tag_ifnoteditmode
+title: If Not Edit Mode tag
+---
 
-The IfNotEditMode tag is used to render content in a web content viewer portlet only when a page is in view mode. This tag can be used to display text, fields, and elements in view mode that are not required to be displayed when the page is in edit mode.
+Use the If Not Edit Mode (`IfNotEditMode`) tag to render content in a web content viewer portlet only when a page is in view mode. You can use this tag to display text, fields, and elements in view mode that are not required to be displayed when the page is in edit mode.
 
-The format of an `IfNotEditMode` tag:
+See the format of an `IfNotEditMode` tag:
 
 ```
 [IfNotEditMode]
@@ -10,14 +13,15 @@ The format of an `IfNotEditMode` tag:
 [/IfNotEditMode]
 ```
 
+## Creating an If Not Edit Mode tag
+
 To create an `IfNotEditMode` tag:
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-2.  Select **If Not Edit Mode** as the tag type.
+2. Select **If Not Edit Mode** as the tag type.
 
-3.  Click **OK** to add the tag to your navigator design.
-
+3. Click **OK** to add the tag to your navigator design.
 
 Additional text, HTML, or tags must be added between the `[IfNotEditMode]` and `[/IfNotEditMode]` tags. The text and tags added here is what is rendered when a page is in view mode.
 

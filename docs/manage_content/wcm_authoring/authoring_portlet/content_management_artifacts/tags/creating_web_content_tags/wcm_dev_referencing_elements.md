@@ -3,25 +3,24 @@ id: wcm_dev_referencing_elements
 title: Element tag
 ---
 
+Use the `Element` tag to reference an element within a presentation template or element design.
 
-
-
-The Element tag is used to reference an element within a presentation template or element design.
-
-The format of an element tag:
+See the format of an `Element` tag:
 
 ```
 [Element type=" " context=" " name=" " key=" " format=" " pre=" " link=" " separator=" " 
 htmlencode=" " awareness=" "  ifEmpty=" " start=" " end=" " ]
 ```
 
-To create an element tag:
+## Creating an Element tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create an `Element` tag:
 
-2.  Select **Element** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select the item type where the element is stored, and the context that is used to determine which item to reference:
+2. Select **Element** as the tag type.
+
+3. Select the item type where the element is stored, and the context that is used to determine which item to reference:
 
     If not set, the item type is `content` and the context is `current`.
 
@@ -36,10 +35,9 @@ To create an element tag:
 
     **Portal mapping versus portal context:** The portal mapping context is determined by the web content associations that are assigned to each page. This context is used for rendering when users first access a page. The context of the page can change when users interact with the content on the page. Each web content viewer on a page can be configured with an explicit context that overrides the rendering page context. The context of the portlet can also change if it is configured to receive links. When users click a link within the viewer that is configured to broadcast its links, the page context is updated. This new context is maintained until users click another link, or until users start a new session. When users start a new session, the original page context is used.
 
-4.  Click **Select authoring template** to select an appropriate authoring template. Select the element to display from the list of available elements. This parameter is added to the tag as the `key=" "` parameter:
+4. Click **Select authoring template** to select an appropriate authoring template. Select the element to display from the list of available elements. This parameter is added to the tag as the `key=" "` parameter:
 
-5.  Click **OK** to add the tag to your navigator design.
-
+5. Click **OK** to add the tag to your navigator design.
 
 When you add the tag to your design, you can also add the following parameters to the tag:
 
