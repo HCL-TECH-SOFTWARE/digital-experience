@@ -106,7 +106,10 @@ This sample code counts the number of content items (excluding custom workflows)
         To count a large number of items, you may need to increase the server session timeout setting. Open the IBM WebSphere Application Server administration console and go to
         **Application Servers > WebSphere_Portal > Container Settings > Web Container Settings > Session Management** to adjust the session timeout.
 
-3. Open the JSP in a web browser:
-`https://<hostname>:<port>/wps/wcm/jsp/html/countVP.jsp`
+3. Open the JSP in a web browser. For example:
+
+    ```url
+    https://<hostname>:<port>/wps/wcm/jsp/html/countVP.jsp
+    ```
 
 4. Review the `SystemOut.log` file for a summary of the counted items.
