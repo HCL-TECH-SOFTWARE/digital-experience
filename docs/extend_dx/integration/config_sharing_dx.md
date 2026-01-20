@@ -63,10 +63,9 @@ The entire mechanism is controlled using the feature flags in the Helm `values.y
 
     ```yaml
     consumeSharedConfigs:
-        - name: dx-shared-config
-        version: 
-            min: 1
-            max: 2
+      - name: dx-shared-config
+        minVersion: 1
+        maxVersion: 2
     ```
 
     This explicit configuration helps prevent unintended integration issues if new products that also share configurations are deployed in the future.
