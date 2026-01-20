@@ -17,6 +17,7 @@ hide: tags
 - How to export parts of a DX Site
 - How to import parts of a DX Site from exported files
 - What to look out for when exporting and deploying DX sites
+- How to export and import DAM assets between environments
 
 ## Reference Site
 
@@ -195,3 +196,93 @@ This xml is used to export the Page metadata and hierarchy xml of your site.
 
 - You can find it in `Administration > Site Management` under the `Unique name or Identifier` Column.
    ![Skin Object ID](../../images/19page_unique_name.png)
+
+## DAM Assets Export and Import
+
+[Digital Asset Management](../../../../../manage_content/digital_assets/usage/index.md) (DAM) Assets Export and Import (EXIM) is a tool for exporting DAM assets from a source environment to the file system in a structured format. You can also use it to import DAM assets from the file system into a target environment.
+
+### User access and control capabilities for HCL DAM EXIM
+
+DAM Export and Import (EXIM) is exposed through [DXClient](../../../../../extend_dx/development_tools/dxclient/index.md).
+
+Administrators and authorized users with Administrator role privileges can access and manage DAM EXIM operations.
+
+When you export DAM assets to a target environment that does not share the same LDAP configuration, access rights are not transferred.
+
+If you specify a file system path and run the command from the container, assets are exported to or imported from the specified location (for example, `store/folder_name/`).
+
+### Limitations
+
+DAM EXIM can be used to back up DAM assets from any environment. The same backup can be imported into another environment.
+
+DAM EXIM does **not** support continuous synchronization like DAM Staging. See [Sharing and staging DAM assets](../../../../../manage_content/digital_assets/configuration/staging_dam/index.md) for information on configuring continuous synchronization of DAM assets.
+
+DAM Staging provides continuous synchronization between environments. If you are using DAM Staging, using DAM EXIM is not required.
+
+### Export DAM assets
+
+Use the export command to export DAM assets to the file system. By default, assets are exported to `store/outputFiles/dam-export-assets/`. If you specify a path, assets are exported to the provided location, for example `store/folder_name/`.
+
+#### Commands description
+
+dxclient manage-dam-assets export-assets
+- Help command  
+  Shows help information for the `manage-dam-assets` command:
+
+```bash
+dxclient manage-dam-assets export-assets -h
+```
+
+- Command options
+
+```bash
+-dxProtocol <value>
+```
+pecifies the protocol to use when connecting to the DX server.
+```
+-hostname <value>
+```
+ecifies the hostname of the DX server.
+```
+-dxPort <value>
+```
+Specifies the port to connect to the server (for Kubernetes environments, the default is 443).
+```
+-dxUsername <value>
+```
+Specifies the username required for server authentication.
+```
+-dxPassword <value>
+```
+Specifies the password required for server authentication.
+```
+-ringAPIPort <value>
+```
+Specifies the DAM server port for Kubernetes environments (default: 443).
+```
+-ringAPIPort <value>
+```
+Specifies the DX Core API server port for Kubernetes environments (default: 443).
+```
+-exportPath <value>
+```  
+Specifies a folder path to import DAM assets to, different from the default location. By default, assets are imported to `store/outputFiles/dam-export-assets/`.
+```
+-importBinary <value>
+```  
+Set to `true` or `false` to include or exclude binary files during the import. The default is `true`.
+
+!!! note
+    Optional parameters are `-exportPath` and `-exportBinary`.If the `-exportPath` value is not a relative or absolute path, the exported assets will be placed in the container and will **not** persist after the command completes.
+
+    For example: `-exportPath outputFileDirectory`
+
+For example:
+```
+dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
+```
+
+??? Related information
+    [Digital Asset Management](../../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dam_artifacts/index.md)
+
+

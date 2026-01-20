@@ -1,11 +1,11 @@
 title: Import and Export of a DX Site
 nav:
-    - index.md
-    - import_theme.md
-    - import_wcm_libraries.md
-    - import_site_page_hierarchy.md
-    - manual_export_theme.md
-    - manual_export_site_page_hierarchy.md
-    - export_theme.md
-    - export_site_page_hierarchy.md
-    - export_wcm_library.md
+  - Importing and Exporting DX Site: index.md
+  - Exporting the DX Site Page Hierarchy xml from your system: export_site_page_hierarchy.md
+  - Exporting your theme from your system: export_theme.md
+  - Exporting your WCM library: export_wcm_library.md
+  - Exporting the DX Site Page Hierarchy xml from your system: import_site_page_hierarchy.md
+  - Exporting the DX Site Page Hierarchy xml from your system: import_theme.md
+  - Exporting the DX Site Page Hierarchy xml from your system: How to Import WCM libraryimport_wcm_libraries.md
+  - Manually exporting the your DX Site Page Hierarchy: manual_export_site_page_hierarchy.md
+  - Manually exporting your Theme via Practitioner Studio: manual_export_theme.md
