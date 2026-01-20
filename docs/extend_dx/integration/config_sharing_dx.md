@@ -59,7 +59,7 @@ The entire mechanism is controlled using the feature flags in the Helm `values.y
 
 2. Configure the Consumer product to look for a specific shared Secret by defining which version of the shared configuration it intends to use for greater control.
 
-    Set the `name`, `min`, and `max` `version` of the `consumeSharedConfigs` parameter in the `values.yaml` file:
+    Set the `name`, `minVersion`, and `maxVersion` of the `consumeSharedConfigs` parameter in the `values.yaml` file:
 
     ```yaml
     consumeSharedConfigs:
