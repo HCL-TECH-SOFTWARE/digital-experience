@@ -6,7 +6,9 @@
 
 ## Introduction
 
-This documentation provides an example demonstrating how the WCM API can be used to render a WCM component.
+This guide demonstrates how to use the WCM API to programmatically render a component. While most components are rendered through the WCM delivery engine automatically, using the Java API allows you to inject WCM content into custom JSPs, portlets, or external applications.
+
+By creating a RenderingContext, you can force a component to render using a specific site path and library, regardless of the user's current location on the site.
 
 ???+ info "DISCLAIMER OF WARRANTIES"
     The following enclosed code is sample code created by HCL Corporation.
