@@ -58,7 +58,7 @@ The following table describes the available database metrics:
 REST API endpoint for database metrics:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=database
+GET /dx/api/dam/v1/database-analysis?type=Database
 ```
 
 !!! note
@@ -87,7 +87,7 @@ The following table describes the available media metrics:
 REST API endpoint for media metrics:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=media
+GET /dx/api/dam/v1/database-analysis?type=Media
 ```
 
 ## Media Type Distribution
@@ -109,7 +109,7 @@ This helps you quickly identify the dominant media types in your deployment.
 REST API endpoint for media type distribution:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=mediatypes
+GET /dx/api/dam/v1/database-analysis?type=MediaTypes
 ```
 
 !!! note
@@ -138,7 +138,7 @@ This allows administrators to quickly identify:
 REST API endpoint for operations matrix:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=operations
+GET /dx/api/dam/v1/database-analysis?type=Operations
 ```
 
 !!! note
@@ -181,7 +181,7 @@ To resolve collections with missing access references:
 REST API endpoint for collections missing access reference IDs:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=missingreferenceid
+GET /dx/api/dam/v1/database-analysis?type=CollectionsMissingAccessReference
 ```
 
 !!! note
@@ -206,7 +206,7 @@ For each orphan media item, the following information is displayed:
 The orphan media items are also available through the REST API endpoint:
 
 ```
-GET /dx/api/dam/v1/database-analysis?type=orphanmediaitems
+GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
 ```
 
 !!! note
