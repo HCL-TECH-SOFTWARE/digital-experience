@@ -94,6 +94,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `sslDefaultBindCiphersuites`: SSL/TLS cipher suites for TLS 1.3
     - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
+    For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
+
 ### Digital Asset Management - Database Analysis
 
 === "Containers"
