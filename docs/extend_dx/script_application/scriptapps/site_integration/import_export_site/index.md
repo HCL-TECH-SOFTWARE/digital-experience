@@ -72,6 +72,7 @@ hide: tags
 3. [Export a DX Theme via commandline](export_theme.md)
 4. [Export a DX site's page hierarchy via commandline](export_site_page_hierarchy.md)
 5. [Export the DX site's WCM libraries via commandline](export_wcm_library.md)
+6. [Export the DX DAM digital assets via commandline](../../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md#export-dam-assets)
 
 ## How to import parts of a DX Site from exported files
 
@@ -80,9 +81,10 @@ Here are the steps in order to deploy your exported DX Site:
 1. [Deploy all DX Modules required by your DX Theme.](../../common-setup/build-and-deploy/build_and_deploy_dx_modules.md)
 2. [Deploy the DX Theme you have created for your site. (Skip if you are using one of the out the box themes).](import_theme.md)
 3. [Import all of WCM library that have your components.](import_wcm_libraries.md)
+    [Import the DX DAM digital assets via commandline](../../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md#import-dam-assets)
 4. [Import your site page hierarchy.](import_site_page_hierarchy.md)
 5. [Update all of WCM library that have references to site pages.](import_wcm_libraries.md)
-6. [(Optional) Update the script applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md)
+6. [(Optional) Update the Script Applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md)
 
 ## XML files
 
