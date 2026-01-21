@@ -22,20 +22,21 @@ DAM Database Analysis is a tool that enables administrators to monitor and analy
 Database Analysis provides comprehensive visibility into your DAM deployment through multiple metric categories. Each metric category offers specific insights that help administrators monitor system health, optimize performance and plan for capacity requirements.
 
 !!! note
-    All metrics are calculated in real-time when requested. For large deployments, initial metric loading may take a few seconds.
+    - All metrics are calculated in real-time when requested. For large deployments, initial metric loading may take a few seconds.
+    - When using the REST API, the `type` parameter is case-insensitive. You can use `Database`, `database`, `Media`, `media` etc interchangeably.
 
 ### Database Analysis Metrics in Detail
 
 The Database Analysis feature organizes metrics into distinct categories, each serving a specific monitoring purpose:
 
-| Metric Category                     | Description                                                         | Administrator Access | Editor Access | User Access |
-|-------------------------------------|---------------------------------------------------------------------|----------------------|---------------|-------------|
-| Database Metrics                    | Core database information including size, schema, and version       | Yes                  | No            | No          |
-| Media Metrics                       | Statistics about media assets, collections, and storage usage       | Yes                  | No            | No          |
-| Media Type Distribution             | Breakdown of media assets by type with count and percentage         | Yes                  | No            | No          |
-| Operations Matrix                   | Overview of all operations with status breakdown                    | Yes                  | No            | No          |
-| Collections Missing Access Reference| Collections without proper access control configuration             | Yes                  | No            | No          |
-| Orphan Media Items                  | Media items not associated with any collection                      | Yes                  | No            | No          |
+| Metric Category                     | Description                                                    
+|-------------------------------------|---------------------------------------------------------------------|
+| Database Metrics                    | Core database information including size, schema, and version       | 
+| Media Metrics                       | Statistics about media assets, collections, and storage usage       |
+| Media Type Distribution             | Breakdown of media assets by type with count and percentage         |
+| Operations Matrix                   | Overview of all operations with status breakdown                    |
+| Collections Missing Access Reference| Collections without proper access control configuration             |
+| Orphan Media Items                  | Media items not associated with any collection                      |
 
 ![Database Analysis](../../../../images/Database_analysis.png)
 
