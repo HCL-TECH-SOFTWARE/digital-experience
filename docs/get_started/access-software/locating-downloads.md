@@ -31,7 +31,7 @@ There are several offerings that are under the HCL DX product line according to 
 |HCL Web Content Manager|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|||
 |HCL DX Cloud (Hosted)\*\*\*|Cloud Native|Portal Offerings|Web Content Manager|Third Party for DX|DX Compose (evaluation)\*|HCL Leap\*\* and MX Foundry\*\*|
 
-\* Refer to the [HCL Digital Experience Compose Evaluation](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0127651){target="_blank"} Use article for more details.
+\* Refer to the [HCL Digital Experience Compose Evaluation Use](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0127651){target="_blank"} article for more details.
 
 \*\* Entitlements provided for use with HCL DX deployments and may not be installed independently without acquiring a separate license. Reference entitlement use permissions in the HCL DX offering license files published on the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
