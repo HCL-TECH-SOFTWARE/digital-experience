@@ -22,8 +22,7 @@ DAM Database Analysis is a tool that enables administrators to monitor and analy
 Database Analysis provides comprehensive visibility into your DAM deployment through multiple metric categories. Each metric category offers specific insights that help administrators monitor system health, optimize performance and plan for capacity requirements.
 
 !!! note
-    - All metrics are calculated in real-time when requested. For large deployments, initial metric loading may take a few seconds.
-    - When using the REST API, the `type` parameter is case-insensitive. You can use `Database`, `database`, `Media`, `media` etc interchangeably.
+    All metrics are calculated in real-time when requested. For large deployments, initial metric loading may take a few seconds.
 
 ### Database Analysis Metrics in Detail
 
