@@ -31,7 +31,7 @@ DX Cloud Native 9.5 uses the License Manager to connect with MHS to check licens
 
 - Entitlement validation: The License Manager periodically validates the active DX entitlement by communicating with MHS. Entitlements are typically valid for 12 months, with a 28-day grace period before expiration. During this grace period, reminder messages are logged within the container to prompt timely renewal.
 
-- User session reporting: The License Manager regularly transmits user session data to MHS. This reporting allows both customers and HCL to monitor license consumption and ensure usage remains within the bounds of the assigned  entitlement tier purchased. 
+- User session reporting: The License Manager regularly transmits user session data to MHS. This reporting allows HCL to monitor license consumption and ensure usage remains within the bounds of the assigned entitlement tier purchased. 
 
 ### Creating an MHS deployment instance
 
