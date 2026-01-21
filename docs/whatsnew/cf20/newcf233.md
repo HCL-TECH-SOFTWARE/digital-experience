@@ -15,9 +15,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Database Analysis
 - Helm values updates
 - New HAProxy security configuration parameters
-- Digital Asset Management - Database Analysis
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -80,6 +80,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - Database Analysis
+
+=== "Containers"
+    The Database Analysis feature in Digital Asset Management (DAM) feature provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
+
 ### Helm values updates
 
 === "Containers"
@@ -95,18 +100,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
     For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
-
-### Digital Asset Management - Database Analysis
-
-=== "Containers"
-    Starting with HCL DX CF233, Digital Asset Management introduces a new Database Analysis feature that provides administrators with detailed metrics and insights into their DAM deployment. This feature helps monitor database performance, storage utilization and media asset distribution.
-
-    Administrators can access these metrics through the DAM REST API endpoint to make informed decisions about resource allocation, storage optimization, and system performance tuning.
-
-    For more information, see the [Database Analysis Controller](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md) topic in the Help Center.
-
-    !!! info "Informational Feature"
-        The Database Analysis feature currently provides comprehensive metrics and insights for monitoring and understanding your DAM deployment. Look for enhanced database healing options in future releases.
 
 ### WAS, JDK, and iFix versions
 

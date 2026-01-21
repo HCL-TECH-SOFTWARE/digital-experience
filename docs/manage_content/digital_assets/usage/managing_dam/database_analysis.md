@@ -1,222 +1,173 @@
 # Database Analysis
 
-This topic describes the details of Digital Asset Management (DAM) Database Analysis feature, which provides administrators with comprehensive metrics and insights into their DAM deployment for monitoring performance, storage utilization, media asset distribution, broken collection and media assets.
-
-## Overview of DAM Database Analysis
-
-DAM Database Analysis is a tool that enables administrators to monitor and analyze their DAM system's health. This feature provides detailed metrics across multiple dimensions, helping you make informed decisions about resource allocation and storage optimization.
+The Digital Asset Management (DAM) Database Analysis feature (available from CF233 onward) provide you metrics and insights into your DAM deployment for monitoring performance, storage utilization, media asset distribution, broken collection and media assets.
 
 !!! note
-    Database Analysis is available starting with HCL DX CF233. Only users with Administrator permissions can access these metrics through the DAM user interface or REST API.
+    Only users with Administrator permissions can access these metrics through the DAM user interface or REST API.
 
-### Access Database Analysis through the DAM UI:
+## Accessing Database Analysis
 
-1. Log in to HCL DX Portal with an account that has Administrator role for DAM
-2. Navigate to the Digital Asset Management application
-3. Click on the **Settings** panel icon
-4. Select **Database Analysis** from the administration options
-5. Expand the desired metric category accordion to view specific metrics
+1. Log in to HCL DX Portal as a DAM administrator.
+2. Go to the **Digital Asset Management** application.
+3. Click **Settings**.
+4. Select **Database Analysis** from the administration options.
+5. Expand your desired category to view specific metrics.
 
-## Overview of Database Analysis Metrics
+## Database Analysis metrics
 
-Database Analysis provides comprehensive visibility into your DAM deployment through multiple metric categories. Each metric category offers specific insights that help administrators monitor system health, optimize performance and plan for capacity requirements.
+Database Analysis provides comprehensive visibility into your DAM deployment through multiple metric categories. Each metric category offers specific insights that help you monitor system health, optimize performance, and plan for capacity requirements.
 
 !!! note
-    - All metrics are calculated in real-time when requested. For large deployments, initial metric loading may take a few seconds.
-    - When using the REST API, the `type` parameter is case-insensitive. You can use `Database`, `database`, `Media`, `media` etc interchangeably.
+    - Use specific type parameters to retrieve only the metrics you need for faster response times.
+    - The system calculates metrics in real-time. For large deployments, initial metric loading may take a few seconds.
+    - When using the REST API, the `type` parameter is case-insensitive. For example, you can use `Media` or `media`.
 
-### Database Analysis Metrics in Detail
+The feature organizes metrics into distinct categories, each serving a specific monitoring purpose:
 
-The Database Analysis feature organizes metrics into distinct categories, each serving a specific monitoring purpose:
-
-| Metric Category                     | Description                                                    
-|-------------------------------------|---------------------------------------------------------------------|
-| Database Metrics                    | Core database information including size, schema, and version       | 
-| Media Metrics                       | Statistics about media assets, collections, and storage usage       |
-| Media Type Distribution             | Breakdown of media assets by type with count and percentage         |
-| Operations Matrix                   | Overview of all operations with status breakdown                    |
-| Collections Missing Access Reference| Collections without proper access control configuration             |
-| Orphan Media Items                  | Media items not associated with any collection                      |
+| Metric Category                         | Description                                                                                                                                               |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Database Metrics                        | Provides core database information such as size, schema, and version                                                                                      |
+| Media Metrics                           | Provides aggregate data on content distribution, storage consumption, and organizational structure within DAM                                             |
+| Media Type Distribution                 | Provides a categorical breakdown of media assets by file type, including the specific count and percentage for each format relative to the total library  |
+| Operations Metrics                      | Provides a status breakdown of all DAM operations                                                                                                         |
+| Collections Missing Access Reference ID | Provides details on collections that do not have proper access control configuration                                                                      |
+| Media Items not in Collection           | Provides metrics on media items that are not associated with any collection                                                                               |
 
 ![Database Analysis](../../../../images/Database_analysis.png)
 
-## Database Metrics
+### Database Metrics
 
-Database Metrics provide fundamental information about the underlying PostgreSQL database that powers your DAM deployment. These metrics help administrators understand database size, structure, and version information.
+Database Metrics provide details about the underlying PostgreSQL database that powers your DAM deployment. These metrics help you understand database size, structure, and version information.
 
 The following table describes the available database metrics:
 
-| Metric              | Description                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| Database Name       | The name of the PostgreSQL database used by DAM                             |
-| Database Size       | Total size of the database in megabytes (MB)                                |
-| Schema Name         | The current schema name being used by DAM (typically `schema_X_X_X`)        |
-| Table Count         | Total number of tables in the current schema                                |
-| PostgreSQL Version  | Version of the PostgreSQL database server                                   |
+| Metric              | Description                                                                   |
+|---------------------|-------------------------------------------------------------------------------|
+| Database Name       | Displays the name of the PostgreSQL database used by DAM                      |
+| Database Size       | Displays the total size of the database in MB                                 |
+| Schema Name         | Displays the current schema name being used by DAM (typically `schema_X_X_X`) |
+| Table Count         | Displays the total number of tables in the current schema                     |
+| PostgreSQL Version  | Displays the current version of the PostgreSQL database server                |
 
 ![Database Metrics](../../../../images/Database_metrics.png)
 
-REST API endpoint for database metrics:
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=Database
 ```
 
 !!! note
-    Database size is calculated in bytes and automatically converted to megabytes for easier interpretation. For very large databases, the size may be displayed in gigabytes (GB).
+    Database size is calculated in bytes and automatically converted to MB for easier interpretation. For very large databases, the size may be displayed in GB.
 
-## Media Metrics
+### Media Metrics
 
-Media Metrics provide detailed statistics about your media assets, collections, and storage utilization. These metrics help administrators understand content distribution, storage consumption, and organizational structure within DAM.
+Media Metrics provide detailed statistics about your media assets, collections, and storage utilization. These metrics help you understand content distribution, storage consumption, and organizational structure within DAM.
 
 The following table describes the available media metrics:
 
-| Metric                          | Description                                                         |
-|---------------------------------|---------------------------------------------------------------------|
-| Total Storage                   | Total storage consumed by all media assets in gigabytes (GB)        |
-| Media Item Count                | Total number of media items across all collections                  |
-| Total Collections               | Total number of collections (root and sub-collections)              |
-| Root Collections                | Number of top-level collections                                     |
-| Sub Collections                 | Number of nested collections                                        |
-| Media Items Not in Collection   | Number of media items not associated with any collection            |
-| Total Operations                | Total number of incomplete operations        |
-| Largest Collection Size         | Size of the largest collection in bytes                             |
-| Smallest Collection Size        | Size of the smallest collection in bytes                            |
+| Metric                          | Description                                                           |
+|---------------------------------|-----------------------------------------------------------------------|
+| Total Storage                   | Displays the total storage consumed by all media assets in GB         |
+| Media Item Count                | Displays the total number of media items across all collections       |
+| Total Collections               | Displays the total number of collections (root and sub-collections)   |
+| Root Collections                | Displays the number of top-level collections                          |
+| Sub Collections                 | Displays the number of nested collections                             |
+| Media Items Not in Collection   | Displays the number of media items not associated with any collection |
+| Total Operations                | Displays the total number of incomplete operations                    |
+| Largest Collection Size         | Displays the size of the largest collection in bytes                  |
+| Smallest Collection Size        | Displays the size of the smallest collection in bytes                 |
 
 ![Media Metrics](../../../../images/Media_metrics.png)
 
-REST API endpoint for media metrics:
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=Media
 ```
 
-## Media Type Distribution
+### Media Type Distribution
 
-Media Type Distribution provides a breakdown of your media assets by type, showing both absolute counts and percentages. This information helps administrators understand content composition and plan for type-specific optimization strategies.
+Media Type Distribution provides a breakdown of your media assets by type, showing both absolute counts and percentages. This information helps you understand content composition and plan for type-specific optimization strategies.
 
 ![Media Type Distribution](../../../../images/Media_type_distribution.png)
 
-### Percentage Calculation
-
-The percentage for each media type is calculated as:
+#### Percentage calculation
 
 ```
 Percentage = (Type Count / Total Media Items) × 100
 ```
 
-This helps you quickly identify the dominant media types in your deployment.
-
-REST API endpoint for media type distribution:
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=MediaTypes
 ```
 
+### Operations Metrics
+
+The Operations Metrics shows the status of DAM operations by trigger function. Use this metric to identify operation patterns and troubleshoot issues.
+
+![Operations Metrics](../../../../images/Operations_metrics.png)
+
 !!! note
-    Media types with zero count are also displayed in the distribution table.
+    For performance analysis, focus on recent operation patterns rather than historical totals.
 
-## Operations Matrix
-
-The Operations Matrix provides a comprehensive overview of all DAM operations, showing the breakdown of operation status by trigger function. This matrix helps administrators identify operation patterns, success rates, and potential issues requiring attention.
-
-![Operations Matrix](../../../../images/Operations_matrix.png)
-
-### Matrix Interpretation
-
-The operations matrix displays:
-
-- Rows representing different trigger functions
-- Columns representing operation statuses
-- Cell values showing the count of operations for each combination
-
-This allows administrators to quickly identify:
-
-- Which operations are most frequently performed
-- Success rates for different operation types
-- Operations that may require troubleshooting
-
-REST API endpoint for operations matrix:
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=Operations
 ```
 
-!!! note
-    The operations matrix includes all operations regardless of age. For performance analysis, focus on recent operation patterns rather than historical totals.
+### Collections Missing Access Reference ID
 
-## Collections Missing Access Reference
-
-This metric identifies collections that do not have proper access control configuration. Collections missing access reference IDs may have inconsistent permission inheritance or access control issues that need administrative attention.
+The Collections Missing Access Reference ID metric identifies collections that do not have proper access control configuration. Collections without access reference IDs may have inconsistent permission inheritance or access control issues that need administrative attention.
 
 ![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference.png)
 
-### Collection Information Provided
+!!! note
+    Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
 
 For each collection missing an access reference, the following information is displayed:
 
-| Field         | Description                                                    |
-|---------------|----------------------------------------------------------------|
-| Collection ID | Unique identifier of the collection                            |
-| Collection Name| Display name of the collection                                |
-| Created       | Date and time when the collection was created                  |
-| Parent ID     | ID of the parent collection (null for root collections)        |
+| Field           | Description                                                          |
+|-----------------|----------------------------------------------------------------------|
+| Collection ID   | Displays the Unique identifier of the collection                     |
+| Collection Name | Displays the display name of the collection                          |
+| Created         | Displays the date and time when the collection was created           |
+| Parent ID       | Displays the ID of the parent collection (null for root collections) |
 
-### Why This Matters
+#### Resolving missing access reference IDs
 
-Collections without proper access reference IDs may experience:
+1. Review the identified collections in the **Database Analysis** section.
+2. Use the **[Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig){target="_blank"}** to set proper access references.
+3. Verify permission inheritance is working correctly after updating.
 
-- Inconsistent permission inheritance
-- Access control errors
-- Issues with sharing and staging operations
-- Problems with role-based access
-
-### Resolving Missing Access References
-
-To resolve collections with missing access references:
-
-1. Review the identified collections in the Database Analysis section
-2. Use the [Update Resource Config API](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/accessUpdateResourceConfig) to set proper access references
-3. Verify permission inheritance is working correctly after updating
-
-REST API endpoint for collections missing access reference IDs:
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=CollectionsMissingAccessReference
 ```
 
-!!! note
-    Collections missing access references should be addressed promptly to ensure proper access control functionality across your DAM deployment.
+### Media Items not in Collection
 
-## Orphan Media Items
-
-Orphan Media Items are media assets that are not associated with any collection. While these items exist in the DAM system, they are not organized within the collection hierarchy, making them difficult to discover and manage.
+The Media Items not in Collection metric lists orphaned media assets that are not associated with any collection. While these items exist in the DAM system, they are not organized within the collection hierarchy, making them difficult to discover and manage.
 
 ![Orphan Media Items](../../../../images/Orphan_media_items.png)
 
-### Media Item Information Provided
-
 For each orphan media item, the following information is displayed:
 
-| Field    | Description                                          |
-|----------|------------------------------------------------------|
-| Media ID | Unique identifier of the media item                  |
-| Name     | File name of the media item                          |
-| Created  | Date and time when the media item was uploaded       |
+| Field    | Description                                                 |
+|----------|-------------------------------------------------------------|
+| Media ID | Displays the Inique identifier of the media item            |
+| Name     | Displays the file name of the media item                    |
+| Created  | Displays the date and time when the media item was uploaded |
 
-The orphan media items are also available through the REST API endpoint:
+!!! note
+    Consider organizing orphaned media items into appropriate collections for better content management.
+
+REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
 ```
-
-!!! note
-    Orphan media items represent orphaned assets that may need attention. Consider organizing these items into appropriate collections for better content management.
-
-### Performance Considerations
-
-When accessing Database Analysis metrics:
-
-- Metrics are calculated in real-time upon request
-- Large deployments may experience slight delays during initial metric calculation
-- Use specific type parameters to retrieve only needed metrics for faster response times
