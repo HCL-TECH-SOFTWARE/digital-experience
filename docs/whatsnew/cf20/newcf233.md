@@ -15,6 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Database Analysis
 - Helm values updates
 - New HAProxy security configuration parameters
 - WAS, JDK, and iFix versions
@@ -78,6 +79,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - Database Analysis
+
+=== "Containers"
+    The Database Analysis feature in Digital Asset Management (DAM) feature provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
 
 ### Helm values updates
 
