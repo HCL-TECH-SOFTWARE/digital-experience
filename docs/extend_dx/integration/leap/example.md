@@ -28,14 +28,14 @@ After setting the above property, you can now integrate HCL Leap applications in
 !!!note
     To property integrate Leap into DX, it is recommended that you familiarize yourself with the following topics:
 
-    - [HCL Digital Experience Introduction course](https://hclsoftwareu.hcltechsw.com/courses/course/hcl-digital-experience-introduction){target="_blank"} and [HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcltechsw.com/component/splms/course/hdx-bu-100-dx-business-user-beginner){target="_blank"}
-    - [Web Content Development](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=414){target="_blank"}
+    - [HCL Digital Experience Introduction course](https://hclsoftwareu.hcl-software.com/courses/course/hcl-digital-experience-introduction){target="_blank"} and [HCL Digital Experience for Business Users (Beginners)](https://hclsoftwareu.hcl-software.com/component/splms/course/hdx-bu-100-dx-business-user-beginner){target="_blank"}
+    - [Web Content Development](https://hclsoftwareu.hcl-software.com/component/splms/lesson/?id=414){target="_blank"}
 
 ### Integrating HCL Leap applications using the embedded JavaScript API
 
 Refer to the following steps to embed a Leap application onto a DX site using Leap's [Embedding API](https://opensource.hcltechsw.com/leap-doc/latest/ref_embedding_api.html?h=embedding){target="_blank"}.
 
-1. Create the Leap application that you plan to integrate, if you haven't done so. If you're new to creating Leap apps [this HCL Software U lesson](https://hclsoftwareu.hcltechsw.com/component/splms/lesson/?id=1821) may help.
+1. Create the Leap application that you plan to integrate, if you haven't done so. If you're new to creating Leap apps [this HCL Software U lesson](https://hclsoftwareu.hcl-software.com/component/splms/lesson/?id=1821) may help.
 
 2. Ensure that you can [access Leap and DX from the same domain name](./installation.md) and [Single Sign-On (SSO) is enabled](./configuration.md#enabling-sso-between-hcl-leap-and-hcl-dx-in-kubernetes).
 
@@ -185,6 +185,6 @@ Support for this feature is not available in the HCL Support Center. For questio
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to integrate DX with HCL Leap as a business user, go to [DX Integration with HCL Leap for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D953){target="_blank"}. To try it out yourself, refer to [DX Integration with HCL Leap for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_integration_with_HCL_Leap_for_Business_Users.pdf){target="_blank"} and corresponding [DX Integration with HCL Leap for Business Users Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_integration_with_HCL_Leap_for_Business_Users_Lab_Resources.zip).
+For an introduction and a demo on how to integrate DX with HCL Leap as a business user, go to [DX Integration with HCL Leap for Business Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D953){target="_blank"}. To try it out yourself, refer to [DX Integration with HCL Leap for Business Users Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_integration_with_HCL_Leap_for_Business_Users.pdf){target="_blank"} and corresponding [DX Integration with HCL Leap for Business Users Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_integration_with_HCL_Leap_for_Business_Users_Lab_Resources.zip).
 
-For an introduction and a demo on how to integrate DX with HCL Leap as a developer, go to [DX Integration with HCL Leap for Developers](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1455){target="_blank"}. To try it out yourself, refer to [DX Integration with HCL Leap for Developers Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_integration_with_HCL_Leap_for_Developers.pdf){target="_blank"}.
+For an introduction and a demo on how to integrate DX with HCL Leap as a developer, go to [DX Integration with HCL Leap for Developers](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1455){target="_blank"}. To try it out yourself, refer to [DX Integration with HCL Leap for Developers Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_DX_integration_with_HCL_Leap_for_Developers.pdf){target="_blank"}.
