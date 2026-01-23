@@ -15,6 +15,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Brazilian Portuguese, Japanese, and Spanish translations now available
+- DAM - Database Analysis
 - Helm values updates
 - New HAProxy security configuration parameters
 - WAS, JDK, and iFix versions
@@ -79,6 +81,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Brazilian Portuguese, Japanese, and Spanish translations now available
+
+=== "Containers"
+    The HCL DX Help Center is now available in Brazilian Portuguese, Japanese, and Spanish. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
+### DAM - Database Analysis
+
+=== "Containers"
+    The Database Analysis feature in Digital Asset Management (DAM) provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
+
 ### Helm values updates
 
 === "Containers"
@@ -130,4 +142,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

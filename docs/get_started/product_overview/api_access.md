@@ -34,16 +34,8 @@ A large set of server-side APIs are also available for providing extensions to t
 | [**User and group management**](../../extend_dx/apis/puma_spi/index.md) | The Portal User Management Architecture (PUMA) System programming interface (SPI) provides interfaces for accessing the profiles of a portal User or Group. |
 | [**HCL DX v8.5 API Specifications**](https://help.hcltechsw.com/digital-experience/9.5/dev/javadoc/vrm/850/api_docs/index.html){target="_blank"} | Reference copy of the HCL DX Version 8.5.0. API, JavaDocs, and other specifications. |
 
-## DXClient
-
-HCL DX includes DXClient, which is a consolidated application and system management utility. With the DXClient tool, developers and administrators can deploy changes or improvements to the DX platform, and automate the development and delivery process.
-
-With DXClient, developers and administrators can manage tasks, such as uploading portlets or script applications and managing the DX server. This tool can take artifacts developed locally and deploy them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, and Kubernetes deployments.
-
-Sample pipelines are provided to enable customers to easily integrate DXClient into their CI/CD processes.
-
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
 
-For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777){target="_blank"}. To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf){target="_blank"}.
+For an introduction and a demo on using DX for developers, go to [DX for Developers (Advanced)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1777){target="_blank"}. To try it out yourself, refer to [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf){target="_blank"}.
