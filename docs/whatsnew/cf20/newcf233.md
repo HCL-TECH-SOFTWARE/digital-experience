@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Blueprint updates
 - My HCLSoftware delivery portal
+- `newDbManagement` flag for database management
 - New How-to articles now available
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -56,6 +57,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Downloading and installing HCL DX from a software licensing portal](../../get_started/download/software_licensing_portal/index.md)
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
+
+### `newDbManagement` flag for database management
+
+=== "Containers"
+    Use the `newDbManagement` flag (introduced in CF231) in your `custom-values.yaml` file to allow the Runtime Controller to manage database scaling, configuration updates, and failover automatically. You can use this flag for new and existing deployments. For more information, refer to [Enabling `newDbManagement`](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_enable_new_db_management.md).
+
+=== "On-Premises"
+    Use the `newDbManagement` flag (introduced in CF231) in your `custom-values.yaml` file to allow the Runtime Controller to manage database scaling, configuration updates, and failover automatically. You can use this flag for new and existing deployments. For more information, refer to [Enabling `newDbManagement`](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_enable_new_db_management.md).
 
 ### New How-to articles now available
 

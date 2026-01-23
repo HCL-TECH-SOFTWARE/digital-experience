@@ -1,40 +1,31 @@
-# Enable new DB Management
+# Enabling `newDbManagement`
 
 Starting with CF231, a new database management mechanism is available for the persistence layer. When the flag `newDbManagement` is set to `true`, all persistence node and pool pods are managed by the Runtime Controller (RTC) instead of being self-managed.
 
-This document explains how RTC-based database management works and how to enable it for both fresh and existing deployments.
+The RTC continuously observes the lifecycle of the persistence layer pods. It is responsible for starting and stopping persistence pods, applying configuration and credential changes, coordinating failover of the primary node, and maintaining the desired scale in sync with the actual pods.
 
-## How it works
+The current state of the persistence layer is stored in a dedicated ConfigMap named:
 
-The Runtime Controller continuously observes the lifecycle of the persistence layer pods. It is responsible for:
+```
+<RELEASE_NAME>-persistence-state
+```
 
-- Starting and stopping persistence pods
-- Applying configuration and credential changes
-- Coordinating failover of the primary node
-- Keeping the desired scale in sync with the actual pods
-
-The current state of the persistence layer is stored in a dedicated ConfigMap with the name:
-
-`<RELEASE_NAME>-persistence-state`
-
-This ConfigMap stores:
+The leading RTC pod reads and updates this ConfigMap to orchestrate the database. This ConfigMap stores the following data:
 
 - Database lifecycle status
 - Scaling information
 - Credential hashes (to detect changes)
 - Information about the current primary node and failures
 
-The leading Runtime Controller pod reads and updates this ConfigMap to orchestrate the database.
+## Inspecting the persistence state
 
-### Inspecting the persistence state
-
-You can observe the state of the database and the actions of the RTC using:
+You can observe the database state and RTC actions by running the following command:
 
 ```sh
 kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
 ```
 
-A typical example for a healthy, running database looks like this:
+The following example shows a healthy, running database:
 
 ```yaml
 data:
@@ -49,13 +40,11 @@ data:
   target_primary_pod: dx-deployment-persistence-node-0
 ```
 
-Key fields:
-
-- `status`: overall lifecycle status.
-- `target_primary_pod`: pod currently considered primary by the RTC.
-- `previousPgNodeCount` / `previousPgPoolCount`: last known replica counts for nodes and pools.
-- `dx-deployment-persistence-*-user`: hashes of the database credentials used to detect changes.
-- `failed_primary` and `primary_failure_count`: information used for primary failover handling.
+- `status`: Overall lifecycle status
+- `target_primary_pod`: Pod currently considered the primary node by the RTC
+- `previousPgNodeCount` and `previousPgPoolCount`: Last known replica counts for nodes and pools
+- `dx-deployment-persistence-*-user`: Hashes of the database credentials used to detect changes
+- `failed_primary` and `primary_failure_count`: Information used for primary failover handling
 
 ## Prerequisites
 
@@ -66,114 +55,140 @@ Before enabling `newDbManagement`, ensure that:
 - You have a current backup of the database.
 - You can afford a short maintenance downtime of your application, as the pods will restart and cause temporary unavailability.
 
-## Enabling RTC management for the persistence layer
+## Enabling RTC-based management
 
-### Fresh deployment
+Use the following steps to enable the RTC for new or existing persistence layers.
 
-For a new deployment, you can enable RTC-based database management by setting the following flag in your `custom-values.yaml`:
+### New deployments
 
-```yaml
-configuration:
-  digitalAssetManagement:
-    newDbManagement: true
-```
+To enable RTC-based database management for new deployments:
 
-Make sure that you also enable the Runtime Controller as part of your deployment:
+1. Set the following flag in your `custom-values.yaml` file:
 
-```yaml
-applications:
-  runtimeController: true
-```
+    ```yaml
+    configuration:
+      digitalAssetManagement:
+        newDbManagement: true
+    ```
 
-Then:
+2. Enable the RTC in the same `custom-values.yaml` file:
 
-1. Deploy your environment using `helm install` with your `custom-values.yaml`.
-2. Wait until all pods are running and ready (`kubectl get pods -n <NAMESPACE>`).
-3. Verify that the persistence pods are managed by the RTC:
-   - Check pods: `kubectl get pods -n <NAMESPACE>`
-   - Inspect the ConfigMap: `kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state`
+    ```yaml
+    applications:
+      runtimeController: true
+    ```
 
-### Existing deployment
+3. Install the Helm chart by running the following command with your `custom-values.yaml` file: <!--more specific commands?-->
 
-For an existing deployment, you must carefully transition from self-managed to RTC-managed persistence. This involves three steps.
+    ```bash
 
-#### 1. Scale down the existing persistence layer
+    ```
 
-First, scale down the persistence nodes to a single pod. The RTC must have a single, unambiguous primary node when it takes over management.
+4. Monitor the deployment until all pods reach a `Running` and `Ready` state by running the following command:
 
-Update the replica count in `custom-values.yaml`:
+    ```bash
+    kubectl get pods -n <NAMESPACE>
+    ```
 
-```yaml
-scaling:
-  replicas:
-    persistenceNode: 1
-```
+5. Verify that the persistence pods are managed by the RTC:
 
-Apply these changes using `helm upgrade` for your deployment.
+   1. Check the pods by running the following command:
 
-Wait for the change to apply and verify that:
+        ```bash
+        kubectl get pods -n <NAMESPACE>
+        ```
 
-- Exactly one persistence node pod remains.
-- The persistence layer and all dependent applications are healthy.
+   2. Inspect the ConfigMap by running the following command:
 
-You can use the following to verify the state of your deployment:
+        ```bash
+        kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
+        ```
 
-```sh
-kubectl get pods -n <NAMESPACE>
-```
+### Existing deployments
 
-#### 2. Enable RTC management
+To enable RTC-based database management for existing deployments, you must transition from self-managed to RTC-managed persistence:
 
-You can now enable the RTC-managed persistence layer by adjusting `custom-values.yaml` with the following configuration:
+1. Scale down the existing persistence node to a single pod. The RTC must have a single, unambiguous primary node when it takes over management.
 
-```yaml
-configuration:
-  digitalAssetManagement:
-    newDbManagement: true
-```
+    1. Update the replica count in the `custom-values.yaml` file:
 
-Ensure that the Runtime Controller is enabled as well:
+        ```yaml
+        scaling:
+          replicas:
+            persistenceNode: 1
+        ```
 
-```yaml
-applications:
-  runtimeController: true
-```
+    2. Apply these changes using `helm upgrade` for your deployment. <!--more specific commands?-->
 
-Apply these changes using `helm upgrade` for your deployment.
+    3. Wait for the change to apply then run the following command to verify the state of your deployment:
 
-After the upgrade:
+        ```sh
+        kubectl get pods -n <NAMESPACE>
+        ```
 
-- Monitor pod status: `kubectl get pods -n <NAMESPACE>`
-- Inspect the persistence state ConfigMap:
+        Verify that exactly one persistence node pod remains and the persistence layer and all dependent applications are healthy.
 
-  ```sh
-  kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
-  ```
+2. Enable the RTC-managed persistence layer.
 
-- If pods do not become healthy, check the Runtime Controller logs in the corresponding pod.
+    1. Adjust the `custom-values.yaml` file with the following configuration:
 
-#### 3. Re-scale the persistence layer to the desired values
+        ```yaml
+        configuration:
+          digitalAssetManagement:
+            newDbManagement: true
+        ```
 
-Finally, scale the persistence nodes up again to the desired replica count in `custom-values.yaml`:
+    2. Enable the RTC in the same `custom-values.yaml` file:
 
-```yaml
-scaling:
-  replicas:
-    persistenceNode: 3
-```
+        ```yaml
+        applications:
+          runtimeController: true
+        ```
 
-Apply these changes using `helm upgrade` for your deployment.
+    3. Apply these changes using `helm upgrade` for your deployment. <!--more specific commands?-->
 
-Wait for the change to apply and verify that:
+    4. Monitor the deployment until all pods reach a `Running` and `Ready` state by running the following command:
 
-- The persistence layer is healthy.
-- All dependent applications are healthy.
+        ```bash
+        kubectl get pods -n <NAMESPACE>
+        ```
 
-You can use:
+    5. Verify that the persistence pods are managed by the RTC:
+        1. Check the pods by running the following command:
 
-```sh
-kubectl get pods -n <NAMESPACE>
-kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
-```
+            ```bash
+            kubectl get pods -n <NAMESPACE>
+            ```
 
-to confirm the final state.
+        2. Inspect the ConfigMap by running the following command:
+
+            ```bash
+            kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
+            ```
+
+        !!!note
+            If pods do not become healthy, check the RTC logs in the corresponding pod.
+
+3. Re-scale the persistence layer to the desired values.
+
+    1. Scale the persistence nodes up again to the desired replica count by adjusting the `custom-values.yaml` file with the following configuration:
+
+        ```yaml
+        scaling:
+          replicas:
+            persistenceNode: 3
+        ```
+
+    2. Apply these changes using `helm upgrade` for your deployment.
+
+    3. Verify the final state and health of the persistence layer by running the following commands:
+
+        ```bash
+        kubectl get pods -n <NAMESPACE>
+        ```
+
+        ```bash
+        kubectl get cm -n <NAMESPACE> -o yaml <RELEASE_NAME>-persistence-state
+        ```
+
+        Ensure that the persistence layer is healthy and all dependent applications are healthy.
