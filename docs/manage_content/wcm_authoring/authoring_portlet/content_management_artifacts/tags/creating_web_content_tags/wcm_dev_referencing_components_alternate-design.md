@@ -1,40 +1,38 @@
 ---
 id: wcm_dev_referencing_components_alternate-design
-title: Alternate design tag
+title: Alternate Design tag
 ---
 
+Use an alternate design (`alternatedesign`) tag to render different components based on an item's relationship to the current navigation path. This is commonly used in menus and navigators to apply unique styling to the active or selected item.
 
-
-
-You use an alternate design tag to display a different component based on whether the item that is returned by a menu or navigator is on the current path or not.
-
-The format of an alternate design tag:
+See the format of an `alternatedesign` tag:
 
 ```
 [alternatedesign highlight=" " normal=" " type=" " start=" " end=" " ]
 ```
 
-To create an alternate design tag:
+## Creating an Alternate Design tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create an `alternatedesign` tag:
 
-2.  Select **Alternate Design** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a component to use when you display items not on the current path in a navigator or menu design. This item would typically be a text or HTML component that contains the code that is used to display a navigator or menu result, such as a placeholder tag. This parameter is added to the tag as the `normal=" "` parameter.
+2. Select **Alternate Design** as the tag type.
+
+3. Select a component to use when you display items not on the current path in a navigator or menu design. This item would typically be a text or HTML component that contains the code that is used to display a navigator or menu result, such as a placeholder tag. This parameter is added to the tag as the `normal=" "` parameter.
 
     !!! note
         If you select `type="parent"` or `type="any"` in step 5, the highlighted design is used by all the site areas in the current item path.
 
-4.  Select a component to use when you display items on the current path in a navigator or menu design. This item would typically be a text or HTML component that contains the code that is used to display a navigator or menu result, such as a placeholder tag. This parameter is added to the tag as the `highlight=" "` parameter.
+4. Select a component to use when you display items on the current path in a navigator or menu design. This item would typically be a text or HTML component that contains the code that is used to display a navigator or menu result, such as a placeholder tag. This parameter is added to the tag as the `highlight=" "` parameter.
 
-5.  Select whether to apply the alternate design tag to the current content item, the parent site area, or any item that is returned by a navigator. This parameter is added to the tag as the `type=" "` parameter.
+5. Select whether to apply the alternate design tag to the current content item, the parent site area, or any item that is returned by a navigator. This parameter is added to the tag as the `type=" "` parameter.
 
     !!! note
         -   When you add an alternate design to a menu design, select only `type="parent"` or `type="any"` because site areas cannot be displayed in menus.
         -   When you add an alternate design to a navigator design, use `type="current"` if the navigator is configured to display content items.
-        
-6.  Click **OK** to add the tag to your navigator design.
 
+6. Click **OK** to add the tag to your navigator design.
 
 When you add the tag to your design, you can also add the following parameters to the tag:
 

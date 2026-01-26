@@ -1,32 +1,36 @@
-# Page information tag
+---
+id: wcm_dev_elements_page-navigation_tag
+title: Page Information tag
+---
 
-You use the page information tag to display page navigation details in the design of a page navigation element.
+Use the Page Information (`PageInfo`) tag to display page navigation details in the design of a page navigation element.
 
-This is the format of a page information tag:
+See the format of a `PageInfo` tag:
 
 ```
 [PageInfo value=" " knowntext=" " unknowntext=" " start=" " end=" " ]
 ```
 
-To create a page information tag:
+## Creating a Page Information tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create a `PageInfo` tag:
 
-2.  Select **Page Information** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a page information value:
+2. Select **Page Information** as the tag type.
 
-    -   currentPage
-    -   totalPages
-    -   firstItemOnPage
-    -   lastItemOnPage
-    -   totalItems
-    -   itemsPerPage
-    -   unknownPages
+3. Select a page information value:
+
+    - currentPage
+    - totalPages
+    - firstItemOnPage
+    - lastItemOnPage
+    - totalItems
+    - itemsPerPage
+    - unknownPages
     The value "unknownPages" is used to display different text when the total number of pages are either known or unknown. When used you must also use the "knowntext" and "unknowntext" parameters.
 
-4.  Click **OK** to add the tag to your navigator design.
-
+4. Click **OK** to add the tag to your navigator design.
 
 Once you add the tag to your design, you can also add the following parameters to the tag:
 

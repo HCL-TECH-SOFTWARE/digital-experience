@@ -1,8 +1,11 @@
-# Plug-in tag
+---
+id: creating_plugin_tag/index.md
+title: Plug-in tag
+---
 
-Rendering plug-ins are referenced by using the plug-in tag. Select from preinstalled rendering plug-ins, or select your own custom plug-ins.
+Use the plug-in (`plugin`) tag to reference rendering plug-ins. You can select preinstalled rendering plug-ins or your own custom plug-ins.
 
-The format of a plug-in tag:
+See the format of a `plugin` tag:
 
 ```
 [plugin:pluginname paramKey="paramVal" compute=" " htmlencode=" " start=" " end=" "]
@@ -10,21 +13,23 @@ Tag Body Content
 [/plugin:pluginname]
 ```
 
-To create a plug-in tag:
+## Creating a plug-in tag
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+To create a `plugin` tag:
 
-2.  Select **Plugin Component** as the tag type.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a plug-in type.
+2. Select **Plugin Component** as the tag type.
 
-4.  Select the plug-in to reference. Information about the plug-in, and valid parameters, are displayed.
+3. Select a plug-in type.
 
-5.  Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
+4. Select the plug-in to reference. Information about the plug-in, and valid parameters, are displayed.
 
-6.  Click **OK** to add the tag to your navigator design.
+5. Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
 
-7.  You can then add custom parameters to your tag design.
+6. Click **OK** to add the tag to your navigator design.
+
+7. You can then add custom parameters to your tag design.
 
     After you add the tag to your design, you can also add the following parameters to the tag:
 
@@ -34,7 +39,7 @@ To create a plug-in tag:
     |`htmlencode=" "`|If `htmlencode="true"` reserved HTML characters are converted into character entities. For example, '`<`' is converted to '`&lt;`'. This parameter is useful if you would like to prevent users from adding malicious code, or if you want to prevent users from changing the design of their text by using HTML. If not specified, the default setting that is specified by the `cmpnt.htmlEncodeDefault` property in the **WCM WCMConfigService** service is used. By default, this property is set to true.|
     |`start=" "``end=" "`|The start and end attributes are used to wrap the data that is returned by a tag within other tags, such as HTML. These attributes are not mandatory.|
 
-    -   **Simple tag**
+    - **Simple tag**
 
         To reference a plug-in without specifying any parameters or tag body content:
 
@@ -42,13 +47,13 @@ To create a plug-in tag:
         [plugin:pluginname]
         ```
 
-    -   **Short tag**
+    - **Short tag**
 
         You can simplify the plug-in tag to this: `[pluginname]`
 
         The shortened plug-in tag cannot replace an existing web content tag. For example, if you created a plug-in named "Property", you must use the full tag: `[Plugin:Property]`. The tag `[Property]` is treated as a property tag, not a plug-in tag.
 
-    -   **Simple tag with parameters**
+    - **Simple tag with parameters**
 
         To reference a plug-in with parameters but no tag body content:
 
@@ -56,7 +61,7 @@ To create a plug-in tag:
         [plugin:pluginname paramKey1="paramVal" paramKey2="paramVal" paramKey2="paramVal2"]
         ```
 
-    -   **Plug-in tag with web content tag as a parameter**
+    - **Plug-in tag with web content tag as a parameter**
 
         ```
         [plugin:pluginname paramKey1="[IDCmpnt context='current' type='sitearea' field='id']"]
@@ -65,7 +70,7 @@ To create a plug-in tag:
         !!! note
             You must use single quotation marks within the web content tag that is being used as a parameter value.
 
-    -   **Plug-in tag with body content**
+    - **Plug-in tag with body content**
 
         To reference a plug-in with parameters and content that include a reference to a component:
 

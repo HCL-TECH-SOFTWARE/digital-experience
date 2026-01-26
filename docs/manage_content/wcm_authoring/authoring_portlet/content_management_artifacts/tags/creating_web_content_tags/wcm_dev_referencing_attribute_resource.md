@@ -1,26 +1,28 @@
 ---
-title: Attribute resource tag
+id: wcm_dev_referencing_attribute_resource
+title: Attribute Resource tag
 ---
 
+Use the Attribute resource (`attributeResource`) tag to define the information returned by a search query.
 
+!!!note
+    You can also use this tag within [List Appearances for Personalization components](../../../../../../extend_dx/ddc/plrf_tech_concepts.md) to surface Digital Data Connector (DDC) data.
 
+See the format of an `attributeResource` tag:
 
-You use the attribute resource tag to define the information that is returned by a search query.
-
-The format of an attribute resource tag:
-
-```
+```html
 [attributeResource attributeName="parameter" separator=" " format=" "]
 ```
 
-To create an attribute resource tag:
+## Creating an Attribute Resource tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create an `attributeResource` tag:
 
-2.  Select **attribute resource** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Click **OK** to add the tag to your navigator design.
+2. Select **attribute resource** as the tag type.
 
+3. Click **OK** to add the tag to your navigator design.
 
 Once you add the tag to your design, you can also add the following parameters to the tag:
 
