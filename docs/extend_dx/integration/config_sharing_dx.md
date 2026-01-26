@@ -30,9 +30,6 @@ The process is managed automatically by the products' Helm charts once the featu
     - The Secret contains integration related settings, such as Lightweight Third-Party Authentication (LTPA) keys provided by the DX Core component.
     - The shared Secret will be recreated during a Helm upgrade if the values setting the configuration values within it have changed (for example, a password update).
 
-        !!!note
-            The Secret contains the producer's Helm values or custom secrets.
-
 2. The consumer uses the shared Secret.
 
     You can configure other co-deployed HCL products (the consumer, such as Leap or MX) to look for, and use this shared Secret.
@@ -56,6 +53,9 @@ The entire mechanism is controlled using the feature flags in the Helm `values.y
     # to share configuration with other HCL products in the same namespace.
     enableConfigurationSharing: false  # Change this to true
     ```
+
+    !!! note
+        For the LTPA keys to be shared, ensure that LTPA is enabled and properly configured in the producer product (for example, DX). Refer to [LTPA Configuration](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_ltpa_key.md) for more information.
 
 2. Configure the Consumer product to look for a specific shared Secret by defining which version of the shared configuration it intends to use for greater control.
 

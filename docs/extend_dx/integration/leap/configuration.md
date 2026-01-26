@@ -102,6 +102,9 @@ You can enable single sign-on (SSO) between HCL Leap and HCL Digital Experience 
 
 ### Implementing LTPA SSO
 
+!!! note
+    LTPA SSO can now be set up using the Configuration Sharing feature described in [Configuration Sharing for co-deployments](../config_sharing_dx.md). This method simplifies the process by automatically sharing LTPA keys between DX and Leap. If you prefer to manually configure LTPA SSO, follow the steps outlined below.
+
 This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using LTPA. The process works by sharing a single LTPA encryption key between the DX and Leap pods. By storing this common key in a Kubernetes Secret, both applications can trust each other's login tokens, allowing users to sign in once and access both platforms seamlessly. The following steps are based on [a community post](https://support.hcltechsw.com/community?id=community_blog&sys_id=ba541e4b1b820614f37655352a4bcbc4){target="_blank"} from the HCLSoftware Community:
 
 1. Ensure both DX and Leap use an identical user registry configuration.
