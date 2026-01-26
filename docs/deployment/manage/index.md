@@ -6,4 +6,4 @@ Review the [HCL Digital Experience Performance Tuning Guide](https://support.hcl
 
 ## HCLSoftware U learning materials
 
-Learn how to manage your HCL DX environment using the Beginner, Intermediate, and Advanced [HCL DX for Administrator courses](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%3Fsearch%3DeyJjYXQiOiIyMSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0%3D){target="_blank"}.
+Learn how to manage your HCL DX environment using the Beginner, Intermediate, and Advanced [HCL DX for Administrator courses](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%3Fsearch%3DeyJjYXQiOiIyMSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0%3D){target="_blank"}.
