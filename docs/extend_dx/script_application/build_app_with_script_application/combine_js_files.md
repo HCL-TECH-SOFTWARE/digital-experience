@@ -6,7 +6,7 @@ title: Combine local JavaScript files
 
 You can import Script Applications with multiple JavaScript files.
 
-To refer to any files that are part of the multi-file Script Application, you can use the Plugin:ScriptPortletElementURL tag in your index.html file. It has the element parameter that points to the relative file path of the resources that are referred to. In the following example, you can see the tag being used to insert the pnp\_retrieve.css file, which is in the root of your Script Application, as a URL in the `<link>` element.
+To refer to any files that are part of the multi-file Script Application, you can use the `Plugin:ScriptPortletElementURL` tag in your `index.html` file. It has the element parameter that points to the relative file path of the resources that are referred to. In the following example, you can see the tag being used to insert the `pnp_retrieve.css` file, which is in the root of your Script Application, as a URL in the `<link>` element.
 
 ![Plugin ScripPortletElementURL tag](../assets/scpt_multifiles.jpg)
 
