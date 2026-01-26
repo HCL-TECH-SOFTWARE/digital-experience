@@ -27,6 +27,7 @@ configuration:
 ```
 
 **When to use:** 
+
 - Development environments
 - Non-critical deployments
 - When credentials are managed through other means
@@ -50,6 +51,7 @@ configuration:
 ```
 
 **When to use:**
+
 - Production environments
 - Enhanced security requirements
 - Credentials managed externally (e.g., HashiCorp Vault, AWS Secrets Manager)
@@ -166,6 +168,7 @@ or by referencing a secret in configuration.core.ltpa.customLtpaSecret
 ### Custom Secret Validation
 
 When using a custom secret, the secret must:
+
 1. Exist in the same namespace as the deployment
 2. Contain all required data keys
 3. Have properly encoded values
@@ -297,6 +300,7 @@ Error: lookup failed: Secret my-ltpa-secret not found
 ```
 
 **Solution:**
+
 1. Verify secret exists: `kubectl get secret my-ltpa-secret -n <namespace>`
 2. Verify secret is in correct namespace
 3. Check secret key names match requirements
@@ -310,6 +314,7 @@ Either configuration.core.ltpa values are set even though a custom secret was pr
 ```
 
 **Solution:**
+
 1. Use **either** inline values **or** custom secret, not both
 2. Clear unused fields:
    ```yaml
