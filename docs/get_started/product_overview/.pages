@@ -2,4 +2,10 @@ title: Product Overview
 nav:
     - index.md
     - offerings.md
+    - Accessibility_features.md
+    - api_access.md
+    - application_integration.md
+    - content_management.md
+    - asset_management.md
+    - dxclient.md
     - ...
