@@ -1,16 +1,17 @@
-# LTPA Configuration
+# Configuring LTPA
 
-## Overview
+LTPA (Lightweight Third Party Authentication) is a single sign-on (SSO) mechanism used for authentication and session sharing across multiple applications. In the DX Core component, LTPA configuration is managed through Helm values and Kubernetes Secrets.
 
-LTPA (Lightweight Third Party Authentication) is a single sign-on (SSO) mechanism used for authentication and session sharing across multiple applications. In the DX Core component, LTPA configuration is managed through Helm values and Kubernetes secrets.
+## Configuration methods
 
-## Configuration Methods
+There are two mutually exclusive ways to configure LTPA for Core:
 
-There are **two mutually exclusive** ways to configure LTPA for Core:
+- Inline configuration through the `values.yaml` file
+- Custom Secret reference
 
-### Method 1: Inline Configuration (Values)
+### Inline configuration
 
-Configure LTPA credentials directly in your `values.yaml` file:
+Configure LTPA credentials directly in your `values.yaml` file by specifying the following properties:
 
 ```yaml
 configuration:
@@ -26,15 +27,11 @@ configuration:
       customLtpaSecret: ""  # Must be empty when using inline config
 ```
 
-**When to use:** 
+Use this configuration for development environments, non-critical deployments, or when credentials are managed through other means.
 
-- Development environments
-- Non-critical deployments
-- When credentials are managed through other means
+### Custom Secret reference
 
-### Method 2: Custom Secret Reference
-
-Reference an existing Kubernetes secret containing LTPA credentials:
+Reference an existing Kubernetes Secret containing LTPA credentials:
 
 ```yaml
 configuration:
@@ -50,205 +47,161 @@ configuration:
       customLtpaSecret: "my-ltpa-secret"  # Reference your secret
 ```
 
-**When to use:**
+Use this configuration for production, high-security environments, or when credentials are managed externally (for example, HashiCorp Vault or AWS Secrets Manager)
 
-- Production environments
-- Enhanced security requirements
-- Credentials managed externally (e.g., HashiCorp Vault, AWS Secrets Manager)
+## Generating LTPA keys
 
-## Generating LTPA Keys
+To generate LTPA keys for Core, export them from the IBM WebSphere Administrative Console:
 
-To generate LTPA keys for Core, you can export them from the IBM WebSphere Administrative Console:
+1. Login to the IBM WebSphere Administrative Console at **`/ibm/console`** with your credentials.
 
-1. Login to the IBM WebSphere Administrative Console at `/ibm/console` with credentials (e.g., wpsadmin/wpsadmin)
+2. Go to **Security** > **Global security**.
 
-2. Navigate to **Security** > **Global security**
+3. Under **Authentication**, select **LTPA**.
 
-3. Under **Authentication**, click on **LTPA**
+4. Under **Cross-cell single sign-on**, enter a **Password** and specify the **Fully qualified key file name** (for example, `/opt/HCL/mykey.ltpa`).
 
-4. Add a password and specify a path for the LTPA key file (e.g., `/opt/HCL/mykey.ltpa`), then click **Export keys**
+5. Select **Export keys**.
 
-5. Extract the LTPA key file from the running pod:
-   ```bash
-   kubectl -n <namespace> exec -it pod/<release>-core-0 -- cat /opt/HCL/ltpa.keys
-   ```
+6. Extract the LTPA key file from the running pod by running the following command:
 
-6. Save the output for creating the secret in the next section
+    ```bash
+    kubectl -n <namespace> exec -it pod/<release>-core-0 -- cat /opt/HCL/ltpa.keys
+    ```
 
-## Secret Structure
+7. Save the command output as a local file for use in the next section.
 
-When using a custom secret, the secret must contain the following data keys:
+## Creating a custom LTPA Secret
+
+When using a custom Secret, the Secret must contain the following data keys:
 
 | Key | Description | Format |
 |-----|-------------|--------|
-| `ltpa.version` | LTPA token version | String (e.g., "1.0") |
+| `ltpa.version` | LTPA token version | String (for example, "1.0") |
 | `ltpa.realm` | LTPA realm name | String |
 | `ltpa.desKey` | 3DES encryption key | String |
 | `ltpa.privateKey` | Private key for LTPA token signing | String |
 | `ltpa.publicKey` | Public key for LTPA token verification | String |
 | `ltpa.password` | Password for LTPA key protection | String |
 
-### Creating a Custom LTPA Secret
+!!!note
+    - When using a custom Secret, the resource must exist in the same namespace as the deployment, contain all the required data keys, and use properly encoded values.
+    - The chart uses the Kubernetes `lookup` function to verify that the Secret exists and contains all the required keys.
 
-#### Using kubectl
+- To create a custom Secret using `kubectl`, run the following command:
 
-```bash
-kubectl create secret generic my-ltpa-secret \
-  --from-literal='ltpa.version=1.0' \
-  --from-literal='ltpa.realm=myLTPARealm' \
-  --from-literal='ltpa.desKey=<your-des-key>' \
-  --from-literal='ltpa.privateKey=<your-private-key>' \
-  --from-literal='ltpa.publicKey=<your-public-key>' \
-  --from-literal='ltpa.password=<your-password>' \
-  -n <your-namespace>
-```
+    ```bash
+    kubectl create secret generic my-ltpa-secret \
+      --from-literal='ltpa.version=1.0' \
+      --from-literal='ltpa.realm=myLTPARealm' \
+      --from-literal='ltpa.desKey=<your-des-key>' \
+      --from-literal='ltpa.privateKey=<your-private-key>' \
+      --from-literal='ltpa.publicKey=<your-public-key>' \
+      --from-literal='ltpa.password=<your-password>' \
+      -n <your-namespace>
+    ```
 
-#### Using a YAML manifest
+- To create a custom Secret using a YAML manifest, define the following resource in a separate YAML file (for example, `ltpa-secret.yaml`) and apply it to your cluster:
 
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: my-ltpa-secret
-  namespace: dx-namespace
-type: Opaque
-stringData:
-  ltpa.version: "1.0"
-  ltpa.realm: "myLTPARealm"
-  ltpa.desKey: "your-des-key-value"
-  ltpa.privateKey: "your-private-key-value"
-  ltpa.publicKey: "your-public-key-value"
-  ltpa.password: "your-ltpa-password"
-```
+    ```yaml
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: my-ltpa-secret
+      namespace: dx-namespace
+    type: Opaque
+    stringData:
+      ltpa.version: "1.0"
+      ltpa.realm: "myLTPARealm"
+      ltpa.desKey: "your-des-key-value"
+      ltpa.privateKey: "your-private-key-value"
+      ltpa.publicKey: "your-public-key-value"
+      ltpa.password: "your-ltpa-password"
+    ```
 
-### Mutual Exclusivity
+## Configuration examples
 
-You **cannot** specify both inline values and a custom secret simultaneously:
+The following examples demonstrate how to configure LTPA for different environments:
 
-```yaml
-# INVALID - This will fail
-configuration:
-  core:
-    ltpa:
-      enabled: true
-      version: "1.0"
-      realm: "myRealm"
-      customLtpaSecret: "my-secret"  # Cannot mix both!
-```
+- **Configure for development with inline values**
 
-**Error Message:**
-```
-Either configuration.core.ltpa values are set even though a custom secret was provided. 
-Please explicitly set the unused credentials to be empty/null
-```
+    Use this method for local or development environments where you want Helm to manage the Secret lifecycle directly.
 
-### Completeness Requirement
+    ```yaml
+    applications:
+      core: true
 
-If LTPA is enabled, you must provide **all required fields** through either method:
+    configuration:
+      core:
+        ltpa:
+          enabled: true
+          version: "1.0"
+          realm: "DXDevelopment"
+          desKey: "dev-des-key-12345"
+          privateKey: "xxxxxx"
+          publicKey: "xxxxxx"
+          password: "dev-password"
+          customLtpaSecret: ""
+    ```
 
-```yaml
-# INVALID - Missing publicKey and privateKey
-configuration:
-  core:
-    ltpa:
-      enabled: true
-      version: "1.0"
-      realm: "myRealm"
-      desKey: "key"
-      password: "pwd"
-      # Missing: privateKey, publicKey
-```
+- **Configure for production with an external secret**
 
-**Error Message:**
-```
-Please provide a configuration for LTPA by either setting Values.configuration.core.ltpa values 
-or by referencing a secret in configuration.core.ltpa.customLtpaSecret
-```
+    Use this method for production environments where you manage credentials externally. You must create the Secret in the target namespace before you deploy.
 
-### Custom Secret Validation
+    ```bash
+    # If using Vault, AWS Secrets Manager, etc., create the secret first
+    kubectl create secret generic prod-ltpa-credentials \
+      --from-literal='ltpa.version=1.0' \
+      --from-literal='ltpa.realm=ProdRealm' \
+      --from-file='ltpa.desKey=./ltpa.des' \
+      --from-file='ltpa.privateKey=./ltpa.private.key' \
+      --from-file='ltpa.publicKey=./ltpa.public.key' \
+      --from-literal='ltpa.password=prod-secure-password' \
+      -n production
+    ```
 
-When using a custom secret, the secret must:
+    In your `values.yaml`, reference the Secret name and set the inline fields to empty strings:
 
-1. Exist in the same namespace as the deployment
-2. Contain all required data keys
-3. Have properly encoded values
+    ```yaml
+    applications:
+      core: true
 
-The chart performs runtime validation using Kubernetes `lookup` function to verify secret existence and completeness.
+    configuration:
+      core:
+        ltpa:
+          enabled: true
+          version: ""
+          realm: ""
+          desKey: ""
+          privateKey: ""
+          publicKey: ""
+          password: ""
+          customLtpaSecret: "prod-ltpa-credentials"
+    ```
 
-## Configuration Examples
+- **Share LTPA configuration**
 
-### Example 1: Development with Inline Values
+    When you enable configuration sharing, LTPA keys are exported to a shared Secret (`dx-shared-config-v1`) for use by other applications such as HCL Leap or HCL Volt MX:
 
-```yaml
-applications:
-  core: true
+    ```yaml
+    incubator:
+      enableConfigurationSharing: true
 
-configuration:
-  core:
-    ltpa:
-      enabled: true
-      version: "1.0"
-      realm: "DXDevelopment"
-      desKey: "dev-des-key-12345"
-      privateKey: "xxxxxx"
-      publicKey: "xxxxxx"
-      password: "dev-password"
-      customLtpaSecret: ""
-```
+    configuration:
+      core:
+        ltpa:
+          enabled: true
+          customLtpaSecret: "my-ltpa-secret"
+    ```
 
-### Example 2: Production with External Secret
+    The Core LTPA configuration becomes available to other products mounting the `dx-shared-config-v1` Secret.
 
-```yaml
-applications:
-  core: true
+## Kubernetes Secret details
 
-configuration:
-  core:
-    ltpa:
-      enabled: true
-      version: ""
-      realm: ""
-      desKey: ""
-      privateKey: ""
-      publicKey: ""
-      password: ""
-      customLtpaSecret: "prod-ltpa-credentials"
-```
+The chart uses a Kubernetes Secret to handle LTPA credentials and automation. Depending on your configuration, this Secret is either managed by the Helm release or referenced as an external resource. The following YAML represents the structure of the Kubernetes Secret:
 
-**Pre-requisite:** Secret must exist in the target namespace:
-
-```bash
-# If using Vault, AWS Secrets Manager, etc., create the secret first
-kubectl create secret generic prod-ltpa-credentials \
-  --from-literal='ltpa.version=1.0' \
-  --from-literal='ltpa.realm=ProdRealm' \
-  --from-file='ltpa.desKey=./ltpa.des' \
-  --from-file='ltpa.privateKey=./ltpa.private.key' \
-  --from-file='ltpa.publicKey=./ltpa.public.key' \
-  --from-literal='ltpa.password=prod-secure-password' \
-  -n production
-```
-
-### Example 3: Shared LTPA Configuration (Configuration Sharing)
-
-When configuration sharing is enabled, LTPA keys are exported to a shared secret (`dx-shared-config-v1`) for use by other applications (LEAP, MX, etc.):
-
-```yaml
-incubator:
-  enableConfigurationSharing: true
-
-configuration:
-  core:
-    ltpa:
-      enabled: true
-      customLtpaSecret: "my-ltpa-secret"
-```
-
-The Core LTPA configuration becomes available to other products mounting the `dx-shared-config-v1` secret.
-
-## Kubernetes Secret Details
-
-### Generated Secret Structure
+!!!note
+    The `ltpa.password` undergoes double base-64 encoding for additional security.
 
 ```yaml
 apiVersion: v1
@@ -268,21 +221,9 @@ data:
   ltpa.password: <double-base64-encoded>
 ```
 
-**Note:** The password field undergoes double base64 encoding for additional security.
+If you use the inline configuration, the chart creates the Secret during installation and deletes it upon uninstallation. If you reference a custom Secret, you must manage that resource independently as it persists after the release is removed.
 
-### Secret Lifecycle
-
-- **Creation:** Secret is created during Helm release installation if LTPA is enabled
-- **Updates:** When values change, Kubernetes automatically triggers pod restarts (via checksum annotation)
-- **Deletion:** Secret is deleted when the Helm release is uninstalled (unless using external secrets)
-
-## Checksum & Pod Restart
-
-The chart automatically includes a checksum of LTPA configuration in the StatefulSet annotations. This ensures:
-
-- Pods automatically restart when LTPA credentials change
-- Configuration changes take effect immediately
-- No manual pod restart required
+To ensure changes take effect immediately, the chart tracks a checksum of the LTPA configuration. It adds this checksum to the `StatefulSet` `annotations`, as shown in the following example. Any update to the credentials, whether in your `values.yaml` or your external Secret, automatically triggers a pod restart.
 
 ```yaml
 annotations:
@@ -291,41 +232,81 @@ annotations:
 
 ## Troubleshooting
 
-### Issue: LTPA Secret Not Found
+- **Mutual exclusivity error**
 
-**Symptom:** Pod fails to start with error about missing secret
+    Specifying both inline values and a custom Secret simultaneously results in the following error:
 
-```
-Error: lookup failed: Secret my-ltpa-secret not found
-```
+    ```text
+    Either configuration.core.ltpa values are set even though a custom Secret was provided. 
+    Please explicitly set the unused credentials to be empty/null
+    ```
 
-**Solution:**
+    For example, this configuration is invalid:
 
-1. Verify secret exists: `kubectl get secret my-ltpa-secret -n <namespace>`
-2. Verify secret is in correct namespace
-3. Check secret key names match requirements
+    ```yaml
+    # INVALID - This will fail
+    configuration:
+      core:
+        ltpa:
+          enabled: true
+          version: "1.0"
+          realm: "myRealm"
+          customLtpaSecret: "my-secret"  # Cannot mix both!
+    ```
 
-### Issue: Validation Fails
+    To resolve this, ensure you use only one method. If you use a custom Secret, you must set all unused inline fields to empty strings:
 
-**Symptom:** Helm deployment fails with validation error
+    ```yaml
+    configuration:
+      core:
+        ltpa:
+          customLtpaSecret: "my-secret"
+          version: ""
+          realm: ""
+          desKey: ""
+          privateKey: ""
+          publicKey: ""
+          password: ""
+    ```
 
-```
-Either configuration.core.ltpa values are set even though a custom secret was provided
-```
+- **Completeness requirement error**
 
-**Solution:**
+    Enabling LTPA without providing all required fields through either method results in the following error:
 
-1. Use **either** inline values **or** custom secret, not both
-2. Clear unused fields:
-   ```yaml
-   configuration:
-     core:
-       ltpa:
-         customLtpaSecret: "my-secret"
-         version: ""
-         realm: ""
-         desKey: ""
-         privateKey: ""
-         publicKey: ""
-         password: ""
-   ```
+    ```text
+    Please provide a configuration for LTPA by either setting Values.configuration.core.ltpa values 
+    or by referencing a secret in configuration.core.ltpa.customLtpaSecret
+    ```
+
+    For example, this configuration is invalid because it is missing the publicKey and privateKey fields:
+
+    ```yaml
+    # INVALID - Missing publicKey and privateKey
+    configuration:
+      core:
+        ltpa:
+          enabled: true
+          version: "1.0"
+          realm: "myRealm"
+          desKey: "key"
+          password: "pwd"
+          # Missing: privateKey, publicKey
+    ```
+
+    To resolve this, ensure you provide all required keys or reference a complete custom Secret.
+
+- **LTPA Secret not found error**
+
+    Referencing a Secret that does not exist or cannot be located during pod startup results in the following error:
+
+    ```text
+    Error: lookup failed: Secret my-ltpa-secret not found
+    ```
+
+    You can verify the resource using the following command:
+
+    ```bash
+    kubectl get secret my-ltpa-secret -n <namespace>
+    ```
+
+    To resolve this, ensure the Secret exists in the target namespace, resides in the correct namespace, and that the Secret key names match the requirements.
