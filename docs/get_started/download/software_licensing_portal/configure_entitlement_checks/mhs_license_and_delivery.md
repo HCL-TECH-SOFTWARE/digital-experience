@@ -133,7 +133,6 @@ INFO: License validity: true
 
 ## Reference: HCL DX Cloud Native 9.5 Tier 1–7 Parts
 
-
 | HCL Digital Experience Cloud Native 9.5 Part Description                                                            | Part Number   |
 |--------------------------------------------------------------------------------------------------------------------|--------------:|
 | HCL Digital Experience Cloud Native Tier 1, 12 Month Term License & S&S, 1–500K User Sessions                       | TN100928Y01   |
@@ -145,4 +144,3 @@ INFO: License validity: true
 | HCL Digital Experience Cloud Native Tier 7, 12 Month Term License & S&S, 60M–120M User Sessions                     | TN100934Y01   |
 
 The latest HCL Digital Experience offering licenses are available at the HCL Software License Agreements site
-
