@@ -179,56 +179,6 @@ The following examples demonstrate how to configure LTPA for different environme
           customLtpaSecret: "prod-ltpa-credentials"
     ```
 
-- **Share LTPA configuration**
-
-    When you enable configuration sharing, LTPA keys are exported to a shared Secret (`dx-shared-config-v1`) for use by other applications such as HCL Leap or HCL Volt MX:
-
-    ```yaml
-    incubator:
-      enableConfigurationSharing: true
-
-    configuration:
-      core:
-        ltpa:
-          enabled: true
-          customLtpaSecret: "my-ltpa-secret"
-    ```
-
-    The Core LTPA configuration becomes available to other products mounting the `dx-shared-config-v1` Secret.
-
-## Kubernetes Secret details
-
-The chart uses a Kubernetes Secret to handle LTPA credentials and automation. Depending on your configuration, this Secret is either managed by the Helm release or referenced as an external resource. The following YAML represents the structure of the Kubernetes Secret:
-
-!!!note
-    The `ltpa.password` undergoes double base-64 encoding for additional security.
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: my-release-core-ltpa
-  labels:
-    app.kubernetes.io/name: hcl-dx-deployment
-    app.kubernetes.io/instance: my-release
-type: Opaque
-data:
-  ltpa.version: <base64-encoded>
-  ltpa.realm: <base64-encoded>
-  ltpa.desKey: <base64-encoded>
-  ltpa.privateKey: <base64-encoded>
-  ltpa.publicKey: <base64-encoded>
-  ltpa.password: <double-base64-encoded>
-```
-
-If you use the inline configuration, the chart creates the Secret during installation and deletes it upon uninstallation. If you reference a custom Secret, you must manage that resource independently as it persists after the release is removed.
-
-To ensure changes take effect immediately, the chart tracks a checksum of the LTPA configuration. It adds this checksum to the `StatefulSet` `annotations`, as shown in the following example. Any update to the credentials, whether in your `values.yaml` or your external Secret, automatically triggers a pod restart.
-
-```yaml
-annotations:
-  checksum/ltpa: "sha256:abc123def456..."
-```
 
 ## Troubleshooting
 
