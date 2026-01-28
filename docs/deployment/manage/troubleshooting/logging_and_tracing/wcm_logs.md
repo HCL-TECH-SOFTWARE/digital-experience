@@ -1,33 +1,36 @@
-# HCL Web Content Manager tracing
+# HCL Web Content Manager Tracing
 
-Use Application Server trace facilities to capture trace information for HCL Web Content Manager (WCM). Tracing can be enabled either permanently or for the current HCL Digital Experience (DX) session only. WCM uses IBM® WebSphere® Application Server trace facilities to generate trace data. Enable tracing when you need detailed output to help debug issues effectively.
+Use the Application Server trace facilities to capture trace information for HCL Web Content Manager (WCM). You can enable tracing permanently or only for the current HCL Digital Experience (DX) session. WCM uses IBM® WebSphere® Application Server trace facilities to generate trace data. Enable tracing when you need detailed information to help diagnose issues.
 
 ## Enable static (extended) tracing
 
-Static tracing captures data from server startup through problem recreation. Use this option when continuous trace data collection is required.
+Static tracing captures data from server startup through the point when the issue occurs. Use this option when you need continuous trace data.
 
-1. Log in to the **Integrated Solutions Console** as the WebSphere Application Server administrator.  
-2. Select **Troubleshooting > Logs and Traces > WebSphere_Portal > Diagnostic Trace**.  
-3. On the **Configuration** tab, select the **Enable Log** checkbox. Adjust **Maximum File Size** and **Maximum Number of Historical Files** as needed to prevent trace data from being overwritten.  
-4. Click **Change Log Level Details**, and enter the required trace string from the table below.  
-5. Click **OK**, and save your changes.  
+Static tracing captures data from server startup through the point when the issue occurs. Use this option when you need continuous trace data.
+
+1. Sign in to the Integrated Solutions Console as the WebSphere Application Server administrator.  
+2. Go to **Troubleshooting > Logs and Traces > WebSphere_Portal > Diagnostic Trace**.  
+3. On the **Configuration** tab, select **Enable Log**. Adjust **Maximum File Size** and **Maximum Number of Historical Files** to prevent trace data from being overwritten.  
+4. Select **Change Log Level Details**, and enter the required trace string from the table below.  
+5. Select **OK**, and save your changes.  
 6. Restart the **WebSphere_Portal** application server.
 
 ## Enable dynamic tracing
 
-Dynamic tracing can be used when restarting the server is not possible.
+Use dynamic tracing when you cannot restart the server.
 
-1. Log in to the **Integrated Solutions Console** as the Portal administrator.  
-2. Select **Administration > Portal Analysis > Enable Tracing**. The **Enable Tracing** portlet appears.  
-3. Type the required trace string into the **Append these trace settings** field.  
-4. Click the **Add** icon. The portlet updates the **Current trace settings** field.
+1. Sign in to the Integrated Solutions Console as the Portal administrator.  
+2. Go to **Administration > Portal Analysis > Enable Tracing**.  
+   - The Enable Tracing portlet opens.  
+3. Enter the required trace string in **Append these trace settings**.  
+4. Select the **Add** icon. The portlet updates **Current trace settings**.
 
     !!!note
-        Restarting HCL DX removes traces set using the **Enable Tracing** portlet.
+        Restarting HCL DX clears any trace settings applied through the Enable Tracing portlet.
 
 ## Trace Strings
 
-HCL DX 9.5 and later provides the following trace strings for detailed debugging and analysis.
+HCL DX 9.5 and later provides these trace strings for detailed debugging and analysis.
 
 |Issue|Trace String|
 |-----|------------|
@@ -37,7 +40,7 @@ HCL DX 9.5 and later provides the following trace strings for detailed debugging
 |WCM REST API|-   `com.ibm.workplace.wcm.rest.*=all:`<br>-   `com.hcl.wcm.rest.*=all:`|
 |Search Token issues|-   `com.ibm.ilel.*=all`|
 
-The following table is the list of all trace strings available for HCL DX 8.5 and higher releases:
+This table lists all trace strings available in HCL DX 8.5 and later.
 
 |Issue|Trace String|
 |-----|------------|
@@ -51,7 +54,7 @@ The following table is the list of all trace strings available for HCL DX 8.5 an
 |Remote Web Content Viewer Portlet|On the remote rendering server:-   `com.ibm.workplace.wcm.app.ui.remote.*=all`<br>-   `com.ibm.workplace.wcm.app.ui.portlet.*=all`<br><br>If the credential vault is in use, add the following the remote rendering server traces:<br>-   `com.ibm.wps.services.credentialvault.*=finest`<br>-   `com.ibm.wps.sso.credentialvault.*=finest`<br>-   `com.ibm.wps.command.credentialvault.*=finest`<br>-   `com.ibm.wps.engine.Servlet.*=finest`<br><br>On the rendering server:<br>-   `com.aptrix.*=all`<br>-   `com.presence.connect.wmmcomms.*=all`<br>-   `com.ibm.wps.services.puma.*=all`<br>-   `com.ibm.wps.puma.*=all`<br>-   `com.ibm.wps.sso.*=all`<br>-   `com.ibm.wps.services.authentication.*=all`<br>-   `com.ibm.ws.security.*=all`<br>-   `com.ibm.ws.wim.*=all:com.ibm.websphere.wim.*=all`<br>-   `com.ibm.wsspi.wim.*=all`|
 |Caching|-   `com.presence.connect.cache.*=finest`<br>-   `com.presence.connect.business.*=finest`<br>-   `com.aptrix.pluto.renderer.*=finest`<br>-   `com.ibm.workplace.wcm.services.content.*=finest`|
 |Pre-rendering|-   `com.aptrix.cacher.*=finest`|
-|Enterprise Content Management Integration|Document Picker issues:-   `com.ibm.wps.proxy.*=all`<br>-   `com.ibm.mm.proxy.*=all`<br>-   `com.ibm.lotus.quickr.*=all`<br><br>Personalization Federated Document issues:<br>-   `com.ibm.workplace.wcm.pzn.ecm.*=all`<br>-   `com.ibm.websphere.personalization.*=all`<br><br>**Note:** Client-side trace required. When recreating the issue, it is important to note any JavaScript exceptions you may see in the browser. Additionally, you need to collect some browser-side information so we can see the requests being passed.<br><br>There are multiple methods for collecting this information:<br>-   [The JavaScript console of the browser](https://www.w3schools.com/jsref/met_console_log.asp)<br>-   [Fiddler](https://www.telerik.com/fiddler)<br>-   [Firefox HTTP Header Live](https://addons.mozilla.org/en-US/firefox/addon/http-header-live/)<br>-   [Firefox Firebug](https://getfirebug.com)|
+|Enterprise Content Management Integration|Document Picker issues:-   `com.ibm.wps.proxy.*=all`<br>-   `com.ibm.mm.proxy.*=all`<br>-   `com.ibm.lotus.quickr.*=all`<br><br>Personalization Federated Document issues:<br>-   `com.ibm.workplace.wcm.pzn.ecm.*=all`<br>-   `com.ibm.websphere.personalization.*=all`<br><br>**Note:** Client-side trace is required. When reproducing the issue, note any JavaScript exceptions in the browser. Also, collect browser-side information to capture the requests being sent.<br><br>There are multiple methods for collecting this information:<br>-   [The JavaScript console of the browser](https://www.w3schools.com/jsref/met_console_log.asp)<br>-   [Fiddler](https://www.telerik.com/fiddler)<br>-   [Firefox HTTP Header Live](https://addons.mozilla.org/en-US/firefox/addon/http-header-live/)<br>-   [Firefox Firebug](https://getfirebug.com)|
 |Blogs and Wikis|-   `com.ibm.workplace.wcm.*=all`<br>-   `com.aptrix.*=all:com.presence.*=all`<br>-   `com.ibm.icm.jcr.*=finest`<br>-   `com.ibm.icm.ci.schema.impl.SchemaService=info`|
 |Java Content Repository (JCR)|-   `com.ibm.icm.*=finest`<br>-   `com.ibm.icm.ci.schema.impl.SchemaService=info`|
 |Java Content Repository (JCR) Export/Import of Library|-   `com.ibm.icm.jcr.command.*=all`|
@@ -65,18 +68,18 @@ The following table is the list of all trace strings available for HCL DX 8.5 an
 |Workflow|-   `com.ibm.workplace.wcm.api.*=finest`<br>-   `com.aptrix.pluto.workflow.*=finest`<br>-   `com.ibm.workplace.wcm.services.workflow.*=finest`|
 
 !!! warning "Warning"
-    - Enabling general tracing can cause the server to become unresponsive, as it may generate a large amount of log output in a short period of time, rapidly consuming disk space and system resources. To prevent this, always set the log scope as narrowly as necessary for troubleshooting, and disable general tracing as soon as you have collected the required information.
+    - Enabling general tracing can make the server unresponsive because it generates a large amount of log output quickly, which can consume disk space and system resources. To avoid this, set the log scope as narrowly as needed for troubleshooting, and turn off general tracing as soon as you have collected the necessary information.
 
-    - The Kubernetes probe is configured by default to target the server's landing page. To reduce the impact of page loads on your site, adjust the [Probes configuration](../../../..//deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or change the landing page to one with a smaller footprint. This helps minimize resource consumption and improves overall site responsiveness during tracing and monitoring.
+    - By default, the Kubernetes probe targets the server's landing page. To reduce the impact of page loads on your site, adjust the [Probes configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or change the landing page to one with a smaller footprint. Starting with CF229, the [out-of-the-box sample site](../../../../build_sites/blueprint.md) is configured as the default site. This site has a larger footprint as it demonstrates the new design system capabilities. It is recommended to move the sample site to a secondary position (or non-default location) to minimize resource consumption and improve responsiveness during tracing and monitoring.
 
-The resulting traces for Virtual Member Manager are written to the following locations:
+Virtual Member Manager writes the resulting traces to the following locations:
 
 - **AIX® and Linux™:** `wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log`
 - **Windows™:** `wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log`
 
 ## HCLSoftware U learning materials
 
-To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
 
 ???+ info "Related information"
     - [WebSphere® Integrated Solutions Console](../../portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

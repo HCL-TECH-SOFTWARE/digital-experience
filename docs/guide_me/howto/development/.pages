@@ -2,10 +2,5 @@ title: Development
 nav:
 
   - index.md
-  - CreateAServletForStaticFiles.md
-  - CodeToPrintUserAndHostname.md
-  - Portletdevelopmentutilitiesandpagecreationsamples.md
-  - CustomLoginPortlet.md
-  - WCMAPIRenderComponent.md
-  
+  - ...
   

@@ -1,32 +1,36 @@
-# Page information tag
+---
+id: wcm_dev_elements_page-navigation_tag
+title: Page Information tag
+---
 
-You use the page information tag to display page navigation details in the design of a page navigation element.
+Use the Page Information (`PageInfo`) tag to display page navigation details in the design of a page navigation element.
 
-This is the format of a page information tag:
+See the format of a `PageInfo` tag:
 
 ```
 [PageInfo value=" " knowntext=" " unknowntext=" " start=" " end=" " ]
 ```
 
-To create a page information tag:
+## Creating a Page Information tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create a `PageInfo` tag:
 
-2.  Select **Page Information** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a page information value:
+2. Select **Page Information** as the tag type.
 
-    -   currentPage
-    -   totalPages
-    -   firstItemOnPage
-    -   lastItemOnPage
-    -   totalItems
-    -   itemsPerPage
-    -   unknownPages
+3. Select a page information value:
+
+    - currentPage
+    - totalPages
+    - firstItemOnPage
+    - lastItemOnPage
+    - totalItems
+    - itemsPerPage
+    - unknownPages
     The value "unknownPages" is used to display different text when the total number of pages are either known or unknown. When used you must also use the "knowntext" and "unknowntext" parameters.
 
-4.  Click **OK** to add the tag to your navigator design.
-
+4. Click **OK** to add the tag to your navigator design.
 
 Once you add the tag to your design, you can also add the following parameters to the tag:
 
@@ -37,7 +41,7 @@ Once you add the tag to your design, you can also add the following parameters t
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [Creating a page navigation component](../../elements/page_nav_element/wcm_dev_elements_page-navigation_creating.md)
