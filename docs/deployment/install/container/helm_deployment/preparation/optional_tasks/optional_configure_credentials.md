@@ -264,7 +264,7 @@ Here's a list of the required credential attributes for each application:
 | Core WPS Credential secret | `security.core.customWpsSecret` | `username`  <br> `password` | Core |
 | Core Config Wizard Credential secret | `security.core.customConfigWizardSecret` | `username`  <br> `password` | Core (Config Wizard) |
 | Core LDAP Credential secret | `configuration.core.ldap.customLdapSecret` | `bindUser` <br> `bindPassword` | Core |
-| Core LTPA Credential secret | `configuration.core.ltpa.customLtpaSecret` | `ltpa.version` <br> `ltpa.realm` <br> `ltpa.desKey` <br> `ltpa.privateKey` <br> `ltpa.publicKey` <br> `ltpa.password` | Core |
+| [Core LTPA Credential secret](./optional_configure_ltpa_key.md) | `configuration.core.ltpa.customLtpaSecret` | `ltpa.version` <br> `ltpa.realm` <br> `ltpa.desKey` <br> `ltpa.privateKey` <br> `ltpa.publicKey` <br> `ltpa.password` | Core |
 | Core Content AI Secret | `security.core.customContentAISecret` | `apiKey` | Core |
 | DAM Plugin Google Vision Credential secret | `security.damPluginGoogleVision.customDamGoogleVisionSecret` | `authenticationKey` <br> `apiKey` | DAM Google Vision |
 | DAM Plugin Kaltura Credential secret | `security.damPluginKaltura.customDamKalturaSecret` | `authenticationKey` <br> `secretKey` | DAM Kaltura |
@@ -342,6 +342,9 @@ type: "Opaque"
 ```
 
 **Core LTPA Credential secret**
+
+For details, refer to [LTPA Configuration](./optional_configure_ltpa_key.md).
+
 ```yaml
 apiVersion: "v1"
 kind: "Secret"
