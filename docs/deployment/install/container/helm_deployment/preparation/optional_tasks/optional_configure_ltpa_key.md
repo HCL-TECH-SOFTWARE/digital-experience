@@ -27,11 +27,9 @@ configuration:
       customLtpaSecret: ""  # Must be empty when using inline config
 ```
 
-Use this configuration for development environments, non-critical deployments, or when credentials are managed through other means.
-
 ### Custom Secret reference
 
-Reference an existing Kubernetes Secret containing LTPA credentials:
+Reference an existing Kubernetes Secret containing LTPA credentials by specifying the following properties:
 
 ```yaml
 configuration:
@@ -46,8 +44,6 @@ configuration:
       password: ""
       customLtpaSecret: "my-ltpa-secret"  # Reference your secret
 ```
-
-Use this configuration for production, high-security environments, or when credentials are managed externally (for example, HashiCorp Vault or AWS Secrets Manager)
 
 ## Generating LTPA keys
 
