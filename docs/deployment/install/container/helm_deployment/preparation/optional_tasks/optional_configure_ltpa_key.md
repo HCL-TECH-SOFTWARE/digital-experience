@@ -59,7 +59,7 @@ To generate LTPA keys for Core, export them from the IBM WebSphere Administrativ
 
 5. Select **Export keys**.
 
-6. Extract the LTPA key file from the running pod by running the following command:
+6. Extract the LTPA key file from the running pod:
 
     ```bash
     kubectl -n <namespace> exec -it pod/<release>-core-0 -- cat /opt/HCL/ltpa.keys
@@ -97,7 +97,7 @@ When using a custom Secret, the Secret must contain the following data keys:
       -n <your-namespace>
     ```
 
-- To create a custom Secret using a YAML manifest, define the following resource in a separate YAML file (for example, `ltpa-secret.yaml`) and apply it to your cluster:
+- To create a custom Secret using a YAML manifest, define the following resource in a separate YAML file (for example, `my-ltpa-secret.yaml`) and apply it to your cluster:
 
     ```yaml
     apiVersion: v1
@@ -119,7 +119,7 @@ When using a custom Secret, the Secret must contain the following data keys:
 
 The following examples demonstrate how to configure LTPA for different environments:
 
-- **Configure for development with inline values**
+- **Define inline values for development**
 
     Use this method for local or development environments where you want Helm to manage the Secret lifecycle directly.
 
@@ -140,7 +140,7 @@ The following examples demonstrate how to configure LTPA for different environme
           customLtpaSecret: ""
     ```
 
-- **Configure for production with an external secret**
+- **Reference an external Secret for production**
 
     Use this method for production environments where you manage credentials externally. You must create the Secret in the target namespace before you deploy.
 
@@ -174,7 +174,6 @@ The following examples demonstrate how to configure LTPA for different environme
           password: ""
           customLtpaSecret: "prod-ltpa-credentials"
     ```
-
 
 ## Troubleshooting
 
