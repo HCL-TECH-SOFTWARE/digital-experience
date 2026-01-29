@@ -1,0 +1,125 @@
+div#headerPanel {
+    background: linear-gradient(121deg, #037780 0, #47decf 100%) 0 0;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    height: 200px;
+    z-index: 600;
+    position: sticky;
+    top:-90px;
+    margin-top: -50px;
+}
+div.inner-title-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding-bottom: 3rem;
+    background: url(../img/header-bg-triangles.svg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 25% auto,20% auto;
+    height: 200px;
+}
+h1.main-title {
+    color: white;
+    z-index: 700;
+    font-weight: 700;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -245px;
+    font-size: 33px !important;
+}
+.md-header {
+    background-color: rgba(31,31,31,0.85);
+    z-index: 900;
+}
+.md-header__topic {
+    background: url(../img/hcl-sofy-logo.svg) no-repeat 0 15px;
+    width: 145px;
+    height: 45px;
+    transition: none;
+}
+.md-header__title[data-md-state=active] .md-header__topic+.md-header__topic,
+.md-header__title[data-md-state=active] .md-header__topic,
+.md-header__topic+.md-header__topic {
+    transform: none;
+    transition: none;
+}
+.md-ellipsis {
+    display: none;
+}
+.md-sidebar--primary .md-nav__link {
+    padding: 0.4rem 0.2rem;    
+    border-top: 1pt solid #eee;
+    margin-top: 0;
+}
+.md-sidebar--primary .md-nav__link:hover,
+.md-nav--secondary .md-nav__link:hover {
+    background: #04bfcc;
+    color: white;
+}
+.xmd-sidebar--primary .md-nav__link--active {
+    background-image: linear-gradient(
+        -90deg, #d2d4dd 0%, rgba(217,221,235,0.8) 80%, rgba(235,237,245,0) 100%);
+}
+.xmd-sidebar--primary .md-sidebar__inner {
+    border: 1pt solid #eee;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.3rem;
+}
+.md-nav--secondary .md-nav__item {
+    border-top: 1pt solid #eee;
+    padding-bottom: .625em;
+}
+.md-sidebar--secondary .md-nav__title {
+    padding-bottom: .625em;
+}
+.md-nav__link {
+    padding: 0.2rem 0.6rem;
+}
+.md-sidebar.md-sidebar--primary {
+    z-index: 1000;
+}
+a.md-nav__button.md-logo {
+    background: url(../img/hcl-sofy-logo.svg) no-repeat;
+    height: 1rem;
+    width: 8rem;
+}
+.md-nav__title .md-nav__button.md-logo svg {
+    display:none;
+}
+@media screen and (min-width: 60em) {
+    .md-search__form {
+        background-color: rgba(255,255,255,.26);
+    
+    }
+    .md-search__form:hover {
+        background-color: rgba(255,255,255,.50);
+    }
+}
+@media screen and (min-width: 76.25em) {
+    .md-nav--primary .md-nav__title[for=__drawer] {
+        margin-bottom: 0.4rem;
+    }
+}
+@media screen and (max-width: 76.1875em){
+    .md-nav--primary .md-nav__title[for=__drawer] {
+        background: linear-gradient(121deg, #037780 0, #47decf 100%) 0 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1.main-title {
+        margin-left: -184px;
+        font-size: 25px!important;
+    }
+}
+@media screen and (max-width: 400px) {
+    h1.main-title {
+        width: 300px;
+        margin-left: -150px;
+        font-size: 25px!important;
+    }
+}

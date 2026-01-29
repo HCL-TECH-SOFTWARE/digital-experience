@@ -1,0 +1,3504 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://opensource.hcltechsw.com/digital-experience/latest/build_sites/search_v2/components/">
+      
+      
+        <link rel="prev" href="../limitations/">
+      
+      
+        <link rel="next" href="../../../manage_content/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Components of Search V2 - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--March2023-->
+<!--  OneTrust Cookies Consent Notice start  -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/99b8d579-c52a-43c9-ab7b-a35e60de7103/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="99b8d579-c52a-43c9-ab7b-a35e60de7103"></script>
+<script type="text/javascript"> 
+	function OptanonWrapper() { } 
+</script>
+<!--  OneTrust Cookies Consent Notice end  -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#components-of-search-v2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcltechsw.com" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcltechsw.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://support.hcltechsw.com/community" target="_blank">Community Forums</a>
+
+</div>
+</div>
+  
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../latest/build_sites/search_v2/components/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Components of Search V2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../whatsnew/cf20/newcf224/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guide_me/tutorials/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../whatsnew/cf20/newcf224/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../themes_skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_14" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Search V2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_14" id="__nav_5_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_14">
+            <span class="md-nav__icon md-icon"></span>
+            Search V2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limitations of Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Components of Search V2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Components of Search V2
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-component-features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search component features and benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-components-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search components overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search components overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomic-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomic Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-composite-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Composite Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-the-search-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling the search components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling the search components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style customization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-default-theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the default theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-and-customizing-the-theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using and customizing the theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-between-components-using-the-broadcast-channel-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication between components using the Broadcast Channel API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../guide_me/tutorials/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-component-features-and-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search component features and benefits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-components-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search components overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search components overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atomic-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atomic Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-composite-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional Composite Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-the-search-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling the search components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling the search components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default styling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style customization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-default-theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the default theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-and-customizing-the-theme-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using and customizing the theme modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-between-components-using-the-broadcast-channel-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication between components using the Broadcast Channel API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/build_sites/search_v2/components.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M441 58.9 453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2 344 121.9l46.1 46.1-134.3 134.2c-2.9 2.9-6.5 5-10.4 6.1L186.9 325l16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25 175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25c-28.1-28.1-73.7-28.1-101.8 0M88 64c-48.6 0-88 39.4-88 88v272c0 48.6 39.4 88 88 88h272c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24v112c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40h112c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="components-of-search-v2">Components of Search V2</h1>
+<p>The Search V2 UI is composed of web components called search components. This guide explains how to use the Search V2 UI search components. Follow along to learn about the different types of search components, their styling options, and extendable features.</p>
+<p>The default search component for Search V2 is designed to be user-friendly, customizable, and extendable. It offers intuitive search interactions, allows user-defined styling and extensions, and can be integrated anywhere in your application. See an example of the search component below.</p>
+<p><img alt="Screenshot" src="../../../assets/HCL_Search_Search_Result.png" /></p>
+<h2 id="search-component-features-and-benefits">Search component features and benefits</h2>
+<p>Search V2 components provide the following benefits:</p>
+<ol>
+<li><strong>Encapsulation:</strong> Styles and functionality are isolated from the rest of your application using Shadow DOM.</li>
+<li><strong>Reusability:</strong> Build once and reuse across different parts of your application.</li>
+<li><strong>Customizability:</strong> Use attributes, properties, and part selectors to customize components without altering their core code.</li>
+</ol>
+<h2 id="search-components-overview">Search components overview</h2>
+<p>Search V2 components has two distinct types: Atomic Components (AC) and Functional Composite Components (FCC).</p>
+<h3 id="atomic-components">Atomic Components</h3>
+<p>Atomic Components (AC) are the smallest possible building blocks of the search functionality. These components include buttons, input fields, and chips, and are built using Web Components standards such as Shadow DOM for encapsulation and reusability. Refer to the table below each component for the list of compatible properties associated with them. </p>
+<ul>
+<li>
+<p><strong>dx-ac-base-element:</strong> his class creates a foundational element for developing custom web components. It supports internationalization and localization, and uses the Shadow DOM to encapsulate its internal structure, ensuring high reusability.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>String</td>
+<td>A unique identifier for the component instance. This property is automatically assigned using a UUID generator when the component is instantiated.</td>
+<td>Generated UUID value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-button:</strong> This customizable button component comes with internationalization support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>outlined</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button should be rendered with an outlined style.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>imgurl</strong></td>
+<td>String</td>
+<td>The URL of the image to be displayed as the icon of a button.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>buttontext</strong></td>
+<td>String</td>
+<td>Displays text on a button.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>endicon</strong></td>
+<td>Boolean</td>
+<td>Determines whether the image is displayed as an end icon instead of a start icon.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>focused</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button currently has focus. This property is managed internally.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-input-select:</strong> This flexible, accessible, and customizable component can handle a variety of user interactions and scenarios.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>The label displayed for the dropdown. Defaults to a context-based message if not provided.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the dropdown is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>selectedValue</strong></td>
+<td>String</td>
+<td>The currently selected value.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>selectedId</strong></td>
+<td>String</td>
+<td>The id of the currently selected option.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>String, String[], OptionData[]</td>
+<td>List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties.</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>DxSearchInputFieldType, String</td>
+<td>The type of the input field used to determine default labels or handle specific behaviors. You can use <code>DxSearchInputFieldType</code> strings such as <code>contentSource</code> or <code>documentObjectType</code> or leave it blank.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-list:</strong> This component wraps an unordered list (<code>&lt;ul&gt;</code>) and uses a slot to insert content such as list items into the component. The <code>part="unordered-list"</code> attribute allows external styling of the <code>&lt;ul&gt;</code>.</p>
+</li>
+<li>
+<p><strong>dx-switch:</strong> This fully accessible and customizable custom component separates behavior (toggle state and events) from appearance (CSS styling through the dynamic part attribute). This component is currently not in use.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>isChecked</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the switch is toggled on (true) or off (false).</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>isDisabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the switch is disabled.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-anchor:</strong> This versatile anchor component supports pagination and custom actions, and is designed for navigation menus and paginated lists.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>url</strong></td>
+<td>String</td>
+<td>Specifies the URL the anchor element navigates to.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>weight</strong></td>
+<td>Number</td>
+<td>Represents a custom weight value for the anchor. Ensure to use case-specific values.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>String</td>
+<td>Specifies the title attribute, providing additional information about the link.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>The text content or label of the anchor element.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>rel</strong></td>
+<td>String</td>
+<td>Specifies the relationship between the current document and the linked document. Sample values include <code>noopener</code> or <code>nofollow</code>.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates if the anchor element is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>selected</strong></td>
+<td>Boolean</td>
+<td>Indicates if the anchor is currently selected and is typically used in scenarios such as pagination.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>Number</td>
+<td>Represents a custom numeric value associated with the anchor. Ensure to use case-specific values.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>mode</strong></td>
+<td>String</td>
+<td>Specifies the mode of the anchor, controlling its behavior and styling. You can use the mode values <code>pagination</code> or <code>result-title</code>, or leave it blank.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>imgurl</strong></td>
+<td>String</td>
+<td>Specifies the URL of an image to be displayed inside the anchor if no text label is provided.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>target</strong></td>
+<td>String</td>
+<td>Specifies where to open the linked document. Sample values include <code>_blank</code> or <code>_self</code>.</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-chip:</strong> This component allows you to display a "chip" or "tag" with a numerical count, such as notification counters, tag lists, or pill-style labels. It also comes with built-in localization support.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>Specifies the name or label of the chip.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>count</strong></td>
+<td>Number</td>
+<td>Represents a numeric count associated with the chip.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>showChipCount</strong></td>
+<td>Boolean</td>
+<td>Determines whether <code>count</code> should be displayed alongside the chip name.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-input-textfield:</strong> This component allows you to create rich input fields with enhanced user experience such as search bars or forms. You can also use it for fields where text input with optional icons and labels is required.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value</strong></td>
+<td>String</td>
+<td>The current value of the textfield.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td>String</td>
+<td>Specifies the input type. Sample values include <code>text</code>, <code>password</code>, or <code>email</code>.</td>
+<td>'text'</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String, undefined</td>
+<td>The label displayed above the textfield.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String</td>
+<td>The placeholder text displayed inside the textfield.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the textfield is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>iconStartUrl</strong></td>
+<td>String, undefined</td>
+<td>URL of the icon displayed at the start of the textfield.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>iconEndUrl</strong></td>
+<td>String, undefined</td>
+<td>URL of the icon displayed at the end of the textfield.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>DxSearchInputFieldType, String</td>
+<td>A field identifier for the input that is useful in custom events or associating the input with specific data. You can use the <code>DxSearchInputFieldType</code> string <code>queryString</code> or provide your own field name.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-center-layout:</strong> This customizable web component provides a structured layout for a search interface. It includes slots for adding content, such as a header, search input, and search output.</p>
+<!-- | **Properties** | **type** | **Description** | **Default** |
+| -------------- | ---------| -----------------------------------------------------------------------|--------------|
+|**isTagsAvailable** |  Boolean | Indicates whether tags are available for display. and controls the visibility of the tag layout. |    false | -->
+</li>
+<li>
+<p><strong>dx-toggle-button:</strong> This component supports customizable icons for each button and adjusts its style based on the selection and outlined setting. It includes separate styles for selected and unselected buttons and allows easy integration into other UI components.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Determines if the button is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>outlined</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button should be rendered with an outlined style.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>selectedValue</strong></td>
+<td>String</td>
+<td>The currently selected value of the toggle button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>iconUrls</strong></td>
+<td>String[]</td>
+<td>Array of URLs for the icons displayed on the buttons.</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><strong>values</strong></td>
+<td>String[]</td>
+<td>Array of values corresponding to each button's selection state.</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-avatar:</strong> This component allows you to customize your avatar's appearance and uses placeholder assets if you have not provided specific URLs. The <code>renderAvatarContent</code> method dynamically decides what to render based on the variant. This component is currently not in use. </p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>variant</strong></td>
+<td>String</td>
+<td>Defines the avatar's visual variant. Sample values include <code>avatar-letter</code>, <code>avatar-icon</code>, or <code>avatar-img</code>.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>imgUrl</strong></td>
+<td>String</td>
+<td>The URL of the image to be displayed as the avatar when the variant is set to <code>avatar-img</code>.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>iconUrl</strong></td>
+<td>String</td>
+<td>The URL of the icon to be displayed as the avatar when the variant is set to <code>avatar-icon</code>.</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><strong>avatarText</strong></td>
+<td>String</td>
+<td>The text to be displayed in the avatar when the variant is set to <code>avatar-letter</code>.</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-header:</strong> This component offers a flexible and responsive header solution with various customization options and localization support.  </p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>color</strong></td>
+<td>String</td>
+<td>Sets the color for the header's text and other elements.</td>
+<td>'rgba(0, 0, 0, .32)'</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>String</td>
+<td>The title displayed in the header.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>showBackIcon</strong></td>
+<td>Boolean</td>
+<td>Determines whether the back icon is shown.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>isSideNavOpen</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the side navigation is open.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Determines whether certain components in the header are disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>variant</strong></td>
+<td>HEADER_VARIANT</td>
+<td>The predetermined structure and styling of the header according to its use-case. You can use the value <code>header-endUser</code>.</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-list-item:</strong>  This component allows you to mark items as selected and apply different styles accordingly. It also includes a slot element, allowing you to insert content into the item when the component is used.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>String</td>
+<td>A unique key for the list item that is typically used to identify it within a list.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>isSelected</strong></td>
+<td>Boolean</td>
+<td>Used to track whether the list item is selected.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-svg-icon:</strong> This component allows you to display scalable vector icons with customizable colors and sizes. You can use this component for dynamic UIs where the icon might need to change based on context or state.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>color</strong></td>
+<td>String</td>
+<td>The color of the SVG icon. If <code>useCurrentColor</code> is set to <code>false</code>, this color will be applied directly to the SVG's fill.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td>String</td>
+<td>The size of the icon. Used for both width and height.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>useCurrentColor</strong></td>
+<td>Boolean</td>
+<td>Determines whether the icon will inherit the color of the parent element's color property (using CSS currentColor).</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>The SVG icon content passed as a template to render the icon.</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="functional-composite-components">Functional Composite Components</h3>
+<p>Functional Composite Components (FCC) combine ACs to deliver higher-level functionality, such as displaying search results or managing pagination. Refer to the table below each component for the list of compatible properties associated with them. </p>
+<ul>
+<li>
+<p><strong>dx-circular-progress:</strong> This component is a customizable radial progress bar that uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress. </p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>size</strong></td>
+<td>Number</td>
+<td>The diameter of the circular progress element.</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>strokewidth</strong></td>
+<td>Number</td>
+<td>The width of the circle's stroke.</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>trailcolor</strong></td>
+<td>String</td>
+<td>The color of the inactive portion (trail) of the circle.</td>
+<td>#D6D6D6</td>
+</tr>
+<tr>
+<td><strong>valuecolor</strong></td>
+<td>String</td>
+<td>The color of the active portion of the circle.</td>
+<td>#0550DC</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-input-query:</strong> This component allows you to customize a set of properties related to search input such as disabling the input and defining placeholder and label text. It also checks the URL for existing query parameters on load, making it ideal for dynamic search-driven applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>field</strong></td>
+<td>String</td>
+<td>The field name for the search input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>queryString</strong></td>
+<td>String</td>
+<td>The query string value for the search input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the input field is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>The label for the input field.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String</td>
+<td>The placeholder text for the input field.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-output-item-attribute:</strong> This component is a flexible and reusable element that you can use to display specific attributes of search results. By consuming the <code>outputContext</code>, it dynamically renders different types of information, such as links, document types, and descriptions based on the attribute specified. This allows the component to be integrated into larger search result display systems with different content sources and attributes.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>attribute</strong></td>
+<td>String</td>
+<td>The attribute to fetch from the search result item.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>index</strong></td>
+<td>String</td>
+<td>The index of the search item in the result list.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>outputContext</strong></td>
+<td>OutputContextType</td>
+<td>Consumed from context and contains the search result data. This property is internally managed by the component and should not be used.</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-fcc-base-element:</strong> This is a base class in the FCC framework that integrates the Broadcast Channel API for component communication and ensures no shadow DOM is used. It also cleans up resources when components are disconnected.</p>
+</li>
+<li>
+<p><strong>dx-search-input-scope:</strong> This LitElement-based component allows you to manage and display a list of content sources for a search input. It fetches data from an external service, allows you to select a content source, and updates the search scope dynamically. You can use it as part of a larger search interface to provide filtering options based on available content sources.   </p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>field</strong></td>
+<td>String</td>
+<td>The field associated with the input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>contentSources</strong></td>
+<td>DxSearchGetContentSource[]</td>
+<td>List of content sources fetched from the service. This property is internally managed by the component and should not be used. To be converted to internal state in the next release.</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><strong>scope</strong></td>
+<td>String[]</td>
+<td>The current selected scope or content source. This property is internally managed by the component and should not be used. To be converted to internal state in the next release.</td>
+<td>['All Sources']</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the input is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>The label for the input field.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String</td>
+<td>The placeholder text for the input field.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-output-pagination:</strong> This flexible pagination component supports multiple pagination types, including infinite scroll and numbered pagination, and can handle different languages and locales. It also allows debouncing scroll events and a clean separation of concerns, making it efficient and maintainable.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>outputConfig</strong></td>
+<td>Object</td>
+<td>Contains the search configuration, including the current page, page size, total number of items, and a function to load a new page (<code>loadPage</code>). It is injected from the <code>outputContext</code>. This property is internally managed by the component and should not be used.</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td>SEARCH_PAGINATION_TYPE_ENUM</td>
+<td>Defines the type of pagination. Sample values include <code>numbered-pagination</code>, <code>show-more-button</code>, or <code>infinite-scroll</code>.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-input-button:</strong> This customizable search button component uses the Broadcast Channel to trigger search actions on click. It supports properties to disable the button and change its text. Debouncing is also used to optimize search requests, making it a reusable UI element for web applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>buttontext</strong></td>
+<td>String</td>
+<td>Custom text to display on the button. Reverts to default localized text if not provided.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-input-type:</strong> This dynamic dropdown component allows you to select document types in a search interface. Built with LitElement for efficient rendering and reactivity, it fetches searchable fields from a backend service, updates the selected document type, and communicates changes using <code>searchChannel</code> to update search parameters.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>field</strong></td>
+<td>String</td>
+<td>The field name for the search input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>documentObjectType</strong></td>
+<td>String</td>
+<td>The selected document object type.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the search input is disabled.</td>
+<td>false</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>The label text for the search input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String</td>
+<td>The placeholder text for the search input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>OptionData[]</td>
+<td>The list of options for the input select dropdown. This property is internally managed by the component and should not be used.</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-output:</strong> This search result display component integrates with backend search services. It manages various search states such as loading, results, no results, or error, and updates the UI dynamically based on search parameters. It is designed for applications that require real-time search with pagination, filtering, and error handling.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>templateItemId</strong></td>
+<td>String</td>
+<td>The ID of the template element used to render individual search results.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>templatePaginationId</strong></td>
+<td>String</td>
+<td>The ID of the pagination template element used for paginated search results.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>searchValue</strong></td>
+<td>String</td>
+<td>The current search query or keyword entered by the user.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>documentObjectType</strong></td>
+<td>String</td>
+<td>The attribute in the document object being searched.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>scope</strong></td>
+<td>String[]</td>
+<td>A list of content source IDs that limit the search query.</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><strong>searchResults</strong></td>
+<td>DxSearchResults</td>
+<td>Contains the search results, including hit count, individual hits, and scores.</td>
+<td>{ hits: { total: { value: NaN, relation: 'eq' }, max_score: 0, hits: [] } }</td>
+</tr>
+<tr>
+<td><strong>isLoading</strong></td>
+<td>Boolean</td>
+<td>A flag that indicates whether search results are being loaded.</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="styling-the-search-components">Styling the search components</h2>
+<p>This section explains the default styles for search components and how to customize them.</p>
+<h3 id="default-styling">Default styling</h3>
+<p>Each component comes with default styles. See the following examples of different default styles below.</p>
+<div class="language-scss highlight"><pre><span></span><code><span class="cm">/* for dx-search-center-layout */</span>
+<span class="nt">dx-search-center-layout</span><span class="nd">::part</span><span class="o">(</span><span class="nt">main</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-input-textfield */</span>
+<span class="nt">dx-input-textfield</span><span class="nd">::part</span><span class="o">(</span><span class="nt">div</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">relative</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-button */</span>
+<span class="nt">dx-button</span><span class="nd">::part</span><span class="o">(</span><span class="nt">button</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-circular-progress */</span>
+<span class="k">@keyframes</span><span class="w"> </span><span class="nt">rotateCircularProgress</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">100</span><span class="err">%</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nt">transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">rotate</span><span class="o">(</span><span class="nt">360deg</span><span class="o">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-header */</span>
+<span class="nt">dx-header</span><span class="nd">::part</span><span class="o">(</span><span class="nt">div</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">relative</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-chip */</span>
+<span class="nt">dx-chip</span><span class="nd">::part</span><span class="o">(</span><span class="nt">chip-div</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">BLACK8P</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">4px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:inline-flex</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:8px</span><span class="w"> </span><span class="nt">8px</span><span class="w"> </span><span class="nt">8px</span><span class="w"> </span><span class="nt">8px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">16px</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="cm">/* for dx-avatar */</span>
+<span class="nt">dx-avatar</span><span class="nd">::part</span><span class="o">(</span><span class="nt">avatar-div</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">32px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">32px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="err">$</span><span class="nt">avatar-border-color</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="nt">border-box</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">justify-content</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="c1">// for the input select fields</span>
+<span class="nt">dx-search-center-layout</span><span class="w"> </span><span class="nc">.search-input-div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">row</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">justify-content</span><span class="nd">:</span><span class="w"> </span><span class="nt">space-between</span><span class="o">;</span>
+
+<span class="w">  </span><span class="nt">dx-search-input-scope</span><span class="o">,</span>
+<span class="w">  </span><span class="nt">dx-search-input-type</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">align-self</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">max-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">49</span><span class="err">%</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">49</span><span class="err">%</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// for the input query field and button</span>
+<span class="nt">dx-search-center-layout</span><span class="w"> </span><span class="nt">div</span><span class="nc">.search-input-div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">row</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">justify-content</span><span class="nd">:</span><span class="w"> </span><span class="nt">space-between</span><span class="o">;</span>
+
+<span class="w">  </span><span class="nt">dx-search-input-query</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">align-self</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">calc</span><span class="o">(</span><span class="nt">100</span><span class="err">%</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">125px</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">max-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">calc</span><span class="o">(</span><span class="nt">100</span><span class="err">%</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nt">125px</span><span class="o">);</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="style-customization">Style customization</h3>
+<p>You can override styles by targeting the component's class names. Other components can be overridden in a similar manner. Refer to the styling examples below for <code>dx-button</code> and <code>dx-input-textfield</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>part</code> attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the <code>::part()</code> pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM.</p>
+</div>
+<div class="language-css highlight"><pre><span></span><code><span class="c">/* for dx-button */</span>
+<span class="nt">dx-button</span><span class="p">::</span><span class="nd">part</span><span class="o">(</span><span class="nt">button-start-icon</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FBCD00</span><span class="p">;</span><span class="w">    </span><span class="c">/* change the color as per your requirements and also other things can be changed */</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* for dx-input-textfield */</span>
+<span class="nt">dx-input-textfield</span><span class="p">::</span><span class="nd">part</span><span class="o">(</span><span class="nt">label</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">@include</span><span class="w"> </span><span class="err">font-default</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#AFC002</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="theme-modules">Theme modules</h2>
+<p>Search components are provided using theme modules, allowing users to create custom stylesheets for all components. This flexibility is ideal for adapting the search functionality to match your application's design. For more information about themes and skins in DX, refer to  <a href="../../themes_skins/">Developing themes and skins</a>.</p>
+<h2 id="getting-the-default-theme-modules">Getting the default theme modules</h2>
+<p>You can use the default theme modules (CSS and JS files) provided to you as-is, or customize it to suit your needs. Follow these steps to get the provided theme modules for the Search V2 UI on your own DX deployment instance.</p>
+<ol>
+<li>
+<p>Log in to your HCL DX 9.5 platform then select <strong>Themes</strong> from the Practitioner Studio homepage or side navigation panel.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_01.png" title="Log in to HCL Digital Experience 9.5 and Go to the Themes page" /></p>
+</li>
+<li>
+<p>In the side navigation panel, go to <strong>Analyzer</strong> then click <strong>Examine modules</strong>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_02.png" title="Go to Theme Analyzer view and click Examine modules" /></p>
+</li>
+<li>
+<p>Click <strong>Examine all modules</strong>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_03.png" title="Click Examine all modules" /></p>
+</li>
+<li>
+<p>Double-click the <strong>Practitioner Studio Theme</strong> module.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_04.png" title="Click on Practitioner Studio Theme" /></p>
+</li>
+<li>
+<p>Expand the <strong>System Modules</strong> folder then locate and click the <code>dx_search_css</code> file.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_14.png" title="Expand the system modules and scroll down to find dx_search_css" /></p>
+</li>
+<li>
+<p>On the right-side panel that appears, scroll down and click <strong>Contributions</strong>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_06.png" title="Click on dx_search_css and on the right side, you will find the module information, scroll down to find Contributions and under it Location" /></p>
+</li>
+<li>
+<p>Click the <strong>Location</strong> URL to view the CSS file.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_07.png" title="Click on the Location URL to view the css file" /></p>
+</li>
+<li>
+<p>Right click on the <strong>Location</strong> URL then click <strong>Save Link As...</strong> and name the file <code>default.css</code>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_08.png" title="Right click on the Location URL to download it. Save as default.css for now" /></p>
+</li>
+<li>
+<p>Go back to the <strong>System Modules</strong> folder then locate and click the <code>dx_search_js</code> file.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_15.png" title="Expand the system modules and scroll down to find dx_search_js" /></p>
+</li>
+<li>
+<p>On the right-side panel, scroll down and click <strong>Contributions</strong> again.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_09.png" title="Click on dx_search_js and on the right side, you will find the module information, scroll down to find Contributions and under it Location" /></p>
+</li>
+<li>
+<p>Click the <strong>Location</strong> URL to view the JS file.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_10.png" title="Click on the Location URL to view the js file" /></p>
+</li>
+<li>
+<p>Right click on the <strong>Location</strong> URL then click <strong>Save Link As...</strong> and name the file <code>index.js</code>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_11.png" title="Right click on the Location URL to download it. Save as index.js for now." /></p>
+</li>
+<li>
+<p>Open the <code>default.css</code>file in a code editor such as Visual Studio Code then open the <strong>Command Palette</strong>. You can open the <strong>Command Palette</strong> by pressing Cmd + Shift + P for Mac, or Ctrl + Shift + P for Windows.</p>
+</li>
+<li>
+<p>In the <strong>Command Palette</strong>, enter <code>&gt; Format Document</code> to format the CSS file in a more structured view. This allows you to read and inspect the code more easily so you can override the styles to your liking. For more information, refer to <a href="#styling-the-search-components">Styling the search components</a>.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_12.png" title="Open the default.css file you have downloaded in a code editor such as Visual Studio Code" /></p>
+<p>See the sample view of the formatted CSS file.</p>
+<p><img alt="" src="../../../assets/HCL_Search_Get_Theme_Modules_13.png" title="Log in to HCL Digital Experience 9.5 and Go to the Search V2 UI" /></p>
+</li>
+</ol>
+<h2 id="using-and-customizing-the-theme-modules">Using and customizing the theme modules</h2>
+<p>Follow these steps to use the theme module files you downloaded on your new or existing theme pages.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure you have downloaded the <code>dx_search_css</code> and <code>dx_search_js</code> files from <a href="#getting-the-default-theme-modules">Getting the default theme modules</a> and saved the files as <code>default.css</code> and <code>index.js</code> respectively.</p>
+</div>
+<ol>
+<li>
+<p>Open the <code>default.css</code> file and update the styles in the file as needed. </p>
+</li>
+<li>
+<p>You can also create your own CSS file, such as <code>custom-theme.css</code>, where you can add your overrides, using the <code>default.css</code> as your guide for the base styles.</p>
+</li>
+<li>
+<p>Link the default and custom CSS files in your application's HTML code as follows.</p>
+<div class="language-html highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/path/to/default.css&quot;</span><span class="p">&gt;</span> 
+  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/path/to/custom-theme.css&quot;</span><span class="p">&gt;</span> 
+</code></pre></div>
+</li>
+<li>
+<p>Download the default theme CSS <code>dx_search_js</code> from the provided location as <code>index.js</code>.</p>
+</li>
+<li>
+<p>Add the script to your application's html head.
+    <div class="language-html highlight"><pre><span></span><code>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;module&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/path/to/index.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>See the sample customized CSS code which changed the background color dx-search-center-layout component.</p>
+<div class="language-css highlight"><pre><span></span><code><span class="nt">dx-search-center-layout</span><span class="p">::</span><span class="nd">part</span><span class="o">(</span><span class="nt">main</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f0f0f0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="communication-between-components-using-the-broadcast-channel-api">Communication between components using the Broadcast Channel API</h2>
+<p>Search V2 utilizes the Broadcast Channel API for its components. The Broadcast Channel API provides real-time synchronization, updating search search results when a new query is entered. It has a decoupled design that allows FCC components to work independently and communicate without direct references.</p>
+<p>This API also enables seamless communication between different FCC components, even when they are placed in separate areas of your application such as themes, JSPs, portlets, or WCM. This functionality is already present in the provided JS theme module.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 17, 2024 17:41:20 UTC">December 17, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
