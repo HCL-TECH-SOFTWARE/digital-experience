@@ -126,7 +126,7 @@ ls -l
 
 # Perform a symlink of your desired profile to the wp_profile directory
 # Make sure you are selecting the right profile that matches your currently installed / active version
-ln -s /opt/HCL/profiles/prof_95_CF217/ /opt/HCL/wp_profile
+ln -s /opt/HCL/profiles/prof_95_CF217 /opt/HCL/wp_profile
 
 # You can now attempt to start the DX Core JVM
 /opt/HCL/wp_profile/bin/startServer.sh WebSphere_Portal

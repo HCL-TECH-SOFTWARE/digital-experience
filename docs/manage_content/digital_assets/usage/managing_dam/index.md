@@ -16,3 +16,5 @@ This section provides information on how to create, configure, and delete media 
 This section provides information on how to modify uploaded or stored media assets using HCL DAM.
 - **[DAM access control management](./dam_access_control.md)**  
 This section provides information about DAM access control, its features, and limitations. Steps on how to assign permission to users through the DAM user interface are also provided.
+- **[Database Analysis](./database_analysis.md)**
+This section provides Digital Asset Management (DAM) Database Analysis feature, which includes comprehensive metrics and insights into their DAM deployment for monitoring performance, storage utilization, media asset distribution, broken collection and media assets.

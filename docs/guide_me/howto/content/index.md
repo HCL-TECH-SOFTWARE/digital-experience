@@ -8,3 +8,5 @@ Learn how to obtain the UUID and Path of WCM content objects through the Linux b
 Learn how to identify new managed pages in HCL Digital Experience.  
 - **[How to work with JSF Portlets on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF Portlets on HCL DX pages.
+- **[How to use Java Server Pages (JSPs) in WCM](./useJSPinWCM.md)**  
+Learn how to use Java Server Pages (JSPs) in WCM.  

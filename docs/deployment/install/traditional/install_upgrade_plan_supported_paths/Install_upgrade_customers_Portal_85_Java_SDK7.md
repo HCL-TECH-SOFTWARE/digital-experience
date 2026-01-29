@@ -18,11 +18,11 @@ Make sure to also review the [detailed requirements article](https://support.hcl
 
 ## Getting the software
 
-Obtain the product software from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do){target="_blank"}.
+Obtain the product software from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878){target="_blank"}.
 
-1. Sign in to the HCL Software Licensing Portal.
+1. Sign in to the [MHS portal](https://my.hcltechsw.com/){target="blank"}.
 
 2. Identify the HCL DX (Portal and or WCM) 8.5 offering you currently have so you can obtain the correct corresponding HCL DX 9.5 offering package.
 
@@ -219,4 +219,4 @@ Starting with HCL Digital Experience Combined fix pack 12, you can change your S
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

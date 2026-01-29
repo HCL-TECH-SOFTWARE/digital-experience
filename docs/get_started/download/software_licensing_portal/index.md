@@ -11,9 +11,9 @@ New customers, or those with new deployments, must register at the MHS portal an
 
 ## Getting the software
 
-You can access product software from the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344){target="_blank"}. For more guidance, refer to the [What is My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} knowledge article.
+You can access product software from the [MHS portal](https://my.hcltechsw.com/){target="blank"}. For more guidance, refer to the [What is My HCLSoftware](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} knowledge article.
 
-HCL DX V9.5 for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){target="_blank"}. Customers with credentials to access entitled software in the HCL Software Licensing Portal can apply those credentials to optionally access the Docker components of DX v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information. 
+HCL DX V9.5 for deployment to Kubernetes environments can be accessed via Helm charts in the [HCL Harbor repository](https://hclcr.io/account/sign-in?redirect_url=/harbor/projects){target="_blank"}. Customers with credentials to access entitled software in the [MHS portal](https://my.hcltechsw.com/){target="blank"} can apply those credentials to optionally access the Docker components of DX v9.5 releases. For more information, see [Access and Deploy DX 9.5 Docker components from HCL Harbor](../harbor_container_registry.md) for more information.
 
 HCL DX software is available through several product offerings and associated software licenses. Depending on the product offering that you purchased, your product might include some or all of the following HCL DX and related programs:
 
@@ -45,7 +45,7 @@ You can also test the new HCL DX API Docker image and run it. Visit the [Experie
 
 ## Fresh full installation
 
-For a fresh full installation, follow the installation path by using the components that follow, which you can find in the [HCL Software Licensing Portal](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0073344) (FlexNet) with HCL DX software packages:
+For a fresh full installation, follow the installation path by using the components that follow, which you can find in the [MHS portal](https://my.hcltechsw.com/){target="blank"} with HCL DX software packages:
 
 - IBM® Installation Manager.
 - IBM WebSphere® Application Server 9.0.5.
