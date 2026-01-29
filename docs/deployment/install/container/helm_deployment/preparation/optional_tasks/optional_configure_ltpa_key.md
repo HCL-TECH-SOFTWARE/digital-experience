@@ -1,6 +1,6 @@
 # Configuring LTPA
 
-LTPA (Lightweight Third Party Authentication) is a single sign-on (SSO) mechanism used for authentication and session sharing across multiple applications. In the DX Core component, LTPA configuration is managed through Helm values and Kubernetes Secrets.
+Lightweight Third Party Authentication (LTPA) is a Single Sign-On (SSO) mechanism used for authentication and session sharing across multiple applications. In the DX Core component, LTPA configuration is managed through Helm values and Kubernetes Secrets.
 
 ## Configuration methods
 
