@@ -2,5 +2,5 @@
 
 This section will eventually include how-to articles about XMLAccess, DXClient, Web Content Manager (WCM) Support Tools portlet, and other tools-related content in HCL Digital Experience (DX).
 
-- **[How to export a single page individually or export page hierarchies?](./Export_Pages_xmlaccess.md)**  
-    Learn how to export pages via Manage Pages or xmlaccess
+- **[How to export a single page or a page hierarchy](./Export_Pages_xmlaccess.md)**  
+    Learn how to export pages via Manage Pages or xmlaccess.
