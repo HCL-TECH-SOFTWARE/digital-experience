@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This guide demonstrates how to use the WCM API to programmatically render a component. While most components are rendered through the WCM delivery engine automatically, using the Java API allows you to inject WCM content into custom JSPs, portlets, or external applications.
+This article demonstrates how to use the WCM API to programmatically render a component. While most components are rendered through the WCM delivery engine automatically, using the Java API allows you to inject WCM content into custom JSPs, portlets, or external applications.
 
 By creating a RenderingContext, you can force a component to render using a specific site path and library, regardless of the user's current location on the site.
 
@@ -16,6 +16,10 @@ By creating a RenderingContext, you can force a component to render using a spec
     The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ## Instructions
+
+The following lines of code can be used to demonstrate the WCM API usage. In the code a DocumentIDIterator first will be defined that points to a Portal component (`PZNCMPT`). Then a libraryPath and a sitePath will be specified that should be used later in the RenderingContext. As soon as the rendering context exists the iterator can go over all component-IDs and print out the results.  
+
+**Code sample:**
 
 ```java
 //Code to lookup a PZN Component and create Rendering Context then render the component in that context
