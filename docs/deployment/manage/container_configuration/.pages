@@ -12,6 +12,6 @@ nav:
     - monitoring
     - volume_resizing.md
     - configure_opensearch
-    
+    - update_invalidation_domain.md
 
   

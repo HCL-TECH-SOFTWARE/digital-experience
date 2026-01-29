@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DXClient - Style-sheet components for LiveSync
 - My HCLSoftware delivery portal
+- New How-to articles now available
 - User Session Reporting Tool - Updated the command to generate user session data usage in metrics format
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -16,7 +17,6 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - DAM - Access Control Cache
-- New How-to articles now available
 - Search V2 - Added supported CSS part attributes for each Atomic Component
 - Search V2 Authoring - New Authoring Search interface
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -53,6 +53,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
+### New How-to articles now available
+
+=== "Containers"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
+=== "On-Premises"
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+
 ### User Session Reporting Tool - Updated the command to generate user session data usage in metrics format
 
 === "Containers"
@@ -81,11 +89,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The DAM Access Control Cache improves performance by reducing redundant access control checks with the Ring API. It caches responses with a configurable Time-to-Live (TTL) mechanism and optimizes efficiency by handling in-flight requests. Caching is enabled by default with a TTL of 10 seconds. For more information, refer to [DAM Access Control Cache](../../manage_content/digital_assets/usage/managing_dam/dam_access_control_cache.md).
-
-### New How-to articles now available
-
-=== "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
 
 ### Search V2 - Added supported CSS part attributes for each Atomic Component
 
@@ -118,4 +121,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

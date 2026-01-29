@@ -13,4 +13,5 @@ nav:
     - optional_experimental_features.md
     - optional_install_new_search.md
     - optional_changing_portal_uri_in_kubernetes.md
+    - optional_configure_ltpa_key.md
     - ...
