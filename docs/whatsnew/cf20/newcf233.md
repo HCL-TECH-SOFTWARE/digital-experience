@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Configuring LTPA for DX Core
 - DAM - Database Analysis
 - Helm values updates
 - New HAProxy security configuration parameters
@@ -93,6 +94,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The HCL DX Help Center is now available in Brazilian Portuguese, Japanese, and Spanish. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
 
 ## Digital Experience 9.5 Container Version
+
+### Configuring LTPA for DX Core
+
+=== "Containers"
+    You can now enable Single Sign-On (SSO) capabilities for the Core component using Lightweight Third Party Authentication (LTPA). You can define the required keys and password directly in your `values.yaml` file for development environments, or reference an external Kubernetes Secret for production environments. For more information on how to configure LTPA, refer to [Configuring LTPA](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_ltpa_key.md).
 
 ### DAM - Database Analysis
 
