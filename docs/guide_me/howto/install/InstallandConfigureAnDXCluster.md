@@ -1,4 +1,4 @@
-# How to install and configure an HCL Digital Experience 9.5 cluster
+# How to install and configure an HCL DX 9.5 cluster
 
 ## Applies to
 

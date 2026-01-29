@@ -5,8 +5,6 @@ nav:
     - DeployOnAzure.md
     - SupportForRedHat.md
     - RunIIMAsDifferentUser.md
+    - InstallandConfigureAnDXCluster.md
     - InstallLDAPTools.md
     - installDXConsoleMode.md
-
-    
-    

@@ -1,4 +1,4 @@
-# Clone a Portal 8.5, 9.0, or 9.5 Environment without Portal Application Archive (PAA)
+# How to clone a DX 8.5, 9.0, or 9.5 environment without PAA
 
 ## Applies to
 
@@ -12,7 +12,6 @@ For clarity:
 
 - **Source system** – the environment you are copying from  
 - **Target system** – the environment you are copying to
-
 
 ## Instructions
 
