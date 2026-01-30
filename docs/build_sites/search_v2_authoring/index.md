@@ -21,14 +21,13 @@ To use Search V2 Authoring, ensure the following prerequisites are met:
 
 Refer to the following pages for more information:
 
-- **[Installing Search V2 Authoring](./installation.md)**<br>
+- **[Installing Search V2 Authoring](./installation.md)**  
 This section provides a high-level overview of the architecture and the steps to install, enable, and update Search V2 Authoring.
-
-- **[Accessing Search V2 Authoring](./access.md)**<br>
+- **[Accessing Search V2 Authoring](./access.md)**  
 This section provides the steps to access the Search V2 Authoring portlet.
-
-- **[Using Search V2 Authoring](./usage.md)**<br>
+- **[Using Search V2 Authoring](./usage.md)**  
 This section provides a step-by-step guide on generating search results using Search V2 Authoring.
-
-- **[Limitations of Search V2 Authoring](./limitations.md)**<br>
+- **[Limitations of Search V2 Authoring](./limitations.md)**  
 This section highlights the current limitations of Search V2 Authoring.
+- **[Troubleshooting Search V2 Authoring](./troubleshooting.md)**  
+This section provides information on how to troubleshoot issues with Search V2 Authoring.

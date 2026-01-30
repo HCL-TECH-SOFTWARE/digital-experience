@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf230.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf233.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
@@ -32,7 +32,7 @@ hide:
 
     ---
 
-    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms. 
+    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms.
 
     ---
 
@@ -68,7 +68,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"}
+    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"}
 
 -   :material-lifebuoy:{ .lg .middle } __HCL Support__
 

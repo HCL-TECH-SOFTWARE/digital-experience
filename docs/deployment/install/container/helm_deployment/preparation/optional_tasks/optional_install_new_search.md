@@ -72,7 +72,7 @@ To configure your search deployment, you have to prepare your `custom-search-val
 You can get a file with the default configuration using the following command:
 
 ``` sh
-# Command to extract values.ymal from Helm Chart
+# Command to extract values.yaml from Helm Chart
 helm show values hcl-dx-search.tar.gz > values.yaml
 ```
 

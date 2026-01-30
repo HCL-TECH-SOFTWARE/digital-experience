@@ -41,10 +41,8 @@ If custom mapping is required you must perform the following steps to map the us
         `./ConfigEngine.sh run-wcm-admin-task-member-fixer -DPortalAdminId=username -DPortalAdminPwd=password -DWasUserId=username -DWasPassword=password -Dlibrary="MyLibrary"`
 
     !!!note
-        An administrator user name and password is not required if you have already specified the portal administrator username and password using the PortalAdminId and PortalAdminPwd settings in the wkplc.properties file.
-
-    !!!note
-        Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
+        - An administrator user name and password is not required if you have already specified the portal administrator username and password using the `PortalAdminId` and `PortalAdminPwd` settings in the `wkplc.properties` file.
+        - Before you progress to the next step and run the member fixer task in fix mode, ensure that the report mode indicates that the updates will happen as you require. A summary of the updates will be shown by the command.
 
     A detailed report containing the updates that will be made for each item will be shown in the SystemOut.log file located in wp_profile_root\logs\HCL Portal and HCL Web Content Manager.
 
@@ -56,7 +54,7 @@ If custom mapping is required you must perform the following steps to map the us
 
     |Condition description|Command to correct condition|
     |---------------------|----------------------------|
-    |Nonexistent users or groups have alternate distinguished names (DNs) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command. <br/> -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.|
+    |Nonexistent users or groups have alternate Distinguished Names (DNs) available.|    -   To update references to nonexistent users or groups with the DN values that are mapped in the MemberFixerModule.properties file, append -DaltDn=update to the command. <br/> -   To remove references to nonexistent users or groups append `-DaltDn=remove` to the command.|
     |If users or groups have invalid distinguished names (DNs) the report lists these as "invalid". This means the distinguished name doesn't exist and there is no alternate distinguished name available.|    -   To remove references to users and groups that have invalid distinguished names append -DinvalidDn=remove to the command. <br/> -   To update references to users and groups that have invalid distinguished names with the portal administrator user distinguished name, append -DinvalidDn=update to the command.|
     |Users or groups have been found with mismatched unique IDs.|    -   To fix the mismatched unique IDs append -DmismatchedId=update to the command. <br/> -   To remove references to users and groups with mismatched unique IDs append -DmismatchedId=remove to the command.|
 
@@ -123,6 +121,15 @@ When running this task on a virtual portal you must add either `-DVirtualPortalH
 ## Parameters to set for large repositories
 
 To prevent your session timing out before the task has finished, you can append the option `-DsessionTimeOut=timeOut` to the command. This sets the number of seconds in which the task must complete before its session will timeout. The default session timeout is 14,440 seconds, which is 4 hours. For large repositories you should increase this setting. For example: `-DsessionTimeOut=36000`, which is 10 hours.
+
+## Setting DNs to specify lowercase or mixed case
+
+You can control how the DN will be stored in DX after the member fixer procedure is complete by setting the `-Dfix_case` parameter: 
+
+- Set the value to `lower` to change all DX references to lowercase.
+- Set the value to `update` to change all DX references to match exactly what the LDAP returns.
+
+Any DN that gets updated by the member fixer task will be stored according to this parameter value.
 
 ## Examples
 

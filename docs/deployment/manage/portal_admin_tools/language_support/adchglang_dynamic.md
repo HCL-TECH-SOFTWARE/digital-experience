@@ -2,7 +2,10 @@
 
 Allow users to change the language while they are logged in to the portal.
 
-If you want your users to be able to change the language during the session, use the following command provided by HCL Digital Experience:
+!!!note
+     These changes should be made to your custom theme instead of an out-of-the-box theme to prevent any changes from being overwritten when you upgrade.
+
+If you want your users to be able to change the language during the session, use the following command provided by HCL Digital Experience (DX):
 
 ```
 <portal-navigation:url command="ChangeLanguage">

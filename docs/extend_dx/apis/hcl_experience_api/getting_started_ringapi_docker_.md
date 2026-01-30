@@ -4,21 +4,24 @@ Follow these steps to get started with the HCL Experience API.
 
 ## Getting Started
 
-1.  Download the HCL Experience API installation binaries. Log in to the [HCL Software Licensing Portal](https://www.hcltech.com/software/support/release){target="_blank"} to download the files from your HCL Digital Experience (DX) entitlements.
-2.  Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example (`hcl-dx-kubernetes-v95-CF19.zip`).
-3.  Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
-4.  Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
+1. Download the HCL Experience API installation binaries. Log in to the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"} to download the files from your HCL Digital Experience (DX) entitlements.
+
+2. Refer to the [Image listing and Docker install](../../../deployment/install/container/image_list.md) Help Center topic for the latest list of container images and their file names, available for download, for example (`hcl-dx-kubernetes-v95-CF19.zip`).
+
+3. Extract the HCL Experience API installation binaries and, within a terminal, navigate to the extracted folder.
+
+4. Verify if the extracted folder contains the Experience API images, for example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, `hcl-dx-experience-api-sample-ui-v0.2.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`, and readme (`README.md`) files.
 
     !!! note
         As HCL DX releases updated Experience API images, the image version number increases. For example, `hcl-dx-ringapi-image-v1.4.0.**<YOUR\_BUILD\_NUMBER\>**.tar.gz`.
 
-5.  Load the HCL Experience API image using the following command:
+5. Load the HCL Experience API image using the following command:
 
     ```
     docker load --input hcl-dx-ringapi-image-v1.4.0.<YOUR_BUILD_NUMBER>.tar.gz
     ```
 
-6.  Verify if the Docker image is loaded using the following command:
+6. Verify if the Docker image is loaded using the following command:
 
     ```
     docker image ls
@@ -31,32 +34,34 @@ Follow these steps to get started with the HCL Experience API.
     
     ```
 
-7.  Execute the following Docker command to bring up the HCL Experience API Docker image:
+7. Execute the following Docker command to bring up the HCL Experience API Docker image:
 
     ```
     docker run -it -p 3000:3000 -p 3001:3001 hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
     ```
 
-    -   You may modify the most common values by passing in the parameters as follows:
+    - You may modify the most common values by passing in the parameters as follows:
 
         ```
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
         ```
 
-    -   If you wish to use `https` to connect to HCL DX 9.5 for security reasons, the command to start would be:
+    - If you wish to use `https` to connect to HCL DX 9.5 for security reasons, the command to start would be:
 
         ```
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e PORTAL_SSL_ENABLED=true hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
         ```
 
-    -   If you wish to update the `CORS_ORIGIN`, the command to start would be:
+    - If you wish to update the `CORS_ORIGIN`, the command to start would be:
 
         ```
         docker run -it -p 3000:3000 -p 3001:3001 -e PORTAL_HOST=172.16.1.4 -e PORTAL_PORT=30015 -e CORS_ORIGIN="http://localhost:3002, http://localhost:3003" hcl/dx/ringapi:v1.4.0.<YOUR_BUILD_NUMBER>
         ```
 
-8.  Verify if `http://<HOST>:<PORT>dx/api/core/v1/explorer` is accessible and shows the HCL Experience explorer (example: http://127.0.0.1:3000/dx/api/core/v1/explorer).
-9.  Verify if the GraphQL application is accessible through URL `http://<HOST>:<GRAPHQL_PORT>dx/api/core/v1/graphql` (example: http://127.0.0.1:3001/dx/api/core/v1/graphql).
+8. Verify if `http://<HOST>:<PORT>dx/api/core/v1/explorer` is accessible and shows the HCL Experience explorer (example: http://127.0.0.1:3000/dx/api/core/v1/explorer).
+
+9. Verify if the GraphQL application is accessible through URL `http://<HOST>:<GRAPHQL_PORT>dx/api/core/v1/graphql` (example: http://127.0.0.1:3001/dx/api/core/v1/graphql).
+
 10. To verify if the HCL Experience API is properly connected to HCL DX 9.5, please run the following command. Login credentials must be an authenticated username and password:
 
     ```
@@ -69,12 +74,11 @@ Follow these steps to get started with the HCL Experience API.
     {"statusCode":200,"message":"Login Successful","data":{"UId":"(USER_NAME)"}}
     ```
 
-
 ## Limitations
 
 The following limitations exist in HCL Experience API:
 
--   When uploading a file or an image via Experience API or Content Composer, the actual file uploaded may be larger than expected when processing through Experience API or Content Composer. This is because REST data in Experience API must be text-based, which is why when uploading files via Experience API or Content Composer, **Base64** is used to convert binary content before sending it to HCL Portal. The size bloat-up caused by the Base-64 transformation causes the encoded file or image to be approximately **30% larger** than the file size on disk.
+- When uploading a file or an image via Experience API or Content Composer, the actual file uploaded may be larger than expected when processing through Experience API or Content Composer. This is because REST data in Experience API must be text-based, which is why when uploading files via Experience API or Content Composer, **Base64** is used to convert binary content before sending it to HCL Portal. The size bloat-up caused by the Base-64 transformation causes the encoded file or image to be approximately **30% larger** than the file size on disk.
 
 ## REST Service Access Levels
 
@@ -87,5 +91,3 @@ If you wish to use the dxrest (in addition to mydxrest) for the REST APIs, you n
 For some operations such as searching for content, the **Editor** role is required. Editor role might also be required for some endpoints of the Ring core wcm REST API.
 
 ![](../../../images/open_api_resources_permission.png)
-
-

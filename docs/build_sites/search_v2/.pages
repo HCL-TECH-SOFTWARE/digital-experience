@@ -5,5 +5,5 @@ nav:
     - Accessing Search V2: access.md
     - Using Search V2: usage.md
     - Limitations of Search V2: limitations.md
-    - Components of Search V2: components.md
+    - Components of Search V2: components
     - Customizations for Search V2: customizations.md

@@ -108,12 +108,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New sizing guidance for rendering in a medium configuration
 
 === "Containers"    
-    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/guides/performance_tuning/kubernetes/rendering_medium_config.md).
+    Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/guides/performance_tuning/kubernetes/Kubernetes_Deployments/rendering_medium_config.md).
 
 ### Documentation for using Logstash to push pod logs to OpenSearch
 
 === "Containers"
-    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/guides/performance_tuning/kubernetes/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
+    As applications scale, managing Kubernetes logs is important for monitoring, debugging, and compliance. The new topic [Using Logstash to push pod logs to OpenSearch](../../guide_me/guides/performance_tuning/kubernetes/Kubernetes_Deployments/logstash_opensearch.md) provides the steps for configuring Logstash and Filebeat to have Kubernetes pod logs forwarded to OpenSearch, an open source search and analytics engine.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -127,4 +127,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

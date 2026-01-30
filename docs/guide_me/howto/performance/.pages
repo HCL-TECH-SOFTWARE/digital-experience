@@ -2,3 +2,5 @@ title: Performance
 
 nav:
     - index.md
+    - DB2DatabasePerformance.md
+    - WarmUpPortalSite.md

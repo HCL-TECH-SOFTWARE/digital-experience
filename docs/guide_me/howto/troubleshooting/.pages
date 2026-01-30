@@ -2,5 +2,8 @@ site_name: Troubleshooting
 
 nav:
 - index.md
-- web-browser
+- Caching: caching
+- Databases and Datasources: database
+- Web-browser: web-browser
 - collectDataOpenShiftAndK8.md
+
