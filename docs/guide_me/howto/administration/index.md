@@ -20,8 +20,6 @@ Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when ac
 Learn about long Portal URLs and how to decode them.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
-- **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
-Learn how to tune WCM to reduce your query time.  
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
