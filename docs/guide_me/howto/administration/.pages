@@ -10,7 +10,6 @@ nav:
     - APIToCountWCMItems.md
     - DecodeLongURLs.md
     - ExpediteAsyncDeletes.md
-    - ImproveQueryPerformance.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
