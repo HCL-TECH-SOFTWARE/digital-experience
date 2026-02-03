@@ -21,6 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Configuring LTPA for DX Core
 - DAM - Database Analysis
+- DAM - New required configuration to enable Indexing
 - Helm values updates
 - New HAProxy security configuration parameters
 - WAS, JDK, and iFix versions
@@ -104,6 +105,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Database Analysis feature in Digital Asset Management (DAM) provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
+
+### DAM - New required configuration to enable Indexing
+
+=== "Containers"
+    Starting from CF233, to enable DAM Indexing, you need to set the `damIndexing` parameter to `true` in your `values.yaml` file and ensure all required `searchMiddleware` configurations are set. For more information, refer to [Adding OpenSearch middleware configurations and enabling DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#adding-opensearch-middleware-configurations-and-enabling-dam-indexing).
 
 ### Helm values updates
 

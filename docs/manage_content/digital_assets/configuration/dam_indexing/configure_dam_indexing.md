@@ -6,9 +6,9 @@ This page contains instructions on how to add configurations of the OpenSearch m
 
 OpenSearch must be enabled.
 
-## Adding OpenSearch middleware configurations to enable DAM Indexing
+## Adding OpenSearch middleware configurations and enabling DAM Indexing
 
-Go to the `values.yaml` file and refer to the following sample Helm values to add configurations of OpenSearch middleware:
+Go to the `values.yaml` file and refer to the following sample Helm values to configure OpenSearch middleware and enable DAM Indexing:
 
 ```yaml
 configuration:
@@ -32,7 +32,13 @@ configuration:
         # Content Source ID of DAM
         # This is needed for indexing to work in DAM
         damContentSourceId: ""
+        # Enable/Disable DAM Indexing
+        damIndexing: true
 ```
+
+!!! important "Required Configuration"
+    To enable DAM Indexing, ensure all required `searchMiddleware` configurations are set and `damIndexing: true` is specified in your `values.yaml` file. The `damIndexing` flag is now part of the `searchMiddleware` configuration.
+
 
 You can create the `damContentSourceId` by using the `POST` `/dx/api/search/v2/contentsources` endpoint from the OpenSearch REST API:
 
