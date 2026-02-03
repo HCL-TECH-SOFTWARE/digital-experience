@@ -42,19 +42,19 @@ openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=US/O=ORG/OU=UNIT/C
 # Admin cert for OpenSearch configuration
 openssl genrsa -out admin-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
-openssl req -new -key admin-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=A" -out admin.csr
+openssl req -new -key admin-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Admin" -out admin.csr
 openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730
 
 # Node cert for inter node communication
 openssl genrsa -out node-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out node-key.pem
-openssl req -new -key node-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch-node" -out node.csr
+openssl req -new -key node-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Node" -out node.csr
 openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730
 
 # Client cert for application authentication
 openssl genrsa -out client-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in client-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out client-key.pem
-openssl req -new -key client-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch-client" -out client.csr
+openssl req -new -key client-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Client" -out client.csr
 openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730
 
 # Create kubernetes secrets
@@ -64,6 +64,48 @@ kubectl create secret generic search-client-cert --from-file=client.pem --from-f
 ```
 
 Adjust the `YOUR_NAMESPACE` placeholder according to your Kubernetes Namespace in which you have DX and search deployed. If you do not perform this step, the OpenSearch nodes are not initialized and the search middleware cannot communicate with them.
+
+### Extracting and formatting the DN for OpenSearch
+
+After generating a certificate (e.g., admin.pem, node.pem, client.pem), you must extract the Distinguished Name (DN) in the format required by OpenSearch.
+
+To extract the DN from a certificate in the correct OpenSearch format, run:
+
+```sh
+openssl x509 -in <certificate-file>.pem -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+```
+
+**Example:**
+
+Run 
+
+```sh
+# Admin certificate DN
+kubectl get secret search-admin-cert -n dxns -o jsonpath='{.data.admin\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+
+# Node certificate DN
+kubectl get secret search-node-cert -n dxns -o jsonpath='{.data.node\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+
+# Client certificate DN (this is what the middleware uses)
+kubectl get secret search-client-cert -n dxns -o jsonpath='{.data.client\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+```
+
+This will output the DN in OpenSearch format (most specific field first):
+
+```
+CN=Admin,OU=IT,O=LAB,C=PH
+CN=Node,OU=IT,O=LAB,C=PH
+CN=Client,OU=IT,O=LAB,C=PH
+```
+
+**Important:** 
+- The `-nameopt RFC2253` flag ensures consistent output across all OpenSSL versions
+- The output format is already correct for OpenSearch (CN first, C last)
+- Ensure there are **NO SPACES** after commas (e.g., `CN=Admin,OU=IT` not `CN=Admin, OU=IT`)
+- Even a single space or typo will cause authentication failures
+
+Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section below.
+
 
 ## Preparing the `custom-search-values.yaml`
 
@@ -97,6 +139,30 @@ images:
 ```
 
 Configure other parameters inside the `custom-search-values.yaml` of the search deployment based on your requirements. The default out-of-the-box deployment is a minimal deployment with one replica per service.
+
+### OpenSearch configuration settings
+
+You can configure Opensearch related settings such as certificate admin DN.
+
+See the section above on [Extracting and formatting the DN for OpenSearch](#extracting-and-formatting-the-dn-for-opensearch) for instructions on how to obtain and format this value.
+
+```yaml
+configuration:
+  openSearch:
+    security:
+      adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US"
+```
+
+If you need to specify multiple DNs, provide each DN in the required OpenSearch format and separate them with a semicolon (`;`).
+
+
+```yaml
+configuration:
+  openSearch:
+    security:
+      adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US;CN=Client,OU=UNIT,O=ORG,C=US;CN=Node,OU=UNIT,O=ORG,C=US"
+```
+
 
 ### Security settings  
 
