@@ -24,28 +24,35 @@ Configure the **WCM SearchService** search properties from the WebSphere Integra
 
         Use this parameter to specify extra elements to crawl when searching for metadata.
 
-        The format for this parameter value is: `elementName,key1`
+Metadata fields such as categories and keywords are not treated as content text by default. They must be explicitly enabled through the WCM SearchService configuration to ensure they are included in search results. To enable these fields, set the `SearchService.MetaFields` property as follows:
+```
+SearchService.MetaFields=categories,categories;keywords,keywords
+```
 
-        To specify more than one metadata field maps, use the following format:
+The format for this parameter value is: `elementName,key1`
 
-        ```
-        elementName1,key1;elementName2,key2;elementName3,key3
-        ```
+To specify more than one metadata field maps, use the following format:
 
-        For example, to crawl for metadata in a text element named `metaText`:
+```
+elementName1,key1;elementName2,key2;elementName3,key3
+```
 
-        ```
-        SearchService.MetaFields=metaText,meta
-        ```
+For example, to crawl for metadata in a text element named `metaText`:
 
-        -   `elementName` is the name of the element you would like to search for metadata. Any valid element with that name in a searchable site area or content item is crawled.
-        -   `key` is the key specified in an element tag that is used as part of a search element design. In the previous example, the key `meta` is used. To render the content of the `metaText` element in a search element design, use the following tag: `<Element context="autoFill" type="content" key="meta"/>`
+```
+ SearchService.MetaFields=metaText,meta
+```
 
-        !!! note
-            -   Only text elements and short text elements can be searched.
-            -   Only site areas that are configured to be searchable are crawled.
+-   `elementName` is the name of the element you would like to search for metadata. Any valid element with that name in a searchable site area or content item is crawled.
+-   `key` is the key specified in an element tag that is used as part of a search element design. In the previous example, the key `meta` is used. To render the content of the `metaText` element in a search element design, use the following tag: `<Element context="autoFill" type="content" key="meta"/>`
+
+For more details on keywords and categories on search, including address with API, refer to [Configuring the Search Sitemap portlet for search by external search engines](../../../build_sites/search/cfg_dx_search/cfg_search_by_internetsearch/srtcfgsitemap1.md).
+
+!!! note
+    -   Only text elements and short text elements can be searched.
+    -   Only site areas that are configured to be searchable are crawled.
             
-    -   **SearchService.SearchSeed.ExcludeFileAttachments**
+- **SearchService.SearchSeed.ExcludeFileAttachments**
 
         Set this parameter to `true` to prevent file resource component attachments from being included in the search results.
         
