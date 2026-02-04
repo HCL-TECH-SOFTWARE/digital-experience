@@ -1,4 +1,4 @@
-# New and migrated articles
+# New and migrated articles 
 
 This section contains the newly created and migrated how-to articles. The articles are arranged by Cumulative Fix (CF) and category.
 
