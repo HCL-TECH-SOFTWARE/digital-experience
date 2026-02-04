@@ -37,8 +37,7 @@ configuration:
 ```
 
 !!! important "Required Configuration"
-    As a service provider to DX, `searchMiddleware` has several configuration settings that can help to manage the search functionality within DX.  If you are using DAM and need to ensure your DAM content is being indexed for use with the DX Picker or your apis, make sure that you keep the `damIndexing` flag set to true.
-
+    As a service provider to DX, `searchMiddleware` has several configuration settings that can help you manage the search functionality within DX. If you are using DAM and need to ensure your DAM content is being indexed for use with the DX Picker or your APIs, ensure to keep the `damIndexing` flag set to `true`.
 
 You can create the `damContentSourceId` by using the `POST` `/dx/api/search/v2/contentsources` endpoint from the OpenSearch REST API:
 
