@@ -18,7 +18,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Moved|Troubleshooting|[How to collect a Fiddler trace (HAR-file)](../troubleshooting/web-browser/collecting_fiddler_har.md)|
 
 !!!note
-    The Troubleshooting section has been moved to a [new location](../troubleshooting/).
+    The Troubleshooting section has been moved to a [new location](../troubleshooting/index.md).
 
 ## CF232
 
