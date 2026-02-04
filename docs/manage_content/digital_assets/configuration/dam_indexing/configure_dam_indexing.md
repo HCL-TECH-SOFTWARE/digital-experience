@@ -37,7 +37,7 @@ configuration:
 ```
 
 !!! important "Required Configuration"
-    To enable DAM Indexing, ensure all required `searchMiddleware` configurations are set and `damIndexing: true` is specified in your `values.yaml` file. The `damIndexing` flag is now part of the `searchMiddleware` configuration.
+    As a service provider to DX, `searchMiddleware` has several configuration settings that can help to manage the search functionality within DX.  If you are using DAM and need to ensure your DAM content is being indexed for use with the DX Picker or your apis, make sure that you keep the `damIndexing` flag set to true.
 
 
 You can create the `damContentSourceId` by using the `POST` `/dx/api/search/v2/contentsources` endpoint from the OpenSearch REST API:
