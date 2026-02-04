@@ -1,8 +1,8 @@
-# Configuring Web Content Manager search options
+# Configuring Web Content Manager search options 
 
 Configure the **WCM SearchService** search properties from the WebSphere Integrated Solutions Console to manage how the search service works with Web Content Manager search forms.
 
-1.  Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers**.
+1.  Go to **Resources** \> **Resource Environment** \> **Resource Environment Providers**. 
 
 2.  Select **WCM SearchService, Custom** properties.
 
@@ -51,6 +51,58 @@ For more details on keywords and categories on search, including address with AP
 !!! note
     -   Only text elements and short text elements can be searched.
     -   Only site areas that are configured to be searchable are crawled.
+
+## Enable indexing for WCM categories and keywords
+
+In HCL Digital Experience Search V1, WCM categories and keywords are **not indexed by default** because they are classified as metadata rather than content text. You must manually enable these fields in the **WCM SearchService** configuration.
+
+### Step 1: Access the WCM SearchService configuration
+1. Open the **WebSphere Integrated Solutions Console**.  
+2. Navigate to:  
+   **Applications > WebSphere enterprise applications > WP ConfigService > Resource environment providers**  
+3. Select **WCM SearchService**.
+
+### Step 2: Configure metadata fields for indexing
+To tell the search service which metadata to include, update the `SearchService.MetaFields` property.
+
+In the **Custom properties** section, add or update the property:
+
+| Property name          | Property value                           |
+|------------------------|-----------------------------------------|
+| SearchService.MetaFields | categories,categories;keywords,keywords |
+
+**Mapping explanation:**  
+- The first value = WCM internal name  
+- The second value = search index field name  
+- You can rename the index field, but keeping the same name is standard practice.
+
+### Step 3: Enable faceting on metadata (optional)
+If you plan to filter or facet by categories or keywords, also define the facet fields:
+
+| Property name                  | Property value       |
+|--------------------------------|--------------------|
+| SearchService.MetaFieldsToFacet | categories;keywords |
+
+### Step 4: Restart and rebuild
+Changes to **WCM SearchService** do not take effect until the system is refreshed and the search collection is rebuilt.
+
+1. **Restart the portal** – a full restart of HCL Digital Experience is required.  
+2. **Rebuild the search collection**:  
+   - Go to **Administration > Manage Search**  
+   - Delete or reset the existing WCM search collection  
+   - Recreate or perform a full crawl of the collection  
+
+!!! warning
+If you do not rebuild the search collection, categories and keywords will **not appear** in the search index, even if the configuration is correct.
+
+### Search V1 results and query logic
+After reindexing, categories and keywords are available as metadata fields. You can query them using:  
+- DX Search REST V1 API  
+- Search Center  
+- Custom search components  
+
+**Example query logic (conceptual):**  
+To find documents within a specific category, target the `categories` metadata field defined in Step 2:
             
 - **SearchService.SearchSeed.ExcludeFileAttachments**
 

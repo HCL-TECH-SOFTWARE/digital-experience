@@ -1,4 +1,4 @@
-# Getting started with the REST service for Web Content Manager
+# Getting started with the REST service for Web Content Manager 
 
 Before getting started with the REST service for Web Content Manager you should become familiar with how it works and how to use it.
 
@@ -60,8 +60,15 @@ The same access control checks also apply to the HCL Digital Experience Version 
 |Editor|Users assigned the "editor" role can:-   work with web content items and run defined queries. <br>-   Run custom queries through the following path: `/wcmrest/query`|
 |Manager|Users assigned the "manager" role can:-   work with web content items and run defined queries. <br>-   Run custom queries through the following path: `/wcmrest/query` <br>-   create, read, update, and delete defined queries.|
 
+---
+# Sample URLs for WCM REST Service 
 
-# WCM REST API Background and Queries
+**Applies to:** HCL Digital Experience 8.5 and later
+
+## Introduction
+Use these sample URLs to get started with the WCM REST API. For additional information, see the referenced sections in the HCL Digital Experience Help Center.
+
+## WCM REST API Background and Queries
 
 Use the following configuration settings and query examples to interact with the Web Content Manager (WCM) REST service.
 
@@ -78,20 +85,21 @@ To debug WCM REST service issues, use the following trace string:
 ```text
 com.ibm.workplace.wcm.rest.*=all
 ```
-# WCM Component Management
+## WCM Component Management
 
 Use the following endpoints and request formats to create or update library components in WCM.
 
 ---
 
-## Create a File Resource Component
+## Creating a File Resource Component
 
 Creating a file resource requires a **two-step process**: first, create the component container, then upload the binary file.
 
-### Step 1: Create the Component
+### Create the Component
 
 Send a **POST request** to the following URL:
 `/wps/mycontenthandler/wcmrest/LibraryFileComponent`
+
 **Request body:**
 
 ```xml
@@ -105,7 +113,7 @@ Send a **POST request** to the following URL:
 !!! tip "Tip"
     Replace `[library-uuid]` with the UUID of the target library where the component will be created.
 
-# WCM Queries
+### WCM Queries
 
 The WCM REST service supports standard query parameters and predefined **Defined Queries** for complex searches.
 
@@ -152,7 +160,7 @@ Use the following parameters to filter or sort WCM items.
 | `workflowid` | Query items using a specific workflow | `/query?workflowid=wcmrest:8d25860b-7a5c-4015-9cd5-bdcc60ce14bb` |
 | `workflowstageid` | Query items active in a specific workflow stage | `/query?workflowstageid=wcmrest:18cfc80c-a490-4d75-9057-fed3db89de53` |
 
-# Defined Queries
+## Defined Queries
 
 Defined queries are preconfigured searches stored in XML and bound to a specific URI. They allow administrators to perform complex queries and control allowable filters using a whitelist.
 
@@ -231,7 +239,7 @@ To retrieve the settings and metadata of a library, send a `GET` request to the 
 GET /wps/mycontenthandler/wcmrest/Library/[library-id]
 Accept: application/atom+xml
 ```
-Example response
+**Example response**
 
 The response returns an Atom <entry> containing the library metadata, including link relations for editing, deleting, and managing access control:
 ```xml
@@ -275,6 +283,7 @@ To create a new library, send a `POST` request to the library URI. Include an At
 POST /wps/mycontenthandler/wcmrest/Library
 Content-Type: application/atom+xml
 ```
+
 **Request body example**
 ```xml
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
@@ -284,6 +293,7 @@ Content-Type: application/atom+xml
   <wcm:language>en</wcm:language>
 </entry>
 ```
+
 #### Read library metadata
 
 To retrieve the settings and metadata of a library, send a GET request to the library’s URI.
@@ -291,8 +301,7 @@ To retrieve the settings and metadata of a library, send a GET request to the li
 **Request**
 `GET /wps/mycontenthandler/wcmrest/Library/[library-id]`
 
-**Response
-**
+**Response**
 The service returns an Atom entry containing link relations for editing, deleting, and managing access control.
 
 ### Update a library
@@ -318,11 +327,11 @@ Content-Type: application/atom+xml
 
 You can delete a library using either synchronous or asynchronous methods.
 
-### Synchronous delete
+#### Synchronous delete
 Send a DELETE request to the library URI. The service returns a 200 OK status when the deletion completes.
 `DELETE /wps/mycontenthandler/wcmrest/Library/[library-id]`
 
-### Asynchronous delete
+#### Asynchronous delete
 For large libraries, append the synchronous=true parameter to trigger a background task.
 `DELETE /wps/mycontenthandler/wcmrest/Library/[library-id]?synchronous=true`
 
@@ -348,7 +357,7 @@ Content-Type: application/atom+xml
   <wcm:authoringTemplateId>unique-template-id</wcm:authoringTemplateId>
 </entry>
 ```
-**Read content template**
+### Read content template
 To retrieve the metadata and structure of a specific template, send a GET request to the template’s URI.
 `GET /wps/mycontenthandler/wcmrest/ContentTemplate/[template-id]`
 
@@ -356,12 +365,12 @@ To retrieve the metadata and structure of a specific template, send a GET reques
 
 To update a template’s metadata or structure, send a PUT request with the updated Atom entry.
 
-#### Request
+**Request**
 
 ```httpPUT /wps/mycontenthandler/wcmrest/ContentTemplate/[template-id]
 Content-Type: application/atom+xml
 ```
-#### Request body example
+**Request body example**
 ```xml
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
   <title>Updated Content Template</title>
@@ -390,7 +399,7 @@ To update default values, such as workflow or presentation template, send a `PUT
 PUT /wps/mycontenthandler/wcmrest/ContentTemplate/[item-uuid]/Prototype
 Content-Type: application/atom+xml
 ```
-#### Request body example
+ **Request body example**
 ```xml
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
   <title>Example Prototype Update</title>
@@ -439,6 +448,7 @@ Use the following properties to control how new content items are created from a
 - `<wcm:enableWorkflow>`: `true` to enforce a workflow on new items, `false` otherwise.  
 - `<wcm:defaultState>`: The initial state for new items, for example, `DRAFT` or `PUBLISHED`.  
 - `<wcm:allowChildCreation>`: `true` if content items can have children created under them.
+
 !!! tip
     Replace [item-uuid] with the UUID of the content template. Adjust values according to the desired behavior for new content items.
 
@@ -451,7 +461,7 @@ Use the following properties to control how new content items are created from a
 | placement          | Determines where the item appears in the list.     | `FIRST_CHILD`, `LAST_CHILD`      |
 | location-options   | Restricts where items can be created.              | `ALL_AVAILABLE`, `SELECTED`      |
 
-#### Update properties example:
+ **Update properties example:**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <content-properties xmlns="http://www.ibm.com/xmlns/wcm/8.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -483,6 +493,7 @@ To create a template, send a `POST` request to the `SiteAreaTemplate` endpoint w
 `/wps/mycontenthandler/wcmrest/SiteAreaTemplate`
 **Content-Type**:  
 `application/atom+xml`
+
 **Example request body**:  
 ```xml
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
@@ -533,7 +544,7 @@ Prototype properties control specific behaviors, such as workflow enablement or 
   <wcm:allowChildCreation>true</wcm:allowChildCreation>
 </properties>
 ```
-# Read a site area template
+### Read a site area template
 
 To retrieve metadata and management links for an existing site area template, send a `GET` request.
 
@@ -545,7 +556,7 @@ The response returns an Atom entry containing several management links:
 - **Prototype** – Access the default values for site areas created from this template.  
 - **New Sitearea** – A helper link to create a new site area based on this template.
 
-# Delete a site area template
+### Delete a site area template
 
 To remove a site area template, send a `DELETE` request to the template's UUID.
 
@@ -559,14 +570,13 @@ To remove a site area template, send a `DELETE` request to the template's UUID.
 
 Use the Web Content Manager (WCM) REST service to create, read, update, and delete presentation templates.
 
-## Create a presentation template
+### Create a presentation template
 
 To create a presentation template, send a `POST` request to the template endpoint with an Atom entry representing the template metadata.
 
 **URL**:  `/wps/mycontenthandler/wcmrest/PresentationTemplate`
 **Content-Type**:  `application/atom+xml`
 **Example request body**:
-
 ```xml
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
   <title>My Presentation Template</title>
@@ -575,7 +585,7 @@ To create a presentation template, send a `POST` request to the template endpoin
 </entry>
 ```
 
-## Read a presentation template
+### Read a presentation template
 
 To retrieve the metadata and link relations for an existing template, send a `GET` request to the template URI.
 
@@ -587,7 +597,7 @@ The response returns an Atom entry that includes management links, such as:
 - `versions` – access version history  
 - `attachments` – manage associated files  
 
-## Update a presentation template
+### Update a presentation template
 
 You can update either the template metadata (title, description) or the template's HTML content (raw data).
 
@@ -680,7 +690,6 @@ You can simplify site area creation by using a "skeleton" representation based o
    Send a GET request to the template's new-sitearea endpoint:`GET /wps/mycontenthandler/wcmrest/SiteAreaTemplate/[template-uuid]/new-sitearea`
 2. **Complete the data**  
 Fill in the empty fields in the returned XML, such as title, name, description, or links.
-
 3. **Create the item**  
 POST the completed XML to the `/SiteArea` endpoint: `POST /wps/mycontenthandler/wcmrest/SiteArea`
 ---
@@ -723,8 +732,6 @@ Use POST requests to move items through workflow operations such as:
 - Reject
 - Publish
 - Expire
-
-## Workflow actions
 
 The following endpoints allow you to manage the workflow of a content item using the WCM REST API:
 
@@ -800,7 +807,7 @@ You must include a library link to define where the stage is stored.
 **URL:**  `/wps/mycontenthandler/wcmrest/WorkflowStage`
 **Headers:**  `Content-Type: application/atom+xml`
 
-### Request body example
+**Request body example**
 
 The following example creates a workflow stage with joint approval enabled and role-based access defined:
 
@@ -896,7 +903,7 @@ To create a category, send a `POST` request to the category endpoint.
 You must include a parent link relation to define where the category belongs (for example, a taxonomy or another category).
 
 **URL:**  `/wps/mycontenthandler/wcmrest/Category`
-### Request body example
+**Request body example**
 
 The following example creates a category under an existing taxonomy:
 
@@ -911,7 +918,7 @@ The following example creates a category under an existing taxonomy:
 ```
 Replace [taxonomy-uuid] with the UUID of the taxonomy or parent category.
 
-### Response
+**Response:**
 
 If the category is created successfully, the service returns the following status:
 `HTTP/1.1 201 Created`
@@ -991,7 +998,7 @@ You can read localized titles and descriptions using the `lang` attribute with a
 
 !!! note
     When a text provider is enabled, the REST service can only read the localized title and description.
-     update these values, you must modify the text provider plug-in directly.
+    Update these values, you must modify the text provider plug-in directly.
 
 ## Access control management
 
@@ -1035,7 +1042,7 @@ To add a user or group to a specific role, send a `POST` request to the Member c
 POST ac:member:[roleTypeName]@oid:[resourceID]
 Content-Type: application/atom+xml
 ```
-#### Example payload:
+**Example payload:**
 ```xml
 <atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
   <atom:content type="application/xml">
@@ -1046,16 +1053,16 @@ Content-Type: application/atom+xml
 ```
 You can identify a principal using ac:id (ObjectID), ac:DN (Distinguished Name), or ac:email.
 
-### emove a member from a role
+### Remove a member from a role
 
 To remove a membership, send a DELETE request to the specific Member URI.
 `DELETE ac:member:oid:[principalID]@role:[roleTypeName]@oid:[resourceID]`
 
-### Resource configuration
+## Resource configuration
 
 The Resource config feed manages ownership and inheritance/propagation blocks.
 
-## Update resource configuration
+### Update resource configuration
 
 To modify the owner or role blocks, send a `PUT` request.
 
@@ -1064,8 +1071,7 @@ To modify the owner or role blocks, send a `PUT` request.
 - `modmerge`: Adds role blocks to existing ones and changes the owner.
 - `update` (default): Replaces all existing blocks and owners.
 
-### Example payload
-
+**Example payload:**
 ```xml
 <atom:entry xmlns:atom="http://www.w3.org/2005/Atom"
             xmlns:ac="http://www.ibm.com/xmlns/prod/lotus/access-control/v1.0">
@@ -1120,35 +1126,34 @@ To retrieve a feed of an item's versions, send a `GET` request to the versions U
 To view the full details of a past version:
 `GET /wps/mycontenthandler/wcmrest/item/[item-uuid]/version/[version-name]`
 
-## Recent and favorite items
+### Recent and favorite items
 
 You can access and manage lists of items that have been recently accessed or marked as favorites.
 
-Recent items
+#### Recent items
 
 Access a list of your recently viewed or edited items:
 `GET /wps/mycontenthandler/wcmrest/recent-items`
 
-### avorite items
+#### avorite items
 
 Access your saved favorites list: `GET /wps/mycontenthandler/wcmrest/favorite-items`
 
-#### Manage favorites
-Manage favorites
+**Manage favorites**
 - Add/remove via item update: Perform a PUT request to the item’s specific URI.
     Set <category scheme="wcmrest:favorite" term="true" /> to add or term="false" to remove.
 - Add/remove via generic URI: Send a POST request to the following helper URIs:
     Add: /favorite-items/additem?item-uri=[item-uri]
 Remove: /favorite-items/removeitem?item-uri=[item-uri]
 
-### Attachments
+## Attachments
 
 Attachments are image resources associated with items containing HTML (such as Presentation Templates, Rich Text Components, or HTML Components).
 
 !!! warning “Limitations”
     Attachments cannot be directly read, updated, or referenced by a unique URI. They are managed through the parent item.
 
-#### Create an attachment
+### Create an attachment
 
 To add an image, send the binary data in a POST request:
 ```

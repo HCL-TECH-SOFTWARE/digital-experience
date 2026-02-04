@@ -1,8 +1,8 @@
-# Search facets REST API specification
+# Search facets REST API specification 
 
 The following document describes the facet parameter of the Search API and the corresponding response elements. The facet parameter allows obtaining the facets, which are relevant for the search query. The facets that are supported in Portal Search include Tag, Person, Date, Source, and for status updates only Trend.
 
-# Implementing  faceted search with Portal Search to improve search result quality
+# Implementing  faceted search with Portal Search to improve search result quality 
 
 **Applies to:** HCL Digital Experience 8.5 and later
 
