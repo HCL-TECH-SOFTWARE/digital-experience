@@ -18,7 +18,7 @@ HTTP makes integration with remote clients easier than with a traditional API. W
 
 The URLs, which comprise the REST service can change from release to release, or even with minor updates. Therefore, it is recommended to never bookmark, or generate a URL unless it is for a defined entry point.
 
--   **Atom publishing protocol service document**
+-   **Atom publishing protocol service document** 
 
     ```
     /wps/mycontenthandler/model/service

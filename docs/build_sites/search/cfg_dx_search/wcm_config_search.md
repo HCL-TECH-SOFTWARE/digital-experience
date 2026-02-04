@@ -8,7 +8,7 @@ Configure the **WCM SearchService** search properties from the WebSphere Integra
 
 3.  Specify values for the search parameters.
 
-    -   **SearchService.DateFormatString**
+    -   **SearchService.DateFormatString** 
 
         Use this parameter to set the date format when dates are entered in search forms. Enter a supported Java date format string. If this property is not set, then the default format is `MMM dd yyyy HH:mm:ss z`.
 

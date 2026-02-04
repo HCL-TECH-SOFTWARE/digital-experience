@@ -8,7 +8,7 @@ The following document describes the facet parameter of the Search API and the c
 
 Faceted search helps your users find the right content faster by providing specific filters for search results. This guide shows you how to set up and configure faceted search using Portal Search to improve the overall search experience in HCL Digital Experience.
 
-# Creating a faceted search collection
+# Creating a faceted search collection 
 
 Follow these steps to configure your search service and create a collection for faceted search.
 
