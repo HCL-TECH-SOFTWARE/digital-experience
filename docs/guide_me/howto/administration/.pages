@@ -7,7 +7,6 @@ nav:
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
-    - APIToCountWCMItems.md
     - DecodeLongURLs.md
     - ExpediteAsyncDeletes.md
     - IncreaseTransactionTimeout.md
