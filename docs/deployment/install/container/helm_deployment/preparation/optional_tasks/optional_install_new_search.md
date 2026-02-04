@@ -30,7 +30,7 @@ If you want to know more about settings for OpenSearch, you can also refer to [I
 
 ## Preparing certificates for inter-service communication
 
-The search uses certificate authentication for the communication between OpenSearch nodes and the search middleware. To get this communication established, you must create certificates and store them in their respective secrets.
+The search uses certificate authentication for the communication between OpenSearch nodes and the search middleware. To get this communication established, you must create certificates and store them in their respective secrets. See the [DN format requirements](#limitation-distinguished-name-dn-format-requirements) for important information about certificate DN validation limitation.
 
 The following commands configure the secrets consumed by the applications:
 
@@ -106,6 +106,31 @@ CN=Client,OU=IT,O=LAB,C=PH
 
 Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section below.
 
+### Limitation: Distinguished Name (DN) Format Requirements
+
+!!!important
+    The `adminDN` field enforces strict validation to ensure certificate compatibility with OpenSearch Security plugin. The following format requirements must be adhered to:
+
+    - **All four fields are REQUIRED**: `CN=<value>,OU=<value>,O=<value>,C=<country-code>`
+    - **Country code MUST be exactly 2 uppercase letters** (e.g., `US`, `IN`, `PH`, `UK`)
+    - **No spaces allowed anywhere** in the DN string
+    - **Multiple DNs** can be provided by separating them with semicolons (`;`) - no spaces around semicolons
+    - **Empty string is allowed** (uses default DN from OpenSearch image)
+
+    **Valid Examples:**
+    ```
+    CN=Admin,OU=IT,O=LAB,C=US
+    CN=Admin,OU=IT,O=LAB,C=IN;CN=Client,OU=IT,O=LAB,C=IN;CN=Node,OU=IT,O=LAB,C=IN
+    ```
+
+    **Invalid Examples:**
+    ```
+    CN=Admin, OU=IT, O=LAB, C=US            # Spaces after commas - INVALID
+    CN=Admin,OU=IT,O=LAB,C=USA              # Country code not 2 letters - INVALID
+    CN=Admin,OU=IT,O=LAB                    # Missing C field - INVALID
+    CN=Admin,OU=IT,O=LAB,C=US ; CN=Client   # Space around semicolon - INVALID
+    CN=Admin,OU=IT,O=LAB,C=us               # Lowercase country code - INVALID
+    ```
 
 ## Preparing the `custom-search-values.yaml`
 
