@@ -234,7 +234,7 @@ Other applications where only one container is deployed in the Pod, only provide
 All application logs from DX pods in a deployment can be combined into a single output using the command:
 
 ```
-kubectl logs -n <namespace> -l release=<release-name> --tail=-1 --all-containers
+kubectl logs -n <namespace> -l release=<release-name> --tail=-1 --all-containers --prefix=true
 ```
 
 where:
