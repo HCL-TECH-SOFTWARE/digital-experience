@@ -8,9 +8,11 @@ The `spHelper` provides the functions and variables that are related to a specif
 
 To make it easier to use this object in multiple places in your code, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
 
+If you want to create a Script Application that may be deployed multiple times to the same page, you should make all variables and methods unique. To achieve that, you may use the Script Application namespace again, so your variable may be set using `var [Plugin:ScriptPortletNamespace]myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`. 
+
 !!! important
-    When developing locally, use the `__SPNS__` placeholder for the namespace. In that case, your variable may be set using `var myspHelper = __SPNS__spHelper;`. 
-    The placeholder is automatically translated when you import or push to the DX server to `[Plugin:ScriptPortletNamespace]`. For details, see [Add tokens to generate the unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/CF229/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
+    When developing locally, you may use the `__SPNS__` placeholder for the namespace. In that case, your variable may be set using `var myspHelper = __SPNS__spHelper;` or as a unique variable `var __SPNS__myspHelper = __SPNS__spHelper;` . 
+    The placeholder is automatically translated when you import or push to the DX server to `[Plugin:ScriptPortletNamespace]`. For details, see [Add tokens to generate the unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/latest/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
 
     You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/latest/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
     
