@@ -20,7 +20,7 @@ The search currently has the following limitations:
 - The REST API request body size is limited to 5 MB.
 - A search result is limited to 10,000 results.
 
-## Preparing your Kubernetes Cluster
+## Preparing your Kubernetes cluster
 
 Make sure that your Kubernetes nodes meet the requirements before running OpenSearch in your Kubernetes cluster. Set the configuration of both the maximum number of open files and the maximum memory allocation capabilities.
 
@@ -30,7 +30,7 @@ If you want to know more about settings for OpenSearch, you can also refer to [I
 
 ## Preparing certificates for inter-service communication
 
-The search uses certificate authentication for the communication between OpenSearch nodes and the search middleware. To get this communication established, you must create certificates and store them in their respective secrets. See the [DN format requirements](#limitation-distinguished-name-dn-format-requirements) for important information about certificate DN validation limitation.
+The search uses certificate authentication for the communication between OpenSearch nodes and the search middleware. To get this communication established, you must create certificates and store them in their respective secrets. See the [DN format requirements](#dn-format-requirements) for important information about certificate DN validation limitation.
 
 The following commands configure the secrets consumed by the applications:
 
@@ -67,7 +67,7 @@ Adjust the `YOUR_NAMESPACE` placeholder according to your Kubernetes Namespace i
 
 ### Extracting and formatting the DN for OpenSearch
 
-After generating a certificate (e.g., admin.pem, node.pem, client.pem), you must extract the Distinguished Name (DN) in the format required by OpenSearch.
+After generating a certificate (for example, `admin.pem`, `node.pem`, `client.pem`), you must extract the Distinguished Name (DN) in the format required by OpenSearch.
 
 To extract the DN from a certificate in the correct OpenSearch format, run:
 
@@ -76,8 +76,6 @@ openssl x509 -in <certificate-file>.pem -noout -subject -nameopt RFC2253 | sed '
 ```
 
 **Example:**
-
-Run 
 
 ```sh
 # Admin certificate DN
@@ -90,7 +88,7 @@ kubectl get secret search-node-cert -n dxns -o jsonpath='{.data.node\.pem}' | ba
 kubectl get secret search-client-cert -n dxns -o jsonpath='{.data.client\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
 ```
 
-This will output the DN in OpenSearch format (most specific field first):
+These commands generate the DN in OpenSearch format (most specific field first):
 
 ```
 CN=Admin,OU=IT,O=LAB,C=PH
@@ -98,39 +96,37 @@ CN=Node,OU=IT,O=LAB,C=PH
 CN=Client,OU=IT,O=LAB,C=PH
 ```
 
-**Important:** 
-- The `-nameopt RFC2253` flag ensures consistent output across all OpenSSL versions
-- The output format is already correct for OpenSearch (CN first, C last)
-- Ensure there are **NO SPACES** after commas (e.g., `CN=Admin,OU=IT` not `CN=Admin, OU=IT`)
-- Even a single space or typo will cause authentication failures
-
-Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section below.
-
-### Limitation: Distinguished Name (DN) Format Requirements
-
 !!!important
-    The `adminDN` field enforces strict validation to ensure certificate compatibility with OpenSearch Security plugin. The following format requirements must be adhered to:
+    - The `-nameopt RFC2253` flag ensures consistent output across all OpenSSL versions.
+    - The output format matches OpenSearch requirements (`CN` first, `C` last).
+    - Any spaces or typos in the string will cause authentication failures.
 
-    - **All four fields are REQUIRED**: `CN=<value>,OU=<value>,O=<value>,C=<country-code>`
-    - **Country code MUST be exactly 2 uppercase letters** (e.g., `US`, `IN`, `PH`, `UK`)
-    - **No spaces allowed anywhere** in the DN string
-    - **Multiple DNs** can be provided by separating them with semicolons (`;`) - no spaces around semicolons
-    - **Empty string is allowed** (uses default DN from OpenSearch image)
+Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section.
 
-    **Valid Examples:**
-    ```
-    CN=Admin,OU=IT,O=LAB,C=US
-    CN=Admin,OU=IT,O=LAB,C=IN;CN=Client,OU=IT,O=LAB,C=IN;CN=Node,OU=IT,O=LAB,C=IN
-    ```
+### DN format requirements
 
-    **Invalid Examples:**
-    ```
-    CN=Admin, OU=IT, O=LAB, C=US            # Spaces after commas - INVALID
-    CN=Admin,OU=IT,O=LAB,C=USA              # Country code not 2 letters - INVALID
-    CN=Admin,OU=IT,O=LAB                    # Missing C field - INVALID
-    CN=Admin,OU=IT,O=LAB,C=US ; CN=Client   # Space around semicolon - INVALID
-    CN=Admin,OU=IT,O=LAB,C=us               # Lowercase country code - INVALID
-    ```
+The `adminDN` field enforces strict validation to ensure certificate compatibility with the OpenSearch Security plugin. The following format requirements must be adhered to:
+
+- Specify all four fields. For example: `CN=<value>,OU=<value>,O=<value>,C=<country-code>`.
+- Use exactly two uppercase letters for the country code. For example: `US`, `IN`, `PH`, or `UK`.
+- Remove all spaces from the DN string.
+- Use semicolons (`;`) to separate multiple DNs.
+- Use an empty string to apply the default OpenSearch DN.
+
+**Valid Examples:**
+```
+CN=Admin,OU=IT,O=LAB,C=US
+CN=Admin,OU=IT,O=LAB,C=IN;CN=Client,OU=IT,O=LAB,C=IN;CN=Node,OU=IT,O=LAB,C=IN
+```
+
+**Invalid Examples:**
+```
+CN=Admin, OU=IT, O=LAB, C=US            # Spaces after commas - INVALID
+CN=Admin,OU=IT,O=LAB,C=USA              # Country code not 2 letters - INVALID
+CN=Admin,OU=IT,O=LAB                    # Missing C field - INVALID
+CN=Admin,OU=IT,O=LAB,C=US ; CN=Client   # Space around semicolon - INVALID
+CN=Admin,OU=IT,O=LAB,C=us               # Lowercase country code - INVALID
+```
 
 ## Preparing the `custom-search-values.yaml`
 
@@ -167,9 +163,7 @@ Configure other parameters inside the `custom-search-values.yaml` of the search 
 
 ### OpenSearch configuration settings
 
-You can configure Opensearch related settings such as certificate admin DN.
-
-See the section above on [Extracting and formatting the DN for OpenSearch](#extracting-and-formatting-the-dn-for-opensearch) for instructions on how to obtain and format this value.
+Configure OpenSearch-related settings, such as `adminDN`, using the following format:
 
 ```yaml
 configuration:
@@ -178,8 +172,9 @@ configuration:
       adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US"
 ```
 
-If you need to specify multiple DNs, provide each DN in the required OpenSearch format and separate them with a semicolon (`;`).
+Refer to [Extracting and formatting the DN for OpenSearch](#extracting-and-formatting-the-dn-for-opensearch) for instructions on how to obtain and format this value.
 
+If you need to specify multiple DNs, provide each DN in the required OpenSearch format and separate them with a semicolon (`;`).
 
 ```yaml
 configuration:
@@ -187,7 +182,6 @@ configuration:
     security:
       adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US;CN=Client,OU=UNIT,O=ORG,C=US;CN=Node,OU=UNIT,O=ORG,C=US"
 ```
-
 
 ### Security settings  
 
@@ -399,7 +393,7 @@ You can validate the setup using the following methods:
 - [Checking the running Pods](#checking-the-running-pods)
 - [Validating access to API explorer](#validating-access-to-api-explorer)
 
-### Checking the running Pods
+### Checking the running pods
 
 Run a kubectl command to validate that all search-related pods are running:
 

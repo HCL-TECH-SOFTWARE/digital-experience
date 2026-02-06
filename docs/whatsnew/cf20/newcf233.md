@@ -24,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - New required configuration to enable Indexing
 - Helm values updates
 - New HAProxy security configuration parameters
+- Search V2 - Specifying custom DNs for admin certificates
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -126,6 +127,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
     For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
+
+### Search V2 - Specifying custom DNs for admin certificates
+
+=== "Containers"
+    You can now specify your own custom Distinguished Name (DN) for admin certificates in the Search V2 backend (OpenSearch) using the new `adminDN` value in the `hcl-dx-search` Helm chart. This allows you to use organization-specific certificates for OpenSearch security instead of the default DN. You can specify a single DN or multiple DNs separated by semicolons. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
 ### WAS, JDK, and iFix versions
 
