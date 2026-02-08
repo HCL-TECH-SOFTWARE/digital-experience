@@ -28,7 +28,7 @@ This example shows an RSS feed that creates a site area in the Web Content Manag
       <title>News</title>
       <link>http://www.hcl.com/news/index.htm</link>
       <description>This is a site area.</description>
-      <guid>20000001</guid>
+      <guid isPermaLink="false">20000001</guid>
       <pubDate>Tue, 31 Oct 2006 10:31:00 EST</pubDate>
       <author>jsample@hcl.com</author>
       <hclwcm:action>add</hclwcm:action>
@@ -66,7 +66,7 @@ This example shows an RSS feed that creates a top-level taxonomy category in Web
       <title>Audience</title>
       <link>http://www.hcl.com/index.htm</link>
       <description>This is the top-level taxonomy.</description>
-      <guid>30000001</guid>
+      <guid isPermaLink="false">30000001</guid>
       <pubDate>Tue, 31 Oct 2006 10:31:00 EST</pubDate>
       <author>jsample@hcl.com</author>
       <hclwcm:action>add</hclwcm:action>
@@ -96,7 +96,7 @@ This example shows an RSS feed that creates a second-level category under an exi
       <title>Employees</title>
       <link>http://www.hcl.com/index.htm</link>
       <description>This is a second-level category.</description>
-      <guid>40000001</guid>
+      <guid isPermaLink="false">40000001</guid>
       <pubDate>Tue, 31 Oct 2006 10:31:00 EST</pubDate>
       <author>jsample@hcl.com</author>
       <hclwcm:action>add</hclwcm:action>
@@ -135,7 +135,7 @@ This example shows an RSS feed that creates a reusable HTML component in the Web
       <title>hcl Footer</title>
       <link>http://www.hcl.com/files/footer.htm</link>
       <description>This is a shared chunk of HTML.</description>
-      <guid>53000001</guid>
+      <guid isPermaLink="false">53000001</guid>
       <pubDate>Tue, 31 Oct 2006 10:31:00 EST</pubDate>
       <author>jsample@hcl.com</author>
       <hclwcm:action>add</hclwcm:action>
@@ -172,7 +172,7 @@ This example shows an RSS feed that creates a content item in the Web Content Ma
       <title>Release 2.0 Announcement</title>
       <link>http://www.hcl.com/news/Rel2Announce.htm</link>
       <description>This is a content item.</description>
-      <guid>80000001</guid>
+      <guid isPermaLink="false">80000001</guid>
       <pubDate>Tue, 31 Oct 2006 10:31:00 EST</pubDate>
       <author>jsample@hcl.com</author>
       <category>/Audience/Employees</category>
