@@ -1,6 +1,8 @@
 title: How-to articles
 nav:
   - index.md
+  - New and migrated articles: whatsnew.md
+  - What's New: whatsnew.md
   - Administration: administration
   - API: api
   - Configuration: configuration
@@ -19,7 +21,6 @@ nav:
   - Syndication: syndication
   - Themes: themes
   - Tools: tools
-  - Troubleshooting: troubleshooting
   - Upgrade: upgrade
   - Web Content Manager Library Management: wcmlibrarymanagement
   

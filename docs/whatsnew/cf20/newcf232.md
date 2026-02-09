@@ -14,12 +14,15 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- German and French translations now available
+
 **Digital Experience 9.5 Container Version**
 
 - Additional configuration options for DX Core probes
 - DX Picker - Configuring dialog size and persisting last known location
 - Dynacache invalidation domain configuration
-- German and French translations now available
 - HAProxy custom headers now available
 - Helm values updates
 - WAS, JDK, and iFix versions
@@ -63,10 +66,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New How-to articles now available
 
 === "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf232) section.
 
 === "On-Premises"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf232) section.
 
 ### Presentation Designer - Direction-specific styling for bidirectional text layouts
 
@@ -90,6 +93,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### German and French translations now available
+
+=== "Containers"
+    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
+=== "On-Premises"
+    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
 ## Digital Experience 9.5 Container Version
 
 ### Additional configuration options for DX Core probes
@@ -112,11 +125,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now change the domain or schema used for the dynacache invalidation table in DX. This table synchronizes dynacache updates across pods. By default, the `INVALIDATION_TABLE` is created in the `RELEASE` domain. To specify a different domain (such as `JCR`, `COMMUNITY`, or `CUSTOMIZATION`), override the `db.cache.invalidation.domain` property in the `ConfigService.properties` file. For more information, refer to [Changing the domain or schema for the dynacache invalidation table in the database](../../deployment/manage/container_configuration/update_invalidation_domain.md).
-
-### German and French translations now available
-
-=== "Containers"
-    The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
 
 ### HAProxy custom headers now available
 

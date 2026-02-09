@@ -1,21 +1,26 @@
-# URL Component tag
+---
+id: wcm_dev_item-details_url
+title: URL Component tag
+---
 
-The URL Component (URLCmpnt) tag is used to generate a URL to a site area or content item. 
+Use the URL Component (`URLCmpnt`) to generate a URL to a site area or content item.
 
-See the format of the URLCmpnt tag.
+See the format of a `URLCmpnt` tag:
 
 ```
 [URLCmpnt mode=" " context=" " type=" " name=" " pageDesign=" " portalTarget=" "
 targetCurrentPortalPage=" " usedIn=" " start=" " end=" " htmlencode=" "]
 ```
 
-To create a URLCmpnt tag, complete the following steps:
+## Creating a URL Component tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create a `URLCmpnt` tag:
 
-2.  Select **URL** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a `mode` type. The `mode` type determines the type of URL that is generated. This parameter is added to the tag as the `mode=" "` parameter.
+2. Select **URL** as the tag type.
+
+3. Select a `mode` type. The `mode` type determines the type of URL that is generated. This parameter is added to the tag as the `mode=" "` parameter.
 
     |Mode|Details|
     |----|-------|
@@ -24,7 +29,7 @@ To create a URLCmpnt tag, complete the following steps:
     |`mode="current"`|The `current` mode generates a URL based on the format of the current request. For example, if the current request is a HCL Portal request, then mode="portal" is used.|
     |`mode="static"`|The `static` mode generates a POC URL that will render as portal URL for portal pages, and as a standard URL for a servlet site.|
 
-4.  Select the `context` and item type that is used to determine which URL to reference.
+4. Select the `context` and item type that is used to determine which URL to reference.
 
     |Context and Item Type|`type="auto"`|`type="content"`|`type="sitearea"`|`type="parent"`|`type="top"`|
     |---------------------|-------------|----------------|-----------------|---------------|------------|
@@ -35,11 +40,11 @@ To create a URLCmpnt tag, complete the following steps:
     |`context="portalMapping"` <br> If selected, the context is set by the content mapping of the current page. This option is only valid for content delivered using a web content viewer portlet.|This parameter displays the URL of the item selected as the default content mapping of the page.|This parameter displays the URL of the default content item of the site area selected as the default content mapping of the page.|This parameter displays the URL of the site area selected as the default content mapping of the page.|This parameter displays the URL of parent of the item selected as the default content mapping of the page.|This parameter displays the URL of the first item in the path of the item selected as the default content mapping of the page.|
     |`context="portletContext"` <br> If selected, the context is set by context of the current web content viewer portlet. This option is only valid for content delivered using a web content viewer portlet.|This parameter displays the URL from the current portlet context item.|If the context of the current portlet is a content item, the URL from the current content item is displayed. If the context of the current portlet is a site area, the URL from the default content item of the site area is displayed.|If the context of the current portlet is a site area, the URL from the site area is displayed. If the context of the current portlet is a content item, the URL from the parent of the content item is displayed.|This parameter displays the URL from the parent of the current portlet context item.|This parameter displays the URL from the first item in the path of the current portlet context item.|
 
-5.  If you want to render the content by using an alternative presentation template, click **presentation template**. This parameter is added to the tag as the `pageDesign=" "` parameter.
+5. If you want to render the content by using an alternative presentation template, click **presentation template**. This parameter is added to the tag as the `pageDesign=" "` parameter.
 
-6.  If you want to render the content on a specific Portal page, select **Portal Page Target**. You can enter the compound name of the URL mapping or friendly URL of the target portal page in the tag after you add the tag to your design. This parameter can be used only if `mode="current"` or `mode="portal"`. This parameter is added to the tag as the `portalTarget=" "` parameter.
+6. If you want to render the content on a specific Portal page, select **Portal Page Target**. You can enter the compound name of the URL mapping or friendly URL of the target portal page in the tag after you add the tag to your design. This parameter can be used only if `mode="current"` or `mode="portal"`. This parameter is added to the tag as the `portalTarget=" "` parameter.
 
-7.  Click **OK** to add the tag to your navigator design.
+7. Click **OK** to add the tag to your navigator design.
 
 When you add this tag to your design, you can also add the following parameters to the tag:
 
@@ -53,4 +58,4 @@ When you add this tag to your design, you can also add the following parameters 
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

@@ -1,4 +1,4 @@
-# Accessibility features
+# Accessibility features 
 
 Accessibility features help users who have a physical disability, such as restricted mobility or limited vision, to use software products successfully.
 

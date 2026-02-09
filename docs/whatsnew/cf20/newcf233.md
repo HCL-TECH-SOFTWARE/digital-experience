@@ -14,12 +14,18 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
-**Digital Experience 9.5 Container Version**
+**Digital Experience 9.5 Version**
 
 - Brazilian Portuguese, Japanese, and Spanish translations now available
+
+**Digital Experience 9.5 Container Version**
+
+- Configuring LTPA for DX Core
 - DAM - Database Analysis
+- DAM - New required configuration to enable Indexing
 - Helm values updates
 - New HAProxy security configuration parameters
+- Search V2 - Specifying custom DNs for admin certificates
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -69,10 +75,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New How-to articles now available
 
 === "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf233) section.
 
 === "On-Premises"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf233) section.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -88,17 +94,32 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
-## Digital Experience 9.5 Container Version
+## Digital Experience 9.5 Version
 
 ### Brazilian Portuguese, Japanese, and Spanish translations now available
 
 === "Containers"
     The HCL DX Help Center is now available in Brazilian Portuguese, Japanese, and Spanish. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
 
+=== "On-Premises"
+    The HCL DX Help Center is now available in Brazilian Portuguese, Japanese, and Spanish. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
+## Digital Experience 9.5 Container Version
+
+### Configuring LTPA for DX Core
+
+=== "Containers"
+    You can now enable Single Sign-On (SSO) capabilities for the Core component using Lightweight Third Party Authentication (LTPA). You can define the required keys and password directly in your `values.yaml` file for development environments, or reference an external Kubernetes Secret for production environments. For more information on how to configure LTPA, refer to [Configuring LTPA](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_ltpa_key.md).
+
 ### DAM - Database Analysis
 
 === "Containers"
     The Database Analysis feature in Digital Asset Management (DAM) provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
+
+### DAM - New required configuration to enable Indexing
+
+=== "Containers"
+    Starting from CF233, to enable DAM Indexing, you need to set the `damIndexing` parameter to `true` in your `values.yaml` file and ensure all required `searchMiddleware` configurations are set. For more information, refer to [Adding OpenSearch middleware configurations and enabling DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#adding-opensearch-middleware-configurations-and-enabling-dam-indexing).
 
 ### Helm values updates
 
@@ -116,15 +137,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
 
+### Search V2 - Specifying custom DNs for admin certificates
+
+=== "Containers"
+    You can now specify your own custom Distinguished Name (DN) for admin certificates in the Search V2 backend (OpenSearch) using the new `adminDN` value in the `hcl-dx-search` Helm chart. This allows you to use organization-specific certificates for OpenSearch security instead of the default DN. You can specify a single DN or multiple DNs separated by semicolons. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
+
 ### WAS, JDK, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF233 contains the following:
 
-    - [WebSphere Application Server 9.0.5.25](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.51](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - iFix PH67137
-    - iFix PH67817
+    - [WebSphere Application Server 9.0.5.26](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit 8.0.8.55](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - iFix PH68243
+    - iFix PH68418
 
 ## Notices of deprecation
 

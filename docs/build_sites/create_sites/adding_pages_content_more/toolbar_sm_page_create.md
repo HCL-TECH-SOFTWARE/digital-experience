@@ -47,4 +47,4 @@ Before you create your child page, you select the **Family Vacations** project f
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Page Templates as a business user, go to [Page Template](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D2999){target="_blank"}. To try it out yourself, refer to [Page Template Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-300_Page_Template.pdf){target="_blank"}.
+For an introduction and a demo on how to use Page Templates as a business user, go to [Page Template](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2999){target="_blank"}. To try it out yourself, refer to [Page Template Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-300_Page_Template.pdf){target="_blank"}.

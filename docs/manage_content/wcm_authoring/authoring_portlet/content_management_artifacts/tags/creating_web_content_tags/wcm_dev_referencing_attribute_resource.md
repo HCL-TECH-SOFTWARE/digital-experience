@@ -1,26 +1,28 @@
 ---
-title: Attribute resource tag
+id: wcm_dev_referencing_attribute_resource
+title: Attribute Resource tag
 ---
 
+Use the Attribute resource (`attributeResource`) tag to define the information returned by a search query.
 
+!!!note
+    You can also use this tag within [List Appearances for Personalization components](../../../../../../extend_dx/ddc/plrf_tech_concepts.md) to surface Digital Data Connector (DDC) data.
 
+See the format of an `attributeResource` tag:
 
-You use the attribute resource tag to define the information that is returned by a search query.
-
-The format of an attribute resource tag:
-
-```
+```html
 [attributeResource attributeName="parameter" separator=" " format=" "]
 ```
 
-To create an attribute resource tag:
+## Creating an Attribute Resource tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create an `attributeResource` tag:
 
-2.  Select **attribute resource** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Click **OK** to add the tag to your navigator design.
+2. Select **attribute resource** as the tag type.
 
+3. Click **OK** to add the tag to your navigator design.
 
 Once you add the tag to your design, you can also add the following parameters to the tag:
 
@@ -47,10 +49,9 @@ Once you add the tag to your design, you can also add the following parameters t
 |`attributeName=title`|This parameter is the title of a content item.|
 |`attributeName=titlelink`|This parameter assembles a complete link that is based on the title of the item that is being returned.|
 |`attributeName=url`|Displays the URL of a content item.|
-|`format=" "`|This parameter is optional and can be used only with some parameter types:-   **When you reference date elements:** <br>The following formats can be defined when you display dates: <br>    -   `format="DATE_SHORT"` <br>    -   `format="DATE_MEDIUM"` <br>    -   `format="DATE_LONG"` <br>    -   `format="DATE_FULL"` <br>    -   `format="DATE_TIME_SHORT"` <br>    -   `format="DATE_TIME_MEDIUM"` <br>    -   `format="DATE_TIME_LONG"` <br>    -   `format="DATE_TIME_FULL"` <br>    -   `format="TIME_SHORT"` <br>    -   `format="TIME_MEDIUM"` <br>    -   `format="TIME_LONG"` <br>    -   `format="TIME_FULL"` <br>    -   `format="DATE_SHORT_TIME_MEDIUM"` <br>    -   `format="DATE_SHORT_TIME_LONG"` <br>    -   `format="DATE_SHORT_TIME_FULL"` <br>    -   `format="DATE_MEDIUM_TIME_SHORT"` <br>    -   `format="DATE_MEDIUM_TIME_LONG"` <br>    -   `format="DATE_MEDIUM_TIME_FULL"` <br>    -   `format="DATE_LONG_TIME_SHORT"` <br>    -   `format="DATE_LONG_TIME_MEDIUM"` <br>    -   `format="DATE_LONG_TIME_FULL"` <br>    -   `format="DATE_FULL_TIME_SHORT"` <br>    -   `format="DATE_FULL_TIME_MEDIUM"` <br>    -   `format="DATE_FULL_TIME_LONG"` <br>    -   `format="RELATIVE"` \(The relative date is displayed as either "today", "yesterday" or the number of days ago.\) <br> -   `format="MILLIS"` \(Number of milliseconds since Midnight, January 1, 1970 GMT\) <br> **Note:** All date formats are based on the timezone of the user, except for `format="MILLIS"`, which is not dependent on the current timezone. <br>
-You can also set user-defined formats for dates: <br>    -   [Setting parameters to format dates](../../elements/element_designs/wcm_reference-dates.md) <br> -   **When you reference number elements:** <br>You can also set user-defined formats for numbers: <br>    -   [Note on formatting numbers](../../elements/element_designs/wcm_reference-numbers.md)|
+|`format=" "`|This parameter is optional and can be used only with some parameter types:-   **When you reference date elements:** <br>The following formats can be defined when you display dates: <br>    -   `format="DATE_SHORT"` <br>    -   `format="DATE_MEDIUM"` <br>    -   `format="DATE_LONG"` <br>    -   `format="DATE_FULL"` <br>    -   `format="DATE_TIME_SHORT"` <br>    -   `format="DATE_TIME_MEDIUM"` <br>    -   `format="DATE_TIME_LONG"` <br>    -   `format="DATE_TIME_FULL"` <br>    -   `format="TIME_SHORT"` <br>    -   `format="TIME_MEDIUM"` <br>    -   `format="TIME_LONG"` <br>    -   `format="TIME_FULL"` <br>    -   `format="DATE_SHORT_TIME_MEDIUM"` <br>    -   `format="DATE_SHORT_TIME_LONG"` <br>    -   `format="DATE_SHORT_TIME_FULL"` <br>    -   `format="DATE_MEDIUM_TIME_SHORT"` <br>    -   `format="DATE_MEDIUM_TIME_LONG"` <br>    -   `format="DATE_MEDIUM_TIME_FULL"` <br>    -   `format="DATE_LONG_TIME_SHORT"` <br>    -   `format="DATE_LONG_TIME_MEDIUM"` <br>    -   `format="DATE_LONG_TIME_FULL"` <br>    -   `format="DATE_FULL_TIME_SHORT"` <br>    -   `format="DATE_FULL_TIME_MEDIUM"` <br>    -   `format="DATE_FULL_TIME_LONG"` <br>    -   `format="RELATIVE"` \(The relative date is displayed as either "today", "yesterday" or the number of days ago.\) <br> -   `format="MILLIS"` \(Number of milliseconds since Midnight, January 1, 1970 GMT\) <br> **Notes:** <br> - All date formats are based on the timezone of the user, except for `format="MILLIS"`, which is not dependent on the current timezone. <br> - To set user-defined formats for dates, refer to [Setting parameters to format dates](../../elements/element_designs/wcm_reference-dates.md). <br> - To set user-defined formats for numbers when you reference number elements, refer to [Note on formatting numbers](../../elements/element_designs/wcm_reference-numbers.md).|
 |`separator=" "`|Enter text or code to be used to separate multiple search results. For example: `separator=" - "`|
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
