@@ -119,7 +119,7 @@ To enable RTC-based database management for existing deployments, you must trans
             persistenceNode: 1
         ```
 
-    2. Apply these changes using `helm upgrade` for your deployment. 
+    2. Apply these changes using `helm upgrade` for your deployment:
 
         ```bash
         helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
@@ -150,7 +150,7 @@ To enable RTC-based database management for existing deployments, you must trans
           runtimeController: true
         ```
 
-    3. Apply these changes using `helm upgrade` for your deployment. 
+    3. Apply these changes using `helm upgrade` for your deployment:
 
         ```bash
         helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
