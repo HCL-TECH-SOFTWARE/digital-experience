@@ -24,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - New required configuration to enable Indexing
 - Helm values updates
 - New HAProxy security configuration parameters
+- `newDbManagement` flag for database management
 - Search V2 - Specifying custom DNs for admin certificates
 - WAS, JDK, and iFix versions
 
@@ -127,6 +128,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
     For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
+
+### `newDbManagement` flag for database management
+
+=== "Containers"
+    Use the `newDbManagement` flag (introduced in CF231) in your `custom-values.yaml` file to allow the Runtime Controller to manage database scaling, configuration updates, and failover automatically. You can use this flag for new and existing deployments. For more information, refer to [Enabling `newDbManagement`](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_enable_new_db_management.md).
 
 ### Search V2 - Specifying custom DNs for admin certificates
 
