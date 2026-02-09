@@ -4,47 +4,40 @@ This API reference can help you customize an instance of your Script Application
 
 ## Namespace `spHelper`
 
-The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference the `spHelper`, you must precede it with the application unique name space tag, for example, `[Plugin:ScriptPortletNamespace]`.
+The `spHelper` provides the functions and variables that are related to a specific instance of the Script Application. To reference the `spHelper`, you must precede it with the application unique name space tag. For example:
 
-To make it easier to use this object in multiple places in your code, you can create your own uniquely named variable, for example, `var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`.
+```
+[Plugin:ScriptPortletNamespace]
+```
 
-If you want to create a Script Application that may be deployed multiple times to the same page, you should make all variables and methods unique. To achieve that, you may use the Script Application namespace again, so your variable may be set using `var [Plugin:ScriptPortletNamespace]myspHelper = [Plugin:ScriptPortletNamespace]spHelper;`. 
+To make it easier to use this object in multiple places in your code, you can create your own uniquely named variable. For example: 
+
+```
+var myspHelper = [Plugin:ScriptPortletNamespace]spHelper;
+```
+
+To create a Script Application that can be deployed multiple times to the same page, make all the variables and methods unique by using the Script Application namespace once more. For example:
+
+```
+var [Plugin:ScriptPortletNamespace]myspHelper = [Plugin:ScriptPortletNamespace]spHelper;
+```
 
 !!! important
-    When developing locally, you may use the `__SPNS__` placeholder for the namespace. In that case, your variable may be set using `var myspHelper = __SPNS__spHelper;` or as a unique variable `var __SPNS__myspHelper = __SPNS__spHelper;` . 
-    The placeholder is automatically translated when you import or push to the DX server to `[Plugin:ScriptPortletNamespace]`. For details, see [Add tokens to generate the unique namespace IDs when applications are pushed or imported to a Script Application](https://help.hcl-software.com/digital-experience/9.5/latest/extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep/).  
+    - When developing locally, you may use the `__SPNS__` placeholder for the namespace. In that case, your variable may be set using `var myspHelper = __SPNS__spHelper;` or as a unique variable `var __SPNS__myspHelper = __SPNS__spHelper;`. The placeholder is automatically translated when you import or push to the DX server to `[Plugin:ScriptPortletNamespace]`. For more information, refer to [Add tokens to generate the unique namespace IDs when applications are pushed or imported to a Script Application](../../../extend_dx/script_application/build_app_with_script_application/cmd_line_push_cmd_patt_rep.md).  
+    - You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet.md).
 
-    You can also reference the namespace with the `[Plugin:Portlet key="namespace" compute="once"]` tag. For more information, see [Portlet plugin tag](https://help.hcl-software.com/digital-experience/9.5/latest/manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_plugin_tag/portlet_plugins/plugin_portlet_portlet/).
-    
-## spHelper field summary
+## `spHelper` fields
 
--   **`spHelper.renderingLocale`**
+- **`spHelper.renderingLocale`**: Get the rendering locale.
+- **`spHelper.userCn`**: Get the user's common name from LDAP.
+- **`spHelper.userId`**: Get the user's ID from LDAP.
+- **`spHelper.userLanguage`**: Get the user's preferred language from LDAP.
+- **`spHelper.userName`**: Get the user's name from LDAP based on the `user.displaynameattribute` theme.
+- **`spHelper.userSn`**: Get the user's surname from LDAP.
 
-    Get the rendering locale.
+## `spHelper` methods
 
--   **`spHelper.userCn`**
-
-    Get the user's common name from LDAP.
-
--   **`spHelper.userId`**
-
-    Get the user's ID from LDAP.
-
--   **`spHelper.userLanguage`**
-
-    Get the user's preferred language from LDAP.
-
--   **`spHelper.userName`**
-
-    Get the user's name from LDAP based on the Theme `user.displaynameattribute`.
-
--   **`spHelper.userSn`**
-
-    Get the user's surname from LDAP.
-
-## Method summary
-
--   **`spHelper.getPortletPreferences()`**
+- **`spHelper.getPortletPreferences()`**
 
     Retrieves the values for the portlet preference that is used for the Script Applications.
 
@@ -81,7 +74,7 @@ If you want to create a Script Application that may be deployed multiple times t
      };
     ```
 
-    -   **Returns**
+    - **Returns**
 
         `{Promise}` A promise that resolves to \{preferenceData: Object\} on success and \{error: Error\} on error. The preferenceData is any JavaScript object that contains your preference values and can be serialized to a string value that represents the object. For example, you can define a JSON object that has a list of holidays where the Script Application behaves differently.
 
@@ -98,7 +91,7 @@ If you want to create a Script Application that may be deployed multiple times t
 
         The error is an Error object that contains the information about the Error. For example, the error ERR0001:Preference data is not available in this context results when the code is run in the preview view or the dependency on the `wp_client_ext` is missing.
 
--   **`spHelper.setPortletPreferences(preferenceData)`**
+- **`spHelper.setPortletPreferences(preferenceData)`**
 
     Sets the values for the portlet preference that is used for Script Applications.
 
@@ -129,7 +122,7 @@ If you want to create a Script Application that may be deployed multiple times t
       };
     ```
 
-    -   **Parameters**
+    - **Parameters**
 
         `{Object}preferenceDatacan` can be null or any JavaScript object that contains your preference values and can be serialized to a string value that represents the object. Setting the value to null removes all preference values. Or, you can specify an array of any size of preference values that you want for this instance of the Script Application. You can use these preference values to customize the Script Application and make the reusable. For example, you can define a JSON object that has a list of holidays where the Script Application behaves differently.
 
@@ -143,11 +136,13 @@ If you want to create a Script Application that may be deployed multiple times t
         ```
         ["true", "true", "true", "true", "true", "true", "true", "true"]
         ```
-    
-            
-    -   **Returns**
+
+    - **Returns**
 
         `{Promise}` A promise that resolves to `{preferenceData: Object}` on success and `{error: Error}` on error. The `preferenceData` is the same data that was passed into this function. The errorText is a string that contains the information about the Error. For example, the error "ERR0001:Preference data is not available in this context" results when the code is run in the preview view or the dependency on the `'wp_client_ext'` is missing.
+
+!!!note
+    To see a working sample that uses `spHelper`, go to [dx-portlet-preferences-script-application-sample](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-preferences-script-application-sample){target="_blank"}.
 
 ## HCLSoftware U learning materials
 
