@@ -78,10 +78,11 @@ To enable RTC-based database management for new deployments:
       runtimeController: true
     ```
 
-3. Install the Helm chart by running the following command with your `custom-values.yaml` file: <!--more specific commands?-->
+3. Install the Helm chart by running the following command with your `custom-values.yaml` file:
 
     ```bash
-
+        # Helm install command
+        helm install -n my-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
     ```
 
 4. Monitor the deployment until all pods reach a `Running` and `Ready` state by running the following command:
@@ -118,7 +119,11 @@ To enable RTC-based database management for existing deployments, you must trans
             persistenceNode: 1
         ```
 
-    2. Apply these changes using `helm upgrade` for your deployment. <!--more specific commands?-->
+    2. Apply these changes using `helm upgrade` for your deployment. 
+
+        ```bash
+        helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+        ```
 
     3. Wait for the change to apply then run the following command to verify the state of your deployment:
 
@@ -145,7 +150,11 @@ To enable RTC-based database management for existing deployments, you must trans
           runtimeController: true
         ```
 
-    3. Apply these changes using `helm upgrade` for your deployment. <!--more specific commands?-->
+    3. Apply these changes using `helm upgrade` for your deployment. 
+
+        ```bash
+        helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+        ```
 
     4. Monitor the deployment until all pods reach a `Running` and `Ready` state by running the following command:
 
@@ -180,6 +189,10 @@ To enable RTC-based database management for existing deployments, you must trans
         ```
 
     2. Apply these changes using `helm upgrade` for your deployment.
+
+        ```bash
+        helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+        ```
 
     3. Verify the final state and health of the persistence layer by running the following commands:
 
