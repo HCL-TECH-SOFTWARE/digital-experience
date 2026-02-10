@@ -16,7 +16,7 @@ To troubleshoot JDBC datasources, you can [troubleshoot](#troubleshooting-sql-qu
 
 To troubleshoot SQL queries, refer to the following steps:
 
-1. Enable the trace string `com.ibm.wps.datastore.impl.*=all` by following the instructions in [Trace logging](../../../../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md#trace-logging).
+1. Enable the trace string `com.ibm.wps.datastore.impl.*=all` by following the instructions in [Trace logging](../../../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md#trace-logging).
 
 2. Review the traces and check for query execution times by examining timestamps in the logs, correlating by thread ID.
 
@@ -46,7 +46,7 @@ To debug SQL queries, refer to the following steps:
 
 4. Click **Apply**.
 5. Click **Save** at the top of the console messages.
-6. Enable the trace string `WAS.database=all` by following the instructions in [Trace logging](../../../../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md#trace-logging).
+6. Enable the trace string `WAS.database=all` by following the instructions in [Trace logging](../../../deployment/manage/troubleshooting/logging_and_tracing/adsyslog.md#trace-logging).
 7. Restart the HCL DX server.
 8. Reproduce the problem. For example, execute the desired actions to generate the query to the database.
 9. Review the SQL queries and result sets in the trace file. The default location is at `<wp_profile_root>/logs/WebSphere_Portal/trace.log`.
