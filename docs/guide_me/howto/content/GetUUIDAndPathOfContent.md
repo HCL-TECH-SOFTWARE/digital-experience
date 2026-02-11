@@ -1,4 +1,4 @@
-# How to get the UUID and Path of WCM content objects using a command Line
+# How to get the UUID and Path of WCM content objects using a command line
 
 ## Applies to
 

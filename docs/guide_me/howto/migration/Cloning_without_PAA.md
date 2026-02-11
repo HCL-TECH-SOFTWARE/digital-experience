@@ -1,145 +1,120 @@
-# How to clone a DX 8.5, 9.0, or 9.5 environment without PAA
+# How to clone a Portal 8.5, 9.0 and 9.5 environment without PAA
 
 ## Applies to
 
-HCL Digital Experience v8.5 and later
+> HCL Digital Experience v8.5 and later
 
-## Introduction
+##  Introduction
 
-This article explains how to clone a Portal environment without using a Portal Application Archive (PAA).
-
-For clarity:
-
-- **Source system** – the environment you are copying from  
-- **Target system** – the environment you are copying to
+This article explains how to clone a Portal environment without using a Portal Application Archive (PAA). This process refers to the system you are copying from as the **source** system and the system you are copying to as the **target** system.
 
 ## Instructions
 
-### Installing or Upgrading the Target Portal
+1. Install or upgrade the target Portal.
 
-Prepare the target Portal environment so it matches the source system:
+    1. Install or upgrade the target Portal to the same level as the source system.
+    2. Upgrade the target WebSphere Application Server (WAS) to match the source system.
+    3. If clustering is required, configure it now or later.
+    4. Ensure that the target Portal includes a profile and not just the binaries.
+    5. Both environments should run the same Portal and WAS versions, preferably at the latest levels.
 
-1. Install or upgrade the target Portal to the same level as the source system.  
-2. Upgrade WebSphere Application Server (WAS) on the target system to match the source system.  
-3. If clustering is required, configure it now or later.  
-4. Ensure the target Portal includes a profile, not just binaries.  
-5. Verify that both environments run the same Portal and WAS versions, preferably at the latest levels.  
+2. Configure security on the target Portal. You may use a different user repository than the source system.
 
-### Configuring Security
+3. Run DBTransfer on the target Portal to DB2, Oracle, or SQL Server. If the target environment is for development, you may use Derby.
 
-Set up security on the target Portal:
+4. (If applicable) Install extensions.
 
-1. Configure security on the target Portal.  
-2. You may use a different user repository than the source system.  
+    - WCM Multilingual extensions: For Portal 8.5 and later, MLS is installed automatically. Only run the configuration tasks.
+    - Content Template Catalog (CTC): Install the same CTC version that is installed on your source system.
 
-### Performing DB Transfer
+5. Export from the source Portal
 
-Transfer the database on the target Portal:
+    1. For the base virtual Portal, use `XMLAccess` with `ExportRelease.xml` to export the base virtual Portal from the source.
 
-1. Run DBTransfer on the target Portal to DB2, Oracle, or SQL Server.  
-2. For development environments, you may use Derby.  
+        ```text
+        c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\ExportRelease.xml -out c:\temp\baseExport.xml -url http://localhost:10039/wps/config
+        ```
 
-### Installing Extensions (If Applicable)
+    2. For other virtual Portals, use `XMLAccess` with `ExportUniqueRelease.xml` to export each virtual Portal.
 
-#### WCM Multilingual Extensions
+        ```text
+        c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\ExportUniqueRelease.xml -out c:\temp\vp1Export.xml -url http://sourcesystem:10039/wps/config/vpcontextroot
+        ```
 
-- Install these extensions if needed.  
-- For Portal 8.5 and later, MLS is installed automatically; run only configuration tasks.  
+        Repeat this step for all other virtual Portals.
 
-#### Content Template Catalog (CTC)
+6. Import to the target Portal.
 
-- Install the same CTC version as on the source system.  
+    1. On the target system, run the `empty-portal` configuration task:
 
-### Exporting from the Source Portal
+        ```text
+        c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat empty-portal
+        ```
 
-1. Export Base Virtual Portal:  
-   Use `XMLAccess` with `ExportRelease.xml` to export the base virtual Portal:
-    ```text
-   c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\ExportRelease.xml -out c:\temp\baseExport.xml -url http://localhost:10039/wps/config
-    ```
-2. Export Virtual Portals: 
-Use XMLAccess with `ExportUniqueRelease.xml` for each virtual portal.
-    ```text
-    c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\ExportUniqueRelease.xml -out c:\temp\vp1Export.xml -url http://sourcesystem:10039/wps/config/vpcontextroot
-    ```
-Repeat this step for all other virtual portals.
----
+    2. Run the `XMLAccess` cleanup task on the target Portal:
 
-## Importing to the Target Portal
+        ```text
+        c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\Task.xml -out c:\temp\task_result.xml -url http://targetsystem:10039/wps/config
+        ```
 
-1. Run `empty-portal`:
-    On the target system, run the `empty-portal` configuration task.
+    3. Copy the `<Profile>\PortalServer\deployed\archive` directory from the source to the target system to transfer all custom EAR files (such as custom themes or portlets).
 
-    ```text
-    c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat empty-portal
-    ```
+        !!!note
+            This step assumes your theme is in an EAR file. If your theme is in the WebDAV store, use the configuration task to export and import it.
 
-2. Run Cleanup Task:
-    Run the `XMLAccess` cleanup task on the target Portal.
+    4. Create other required configuration items in WebSphere Application Server (for example, shared libraries, URLs, namespace bindings, or theme settings in WP Dynamic ContentSpot Mappings)
 
-    ```text
-    c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\IBM\WebSphere\PortalServer\doc\xml-samples\Task.xml -out c:\temp\task_result.xml -url http://targetsystem:10039/wps/config
-    ```
+    5. Copy required files such JAR and configuration files (for example, `log4j.xml`) to the target filesystem.
 
-3. Copy and Deploy Custom Files:
+    6. Set the properties required for syndication in `WCM ConfigService` (for example, enable Member Fixer to run as part of syndication).
 
-    1. Copy and deploy all custom EAR files from the source system to the target system. This includes custom themes or portlets.
+    7. Use `XMLAccess` to import `baseExport.xml` into the base virtual Portal on the target:
 
-    2. Copy the `<Profile>\PortalServer\deployed\archive` directory from the source to the target system.
+        ```text
+        c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\temp\baseExport.xml -out c:\temp\baseExport_result.xml -url http://targetsystem:10039/wps/config
+        ```
 
-    !!! note
-        It is assumed that your theme is in an EAR file. If your theme is in the WebDAV store, use the configuration task to export and import the custom theme.
+    8. Run the `update-wcm` configuration task on the target Portal:
 
-4. Configure WebSphere:
-    Create any additional required configuration items in WebSphere Application Server. This includes shared libraries, URLs, name space bindings, and theme settings in WP Dynamic ContentSpot Mappings.
+        ```text
+        c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat update-wcm
+        ```
 
-5. Copy Filesystem Artifacts:
-    Copy required files like JAR and configuration files (`log4j.xml`, etc.) to the target filesystem.
+    9. If the server is in a clustered environment, run the `activate-portlets` task.
 
-6. Configure Syndication Properties:
-    Set the properties required for syndication in `WCM ConfigService`. For example, enable the member fixer to run as part of syndication.
+        ```text
+        c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat activate-portlets
+        ```
 
-7. Import Base Virtual Portal:
-    Use `XMLAccess` to import `baseExport.xml` into the base virtual Portal on the target.
+    10. (Optional) If you use personalization, export the PZN rules from the source system and import them to the target server. You can do this using the Personalization Administration Portlet Export and Import functions.
 
-    ```text
-    c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\temp\baseExport.xml -out c:\temp\baseExport_result.xml -url http://targetsystem:10039/wps/config
-    ```
+    11. Verify that the base virtual Portal is working correctly.
 
-8. Update WCM:
-    Run the `update-wcm` configuration task on the target Portal.
+7. (If applicable) Configure virtual portals.
 
-    ```text
-    c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat update-wcm
-    ```
+    1. Create your virtual Portals on the target system using the `create-virtual-portal` task. You can retrieve the necessary parameters from the source using `list-all-virtual-portals`.
 
-9. Activate Portlets:
-    If in a cluster, run `activate-portlets`.
+        ```text
+        c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat create-virtual-portal -DWasPassword=password -DPortalAdminPwd=password -DVirtualPortalTitle=VirtualPortalTitle -DVirtualPortalContext=VirtualPortalContext -DVirtualPortalID=VirtualPortalShortID -DVirtualPortalObjectId=VirtualPortalOID -DVirtualPortalRealm=VirtualPortalRealm -DVirtualPortalHostName=VirtualPortalHostName
+        ```
 
-    ```text
-    c:\IBM\WebSphere\wp_profile\ConfigEngine\ConfigEngine.bat activate-portlets
-    ```
+    2. Import the XML file for each virtual Portal from the source using `XMLAccess`. Insure that the VP context root in the XMLAccess command matches the VP name in the `/wps/config/` XMLAccess statement.
 
-10. Import Personalization Rules (Optional):
-    If you use personalization, export the PZN rules from the source system and import them to the target system. You can do this using the Personalization Administration Portlet Export and Import functions.
+        ```text
+        c:\IBM\WebSphere\wp_profile\PortalServer\bin\xmlaccess.bat -user wpsadmin -password mypassword -in c:\temp\vp1Export.xml -out c:\temp\vp1Export_result.xml -url http://targetsystem:10039/wps/config/vpcontextroot
+        ```
 
-11. Verify Base Portal:
-    Verify that the base virtual Portal is working correctly.
----
+        Repeat this step for all other virtual Portals.
 
-## Post-Migration Tasks
+8. Perform post-migration tasks.
 
-1. Restart Portal:  
-   Restart the Portal. Check for errors in `SystemOut.log` and address any missed artifacts.
+    1. Restart the Portal, check for errors in `SystemOut.log`, and address any missed artifacts.
 
-2. Set Up Syndication:  
-   Set up syndication for the appropriate libraries between the source and target systems. This includes the Multi-Lingual configuration library.
+    2. Set up syndication for the appropriate libraries between the source and target systems. This includes the Multilingual configuration library.
 
-   !!!note
-       You must also set up syndication between your source system virtual portals and the target system virtual portals. If managed pages are disabled, the libraries are shared across virtual portals.
+        !!!note
+            You must also set up syndication between your source system virtual Portals and the target system virtual Portals. If managed pages are disabled, the libraries are shared across virtual Portals.
 
-3. Set Library Permissions:  
-   After the initial syndication run, manually configure the library permissions because they are not syndicated automatically.
+    3. After the initial syndication run, manually configure the library permissions because they are not syndicated automatically.
 
-4. Regenerate Web Server Plugin (Optional):  
-   If you have a web server, regenerate and propagate the web server plugin configuration.
+    4. (Optional) If you have a web server, regenerate and propagate the web server plugin configuration.

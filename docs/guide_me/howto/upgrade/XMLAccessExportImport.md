@@ -1,4 +1,4 @@
-# How to use XMLAccess to export and import portal pages
+# How to use XML Access to export and import portal pages
 
 ## Applies to
 
@@ -8,10 +8,8 @@
 
 XML Access (XML Configuration Service) is a command-line batch utility that you can use to export and import portal configurations. You can export specific pages, partial configurations, or complete environments from one portal to another.
 
-By default, HCL Digital Experience provides a set of standard XML samples with the installation binaries. You can find these samples in the following directory:  
+By default, HCL DX provides a set of standard XML samples with the installation binaries. You can find these samples in the following directory:  
 `<PortalServer_root>/doc/xml-samples`
-
-## XML Access features and use cases
 
 You can use XML Access to:
 
@@ -25,13 +23,9 @@ You can use XML Access to:
 
 ## Instructions
 
-XML Access (XML Configuration Service) is a command-line batch utility that you can use to export and import portal configurations.  
+This section explains how to use XML Access to export and import portal pages. The example shows how to export the **Home** portal page, delete it, and then restore it by importing the previously exported XML file.
 
-This section explains how to use XML Access to export and import portal pages. The example shows how to export the **Home** portal page, delete it, and then restore it by importing the previously exported XML file.   
-
-### Detailed steps
-
-1. Sign in to the HCL Portal Server as an administrator.  
+1. Sign in to the HCL DX server as an administrator.  
 
 2. Go to **Administration > Portal User Interface > Content Root**.  
 
@@ -69,4 +63,4 @@ This section explains how to use XML Access to export and import portal pages. T
 
 10. Wait for the success message that confirms the import process completed successfully.  
 
-    ![Import successful message](./images/XMLAccessExportImport_image-1.png)    
+    ![Import successful message](./images/XMLAccessExportImport_image-1.png)
