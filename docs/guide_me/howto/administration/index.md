@@ -12,16 +12,12 @@ Learn how to clear the extension registry, the Open Services Gateway initiative 
 Learn how to clear Web Content Manager (WCM) caches using the ConfigEngine task.  
 - **[How to clear WebSphere Dynacache caches](./ClearWebSphereDynacache.md)**  
 Learn how to clear WebSphere Dynacache caches using the sample JSP code.  
-- **[How to count WCM items and versions using the WCM API sample code](./APIToCountWCMItems.md)**  
-Learn about the WCM API sample code to count WCM items and versions.  
 - **[How to customize the error behavior when accessing WCM resources](./CustomizeErrorBehavior.md)**  
 Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when accessing WCM resources.  
 - **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
 Learn about long Portal URLs and how to decode them.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
-- **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
-Learn how to tune WCM to reduce your query time.  
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  

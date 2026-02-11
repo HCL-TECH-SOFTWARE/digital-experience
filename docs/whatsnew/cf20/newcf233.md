@@ -21,8 +21,11 @@ The following features and updates are available to customers installing HCL Dig
 
 - Configuring LTPA for DX Core
 - DAM - Database Analysis
+- DAM - New required configuration to enable Indexing
 - Helm values updates
 - New HAProxy security configuration parameters
+- `newDbManagement` flag for database management
+- Search V2 - Specifying custom DNs for admin certificates
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -64,10 +67,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New How-to articles now available
 
 === "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf233) section.
 
 === "On-Premises"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [How-to articles](../../guide_me/howto/index.md) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf233) section.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -105,6 +108,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The Database Analysis feature in Digital Asset Management (DAM) provides you with detailed metrics and insights into your DAM deployment. This feature helps you monitor database performance, storage utilization, and media asset distribution. You can access these metrics through the DAM REST API endpoint. For more information, refer to the [Database Analysis](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md).
 
+### DAM - New required configuration to enable Indexing
+
+=== "Containers"
+    Starting from CF233, to enable DAM Indexing, you need to set the `damIndexing` parameter to `true` in your `values.yaml` file and ensure all required `searchMiddleware` configurations are set. For more information, refer to [Adding OpenSearch middleware configurations and enabling DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#adding-opensearch-middleware-configurations-and-enabling-dam-indexing).
+
 ### Helm values updates
 
 === "Containers"
@@ -120,6 +128,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `sslDefaultBindOptions`: SSL/TLS options for HAProxy global configuration
 
     For more information, refer to [Configuring HAProxy networking](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
+
+### `newDbManagement` flag for database management
+
+=== "Containers"
+    Use the `newDbManagement` flag (introduced in CF231) in your `custom-values.yaml` file to allow the Runtime Controller to manage database scaling, configuration updates, and failover automatically. You can use this flag for new and existing deployments. For more information, refer to [Enabling `newDbManagement`](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_enable_new_db_management.md).
+
+### Search V2 - Specifying custom DNs for admin certificates
+
+=== "Containers"
+    You can now specify your own custom Distinguished Name (DN) for admin certificates in the Search V2 backend (OpenSearch) using the new `adminDN` value in the `hcl-dx-search` Helm chart. This allows you to use organization-specific certificates for OpenSearch security instead of the default DN. You can specify a single DN or multiple DNs separated by semicolons. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
 ### WAS, JDK, and iFix versions
 
