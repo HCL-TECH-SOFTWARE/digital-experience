@@ -1,0 +1,7 @@
+site_name: Troubleshooting
+
+nav:
+- index.md
+- Caching: caching
+- Databases and Datasources: database
+- Web-browser: web-browser

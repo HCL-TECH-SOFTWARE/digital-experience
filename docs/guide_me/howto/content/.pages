@@ -3,3 +3,6 @@ title: Content
 nav:
     - index.md
     - customizeTinyMCE.md
+    - GetUUIDAndPathOfContent.md
+    - IdentifyNewManagedPages.md
+    - useJSPinWCM.md

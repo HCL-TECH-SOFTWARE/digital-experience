@@ -127,7 +127,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DX Picker - Previewing an asset
 
 === "Containers"
-    With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage/index.md).
+    With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md).
 
 ### Digital Asset Management - Moving a collection 
 
@@ -141,6 +141,6 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
 
 

@@ -1,8 +1,10 @@
 title: System Requirements
 nav:
     - index.md
+    - DXusageUDPICMPprotocols.md
     - kubernetes
     - traditional
     - disclaimer.md
     - glossary.md
+    
   

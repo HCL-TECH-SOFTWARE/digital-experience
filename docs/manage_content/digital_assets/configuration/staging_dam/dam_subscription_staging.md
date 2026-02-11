@@ -2,17 +2,20 @@
 
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
+!!! warning "Deprecated parameters (CF221+)"
+    Starting from CF221, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are deprecated and should no longer be used in DAM staging commands.
 
 ## Differences between DAM staging and WCM syndication
+
 !!! note
         WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
+
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
 | `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as Kubernetes Secrets and used for file transfer authentication and authorization from publisher to subscriber. The user credentials stored in secret is the primary portal administrator credential. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
 | `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
 | `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
 | `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
-
 
 ## DAM staging framework
 
@@ -26,12 +29,14 @@ The DAM staging framework allows you to stage your DAM content from an authoring
         A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
 
 ### Configure staging hostname
+
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
 
 !!! note
         In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
-     
+
 ### Configuring LTPA Token Refresh Time
+
 LTPA token stored in cache refreshes every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under the `configurations` section of `digitalAssetManagement`.
 
 ```yaml
@@ -39,6 +44,7 @@ configuration:
   digitalAssetManagement:
     ltpaTokenRefreshTimeInMinutes: 5
 ```
+
 `ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
 
 ### Configuring LDAP

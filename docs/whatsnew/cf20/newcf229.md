@@ -1,11 +1,12 @@
-# What's new in CF229 
+# What's new in CF229
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF229 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- My HCLSoftware delivery portal
 - Blueprint design system
+- My HCLSoftware delivery portal
+- New How-to articles now available
 - Presentation Designer - Default and Override stylesheets now available
 - TinyMCE Enhanced Rich Text Editor - Additional configuration settings now available
 - User Session Reporting Tool - Removed `-productFeatureIdName` as a command-line parameter
@@ -33,6 +34,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
 
+### Blueprint design system
+
+=== "Containers"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+
+=== "On-Premises"
+    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+
 ### My HCLSoftware delivery portal
 
 === "Containers"
@@ -51,13 +60,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [HCL Digital Experience Cloud Native 9.5 entitlement checks](../../get_started/download/software_licensing_portal/configure_entitlement_checks/index.md)
     - [Entitlement checking in the My HCLSoftware delivery portal](../../get_started/download/software_licensing_portal/configure_entitlement_checks/mhs_license_and_delivery.md)
 
-### Blueprint design system
+### New How-to articles now available
 
 === "Containers"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf229) section.
 
 === "On-Premises"
-    Blueprint is a design system aimed at accelerating the implementation of new sites in the HCL DX platform. The Blueprint design system will be automatically installed as part of this CF and future release. For more information, refer to the [Blueprint](../../build_sites/blueprint.md) page or visit the [HCL DX Blueprint Storybook](https://opensource.hcltechsw.com/dx-blueprint-storybook/){target="_blank"}.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf229) section.
 
 ### Presentation Designer - Default and Override stylesheets now available
 
@@ -177,4 +186,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

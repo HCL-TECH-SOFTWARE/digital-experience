@@ -1,6 +1,30 @@
-# Custom Configuration Properties for Script Applications
+# Custom Configuration Properties for Script Applications 
 
-When the Script Application imports or exports an application, it uses specific properties as the parameters for the import or export. You can override these properties. For example, you can change the file types and sizes that can be uploaded and the number of files that a compressed file for upload can contain.
+## Default Import Properties for Script Applications
+ 
+When you import Script Applications, only specific file types are allowed by default. These properties define which file extensions can be uploaded as part of the application package. Each property is not case-sensitive.
+
+### Default properties
+
+- **HTML files**  
+  `scriptportlet.import.extensions.Html=html,htm`
+
+- **Script files**  
+  `scriptportlet.import.extensions.Script=js`
+
+- **Style files**  
+  `scriptportlet.import.extensions.StyleSheet=css`
+
+- **Image files**  
+  `scriptportlet.import.extensions.Image=jpg,jpeg,gif,png,bmp`
+
+---
+
+!!! important
+    With the [recommended DXClient](../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/deployapplication.md) approach, file-type management works differently. See [How to add MIME types to the DX server](../../../guide_me/howto/administration/SupportForAdditionalMIMETypes.md)
+ 
+
+### Best Practices for Overriding Properties
 
 By default, you can upload only specific types of files by using the Script Application. The Script Application import feature does not scan uploaded files, therefore use caution before you include other file types as part of an import. If you want to add extra file types, or change any of the other properties, use the procedure given later.
 
@@ -20,3 +44,5 @@ If you edit the Script Application Configuration Properties component directly i
 3.  Edit the properties that you want to change and save the file.
 
 4.  If you upgrade your portal to another version or with a Combined Cumulative Fix, check to see whether any items you overrode were changed by default. Change the text component and save the component.
+
+
