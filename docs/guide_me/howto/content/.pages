@@ -5,4 +5,5 @@ nav:
     - customizeTinyMCE.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
+    - JSF_hasBaseURL.md
     - useJSPinWCM.md

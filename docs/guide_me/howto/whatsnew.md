@@ -9,6 +9,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Content|[How to create a custom configuration file for TinyMCE](./content/customizeTinyMCE.md)|
+|Migrated|Content|[How to work with JavaServer Faces (JSFs) on HCL DX pages](./content/JSF_hasBaseURL.md)|
 |Migrated|Development|[How to count WCM library content items on virtual portals using Java and JSPs](./development/countContentItemsLibsVP.md)|
 |Migrated|Development|[How to use the WCM API to render a WCM component in HCL DX](./development/WCMAPIRenderComponent.md)|
 |Migrated|Performance|[How to warm up your Portal site](./performance/WarmUpPortalSite.md)|
@@ -26,7 +27,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Configuration|[How to modify the response header with `ForceType` when using HCL DX with the IBM HTTP server](./configuration/responseHeaderForceType.md)|
-|Migrated|Content|[How to use Java Server Pages (JSPs) in WCM](./content/useJSPinWCM.md)|
+|Migrated|Content|[How to use JavaServer Pages (JSPs) in WCM](./content/useJSPinWCM.md)|
 |Migrated|Install|[How to install HCL DX 9.5 standalone on Linux](./install/installDXConsoleMode.md)|
 |Migrated|Migration|[How to clone a Portal 8.5, 9.0 and 9.5 environment without PAA](./migration/Cloning_without_PAA.md)|
 |Migrated|Security|[How to replace an LDAP in HCL DX](./security/ReplacePortalLDAP.md)|
