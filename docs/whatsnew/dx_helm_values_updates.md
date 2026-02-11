@@ -2,6 +2,57 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+### CF233
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| volumes.persistenceNode.sharedmemorymount.sizeLimit | 64Mi | <!-- Commit: 04b54adc, Author: Jenny Bethea, Date: 2025-12-17 -->
+| networking.haproxy.sslDefaultBindCiphers | "" | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| networking.haproxy.sslDefaultBindCiphersuites | "" | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| networking.haproxy.sslDefaultBindOptions | [] | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| configuration.digitalAssetManagement.defaultCollectionFetchLimit | 100 | <!-- Commit: 8bde0e11, Author: Ramachandran Mani, Date: 2026-01-21 -->
+| configuration.searchMiddleware.damIndexing | true | <!-- Commit: 3fcb5eee, Author: Kristine Gazeline Apalla, Date: 2026-02-03 -->
+| incubator.consumeSharedConfigs | [] | <!-- Commit: 6d929ed2, Author: Kevin Hendel, Date: 2025-12-24 -->
+| incubator.openTelemetry.enabled | false | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.collector.exportUrl | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.collector.protocol | http/protobuf | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.service.name | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.service.namespace | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.default | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.core | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.contentComposer | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.digitalAssetManagement | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.imageProcessor | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.licenseManager | info | <!-- Commit: 1866b422, Author: srinath.tr@hcl.com, Date: 2025-12-05 -->
+| incubator.openTelemetry.logging.services.openLdap | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.persistence | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.remoteSearch | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.ringApi | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.runtimeController | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.webEngine | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.debug.enabled | false | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.security.iq.dbUser | dx_iq_db_user | <!-- Commit: d2f61098, Author: rubyann.matias@hcl.com, Date: 2026-01-07 -->
+| incubator.security.iq.dbPassword | d1gitalExperience | <!-- Commit: e2d97aae, Author: rubyann.matias@hcl.com, Date: 2026-01-06 -->
+| incubator.security.iq.customDbSecret | "" | <!-- Commit: e2d97aae, Author: rubyann.matias@hcl.com, Date: 2026-01-06 -->
+| incubator.configuration.digitalAssetManagement.enableTrashAutoClearance | false | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.trashClearanceTimeInDays | 30 | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | false | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes | 1440 | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.searchMiddleware.version | 
+| incubator.configuration.searchMiddleware.contextRoot.api | 
+| incubator.configuration.searchMiddleware.contextRoot.pickerUI | 
+
+**Changed Values:**
+
+None
+
 ### CF232
 
 **Added Keys:**
