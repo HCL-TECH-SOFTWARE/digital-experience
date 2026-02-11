@@ -8,6 +8,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Content|[How to create a custom configuration file for TinyMCE](./content/customizeTinyMCE.md)|
 |Migrated|Content|[How to work with JavaServer Faces (JSFs) on HCL DX pages](./content/JSF_hasBaseURL.md)|
 |Migrated|Development|[How to count WCM library content items on virtual portals using Java and JSPs](./development/countContentItemsLibsVP.md)|
 |Migrated|Development|[How to use the WCM API to render a WCM component in HCL DX](./development/WCMAPIRenderComponent.md)|
