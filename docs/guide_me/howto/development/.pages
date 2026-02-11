@@ -2,8 +2,12 @@ title: Development
 nav:
 
   - index.md
+  - Portletdevelopmentutilitiesandpagecreationsamples.md
+  - SampleJSPtoConvertAfileToBase64EncodedFormat.md
+  - APIToCountWCMItems.md
+  - countContentItemsLibsVP.md
+  - custom_login_filter_sample.md
+  - CustomLoginPortlet.md
   - CreateAServletForStaticFiles.md
   - CodeToPrintUserAndHostname.md
-  - Portletdevelopmentutilitiesandpagecreationsamples.md
-  - CustomLoginPortlet.md
-  
+  - WCMAPIRenderComponent.md

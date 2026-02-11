@@ -3,12 +3,9 @@ id: wcm_dev_item-details_property
 title: Property tag
 ---
 
+Use the `Property` tag display various fields and metadata from content items and site areas.
 
-
-
-A property tag is used to display various fields and metadata from content items and site areas.
-
-The format of a property tag:
+See the format of a `Property` tag:
 
 ```
 [Property field=" " context=" " type=" " name=" " format=" " separator=" " 
@@ -16,13 +13,15 @@ htmlencode=" " awareness=" " ifEmpty=" " include=" " restrict=" " resolve=" "
 pre=" " start=" " end=" " ]
 ```
 
-To create a property tag:
+## Creating a Property tag
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+To create a `Property` tag:
 
-2.  Select **Property** as the tag type.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a property type. This property is added to the tag as the `field=" "` parameter:
+2. Select **Property** as the tag type.
+
+3. Select a property type. This property is added to the tag as the `field=" "` parameter:
 
     |Property type|Details|
     |-------------|-------|
@@ -36,7 +35,7 @@ To create a property tag:
     |Profile properties|    -   **categories** <br>Displays the categories that this item is profiled with. <br>    -   **keywords** <br>Displays the keywords that this item is profiled with.|
     |Workflow properties|    -   **status** <br>Displays the workflow status of an item. <br>    -   **statusid** <br>Displays the workflow status of an item as an integer: <br>        -   1 for draft. <br>        -   2 for published. <br>        -   4 for expired. <br>    -   **pendingstatus** <br>Displays a translated string for the pending status. The pending status is the status that the document will move into in the future. For example, when a scheduled date is reached, or when a project is published. <br>    -   **pendingstatusid** <br>Retrieves the pending status as an integer: <br>        -   1 for an item not pending a change in status. <br>        -   2 for publish pending. <br>        -   4 for expire pending. <br>        -   8 for delete pending. <br>    -   **workflow** <br>Displays the selected workflow of an item. <br>    -   **currentstage** <br>Displays the workflow stage that the item is in. <br>    -   **publishdate** <br>Displays the date and time that is selected in the publish date field of an item. <br>    -   **expirydate** <br>Displays the date and time that is selected in the expiry date field of an item. <br>    -   **generaldateone** <br>Displays the date and time that is selected in the general date one field of an item. <br>    -   **generaldatetwo** <br>Displays the date and time that is selected in the general date two field of an item. <br>    -   **additionalviewers** <br>Displays the names of any additional viewers that are selected for an item.|
 
-4.  Select the item type and the context that is used to determine which item to reference:
+4. Select the item type and the context that is used to determine which item to reference:
 
     |Context and Item Type|`type="auto"`|`type="content"`|`type="sitearea"`|`type="parent"`|`type="top"`|
     |---------------------|-------------|----------------|-----------------|---------------|------------|
@@ -49,8 +48,7 @@ To create a property tag:
 
     **Portal mapping versus portal context:** The portal mapping context is determined by the web content associations that are assigned to each page. This context is used for rendering when users first access a page. The context of the page can change when users interact with the content on the page. Each web content viewer on a page can be configured with an explicit context that overrides the rendering page context. The context of the portlet can also change if it is configured to receive links. When users click a link within the viewer that is configured to broadcast its links, the page context is updated. This new context is maintained until users click another link, or until users start a new session. When users start a new session, the original page context is used.
 
-5.  Click **OK** to add the tag to your navigator design. 
-
+5. Click **OK** to add the tag to your navigator design. 
 
 When you add the tag to your design, you can also add the following parameters to the tag:
 
@@ -80,4 +78,4 @@ separator="&amp;nbsp;&amp;nbsp;"
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

@@ -57,7 +57,7 @@ Follow these steps to enable HCL Discover integration with HCL Digital Experienc
 
 You can configure HCL Discover with HCL Digital Experience with theme modules. This gives you more granular control per page and when to use it. In this part, you will update your theme to add the Discover modules and update the profile.
 
-1. Use the instructions in Part 3 of Lab [HDX-DEV-100 Theme Development](https://hclsoftwareu.hcltechsw.com/courses/course/hdx-dev-100-dx-developer-beginner) to work on your theme.
+1. Use the instructions in Part 3 of Lab [HDX-DEV-100 Theme Development](https://hclsoftwareu.hcl-software.com/courses/course/hdx-dev-100-dx-developer-beginner) to work on your theme.
     1. From your DX Solution Modules SoFy instance, choose the Spotlight theme.
     2. Add the two modules discover_vxxx and pako_vxxx from the host of your DX server under PortalServer/doc/discover or get them from your unzipped lab files under the theme’s modules folder.
     3. Edit the DiscoverUI_for_DX-js.uncompressed.js.
@@ -128,8 +128,8 @@ For example:
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how HCL DX and HCL Discover work together, go to [HCL DX and HCL Discover for Business Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D956){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Business Users Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Discover_for_Business_Users.pdf){target="_blank"}.
+For an introduction and a demo on how HCL DX and HCL Discover work together, go to [HCL DX and HCL Discover for Business Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D956){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Business Users Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-BU_DX_Integration_with_HCL_Discover_for_Business_Users.pdf){target="_blank"}.
 
-For an introduction and a demo on how to set up the integration between HCL DX and HCL Discover, go to [HCL DX and HCL Discover for Administrators](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1228){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Administrators Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-ADM_DX_Integration_with_HCL_Discover_for_Administrators.pdf){target="_blank"}.
+For an introduction and a demo on how to set up the integration between HCL DX and HCL Discover, go to [HCL DX and HCL Discover for Administrators](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1228){target="_blank"}. To try it out yourself, refer to [HCL DX and HCL Discover for Administrators Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-ADM_DX_Integration_with_HCL_Discover_for_Administrators.pdf){target="_blank"}.
 
-You may also use the dedicated course [HDE-INT-HDX HCL Discover Integration with HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/courses/course/hde-int-hdx-hcl-discover-integration-with-hcl-digital-experience){target="blank"}.
+You may also use the dedicated course [HDE-INT-HDX HCL Discover Integration with HCL Digital Experience](https://hclsoftwareu.hcl-software.com/courses/course/hde-int-hdx-hcl-discover-integration-with-hcl-digital-experience){target="blank"}.
