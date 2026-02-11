@@ -1,4 +1,4 @@
-# What's new in CF233
+# What's new in CF233 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF233 on supported platforms:
 
