@@ -1,6 +1,6 @@
 # Migration overview
 
-Migration is the process of collecting configuration data and applications from an earlier installed version of HCL Digital Experience and merging them into a newer installed version. So that the new environment is identical to the earlier environment. Migration to a different (remote) server is not supported.
+Migration is the process of collecting configuration data and applications from an earlier installed version of HCL Digital Experience and merging them into a newer installed version.  This is so that the new environment is identical to the earlier environment.  Migration to a different (remote) server is not supported.
 
 Migration is different from upgrading. With upgrading, you replace an existing installed out-of-date version of files with current files. With migration, you install the new version of a product alongside of the earlier version and then copy data from the earlier version to the new version. By migrating information from the earlier version to the new version, you can use that information in the new version without having to re-create it from scratch. Migration enables customizations to be carried forward that were implemented in the earlier portal so that you can continue to use them in the new portal.
 
