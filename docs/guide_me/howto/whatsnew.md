@@ -11,6 +11,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to count WCM library content items on virtual portals using Java and JSPs](./development/countContentItemsLibsVP.md)|
 |Migrated|Development|[How to use the WCM API to render a WCM component in HCL DX](./development/WCMAPIRenderComponent.md)|
 |Migrated|Performance|[How to warm up your Portal site](./performance/WarmUpPortalSite.md)|
+|Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
 |Migrated|Troubleshooting|[How to resolve caching issues with WCM menus](../troubleshooting/caching/MenuQueryCache.md)|
 |Moved|Development|[How to count WCM items and versions using the WCM API sample code](./development/APIToCountWCMItems.md)|
 |Moved|Performance|[How to improve query performance for WCM queries](./performance/ImproveQueryPerformance.md)|
