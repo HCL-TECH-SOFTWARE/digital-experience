@@ -105,7 +105,9 @@ Use the exact DN value from this command in the `adminDN` field as described in 
 
 ### DN format requirements
 
-The `adminDN` field enforces strict validation to ensure certificate compatibility with the OpenSearch Security plugin. The following format requirements must be adhered to:
+The `adminDN` field currently enforces strict validation to ensure certificate compatibility with the OpenSearch Security plugin. This limitation will be lifted soon on next release.
+
+The following format requirements must be adhered to, for now:
 
 - Specify all four fields. For example: `CN=<value>,OU=<value>,O=<value>,C=<country-code>`.
 - Use exactly two uppercase letters for the country code. For example: `US`, `IN`, `PH`, or `UK`.
