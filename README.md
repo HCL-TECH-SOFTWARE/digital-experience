@@ -18,21 +18,21 @@ You are welcome to report bugs or provide feedback on the **product documentatio
 
 Perform the following steps to install mkdocs and clone the git repository to update the markdown files and create a pull request.
 
-1. Follow the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/){target="_blank"} to install [`MkDocs`](https://www.mkdocs.org/){target="_blank"} and `pip`
+1. Follow the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/) to install [`MkDocs`](https://www.mkdocs.org/) and `pip`
 2. Install the required `mkdocs` plugins:  
     - `pip install -r requirements.txt`
-3. Clone the [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience){target="_blank"}
+3. Clone the [digital-experience repository](https://github.com/HCL-TECH-SOFTWARE/digital-experience)
 4. Update the markdown files in the `docs` folder
-5. Verify the changes by building the project locally [mkdocs serve](https://www.mkdocs.org/getting-started/#creating-a-new-project){target="_blank"}
+5. Verify the changes by building the project locally [mkdocs serve](https://www.mkdocs.org/getting-started/#creating-a-new-project)
 6. Commit the changes
-7. Create and submit a [Pull Request](https://github.com/HCL-TECH-SOFTWARE/digital-experience/pulls){target="_blank"}
+7. Create and submit a [Pull Request](https://github.com/HCL-TECH-SOFTWARE/digital-experience/pulls)
 8. Await the PR to be reviewed, merged, and built.
 
 #### Create a documentation update request
 
 Perform the following steps to create a documentation issue request.
 
-1. Go to the **[Issues](https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues){target="_blank"}** tab.
+1. Go to the **[Issues](https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues)** tab.
 2. Select **New issue > Documentation Update Request**.
 3. Fill the following fields:
     - **Add a title**
