@@ -28,7 +28,10 @@ Perform the following steps to create a documentation issue request.
     - **Page(s) impacted**
     - **What is the issue?\***
     - **Version**
-4. Select **Create**.
+4. Select the **Reviewers** gear icon and set the following reviewers:
+    - marcvincentvista
+    - nads102896
+5. Select **Create**.
 
 #### Clone the repository
 
