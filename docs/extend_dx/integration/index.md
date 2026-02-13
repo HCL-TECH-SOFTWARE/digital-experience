@@ -22,7 +22,7 @@ You can use the Digital Data Connector (DDC) for HCL DX framework to integrate d
 A portal provides access to content, data, and services that are located throughout the enterprise. These services include predefined connectors and portlets, and tools for creating additional connectors and portlets.
 - **[IBM MobileFirst](ibm_mobilefirst/index.md)**  
 Integrate HCL DX with MobileFirst to provide multi-channel support to your web communities.
-- **[Configuration Sharing for co-deployments](./configmap_sharing_dx.md)**  
+- **[Configuration Sharing for co-deployments](./config_sharing_dx.md)**  
 Use the standardized Configuration Sharing feature between HCL products (such as DX, Leap, and MX) deployed within the same Kubernetes namespace.
 
 <!--
@@ -30,8 +30,8 @@ Use the standardized Configuration Sharing feature between HCL products (such as
 
 ## HCLSoftware U learning materials
 
-For an introduction and demo on how a business user may benefit from the integration capabilities of HCL DX, go to the [Integration for Business Users introductory lesson](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D514){target="_blank"}.
+For an introduction and demo on how a business user may benefit from the integration capabilities of HCL DX, go to the [Integration for Business Users introductory lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D514){target="_blank"}.
 
-For an introduction and demo on how a developer can leverage HCL DX capabilities to integrate other applications and provide assets and content to those applications, go to the [Integration for Developers introductory lesson](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1722) and corresponding [Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_Integrate_DX_Assets_and_Content.pdf){target="_blank"}.
+For an introduction and demo on how a developer can leverage HCL DX capabilities to integrate other applications and provide assets and content to those applications, go to the [Integration for Developers introductory lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1722) and corresponding [Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Integration/HDX-INT-DEV_Integrate_DX_Assets_and_Content.pdf){target="_blank"}.
 
-For an introduction and demo on the administrator tasks involving Integration, go to the [Integration for Administrators introductory lesson](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1226).
+For an introduction and demo on the administrator tasks involving Integration, go to the [Integration for Administrators introductory lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1226).

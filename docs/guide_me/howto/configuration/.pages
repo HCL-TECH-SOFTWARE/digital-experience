@@ -8,7 +8,7 @@ nav:
     - ConfigureRAD.md
     - EnableImageFormats.md
     - IntegrateLDAP.md
-    - RemoveStateInformationFromURL.md
-    - HideXPoweredByHeader.md
-    - SetGenericJVMArgumentsCorePod.md
     - responseHeaderForceType.md
+    - HideXPoweredByHeader.md
+    - RemoveStateInformationFromURL.md
+    - SetGenericJVMArgumentsCorePod.md

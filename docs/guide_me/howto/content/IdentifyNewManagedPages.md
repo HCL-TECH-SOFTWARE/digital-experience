@@ -1,4 +1,4 @@
-# How to identify new managed pages in HCL Digital Experience
+# How to identify new managed pages in HCL DX
 
 ## Applies to
 

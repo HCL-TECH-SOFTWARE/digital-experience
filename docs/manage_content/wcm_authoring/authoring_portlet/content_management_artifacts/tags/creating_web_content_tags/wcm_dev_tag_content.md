@@ -1,8 +1,11 @@
 ---
+id: wcm_dev_tag_content
 title: Content tag
 ---
 
-The `Content` tag directly renders a content item or site area. See the format of a `Content` tag:
+Use the `Content` tag to render a content item or site area.
+
+See the format of a `Content` tag:
 
 ```
 [Content context=" " presentationPath=" " renderMode=" " uuid=" " path=" "]
@@ -14,43 +17,43 @@ The `Content` tag directly renders a content item or site area. See the format o
 
 ## Creating a Content tag
 
-Refer to the following steps to create a `Content` tag:
+To create a `Content` tag:
 
-1.  Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
+1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
 
-2.  Select **Content** as the tag type.
+2. Select **Content** as the tag type.
 
-3.  Select a context type:
+3. Select a context type:
 
-    -   **Autofill**
+    - **Autofill**
 
         Use this option when the element that is referenced is determined by the search parameters of a menu, navigator, or taxonomy component. If the tag is not used within a menu, navigator, or taxonomy component, the context reverts to the current item.
 
-    -   **Current**
+    - **Current**
 
         If selected, the context is set by the current item.
 
-    -   **Portal Context**
+    - **Portal Context**
 
         If selected, the context is set by the context of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
         See the knowledge center topic that is called **Web content associations** for further information.
 
-    -   **Portal Mapping**
+    - **Portal Mapping**
 
         If selected, the context is set by the web content association of the current page. This option is only valid for content that is delivered by using a web content viewer portlet.
 
         See the knowledge center topic that is called **Web content associations** for further information.
 
-    -   **Portlet Context**
+    - **Portlet Context**
 
         If selected, the context is set by context of the current web content viewer portlet. This option is only valid for content that is delivered by using a web content viewer portlet.
 
-    -   **Selected**
+    - **Selected**
 
         If selected, the context is set by the selected item. You can select an item by clicking **Select content** in the dialog. The selected item is then added to the tag with the `uuid=" "` parameter that points to the UUID of the content or site area. Alternatively, you can manually enter the `path=" "` parameter that points to the item's path. If the UUID or path parameter is specified, the context is always "selected", so you do not have to specify `context="Selected"`.
 
-4.  Click **OK** to add the tag to your navigator design.
+4. Click **OK** to add the tag to your navigator design.
 
 ## Optional parameters
 
@@ -101,4 +104,4 @@ Refer to the following examples of use cases for the `Content` tag.
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

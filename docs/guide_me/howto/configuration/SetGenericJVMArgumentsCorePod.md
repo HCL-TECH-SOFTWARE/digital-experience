@@ -14,17 +14,17 @@ This article describes how to set generic JVM arguments for the dx-core pod in a
 
 To add generic JVM arguments to the dx-core pod wp_profile/WebSpherePortal JVM, follow these steps:  
 
-1. Install or Update the HCL DX environment using the helm chart. Details can be found at URL: [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md){target="_blank"}.  
+1. Install or update the HCL DX environment using the Helm chart. For more information, refer to [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md){target="_blank"}.  
 
-2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic jvm arguments as following:  
+2. As soon as the dx-core pod is up and running and the IBM Integrated Solutions Console is accessible, set the generic JVM arguments as following:  
 
     1. Open a web-browser and access the IBM Integrated Solutions Console (admin console). (For example: `http://<DX_HOSTNAME>/ibm/console`)  
     2. Login as administrator.  
-    3. In the Administration Console click **Servers**.  
-    4. Expand Server Type, then click **WebSphere application servers**.  
+    3. In the Administration Console, select **Servers**.  
+    4. Expand Server Type, then select **WebSphere application servers**.  
     5. Select the server name.  
     6. Expand **Java and Process Management**, then click **Process Definition**.  
     7. Under the **Additional Properties** section, click **Java Virtual Machine**.  
     8. Scroll down and locate the textbox for **Generic JVM arguments**.  
-    9. Add the additional generic jvm arguments at the end of all values that are already specified by using a space as separator.  
-    10. Once changes are saved to the master configuration, the core-pod(s) require a restart for the arguments to take effect.  
+    9. Add the additional generic JVM arguments at the end of all values that are already specified by using a space as separator.  
+    10. Once changes are saved to the master configuration, the core-pod(s) require a restart for the arguments to take effect.

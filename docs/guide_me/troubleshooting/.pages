@@ -2,5 +2,6 @@ site_name: Troubleshooting
 
 nav:
 - index.md
-- Web-browser: web-browser
+- Caching: caching
 - Databases and Datasources: database
+- Web-browser: web-browser
