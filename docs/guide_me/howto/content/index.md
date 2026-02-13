@@ -12,3 +12,5 @@ Learn how to identify new managed pages in HCL DX.
 Learn how to use JSP components in HCL DX using WCM.
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
+- **[How to use XMLAccess?](./xmlaccess_faq.md)**  
+Learn how to use XML Access.  
