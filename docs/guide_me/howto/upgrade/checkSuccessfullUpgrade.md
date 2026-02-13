@@ -1,4 +1,4 @@
-# How to determine if a HCL Digital Experience CF upgrade was successfully?
+# How to determine if a HCL Digital Experience CF upgrade was successful?
 
 ## Applies to
 
@@ -6,11 +6,11 @@
 
 ## Introduction
 
-You have just upgraded the maintenance level or cumulative fix (CF) level for HCL Digital Experience, but you are unsure whether or not the upgrade was successful.  How to verify that the installation was successfully?  
+You have just upgraded the maintenance level or cumulative fix (CF) level for HCL Digital Experience, but you are unsure whether or not the upgrade was successful.  How can you verify that the installation was successful?  
 
 ## Instructions
 
-There are a number of places to check to ensure that the installation was successfully:
+There are a number of places to check to ensure that the installation was successful:
 
 1. Verify the ConfigTrace.log to see if there are any fatal errors for the applyCF task. The ConfigTrace.log is generally located in the `<wp_profile_root>/ConfigEngine/log` directory.
 
