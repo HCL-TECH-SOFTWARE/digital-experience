@@ -14,7 +14,7 @@ There are a number of places to check to ensure that the installation was succes
 
 1. Verify the ConfigTrace.log to see if there are any fatal errors for the applyCF task. The ConfigTrace.log is generally located in the `<wp_profile_root>/ConfigEngine/log` directory.
 
-2. Verify the wps.properties under the PortalServer binaries and the wp_profile. Compare the wps.properties between the `<wp_profile>\PortalServer\wps.properties` and `<portalHome>\wps.properties` and ensure that the versions are the same. 
+2. Verify the wps.properties under the PortalServer binaries and the wp_profile. Compare the wps.properties between the `<wp_profile>\PortalServer\wps.properties` and `<portalHome>\wps.properties` and ensure that the versions are the same.  
 
     !!!note
         The CF levels should reflect the upgraded level for both the properties files which indicates that the binaries and the portal profile were upgraded.  
