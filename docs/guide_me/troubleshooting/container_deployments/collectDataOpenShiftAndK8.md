@@ -126,7 +126,7 @@ Follow these steps to run `wpcollector` in your container environment.
         kubectl cp -n dx-191 dx-core-0:/opt/HCL/wp_profile/filesForAutoPD/wp.mustgather-2021.02.11-14.33.19.166+0000.zip /temp/wp.mustgather-2021.02.11-14.33.19.166+0000.zip`  
         ```
 
-7. Upload the file to HCL Support. Detailed instructions can be found at [HTTPS and SFTP upload and download instructions](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064){target="_blank"}. Send the file using the steps provided in the HTTPS and SFTP upload and download instructions.
+7. Send the file to HCL Support using the steps provided in the [HTTPS and SFTP upload and download instructions](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0010064){target="_blank"}.
 
 ???+ info "Related information"
     - [Automated data collection capability provided by wpcollector tool](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012545){target="_blank"}  
