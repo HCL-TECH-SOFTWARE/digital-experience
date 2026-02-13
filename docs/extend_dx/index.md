@@ -1,4 +1,4 @@
-# Extend DX
+# Extend DX test
 
 HCL Digital Experience (DX) provides a rich set of capabilities to create and integrate versatile applications for web and multi-channel delivery of experiences.
 In this section of the documentation the various options to integrate existing applications via e.g. the Web Application Bridge, by developing applications like portlets or script apps and many other ways are outlined.
