@@ -2,6 +2,9 @@
 
 Successful migration requires significant planning and preparation, understanding the tools that are involved, and careful execution of the appropriate steps in the order provided.
 
+!!! important
+    Depending on your source and target versions, Support might recommend using the staging-to-production process instead of the standard migration process. Verify the appropriate approach for your environment before you begin.
+
 -   **[Migration overview](mig_over.md)**  
 Migration is the process of collecting configuration data and applications from an earlier installed version of HCL Digital Experience and merging them into a newer installed version. So that the new environment is identical to the earlier environment.
 -   **[Planning for migration](../../manage/migrate/planning_migration/index.md)**  
