@@ -2,14 +2,15 @@
 title:  Entitlement checking in the My HCLSoftware delivery portal
 ---
 
-The [My HCLSoftware portal (MHS)](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} is available for the distribution of HCLSoftware products. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how you can check your entitlements in the MHS delivery portal.
+The [My HCLSoftware portal (MHS)](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0109011){target="_blank"} is available for the distribution of HCLSoftware products for entitled customers. In MHS, you can find and download the latest HCLSoftware product releases and supported older releases. This topic provides information on how customers with HCL Digital Experience Cloud Native term part entitlements can check and validate entitlements in the MHS delivery portal.
 
 ## Prerequisites
 
 Make sure you have the following elements before configuring the HCL Digital Experience (DX) Cloud Native V9.5 entitlements to be deployed on supported Kubernetes platforms using the MHS delivery portal for entitlement checking:  
 
 - An MHS account and access to the [MHS portal](https://my.hcltechsw.com/){target="_blank"}.
-- A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team.
+- A valid [HCL DX Cloud Native 9.5 (Tier 1 – 7)](https://www.hcltechsw.com/wps/wcm/connect/61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d/HCL+Digital+Experience+Cloud+Native+v9.5.pdf?MOD=AJPERES&CONVERT_TO=url&CACHEID=ROOTWORKSPACE-61f40a7e-d2ca-42d4-b24c-d5adfd4fe54d-n-MmIad){target="_blank"} offering part purchased and issued by the HCL Software licensing team. See [HCL DX Cloud Native 9.5 Tier 1–7 Parts](#reference-hcl-dx-cloud-native-95-tier-17-parts)
+table below
 - Your DX Cloud Native 9.5 (Tier 1 – 7) entitlements are mapped to your MHS portal instances.  
 - A plan to deploy or update to [HCL DX 9.5 Container Update CF226](../../../../whatsnew/cf20/newcf226.md) or to a later release, if you are currently using a prior version.
 - An instance deployment. To create an instance deployment, refer to the steps in [Creating an MHS deployment instance](#creating-an-mhs-deployment-instance) in the MHS portal.
@@ -26,11 +27,11 @@ Follow the configuration steps in [Configuring the DX Cloud Native 9.5 entitleme
 
 ## Configuring the DX Cloud Native 9.5 entitlement
 
-DX Cloud Native 9.5 uses the License Manager to connect with MHS to check license validity and track user sessions. This helps make sure your deployment stays within the allowed usage and provides insights for license management.
+DX Cloud Native 9.5 uses the License Manager to connect with MHS to check license validity to the entitlement purchase period for Digital Experience Cloud Native 9.5 Tier 1 – 7 term part offerings, and track user sessions. This helps make sure your deployment stays within the allowed usage and provides insights for license management.
 
 - Entitlement validation: The License Manager periodically validates the active DX entitlement by communicating with MHS. Entitlements are typically valid for 12 months, with a 28-day grace period before expiration. During this grace period, reminder messages are logged within the container to prompt timely renewal.
 
-- User session reporting: The License Manager regularly transmits user session data to MHS. This reporting allows both customers and HCL to monitor license consumption and ensure usage remains within the bounds of the assigned entitlement tier. The reports also help determine whether a shift to a different usage tier may be necessary based on actual session activity.
+- User session reporting: The License Manager regularly transmits user session data to MHS. This reporting allows HCL to monitor license consumption and ensure usage remains within the bounds of the assigned entitlement tier purchased. 
 
 ### Creating an MHS deployment instance
 
@@ -129,3 +130,17 @@ INFO: The connection to the entitlement server is successful. You have a valid H
 INFO: Starting session count of the license manager
 INFO: License validity: true
 ```
+
+## Reference: HCL DX Cloud Native 9.5 Tier 1–7 Parts
+
+| HCL Digital Experience Cloud Native 9.5 Part Description                                                            | Part Number   |
+|--------------------------------------------------------------------------------------------------------------------|--------------:|
+| HCL Digital Experience Cloud Native Tier 1, 12 Month Term License & S&S, 1–500K User Sessions                       | TN100928Y01   |
+| HCL Digital Experience Cloud Native Tier 2, 12 Month Term License & S&S, 500K–2M User Sessions                      | TN100929Y01   |
+| HCL Digital Experience Cloud Native Tier 3, 12 Month Term License & S&S, 2M–6M User Sessions                        | TN100930Y01   |
+| HCL Digital Experience Cloud Native Tier 4, 12 Month Term License & S&S, 6M–12M User Sessions                       | TN100931Y01   |
+| HCL Digital Experience Cloud Native Tier 5, 12 Month Term License & S&S, 12M–24M User Sessions                      | TN100932Y01   |
+| HCL Digital Experience Cloud Native Tier 6, 12 Month Term License & S&S, 24M–60M User Sessions                      | TN100933Y01   |
+| HCL Digital Experience Cloud Native Tier 7, 12 Month Term License & S&S, 60M–120M User Sessions                     | TN100934Y01   |
+
+The latest HCL Digital Experience offering licenses are available at the HCL Software License Agreements site

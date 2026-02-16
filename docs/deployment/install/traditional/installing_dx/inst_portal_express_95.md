@@ -22,7 +22,7 @@ Similarly, attempts to install the product will also fail. A review of the insta
 
 ## Recommended Solution
 
-To apply iFix PH03610 solution, users need to visit the HCL Software License Portal page and [download the fix](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/entitledDownloadFile.action?downloadPkgId=HCL_Portal_Maintenance&orgId=HCL).
+To apply iFix PH03610 solution, users need to visit the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"} page and download the fix.
 
 ## Workaround
 
