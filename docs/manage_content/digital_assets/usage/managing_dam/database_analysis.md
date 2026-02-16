@@ -107,10 +107,24 @@ GET /dx/api/dam/v1/database-analysis?type=MediaTypes
 
 The Operations Metrics show the status of DAM operations by trigger function. Use this metric to identify operation patterns and troubleshoot issues.
 
-![Operations Metrics](../../../../images/Operations_metrics.png)
+![Operations Metrics](../../../../images/Operations_metrics_latest.png)
+
+#### Available Actions
+
+In the Operations Metrics section, you can take corrective action on failed operations:
+
+**Retrigger Failed Operations** - This button allows you to re-execute operations that failed or are stuck. To use this feature:
+
+1. Expand the **Operations** section to view all operations by trigger function and their statuses.
+2. Rows with failed operations will have a checkbox that you can select.
+3. Select one or more rows containing failed operations by clicking their checkboxes.
+4. Click the **Retrigger Failed Operation** button.
+5. The system will attempt to re-execute the selected failed operations.
+6. A success message will confirm the re-triggering action, and the operations data will refresh automatically.
 
 !!! note
-    For performance analysis, focus on recent operation patterns rather than historical totals.
+    - For performance analysis, focus on recent operation patterns rather than historical totals.
+    - You must select at least one row before the Retrigger button becomes available.
 
 REST API endpoint:
 
@@ -122,10 +136,24 @@ GET /dx/api/dam/v1/database-analysis?type=Operations
 
 The Collections Missing Access Reference ID metric identifies collections that do not have proper access control configuration. Collections without access reference IDs may have inconsistent permission inheritance or access control issues that need administrative attention.
 
-![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference.png)
+![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference_latest.png)
+
+#### Available Actions
+
+In the Collections Missing Access Reference section, you can resolve missing access references:
+
+**Generate Access Reference** - This button allows you to automatically generate and configure access references for collections that are missing them. To use this feature:
+
+1. Expand the **Collections Missing Access Reference ID** section to view all affected collections.
+2. Select one or more collections by clicking their checkboxes.
+3. Click the **Generate Access Reference** button.
+4. The system will contact the DX Core API to register proper access references for the selected collections.
+5. A success message will confirm the action, and the collections list will refresh automatically.
+6. The selected collections should now have proper access control configuration.
 
 !!! note
-    Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
+    - Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
+    - You must select at least one collection before the Generate Access Reference button becomes available.
 
 For each collection missing an access reference, the following information is displayed:
 
@@ -152,7 +180,21 @@ GET /dx/api/dam/v1/database-analysis?type=CollectionsMissingAccessReference
 
 The Media Items not in Collection metric lists orphaned media assets that are not associated with any collection. While these items exist in the DAM system, they are not organized within the collection hierarchy, making them difficult to discover and manage.
 
-![Orphan Media Items](../../../../images/Orphan_media_items.png)
+![Orphan Media Items](../../../../images/Orphan_media_items_latest.png)
+
+#### Available Actions
+
+In the Media Items not in Collection section, you can organize orphaned media assets:
+
+**Move** - This button (shown in each row) allows you to move an orphan media item into a collection. To use this feature:
+
+1. Expand the **Media Items not in Collection** section to view all orphaned assets.
+2. Each orphan media item will have a **Move** button on the right side of its row.
+3. Click the **Move** button for the media item you want to organize.
+4. A dialog will open where you can select a collection to move the media item into.
+5. Choose your desired collection and confirm the action.
+6. The media item will be moved into the selected collection, and it will no longer appear as an orphan.
+7. The orphaned media list will refresh automatically.
 
 For each orphan media item, the following information is displayed:
 
@@ -163,10 +205,12 @@ For each orphan media item, the following information is displayed:
 | Created  | Date and time when the media item was uploaded |
 
 !!! note
-    Consider organizing orphaned media items into appropriate collections for better content management.
+    - Consider organizing orphaned media items into appropriate collections for better content management.
+    - The Move action will maintain all metadata and versions associated with the media item.
 
 REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
+POST /dx/api/dam/v1/database-analysis
 ```
