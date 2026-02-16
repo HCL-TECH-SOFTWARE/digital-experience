@@ -1,7 +1,7 @@
 # Managing JCR databases
 
 This section explains how to manage Java Content Repository (JCR) databases, including backup, restore, and migration tasks.
-## Sample scenario: Copying a JCR database
+## Copying a JCR database
 
 This section describes how to copy a Java Content Repository (JCR) database from a source environment to a target environment, using IBM DB2 as an example.
 
