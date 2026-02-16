@@ -16,11 +16,12 @@ Make sure to also review the [detailed requirements article](https://support.hcl
 - [Preparing your Windows OS](../installing_dx/windows/prep_os-windows.md)
 
 ## Getting the software
-Product software can be obtained from the [HCL Software Licensing Portal](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do).
+
+Product software can be obtained from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
 Additional guidance is available here: [Step-by-step guide on downloading HCL Digital Experience products](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878).
 
-1. Sign in to the HCL Software Licensing Portal.
+1. Sign in to the [MHS portal](https://my.hcltechsw.com/){target="blank"}.
 
 2. Identify the Portal 9.5 offering you want to install.
 
@@ -343,4 +344,4 @@ This completes the upgrade to HCL Portal 9.5 standalone.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

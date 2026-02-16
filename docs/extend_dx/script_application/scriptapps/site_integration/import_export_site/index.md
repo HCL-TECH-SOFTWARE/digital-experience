@@ -8,15 +8,16 @@ tags:
 hide: tags
 ---
 
-# Importing and Exporting DX Site
-
+# Importing and Exporting DX Site 
+ 
 ## Overview
 
-### What You Will Learn In This Tutorial
+### What You Will Learn In This Tutorial 
 
 - How to export parts of a DX Site
 - How to import parts of a DX Site from exported files
 - What to look out for when exporting and deploying DX sites
+- How to export and import DAM assets between environments
 
 ## Reference Site
 
@@ -71,18 +72,19 @@ hide: tags
 3. [Export a DX Theme via commandline](export_theme.md)
 4. [Export a DX site's page hierarchy via commandline](export_site_page_hierarchy.md)
 5. [Export the DX site's WCM libraries via commandline](export_wcm_library.md)
+6. [Export the DX DAM digital assets via commandline](../../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md#export-dam-assets)
 
 ## How to import parts of a DX Site from exported files
 
 Here are the steps in order to deploy your exported DX Site:
 
-1. [Deploy all DX Modules required by your DX Theme.](../../common-setup/build-and-deploy/build_and_deploy_dx_modules.md)
-2. [Deploy the DX Theme you have created for your site. (Skip if you are using one of the out the box themes).](import_theme.md)
-3. [Import all of WCM library that have your components.](import_wcm_libraries.md)
-4. [Import your site page hierarchy.](import_site_page_hierarchy.md)
-5. [Update all of WCM library that have references to site pages.](import_wcm_libraries.md)
-6. [(Optional) Update the script applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md)
-
+1. [Deploy all DX modules required by your DX theme](../../common-setup/build-and-deploy/build_and_deploy_dx_modules.md)
+2. [Deploy the DX theme you created for your site (skip this step if you are using an out-of-the-box theme)](import_theme.md)
+3. [Import DX DAM digital assets from the command line](../../../../../manage_content/digital_assets/usage/managing_dam/dam_exim.md#import-dam-assets)
+4. [Import all WCM libraries that contain your components](import_wcm_libraries.md)
+5. [Import your site page hierarchy](import_site_page_hierarchy.md)
+6. [Update all WCM libraries that reference site pages](import_wcm_libraries.md)
+7. [(Optional) Update Script Applications](../../common-setup/build-and-deploy/build_and_deploy_scriptapps.md)
 ## XML files
 
    Sample XML files are available in the [WoodBurn Insurance reference site](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps/tree/main/showcase-sites/WoodBurnInsurance). DXClient samples are also available in the DX server located in the following directory: `<portal_server_home>/doc/xml-samples`.
@@ -195,3 +197,93 @@ This xml is used to export the Page metadata and hierarchy xml of your site.
 
 - You can find it in `Administration > Site Management` under the `Unique name or Identifier` Column.
    ![Skin Object ID](../../images/19page_unique_name.png)
+
+## DAM Assets Export and Import
+
+[Digital Asset Management](../../../../../manage_content/digital_assets/usage/index.md) (DAM) Assets Export and Import (EXIM) is a tool for exporting DAM assets from a source environment to the file system in a structured format. You can also use it to import DAM assets from the file system into a target environment.
+
+### User access and control capabilities for HCL DAM EXIM
+
+DAM Export and Import (EXIM) is exposed through [DXClient](../../../../../extend_dx/development_tools/dxclient/index.md).
+
+Administrators and authorized users with Administrator role privileges can access and manage DAM EXIM operations.
+
+When you export DAM assets to a target environment that does not share the same LDAP configuration, access rights are not transferred.
+
+If you specify a file system path and run the command from the container, assets are exported to or imported from the specified location (for example, `store/folder_name/`).
+
+### Limitations
+
+DAM EXIM can be used to back up DAM assets from any environment. The same backup can be imported into another environment.
+
+DAM EXIM does **not** support continuous synchronization like DAM Staging. See [Sharing and staging DAM assets](../../../../../manage_content/digital_assets/configuration/staging_dam/index.md) for information on configuring continuous synchronization of DAM assets.
+
+DAM Staging provides continuous synchronization between environments. If you are using DAM Staging, using DAM EXIM is not required.
+
+### Export DAM assets
+
+Use the export command to export DAM assets to the file system. By default, assets are exported to `store/outputFiles/dam-export-assets/`. If you specify a path, assets are exported to the provided location, for example `store/folder_name/`.
+
+#### Commands description
+
+dxclient manage-dam-assets export-assets
+- Help command  
+  Shows help information for the `manage-dam-assets` command:
+
+```bash
+dxclient manage-dam-assets export-assets -h
+```
+
+- Command options
+
+```bash
+-dxProtocol <value>
+```
+pecifies the protocol to use when connecting to the DX server.
+```
+-hostname <value>
+```
+ecifies the hostname of the DX server.
+```
+-dxPort <value>
+```
+Specifies the port to connect to the server (for Kubernetes environments, the default is 443).
+```
+-dxUsername <value>
+```
+Specifies the username required for server authentication.
+```
+-dxPassword <value>
+```
+Specifies the password required for server authentication.
+```
+-ringAPIPort <value>
+```
+Specifies the DAM server port for Kubernetes environments (default: 443).
+```
+-ringAPIPort <value>
+```
+Specifies the DX Core API server port for Kubernetes environments (default: 443).
+```
+-exportPath <value>
+```  
+Specifies a folder path to import DAM assets to, different from the default location. By default, assets are imported to `store/outputFiles/dam-export-assets/`.
+```
+-importBinary <value>
+```  
+Set to `true` or `false` to include or exclude binary files during the import. The default is `true`.
+
+!!! note
+    Optional parameters are `-exportPath` and `-exportBinary`.If the `-exportPath` value is not a relative or absolute path, the exported assets will be placed in the container and will **not** persist after the command completes.
+
+    For example: `-exportPath outputFileDirectory`
+
+For example:
+```
+dxclient manage-dam-assets import-assets -dxProtocol https -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -exportPath <exportPath> -importBinary <importBinary>
+```
+
+??? Related information
+    [Digital Asset Management](../../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dam_artifacts/index.md)
+
+

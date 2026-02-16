@@ -1,0 +1,5 @@
+site_name: Troubleshooting problems with caching
+
+nav:
+- index.md
+- MenuQueryCache.md  

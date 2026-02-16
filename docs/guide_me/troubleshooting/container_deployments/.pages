@@ -1,0 +1,5 @@
+site_name: Container deployments
+
+nav:
+- index.md
+- collectDataOpenShiftAndK8.md

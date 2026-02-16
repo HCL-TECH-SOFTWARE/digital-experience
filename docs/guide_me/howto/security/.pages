@@ -1,7 +1,8 @@
 title: Security
 nav:
     - index.md
-    - enable_http_security_http_only_samesite_K8.md
-    - transient_users_with_OpenID_Connect.md
     - AddAdditionalWASRealms.md
+    - enable_http_security_http_only_samesite_K8.md
+    - implementsaml_portal.md
+    - transient_users_with_OpenID_Connect.md
     - ReplacePortalLDAP.md
