@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
 
@@ -12,10 +13,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
-
-**Digital Experience 9.5 Version**
-
--
 
 **Digital Experience 9.5 Container Version**
 
@@ -39,6 +36,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF234. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### HCL Doc IQ chatbot for the DX Help Center
+
+=== "Containers"
+    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
+
+    !!!note 
+        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+
+=== "On-Premises"
+    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
+
+    !!!note 
+        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
 
 ### My HCLSoftware delivery portal
 
