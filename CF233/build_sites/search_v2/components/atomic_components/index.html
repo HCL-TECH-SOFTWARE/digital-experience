@@ -1,0 +1,5854 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/digital-experience/9.5/latest/latest/build_sites/search_v2/components/atomic_components/">
+      
+      
+        <link rel="prev" href="../../limitations/">
+      
+      
+        <link rel="next" href="../functional_composite_components/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Atomic Components - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--Jan2025-->
+
+<!-- SmartCat script-->
+<script id='sc-script' src="https://cdn.smartcat-proxy.com/168fc4fe410c474eb1f6043205ededea/script-v1/__translator.js?hash=6a6a63c258c09df66a084cf91cd87ede"></script>
+<!-- End SmartCat script -->
+
+<!-- OneTrust Cookies Consent Notice start for hcl-software.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c65f43b5-068e-4e4b-80d3-bdc8c41cf93d" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for hcl-software.com -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atomic-components" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcl-software.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25" target="_blank">Community Forums</a>
+
+</div>
+</div>
+
+<div style='float: right;display: inline-block;width: 140px;margin-top: -7px;'>
+  <span id='scLangSelectorContainer' style='z-index: 1000; position: absolute; right:200.95px;'/>
+</div>
+
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/build_sites/search_v2/components/atomic_components/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Atomic Components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-tabs__link">
+        
+  
+    
+  
+  DX Compose
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../whatsnew/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Build Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../create_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Setting Up Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../themes_skins/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Themes and Skins
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../practitioner_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Practitioner Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portal_settings/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage site settings
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sitebuilder/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Builder
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blueprint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blueprint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nex_haven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nex Haven
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../woodburn_studio/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Woodburn Studio
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../search/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../tagging_rating/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Tagging and rating
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../virtual_portal/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Virtual Portal
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../mobile/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Mobile
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../site_analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Site Analytics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../social_rendering/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Social Rendering
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_16" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Search V2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_16" id="__nav_5_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_16">
+            <span class="md-nav__icon md-icon"></span>
+            Search V2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../limitations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limitations of Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_16_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Components of Search V2
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_16_6" id="__nav_5_16_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_16_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_16_6">
+            <span class="md-nav__icon md-icon"></span>
+            Components of Search V2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Atomic Components
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functional_composite_components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functional Composite Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Customizations for Search V2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../search_v2_authoring/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Search V2 Authoring
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../guide_me/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DX Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/build_sites/search_v2/components/atomic_components.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M441 58.9 453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2 344 121.9l46.1 46.1-134.3 134.2c-2.9 2.9-6.5 5-10.4 6.1L186.9 325l16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25 175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25c-28.1-28.1-73.7-28.1-101.8 0M88 64c-48.6 0-88 39.4-88 88v272c0 48.6 39.4 88 88 88h272c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24v112c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40h112c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="atomic-components">Atomic Components</h1>
+<p>Atomic Components (ACs) are the smallest possible building blocks of the search functionality. These components include buttons, input fields, and chips, and are built using web components standards such as Shadow DOM for encapsulation and reusability. Refer to the table below each component for the list of compatible properties associated with them.</p>
+<ul>
+<li>
+<p><strong>dx-ac-base-element:</strong> This class is a base class for all AC web components, built using LitElement. It provides foundational features such as unique ID assignment, localization support, and configurable shadow DOM encapsulation. This class is intended to be extended by other AC components to ensure consistent behavior and structure across the library.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>String</td>
+<td>Specifies the unique identifier for the component instance. This property is automatically assigned using a UUID generator when the component is instantiated.</td>
+<td>Generated UUID value</td>
+</tr>
+<tr>
+<td><strong>localization</strong></td>
+<td>Map&lt;string,string&gt;</td>
+<td>Specifies the localization map for template messages used for internationalization.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-accordion:</strong> This customizable web component provides an expandable and collapsible accordion UI element. It supports optional checkboxes, secondary text, and left-to-right (LTR) or right-to-left (RTL) layouts. The component is accessible, keyboard-navigable, and supports both outlined and no-outline visual styles. It is suitable for displaying grouped content sections that users can expand or collapse as needed.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>showCheckbox</strong></td>
+<td>Boolean</td>
+<td>Displays a checkbox in the accordion header if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the accordion interaction when set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showSecondaryText</strong></td>
+<td>Boolean</td>
+<td>Shows secondary text below the main label if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td><code>outlined</code> or <code>no-outline</code></td>
+<td>Sets the visual style of the accordion: outlined or no outline.</td>
+<td><code>outlined</code></td>
+</tr>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Controls whether the accordion is expanded.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>Main label text for the accordion header.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>secondaryText</strong></td>
+<td>String</td>
+<td>Secondary text displayed if showSecondaryText is enabled.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-alert:</strong> This customizable alert component, built with Lit, displays important messages to users with different severity levels and visual styles. It supports various alert types such as info, error, warning, and success, and can be styled as contained or outlined. It also allows you to set a custom width and message.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>message</strong></td>
+<td>String</td>
+<td>Specifies the message text to display inside the alert.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>width</strong></td>
+<td>Number</td>
+<td>Indicates the width of the alert in pixels.</td>
+<td><code>240</code></td>
+</tr>
+<tr>
+<td><strong>variant</strong></td>
+<td>String</td>
+<td>Determines the visual style of the alert. Possible values are <code>contained</code> and <code>outlined</code></td>
+<td><code>contained</code></td>
+</tr>
+<tr>
+<td><strong>severity</strong></td>
+<td>String</td>
+<td>Determines the severity level of the alert. Possible values are <code>info</code>, <code>error</code>, <code>warning</code>, and <code>success</code></td>
+<td><code>info</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-button:</strong> This customizable button component comes with internationalization support, conditional icon and text rendering, and isolated styling using Shadow DOM and CSS parts.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button is disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>imgurl</strong></td>
+<td>String</td>
+<td>The URL of the image to be displayed as the icon of a button.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>Specifies the template for a custom icon (for example, SVG or enchanted icon).</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>buttontext</strong></td>
+<td>String</td>
+<td>Displays text on a button.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>endicon</strong></td>
+<td>Boolean</td>
+<td>Determines whether the image is displayed as an end icon instead of a start icon.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>variant</strong></td>
+<td>String</td>
+<td>Specifies the button's visual style. Possible values are <code>contained</code>, <code>text</code>, and <code>outlined</code>.</td>
+<td><code>contained</code></td>
+</tr>
+<tr>
+<td><strong>withPadding</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button should have padding.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>inverseColor</strong></td>
+<td>Boolean</td>
+<td>Uses the inverse color scheme for the button.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td><code>small</code> or <code>medium</code></td>
+<td>Specifies the size of the button (affects icon size and padding).</td>
+<td><code>small</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-button</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>button</strong></td>
+<td>Represents the main button element. It is the default part for the button and is styled based on the button's state (such as <code>disabled</code> and <code>focused</code>) and <code>variant</code> (such as <code>contained</code>, <code>outlined</code>, or <code>text</code>).</td>
+</tr>
+<tr>
+<td><strong>button-disabled</strong></td>
+<td>Represents the button in a disabled state when the <code>disabled</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>button-outlined</strong></td>
+<td>Represents the button with an outlined style when the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+<tr>
+<td><strong>button-outlined-focused</strong></td>
+<td>Represents the <code>outlined</code> button in a focused state when the <code>focused</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+<tr>
+<td><strong>button-outlined-disabled</strong></td>
+<td>Represents the <code>outlined</code> button in a disabled state when the <code>disabled</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+<tr>
+<td><strong>button-start-icon</strong></td>
+<td>Represents the start icon of the button when the <code>starticon</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>button-start-icon-with-padding</strong></td>
+<td>Represents the start icon of the button with padding when the button does not have text (<code>buttontext</code> is set to <code>""</code>) but has the <code>withPadding</code> property set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>button-end-icon</strong></td>
+<td>Represents the end icon of the button when the <code>endicon</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>button-start-icon-no-margin</strong></td>
+<td>Represents the start icon of the button without margin when the button does not have text (<code>buttontext</code> is set to <code>""</code>) and the <code>withPadding</code> property is set to <code>false</code>.</td>
+</tr>
+<tr>
+<td><strong>button-start-icon-rtl-margin</strong></td>
+<td>Represents the start icon of the button with right-to-left (RTL) margin when the text direction is set to <code>RTL</code>.</td>
+</tr>
+<tr>
+<td><strong>button-text</strong></td>
+<td>Represents the text content of the button when the button has text (<code>buttontext</code> is not an empty string).</td>
+</tr>
+<tr>
+<td><strong>button-contained</strong></td>
+<td>Represents the button with a contained style when the <code>variant</code> property is set to <code>contained</code>.</td>
+</tr>
+<tr>
+<td><strong>button-contained-disabled</strong></td>
+<td>Represents the contained button in a disabled state when the <code>disabled</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>contained</code>.</td>
+</tr>
+<tr>
+<td><strong>button-contained-focused</strong></td>
+<td>Represents the contained button in a focused state when the <code>focused</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>contained</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-text</strong></td>
+<td>Represents the button with an enchanted text style when the <code>variant</code> property is set to <code>text</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-text-disabled</strong></td>
+<td>Represents the enchanted text button in a disabled state when the <code>disabled</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>text</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-text-focused</strong></td>
+<td>Represents the enchanted text button in a focused state when the <code>focused</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>text</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-outlined</strong></td>
+<td>Represents the button with an enchanted outlined style when the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-outlined-disabled</strong></td>
+<td>Represents the enchanted outlined button in a disabled state when the <code>disabled</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+<tr>
+<td><strong>button-enchanted-outlined-focused</strong></td>
+<td>Represents the enchanted outlined button in a focused state when the <code>focused</code> property is set to <code>true</code> and the <code>variant</code> property is set to <code>outlined</code>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-input-select:</strong> This flexible, accessible, and customizable component can handle a variety of user interactions and scenarios.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>The label displayed for the dropdown. Defaults to a context-based message if not provided.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the <code>dx-input-select</code> component is disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>selectedValue</strong></td>
+<td>String</td>
+<td>The currently selected value.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>selectedId</strong></td>
+<td>String</td>
+<td>The id of the currently selected option.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>String, String[], OptionData[]</td>
+<td>List of options to display in the dropdown. The options can be a JSON string, an array of strings, or an array of objects with id and name properties.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>DxSearchInputFieldType, String</td>
+<td>The type of the input field used to determine default labels or handle specific behaviors. You can use <code>DxSearchInputFieldType</code> strings such as <code>contentSource</code> or <code>documentObjectType</code> or leave it blank.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>hiddenLabel</strong></td>
+<td>Boolean</td>
+<td>Hides the label when set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>hiddenIcon</strong></td>
+<td>Boolean</td>
+<td>Hides the dropdown icon when set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showRemoveLabel</strong></td>
+<td>Boolean</td>
+<td>Shows a "remove" label for clearing the selection.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String or undefined</td>
+<td>Specifies the placeholder text shown when no value is selected.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>alwaysShowPlaceholder</strong></td>
+<td>Boolean</td>
+<td>Shows the placeholder text when set to <code>true</code>, even when a value is selected.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-input-select</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>div</strong></td>
+<td>Represents the outermost container <code>&lt;div&gt;</code> of the <code>dx-input-select</code> component. This part can be styled to control the overall layout and appearance of the component.</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>Represents the <code>&lt;label&gt;</code> element of the <code>dx-input-select</code> component. This part can be styled to control the appearance of the label text displayed above or beside the dropdown.</td>
+</tr>
+<tr>
+<td><strong>BUTTON_PARTS</strong></td>
+<td>Represents the parts of the <code>&lt;dx-button&gt;</code> element used in the component. The <code>exportparts</code> attribute allows the button's internal parts to be styled externally and ensures all button parts are exported for external styling.</td>
+</tr>
+<tr>
+<td><strong>unordered-list</strong></td>
+<td>Represents the <code>&lt;dx-list&gt;</code> element that contains the dropdown options. This part can be styled to control the appearance of the dropdown list.</td>
+</tr>
+<tr>
+<td><strong>LIST_ITEM_PARTS</strong></td>
+<td>Represents the parts of each <code>&lt;dx-list-item&gt;</code> element within the dropdown list. The <code>exportparts</code> attribute allows the list item's internal parts to be styled externally and ensures all list item parts are exported for external styling.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-list:</strong> This component wraps an unordered list (<code>&lt;ul&gt;</code>) and uses a slot to insert content such as list items into the component. The <code>part="unordered-list"</code> attribute allows external styling of the <code>&lt;ul&gt;</code>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>role</strong></td>
+<td>String</td>
+<td>Specifies the ARIA role for the <code>&lt;ul&gt;</code> element. It is used for accessibility purposes.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attribute is responsible for determining the appropriate CSS for the <code>dx-list</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>unordered-list</strong></td>
+<td>Represents the <code>&lt;ul&gt;</code> element rendered by the <code>dx-list</code> component. It is the main container for the list items.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-switch:</strong> This fully accessible and customizable custom component separates behavior (toggle state and events) from appearance (CSS styling through the dynamic part attribute). This component is currently not in use.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>isChecked</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the switch is toggled on (<code>true</code>) or off (<code>false</code>).</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>isDisabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the switch is disabled.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-switch</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>switch-label</strong></td>
+<td>Represents the label element of the switch component. It is the container for the input and slider elements.</td>
+</tr>
+<tr>
+<td><strong>switch-label-disabled</strong></td>
+<td>Represents the label element of the switch component if the <code>isDisabled</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>switch-input</strong></td>
+<td>Represents the input element of the switch, which is a checkbox. It handles the toggle functionality of the switch.</td>
+</tr>
+<tr>
+<td><strong>switch-slider</strong></td>
+<td>Represents the slider element of the switch, which visually indicates whether the switch is on or off.</td>
+</tr>
+<tr>
+<td><strong>switch-slider-checked</strong></td>
+<td>Represents the slider element of the switch if the <code>isChecked</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>switch-slider-disabled</strong></td>
+<td>Represents the slider element of the switch if the <code>isDisabled</code> property is set to <code>true</code> but the <code>isChecked</code> property is set to <code>false</code>.</td>
+</tr>
+<tr>
+<td><strong>switch-slider-checked-disabled</strong></td>
+<td>Represents the slider element of the switch if the <code>isDisabled</code> and <code>isChecked</code> properties are set to <code>true</code>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-anchor:</strong> This customizable web component renders an extended anchor tag used in advanced UI scenarios, such as pagination, navigation, and result listings. The component supports dynamic attributes, event handling for custom click actions, and displays either text or an image. It is designed to be accessible and easily integrated into larger web applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>url</strong></td>
+<td>String</td>
+<td>Specifies the URL to which the anchor navigates.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>weight</strong></td>
+<td>Number</td>
+<td>Specifies a numeric value for custom logic or styling (for example, ordering).</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>anchorTitle</strong></td>
+<td>String</td>
+<td>Specifies the title attribute for the anchor, shown as a tooltip on hover.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>Specifies the display text for the anchor</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>rel</strong></td>
+<td>String</td>
+<td>Specifies the relationship between the current document and the linked document. Sample values include <code>noopener</code> or <code>nofollow</code>.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates if the anchor element is disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>selected</strong></td>
+<td>Boolean</td>
+<td>Indicates if the anchor is currently selected and is typically used in scenarios such as pagination.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>Number</td>
+<td>Represents a custom numeric value associated with the anchor. Ensure to use case-specific values.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>mode</strong></td>
+<td>String</td>
+<td>Specifies the mode of the anchor, controlling its behavior and styling. You can use the mode values <code>pagination</code> or <code>result-title</code>, or leave it blank.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>imgurl</strong></td>
+<td>String</td>
+<td>Specifies the URL of an image to be displayed inside the anchor if no text label is provided.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>target</strong></td>
+<td>String</td>
+<td>Specifies where to open the linked document. Sample values include <code>_blank</code> or <code>_self</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-anchor</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>result-title</strong></td>
+<td>Applies specific styles or behaviors for result titles in the UI. Used when the anchor tag represents a result title.</td>
+</tr>
+<tr>
+<td><strong>pagination-index-disabled</strong></td>
+<td>Applies styles or behaviors indicating that the pagination link is not clickable. Used when the anchor tag is part of a pagination component and the <code>disabled</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>pagination-index-selected</strong></td>
+<td>Applies styles or behaviors indicating that the pagination link is currently active or selected. Used when the anchor tag is part of a pagination component and the <code>selected</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>pagination-index-default</strong></td>
+<td>Applies the default styles or behaviors for pagination links. Used when the anchor tag is part of a pagination component and is in its default state (<code>disabled</code> and <code>selected</code> are both set to <code>false</code>).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-chip:</strong> This component allows you to display a "chip" or "tag" with a numerical count, such as notification counters, tag lists, or pill-style labels. It also comes with built-in localization support.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>Specifies the name or label of the chip.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>count</strong></td>
+<td>Number</td>
+<td>Represents a numeric count associated with the chip.</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>showChipCount</strong></td>
+<td>Boolean</td>
+<td>Determines whether <code>count</code> should be displayed alongside the chip name.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showAvatar</strong></td>
+<td>Boolean</td>
+<td>Determines whether to display an avatar icon at the start of the chip.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>clearIcon</strong></td>
+<td>Boolean</td>
+<td>Determines whether to display a clear (remove) icon slot at the end of the chip.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the chip, making it non-interactive and visually distinct.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-chip</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>chip-div</strong></td>
+<td>Represents the main container <code>&lt;div&gt;</code> for the <code>dx-chip</code> component. It serves as the root element for styling and interaction.</td>
+</tr>
+<tr>
+<td><strong>chip-name</strong></td>
+<td>Represents the <code>&lt;span&gt;</code> element that displays the name of the chip. It is used to style the text content of the chip's name.</td>
+</tr>
+<tr>
+<td><strong>chip-count</strong></td>
+<td>Represents the <code>&lt;span&gt;</code> element that displays the count of the chip when the locale is left-to-right (LTR). It is used to style the count value in LTR layouts.</td>
+</tr>
+<tr>
+<td><strong>chip-count-rtl</strong></td>
+<td>Represents the <code>&lt;span&gt;</code> element that displays the count of the chip when the locale is right-to-left (RTL). It is used to style the count value in RTL layouts.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-circular-progress:</strong> This customizable radial progress bar uses SVG graphics and CSS animations to display a loading state. It supports various styling options such as size, stroke width, and color, and can be integrated into any web application to visually indicate progress.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>size</strong></td>
+<td>Number</td>
+<td>Specifies the diameter of the circular progress element.</td>
+<td><code>100</code></td>
+</tr>
+<tr>
+<td><strong>strokewidth</strong></td>
+<td>Number</td>
+<td>Specifies the width of the circle's stroke.</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><strong>trailcolor</strong></td>
+<td>String</td>
+<td>Specifies the color of the inactive portion (trail) of the circle.</td>
+<td><code>#D6D6D6</code></td>
+</tr>
+<tr>
+<td><strong>valuecolor</strong></td>
+<td>String</td>
+<td>Specifies the color of the active portion of the circle.</td>
+<td><code>#0550DC</code></td>
+</tr>
+</tbody>
+</table>
+<p>The <code>dx-circular-progress</code> component does not currently use any part attributes in its implementation.</p>
+</li>
+<li>
+<p><strong>dx-input-textfield:</strong> This component allows you to create rich input fields with enhanced user experience such as search bars or forms. You can also use it for fields where text input with optional icons and labels is required.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>value</strong></td>
+<td>String</td>
+<td>Specifies the current value of the textfield.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td>String</td>
+<td>Specifies the input type. Sample values include <code>text</code>, <code>password</code>, or <code>email</code>.</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String, undefined</td>
+<td>Specifies the label displayed above the textfield.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String</td>
+<td>Specifies the placeholder text displayed inside the textfield.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the textfield is disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>clearIconUrl</strong></td>
+<td>String</td>
+<td>Specifies the URL or name of the icon used to clear the input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>actionIconUrl</strong></td>
+<td>String</td>
+<td>Specifies the URL or name of the icon used for an action (for example, search).</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>DxSearchInputFieldType, String</td>
+<td>Specifies a field identifier for the input that is useful in custom events or associating it with specific data. You can use the <code>DxSearchInputFieldType</code> string <code>queryString</code> or provide your own field name.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>hassearchedbefore</strong></td>
+<td>Boolean</td>
+<td>Indicates if a search has been performed before.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-input-textfield</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>div</strong></td>
+<td>Represents the outermost container of the textfield component.</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>Represents the label element for the input field. It is used when the <code>label</code> property is provided.</td>
+</tr>
+<tr>
+<td><strong>icon-start</strong></td>
+<td>Represents the starting icon of the input field. It is used when the <code>iconStartUrl</code> property is provided.</td>
+</tr>
+<tr>
+<td><strong>icon-start-with-label</strong></td>
+<td>Represents the starting icon of the input field when a label is also present. It is applied in addition to the <code>icon-start</code> part.</td>
+</tr>
+<tr>
+<td><strong>input</strong></td>
+<td>Represents the input field. It is the default part for the input element.</td>
+</tr>
+<tr>
+<td><strong>input-disabled</strong></td>
+<td>Represents the input field when the <code>disabled</code> property is set to <code>true</code>. It is applied in addition to the <code>input</code> part.</td>
+</tr>
+<tr>
+<td><strong>input-icon-start</strong></td>
+<td>Represents the input field when there is a starting icon (<code>iconStartUrl</code> is provided). It is applied in addition to the <code>input</code> part.</td>
+</tr>
+<tr>
+<td><strong>input-icon-end</strong></td>
+<td>Represents the input field when there is an ending icon (<code>iconEndUrl</code> is provided). It is applied in addition to the <code>input</code> part.</td>
+</tr>
+<tr>
+<td><strong>input-icon-both</strong></td>
+<td>Represents the input field when both starting and ending icons are present (<code>iconStartUrl</code> and <code>iconEndUrl</code> are provided). It is applied in addition to the <code>input</code> part.</td>
+</tr>
+<tr>
+<td><strong>icon-end</strong></td>
+<td>Represents the ending icon of the input field. It is used when the <code>iconEndUrl</code> property is provided.</td>
+</tr>
+<tr>
+<td><strong>icon-end-with-label</strong></td>
+<td>Represents the ending icon of the input field when a label is also present. It is applied in addition to the <code>icon-end</code> part.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-item-type-avatar:</strong> This custom web component displays a predefined avatar representing a specific item type. It supports both icon-based and image-based avatars, automatically selecting the appropriate icon and color based on the provided item type.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>itemType</strong></td>
+<td>String</td>
+<td>Specifies the type of item to display. Determines which icon and color are shown.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>imageUrl</strong></td>
+<td>String</td>
+<td>Specifies the URL of the image to display as the avatar. The image is displayed only if this URL is provided and the <code>itemType</code> is <code>IMAGE</code>.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-input-textfield</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ITEM_TYPE_AVATAR_EXPORT_PARTS</strong></td>
+<td>Represents the part names exported from the internal dx-avatar component, allowing you to style or access sub-elements of the avatar from outside the shadow DOM. Typical parts may include icon, image, background, or label.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-search-center-layout:</strong> This customizable web component provides a structured layout for a search interface. It includes slots for adding content, such as a header, search input, and search output.</p>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-search-center-layout</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>header-container</strong></td>
+<td>Represents the container for the header section of the layout.</td>
+</tr>
+<tr>
+<td><strong>header</strong></td>
+<td>Represents the header content itself, which is populated through the <code>dx-header</code> slot.</td>
+</tr>
+<tr>
+<td><strong>pagination-container</strong></td>
+<td>Represents the container for the pagination section.</td>
+</tr>
+<tr>
+<td><strong>pagination</strong></td>
+<td>Represents the pagination content, which is populated through the <code>dx-pagination</code> slot.</td>
+</tr>
+<tr>
+<td><strong>main</strong></td>
+<td>Represents the main content area of the layout.</td>
+</tr>
+<tr>
+<td><strong>search-input-container</strong></td>
+<td>Represents the container for the search input section, which is populated through the <code>search-input-container</code> slot.</td>
+</tr>
+<tr>
+<td><strong>hr-part</strong></td>
+<td>Represents the horizontal rule (divider) between the search input and the search results.</td>
+</tr>
+<tr>
+<td><strong>search-result-container</strong></td>
+<td>Represents the container for the search results section.</td>
+</tr>
+<tr>
+<td><strong>SEARCH_OUTPUT_CONTAINER</strong></td>
+<td>Represents a dynamic container for search results when the tag cloud is visible.</td>
+</tr>
+<tr>
+<td><strong>SEARCH_OUTPUT_CONTAINER_NO_TAGS</strong></td>
+<td>Represents a dynamic container for search results when the tag cloud is hidden.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-toggle-button:</strong> This component supports customizable icons for each button and adjusts its style based on the selection and outlined setting. It includes separate styles for selected and unselected buttons and allows easy integration into other UI components.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Determines if the button is disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>outlined</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the button should be rendered with an outlined style.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>selectedValue</strong></td>
+<td>String</td>
+<td>Specifies the currently selected value of the toggle button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>iconUrls</strong></td>
+<td>String[]</td>
+<td>Array of URLs for the icons displayed on the buttons.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>values</strong></td>
+<td>String[]</td>
+<td>Array of values corresponding to each button's selection state.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>singleButton</strong></td>
+<td>Boolean</td>
+<td>Renders a single toggle button if set to <code>true</code>. Otherwise, it renders two buttons.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>toggleOn</strong></td>
+<td>Boolean</td>
+<td>Indicates if the single toggle button is in the "on" state.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showBadge</strong></td>
+<td>Boolean</td>
+<td>Displays a badge on the single toggle button if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>singleButtonTitle</strong></td>
+<td>String</td>
+<td>Specifies the title attribute for the single toggle button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>singleButtonAria</strong></td>
+<td>String</td>
+<td>Specifies the ARIA label for the single toggle button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>Specifies the icon template for the single toggle button.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-toggle-button</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>toggle-button-div</strong></td>
+<td>Represents the outer container <code>&lt;div&gt;</code> of the toggle button component.</td>
+</tr>
+<tr>
+<td><strong>toggle-button-div-outlined</strong></td>
+<td>Represents the outer container <code>&lt;div&gt;</code> of the toggle button component if the <code>outlined</code> property is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>first-button</strong></td>
+<td>Represents the first <code>&lt;button&gt;</code> element in the toggle button.</td>
+</tr>
+<tr>
+<td><strong>toggle-button-selected</strong></td>
+<td>Represents the first or second <code>&lt;button&gt;</code> element in the toggle button if the <code>selectedValue</code> matches the first value in the <code>values</code> array.</td>
+</tr>
+<tr>
+<td><strong>toggle-button</strong></td>
+<td>Represents the first or second <code>&lt;button&gt;</code> element in the toggle button if the <code>selectedValue</code> does not match the first value in the <code>values</code> array.</td>
+</tr>
+<tr>
+<td><strong>second-button</strong></td>
+<td>Represents the second <code>&lt;button&gt;</code> element in the toggle button.</td>
+</tr>
+<tr>
+<td><strong>toggle-button-icon</strong></td>
+<td>Represents the <code>&lt;img&gt;</code> elements inside the buttons, which display the icons for the toggle button options. This part remains constant and does not change.</td>
+</tr>
+<tr>
+<td><strong>badge-dot</strong></td>
+<td>Represents the badge element shown when <code>showBadge</code> is set to <code>true</code> in single button mode.</td>
+</tr>
+<tr>
+<td><strong>toggle-single-button</strong></td>
+<td>Represents the single toggle button element when <code>singleButton</code> is set to <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>toggle-on-single-button</strong></td>
+<td>Applied to the single button when it is in the "on" state (<code>toggleOn</code> is set to <code>true</code>).</td>
+</tr>
+<tr>
+<td><strong>toggle-off-single-button</strong></td>
+<td>Applied to the single button when it is in the "off" state (<code>toggleOn</code> is set to <code>false</code>).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-snackbar:</strong> This custom web component displays brief messages to users, typically as feedback for actions or system events. It supports different message types (such as info, warning, error, success, and progress) and can display an icon or a progress indicator accordingly. The component is built using the Lit library and is highly customizable, supporting slots for action buttons and theming using CSS parts.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>message</strong></td>
+<td>String</td>
+<td>Specifies the message text or HTML content to display in the snackbar.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td>String</td>
+<td>Specifies the type of snackbar to display and determines the icon or progress indicator shown. Possible values are <code>info</code>, <code>warning</code>, <code>error</code>, <code>success</code>, <code>progress</code></td>
+<td><code>info</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-snackbar</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>snackbar-container</strong></td>
+<td>Represents the main container for the snackbar.</td>
+</tr>
+<tr>
+<td><strong>snackbar-icon-container</strong></td>
+<td>Represents the container that holds the icon or progress indicator.</td>
+</tr>
+<tr>
+<td><strong>snackbar-icon</strong></td>
+<td>Represents the first <code>&lt;button&gt;</code> element in the snackbar.</td>
+</tr>
+<tr>
+<td><strong>snackbar-progress</strong></td>
+<td>Represents the container for the progress indicator. This container is shown only when type is <code>SNACKBAR_PROGRESS</code>.</td>
+</tr>
+<tr>
+<td><strong>snackbar-message</strong></td>
+<td>Represents the element displaying the snackbar message text or HTML.</td>
+</tr>
+<tr>
+<td><strong>snackbar-button-container</strong></td>
+<td>Represents the container for the action buttons section.</td>
+</tr>
+<tr>
+<td><strong>snackbar-buttons</strong></td>
+<td>Represents the slot container for custom action buttons (<code>slot="snackbar-buttons"</code>).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-tooltip:</strong> This highly configurable web component displays tooltips in web applications. It provides flexible positioning, sizing, and content options, supporting both single-line and multi-line tooltips. The component is accessible, responsive to viewport changes, and can be customized for right-to-left (RTL) layouts. It automatically manages visibility, placement, and sizing based on the target element and viewport constraints.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>show</strong></td>
+<td>Boolean</td>
+<td>Controls the visibility of the tooltip.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>tooltiptext</strong></td>
+<td>String or undefined</td>
+<td>Specifies the text content to display inside the tooltip.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>tooltipSize</strong></td>
+<td>String</td>
+<td>Specifies the size variant of the tooltip (for example, small or large).</td>
+<td><code>tooltip-small</code></td>
+</tr>
+<tr>
+<td><strong>tooltipType</strong></td>
+<td>String</td>
+<td>Specifies the type of tooltip (for example, single-line or multi-line).</td>
+<td><code>tooltip-single-line</code></td>
+</tr>
+<tr>
+<td><strong>placement</strong></td>
+<td>String</td>
+<td>Specifies the preferred placement of the tooltip (for example, top, bottom, left, or right).</td>
+<td><code>tooltip-bottom</code></td>
+</tr>
+<tr>
+<td><strong>gap</strong></td>
+<td>Number</td>
+<td>Specifies the gap in pixels between the tooltip and the target element.</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>multiLineMaxWidth</strong></td>
+<td>Number</td>
+<td>Specifies the maximum width for multi-line tooltips in pixels.</td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>viewportPadding</strong></td>
+<td>Number</td>
+<td>Specifies the padding from the viewport edge in pixels.</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>minimumWidth</strong></td>
+<td>Number</td>
+<td>Specifies the minimum width of the tooltip in pixels.</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>isRTL</strong></td>
+<td>Boolean</td>
+<td>Enables RTL layout support.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-tooltip</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>tooltip-root</strong></td>
+<td>Represents the root element of the tooltip component. Useful for styling the overall tooltip container.</td>
+</tr>
+<tr>
+<td><strong>tooltip-text</strong></td>
+<td>Represents the element containing the tooltip text. This part is combined with the effective type, size, and placement for more granular styling (for example, single-line, multi-line, small, large, top, or bottom).</td>
+</tr>
+<tr>
+<td><strong>tooltip-target</strong></td>
+<td>Represents the interactive element that triggers the tooltip display upon hover or focus.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-avatar:</strong> This web component displays user avatars in various forms, such as images, icons, or text initials. It supports different shapes (rounded or circular), color themes, and content types (image, icon, icon template, or text). It is also highly customizable and can be used to represent users, entities, or any object requiring a visual identifier in your application.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>variant</strong></td>
+<td>String</td>
+<td>Sets the avatar's visual variant. Possible values are <code>avatar-letter</code>, <code>avatar-icon</code>, or <code>avatar-img</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>imgUrl</strong></td>
+<td>String</td>
+<td>Indicates the URL of the image to be displayed as the avatar when the <code>variant</code> is set to <code>avatar-img</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>iconUrl</strong></td>
+<td>String</td>
+<td>Indicates the URL of the icon to be displayed as the avatar when the <code>variant</code> is set to <code>avatar-icon</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>color</strong></td>
+<td>String</td>
+<td>Specifies the color theme for the avatar.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>iconTemplate</strong></td>
+<td>TemplateResult or String</td>
+<td>Custom icon template or SVG string for icon template avatars.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>avatarText</strong></td>
+<td>String</td>
+<td>Specifies the text to be displayed in the avatar when the <code>variant</code> is set to <code>avatar-letter</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td>String</td>
+<td>Sets the shape of the avatar. Possible values are <code>avatar-rounded</code> or <code>avatar-circular</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-avatar</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>avatar-div</strong></td>
+<td>Represents the part attribute for the outer div element when the <code>type</code> property is set to <code>avatar-rounded</code>. It is used to style the container of the rounded avatar.</td>
+</tr>
+<tr>
+<td><strong>avatar-div-circular</strong></td>
+<td>Represents the part attribute for the outer div element when the <code>type</code> property is set to <code>avatar-circular</code>. It is used to style the container of the circular avatar.</td>
+</tr>
+<tr>
+<td><strong>avatar-image-circular</strong></td>
+<td>Represents the part attribute for an image element when the <code>variant</code> property is set to <code>avatar-img</code> and the <code>type</code> property is set to <code>avatar-circular</code>. It is used to style the circular avatar displaying an image.</td>
+</tr>
+<tr>
+<td><strong>avatar-image-rounded</strong></td>
+<td>Represents the part attribute for an image element when the <code>variant</code> property is set to <code>avatar-img</code> and the <code>type</code> property is set to <code>avatar-rounded</code>. It is used to style the rounded avatar displaying an image.</td>
+</tr>
+<tr>
+<td><strong>avatar-icon-circular</strong></td>
+<td>Represents the part attribute for an image element when the <code>variant</code> property is set to <code>avatar-icon</code> and the <code>type</code> property is set to <code>avatar-circular</code>. It is used to style the circular avatar displaying an icon.</td>
+</tr>
+<tr>
+<td><strong>avatar-icon-rounded</strong></td>
+<td>Represents the part attribute for an image element when the <code>variant</code> property is set to <code>avatar-icon</code> and the <code>type</code> property is set to <code>avatar-rounded</code>. It is used to style the rounded avatar displaying an icon.</td>
+</tr>
+<tr>
+<td><strong>avatar-span-circular</strong></td>
+<td>Represents the part attribute for a span element when the <code>variant</code> property is set to <code>avatar-letter</code> and the <code>type</code> property is set to <code>avatar-circular</code>. It is used to style the circular avatar displaying text.</td>
+</tr>
+<tr>
+<td><strong>avatar-span-rounded</strong></td>
+<td>Represents the part attribute for a span element when the <code>variant</code> property is set to <code>avatar-letter</code> and the <code>type</code> property is set to <code>avatar-rounded</code>. It is used to style the rounded avatar displaying text.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-header:</strong> This component offers a flexible and responsive header solution with various customization options and localization support.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>color</strong></td>
+<td>String</td>
+<td>Sets the color for the header's text and other elements.</td>
+<td>'rgba(0, 0, 0, .32)'</td>
+</tr>
+<tr>
+<td><strong>headerTitle</strong></td>
+<td>String</td>
+<td>Specifies the title displayed in the header.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>showBackIcon</strong></td>
+<td>Boolean</td>
+<td>Determines whether the back icon is shown.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>isSideNavOpen</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the side navigation is open.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Determines whether certain components in the header are disabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>variant</strong></td>
+<td>String</td>
+<td>Specifies the predetermined structure and styling of the header according to its use-case. You can use the value <code>header-endUser</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-header</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>header</strong></td>
+<td>Represents the main container of the header component.</td>
+</tr>
+<tr>
+<td><strong>sub-header-start</strong></td>
+<td>Represents the left side of the header, typically used for navigation or back buttons.</td>
+</tr>
+<tr>
+<td><strong>header-spacing-start-hamburger</strong></td>
+<td>Represents the spacing or container for the hamburger menu when the side navigation is open.</td>
+</tr>
+<tr>
+<td><strong>header-spacing-start</strong></td>
+<td>Represents the spacing or container for the left side of the header when the side navigation is closed.</td>
+</tr>
+<tr>
+<td><strong>h6</strong></td>
+<td>Represents the container for the title or heading of the header.</td>
+</tr>
+<tr>
+<td><strong>sub-header-end</strong></td>
+<td>Represents the right side of the header, typically used for actions such as search, filters, or badges.</td>
+</tr>
+<tr>
+<td><strong>header-spacing-end</strong></td>
+<td>Represents the spacing or container for the right side of the header.</td>
+</tr>
+<tr>
+<td><strong>input</strong></td>
+<td>Represents the input text field used in the header, typically for search functionality.</td>
+</tr>
+<tr>
+<td><strong>badge_dot</strong></td>
+<td>Represents the badge element, often used to display notifications or indicators.</td>
+</tr>
+<tr>
+<td><strong>hr-part</strong></td>
+<td>Represents the horizontal rule (divider) at the bottom of the header.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-list-item:</strong> This component allows you to mark items as selected and apply different styles accordingly. It also includes a slot element, allowing you to insert content into the item when the component is used.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>key</strong></td>
+<td>String</td>
+<td>A unique key for the list item that is typically used to identify it within a list.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>isSelected</strong></td>
+<td>Boolean</td>
+<td>Used to track whether the list item is selected.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>role</strong></td>
+<td>String</td>
+<td>Specifies the ARIA role for the list item, such as <code>menuitem</code>.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-list-item</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>menu-item</strong></td>
+<td>This part is applied when the <code>role</code> property of the list item is set to <code>menuitem</code>. It represents a menu item in a list.</td>
+</tr>
+<tr>
+<td><strong>list-item-selected</strong></td>
+<td>This part is applied when the <code>isSelected</code> property is set to <code>true</code>. It indicates that the list item is currently selected.</td>
+</tr>
+<tr>
+<td><strong>list-item</strong></td>
+<td>This part is applied when the <code>role</code> property of the list item is set to <code>menuitem</code>. It represents a menu item in a list.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-svg-icon:</strong> This component allows you to display scalable vector icons with customizable colors and sizes. You can use this component for dynamic UIs where the icon might need to change based on context or state.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>color</strong></td>
+<td>String</td>
+<td>The color of the SVG icon. If <code>useCurrentColor</code> is set to <code>false</code>, this color will be applied directly to the SVG's fill.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td>String</td>
+<td>The size of the icon. Used for both width and height.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>useCurrentColor</strong></td>
+<td>Boolean</td>
+<td>Determines whether the icon will inherit the color of the parent element's color property (using CSS currentColor).</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>The SVG icon content passed as a template to render the icon.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-authoring-item-type-avatar:</strong> This component allows you to display an avatar image based on the <code>itemType</code> property that determines the type of item for which the avatar is rendered.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>itemType</strong></td>
+<td>String</td>
+<td>Determines the type of item for which the avatar is rendered.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-badge:</strong> This component displays a badge, typically used to show a small piece of information such as a count, label, or status. It supports both left-to-right (LTR) and right-to-left (RTL) layouts, automatically adjusting its styling based on the current localization direction.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>badge</strong></td>
+<td>String</td>
+<td>Holds the text content to be displayed inside the badge.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-badge</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>badge_text</strong></td>
+<td>Represents the badge text when the text direction is left-to-right (LTR).</td>
+</tr>
+<tr>
+<td><strong>badge_text-rtl</strong></td>
+<td>Represents the badge text when the text direction is right-to-left (RTL).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-breadcrumbs-item:</strong> This web component represents a single, customizable item in a breadcrumb navigation trail. It is built using the Lit library and is designed to display a navigational link (optionally with an icon). It also supports customization for disabled states and accessibility, helping users understand and navigate the hierarchy of a website or application.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>path</strong></td>
+<td>PathType Object</td>
+<td>Defines the breadcrumb item data, including title, link, icon, iconName, and state.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>partProp</strong></td>
+<td>String</td>
+<td>Specifies the custom part attribute for styling or identification.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>key</strong></td>
+<td>String</td>
+<td>Specifies the unique key for the breadcrumb item, which is essential for list rendering.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-badge</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>breadcrumbs-item</strong></td>
+<td>Applied to the <code>&lt;li&gt;</code> element representing a breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Added to the <code>&lt;li&gt;</code> element when the breadcrumb item is disabled.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-item-last</strong></td>
+<td>Used for the last breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-icon</strong></td>
+<td>Applied to the icon element within the breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-item-last-icon</strong></td>
+<td>Used for the icon in the last breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-link</strong></td>
+<td>Applied to the <code>&lt;a&gt;</code> link for a breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-link-last</strong></td>
+<td>Used for the link in the last breadcrumb item.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-content</strong></td>
+<td>Applied to the <code>&lt;div&gt;</code> wrapping the icon and text.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-text</strong></td>
+<td>Applied to the <code>&lt;span&gt;</code> containing the breadcrumb title.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-breadcrumbs:</strong> This web component displays a navigational breadcrumb trail, helping users understand and navigate the hierarchy of a website or application. It renders a list of breadcrumb items, each representing a navigation step. The component supports both left-to-right (LTR) and right-to-left (RTL) layouts and allows custom click handling for breadcrumb navigation.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>paths</strong></td>
+<td>Array&lt;PathType&gt;</td>
+<td>Specifies the array of breadcrumb path objects to display. Each object defines a breadcrumb item (PathType).</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>handleBreadcrumbClick</strong></td>
+<td>Function</td>
+<td>Defines the optional callback function invoked when a breadcrumb item is clicked (except for disabled items).</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following PathType Interface properties are used in <code>dx-breadcrumbs</code> and <code>dx-breadcrumbs-item</code>:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>title</strong></td>
+<td>String</td>
+<td>Specifies the display text for the breadcrumb item.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>parentId</strong></td>
+<td>String</td>
+<td>Specifies the optional parent identifier for hierarchical data.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td>String</td>
+<td>Specifies the URL or route for navigation.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>Defines the custom icon template to render.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>iconName</strong></td>
+<td>String</td>
+<td>Specifies the predefined icon name (for example <code>HOME</code> or <code>INFORMATION</code>).</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the breadcrumb item if set to <code>true</code>.</td>
+<td><code>undefined</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-breadcrumbs</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>breadcrumbs-container</strong></td>
+<td>Represents the main container for the breadcrumbs navigation.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-list</strong></td>
+<td>Represents the list element that holds all breadcrumb items.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-separator</strong></td>
+<td>Represents the separator element (for example, chevron icon) between breadcrumb items.</td>
+</tr>
+<tr>
+<td><strong>breadcrumbs-item-last</strong></td>
+<td>Represents the last breadcrumb item in the list, typically styled differently to indicate the current page.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-data-grid:</strong> This component is designed to provide a highly customizable and interactive data grid for displaying tabular data. Its features include sorting, selection, tooltips, and keyboard navigation.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>isLoading</strong></td>
+<td>String</td>
+<td>Indicates whether the data grid is in a loading state.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>colDef</strong></td>
+<td>String</td>
+<td>Represents the column definitions for the data grid.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>hasMiddlewareError</strong></td>
+<td>String</td>
+<td>Indicates if there is a middleware error.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>hasContentSourceAvailable</strong></td>
+<td>String</td>
+<td>Indicates if content sources are available.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>checkboxSelection</strong></td>
+<td>String</td>
+<td>Indicates if checkbox selection is enabled.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>customTableHeaderPart</strong></td>
+<td>String</td>
+<td>Custom part name for table header styling.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>customTableCellPart</strong></td>
+<td>String</td>
+<td>Custom part name for table cell styling.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>specialFields</strong></td>
+<td>String[]</td>
+<td>List of special fields for custom rendering or actions.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>tableHover</strong></td>
+<td>String</td>
+<td>Indicates if table hover effects are enabled.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-data-grid</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>table-row-header-container</strong></td>
+<td>Represents the container for the table header row.</td>
+</tr>
+<tr>
+<td><strong>table-select-all-checkbox</strong></td>
+<td>Represents the checkbox for selecting all rows in the header row.</td>
+</tr>
+<tr>
+<td><strong>table-header-container</strong></td>
+<td>Represents the container for each table header cell.</td>
+</tr>
+<tr>
+<td><strong>table-header-container-child</strong></td>
+<td>Represents the child container inside a table header cell.</td>
+</tr>
+<tr>
+<td><strong>table-header-text-parent</strong></td>
+<td>Represents the parent container for the header text.</td>
+</tr>
+<tr>
+<td><strong>table-header-text</strong></td>
+<td>Represents the text content of the table header.</td>
+</tr>
+<tr>
+<td><strong>table-sort-button-container</strong></td>
+<td>Represents the container for the sort buttons in the header.</td>
+</tr>
+<tr>
+<td><strong>table-header-icon-button</strong></td>
+<td>Represents the sort icon button in the header.</td>
+</tr>
+<tr>
+<td><strong>table-header-asc-sort-button-hidden</strong></td>
+<td>Represents the hidden state of the ascending sort button.</td>
+</tr>
+<tr>
+<td><strong>table-header-desc-sort-button-hidden</strong></td>
+<td>Represents the hidden state of the descending sort button.</td>
+</tr>
+<tr>
+<td><strong>table-header-sort-button</strong></td>
+<td>Represents the visible state of the sort button.</td>
+</tr>
+<tr>
+<td><strong>table-column-separator</strong></td>
+<td>Represents the separator between table columns.</td>
+</tr>
+<tr>
+<td><strong>table-column-separator-hr</strong></td>
+<td>Represents the horizontal rule (divider) used as a column separator.</td>
+</tr>
+<tr>
+<td><strong>table-body-container</strong></td>
+<td>Represents the container for the table body.</td>
+</tr>
+<tr>
+<td><strong>table-loading-text</strong></td>
+<td>Represents the loading text displayed when data is being loaded.</td>
+</tr>
+<tr>
+<td><strong>table-result-label</strong></td>
+<td>Represents the label for the result message, such as "No results found."</td>
+</tr>
+<tr>
+<td><strong>table--result-description</strong></td>
+<td>Represents the description for the result message.</td>
+</tr>
+<tr>
+<td><strong>table-row-body-container</strong></td>
+<td>Represents the container for each row in the table body.</td>
+</tr>
+<tr>
+<td><strong>table-select-checkbox-container</strong></td>
+<td>Represents the container for the checkbox in each row.</td>
+</tr>
+<tr>
+<td><strong>table-select-checkbox</strong></td>
+<td>Represents the checkbox for selecting a specific row.</td>
+</tr>
+<tr>
+<td><strong>table-cell-container</strong></td>
+<td>Represents the container for each table cell.</td>
+</tr>
+<tr>
+<td><strong>table-cell-text</strong></td>
+<td>Represents the text content of a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-cell-icon-button</strong></td>
+<td>Represents the icon button inside a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-action-icon-button</strong></td>
+<td>Represents the action button for a row, such as an edit button for modifying an item or an overflow menu for displaying additional actions in a menu list.</td>
+</tr>
+<tr>
+<td><strong>table-header-menu-item</strong></td>
+<td>Represents a menu item in the overflow menu.</td>
+</tr>
+<tr>
+<td><strong>table-container</strong></td>
+<td>Represents the main container for the entire table.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}</strong></td>
+<td>Represents the authoring-specific styling for a column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div</strong></td>
+<td>Represents the authoring-specific container for a column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-0</strong></td>
+<td>Represents the first child container in the authoring column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-1</strong></td>
+<td>Represents the second child container in the authoring column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-2</strong></td>
+<td>Represents the third child container in the authoring column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-3</strong></td>
+<td>Represents the fourth child container in the authoring column.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-4</strong></td>
+<td>Represents the fifth child container in the authoring column.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-data-grid-generic:</strong> This highly flexible and customizable web component renders data grids in web applications. It supports dynamic columns, sorting, selection, action menus, and integration with middleware data sources. The component is designed for enterprise use cases, offering accessibility, keyboard navigation, and advanced features such as row actions, tooltips, and avatar rendering. It is built using Lit and can be easily integrated into modern web applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>data</strong></td>
+<td>DxDataGridContextType</td>
+<td>Defines the data context for the grid, including items, pagination, sorting, and selection.</td>
+<td>{}</td>
+</tr>
+<tr>
+<td><strong>columns</strong></td>
+<td>DxDataGridColDef[]</td>
+<td>Defines an array of column definitions specifying field, header, actions, and rendering options.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>isLoading</strong></td>
+<td>String</td>
+<td>Indicates if the grid is in a loading state.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>hasMiddlewareError</strong></td>
+<td>String</td>
+<td>Indicates if there is a middleware error.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>hasContentSourceAvailable</strong></td>
+<td>String</td>
+<td>Indicates if a content source is available.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>customTableHeaderPart</strong></td>
+<td>String</td>
+<td>Custom part name for table header cells (for styling/export parts).</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>customeTableCellPart</strong></td>
+<td>String</td>
+<td>Custom part name for table body cells (for styling/export parts).</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>specialFields</strong></td>
+<td>String[]</td>
+<td>Defines a list of special fields for custom rendering or logic.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>isRowClickable</strong></td>
+<td>Boolean</td>
+<td>Enables row click events for selection or navigation.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>tableHover</strong></td>
+<td>String</td>
+<td>Enables table hover effect.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>checkboxSelection</strong></td>
+<td>String</td>
+<td>Enables row selection using checkboxes when set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-data-grid-generic</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>table-container</strong></td>
+<td>Represents the main container for the data grid table.</td>
+</tr>
+<tr>
+<td><strong>table-row-header-container</strong></td>
+<td>Represents the <code>&lt;tr&gt;</code> element for the table header row.</td>
+</tr>
+<tr>
+<td><strong>table-row-body-container</strong></td>
+<td>Represents a table row in the body.</td>
+</tr>
+<tr>
+<td><strong>table-row-body-container-selected</strong></td>
+<td>Represents a selected table row.</td>
+</tr>
+<tr>
+<td><strong>table-row-body-container-hovered</strong></td>
+<td>Represents a hovered table row.</td>
+</tr>
+<tr>
+<td><strong>table-select-all-checkbox</strong></td>
+<td>Represents the header cell containing the select-all checkbox.</td>
+</tr>
+<tr>
+<td><strong>table-header-container</strong></td>
+<td>Represents the main container for each table header cell.</td>
+</tr>
+<tr>
+<td><strong>table-header-container-child</strong></td>
+<td>Represents a child container inside a table header cell.</td>
+</tr>
+<tr>
+<td><strong>table-header-text-parent</strong></td>
+<td>Represents the parent container for the header text.</td>
+</tr>
+<tr>
+<td><strong>table-header-text</strong></td>
+<td>Represents the actual header text span.</td>
+</tr>
+<tr>
+<td><strong>table-sort-button-container</strong></td>
+<td>Represents the container for the sort buttons in the header.</td>
+</tr>
+<tr>
+<td><strong>table-header-icon-button</strong></td>
+<td>Represents the sort icon button in the header.</td>
+</tr>
+<tr>
+<td><strong>table-header-asc-sort-button</strong></td>
+<td>Represents the sort button for ascending order.</td>
+</tr>
+<tr>
+<td><strong>table-header-desc-sort-button</strong></td>
+<td>Represents the sort button for descending order.</td>
+</tr>
+<tr>
+<td><strong>table-header-asc-sort-button-hidden</strong></td>
+<td>Represents the hidden state for ascending sort button.</td>
+</tr>
+<tr>
+<td><strong>table-header-desc-sort-button-hidden</strong></td>
+<td>Represents the hidden state for descending sort button.</td>
+</tr>
+<tr>
+<td><strong>table-header-sort-button</strong></td>
+<td>Represents the active sort button.</td>
+</tr>
+<tr>
+<td><strong>table-column-separator</strong></td>
+<td>Represents the container for the column separator line.</td>
+</tr>
+<tr>
+<td><strong>table-column-separator-hr</strong></td>
+<td>Represents the horizontal rule element for the column separator.</td>
+</tr>
+<tr>
+<td><strong>table-body-container</strong></td>
+<td>Represents the main container for the table body (rows and loading, empty, or error states).</td>
+</tr>
+<tr>
+<td><strong>table-select-checkbox-container</strong></td>
+<td>Represents the container for the row selection checkbox.</td>
+</tr>
+<tr>
+<td><strong>table-select-checkbox</strong></td>
+<td>Represents the row selection checkbox.</td>
+</tr>
+<tr>
+<td><strong>table-cell-container</strong></td>
+<td>Represents the container for a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-cell-text</strong></td>
+<td>Represents the main text span in a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-cell-link</strong></td>
+<td>Represents the link element in a table cell if the cell is a link.</td>
+</tr>
+<tr>
+<td><strong>table-action-buttons-container</strong></td>
+<td>Represents the container for action buttons in a row.</td>
+</tr>
+<tr>
+<td><strong>table-action-icon-button</strong></td>
+<td>Represents an action icon button in a row.</td>
+</tr>
+<tr>
+<td><strong>table-action-icon-button-menu</strong></td>
+<td>Represents an action icon button that opens a menu.</td>
+</tr>
+<tr>
+<td><strong>table-action-icon-button-hidden</strong></td>
+<td>Represents the hidden state for an action icon button.</td>
+</tr>
+<tr>
+<td><strong>table-cell-icon-button</strong></td>
+<td>Represents an icon button inside a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-cell-text-action</strong></td>
+<td>Represents the text action button inside a table cell.</td>
+</tr>
+<tr>
+<td><strong>table-header-menu-item</strong></td>
+<td>Represents a menu item in the table header.</td>
+</tr>
+<tr>
+<td><strong>table-result-label</strong></td>
+<td>Represents the label for empty or error states in the table body.</td>
+</tr>
+<tr>
+<td><strong>table-result-description</strong></td>
+<td>Represents the description for empty or error states in the table body.</td>
+</tr>
+<tr>
+<td><strong>table-loading-text</strong></td>
+<td>Represents the text shown when the table is loading.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}</strong></td>
+<td>Represents the authoring-specific column part. <code>{index}</code> is replaced by the column index.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div</strong></td>
+<td>Represents the authoring-specific column div. <code>{index}</code> is replaced by the column index.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-{index}-div-0/1/2/3/4</strong></td>
+<td>Represents the nested divs for authoring columns for layout and styling. <code>{index}</code> is replaced by the column index.</td>
+</tr>
+<tr>
+<td><strong>table-column-picker-{index}</strong></td>
+<td>Represents the picker-specific column part. <code>{index}</code> is replaced by the column index.</td>
+</tr>
+<tr>
+<td><strong>table-column-authoring-div-{index}</strong></td>
+<td>Represents the authoring mode cell content wrapper, which is index-specific.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-dialog:</strong> This component is designed to represent a reusable dialog or modal element with customizable content, title, and actions.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Determines whether the dialog is visible or hidden. This property is reflected to the DOM, so any changes to it are also reflected in the corresponding HTML attribute.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>dialogTitle</strong></td>
+<td>String</td>
+<td>Specifies the title text displayed in the dialog header (if not overridden by slot).</td>
+<td><code>A localized string for the generic label</code></td>
+</tr>
+<tr>
+<td><strong>size</strong></td>
+<td>String</td>
+<td>Sets the dialog size. Accepts values from <code>DialogSizes</code> enum (for example, XL or SM).</td>
+<td><code>xl</code></td>
+</tr>
+<tr>
+<td><strong>overrideTitle</strong></td>
+<td>Boolean</td>
+<td>Determines whether the default title is overridden by custom content provided through a slot.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-dialog</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dialog-root</strong></td>
+<td>Represents the root container of the dialog component. It wraps the entire dialog structure.</td>
+</tr>
+<tr>
+<td><strong>backdrop</strong></td>
+<td>Represents the backdrop layer behind the dialog. It is used to block interaction with the rest of the page and provides a visual overlay.</td>
+</tr>
+<tr>
+<td><strong>container</strong></td>
+<td>Represents the container that holds the dialog content. It ensures proper layout and positioning of the dialog.</td>
+</tr>
+<tr>
+<td><strong>paper</strong></td>
+<td>Represents the main dialog paper or card-like structure that contains the title, content, and actions.</td>
+</tr>
+<tr>
+<td><strong>title</strong></td>
+<td>Represents the title section of the dialog. This part is conditionally applied based on the <code>overrideTitle</code> property.</td>
+</tr>
+<tr>
+<td><strong>title-root</strong></td>
+<td>Represents the root container for the title text. It is used when <code>overrideTitle</code> property is set to <code>false</code>.</td>
+</tr>
+<tr>
+<td><strong>title-text</strong></td>
+<td>Represents the text element of the dialog title. It displays the title string.</td>
+</tr>
+<tr>
+<td><strong>icon-root</strong></td>
+<td>Represents the container for the close icon. It is used to position and style the close button.</td>
+</tr>
+<tr>
+<td><strong>icon-close</strong></td>
+<td>Represents the close icon. It is used to trigger the dialog close action.</td>
+</tr>
+<tr>
+<td><strong>content</strong></td>
+<td>Represents the content section of the dialog. It wraps the main content of the dialog.</td>
+</tr>
+<tr>
+<td><strong>content-root</strong></td>
+<td>Represents the root container for the dialog content. It ensures proper layout and styling of the content.</td>
+</tr>
+<tr>
+<td><strong>action</strong></td>
+<td>Represents the action section of the dialog. It contains the buttons or actions available in the dialog.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-header-layout:</strong> This component serves as a layout template for a header section in a web application, allowing developers to define and organize content into specific slots. These slots include <code>header-start</code>, <code>header-start-label</code>, <code>header-middle</code>, and <code>header-end</code>.</p>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-header-layout</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>main-header</strong></td>
+<td>Represents the main container for the header layout. It acts as the root wrapper for all header sections.</td>
+</tr>
+<tr>
+<td><strong>header-start-container</strong></td>
+<td>Represents the container for the start section of the header. This section is typically used for elements such as logos or navigation menus.</td>
+</tr>
+<tr>
+<td><strong>header-start</strong></td>
+<td>Represents the specific slot within the start section of the header. This slot allows users to insert custom content into the start section.</td>
+</tr>
+<tr>
+<td><strong>header-start-container-label</strong></td>
+<td>Represents the container for the label associated with the start section of the header. This is likely used for additional descriptive content.</td>
+</tr>
+<tr>
+<td><strong>header-start-label</strong></td>
+<td>Represents the specific slot for the label in the start section. This slot allows users to insert custom label content.</td>
+</tr>
+<tr>
+<td><strong>header-middle-container</strong></td>
+<td>Represents the container for the middle section of the header. This section is typically used for elements such as search bars or titles.</td>
+</tr>
+<tr>
+<td><strong>header-middle</strong></td>
+<td>Represents the specific slot within the middle section of the header. This slot allows users to insert custom content into the middle section.</td>
+</tr>
+<tr>
+<td><strong>header-end-container</strong></td>
+<td>Represents the container for the end section of the header. This section is typically used for elements such as user profile icons or action buttons.</td>
+</tr>
+<tr>
+<td><strong>header-end</strong></td>
+<td>Represents the specific slot within the end section of the header. This slot allows users to insert custom content into the end section.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-icon-button:</strong> This component is designed to render a <code>dx-button</code> button that can display an icon or image. Its padding and size can be customized. You need to add an <code>aria-label</code> to this component to prevent the screen reader from reading its <code>alt</code> text.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>size</strong></td>
+<td>String</td>
+<td>Specifies the size of the icon button.</td>
+<td>'small'</td>
+</tr>
+<tr>
+<td><strong>withPadding</strong></td>
+<td>Boolean</td>
+<td>Determines whether the button should have padding.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>imgurl</strong></td>
+<td>String</td>
+<td>Specifies the URL of the image to be used in the button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>icon</strong></td>
+<td>TemplateResult</td>
+<td>Defines the Lit template for rendering a custom icon.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the button if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>inverseColor</strong></td>
+<td>Boolean</td>
+<td>Applies an inverse color scheme if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attribute is responsible for determining the appropriate CSS for the <code>dx-icon-button</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BUTTON_PARTS</strong></td>
+<td>Exposes the internal parts of the <code>dx-button</code> component so they can be styled externally. It accepts a comma-separated list of part names.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-datepicker:</strong> This custom web component, built with LitElement, provides a highly accessible, localized, and feature-rich date picker input for web applications. It supports keyboard navigation, localization, custom date formats, and accessibility features such as ARIA labels. The component allows users to select dates through an input field or an interactive calendar popup, with support for year selection, validation, and custom helper text. It is suitable for use in forms and complex UI scenarios where robust date input is required.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>Specifies the name of the datepicker, used for form submission.</td>
+<td>'datepicker'</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String</td>
+<td>Specifies the label for the datepicker, displayed above the input.</td>
+<td>'Label'</td>
+</tr>
+<tr>
+<td><strong>showInputAction</strong></td>
+<td>Boolean</td>
+<td>Controls whether to show or hide an action next to the input label.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>helperIconTooltip</strong></td>
+<td>String</td>
+<td>Provides the tooltip text for the helper icon next to the label.</td>
+<td>'Label helper tooltip'</td>
+</tr>
+<tr>
+<td><strong>requiredField</strong></td>
+<td>Boolean</td>
+<td>Determines whether to show or hide the required field asterisk next to the label.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Opens the datepicker calendar on page load if set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>hideHelperText</strong></td>
+<td>Boolean</td>
+<td>Hides the helper text below the input.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showRemoveLabel</strong></td>
+<td>Boolean</td>
+<td>Controls whether to show or hide a "remove" label action.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>Number</td>
+<td>Specifies the current value of the datepicker (as a Unix timestamp in ms).</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the datepicker input and actions.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>String</td>
+<td>Specifies an additional field identifier, used in events.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-datepicker</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>datepicker-root</strong></td>
+<td>Represents the root container of the datepicker component.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-label-and-action</strong></td>
+<td>Represents the wrapper for the label and any action elements (such as the remove label or input action).</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-label</strong></td>
+<td>Represents the container for the label and required asterisk.</td>
+</tr>
+<tr>
+<td><strong>datepicker-label-text</strong></td>
+<td>Represents the main label text for the datepicker.</td>
+</tr>
+<tr>
+<td><strong>datepicker-label-text-disabled</strong></td>
+<td>Represents the label text when the input is disabled.</td>
+</tr>
+<tr>
+<td><strong>datepicker-label-text-invalid</strong></td>
+<td>Represents the label text when the input is invalid.</td>
+</tr>
+<tr>
+<td><strong>datepicker-label-required</strong></td>
+<td>Represents the asterisk indicating a required field.</td>
+</tr>
+<tr>
+<td><strong>datepicker-remove-label</strong></td>
+<td>Represents the "remove" label or button for removing the field.</td>
+</tr>
+<tr>
+<td><strong>datepicker-remove-label-disabled</strong></td>
+<td>Represents the "remove" label or button when disabled.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-form</strong></td>
+<td>Represents the rapper for the input and calendar icon.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-input</strong></td>
+<td>Represents the container for the input field.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-input-invalid</strong></td>
+<td>Represents the input container when the value is invalid.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-input-disabled</strong></td>
+<td>Represents the input container when disabled.</td>
+</tr>
+<tr>
+<td><strong>datepicker-input</strong></td>
+<td>Represents the input field for date entry.</td>
+</tr>
+<tr>
+<td><strong>datepicker-input-rtl</strong></td>
+<td>Represents the input field in right-to-left (RTL) layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-icon</strong></td>
+<td>Represents the container for the calendar icon button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-div-calendar-button</strong></td>
+<td>Represents the button to open or close the calendar.</td>
+</tr>
+<tr>
+<td><strong>datepicker-invalid-text</strong></td>
+<td>Represents the error message text for invalid input.</td>
+</tr>
+<tr>
+<td><strong>datepicker-invalid-text-rtl</strong></td>
+<td>Represents the error message text in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-help-text</strong></td>
+<td>Represents the helper text below the input.</td>
+</tr>
+<tr>
+<td><strong>datepicker-help-text-rtl</strong></td>
+<td>Represents the helper text in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar</strong></td>
+<td>Represents the calendar popup container.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-header</strong></td>
+<td>Represents the header of the calendar (month or year and navigation).</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-div-year</strong></td>
+<td>Represents the container for the year and year selection button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-div-year-span</strong></td>
+<td>Represents the span showing the current month and year.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-view-button</strong></td>
+<td>Represents the button to toggle year selection view.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-view-button-rtl</strong></td>
+<td>Represents the year view button in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-div-month</strong></td>
+<td>Represents the container for month navigation buttons.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-month-prev</strong></td>
+<td>Represents the button to go to the previous month.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-month-prev-rtl</strong></td>
+<td>Represents the previous month button in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-month-next</strong></td>
+<td>Represents the button to go to the next month.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-month-next-rtl</strong></td>
+<td>Represents the next month button in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-days</strong></td>
+<td>Represents the row containing the day-of-week labels.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-day-label</strong></td>
+<td>Represents each day-of-week label.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates</strong></td>
+<td>Represents the container for all date buttons.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-date-span</strong></td>
+<td>Represents the wrapper for each date button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates-button</strong></td>
+<td>Represents the button for each date.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates-button-selected</strong></td>
+<td>Represents the selected date button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates-today-span</strong></td>
+<td>Represents the indicator for today's date.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates-today-span-rtl</strong></td>
+<td>Represents the indicator for today's date in RTL layout.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-dates-empty-div</strong></td>
+<td>Represents the empty div for calendar grid alignment.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-selection</strong></td>
+<td>Represents the container for the year selection view.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-selection-years</strong></td>
+<td>Represents the container for the list of year buttons.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-selection-year-div</strong></td>
+<td>Represents the wrapper for each year button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-selection-year-button</strong></td>
+<td>Represents the button for each year.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-year-selection-year-button-selected</strong></td>
+<td>Represents the button for the selected year.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-footer</strong></td>
+<td>Represents the footer of the calendar, which contains the "Today" button.</td>
+</tr>
+<tr>
+<td><strong>datepicker-calendar-footer-button</strong></td>
+<td>Represents the "Today" button in the calendar footer.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-menu:</strong> This component is designed to represent a dropdown menu that can be anchored to a target element and toggled open or closed.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the menu is open or closed.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>menuDelay</strong></td>
+<td>Number</td>
+<td>Specifies the delay (in milliseconds) before the menu opens or closes.</td>
+<td><code>300</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-menu</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>menu-root</strong></td>
+<td>Represents the root container of the menu. It is the main wrapper for the menu content.</td>
+</tr>
+<tr>
+<td><strong>backdrop</strong></td>
+<td>Represents the backdrop element behind the menu. It is used to detect clicks outside the menu to trigger the menu to close.</td>
+</tr>
+<tr>
+<td><strong>paper-root</strong></td>
+<td>Represents the container for the menu content. It holds the actual menu items and is styled to appear as the menu.</td>
+</tr>
+<tr>
+<td><strong>LIST_PARTS</strong></td>
+<td>Represents the parts of the <code>dx-list</code> component used inside the menu. These parts are exported through the <code>dx-list</code> component to allow for the styling of the list and its items.</td>
+</tr>
+<tr>
+<td><strong>BUTTON_PARTS</strong></td>
+<td>Represents the parts of the <code>dx-button</code> element that triggers the menu. These parts are exported through the target anchor to allow for the styling of the trigger element.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-menu-item:</strong> This component is designed to represent a single menu item in a menu list and enables interaction and accessibility.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>text</strong></td>
+<td>String</td>
+<td>Represents the text content of the menu item.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>value</strong></td>
+<td>String</td>
+<td>Represents the value associated with the menu item.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>menuObject</strong></td>
+<td>Object</td>
+<td>Represents an object containing additional data for the menu item.</td>
+<td><code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-menu-item</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>text-root</strong></td>
+<td>Applied to the root container of the text within the menu item. It is used to wrap the text and handle mouse events like <code>mouseenter</code> for tooltips.</td>
+</tr>
+<tr>
+<td><strong>text</strong></td>
+<td>Applied to the actual text content of the menu item. It represents the visible text displayed to the user.</td>
+</tr>
+<tr>
+<td><strong>LIST_ITEM_PARTS</strong></td>
+<td>A collection of parts exported from the <code>dx-list-item</code> component through the <code>exportparts</code> attribute. These parts are made available for external styling and customization.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-multiple-select-chip:</strong> This component defines the properties for a multiple select chip component. This component is designed to allow users to select multiple options from a dropdown list, with each selection displayed as a chip. It supports features such as disabling the component, showing avatars, displaying the count of selected chips, handling empty options, and more. The component is highly configurable through its properties, making it suitable for various use cases where multi-selection is required in a user interface.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the input and all interactions.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>showHelperText</strong></td>
+<td>Boolean</td>
+<td>Shows helper text below the input.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>helperText</strong></td>
+<td>String</td>
+<td>Displays a helper text below the input.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>String</td>
+<td>Specifies the name attribute for the input.</td>
+<td><code>multiple-select</code></td>
+</tr>
+<tr>
+<td><strong>selectedValues</strong></td>
+<td>OptionData[]</td>
+<td>Defines an array of selected option objects.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>OptionData[]</td>
+<td>Defines an array of available option objects.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>field</strong></td>
+<td>String</td>
+<td>Specifies the field type or identifier.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>showRemoveLabel</strong></td>
+<td>Boolean</td>
+<td>Shows a "remove" label for the field.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>emptyOptions</strong></td>
+<td>Boolean</td>
+<td>Allows the addition of new values not in the options list.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>clearIcon</strong></td>
+<td>Boolean</td>
+<td>Shows a clear icon on each chip.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><strong>error</strong></td>
+<td>Boolean</td>
+<td>Marks the input as having an error.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>customWidth</strong></td>
+<td>String or undefined</td>
+<td>Specifies the custom width for the component (for example, '300px').</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>placeholder</strong></td>
+<td>String or undefined</td>
+<td>Specifies the placeholder text for the input.</td>
+<td><code>Localized default</code></td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>String or undefined</td>
+<td>Specifies the Label for the input.</td>
+<td><code>Localized default</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-multiple-select-chip</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>top-container-div</strong></td>
+<td>Represents the main container for the entire multi-select component.</td>
+</tr>
+<tr>
+<td><strong>multiple-select-div-label-and-remove</strong></td>
+<td>Represents the container for the label and (optionally) the remove label button.</td>
+</tr>
+<tr>
+<td><strong>label</strong></td>
+<td>Represents the main label for the multi-select input.</td>
+</tr>
+<tr>
+<td><strong>multiple-select-label-disabled</strong></td>
+<td>Applied to the label when the component is disabled.</td>
+</tr>
+<tr>
+<td><strong>label-focus</strong></td>
+<td>Applied to the label when the input is focused.</td>
+</tr>
+<tr>
+<td><strong>multiple-select-remove-label</strong></td>
+<td>Represents the "remove" label or button for the component.</td>
+</tr>
+<tr>
+<td><strong>multiple-select-remove-label-disabled</strong></td>
+<td>Applied to the remove label when disabled.</td>
+</tr>
+<tr>
+<td><strong>input-container</strong></td>
+<td>Represents the container for the input field and chips.</td>
+</tr>
+<tr>
+<td><strong>input-container-disabled</strong></td>
+<td>Applied to the input container when disabled.</td>
+</tr>
+<tr>
+<td><strong>chip-and-input-container</strong></td>
+<td>Represents the container for the chips and the input field.</td>
+</tr>
+<tr>
+<td><strong>input-field</strong></td>
+<td>Represents the actual input field for typing or selecting options.</td>
+</tr>
+<tr>
+<td><strong>input-text</strong></td>
+<td>Represents the input text field part.</td>
+</tr>
+<tr>
+<td><strong>multiple-select-input-default</strong></td>
+<td>Applied to the input when it has a value.</td>
+</tr>
+<tr>
+<td><strong>clear-and-icon-container</strong></td>
+<td>Represents the container for the clear-all icon and dropdown toggle button.</td>
+</tr>
+<tr>
+<td><strong>Clear</strong></td>
+<td>Represents the clear-all button or icon.</td>
+</tr>
+<tr>
+<td><strong>clear-all-icon</strong></td>
+<td>Represents the visible clear-all icon part.</td>
+</tr>
+<tr>
+<td><strong>clear-all-icon-hidden</strong></td>
+<td>Represents the hidden state for the clear-all icon.</td>
+</tr>
+<tr>
+<td><strong>list-item-content</strong></td>
+<td>Represents the container for the content inside each list item.</td>
+</tr>
+<tr>
+<td><strong>checkmark</strong></td>
+<td>Represents the checkmark icon for selected options.</td>
+</tr>
+<tr>
+<td><strong>checkmark-placeholder</strong></td>
+<td>Represents the placeholder for the checkmark when not selected.</td>
+</tr>
+<tr>
+<td><strong>list-items</strong></td>
+<td>Represents the text or content of each list item.</td>
+</tr>
+<tr>
+<td><strong>no-list-item</strong></td>
+<td>Represents the list item shown when there are no options.</td>
+</tr>
+<tr>
+<td><strong>list-item-no-content</strong></td>
+<td>Represents the content inside the "no options" list item.</td>
+</tr>
+<tr>
+<td><strong>helper-text</strong></td>
+<td>Represents the helper text shown below the input.</td>
+</tr>
+<tr>
+<td><strong>CHIP_PARTS</strong></td>
+<td>Exported to the dx-chip for styling its internal parts.</td>
+</tr>
+<tr>
+<td><strong>BUTTON_PARTS</strong></td>
+<td>Exported to the dropdown toggle button for styling.</td>
+</tr>
+<tr>
+<td><strong>ICON_BUTTON_EXPORT_PARTS</strong></td>
+<td>Exported to the clear-all icon button for styling.</td>
+</tr>
+<tr>
+<td><strong>LIST_PARTS.UNORDERED_LIST</strong></td>
+<td>Exported to the list container for styling the dropdown list.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-panel:</strong> This customizable side panel web component, built with Lit, is designed for use in modern web applications. It provides a modal-like sliding panel that can be positioned on the left or right of the viewport. The panel supports a header with a title, an accessible ARIA label, a close button, and slots for custom content. It is ideal for displaying additional information, forms, or navigation without navigating away from the main view.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Controls the visibility of the panel. The panel is shown if this is set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>position</strong></td>
+<td>String</td>
+<td>Sets the panel's position.</td>
+<td><code>left</code></td>
+</tr>
+<tr>
+<td><strong>headerTitle</strong></td>
+<td>String</td>
+<td>Specifies the title text displayed in the panel header.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>ariaLabel</strong></td>
+<td>String</td>
+<td>Specifies the ARIA label for accessibility and describes the panel for screen readers.</td>
+<td>''</td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-panel</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>panel-container</strong></td>
+<td>Represents the main container of the panel (the dialog surface).</td>
+</tr>
+<tr>
+<td><strong>panel-header</strong></td>
+<td>Represents the header section of the panel, containing the title, center slot, and close button.</td>
+</tr>
+<tr>
+<td><strong>panel-title</strong></td>
+<td>Represents the area within the header that displays the panel's title text.</td>
+</tr>
+<tr>
+<td><strong>panel-close-button</strong></td>
+<td>Represents the close button in the header, allowing users to dismiss the panel.</td>
+</tr>
+<tr>
+<td><strong>panel-content</strong></td>
+<td>Represents the main content area of the panel, where slotted content is rendered.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-theme-inspector:</strong> This web component visually inspects and displays the color palette and theme variables used in an application. It renders tables showing all available color shades, theme properties, and their values for both light and dark modes. It is useful for developers and designers to verify and document the color and theme configuration in a UI system.This component does not expose any properties to be set from outside. All configuration is internal and handled via state or theme utilities.</p>
+</li>
+<li>
+<p><strong>dx-table-pagination:</strong> This web component provides a customizable and accessible pagination control for data tables. It allows users to navigate through large datasets by selecting the number of rows per page and moving between pages using navigation buttons. The component supports both left-to-right (LTR) and right-to-left (RTL) layouts, and emits events when the page or row size changes, enabling seamless integration with data-driven applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>disabled</strong></td>
+<td>Boolean</td>
+<td>Disables the pagination controls when set to <code>true</code>.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>currentPage</strong></td>
+<td>Number</td>
+<td>Specifies the current active page (1-based index).</td>
+<td><code>left</code></td>
+</tr>
+<tr>
+<td><strong>totalCount</strong></td>
+<td>Number</td>
+<td>Specifies the total number of items in the dataset.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>rowSize</strong></td>
+<td>Number</td>
+<td>Specifies the number of rows to display per page.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>String[]</td>
+<td>Defines the selectable options for rows per page.</td>
+<td><code>['10', '25', '50', '100'] (from DEFAULT_ROWS_OPTIONS)</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-table-pagination</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>container</strong></td>
+<td>Represents the main container for the pagination component.</td>
+</tr>
+<tr>
+<td><strong>rows-section</strong></td>
+<td>Represents the section containing the row size selector and row description.</td>
+</tr>
+<tr>
+<td><strong>rows-description</strong></td>
+<td>Represents the span displaying the current rows description (for example, "1-10 of 100").</td>
+</tr>
+<tr>
+<td><strong>pages-section</strong></td>
+<td>Represents the section containing the page navigation controls.</td>
+</tr>
+<tr>
+<td><strong>pages-nav-button</strong></td>
+<td>Applied to each navigation button (first, previous, next, or last page).</td>
+</tr>
+<tr>
+<td><strong>pages-description</strong></td>
+<td>Represents the span displaying the current page and total pages (for example, "1 / 10").</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>dx-preview:</strong> This web component provides a modal preview interface for digital assets such as images and videos. It supports navigation between multiple items, zoom controls for images, rendition selection, download and select actions, and error handling for unsupported file types. The component is highly configurable and emits custom events for integration with parent applications.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Properties</strong></th>
+<th><strong>type</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>open</strong></td>
+<td>Boolean</td>
+<td>Controls whether the preview modal is open.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><strong>items</strong></td>
+<td>PreviewItem[]</td>
+<td>Defines the array of items to preview. Each item contains <code>id</code>, <code>title</code>, <code>type</code>, <code>renditions</code>, and <code>fileExtension</code>.</td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><strong>customHeaderTitle</strong></td>
+<td>String</td>
+<td>Specifies a custom title for the preview header. If not set, uses the current item's title.</td>
+<td>null</td>
+</tr>
+<tr>
+<td><strong>component</strong></td>
+<td>TemplateResult or String</td>
+<td>Provides custom content to render instead of the default preview.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>isPreviousButtonDisabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the previous navigation button is disabled.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>isNextButtonDisabled</strong></td>
+<td>Boolean</td>
+<td>Indicates whether the next navigation button is disabled.</td>
+<td><code>undefined</code></td>
+</tr>
+<tr>
+<td><strong>renditionLabel</strong></td>
+<td>String</td>
+<td>Specifies the label for the rendition select dropdown.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>selectButtonTitle</strong></td>
+<td>String</td>
+<td>Specifies the text for the select button.</td>
+<td>''</td>
+</tr>
+<tr>
+<td><strong>initialItemIndex</strong></td>
+<td>Number</td>
+<td>Specifies the index of the item to show initially.</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following CSS part attributes are responsible for determining the appropriate CSS for the <code>dx-preview</code> component and its elements based on the component's state and properties.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Part</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>preview-backdrop</strong></td>
+<td>Represents the backdrop overlay for the preview modal.</td>
+</tr>
+<tr>
+<td><strong>preview-container</strong></td>
+<td>Represents the main container for the preview dialog.</td>
+</tr>
+<tr>
+<td><strong>preview-header</strong></td>
+<td>Represents the header section of the preview dialog.</td>
+</tr>
+<tr>
+<td><strong>preview-header-start-actions</strong></td>
+<td>Represents the container for the left-side header actions (for example, the back button).</td>
+</tr>
+<tr>
+<td><strong>preview-header-title</strong></td>
+<td>Represents the element that displays the title of the current item or custom header.</td>
+</tr>
+<tr>
+<td><strong>preview-header-middle-actions</strong></td>
+<td>Represents the middle section of the header, used for rendition selection (if applicable).</td>
+</tr>
+<tr>
+<td><strong>preview-header-rendition-label</strong></td>
+<td>Represents the label for the rendition select dropdown.</td>
+</tr>
+<tr>
+<td><strong>preview-header-rendition-input-select</strong></td>
+<td>Represents the rendition select dropdown itself.</td>
+</tr>
+<tr>
+<td><strong>preview-header-end-actions</strong></td>
+<td>Represents the container for the right-side header actions (for example, download or select button).</td>
+</tr>
+<tr>
+<td><strong>preview-header-select-button</strong></td>
+<td>Represents the "Select" button in the header.</td>
+</tr>
+<tr>
+<td><strong>preview-header-divider</strong></td>
+<td>Represents the divider line below the header.</td>
+</tr>
+<tr>
+<td><strong>preview-item-container</strong></td>
+<td>Represents the main area where the previewed item (image, video, or unsupported file type) is shown.</td>
+</tr>
+<tr>
+<td><strong>preview-item-previous-button-container</strong></td>
+<td>Represents the container for the previous navigation button.</td>
+</tr>
+<tr>
+<td><strong>preview-item-previous-button</strong></td>
+<td>Represents the previous navigation button itself.</td>
+</tr>
+<tr>
+<td><strong>preview-item-next-button-container</strong></td>
+<td>Represents the container for the next navigation button.</td>
+</tr>
+<tr>
+<td><strong>preview-item-next-button</strong></td>
+<td>Represents the next navigation button itself.</td>
+</tr>
+<tr>
+<td><strong>preview-item-content</strong></td>
+<td>Represents the container for the main content (image, video, or unsupported message).</td>
+</tr>
+<tr>
+<td><strong>preview-item-image</strong></td>
+<td>Represents the image element used for image previews.</td>
+</tr>
+<tr>
+<td><strong>preview-item-video-container</strong></td>
+<td>Represents the container for video previews.</td>
+</tr>
+<tr>
+<td><strong>preview-item-video</strong></td>
+<td>Represents the video element used for video previews.</td>
+</tr>
+<tr>
+<td><strong>preview-item-unsupported-container</strong></td>
+<td>Represents the container for the unsupported file type message.</td>
+</tr>
+<tr>
+<td><strong>preview-item-unsupported-message-container</strong></td>
+<td>Represents the container for the unsupported message text.</td>
+</tr>
+<tr>
+<td><strong>preview-item-unsupported-message-title</strong></td>
+<td>Represents the title for the unsupported file type message.</td>
+</tr>
+<tr>
+<td><strong>preview-item-unsupported-message-description</strong></td>
+<td>Represents the description for the unsupported file type message.</td>
+</tr>
+<tr>
+<td><strong>preview-zoom-container</strong></td>
+<td>Represents the container for zoom controls (shown for images).</td>
+</tr>
+<tr>
+<td><strong>preview-zoom-controls</strong></td>
+<td>Represents the zoom control button group.</td>
+</tr>
+<tr>
+<td><strong>ICON_BUTTON_EXPORT_PARTS</strong></td>
+<td>Represents all button-related parts for icon buttons.</td>
+</tr>
+<tr>
+<td><strong>PREVIEW_NAV_BUTTONS_EXPORT_PARTS</strong></td>
+<td>Represents the parts for navigation buttons.</td>
+</tr>
+<tr>
+<td><strong>PREVIEW_ZOOM_BUTTONS_EXPORT_PARTS</strong></td>
+<td>Represents the parts for zoom in or zoom out buttons.</td>
+</tr>
+<tr>
+<td><strong>PREVIEW_ZOOM_PERCENT_BUTTON_EXPORT_PARTS</strong></td>
+<td>Represents the parts for the zoom percentage button.</td>
+</tr>
+<tr>
+<td><strong>PREVIEW_RENDITION_SELECT_EXPORT_PARTS</strong></td>
+<td>Represents the parts for the rendition select dropdown.</td>
+</tr>
+<tr>
+<td><strong>ITEM_TYPE_AVATAR_EXPORT_PARTS</strong></td>
+<td>Represents the parts for the item type avatar.</td>
+</tr>
+<tr>
+<td><strong>TOOLTIP_EXPORT_PARTS</strong></td>
+<td>Represents the parts for tooltips.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 17, 2025 14:34:14 UTC">October 17, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="../../../../javascripts/current.js"></script>
+      
+    
+  </body>
+</html>

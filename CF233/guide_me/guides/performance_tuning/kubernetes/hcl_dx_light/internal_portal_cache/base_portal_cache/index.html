@@ -1,0 +1,3913 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/digital-experience/9.5/latest/latest/guide_me/guides/performance_tuning/kubernetes/hcl_dx_light/internal_portal_cache/base_portal_cache/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../wcm_cache_instances/">
+      
+      
+      <link rel="icon" href="../../../../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Base Portal Cache Instances - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--Jan2025-->
+
+<!-- SmartCat script-->
+<script id='sc-script' src="https://cdn.smartcat-proxy.com/168fc4fe410c474eb1f6043205ededea/script-v1/__translator.js?hash=6a6a63c258c09df66a084cf91cd87ede"></script>
+<!-- End SmartCat script -->
+
+<!-- OneTrust Cookies Consent Notice start for hcl-software.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c65f43b5-068e-4e4b-80d3-bdc8c41cf93d" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for hcl-software.com -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#base-portal-cache-instances" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcl-software.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25" target="_blank">Community Forums</a>
+
+</div>
+</div>
+
+<div style='float: right;display: inline-block;width: 140px;margin-top: -7px;'>
+  <span id='scLangSelectorContainer' style='z-index: 1000; position: absolute; right:200.95px;'/>
+</div>
+
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../../../../latest/guide_me/guides/performance_tuning/kubernetes/hcl_dx_light/internal_portal_cache/base_portal_cache/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Base Portal Cache Instances
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../whatsnew/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-tabs__link">
+        
+  
+    
+  
+  DX Compose
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../whatsnew/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Guide Me
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Performance Tuning Guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2_2" id="__nav_8_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Performance Tuning Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../appendix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Kubernetes performance tuning
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2_2_3" id="__nav_8_2_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_2_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes performance tuning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../base_portal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base Portal Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../database_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../directory_server_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Directory Server Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../disable_tag_rate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disabling Tagging and Rating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../env_reco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Recommendations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../focus_areas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Key Focus Areas for Effective Performance Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2_3_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HCL DX Light Mode
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2_2_3_8" id="__nav_8_2_2_3_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_2_2_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2_2_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            HCL DX Light Mode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manage_retrieval_user_attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing the Retrieval of User Attributes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine_grained_access_control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fine Grained Access Control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dynamic_content_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use of Dynamic Content Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pzn_best_practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personalization Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real_world_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Real-World Network Considerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Sockets Layer (SSL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tagging_rating/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tagging &amp; Rating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webseal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WebSEAL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install_fixpack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing a Fixpack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dx_caching/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HCL DX Caching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adaptive_page_cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adaptive Page Caching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../portlet_fragment_cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portlet Fragment Cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../application_cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application Caching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wcm_cache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WCM Caching
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2_3_8_16" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Internal Portal Caches
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2_2_3_8_16" id="__nav_8_2_2_3_8_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_8_2_2_3_8_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_2_2_3_8_16">
+            <span class="md-nav__icon md-icon"></span>
+            Internal Portal Caches
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Base Portal Cache Instances
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Base Portal Cache Instances
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-assembly-process-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Assembly / Process Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portal-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal User Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-data-connector-ddc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Data Connector (DDC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outbound-http-connection-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outbound HTTP Connection Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portlet-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portlet Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolver-static-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolver &amp; Static Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging &amp; Rating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-portals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Portals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-changes-in-hcl-dx-cf04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Changes in HCL DX CF04
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webdav" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebDav
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsrp-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSRP Consumer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsrp-producer" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSRP Producer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSphere
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wssecuremap" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSSecureMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wcm_cache_instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WCM Cache Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample_scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example Scenarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../high_volume_sites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High Volume Sites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../internationalization_service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internationalization Service Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jsf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Server Faces (JSF)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Kubernetes_Deployments/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Kubernetes Deployments
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other_db_considerations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Database Considerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other_portal_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Portal Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other_tuning_considerations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Tuning Considerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other_wcm_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other WCM Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pod_cpu_limits_requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizing Pod CPU Limits and Requests in Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resource_env_provider/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource Environment Provider
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sec_fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security-Related Fields
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tuning_portal_admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tuning using HCL DX Administration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wab_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Application Bridge (WAB) Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_db_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WCM Database Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wcm_tuning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Content Management Tuning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wef/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Experience Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../traditional_deployments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance Tuning Guide for Traditional Deployments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../SecurityHardeningGuide/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Security Hardening Guide
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../howto/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    How-to articles
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../troubleshooting/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../glossary/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DX Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-assembly-process-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Assembly / Process Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portal-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portal User Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-data-connector-ddc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Data Connector (DDC)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outbound-http-connection-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outbound HTTP Connection Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#portlet-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Portlet Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolver-static-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolver &amp; Static Pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social-rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Rendering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tagging &amp; Rating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-portals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Portals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cache-changes-in-hcl-dx-cf04" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Changes in HCL DX CF04
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webdav" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebDav
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsrp-consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSRP Consumer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wsrp-producer" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSRP Producer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSphere
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wssecuremap" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSSecureMap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/guide_me/guides/performance_tuning/kubernetes/hcl_dx_light/internal_portal_cache/base_portal_cache.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M441 58.9 453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2 344 121.9l46.1 46.1-134.3 134.2c-2.9 2.9-6.5 5-10.4 6.1L186.9 325l16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25 175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25c-28.1-28.1-73.7-28.1-101.8 0M88 64c-48.6 0-88 39.4-88 88v272c0 48.6 39.4 88 88 88h272c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24v112c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40h112c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="base-portal-cache-instances">Base Portal Cache Instances</h1>
+<p>This section describes the caches in HCL Portal 9.5 and provides best practices for their configuration. As highlighted in previous sections detailing performance benchmark modifications, cache size and lifetime are the most commonly adjusted properties when tuning Portal caches. You might consider increasing a cache's size if many values are used regularly and sufficient Java heap space is available. Similarly, you may extend the lifetime of cache entries if the cached data rarely changes and it's not critical for your business to reflect those changes immediately in your Portal. The configurations discussed in this section are typically set either in the Resource Environment Provider section of the WebSphere Integrated Solutions Console or within the <code>CacheManagersService.properties</code> file. For specific instructions on configuring caches, refer to the "Cache Manager Service" section in the base Portal tuning documentation.</p>
+<p>Each cache description includes the following key attributes:</p>
+<ul>
+<li><strong>Default size, default lifetime, and cache usage pattern:</strong> </li>
+<li><strong>Cache content and scaling factor(s):</strong> </li>
+<li><strong>Read and write access information:</strong> </li>
+</ul>
+<p>Some cache descriptions include a sample scenario with suggested property values.</p>
+<h2 id="access-control">Access Control</h2>
+<p>his section details each of the access control caches. Maintaining current access control information is critical for proper Portal operation. Therefore, these caches must be shared within a cluster to ensure information propagates to all members. To prevent concurrent reloads from multiple caches, different lifetime values should be set. This approach of varied lifetime and invalidation intervals could also be applied to other caches.
+Below figure of Portal Access Control Cache Hierarchy shows the relationships among the various caches.</p>
+<p>The cylinders represent cache instances. The gray caches are caches of the Portal user management</p>
+<p>(PUMA) component that are closely related to the caches of the Portal access control component. The PUMA caches contain information originating from the user registry. Portal access control uses these caches for user identification and group membership retrieval.</p>
+<p>TThe vertical axis represents the cache aggregation direction. Cache instances in higher layers leverage cache instances from lower layers to compute their values. For example, when computing effective permissions (entitlements) for a user (cached in the <code>ExplicitEntitlementsCache</code>), the Portal access control component leverages cache values from the <code>ChildResourcesCache</code> and <code>RoleMappingCache</code>.
+<img alt="alt text" src="../../../Portal%20Access%20Control%20Cache%20Hierarchy.png" /></p>
+<p><strong>com.ibm.wps.ac.AccessControlUserContextCache</strong></p>
+<p><strong>Default size: 6000, default lifetime: 1200, usage pattern: regular.</strong></p>
+<p>This cache stores access control user context objects, serving as a local cache for permissions assigned to specific users. Whenever possible, access control requests are fulfilled using this information, allowing access control methods to return very quickly. This cache scales with the number of active users. For optimal Portal operation, you should ensure that entries for all actively working users fit into the cache, especially if a user has access to many Portal resources. Entries are invalidated from the cache upon any Portal administrative action. While creating a cache entry is typically inexpensive because most information is in memory, it can take longer if the required information isn't found in other caches. An entry in this cache can become very large, depending on the number of resources a user can access.</p>
+<p><strong>com.ibm.wps.ac.ChildResourcesCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 28800, usage pattern: regular.</strong></p>
+<p>This cache contains the resource hierarchy within Portal access control. Its size scales with the number of protected resources accessed by active users in the system, similar to the protected resources cache. This cache does not contain leaf objects in the access control tree, so the number of entries is typically smaller. The cache is accessed during most Portal access control requests. Entries are invalidated from this cache during resource deletion, resource parent changes, modification of the resource owner, externalization, internalization, and role block change. Creating a cache entry includes a multi-row query against the Portal database. An entry in the cache is fairly small.</p>
+<p><strong>com.ibm.wps.ac.CommonApplicationRoleMgmt</strong>
+<strong>Default size: 30000, default lifetime: 8450, usage pattern: physical cache instance for the following caches:</strong></p>
+<ul>
+<li><code>com.ibm.wps.ac.ApplicationRoleForApplicationUserCache</code></li>
+<li><code>com.ibm.wps.ac.MappedRolesToUserCache</code></li>
+<li><code>com.ibm.wps.ac.ApplicationRoleOIDCache</code></li>
+<li><code>com.ibm.wps.ac.ApplicationRoleDescriptorCache</code></li>
+<li><code>com.ibm.wps.ac.ApplicationRolesForPrincipalCache</code></li>
+<li><code>com.ibm.wps.ac.ApplicationRoleChildrenCache</code></li>
+<li><code>com.ibm.wps.ac.ApplicationRoleMappingsCache</code></li>
+<li><code>com.ibm.wps.ac.ContainedRolesCache</code></li>
+</ul>
+<p>This physical cache instance holds all entries from application role specific cache wrapper instances.</p>
+<p><strong>com.ibm.wps.ac.CommonExplicitEntitlementsCache</strong></p>
+<p><strong>Default size: 33000, default lifetime: 28800, usage pattern: physical cache instance for the following caches:</strong></p>
+<ul>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.CONTENT_NODE</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.PORTLET_APPLICATION_DEFINITION</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.PORTLET_DEFINITION</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.USER_GROUP</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.VIRTUAL</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.WEB_MODULE</code></li>
+<li><code>com.ibm.wps.ac.ExplicitEntitlementsCache.WSRP_PRODUCER</code></li>
+</ul>
+<p>This physical cache instance holds all entries from selected entitlements specific cache wrapper instances. More specifically, these caches contain the permissions of a user or group on a number of resources of the same ResourceType. There are dedicated caches for the different <code>ResourceTypes</code>. For example, the cache for pages is called com.ibm.wps.ac. ExplicitEntitlementsCache.<code>CONTENT_NODE</code>. All <code>ResourceTypes</code> that are not specified explicitly will be cached in the default cache. The size of this cache scales with the number of active users/groups multiplied by the different <code>ResourceTypes</code> valid for this cache and accessed by the users and groups, either by ‘using’ the resource during navigating the Portal or by Portal administration.</p>
+<p>There is one entry per set of permissions per WebSphere Portal domain. Entries are read during regular access control requests, page rendering, and particularly during Portal administration. If a specific resource type is not used, you will observe only cache misses and no other activity on the corresponding cache. Entries are invalidated from this cache during all access control modifications and logins. Creating an entry in one of these caches can typically be done using in-memory information from lower-level caches. However, if the required information is not available, creating a cache entry may require multiple database requests. An entry in the cache is relatively small but is built from multiple objects typically stored in other caches.</p>
+<p><strong>com.ibm.wps.ac.CommonRolesCache</strong></p>
+<p><strong>Default size: 40000, default lifetime: 28800, usage pattern: physical cache instance for the following caches:</strong></p>
+<ul>
+<li><code>com.ibm.wps.ac.RolesCache</code></li>
+<li><code>com.ibm.wps.ac.ParentResourceRoleMappingCache</code></li>
+<li><code>com.ibm.wps.ac.ResourceRoleMappingCache</code></li>
+</ul>
+<p>This physical cache instance holds all entries from roles specific cache wrapper instances. Specifically, those caches contain the access control role instances. The size of an individual cache scales with the number of active users/groups multiplied by the different ResourceTypes they access. There is one entry per role instance per principal per resource type per HCL Portal domain. Data is read from the cache during many Portal access control requests, if the corresponding entitlements are not already cached. Entries are invalidated from this cache during role mapping creation, role mapping deletion, resource deletion, externalization, and internalization. Creating a cache entry means executing at least one, but potentially multiple database queries. An entry in the cache is relatively small.</p>
+<p><strong>com.ibm.wps.ac.ProjectDeletedResourcesCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores authorization information for pages that were defined outside a project and subsequently deleted as part of that project. Each entry contains the project identification and the database domain identification. Given that there are two possible domains (release or JCR), the maximum number of cache entries is twice the number of projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Portal 8, this cache was combined into the <code>com.ibm.wps.ac.CommonProjectResourcesCache</code>.</p>
+</div>
+<p><strong>com.ibm.wps.ac.ProjectDraftResourcesCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores authorization information about draft pages created in a project. This cache contains the project identification and the database domain identification. Since there are two possible domains, release or jcr, the maximum number of cache entries is twice the number of projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Portal 8, this cache was combined into the <code>com.ibm.wps.ac.CommonProjectResourcesCache. com.ibm.wps.ac</code>.</p>
+</div>
+<p><strong>DataEventPropagationCache</strong></p>
+<p>This is a special purpose cache that is used especially for Portal access control cache invalidation communication. Do not change its configuration.</p>
+<p><strong>com.ibm.wps.ac.DependentProtectedResourceCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 14400, usage pattern: regular.</strong></p>
+<p>The protected resource caches contain the resources protected by Portal access control. The size of these caches scales with the number of protected resources accessed by the active users in the system. The <code>DependentProtectedResourcesCache</code> is used exclusively by WCM content item resources, while the <code>ProtectedResourcesCache</code> holds resources for various Portal resource types.</p>
+<p>Entries are read from the cache during every permission or entitlement call against access control. Entries are invalidated from this cache during resource deletion, resource relocation, resource state modification (private/shared), resource owner modification, externalization, internalization, and role block changes. Creating a cache entry requires a single-row lookup in the Portal database. An entry in the cache is relatively small.</p>
+<p><strong>com.ibm.wps.ac.ExplicitEntitlementsCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: varying (around 10000), usage pattern: invalidation checking.</strong></p>
+<p>Includes <code>com.ibm.wps.ac.ExplicitEntitlementsCache.ICM_CONTENT.dyn com.ibm.wps.ac.ChildEntitlementsCache com.ibm.wps.ac.SingleEntitlementsCache</code></p>
+<p>These caches contain additional access control data not directly cached in the <code>com.ibm.wps.ac.CommonExplicitEntitlementsCache</code>. They are dedicated to specialized resource types and uncommon use cases. Consequently, in a typical scenario, only some or none of these caches are filled, as the majority of the data is already cached in the <code>CommonExplicitEntitlementsCache</code>.</p>
+<p><strong>com.ibm.wps.ac.ExternalOIDCache</strong></p>
+<p><strong>Default size: 28800, default lifetime: 8640, usage pattern: regular.</strong></p>
+<p>his cache contains the mapping between the external ObjectIDs of individual protected resources (e.g., page or portlet IDs) and the Portal access control-specific ObjectIDs stored in the database table <code>PROT_RES</code>. Entries are read from the cache during many Portal access control requests. The size of this cache scales with the number of protected resources accessed by the active users in the system. Since this mapping is immutable, this cache is never explicitly invalidated. Creating a cache entry requires a single-row database query. An entry in the cache is fairly small.</p>
+<p><strong>com.ibm.wps.ac.groupmanagement.CommonUserGroupMgmt</strong></p>
+<p><strong>Default size: 5000, default lifetime: 3600, usage pattern: physical cache instance for the following caches:</strong></p>
+<ul>
+<li><code>com.ibm.wps.ac.groupmanagement.NestedGroupCache</code></li>
+<li><code>com.ibm.wps.ac.groupmanagement.GroupCache</code></li>
+<li><code>com.ibm.wps.ac.groupmanagement.PeerGroupCache</code></li>
+</ul>
+<p>For WP9.5, this cache was split back into <code>com.ibm.wps.ac.groupmanagement.GroupCache</code> and <code>com.ibm.wps.ac.groupmanagement.NestedGroupCache</code> for performance reasons. <code>com.ibm.wps.ac.groupmanagement.PeerGroupCache</code> was used for Application Infrastructure, which is no longer supported.</p>
+<p><strong>com.ibm.wps.ac.groupmanagement.GroupCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 3600, usage pattern: regular</strong></p>
+<p>GroupCache is used in an HCL Portal when nested groups are disabled. This cache contains the direct groups to which a user belongs. The size of this cache scales with the number of active users and the number of virtual Portals they access. The cache is accessed during login into Portal, but typically not during regular Portal navigation. Its main use case is during administration of users and user groups. Entries are invalidated from this cache after user and group administrative changes. Creating a new cache entry requires queries against the VMM component and then typically against the user repository. An entry in the cache is medium-sized.</p>
+<p><strong>com.ibm.wps.ac.groupmanagement.NestedGroupCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 3600, usage pattern: regular</strong></p>
+<p><code>NestedGroupCache</code> is used in a WebSphere Portal when nested groups are enabled. This cache contains the nested groups to which a user belongs. The size of this cache scales with the number of active users and the number of virtual Portals they access. The cache is accessed during Portal login, but typically not during regular Portal navigation. Its main use case is during the administration of users and user groups. Entries are invalidated from this cache after user and group administrative changes. Creating a new cache entry requires queries against the VMM component and, typically, then against the user repository. An entry in the cache is medium-sized.</p>
+<p><strong>com.ibm.wps.ac.OwnedResourcesCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 28800, usage pattern: invalidation checking.</strong></p>
+<p>This cache maps resource owners (user groups or individual users) to the resources they own. This cache scales with the number of active users/groups multiplied with the different ResourceTypes they access. There is one entry in the cache per principal per resource type per HCL Portal domain. Data is read from this cache during many Portal access control requests, if the corresponding entitlements are not already cached in an entitlements cache. Entries are invalidated from this cache during resource deletion, modification of the resource owner, and externalization. Creating a cache entry means executing a multirow query against the Portal database. An entry in the cache is relatively small.</p>
+<p>In many scenarios, there is no benefit from this cache and it can be disabled. In other scenarios, it may be beneficial but only with cache sizes near the default. Larger cache sizes can make performance worse. <em>Performance testing is required to determine the benefit of this cache for a specific use case and data population.</em></p>
+<p><strong>com.ibm.wps.ac.PermissionCollectionCache</strong></p>
+<p><strong>Default size: 2000, default lifetime: 14400, usage pattern: regular; admit-threshold:2</strong></p>
+<p>This cache contains permission collections that can be used for permission checks. It scales with the number of permissions in the system, i.e. the number of Portal resources and permissions assigned on those. Entries in the cache typically are requested very frequently during permission checks. An admitthreshold is used to avoid caching rarely used permissions. You may wish to try different admit-threshold settings to tune this cache. Entries are never invalidated from the cache. Creating a cache entry is very fast since all required information is in-memory. A cache entry is small.</p>
+<p><strong>com.ibm.wps.ac.ProtectedResourceCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 14400, usage pattern: regular.</strong></p>
+<p>This cache contains the resources protected by Portal access control. The size of this cache scales with the number of protected resources accessed by the active users in the system. Entries are read from the cache during every permission call or entitlements call against access control. Entries are invalidated from this cache during resource deletion, resource relocation and modification of the resource state</p>
+<p>(private/shared), modification of the resource owner, externalization, internalization, and role block change. Creating a cache entry requires a single-row lookup in the Portal database. An entry in the cache is relatively small.</p>
+<h2 id="datastore">Datastore</h2>
+<p>The datastore caches contain data read from the Portal database. The goal of these caches is not to be a complete image of the DB content, but to have frequently-accessed but raw information available for all other Portal components to use.</p>
+<p><strong>com.ibm.wps.datastore.pageinstance.DerivationCache</strong></p>
+<p><strong>Default size: 3000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores the mappings between pages and their derivation children, or empty mappings if no such children exist. Like the pageinstance.OIDCache cache, it is also accessed very frequently during page rendering and administration. Creating a cache entry involves one multi-row database query. This cache also scales with the number of pages in the system. Hence, you can use the same sizes for this cache as for <code>pageinstance.OIDCache</code> (assuming this is the intended comparison).</p>
+<p><code>com.ibm.wps.datastore.pageinstance.OIDCache</code> and this one. In most Portal usage scenarios the actual size of this cache will be somewhat lower than the page instance cache. An average entry in the cache is rather small. Only if all your pages have long lists of derivation children will the entries become larger. To achieve best performance, in terms of cache hit rate, the size should be set to a value so that all pages defined in the system fit into the cache. This corresponds to the combined row count of the PAGE_INST database tables in the release, community and customization databases.</p>
+<p><strong>com.ibm.wps.datastore.pageinstance.DynamicNodeCache</strong></p>
+<p><strong>Default size: 5, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores one list per virtual Portal. These lists contain all pages in the corresponding domain that are flagged as dynamic nodes, i.e. dynamic assembly content nodes can be added below these pages. Since the number of domains does not grow, the size scales with the number of virtual portals. The cache size should be #Virtual Portals * 3+ 3. The size of one entry into the cache ranges from small in a Portal with very few dynamic nodes up to medium with many dynamic nodes in the system.</p>
+<p><strong>com.ibm.wps.datastore.pageinstance.MetaDataCache</strong></p>
+<p><strong>Default size: 499, default lifetime: 3600, usage pattern: regular</strong></p>
+<p>This cache stores information relevant for retrieving pages based on page parameters. The primary use case that benefits from this cache is retrieving the individual target pages from friendly URLs.</p>
+<p>The size of the cache scales with the number of friendly URLs defined and used in Portal. The entries in this cache are rather small.</p>
+<p><strong>com.ibm.wps.datastore.pageinstance.OIDCache</strong></p>
+<p><strong>Default size: 3000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores information on Portal pages for fast retrieval during login or page navigation. It scales with the number of page instances in the system. It is one of the most frequently used caches and should be large enough to hold all pages that are frequently accessed by users.</p>
+<p>Pages are loaded into the cache through direct navigation, by creating links to other pages, or by working with pages during Portal administration (always including all higher derivation levels). Creating a cache entry involves four multi-row database lookups. An entry in the cache is medium-sized.</p>
+<p>To achieve best performance in terms of cache hit rate, the size should be set so that all pages defined in the system fit into the cache. This corresponds to the combined row count of the PAGE_INST database tables in the release, community, and customization databases.</p>
+<p><strong>com.ibm.wps.datastore.pageinstance.OIDDraftCache</strong></p>
+<p><strong>Default size: 500, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>his cache stores information on Portal draft pages for fast retrieval during login or page navigation. It scales with the number of draft page instances in the system. It should be large enough to hold all draft pages that are frequently accessed by users.</p>
+<p>Draft pages are loaded into the cache through direct navigation, by creating links to other pages, or by working with pages during Portal administration (always including all higher derivation levels). Creating a cache entry involves four multi-row database lookups. An entry in the cache is medium-sized.</p>
+<p>To maximize your cache hit rate and achieve the best performance, <strong>size your cache to fully accommodate all draft pages</strong>. This optimal size directly corresponds to the row count of the <code>PAGE_INST_DRAFT</code> table in your release database.
+<strong>com.ibm.wps.datastore.portaliddescriptor.VPIDCache</strong></p>
+<p><strong>Default size: 200, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache maps long virtual portal object IDs to the corresponding Portal internal short ID and vice versa. It scales with two times the number of virtual portals in the system, plus two additional entries. Data is read from the cache during every rendering request.</p>
+<p>For optimal caching the size should be set to twice the number of Virtual Portals defined in the system plus two entries. Creating a cache entry involves one single-row database lookup. An entry object into the cache is fairly small.</p>
+<p><strong>com.ibm.wps.datastore.services.Identification.OidAndUniqueName.cache</strong> </p>
+<p><strong>Default size: 5000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores unique names. It is used quite frequently during page rendering and especially administration of unique names. Page and portlet unique names make up the biggest part of the cache content. The cache should be large enough to hold entries for the most frequently used pages and portlets having a unique name associated with them. Note that not all resources have a unique name associated with them. To eliminate database lookups the cache size could correspond to the database table</p>
+<p>UNIQUE_NAME multiplied by two, to allow for mapping in two directions. Creating a cache entry involves reading one entry from the Portal database. An entry object into the cache is fairly small.</p>
+<p><strong>com.ibm.wps.datastore.services.Identification.SerializedOidString.cache</strong></p>
+<p><strong>Default size: 5000, default lifetime: infinite (-1), usage pattern: cascading object types.</strong></p>
+<p>This cache stores serialized ObjectIDs used in request parameters or XML Access files. It contains a subset of all the loaded ObjectIDs in memory. It scales with the number of ObjectIDs in the system, but the serialized version of all of these IDs are not requested, hence the actual size is impossible to predict. The cache is used during every request. Creating a cache entry is rather cheap. Typically all information can be retrieved in memory, database lookups are scarcely necessary. A cache entry is fairly small.</p>
+<h2 id="dynamic-assembly-process-integration">Dynamic Assembly / Process Integration</h2>
+<p>The following caches are used when dynamic UI functionality, often together with WebSphere Process Server integration are used.</p>
+<p><strong>processintegration.PendingTasksCache</strong></p>
+<p><strong>Default size: 2500, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache contains the pending process tasks in the scope of a user. The size of this cache scales with the number of users concurrently using process integration functionality. Each cache entry consists of a complete set of pending process tasks for a given user and therefore can be fairly large in memory. Reloading a cache entry involves accessing the Human Task Manager via an EJB call. The cache is always accessed when the PendingTasksTag is used in a portlet JSP.</p>
+<p>You should also configure the setting <code>processintegration.pendingtasks.lifetime</code> in <code>ConfigServices.properties</code> which defaults to a value of 30 seconds. This setting describes the interval at which a process engine is queried for pending tasks of a user and the cache entries are updated.</p>
+<p><strong>wp.te.transformationAssociationCache</strong></p>
+<p><strong>Default size: 500, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache contains transformation extension nodes. So typically there are only a few entries in the cache. There is typically one access to the cache per request. Building an entry to the cache involves one database query. One entry is fairly small. Typically there is no need to modify the settings for this cache.</p>
+<h2 id="model">Model</h2>
+<p>The model caches can be categorized into two groups:</p>
+<ol>
+<li><strong>Caches for assembled models as a whole</strong> (for example, <code>com.ibm.wps.model.factory.UserSpecificModelCache</code>).</li>
+<li><strong>Caches for information within a model</strong> (for example, caching a <code>ContentPage</code>).
+Portal Model Cache Hierarchy describes the hierarchy of caches in the model component and depending Portal components. The structure of the picture is identical to Figure Figure 9 Portal Access Control Cache Hierarchy. The vertical axis shows caches with increasing aggregation of data.</li>
+</ol>
+<p>The model component only caches data at a rather high aggregation level. As a result, all data cached here hence is rather valuable and reloads can be expensive if the corresponding data is not available in the lower-level caches. Model caches are dependent upon the datastore and Portal access control caches. The figure only features the most important caches.</p>
+<p><strong>Portal Model Cache Hierarchy</strong></p>
+<p><img alt="alt text" src="../../../Portal%20Model%20Cache%20Hierarchy.png" /></p>
+<p><strong>com.ibm.wps.model.admin.ListModelCache</strong></p>
+<p><strong>Default size: 25, default lifetime: 86400, usage pattern: regular.</strong></p>
+<p>This cache stores a very limited amount of items and is properly invalidated, so changing its size or lifetime will probably not provide a performance benefit.</p>
+<p><strong>com.ibm.wps.model.admin.skin.SkinListCache.themestoskin</strong> </p>
+<p><strong>Default size: 1000, default lifetime: 86400, usage pattern: regular</strong></p>
+<p>This cache stores the association of skins to themes. The optimal size correlates with the number of themes in use by Portal.</p>
+<p><strong>com.ibm.wps.model.admin.skin.ThemeScopedSkinListCache` Default size: 200, default lifetime: 86400, usage pattern: regular Do not change the configuration of this cache. It caches a single item and is properly invalidated, so changing size or lifetime will not improve performance.</strong></p>
+<p><strong>com.ibm.wps.model.content.impl.DynamicLoadCache</strong></p>
+<p><strong>Default size: 10, default lifetime: 86400, usage pattern: regular.</strong></p>
+<p>This cache contains all content nodes which represent extension nodes for dynamic assembly. In an unmodified installation, this is the only node, the “Content Root”, which has the PZN dynamic assembly associated with it. Other nodes are root nodes for SAP integration or Dynamic UI.</p>
+<p><strong>com.ibm.wps.model.content.impl.ExplicitOidCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 86400, usage pattern: regular</strong></p>
+<p>This cache is used to store the explicit derivations of a content node (Portal Page). The optimal size correlates with the number of pages defined in the Portal.</p>
+<p><strong>com.ibm.wps.model.content.impl.InternalUrlBacklinkCache</strong> </p>
+<p><strong>Default size: 5000, default lifetime: 10000, usage pattern: regular</strong></p>
+<p>This is a legacy cache that is only active for Mashups.</p>
+<p><strong>com.ibm.wps.model.content.impl.ResourceCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 5600, usage pattern: regular.</strong></p>
+<p>his cache contains aggregated pages. Unlike the data store page instance cache, this cache holds the complete models of pages and their content (i.e., the portlets and containers on them). The page instance cache, conversely, stores only the raw page data.</p>
+<p>This cache scales with the number of pages defined in your Portal and the different sets of access control rights on those pages. This cache contains very valuable information; it leverages several other caches (for example, page instance and access control caches) to build its data. Therefore, creating a cache entry usually only requires in-memory information, but it can also lead to many database queries.</p>
+<p>The size of an entry in the cache depends on the complexity of the pages, but typically the objects are medium-sized, as they are usually made of references to other cached data. The cache should be large enough to hold the most frequently accessed pages multiplied by the number of different access control settings on these pages. Increasing the <code>cache lifetime</code> can be useful if page definitions do not change often in your environment.
+Example: A portal has 500 pages and all users have the same permissions on these. In addition, there are another 50 pages; two groups of users have different access rights on these pages. In this case a maximum of 600 entries would be in the cache.</p>
+<p><strong>com.ibm.wps.model.content.impl.UnknownTopologiesCache</strong> </p>
+<p><strong>Default size: 50, default lifetime: 15000, usage pattern: regular.</strong></p>
+<p>This cache stores a very limited amount of items and is properly invalidated, so changing its size or lifetime will probably not provide a performance benefit.</p>
+<p><strong>com.ibm.wps.model.content.impl.TopologyCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 5700, usage pattern: regular.</strong></p>
+<p>his cache contains Portal topology information, i.e., Portal navigation elements composed of navigation nodes and their sorted, access-control-filtered children. Topology elements undergo several processing steps. First, they are loaded from the database, and eventually, they are added to the cache. This cache contains only the completely processed topology entities.</p>
+<p>This cache is explicitly used during login and whenever a user navigates to a part of the Portal where they have not been before during the same session. If a cache entry is not found, a private copy is created and then further processed. Once the private copy is completely processed—which does not happen for all navigation nodes—it is added to the cache. If a user finds an entry in the cache, a reference is copied into their private topology model, and additional cache accesses are no longer necessary. Hence, there is only one cache hit (or miss) per user and navigation node.</p>
+<p>The cache scales with the number of navigation nodes, the number of distinct permission sets on these nodes, and, possibly, the derivation chain (children and parents) to which a page belongs. Entries in this cache are expensive to create; they rely on other cached information, such as access control caches and the page instance cache. The entries in the cache are medium-sized, consisting mainly of references to other cached data. The cache should be sized to store the most important pages multiplied by all the different permission sets that exist on these pages.</p>
+<p><strong>com.ibm.wps.model.factory.public.pages.update</strong></p>
+<p><strong>Default size: 100, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>Do not change the configuration of this cache. It caches a single item and is properly invalidated, so changing size or lifetime will not improve performance.</p>
+<p><strong>com.ibm.wps.model.factory.SingletonModelCache</strong></p>
+<p><strong>Default size: 100, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores a very limited amount of items and is properly invalidated, so changing its size or lifetime will probably not provide a performance benefit.</p>
+<p><strong>com.ibm.wps.model.factory.UserSpecificModelCache</strong></p>
+<p><strong>Default size: 6000, default lifetime: 19000, usage pattern: regular.</strong></p>
+<p>n this cache, all models for all users are cached. In addition to user-dependent models, there are models such as the Content Model, which are session, markup, and device class-dependent.</p>
+<p>Thus, the number of entries in this cache scales with the number of concurrently logged-in users on one cluster node, multiplied by the number of markups, and device classes. Additional entries are created if a user logs in more than once. A logged-in user with multiple sessions will cause more entries to be added to the cache. In addition, if many users are interacting with the Portal administrative pages, the number of entries will be doubled.
+Typically users have 4 models at maximum on a system where only rendering is taking place.</p>
+<p><strong>com.ibm.wps.model.impl.RuntimeClientMap.patternCache</strong></p>
+<p><strong>Default size: 100, default lifetime: 86400, usage pattern: regular.</strong></p>
+<p>This cache stores the regular expression pattern for each client pattern. The optimal size correlates with number of configured clients (See <strong>Portal Administration &gt; Portal Settings &gt; Supported clients</strong>).</p>
+<p><strong>com.ibm.wps.model.impl.RuntimeClientMap.userAgent2client</strong></p>
+<p><strong>Default size: 250, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache maps user agent strings, i.e. the identification strings sent by browsers in the HTTP header, to client profiles. These profiles basically correspond to Composite Capability/Preference Profiles (CC/PP) profiles. Hence the cache scales with the number of browser identification strings. Data from this cache is accessed during every request. Creating a cache entry is very cheap since the profile information is in memory already. An entry in the cache hence is fairly small since already existing data is referenced.</p>
+<p><strong>com.ibm.wps.model.portlet.PortletPoolCache</strong></p>
+<p>This cache is for future use and can be disabled. It will be disabled by default in a future Cumulative Fix (CF).</p>
+<h2 id="policy">Policy</h2>
+<p>The HCL Portal policy manager uses the following caches.</p>
+<p><strong>com.ibm.wps.mpages.ActiveProjectOIDCache</strong></p>
+<p><strong>Default size: 50, default lifetime: uses globally configured default lifetime, usage pattern: regular.</strong></p>
+<p>This cache contains all ObjectIDs of active projects. Its semantic is more like a set than a map as it is used to check if the ObjectID of a project maps to an active project. If that information is not obtained through the cache, i.e., a cache miss, then some expensive WCM calls possibly including JCR calls, have to be executed. The cache size scales with the number of active projects. Cache entries are very small. If no projects are used at all, e.g., in a rendering-only system then this cache can be deactivated. </p>
+<p><strong>com.ibm.wps.mpages.ProjectNameUUIDCache</strong></p>
+<p><strong>Default size: 100, default lifetime: uses globally configured default lifetime, usage pattern: regular.</strong></p>
+<p>This cache allows mapping from a project name to its UUID. If that information is not obtained through the cache, i.e., a cache miss, then some expensive WCM calls possibly including JCR calls, have to be executed. The cache size scales with the number of active projects. Cache entries are very small. If no projects are used at all, e.g., in a rendering-only system then this cache can be deactivated.</p>
+<p><strong>com.ibm.wps.mpages.ProjectUUIDNameCache</strong></p>
+<p><strong>Default size: 50, default lifetime: uses globally configured default lifetime, usage pattern: regular.</strong></p>
+<p>This cache allows mapping from a project's UUID to its name. If that information is not obtained through the cache, i.e., a cache miss, then some expensive WCM calls, possibly including JCR calls, have to be executed. The cache size scales with the number of active projects. Cache entries are very small. If no projects are used at all, e.g., in a rendering-only system, then this cache can be deactivated.</p>
+<p><strong>com.ibm.wps.policy.services.PolicyCacheManager</strong></p>
+<p><strong>Default size: 1000, default lifetime: 43200, usage pattern: regular.</strong></p>
+<p>TThis cache stores policies. Out of the box, Portal comes with twelve theme policies and one mail policy, each constituting a single entry in the cache. Hence, the maximum number of cache entries depends on your system and the number of custom policies. This cache is accessed fairly often if policies are utilized. The HCL Portal 8.5 default theme uses policies and queries this cache during every request, but it is possible to create themes that do not use policies. Furthermore, when opening emails, the cache is accessed. Creating a cache entry involves reading data from a database. An entry in the cache is fairly small.</p>
+<p><strong>com.ibm.wps.policy.services.UserPolicyNodeCacheManager</strong></p>
+<p><strong>Default size: 2500, default lifetime: 600, usage pattern: regular.</strong></p>
+<p>his cache stores connections between a policy and a policy target, for example, a user's distinguished name. Theme policies don't use targets, hence, there are no cache entries based on these policies. The out-of-the-box mail policy uses the user as its target. Hence, there's at least one entry for every user accessing the CPP mail portlet. The size of a cache entry depends on the size of the target object. For a distinguished name, a cache entry is fairly small.</p>
+<h2 id="portal-user-management">Portal User Management</h2>
+<p>The following caches are used by the Portal user management component (PUMA). They are closely related to the access control caches and caching within the WebSphere WIM and VMM functionality. </p>
+<p><strong>com.ibm.wps.puma.CommonPrincipalCache</strong></p>
+<p><strong>Default size: 30000, default lifetime: 3600, usage pattern: physical cache instance for the combined caches <code>com.ibm.wps.puma</code> instances</strong></p>
+<p>TThis physical cache instance holds entries from <code>PUMA OID_User_Cache</code>, <code>OID_Group_Cache</code>, <code>DN_User_Cache</code>, and <code>DN_Group_Cache</code>. Those caches contain the mapping between the distinguished name / internal ObjectID of users and groups and their internal data object. The size of these caches scales with the number of active users and groups or user and groups that are used for delegation multiplied with factor 4 (as each entry is stored with different keys to enhance lookup). Entries are invalidated from this cache during deletion of a user or group. Creating an entry requires database and WIM/VMM access that may trigger further LDAP requests. An entry in the cache is fairly large.</p>
+<p><strong>com.ibm.wps.puma.DN_OID_Cache &amp; com.ibm.wps.puma.OID_DN_Cache</strong></p>
+<p><strong>Default size: 30000 &amp; 5000, respectively, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>These two caches contain the mapping between the distinguished name of users and groups and their internal ObjectID identifier. The size of these caches scale with the number of active users and groups or users and groups that are used for delegation. Entries are invalidated from this cache during deletion of a user or group. Creating an entry requires one database lookup. An entry into the caches is fairly small.</p>
+<p><strong>com.lotus.cs.services.domino.DominoService</strong></p>
+<p><strong>Default size: 2000, default lifetime: 11080, usage pattern: regular.</strong></p>
+<p>This cache stores user-specific Domino information. It is used for HCL Sametime awareness functions. It scales with the number of users working with the corresponding function. The cache is accessed whenever awareness functions are requested during page rendering. Creating a cache entry is cheap and simply involves creating a new Domino session. An entry to the cache is medium-sized.</p>
+<p><strong>com.lotus.cs.services.UserEnvironment</strong></p>
+<p><strong>Default size: 2000, default lifetime: 10880, usage pattern: regular.</strong></p>
+<p>his cache stores user-specific information. Each entry compiles a user's credential information across various LDAP directories and details which data for that user can be found in each directory. For example, general information might be stored in one directory, while their mail server and file path are in another.</p>
+<p>The cache scales with the number of users working with Collaboration portlets. It's accessed whenever a Collaboration portlet, such as an HCL Sametime portlet, is accessed. Creating a cache entry can be fairly expensive since multiple resources might be queried. An entry in the cache is medium-sized.</p>
+<h2 id="digital-data-connector-ddc">Digital Data Connector (DDC)</h2>
+<p>Portal uses the Digital Data Connector caches for Social Rendering. See <a href="../../../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_perf_tune_cach/">Performance tuning for lists of social objects</a> for more information on the following caches.</p>
+<p><strong>com.ibm.workplace.wcm.pzn.plr.BeanListCache</strong></p>
+<p><strong>Default size: 307, default lifetime: 900, usage pattern: regular</strong></p>
+<p>The bean list cache caches the bean list Java objects that the Digital Data Connector plug-ins return. The DDC plug-ins control the cache key generation for the individual entries and whether the bean lists are automatically removed from the cache during user login. By default, this cache is enabled.</p>
+<p>Note: Single entries of this cache can have a size of several MB. Therefore, the default number of cache entries for this cache is much lower than the default of other portal caches. When you use the bean list cache, closely monitor the cache and tune it as required. You might also consider the size of individual cache entries and how to influence it. For more information, see <a href="../../../../../../../build_sites/social_rendering/administering_social_list/soc_rendr_perf_tune_cach/">Performance tuning for lists of social objects</a>.</p>
+<p><strong>com.ibm.workplace.wcm.pzn.plr.xml.DocumentCache</strong></p>
+<p><strong>Default size: 3007, default lifetime: 900, usage pattern: regular</strong></p>
+<p>The document cache is used by the generic XML DDC plug-in for caching the Document Object Model (DOM) objects for individual source URIs. This cache specifically the DOMs for associated item attributes. If an individual associated item attribute is flagged as shared in the list-rendering profile, the cache entries are shared between different users. Such shared documents do not get invalidated on user login.</p>
+<p>Documents that are loaded through non-shared associated item attributes are cached separately per user. These cache entries are automatically invalidated during login. By default, this cache is enabled.</p>
+<p><strong>com.ibm.workplace.wcm.pzn.plr.ListRenderingCache</strong></p>
+<p><strong>Default size: 3007, default lifetime: 900, usage pattern: regular</strong></p>
+<p>The list-rendering cache caches the markup that a specific appearance component generates for a specific bean list instance. If you enable this cache, updates in the appearance component might not become visible immediately, as updates to the corresponding IBM Web Content Manager design components do not invalidate this cache. In general, the entries in this cache are invalidated together with the corresponding bean list objects in the bean list cache listed earlier in this topic. As a result, it is good practise to disable this cache on authoring systems and enable it on delivery systems.</p>
+<p>To use this cache, you must use the ListRenderingCache rendering plug-in to instrument the Web Content Manager design components that are involved in the markup generation for this cache. For more information see <a href="../../../../../../../build_sites/social_rendering/administering_social_list/">Administering social lists</a>.</p>
+<p><em>Mobile</em></p>
+<p><strong>com.ibm.wps.devicesupport.client2deviceclass</strong></p>
+<p><strong>Default size: 25, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores the list of device classes associated with a client as a list of ObjectIds. The recommended size is equal to the number of defined (and regularly) used clients in WebSphere Portal.</p>
+<p><strong>com.ibm.wps.devicesupport.profile2deviceclass</strong></p>
+<p>D<strong>efault size: 25, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores the list of device classes associated with a CCPP client profile as a list of ObjectIds. The recommended size is equal to the number of defined (and regularly) used clients in WebSphere Portal.</p>
+<h2 id="outbound-http-connection-service">Outbound HTTP Connection Service</h2>
+<p><strong>com.ibm.wps.outbound.datastore.ProxyConfigCache.values</strong></p>
+<p><strong>Default size: 100, default lifetime: infinite, usage pattern: regular.</strong></p>
+<p>This cache stores the configuration settings for the Outbound HTTP Connection Service. It is used whenever a component that utilizes this service, such as the AJAX proxy, is invoked. Cache entries are invalidated whenever changes to the outbound HTTP connections configuration are applied. To achieve optimal performance, the size of this cache should be greater than the total number of configuration settings for outbound HTTP connections, which include:
+ - All outbound connection profiles</p>
+<ul>
+<li>
+<p>All policy mappings, including one default mapping for each outbound connection profile All policy rules</p>
+</li>
+<li>
+<p>All cookie rules</p>
+</li>
+</ul>
+<p>In clustered environments, this cache must be shared, unless changes that are applied on the configuration settings of outbound HTTP connections are not required on all cluster nodes.</p>
+<p><strong>com.ibm.wps.outbound.datastore.ProxyConfigCache.topologies</strong></p>
+<p><strong>Default size: 100, default lifetime: infinite, usage pattern: regular.</strong></p>
+<p>TThis cache stores the parent-child relations of configuration settings for the Outbound HTTP Connection Service. It is used whenever a component that utilizes this service, such as the AJAX proxy, is invoked. Cache entries are invalidated whenever changes to the outbound HTTP connections configuration are applied. To achieve optimal performance, the size of this cache should be greater than the total number of configuration settings for outbound HTTP connections.</p>
+<p>In clustered environments, this cache must be shared, unless changes to the outbound HTTP connections configuration are not required on all cluster nodes.</p>
+<h2 id="personalization">Personalization</h2>
+<p>Personalization has several different types of data that is stored in the JCR. Each one of these caches is used to store the corresponding nodetype:</p>
+<ul>
+<li><code>services/cache/pzn/applicationObjects</code></li>
+<li><code>services/cache/pzn/campaigns</code></li>
+<li><code>services/cache/pzn/general</code></li>
+<li><code>services/cache/pzn/jcrNodeTypes</code></li>
+<li><code>services/cache/pzn/resourceCollections</code></li>
+<li><code>services/cache/pzn/ruleMappings</code></li>
+<li><code>services/cache/pzn/uuidPathConversions</code></li>
+</ul>
+<p>The pzn/general is used for nodes such as those involved in select action result sets, the result sets themselves, etc; the other caches store individual types. These caches can be enabled/disabled, have their expirations, etc set in</p>
+<p><code>&lt;wp_profile_root&gt;/PortalServer/config/config/services/PersonalizationService.properties</code></p>
+<h2 id="page-management">Page Management</h2>
+<p>The following caches are used primarily in page management scenarios.</p>
+<p><strong>com.ibm.wps.contentmapping.AuthoringCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores the mapping between Portal pages and WCM Portal Page artifacts that are used by the managed pages feature. It is primarily relevant on authoring systems where managed pages are enabled.</p>
+<p><strong>com.ibm.wps.contentmapping.ContentMappingsCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache stores web content page resolution results. Web content page resolution means dynamically retrieving the right Portal page for rendering a given WCM content item or an IBM Connections resource. This resolution is typically performed when clicking on a link to a WCM content item (in the Web Content Viewer portlet, a Search result, or the Tag Center portlet) or a link to an IBM Connections resource in an IBM Connections portlet.</p>
+<p><strong>com.ibm.wps.contentmapping.ContentMappingInfoCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>Caches the content mapping configuration (aka. page association configuration) for portal pages. This information is leveraged by the page associations dialog and other Portal administrative UIs. </p>
+<p><strong>com.ibm.wps.datastore.project.DraftedVersionExistsCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: uses globally configured default lifetime, usage pattern: regular.</strong></p>
+<p>This cache contains all ObjectIDs of pages for which a draft exists per project. It scales with the number of active projects. Creating a cache entry requires a database call that typically involves counting all entries within an index. A cache value could be relatively big, as it represents a list of ObjectIDs for all pages that are drafted in a project.
+If no projects are used at all, e. g. in a rendering-only system then this cache can be deactivated.</p>
+<h2 id="portlet-environment">Portlet Environment</h2>
+<p>The following caches are used to store various portlet definitions, configuration settings and attributes.</p>
+<p><strong>com.ibm.wps.pe.applicationregistry</strong></p>
+<p><strong>Default size: 1000, default lifetime: 1800, usage pattern: regular.</strong></p>
+<p>This cache contains the portlet applications and the portlet definitions. This cache scales with the number of portlet applications, portlet definitions and portlet clones that are in active use in the system.</p>
+<p>Increasing the default lifetime can improve performance if portlet applications as well as portlet definitions and portlet clones change infrequently. Rebuilding the cache entries is rather expensive since it requires multiple database queries.</p>
+<p><strong>com.ibm.wps.pe.contenttypes.nocharset</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>his cache contains content types in a specific format that is required by the portlet container. This cache is used to avoid the calculation and formatting of response content types that are set by a portlet during a portlet invocation. The cache scales with the number of different response content types.</p>
+<p>By default, cache entries do not expire; this setting should not be changed. Rebuilding cache entries does not include database access but is computation intensive.</p>
+<p><strong>com.ibm.wps.pe.contenttypes.result</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache contains content types in a specific format that is required by the portlet container. The objects held in this cache have another format and are processed differently from the objects in cache <code>com.ibm.wps.pe.contenttypes.nocharset</code>. This cache is used to avoid the calculation and formatting of response content types that are set by a portlet during a portlet invocation. The cache scales with the number of different response content types.
+By default cache entries do not expire, this setting should not be changed. Rebuilding cache entries does not include database access but is computation intensive.</p>
+<p><strong>com.ibm.wps.pe.deployedresources</strong></p>
+<p><strong>Default size: 500, default lifetime: 15000, usage pattern: regular.</strong></p>
+<p>This cache contains web module information and servlet information which are associated with portlets. The cache scales with the number of deployed portlet web applications and portlets that are in active use in the system.</p>
+<p>Increasing the default lifetime can improve performance if web applications as well as portlet definitions and portlet clones change infrequently. Rebuilding the cache entries is rather expensive since it requires multiple database queries.</p>
+<p><strong>com.ibm.wps.pe.portletentity</strong></p>
+<p><strong>Default size: 10000, default lifetime: 28800, usage pattern: regular.</strong></p>
+<p>This cache contains configuration for portlets on pages (portlet instances, shared and per-user). It scales with the number of pages defined in your Portal, the number of portlets on the pages and the number of portlet instances that have been personalized by users. The cache is accessed many times during Portal page rendering. It is important that the most relevant portlet entities are cached. Creating a cache entry involves a single database lookup. An entry into the cache is fairly small.</p>
+<p>Example: In a Portal with 500 pages and on average three portlets per page, the optimal cache size would be 1500 to store all possible portlet entity data in the cache, if users are not allowed to personalize the portlets. If the Portal has 100 users that are logged in concurrently and these users have personalized 50 portlets on average, the required cache size to cache all data would be 6500. These numbers give the maximum number of entries to the cache. Typically for this cache it is not required to have all portlet entities in memory, because most users will not view all pages so that not all personalized data must be loaded. The most frequently accessed un-personalized portlet entities should fit into the cache, though.</p>
+<p><strong>com.ibm.wps.pe.portletentitycounter</strong></p>
+<p><strong>Default size: 2000, default lifetime: 1800, usage pattern: regular.</strong></p>
+<p>This cache contains an approximate number of personalized entities per shared portlet instance. It is used heuristically to avoid database access when determining the portlet instance that is associated with a portlet window. The cache scales with the number of shared portlet instances that are in active use in the system.</p>
+<p>Increasing the default lifetime can improve performance if portlet instances change infrequently. Rebuilding the cache entries is relatively expensive, as it requires multiple database queries.</p>
+<p><strong>com.ibm.wps.pe.portletmodel.portletdefinition</strong></p>
+<p><strong>Default size: 1000, default lifetime: 1800, usage pattern: regular.</strong></p>
+<p>This cache contains portlet definitions. These definitions could be considered meta information about the deployed portlets. The cache scales with the number of portlet definitions that are in active use in the system.</p>
+<p>Increasing the default lifetime can improve performance if portlet definitions change infrequently. Rebuilding the cache entries is rather expensive since it requires multiple database queries.</p>
+<p><strong>com.ibm.wps.pe.portletregistry</strong></p>
+<p><strong>Default size: 1000, default lifetime: 1800, usage pattern: regular.</strong></p>
+<p>his cache contains portlet definitions. This cache holds objects of a different class compared to those in cache <code>com.ibm.wps.pe.portletmodel.portletdefinition</code>. The cache scales with the number of portlet definitions that are in active use in the system.</p>
+<p>Increasing the default lifetime can improve performance if portlet definitions change infrequently.</p>
+<p>Rebuilding cache entries is relatively expensive, as it involves loading data from the database through several calls.</p>
+<h2 id="resolver-static-pages">Resolver &amp; Static Pages</h2>
+<p><strong>com.ibm.wps.resolver.cor.cache.uri</strong></p>
+<p><strong>Default size: 2000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>The cache caches java.net.URI objects based on their string representation. The cache values are small. The cache does not depend on the user, the virtual portal or the project.</p>
+<p><strong>com.ibm.wps.resolver.data.cache.CacheMissDataSourceCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>This cache is used as a first level cache for caching data sources. Data is cached based on a combination of the URI of the data source and dependencies on request headers, so the same URI can appear multiple times in the cache. For every cache lookup, the system has to check for all possible variations of the URI in the cache. The <code>CacheMissDataSourceCache</code> speeds up this variation processing by caching the information that a particular variation is not part of the cache.</p>
+<p>The cache only stores the cache keys, not cache values (the existence of the key in the cache implies a cache miss).</p>
+<p>The size should be approximately twice as large as the size of the data source cache.</p>
+<p><strong>com.ibm.wps.resolver.data.cache.DataSourceCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>This cache caches data sources on the server. The cache key is the URI of the data source and information about dependencies on request headers. Entries depend, in general, on the user, the project and the virtual portal. Primarily the cache is used to cache aggregated resources via the resource aggregator framework, but it might be used by applications as well, so general purpose predictions on the cache size are not possible.</p>
+<p>You can view the content of the cache via <code>http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.data.cache.DataSourceCache</code>.</p>
+<p>The key into the cache is the URI of a data source. The value is the content of the data source, which can be anything from text files to binary data.</p>
+<p><strong>com.ibm.wps.resolver.friendly.cache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>The cache caches intermediate results during friendly URL processing. If friendly names are configured to be user specific, the size scales with the number of pages that have friendly names by the number of concurrent users. If friendly names are user independent, the cache scales only with the number of pages. The cache values are small.</p>
+<p>Friendly names are not user specific if they are used only for pages that are public or pages that are shared by all users. If no user specific friendly names are used this cache can be made public by setting friendly.force.public to true in the WP ConfigService resource environment provider.</p>
+<p>The content of the cache can be viewed via <code>&lt;http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.resolver.friendly.cache&gt;</code>.</p>
+<p><strong>com.ibm.wps.resolver.resource.AbstractRequestDispatcherFactory</strong> </p>
+<p><strong>Default size: 20, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>In this cache, Java objects of type <code>javax.servlet.RequestDispatcher</code> are stored. The cache keys are pairs of <code>javax.servlet.ServletContext</code> and a <code>String</code> object representing the resource path.
+The request dispatcher is a J2EE tool to dispatch a request from one application to another application on the server. With caching, the request dispatchers obtained can be reused.</p>
+<p><strong>com.ibm.wps.spa.parser.locale.LocalizationParserCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>The cache caches the processing of the locales in HTML files that represent the themes and skins. The size of the cache scales with the number of used themes and skins.</p>
+<p>The cache values are medium sized.</p>
+<p>The content of the cache can be viewed via <code>&lt;http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.locale.LocalizationParser&gt;</code>. </p>
+<p><strong>Cache.com.ibm.wps.spa.parser.skin.SkinParserCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>The cache caches the parsing of skins for dynamic spots. The size of the cache scales with the number of skins.</p>
+<p>The cache values are medium sized.</p>
+<p>The content of the cache can be viewed via <code>&lt;http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.skin.SkinParserCache&gt;</code>.</p>
+<p><strong>com.ibm.wps.spa.parser.skin.ThemeParserCache</strong></p>
+<p><strong>Default size: 1000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>The cache caches the parsing of themes for dynamic spots. The size of the cache scales with the number of themes.</p>
+<p>The cache values are medium sized.</p>
+<p>The content of the cache can be viewed via <code>&lt;http://portalserver/wps/mycontenthandler/distmap/ws/com.ibm.wps.spa.parser.skin.ThemeParserCache&gt;</code>.<!--!link correct? does not seem to work?--></p>
+<h2 id="search">Search</h2>
+<p>The following two caches are for internal usage and customers should not modify them. They are expected to be very small.</p>
+<p><strong>com.ibm.lotus.search.cache.dynacache.CacheServiceImp</strong></p>
+<ul>
+<li>General purpose cache for search configuration objects, like search services. </li>
+</ul>
+<p><strong>com.ibm.lotus.search.siapi.search.imp.propertiesScope</strong></p>
+<ul>
+<li>Cache for resolved scopes.</li>
+</ul>
+<h2 id="social-rendering">Social Rendering</h2>
+<p>Social data that is rendered on your Portal pages by using the social rendering feature is retrieved from a remote HCL Connections server. To reduce network traffic and improve performance, the data is cached on HCL Portal</p>
+<p>Social rendering uses the Digital Data Connector (DDC) caches.</p>
+<h2 id="url-mappings">URL Mappings</h2>
+<p>The following caches contain data on Portal URL mappings. Be sure to size the caches in a way that these are large enough to hold all defined URL mappings in your system.</p>
+<p><strong>wps.mappingurl.ContextsCache</strong></p>
+<p><strong>Default size: 500, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache contains URL mapping contexts. It scales with the number of mapping contexts defined in the system. This cache is used if a URL mapping cannot be resolved using the lookup cache. Creating an entry involves reading a mapping entry from the database. An entry in the cache is medium-sized.</p>
+<p><strong>wps.mappingurl.LookupCache</strong></p>
+<p><strong>Default size: 600, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache serves as a final lookup cache for the computed mappings between a hierarchy of URL mappings and a WebSphere Portal resource. It is accessed during every request to identify URL mappings from the incoming URL. The size of this cache should correspond to the total number of all mappings. Creating a cache entry is typically inexpensive because the information is often in-memory. An entry in the cache is relatively small.</p>
+<h2 id="tagging-rating">Tagging &amp; Rating</h2>
+<p><strong>com.ibm.wps.cp.tagging.TagCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores information about <strong>tag instances</strong>. A tag instance is a single tag associated with a single resource. For example, if a single resource <code>R1</code> has been tagged (by different users) with the tags <code>T1</code>, <code>T1</code>, and <code>T3</code>, three tag instances are created: one for <code>R1</code> tagged with <code>T1</code>, another for <code>R1</code> tagged again with <code>T1</code>, and a third for <code>R1</code> tagged with <code>T3</code>. If another resource <code>R2</code> has been tagged the same way (i.e., with the same tag names), three additional tag instances are created that hold information about how <code>R2</code> was tagged.</p>
+<p>The cache scales with the <strong>number of tag instances</strong> in the system. It is accessed, and a new entry is added, whenever tag instances (distinct from tag spaces; see the <code>TagSpaceCache</code>) for a particular resource are queried. Thus, a reasonable size for this cache depends on the number of tags being assigned and queried.</p>
+<p>Depending on the usage intensity of HCL Portal's tagging capabilities, a large number of tag instances can be quickly created. For instance, if a user invokes a custom tagging widget that can display all tag instances assigned to a particular resource, the cache might fill up quickly. It's advisable to ensure quick reloading of such a widget when invoking it for a resource that has been previously invoked. Thus, to achieve optimal performance in terms of cache hit rate, the size should be set so that all tag instances of a typical number of resources (for which tags are queried within the defined cache lifetime) fit into the cache.</p>
+<hr />
+<p>It's also worth noting that the <code>TagCache</code> is usually less important and thus used less often than the <code>TagSpaceCache</code>. This is because users are often, for the same tag name, interested only in its count. The <code>TagSpaceCache</code> provides exactly this: information about how many times a particular tag (name) has been assigned to a particular resource. For example, for a particular resource <code>Rx</code>, it is usually only of interest how many times a tag (name) <code>T1</code>, <code>T2</code>, or <code>Tx</code> has been assigned; retrieving each single tag instance is usually less relevant.</p>
+<p><strong>com.ibm.wps.cp.tagging.TagSpaceCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores information about <strong>tag spaces</strong>. A tag space is the aggregation of tags with the same name that have been associated with a single resource. For example, if a single resource <code>R1</code> has been tagged (by different users) with the tags <code>T1</code>, <code>T1</code>, and <code>T3</code>, two (not three, as with tag instances) tag spaces are created: one that holds the information that <code>R1</code> has been tagged with <code>T1</code> two times, and one that holds the information that <code>R1</code> has been tagged with <code>T3</code> once. If another resource <code>R2</code> has been tagged the same way (i.e., with the same tag names), two additional tag spaces are created that hold information about how <code>R2</code> was tagged.</p>
+<p>The cache scales with the <strong>number of tags</strong> in the system. It is accessed, and a new entry is added, whenever tags for a particular resource are queried – in a way that tags with the same tag name can be aggregated as only their count is of interest. Thus, a reasonable size for this cache depends on the number of tags being assigned and queried. The standard tag widgets, for example, access this cache frequently.</p>
+<p>Depending on the usage intensity of HCL Portal's tagging capabilities, a lot of tags can be quickly created. For instance, if a user invokes the standard tag widget (in order to query tags for a particular resource) in a short period of time and for a huge amount of different resources that all have been tagged a lot, the cache might fill up quickly. Again, it's advisable to ensure quick reloading of the standard tag widget when invoking it for a resource for which it has been invoked prior. Thus, to achieve optimal performance in terms of cache hit rate, the size should be set to a value so that all tag spaces of a typical number of resources (for which tags are queried within the defined cache lifetime) fit into the cache.</p>
+<p><strong>com.ibm.wps.cp.rating.RatingSpaceCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores information about <strong>rating spaces</strong>. A rating space is the aggregation of ratings of the same value that have been associated with a single resource. For example, if a single resource <code>R1</code> has been rated (by different users) with the values <code>5</code>, <code>5</code>, and <code>3</code>, two (not three, as with rating instances) rating spaces are created: one for <code>R1</code> rated two times with <code>5</code>, and another for <code>R1</code> rated once with <code>3</code>. If another resource <code>R2</code> has been rated the same way (i.e., with the same values), two additional rating spaces are created that hold information about how <code>R2</code> was rated.
+The cache scales with the number of ratings in the system. The cache is accessed and a new entry is added whenever ratings for a particular resource are being queried - in a way that ratings with the same value can be aggregated as only their count is of interest. Thus, a reasonable size for this cache depends on the amount of ratings being assigned and queried. The standard rating widgets for example access this cache frequently.</p>
+<p>Depending on the usage intensity of HCL Portal's rating capabilities a lot of ratings can be quickly created. For instance, if a user invokes the standard rating widget (in order to query ratings for a particular resource) in a short period of time and for a huge amount of different resources that all have been rated a lot, the cache might fill up quickly. Again, one should at least try to allow for a quick reloading of the standard rating widget when invoking it for a resource for which it has been invoked prior. Thus, to achieve best performance, in terms of cache hit rate, the size should be set to a value so that all rating spaces of a typical number of resources for which ratings are being queried in the defined cache lifetime fit into the cache.</p>
+<p><strong>com.ibm.wps.cp.tagging.ResourceModelCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores information about resources (pages, portlets, WCM content, etc.) registered with the tagging and rating engine. We refer to these registered resources as collaborative resources. A resource is being registered with the T&amp;R engine once it is tagged or rated. This means that, at this point in time, the information which tags and/or ratings have been assigned to which resource by which user is being stored.</p>
+<p>The cache scales with the number of collaborative resources in the system. The cache is accessed and a new entry is added whenever a resource is tagged or rated, or when particular resources are being queried,</p>
+<p>e.g. by tag names or rating values. Typical queries include queries like "Find all resources tagged with the tag T1" or "Find all resources rated with a value greater than 3". Thus, a reasonable size for this cache depends on the amount of collaborative resources being worked with. Thus, to achieve best performance, in terms of cache hit rate, the size should be set to a value so that a typical amount of collaborative resources being worked with – within the defined cache lifetime – fit into the cache.</p>
+<p><strong>com.ibm.wps.cp.tagging.TagNameMissCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: infinite, usage pattern: regular.</strong></p>
+<p>This cache stores information about all the tag names that have been searched for without success. It avoids costly queries for certain tag names to be carried out over and over again. This means that, in case a query for a particular tag <code>T1</code> returns no results, the next query for this particular tag <code>T1</code> is not being carried out again (as long as no new tags have been added as adding new tags can invalidate this cache); rather than that the result is directly served from the cache.</p>
+<p>The cache scales with the number of distinct tags (actually tag names) that users have been searched for without success before. The cache is accessed and a new entry is added whenever a new tag is being searched for without success. Thus, a reasonable size for this cache depends on the amount of distinct tag names users have been searched for. To achieve best performance in terms of cache hit rate, the size should be set to a value so that a typical amount of tag names being searched for fit into the cache.</p>
+<p><strong>com.ibm.wps.cp.tagging.TypeAheadCache</strong></p>
+<p><strong>Default size: 10000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores information about all the tag names that have already been used to tag resources. The set of tags being maintained as part of this cache is independent from any resource information.</p>
+<p>The cache is primarily being used by WebSphere Portal's tagging and rating type-ahead feature. As the user starts typing a tag name, one or more possible matches for the entered text fragment are being searched for and immediately shown to the user. This immediate feedback allows users to select one of the listed options rather than having to type the entire word or phrase they were looking for. A user can also choose a closely related option from the presented list. Thus, the type-ahead feature allows users to explore the tag space as they type. This can make it easier to find the correct term they want to use as the tag <a href="../../../../../../../build_sites/tagging_rating/hints_tips_tag_rate/tag_rate_ref_hintip_4admins/">Hints and tips for developers and portal administrators</a>
+.
+The cache scales with the number of distinct tags (actually tag names) in the system. The cache is accessed and a new entry is added whenever a new tag is brought into the system, or when available tags are being queried (by text fragments). Thus, a reasonable size for this cache depends on the amount of distinct tag names available.</p>
+<p>To achieve best performance in terms of cache hit rate, the size should be set to a value so that all distinct tag names fit into the cache.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Name</strong></td>
+<td style="text-align: left;"><code>com.ibm.wps.cp.models.ModelCache.*</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Models Included</strong></td>
+<td style="text-align: left;"><code>TagModel</code>, <code>RatingModel</code>, <code>ResourceModel</code>, <code>CategoryModel</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default Size</strong></td>
+<td style="text-align: left;"><code>200</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Default Lifetime</strong></td>
+<td style="text-align: left;"><code>3600</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usage Pattern</strong></td>
+<td style="text-align: left;"><code>regular</code></td>
+</tr>
+</tbody>
+</table>
+<p>These caches store information about the models HCL Portal's tagging and rating capabilities provide you with. There is one distinct cache for each model being provided (refer to the Knowledge Center for more information on these models):</p>
+<p>The cache for the TagModel which is primarily used for querying tags, e.g. tags by tag names. The cache for the RatingModel which is primarily used for querying ratings, e.g. ratings by rating values. The cache for the ResourceModel which is primarily used for querying collaborative resources, e.g. resources by tag names or by rating values. The cache for the CategoryModel which is primarily used for querying categories, for example category names.</p>
+<p>These caches scale with the number of models usually being requested. Requestors are usually components exploiting these models to implement specific functionalities. The cache is accessed, and a new entry is added whenever a new model object is being requested. Thus, a reasonable size for this cache depends on the amount of components usually exploiting these models. To achieve best performance, in terms of cache hit rate, the size should be set to a value so that a typical amount of models required by exploiting components fit into the cache.</p>
+<h2 id="virtual-portals">Virtual Portals</h2>
+<p>The following group of caches is only relevant if you have defined additional virtual portals in your system. In all other situations it is safe to set the size of these caches to one and the lifetime to infinite.</p>
+<h2 id="cache-changes-in-hcl-dx-cf04">Cache Changes in HCL DX CF04</h2>
+<p>In HCL DX CF04, the following caches were removed, with the exception of <code>com.ibm.wps.services.vpmapping.VirtualPortalIDToRealmCache</code>. A new cache, <code>com.ibm.wps.services.vpmapping.VirtualPortalIDAndHostnameCache</code>, was added to support Virtual Portal (VP) to hostname mapping.</p>
+<p><strong>com.ibm.wps.services.vpmapping.CheckForHostnameCache</strong></p>
+<p><strong>Default size: 20, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache keeps track of the hostnames used by virtual portals. If this cache is used, it could contain one entry per virtual portal, so the cache size should be larger than the number of virtual portals of your installation.</p>
+<p><strong>com.ibm.wps.services.vpmapping.URLToVirtualPortalIDCache</strong></p>
+<p><strong>Default size: 120, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache maps LPID values to virtual portal IDs. LPIDs are encoded in a URL that points to a certain virtual portal. Therefore, the number of LPIDs is equal to the number of virtual portal IDs. Accordingly, the optimum size of this cache is the number of virtual portals defined in your environment. You may increase the lifetime for better performance if your setup of virtual portals changes infrequently. If you only use the default portal and no additional virtual portal, you will see one entry in the cache and little traffic on the cache.</p>
+<p><strong>com.ibm.wps.services.vpmapping.HostnameToVirtualPortalIDCache</strong></p>
+<p><strong>Default size: 20, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache ensures an efficient mapping between virtual portal ids and hostnames. If this cache is used, it could contain one entry per virtual portal, so the cache size should be larger than the number of virtual portals of your installation.</p>
+<p><strong>com.ibm.wps.services.vpmapping.VirtualPortalIDCacheToHostname</strong></p>
+<p><strong>Default size: 20, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache ensures an efficient mapping between hostnames and virtual portal ids. If this cache is used, it could contain one entry per virtual portal, so the cache size should be larger than the number of virtual portals of your installation.</p>
+<p><strong>com.ibm.wps.services.vpmapping.VirtualPortalIDToRealmCache</strong></p>
+<p><strong>Default size: 120, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache stores the realm information for virtual portals. One realm can contain several virtual portals, but one virtual portal can only be part of a single realm. As a consequence, the optimum size of this cache is the number of virtual portals defined in your environment. You may increase the lifetime for better performance if your setup of virtual portals changes infrequently. If you only use the default portal and no additional virtual portal, you will see one entry in the cache and little traffic on the cache. Creating a new cache entry requires one database query. An entry into the cache is fairly small. </p>
+<p><strong>com.ibm.wps.services.vpmapping.VirtualPortalIDToURLCache</strong></p>
+<p><strong>Default size: 120, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>TThis cache maps virtual portal IDs to their respective LPID. The LPID is usually used to create URLs for a specific virtual portal. Since the number of LPIDs is equal to the number of virtual portal IDs, the optimum size of this cache is the number of virtual portals defined in your environment. You may increase the lifetime for better performance if your setup of virtual portals changes infrequently. If you only use the default portal and no additional virtual portal, you will see one entry in the cache and little cache traffic.</p>
+<h2 id="webdav">WebDav</h2>
+<p><strong>com.ibm.wps.FileCache_Syncer</strong></p>
+<p><strong>This is a special purpose cache that is used for the WebDAV file store. Do not change its configuration!</strong></p>
+<p><strong>com.ibm.wps.filestore.JCRItemsCache</strong></p>
+<p><strong>Default size: 5000, default lifetime: infinite, usage pattern: regular</strong></p>
+<p>This cache is closely related to the WebDAV file store. The content of themes and skins is stored in the WebDAV file store if this information is not contained in WAR-files.</p>
+<p>For each file stored in the WebDAV file store, meta information, for example its administrative ID and access information is stored in the JCRItemsCache. For further information about the WebDAV file store, see the WebSphere Portal Knowledge Center.</p>
+<h2 id="wsrp-consumer">WSRP Consumer</h2>
+<p>All WSRP caches are only accessed if the Portal is used as either a WSRP consumer or producer. Each of the caches is used on either side of the WSRP communication, but not on both sides. Most of the WSRP caches are used and read during every WSRP request, either displaying a page with a provided portlet on it, or administering WSRP properties. Exceptions to this general rule are noted below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All caches in the following includes the examples</p>
+</div>
+<p><strong>wsrp.cache.deleted.portlets</strong></p>
+<p><strong>Default size: 500, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache contains the handles of remote portlets that were destroyed by invoking the destroyPortlets operation. It is used on the consumer side. It scales with the number of portlet instances of remote portlets that are deleted on the consumer. The cache is used to avoid duplicate destroyPortlets requests, thus recreating the cache entry is expensive. It involves performing a WSRP request.</p>
+<p><strong>wsrp.cache.markup</strong></p>
+<p><strong>Default size: 5000, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>The WSRP Consumer uses this cache to cache <code>getMarkup</code> responses. If Markup Caching is enabled for the Consumer or for a remote portlet, the Consumer checks this cache before sending a WSRP <code>getMarkup</code> request to the producer. It sends the request only if a corresponding markup response isn't found in the cache.</p>
+<p>This cache is thus used to avoid sending WSRP <code>getMarkup</code> requests. It scales with the number of cacheable <code>getMarkup</code> responses received from the producer. You can adapt the cache size. The WSRP Consumer will always override the default lifetime according to the cache expiration provided by the remote portlet.</p>
+<p><strong>wsrp.cache.portlet.descriptions</strong></p>
+<p><strong>Default size: 2000, default lifetime: 10800, usage pattern: regular.</strong></p>
+<p>This cache contains the portlet descriptions of remote portlets. These descriptions could be considered meta information on the provided portlets, like languages and descriptions. The cache scales with the number of remote portlets consumed by the consumer. Increasing the default lifetime can improve performance if portlet descriptions of the provided portlets change infrequently. Rebuilding cache entries is rather expensive. It includes parsing the cached service description. The cached entries are rather expensive in terms of memory usage.</p>
+<p><strong>wsrp.cache.producer.objects</strong></p>
+<p><strong>Default size: 500, default lifetime: 10800, usage pattern: regular.</strong></p>
+<p>This cache contains the descriptor of the producer. It is used on the consumer side. It scales with the number of producers that the consumer interacts with. Recreating cache entries is fairly expensive. It involves some DB queries and in-memory operations.</p>
+<p><strong>wsrp.cache.producer.user</strong></p>
+<p><strong>Default size: 5000, default lifetime: 3600, usage pattern: multiple object types.</strong></p>
+<p>This cache contains the descriptor of the producer and context information between users and producers. It is used on the consumer side. It scales with the total number of active users accessing remote portlets of these producers, i.e the maximum the number of producers multiplied with the number of active users accessing them plus the number of producers. Recreating cache entry is fairly expensive. It involves some DB queries and in-memory operations. Therefore the session timeout should not be higher than the lifetime of entries in the cache. Cache entries are explicitly invalidated during user session destruction. </p>
+<p><strong>wsrp.cache.servicedescription</strong></p>
+<p><strong>Default size: 150, default lifetime: infinite (-1) usage pattern: regular</strong></p>
+<p>This cache contains service descriptions of WSRP producers. It is used on the consumer side. It scales with the number of WSRP producers integrated into the consuming Portals; there is exactly one description per producer. The service description is generated using all the portlet descriptions from the producer Portal plus some additional data. Hence a service description can be large in terms of memory requirements. Rebuilding the description requires several roundtrips and is an expensive operation. Cache entries are rebuilt if a user clicks the ‘Browse’ button in the WSRP administration portlets. This leads to a refresh of all service descriptions of all producers. This cache is only used during WSRP administration.</p>
+<p><strong>wsrp.cache.wsrp.portlet</strong></p>
+<p><strong>Default size: 2000, default lifetime: 10800, usage pattern: regular.</strong></p>
+<p>This cache contains the proxy portlet instances on the WSRP consumer side and is only used there. It scales with the number of integrated remote portlets multiplied with the number of users having their own customizations of portlet preferences for these remote portlets (portlet settings for legacy portlets respectively). Creating an entry for the cache involves one multi-line database query. The size of a cached entry depends on the number of parameters associated with the portlet. Hence the size ranges from small to fairly large.</p>
+<h2 id="wsrp-producer">WSRP Producer</h2>
+<p><strong>wsrp.cache.event.description</strong></p>
+<p><strong>Default size: 2000, default lifetime: 10800, usage pattern: regular.</strong></p>
+<p>This cache contains the event descriptions. These are the descriptions of events that are supported by the provided portlets. It is used on the producer. It scales with the number of events the provided portlets support. Recreating cache entries is fairly expensive. It involves some DB queries and in-memory operations.</p>
+<p><strong>wsrp.cache.portlet.windows</strong></p>
+<p><strong>Default size: 10000, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache contains a WSRP specific wrapper on a WebSphere Portal portlet entity object. It is used on the producer side. It scales with the number of provided portlets and the number of occurrences of these portlets on consumer pages. Recreating cache entries is rather cheap and typically only includes in-memory operations. An entry into this cache is fairly small. This cache is accessed very often during a request. </p>
+<p><strong>wsrp.cache.portletdescription</strong></p>
+<p><strong>Default size: 500, default lifetime: 3600, usage pattern: regular.</strong></p>
+<p>This cache contains the portlet descriptions of provided portlets. These descriptions could be considered meta information on the provided portlets, like languages and descriptions. It is used on the producer side. The cache scales with the number of portlets provided by the producer. Increasing the default lifetime can improve performance if portlet descriptions of the provided portlets change infrequently. Rebuilding cache entries is rather expensive. It includes loading data from the database with several calls. The cached entries are rather expensive in terms of memory usage.</p>
+<p><strong>wsrp.producer.portletpool.portlets</strong></p>
+<p><strong>Default size: 5000, default lifetime: infinite (-1), usage pattern: cascading object types.</strong></p>
+<p>This cache stores the Producer Offered Portlets and Consumer Configured Portlets and hence scales with their number. It scales with the number of provided portlets and the number of remote users having personalized those (Consumer Configured Portlets); hence the maximum would be the number of provided portlets multiplied by the number of remote users accessing the producer. Reloading cache entries involves one query against the database. Cached entries are rather small.</p>
+<h2 id="websphere">WebSphere</h2>
+<ul>
+<li><code>com.ibm.workplace/ExtensionRegistryCache</code>  </li>
+<li><code>com.ibm.ws.wssecurity.sctClientCacheMap</code> </li>
+<li><code>com.ibm.ws.wssecurity.sctServiceCacheMap</code>  </li>
+</ul>
+<p>ese caches are WAS internal caches whose size is not expected to be modified by customers. When viewing these caches with the Portal Cache Viewer, the following text is displayed:</p>
+<p>This cache is not an HCL Portal cache. No recommendations are given.</p>
+<p><strong>LDAP/AttributesCache</strong></p>
+<p><strong>Default size: 4000, default lifetime: 1200, usage pattern: regular.</strong></p>
+<p>VMM attributes cache to improve the performance of VMM.</p>
+<p><strong>LDAP/SearchResultsCache</strong></p>
+<p><strong>Default size: 2000, default lifetime: 600, usage pattern: regular.</strong></p>
+<p>VMM search results cache to improve the performance of VMM search.</p>
+<h2 id="wssecuremap">WSSecureMap</h2>
+<p>Default size: 2000, default lifetime: (Same as ltpaToken timeout. Cache entries also go away when the user is logged out), usage pattern: regular.</p>
+<p>The WSSecureMap cache stores security attributes used to recreate the user credential. It scales with the number of users who log in.</p>
+<p><strong>How to Set</strong></p>
+<ol>
+<li>
+<p>In the WebSphere Integrated Solutions Console, navigate to: <strong>Security &gt; Global Security &gt; Custom properties &gt; New</strong> </p>
+</li>
+<li>
+<p>Create both of these security custom properties:</p>
+</li>
+<li>
+<p><strong>Name:</strong> <code>com.ibm.ws.security.WSSecureMapInitAtStartup</code>
+    <strong>Value:</strong> <code>true</code></p>
+</li>
+<li>
+<p><strong>Name:</strong> <code>com.ibm.ws.security.WSSecureMapSize</code>
+    <strong>Value:</strong> <code>&lt;integer 100 or greater&gt;</code></p>
+</li>
+</ol>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<p>This group of caches does not fit in any of the other categories.</p>
+<p><strong>com.ibm.wps.multiviews.uri2uri</strong></p>
+<p><strong>Default size: 10, default lifetime: infinite (-1), usage pattern: regular</strong></p>
+<p>This cache holds URIs that are expensive to parse. Its size should be equal to the number of mvc: URIs used in the theme on the main rendering path.</p>
+<p><strong>com.ibm.wps.services.cache.cachedstate.CachedStateServiceSessionBound.cache</strong></p>
+<p><strong>Default size: 5000, default lifetime: 7200, usage pattern: typically regular.</strong></p>
+<p>This cache stores session-scoped data in the Portal context and is used by various Portal components. This cache scales linearly with the number of active sessions in the system and the number of Portal components using this cache for data retrieval. The usage pattern, access times, entry creation costs and entry memory sizes depend on the Portal component using this cache and cannot be stated in general.</p>
+<p><strong>com.ibm.wps.services.registry.ReloadableBucketCache</strong></p>
+<p><strong>Default size: 32, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache is used in a cluster for Portals to notify other cluster members when one of the registries needs to be reloaded due to an administrative action. It should <strong>never be disabled</strong> or set to <code>shared=false</code>.</p>
+<p><strong>wp.xml.configitems</strong></p>
+<p><strong>Default size: 100, default lifetime: infinite (-1), usage pattern: regular.</strong></p>
+<p>This cache stores XML Access configuration items. It is used only during XML Access processing. The entries resemble references between nodes in the XML Access document. Especially when working with complex XML files, usually used for imports or Release Builder processes, it can be beneficial to increase the cache size. The cache will be cleared after XML processing is completed. Reloading a cache entry involves one database query. Entries in the cache are medium-sized.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 4, 2025 09:59:33 UTC">November 4, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy", "content.action.edit"], "search": "../../../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../../../../../../javascripts/extra.js"></script>
+      
+        <script src="../../../../../../../javascripts/current.js"></script>
+      
+    
+  </body>
+</html>

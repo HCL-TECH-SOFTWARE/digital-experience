@@ -1,0 +1,3770 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/digital-experience/9.5/latest/latest/whatsnew/dx_helm_values_updates/">
+      
+      
+        <link rel="prev" href="../cf17/new_cf17/">
+      
+      
+        <link rel="next" href="../deprecated_features/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>DX Helm values updates - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--Jan2025-->
+
+<!-- SmartCat script-->
+<script id='sc-script' src="https://cdn.smartcat-proxy.com/168fc4fe410c474eb1f6043205ededea/script-v1/__translator.js?hash=6a6a63c258c09df66a084cf91cd87ede"></script>
+<!-- End SmartCat script -->
+
+<!-- OneTrust Cookies Consent Notice start for hcl-software.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c65f43b5-068e-4e4b-80d3-bdc8c41cf93d" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for hcl-software.com -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dx-helm-values-updates" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcl-software.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25" target="_blank">Community Forums</a>
+
+</div>
+</div>
+
+<div style='float: right;display: inline-block;width: 140px;margin-top: -7px;'>
+  <span id='scLangSelectorContainer' style='z-index: 1000; position: absolute; right:200.95px;'/>
+</div>
+
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../latest/whatsnew/dx_helm_values_updates/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DX Helm values updates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../extend_dx/" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide_me/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-tabs__link">
+        
+  
+    
+  
+  DX Compose
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            What's New
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf20/newcf233/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF200 and later
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF19 to CF199
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf18/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF18 to CF184
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../cf17/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    CF17 to CF173
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DX Helm values updates
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    DX Helm values updates
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cf233" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF233
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf232" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF232
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf231" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF231
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf230" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF230
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf229" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF229
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf228" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF228
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf227" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF227
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf226" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF226
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf225" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF225
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf224" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF224
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecated_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deprecated features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unsupported_features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupported features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../extend_dx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../guide_me/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DX Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cf233" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF233
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf232" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF232
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf231" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF231
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf230" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF230
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf229" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF229
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf228" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF228
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf227" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF227
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf226" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF226
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf225" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF225
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cf224" class="md-nav__link">
+    <span class="md-ellipsis">
+      CF224
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/whatsnew/dx_helm_values_updates.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M441 58.9 453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2 344 121.9l46.1 46.1-134.3 134.2c-2.9 2.9-6.5 5-10.4 6.1L186.9 325l16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25 175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25c-28.1-28.1-73.7-28.1-101.8 0M88 64c-48.6 0-88 39.4-88 88v272c0 48.6 39.4 88 88 88h272c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24v112c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40h112c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="dx-helm-values-updates">DX Helm values updates</h1>
+<p>This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.</p>
+<h3 id="cf233">CF233</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>volumes.persistenceNode.sharedmemorymount.sizeLimit</td>
+<td>64Mi</td>
+</tr>
+<tr>
+<td>networking.haproxy.sslDefaultBindCiphers</td>
+<td>""</td>
+</tr>
+<tr>
+<td>networking.haproxy.sslDefaultBindCiphersuites</td>
+<td>""</td>
+</tr>
+<tr>
+<td>networking.haproxy.sslDefaultBindOptions</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.defaultCollectionFetchLimit</td>
+<td>100</td>
+</tr>
+<tr>
+<td>configuration.searchMiddleware.damIndexing</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.consumeSharedConfigs</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.collector.exportUrl</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.collector.protocol</td>
+<td>http/protobuf</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.service.name</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.service.namespace</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.default</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.core</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.contentComposer</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.digitalAssetManagement</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.imageProcessor</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.licenseManager</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.openLdap</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.persistence</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.remoteSearch</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.ringApi</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.runtimeController</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.logging.services.webEngine</td>
+<td>info</td>
+</tr>
+<tr>
+<td>incubator.openTelemetry.debug.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.security.iq.dbUser</td>
+<td>dx_iq_db_user</td>
+</tr>
+<tr>
+<td>incubator.security.iq.dbPassword</td>
+<td>d1gitalExperience</td>
+</tr>
+<tr>
+<td>incubator.security.iq.customDbSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.enableTrashAutoClearance</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.trashClearanceTimeInDays</td>
+<td>30</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.enableSoftDelete</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes</td>
+<td>1440</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>incubator.configuration.searchMiddleware.version</td>
+</tr>
+<tr>
+<td>incubator.configuration.searchMiddleware.contextRoot.api</td>
+</tr>
+<tr>
+<td>incubator.configuration.searchMiddleware.contextRoot.pickerUI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changed Values:</strong></p>
+<p>None</p>
+<h3 id="cf232">CF232</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>networking.addon.ringApi.caTrustSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>probes.core.readinessProbe.customProbeURL</td>
+<td>""</td>
+</tr>
+<tr>
+<td>probes.core.startupProbe.customProbeURL</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.core.invalidationDomain</td>
+<td>RELEASE</td>
+</tr>
+<tr>
+<td>incubator.networking.dxIqService</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.blueprint.enableAssets</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.configuration.blueprint.enableNexHaven</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.configuration.blueprint.skipAssetsUpdate</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.blueprint.skipNexHavenUpdate</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<p>None</p>
+<h3 id="cf231">CF231</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.digitalAssetManagement.newDbManagement</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.persistence.databaseName</td>
+<td>dxmediadb</td>
+</tr>
+<tr>
+<td>incubator.enableConfigurationSharing</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.digitalAssetManagement.enableAssetMoveRename</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.enableCollectionMove</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.newDbManagement</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changed Values:</strong></p>
+<p>None</p>
+<h3 id="cf230">CF230</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>networking.haproxy.customHeader</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>networking.haproxy.deleteHeader</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.configuration.searchMiddleware.version</td>
+<td>v2</td>
+</tr>
+<tr>
+<td>incubator.configuration.searchMiddleware.contextRoot.api</td>
+<td>/dx/api/search</td>
+</tr>
+<tr>
+<td>incubator.configuration.searchMiddleware.contextRoot.pickerUI</td>
+<td>/dx/ui/search/picker</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<p>None</p>
+<h3 id="cf229">CF229</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.persistence.ssl</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.persistence.dbInitByDam</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.newDbManagement</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hclFlexnetID</td>
+</tr>
+<tr>
+<td>hclFlexnetURL</td>
+</tr>
+<tr>
+<td>networking.licenseCertSecret</td>
+</tr>
+<tr>
+<td>security.licenseManager.licenseManagerUser</td>
+</tr>
+<tr>
+<td>security.licenseManager.licenseManagerPassword</td>
+</tr>
+<tr>
+<td>security.licenseManager.customLicenseManagerSecret</td>
+</tr>
+<tr>
+<td>security.licenseManager.customFlexnetLicenseManagerPrivateKeySecret</td>
+</tr>
+<tr>
+<td>configuration.licenseManager.licenseServerId</td>
+</tr>
+<tr>
+<td>configuration.licenseManager.licenseFeatureNameWithVersion</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changed Values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Old Value</th>
+<th>New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.enableRootCollectionSort</td>
+<td>false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>peopleservice.networking.contextRoot.api</td>
+<td>dx/api/people/v1</td>
+<td>/dx/api/people/v1</td>
+</tr>
+<tr>
+<td>peopleservice.networking.contextRoot.ui</td>
+<td>dx/ui/people</td>
+<td>/dx/ui/people</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cf228">CF228</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>networking.haproxy.affinityCookieDomain</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.maxBulkUploadWithoutWarning</td>
+<td>100</td>
+</tr>
+<tr>
+<td>configuration.runtimeController.leaderElection.leaseExpiryTime</td>
+<td>15</td>
+</tr>
+<tr>
+<td>configuration.runtimeController.leaderElection.leasePollingTime</td>
+<td>5</td>
+</tr>
+<tr>
+<td>configuration.webEngine.transientUserRegistry.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.webEngine.wabEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.enableRootCollectionSort</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Old Value</th>
+<th>New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>probes.remoteSearch.readinessProbe.failureThreshold</td>
+<td>120</td>
+<td>2</td>
+</tr>
+<tr>
+<td>probes.remoteSearch.readinessProbe.periodSeconds</td>
+<td>60</td>
+<td>30</td>
+</tr>
+<tr>
+<td>configuration.licenseManager.licenseServerUri</td>
+<td>-</td>
+<td>https://api.hcltechsw.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cf227">CF227</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaling.replicas.runtimeController</td>
+<td>1</td>
+</tr>
+<tr>
+<td>networking.haproxy.alwaysEnableSessionAffinity</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.aclCacheTtl</td>
+<td>10</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.authCacheTtl</td>
+<td>600</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.nodeRequestTimeoutInMinutes</td>
+<td>15</td>
+</tr>
+<tr>
+<td>incubator.configuration.dxPicker.renderPickerSearch</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Old Value</th>
+<th>New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.db2.DbLibrary</td>
+<td>/opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar</td>
+<td>/opt/openliberty/wlp/usr/svrcfg/templates/jars/db2/db2jcc4.jar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cf226">CF226</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.digitalAssetManagement.allowEditorToCreateCollections</td>
+<td>true</td>
+</tr>
+<tr>
+<td>configuration.persistence.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.customKeystoreSecrets</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>configuration.webEngine.customTruststoreSecrets</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.search.middleware.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.search.contentSourceId</td>
+<td>""</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Old Value</th>
+<th>New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>logging.damPluginGoogleVision.level.0</td>
+<td>api:server-v0:*=info</td>
+<td>api:server-v1:*=info</td>
+</tr>
+<tr>
+<td>logging.damPluginKaltura.level.0</td>
+<td>api:server-v0:*=info</td>
+<td>api:server-v1:*=info</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url</td>
+<td>http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v0/plugin</td>
+<td>http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin</td>
+</tr>
+<tr>
+<td>configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url</td>
+<td>http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v0/googleVisionAI</td>
+<td>http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cf225">CF225</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>volumes.webEngine.customPVCs</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>probes.core.livenessProbe.customProbeURL</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.licenseManager.customMhsDeploymentKeySecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.licenseManager.mhsDeploymentKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>global.serviceAccountName</td>
+<td>""</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<p>None</p>
+<p><strong>Changed Values:</strong></p>
+<p>None</p>
+<h3 id="cf224">CF224</h3>
+<p><strong>Added Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hostAliases.contentComposer</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.core</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.damPluginGoogleVision</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.digitalAssetManagement</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.imageProcessor</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.openLdap</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.persistenceNode</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.persistenceConnectionPool</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.remoteSearch</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.ringApi</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.runtimeController</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.haproxy</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.licenseManager</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.damPluginKaltura</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>hostAliases.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>peopleservice.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.production</td>
+<td>true</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.authStrategy</td>
+<td>"DX"</td>
+</tr>
+<tr>
+<td>peopleservice.integration.dx</td>
+<td>true</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.dx.sessionCookieName</td>
+<td>"JSESSIONID"</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.dx.userValidationEndpoint</td>
+<td>"/auth/validate"</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.dx.currentUserAccessEndpoint</td>
+<td>"/dxmyrest/access/current-user?resourceId=wps.USERS"</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.dx.userAccessPrivilegedRoles</td>
+<td>"Administrator,Privileged User,Editor"</td>
+</tr>
+<tr>
+<td>peopleservice.configuration.dx.portletPageContextRoot</td>
+<td>"/wps/myportal/Practitioner/PeopleService"</td>
+</tr>
+<tr>
+<td>peopleservice.networking.ssl.enabled</td>
+<td>true</td>
+</tr>
+<tr>
+<td>peopleservice.networking.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>peopleservice.networking.contextRoot.api</td>
+<td>"dx/api/people/v1"</td>
+</tr>
+<tr>
+<td>peopleservice.networking.contextRoot.ui</td>
+<td>"dx/ui/people"</td>
+</tr>
+<tr>
+<td>images.tags.webEngine</td>
+<td>"CF224_20241213-2134"</td>
+</tr>
+<tr>
+<td>images.names.webEngine</td>
+<td>"dx/webengine"</td>
+</tr>
+<tr>
+<td>resources.webEngine.requests.cpu</td>
+<td>"2000m"</td>
+</tr>
+<tr>
+<td>resources.webEngine.requests.memory</td>
+<td>"4096Mi"</td>
+</tr>
+<tr>
+<td>resources.webEngine.limits.cpu</td>
+<td>"4000m"</td>
+</tr>
+<tr>
+<td>resources.webEngine.limits.memory</td>
+<td>"6144Mi"</td>
+</tr>
+<tr>
+<td>annotations.service.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>annotations.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>labels.service.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>labels.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>scaling.replicas.webEngine</td>
+<td>1</td>
+</tr>
+<tr>
+<td>scaling.horizontalPodAutoScaler.webEngine.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>scaling.horizontalPodAutoScaler.webEngine.minReplicas</td>
+<td>1</td>
+</tr>
+<tr>
+<td>scaling.horizontalPodAutoScaler.webEngine.maxReplicas</td>
+<td>3</td>
+</tr>
+<tr>
+<td>scaling.horizontalPodAutoScaler.webEngine.targetCPUUtilizationPercentage</td>
+<td>75</td>
+</tr>
+<tr>
+<td>scaling.horizontalPodAutoScaler.webEngine.targetMemoryUtilizationPercentage</td>
+<td>80</td>
+</tr>
+<tr>
+<td>nodeSelector.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>affinity.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>nodeName.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>tolerations.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>topologySpreadConstraints.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>volumes.webEngine.customization.storageClassName</td>
+<td>manual</td>
+</tr>
+<tr>
+<td>volumes.webEngine.customization.requests.storage</td>
+<td>500Mi</td>
+</tr>
+<tr>
+<td>volumes.webEngine.customization.selector</td>
+<td>""</td>
+</tr>
+<tr>
+<td>volumes.webEngine.customization.volumeName</td>
+<td>""</td>
+</tr>
+<tr>
+<td>volumes.log.storageClassName</td>
+<td>manual</td>
+</tr>
+<tr>
+<td>volumes.log.requests.storage</td>
+<td>250Mi</td>
+</tr>
+<tr>
+<td>volumes.log.selector</td>
+<td>""</td>
+</tr>
+<tr>
+<td>volumes.log.volumeName</td>
+<td>""</td>
+</tr>
+<tr>
+<td>applications.webEngine</td>
+<td>false</td>
+</tr>
+<tr>
+<td>networking.webEngine.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>networking.webEngine.port</td>
+<td>""</td>
+</tr>
+<tr>
+<td>networking.webEngine.ssl</td>
+<td>true</td>
+</tr>
+<tr>
+<td>networking.webEngine.contextRoot</td>
+<td>wps</td>
+</tr>
+<tr>
+<td>networking.webEngine.personalizedHome</td>
+<td>myportal</td>
+</tr>
+<tr>
+<td>networking.webEngine.home</td>
+<td>portal</td>
+</tr>
+<tr>
+<td>networking.webEngine.cookieSameSiteAttribute</td>
+<td>""</td>
+</tr>
+<tr>
+<td>networking.webEngine.cspFrameAncestorsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>networking.webEngine.cspFrameAncestorsAllowedSourceURLs</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>security.webEngine.webEngineUser</td>
+<td>wpsadmin</td>
+</tr>
+<tr>
+<td>security.webEngine.webEnginePassword</td>
+<td>""</td>
+</tr>
+<tr>
+<td>security.webEngine.customWebEngineSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>security.webEngine.webEngineContentAIProviderAPIKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>security.webEngine.customWebEngineContentAISecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>probes.webEngine.livenessProbe.failureThreshold</td>
+<td>6</td>
+</tr>
+<tr>
+<td>probes.webEngine.livenessProbe.initialDelaySeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>probes.webEngine.livenessProbe.periodSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>probes.webEngine.livenessProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>probes.webEngine.livenessProbe.timeoutSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>probes.webEngine.readinessProbe.failureThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>probes.webEngine.readinessProbe.initialDelaySeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>probes.webEngine.readinessProbe.periodSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>probes.webEngine.readinessProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>probes.webEngine.readinessProbe.timeoutSeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>probes.webEngine.startupProbe.failureThreshold</td>
+<td>360</td>
+</tr>
+<tr>
+<td>probes.webEngine.startupProbe.initialDelaySeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>probes.webEngine.startupProbe.periodSeconds</td>
+<td>20</td>
+</tr>
+<tr>
+<td>probes.webEngine.startupProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>probes.webEngine.startupProbe.timeoutSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>logging.webEngine.level</td>
+<td>"*=info"</td>
+</tr>
+<tr>
+<td>logging.webEngine.level</td>
+<td>"com.ibm.wps.logging.ExceptionLogger=all"</td>
+</tr>
+<tr>
+<td>logging.customLogSidecarContainers</td>
+<td>""</td>
+</tr>
+<tr>
+<td>metrics.webEngine.scrape</td>
+<td>true</td>
+</tr>
+<tr>
+<td>metrics.webEngine.prometheusDiscoveryType</td>
+<td>annotation</td>
+</tr>
+<tr>
+<td>configuration.webEngine.configOverrideFiles</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>configuration.webEngine.debug</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.webEngine.propertiesFilesOverrides</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>configuration.webEngine.propertiesDisable</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>configuration.webEngine.useExternalDatabase</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dropDatabaseTables</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.webEngine.customDbDomainPropertiesSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.InitializeFeedbackDB</td>
+<td>"true"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbName</td>
+<td>WPFDBK</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbSchema</td>
+<td>feedback</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DataSourceName</td>
+<td>wpfdbkdbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPFDBK:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbConfigRoleName</td>
+<td>WP_PZN_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbRuntimeRoleName</td>
+<td>WP_PZN_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.XDbName</td>
+<td>WPFDBK</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.feedback.DbNode</td>
+<td>pznNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbName</td>
+<td>WPLM</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbSchema</td>
+<td>likeminds</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DataSourceName</td>
+<td>wplmdbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPLM:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbConfigRoleName</td>
+<td>WP_PZN_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbRuntimeRoleName</td>
+<td>WP_PZN_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.XDbName</td>
+<td>WPLM</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.likeminds.DbNode</td>
+<td>pznNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbName</td>
+<td>WPREL</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbSchema</td>
+<td>release</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DataSourceName</td>
+<td>wpreldbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPREL:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbConfigRoleName</td>
+<td>WP_BASE_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbRuntimeRoleName</td>
+<td>WP_BASE_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.XDbName</td>
+<td>WPREL</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.release.DbNode</td>
+<td>wpsNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbName</td>
+<td>WPCOMM</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbSchema</td>
+<td>community</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DataSourceName</td>
+<td>wpcommdbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPCOMM:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbConfigRoleName</td>
+<td>WP_BASE_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbRuntimeRoleName</td>
+<td>WP_BASE_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.XDbName</td>
+<td>WPCOMM</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.community.DbNode</td>
+<td>wpsNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbName</td>
+<td>WPCUST</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbSchema</td>
+<td>customization</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DataSourceName</td>
+<td>wpcustdbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPCUST:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbConfigRoleName</td>
+<td>WP_BASE_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbRuntimeRoleName</td>
+<td>WP_BASE_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.XDbName</td>
+<td>WPCUST</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.customization.DbNode</td>
+<td>wpsNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbType</td>
+<td>db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbName</td>
+<td>WPJCR</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbSchema</td>
+<td>jcr</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DataSourceName</td>
+<td>wpjcrdbDS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbUrl</td>
+<td>"jdbc:db2://&lt;replace-db-host&gt;:&lt;replace-db-port&gt;/WPJCR:returnAlias=0;"</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbRuntimeUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbRuntimePassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DBA.DbUser</td>
+<td>&lt;replace-db-user&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DBA.DbPassword</td>
+<td>&lt;replace-db-password&gt;</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbConfigRoleName</td>
+<td>WP_JCR_CONFIG_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbRuntimeRoleName</td>
+<td>WP_JCR_RUNTIME_USERS</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.XDbName</td>
+<td>WPJCR</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbDomainProperties.jcr.DbNode</td>
+<td>wpsNode</td>
+</tr>
+<tr>
+<td>configuration.webEngine.customDbTypePropertiesSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.derby.DbDriver</td>
+<td>org.apache.derby.jdbc.EmbeddedDriver</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.derby.DbLibrary</td>
+<td>/opt/HCL/AppServer/derby/lib/derby.jar</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.derby.JdbcProviderName</td>
+<td>wpdbJDBC_derby</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.db2.DbDriver</td>
+<td>com.ibm.db2.jcc.DB2Driver</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.db2.DbLibrary</td>
+<td>/opt/openliberty/wlp/usr/svrcfg/bin/db2jcc4.jar</td>
+</tr>
+<tr>
+<td>configuration.webEngine.dbTypeProperties.db2.JdbcProviderName</td>
+<td>wpdbJDBC_db2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.type</td>
+<td>none</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.bindUser</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.bindPassword</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.customLdapSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.suffix</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.port</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.serverType</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.id</td>
+<td>dx_ldap</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.attributeMappingLdap</td>
+<td>["mail", "title", "userPassword"]</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.attributeMappingPortal</td>
+<td>["ibm-primaryEmail", "ibm-jobTitle", "password"]</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ldap.attributeNonSupported</td>
+<td>["certificate", "members"]</td>
+</tr>
+<tr>
+<td>configuration.webEngine.tuning.authoring</td>
+<td>true</td>
+</tr>
+<tr>
+<td>configuration.webEngine.ltpa.customLtpaSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.exposeConfigurationConsole</td>
+<td>true</td>
+</tr>
+<tr>
+<td>configuration.webEngine.contentAI.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.webEngine.contentAI.provider</td>
+<td>OPEN_AI</td>
+</tr>
+<tr>
+<td>configuration.webEngine.contentAI.className</td>
+<td>""</td>
+</tr>
+<tr>
+<td>configuration.webEngine.search.uiV2Enabled</td>
+<td>true</td>
+</tr>
+<tr>
+<td>configuration.webEngine.search.inputRedirectVersion</td>
+<td>v2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.search.wcmVersion</td>
+<td>v2</td>
+</tr>
+<tr>
+<td>configuration.webEngine.customSecrets</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>configuration.core.search.uiV2Enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>configuration.core.search.inputRedirectVersion</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>configuration.core.search.wcmVersion</td>
+<td>v1</td>
+</tr>
+<tr>
+<td>environment.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>maintenanceMode.webEngine</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Removed Keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>incubator.resources.webEngine.requests.cpu</td>
+<td>2000m</td>
+</tr>
+<tr>
+<td>incubator.resources.webEngine.requests.memory</td>
+<td>4096Mi</td>
+</tr>
+<tr>
+<td>incubator.resources.webEngine.limits.cpu</td>
+<td>4000m</td>
+</tr>
+<tr>
+<td>incubator.resources.webEngine.limits.memory</td>
+<td>6144Mi</td>
+</tr>
+<tr>
+<td>incubator.logging.webEngine.level</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.logging.webEngine.customLogSidecarContainers</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.annotations.service.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.annotations.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.labels.service.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.labels.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.environment.pod.webEngine</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.topologySpreadConstraints.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.nodeSelector.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.nodeName.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.tolerations.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.affinity.webEngine</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.maintenanceMode.webEngine</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.applications.webEngine</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.images.tags.webEngine</td>
+<td>v95_CF199_20240610-0714_rohan_develop</td>
+</tr>
+<tr>
+<td>incubator.images.names.webEngine</td>
+<td>dx-build-output/core-liberty/hcldx-core-liberty</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.adminUser</td>
+<td>wpsadmin</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.adminPassword</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.customWebEngineAdminUserSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.webEngineUser</td>
+<td>wpsadmin</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.webEnginePassword</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.customWebEngineSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.webEngineContentAIProviderAPIKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.security.webEngine.customWebEngineContentAISecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.port</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.ssl</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.contextRoot</td>
+<td>wps</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.personalizedHome</td>
+<td>myportal</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.home</td>
+<td>portal</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.cookieSameSiteAttribute</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.cspFrameAncestorsEnabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.networking.webEngine.cspFrameAncestorsAllowedSourceURLs</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>incubator.metrics.webEngine.scrape</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.metrics.webEngine.prometheusDiscoveryType</td>
+<td>annotation</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.livenessProbe.failureThreshold</td>
+<td>6</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.livenessProbe.initialDelaySeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.livenessProbe.periodSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.livenessProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.livenessProbe.timeoutSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.readinessProbe.failureThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.readinessProbe.initialDelaySeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.readinessProbe.periodSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.readinessProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.readinessProbe.timeoutSeconds</td>
+<td>30</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.startupProbe.failureThreshold</td>
+<td>4320</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.startupProbe.initialDelaySeconds</td>
+<td>0</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.startupProbe.periodSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.startupProbe.successThreshold</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.probes.webEngine.startupProbe.timeoutSeconds</td>
+<td>10</td>
+</tr>
+<tr>
+<td>incubator.scaling.replicas.webEngine</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.scaling.horizontalPodAutoScaler.webEngine.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.scaling.horizontalPodAutoScaler.webEngine.minReplicas</td>
+<td>1</td>
+</tr>
+<tr>
+<td>incubator.scaling.horizontalPodAutoScaler.webEngine.maxReplicas</td>
+<td>3</td>
+</tr>
+<tr>
+<td>incubator.scaling.horizontalPodAutoScaler.webEngine.targetCPUUtilizationPercentage</td>
+<td>75</td>
+</tr>
+<tr>
+<td>incubator.scaling.horizontalPodAutoScaler.webEngine.targetMemoryUtilizationPercentage</td>
+<td>80</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.customization.storageClassName</td>
+<td>manual</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.customization.requests.storage</td>
+<td>500Mi</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.customization.selector</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.customization.volumeName</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.log.storageClassName</td>
+<td>manual</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.log.requests.storage</td>
+<td>250Mi</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.log.selector</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.volumes.webEngine.log.volumeName</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.configOverrideFiles</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.propertiesFilesOverrides</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.propertiesDisable</td>
+<td>{}</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.type</td>
+<td>none</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.bindUser</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.bindPassword</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.customLdapSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.suffix</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.host</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.port</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.serverType</td>
+<td>CUSTOM</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.id</td>
+<td>dx_ldap</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.attributeMappingLdap</td>
+<td>["mail", "title", "userPassword"]</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.attributeMappingPortal</td>
+<td>["ibm-primaryEmail", "ibm-jobTitle", "password"]</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ldap.attributeNonSupported</td>
+<td>["certificate", "members"]</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.tuning.authoring</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.version</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.password</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.realm</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.desKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.privateKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.publicKey</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.ltpa.customLtpaSecret</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.exposeConfigurationConsole</td>
+<td>true</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.contentAI.enabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.contentAI.provider</td>
+<td>OPEN_AI</td>
+</tr>
+<tr>
+<td>incubator.configuration.webEngine.contentAI.className</td>
+<td>""</td>
+</tr>
+<tr>
+<td>incubator.configuration.core.presentationDesigner.enabled</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changed Values:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Old Value</th>
+<th>New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>configuration.searchMiddleware.pushAdminUser</td>
+<td>pushAdmin</td>
+<td>pushadmin</td>
+</tr>
+<tr>
+<td>configuration.searchMiddleware.pushAdminPassword</td>
+<td>adminPush</td>
+<td>adminpush</td>
+</tr>
+<tr>
+<td>incubator.configuration.digitalAssetManagement.renderNewUI</td>
+<td>false</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 17:09:41 UTC">February 10, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/current.js"></script>
+      
+    
+  </body>
+</html>

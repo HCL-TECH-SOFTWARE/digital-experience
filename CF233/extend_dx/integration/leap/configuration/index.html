@@ -1,0 +1,3007 @@
+<!-- Elements added to main will be displayed on all pages -->
+<!--March2023-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="HCL Digital Experience documentation for users and admins.">
+      
+      
+      
+        <link rel="canonical" href="https://help.hcl-software.com/digital-experience/9.5/latest/latest/extend_dx/integration/leap/configuration/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../example/">
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Configuration - HCL Digital Experience Help Center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/style.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      <!--Jan2025-->
+
+<!-- SmartCat script-->
+<script id='sc-script' src="https://cdn.smartcat-proxy.com/168fc4fe410c474eb1f6043205ededea/script-v1/__translator.js?hash=6a6a63c258c09df66a084cf91cd87ede"></script>
+<!-- End SmartCat script -->
+
+<!-- OneTrust Cookies Consent Notice start for hcl-software.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c65f43b5-068e-4e4b-80d3-bdc8c41cf93d" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for hcl-software.com -->
+
+<!--  Global site tag (gtag.js) - Google Analytics start -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-7LF0XY95M1" class="optanon-category-C0002-C0003-C0004-C0005"></script>
+<script type="text/plain" class="optanon-category-C0002-C0003-C0004-C0005">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169645537-2');
+  gtag('config', 'G-7LF0XY95M1');
+</script>
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNNFCCM');</script>
+  <!-- End Google Tag Manager -->
+  
+<!--  Global site tag (gtag.js) - Google Analytics end -->
+    
+    
+    
+  
+    <meta name="robots" content="index, follow" />
+  
+  <meta property="og:image" content="https://opensource.hcltechsw.com/digital-experience/site-thumbnail.png" />
+
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuring-hcl-leap-for-integration-with-hcl-dx" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div>
+   <a href="https://www.hcltechsw.com/"> 
+  <img width="150" height="30" src="https://help.hcltechsw.com/assets/images/HCL_Software_Logo_White.svg" alt="HCL Logo" target="_blank"></a>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="dropdown">
+  <button class="dropbtn">Resources <i class="fa fa-caret-down"></i></button> 
+  <div class="dropdown-content">
+  <a href="https://support.hcl-software.com/csm" target="_blank">Customer Support</a>
+  <a href="https://hclsoftwareu.hcl-software.com/hcl-dx" target="_blank">HCLSoftware U</a>
+  <a href="https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25" target="_blank">Community Forums</a>
+
+</div>
+</div>
+
+<div style='float: right;display: inline-block;width: 140px;margin-top: -7px;'>
+  <span id='scLangSelectorContainer' style='z-index: 1000; position: absolute; right:200.95px;'/>
+</div>
+
+  <!-- Uncomment the following announcement if you need it -->
+  <!--
+ <div class="md-banner--feedback" style="display:inline">
+
+  <strong>We value your feedback on this site.</strong> Please report any issues you find <a class="announcement__link" href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/issues">via Github</a>. 
+  
+  <div class="md-banner--feedback">Looking for v8.5 or v9.0? <a class="announcement__link"  href="https://help.hcltechsw.com/digital-experience/9.5/welcome_hcl_dx.html">Check the legacy Help Center.</a>
+</div>  
+</div>
+-->
+
+</div>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../../../../../latest/extend_dx/integration/leap/configuration/">
+    <strong>Click here to go to latest.</strong>
+  </a> 
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-header__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience Help Center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../get_started/product_overview/" class="md-tabs__link">
+          
+  
+    
+  
+  Get Started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../whatsnew/" class="md-tabs__link">
+          
+  
+    
+  
+  What's New
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../deployment/" class="md-tabs__link">
+          
+  
+    
+  
+  Deploy DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../build_sites/" class="md-tabs__link">
+          
+  
+    
+  
+  Build Sites
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../manage_content/" class="md-tabs__link">
+          
+  
+    
+  
+  Manage Content
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Extend DX
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../guide_me/" class="md-tabs__link">
+          
+  
+    
+  
+  Guide Me
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../early_access/" class="md-tabs__link">
+          
+  
+    
+  
+  Early Access
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-tabs__link">
+        
+  
+    
+  
+  DX Compose
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="HCL Digital Experience Help Center" class="md-nav__button md-logo" aria-label="HCL Digital Experience Help Center" data-md-component="logo">
+      
+  <img src="../../../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience Help Center
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HCL-TECH-SOFTWARE/digital-experience
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    
+  
+  
+    <a href="../../../../get_started/product_overview/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Get Started
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../whatsnew/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    What's New
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../deployment/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Deploy DX
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../build_sites/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Build Sites
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../manage_content/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Manage Content
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Extend DX
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Extend DX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Integrate Applications
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Integrate Applications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commerce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HCL Commerce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../connections/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Connections
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    HCL Leap
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_2_4" id="__nav_7_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            HCL Leap
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-layer-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Layer for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Layer for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingress-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingress for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-ingress-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Ingress for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-api-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway API for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gateway API for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-gateway-api-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Gateway API for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-hcl-leap-for-integration-with-hcl-dx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring HCL Leap for integration with HCL DX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring HCL Leap for integration with HCL DX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-ltpa-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing LTPA SSO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-oidc-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing OIDC SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../mx/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL Volt MX Foundry
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../huddo_boards/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Huddo Boards
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../people_service/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    HCL People Service
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../unified_task_list/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Unified Task List
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../wab/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Web Application Bridge
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fea_ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Connector Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../ibm_mobilefirst/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    IBM MobileFirst
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config_sharing_dx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Sharing for co-deployments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../development_tools/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Development Tools
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../script_application/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Script Applications
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ddc/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Digital Data Connector
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../portlets_development/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portlet Development
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../screenflow/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Screen Flow Manager
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../paa/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Portal Application Archive
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../apis/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    APIs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../guide_me/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Guide Me
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../early_access/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Early Access
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://help.hcl-software.com/digital-experience/dx-compose/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DX Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-layer-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Layer for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Layer for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingress-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingress for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-ingress-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Ingress for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-api-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway API for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gateway API for HCL DX and HCL Leap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-gateway-api-for-hcl-dx-and-hcl-leap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Gateway API for HCL DX and HCL Leap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-hcl-leap-for-integration-with-hcl-dx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring HCL Leap for integration with HCL DX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring HCL Leap for integration with HCL DX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-ltpa-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing LTPA SSO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing-oidc-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing OIDC SSO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/HCL-TECH-SOFTWARE/digital-experience/edit/main/docs/extend_dx/integration/leap/configuration.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M441 58.9 453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2 344 121.9l46.1 46.1-134.3 134.2c-2.9 2.9-6.5 5-10.4 6.1L186.9 325l16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25 175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25c-28.1-28.1-73.7-28.1-101.8 0M88 64c-48.6 0-88 39.4-88 88v272c0 48.6 39.4 88 88 88h272c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24v112c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40h112c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="configuring-hcl-leap-for-integration-with-hcl-dx">Configuring HCL Leap for integration with HCL DX</h1>
+<p>This page provides information on how to configure the integration of HCL Leap with the existing Digital Experience (DX) environment.</p>
+<h2 id="access-layer-for-hcl-dx-and-hcl-leap">Access Layer for HCL DX and HCL Leap</h2>
+<p>You have two options for implementing the Access Layer in the DX deployment and Leap: <a href="#ingress-for-hcl-dx-and-hcl-leap">Ingress</a> and <a href="#gateway-api-for-hcl-dx-and-hcl-leap">Gateway API</a>. Choose the option that fits your specific needs and preferences.</p>
+<h3 id="ingress-for-hcl-dx-and-hcl-leap">Ingress for HCL DX and HCL Leap</h3>
+<p>Refer to the following steps to implement a generic Ingress on your Kubernetes cluster for use with DX and Leap. The actual implementation might vary depending on the cluster's setup and configuration.</p>
+<h4 id="prerequisites">Prerequisites</h4>
+<p>Ensure you follow the guidelines provided in the <a href="../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#ingress-implementation-for-dx-deployments">optional Ingress documentation</a> to set up Ingress for DX.</p>
+<h4 id="implementing-ingress-for-hcl-dx-and-hcl-leap">Implementing Ingress for HCL DX and HCL Leap</h4>
+<ol>
+<li>
+<p>Create a separate Ingress resource for Leap or extend the existing DX Ingress configuration. In Kubernetes, Ingress resources manage how external HTTP(S) traffic is routed to services within the cluster. You can either define a dedicated Ingress for Leap or incorporate its routes into the existing DX Ingress.</p>
+</li>
+<li>
+<p>Ensure the Ingress resource is configured to match Leap’s deployment path. The specified path (for example, <code>/apps</code>) should align with Leap’s context route so that incoming requests are correctly routed to the Leap service as accessed by end users.</p>
+</li>
+</ol>
+<p>The following YAML file demonstrates how to define an Ingress resource that routes traffic to the Leap backend service based on a specific path (for example, <code>/apps</code>):</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-routes</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ingressClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">tls</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dx-tls-cert</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">hosts</span><span class="p p-Indicator">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-kube-deployment.com</span>
+<span class="w">    </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-kube-deployment.com</span>
+<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="p p-Indicator">:</span>
+<span class="w">        </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/apps</span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">pathType</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prefix</span>
+<span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">backend</span><span class="p p-Indicator">:</span>
+<span class="w">            </span><span class="nt">service</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leap-deployment-leap</span>
+<span class="w">                </span><span class="nt">port</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9080</span>
+</code></pre></div>
+<ul>
+<li>The <code>metadata</code> section identifies the Ingress resource.</li>
+<li>The <code>spec</code> section outlines the routing configuration.</li>
+<li>The <code>tls</code> block sets up HTTPS for the specified domain.</li>
+<li>Within the <code>rules</code> section, requests to the <code>/apps</code> path (including sub-paths) for the defined host are directed to the Leap service deployed in the cluster.</li>
+</ul>
+<h3 id="gateway-api-for-hcl-dx-and-hcl-leap">Gateway API for HCL DX and HCL Leap</h3>
+<p>Refer to the following steps to configure the optional Gateway API for DX and Leap. The Gateway API allows you to route requests to both products under the same hostname, enhancing the deployment's efficiency and management.</p>
+<h4 id="prerequisites_1">Prerequisites</h4>
+<p>Ensure you follow the guidelines provided in the <a href="../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer/#gateway-api-implementation-for-dx-deployments">optional Gateway API documentation</a> to set up the Gateway API for HCL DX.</p>
+<h4 id="implementing-gateway-api-for-hcl-dx-and-hcl-leap">Implementing Gateway API for HCL DX and HCL Leap</h4>
+<ol>
+<li>
+<p>Create a separate Gateway API resource for Leap or extend the existing DX Gateway configuration. The Gateway API offers a more flexible and expressive approach to traffic management than traditional Ingress. Consolidating routing for both DX and Leap under a single configuration can simplify access layer management.</p>
+</li>
+<li>
+<p>Ensure the Gateway API configuration accurately reflects the context route used in the Leap deployment (for example, <code>/apps</code>). This ensures that incoming requests to that path are properly routed to the Leap backend service.</p>
+</li>
+</ol>
+<p>The following YAML file demonstrates how to define a Gateway API <code>HTTPRoute</code> resource for routing requests to the Leap backend service:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway.networking.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPRoute</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leap-http-api-route</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parentRefs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway</span>
+<span class="w">    </span><span class="nt">sectionName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https</span>
+<span class="w">  </span><span class="nt">hostnames</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-kube-deployment.com</span>
+<span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">matches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PathPrefix</span>
+<span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/apps</span>
+<span class="w">    </span><span class="nt">backendRefs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leap-deployment-leap</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9080</span>
+</code></pre></div>
+<ul>
+<li>The <code>metadata</code> section assigns a name to the HTTPRoute resource.</li>
+<li>The <code>spec</code> section outlines the routing configuration.</li>
+<li>The <code>parentRefs</code> section links the route to a specific Gateway and its section (for example, <code>https</code>).</li>
+<li>The <code>hostnames</code> section indicates the domain this route is intended for.</li>
+<li>Within <code>rules</code>, the <code>matches</code> block defines the path prefix condition (such as <code>/apps</code>)</li>
+<li>The <code>backendRefs</code> section specifies the target backend service and port where Leap is hosted.</li>
+</ul>
+<h2 id="configuring-hcl-leap-for-integration-with-hcl-dx_1">Configuring HCL Leap for integration with HCL DX</h2>
+<p>You can enable single sign-on (SSO) between HCL Leap and HCL Digital Experience (DX) in Kubernetes by using either the <a href="#implementing-ltpa-sso">Lightweight Third-Party Authentication (LTPA)</a> protocol or the modern <a href="#implementing-oidc-sso">OpenID Connect (OIDC)</a> protocol.</p>
+<h3 id="implementing-ltpa-sso">Implementing LTPA SSO</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can set up LTPA SSO using the Configuration Sharing feature described in <a href="../../config_sharing_dx/">Configuration Sharing for co-deployments</a>. This method simplifies the process by automatically sharing LTPA keys between DX and Leap. If you prefer to manually configure LTPA SSO, follow the steps outlined in this section.</p>
+</div>
+<p>This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using LTPA. The process works by sharing a single LTPA encryption key between the DX and Leap pods. By storing this common key in a Kubernetes Secret, both applications can trust each other's login tokens, allowing users to sign in once and access both platforms seamlessly. The following steps are based on <a href="https://support.hcltechsw.com/community?id=community_blog&amp;sys_id=ba541e4b1b820614f37655352a4bcbc4" target="_blank">a community post</a> from the HCLSoftware Community:</p>
+<ol>
+<li>
+<p>Ensure both DX and Leap use an identical user registry configuration.</p>
+<ul>
+<li>For DX, please refer to the doc on <a href="../../../../get_started/plan_deployment/traditional_deployment/user_registry_consideration/plan_ureg_ov/">User Registry Options</a> for details.</li>
+<li>For Leap, please refer to <a href="https://opensource.hcltechsw.com/leap-doc/latest/helm_configure_ldap.html">the Leap documentation</a> for details.</li>
+</ul>
+</li>
+<li>
+<p>Ensure both DX and Leap use the same realm name.</p>
+<p>To set the realm name for DX:</p>
+<ol>
+<li>Log in to the WebSphere Integrated Solutions Console (<code>your-domain.com/ibm/console</code>) as an administrator.</li>
+<li>Click <strong>Security &gt; Global Security &gt; User Account Repository &gt; Realm Name</strong>.</li>
+<li>
+<p>Under <strong>User account repository</strong>, set the <strong>Realm name</strong> (for example, <code>defaultWIMFileBasedRealm</code>).</p>
+<p><img alt="" src="../../../../assets/dx-leap-integration-realm.png" /></p>
+</li>
+<li>
+<p>Click <strong>Apply</strong>.</p>
+</li>
+<li>Click <strong>Save</strong> at the top of the console messages.</li>
+</ol>
+<p>To set the realm name for Leap:</p>
+<ol>
+<li>
+<p>Edit the <code>configOverrideFiles</code> section in your Helm chart's <code>values.yaml</code> file. In the following example, the realm name for Leap is set to <code>defaultWIMFileBasedRealm</code>, similar to the realm name set in DX.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">leap</span><span class="p">:</span><span class="w">  </span>
+<span class="w">        </span><span class="nt">configOverrideFiles</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">mycustomoverride</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">                </span><span class="no">&lt;server description=&quot;leapServer&quot;&gt;</span>
+<span class="w">                </span><span class="no">&lt;federatedRepository id=&quot;leapRepo&quot;&gt;</span>
+<span class="w">                    </span><span class="no">&lt;primaryRealm name=&quot;defaultWIMFileBasedRealm&quot; allowOpIfRepoDown=&quot;true&quot;&gt;</span>
+<span class="w">                    </span><span class="no">&lt;participatingBaseEntry name=&quot;o=defaultWIMFileBasedRealm&quot; /&gt;</span>
+<span class="w">                    </span><span class="no">&lt;/primaryRealm&gt;</span>
+<span class="w">                </span><span class="no">&lt;/federatedRepository&gt;</span>
+<span class="w">                </span><span class="no">&lt;basicRegistry id=&quot;leapRegistry&quot; realm=&quot;defaultWIMFileBasedRealm&quot; ignoreCaseForAuthentication=&quot;true&quot;&gt;</span>
+<span class="w">                    </span><span class="no">&lt;user id=&quot;&lt;my-user-id&gt;&quot; name=&quot;uid=&lt;my-user-id&gt;,o=defaultWIMFileBasedRealm&quot; password=&quot;&lt;my-password&gt;&quot; /&gt;</span>
+<span class="w">                </span><span class="no">&lt;/basicRegistry&gt;</span>
+<span class="w">                </span><span class="no">&lt;/server&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Perform a Helm upgrade to apply your changes.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information regarding Leap's <code>configOverrideFiles</code> parameter, refer to <a href="https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html?h=configoverridefile">Open Liberty server customizations</a>.</p>
+</div>
+</li>
+<li>
+<p>Ensure both DX and Leap use the same DNS domain. Refer to <a href="../installation/">these steps</a> for details.</p>
+</li>
+<li>
+<p>Ensure LTPA cookies flow only over HTTPS.</p>
+<p>To limit the flow of LTPA cookies to SSL only on the traditional WebSphere Application Server (WAS):</p>
+<ol>
+<li>Log in to the WebSphere Integrated Solutions Console (<code>your-domain.com/ibm/console</code>) as an administrator.</li>
+<li>Click <strong>Security &gt; Global security &gt; Web and SIP security &gt; Single sign-on (SSO)</strong>.</li>
+<li>Select the <strong>Requires SSL</strong> checkbox.</li>
+<li>Click <strong>Apply</strong>.</li>
+<li>Click <strong>Save</strong> at the top of the console messages.</li>
+</ol>
+<p>To limit the flow of LTPA cookies to SSL only on Liberty:</p>
+<ol>
+<li>
+<p>Add the following parameter to the <code>configOverrideFiles</code> section of your <code>values.yaml</code> file</p>
+<div class="language-text highlight"><pre><span></span><code>&lt;webAppSecurity ssoRequiresSSL=&quot;true&quot;/&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Perform a Helm upgrade to apply your changes.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Ensure both DX and Leap use the same LTPA keys.</p>
+<ol>
+<li>Export the LTPA keys from WAS:<ol>
+<li>Log in to the WebSphere Integrated Solutions Console (<code>your-domain.com/ibm/console</code>) as an administrator.</li>
+<li>Click <strong>Security &gt; Global security &gt; LTPA</strong>.</li>
+<li>In the Cross-cell single sign-on section, enter values for the following fields:<ol>
+<li>Under <strong>Password</strong>, enter and confirm a secure password. You will require this password later.</li>
+<li>Under <strong>Fully qualified key file name</strong>, specify a name for the file that holds the exported keys (for example, <code>ltpa.keys</code>).</li>
+</ol>
+</li>
+<li>Click <strong>Export keys</strong>.</li>
+</ol>
+</li>
+<li>Look for the exported <code>ltpa.keys</code> in your DX core pod.<ol>
+<li>In your cluster, run <code>kubectl exec -it &lt;your-dx-core-pod-name&gt; -- sh</code>.</li>
+<li>Run <code>find / -name ltpa.keys</code> to find the location of the ltpa.keys file, e.g. <code>/opt/HCL/profiles/prof_95_CF229/ltpa.keys</code>.</li>
+<li>Run <code>cat &lt;ltpa.keys-location&gt;</code> to print the file's contents into the terminal.</li>
+</ol>
+</li>
+<li>Copy the content of the exported LTPA key file into a file named <code>ltpa.keys</code> in your cluster. This file will be used to create the Kubernetes secret.</li>
+<li>Exit the DX Core pod shell by running <code>exit</code>.</li>
+<li>
+<p>Run the following command in your cluster to create the Kubernetes secret:</p>
+<div class="language-text highlight"><pre><span></span><code>kubectl create secret generic my-custom-ltpa-key --from-file=/path/to/ltpa.keys --namespace=&lt;namespace&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Update <code>ltpa-key</code> in the Leap custom Helm <code>values.yaml</code> file, then run a helm upgrade:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span><span class="w"> </span>
+<span class="w">    </span><span class="nt">leap</span><span class="p">:</span><span class="w"> </span>
+<span class="w">        </span><span class="nt">customSecrets</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">ltpa-key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-custom-ltpa-key</span>
+</code></pre></div>
+</li>
+<li>
+<p>Look for <code>ltpa.keys</code> in your Leap pod (steps are similar to those that you did to find it in the DX pod). Check that its contents are the same as the ltpa.keys exported in DX. Note the location of the ltpa.keys file for the next step.</p>
+</li>
+<li>
+<p>Update the LTPA <code>keysFileName</code> and <code>keysPassword</code> parameters by adding this line to the <code>configOverrideFiles</code> section of your Leap <code>values.yaml</code> file: </p>
+<div class="language-text highlight"><pre><span></span><code>&lt;ltpa keysFileName=&quot;/path/to/ltpa.keys&quot; keysPassword=&quot;&lt;myLtpaKeyPassword&gt;&quot; /&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Perform a Helm upgrade to apply your changes.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details on using custom secrets as key file, refer to <a href="https://opensource.hcltechsw.com/leap-doc/latest/helm_admin_customsecret.html?h=ltpa#using-custom-secrets-as-key-file" target="_blank">Using custom secrets as key file</a>.</p>
+</div>
+<p>See the resulting <code>values.yaml</code> file after adding the <code>&lt;webAppSecurity ssoRequiresSSL="true"/&gt;</code> and <code>&lt;ltpa keysFileName="/path/to/ltpa.keys" keysPassword="&lt;myLtpaKeyPassword&gt;" /&gt;</code> lines to the <code>configOverrideFiles</code> section:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1">### Leap custom values file</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">leap</span><span class="p">:</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">configOverrideFiles</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">mycustomoverride</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">&lt;server description=&quot;leapServer&quot;&gt;</span>
+<span class="w">        </span><span class="no">&lt;webAppSecurity ssoRequiresSSL=&quot;true&quot;/&gt;</span>
+<span class="w">        </span><span class="no">&lt;ltpa keysFileName=&quot;/path/to/ltpa.keys&quot; keysPassword=&quot;&lt;myLtpaKeyPassword&gt;&quot; /&gt;</span>
+<span class="w">        </span><span class="no">&lt;federatedRepository id=&quot;leapRepo&quot;&gt;</span>
+<span class="w">            </span><span class="no">&lt;primaryRealm name=&quot;defaultWIMFileBasedRealm&quot; allowOpIfRepoDown=&quot;true&quot;&gt;</span>
+<span class="w">            </span><span class="no">&lt;participatingBaseEntry name=&quot;o=defaultWIMFileBasedRealm&quot; /&gt;</span>
+<span class="w">            </span><span class="no">&lt;/primaryRealm&gt;</span>
+<span class="w">        </span><span class="no">&lt;/federatedRepository&gt;</span>
+<span class="w">        </span><span class="no">&lt;basicRegistry id=&quot;leapRegistry&quot; realm=&quot;defaultWIMFileBasedRealm&quot; ignoreCaseForAuthentication=&quot;true&quot;&gt;</span>
+<span class="w">            </span><span class="no">&lt;user id=&quot;&lt;my-user-id&gt;&quot; name=&quot;uid=&lt;my-uid&gt;,o=defaultWIMFileBasedRealm&quot; password=&quot;&lt;my-password&gt;&quot; /&gt;</span>
+<span class="w">        </span><span class="no">&lt;/basicRegistry&gt;</span>
+<span class="w">        </span><span class="no">&lt;/server&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Restart HCL Leap and HCL DX. You should now be able to log in to DX and open Leap without having to log in again.</p>
+</li>
+</ol>
+<h3 id="implementing-oidc-sso">Implementing OIDC SSO</h3>
+<p>This guide explains how to enable SSO between HCL DX and HCL Leap on Kubernetes using OIDC. The <a href="../../../../deployment/manage/security/people/authentication/oidc/">OIDC</a> approach connects directly to your preferred Identity Provider (IdP). By configuring DX and Leap to trust your central IdP, users can sign in once and access both applications securely. Authentication and access control are managed in a single location.</p>
+<ol>
+<li>
+<p>Choose and configure your IdP.</p>
+<ol>
+<li>
+<p>Create a client registration for each product (DX and Leap). Your IdP will serve as the single point of truth for credential inputs.</p>
+</li>
+<li>
+<p>(Optional) Customize the IdP access UI. For more information, refer to <a href="../../../../deployment/manage/security/people/authentication/oidc/dx-oidc-customization-considerations/">IdP Customization and Consideration</a>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Enable OIDC in HCL DX.</p>
+<p>To enable OIDC on HCL DX using the WebSphere Application Server, refer to <a href="../../../../deployment/manage/security/people/authentication/oidc/dx-update-websphere-for-oidc/">Updating WebSphere to support OIDC Authentication for DX</a>.</p>
+</li>
+<li>
+<p>Enable OIDC in HCL Leap.</p>
+<p>You can configure Leap to use OIDC as the primary authentication mechanism, making it a relying party (RP) to your IdP. When OIDC is enabled, the user and group lookup features in Leap aren’t available and must be disabled as part of the configuration.</p>
+<ol>
+<li>
+<p>Configure the necessary certificates for secure OIDC communication.</p>
+<p>As part of the identity provider configuration process, you must create or obtain a digital certificate for HTTPS. Deploy this certificate to Leap so that both servers can communicate securely.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SSL certificate (<code>.crt</code>) and public key (<code>.key</code>) must be in PKCS12 format.</p>
+</div>
+</li>
+<li>
+<p>After copying the <code>.key</code> and <code>.crt</code> to the Kubernetes image, create a secret using the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>tls<span class="w"> </span>&lt;tls_secret&gt;<span class="w"> </span>--key<span class="o">=</span><span class="s2">&quot;/tmp/oidc.key&quot;</span><span class="w"> </span>--cert<span class="o">=</span><span class="s2">&quot;/tmp/oidc.crt&quot;</span>
+</code></pre></div>
+<p>This secret can be referenced in the <code>values.yaml</code> file using the following configuration:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">leap</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">customCertificateSecrets</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">idpCert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;tls_secret&gt;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add the OIDC definition as a server customization in the <code>values.yaml</code> file.</p>
+<p>The properties you need to specify depend on your identity provider configuration. For more information, refer to the <a href="https://openliberty.io/docs/latest/reference/config/openidConnectClient.html" target="_blank">Open Liberty documentation on OIDC</a>.</p>
+<p>Before you begin, verify that the discovery endpoint URL (usually ending with <code>/.well-known/openid-configuration</code>) is valid by opening it in a browser. Then, update the <code>values.yaml</code> file with the client ID and secret that you obtained from your IdP.</p>
+<p>Example of an OIDC definition:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Replace placeholder values with your actual OIDC configuration</span>
+<span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">leap</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">configOverrideFiles</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">openIdConnect</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">                </span><span class="no">&lt;server description=&quot;leapServer&quot;&gt;</span>
+<span class="w">                </span><span class="no">&lt;openidConnectClient id=&quot;&lt;unique-oidc-id&gt;&quot;</span>
+<span class="w">                    </span><span class="no">clientId=&quot;&lt;your-client-id&gt;&quot;</span>
+<span class="w">                    </span><span class="no">clientSecret=&quot;&lt;your-client-secret&gt;&quot;</span>
+<span class="w">                    </span><span class="no">signatureAlgorithm=&quot;RS256&quot;</span>
+<span class="w">                    </span><span class="no">authFilterRef=&quot;interceptedAuthFilter&quot;</span>
+<span class="w">                    </span><span class="no">mapIdentityToRegistryUser=&quot;false&quot;</span>
+<span class="w">                    </span><span class="no">httpsRequired=&quot;true&quot;</span>
+<span class="w">                    </span><span class="no">scope=&quot;openid&quot;</span>
+<span class="w">                    </span><span class="no">userIdentityToCreateSubject=&quot;preferred_username&quot;</span>
+<span class="w">                    </span><span class="no">discoveryEndpointUrl=&quot;&lt;your-idp-discovery-endpoint&gt;&quot;&gt;</span>
+<span class="w">                </span><span class="no">&lt;/openidConnectClient&gt;</span>
+<span class="w">                </span><span class="no">&lt;authFilter id=&quot;interceptedAuthFilter&quot;&gt;</span>
+<span class="w">                    </span><span class="no">&lt;requestUrl id=&quot;authRequestUrl&quot; matchType=&quot;contains&quot; urlPattern=&quot;/apps/secure|/apps/secured&quot;/&gt;</span>
+<span class="w">                </span><span class="no">&lt;/authFilter&gt;</span>
+<span class="w">                </span><span class="no">&lt;httpEndpoint id=&quot;defaultHttpEndpoint&quot;</span>
+<span class="w">                    </span><span class="no">host=&quot;*&quot;</span>
+<span class="w">                    </span><span class="no">httpPort=&quot;9080&quot;</span>
+<span class="w">                    </span><span class="no">httpsPort=&quot;9443&quot;&gt;</span>
+<span class="w">                    </span><span class="no">&lt;samesite none=&quot;*&quot; /&gt;</span>
+<span class="w">                </span><span class="no">&lt;/httpEndpoint&gt;</span>
+<span class="w">                </span><span class="no">&lt;/server&gt;</span>
+</code></pre></div>
+<p>For more details on defining a server customization, refer to <a href="https://opensource.hcltechsw.com/leap-doc/latest/helm_open_liberty_custom.html" target="_blank">Open Liberty server customizations</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <code>openIdConnectClient</code> redirects to <code>https://&lt;your-domain&gt;/oidcclient/redirect/&lt;unique-oidc-id&gt;</code> after authentication. Make sure the valid redirect URIs in your IdP include an entry that matches this pattern, and use a different ID than the one you use for DX. You might also need to update your Ingress or Gateway API configuration so that <code>/oidcclient/redirect/&lt;unique-oidc-id&gt;</code> redirects to the Leap service.</p>
+</div>
+</li>
+<li>
+<p>Add the following config properties related to OIDC in the <code>values.yaml</code> file.</p>
+<p>The following properties must be set to complete the OIDC configuration:</p>
+<ul>
+<li><code>userLookups</code>: Set this to <code>false</code> to disable user lookups, which is not available when configured with OIDC.</li>
+<li><code>userGroups</code>: Set this to <code>false</code> to disable group lookups, which is not available when configured with OIDC.</li>
+<li><code>postLogoutRedirectURL</code>: Set this to the URL to which Leap will redirect the browser after a user logs out. This is necessary to complete the authentication flow with your IdP.</li>
+</ul>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">configuration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">leap</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">leapProperties</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">ibm.nitro.NitroConfig.userLookup=false</span>
+<span class="w">            </span><span class="no">ibm.nitro.NitroConfig.userGroups=false</span>
+<span class="w">            </span><span class="no">ibm.nitro.LogoutServlet.postLogoutRedirectURL=&lt;your-idp-logout-endpoint&gt;?client_id=&lt;your-client-id&gt;&amp;post_logout_redirect_uri=https://&lt;your-domain&gt;/apps/secure/org/ide/manager.html</span>
+</code></pre></div>
+<p>For more details on setting Leap properties, refer to <a href="https://opensource.hcltechsw.com/leap-doc/latest/helm_leap_properties.html" target="_blank">Leap properties</a>.</p>
+</li>
+<li>
+<p>Perform a Helm upgrade to apply your changes.</p>
+</li>
+<li>
+<p>Delete the Leap pod using the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>&lt;leap-pod-name&gt;
+</code></pre></div>
+<p>After you complete the configuration, users who access Leap are redirected to your IdP authentication page.</p>
+</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 27, 2026 02:31:31 UTC">January 27, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019-2024, HCL Technologies Limited -  <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HCL-TECH-SOFTWARE" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.prune", "search.highlight", "search.share", "search.suggest", "navigation.prune", "content.code.copy", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="../../../../javascripts/current.js"></script>
+      
+    
+  </body>
+</html>
