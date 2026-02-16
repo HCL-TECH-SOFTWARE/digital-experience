@@ -2,13 +2,19 @@
 
 This section contains the newly created and migrated how-to articles. The articles are arranged by Cumulative Fix (CF) and category.
 
-<!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.-->
+<!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
+## CF###
+| Type | Category | Article |
+|------|----------|---------|
+||||
+-->
 
 ## CF234
 
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
+|Migrated|Troubleshooting|[How to generate a PACDump](../troubleshooting/security/PumaDump.md)|
 
 ## CF233
 
