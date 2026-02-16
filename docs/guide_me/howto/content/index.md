@@ -4,10 +4,10 @@ This section includes how-to articles about Web Content Manager (WCM) Authoring,
 
 - **[How to create a custom configuration file for TinyMCE](./customizeTinyMCE.md)**  
 Learn how to create a custom configuration file for use with the TinyMCE editor.
+- **[How to export themes and skins in HCL DX](./OnlyExportThemeSkins.md)**  
+Learn how to export HCL DX themes and skins without exporting the entire server configuration.  
 - **[How to get the UUID and Path of WCM content objects using a command Line](./GetUUIDAndPathOfContent.md)**  
 Learn how to obtain the UUID and Path of WCM content objects through the Linux bash command line.  
-- **[How to export themes and skins in HCL DX](./OnlyExportThemeSkins.md)**  
-Learn how to export only themes and skins in HCL Digital Experience.  
 - **[How to identify new managed pages in HCL DX](./IdentifyNewManagedPages.md)**  
 Learn how to identify new managed pages in HCL DX.  
 - **[How to use JavaServer Pages (JSPs) in WCM](./useJSPinWCM.md)**  
