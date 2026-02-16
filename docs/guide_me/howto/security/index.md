@@ -12,5 +12,5 @@ Learn about the SAML 2.0 standard, the SAML SSO capabilities available in WAS, a
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to uninstall the Unified Task List and Script Application Import Portlets to avoid Log4j warnings from security scan tools](./UnifiedTaskListLog4j.md)**  
-Learn how to resolve a security issue with the Unified Task List Portlet and the Script Application Import Portlet which includes a version of log4j.jar that might be flagged by security scan tools as vulnerable.  
+- **[How to prevent Log4j warnings from security scanners](./UnifiedTaskListLog4j.md)**  
+Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
