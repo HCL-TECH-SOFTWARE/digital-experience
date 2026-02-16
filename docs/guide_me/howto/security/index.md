@@ -10,7 +10,7 @@ Learn how to enable HTTP-related security flags and attributes in your HCL DX en
 Learn about the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and how to implement it.
 - **[How to integrate transient users with OpenID Connect](./transient_users_with_OpenID_Connect.md)**  
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
-- **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
-Learn how to replace an LDAP server configuration step by step in HCL DX.
 - **[How to prevent Log4j warnings from security scanners](./UnifiedTaskListLog4j.md)**  
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
+- **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
+Learn how to replace an LDAP server configuration step by step in HCL DX.
