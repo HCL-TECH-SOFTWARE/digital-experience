@@ -1,6 +1,6 @@
 # Troubleshooting Helm Deployment
 
-This section shows how to find and resolve issues when deploying HCL DX 9.5 CF196 and later releases using Helm.
+This section shows how to find and resolve issues when deploying HCL DX 9.5 using Helm.
 
 ## Logs
 
@@ -13,7 +13,7 @@ Most component logs can be accessed directly on the Kubernetes or OpenShift plat
 All container logs from DX 9.5 pods in a deployment with Helm can be combined into a single output using the commands:
 
 ```
-kubectl logs -n your-namespace -l release=your-release-name --tail=-1
+kubectl logs -n your-namespace -l release=your-release-name --tail=-1 --all-containers --prefix=true
 ```
 
 In the example above, the `your-namespace` reference is the namespace in which your HCL Digital Experience 9.5 deployment is installed and `your-release-name` is the Helm release name you used when installing. On UNIX-based operating systems, the output can be directed to a file for convenience by appending `> some-file-name` to the command.
@@ -30,10 +30,11 @@ In the example above the `your-namespace` reference is the namespace in which 
 
 ## Events
 
-Pod events can give useful information for troubleshooting, such as why certain pods are not running. To get the events for a pod, you can use the following command:
+Pod events can give useful information for troubleshooting, such as why certain pods are not running. To get the events for a pod, you can use the following commands:
 
 ```
 kubectl describe pod -n your-namespace pod-name
+kubectl get events -n your-namespace
 ```
 
 In the above example, `your-namespace` is the namespace in which your HCL Digital Experience deployment is installed and `pod-name` is the particular pod that you wish to examine.
@@ -69,4 +70,4 @@ In the above examples, `your-namespace` is the namespace in which your HCL Digi
 
 ## HCLSoftware U learning materials
 
-To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.
+To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.

@@ -6,7 +6,7 @@ title: Combine local JavaScript files
 
 You can import Script Applications with multiple JavaScript files.
 
-To refer to any files that are part of the multi-file Script Application, you can use the Plugin:ScripPortletElementURL tag in your index.html file. It has the element parameter that points to the relative file path of the resources that are referred to. In the following example, you can see the tag being used to insert the pnp\_retrieve.css file, which is in the root of your Script Application, as a URL in the `<link>` element.
+To refer to any files that are part of the multi-file Script Application, you can use the `Plugin:ScriptPortletElementURL` tag in your `index.html` file. It has the element parameter that points to the relative file path of the resources that are referred to. In the following example, you can see the tag being used to insert the `pnp_retrieve.css` file, which is in the root of your Script Application, as a URL in the `<link>` element.
 
 ![Plugin ScripPortletElementURL tag](../assets/scpt_multifiles.jpg)
 
@@ -23,4 +23,4 @@ Choose one of the following options to enable combining of sibling local script 
 
 ## HCLSoftware U learning materials
 
-To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
+To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.

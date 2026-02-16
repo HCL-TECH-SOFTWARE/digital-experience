@@ -2,6 +2,9 @@ title: Content
 
 nav:
     - index.md
+    - customizeTinyMCE.md
+    - disableManagedPages.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
-    - disableManagedPages.md
+    - JSF_hasBaseURL.md
+    - useJSPinWCM.md
