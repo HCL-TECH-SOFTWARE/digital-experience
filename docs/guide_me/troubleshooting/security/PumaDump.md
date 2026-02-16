@@ -77,10 +77,10 @@ http://<host>:<port>/wps/mycontenthandler/ac/resourceconfig:oid:Z6QReDeGPC8MPCC5
 If role blocks exist, the output resembles the following example:
 
 ```xml
-         <ac:resource-config>
-             <ac:role-block ac:block-type=\"inheritance\" ac:type=\"User\"/>
-             <ac:role-block ac:block-type=\"propagation\" ac:type=\"User\"/>
-         </ac:resource-config>
+<ac:resource-config>
+    <ac:role-block ac:block-type=\"inheritance\" ac:type=\"User\"/>
+    <ac:role-block ac:block-type=\"propagation\" ac:type=\"User\"/>
+</ac:resource-config>
 ```
 
 If you find an unwanted role block, remove it by editing the response. Then, send the edited XML back to the server using an HTTP PUT request to the same URL. Ensure you set the content type to `application/xml`. This approach is especially useful for troubleshooting when two environments exhibit different behavior for an identical item.
