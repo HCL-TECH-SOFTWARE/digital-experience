@@ -18,7 +18,7 @@ If you are using a version of HCL DX earlier than Cumulative Fix (CF) 221, secur
 
 1. Determine whether your application relies on these portlets:
 
-    - Unified Task List integrates with process servers such as IBM Process Server.  
+    - Unified Task List integrates with process servers such as IBM Business Process Manager (BPM).  
     - Script Application Import lets developers import script applications using a GUI. This is generally required in development environments only. Deployed script applications in test staging, and production systems will continue to function without this portlet. Staging-to-production procedures can be used to deploy script applications to production, even absent this portlet.  
 
 2. Navigate to **Manage Web Modules**:
@@ -29,6 +29,4 @@ If you are using a version of HCL DX earlier than Cumulative Fix (CF) 221, secur
 3. In each web module, locate and delete the following files:  
 
     - `unifiedtasklist.war`
-    - `wp.sp.importexport.war`
-
-
+    - `wp.sp.importexport.war`  
