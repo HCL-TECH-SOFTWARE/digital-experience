@@ -111,16 +111,7 @@ The Operations Metrics show the status of DAM operations by trigger function. Us
 
 #### Available Actions
 
-In the Operations Metrics section, you can take corrective action on failed operations:
-
-**Retrigger Failed Operations** - This button allows you to re-execute operations that failed or are stuck. To use this feature:
-
-1. Expand the **Operations** section to view all operations by trigger function and their statuses.
-2. Rows with failed operations will have a checkbox that you can select.
-3. Select one or more rows containing failed operations by clicking their checkboxes.
-4. Click the **Retrigger Failed Operation** button.
-5. The system will attempt to re-execute the selected failed operations.
-6. A success message will confirm the re-triggering action, and the operations data will refresh automatically.
+**Retrigger Failed Operations** - Select one or more rows with failed operations and click **Retrigger Failed Operation** to re-execute them.
 
 !!! note
     - For performance analysis, focus on recent operation patterns rather than historical totals.
@@ -140,16 +131,7 @@ The Collections Missing Access Reference ID metric identifies collections that d
 
 #### Available Actions
 
-In the Collections Missing Access Reference section, you can resolve missing access references:
-
-**Generate Access Reference** - This button allows you to automatically generate and configure access references for collections that are missing them. To use this feature:
-
-1. Expand the **Collections Missing Access Reference ID** section to view all affected collections.
-2. Select one or more collections by clicking their checkboxes.
-3. Click the **Generate Access Reference** button.
-4. The system will contact the DX Core API to register proper access references for the selected collections.
-5. A success message will confirm the action, and the collections list will refresh automatically.
-6. The selected collections should now have proper access control configuration.
+**Generate Access Reference** - Select one or more collections and click **Generate Access Reference** to automatically configure access control settings for them.
 
 !!! note
     - Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
@@ -184,17 +166,7 @@ The Media Items not in Collection metric lists orphaned media assets that are no
 
 #### Available Actions
 
-In the Media Items not in Collection section, you can organize orphaned media assets:
-
-**Move** - This button (shown in each row) allows you to move an orphan media item into a collection. To use this feature:
-
-1. Expand the **Media Items not in Collection** section to view all orphaned assets.
-2. Each orphan media item will have a **Move** button on the right side of its row.
-3. Click the **Move** button for the media item you want to organize.
-4. A dialog will open where you can select a collection to move the media item into.
-5. Choose your desired collection and confirm the action.
-6. The media item will be moved into the selected collection, and it will no longer appear as an orphan.
-7. The orphaned media list will refresh automatically.
+**Move** - Click **Move** on any orphaned media item, select your desired collection, and confirm to organize it.
 
 For each orphan media item, the following information is displayed:
 
