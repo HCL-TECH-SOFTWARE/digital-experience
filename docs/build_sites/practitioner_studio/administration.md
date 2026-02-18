@@ -1,7 +1,14 @@
 # Administration
 
-Use the Portal administration portlets that are provided with HCL Digital Experience to perform various day-to-day administration tasks.
+Use the HCL Digital Experience administration to perform various day-to-day administration tasks.
 
+
+## Enhanced Administration
+
+
+![Screen capture of the Enhanced Practitioner Studio and toolbar.](../../assets/Enhanced_Practitioner_Studio_and_toolbar.png)
+
+Starting from CF230, the Administration pages have been reorganized to improve usability.
 
 ## Site Management
 
@@ -84,22 +91,9 @@ Use the Portal administration portlets that are provided with HCL Digital Experi
 
 ## Tracing
 
-Use client-side logging and tracing to capture and analyze JavaScript execution and page rendering behavior in HCL Digital Experience.
+Use client-side logging and tracing to capture and analyze JavaScript execution and page rendering behavior in HCL Digital Experiences.  
+  [Learn more about dynamic tracing](../../deployment/manage/troubleshooting/logging_and_tracing/wcm_logs/#enable-dynamic-tracing/index.md)
 
-- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)  
-  Learn how to use HCL Content Composer to create and manage site content.
-
-- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md)  
-  Learn how to generate reports and update reported items in bulk.
-
-- [**HCL Web Content Manager Support Tools**](../../deployment/manage/troubleshooting/wcm_support_tools.md)  
-  Learn how to use the Web Content Manager (WCM) Support Tools portlet to investigate and analyze Java Content Repository (JCR) nodes.
-
-- [**Managing Syndicators and Subscribers**](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)  
-  Learn how to transport data between HCL Web Content Manager instances.
-
-- [**Web Content Feed Management**](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)  
-  Learn how to create and manage content feeds.
 
 ## Settings
 
@@ -115,6 +109,10 @@ Use client-side logging and tracing to capture and analyze JavaScript execution 
 - **Clients** – Learn how to define the types of devices that can access the portal and manage their client-specific settings.  
   [Learn more about managing client devices](../../build_sites/portal_settings/manage_client_devices/index.md)
 
+
+## About
+
+Contains details on the current version. 
 
 <!--- 
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
