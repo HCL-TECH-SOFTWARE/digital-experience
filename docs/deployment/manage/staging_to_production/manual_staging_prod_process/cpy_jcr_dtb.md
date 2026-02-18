@@ -1,4 +1,4 @@
-# Managing JCR databases
+# Managing JCR databases 
 
 This section explains how to manage Java Content Repository (JCR) databases, including backup, restore, and migration tasks.  
 
