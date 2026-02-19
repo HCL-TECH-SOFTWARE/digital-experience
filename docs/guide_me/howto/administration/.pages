@@ -12,3 +12,4 @@ nav:
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
+    - DetermineVPObjectID.md
