@@ -29,8 +29,8 @@ In the following sections, we described some of the operations that normally run
 
 | Operation | Description |
 |------------------|-------------|
-| **prepareRenditions** | Analyzes your file to determine what different versions and sizes are needed. Plans which formats will work best for displaying on different devices (phones, tablets, computers) and different quality settings. |
-| **generateRendition** | Creates different versions of your media file in various sizes and formats optimized for different uses - such as a smaller version for mobile phones, a medium version for tablets, and a large version for computer screens. |
+| **prepareRenditions** | Triggers rendition generation by mapping the detected MIME type to its predefined configuration. |
+| **generateVersion** | Initiate versions generation for each renditions for different uses - such as a smaller version for mobile phones, a medium version for tablets, and a large version for computer screens. |
 | **generateThumbnail** | Creates a small preview image (like a snapshot) of your media that shows up in lists and search results. For videos, it grabs a key moment from the video to display. For images, it shows a preview. Your original file's thumbnail is created first so you can see a preview right away. |
 | **generateSupplement** | Creates alternative versions of your media such as HD or 4K archive versions, lower-quality versions for slower internet connections, or different format variations for better browser compatibility. |
 | **generateKeyword** | Automatically reads the content of your media file and extracts searchable keywords and topics. For images, it can read text in the image. For documents, it finds key terms. For videos, it can analyze transcripts if available. This makes your media easier to find through search. |
@@ -82,7 +82,7 @@ In the following sections, we described some of the operations that normally run
 | Operation | Description |
 |------------------|-------------|
 | **versionRetention** | Automatically removes old versions of media files when you exceed your version limit. For example, you might keep only the 3 most recent versions. Very old versions that have been kept for a minimum period are cleaned up first. |
-| **regenerateRenditionOrVersion** | Creates new versions of media or its different formats. Useful for converting between image formats (like from JPEG to WebP), improving quality, or creating copies in new formats for better browser compatibility. |
+| **regenerateRenditionOrVersion** | Triggers the regeneration of missing asset renditions and versions, provided the 'Cleanup' flag is enabled in the system configuration. |
 
 ## Upload & Post-Actions Operations
 
@@ -97,8 +97,8 @@ In the following sections, we described some of the operations that normally run
 |------------------|-------------|
 | **syncStagingCollectionContent** | Synchronizes collection information (names, descriptions, folder structure) between two separate DAM systems to keep them in sync. Used when you have a test/staging system and a production system. |
 | **syncStagingMediaContent** | Copies media file information from one DAM system to another including names, descriptions, keywords, and properties. |
-| **syncStagingRenditionContent** | Copies information about different versions and formats of media between systems (doesn't copy the actual files, just the information about them). |
-| **syncStagingVersionContent** | Copies version history and file versions between systems so both systems have the same edit history. |
+| **syncStagingRenditionContent** | Sync renditions for assets from publisher to subscriber in staging set up. |
+| **syncStagingVersionContent** | Sync versions for assets from publisher to subscriber in staging set up. |
 | **syncStagingPermissionResource** | Copies user permissions and access control settings between systems so the same people have access to the same items in both places. |
 | **syncStagingCreatePermission** | Sets up new user permissions on copied items when they don't have permissions set up yet in the target system. |
 | **syncStagingDeletePermission** | Removes user permissions from items when they've been revoked in the source system. |
@@ -113,7 +113,6 @@ In the following sections, we described some of the operations that normally run
 | **processCollection** | Prepares a single collection to be synchronized including all its media and permissions. |
 | **processCollectionItems** | Prepares all media items in a collection for synchronization. |
 | **resyncSubscriber** | Re-attempts synchronization for items that failed during a previous sync attempt, ensuring everything eventually gets synced. |
-| **syncStagingMismatchSearch** | Performs a complete scan comparing both systems to find all items that are different and need syncing. Makes a detailed report of all mismatches. |
 
 ## Content Management Operations
 
@@ -128,11 +127,7 @@ In the following sections, we described some of the operations that normally run
 
 | Operation | Description |
 |------------------|-------------|
-| **Video Upload to Kaltura** | Automatically uploads your videos to Kaltura (a video hosting service) after you upload them to DAM. Kaltura then handles creating different quality versions and hosting them for fast delivery. |
-| **videoDeleteFromKaltura** | Removes videos from Kaltura when you delete them from DAM. Keeps Kaltura's storage clean by removing outdated hosted videos. |
-| **Cleanup Kaltura Actions** | Cleans up failed video uploads on Kaltura, such as incomplete uploads or failed conversion attempts. Prevents wasted storage space on Kaltura. |
-| **Sync Kaltura** | Synchronizes video information between DAM and Kaltura to keep metadata, conversion status, and settings in sync between both systems. |
-| **Copy Thumbnail from Kaltura** | Uses the thumbnail that Kaltura created for your video instead of creating one locally. This reduces processing and uses Kaltura's smart thumbnail selection. |
+| **Kaltura Plugin** | Manages video integration with Kaltura (a video hosting service) including upload, delete, thumbnail generation, and status synchronization. Automatically uploads videos to Kaltura after upload to DAM, manages renditions and thumbnails, removes videos when deleted from DAM, and keeps metadata synchronized between both systems. |
 
 ---
 

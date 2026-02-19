@@ -131,7 +131,7 @@ The Collections Missing Access Reference ID metric identifies collections that d
 
 #### Available Actions
 
-**Generate Access Reference** - Select one or more collections and click **Generate Access Reference** to automatically configure access control settings for them.
+**Generate Access Reference** - Select one or more collections and click **Generate Access Reference** to re-generate access reference for them.
 
 !!! note
     - Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
