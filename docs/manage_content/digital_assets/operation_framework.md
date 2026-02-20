@@ -30,8 +30,8 @@ In the following sections, we described some of the operations that normally run
 | Operation | Description |
 |------------------|-------------|
 | **prepareRenditions** | Triggers rendition generation by mapping the detected MIME type to its predefined configuration. |
-| **generateVersion** | Initiate versions generation for each renditions for different uses - such as a smaller version for mobile phones, a medium version for tablets, and a large version for computer screens. |
-| **generateThumbnail** | Creates a small preview image (like a snapshot) of your media that shows up in lists and search results. For videos, it grabs a key moment from the video to display. For images, it shows a preview. Your original file's thumbnail is created first so you can see a preview right away. |
+| **generateVersion** | Creates file versions that represent different iterations or edits of the same media asset. Versions maintain the edit history and allow reverting to previous versions if needed. |
+| **generateThumbnail** | Creates a small preview image (like a snapshot) of your media that shows up in lists and search results. For images, it shows a preview of the content. Your original file's thumbnail is created first so you can see a preview right away. |
 | **generateSupplement** | Creates alternative versions of your media such as HD or 4K archive versions, lower-quality versions for slower internet connections, or different format variations for better browser compatibility. |
 | **generateKeyword** | Automatically reads the content of your media file and extracts searchable keywords and topics. For images, it can read text in the image. For documents, it finds key terms. For videos, it can analyze transcripts if available. This makes your media easier to find through search. |
 
@@ -57,17 +57,17 @@ In the following sections, we described some of the operations that normally run
 
 | Operation | Description |
 |------------------|-------------|
-| **deleteMedia** | Marks a media item as deleted and moves it to trash. The file isn't actually removed yet - it stays in the system for 30 days so you can recover it if needed. All associated items like thumbnail versions, copies, and collection references are also marked for deletion. |
+| **deleteMedia** | Marks a media item as deleted and moves it to trash. The file isn't actually removed yet - it stays in the system for a configurable period so you can recover it if needed. All associated items like thumbnail versions, copies, and collection references are also marked for deletion. |
 | **deleteStorage** | Permanently removes the actual media files from storage after they've been marked for deletion. This frees up disk space but happens only after deleteMedia has confirmed the deletion. |
 | **deleteCollection** | Deletes a collection and everything in it - including all sub-collections and all media items within. Like deleteMedia, items are soft-deleted first and stay recoverable for 30 days before permanent removal. |
-| **deleteOperations** | Removes old operation records from the system to prevent the operations log from growing too large. Failed operations are kept for 24 hours, successful ones are archived quickly. |
+| **deleteOperations** | Removes old operation records from the system to prevent the operations log from growing too large. Failed operations are kept according to the configured threshold. |
 | **deleteIndexedDocumentsByQuery** | Removes deleted items from the search index so they no longer appear in search results. Keeps the search index synchronized with what's actually in the system. |
 
 ## Indexing & Search Operations
 
 | Operation | Description |
 |------------------|-------------|
-| **initiateInitialIndexing** | Creates the search index for the first time or rebuilds it after corruption. Scans all media and collections to make them searchable. This is a large operation that may take time for systems with many items. |
+| **initiateInitialIndexing** | Creates the search index for the first time or rebuilds it after corruption. Triggers multiple recursive operations to scan all media and collections and make them searchable. Can take time for systems with many items. |
 | **initiateReIndexing** | Completely rebuilds the search index from scratch, removing old stale entries and re-indexing everything. Used when improving search functionality or recovering from serious search issues. |
 | **processAssetsForIndexing** | Prepares batches of media items to be added to the search index. Groups items together for efficient batch processing. |
 | **processAssetsForLiveIndexing** | Adds newly uploaded or modified media to the search index immediately so it appears in search results right away (within a few seconds). |
@@ -89,37 +89,34 @@ In the following sections, we described some of the operations that normally run
 | Operation | Description |
 |------------------|-------------|
 | **schedulePostActions** | Orchestrates all the automatic tasks that happen after you upload a file. These tasks run in sequence: extracting file information, generating different sizes and formats, creating thumbnails, making it searchable, and ready for use. This is the main operation that kicks off all the file processing. |
-| **trackMediaState** | Continuously updates the status of your media as it's being uploaded and processed. Provides progress information to the user interface so users can see what stage their upload is at (uploading, processing, ready, or failed). |
+| **trackMediaState** | Monitors the media upload and processing progress by checking if all expected renditions have been generated. Updates the media state to SUCCESS once all renditions are complete, or to FAILURE if processing fails. |
 
 ## Staging & Synchronization Operations
 
 | Operation | Description |
 |------------------|-------------|
-| **syncStagingCollectionContent** | Synchronizes collection information (names, descriptions, folder structure) between two separate DAM systems to keep them in sync. Used when you have a test/staging system and a production system. |
+| **syncStagingCollectionContent** | Synchronizes collection information (names, descriptions, folder structure) between two separate DAM systems to keep them in sync. |
 | **syncStagingMediaContent** | Copies media file information from one DAM system to another including names, descriptions, keywords, and properties. |
 | **syncStagingRenditionContent** | Sync renditions for assets from publisher to subscriber in staging set up. |
 | **syncStagingVersionContent** | Sync versions for assets from publisher to subscriber in staging set up. |
 | **syncStagingPermissionResource** | Copies user permissions and access control settings between systems so the same people have access to the same items in both places. |
 | **syncStagingCreatePermission** | Sets up new user permissions on copied items when they don't have permissions set up yet in the target system. |
 | **syncStagingDeletePermission** | Removes user permissions from items when they've been revoked in the source system. |
-| **syncStagingRoleBlock** | Copies user role definitions (like "Editor", "Viewer", "Admin") between systems. |
+| **syncStagingRoleBlock** | add or delete role block in target environment. |
 | **syncStagingFavoriteContent** | Copies each user's favorite items between systems so favorites appear on both. |
 | **syncStagingMediaTypeContent** | Copies media type definitions (like image, video, document) and their settings between systems. |
-| **syncStagingMediaTypeGroupContent** | Copies media type grouping categories (like "all images", "all videos") between systems. |
+| **syncStagingMediaTypeGroupContent** | Synchronizes media type group records from the "media_type_group" table between publisher and subscriber systems. |
 | **initiateNextSync** | Schedules and starts the next synchronization cycle between systems. |
-| **initiateCollectionTreeTraversal** | Identifies which collections and items need to be synchronized by walking through the entire collection structure. |
+| **initiateCollectionTreeTraversal** | Traverses through all collections and compares each collection and all items under it with the subscriber system, then creates mismatch logs for all differences found. |
 | **findStagingPermissionsMismatch** | Checks if permissions are different between two systems and reports what doesn't match. |
 | **compareRecords** | Determines if an item has changed and needs to be synchronized between systems. |
 | **processCollection** | Prepares a single collection to be synchronized including all its media and permissions. |
 | **processCollectionItems** | Prepares all media items in a collection for synchronization. |
-| **resyncSubscriber** | Re-attempts synchronization for items that failed during a previous sync attempt, ensuring everything eventually gets synced. |
+| **resyncSubscriber** | Re-attempts synchronization for items that failed during a previous sync attempt based on the staging mismatch logs, ensuring everything eventually gets synced. |
 
 ## Content Management Operations
 
 | Operation | Description |
-|------------------|-------------|
-| **contentCreateUpdate** | Creates notifications when media or collections are created or changed. These notifications alert other systems (like websites or publishing platforms) about the changes so they can update their information too. |
-| **contentDelete** | Sends notifications when items are deleted so other connected systems know to clean up their references. |
 | **purgeEvents** | Removes old event records from the activity log to prevent it from growing too large. Event history is kept for 90 days before being archived. |
 | **updateSyncStatus** | Updates progress information during synchronization between systems. Shows whether sync is in progress, completed successfully, or encountered problems. |
 
