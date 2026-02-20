@@ -95,7 +95,7 @@ In the following sections, we described some of the operations that normally run
 
 | Operation | Description |
 |------------------|-------------|
-| **syncStagingCollectionContent** | Synchronizes collection information (names, descriptions, folder structure) between two separate DAM systems to keep them in sync. |
+| **syncStagingCollectionContent** | Synchronizes collection information (names and descriptions) between two separate DAM systems to keep them in sync. |
 | **syncStagingMediaContent** | Copies media file information from one DAM system to another including names, descriptions, keywords, and properties. |
 | **syncStagingRenditionContent** | Sync renditions for assets from publisher to subscriber in staging set up. |
 | **syncStagingVersionContent** | Sync versions for assets from publisher to subscriber in staging set up. |
@@ -105,14 +105,14 @@ In the following sections, we described some of the operations that normally run
 | **syncStagingRoleBlock** | add or delete role block in target environment. |
 | **syncStagingFavoriteContent** | Copies each user's favorite items between systems so favorites appear on both. |
 | **syncStagingMediaTypeContent** | Copies media type definitions (like image, video, document) and their settings between systems. |
-| **syncStagingMediaTypeGroupContent** | Synchronizes media type group records from the "media_type_group" table between publisher and subscriber systems. |
+| **syncStagingMediaTypeGroupContent** | Synchronizes media type group rows between publisher and subscriber systems. |
 | **initiateNextSync** | Schedules and starts the next synchronization cycle between systems. |
 | **initiateCollectionTreeTraversal** | Traverses through all collections and compares each collection and all items under it with the subscriber system, then creates mismatch logs for all differences found. |
 | **findStagingPermissionsMismatch** | Checks if permissions are different between two systems and reports what doesn't match. |
 | **compareRecords** | Determines if an item has changed and needs to be synchronized between systems. |
 | **processCollection** | Prepares a single collection to be synchronized including all its media and permissions. |
 | **processCollectionItems** | Prepares all media items in a collection for synchronization. |
-| **resyncSubscriber** | Re-attempts synchronization for items that failed during a previous sync attempt based on the staging mismatch logs, ensuring everything eventually gets synced. |
+| **resyncSubscriber** | Re-synchronizes items based on the mismatch logs generated after the find mismatch operation is executed, ensuring everything eventually gets synced. |
 
 ## Content Management Operations
 
