@@ -8,3 +8,5 @@ nav:
     - IdentifyNewManagedPages.md
     - JSF_hasBaseURL.md
     - useJSPinWCM.md
+    - DeleteLibWithRefs.md
+    

@@ -14,3 +14,5 @@ Learn how to identify new managed pages in HCL DX.
 Learn how to use JSP components in HCL DX using WCM.
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
+- **[How to Delete Libraries That Are Referenced by Other Libraries](./DeleteLibWithRefs.md)**  
+Learn how to delete libraries that are referenced by other libraries.
