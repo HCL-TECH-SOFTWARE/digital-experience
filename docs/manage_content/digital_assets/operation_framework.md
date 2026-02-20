@@ -127,7 +127,7 @@ In the following sections, we described some of the operations that normally run
 
 | Operation | Description |
 |------------------|-------------|
-| **Kaltura Plugin** | Manages video integration with Kaltura (a video hosting service) including upload, delete, thumbnail generation, and status synchronization. Automatically uploads videos to Kaltura after upload to DAM, manages renditions and thumbnails, removes videos when deleted from DAM, and keeps metadata synchronized between both systems. |
+| **VideoUploadToKaltura** | Manages video integration with Kaltura (a video hosting service) including upload, delete, thumbnail generation, and status synchronization. Automatically uploads videos to Kaltura after upload to DAM, manages renditions and thumbnails, removes videos when deleted from DAM, and keeps metadata synchronized between both systems. |
 
 ---
 
