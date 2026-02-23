@@ -15,49 +15,48 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
 
 1. Log in to the Red Hat Linux server that hosts the source JCR database.
 
-2. Open a terminal: Right-click the desktop and select **Open Terminal**.
+2. Open a terminal. Right-click the desktop and select **Open Terminal**.
 
 3. Increase the file descriptor limit:
 
-   ```shell
-   ulimit -n 24000
+    ```shell
+    ulimit -n 24000
     ```
 
 4. Switch to the DB2 instance user:
 
-    ```shell
+    ```bash
     su - db2inst1
     ```
 
-5. List the existing databases to verify the JCR database:  
+5. List the existing databases to verify the JCR database:
 
-    ```shell
+    ```bash
     db2 list database directory
     ```
 
-6. Start IBM DB2:  
+6. Start IBM DB2:
 
     ```shell
     db2start
     ```
 
-    Sample output:  
+    Sample output:
 
     ```shell
-    db2start 
-    10/08/2015 22:23:17 0 0 SQL 1063N DB2START processing was successful.
-    SQL1063N DB2START processing was successful.    
+    10/08/2015 22:23:17 0 0 SQL1063N DB2START processing was successful.
+    SQL1063N DB2START processing was successful.
     ```
 
 ### Step 2: Backing up the JCR database
 
 1. Create a directory to store the backup:
 
-   ```shell
-   mkdir -p /home/db2inst1/backup
-   ```
+    ```bash
+    mkdir -p /home/db2inst1/backup
+    ```
 
-2. Back up the WPJCR database:
+2. Back up the `WPJCR` database:
 
     ```shell
     db2 backup database WPJCR to /home/db2inst1/backup
@@ -67,11 +66,11 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
 
     ```shell
     scp WPJCR.0.db2inst1.DBPART000.20151008222851.001 root@<target-server>:/home/db2inst1/backup/
-    ```  
+    ```
 
 ### Step 3: Restoring the JCR database on the target server
 
-1. Restore the WPJCR database on the target DB2 server with a new name such as WPJCRT with the command:  
+1. Restore the WPJCR database on the target DB2 server with a new name such as `WPJCRT` by running the following command:
 
     ```shell
     db2 restore database WPJCR from /home/db2inst1/backup/into WPJCRT
@@ -79,8 +78,8 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
 
 2. Verify that the restored database exists:
 
-    ``` shell
+    ```shell
     db2 list database directory
     ```
 
-The new database (WPJCRT) should appear in the list.  
+    The new database (`WPJCRT`) should appear in the list.
