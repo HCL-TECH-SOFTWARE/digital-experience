@@ -168,30 +168,6 @@ Property tags map to standard WCM content properties.
 Sample Article
 ```
 
-#### 3. Generic Tags
-
-Generic tags support multiple data types and can be configured in the properties panel.
-
-**Supported Data Types:**
-
-- Text
-- Number
-- Date
-- Image
-- Rich Text
-- Link
-- File
-
-**Usage:**
-
-1. Add a generic tag element to the canvas
-2. Select the element
-3. Open the Properties panel
-4. Choose the appropriate data type
-5. The element displays the corresponding value from the selected context
-
----
-
 ## Styling and Customization
 
 ### Applying Styles to Context Elements
