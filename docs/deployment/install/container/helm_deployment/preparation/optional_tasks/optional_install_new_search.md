@@ -30,107 +30,223 @@ If you want to know more about settings for OpenSearch, you can also refer to [I
 
 ## Preparing certificates for inter-service communication
 
-The search uses certificate authentication for the communication between OpenSearch nodes and the search middleware. To get this communication established, you must create certificates and store them in their respective secrets. See the [DN format requirements](#dn-format-requirements) for important information about certificate DN validation limitation.
+The search uses certificate-based authentication for secure communication between OpenSearch nodes and the search middleware. You must create certificates with specific Distinguished Names (DNs) and store them in Kubernetes secrets.
 
-The following commands configure the secrets consumed by the applications:
+### Understanding certificate roles
+
+Three types of certificates are required:
+
+- **Admin certificate**: Used for OpenSearch administrative operations and configuration. The DN from this certificate must be configured in the Helm chart's `adminDN` field.
+- **Node certificate**: Used for inter-node communication between OpenSearch cluster nodes. The DN is pre-configured to match `CN=opensearch-node*` (wildcard pattern).
+- **Client certificate**: Used by the search middleware to authenticate with OpenSearch. The DN is pre-configured to match `CN=opensearch-client,OU=UNIT,O=ORG,C=US`.
+
+!!!important
+    Only the **admin certificate DN** needs to be customized via the Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and will work automatically if you follow the certificate generation commands below.
+
+### Generating certificates
+
+Use the following commands to generate all required certificates. You can customize the admin certificate DN to match your organization's requirements:
 
 ```sh
 # Root CA for certificates
 openssl genrsa -out root-ca-key.pem 2048
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch" -out root-ca.pem -days 730
 
-# Admin cert for OpenSearch configuration
+# Admin cert - CUSTOMIZE THE DN HERE to match your requirements
+# Example shows: CN=Admin,OU=UNIT,O=ORG,C=US
+# You can use any valid DN following the format requirements in the next section
 openssl genrsa -out admin-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
-openssl req -new -key admin-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Admin" -out admin.csr
+openssl req -new -key admin-key.pem -subj "/CN=Admin/OU=UNIT/O=ORG/C=US" -out admin.csr
 openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730
 
-# Node cert for inter node communication
+# Node cert - DO NOT CHANGE THIS DN (must match CN=opensearch-node* pattern)
 openssl genrsa -out node-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out node-key.pem
-openssl req -new -key node-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Node" -out node.csr
+openssl req -new -key node-key.pem -subj "/CN=opensearch-node/OU=UNIT/O=ORG/C=US" -out node.csr
 openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730
 
-# Client cert for application authentication
+# Client cert - DO NOT CHANGE THIS DN (must match exactly as shown)
 openssl genrsa -out client-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in client-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out client-key.pem
-openssl req -new -key client-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=Client" -out client.csr
+openssl req -new -key client-key.pem -subj "/CN=opensearch-client/OU=UNIT/O=ORG/C=US" -out client.csr
 openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730
 
-# Create kubernetes secrets
+# Create Kubernetes secrets
 kubectl create secret generic search-admin-cert --from-file=admin.pem --from-file=admin-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
 kubectl create secret generic search-node-cert --from-file=node.pem --from-file=node-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
 kubectl create secret generic search-client-cert --from-file=client.pem --from-file=client-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
 ```
 
-Adjust the `YOUR_NAMESPACE` placeholder according to your Kubernetes Namespace in which you have DX and search deployed. If you do not perform this step, the OpenSearch nodes are not initialized and the search middleware cannot communicate with them.
+Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and search are deployed.
 
-### Extracting and formatting the DN for OpenSearch
+!!!note
+    The OpenSearch entrypoint script automatically:
+    
+    - Reads the `adminDN` value from the Helm chart configuration
+    - Writes it to the OpenSearch security configuration
+    - Extracts the Common Name (CN) from the admin DN
+    - Grants the `all_access` role to that user for full administrative permissions
+    
+    This means you only need to configure the admin certificate DN in your Helm values - role mappings are handled automatically.
 
-After generating a certificate (for example, `admin.pem`, `node.pem`, `client.pem`), you must extract the Distinguished Name (DN) in the format required by OpenSearch.
+### Extracting the DN from your certificate
 
-To extract the DN from a certificate in the correct OpenSearch format, run:
+After generating your admin certificate, you must extract its Distinguished Name (DN) in RFC 2253 format to configure in the Helm chart.
+
+**Extract DN from certificate file:**
 
 ```sh
-openssl x509 -in <certificate-file>.pem -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+openssl x509 -in admin.pem -noout -subject -nameopt RFC2253 | sed 's/subject=//'
 ```
 
-**Example:**
+**Extract DN from Kubernetes secret:**
 
 ```sh
-# Admin certificate DN
-kubectl get secret search-admin-cert -n dxns -o jsonpath='{.data.admin\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
-
-# Node certificate DN
-kubectl get secret search-node-cert -n dxns -o jsonpath='{.data.node\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
-
-# Client certificate DN (this is what the middleware uses)
-kubectl get secret search-client-cert -n dxns -o jsonpath='{.data.client\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
+kubectl get secret search-admin-cert -n YOUR_NAMESPACE -o jsonpath='{.data.admin\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
 ```
 
-These commands generate the DN in OpenSearch format (most specific field first):
+Replace `YOUR_NAMESPACE` with your deployment namespace.
+
+**Example output:**
 
 ```
-CN=Admin,OU=IT,O=LAB,C=PH
-CN=Node,OU=IT,O=LAB,C=PH
-CN=Client,OU=IT,O=LAB,C=PH
+CN=Admin,OU=UNIT,O=ORG,C=US
 ```
 
-!!!important
-    - The `-nameopt RFC2253` flag ensures consistent output across all OpenSSL versions.
-    - The output format matches OpenSearch requirements (`CN` first, `C` last).
-    - Any spaces or typos in the string will cause authentication failures.
+!!!important "Critical: Use RFC 2253 format"
+    The `-nameopt RFC2253` flag is **required** because:
+    
+    - It preserves the exact component ordering from your certificate
+    - OpenSearch DN matching is **order-sensitive** - the order must match exactly
+    - It properly formats special characters and Unicode
+    - It ensures consistent output across all OpenSSL versions
+    
+    **Never use** `-nameopt oneline` or other formats, as they may reorder DN components and cause authentication failures.
 
 Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section.
 
 ### DN format requirements
 
-The `adminDN` field currently enforces strict validation to ensure certificate compatibility with the OpenSearch Security plugin.
+The `adminDN` field accepts Distinguished Names in **RFC 2253 format** with comprehensive validation to ensure compatibility with the OpenSearch Security plugin.
+
+#### Supported attribute types
+
+The following attribute types are supported and can appear in any order:
+
+| Attribute | Full Name | Description | Can Repeat |
+|-----------|-----------|-------------|------------|
+| `CN` | Common Name | User, service, or device name | No |
+| `OU` | Organizational Unit | Department or division | Yes |
+| `O` | Organization | Company or organization name | No |
+| `L` | Locality | City or locality | No |
+| `ST` | State/Province | State or province name | No |
+| `C` | Country | Two-letter country code (ISO 3166) | No |
+| `DC` | Domain Component | DNS domain component | Yes |
+
+#### Component ordering
+
+!!!warning "Order-sensitive matching"
+    OpenSearch DN matching is **order-sensitive**. The DN component order in your Helm configuration **must match exactly** the order in your certificate.
+    
+    **Example:** If your certificate has `CN=Admin,OU=IT,O=Company,C=US`, you must use that exact order in the Helm chart. Using `C=US,O=Company,OU=IT,CN=Admin` will **fail authentication** even though it represents the same DN.
+    
+    Always extract the DN from your certificate using the RFC 2253 format command shown above to ensure correct ordering.
+
+#### Special character escaping
+
+If your DN contains special characters in attribute values, you must escape them according to RFC 2253 rules:
+
+| Character | Escape Sequence | Example Value | Escaped in Helm Chart |
+|-----------|----------------|---------------|----------------------|
+| Comma (`,`) | `\,` | `Smith, Jones & Co.` | `Smith\, Jones & Co.` |
+| Plus sign (`+`) | `\+` | `Research + Development` | `Research \+ Development` |
+| Hash/Pound (`#`) | `\#` | `Test #1` | `Test \#1` |
+| Backslash (`\`) | `\\` | `Path\To\Resource` | `Path\\To\\Resource` |
+| Quote (`"`) | `\"` | `"Special" Name` | `\"Special\" Name` |
+
+**Characters that do NOT need escaping:**
+- Ampersand (`&`)
+- Tilde (`~`)
+- Hyphen (`-`)
+- Period (`.`)
+- Underscore (`_`)
+- Space (` `)
+
+#### Unicode support
+
+Unicode characters (accented letters, non-Latin scripts) are fully supported:
+
+| Language | Example Value | In Helm Chart |
+|----------|---------------|---------------|
+| French | `François Dubois` | `François Dubois` |
+| Spanish | `Área Técnica` | `Área Técnica` |
+| German | `Zürich Financial` | `Zürich Financial` |
 
 !!!note
-    These restrictions will be loosened in a future update.
+    Unicode characters are automatically hex-encoded during certificate processing (e.g., `ñ` becomes `\C3\B1` internally), but you should use the actual Unicode characters in your Helm configuration.
 
-The following format requirements must be adhered to:
+#### Complete DN examples
 
-- Specify all four fields. For example: `CN=<value>,OU=<value>,O=<value>,C=<country-code>`.
-- Use exactly two uppercase letters for the country code. For example: `US`, `IN`, `PH`, or `UK`.
-- Remove all spaces from the DN string.
-- Use semicolons (`;`) to separate multiple DNs.
-- Use an empty string to apply the default OpenSearch DN.
-
-**Valid Examples:**
-```
-CN=Admin,OU=IT,O=LAB,C=US
-CN=Admin,OU=IT,O=LAB,C=IN;CN=Client,OU=IT,O=LAB,C=IN;CN=Node,OU=IT,O=LAB,C=IN
+**Simple DN:**
+```yaml
+adminDN: "CN=Admin,OU=IT,O=Company,C=US"
 ```
 
-**Invalid Examples:**
+**DN with multiple organizational units:**
+```yaml
+adminDN: "CN=Database_01,OU=Platform Engineering,OU=Infrastructure,O=Tech Corp,C=US"
 ```
-CN=Admin, OU=IT, O=LAB, C=US            # Spaces after commas - INVALID
-CN=Admin,OU=IT,O=LAB,C=USA              # Country code not 2 letters - INVALID
-CN=Admin,OU=IT,O=LAB                    # Missing C field - INVALID
-CN=Admin,OU=IT,O=LAB,C=US ; CN=Client   # Space around semicolon - INVALID
-CN=Admin,OU=IT,O=LAB,C=us               # Lowercase country code - INVALID
+
+**DN with domain components:**
+```yaml
+adminDN: "CN=search-admin,DC=internal,DC=corp,DC=local,O=Company,C=US"
+```
+
+**DN with escaped special characters:**
+```yaml
+adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
+```
+
+**DN with Unicode characters:**
+```yaml
+adminDN: "CN=François Dubois,OU=Área Técnica,O=EUROPA SIP,C=ES"
+```
+
+**DN with mixed features (Unicode + escaped characters + multiple OUs):**
+```yaml
+adminDN: "CN=María García,OU=Diseño \+ Desarrollo,OU=Innovación,O=Zürich Financial~Group,L=Madrid,C=ES"
+```
+
+**Multiple DNs (for multi-admin configurations):**
+```yaml
+adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
+```
+
+#### Validation rules
+
+The Helm chart validates that:
+
+- DN starts with a valid attribute type (`CN`, `OU`, `O`, `L`, `ST`, `C`, or `DC`)
+- Components are separated by commas (`,`)
+- Each component follows the format `ATTRIBUTE=value`
+- Multiple DNs are separated by semicolons (`;`)
+- Special characters are properly escaped
+
+**Valid DNs:**
+```
+CN=Admin,OU=IT,O=Company,C=US
+CN=François,OU=Área Técnica,O=EUROPA SIP,C=ES
+O=Smith\, Jones & Co.,OU=Research \+ Development,CN=CEO,C=US
+CN=Admin,OU=IT,O=Company,C=US;CN=Backup,OU=IT,O=Company,C=US
+```
+
+**Invalid DNs:**
+```
+admin@company.com                        # Not a DN format
+CN=Admin OU=IT O=Company C=US            # Missing commas between components
+CN=Admin,OU=IT,O=Company,C=United States # Country code must be 2 letters
+CN=Admin,OU=IT,O=Smith, Jones,C=US       # Comma inside value must be escaped (should be O=Smith\, Jones)
 ```
 
 ## Preparing the `custom-search-values.yaml`
@@ -168,25 +284,108 @@ Configure other parameters inside the `custom-search-values.yaml` of the search 
 
 ### OpenSearch configuration settings
 
-Configure OpenSearch-related settings, such as `adminDN`, using the following format:
+Configure the admin certificate DN in your Helm values file. This is the **only** certificate DN you need to configure - the node and client certificate DNs are pre-configured.
+
+#### Single admin DN
 
 ```yaml
 configuration:
   openSearch:
     security:
-      adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US"
+      adminDN: "CN=Admin,OU=IT,O=Company,C=US"
 ```
 
-Refer to [Extracting and formatting the DN for OpenSearch](#extracting-and-formatting-the-dn-for-opensearch) for instructions on how to obtain and format this value.
+#### Multiple admin DNs
 
-If you need to specify multiple DNs, provide each DN in the required OpenSearch format and separate them with a semicolon (`;`).
+For environments with multiple administrators, separate each DN with a semicolon (`;`):
 
 ```yaml
 configuration:
   openSearch:
     security:
-      adminDN: "CN=Admin,OU=UNIT,O=ORG,C=US;CN=Client,OU=UNIT,O=ORG,C=US;CN=Node,OU=UNIT,O=ORG,C=US"
+      adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
 ```
+
+#### DN with special characters
+
+If your DN contains special characters, escape them according to the [special character escaping](#special-character-escaping) rules:
+
+```yaml
+configuration:
+  openSearch:
+    security:
+      adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
+```
+
+#### DN with Unicode characters
+
+Unicode characters can be used directly in the configuration:
+
+```yaml
+configuration:
+  openSearch:
+    security:
+      adminDN: "CN=François Dubois,OU=Área Técnica,O=EUROPA SIP,C=ES"
+```
+
+#### How it works
+
+When you configure the `adminDN` in your Helm values:
+
+1. **Certificate DN extraction**: The DN is extracted from your admin certificate using RFC 2253 format
+2. **Helm configuration**: You set the extracted DN in the `adminDN` field
+3. **Automatic configuration**: The OpenSearch entrypoint script automatically:
+   - Writes the DN to `opensearch.yml` under `plugins.security.authcz.admin_dn`
+   - Extracts the Common Name (CN) from the DN (e.g., `Admin` from `CN=Admin,OU=IT,O=Company,C=US`)
+   - Adds that user to the `all_access` role in `roles_mapping.yml`
+   - Grants full administrative permissions
+
+**You do not need to manually configure role mappings** - they are handled automatically based on the CN in your admin DN.
+
+!!!example "Complete configuration example"
+    If your admin certificate has DN: `CN=SearchAdmin,OU=Platform,O=TechCorp,C=US`
+    
+    **In your Helm values:**
+    ```yaml
+    configuration:
+      openSearch:
+        security:
+          adminDN: "CN=SearchAdmin,OU=Platform,O=TechCorp,C=US"
+    ```
+    
+    **What happens automatically:**
+    
+    - OpenSearch configuration (`opensearch.yml`) is updated with:
+      ```yaml
+      plugins.security.authcz.admin_dn:
+        - 'CN=SearchAdmin,OU=Platform,O=TechCorp,C=US'
+      ```
+    
+    - Role mapping (`roles_mapping.yml`) is updated with:
+      ```yaml
+      all_access:
+        users:
+          - "SearchAdmin"
+      ```
+    
+    - The user `SearchAdmin` now has full administrative access to OpenSearch
+
+#### Pre-configured certificate DNs
+
+The following DNs are pre-configured in the OpenSearch image and do **not** need to be specified in Helm values:
+
+| Certificate Type | Pre-configured DN Pattern | Purpose |
+|------------------|---------------------------|---------|
+| Node certificate | `CN=opensearch-node*` | Inter-node communication (wildcard matches any node name) |
+| Client certificate | `CN=opensearch-client,OU=UNIT,O=ORG,C=US` | Middleware authentication (exact match) |
+
+**Why these are typically not changed:**
+
+- **Node certificate**: Uses a wildcard pattern (`CN=opensearch-node*`) that automatically matches all OpenSearch nodes in the cluster. This allows nodes to join the cluster without requiring DN configuration changes. Changing this would require updating the OpenSearch image configuration.
+
+- **Client certificate**: The search middleware is pre-configured to use this exact DN for authentication. The middleware code and OpenSearch role mappings are both configured to recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this would require modifying both the middleware configuration and rebuilding the OpenSearch image.
+
+**For most deployments**, you only need to customize the **admin certificate DN** to match your organization's security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
 
 ### Security settings  
 
