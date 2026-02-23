@@ -63,14 +63,16 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
 
 ### Step 3: Restoring the JCR database on the target server
 
-1. Restore the WPJCR database on the target DB2 server with a new name such as WPJCRT with the command:  
+1. Restore the WPJCR database on the target DB2 server with a new name such as `WPJCRT` by running the following command:
 
-```shell
-   db2 restore database WPJCR from /home/db2inst1/backup/into WPJCRT
-```
+    ```shell
+    db2 restore database WPJCR from /home/db2inst1/backup/into WPJCRT
+    ```
+
 2. Verify that the restored database exists:
 
-``` shell
-   db2 list database directory
-```
-The new database (WPJCRT) should appear in the list.  
+    ```shell
+    db2 list database directory
+    ```
+
+    The new database (`WPJCRT`) should appear in the list.
