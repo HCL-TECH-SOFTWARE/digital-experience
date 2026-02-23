@@ -172,6 +172,7 @@ If your DN contains special characters in attribute values, you must escape them
 - Period (`.`)
 - Underscore (`_`)
 - Space (` `)
+- Apostrophe/Single quote (`'`) - e.g., `O'Brien`, `O'Reilly`
 
 #### Unicode support
 
@@ -187,6 +188,11 @@ Unicode characters (accented letters, non-Latin scripts) are fully supported:
     Unicode characters are automatically hex-encoded during certificate processing (e.g., `ñ` becomes `\C3\B1` internally), but you should use the actual Unicode characters in your Helm configuration.
 
 #### Complete DN examples
+
+**YAML quoting rules:**
+- Use **double quotes** for most DNs (simpler syntax)
+- Use **single quotes** when DN contains apostrophes - apostrophes must be doubled (`O''Brien`)
+- Single quotes preserve backslashes literally (important for `\,`, `\+`, `\#` and hex-encoded Unicode)
 
 **Simple DN:**
 ```yaml
@@ -212,6 +218,12 @@ adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
 ```yaml
 adminDN: "CN=François Dubois,OU=Área Técnica,O=EUROPA SIP,C=ES"
 ```
+
+**DN with apostrophe (no escaping needed in DN, but use single quotes in YAML):**
+```yaml
+adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
+```
+Note: Apostrophes don't need escaping in the DN itself, but when using YAML single quotes, apostrophes must be doubled (`O''Brien`).
 
 **DN with mixed features (Unicode + escaped characters + multiple OUs):**
 ```yaml
