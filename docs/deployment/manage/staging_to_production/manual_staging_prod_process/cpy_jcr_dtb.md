@@ -47,7 +47,7 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
     10/08/2015 22:23:17 0 0 SQL1063N DB2START processing was successful.
     SQL1063N DB2START processing was successful.
     ```
-    
+
 ### Step 2: Backing up the JCR database
 
 1. Create a directory to store the backup:
