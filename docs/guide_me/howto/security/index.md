@@ -14,5 +14,5 @@ Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL 
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to Integrate HCL Portal User Authentication and Microsoft Azure AD](./AuthenticationMSAzure.md)**  
+- **[How to integrate HCL Portal user authentication using Microsoft Azure AD](./AuthenticationMSAzure.md)**  
 Learn how to integrate HCL Portal user authentication and Microsoft Azure AD.
