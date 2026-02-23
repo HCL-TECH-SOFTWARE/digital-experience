@@ -15,51 +15,58 @@ In this example, the administrator uses **IBM DB2® command-line tools** to back
 
 1. Log in to the Red Hat Linux server that hosts the source JCR database.
 
-2. Open a terminal: Right-click the desktop and select **Open Terminal**.
+2. Open a terminal. Right-click the desktop and select **Open Terminal**.
 
 3. Increase the file descriptor limit:
 
-```shell
-   ulimit -n 24000
-```
+    ```shell
+    ulimit -n 24000
+    ```
+
 4. Switch to the DB2 instance user:
 
-```bash
-   su - db2inst1
-```
+    ```bash
+    su - db2inst1
+    ```
+
 5. List the existing databases to verify the JCR database:
 
-```bash
-   db2 list database directory
-```
-6. Start IBM DB2:  
+    ```bash
+    db2 list database directory
+    ```
 
-```shell
+6. Start IBM DB2:
+
+    ```shell
     db2start
-```
-    Sample output:  
-```shell
-    db2start 
-    10/08/2015 22:23:17 0 0 SQL 1063N DB2START processing was successful.
-    SQL1063N DB2START processing was successful.    
-```
+    ```
+
+    Sample output:
+
+    ```shell
+    10/08/2015 22:23:17 0 0 SQL1063N DB2START processing was successful.
+    SQL1063N DB2START processing was successful.
+    ```
+    
 ### Step 2: Backing up the JCR database
 
 1. Create a directory to store the backup:
 
-```bash
-   mkdir -p /home/db2inst1/backup
-```
-2. Back up the WPJCR database:
+    ```bash
+    mkdir -p /home/db2inst1/backup
+    ```
 
-```shell
-   db2 backup database WPJCR to /home/db2inst1/backup
-```
+2. Back up the `WPJCR` database:
+
+    ```shell
+    db2 backup database WPJCR to /home/db2inst1/backup
+    ```
+
 3. If the target portal server uses a different database server, copy the backup file to the target server. Before copying, repeat steps 1–2 on the target server to prepare the environment.
 
-```shell
-   scp WPJCR.0.db2inst1.DBPART000.20151008222851.001 root@<target-server>:/home/db2inst1/backup/
-```  
+    ```shell
+    scp WPJCR.0.db2inst1.DBPART000.20151008222851.001 root@<target-server>:/home/db2inst1/backup/
+    ```
 
 ### Step 3: Restoring the JCR database on the target server
 
