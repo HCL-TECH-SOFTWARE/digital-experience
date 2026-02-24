@@ -335,8 +335,8 @@ Canvas Context Preview works in both Edit and View modes.
 - Can select and change contexts
 - Useful for reviewing template with different content
 
-### Switching Context with Unsaved changes
-The image below shows the prompt if there are unsaved changes while switching canvas context.
+### Triggering Preview with Unsaved changes
+The image below shows the prompt if the Preview Link is clicked while there are unsaved changes.
 ![](../../../../assets/HCL_Presentation_Designer_Context_UnsavedChanges.png)
 
 ---
