@@ -45,31 +45,29 @@ Three types of certificates are required:
 
 ### Generating certificates
 
-Use the following commands to generate all required certificates. You can customize the admin certificate DN to match your organization's requirements:
+Use the following comprehensive example to generate all required certificates with real-world special characters, Unicode, and multiple components:
 
 ```sh
-# Root CA for certificates
+# Root CA for certificates - using comprehensive test DN
 openssl genrsa -out root-ca-key.pem 2048
-openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=US/O=ORG/OU=UNIT/CN=opensearch" -out root-ca.pem -days 730
+openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
 
-# Admin cert - CUSTOMIZE THE DN HERE to match your requirements
-# Example shows: CN=Admin,OU=UNIT,O=ORG,C=US
-# You can use any valid DN following the format requirements in the next section
+# Admin cert - using same comprehensive test DN
 openssl genrsa -out admin-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
-openssl req -new -key admin-key.pem -subj "/CN=Admin/OU=UNIT/O=ORG/C=US" -out admin.csr
+openssl req -new -key admin-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out admin.csr
 openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730
 
-# Node cert - DO NOT CHANGE THIS DN (must match CN=opensearch-node* pattern)
+# Node cert - using test DN components but with wildcard CN pattern
 openssl genrsa -out node-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out node-key.pem
-openssl req -new -key node-key.pem -subj "/CN=opensearch-node/OU=UNIT/O=ORG/C=US" -out node.csr
+openssl req -new -key node-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=opensearch-node/DC=internal/DC=com" -utf8 -out node.csr
 openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730
 
-# Client cert - DO NOT CHANGE THIS DN (must match exactly as shown)
+# Client cert - using test DN components but with fixed CN for middleware
 openssl genrsa -out client-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in client-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out client-key.pem
-openssl req -new -key client-key.pem -subj "/CN=opensearch-client/OU=UNIT/O=ORG/C=US" -out client.csr
+openssl req -new -key client-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=opensearch-client/DC=internal/DC=com" -utf8 -out client.csr
 openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730
 
 # Create Kubernetes secrets
@@ -90,6 +88,17 @@ Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and search are 
     
     This means you only need to configure the admin certificate DN in your Helm values - role mappings are handled automatically.
 
+!!!important "Why this comprehensive example?"
+    This example demonstrates all the special cases you might encounter:
+    
+    - **Apostrophe**: `Patrick O'Brien` - requires special YAML handling
+    - **Escaped comma**: `Smith, Jones & Co.` - comma inside organization name
+    - **Unicode**: `Área Técnica` - hex-encoded in certificates
+    - **Escaped plus**: `Research \+ Development` - plus sign in OU name
+    - **Multiple OUs**: Two organizational unit components
+    - **All 7 DN component types**: CN, OU (×2), O, L, ST, C, DC (×2)
+    - **Real-world complexity**: Similar to actual corporate certificate structures
+
 ### Extracting the DN from your certificate
 
 After generating your admin certificate, you must extract its Distinguished Name (DN) in RFC 2253 format to configure in the Helm chart.
@@ -108,11 +117,14 @@ kubectl get secret search-admin-cert -n YOUR_NAMESPACE -o jsonpath='{.data.admin
 
 Replace `YOUR_NAMESPACE` with your deployment namespace.
 
-**Example output:**
+**Example output (from our comprehensive test DN):**
 
 ```
-CN=Admin,OU=UNIT,O=ORG,C=US
+CN=Patrick O'Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cnica,O=Smith\, Jones & Co.,L=Hong Kong,ST=Bayern,C=DE,DC=internal,DC=com
 ```
+
+!!!next "Next step: Configure this DN in Helm"
+    This extracted DN contains apostrophes that must be doubled for YAML. See the [main example flow](#complete-dn-examples) for the exact YAML configuration with proper apostrophe handling.
 
 !!!important "Critical: Use RFC 2253 format"
     The `-nameopt RFC2253` flag is **required** because:
@@ -176,16 +188,18 @@ If your DN contains special characters in attribute values, you must escape them
 
 #### Unicode support
 
-Unicode characters (accented letters, non-Latin scripts) are fully supported:
+Unicode characters (accented letters, non-Latin scripts) are supported, but you must use the **hex-encoded form** as extracted from your certificate - not the raw Unicode characters.
 
-| Language | Example Value | In Helm Chart |
-|----------|---------------|---------------|
-| French | `François Dubois` | `François Dubois` |
-| Spanish | `Área Técnica` | `Área Técnica` |
-| German | `Zürich Financial` | `Zürich Financial` |
+When OpenSearch reads a certificate DN during TLS handshake, its Java X.500 parser automatically hex-encodes Unicode characters. The value you configure in Helm must match this hex-encoded output exactly.
 
-!!!note
-    Unicode characters are automatically hex-encoded during certificate processing (e.g., `ñ` becomes `\C3\B1` internally), but you should use the actual Unicode characters in your Helm configuration.
+| Language | Certificate contains | Use in Helm Chart |
+|----------|---------------------|-------------------|
+| French | `François Dubois` | `Fran\C3\A7ois Dubois` |
+| Spanish | `Área Técnica` | `\C3\81rea T\C3\A9cnica` |
+| German | `Zürich Financial` | `Z\C3\BCrich Financial` |
+
+!!!warning "Always extract DN from your certificate"
+    Never type Unicode characters directly into the `adminDN` Helm value. Always use the `openssl x509 -nameopt RFC2253` command to extract the exact DN string from your certificate, including hex-encoded Unicode. See [Extracting the DN from your certificate](#extracting-the-dn-from-your-certificate).
 
 #### Complete DN examples
 
@@ -193,6 +207,61 @@ Unicode characters (accented letters, non-Latin scripts) are fully supported:
 - Use **double quotes** for most DNs (simpler syntax)
 - Use **single quotes** when DN contains apostrophes - apostrophes must be doubled (`O''Brien`)
 - Single quotes preserve backslashes literally (important for `\,`, `\+`, `\#` and hex-encoded Unicode)
+
+**Main example flow (from certificate generation above):**
+```yaml
+adminDN: 'CN=Patrick O''Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cnica,O=Smith\, Jones & Co.,L=Hong Kong,ST=Bayern,C=DE,DC=internal,DC=com'
+```
+
+!!!example "This is our comprehensive example"
+    This DN comes directly from the certificate generation commands shown above. It demonstrates all special cases in one real-world example:
+    
+    - Apostrophe handling (`O''Brien`)
+    - Unicode hex-encoding (`\C3\81rea T\C3\A9cnica`)
+    - Escaped commas (`Smith\, Jones`)
+    - Escaped plus signs (`Research \+ Development`)
+    - All 7 DN component types (CN, OU×2, O, L, ST, C, DC×2)
+
+!!!next "Continue: Deploy with this DN"
+    Ready to deploy? See [Deploying with your admin DN](#deploying-with-your-admin-dn) for the complete helm upgrade commands using this exact DN.
+
+
+
+**DN with apostrophe (CRITICAL - must use single quotes and double apostrophes):**
+```yaml
+adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
+```
+
+!!!critical "Apostrophes require special YAML handling"
+    When your extracted DN contains apostrophes (like `O'Brien`), you **must**:
+    
+    1. **Use single quotes** around the entire DN value
+    2. **Double every apostrophe** inside the DN (`O'Brien` → `O''Brien`)
+    
+    **Why this is critical:**
+    
+    - The certificate DN contains: `CN=Patrick O'Brien`
+    - YAML single quotes preserve backslashes (needed for `\,`, `\+`, `\#`, and hex-encoded Unicode)
+    - But in YAML single quotes, apostrophes must be escaped by doubling them
+    - If you use double quotes, backslashes get interpreted incorrectly
+    - If you don't double apostrophes, YAML parsing fails
+    
+    **Example of what happens if done wrong:**
+    ```yaml
+    # WRONG - will cause YAML parsing error
+    adminDN: "CN=Patrick O'Brien,OU=\C3\81rea T\C3\A9cnica,..."
+    
+    # WRONG - backslashes get interpreted incorrectly  
+    adminDN: 'CN=Patrick O'Brien,OU=\C3\81rea T\C3\A9cnica,...'
+    
+    # CORRECT - single quotes with doubled apostrophes
+    adminDN: 'CN=Patrick O''Brien,OU=\C3\81rea T\C3\A9cnica,...'
+    ```
+
+**DN with mixed features (Unicode hex-encoded + escaped characters + multiple OUs):**
+```yaml
+adminDN: "CN=Mar\C3\ADa Garc\C3\ADa,OU=Dise\C3\B1o \+ Desarrollo,OU=Innovaci\C3\B3n,O=Z\C3\BCrich Financial~Group,L=Madrid,C=ES"
+```
 
 **Simple DN:**
 ```yaml
@@ -214,20 +283,9 @@ adminDN: "CN=search-admin,DC=internal,DC=corp,DC=local,O=Company,C=US"
 adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
 ```
 
-**DN with Unicode characters:**
+**DN with Unicode characters (use hex-encoded form extracted from certificate):**
 ```yaml
-adminDN: "CN=François Dubois,OU=Área Técnica,O=EUROPA SIP,C=ES"
-```
-
-**DN with apostrophe (no escaping needed in DN, but use single quotes in YAML):**
-```yaml
-adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
-```
-Note: Apostrophes don't need escaping in the DN itself, but when using YAML single quotes, apostrophes must be doubled (`O''Brien`).
-
-**DN with mixed features (Unicode + escaped characters + multiple OUs):**
-```yaml
-adminDN: "CN=María García,OU=Diseño \+ Desarrollo,OU=Innovación,O=Zürich Financial~Group,L=Madrid,C=ES"
+adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
 ```
 
 **Multiple DNs (for multi-admin configurations):**
@@ -331,13 +389,13 @@ configuration:
 
 #### DN with Unicode characters
 
-Unicode characters can be used directly in the configuration:
+Unicode characters must be in **hex-encoded form** as extracted from your certificate using `openssl x509 -nameopt RFC2253`:
 
 ```yaml
 configuration:
   openSearch:
     security:
-      adminDN: "CN=François Dubois,OU=Área Técnica,O=EUROPA SIP,C=ES"
+      adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
 ```
 
 #### How it works
@@ -398,6 +456,39 @@ The following DNs are pre-configured in the OpenSearch image and do **not** need
 - **Client certificate**: The search middleware is pre-configured to use this exact DN for authentication. The middleware code and OpenSearch role mappings are both configured to recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this would require modifying both the middleware configuration and rebuilding the OpenSearch image.
 
 **For most deployments**, you only need to customize the **admin certificate DN** to match your organization's security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
+
+### Deploying with your admin DN
+
+After extracting your DN from the certificate, create a values file and deploy:
+
+```sh
+# Create admin DN values file (recommended approach)
+cat > admin-dn-values.yaml << 'EOF'
+configuration:
+  openSearch:
+    security:
+      adminDN: 'DC=com,DC=internal,CN=Patrick O''Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cnica,O=Smith\, Jones & Co.,L=Hong Kong,ST=Bayern,C=DE'
+EOF
+
+# Deploy the Helm chart (use full paths to avoid file location issues)
+helm upgrade dx-search ./native-kube/install-hcl-dx-search \
+  -f ~/native-kube/install-deploy-search-values.yaml \
+  -f ~/admin-dn-values.yaml \
+  -n YOUR_NAMESPACE
+```
+
+!!!warning "Avoid using --set for complex DNs"
+    Do NOT use `--set` for DNs with special characters:
+    
+    ```sh
+    # WRONG - causes YAML parsing errors
+    helm upgrade ... --set configuration.openSearch.security.adminDN="CN=Patrick O''Brien,OU=..."
+    
+    # CORRECT - use values file approach
+    helm upgrade ... -f admin-dn-values.yaml
+    ```
+    
+    The `--set` command tries to parse the DN as YAML object properties, causing schema validation errors like "Additional property ST is not allowed".
 
 ### Security settings  
 
