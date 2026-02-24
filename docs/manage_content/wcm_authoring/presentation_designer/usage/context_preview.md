@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Canvas Context Preview feature in HCL Digital Experience Presentation Designer enables users to preview how presentation templates will render with actual content from WCM (Web Content Manager) content items. This feature provides real-time visualization of template designs with live data, helping content authors and designers make informed decisions before publishing.
+The Canvas Context Preview feature in HCL Digital Experience Presentation Designer enables users to preview how presentation templates will render with actual content from WCM (Web Content Manager) content items. This feature provides real-time visualization of template designs with loaded actual data, helping content authors and designers make informed decisions before publishing.
 
 **Key Benefits:**
 
