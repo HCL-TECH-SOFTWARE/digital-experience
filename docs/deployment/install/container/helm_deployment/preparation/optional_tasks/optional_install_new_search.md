@@ -258,7 +258,7 @@ adminDN: 'CN=Patrick O''Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cni
 
 
 
-#### DN with apostrophe (CRITICAL - must use single quotes and double apostrophes) {#special-apostrophe-handling}
+#### DN with apostrophe (CRITICAL - must use single quotes and double apostrophes)
 ```yaml
 adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
 ```
