@@ -84,7 +84,7 @@ The following sections describe common operations that run in DAM.
 | **syncStagingDeletePermission** | Removes user permissions on the target system to match deletions in the source system. |
 | **syncStagingRoleBlock** | Adds or removes role blocks in the target environment to match the source system. |
 | **syncStagingFavoriteContent** | Synchronizes user-favorited items between systems. |
-| **syncStagingMediaTypeContent** | Synchronizes media type definitions (such as image, video, or document) and their associated settings between systems. |
+| **syncStagingMediaTypeContent** | Synchronizes MIME type definitions (such as image, video, or document) and their associated settings between systems. |
 | **syncStagingMediaTypeGroupContent** | Synchronizes media type group rows between publisher and subscriber systems. |
 | **initiateNextSync** | Schedules and triggers the next synchronization cycle between systems. |
 | **initiateCollectionTreeTraversal** | Scans the collection hierarchy and compares items with the subscriber system to generate mismatch logs. |
