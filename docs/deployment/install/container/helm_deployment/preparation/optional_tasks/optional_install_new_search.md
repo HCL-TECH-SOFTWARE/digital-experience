@@ -167,24 +167,27 @@ The following attribute types are supported and can appear in any order:
 
 #### Special character escaping
 
-If your DN contains special characters in attribute values, you must escape them according to RFC 2253 rules:
+Different escaping rules apply to OpenSSL `-subj` format (certificate generation) vs RFC 2253 format (Helm values). Use this comprehensive reference:
 
-| Character | Escape Sequence | Example Value | Escaped in Helm Chart |
-|-----------|----------------|---------------|----------------------|
-| Comma (`,`) | `\,` | `Smith, Jones & Co.` | `Smith\, Jones & Co.` |
-| Plus sign (`+`) | `\+` | `Research + Development` | `Research \+ Development` |
-| Hash/Pound (`#`) | `\#` | `Test #1` | `Test \#1` |
-| Backslash (`\`) | `\\` | `Path\To\Resource` | `Path\\To\\Resource` |
-| Quote (`"`) | `\"` | `"Special" Name` | `\"Special\" Name` |
+| Original Value | In OpenSSL `-subj` Command | In Helm Chart (RFC 2253) | Notes |
+|----------------|----------------------------|--------------------------|-------|
+| `Smith, Jones & Co.` | `Smith, Jones & Co.` | `Smith\, Jones & Co.` | Comma is separator in RFC 2253, must escape |
+| `Research + Development` | `Research \+ Development` | `Research \+ Development` | Plus sign needs escaping in both formats |
+| `Test #1` | `Test \#1` | `Test \#1` | Hash needs escaping in both formats |
+| `Path\To\Resource` | `Path\\To\\Resource` | `Path\\To\\Resource` | Backslash needs escaping in both formats |
+| `"Special" Names` | `\"Special\" Names` | `\"Special\" Names` | Quotes need escaping in both formats |
+| `Names & Associates` | `Names \& Associates` | `Names & Associates` | Ampersand optional in OpenSSL, not needed in RFC 2253 |
+| `O'Brien` | `O'Brien` | `O''Brien` (special YAML handling) | No RFC 2253 escape, but requires YAML single quotes with doubled apostrophes |
+| `Test-User` | `Test-User` | `Test-User` | Hyphen never needs escaping |
+| `Test.User` | `Test.User` | `Test.User` | Period never needs escaping |
+| `Test_User` | `Test_User` | `Test_User` | Underscore never needs escaping |
+| `Test User` | `Test User` | `Test User` | Space never needs escaping |
+| `Test~User` | `Test~User` | `Test~User` | Tilde never needs escaping |
 
-**Characters that do NOT need escaping in RFC 2253 format:**
-- Ampersand (`&`) - Note: May need escaping in OpenSSL `-subj` format as `\&`
-- Tilde (`~`)
-- Hyphen (`-`)
-- Period (`.`)
-- Underscore (`_`)
-- Space (` `)
-- Apostrophe/Single quote (`'`) - e.g., `O'Brien`, `O'Reilly` (see [Complete DN examples section below](#complete-dn-examples))
+**Key differences:**
+- **Comma (`,`)**: Not escaped in OpenSSL (because `/` is separator), MUST be escaped in RFC 2253 (because `,` is separator)
+- **Ampersand (`&`)**: May be escaped in OpenSSL, not needed in RFC 2253
+- **Apostrophe (`'`)**: No escaping in either format, but requires special YAML handling (see [Complete DN examples section below](#complete-dn-examples))
 
 #### DN format differences: OpenSSL vs RFC 2253
 
