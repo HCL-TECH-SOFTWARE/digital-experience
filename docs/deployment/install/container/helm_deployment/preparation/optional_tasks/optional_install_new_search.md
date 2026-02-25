@@ -184,7 +184,38 @@ If your DN contains special characters in attribute values, you must escape them
 - Period (`.`)
 - Underscore (`_`)
 - Space (` `)
-- Apostrophe/Single quote (`'`) - e.g., `O'Brien`, `O'Reilly`
+- Apostrophe/Single quote (`'`) - e.g., `O'Brien`, `O'Reilly` (see [Complete DN examples section below](#complete-dn-examples))
+
+#### DN format differences: OpenSSL vs RFC 2253
+
+!!!important "Why certificate generation and Helm values use different escaping"
+    Customers often wonder why certificate generation commands use different escaping than Helm values. This is because they use **different DN formats**:
+
+    **OpenSSL `-subj` format** (for certificate generation):
+    - Uses `/` as component separators (slash-separated)
+    - Uses **least significant first** order: `/C=US/O=Company/CN=Name`
+    - **Commas don't need escaping** because `/` is the separator
+    - Still needs to escape other special characters: `\"`, `\#`, `\\`, `\+`
+    
+    **RFC 2253 format** (for Helm values and extracted DNs):
+    - Uses `,` as component separators (comma-separated)  
+    - Uses **most significant first** order: `CN=Name,O=Company,C=US`
+    - **Commas MUST be escaped** because `,` is the separator
+    - Same escaping for other special characters: `\"`, `\#`, `\\`, `\+`
+
+    **Example comparison:**
+    
+    | Format | DN | Comma handling |
+    |--------|-----|----------------|
+    | OpenSSL `-subj` | `/O=Smith, Jones & Co./CN=Admin` | Comma not escaped |
+    | RFC 2253 | `O=Smith\, Jones & Co.,CN=Admin` | Comma escaped |
+
+    OpenSSL automatically converts between formats, so you only need to worry about using the correct escaping for each context.
+
+**Simple rule for customers:**
+1. **Generate certificates** with OpenSSL format (slash-separated, commas not escaped)
+2. **Extract DNs** with RFC 2253 format (see [Extracting the DN from your certificate](#extracting-the-dn-from-your-certificate))
+3. **Use extracted DN** in Helm values (comma-separated, commas escaped)
 
 #### Unicode support
 
@@ -227,7 +258,7 @@ adminDN: 'CN=Patrick O''Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cni
 
 
 
-**DN with apostrophe (CRITICAL - must use single quotes and double apostrophes):**
+#### DN with apostrophe (CRITICAL - must use single quotes and double apostrophes) {#special-apostrophe-handling}
 ```yaml
 adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
 ```
