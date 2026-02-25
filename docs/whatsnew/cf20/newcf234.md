@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - New actions available in Database Analysis
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -94,6 +95,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - New actions available in Database Analysis
+
+=== "Containers"
+    New actions are now available in the Database Analysis feature of HCL Digital Asset Management (DAM). You can now retrigger failed operations, generate access references, and move orphaned media items into your desired collections. For more information on these new actions, refer to [Operations Metrics](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#operations-metrics), [Collections Missing Access Reference ID](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#collections-missing-access-reference-id), and [Media Items not in Collection](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#media-items-not-in-collection).
 
 ### Helm values updates
 
