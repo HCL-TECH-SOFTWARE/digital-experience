@@ -177,8 +177,8 @@ If your DN contains special characters in attribute values, you must escape them
 | Backslash (`\`) | `\\` | `Path\To\Resource` | `Path\\To\\Resource` |
 | Quote (`"`) | `\"` | `"Special" Name` | `\"Special\" Name` |
 
-**Characters that do NOT need escaping:**
-- Ampersand (`&`)
+**Characters that do NOT need escaping in RFC 2253 format:**
+- Ampersand (`&`) - Note: May need escaping in OpenSSL `-subj` format as `\&`
 - Tilde (`~`)
 - Hyphen (`-`)
 - Period (`.`)
