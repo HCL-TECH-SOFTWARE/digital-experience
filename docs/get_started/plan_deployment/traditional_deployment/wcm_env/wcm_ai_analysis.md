@@ -46,7 +46,7 @@ To enable content AI analysis:
 
 ### Configuring an AI class for a custom content AI provider
 
-Only administrators can configure an AI class to use a custom content AI provider.
+Only administrators can configure an AI class to use a custom content AI provider. Note that if you wish to connect to an AI provider (such as LiteLLM) that is API-compatible with OpenAI models, you may be able to use the default provider class and just change its configuration parameters (see below).
 
 1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration```. Optionally, starting CF224, you can also implement the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
@@ -124,8 +124,10 @@ If AI analysis-related configurations require customization, log in to the WebSp
 
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```OPENAI_MODEL```: The currently supported AI model is ```text-davinci-003```. However, AI model can be overriden by overriding this property.
-2. ```OPENAI_MAX_TOKENS```: Set positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
+1. ```OPENAI_MODEL```: The currently supported AI model is ```gpt-4o```. However, AI model can be overriden by overriding this property.
+2. ```OPENAI_MAX_TOKENS```: Set positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response and defaults to ```256```.
 3. ```OPENAI_TEMPERATURE```: Set positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text. Higher values produce more diverse and random output. Lower values produce more focused and deterministic output.
+4. ```OPENAI_HOST```: The host to connect to for AI calls, defaults to ```api.openai.com```. Configuring this could allow you to connect to a different service that offers an OpenAI-compatible API, such as LiteLLM.
+5. ```OPENAI_SCHEME```: The scheme which AI calls will use, defaults to ```https```.
 
 After enabling the content AI analysis in DX deployment, use the [WCM REST V2 AI Analysis API](../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) to call the AI analyzer APIs of the configured content AI provider.
