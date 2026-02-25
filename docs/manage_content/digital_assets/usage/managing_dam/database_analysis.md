@@ -109,13 +109,10 @@ The Operations Metrics show the status of DAM operations by trigger function. Us
 
 ![Operations Metrics](../../../../images/Operations_metrics_latest.png)
 
-#### Available Actions
-
-**Retrigger Failed Operations** - Select one or more rows with failed operations and click **Retrigger Failed Operation** to re-execute them.
+Select one or more rows with failed operations and click **Retrigger Failed Operation** to re-execute them.
 
 !!! note
-    - For performance analysis, focus on recent operation patterns rather than historical totals.
-    - You must select at least one row before the Retrigger button becomes available.
+    For performance analysis, focus on recent operation patterns rather than historical totals.
 
 REST API endpoint:
 
@@ -129,13 +126,10 @@ The Collections Missing Access Reference ID metric identifies collections that d
 
 ![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference_latest.png)
 
-#### Available Actions
-
-**Generate Access Reference** - Select one or more collections and click **Generate Access Reference** to re-generate access reference for them.
+Select one or more collections and click **Generate Access Reference** to re-generate access reference for them.
 
 !!! note
-    - Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
-    - You must select at least one collection before the Generate Access Reference button becomes available.
+    Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
 
 For each collection missing an access reference, the following information is displayed:
 
@@ -164,9 +158,7 @@ The Media Items not in Collection metric lists orphaned media assets that are no
 
 ![Orphan Media Items](../../../../images/Orphan_media_items_latest.png)
 
-#### Available Actions
-
-**Move** - Click **Move** on any orphaned media item, select your desired collection, and confirm to organize it.
+Click **Move** on any orphaned media item, select your desired collection, and confirm to organize it.
 
 For each orphan media item, the following information is displayed:
 
@@ -178,7 +170,7 @@ For each orphan media item, the following information is displayed:
 
 !!! note
     - Consider organizing orphaned media items into appropriate collections for better content management.
-    - The Move action will maintain all metadata and versions associated with the media item.
+    - Moved media items retain all metadata and versions associated with them.
 
 REST API endpoint:
 

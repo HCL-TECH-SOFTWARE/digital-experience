@@ -1,155 +1,140 @@
-# Operations framework 
+# Operations framework
 
-One integral part of HCL DX Digital Asset Management is the so-called "operations framework". This tooling allows DAM to run asynchronous background processes.
- 
-The operations framework consists of four key components:
+The operations framework allows the Digital Asset Management (DAM) feature of HCL Digital Experience (DX) to run asynchronous background processes.
 
-- For storing `operations` we leverage our `DAM database`. On top of it sits a **`scheduler`** which always looks for `operations` that need to be handled and will assign those to **`workers`**. Those **`workers`** receive the `operation` to be handled from the scheduler and will return their results after being done. 
+## Components
+
+This framework consists of the following components:
+
+- DAM database: Stores all operations.
+- `operation`: Specific tasks that need to be performed. They are stored in the DAM database and handled by the scheduler.
+- `scheduler`: The controlling mechanism of the operations framework. It creates workers, assigns operations to them, and cleans up expired operations and workers.
+- `scheduler heartbeat`: The configurable interval at which the scheduler attempts to claim operations for workers.
+- `statusUpdate`: A message sent by a worker to the scheduler to report the result of an operation.
+- `worker`: Forked tasks created by the DAM main process. A worker receives an operation, executes it, and reports the results back to the main process. A worker handles only one operation at a time and includes a `lastTouched` metadata value to track how long it remains in its current state.
 
 ![Architectural Overview](.../../../../images/architectural_overview.png)
- 
----
-## Glossary
 
-### Operation
-A specific task that needs to be performed. Will be stored in the DAM database and handled by the scheduler.
-### Worker
-A forked task will be created by the DAM main process. This `worker` will receive the `operation` from the DAM main process and carry out the work necessary. After the work is done, it will report back to the master. It can only handle one `operation` at a time. A worker has a metadata value called `lastTouched` which is used to determine how long a `worker` is in its current state. 
-### StatusUpdate
-Will be sent by the `workers` to the DAM scheduler to inform about the result of handling an `operation`.  
-### Scheduler
-The `scheduler` is the controlling mechanism of the framework of the operations. It takes care of creating `workers`, feeding them with `operations` to work on and, ensuring expired `operations` and expired `workers` are being cleaned up.
-### Scheduler heartbeat
-The `scheduler heartbeat` defines the intervals in which the `scheduler` will try to claim `operations` for `workers`. This can be configured.  
-## List of operations 
+## Operations
 
-In the following sections, we described some of the operations that normally run in DAM. 
+The following sections describe common operations that run in DAM.
 
-## Rendering & Media Processing Operations
+### Rendering and media processing
 
 | Operation | Description |
 |------------------|-------------|
 | **prepareRenditions** | Triggers rendition generation by mapping the detected MIME type to its predefined configuration. |
-| **generateVersion** | Creates file versions that represent different iterations or edits of the same media asset. Versions maintain the edit history and allow reverting to previous versions if needed. |
-| **generateThumbnail** | Creates a small preview image (like a snapshot) of your media that shows up in lists and search results. For images, it shows a preview of the content. Your original file's thumbnail is created first so you can see a preview right away. |
-| **generateSupplement** | Creates alternative versions of your media such as HD or 4K archive versions, lower-quality versions for slower internet connections, or different format variations for better browser compatibility. |
-| **generateKeyword** | Automatically reads the content of your media file and extracts searchable keywords and topics. For images, it can read text in the image. For documents, it finds key terms. For videos, it can analyze transcripts if available. This makes your media easier to find through search. |
+| **generateVersion** | Saves iterations of a media asset to maintain its edit history and allow reverting to previous states. |
+| **generateThumbnail** | Generates a small preview image for lists and search results and prioritizes the original file's thumbnail for immediate viewing. |
+| **generateSupplement** | Creates alternative media formats and resolutions, such as HD or 4K archives, low-bandwidth options, or browser-compatible variations. |
+| **generateKeyword** | Extracts searchable keywords and topics from media content, including text from images, key terms from documents, and transcripts from videos. |
 
-## Metadata Operations
-
-| Operation | Description |
-|------------------|-------------|
-| **generateMetaData** | Automatically extracts and reads detailed information about your media file such as dimensions, duration, color information, camera settings, author information, and creation dates. This information helps organize and understand your media without manual entry. |
-| **updateMetaData** | Saves the automatically extracted file information into your media records so it can be searched and referenced. Creates a record of when the information was updated and by whom. |
-| **validateThumbnail** | Checks that thumbnail previews meet quality standards - ensuring they're the correct size, proper format, and display correctly without damage or corruption. If a thumbnail fails quality checks, it can be regenerated. |
-
-## Cleanup & Maintenance Operations
+### Metadata
 
 | Operation | Description |
 |------------------|-------------|
-| **cleanupMedia** | Removes temporary and unused files related to media after deletion or when processing fails. Frees up storage space by deleting temporary chunks, failed processing files, and cache files that are no longer needed. |
-| **cleanupCollections** | Removes empty collection records and cleans up the relationships between collections and media items, particularly after deletions or moves. Keeps the collection structure organized and prevents orphaned entries. |
-| **deleteOrphanDirectoryAndMedia** | Finds and removes "lost" files and folders that exist on the storage but don't have any record in the system database. This helps recover from failed uploads or corrupted data situations. |
-| **deleteOrphanMediaStorage** | Removes storage records for media files that no longer exist as active items in the system. Prevents broken references and keeps the database clean after deletions. |
-| **clearTrash** | Permanently deletes items that were deleted 30 days ago (configurable). Soft-deleted items stay for a recovery period before being completely removed. This operation cleans them up to free space when the retention period expires. |
+| **generateMetaData** | Extracts detailed information about your media file such as dimensions, duration, color information, camera settings, author information, and creation dates. |
+| **updateMetaData** | Saves extracted file information to media records to enable search and referencing. Logs the update timestamp and the associated user. |
+| **validateThumbnail** | Ensures thumbnail previews meet size, format, and display standards. Thumbnails that do not meet these standards can be regenerated. |
 
-## Delete Operations
+### Indexing and search
 
 | Operation | Description |
 |------------------|-------------|
-| **deleteMedia** | Marks a media item as deleted and moves it to trash. The file isn't actually removed yet - it stays in the system for a configurable period so you can recover it if needed. All associated items like thumbnail versions, copies, and collection references are also marked for deletion. |
-| **deleteStorage** | Permanently removes the actual media files from storage after they've been marked for deletion. This frees up disk space but happens only after deleteMedia has confirmed the deletion. |
-| **deleteCollection** | Deletes a collection and everything in it - including all sub-collections and all media items within. Like deleteMedia, items are soft-deleted first and stay recoverable for 30 days before permanent removal. |
-| **deleteOperations** | Removes old operation records from the system to prevent the operations log from growing too large. Failed operations are kept according to the configured threshold. |
-| **deleteIndexedDocumentsByQuery** | Removes deleted items from the search index so they no longer appear in search results. Keeps the search index synchronized with what's actually in the system. |
-
-## Indexing & Search Operations
-
-| Operation | Description |
-|------------------|-------------|
-| **initiateInitialIndexing** | Creates the search index for the first time or rebuilds it after corruption. Triggers multiple recursive operations to scan all media and collections and make them searchable. Can take time for systems with many items. |
-| **initiateReIndexing** | Completely rebuilds the search index from scratch, removing old stale entries and re-indexing everything. Used when improving search functionality or recovering from serious search issues. |
-| **processAssetsForIndexing** | Prepares batches of media items to be added to the search index. Groups items together for efficient batch processing. |
-| **processAssetsForLiveIndexing** | Adds newly uploaded or modified media to the search index immediately so it appears in search results right away (within a few seconds). |
-| **processAssetsDocumentBuilding** | Converts media item information into the structured format needed for search indexing. Extracts searchable text, keywords, and categories. |
-| **invalidateIndexedContent** | Marks indexed content as needing to be updated when configuration changes or bulk updates occur. Triggers re-indexing on the next cycle. |
-| **processCollectionsForIndexing** | Adds collection hierarchy and metadata to the search index so collections can be searched and used for filtering. |
-| **processCollectionsDocumentBuilding** | Converts collection information into the structured format needed for search indexing. |
+| **initiateInitialIndexing** | Creates or rebuilds the search index. Triggers recursive operations to scan media and collections to enable searchability. |
+| **initiateReIndexing** | Rebuilds the search index to remove stale entries. Resolves index corruption and applies search functionality updates. |
+| **processAssetsForIndexing** | Batches media items for efficient addition to the search index. |
+| **processAssetsForLiveIndexing** | Immediately indexes newly uploaded or modified media items for near real-time search availability. |
+| **processAssetsDocumentBuilding** | Converts media metadata into a structured indexing format by extracting searchable text, keywords, and categories. |
+| **invalidateIndexedContent** | Flags indexed content for an update following configuration changes or bulk modifications. Triggers re-indexing on the next cycle. |
+| **processCollectionsForIndexing** | Indexes collection hierarchies and metadata to enable search and filtering. |
+| **processCollectionsDocumentBuilding** | Converts collection metadata into a structured format for search indexing. |
 | **processAssetForDeletion** | Removes deleted media from the search index so it no longer appears in search results. |
 
-## Version Management Operations
+### Version management
 
 | Operation | Description |
 |------------------|-------------|
-| **versionRetention** | Automatically removes old versions of media files when you exceed your version limit. For example, you might keep only the 3 most recent versions. Very old versions that have been kept for a minimum period are cleaned up first. |
-| **regenerateRenditionOrVersion** | Triggers the regeneration of missing asset renditions and versions, provided the 'Cleanup' flag is enabled in the system configuration. |
+| **versionRetention** | Automatically removes older versions of media files when the configured version limit is exceeded. Prioritizes the cleanup of the oldest versions that have passed the minimum retention period. |
+| **regenerateRenditionOrVersion** | Regenerates missing asset renditions and versions if the `Cleanup` flag is enabled in the system configuration. |
 
-## Upload & Post-Actions Operations
-
-| Operation | Description |
-|------------------|-------------|
-| **schedulePostActions** | Orchestrates all the automatic tasks that happen after you upload a file. These tasks run in sequence: extracting file information, generating different sizes and formats, creating thumbnails, making it searchable, and ready for use. This is the main operation that kicks off all the file processing. |
-| **trackMediaState** | Monitors the media upload and processing progress by checking if all expected renditions have been generated. Updates the media state to SUCCESS once all renditions are complete, or to FAILURE if processing fails. |
-
-## Staging & Synchronization Operations
+### Kaltura video integration
 
 | Operation | Description |
 |------------------|-------------|
-| **syncStagingCollectionContent** | Synchronizes collection information (names and descriptions) between two separate DAM systems to keep them in sync. |
-| **syncStagingMediaContent** | Copies media file information from one DAM system to another including names, descriptions, keywords, and properties. |
-| **syncStagingRenditionContent** | Sync renditions for assets from publisher to subscriber in staging set up. |
-| **syncStagingVersionContent** | Sync versions for assets from publisher to subscriber in staging set up. |
-| **syncStagingPermissionResource** | Copies user permissions and access control settings between systems so the same people have access to the same items in both places. |
-| **syncStagingCreatePermission** | Sets up new user permissions on copied items when they don't have permissions set up yet in the target system. |
-| **syncStagingDeletePermission** | Removes user permissions from items when they've been revoked in the source system. |
-| **syncStagingRoleBlock** | add or delete role block in target environment. |
-| **syncStagingFavoriteContent** | Copies each user's favorite items between systems so favorites appear on both. |
-| **syncStagingMediaTypeContent** | Copies media type definitions (like image, video, document) and their settings between systems. |
+| **VideoUploadToKaltura** | Manages the Kaltura integration by automating video uploads, rendition generation, and thumbnail creation. Synchronizes metadata, status, and deletions to maintain consistency between systems. |
+
+### Upload and post-actions
+
+| Operation | Description |
+|------------------|-------------|
+| **schedulePostActions** | Orchestrates automated post-upload tasks in sequence, including metadata extraction, rendition and thumbnail generation, and search indexing. Acts as the primary trigger for the media processing pipeline. |
+| **trackMediaState** | Monitors upload and processing progress by verifying the generation of expected renditions. Updates the media state to `SUCCESS` upon completion or `FAILURE` if processing errors occur. |
+
+### Staging and synchronization
+
+| Operation | Description |
+|------------------|-------------|
+| **syncStagingCollectionContent** | Synchronizes collection names and descriptions between DAM systems. |
+| **syncStagingMediaContent** | Synchronizes media metadata (such as names, descriptions, keywords, and properties) between DAM systems.|
+| **syncStagingRenditionContent** | Synchronizes asset renditions from the publisher to the subscriber in a staging configuration. |
+| **syncStagingVersionContent** | Synchronizes asset versions from the publisher to the subscriber in a staging configuration. |
+| **syncStagingPermissionResource** | Synchronizes user permissions and access control settings to maintain consistency between systems. |
+| **syncStagingCreatePermission** | Creates user permissions on the target system for newly synchronized items. |
+| **syncStagingDeletePermission** | Removes user permissions on the target system to match deletions in the source system. |
+| **syncStagingRoleBlock** | Adds or removes role blocks in the target environment to match the source system. |
+| **syncStagingFavoriteContent** | Synchronizes user-favorited items between systems. |
+| **syncStagingMediaTypeContent** | Synchronizes media type definitions (such as image, video, or document) and their associated settings between systems. |
 | **syncStagingMediaTypeGroupContent** | Synchronizes media type group rows between publisher and subscriber systems. |
-| **initiateNextSync** | Schedules and starts the next synchronization cycle between systems. |
-| **initiateCollectionTreeTraversal** | Traverses through all collections and compares each collection and all items under it with the subscriber system, then creates mismatch logs for all differences found. |
-| **findStagingPermissionsMismatch** | Checks if permissions are different between two systems and reports what doesn't match. |
-| **compareRecords** | Determines if an item has changed and needs to be synchronized between systems. |
-| **processCollection** | Prepares a single collection to be synchronized including all its media and permissions. |
-| **processCollectionItems** | Prepares all media items in a collection for synchronization. |
-| **resyncSubscriber** | Re-synchronizes items based on the mismatch logs generated after the find mismatch operation is executed, ensuring everything eventually gets synced. |
+| **initiateNextSync** | Schedules and triggers the next synchronization cycle between systems. |
+| **initiateCollectionTreeTraversal** | Scans the collection hierarchy and compares items with the subscriber system to generate mismatch logs. |
+| **findStagingPermissionsMismatch** | Identifies and reports permission discrepancies for items between systems. |
+| **compareRecords** | Evaluates items to determine if synchronization is required based on detected changes. |
+| **processCollection** | Prepares a collection, its items, and associated permissions for synchronization. |
+| **processCollectionItems** | Prepares all media items within a collection for synchronization. |
+| **resyncSubscriber** | Re-synchronizes items based on the mismatch logs to resolve discrepancies between systems. |
 
-## Content Management Operations
-
-| Operation | Description |
-| **purgeEvents** | Removes old event records from the activity log to prevent it from growing too large. Event history is kept for 90 days before being archived. |
-| **updateSyncStatus** | Updates progress information during synchronization between systems. Shows whether sync is in progress, completed successfully, or encountered problems. |
-
-## Kaltura Video Integration Operations
+### Content management
 
 | Operation | Description |
 |------------------|-------------|
-| **VideoUploadToKaltura** | Manages video integration with Kaltura (a video hosting service) including upload, delete, thumbnail generation, and status synchronization. Automatically uploads videos to Kaltura after upload to DAM, manages renditions and thumbnails, removes videos when deleted from DAM, and keeps metadata synchronized between both systems. |
+| **purgeEvents** | Clears event records from the activity log after a 90-day retention period. |
+| **updateSyncStatus** | Updates synchronization progress between systems. Displays active, successful, or failed statuses. |
 
----
+### Deletion
 
-### Failed operations clean up job
+| Operation | Description |
+|------------------|-------------|
+| **deleteMedia** | Marks media items, including associated thumbnails, copies, and collection references, for soft-deletion. Items remain recoverable for a configurable retention period. |
+| **deleteStorage** | Permanently removes media files from storage after the soft-deletion retention period expires to free disk space. |
+| **deleteCollection** | Soft-deletes a collection, including all nested sub-collections and associated media items. Items remain recoverable for the configured retention period (default: 30 days). |
+| **deleteOperations** | Clears old operation records to maintain log size. Retains failed operations based on configured thresholds. |
+| **deleteIndexedDocumentsByQuery** | Removes deleted items from the search index to prevent them from appearing in search results and maintain synchronization with the database. |
 
-Naturally, it might happen that the list of operations in the DAM database gets quite long. The operations cleanup job ensures to clean up obsolete operations to make sure the list doesn't get cluttered. This kind of obsolete operations includes e.g. failed operations, etc. It is configurable for how long obsolete operations will be kept before they get finally cleaned up.
--   Naturally, it might happen that the list of operations in the DAM database gets quite long. The operations cleanup job ensures to clean up obsolete operations to make sure the list doesn't get cluttered. This kind of obsolete operations includes e.g. failed operations, etc. It is configurable for how long obsolete operations will be kept before they get finally cleaned up.
-#### Configuration attributes in `values.yaml` 
+### Cleanup and maintenance
 
-- Maximum threshold time
+| Operation | Description |
+|------------------|-------------|
+| **cleanupMedia** | Removes temporary chunks, cache files, and failed processing files after media deletion or processing failures to free up storage space. |
+| **cleanupCollections** | Removes empty collection records and resolves relationships between collections and media items, particularly after deletions or moves to prevent orphaned entries.|
+| **deleteOrphanDirectoryAndMedia** | Removes files and folders from storage that lack corresponding database records. Resolves discrepancies caused by failed uploads or data corruption. |
+| **deleteOrphanMediaStorage** | Removes storage records for deleted or inactive media files to prevent broken database references. |
+| **clearTrash** | Permanently deletes soft-deleted items after a configurable retention period (default: 30 days) to free up storage space. |
 
-`failedOperationThresholdTimeHours` determines the maximum threshold time for failed operation jobs after which failed operations will be deleted. 
+#### Cleanup of failed and obsolete operations
+
+The operations cleanup job automatically removes failed or obsolete records from the database. This process is governed by two configurable thresholds in the values.yaml file that determine when records are eligible for deletion.
+
+| Attribute | Description |
+|------------------|-------------|
+|`failedOperationThresholdTimeHours`| Specifies the maximum age (in hours) that a failed operation record is retained before deletion. |
+|`failedOperationThresholdLimitRecords`| Specifies the maximum number of failed operation records allowed in the database. When this limit is exceeded, the oldest records are deleted. |
+
+For example:
 
 ```yaml
 configuration:
   digitalAssetManagement:
     failedOperationThresholdTimeHours: 24
-```
-
-- Threshold limit of records
-
-`failedOperationThresholdLimitRecords` determines the maximum threshold limit of failed operation job records. If the threshold is met, the failed operations will be deleted.
-
-```yaml
-configuration:
-  digitalAssetManagement:
     failedOperationThresholdLimitRecords: 20000
 ```

@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Operations
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -94,6 +95,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - Operations
+
+=== "Containers"
+    Documentation is now available for the common operations that run in the Digital Asset Management (DAM) feature of HCL DX. For more detailed information about each operation, refer to [Operations framework - Operations](../../manage_content/digital_assets/operation_framework.md#operations).
 
 ### Helm values updates
 
