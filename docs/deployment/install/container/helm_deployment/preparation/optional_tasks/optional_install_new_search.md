@@ -45,6 +45,9 @@ Three types of certificates are required:
 
 ### Generating certificates
 
+!!!info "Special character reference"
+    Before generating certificates, see [Special character escaping](#special-character-escaping) for a comprehensive guide on how different characters should be handled in certificate generation vs Helm configuration.
+
 Use the following comprehensive example to generate all required certificates with real-world special characters, Unicode, and multiple components:
 
 ```sh
