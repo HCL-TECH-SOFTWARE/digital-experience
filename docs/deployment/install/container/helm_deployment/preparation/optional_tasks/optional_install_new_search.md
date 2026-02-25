@@ -1,7 +1,6 @@
 # Installing the Search V2 backend
 
-This topic provides information on how to configure search based on OpenSearch (Search V2) for your DX deployment.
-
+This topic explains how to configure Search V2, based on OpenSearch, for your HCL Digital Experience (DX) deployment.
 The search currently provides the following capabilities:
 
 - WCM crawling
@@ -11,7 +10,7 @@ The search currently provides the following capabilities:
 
 ## Prerequisites
 
-To use the capabilities of OpenSearch, it is required to have a DX deployment running inside Kubernetes. This DX deployment must at least contain DX Core because it contains the Web Content Manager (WCM) and is used for ACL lookup.
+To use OpenSearch, your HCL Digital Experience (DX) deployment must run in Kubernetes. The deployment must include DX Core, which provides Web Content Manager (WCM) and supports ACL lookup.
 
 ## Limitations
 
@@ -26,26 +25,27 @@ Make sure that your Kubernetes nodes meet the requirements before running OpenSe
 
 Ensure that you have at least configured `nofile 65536` and `vm.max_map_count=262144` on your Kubernetes nodes. The configuration depends on your Kubernetes node setup. Refer to the documentation of your cloud provider for information on how to adjust these values.
 
-If you want to know more about settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) in the official OpenSearch documentation.
+If you want to know more about settings for OpenSearch, you can also refer to [Important Settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings){target="_blank"} in the official OpenSearch documentation.
 
 ## Preparing certificates for inter-service communication
 
-The search uses certificate-based authentication for secure communication between OpenSearch nodes and the search middleware. You must create certificates with specific Distinguished Names (DNs) and store them in Kubernetes secrets.
+The search uses certificates to secure communication between OpenSearch nodes and the search middleware. You must create certificates with the required Distinguished Names (DNs) and store them in Kubernetes secrets.
 
 ### Understanding certificate roles
 
 Three types of certificates are required:
 
-- **Admin certificate**: Used for OpenSearch administrative operations and configuration. The DN from this certificate must be configured in the Helm chart's `adminDN` field.
-- **Node certificate**: Used for inter-node communication between OpenSearch cluster nodes. The DN is pre-configured to match `CN=opensearch-node*` (wildcard pattern).
-- **Client certificate**: Used by the search middleware to authenticate with OpenSearch. The DN is pre-configured to match `CN=opensearch-client,OU=UNIT,O=ORG,C=US`.
+- - **Admin certificate** – Used for OpenSearch administrative operations and configuration. Configure the certificate’s DN in the Helm chart `adminDN` field.  
+- **Node certificate** – Used for communication between OpenSearch cluster nodes. The DN is pre-configured as `CN=opensearch-node*` (wildcard pattern).  
+- **Client certificate** – Used by the search middleware to authenticate with OpenSearch. The DN is pre-configured as `CN=opensearch-client,OU=UNIT,O=ORG,C=US`.
 
-!!!important
-    Only the **admin certificate DN** needs to be customized via the Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and will work automatically if you follow the certificate generation commands below.
+!!! important
+    Only the admin certificate DN must be customized in the Helm chart.  
+    The node and client certificate DNs are pre-configured in the OpenSearch image and work automatically if you follow the certificate generation commands below.
 
 ### Generating certificates
 
-Use the following comprehensive example to generate all required certificates with real-world special characters, Unicode, and multiple components:
+Use this example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 
 ```sh
 # Root CA for certificates - using comprehensive test DN
@@ -76,40 +76,39 @@ kubectl create secret generic search-node-cert --from-file=node.pem --from-file=
 kubectl create secret generic search-client-cert --from-file=client.pem --from-file=client-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
 ```
 
-Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and search are deployed.
+Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and Search are deployed.  
 
-!!!note
-    The OpenSearch entrypoint script automatically:
-    
-    - Reads the `adminDN` value from the Helm chart configuration
-    - Writes it to the OpenSearch security configuration
-    - Extracts the Common Name (CN) from the admin DN
-    - Grants the `all_access` role to that user for full administrative permissions
-    
-    This means you only need to configure the admin certificate DN in your Helm values - role mappings are handled automatically.
+The OpenSearch entrypoint script automatically:
 
-!!!important "Why this comprehensive example?"
+- Reads the `adminDN` value from the Helm chart configuration.  
+- Writes it to the OpenSearch security configuration.  
+- Extracts the Common Name (CN) from the admin DN.  
+- Grants the `all_access` role to that user for full administrative permissions.  
+
+This means you only need to configure the admin certificate DN in your Helm values; role mappings are handled automatically.
+
+!!! important "Purpose of This Example"
     This example demonstrates all the special cases you might encounter:
-    
-    - **Apostrophe**: `Patrick O'Brien` - requires special YAML handling
-    - **Escaped comma**: `Smith, Jones & Co.` - comma inside organization name
-    - **Unicode**: `Área Técnica` - hex-encoded in certificates
-    - **Escaped plus**: `Research \+ Development` - plus sign in OU name
-    - **Multiple OUs**: Two organizational unit components
-    - **All 7 DN component types**: CN, OU (×2), O, L, ST, C, DC (×2)
-    - **Real-world complexity**: Similar to actual corporate certificate structures
+
+    - **Apostrophe**: `Patrick O'Brien` – requires special YAML handling.  
+    - **Escaped comma**: `Smith, Jones & Co.` – comma inside an organization name.  
+    - **Unicode**: `Área Técnica` – hex-encoded in certificates.  
+    - **Escaped plus**: `Research \+ Development` – plus sign in an OU name.  
+    - **Multiple OUs**: Two organizational unit components.  
+    - **All seven DN component types**: CN, OU (×2), O, L, ST, C, DC (×2).  
+    - **Real-world complexity**: Reflects actual corporate certificate structures.
 
 ### Extracting the DN from your certificate
 
-After generating your admin certificate, you must extract its Distinguished Name (DN) in RFC 2253 format to configure in the Helm chart.
+After you generate the admin certificate, extract its Distinguished Name (DN) in RFC 2253 format. Use this DN to configure the Helm chart.
 
-**Extract DN from certificate file:**
+#### Extract DN from certificate file:
 
 ```sh
 openssl x509 -in admin.pem -noout -subject -nameopt RFC2253 | sed 's/subject=//'
 ```
 
-**Extract DN from Kubernetes secret:**
+#### Extract DN from Kubernetes secret:
 
 ```sh
 kubectl get secret search-admin-cert -n YOUR_NAMESPACE -o jsonpath='{.data.admin\.pem}' | base64 -d | openssl x509 -noout -subject -nameopt RFC2253 | sed 's/subject=//'
@@ -117,30 +116,27 @@ kubectl get secret search-admin-cert -n YOUR_NAMESPACE -o jsonpath='{.data.admin
 
 Replace `YOUR_NAMESPACE` with your deployment namespace.
 
-**Example output (from our comprehensive test DN):**
+#### Verify the output
+Example output from our comprehensive test DN:
 
 ```
 CN=Patrick O'Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cnica,O=Smith\, Jones & Co.,L=Hong Kong,ST=Bayern,C=DE,DC=internal,DC=com
 ```
 
-!!!next "Next step: Configure this DN in Helm"
-    This extracted DN contains apostrophes that must be doubled for YAML. See the [main example flow](#complete-dn-examples) for the exact YAML configuration with proper apostrophe handling.
+#### Next step: Configure this DN in Helm
+    This extracted DN contains apostrophes that must be doubled for YAML. See the [main example flow](#complete-dn-examples) for the exact YAML configuration with correct apostrophe handling.
 
-!!!important "Critical: Use RFC 2253 format"
-    The `-nameopt RFC2253` flag is **required** because:
-    
-    - It preserves the exact component ordering from your certificate
-    - OpenSearch DN matching is **order-sensitive** - the order must match exactly
-    - It properly formats special characters and Unicode
-    - It ensures consistent output across all OpenSSL versions
-    
-    **Never use** `-nameopt oneline` or other formats, as they may reorder DN components and cause authentication failures.
+#### Critical: Use RFC 2253 format
+The `-nameopt RFC2253` flag is required because:
 
-Use the exact DN value from this command in the `adminDN` field as described in the [OpenSearch configuration settings](#opensearch-configuration-settings) section.
+- It preserves the exact component order from your certificate.  
+- OpenSearch DN matching is order-sensitive; the order must match exactly.  
+- It formats special characters and Unicode correctly.  
+- It ensures consistent output across all OpenSSL versions.
 
 ### DN format requirements
 
-The `adminDN` field accepts Distinguished Names in **RFC 2253 format** with comprehensive validation to ensure compatibility with the OpenSearch Security plugin.
+The `adminDN` field accepts Distinguished Names in RFC 2253 format. It validates the DN to ensure compatibility with the OpenSearch Security plugin.
 
 #### Supported attribute types
 
@@ -158,16 +154,16 @@ The following attribute types are supported and can appear in any order:
 
 #### Component ordering
 
-!!!warning "Order-sensitive matching"
-    OpenSearch DN matching is **order-sensitive**. The DN component order in your Helm configuration **must match exactly** the order in your certificate.
-    
-    **Example:** If your certificate has `CN=Admin,OU=IT,O=Company,C=US`, you must use that exact order in the Helm chart. Using `C=US,O=Company,OU=IT,CN=Admin` will **fail authentication** even though it represents the same DN.
-    
+!!! warning "Order-sensitive matching"
+    OpenSearch DN matching is order-sensitive. The DN component order in your Helm configuration must match exactly the order in your certificate.
+
+    Example: If your certificate has `CN=Admin,OU=IT,O=Company,C=US`, use that exact order in the Helm chart. Using `C=US,O=Company,OU=IT,CN=Admin` will fail authentication, even though it represents the same DN.
+
     Always extract the DN from your certificate using the RFC 2253 format command shown above to ensure correct ordering.
 
 #### Special character escaping
 
-If your DN contains special characters in attribute values, you must escape them according to RFC 2253 rules:
+If your DN contains special characters in attribute values, escape them according to RFC 2253 rules.
 
 | Character | Escape Sequence | Example Value | Escaped in Helm Chart |
 |-----------|----------------|---------------|----------------------|
@@ -178,19 +174,22 @@ If your DN contains special characters in attribute values, you must escape them
 | Quote (`"`) | `\"` | `"Special" Name` | `\"Special\" Name` |
 
 **Characters that do NOT need escaping:**
-- Ampersand (`&`)
-- Tilde (`~`)
-- Hyphen (`-`)
-- Period (`.`)
-- Underscore (`_`)
-- Space (` `)
-- Apostrophe/Single quote (`'`) - e.g., `O'Brien`, `O'Reilly`
+
+- Ampersand (`&`)  
+- Tilde (`~`)  
+- Hyphen (`-`)  
+- Period (`.`)  
+- Underscore (`_`)  
+- Space (` `)  
+- Apostrophe / single quote (`'`) – e.g., `O'Brien`, `O'Reilly`
 
 #### Unicode support
 
-Unicode characters (accented letters, non-Latin scripts) are supported, but you must use the **hex-encoded form** as extracted from your certificate - not the raw Unicode characters.
+Unicode characters (accented letters, non-Latin scripts) are supported.  
+You must use the hex-encoded form as extracted from your certificate, not the raw Unicode characters.
 
-When OpenSearch reads a certificate DN during TLS handshake, its Java X.500 parser automatically hex-encodes Unicode characters. The value you configure in Helm must match this hex-encoded output exactly.
+When OpenSearch reads a certificate DN during the TLS handshake, its Java X.500 parser automatically hex-encodes Unicode characters.  
+The value you configure in Helm must match this hex-encoded output exactly.
 
 | Language | Certificate contains | Use in Helm Chart |
 |----------|---------------------|-------------------|
@@ -198,55 +197,61 @@ When OpenSearch reads a certificate DN during TLS handshake, its Java X.500 pars
 | Spanish | `Área Técnica` | `\C3\81rea T\C3\A9cnica` |
 | German | `Zürich Financial` | `Z\C3\BCrich Financial` |
 
-!!!warning "Always extract DN from your certificate"
-    Never type Unicode characters directly into the `adminDN` Helm value. Always use the `openssl x509 -nameopt RFC2253` command to extract the exact DN string from your certificate, including hex-encoded Unicode. See [Extracting the DN from your certificate](#extracting-the-dn-from-your-certificate).
+!!! warning "Always extract the DN from your certificate"
+    Never type Unicode characters directly into the `adminDN` Helm value.  
+    Always use the `openssl x509 -nameopt RFC2253` command to extract the exact DN string from your certificate, including hex-encoded Unicode.  
+    See [Extracting the DN from your certificate](#extracting-the-dn-from-your-certificate).
 
 #### Complete DN examples
 
-**YAML quoting rules:**
-- Use **double quotes** for most DNs (simpler syntax)
-- Use **single quotes** when DN contains apostrophes - apostrophes must be doubled (`O''Brien`)
-- Single quotes preserve backslashes literally (important for `\,`, `\+`, `\#` and hex-encoded Unicode)
+YAML quoting rules:
 
-**Main example flow (from certificate generation above):**
+- Use **double quotes** for most DNs (simpler syntax).  
+- Use **single quotes** when a DN contains apostrophes.  
+  Double each apostrophe (`O''Brien`).  
+- Single quotes preserve backslashes literally.  
+  This is required for `\,`, `\+`, `\#`, and hex-encoded Unicode.
+
+Main example flow (from certificate generation above):
 ```yaml
 adminDN: 'CN=Patrick O''Brien,OU=Research \+ Development,OU=\C3\81rea T\C3\A9cnica,O=Smith\, Jones & Co.,L=Hong Kong,ST=Bayern,C=DE,DC=internal,DC=com'
 ```
 
-!!!example "This is our comprehensive example"
-    This DN comes directly from the certificate generation commands shown above. It demonstrates all special cases in one real-world example:
-    
-    - Apostrophe handling (`O''Brien`)
-    - Unicode hex-encoding (`\C3\81rea T\C3\A9cnica`)
-    - Escaped commas (`Smith\, Jones`)
-    - Escaped plus signs (`Research \+ Development`)
-    - All 7 DN component types (CN, OU×2, O, L, ST, C, DC×2)
+#### Comprehensive DN Example
+This DN comes directly from the certificate generation commands shown above.  
+It demonstrates all special cases in a real-world scenario:
 
-!!!next "Continue: Deploy with this DN"
-    Ready to deploy? See [Deploying with your admin DN](#deploying-with-your-admin-dn) for the complete helm upgrade commands using this exact DN.
+- Apostrophe handling (`O''Brien`)  
+- Unicode hex-encoding (`\C3\81rea T\C3\A9cnica`)  
+- Escaped commas (`Smith\, Jones`)  
+- Escaped plus signs (`Research \+ Development`)  
+- All seven DN component types: CN, OU×2, O, L, ST, C, and DC×2
 
+#### Deploy with this DN
+Ready to deploy? See [Deploying with your admin DN](#deploying-with-your-admin-dn)  
+for the complete Helm upgrade commands using this exact DN.
 
-
-**DN with apostrophe (CRITICAL - must use single quotes and double apostrophes):**
+DN with Apostrophe (Critical – Use Single Quotes and Double Apostrophes):
 ```yaml
 adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
 ```
 
-!!!critical "Apostrophes require special YAML handling"
-    When your extracted DN contains apostrophes (like `O'Brien`), you **must**:
+#### Handle Apostrophes Correctly in YAML
+
+When your extracted DN contains apostrophes (for example, `O'Brien`), you must:
+
+1. Use single quotes around the entire DN value.  
+2. Double every apostrophe inside the DN (`O'Brien` → `O''Brien`).  
+
+#### Why this is critical
+
+- The certificate DN contains `CN=Patrick O'Brien`.  
+- YAML single quotes preserve backslashes, which are required for `\,`, `\+`, `\#`, and hex-encoded Unicode.  
+- In YAML single-quoted strings, apostrophes must be escaped by doubling them.  
+- If you use double quotes, YAML can interpret backslashes incorrectly.  
+- If you do not double apostrophes, YAML parsing fails.
     
-    1. **Use single quotes** around the entire DN value
-    2. **Double every apostrophe** inside the DN (`O'Brien` → `O''Brien`)
-    
-    **Why this is critical:**
-    
-    - The certificate DN contains: `CN=Patrick O'Brien`
-    - YAML single quotes preserve backslashes (needed for `\,`, `\+`, `\#`, and hex-encoded Unicode)
-    - But in YAML single quotes, apostrophes must be escaped by doubling them
-    - If you use double quotes, backslashes get interpreted incorrectly
-    - If you don't double apostrophes, YAML parsing fails
-    
-    **Example of what happens if done wrong:**
+    **Example: What Happens if Configured Incorrectly:**
     ```yaml
     # WRONG - will cause YAML parsing error
     adminDN: "CN=Patrick O'Brien,OU=\C3\81rea T\C3\A9cnica,..."
@@ -258,37 +263,37 @@ adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
     adminDN: 'CN=Patrick O''Brien,OU=\C3\81rea T\C3\A9cnica,...'
     ```
 
-**DN with mixed features (Unicode hex-encoded + escaped characters + multiple OUs):**
+DN with mixed features (Unicode hex-encoded + escaped characters + multiple OUs):
 ```yaml
 adminDN: "CN=Mar\C3\ADa Garc\C3\ADa,OU=Dise\C3\B1o \+ Desarrollo,OU=Innovaci\C3\B3n,O=Z\C3\BCrich Financial~Group,L=Madrid,C=ES"
 ```
 
-**Simple DN:**
+Simple DN:
 ```yaml
 adminDN: "CN=Admin,OU=IT,O=Company,C=US"
 ```
 
-**DN with multiple organizational units:**
+DN with multiple organizational units:
 ```yaml
 adminDN: "CN=Database_01,OU=Platform Engineering,OU=Infrastructure,O=Tech Corp,C=US"
 ```
 
-**DN with domain components:**
+DN with domain components:
 ```yaml
 adminDN: "CN=search-admin,DC=internal,DC=corp,DC=local,O=Company,C=US"
 ```
 
-**DN with escaped special characters:**
+DN with escaped special characters:
 ```yaml
 adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
 ```
 
-**DN with Unicode characters (use hex-encoded form extracted from certificate):**
+DN with Unicode characters (use hex-encoded form extracted from certificate):
 ```yaml
 adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
 ```
 
-**Multiple DNs (for multi-admin configurations):**
+Multiple DNs (for multi-admin configurations):
 ```yaml
 adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
 ```
@@ -303,7 +308,7 @@ The Helm chart validates that:
 - Multiple DNs are separated by semicolons (`;`)
 - Special characters are properly escaped
 
-**Valid DNs:**
+Valid DNs:
 ```
 CN=Admin,OU=IT,O=Company,C=US
 CN=François,OU=Área Técnica,O=EUROPA SIP,C=ES
@@ -311,7 +316,7 @@ O=Smith\, Jones & Co.,OU=Research \+ Development,CN=CEO,C=US
 CN=Admin,OU=IT,O=Company,C=US;CN=Backup,OU=IT,O=Company,C=US
 ```
 
-**Invalid DNs:**
+Invalid DNs:
 ```
 admin@company.com                        # Not a DN format
 CN=Admin OU=IT O=Company C=US            # Missing commas between components
@@ -354,9 +359,9 @@ Configure other parameters inside the `custom-search-values.yaml` of the search 
 
 ### OpenSearch configuration settings
 
-Configure the admin certificate DN in your Helm values file. This is the **only** certificate DN you need to configure - the node and client certificate DNs are pre-configured.
+Configure the admin certificate DN in your Helm values file. This is the only certificate DN you need to configure - the node and client certificate DNs are pre-configured.
 
-#### Single admin DN
+ Single admin DN
 
 ```yaml
 configuration:
@@ -365,7 +370,7 @@ configuration:
       adminDN: "CN=Admin,OU=IT,O=Company,C=US"
 ```
 
-#### Multiple admin DNs
+Multiple admin DNs
 
 For environments with multiple administrators, separate each DN with a semicolon (`;`):
 
@@ -389,7 +394,7 @@ configuration:
 
 #### DN with Unicode characters
 
-Unicode characters must be in **hex-encoded form** as extracted from your certificate using `openssl x509 -nameopt RFC2253`:
+Unicode characters must be in hex-encoded form as extracted from your certificate using `openssl x509 -nameopt RFC2253`:
 
 ```yaml
 configuration:
@@ -402,17 +407,17 @@ configuration:
 
 When you configure the `adminDN` in your Helm values:
 
-1. **Certificate DN extraction**: The DN is extracted from your admin certificate using RFC 2253 format
-2. **Helm configuration**: You set the extracted DN in the `adminDN` field
-3. **Automatic configuration**: The OpenSearch entrypoint script automatically:
-   - Writes the DN to `opensearch.yml` under `plugins.security.authcz.admin_dn`
-   - Extracts the Common Name (CN) from the DN (e.g., `Admin` from `CN=Admin,OU=IT,O=Company,C=US`)
-   - Adds that user to the `all_access` role in `roles_mapping.yml`
-   - Grants full administrative permissions
+1. **Certificate DN extraction**: The DN is extracted from your admin certificate using RFC 2253 format.  
+2. **Helm configuration**: You set the extracted DN in the `adminDN` field.  
+3. **Automatic configuration**: The OpenSearch entrypoint script automatically:  
+    - Writes the DN to `opensearch.yml` under `plugins.security.authcz.admin_dn`.  
+    - Extracts the Common Name (CN) from the DN (for example, `Admin` from `CN=Admin,OU=IT,O=Company,C=US`).  
+    - Adds that user to the `all_access` role in `roles_mapping.yml`.  
+    - Grants full administrative permissions.
 
 **You do not need to manually configure role mappings** - they are handled automatically based on the CN in your admin DN.
 
-!!!example "Complete configuration example"
+#### Complete configuration example
     If your admin certificate has DN: `CN=SearchAdmin,OU=Platform,O=TechCorp,C=US`
     
     **In your Helm values:**
@@ -451,11 +456,11 @@ The following DNs are pre-configured in the OpenSearch image and do **not** need
 
 **Why these are typically not changed:**
 
-- **Node certificate**: Uses a wildcard pattern (`CN=opensearch-node*`) that automatically matches all OpenSearch nodes in the cluster. This allows nodes to join the cluster without requiring DN configuration changes. Changing this would require updating the OpenSearch image configuration.
+- **Node certificate** – Uses a wildcard pattern (`CN=opensearch-node*`) that automatically matches all OpenSearch nodes in the cluster. This allows nodes to join the cluster without DN configuration changes. Changing this would require updating the OpenSearch image configuration.
 
-- **Client certificate**: The search middleware is pre-configured to use this exact DN for authentication. The middleware code and OpenSearch role mappings are both configured to recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this would require modifying both the middleware configuration and rebuilding the OpenSearch image.
+- **Client certificate** – The search middleware is pre-configured to use this DN for authentication. The middleware code and OpenSearch role mappings recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this would require modifying the middleware configuration and rebuilding the OpenSearch image.
 
-**For most deployments**, you only need to customize the **admin certificate DN** to match your organization's security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
+**For most deployments**, you only need to customize the **admin certificate DN** to match your organization’s security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
 
 ### Deploying with your admin DN
 
@@ -488,9 +493,10 @@ helm upgrade dx-search ./native-kube/install-hcl-dx-search \
     helm upgrade ... -f admin-dn-values.yaml
     ```
     
-    The `--set` command tries to parse the DN as YAML object properties, causing schema validation errors like "Additional property ST is not allowed".
+    The `--set` command tries to parse the DN as YAML object properties, which can cause schema validation errors such as:  
+`Additional property ST is not allowed`.
 
-### Security settings  
+### Security settings
 
 You can reconfigure security-related configurations such as **Search admin** and **Push admin**.
 
@@ -506,8 +512,8 @@ security:
     pushAdminPassword: "adminpush"  
 ``` 
 
-- **Search admin**: Reconfigure `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.   
-- **Push admin**: Reconfigure `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
+- - **Search admin** – Set `searchAdminUser` to the search admin username and `searchAdminPassword` to the search admin password.  
+- **Push admin** – Set `pushAdminUser` to the push admin username and `pushAdminPassword` to the push admin password.  
 
 ### Split deployment settings  
 
@@ -519,13 +525,14 @@ configuration:
     splitDeployment: false 
 ```  
 
-- `splitDeployment` under the `openSearch` configuration controls whether the OpenSearch roles are split into manager and data pods or not. This configuration is set to `false` by default to ensure all roles are combined into the manager pods and no additional data pods are created. Change the configuration to `true` to create distinct manager data pods which can be configured individually.  
-- `splitDeployment` under the `searchMiddleware` configuration controls whether the data and query load should be split between pods or not.  
+- `splitDeployment` under the `openSearch` configuration controls whether OpenSearch roles are split into manager and data pods.  
+  This setting is `false` by default, which keeps all roles combined in the manager pods and prevents additional data pods from being created. Change the setting to `true` to create separate manager and data pods that can be configured individually.  
+
+- `splitDeployment` under the `searchMiddleware` configuration controls whether data and query load are split between pods. 
 
 ### Replicas settings  
 
-You can reconfigure the default amount of replicas per application.
-
+You can change the default number of replicas for each application.
 ```yaml
 scaling:
   # The default amount of replicas per application
@@ -547,8 +554,9 @@ scaling:
       targetMemoryUtilizationPercentage: 80
 ```  
 
-- If split deployment is enabled, both the `searchMiddlewareQuery` and `searchMiddlewareData` values are considered. In a non-split deployment, only the `searchMiddlewareQuery` value is considered.  
-- You can enable automated scaling by enabling `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. Enter the minimum number of pods in the `minReplicas` field and the maximum number of pods in `maxReplicas`. By default, automated scaling is disabled for both `searchMiddlewareQuery` and `searchMiddlewareData` settings.  
+- If split deployment is enabled, both `searchMiddlewareQuery` and `searchMiddlewareData` values are used. In a non-split deployment, only `searchMiddlewareQuery` is used.  
+
+- You can enable automated scaling by setting `horizontalPodAutoScaler` for both `searchMiddlewareQuery` and `searchMiddlewareData`. Enter the minimum number of pods in `minReplicas` and the maximum in `maxReplicas`. By default, automated scaling is disabled for both settings.  
 
 ### Automated setup of content sources and crawlers
 
@@ -567,14 +575,18 @@ configuration:
       enabled: true
 ```  
 
-You can enable an automated setup for content sources and crawlers. This setting is enabled by default for all content sources and crawlers. This includes the following content sources:
-- 'dam' for Digital Asset Management (`dam_default_content_source` - `75024f9c-2579-58f1-3new-5706ba2a62fc`)
-- 'jcr' for Java Content Repository (`jcr_default_content_source` - `680f8805-92f3-45d4-a900-8f28c7160935`)
-- 'portal' for Portal (`portal_default_content_source` - `5d2d2fa4-8f71-435d-9341-c3034ff9c509`)
-- 'wcm' for Web Content Manager (`wcm_default_content_source` - `972369e7-041c-4459-9211-069f4917c1ba`)
-- 'people' for People Service (`people_default_content_source` - `81f17efc-2a4a-4247-ae0b-3bb99eb62643`)
+You can enable an automated setup for content sources and crawlers.  
+This setting is enabled by default for all content sources and crawlers.  
 
-For each of the content sources, you can enable or disable the automated setup by setting the `enabled` field to `true` or `false`. It is possible to override the default settings for `uuid`, `aclLookupHost`, and `aclLookupPath` for each content source. If left empty, the setup will automatically detect default values by inspecting the existing DX deployment.
+The following content sources are included:
+
+- `dam`    – Digital Asset Management (`dam_default_content_source` - `75024f9c-2579-58f1-3new-5706ba2a62fc`)  
+- `jcr`    – Java Content Repository (`jcr_default_content_source` - `680f8805-92f3-45d4-a900-8f28c7160935`)  
+- `portal` – Portal (`portal_default_content_source` - `5d2d2fa4-8f71-435d-9341-c3034ff9c509`)  
+- `wcm`    – Web Content Manager (`wcm_default_content_source` - `972369e7-041c-4459-9211-069f4917c1ba`)  
+- `people` – People Service (`people_default_content_source` - `81f17efc-2a4a-4247-ae0b-3bb99eb62643`)
+
+For each content source, you can enable or disable automated setup by setting the `enabled` field to `true` or `false`.  You can override the default settings for `uuid`, `aclLookupHost`, and `aclLookupPath` for each content source. If these fields are left empty, the setup automatically detects default values by inspecting the existing DX deployment.
 
 ### Allowlisting for file types in the file processor 
 
@@ -595,7 +607,7 @@ configuration:
 
 ### Common fields mapping for fallback  
 
-Common field mappings are the default mappings for WCM, DAM, JCR, PORTAL, and PEOPLE in the `documentObject` parameter. You can find appropriate mappings for each field in this parameter. Use an empty string if none of the mappings apply. For more information about the `documentObject` parameter, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
+Common field mappings are the default mappings for WCM, DAM, JCR, PORTAL, and PEOPLE in the `documentObject` parameter. You can find the appropriate mapping for each field in this parameter. Use an empty string if none of the mappings apply. For more information about the `documentObject` parameter, see [Indexed documents](../../../../../manage/container_configuration/configure_opensearch/architectural_overview.md#indexed-documents).
 
 ```yaml
 commonFieldMappings:
@@ -633,14 +645,15 @@ commonFieldMappings:
 
 Refer to the following list for more information about the fields:
 
-- `wcm`, `dam`, `jcr`, `portal`, and `people` are the types of content source currently supported.  
+- `wcm`, `dam`, `jcr`, `portal`, and `people` are the content source types currently supported.  
 - Names of common field mappings such as `title`, `description`, `type`, and `tags` cannot be changed.  
-- Apart from `title`, `description`, `type` and `tags`, additional common fields are not allowed.  
-- There are default values defined to map different content sources such as `wcm`, `dam`, `jcr`, and `portal` to different common fields such as `title`, `description`, `type` and `tags`. You can change these default mapping values.
+- Apart from `title`, `description`, `type`, and `tags`, additional common fields are not allowed.  
+- Default values map different content sources (`wcm`, `dam`, `jcr`, `portal`) to common fields (`title`, `description`, `type`, `tags`).  
+  You can change these default mapping values as needed.
 
 ### Persistent Volume size requests  
 
-The default storage size for OpenSearch is set to `1Gi`. You can adjust the storage size for more indexing and larger deployments.
+The default storage size for OpenSearch is `1Gi`. You can increase the storage size for larger deployments or to support more indexing.
 
 ```yaml
 # Persistent Volume Setup
@@ -656,21 +669,14 @@ volumes:
 
 ## Running Helm install
 
-!!!important
-    Modification to any files (for example, chart.yaml, templates, crds) in `hcl-dx-search-vX.X.X\_XXXXXXXX-XXXX.tar.gz`, except `custom-values.yaml` or `values.yaml`, is not supported.
+!!! important
+    Modifying any files (for example, `chart.yaml`, templates, CRDs) in `hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz`—except `custom-values.yaml` or `values.yaml`—is not supported.
 
 Run the installation of your prepared configurations using Helm with the following command:
 
 ```sh
 # Helm install command
 helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-release-name path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz
-```
-Where:
-
-- The `my-namespace` is the namespace where your HCL DX 9.5 deployment is installed to.
-- The `-f path/to/your/custom-search-values.yaml` must point to the custom-search-values.yaml you created, which contains all deployment configuration.
-- `your-release-name` is the Helm release name and prefixes all resources created in that installation such as Pods, Services, and others.
-- `path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL DX 9.5 Search Helm Chart that you extracted as described in the planning and preparation steps.
 
 ## Configuring DX install to pass through search
 
