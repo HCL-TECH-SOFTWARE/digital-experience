@@ -125,7 +125,7 @@ If AI analysis-related configurations require customization, log in to the WebSp
 ### OpenAI ChatGPT specific custom configurations
 
 1. ```OPENAI_MODEL```: The currently supported AI model is ```gpt-4o```. However, AI model can be overriden by overriding this property.
-2. ```OPENAI_MAX_TOKENS```: Set positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response and defaults to ```256```.
+2. ```OPENAI_MAX_TOKENS```: Set a positive integer value for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response and defaults to ```256```.
 3. ```OPENAI_TEMPERATURE```: Set positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text. Higher values produce more diverse and random output. Lower values produce more focused and deterministic output.
 4. ```OPENAI_HOST```: The host to connect to for AI calls, defaults to ```api.openai.com```. Configuring this could allow you to connect to a different service that offers an OpenAI-compatible API, such as LiteLLM.
 5. ```OPENAI_SCHEME```: The scheme which AI calls will use, defaults to ```https```.
