@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- WCM - Additional configuration options for custom AI providers
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -76,6 +77,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf234) section.
+
+### WCM - Additional configuration options for custom AI providers
+
+=== "Containers"
+    You can now use two additional configuration parameters for custom AI providers: `OPENAI_HOST` and `OPENAI_SCHEME`. Use `OPENAI_HOST` to connect to a different AI analysis host that offers an OpenAI-compatible API, such as LiteLLM. Use `OPENAI_SCHEME` to set the scheme for AI calls. For more information on these configuration options, refer to [OpenAI ChatGPT specific custom configurations](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
+
+=== "On-Premises"
+    You can now use two additional configuration parameters for custom AI providers: `OPENAI_HOST` and `OPENAI_SCHEME`. Use `OPENAI_HOST` to connect to a different AI analysis host that offers an OpenAI-compatible API, such as LiteLLM. Use `OPENAI_SCHEME` to set the scheme for AI calls. For more information on these configuration options, refer to [OpenAI ChatGPT specific custom configurations](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
 
 ## Digital Experience 8.5 and 9.0 Versions
 

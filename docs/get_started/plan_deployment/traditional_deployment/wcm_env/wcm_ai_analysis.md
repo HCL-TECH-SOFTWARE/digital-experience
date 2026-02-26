@@ -1,16 +1,15 @@
 # WCM Content AI Analysis
 
-Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment. You can also learn  steps for configuring a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available in HCL Digital Experience 9.5 Container Update CF213 and later.
+Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment, and how to set up a content AI provider. This feature is available in HCL Digital Experience (DX) 9.5 Container Update CF213 and later. The following table outlines AI capabilities by release:
 
-!!!note
-	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
+| Release | Feature updates |
+| :--- | :--- |
+| **CF224** | AI Workflows and AI Translation are available. |
+| **CF221** | The default AI model is updated to `gpt-4o`. |
+| **CF214** | Custom AI implementations are supported. |
+| **CF213** | OpenAI ChatGPT is the supported content AI provider. |
 
-Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
-Starting CF224, AI Workflows and AI Translation are available.
-
-## Content AI provider overview
-
-### OpenAI ChatGPT overview
+## Content AI provider - Open AI's ChatGPT
 
 OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground){target="_blank"}, you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
@@ -46,7 +45,10 @@ To enable content AI analysis:
 
 ### Configuring an AI class for a custom content AI provider
 
-Only administrators can configure an AI class to use a custom content AI provider. Note that if you wish to connect to an AI provider (such as LiteLLM) that is API-compatible with OpenAI models, you may be able to use the default provider class and just change its configuration parameters (see below).
+Only administrators can configure an AI class to use a custom content AI provider.
+
+!!!note
+	If you wish to connect to an AI provider (such as LiteLLM) that is API-compatible with OpenAI models, you may be able to use the default provider class and just change its configuration parameters (see below).
 
 1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration```. Optionally, starting CF224, you can also implement the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
