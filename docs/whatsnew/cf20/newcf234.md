@@ -44,13 +44,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
 
     !!!note 
-        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
 
 === "On-Premises"
     The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
 
     !!!note 
-        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
 
 ### My HCLSoftware delivery portal
 
