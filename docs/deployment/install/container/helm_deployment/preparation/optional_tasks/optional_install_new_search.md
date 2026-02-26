@@ -165,6 +165,24 @@ The following attribute types are supported and can appear in any order:
 
 If your DN contains special characters in attribute values, escape them according to RFC 2253 rules.
 
+Different escaping rules apply to OpenSSL `-subj` format (certificate generation) vs RFC 2253 format (Helm values). Use this comprehensive reference:
+
+| Original Value | In OpenSSL `-subj` Command | In Helm Chart (RFC 2253) | Notes |
+|----------------|----------------------------|--------------------------|-------|
+| `Smith, Jones & Co.` | `Smith, Jones & Co.` | `Smith\, Jones & Co.` | Comma is separator in RFC 2253, must escape |
+| `Research + Development` | `Research \+ Development` | `Research \+ Development` | Plus sign needs escaping in both formats |
+| `Test #1` | `Test \#1` | `Test \#1` | Hash needs escaping in both formats |
+| `Path\To\Resource` | `Path\\To\\Resource` | `Path\\To\\Resource` | Backslash needs escaping in both formats |
+| `"Special" Names` | `\"Special\" Names` | `\"Special\" Names` | Quotes need escaping in both formats |
+| `Names & Associates` | `Names \& Associates` | `Names & Associates` | Ampersand optional in OpenSSL, not needed in RFC 2253 |
+| `O'Brien` | `O'Brien` | `O''Brien` (special YAML handling) | No RFC 2253 escape, but requires YAML single quotes with doubled apostrophes |
+| `Test-User` | `Test-User` | `Test-User` | Hyphen never needs escaping |
+| `Test.User` | `Test.User` | `Test.User` | Period never needs escaping |
+| `Test_User` | `Test_User` | `Test_User` | Underscore never needs escaping |
+| `Test User` | `Test User` | `Test User` | Space never needs escaping |
+| `Test~User` | `Test~User` | `Test~User` | Tilde never needs escaping |
+
+
 | Character | Escape Sequence | Example Value | Escaped in Helm Chart |
 |-----------|----------------|---------------|----------------------|
 | Comma (`,`) | `\,` | `Smith, Jones & Co.` | `Smith\, Jones & Co.` |
@@ -181,7 +199,48 @@ If your DN contains special characters in attribute values, escape them accordin
 - Period (`.`)  
 - Underscore (`_`)  
 - Space (` `)  
-- Apostrophe / single quote (`'`) – e.g., `O'Brien`, `O'Reilly`
+- Apostrophe / single quote (`'`) – for example, O'Brien, O'Reilly 
+
+**Key differences:**
+
+- Comma (`,`): Not escaped in OpenSSL (because `/` is the separator); MUST be escaped in RFC 2253 (because `,` is the separator)  
+- Ampersand (`&`): May be escaped in OpenSSL; not needed in RFC 2253  
+- Apostrophe (`'`): No escaping in either format, but requires special YAML handling (see [Complete DN examples section below](#complete-dn-examples))
+
+#### DN format differences: OpenSSL vs RFC 2253
+
+#### Why certificate generation and Helm values use different escaping
+
+Customers often wonder why certificate generation commands use different escaping than Helm values. This is because they use different DN formats:
+
+**OpenSSL `-subj` format (for certificate generation):**
+
+- Uses `/` as component separators (slash-separated)  
+- Uses **least significant first** order: `/C=US/O=Company/CN=Name`  
+- **Commas don't need escaping** because `/` is the separator  
+- Escapes other special characters as needed: `\"`, `\#`, `\\`, `\+`  
+
+**RFC 2253 format (for Helm values and extracted DNs):**
+
+- Uses `,` as component separators (comma-separated)  
+- Uses most significant first order: `CN=Name,O=Company,C=US`  
+- Commas MUST be escaped because `,` is the separator  
+- Escapes other special characters as needed: `\"`, `\#`, `\\`, `\+`
+
+    **Example comparison:**
+
+    | Format | DN | Comma handling |
+    |--------|-----|----------------|
+    | OpenSSL `-subj` | `/O=Smith, Jones & Co./CN=Admin` | Comma not escaped |
+    | RFC 2253 | `O=Smith\, Jones & Co.,CN=Admin` | Comma escaped |
+
+    OpenSSL automatically converts between formats, so you only need to worry about using the correct escaping for each context.
+
+***Simple rule for customers:**
+
+1. Generate certificates with OpenSSL format (slash-separated, commas not escaped)
+2. Extract DNs with RFC 2253 format (see [Extracting the DN from your certificate](#extracting-the-dn-from-your-certificate))
+3. Use extracted DN in Helm values (comma-separated, commas escaped)
 
 #### Unicode support
 
@@ -206,8 +265,8 @@ The value you configure in Helm must match this hex-encoded output exactly.
 
 YAML quoting rules:
 
-- Use **double quotes** for most DNs (simpler syntax).  
-- Use **single quotes** when a DN contains apostrophes.  
+- Use double quotes for most DNs (simpler syntax).  
+- Use single quotes when a DN contains apostrophes.  
   Double each apostrophe (`O''Brien`).  
 - Single quotes preserve backslashes literally.  
   This is required for `\,`, `\+`, `\#`, and hex-encoded Unicode.
@@ -231,7 +290,8 @@ It demonstrates all special cases in a real-world scenario:
 Ready to deploy? See [Deploying with your admin DN](#deploying-with-your-admin-dn)  
 for the complete Helm upgrade commands using this exact DN.
 
-DN with Apostrophe (Critical – Use Single Quotes and Double Apostrophes):
+#### DN with apostrophe (CRITICAL - must use single quotes and double apostrophes)
+When a DN contains an apostrophe, see example:
 ```yaml
 adminDN: 'CN=Patrick O''Brien,OU=Legal,O=O''Reilly Media,C=IE'
 ```
@@ -244,6 +304,8 @@ When your extracted DN contains apostrophes (for example, `O'Brien`), you must:
 2. Double every apostrophe inside the DN (`O'Brien` → `O''Brien`).  
 
 #### Why this is critical
+
+When defining certificate DNs in YAML, proper escaping is essential to avoid parsing errors. 
 
 - The certificate DN contains `CN=Patrick O'Brien`.  
 - YAML single quotes preserve backslashes, which are required for `\,`, `\+`, `\#`, and hex-encoded Unicode.  
@@ -460,7 +522,7 @@ The following DNs are pre-configured in the OpenSearch image and do **not** need
 
 - **Client certificate** – The search middleware is pre-configured to use this DN for authentication. The middleware code and OpenSearch role mappings recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this would require modifying the middleware configuration and rebuilding the OpenSearch image.
 
-**For most deployments**, you only need to customize the **admin certificate DN** to match your organization’s security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
+**For most deployments**, you only need to customize the admin certificate DN to match your organization’s security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates) above.
 
 ### Deploying with your admin DN
 
