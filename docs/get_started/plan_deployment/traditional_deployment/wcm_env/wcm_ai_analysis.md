@@ -1,6 +1,6 @@
 # WCM Content AI Analysis
 
-Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment, and how to set up a content AI provider. This feature is available in HCL Digital Experience (DX) 9.5 Container Update CF213 and later. The following table outlines AI capabilities by release:
+Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment, and how to set up a content AI provider. This feature is available from HCL Digital Experience (DX) 9.5 Container Update CF213 onward. The following table outlines AI capabilities by release:
 
 | Release | Feature updates |
 | :--- | :--- |
