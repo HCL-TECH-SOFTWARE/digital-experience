@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document include detailed instructions to determine the virtual portal (VP) name that is associated with a virtual portal objectID (oid).
+This document includes detailed instructions to determine the virtual portal (VP) name that is associated with a virtual portal objectID (oid).
 
 ## Instructions
 
@@ -20,17 +20,17 @@ At the end of the created **VirtualPortals.txt** file, there are entries that sh
 
 ```log
 [wsadmin] VirtualPortal:  
-[wsadmin] Title: jdr  
-[wsadmin] Description: jdr virtual portal  
+[wsadmin] Title: myVP  
+[wsadmin] Description: my virtual portal  
 [wsadmin] Realm: defaultWIMFileBasedRealm  
 [wsadmin] Object ID: Z18_MQH41AG0MO4980A5CPQEPC0000  
 [wsadmin] Hostname: <cannot be retrieved>  
-[wsadmin] Context: jdr  
+[wsadmin] Context: myVP  
 [wsadmin] Short ID: 28549  
 [wsadmin] _____________________________________________________  
 ```
 
-The listing above does not include the workspace ID (each VP has unique workspace). If the workspace ID is known, the following query may help to find out more:
+The listing above does not include the workspace ID (each VP has a unique workspace). If the workspace ID is known, the following query may help to find out more:
 
 ```sql
 SELECT * FROM JCR.ICMSTCJRWS WHERE WSID = <your wsid>
