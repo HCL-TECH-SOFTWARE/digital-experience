@@ -1,4 +1,4 @@
-# How to enable or disable managed pages on HCL Digital Experience
+# How to enable or disable managed pages on HCL DX
 
 ## Applies to
 
@@ -6,15 +6,15 @@
 
 ## Introduction
 
-When you create a new installation of HCL Digital Experience 9.5, managed pages are enabled by default. However, you can also manually disable and enable the feature as needed.
+When you create a new installation of HCL Digital Experience (DX) 9.5, the Managed Pages feature is enabled by default. This article describes how to enable or disable this feature.
 
 ## Instructions
 
-Here are the instructions to disable or enable manage pages.
+Refer to the following steps to enable or disable the Managed Pages feature.
 
-### Disable manages pages (independent on the current state)
+### Disabling Managed Pages (independent of the current state)
 
-1. Back up Portal file system and database
+1. Back up your DX file system and database.
 
 2. Run the following task:
 
@@ -22,55 +22,66 @@ Here are the instructions to disable or enable manage pages.
     ./ConfigEngine.sh disable-managed-pages -DPortalAdminPwd=<password> -DWasPassword=<password>  
     ```
 
-    For details, please check [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md){target="_blank"}.
+    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the Web Content Manager (WCM) repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md).
 
-3. Verify **managed.pages** property is **false** in **WP_ConfigService**.
+3. In the WebSphere Integrated Solutions Console, verify that the **managed.pages** property is set to `false` in **WP_ConfigService**.
 
-4. Delete Portal Site Library in base portal and all virtual portals.
+    1. Log in to the WebSphere Integrated Solutions Console as an administrator.
+    2. Navigate to **Resources > Resource Environment > Resource Environment Providers**.
+    3. Select **WP_ConfigService** from the list of providers.
+    4. Under **Additional Properties**, click **Custom properties**.
+        5. Locate the **managed.pages** property and verify that the **Value** is set to `false`.
 
-5. Delete all syndicator and subscribers for base portal and all virtual portals that reference Portal Site library.
+4. Delete the Portal Site library in the base portal and all virtual portals to remove the legacy managed page content metadata.
 
-6. Restart the HCL DX server.
+5. Delete all WCM syndicators and subscribers for the base portal and all virtual portals that reference the Portal Site library to prevent synchronization errors.
 
-### Enable or re-enable manages pages
+6. Restart the HCL DX server to apply the configuration changes and clear system caches.
 
-1. Back up Portal file system and database
+### Enabling or re-enabling Managed Pages
 
-2. Run the task:
+1. Back up your DX file system and database.
 
-    ```shell
-    ./ConfigEngine.sh enable-managed-pages -DPortalAdminPwd=<password> -DWasPassword=<password>
+2. Run the following task:
+
+    ```shell  
+    ./ConfigEngine.sh disable-managed-pages -DPortalAdminPwd=<password> -DWasPassword=<password>  
     ```
 
-    For details, please check: [Enabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md){target="_blank"}.  
+    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the WCM repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md).
 
-3. Verify **managed.pages** property is **true** in **WP_ConfigService**
+3. In the WebSphere Integrated Solutions Console, verify that the **managed.pages** property is set to `true` in **WP_ConfigService**.
 
-4. Run this task:
+    1. Log in to the WebSphere Integrated Solutions Console as an administrator.
+    2. Navigate to **Resources > Resource Environment > Resource Environment Providers**.
+    3. Select **WP_ConfigService** from the list of providers.
+    4. Under **Additional Properties**, click **Custom properties**.
+    5. Locate the **managed.pages** property and verify that the **Value** is set to `true`.
+
+4. Run the following task to initialize the Managed Pages structure and create the necessary site nodes for your virtual portals:
 
     ```shell
     ./ConfigEngine.sh create-virtual-portal-site-nodes -DPortalAdminPwd=<password> -DWasPassword=<password>
     ```
 
-5. Run this task to create page nodes on base portal:
+5. Run the following task to create the required page nodes and WCM content mappings on the base portal:
 
     ```shell
     ./ConfigEngine.sh create-page-nodes -DPortalAdminPwd=<password> -DWasPassword=<password>
     ```
 
-6. Run this task for each of the virtual portals, one at a time:
+6. Run the following task for each virtual portal, one at a time, to create its specific page nodes:
 
     ```shell
     ./ConfigEngine.sh create-page-nodes -DPortalAdminPwd=<password> -DWasPassword=<password> -DVirtualPortalContext=context
     ```
 
     !!!note
-        Use the flag -DVirtualPortalHost if VP is defined by host name instead of context
+        Use the `-DVirtualPortalHost` flag if the virtual portal is defined by a host name instead of a context.
 
-7. Restart the HCL DX server
+7. Restart the HCL DX server to finalize the configuration changes and initialize the new page services.
 
-8. Run the online event log reset for the Portal Site library on Base and all virtual portals.  
-    For instructions, see: [Resetting the web content event log](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_reset_event_log.md){target="_blank"}
+8. Run the online event log reset for the Portal Site library on the base portal and all virtual portals to synchronize the content state. For instructions, refer to [Resetting the web content event log](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_reset_event_log.md).
 
-!!!note
-    To sync Portal pages with WCM, **versioningStrategy.PortalPage=always** needs to be set in **WCM_WCMConfigService**.  
+    !!!note
+        To sync Portal pages with WCM, set the `versioningStrategy.PortalPage=always` flag in **WCM_WCMConfigService**.  
