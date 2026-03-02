@@ -220,50 +220,6 @@ CN=Admin,OU=IT,O=Company,C=United States # Country code must be 2 letters
 CN=Admin,OU=IT,O=Smith, Jones,C=US       # Comma inside value must be escaped (should be O=Smith\, Jones)
 ```
 
-### Configuration examples
-
-- Mixed features (Unicode hex-encoded, escaped characters, and multiple OUs):
-
-    ```yaml
-    adminDN: "CN=Mar\C3\ADa Garc\C3\ADa,OU=Dise\C3\B1o \+ Desarrollo,OU=Innovaci\C3\B3n,O=Z\C3\BCrich Financial~Group,L=Madrid,C=ES"
-    ```
-
-- Simple DN:
-
-    ```yaml
-    adminDN: "CN=Admin,OU=IT,O=Company,C=US"
-    ```
-
-- Multiple organizational units:
-
-    ```yaml
-    adminDN: "CN=Database_01,OU=Platform Engineering,OU=Infrastructure,O=Tech Corp,C=US"
-    ```
-
-- Domain components:
-
-    ```yaml
-    adminDN: "CN=search-admin,DC=internal,DC=corp,DC=local,O=Company,C=US"
-    ```
-
-- Escaped special characters:
-
-    ```yaml
-    adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
-    ```
-
-- DN with Unicode characters (use hex-encoded form extracted from certificate):
-
-    ```yaml
-    adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
-    ```
-
-- Multiple DNs (for multi-admin configurations):
-
-    ```yaml
-    adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
-    ```
-
 ## Preparing the `custom-search-values.yaml`
 
 To configure your search deployment, you have to prepare your `custom-search-values.yaml` which contains all configurable settings. This custom values file must only contain the parameters that you want to overwrite with your preferred settings.
@@ -301,49 +257,49 @@ Configure other parameters inside the `custom-search-values.yaml` of the search 
 
 Configure the admin certificate DN in your Helm values file. For example:
 
-- Single admin DN
+- Simple DN:
 
     ```yaml
-    configuration:
-      openSearch:
-        security:
-          adminDN: "CN=Admin,OU=IT,O=Company,C=US"
+    adminDN: "CN=Admin,OU=IT,O=Company,C=US"
     ```
 
-- Multiple admin DNs
-
-    For environments with multiple administrators, separate each DN with a semicolon (`;`):
+- Multiple organizational units:
 
     ```yaml
-    configuration:
-      openSearch:
-        security:
-          adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
+    adminDN: "CN=Database_01,OU=Platform Engineering,OU=Infrastructure,O=Tech Corp,C=US"
     ```
 
-- DN with special characters
-
-    If your DN contains special characters, escape them according to the [special character escaping](#special-character-escaping) rules:
+- Domain components:
 
     ```yaml
-    configuration:
-      openSearch:
-        security:
-          adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
+    adminDN: "CN=search-admin,DC=internal,DC=corp,DC=local,O=Company,C=US"
     ```
 
-- DN with Unicode characters
-
-    Unicode characters must be in hex-encoded form as extracted from your certificate using `openssl x509 -nameopt RFC2253`:
+- Escaped special characters:
 
     ```yaml
-    configuration:
-      openSearch:
-        security:
-          adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
+    adminDN: "CN=CEO,O=Smith\, Jones \+ Associates,OU=Research \+ Development,C=US"
     ```
 
-When you configure the adminDN in your Helm values, the OpenSearch entrypoint script reads this string and automatically writes it into the opensearch.yml file under the `plugins.security.authcz.admin_dn` parameter. During initialization, the script also parses the string to extract the Common Name (CN) and adds it to the `all_access` role in the `roles_mapping.yml` file.
+- DN with Unicode characters (use hex-encoded form extracted from certificate):
+
+    ```yaml
+    adminDN: "CN=Fran\C3\A7ois Dubois,OU=\C3\81rea T\C3\A9cnica,O=EUROPA SIP,C=ES"
+    ```
+
+- Mixed features (Unicode hex-encoded, escaped characters, and multiple OUs):
+
+    ```yaml
+    adminDN: "CN=Mar\C3\ADa Garc\C3\ADa,OU=Dise\C3\B1o \+ Desarrollo,OU=Innovaci\C3\B3n,O=Z\C3\BCrich Financial~Group,L=Madrid,C=ES"
+    ```
+
+- Multiple DNs (for multi-admin configurations):
+
+    ```yaml
+    adminDN: "CN=Admin,OU=IT,O=Company,C=US;CN=Backup-Admin,OU=Operations,O=Company,C=US"
+    ```
+
+When you configure the `adminDN` in your Helm values, the OpenSearch entrypoint script reads this string and automatically writes it into the opensearch.yml file under the `plugins.security.authcz.admin_dn` parameter. During initialization, the script also parses the string to extract the Common Name (CN) and adds it to the `all_access` role in the `roles_mapping.yml` file.
 
 For example, when you configure the `CN=SearchAdmin,OU=Platform,O=TechCorp,C=US` DN as administrator:
 
