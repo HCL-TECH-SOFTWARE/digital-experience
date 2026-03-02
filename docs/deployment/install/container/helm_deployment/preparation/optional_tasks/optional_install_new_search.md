@@ -41,7 +41,7 @@ The following types of certificates are required:
 |-----------|-----------|-------------|
 |Admin|Used for OpenSearch administrative operations and configuration.|Configurable in the `adminDN` field of your Helm chart.|
 |Node|Used for communication between OpenSearch cluster nodes.|Pre-configured as `CN=opensearch-node*` (wildcard pattern).|
-|Client|Used by the search middleware to authenticate with OpenSearch.|Pre-configured as `CN=opensearch-client,OU=UNIT,O=ORG,C=US`.|
+|Client|Used by the search middleware to authenticate with OpenSearch.|Pre-configured as `CN=opensearch-client`.|
 
 !!! important
     Only the admin certificate DN must be customized in your Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and work automatically if you follow the certificate generation commands.
