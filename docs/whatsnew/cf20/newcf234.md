@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DAM - New actions available in Database Analysis
 - Helm values updates
+- Search V2 - Expanded support for Certificate DNs
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -116,6 +117,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf234).
+
+### Search V2 - Expanded support for Certificate DNs
+
+=== "Containers"
+    The Search V2 backend now supports comprehensive Distinguished Name (DN) validation and role mapping for administrative certificates. This update ensures compatibility with complex organizational security standards by supporting seven core attribute types: `CN`, `OU`, `O`, `L`, `ST`, `C`, and `DC`.
+
+    The OpenSearch entrypoint script now automatically parses the Common Name (CN) from your `adminDN` and maps it to the `all_access` administrative role in the security configuration. For more information refer to [Installing the Search V2 backend](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
 
 ### WAS, JDK, and iFix versions
 
