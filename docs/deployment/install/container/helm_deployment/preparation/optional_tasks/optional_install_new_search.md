@@ -177,8 +177,9 @@ If DN attribute values contain special characters, escape them according to RFC 
 
 Proper YAML quoting is essential to prevent parsing errors when moving your RFC 2253 string into a Helm configuration.
 
-- Enclose the DN in double quotes (`"..."`). This handles most scenarios, including standard backslash escaping.
-- If your DN contains an apostrophe (such as `O'Brien`), you must enclose the entire DN in single quotes and double the internal apostrophe (`O''Brien`). Single quotes ensure YAML preserves the literal backslashes required for escaped commas and hex-encoded Unicode.
+- Wrap the entire DN in single quotes (`' '`) to ensure backslashes are treated as literal text.
+- Double any internal apostrophes (for example, `O''Brien`) when using single quotes.
+- Avoid double quotes (`" "`) to prevent YAML from mangling hex-encoded Unicode or escaped characters.
 
 For example:
 
