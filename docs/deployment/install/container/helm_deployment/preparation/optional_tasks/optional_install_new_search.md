@@ -337,7 +337,7 @@ The following DNs are pre-configured in the OpenSearch image and do not need to 
 | Certificate Type | Pre-configured DN Pattern | Purpose |
 |------------------|---------------------------|---------|
 | Node certificate | `CN=opensearch-node*` | Uses a wildcard pattern (`CN=opensearch-node*`) that automatically matches all OpenSearch nodes in the cluster. This allows nodes to join the cluster without DN configuration changes. Changing this requires updating the OpenSearch image configuration. |
-| Client certificate | `CN=opensearch-client,OU=UNIT,O=ORG,C=US` | The search middleware is pre-configured to use this DN for authentication. The middleware code and OpenSearch role mappings recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this requires modifying the middleware configuration and rebuilding the OpenSearch image. |
+| Client certificate | `CN=opensearch-client` | The search middleware is pre-configured to use this DN for authentication. The middleware code and OpenSearch role mappings recognize `opensearch-client` as a trusted user with appropriate permissions. Changing this requires modifying the middleware configuration and rebuilding the OpenSearch image. |
 
 For most deployments, you only need to customize the admin certificate DN to match your organization’s security requirements. The node and client certificates work out-of-the-box when you follow the [certificate generation commands](#generating-certificates).
 
