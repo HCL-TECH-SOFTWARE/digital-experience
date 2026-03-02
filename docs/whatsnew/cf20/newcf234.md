@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- WCM AI Analysis - Additional configuration options for custom AI providers
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - New actions available in Database Analysis
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -43,13 +45,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
 
     !!!note 
-        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
 
 === "On-Premises"
     The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
 
     !!!note 
-        Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
 
 ### My HCLSoftware delivery portal
 
@@ -77,6 +81,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf234) section.
 
+### WCM AI Analysis - Additional configuration options for custom AI providers
+
+=== "Containers"
+    You can now use two additional configuration parameters to connect the default AI provider to alternative, OpenAI-compatible services: `OPENAI_HOST` and `OPENAI_SCHEME`. Use `OPENAI_HOST` to connect to a different AI analysis host. Use `OPENAI_SCHEME` to set the protocol scheme for AI calls. For more information on these configuration options, refer to [OpenAI ChatGPT specific custom configurations](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
+
+=== "On-Premises"
+    You can now use two additional configuration parameters to connect the default AI provider to alternative, OpenAI-compatible services: `OPENAI_HOST` and `OPENAI_SCHEME`. Use `OPENAI_HOST` to connect to a different AI analysis host. Use `OPENAI_SCHEME` to set the protocol scheme for AI calls. For more information on these configuration options, refer to [OpenAI ChatGPT specific custom configurations](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -94,6 +106,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - New actions available in Database Analysis
+
+=== "Containers"
+    New actions are now available in the Database Analysis feature of HCL Digital Asset Management (DAM). You can now retrigger failed operations, generate access references, and move orphaned media items into your desired collections. For more information on these new actions, refer to [Operations Metrics](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#operations-metrics), [Collections Missing Access Reference ID](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#collections-missing-access-reference-id), and [Media Items not in Collection](../../manage_content/digital_assets/usage/managing_dam/database_analysis.md#media-items-not-in-collection).
 
 ### Helm values updates
 
