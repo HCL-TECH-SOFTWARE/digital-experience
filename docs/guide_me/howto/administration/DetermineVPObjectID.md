@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article describes how to determine the name of a virtual portal (VP) using its ObjectID (OID).
+When reviewing diagnostic logs, database records, or XMLAccess scripts, you may encounter a virtual portal (VP) referenced only by its unique ObjectID (OID). This article describes how to determine the name of a VP using its OID.
 
 ## Instructions
 
