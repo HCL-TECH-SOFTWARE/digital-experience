@@ -1,11 +1,11 @@
 ---
-title: Register for Access
+title: Register for access
 tags: 
     - Flexnet
     - download
 hide: tags
 ---
-# How to Register for Access
+# How to register for access
 
 This guide describes a comprehensive procedure to successfully Register and Access the HCL Software License & Delivery site, Locate and Download DX products and steps on how to open a support ticket in case you encounter any issue with getting the software.
 
@@ -20,7 +20,7 @@ The license portal provides both Software distribution and management of your So
 HCL Software has 3 main sites that require separate login. As we are working towards Single Sign On for the different sites, but have not yet implemented this, currently each site has a separate login.
 
 * The [E-commerce site](https://buy.hcltechsw.com/) for Software Contract Renewals.
-* The [License & Delivery site](https://hclsoftware.flexnetoperations.com/flexnet/operationsportal/logon.do) for managing Software Licenses and providing you with Software Downloads.
+* The [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} for managing Software Licenses and providing you with Software Downloads.
 * The [Customer Support site](https://support.hcltechsw.com/csm) for working with HCL Support on Support Cases.
 
 Indicated below are the steps on how to register as an HCL Customer or as an HCL Business Partner.
