@@ -22,7 +22,7 @@ Refer to the following steps to enable or disable the Managed Pages feature.
     ./ConfigEngine.sh disable-managed-pages -DPortalAdminPwd=<password> -DWasPassword=<password>  
     ```
 
-    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the Web Content Manager (WCM) repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md).
+    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the Web Content Manager (WCM) repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md){target="_blank"}.
 
 3. In the WebSphere Integrated Solutions Console, verify that the **managed.pages** property is set to `false` in **WP_ConfigService**.
 
@@ -48,7 +48,7 @@ Refer to the following steps to enable or disable the Managed Pages feature.
     ./ConfigEngine.sh disable-managed-pages -DPortalAdminPwd=<password> -DWasPassword=<password>  
     ```
 
-    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the WCM repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md).
+    This command disables the Managed Pages feature by updating the configuration flag and decoupling the DX page model from the WCM repository. For more information, refer to [Disabling managed pages](../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_disable.md){target="_blank"}.
 
 3. In the WebSphere Integrated Solutions Console, verify that the **managed.pages** property is set to `true` in **WP_ConfigService**.
 
@@ -81,7 +81,7 @@ Refer to the following steps to enable or disable the Managed Pages feature.
 
 7. Restart the HCL DX server to finalize the configuration changes and initialize the new page services.
 
-8. Run the online event log reset for the Portal Site library on the base portal and all virtual portals to synchronize the content state. For instructions, refer to [Resetting the web content event log](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_reset_event_log.md).
+8. Run the online event log reset for the Portal Site library on the base portal and all virtual portals to synchronize the content state. For instructions, refer to [Resetting the web content event log](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_config_reset_event_log.md){target="_blank"}.
 
     !!!note
         To sync Portal pages with WCM, set the `versioningStrategy.PortalPage=always` flag in **WCM_WCMConfigService**.  
