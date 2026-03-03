@@ -44,4 +44,4 @@ These entries do not include the workspace ID, as each virtual portal is assigne
 SELECT * FROM JCR.ICMSTCJRWS WHERE WSID = '<your wsid>'
 ```
 
-For more information, refer to [Portal configuration tasks for administering virtual portals](../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md).  
+For more information, refer to [Portal configuration tasks for administering virtual portals](../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md){target="_blank"}.  
