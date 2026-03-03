@@ -15,6 +15,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to find the virtual portal name by ObjectID](./administration/DetermineVPObjectID.md)|
 |Migrated|Content|[How to export themes and skins in HCL DX](./content/OnlyExportThemeSkins.md)|
 |Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
 |Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
