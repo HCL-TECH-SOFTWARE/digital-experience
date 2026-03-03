@@ -1,4 +1,4 @@
-# How to determine which virtual portal name is associated with a virtual portal objectID
+# How to find the virtual portal name by ObjectID
 
 ## Applies to
 
@@ -6,17 +6,25 @@
 
 ## Introduction
 
-This document includes detailed instructions to determine the virtual portal (VP) name that is associated with a virtual portal objectID (oid).
+This article describes how to determine the name of a virtual portal (VP) using its ObjectID (OID).
 
 ## Instructions
 
 Run the following ConfigEngine task:
 
-```shell
-ConfigEngine.bat|sh list-all-virtual-portals -DPortalAdminPwd=<your_password> -DWasPassword=<your_password> > VirtualPortals.txt
-```
+- For Linux:
 
-At the end of the created **VirtualPortals.txt** file, there are entries that show the relationships between the virtual portal name and the virtual portal objectID (oid). The log-entries look like as following:
+    ```shell
+    ConfigEngine.sh list-all-virtual-portals -DPortalAdminPwd=<your_password> -DWasPassword=<your_password> > VirtualPortals.txt
+    ```
+
+- For Windows:
+
+    ```shell
+    ConfigEngine.bat list-all-virtual-portals -DPortalAdminPwd=<your_password> -DWasPassword=<your_password> > VirtualPortals.txt
+    ```
+
+At the end of the created `VirtualPortals.txt` file, there are entries that show the relationships between the VP name and its OID. For example:
 
 ```log
 [wsadmin] VirtualPortal:  
@@ -30,10 +38,10 @@ At the end of the created **VirtualPortals.txt** file, there are entries that sh
 [wsadmin] _____________________________________________________  
 ```
 
-The listing above does not include the workspace ID (each VP has a unique workspace). If the workspace ID is known, the following query may help to find out more:
+These entries do not include the workspace ID, as each virtual portal is assigned a unique JCR workspace. If you already have a workspace ID and need to retrieve its associated workspace name and database metadata, run the following SQL query against your portal database:
 
 ```sql
-SELECT * FROM JCR.ICMSTCJRWS WHERE WSID = <your wsid>
+SELECT * FROM JCR.ICMSTCJRWS WHERE WSID = '<your wsid>'
 ```
 
-More information can be found in [Portal configuration tasks for administering virtual portals](../../..//build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md){target="_blank"}.  
+For more information, refer to [Portal configuration tasks for administering virtual portals](../../../build_sites/virtual_portal/vp_reference/vp_command_ref/portal_cfg_adm_vp/index.md).  

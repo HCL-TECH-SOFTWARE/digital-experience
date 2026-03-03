@@ -9,7 +9,7 @@ nav:
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
     - ExpediteAsyncDeletes.md
+    - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
-    - DetermineVPObjectID.md
