@@ -140,10 +140,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Advanced Rich Text Editor (CKEditor) (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX has been on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX has been on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
