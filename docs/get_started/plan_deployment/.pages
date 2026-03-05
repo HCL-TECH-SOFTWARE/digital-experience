@@ -1,6 +1,7 @@
-title: Plan Your Deployment
+title: Plan your deployment
 nav:
-    - Kubernetes Deployment: container_deployment
-    - Traditional Deployment: traditional_deployment
-    - Hybrid Deployment: deployment/install/hybrid/
-    - Development Deployment: docker
+    - index.md
+    - Kubernetes deployment: container_deployment
+    - Traditional deployment: traditional_deployment
+    - Hybrid deployment: deployment/install/hybrid
+    - Development deployment: docker
