@@ -21,6 +21,8 @@ Rational® Application Developer includes tools designed to help you develop por
 
 ## HCLSoftware U learning materials
 
+To learn how to do advanced development with HCL DX and set up your local Java development, go to [HCL DX for Developers (Advanced)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1777){target="_blank"}. To set yo your local Java Development, refer to the [DX Setup Local Java Development Environment Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_Setup_a_Java_Development_Environment_Lab.pdf){target="_blank"}.
+
 For an introduction and a demo on how to use Java portlets, go to [Java Portlet Development](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2784){target="_blank"}. To try it out yourself, refer to [DX JSP Portlet Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-300_DX_JSP_Portlet_Development_Lab.pdf){target="_blank"}.
 
 
