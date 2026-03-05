@@ -23,10 +23,10 @@ You can configure HCL Web Content Manager to use different editors for rich text
     4. Click **Start**
     5. A success message should be shown once the application is started.
     6. Find **TinyMCEServices** again and click the name link for the application.
-    7. Under **Detail Properties** click **Target specific application status**
-    8. Select the checkbox by **WebSphere_Portal** and then click **Enable Auto Start**
+    7. Under **Detail Properties** click **Target specific application status**.
+    8. Select the checkbox by **WebSphere_Portal** and then click **Enable Auto Start**.
     9. Click **Save** at the top of the console messages.
-    10. The **Auto Start** column should now be set to **Yes**
+    10. The **Auto Start** column should now be set to Yes.
 
 -   **Custom**
 
