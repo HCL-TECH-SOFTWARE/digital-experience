@@ -12,6 +12,16 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.
 
+    ***Enabling Spelling Services for TinyMCE (Enhanced Editor)***
+
+    To enable the spell check functionality in TinyMCE, the TinyMCEServices application must be started on the server.
+
+    1. Log in to the **IBM WebSphere Integrated Solutions Console** as an administrator.
+    2. Go to **Applications** > **Application Types** > **WebSphere enterprise applications**.
+    3. Find **TinyMCEServices** and select the checkbox for the application.
+    4. Click **Start**
+    5. A success message should be shown once the application is started.
+
 -   **Custom**
 
     Select **Custom** to use a third-party rich text editor as your default editor. Before you enable a compatible third-party rich text editor, read the installation and configuration instructions of the third-party rich text editor. These instructions should include steps for enabling the third-party rich text editor to be used in a Web Content Manager solution.
@@ -39,5 +49,4 @@ You can configure HCL Web Content Manager to use different editors for rich text
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: mycustomkey;myfile, where mycustomkey is a constant within the Web Content Manager configuration service.
-
 
