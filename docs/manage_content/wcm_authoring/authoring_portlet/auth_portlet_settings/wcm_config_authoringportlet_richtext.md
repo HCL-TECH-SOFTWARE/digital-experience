@@ -10,7 +10,21 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
 -   **Enhanced Editor**
 
-    Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.
+    Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled. TinyMCE spellcheck requires the TinyMCEServices application, which is not started by default.
+    ## Enable spelling services for TinyMCE (Enhanced Editor)
+
+To enable spell check functionality in TinyMCE, start the **TinyMCEServices** application on the server.
+
+1. Log in to the **IBM WebSphere Integrated Solutions Console** as an administrator.
+2. Go to **Applications** > **Application Types** > **WebSphere enterprise applications**.
+3. Find **TinyMCEServices** and select the checkbox for the application.
+4. Click **Start**.
+5. Verify that a success message appears indicating that the application started successfully.
+6. Locate **TinyMCEServices** again and click the application name.
+7. Under **Detail Properties**, click **Target specific application status**.
+8. Select the checkbox for **WebSphere_Portal**, and then click **Enable Auto Start**.
+9. Click **Save** at the top of the console messages.
+10. Verify that the Auto Start column is set to Yes.
 
 -   **Custom**
 
@@ -39,5 +53,4 @@ You can configure HCL Web Content Manager to use different editors for rich text
 **Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: mycustomkey;myfile, where mycustomkey is a constant within the Web Content Manager configuration service.
-
 
