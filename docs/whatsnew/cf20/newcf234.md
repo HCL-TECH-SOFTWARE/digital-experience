@@ -150,7 +150,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### emoved the Woodburn Studio demo
+### Removed the Woodburn Studio demo
 
 === "Containers"
     The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. Support for existing installations will continue until August 4, 2026. After this date, Woodburn Studio will no longer be supported. For more information, see Deprecated features. [Deprecated features](../deprecated_features.md).
