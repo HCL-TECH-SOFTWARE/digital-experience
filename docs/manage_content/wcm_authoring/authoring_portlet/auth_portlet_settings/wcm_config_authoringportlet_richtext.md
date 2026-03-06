@@ -10,23 +10,21 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
 -   **Enhanced Editor**
 
-    Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled to use this editor.
-    TinyMCE spellcheck requires the TinyMCEServices application, which is not started by default.
+    Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled. TinyMCE spellcheck requires the TinyMCEServices application, which is not started by default.
+    ## Enable spelling services for TinyMCE (Enhanced Editor)
 
-    ***Enabling Spelling Services for TinyMCE (Enhanced Editor)***
+To enable spell check functionality in TinyMCE, start the **TinyMCEServices** application on the server.
 
-    To enable the spell check functionality in TinyMCE, the TinyMCEServices application must be started on the server.
-
-    1. Log in to the **IBM WebSphere Integrated Solutions Console** as an administrator.
-    2. Go to **Applications** > **Application Types** > **WebSphere enterprise applications**.
-    3. Find **TinyMCEServices** and select the checkbox for the application.
-    4. Click **Start**
-    5. A success message should be shown once the application is started.
-    6. Find **TinyMCEServices** again and click the name link for the application.
-    7. Under **Detail Properties** click **Target specific application status**.
-    8. Select the checkbox by **WebSphere_Portal** and then click **Enable Auto Start**.
-    9. Click **Save** at the top of the console messages.
-    10. The **Auto Start** column should now be set to Yes.
+1. Log in to the **IBM WebSphere Integrated Solutions Console** as an administrator.
+2. Go to **Applications** > **Application Types** > **WebSphere enterprise applications**.
+3. Find **TinyMCEServices** and select the checkbox for the application.
+4. Click **Start**.
+5. Verify that a success message appears indicating that the application started successfully.
+6. Locate **TinyMCEServices** again and click the application name.
+7. Under **Detail Properties**, click **Target specific application status**.
+8. Select the checkbox for **WebSphere_Portal**, and then click **Enable Auto Start**.
+9. Click **Save** at the top of the console messages.
+10. Verify that the Auto Start column is set to Yes.
 
 -   **Custom**
 
