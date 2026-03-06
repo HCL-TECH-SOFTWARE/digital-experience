@@ -153,11 +153,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### emoved the Woodburn Studio demo
 
 === "Containers"
-    Woodburn Studio is no longer available for installation or updates.
+    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. Support for existing installations will continue until August 4, 2026. After this date, Woodburn Studio will no longer be supported. For more information, see Deprecated features. [Deprecated features](../deprecated_features.md).
+
 
 === "On-Premises"
-     Woodburn Studio is no longer available for installation or updates.
-
+    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. Support for existing installations will continue until August 4, 2026. After this date, Woodburn Studio will no longer be supported. For more information, see Deprecated features. [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
