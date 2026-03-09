@@ -34,10 +34,7 @@ The Search Page has the following components:
 
 ## Other ways of accessing the Search V2 UI(Search page)
 
-You can also access the Search page through the Woodburn Studio homepage search bar and the Practitioner Studio side navigation panel. Once redirected, you can use the search results or initiate a new search. For more information, refer to [Using Search V2](./usage.md).
-
-- To access the Search page from Woodburn Studio, go to the Woodburn Studio homepage then click the **Search Site** search field on the top-right corner of the page.
-    ![](../../assets/HCL_Search_Access_Page_Via_Woodburn_1.png)
+You can also access the Search page through the Practitioner Studio side navigation panel. Once redirected, you can use the search results or initiate a new search. For more information, refer to [Using Search V2](./usage.md).
 
 - To access the Search page from Practitioner Studio, go to the Practitioner Studio homepage, where you can find the search option in the top toolbar.
     ![](../../assets/HCL_Search_Access_Page_Via_PS_Sidenav_1.png)
