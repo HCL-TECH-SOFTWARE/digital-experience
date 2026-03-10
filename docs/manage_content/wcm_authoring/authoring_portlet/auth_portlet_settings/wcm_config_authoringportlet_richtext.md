@@ -26,7 +26,9 @@ To enable spell check functionality in TinyMCE, start the **TinyMCEServices** ap
 9. Click **Save** at the top of the console messages.
 10. Verify that the Auto Start column is set to Yes.
 
--   **Custom**
+---
+
+- **Custom**
 
     Select **Custom** to use a third-party rich text editor as your default editor. Before you enable a compatible third-party rich text editor, read the installation and configuration instructions of the third-party rich text editor. These instructions should include steps for enabling the third-party rich text editor to be used in a Web Content Manager solution.
 
