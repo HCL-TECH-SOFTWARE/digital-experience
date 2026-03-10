@@ -1,6 +1,6 @@
 # Configuring Practitioner Studio
 
-Learn how to apply Practitioner Studio-related themes and administration changes in a newly created virtual Portal.
+Learn how to show the Practitioner Studio theme and administration changes in a newly created virtual Portal.
 
 Administrators can configure the Virtual Portal Manager portlet so Practitioner Studio themes and administration changes show in newly created virtual Portals. For more information, see [Configuring Virtual Portal Manager for newly created virtual Portals](#configuring-virtual-portal-manager-for-newly-created-virtual-portals).
 

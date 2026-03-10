@@ -1,4 +1,4 @@
-# Woodburn Studio demo site (legacy)
+# Woodburn Studio demo site
 
 Woodburn Studio was a demonstration site included with HCL Digital Experience 9.5 to showcase selected platform capabilities.
 

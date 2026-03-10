@@ -1,7 +1,5 @@
 # How to Switch the languages in the Digital Experience theme
 
-To showcase multilingual support, use the language icon in the Digital Experience theme to select the language of your choice. The currently supported languages are English, French, and Spanish.
-
 ## Procedure
 
 1.  Click on the translate icon in the navigation header section.

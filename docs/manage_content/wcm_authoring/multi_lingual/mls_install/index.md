@@ -5,7 +5,6 @@ Before you use the multilingual solution, you must deploy, install and configure
 -   **[Multilingual deployment](wcm_mls_deploy.md)**  
 Deployment of multilingual sites can be centralized, running out of single environment, or decentralized where locales are served from different environments.
 -   **[How to Switch the languages in the Digital Experience theme\| HCL Digital Experience](wcm_switch_lang_portal_theme.md)**  
-Use the language switch icon in the Digital Experience theme to select the language of your choice. The currently supported languages are English, French, and Spanish.
 -   **[Configuring a multilingual system](wcm_mls_configure.md)**  
 After you install the multilingual extensions, you then must configure your system to support multilingual authoring and rendering.
 -   **[Multilingual presentation](wcm_mls_presentation.md)**  

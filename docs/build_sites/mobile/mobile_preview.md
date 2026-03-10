@@ -110,7 +110,7 @@ Option 2: Reference the Mobile Preview simulator for launch in an HCL DX theme
 
 Option 3: Access the Mobile Preview simulator from a Dynamic Content Spot configured in your theme
 
-In a sample theme delivered with HCL DX 9.5 CF19 and later releases, the Mobile Preview Simulator is added as a Dynamic Content Spot in the default `theme.html`. This serves to make the simulator capability available to all site pages by default. The code example below shows how the Dynamic Content Spot is added:
+In a site theme, the Mobile Preview Simulator can be added as a Dynamic Content Spot in the default `theme.html`. This makes the simulator capability available to site pages by default. The code example below shows how the Dynamic Content Spot is added:
 
 ```
 <c:set var="mobilePreview" value="${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}"/>
@@ -129,7 +129,7 @@ In a sample theme delivered with HCL DX 9.5 CF19 and later releases, the Mobile 
 <a rel="dynamic-content" href="dyn-cs:id:MP_button"></a>
 ```
 
-The following example demonstrates use of the Mobile Preview simulator to view site display on mobile device displays.
+The following example demonstrates use of the Mobile Preview simulator to view a site on mobile device displays.
 
 ![Using the Mobile Preview simulator to view site display on mobile devices](../../images/using_mobile_preview_simulator.png)
 
