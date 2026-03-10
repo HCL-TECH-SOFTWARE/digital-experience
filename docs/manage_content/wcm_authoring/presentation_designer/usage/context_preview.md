@@ -1,165 +1,86 @@
 # Canvas Context Preview in Presentation Designer
 
-## Overview
+The Canvas Context Preview feature in HCL Digital Experience (DX) Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. This feature allows you to:
 
-The Canvas Context Preview feature in HCL Digital Experience Presentation Designer enables users to preview how presentation templates will render with actual content from WCM (Web Content Manager) content items. This feature provides real-time visualization of template designs with loaded actual data, helping content authors and designers make informed decisions before publishing.
-
-**Key Benefits:**
-
-- **Real-time Preview:** Instantly see how your template renders with actual content
-- **Content Mapping:** Automatically maps content elements, property tags, and generic tags to your template
-- **Multiple Data Sources:** Supports Content Elements, Property Tags, and Generic Tags
-- **Style Preservation:** Maintains custom styling while switching between different content contexts
-- **Persistence:** Remembers your selected context across sessions and device view changes
-
----
-
-## Feature Components
-
-### 1. Canvas Context Button
-
-Located in the header toolbar, the Canvas Context button provides access to the Canvas context preview functionality.
-
-![](../../../../assets/HCL_Presentation_Designer_Context_Preview_Initial_State.png)
-
-The above image shows the Canvas Context button in the header toolbar.
-
-**Visual Indicators:**
-
-- **Icon:** Context icon button (displays context/database icon)
-- **States:**
-    - Default: Indicates no context is selected
-    - Active: Shows when a context is currently applied
-- **Tooltip:** Displays helpful information about the feature
-
-- **Icon:** Preview link
-- **States:**
-    - Default: Indicates disabled if no context is selected
-    - Active: Shows when a context is currently applied
-
-**Keyboard Accessibility:**
-
-- Press `Tab` to focus the button
-- Press `Enter` or `Space` to activate
-
-### 2. Context Search Popup
-
-When you click the Canvas Context button, a search popup opens allowing you to:
-
-![](../../../../assets/HCL_Presentation_Designer_Context_Search_Popup.png)
-![](../../../../assets/HCL_Presentation_Designer_Context_Search_PopupResult.png)
-
-The image shows the Context Search Popup with search functionality.
-
-#### Method A: Search for Content
-
-1. **Open Canvas Context Preview:** Click the context icon in the header
-2. **Search:** Type keywords to search for content items
-3. **View Results:** Browse through the list of matching items
-4. **Select Context:** Click on your desired content item
-5. **Apply:** The canvas updates automatically with the selected context
-
-
-**Search Features:**
-
-- **Debounced Search:** Typing triggers search after a brief delay (300ms)
-- **Real-time Results:** Results update as you type
-- **Path Display:** Shows the full path of each content item for context
-- **Type Indication:** Displays whether the item is a Content Item
-
----
+- Preview template changes in real time as you map content elements and tags.
+- Map content elements, property tags, and generic tags directly to the template structure.
+- Preserve custom styling and layouts while switching between different content contexts.
+- Retain the selected content context across different device views and sessions.
+- Automatically map content elements and property tags to the template.
 
 ## Working with Canvas Context Preview
 
-### Selecting a Context
+The **Apply canvas context preview** button in the header toolbar opens the context preview.
 
-**Step-by-Step Instructions:**
+![](../../../../assets/HCL_Presentation_Designer_Context_Preview_Initial_State.png)
 
-1. **Open Presentation Designer**
-    - Navigate to WCM Authoring
-    - Open an existing presentation template or create a new one
+In the **Canvas context** field that appears, you can search for content items and templates to preview.
 
-2. **Access Canvas Context Preview**
-    - Locate the context icon button in the header toolbar
-    - Click the button to open the context search popup
+![](../../../../assets/HCL_Presentation_Designer_Context_Search_PopupResult.png)
 
-3. **Search for Content**
-    - Type your search query in the search field
-    - Use keywords from the content's title or name
-    - Wait for search results to appear
+Selecting an item from the results automatically updates the canvas with the new context. As you type, the search results update automatically. Each result displays the item type and its full path so you can easily identify the correct content.
 
-4. **Select a Content Item**
-    - Review the search results
-    - Click on the desired content item from the list
-    - The interface shows the full path and type of each item
+### Selecting a context
 
-5. **View the Preview**
-    - The canvas automatically updates with the selected context
-    - Content elements display actual values from the selected content
-    - Property tags and generic tags are mapped accordingly
+To select a context:
+
+1. Open an existing **Presentation template** or create a new one.
+2. Select the **Apply canvas context preview** icon.
+3. In the **Canvas context** field, enter keywords from the title or name of the content item.
+4. Select a content item from the results.
+5. View the updated canvas to see the selected content and mapped tags.
+
+!!!note
+    The selected context persists across sessions.
+
+The following example shows the canvas updated with the selected context and actual content values:
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Selected.png)
 
-The above image shows the canvas with a selected context applied, displaying actual content values.
+### Content mapping <!--Map content elements, property tags, and generic tags directly to the template structure. - are generic tags supposed to be described in this section too?-->
 
-**Expected Behavior:**
+Canvas Context Preview automatically maps the following types of content: <!--"Canvas Context Preview automatically maps content elements, property tags, and generic tags."-->
 
-- ✅ Loading indicator appears while fetching content
-- ✅ Canvas updates automatically when context is selected
-- ✅ Content elements show actual values instead of placeholders
-- ✅ The selected context persists across sessions
+#### Content elements
 
-### Content Element States
+Content elements map to corresponding fields in your selected content item. After selecting a canvas context, content elements display different states based on the availability and values of the selected content item:
 
-After selecting a Canvas Context, content elements on the canvas will display in different states based on the availability and values of the corresponding content from the selected content item.
+- **With Value:** Elements with corresponding content display the actual value from the selected content item.
+- **Empty:** Elements that exist in the content item but have no value display an "[element-name] element [Empty]" placeholder.
+- **Does Not Exist:** Elements that do not exist in the selected content item display an "[element-name] element does not exist" placeholder.
 
-![](../../../../assets/HCL_Presentation_Designer_Context_Element_States.png)
+For example:
 
-The above image shows the different states of content elements after a Canvas Context is selected.
+![](../../../../assets/HCL_Presentation_Designer_Context_Element_States.png) 
 
-**Element States:**
+<!-- can we replace this image with another that shows the three states so we can omit the section underneath? I think the image is lacking the "With Value" element state (but correct me if I'm wrong): 
 
-- **With Value:** Elements that have corresponding content display the actual value from the selected content item
-- **Empty:** Elements that exist in the content item but have no value show an "[element-name] element [Empty]" placeholder
-- **Does Not Exist:** Elements that don't exist in the selected content item show an "[element-name] element does not exist" placeholder
+    For example: 
 
-### Content Mapping
+    ```
+    Template has: Title (Text Element), Image (Image Element), Description (Text Element)
+    Content has: Title="Welcome", Image=<image-url>, Description=""
 
-The Canvas Context Preview feature automatically maps three types of content bindings:
+    Result on Canvas:
+    - Title: "Welcome" (actual value)
+    - Image: <displays the image>
+    - Description: "Description element [Empty]" (placeholder)
+    ```
+--->
 
-#### 1. Content Elements
+#### Property tags
 
-Content elements are automatically bound to corresponding fields in your selected content item.
+Property tags map to standard WCM content properties. The following property tags are supported:
 
-**Mapping Behavior:**
+| Property | Description |
+| -------- | ----------- |
+| `name` | Content item name |
+| `title` | Content item title |
+| `description` | Content item description |
+| `lastModifiedDate` | Last modification timestamp |
 
-- **Element Exists & Has Value:** Displays the actual content value
-- **Element Exists but Empty:** Shows `[element-name] element [Empty]` placeholder
-- **Element Doesn't Exist:** Shows `[element-name] element does not exist` placeholder
+For example:
 
-**Example:**
-```
-Template has: Title (Text Element), Image (Image Element), Description (Text Element)
-Content has: Title="Welcome", Image=<image-url>, Description=""
-
-Result on Canvas:
-- Title: "Welcome" (actual value)
-- Image: <displays the image>
-- Description: "Description element [Empty]" (placeholder)
-```
-
-#### 2. Property Tags
-
-Property tags map to standard WCM content properties.
-
-**Supported Property Tags:**
-
-- `name` - Content item name
-- `title` - Content item title
-- `description` - Content item description
-- `lastModifiedDate` - Last modification timestamp
-
-**Mapping Example:**
 ```html
 <!-- Property Tag in Template -->
 <Element context="current" type="content" key="name" />
@@ -168,178 +89,106 @@ Property tags map to standard WCM content properties.
 Sample Article
 ```
 
-## Styling and Customization
+## Styling and customization
 
-### Applying Styles to Context Elements
+Custom styles applied to context elements are preserved when you select or switch between different contexts. Your styles also remain intact across device view changes and persist after you save and reopen the template.
 
-**Style Persistence:**
+### Style limitations
 
-- ✅ Custom styles are preserved when selecting a context
-- ✅ Styles remain intact when switching between different contexts
-- ✅ Styles are maintained across device view changes
-- ✅ Styles persist after saving and reopening the template
-
-### Style Limitations
-
-⚠️ **Important Notes:**
+Keep the following in mind when styling context elements:
 
 - Styles apply to the element container, not individual content values
 - Responsive styles may need adjustment per device view
 - Some WCM content may include inline styles that override template styles
 
----
+## Canvas Context Preview settings
 
-## Canvas Settings with Canvas Context Preview
+### Device preview integration
 
-### Device Preview Integration
+Canvas context preview works with the device preview feature in Presentation Designer. When you select a context, it persists across desktop, tablet, and mobile views. Content values remain correctly mapped while the layout adjusts to the selected device view. Any device-specific responsive styles automatically apply to the active context.
 
-Canvas Context Preview works seamlessly with Presentation Designer's device preview feature.
+### RTL and LTR support
 
-**Supported Devices:**
+Canvas context preview supports both right-to-left (RTL) and left-to-right (LTR) text directions. When you toggle the RTL switch in the header, content elements and layouts adjust accordingly while the selected context remains active.
 
-- Desktop (default)
-- Tablet
-- Mobile
+This support includes:
 
-**How It Works:**
+- **RTL languages:** Such as Arabic and Hebrew.
+- **LTR languages:** All other supported languages.
 
-1. Select a canvas context
-2. Switch device views using the device selector
-3. The selected context persists across all device views
-4. Content values remain mapped correctly
+### Canvas dimensions and zoom
 
-**Responsive Behavior:**
-```
-Desktop View (1920x1080):
-- Context: Article A
-- Element Values: Title, Image, Description
+Canvas context preview remains active as you adjust the canvas dimensions and zoom levels. Whether you manually enter width and height, select a predefined size, or rotate the orientation, the selected context and mapped content values persist.
 
-Switch to Mobile View (375x667):
-- Context: Still Article A (persisted)
-- Element Values: Same content, responsive layout
-- Styles: Device-specific responsive styles applied
-```
-
-### RTL/LTR Support
-
-Canvas Context Preview supports right-to-left (RTL) and left-to-right (LTR) text directions.
-
-**How to Use:**
-
-1. Select a context
-2. Toggle the RTL switch in the header
-3. Content elements adjust their text direction
-4. Layout mirrors appropriately
-5. The selected context remains active
-
-
-**Supported Languages:**
-
-- Arabic, Hebrew (RTL)
-- All other languages (LTR)
-
-### Canvas Dimensions and Zoom
-
-**Dimension Controls:**
-
-- Width and Height inputs
-- Predefined sizes (Desktop, Tablet, Mobile)
-- Rotate button for orientation change
-
-**Context Behavior:**
-
-- ✅ Selected context persists when changing dimensions
-- ✅ Content values remain mapped correctly
-- ✅ Zoom level does not affect context mapping
-- ✅ Rotating the canvas preserves the context
-
----
-
-## Advanced Features
+## Advanced features
 
 ### Context Validation
 
-When you open Presentation Designer with a previously selected context, the system automatically validates the context.
+When you open Presentation Designer with a previously selected context, the system validates that the content item still exists, the user has permission to access the content, and the content has not been moved or deleted.
 
-**Validation Checks:**
+- If the content is successfully validated, the context is restored automatically and the canvas displays the selected content.
+- If the content validation fails, a message indicates that the content was not found or access is restricted, the context is cleared, and the user can select a new context.
 
-- ✅ Content item still exists
-- ✅ User has permission to access the content
-- ✅ Content has not been moved or deleted
+![](../../../../assets/HCL_Presentation_Designer_Context_Validation_Error.png) <!--we can cut this image to only show the error message, or remove it entirely-->
 
-**Validation Outcomes:**
+### State persistence
 
-**Success (200 OK):**
+Canvas context preview saves settings in the local storage of your browser to maintain these settings across sessions.
 
-- Context is restored automatically
-- Canvas displays with the selected content
-- Loading indicator shows during validation
-
-**Failure (404 Not Found or 403 Forbidden):**
-
-- Snackbar message: "The content was not found. It may have been deleted or you may not have permission to access it."
-- Context is cleared from the canvas
-- User can select a new context
-
-![](../../../../assets/HCL_Presentation_Designer_Context_Validation_Error.png)
-
-The above image shows the error message displayed when context validation fails.
-
-### State Persistence
-
-Canvas Context Preview leverages browser localStorage to persist settings across sessions.
 ![](../../../../assets/HCL_Presentation_Designer_Context_LocalStorage.png)
-**What Is Saved:**
 
-- Selected content item ID and metadata
-- Content item name and display title
-- Content item path and type
-- Canvas dimensions (width, height)
-- Zoom level
-- RTL/LTR mode
+The system saves the content item ID, metadata, name, display title, path, and type. It also saves canvas dimensions, zoom levels, and the text direction mode (RTL or LTR).
 
-**Storage Key:**
+- Settings are restored when you open a template, navigate from WCM, or refresh the browser.
+- Settings are cleared when you select **Back to authoring**, select **Cancel**, or log out of HCL DX.
+
+To retrieve settings for a specific template, use the following command in the browser console:
+
 ```javascript
 // Format: presentationdesigner_canvas_settings_{template-id}
 localStorage.getItem('presentationdesigner_canvas_settings_abc-123-def');
 ```
 
-**When Settings Are Restored:**
+### Edit and View mode
 
-- Opening an existing presentation template
-- Navigating back from WCM
-- Browser refresh (while in Presentation Designer)
+Canvas Context Preview works in both **Edit** (default) and **View** modes.
 
-**When Settings Are Cleared:**
+- **Edit** mode gives you full access to styling and layout tools. You can move elements and modify element properties while context values are displayed.
+- **View** mode provides a read-only view of the canvas. You cannot modify elements or styles. You can change contexts to review the appearance of the template with different content.
 
-- Clicking "Back to Authoring" in header
-- Selecting "Cancel" and confirming navigation
-- Logging out of HCL DX
+!!!note
+    If you select **Apply canvas context preview** while there are unsaved changes, a prompt appears to **Save and preview**.
 
-### Edit Mode Behavior
+## User scenarios <!--overhauled use cases and troubleshooting sections-->
 
-Canvas Context Preview works in both Edit and View modes.
+- **Designing with real content**
 
-**Edit Mode (Default):**
+    Designers use canvas context preview to verify how layouts handle actual data. This identifies layout issues, such as text overflow or image scaling, early in the design process.
 
-- Full access to styling and layout tools
-- Can drag and drop elements
-- Can modify element properties
-- Context values are displayed
+- **Multilingual support**
 
-**View Mode (Edit Off):**
+    Authors toggle between LTR and RTL modes to test language support. This confirms that the layout mirrors correctly for languages such as Arabic or Hebrew while the content remains active.
 
-- Read-only canvas view
-- Cannot modify elements or styles
-- Canvas Context Preview still functional
-- Can select and change contexts
-- Useful for reviewing template with different content
+- **Responsive design validation**
 
-### Triggering Preview with Unsaved changes
-The image below shows the prompt if the Preview Link is clicked while there are unsaved changes.
-![](../../../../assets/HCL_Presentation_Designer_Context_UnsavedChanges.png)
+    Designers switch between desktop, tablet, and mobile views to ensure the design functions across different screen sizes. This identifies mobile layout issues while using real content.
 
----
+- **Content migration and permissions**
+
+    Administrators use context validation to ensure templates remain functional after content migrations. The system identifies if a content item was moved, deleted, or if access is restricted.
+
+## Troubleshooting
+
+Refer to the following scenarios when troubleshooting context preview issues.
+
+| Issue | Cause | Solution |
+| :--- | :--- | :--- |
+| **Element does not exist** | The content item lacks the specified element. | Verify the content structure or select a different item. |
+| **Empty placeholder** | The element exists but has no value. | Add a value to the content item or use a different item. |
+| **Validation failed** | Content was moved or deleted, or access is restricted. | Select a new content item or verify permissions. |
+| **Styles not preserved** | Inline styles or CSS specificity conflicts. | Use more specific selectors and check for inline overrides. |
+
+<!--
 
 ## Workflows and Use Cases
 
@@ -490,3 +339,4 @@ The image below shows the prompt if the Preview Link is clicked while there are 
 2. Use more specific CSS selectors
 3. Use `!important` sparingly for critical styles
 4. Review override stylesheet settings
+-->

@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Presentation Designer - Canvas Context Preview
 - WCM AI Analysis - Additional configuration options for custom AI providers
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -81,6 +82,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf234) section.
+
+### Presentation Designer - Canvas Context Preview
+
+=== "Containers"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with WCM (Web Content Manager) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with WCM (Web Content Manager) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### WCM AI Analysis - Additional configuration options for custom AI providers
 
