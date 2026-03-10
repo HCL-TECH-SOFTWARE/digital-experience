@@ -4,14 +4,15 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
 ## Rich text editor
 
--   **Default**
+-   ### Default
 
     Select this option to use the default JavaScript editor. This editor does not require a working Java runtime environment on the client computer.
 
--   **Enhanced Editor**
+-   ### Enhanced Editor
 
     Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled. TinyMCE spellcheck requires the TinyMCEServices application, which is not started by default.
-    ## Enable spelling services for TinyMCE (Enhanced Editor)
+
+    #### Enable spelling services for TinyMCE (Enhanced Editor)
 
 To enable spell check functionality in TinyMCE, start the **TinyMCEServices** application on the server.
 
@@ -26,9 +27,7 @@ To enable spell check functionality in TinyMCE, start the **TinyMCEServices** ap
 9. Click **Save** at the top of the console messages.
 10. Verify that the Auto Start column is set to Yes.
 
----
-
-- **Custom**
+-   ### Custom
 
     Select **Custom** to use a third-party rich text editor as your default editor. Before you enable a compatible third-party rich text editor, read the installation and configuration instructions of the third-party rich text editor. These instructions should include steps for enabling the third-party rich text editor to be used in a Web Content Manager solution.
 
@@ -36,14 +35,13 @@ To enable spell check functionality in TinyMCE, start the **TinyMCEServices** ap
 
     If the third-party rich text editor is not available, the standard rich text editor is used.
 
-
 ## HTML editor
 
--   **Default**
+-   ### Default
 
     Select this option to use the default HTML editor.
 
--   **Custom**
+-   ### Custom
 
     Select **Custom** to use a third-party HTML editor as your default editor. Before you enable a compatible third-party HTML editor, read the installation and configuration instructions of the third-party HTML editor. These instructions should include steps for enabling the third-party HTML editor to be used in a Web Content Manager solution.
 
@@ -52,7 +50,7 @@ To enable spell check functionality in TinyMCE, start the **TinyMCEServices** ap
     If the third-party HTML editor is not available, the default HTML editor is used.
 
 
-**Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: /wps/customapplication;/jsp/jspFilename.jsp.
+**Storing JSP files:** JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: contextPath;jspPath. For example: `/wps/customapplication;/jsp/jspFilename.jsp`.
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the jsp value field, it is replaced dynamically at render time. For example: mycustomkey;myfile, where mycustomkey is a constant within the Web Content Manager configuration service.
 
