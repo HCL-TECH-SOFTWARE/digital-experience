@@ -2,6 +2,10 @@
 
 This section contains the newly created and migrated how-to articles. The articles are arranged by Cumulative Fix (CF) and category.
 
+- **Migrated:** How-to articles migrated from the knowledge base to the DX Help Center.
+- **Moved:** How-to articles moved to a new category and link to new Help Center URLs.
+- **New:** Newly created how-to articles.
+
 <!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
 
 ## CF###
@@ -15,6 +19,8 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to find the virtual portal name by ObjectID](./administration/DetermineVPObjectID.md)|
+|Migrated|Content|[How to enable or disable managed pages on HCL DX](./content/disableManagedPages.md)|
 |Migrated|Content|[How to export themes and skins in HCL DX](./content/OnlyExportThemeSkins.md)|
 |Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
 |Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|

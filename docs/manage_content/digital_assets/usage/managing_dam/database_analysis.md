@@ -107,7 +107,9 @@ GET /dx/api/dam/v1/database-analysis?type=MediaTypes
 
 The Operations Metrics show the status of DAM operations by trigger function. Use this metric to identify operation patterns and troubleshoot issues.
 
-![Operations Metrics](../../../../images/Operations_metrics.png)
+![Operations Metrics](../../../../images/Operations_metrics_latest.png)
+
+Select one or more rows with failed operations and click **Retrigger Failed Operation** to re-execute them.
 
 !!! note
     For performance analysis, focus on recent operation patterns rather than historical totals.
@@ -122,7 +124,9 @@ GET /dx/api/dam/v1/database-analysis?type=Operations
 
 The Collections Missing Access Reference ID metric identifies collections that do not have proper access control configuration. Collections without access reference IDs may have inconsistent permission inheritance or access control issues that need administrative attention.
 
-![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference.png)
+![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference_latest.png)
+
+Select one or more collections and click **Generate Access Reference** to re-generate access reference for them.
 
 !!! note
     Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
@@ -152,7 +156,9 @@ GET /dx/api/dam/v1/database-analysis?type=CollectionsMissingAccessReference
 
 The Media Items not in Collection metric lists orphaned media assets that are not associated with any collection. While these items exist in the DAM system, they are not organized within the collection hierarchy, making them difficult to discover and manage.
 
-![Orphan Media Items](../../../../images/Orphan_media_items.png)
+![Orphan Media Items](../../../../images/Orphan_media_items_latest.png)
+
+Click **Move** on any orphaned media item, select your desired collection, and confirm to organize it.
 
 For each orphan media item, the following information is displayed:
 
@@ -163,10 +169,12 @@ For each orphan media item, the following information is displayed:
 | Created  | Date and time when the media item was uploaded |
 
 !!! note
-    Consider organizing orphaned media items into appropriate collections for better content management.
+    - Consider organizing orphaned media items into appropriate collections for better content management.
+    - Moved media items retain all metadata and versions associated with them.
 
 REST API endpoint:
 
 ```
 GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
+POST /dx/api/dam/v1/database-analysis
 ```
