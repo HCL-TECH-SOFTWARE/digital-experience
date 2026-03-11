@@ -1,4 +1,4 @@
-# How to delete libraries referenced by other libraries
+# How to delete WCM libraries referenced by other libraries
 
 ## Applies to
 
