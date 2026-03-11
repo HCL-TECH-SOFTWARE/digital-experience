@@ -5,3 +5,4 @@ nav:
     - DB2DatabasePerformance.md
     - ImproveQueryPerformance.md
     - WarmUpPortalSite.md
+    - WCMItemPerformance.md

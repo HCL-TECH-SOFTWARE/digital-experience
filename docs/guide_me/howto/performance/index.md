@@ -8,3 +8,5 @@ Learn how to improve DX database performance on a DB2 database.
 Learn how to tune WCM to reduce your query time.  
 - **[How to warm up your Portal site](WarmUpPortalSite.md)**  
 Learn how to improve DX performance by warming up your site at startup.
+- **[How To Identify if a WCM Item is Causing a Performance Issue](WCMItemPerformance.md)**  
+Learn how to determine which WCM content items are causing performance issues.
