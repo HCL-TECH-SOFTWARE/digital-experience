@@ -1,4 +1,4 @@
-# How to create a syndicator / subscriber pair
+# How to create a syndicator-subscriber pair
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document describes how to create a syndicator / subscriber pair.
+In Web Content Manager (WCM), content updates and metadata are distributed across your infrastructure using a dedicated syndication relationship. Establishing this connection ensures that your authoring environment can automatically push published changes to your delivery servers. This article describes how to create a syndicator-subscriber pair.
 
 ## Instructions
 
