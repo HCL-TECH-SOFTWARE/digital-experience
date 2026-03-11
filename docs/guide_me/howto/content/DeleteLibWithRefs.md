@@ -10,7 +10,7 @@ In HCL Digital Experience (DX) Web Content Manager (WCM), web content libraries 
 
 ## Instructions
 
-If you need to delete a library that contains items that are referenced by another library, you have two options: manually edit the items, or run the module to delete multiple libraries.
+To delete a WCM library that contains items referenced by another library, you can manually edit the items or run the module to delete multiple libraries.
 
 ### Manually edit the items
 
