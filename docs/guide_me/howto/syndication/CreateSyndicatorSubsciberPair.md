@@ -6,34 +6,35 @@
 
 ## Introduction
 
-In Web Content Manager (WCM), content updates and metadata are distributed across your infrastructure using a dedicated syndication relationship. Establishing this connection ensures that your authoring environment can automatically push published changes to your delivery servers. This article describes how to create a syndicator-subscriber pair.
+In the Web Content Manager (WCM) feature of HCL Digital Experience (DX), content updates and metadata are distributed across your infrastructure using a dedicated syndication relationship. Establishing this connection ensures that your authoring environment can automatically push published changes to your delivery servers. This article describes how to create a syndicator-subscriber pair.
 
 ## Instructions
 
-On subscriber server:
+Before establishing the syndication pair, authorize the subscriber server to securely communicate with the syndicator. Initialize this connection by creating a shared credential vault slot on the subscriber server to store the administrative credentials for the syndicator, then configure the subscription.
 
-### Step 1 - Create the vault slot
+### Create the vault slot
 
-1. Navigate to `Administration > Security > Credential Vault`.
-2. Click `Add a Vault Slot`.
-3. Enter the Name: `SyndicationSlot`.  
-4. Under Vault resource associated with vault slot, select  `New` and enter the name: `SyndicationVaultResource`.  
-5. Select `Vault slot is shared` and enter the shared userid (syndicator admin userid) and shared password twice.
-6. Under Description type in: `SyndicationSharedSlot`.
-7. Then click ok.
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Administration > Security > Credential Vault**.
+3. Select **Add a vault slot**.
+4. Under **Name**, enter `SyndicationSlot`.  
+5. Under **Vault resource associated with vault slot**, select **New** and enter `SyndicationVaultResource`.  
+6. Tick the **Vault slot is shared** checkbox then enter the **Shared userid** (the syndicator admin userid) and **Shared password** twice.
+7. Under **Description**, enter `SyndicationSharedSlot`.
+8. Select **OK**.
 
-### Step 2 - Create the syndicator / subscriber pair
+### Create the syndicator-subscriber pair
 
- 1. Navigate to `Administration > Content Management > Subscribers`.  
- 2. Click the `Subscribe Now` button.  
- 3. In the `Syndicator URL` section enter your syndicator server URL.  
-     For example: `http://mysyndicator.example_hostname.com:<port>/wps/wcm`.  
- 4. Specify the Syndicator Name: `mySyndicator`.  
- 5. Specify the Subscriber Name: `mySubscriber`.  
- 6. Select the credential vault slot `SyndicationSlot`.  
+ 1. Navigate to **Administration > Content Management > Subscribers**.  
+ 2. Select **Subscribe Now**.  
+ 3. Under **Syndicator URL**, enter your syndicator server URL. For example, `http://mysyndicator.example_hostname.com:<port>/wps/wcm`.
 
-!!!note
-    If the syndicator is a Virtual Portal (VP) named for example `myVP`, the URL would be: `http://mysyndicator.example_hostname.com:<port>/wps/wcm/myVP`.
+    !!!note
+        If the syndicator is a Virtual Portal (VP) named `myVP`, the URL would be: `http://mysyndicator.example_hostname.com:<port>/wps/wcm/myVP`.
+
+ 4. Under **Syndicator Name**, enter `mySyndicator`.  
+ 5. Under **Subscriber Name**, enter `mySubscriber`.  
+ 6. In the **Credential Vault Slot** dropdown, select `SyndicationSlot`.  
 
 ???+ info "Additional information"
-    More details can be found in the [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"} video.
+    - [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"}.
