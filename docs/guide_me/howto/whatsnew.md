@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Administration|[How to find the virtual portal name by ObjectID](./administration/DetermineVPObjectID.md)|
+|Migrated|Content|[How to delete WCM libraries referenced by other libraries](./content/DeleteLibWithRefs.md)|
 |Migrated|Content|[How to enable or disable managed pages on HCL DX](./content/disableManagedPages.md)|
 |Migrated|Content|[How to export themes and skins in HCL DX](./content/OnlyExportThemeSkins.md)|
 |Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
