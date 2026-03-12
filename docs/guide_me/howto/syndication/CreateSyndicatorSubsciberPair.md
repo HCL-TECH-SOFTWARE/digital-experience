@@ -79,17 +79,6 @@ After the syndicator-subscriber connection is established, test the connection o
 
     For example on the subscriber side the message should be:  
     `The subscriber successfully communicated with the syndicator "<syndicator_name>".`  
-    - In the syndicator server, the following message should appear:
-
-        ```text
-        The syndicator successfully communicated with the subscriber "<subscriber_name>".
-        ```
-
-    - In the subscriber server, the following message should appear:
-
-        ```text
-        The subscriber successfully communicated with the syndicator "<syndicator_name>".
-        ```
 
     If the connection fails, refer to [Verify the configuration settings](#verify-the-configuration-settings) and [Troubleshooting](#troubleshooting).
 
@@ -103,33 +92,33 @@ If you encounter errors while testing the connection, verify the configuration s
 4. Select the **Edit Syndicator** or **Edit Subscriber** pencil icon on the right side.  
 5. Compare your URLs against the following examples to ensure they are correct.
 
-    - Sample subscriber URLs on the syndicator server:
+    Sample subscriber URLs on the syndicator server:  
 
-        ```url
-        https://subscriber_hostname/wps/wcm/connect?MOD=Subs
-        ```
+    ```url
+    https://subscriber_hostname/wps/wcm/connect?MOD=Subs
+    ```
 
-        ```url
-        https://subscriber_hostname:10041/wps/wcm/connect?MOD=Subs
-        ```  
+    ```url
+    https://subscriber_hostname:10041/wps/wcm/connect?MOD=Subs
+    ```  
 
-        ```url
-        http://subscriber_hostname:10039/wps/wcm/connect?MOD=Subs
-        ```  
+    ```url
+    http://subscriber_hostname:10039/wps/wcm/connect?MOD=Subs
+    ```  
 
-    - Sample syndicator URLs on the subscriber server:
+    Sample syndicator URLs on the subscriber server:
 
-        ```url
-        https://syndicator_hostname/wps/wcm/connect?MOD=Synd
-        ```
+    ```url
+    https://syndicator_hostname/wps/wcm/connect?MOD=Synd
+    ```
 
-        ```url
-        https://syndicator_hostname:10041/wps/wcm/connect?MOD=Synd
-        ```  
+    ```url
+    https://syndicator_hostname:10041/wps/wcm/connect?MOD=Synd
+    ```  
 
-        ```url
-        http://syndicator_hostname:10039/wps/wcm/connect?MOD=Synd
-        ```  
+    ```url
+    http://syndicator_hostname:10039/wps/wcm/connect?MOD=Synd
+    ```  
 
 ### Troubleshooting
 
