@@ -37,7 +37,7 @@ Complete the following steps on both the syndicator and the subscriber servers:
 
 ### Create the vault slot
 
-1. On the subscriber side, log in to HCL DX as an administrator.
+1. On the subscriber server, log in to HCL DX as an administrator.
 2. Navigate to **Administration > Security > Credential Vault**.
 3. Select **Add a vault slot**.
 4. Under **Name**, enter `SyndicationSlot`.  
@@ -61,7 +61,8 @@ Complete the following steps on both the syndicator and the subscriber servers:
 
 4. Under **Syndicator Name**, enter `mySyndicator`.  
 5. Under **Subscriber Name**, enter `mySubscriber`.  
-6. In the **Credential Vault Slot** drop-down list, select `SyndicationSlot`.  
+6. In the **Credential Vault Slot** drop-down list, select `SyndicationSlot`.
+7. Select **Next**, and then **Finish**.
 
 ### Verify the connection
 
@@ -70,14 +71,20 @@ After the syndicator-subscriber connection is established, test the connection o
 1. Log in to HCL DX as an administrator.  
 2. Navigate to **Administration > Content Management**.
 3. Select **Syndicators** or **Subscribers**.
-4. Select the **flash** (Test connection) icon on the right side.
+4. Select the **Test connection** flash icon.
 5. Verify that a green information message appears, indicating that the connection works.  
 
-    For example on syndicator side the message should be:  
-    `The syndicator successfully communicated with the subscriber "<subscriber_name>".`
+    - In the syndicator server, the following message should appear:
 
-    For example on the subscriber side the message should be:
-    `The subscriber successfully communicated with the syndicator "<syndicator_name>".`
+        ```text
+        The syndicator successfully communicated with the subscriber "<subscriber_name>".
+        ```
+
+    - In the subscriber server, the following message should appear:
+
+        ```text
+        The subscriber successfully communicated with the syndicator "<syndicator_name>".
+        ```
 
     If the connection fails, refer to [Verify the configuration settings](#verify-the-configuration-settings) and [Troubleshooting](#troubleshooting).
 
@@ -88,7 +95,7 @@ If you encounter errors while testing the connection, verify the configuration s
 1. Log in to HCL DX as an administrator for the syndicator and subscriber servers.  
 2. Navigate to **Administration > Content Management**.
 3. Select **Syndicators** or **Subscribers**.
-4. Select the **pencil** (Edit Syndicator | Edit Subscriber) icon on the right side.  
+4. Select the **Edit Syndicator** or **Edit Subscriber** pencil icon on the right side.  
 5. Compare your URLs against the following examples to ensure they are correct.
 
     - Sample subscriber URLs on the syndicator server:
