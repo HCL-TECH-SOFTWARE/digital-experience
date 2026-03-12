@@ -50,7 +50,7 @@ To enable spell check functionality in TinyMCE, start the **TinyMCEServices** ap
     If the third-party HTML editor is not available, the default HTML editor is used.
 
 
-#### Storing JSP files: 
+### Storing JSP files: 
 JSP files are stored within a web application that runs on the portal. To reference a JSP file in another web application, use the following path: `contextPath;jspPath`. For example: `/wps/customapplication;/jsp/jspFilename.jsp`.
 
 A dynamic context path value can be defined by adding a token to the context path that corresponds to a key and value pair to the Web Content Manager configuration service environment provider. When this key is used as the token in the JSP value field, it is replaced dynamically at render time. For example: `mycustomkey;myfile`, where `mycustomkey` is a constant within the Web Content Manager configuration service.
