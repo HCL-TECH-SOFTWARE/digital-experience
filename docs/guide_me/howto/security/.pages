@@ -4,6 +4,7 @@ nav:
     - AddAdditionalWASRealms.md
     - enable_http_security_http_only_samesite_K8.md
     - implementsaml_portal.md
+    - AuthenticationMSAzure.md
     - transient_users_with_OpenID_Connect.md
     - UnifiedTaskListLog4j.md
     - ReplacePortalLDAP.md
