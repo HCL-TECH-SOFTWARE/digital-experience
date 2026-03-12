@@ -23,6 +23,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Content|[How to delete WCM libraries referenced by other libraries](./content/DeleteLibWithRefs.md)|
 |Migrated|Content|[How to enable or disable managed pages on HCL DX](./content/disableManagedPages.md)|
 |Migrated|Content|[How to export themes and skins in HCL DX](./content/OnlyExportThemeSkins.md)|
+|Migrated|Security|[How to integrate HCL DX user authentication using Microsoft Azure AD](./security/AuthenticationMSAzure.md)|
 |Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
 |Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
 |Migrated|Troubleshooting|[How to generate a PACDump](../troubleshooting/security/PumaDump.md)|
