@@ -10,7 +10,7 @@ In the Web Content Manager (WCM) feature of HCL Digital Experience (DX), content
 
 ## Instructions
 
-Before establishing the syndication pair, authorize the subscriber server to securely communicate with the syndicator. Initialize this connection by creating a shared credential vault slot on the subscriber server to store the administrative credentials for the syndicator, and then configure the subscription.
+Initialize this connection by creating a shared credential vault slot on the subscriber server to store the administrative credentials for the syndicator, and then configure the subscription.
 
 ### Prerequisites for SSL connections
 
@@ -37,48 +37,51 @@ Complete the following steps on both the syndicator and the subscriber servers:
 
 ### Create the vault slot
 
-1. On the subscriber side, login to HCL DX as an administrator.
+1. On the subscriber side, log in to HCL DX as an administrator.
 2. Navigate to **Administration > Security > Credential Vault**.
 3. Select **Add a vault slot**.
 4. Under **Name**, enter `SyndicationSlot`.  
-5. Under **Vault resource associated with vault slot**, select **New** and enter `SyndicationVaultResource`.  
-6. Tick the **Vault slot is shared** checkbox then enter the **Shared userid** (the syndicator admin userid) and **Shared password** twice.
+5. Under **Vault resource associated with vault slot**, select **New**, and then enter `SyndicationVaultResource`.  
+6. Select the **Vault slot is shared** check box, and then enter the following details:
+    - **Shared userid** (the syndicator admin user ID)
+    - **Shared password**
+    - **Confirm password**
 7. Under **Description**, enter `SyndicationSharedSlot`.
 8. Select **OK**.
 
 ### Create the syndicator-subscriber pair
 
- 1. Navigate to **Administration > Content Management > Subscribers**.  
- 2. Select **Subscribe Now**.  
- 3. Under **Syndicator URL**, enter your syndicator server URL. For example, `http://mysyndicator.example_hostname.com:<port>/wps/wcm`.  
+1. Navigate to **Administration > Content Management > Subscribers**.  
+2. Select **Subscribe Now**.  
+3. Under **Syndicator URL**, enter your syndicator server URL. For example: `http://mysyndicator.example_hostname.com:<port>/wps/wcm`.  
 
     !!!note
-        If the syndicator is a Virtual Portal (VP) named `myVP`, the URL would be: `http://mysyndicator.example_hostname.com:<port>/wps/wcm/myVP`.  
-        If an SSL connection will be used, please use `https` as protocol in the URL instead of `http`.  
+        - If the syndicator is a Virtual Portal (VP) named `myVP`, the URL would be: `http://mysyndicator.example_hostname.com:<port>/wps/wcm/myVP`.  
+        - If you use an SSL connection, use `https` as the protocol in the URL instead of `http`.  
 
- 4. Under **Syndicator Name**, enter `mySyndicator`.  
- 5. Under **Subscriber Name**, enter `mySubscriber`.  
- 6. In the **Credential Vault Slot** dropdown, select `SyndicationSlot`.  
+4. Under **Syndicator Name**, enter `mySyndicator`.  
+5. Under **Subscriber Name**, enter `mySubscriber`.  
+6. In the **Credential Vault Slot** drop-down list, select `SyndicationSlot`.  
 
 ### Verify the connection
 
-After the syndicator-subscriber connection is successfully established, test the connection for the syndicator and subscriber servers.
+After the syndicator-subscriber connection is established, test the connection on the syndicator and subscriber servers.
 
 1. Log in to HCL DX as an administrator.  
 2. Navigate to **Administration > Content Management**.
 3. Select **Syndicators** or **Subscribers**.
 4. Select the **flash** icon on the right side.
-5. Check, if a green information message appears, indicating that the connection works. If the connection fails, refer to [**Verify the connection settings**](#verify-the-configuration-settings) section and [**Troubleshooting**](#troubleshooting).
+5. Verify that a green information message appears, indicating that the connection works. If the connection fails, refer to [Verify the configuration settings](#verify-the-configuration-settings) and [Troubleshooting](#troubleshooting).
 
 ### Verify the configuration settings  
 
-If you encounter errors while testing the connection, verify the configuration settings on both the syndicator and subscriber servers using the following steps
+If you encounter errors while testing the connection, verify the configuration settings on both the syndicator and subscriber servers using the following steps:
 
 1. Log in to HCL DX as an administrator for the syndicator and subscriber servers.  
 2. Navigate to **Administration > Content Management**.
 3. Select **Syndicators** or **Subscribers**.
 4. Select the **pencil** icon on the right side.  
-5. Verify that the syndicator and subscriber URLs are set correctly. For example:  
+5. Compare your URLs against the following examples to ensure they are correct.
 
     - Sample subscriber URLs on the syndicator server:
 
@@ -105,8 +108,6 @@ If you encounter errors while testing the connection, verify the configuration s
 If the syndicator-subscriber pair connection continues to fail, check the `SystemOut.log` on both servers to determine which error messages occur during a test connection for further troubleshooting. If more detailed traces are required, refer to [Collecting Data: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}.
 
 ???+ info "Additional information"
-    -[Collecting Data: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}
     - [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"}
     - [Syndication troubleshooting](../../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md){target="_blank"}
     - [Troubleshooting Syndication Issues](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0102792){target="_blank"}
-
