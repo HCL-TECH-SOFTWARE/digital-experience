@@ -38,22 +38,22 @@ To provide a custom Cascading Style Sheets (CSS) theme module, there are two opt
             }
             ```
 
-        6. Check the new theme module using the **Analyzer** tab. 
+        6. Check the new theme module using the **Analyzer** tab.
 
         7. Verify the `index.css` stylings by clicking the **Sub-Contribution** link.
             ![Screenshot](../../assets/HCL_Search_Theme_Analyzer_New_Module.png)
 
 2. Use the new custom CSS module in a theme profile.
-    
+
     Edit the `../PractitionerStudio/profiles/profile_search_v2.json` and add the new unique module ID to the profile.
 
 3. Open DX and start a new search.
 
-    Your styling overrides should be visible when you start a new search. 
+    Your styling overrides should be visible when you start a new search.
 
 ### Creating a custom CSS theme module and extending the default CSS module
 
-1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](components.md#getting-the-default-theme-modules).
+1. Download the current stylings using the **Analyzer** tab. For more information, see [Getting the default theme modules](./components/index.md#getting-the-default-theme-modules).
 
 2. Apply your desired changes to the stylings you downloaded. Make sure to use a formatting tool to get a formatted version of the CSS content.
 
@@ -179,7 +179,7 @@ dx-input-textfield::part(input) {
 You can override styles by targeting the component's class names or part attribute. You can override other components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
 
 !!! note
-    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components.md#atomic-components).    
+    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components/atomic_components.md).
 
 ```css
 /* for dx-button */

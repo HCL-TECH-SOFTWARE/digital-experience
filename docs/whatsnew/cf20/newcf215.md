@@ -89,7 +89,7 @@ The following features and updates are available to customers installing HCL Dig
 ### DX Picker - Updated installation instructions for hybrid and Kubernetes deployments
 
 === "Containers"
-    Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/installation/index.md) for more information. 
+    Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md) for more information.
 
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
@@ -104,5 +104,5 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
 

@@ -1,6 +1,6 @@
 # Uninstalling the Pers_Offers portlet and PZNDemo
 
-In this topic, you will learn how to to uninstall the Pers_Offers portlet and the Personalization sample demo (PZNDemo), database, and users.
+In this topic, you will learn how to uninstall the Pers_Offers portlet and the Personalization sample demo (PZNDemo), database, and users.
 
 1. Log in to HCL Digital Experience (DX) as the Portal administrator (wpsadmin).
 

@@ -1,0 +1,7 @@
+title: Kubernetes Deployments
+nav:
+    - index.md
+    - logstash_opensearch.md
+    - rendering_large_config.md
+    - rendering_medium_config.md
+    - rendering_small_config.md

@@ -1,0 +1,85 @@
+# How to create a custom configuration file for TinyMCE
+
+## Applies to
+
+> HCL Digital Experience v8.5 and later  
+
+## Introduction
+
+TinyMCE is a what-you-see-is-what-you-get (WYSIWYG) editor that you can use with HCL Digital Experience (DX). This article explains how to create a custom configuration file for the TinyMCE editor embedded in the HCL DX environment.  
+
+## Instructions
+
+!!! important
+    The Textbox.io component in HCL DX is deprecated as of January 31, 2023, and reached end of support (EOS) on January 31, 2024. Starting with CF208, you can use the TinyMCE editor as the embedded rich text editor. For more information, see [Deprecated features](../../../whatsnew/deprecated_features.md){target="_blank"}.  
+
+### Enabling TinyMCE
+
+Before you use TinyMCE, add a custom property to the `WCM WCMConfigService` resource environment provider.
+
+1. Log in to the **IBM WebSphere Integrated Solutions Console** as an administrator.
+2. Go to **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
+3. Under **Additional Properties**, select **Custom properties**.
+4. Select **New...**
+5. In the **Name** field, enter `inplaceEdit.defaultRichTextEditor`.
+6. In the **Value** field, enter `TinyMCE`.
+7. Click **Apply**.
+8. Click **Save** at the top of the console messages.
+
+### Configuring HCL Web Content Manager to use the enhanced editor
+
+Follow these steps to enable the enhanced editor in the authoring portlet:
+
+1. On the authoring portlet page, go to **Preferences** > **Edit Shared Settings**.
+2. Open the **Editor Options** menu.
+3. Click the **Select the rich text editor to use in rich text fields** dropdown and choose **Enhanced Editor**.
+4. Click **OK**.
+
+### Customizing the editor
+
+These steps apply only to the enhanced editor used in the HCL WCM authoring portlet. In a clustered environment, perform these steps on the primary node only, then re-sync the cluster.
+
+1. Create the custom configuration file.
+
+    The TinyMCE editor uses a custom configuration file named `tiny_config.jsp`. Sample configurations are available in `<PortalServer_root>/wcm/prereq.wcm/wcm/config/templates/shared/app/config/tinymce`.
+
+    1. Navigate to `<wp_profile_root>/PortalServer/wcm/shared/app/config/` and create a folder named `tinymce`.
+    2. Locate the sample file in `<PortalServer_root>/wcm/prereq.wcm/wcm/config/templates/shared/app/config/tinymce/tiny_config.jsp`.
+    3. Copy `tiny_config.jsp` from the sample location to your new `tinymce` folder.
+
+2. Customize the configuration.
+
+    1. Open the `tiny_config.jsp` file you just copied in a text editor.
+    2. Customize the settings as needed. Use the available [configuration options](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md) to enhance the rich text editing experience.
+
+3. Run the configuration command.
+
+    1. Open a command prompt.
+    2. From the `<wp_profile_root>/ConfigEngine` directory, run the following command to apply the changes made to `tiny_config.jsp`:
+
+        - **Windows**
+
+            ```cmd
+            ConfigEngine.bat configure-wcm-ephox-editor-custom-configuration -DWasPassword=<password> -DPortalAdminId=<username> -DPortalAdminPwd=<password>
+            ```
+
+        - **UNIX or Linux**
+
+            ```bash
+            ./ConfigEngine.sh configure-wcm-ephox-editor-custom-configuration -DWasPassword=<password> -DPortalAdminId=<username> -DPortalAdminPwd=<password>
+            ```
+
+        You do not need to provide an administrator username or password if they are already specified in the `wkplc.properties` file.
+
+4. Restart the server.
+
+### Testing the configuration
+
+Access HCL Web Content Manager (WCM), create or edit an HTML or rich text element, and verify that your custom configuration works as expected.  
+
+!!! note
+    Several TinyMCE defects have been fixed in the latest CF versions. For more information, see the [Fixes integrated in HCL Digital Experience 8.5.0.0, 9.0, and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"} knowledge base article.
+
+???+ info "Related information"
+    - [Enhanced rich text editor configuration options](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md){target="_blank"}
+    - [Editor options](../../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md){target="_blank"}

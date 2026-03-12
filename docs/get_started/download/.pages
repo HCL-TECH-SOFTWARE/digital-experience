@@ -1,5 +1,5 @@
 title: Download Software
 nav:
     - index.md
-    - software_licensing_portal
+    - Downloading and installing HCL DX from the software licensing portal: software_licensing_portal
     - harbor_container_registry.md

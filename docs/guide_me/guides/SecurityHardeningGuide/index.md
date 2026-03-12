@@ -39,3 +39,6 @@ Security is a broad topic with many aspects to consider. This can become quite c
     - Be reliable
     
     - Ensure that authorized users can access data, when needed.
+
+!!!note
+    You can download a PDF version of this guide in [Security Hardening Guide for HCL Digital Experience](./Security%20Hardening%20Guide%20for%20HCL%20Digital%20Experience.pdf){target="_blank"}.

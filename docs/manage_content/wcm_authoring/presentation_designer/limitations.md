@@ -31,18 +31,18 @@ Take note of the following limitations when using Presentation Designer:
         - Columns
         - Row span
         - Column span
-    - Multiple stylesheet not yet supported:
-        - Proper handling of multiple stylesheets.
-        - Aside from the Default and Override stylesheets, any other stylesheets imported through the following methods are not fully supported:
-            - External stylesheets
-            - Style tags
-        - CSS Selectors or CSS Rules:
-            - ID Selectors
-            - Universal Selector
-            - Combinators
-            - Attribute Selectors
-            - Pseudo-classes
-            - Pseudo-elements
-            - At-Rules
-
-            Having these selector types in any stylesheet components used in the Presentation Template may result in unknown side effects when the Presentation Template is opened and updated using the Presentation Designer.
+    - Aside from the Default and Override stylesheets, and other stylesheet components created by the user in Authoring, any other stylesheets imported through the following methods are not fully supported:
+        - External stylesheets
+        - Style tags
+    - The Style Panel is currently designed to only display resolved styles from the Default and Override stylesheets. This means that custom styles from other stylesheet components will render on the canvas but will not be reflected in the style panel's fields.
+    - Custom classes cannot be applied using the Presentation Designer interface. They must be added directly to the element's class attribute in the presentation template's markup in Authoring.
+    - CSS Selectors or CSS Rules:
+        - ID Selectors
+        - Universal Selector
+        - Combinators
+        - Attribute Selectors
+        - Pseudo-classes
+        - Pseudo-elements
+        - At-Rules
+        
+        Having these selector types in the Default and Override stylesheet components used in the Presentation Template may result in unknown side effects when the Presentation Template is opened and updated using the Presentation Designer.

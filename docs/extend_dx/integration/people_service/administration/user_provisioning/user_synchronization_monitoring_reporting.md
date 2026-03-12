@@ -26,4 +26,4 @@ Monitoring log messages during the synchronization process is crucial for identi
     - **Time lapsed for synchronization:** Provides insight into the duration of the process, which can be useful for performance tuning.
 
 ???+ info "Related information"
-    - [Logstash documentation](../../../../../guide_me/guides/performance_tuning/kubernetes/logstash_opensearch.md)
+    - [Logstash documentation](../../../../../guide_me/guides/performance_tuning/kubernetes/Kubernetes_Deployments/logstash_opensearch.md)
