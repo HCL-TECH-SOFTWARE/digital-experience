@@ -20,7 +20,7 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     If the third-party rich text editor is not available, the standard rich text editor is used.
 
-## Enable spelling services for TinyMCE (Enhanced Editor)
+### Enable spelling services for TinyMCE (Enhanced Editor)
 
 To enable spell check functionality in TinyMCE, start the **TinyMCEServices** application on the server.
 
