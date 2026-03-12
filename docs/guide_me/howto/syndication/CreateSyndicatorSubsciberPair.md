@@ -10,49 +10,30 @@ In the Web Content Manager (WCM) feature of HCL Digital Experience (DX), content
 
 ## Instructions
 
-Before establishing the syndication pair, authorize the subscriber server to securely communicate with the syndicator. Initialize this connection by creating a shared credential vault slot on the subscriber server to store the administrative credentials for the syndicator, then configure the subscription.
+Before establishing the syndication pair, authorize the subscriber server to securely communicate with the syndicator. Initialize this connection by creating a shared credential vault slot on the subscriber server to store the administrative credentials for the syndicator, and then configure the subscription.
 
 ### Prerequisites for SSL connections
 
-When using an SSL-connection for syndication, please first ensure that the syndicator-server has added the signer certificate from the subscriber-server into it's own NodeDefaultTrustStore and that the subscriber-server also has added the signer certificate from the syndicator-server to it's Node DefaultTrustStore as well, before trying to establish the syndication pair! This can be done as following:  
+Before you establish a syndication pair, ensure that the syndicator and subscriber servers have exchanged signer certificates in their respective `NodeDefaultTrustStore` files.
 
-**On Syndicator side:**  
+Complete the following steps on both the syndicator and the subscriber servers:
 
-1. Login into the IBM Integrated Solutions Console (WAS admin console) as WebSphere Application Server administrator  
-2. Navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates**  
-3. Click to the button **Retrieve from port**  
-4. Enter the following information:  
-    **Host:** `<Subscriber server hostname>`  
-    **Port:** `443`  
+1. Log in to the IBM Integrated Solutions Console (WAS admin console) as an administrator.  
+2. Navigate to **Security > SSL certificate and key management > Key stores and certificates > `NodeDefaultTrustStore` > Signer certificates**.
+3. Select **Retrieve from port**, and then enter the following:  
+    - **Host:** The hostname of the target server (for example, on the syndicator, enter the subscriber server hostname).
+    - **Port:** `443`  
 
-    !!!note
-        For on-premise environments you may want to use then port 10041 (default HCL DX SSL port)
+        !!!note
+            For on-premises environments, use the default HCL DX SSL port `10041`.
 
-    **SSL configuration for outbound connection:** `NodeDefaultSSLSettings`  
-    **Alias:** `<Hostname of the subscriber server>`  
+    - **SSL configuration for outbound connection:** `NodeDefaultSSLSettings`  
+    - **Alias:** The hostname of the target server (for example, on the syndicator, enter the subscriber server hostname).
 
-5. Click to the button **Retrieve signer information**  
-
-6. After the signer certificate was received correctly, click tot he **OK** button and save the changes to the master configuration.  
-
-**On Subscriber side:**  
-
-1. Login into the IBM Integrated Solutions Console (WAS admin console) as WebSphere Application Server administrator  
-2. Navigate to **Security > SSL certificate and key management > Key stores and certificates > NodeDefaultTrustStore > Signer certificates**  
-3. Click to the button **Retrieve from port**  
-4. Enter the following information:  
-    **Host:** `<Syndicator server hostname>`  
-    **Port:** `443`  
-
-    !!!note
-        For on-premise environments you may want to use then port 10041 (default HCL DX SSL port)
-
-    **SSL configuration for outbound connection:** `NodeDefaultSSLSettings`  
-    **Alias:** `<Hostname of the syndicator server>`  
-
-5. Click to the button **Retrieve signer information**  
-
-6. After the signer certificate was received correctly, click tot he **OK** button and save the changes to the master configuration.  
+4. Select **Retrieve signer information**.
+5. After the signer certificate is received correctly, select **OK**.
+6. Select **Apply**.
+7. Select **Save** at the top of the console messages.
 
 ### Create the vault slot
 
@@ -81,42 +62,51 @@ When using an SSL-connection for syndication, please first ensure that the syndi
 
 ### Verify the connection
 
-As soon as the syndicator/subscriber connection-pair has been successfully established, click to the **Test Connection** button on the subscriber side to verify the connection. Do the same step on the syndicator side.  
+After the syndicator-subscriber connection is successfully established, test the connection for the syndicator and subscriber servers.
 
-**Steps to verify the connection:**  
-
-1. Login into HCL DX Portal as portal administrator.  
-2. Navigate to **Administration > Content Management > Syndicators or Subscribers**.  
-3. Click to the **flash** icon on the right side  
-4. Check, if a green information message appears, indicating that the connection works.  
-    If the connection fails, please check the **Verify the connection settings** section and/or the troubleshooting documents mentioned in the **Additional information** section.  
+1. Log in to HCL DX as an administrator.  
+2. Navigate to **Administration > Content Management**.
+3. Select **Syndicators** or **Subscribers**.
+4. Select the **flash** icon on the right side.
+5. Check, if a green information message appears, indicating that the connection works. If the connection fails, refer to [**Verify the connection settings**](#verify-the-configuration-settings) section and [**Troubleshooting**](#troubleshooting).
 
 ### Verify the configuration settings  
 
-If any errors occur with the Test Connection, please verify the configuration settings on both sides (Syndicator and Subscriber side). This can be done as following:  
+If you encounter errors while testing the connection, verify the configuration settings on both the syndicator and subscriber servers using the following steps
 
-1. Login into HCL DX Portal as portal administrator on both sides (Syndicator and Subscriber server side).  
-2. Navigate to **Administration > Content Management > Syndicators or Subscribers**.  
-3. Click to the **pencil** icon on the right side.  
-4. Please check, if the Syndicator and subscriber URL is set correctly. For example:  
+1. Log in to HCL DX as an administrator for the syndicator and subscriber servers.  
+2. Navigate to **Administration > Content Management**.
+3. Select **Syndicators** or **Subscribers**.
+4. Select the **pencil** icon on the right side.  
+5. Verify that the syndicator and subscriber URLs are set correctly. For example:  
 
-    **When using SSL:**  
-    On Syndicator side a sample Subscriber URL:  
-    `https://subscriber_hostname:443/wps/wcm/connect?MOD=Subs`  
-    or:  
-    `https://subscriber_hostname:10041/wps/wcm/connect?MOD=Subs`  
+    - Sample subscriber URLs on the syndicator server:
 
-    On Subscriber side a sample Syndicator URL:  
-    `https://syndicator_hostname:443/wps/wcm/connect?MOD=Synd`  
-    or:  
-    `https://syndicator_hostname:10041/wps/wcm/connect?MOD=Synd`  
+        ```url
+        https://subscriber_hostname:443/wps/wcm/connect?MOD=Subs
+        ```
+
+        ```url
+        https://subscriber_hostname:10041/wps/wcm/connect?MOD=Subs
+        ```  
+
+    - Sample syndicator URLs on the subscriber server:
+
+        ```url
+        https://syndicator_hostname:443/wps/wcm/connect?MOD=Synd
+        ```
+
+        ```url
+        https://syndicator_hostname:10041/wps/wcm/connect?MOD=Synd
+        ```  
 
 ### Troubleshooting
 
-If the syndicator/subscriber pair connection still fails, please check the SystemOut.log on Syndicator and Subscriber side to find out, which error messages occur during a test connection. Based on the error-message further troubleshooting can be done. If more detailed traces are required, please review [Collecting DAta: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}
+If the syndicator-subscriber pair connection continues to fail, check the `SystemOut.log` on both servers to determine which error messages occur during a test connection for further troubleshooting. If more detailed traces are required, refer to [Collecting Data: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}.
 
 ???+ info "Additional information"
-    - [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"}.  
-    - [Syndication troubleshooting](../../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md){target="_blank"}.  
-    - [Troubleshooting Syndication Issues](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0102792){target="_blank"}.  
-    - [Collecting Data: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}.  
+    -[Collecting Data: Syndication for HCL Digital Experience v8.5 and higher](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013616){target="_blank"}
+    - [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"}
+    - [Syndication troubleshooting](../../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md){target="_blank"}
+    - [Troubleshooting Syndication Issues](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0102792){target="_blank"}
+
