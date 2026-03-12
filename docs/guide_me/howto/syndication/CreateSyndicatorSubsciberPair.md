@@ -74,11 +74,17 @@ After the syndicator-subscriber connection is established, test the connection o
 4. Select the **Test connection** flash icon.
 5. Verify that a green information message appears, indicating that the connection works.  
 
-    For example on syndicator side the message should be:  
-    `The syndicator successfully communicated with the subscriber "<subscriber_name>".`  
+    - In the syndicator server, the following message should appear:
 
-    For example on the subscriber side the message should be:  
-    `The subscriber successfully communicated with the syndicator "<syndicator_name>".`  
+        ```text
+        The syndicator successfully communicated with the subscriber "<subscriber_name>".
+        ```
+
+    - In the subscriber server, the following message should appear:
+
+        ```text
+        The subscriber successfully communicated with the syndicator "<syndicator_name>".
+        ```
 
     If the connection fails, refer to [Verify the configuration settings](#verify-the-configuration-settings) and [Troubleshooting](#troubleshooting).
 
