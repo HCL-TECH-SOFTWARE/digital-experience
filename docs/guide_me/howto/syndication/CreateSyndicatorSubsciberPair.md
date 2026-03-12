@@ -74,10 +74,10 @@ After the syndicator-subscriber connection is established, test the connection o
 5. Verify that a green information message appears, indicating that the connection works.  
 
     For example on syndicator side the message should be:  
-    `The syndicator successfully communicated with the subscriber "<subscriber_name>".`
+    `The syndicator successfully communicated with the subscriber "<subscriber_name>".`  
 
-    For example on the subscriber side the message should be:
-    `The subscriber successfully communicated with the syndicator "<syndicator_name>".`
+    For example on the subscriber side the message should be:  
+    `The subscriber successfully communicated with the syndicator "<syndicator_name>".`  
 
     If the connection fails, refer to [Verify the configuration settings](#verify-the-configuration-settings) and [Troubleshooting](#troubleshooting).
 
@@ -94,21 +94,29 @@ If you encounter errors while testing the connection, verify the configuration s
     - Sample subscriber URLs on the syndicator server:
 
         ```url
-        https://subscriber_hostname:443/wps/wcm/connect?MOD=Subs
+        https://subscriber_hostname/wps/wcm/connect?MOD=Subs
         ```
 
         ```url
         https://subscriber_hostname:10041/wps/wcm/connect?MOD=Subs
         ```  
 
+        ```url
+        http://subscriber_hostname:10039/wps/wcm/connect?MOD=Subs
+        ```  
+
     - Sample syndicator URLs on the subscriber server:
 
         ```url
-        https://syndicator_hostname:443/wps/wcm/connect?MOD=Synd
+        https://syndicator_hostname/wps/wcm/connect?MOD=Synd
         ```
 
         ```url
         https://syndicator_hostname:10041/wps/wcm/connect?MOD=Synd
+        ```  
+
+        ```url
+        http://syndicator_hostname:10039/wps/wcm/connect?MOD=Synd
         ```  
 
 ### Troubleshooting
