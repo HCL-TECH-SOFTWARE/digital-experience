@@ -22,7 +22,7 @@ Refer to the following steps to identify missing resource permissions.
 
 4. Navigate to **Administration > Tracing**.
 
-5. Under **Append these trace settings:**, enter the following string, then select the **Add** plus icon:
+5. Under **Append these trace settings:**, enter the following string, and then select the **Add** plus icon:
 
     ```text
     com.ibm.wps.ac.impl.AccessControlFederator=all
@@ -37,7 +37,7 @@ Refer to the following steps to identify missing resource permissions.
     ```
 
     !!!note
-        - Do not delete the `trace.log` file, or a Portal JVM restart is required.
+        - Do not delete the `trace.log` file. Otherwise, a Portal JVM restart is required.
         - For Windows, use a text editor such as Notepad++ to clear the contents of the `trace.log` file while the server is running.
 
 8. Perform the final action to recreate the issue.
@@ -48,70 +48,71 @@ Refer to the following steps to identify missing resource permissions.
     cp trace.log recreate.log
     ```
 
-10. Return to **Tracing**, locate the trace string you entered in step 5, and select the **Remove** trash icon.
+10. Return to **Tracing**, locate the trace string you entered in Step 5, and select the **Remove** trash icon.
 
 ### Reviewing traces
 
-1. In the `trace.log` file, locate the **hasPermission** string and search for entries that returned **false**.
-2. Then look a few lines up to see what role was being checked on what resource. You can use this grep command in lieu of an editor to find any "false" entries:  
+1. Use the following command to search the `trace.log` file for the `hasPermission` string and find entries that returned `false`:
 
-    `grep  -i  hasPermission  recreate.log |grep -i false`  
+    `grep -i hasPermission recreate.log |grep -i false`  
 
-    Sample entry from a trace (Note **RETURN RESULT: false**):  
+2. Review the lines immediately preceding the `false` entry to determine which role was checked on which resource. For example (`RETURN RESULT: false`):  
 
-    ```trace-entry
+    ```bash
     0000013c AccessControl > com.ibm.wps.ac.impl.AccessControlFederator checkShortCutPermission ENTRY ACPrincipalPumaImpl: Name: UID=JohnDoe,OU=PEOPLE,DC=MYCOMPANY,DC=COM, OID:[ExtIDImpl 'Z9eAeLAI8KU46L1CI3SK6P1BUKAL7GAHU48H952BUKAL7F2H65MS9LAFA4CHA5IKSK0H9C1H6KUSA1QGGK7PA9AGO22D8TPGUK61', USER, UID=1509859,OU=PEOPLE,OU=EXTERNAL,DC=MYCOMPANY,DC=COM, [Domain: rel]] (PermissionCollection)[[ObjectIDImpl 'Z6_00000000000000A0BR2B300GN4', CONTENT_NODE, VP: 0, [Domain: rel], DB: 0000-000000000000000080026B8B35008097]:ModifyNode1:(ActionSet)Edit, (0) (/ActionSet)](/PermissionCollection) ........(deleted 4 lines)  
     ...  
     0000013c AccessControl < com.ibm.wps.ac.impl.AccessControlFederator hasPermission RETURN RESULT: false for ACPrincipalPumaImpl: Name: UID=JohnDoe,OU=PEOPLE,DC=MYCOMPANY,DC=COM, OID:[ExtIDImpl  
     ...  
     ```
 
-3. Verify the entries are on the same thread (in this case **0000013c**).  
+3. Verify that the entries are on the same thread (in this example, `0000013c`).
 
-    !!!note
-        The first entry indicates portal is checking, if the user has Edit Role ie "(ActionSet)Edit" on resource with objectid **Z6_00000000000000A0BR2B300GN4**.  
-        The second entry shows the result of that check returned from Portal Access Control (PAC).  
+    - The first entry indicates that the portal is checking if the user has the Edit role (for example, `(ActionSet)Edit` on resource with ObjectID `Z6_00000000000000A0BR2B300GN4`).  
+    - The second entry shows the result of that check returned from Portal Access Control (PAC).  
 
-### Export the portal content using XML Access
+!!!note
+    You may see `hasPermission` returning `false` for a UUID (for example, `d837d02c-85f9-4cfb-b21e-9c713aae2e71`) instead of a ObjectID. In that case, use the WCM Support Tools Portlet to look up the UUID instead of generating a full XML Access export.
 
-One way to look up the objectId **Z6_00000000000000A0BR2B300GN4** is to collect a full xmlaccess export using these steps:
+### Exporting the portal content using XML Access
 
-1. Follow the instructions of [Generating a complete XML Access export of a Portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/gen_xmlaccessexpt_ptlconfig.md){target="_blank"} to create a full xmlaccess export file. (result.xml).  
+To export the portal content associated with the ObjectID `Z6_00000000000000A0BR2B300GN4`, generate an XML Access export using the following steps:
 
-2. Search through export.xml to identify the resource with the missing role. For this example, search for **Z6_00000000000000A0BR2B300GN4**.  
+1. Generate an XML Access export file (`result.xml`) by following the instructions in [Generating a complete XML Access export of a Portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/gen_xmlaccessexpt_ptlconfig.md){target="_blank"}.  
 
-    !!!note
-        That a page is represented as a "content-node" element in the xmlaccess export, eg:  
-        ```content
-        <content-node action="update" active="true" content-parentref="Z6_000000000000000000000000A0" domain="rel" objectid="Z6_00000000000000A0BR2B300GN4" ordinal="100" themeref="undefined" type="label" uniquename="ibm.portal.Home">
-        ```
+2. In the `result.xml` file, locate the resource with the missing role (`Z6_00000000000000A0BR2B300GN4`)
 
-Combining the trace result with the identified item from the xmlaccess export, it shows the user **JohnDoe** is missing the **Editor Role** on the **ibm.portal.Home** page with objectid **Z6_00000000000000A0BR2B300GN4**.  
+    When you locate the ObjectID in the export, it appears within an XML element that identifies the resource type. For example, a portal page is represented as a `<content-node>`:
 
-Most role names are self-explanatory eg. **traverse/view** means to assign User Role, **personalize** means to assign Privileged User Role.
+    ```xml
+    <content-node action="update" active="true" content-parentref="Z6_000000000000000000000000A0" domain="rel" objectid="Z6_00000000000000A0BR2B300GN4" ordinal="100" themeref="undefined" type="label" uniquename="ibm.portal.Home">
+    ```
 
-### Working with a UUID
+By combining the trace results with the identified item from the XML Access export, you can determine that the user `JohnDoe` is missing the Edit role on the `ibm.portal.Home` page (ObjectID `Z6_00000000000000A0BR2B300GN4`).
 
-You may see **hasPermission returning false** for a uuid (eg. d837d02c-85f9-4cfb-b21e-9c713aae2e71) instead of a objectID like the one above. In that case use the WCM Support Tools Portlet to look up the uuid (instead of the full xmlaccess export).
+Most role names are self-explanatory. For example, a `traverse/view` error means you must assign the User role, and a `personalize` error means you must assign the Privileged User role.
 
-### JCR Issues
+### JCR issues
 
-If you're not able to identify the resource using the above process, the issue may be at the JCR layer. Try the same process above but use the following trace string instead:  
+If you cannot identify the resource using the previous process, the issue might be at the JCR layer. Use the following steps to troubleshoot JCR permissions:
 
-`com.ibm.icm.jcr.service.access.WPSAccessManagerImpl=all`  
+1. Repeat the [trace collection process](#collecting-traces), but use the following trace string instead:
 
-Grep the trace.log for **isGranted** and/or **Permissions**
+    ```plaintext
+    com.ibm.icm.jcr.service.access.WPSAccessManagerImpl=all
+    ```  
 
-In case a user needs to check if the Markup Editor role is assigned on the static page for which customer attempts to change the page layout check the link below:
+2. Use grep to search the trace.log file for the isGranted or Permissions strings. For example:
 
-[Access permissions](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md){target="_blank"}  
+    ```bash
+    grep -i "isGranted\|Permissions" trace.log
+    ```
 
-Look for the part which states that the action, **Modifying page properties includes Set page layout properties of a static page.P** requires **Markup editor role**.  
-Notice that in the role hierarchy, Markup Editor stands on its own, except in relation to the Administrator role:  
+If you need to verify whether the Markup Editor role is assigned to a static page where a user is attempting to change the layout, refer to [Access permissions](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md){target="_blank"}.
 
-[Resource Roles](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md){target="_blank"}  
+- The action **Modifying page properties includes Set page layout properties of a static page** requires the Markup Editor role.
+- In the role hierarchy, the Markup Editor role stands on its own, except in relation to the Administrator role. For more information, refer to [Resource Roles](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md){target="_blank"}.
 
-This is related to the following trace below in which AccessControlFederator **hasPermission has a RETURN RESULT of false**:
+This requirement correlates with the following trace entry, where `AccessControlFederator` shows `hasPermission` returning `false`:
 
 ```trace-entry
 [8/1/23 22:46:30:047 CST] 000001eb AccessControl < com.ibm.wps.ac.impl.AccessControlFederator hasPermission RETURN RESULT: false for ACPrincipalPumaImpl: Name: CN=A7K2ZZZCN,OU=CN,OU=User,DC=CN,DC=MMM,DC=COM, OID:[ExtIDImpl 'Z9eAeP9P8JQ07N1CGJHH6PHP0JHH61BE66OCCH1ECJP0663EC3SKCGHP0', USER, 9e458708c49f0c4a9c0c18630f868e0f, [Domain: rel]] in project [ExtIDImpl 'Z6QSeDeP9O0JP4C2BDEJMCCO1PCMMG6HHPIJM4CNHOCMMG61JP2MH57H9OCMSGCO1', PROJECT, 9a03ab57-c8df-41f9-a7bf-4afac91af9d8, [Domain: jcr]] on (PermissionCollection)[[ObjectIDImpl 'Z6_M94G0O412P7A506IA529QPSU54', CONTENT_NODE, VP: 0, [Domain: rel], DB: 0000-3611083009221F558091AA88A433F785]:NA:(ActionSet)Edit,Edit_Markup, (0) (/ActionSet)](/PermissionCollection)  
