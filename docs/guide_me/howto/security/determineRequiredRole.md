@@ -1,4 +1,4 @@
-# How to determine which DX resource is missing a required role
+# How to identify missing DX resource roles
 
 ## Applies to
 
@@ -6,43 +6,53 @@
 
 ## Introduction
 
-This article explains how to determine which Portal or Web Content Manager (WCM) resource is missing required roles, if a user can not see a page or content item. Use these steps to identify the page/resource that is missing the required role assignment for the user or user's groups.  
+If a user cannot view a specific page or content item, they might lack the required access roles. This article describes how to identify which Portal or Web Content Manager (WCM) resource is missing role assignments for a user or their groups.
 
 ## Instructions
 
-Please use the following instructions to find missing resource permissions.
+Refer to the following steps to identify missing resource permissions.
 
 ### Collecting traces
 
-1. Backup/Delete all trace*.log files currently on the server (usually in directory `<wp_profile_root>/logs/WebSphere_Portal`  
+1. Back up and delete all existing `trace.log` files on the server. These files are typically located in the `<wp_profile_root>/logs/WebSphere_Portal` directory.
 
-2. Reduce activity on the server to a minimum  
+2. Reduce server activity to a minimum.
 
-3. Enable the following trace-string by logging into the Portal and by navigating to  **Administration > Enable Tracing**:  
-   `com.ibm.wps.ac.impl.AccessControlFederator=all`  
+3. Log in to HCL DX as an administrator.
 
-4. Navigate to the point where you are ready to submit the request to recreate the problem.
+4. Navigate to **Administration > Tracing**.
 
-5. Empty the trace.log file content using command:  
-   `> trace.log`
+5. Under **Append these trace settings:**, enter the following string, then select the **Add** plus icon:
+
+    ```text
+    com.ibm.wps.ac.impl.AccessControlFederator=all
+    ```  
+
+6. Perform the steps to recreate the issue, stopping immediately prior to the final action.
+
+7. Clear the contents of the `trace.log` file using the following command:
+
+    ```shell
+    > trace.log
+    ```
 
     !!!note
-        - For windows use any text editor (etc. Notepad++) to remove the content of the trace.log file on the fly.  
-        - Do not delete the trace.log file or a restart of the portal jvm will be required.  
+        - Do not delete the `trace.log` file, or a Portal JVM restart is required.
+        - For Windows, use a text editor such as Notepad++ to clear the contents of the `trace.log` file while the server is running.
 
-6. Recreate the issue
+8. Perform the final action to recreate the issue.
 
-7. Copy trace.log as quickly as possible to a new location or file:  
+9. Immediately copy the `trace.log` file to a new location or file name using the following command:
 
     ```shell
     cp trace.log recreate.log
     ```
 
-8. Remove the trace string in the Portal.
+10. Return to **Tracing**, locate the trace string you entered in step 5, and select the **Remove** trash icon.
 
-### Reviewing the traces
+### Reviewing traces
 
-1. Search through trace.log for the string **hasPermission** and look for entries that returned **false**.
+1. In the `trace.log` file, locate the **hasPermission** string and search for entries that returned **false**.
 2. Then look a few lines up to see what role was being checked on what resource. You can use this grep command in lieu of an editor to find any "false" entries:  
 
     `grep  -i  hasPermission  recreate.log |grep -i false`  
@@ -62,7 +72,7 @@ Please use the following instructions to find missing resource permissions.
         The first entry indicates portal is checking, if the user has Edit Role ie "(ActionSet)Edit" on resource with objectid **Z6_00000000000000A0BR2B300GN4**.  
         The second entry shows the result of that check returned from Portal Access Control (PAC).  
 
-### Export the portal content using xmlaccess
+### Export the portal content using XML Access
 
 One way to look up the objectId **Z6_00000000000000A0BR2B300GN4** is to collect a full xmlaccess export using these steps:
 
