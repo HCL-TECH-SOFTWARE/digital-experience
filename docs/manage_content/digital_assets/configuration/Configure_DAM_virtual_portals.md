@@ -9,7 +9,7 @@ Prerequisites:
 
 - Install HCL Digital Experience 9.5 CF19 or higher release, including Digital Asset Management and the Experience API.
 - Configure virtual portal support to the HCL DX 9.5 CF19 or higher release deployment.
-- Verify access to the Practitioner Studio interface on the virtual portal. See [Enabling Practitioner Studio and Woodburn Studio in an existing virtual portal](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for additional information.
+- Verify access to the Practitioner Studio interface on the virtual portal. See [Enabling Practitioner Studio in an existing virtual portal](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md) for additional information.
 
 ## Installing Digital Asset Management on a virtual portal
 
