@@ -6,6 +6,8 @@ This section includes how-to articles about issues related to login, Portal Acce
 Learn how to add additional security realms for Virtual Portals.  
 - **[How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX](./enable_http_security_http_only_samesite_K8.md)**  
 Learn how to enable HTTP-related security flags and attributes in your HCL DX environment.  
+- **[How to identify missing DX resource roles](./determineRequiredRole.md)**  
+Learn how to determine which DX resource is missing a required role (for example, if a user cannot see a page or content item).  
 - **[How to implement SAML in HCL DX](implementsaml_portal.md)**  
 Learn about the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and how to implement it.
 - **[How to integrate HCL DX user authentication using Microsoft Azure AD](./AuthenticationMSAzure.md)**  
