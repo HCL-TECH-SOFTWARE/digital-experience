@@ -6,7 +6,10 @@ The HCL Doc IQ chatbot lets you interact with Help Center documentation. Instead
 
 Doc IQ improves the documentation experience by making information easier to find, reducing the time needed to locate relevant topics, and guiding you to the most relevant documentation resources.
 
-The chatbot analyzes documentation and generates responses that reference relevant topics. This lets you quickly access the source material for more detailed information. For customers, the impact is primarily network bandwidth, similar to loading an HTML page.
+The chatbot analyzes documentation and generates responses that reference relevant topics. This lets you quickly access the source material for more detailed information.  
+
+
+It finds relevant information in documentation and knowledge base (KB) articles.
 
 ![HCL Doc IQ chatbot interface](../../images/doc-iq-chatbot-interface.png){ width=400 }
 
@@ -35,7 +38,7 @@ The Doc IQ chatbot leverages documentation to provide answers to your questions.
 
 When you submit a query, the chatbot:
 
-1. Analyzes the your question.  
+1. Analyzes your question.  
 2. Searches the available documentation for relevant information.  
 3. Generates a summarized response.  
 4. Includes references to the documentation topics used to generate the answer.
