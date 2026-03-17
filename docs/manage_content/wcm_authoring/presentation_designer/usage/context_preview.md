@@ -3,7 +3,7 @@
 The Canvas Context Preview feature in HCL Digital Experience (DX) Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. This feature allows you to:
 
 - Preview template changes in real time as you map content elements and tags.
-- Map content elements, property tags, and generic tags directly to the template structure.
+- Map content elements, property tags, directly to the template structure.
 - Preserve custom styling and layouts while switching between different content contexts.
 - Retain the selected content context across different device views and sessions.
 - Automatically map content elements and property tags to the template.
@@ -37,9 +37,9 @@ The following example shows the canvas updated with the selected context and act
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Selected.png)
 
-### Content mapping <!--Map content elements, property tags, and generic tags directly to the template structure. - are generic tags supposed to be described in this section too?-->
+### Content mapping <!--Map content elements, property tags directly to the template structure. - are generic tags supposed to be described in this section too?-->
 
-Canvas Context Preview automatically maps the following types of content: <!--"Canvas Context Preview automatically maps content elements, property tags, and generic tags."-->
+Canvas Context Preview automatically maps content elements, property tags: <!--"Canvas Context Preview automatically maps content elements, property tags"-->
 
 #### Content elements
 
