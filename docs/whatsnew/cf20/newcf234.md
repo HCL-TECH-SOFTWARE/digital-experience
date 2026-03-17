@@ -86,10 +86,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Presentation Designer - Canvas Context Preview
 
 === "Containers"
-    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with WCM (Web Content Manager) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 === "On-Premises"
-    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with WCM (Web Content Manager) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### WCM AI Analysis - Additional configuration options for custom AI providers
 
