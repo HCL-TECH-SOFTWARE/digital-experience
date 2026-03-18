@@ -10,9 +10,16 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
 
 3.  It is recommended that all databases to be used with HCL Portal are configured in Dedicated Server Mode.
 
-4.  If you are using Oracle
+4.  All Oracle databases must be created with the `AL32UTF8` character set for maximum Unicode compatibility. The National Character Set should be set to `AL16UTF16`.
 
-5.  If you are using Oracle 12c databases, you must configure database transfer and runtime with the ojdbc7.jar and xdb6.jar library files. These two libraries must be in the same directory.
+5.  Select the appropriate JDBC driver based on your Oracle version:
+
+    -   **Oracle 12c**: Configure database transfer and runtime with the `ojdbc7.jar` and `xdb6.jar` library files. These two libraries must be in the same directory.
+
+    -   **Oracle 19c and Oracle 21c**: Configure database transfer and runtime with the `ojdbc11.jar` library file. The `xdb6.jar` file is not required for Oracle 19c and 21c. Use the `ojdbc11.jar` driver provided by Oracle for your specific Oracle Database version. Refer to the [Oracle JDBC Downloads page](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html) for the latest driver.
+
+    !!! note
+        HCL DX is tested against Oracle 19c and Oracle 21c. Oracle 12c is no longer covered by standard Oracle support. Customers on Oracle 12c should plan their upgrade to a supported Oracle version.
 
 6.  You must set the buffer pools allocated to the Oracle database in order for HCL Portal to communicate with the Java™ Content Repository database. Refer to the Oracle product documentation for information on how to set the buffer pools. Use these recommended buffer pool values as a guide for setting your values:
 
