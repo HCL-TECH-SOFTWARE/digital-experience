@@ -34,11 +34,15 @@ The following are supported media asset file formats in HCL Digital Experience 9
 |.tiff|image/tiff|
 |.webp|image/webp|
 
-!!! note 
-    -   You can set the maximum file size for the DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById) API documentation topic.
-    -   SVG file type is disabled. If you wish to enable .svg file type (extension image/svg+xml) for asset upload, you can enable it via API using enabled parameter.
-    [MediaTypeController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById)
-    this API documentation topic.
+!!! note
+    - You can set the maximum file size for DAM asset uploads. For more information, see [`MediaTypeGroupController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById).
+
+    - SVG files are disabled by default. To enable `.svg` files (extension `image/svg+xml`) for asset uploads, use the API and set the `enabled` parameter to `true`. For more information, see [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById). For step-by-step guidance, see [Adding a new MIME type in DAM](../../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md/#adding-a-new-mime-type-in-dam).
+
+    - If you cannot upload files to DAM, see [Cannot upload files to DAM](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129583){target="_blank"}.
+
+    - 
+
 |File type|Extension|
 |---------|---------|
 |.ogv|video/ogg|
