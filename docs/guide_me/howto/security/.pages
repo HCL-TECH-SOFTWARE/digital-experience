@@ -9,3 +9,4 @@ nav:
     - transient_users_with_OpenID_Connect.md
     - UnifiedTaskListLog4j.md
     - ReplacePortalLDAP.md
+    - FedReposDifferentLoginProps.md
