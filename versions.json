@@ -1,10 +1,15 @@
 [
   {
-    "version": "CF224",
-    "title": "CF224",
+    "version": "CF234",
+    "title": "CF234",
     "aliases": [
       "latest"
     ]
+  },
+  {
+    "version": "CF224",
+    "title": "CF224",
+    "aliases": []
   },
   {
     "version": "CF223",
