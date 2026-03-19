@@ -1,4 +1,4 @@
-# What's new in CF234
+# What's new in CF234 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF234 on supported platforms:
 
