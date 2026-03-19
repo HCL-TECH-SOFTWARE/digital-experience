@@ -1,15 +1,15 @@
-# Examples of using the Site Manager in Woodburn Studio
+# Examples of using the Site Manager
 
-This topic provides examples of how you can use the Site Manager through the Woodburn Studio demo site. You can perform the same actions in your own site.
+This topic provides examples of how you can use the Site Manager through a sample site. You can perform the same actions in your own site.
 
 ## Using the site toolbar
 With the site toolbar, you can add and modify pages and content as needed. This example shows you the several actions available through the **Context menu**. 
 
-1. In the Woodburn Studio site, switch the **Edit Mode** toggle button to **ON**. 
+1. In your site, switch the **Edit Mode** toggle button to **ON**.
 
-    Going into Edit mode opens the site toolbar and allows you to create and modify content. The left side of the screen shows the tree view of Woodburn Studio.
+    Going into Edit mode opens the site toolbar and allows you to create and modify content. The left side of the screen shows the site tree view.
 
-2. On the Woodburn Studio tree, click the menu icon of a specific page to open the Context menu. A list of actions available is displayed. You can:
+2. On the site tree, click the menu icon of a specific page to open the Context menu. A list of actions available is displayed. You can:
 
     - Create a child page.
     - Create a sibling page.
@@ -23,7 +23,7 @@ With the site toolbar, you can add and modify pages and content as needed. This 
 ## In-place editing
 Through in-place editing, users with edit access can directly modify the content of a webpage. This section shows examples on how you can use this feature. 
 
-1. In the Woodburn Studio site, switch the **Edit Mode** toggle button to **ON**. 
+1. In your site, switch the **Edit Mode** toggle button to **ON**.
 
     Going into edit mode allows you to create and modify content.
 
@@ -32,19 +32,19 @@ Through in-place editing, users with edit access can directly modify the content
     With in-place editing, you can:
 
     - Change the content of text boxes. You can click on a text box and it switches to an editable text box. In this example, you can change the content of the **Headline-Text** box.
-        ![Modifying text in Woodburn Studio](../../../images/woodburn_studio_sample.png)
+        ![Modifying text in a site](../../../images/woodburn_studio_sample.png)
 
     - Use buttons to follow links to other pages. 
 
     - Change images. Click on an image and a window appears. You can upload or remove an image, modify the image attributes, and control the different renditions of an image. Click **Save** to save your changes.
-        ![Uploading a new image in Woodburn Studio](../../../images/woodburn_studio_upload.png)
+        ![Uploading a new image in a site](../../../images/woodburn_studio_upload.png)
 
 
 ## Inline editing
 
 Unlike in-place editing where you can directly edit content items on the page review frame, inline editing is done through authoring portals. The example below shows you how to add an article in your demo site. 
 
-1. In the Woodburn Studio site, switch the **Edit Mode** toggle button to **ON**. 
+1. In your site, switch the **Edit Mode** toggle button to **ON**.
 
     Going into edit mode opens the site toolbar and allows you to create and modify content. 
 
@@ -102,6 +102,5 @@ In this example, you can modify the various settings of a specific page.
     - [Adding pages, content, and more](../../../build_sites/create_sites/adding_pages_content_more/index.md)
     - [Configure your content spot](../../../build_sites/create_sites/content_spot/index.md)
     - [Developing and managing content](../../../build_sites/create_sites/developing_managing_content/index.md)
-    - [The Woodburn Studio demo site](../../../build_sites/woodburn_studio/index.md)
     
 

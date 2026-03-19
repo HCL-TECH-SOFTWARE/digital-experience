@@ -1,11 +1,11 @@
 # How to enable Practitioner Studio
 
-This section outlines how to enable Practitioner Studio and Woodburn Studio in both base portal and virtual portal environments.
+This section outlines how to enable Practitioner Studio in both base portal and virtual portal environments.
 
-## Enabling Practitioner Studio and Woodburn Studio in base portal
+## Enabling Practitioner Studio in base portal
 
 !!! note
-    It is not necessary to stop or restart Portal when running these configuration tasks. Please note that in order for you to deploy Practitioner Studio and Woodburn Studio to a virtual portal, you must first enable the 95 UI features in base Portal.
+    It is not necessary to stop or restart Portal when running these configuration tasks. To deploy Practitioner Studio to a virtual portal, first enable the 9.5 UI features in the base Portal.
 
 1. Open a command line.
 2. Change to the wp\_profile-root/ConfigEngine directory.
@@ -18,7 +18,7 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
         Any actions taken when using the **Preview As User** feature in DAM and CC shows the site as the original user, not the one that you are using to preview.
 
 
-## Enabling Practitioner Studio and Woodburn Studio in an existing virtual portal
+## Enabling Practitioner Studio in an existing virtual portal
 
 1. Open a command line.
 2. Change to the wp\_profile-root/ConfigEngine directory.
@@ -31,7 +31,7 @@ This section outlines how to enable Practitioner Studio and Woodburn Studio in b
     !!! note
         -   To configure the virtual Portal Manager so that Practitioner Studio is deployed for the newly created virtual portals, see [How to configure Practitioner Studio](../../practitioner_studio/working_with_ps/config_prac_studio.md).
 
-        -   To enable Practitioner Studio and Woodburn Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
+        -   To enable Practitioner Studio on all available Virtual Portals, you can use the following parameter: `-DUpdateVPs=true`
 
         -   If **-DVirtualPortalContext=** has a space in the context name, please add quotes around the name of the context.
 

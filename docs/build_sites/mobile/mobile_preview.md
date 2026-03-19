@@ -14,7 +14,7 @@ This section provides information on the usage of the Mobile Preview Simulator i
 
 ## Installation
 
-The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with the [Practitioner Studio](../practitioner_studio/index.md) and [Woodburn Studio demo site](../woodburn_studio/index.md).
+The Mobile Preview Simulator is enabled by default in HCL Digital Experience 9.5 CF19 and later releases and deployed along with [Practitioner Studio](../practitioner_studio/index.md).
 
 Access the Mobile Preview Simulator
 
@@ -22,9 +22,9 @@ After verifying access to Practitioner Studio, the Mobile Preview Simulator can 
 
 /wps/mobilepreview/MobileBrowserSimulator/index.html
 
-The Mobile Preview image and action appears at the top right, just below the Woodburn Studio site menu as shown in the following figure.
+The Mobile Preview image and action appears at the top right, as shown in the following figure.
 
-![The Mobile Preview image and action appear on the top right, just below the Woodburn Studio site menu shown in this figure.](../../images/MobilePreview%20icon%20logged%20in%20users%20edit%20mode.png)
+![The Mobile Preview image and action appear on the top right, as shown in this figure.](../../images/MobilePreview%20icon%20logged%20in%20users%20edit%20mode.png)
 
 Append the following query to the URL to set the HCL Digital Experience page to display initially:
 
@@ -108,9 +108,9 @@ Option 2: Reference the Mobile Preview simulator for launch in an HCL DX theme
     ```
 
 
-Option 3: Access the Mobile Preview simulator from a Dynamic Content Spot configured to the Woodburn Studio demonstration site
+Option 3: Access the Mobile Preview simulator from a Dynamic Content Spot configured in your theme
 
-In Woodburn Studio demonstration site delivered in HCL DX 9.5 CF19 and later releases, the Mobile Preview Simulator is added as a Dynamic Content Spot in the default theme.html. This serves to make the simulator capability available to all of the Woodburn Studio demonstration site pages by default. The code example below shows how the Dynamic Content Spot is added to the Woodburn Studio demonstration site:
+In a site theme, the Mobile Preview Simulator can be added as a Dynamic Content Spot in the default `theme.html`. This makes the simulator capability available to site pages by default. The code example below shows how the Dynamic Content Spot is added:
 
 ```
 <c:set var="mobilePreview" value="${pageContext.request.contextPath}/mobilepreview/MobileBrowserSimulator/index.html?webpage=${fn:escapeXml(wp.selectionModel.selected.urlGeneration.noNavigationalState.allowRelativeURL)}"/>
@@ -129,8 +129,8 @@ In Woodburn Studio demonstration site delivered in HCL DX 9.5 CF19 and later rel
 <a rel="dynamic-content" href="dyn-cs:id:MP_button"></a>
 ```
 
-The following examples demonstrate use of the Mobile Preview simulator to view display of the Woodburn Studio demonstration site on mobile device displays.
+The following example demonstrates use of the Mobile Preview simulator to view a site on mobile device displays.
 
-![Using the Mobile Preview simulator to view Woodburn Studio demonstration site display on mobile devices](../../images/using_mobile_preview_simulator.png)
+![Using the Mobile Preview simulator to view site display on mobile devices](../../images/using_mobile_preview_simulator.png)
 
 
