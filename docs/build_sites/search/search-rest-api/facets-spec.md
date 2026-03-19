@@ -1,6 +1,50 @@
-# Search facets REST API specification
+# Search facets REST API specification 
 
 The following document describes the facet parameter of the Search API and the corresponding response elements. The facet parameter allows obtaining the facets, which are relevant for the search query. The facets that are supported in Portal Search include Tag, Person, Date, Source, and for status updates only Trend.
+
+# Implementing  faceted search with Portal Search to improve search result quality 
+
+**Applies to:** HCL Digital Experience 8.5 and later
+
+Faceted search helps your users find the right content faster by providing specific filters for search results. This guide shows you how to set up and configure faceted search using Portal Search to improve the overall search experience in HCL Digital Experience.
+
+# Creating a faceted search collection 
+
+Follow these steps to configure your search service and create a collection for faceted search.
+
+## Step 1: Configure search service properties
+
+You must define which fields are faceted and specify data types for non-string fields (such as integers) to enable sorting.
+
+1. In the Portal administration interface, go to **Administration > Manage Search > Search Services**.
+2. Locate and edit the properties for your service (for example, **Default Search Service**).
+3. Add or update the following properties:
+
+| Property Name  | Value                        | Description                                         |
+|----------------|-------------------------------|---------------------------------------------------|
+| facetedFields  | `["category"]`               | Defines the fields used for faceting.            |
+| fieldTypes     | `{"popularity":"integer"}`   | Defines data types for non-string fields.        |
+| sortedField    | `[Your Field]`               | Required for the server to accept facets.        |
+
+4. Restart the Portal server and the remote search service (if applicable) to apply the changes.
+
+## Step 2: Create and crawl the collection
+
+Once the server restarts, you can build the search index:
+
+1. Create a new search collection and the appropriate content source.
+2. Start the crawler to feed data into the search collection.
+3. Install and configure the **ExplorativeUI** portlet.
+
+## Understand search relevance
+
+When a user performs a single-keyword search, the system determines relevance based on several factors:
+
+- **Keyword density:** A document with 28 occurrences of a word across 16 pages is ranked higher than a document with 28 occurrences across 1,600 pages.
+- **Metadata:** Keywords included in metadata (title, description, and rich text) that aren't visible in the body of the document improve discoverability.
+- **Manual weighting:** You can influence the search order by repeating specific words in the description field.
+
+
 
 ## Request Format
 

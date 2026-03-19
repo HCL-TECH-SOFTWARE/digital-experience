@@ -1,3 +1,6 @@
 # Syndication
 
-This section will eventually include how-to articles about syndication-related content in HCL Digital Experience (DX).
+This section includes how-to articles about syndication in HCL Digital Experience (DX).
+
+- **[How to create a syndicator-subscriber pair](./CreateSyndicatorSubsciberPair.md)**  
+Learn how to create a syndicator-subscriber pair in Web Content Manager (WCM).

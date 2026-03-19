@@ -38,8 +38,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The HCL DX Blueprint design system has been updated for CF231. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
+    !!!note
+        The Nex Haven sample site template has been removed from the Blueprint Design System package. 
+
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF231. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/231.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+    !!!note
+        The Nex Haven sample site template has been removed from the Blueprint Design System package. 
 
 ### DXClient - Create and deploy Script Applications using the `create-dx-script-app` tool
 
