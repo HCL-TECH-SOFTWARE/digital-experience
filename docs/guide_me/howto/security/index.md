@@ -18,5 +18,5 @@ Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL 
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How To Configure HCL Portal to Allow Users to Log in With Different Login Properties in a Federated Repository](./FedReposDifferentLoginProps.md)**  
-Learn how to configure HCL Portal to allow users to log in with different login properties in a federated repository
+- **[How to configure HCL DX to allow users to login with different login properties in a federated repository](./FedReposDifferentLoginProps.md)**  
+Learn how to configure HCL DX to allow users to login with different login properties in a federated repository.  
