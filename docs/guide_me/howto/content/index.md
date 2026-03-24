@@ -16,7 +16,7 @@ Learn how to obtain the UUID and Path of WCM content objects through the Linux b
 Learn how to identify new managed pages in HCL DX.  
 - **[How to use JavaServer Pages (JSPs) in WCM](./useJSPinWCM.md)**  
 Learn how to use JSP components in HCL DX using WCM.
+- **[How to use XML Access](./xmlaccess_faq.md)**  
+Learn how to use the XML Access command line tool.  
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
-- **[How to use XMLAccess?](./xmlaccess_faq.md)**  
-Learn how to use XML Access.  
