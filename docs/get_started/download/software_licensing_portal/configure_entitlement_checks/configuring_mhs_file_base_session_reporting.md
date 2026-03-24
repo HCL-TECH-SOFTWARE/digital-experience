@@ -150,6 +150,11 @@ After generating the metrics file (for example, `{YYYY-MM-DDTHH-MM-SS UTC}_usage
 3. Wait for the upload to finish. Refer to the following status messages and corresponding actions when uploading metrics files to MHS:
 
     - If the status is `validating` or `processing`, wait on the page or return to the previous page to observe the status change (`completed`, `failed`, or `rejected`).
-    - If the status is `rejected`, check for tampered hash chaining, invalid signatures, or fields not in the required format.. Ensure to upload the valid metrics file.
+    - If the status is `rejected`, check for tampered hash chaining, invalid signatures, or fields not in the required format. Ensure to upload the valid metrics file.
     - If the status is `failed`, reach out to [MHS support](https://support.hcl-software.com/csm){target="_blank"} through IT operations.
     - If the status is `completed`, the file is validated and the data is processed successfully.
+
+4. Entitled customer users with the "Deploy Software" permission for MHS should be able to view the information uploaded using the prior steps in their MHS deployment information. Each deployment has a "Usage" tab that shows reported usage graphically and in a table format. Contact MHS support  if the steps have been completed and customer users with the MHS Deploy Software permission for the relevant deployment are not able to view the uploaded usage data. 
+
+    !!! note
+        Entitled customer users with the "Deploy Software" permission for MHS should be able to view the information uploaded using the prior steps in their MHS deployment information. Each deployment has a "Usage" tab that shows reported usage graphically and in a table format. Contact [MHS support](https://support.hcl-software.com/csm){target="_blank"} if the steps have been completed and customer users with the MHS Deploy Software permission for the relevant deployment are not able to view the uploaded usage data. 

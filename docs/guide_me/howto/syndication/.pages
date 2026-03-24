@@ -1,4 +1,5 @@
 title: Syndication
 
 nav:
-    - index.md
+    - Home: index.md
+    - CreateSyndicatorSubsciberPair.md
