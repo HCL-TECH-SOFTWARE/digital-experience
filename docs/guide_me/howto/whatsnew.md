@@ -9,11 +9,18 @@ This section contains the newly created and migrated how-to articles. The articl
 <!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
 
 ## CF###
+
 | Type | Category | Article |
 |------|----------|---------|
 ||||
 
 -->
+
+## CF235
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Upgrade|[How to verify an HCL DX CF upgrade](./upgrade/checkSuccessfullUpgrade.md)|
 
 ## CF234
 
