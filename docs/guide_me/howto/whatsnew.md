@@ -1,8 +1,34 @@
-# New and migrated articles 
+# New and migrated articles
 
 This section contains the newly created and migrated how-to articles. The articles are arranged by Cumulative Fix (CF) and category.
 
-<!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.-->
+- **Migrated:** How-to articles migrated from the knowledge base to the DX Help Center.
+- **Moved:** How-to articles moved to a new category and link to new Help Center URLs.
+- **New:** Newly created how-to articles.
+
+<!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
+
+## CF###
+| Type | Category | Article |
+|------|----------|---------|
+||||
+
+-->
+
+## CF234
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to find the virtual portal name by ObjectID](./administration/DetermineVPObjectID.md)|
+|Migrated|Content|[How to delete WCM libraries referenced by other libraries](./content/DeleteLibWithRefs.md)|
+|Migrated|Content|[How to enable or disable managed pages on HCL DX](./content/disableManagedPages.md)|
+|Migrated|Content|[How to export themes and skins in HCL DX](./content/OnlyExportThemeSkins.md)|
+|Migrated|Security|[How to identify missing DX resource roles](./security/determineRequiredRole.md)|
+|Migrated|Security|[How to integrate HCL DX user authentication using Microsoft Azure AD](./security/AuthenticationMSAzure.md)|
+|Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
+|Migrated|Syndication|[How to create a syndicator-subscriber pair](./syndication/CreateSyndicatorSubsciberPair.md)|
+|Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
+|Migrated|Troubleshooting|[How to generate a PACDump](../troubleshooting/security/PumaDump.md)|
 
 ## CF233
 

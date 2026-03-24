@@ -107,7 +107,9 @@ GET /dx/api/dam/v1/database-analysis?type=MediaTypes
 
 The Operations Metrics show the status of DAM operations by trigger function. Use this metric to identify operation patterns and troubleshoot issues.
 
-![Operations Metrics](../../../../images/Operations_metrics.png)
+![Operations Metrics](../../../../images/Operations_metrics_latest.png)
+
+Select one or more rows with failed operations and click **Retrigger Failed Operation** to re-execute them.
 
 !!! note
     For performance analysis, focus on recent operation patterns rather than historical totals.
@@ -122,7 +124,9 @@ GET /dx/api/dam/v1/database-analysis?type=Operations
 
 The Collections Missing Access Reference ID metric identifies collections that do not have proper access control configuration. Collections without access reference IDs may have inconsistent permission inheritance or access control issues that need administrative attention.
 
-![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference.png)
+![Collections Missing Access Reference](../../../../images/Collections_missing_access_reference_latest.png)
+
+Select one or more collections and click **Generate Access Reference** to re-generate access reference for them.
 
 !!! note
     Collections missing access reference IDs should be addressed promptly to ensure proper access control functionality across your DAM deployment.
@@ -152,7 +156,9 @@ GET /dx/api/dam/v1/database-analysis?type=CollectionsMissingAccessReference
 
 The Media Items not in Collection metric lists orphaned media assets that are not associated with any collection. While these items exist in the DAM system, they are not organized within the collection hierarchy, making them difficult to discover and manage.
 
-![Orphan Media Items](../../../../images/Orphan_media_items.png)
+![Orphan Media Items](../../../../images/Orphan_media_items_latest.png)
+
+Click **Move** on any orphaned media item, select your desired collection, and confirm to organize it.
 
 For each orphan media item, the following information is displayed:
 
@@ -163,10 +169,51 @@ For each orphan media item, the following information is displayed:
 | Created  | Date and time when the media item was uploaded |
 
 !!! note
-    Consider organizing orphaned media items into appropriate collections for better content management.
+    - Consider organizing orphaned media items into appropriate collections for better content management.
+    - Moved media items retain all metadata and versions associated with them.
 
-REST API endpoint:
+### REST API endpoints
 
-```
-GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
-```
+- `GET /dx/api/dam/v1/database-analysis`
+
+    Query parameter:
+
+    - `type` (Required): The value must be one of the `Database`, `Media`, `Operations`, `MediaTypes`, `CollectionsMissingAccessReference` and `OrphanMediaItems`.
+
+- `POST /dx/api/dam/v1/database-analysis`
+
+    Request payload schema:
+
+    - `type` (required): Healing operation type.
+    - `targets` (required): Array of IDs or trigger-function names, depending on `type`.
+    - `targetCollectionId` (optional): Destination collection ID (required only for `MoveOrphanMedia`).
+
+    Supported `type` values with sample payloads:
+
+    1. `RetriggerFailedOperations`: Retriggers failed operations for the listed trigger functions.
+
+        ```json
+        {
+            "type": "RetriggerFailedOperations",
+            "targets": ["generateThumbnail", "generateMetaData"]
+        }
+        ```
+
+    2. `RegenerateMissingAccessReference`: Regenerates access reference IDs for the listed collection IDs.
+
+        ```json
+        {
+            "type": "RegenerateMissingAccessReference",
+            "targets": ["c8ce7a84-c3d8-486a-8ae2-57cbf6b11111", "4b57247d-a55b-4458-85c9-09ecf4a32222"]
+        }
+        ```
+
+    3. `MoveOrphanMedia`: Moves the specified orphan media item to the destination collection, `targets` must contain exactly one media ID for this type.
+
+        ```json
+        {
+            "type": "MoveOrphanMedia",
+            "targets": ["96cb4af4-4478-43a3-a69c-72c4f5016f6f"],
+            "targetCollectionId": "f2d0f9ed-19f0-4f77-8b9e-e4c4c7f73333"
+        }
+        ```

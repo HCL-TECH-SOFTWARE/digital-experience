@@ -24,13 +24,13 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
 
 3.  Register a service worker with a functional fetch handler.
 
-Once an application meets the above criteria, the browser will display a button that will allow the application to be installed. See the PWA install option example shown below using the [Woodburn Studio Demo Site](../woodburn_studio/index.md).
+Once an application meets the above criteria, the browser will display a button that allows the application to be installed. See the install option example below.
 
-![Woodburn Studio Demo Site](../../images/woodburn_studio_demo_site.png)
+![Sample site install prompt](../../images/woodburn_studio_demo_site.png)
 
 When the install button is clicked, a dialog will appear that prompts the user to install the application.
 
-![Install Woodburn Studio offline option](../../images/Install%20Woodburn%20studio%20PWA%20offline%20option.png)
+![Install application for offline use](../../images/Install%20Woodburn%20studio%20PWA%20offline%20option.png)
 
 Once the application is installed, the application icon will display \(in the following example as a Google Chrome application\) and the application will be launched.
 
@@ -45,7 +45,7 @@ HCL Digital Experience 9.5 CF19 and Container Update CF192 add new platform and 
 1.  **Updated System module** delivered in HCL DX 9.5 CF19. This module serves the manifest and service worker files.
 2.  **New Theme scope module** that is defined in the theme.json file. This loads the pwa.js.
 3.  **New page metadata** is created that can be used on the root page of the site \(or other pages in some cases\).
-4.  An updated [Woodburn Studio Demo Site](../woodburn_studio/index.md), which will present a Progressive Web Application enabled for installation and display to supported mobile platforms. PWA installation and display of the updated Woodburn Studio site experience is tested and verified on the following mobile browser platforms:
+4.  A sample site configured as a Progressive Web Application that is enabled for installation and display on supported mobile platforms. PWA installation and display have been tested and verified on the following mobile browser platforms:
 
     -   Apple Safari must be used for Apple Mobile devices. \(Not supported for desktop access\). Apple iOS v13 and v14 are tested and verified.
     -   Google Chrome 85 on Mac and Windows
@@ -88,20 +88,20 @@ By default, the manifest.json file does not provide any localization information
     -   descriptions
 
 ```
-        "name": "Woodburn",
+        "name": "Sample App",
         "names": [
             {
-                "value": "Woodburn application",
+                "value": "Sample application",
                 "lang": "en"
             },
             {
-                "value": "Woodburn Anwendung",
+                "value": "Beispielanwendung",
                 "lang": "de"
             }
         ],
 ```
 
-In this example, if the user accesses the DX Progressive Web Application using German language preferences, the name of the application displayed will be **Woodburn Anwendung**. However, if the user were to access the application in a language that is not defined in the manifest, the value from the name field would be used as a fallback.
+In this example, if the user accesses the DX Progressive Web Application using German language preferences, the name of the application displayed will be **Beispielanwendung**. However, if the user were to access the application in a language that is not defined in the manifest, the value from the name field would be used as a fallback.
 
 ## Hiding pages in PWA application mode
 
@@ -120,9 +120,9 @@ Hidden pages are implemented via CSS included in the theme. There are two places
             }
     ```
 
--   Update the navigation JSP for the theme; usually located in the themes/html/dynamicSpots directory in the root of the dynamic files. The `pwa.Hidden` page metadata parameter is checked and if it is true the `pwa.Hidden` CSS class will be applied to the `li` element to hide the page. In the example below, the hidden parameter is added to the mainNav.jsp in the Woodburn Studio theme.
+-   Update the navigation JSP for the theme; usually located in the themes/html/dynamicSpots directory in the root of the dynamic files. The `pwa.Hidden` page metadata parameter is checked and if it is true the `pwa.Hidden` CSS class will be applied to the `li` element to hide the page. In the example below, the hidden parameter is added to the `mainNav.jsp` in a custom theme.
 
-    **Example : Adding a hidden page metadata parameter to the Woodburn Studio theme**
+    **Example : Adding a hidden page metadata parameter to a custom theme**
 
     ```
         <c:set var="pwaHidden" value="${node.metadata['pwa.Hidden']}"></c:set>
@@ -156,14 +156,14 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 
     -   Restart the HCL DX 9.5 server.
 
-    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\) as noted above in the Updated [Woodburn Studio Demo Site](../woodburn_studio/index.md) detail.
+    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\).
 
     All further steps apply to custom themes and/or to custom sites.
 
-2.  **Create a pwas directory in the root of the theme static files**. This directory will contain all of the PWA configurations. Each sub-directory under pwas represents a single configuration. For example, in the updated Woodburn Studio theme \( in CF19 and higher releases\), these directories/files exist:
+2.  **Create a pwas directory in the root of the theme static files**. This directory will contain all of the PWA configurations. Each sub-directory under `pwas` represents a single configuration. For example, these directories/files can exist:
 
     -   pwas \(folder\)
-        -   woodburn \(folder\)
+        -   site1 \(folder\)
             -   images \(folder\)
             -   manifest.json
             -   service-worker.js
@@ -181,9 +181,9 @@ Hidden pages are implemented via CSS included in the theme. There are two places
     -   `start_url` or the preferred URL that should be loaded when the user launches the web application. The scope can be set directly in the manifest file or using the `com.hcl.dx.pwa.manifest.start_url` page metadata parameter on the PWA configuration node \(usually the root label or page of the site\). The scope can be set to a value of auto which will result in the friendly name of the root page being used \(if the root is a label, the `start_url` will default to the path of the first child under the label\). 
     -   display \(must be either fullscreen, standalone, or minimal-ui\)
     -   `prefer_related_applications` must not be present, or be false
-    See the Woodburn Studio theme installed to HCL DX 9.5 CF19 and higher releases for an example of this file, and the implementation examples below.
+    See the implementation examples below for a reference pattern.
 
-5.  **Create a service-worker.js file in the PWA configuration folder.** It is possible to use the same service worker file across multiple PWA configurations. HCL DX will first look for the service-worker.js file in the PWA configuration directory. If a service-worker.js file cannot be found there, it will next look in the root pwas directory. See the Woodburn Studio theme for an example of this file.
+5.  **Create a service-worker.js file in the PWA configuration folder.** It is possible to use the same service worker file across multiple PWA configurations. HCL DX will first look for the service-worker.js file in the PWA configuration directory. If a service-worker.js file cannot be found there, it will next look in the root `pwas` directory.
 6.  **Create a theme scoped module in the theme.json file** located in the contributions directory in the root of the static files. This module will be used to load the pwa.js file that is responsible for registering the PWA service worker. An example of this module could be presented as follows:
 
     **Example : Registering the PWA service worker**
@@ -226,7 +226,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
                 },
     ```
 
-7.  **Add the pwa.js file referenced in the theme scoped module to the js directory** in the root of the static files. The pwa.js file is responsible for registering the service worker with the browser. See the Woodburn Studio theme for an example of this file.
+7.  **Add the pwa.js file referenced in the theme scoped module to the js directory** in the root of the static files. The `pwa.js` file is responsible for registering the service worker with the browser.
 8.  **Add the new theme scoped module** \(`wp_theme_pwa` from the theme.json file\) to the theme profile\(s\). For example, the deferred\_profile.json might be updated to: 
 
     ```
@@ -239,7 +239,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../themes_skins/the_module_framework/themeopt_analyzer/index.md) Help Center topic for instructions to analyze and clear theme caches.
 10. **Add any necessary metadata values** to the pages:
 
-    -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme pwas directory that will apply. For example, this page metadata parameter is set to `woodburn` on the Woodburn Studio theme root label \(`Woodburn Studio`\).
+    -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme `pwas` directory that will apply. For example, this page metadata parameter can be set to `site1` on your site root label.
     -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
     -   **Optional: `com.hcl.dx.pwa.serviceworker.scope`** - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser \(typically the URL for the root page of the site, for example, /wps/myportal/site1\). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter. The value of this parameter will default to auto.
     -   **Optional: `com.hcl.dx.pwa.preload_urls`** - Set on the root label or page of the site to define a list of URLs that can be preloaded by the service-worker. This list is comma-separated and will be dynamically added to the service-worker using the variable preloadURLs.
@@ -253,7 +253,7 @@ PWA support in Virtual Portals: Typically, PWAs are designed to serve a single s
 
 ## Creating a custom PWA install button
 
-It is possible to create a custom PWA install button within the site itself by changing the theme. There is a custom button in the Woodburn Studio theme that can be used as a sample.
+It is possible to create a custom PWA install button within the site itself by changing the theme.
 
 ![](../../images/pwa-woodburn-button.png)
 
@@ -261,10 +261,10 @@ The button also appears when the site is in responsive mode.
 
 ![](../../images/pwa-woodburn-button-responsive.png)
 
-The following changes were made to the Woodburn Studio theme to implement the button:
+The following changes can be made to a custom theme to implement the button:
 
 1.  The pwa.js file was updated to include handling PWA specific events such as `beforeinstallprompt` and `appinstalled`. These events handle displaying the install button when the install criteria is met, not displaying the button when in PWA application mode and other processing.
-2.  The theme custom CSS was updated to style the button \(the main.css file in Woodburn Studio\).
+2.  The theme custom CSS was updated to style the button \(for example, in `main.css`\).
 
     For example:
 
@@ -285,7 +285,7 @@ The following changes were made to the Woodburn Studio theme to implement the bu
     }
     ```
 
-3.  The theme custom navigation JSP was updated to include the button in the navigation \(the mainNav.jsp in Woodburn Studio\).
+3.  The theme custom navigation JSP was updated to include the button in the navigation \(for example, in `mainNav.jsp`\).
 
     For example:
 
