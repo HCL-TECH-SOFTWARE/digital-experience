@@ -15,6 +15,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF235
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
+
 ## CF234
 
 | Type | Category | Article |
