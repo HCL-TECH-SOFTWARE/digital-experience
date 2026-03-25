@@ -16,7 +16,7 @@ Learn how to migrate HCL DX user authentication from an IBM Directory Server to 
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
 - **[How to prevent Log4j warnings from security scanners](./UnifiedTaskListLog4j.md)**  
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
+- **[How to redirect users to a custom login page in HCL DX](./ChangeLoginPage.md)**  
+Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to change the login page](./ChangeLoginPage.md)**  
-Learn how to change the default login page for protected resources in HCL DX.

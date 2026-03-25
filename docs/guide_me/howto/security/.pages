@@ -8,5 +8,5 @@ nav:
     - AuthenticationMSAzure.md
     - transient_users_with_OpenID_Connect.md
     - UnifiedTaskListLog4j.md
-    - ReplacePortalLDAP.md
     - ChangeLoginPage.md
+    - ReplacePortalLDAP.md
