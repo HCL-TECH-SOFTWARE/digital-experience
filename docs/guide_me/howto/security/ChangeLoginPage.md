@@ -1,4 +1,4 @@
-# How To Change the Login Page
+# How to change the login page
 
 ## Applies to
 
@@ -6,17 +6,18 @@
 
 ## Introduction
 
-When accessing .../wps/myportal you would like to be directed to a custom login page instead of the default login page.  This document describes the prodedure for this configuration.
+In HCL DX, when accessing a protected server context like `/wps/myportal` a user will be redirected to the default login page, but you may want to change this to redirect users to a custom login page instead of the default one. This document describes the procedure that can be used to configure it.  
 
 ## Instructions
-When you request a protected resource (a URL with a security constraint, in this case .../wps/myportal), WebSphere Application Server checks the web.xml file within the wps.war and sends you to what it believes to be the login page, .../wps/redirect (HCL Portal's redirect servlet). The redirect servlet identifies the login page by unique name and redirects you there.
 
-By default, this unique name is wps.Login, as determined by the Administrator Unique Names Mapping Service:
+When a request happens to a protected resource (a URL with a security constraint, in this case the HCL DX context `/wps/myportal`), IBM WebSphere Application Server checks the web.xml file within the wps.war and sends the user to what it believes to be the login page by using `/wps/redirect` (HCL DX redirect servlet). The redirect servlet identifies the login page by unique name and redirects the user there.
+
+By default, this unique name is `wps.Login`, as determined by the Administrator Unique Names Mapping Service:
 
 [Administrator Unique Names Mapping Service](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/srvcfgref_uniq_name.md){target="_blank"}
 
-So, if you want users to be directed somewhere else, you have two options:
+If users should be redirected somewhere else, the following two options are available:
 
-**Option 1:** Change the property value of LOGIN in the Administrator Unique Names Mapping service to point to your custom login page.
+**Option 1:** Change the property value of LOGIN in the Administrator Unique Names Mapping service to point to the custom login page.
 
-**Option 2:** Remove the unique name wps.Login from the default login page and assign it to your custom login page instead.
+**Option 2:** Remove the unique name wps.Login from the default login page and assign it to the custom login page instead.
