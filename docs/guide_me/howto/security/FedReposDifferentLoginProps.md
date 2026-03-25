@@ -6,7 +6,7 @@
 
 ## Introduction
 
-When HCL DX is configured with a federated LDAP, it relies on Virtual Member Manager (VMM) for authentication.  If you want to use more than one login property, you need to configure VMM to support multiple login properties.  
+When HCL DX is configured with a federated LDAP, it relies on Virtual Member Manager (VMM) for authentication.  If you want to use more than one login property, you need to configure VMM to support multiple login properties. This article describes how to update your repository settings to enable multiple login properties.
 
 !!!note
     Login properties values should be unique across all repositories participating in a realm. Work with your LDAP administrator to ensure this requirement is met. Additionally, this article assumes that the login property is already defined within the LDAP. For more information on how to extend the properties beyond the LDAP, refer to [How to configure an extended property as a login property for the LDAP repository configuration in a federated repository setup](https://www.ibm.com/support/pages/how-configure-extended-property-login-property-ldap-repository-configuration-federated-repository-setup){target="_blank"}.
