@@ -1,4 +1,4 @@
-# How to identify if a WCM item is causing a performance issue
+# How to identify WCM items causing performance issues
 
 ## Applies to
 
@@ -6,42 +6,46 @@
 
 ## Introduction
 
-If it is unclear which content item is at fault, there are a few basic troubleshooting steps that can be followed to narrow down the source.
+When a page in HCL DX loads slowly, the root cause is often a complex presentation template or a specific piece of Web Content Manager (WCM) content. This article describes how to identify the exact content item causing the performance issue.
 
 ## Instructions
 
-1. Focus on one page that demonstrates a performance issue with the fewest WCM Rendering Portlets.
+1. Focus on a single page that demonstrates the performance issue and has the fewest WCM rendering portlets.
+2. Identify the WCM content rendered in each WCM rendering portlet on the page by accessing **Edit Shared Settings**. You can do this in one of two ways:
 
-2. Identify the WCM content rendered in the WCM Rendering Portlets on the page via **Edit Shared Settings** for each Portlet.
+    - Using **Edit mode**:
 
-    You will need put the page into **Edit mode** to see the drop-down for **Edit Shared Settings** in the upper right hand corner of the portlet.
+        1. Put the page into **Edit mode**.
 
-    Another option is to navigate to the page in question under **Administration > Site Management** and click the icon to **Edit Page Layout**. Then click the drop-down for the WCM Rendering Portlet in question and select **Edit Shared Settings**.
+        2. Select **Edit Shared Settings** from the drop-down menu in the upper-right corner of the portlet.
 
-3. Run the following ConfigEngine task:  
+    - From **Site Management**:
 
-    **On Microsoft Windows:**  
+        1. Navigate to **Administration > Site Management**.
 
-    ```shell
-    ConfigEngine.bat action-WCM-clear-cache-all
-    ```
+        2. Click the **Edit Page Layout** icon.
 
-    **On AIX/Unix/Linux:**
+        3. Select **Edit Shared Settings** from the portlet drop-down menu.
 
-    ```shell
-    ConfigEngine.sh action-WCM-clear-cache-all
-    ```
+3. Run the appropriate ConfigEngine task for your operating system to clear the WCM cache:
 
-    ???+ info "USE WITH CAUTION"
-        Clearing WCM caches can have a major temporary impact on server performance while the caches are re-populated.
+    - **Windows:**  
 
-4. Clear the browser cache as well.  
+        ```shell
+        ConfigEngine.bat action-WCM-clear-cache-all
+        ```
 
-5. Preview each WCM item from step 2, using the preview option in the WCM Authoring Portlet.  
+    - **AIX, Unix, or Linux:**
 
-6. Preview each item a second time without clearing the browser cache and WCM Caches.  
-    Any WCM item that takes longer than five seconds to render is suspect.  
+        ```shell
+        ConfigEngine.sh action-WCM-clear-cache-all
+        ```
 
-7. Check the presentation template mapped to that content's site area.  
+    !!! warning
+        Clearing WCM caches can have a major temporary impact on server performance while the caches are repopulated.
 
-8. Back up the contents of the presentation template, then delete entries in the presentation template one at a time and re-preview the content until the component/element causing the performance issue is isolated.  
+4. Clear your browser cache.
+5. Preview each WCM item identified in Step 2 using the preview option in the WCM authoring portlet.
+6. Preview each item a second time without clearing the browser or WCM caches. An item that takes longer than five seconds to render is likely causing the performance issue.
+7. Check the presentation template mapped to the site area of that specific item.
+8. Back up the contents of the presentation template. Then, delete entries in the template one at a time and preview the content again until you isolate the component or element causing the performance issue.

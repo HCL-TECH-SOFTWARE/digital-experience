@@ -1,8 +1,7 @@
 title: Performance
-
 nav:
+    - WCMItemPerformance.md
     - index.md
     - DB2DatabasePerformance.md
     - ImproveQueryPerformance.md
     - WarmUpPortalSite.md
-    - WCMItemPerformance.md

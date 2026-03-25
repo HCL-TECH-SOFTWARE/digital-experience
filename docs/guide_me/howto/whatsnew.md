@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
+|Migrated|Performance|[How to identify WCM items causing performance issues](./performance/WCMItemPerformance.md)|
 
 ## CF234
 
