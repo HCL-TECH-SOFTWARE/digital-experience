@@ -172,9 +172,48 @@ For each orphan media item, the following information is displayed:
     - Consider organizing orphaned media items into appropriate collections for better content management.
     - Moved media items retain all metadata and versions associated with them.
 
-REST API endpoint:
+### REST API endpoints
 
-```
-GET /dx/api/dam/v1/database-analysis?type=OrphanMediaItems
-POST /dx/api/dam/v1/database-analysis
-```
+- `GET /dx/api/dam/v1/database-analysis`
+
+    Query parameter:
+
+    - `type` (Required): The value must be one of the `Database`, `Media`, `Operations`, `MediaTypes`, `CollectionsMissingAccessReference` and `OrphanMediaItems`.
+
+- `POST /dx/api/dam/v1/database-analysis`
+
+    Request payload schema:
+
+    - `type` (required): Healing operation type.
+    - `targets` (required): Array of IDs or trigger-function names, depending on `type`.
+    - `targetCollectionId` (optional): Destination collection ID (required only for `MoveOrphanMedia`).
+
+    Supported `type` values with sample payloads:
+
+    1. `RetriggerFailedOperations`: Retriggers failed operations for the listed trigger functions.
+
+        ```json
+        {
+            "type": "RetriggerFailedOperations",
+            "targets": ["generateThumbnail", "generateMetaData"]
+        }
+        ```
+
+    2. `RegenerateMissingAccessReference`: Regenerates access reference IDs for the listed collection IDs.
+
+        ```json
+        {
+            "type": "RegenerateMissingAccessReference",
+            "targets": ["c8ce7a84-c3d8-486a-8ae2-57cbf6b11111", "4b57247d-a55b-4458-85c9-09ecf4a32222"]
+        }
+        ```
+
+    3. `MoveOrphanMedia`: Moves the specified orphan media item to the destination collection, `targets` must contain exactly one media ID for this type.
+
+        ```json
+        {
+            "type": "MoveOrphanMedia",
+            "targets": ["96cb4af4-4478-43a3-a69c-72c4f5016f6f"],
+            "targetCollectionId": "f2d0f9ed-19f0-4f77-8b9e-e4c4c7f73333"
+        }
+        ```

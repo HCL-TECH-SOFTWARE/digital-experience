@@ -1,6 +1,6 @@
 # Prepare a Page for Your Script Application
 
-1. **If you have an existing target page for the Script Application, then skip to step #3**. Otherwise, you may create a sibling or child page under the Woodburn Studio site to have a temporary test page:
+1. **If you have an existing target page for the Script Application, then skip to step #3**. Otherwise, create a sibling or child page under your site to have a temporary test page:
    ![Optionally create child page](../../images/07CreateSiblingPage.png)
 
 2. Enter a Page Title and choose the template Basic Portal 8.5 (temporary theme). Click the **Create Page** button.
