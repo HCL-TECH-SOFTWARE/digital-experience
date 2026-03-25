@@ -111,8 +111,8 @@ Click the **Portlet menu** icon to show the following actions:
 
 Refer to the following pages for more information:
 
--   **[Examples of using the Site Manager in Woodburn Studio](site_manager_samples.md)**  
-This topic provides examples of how you can use the Site Manager through the Woodburn Studio demo site. You can perform the same actions in your own site.
+-   **[Examples of using the Site Manager](site_manager_samples.md)**  
+This topic provides examples of how you can use the Site Manager in a sample site. You can perform the same actions in your own site.
 -   **[Updating sample template items for inline editing after an upgrade installation | HCL Web Content Manager](wcm_dev_inline_upgrade.md)**  
 HCL Web Content Manager includes sample content such as web content template pages and predefined portlets that you can add to pages to render content. If you upgrade, these sample web content template items continue to use the editing method of the earlier release. To use the inline editing method with the earlier template items, you must complete several manual steps.
 -   **[Enabling inline editing for content items](wcm_dev_inline_tags.md)**  

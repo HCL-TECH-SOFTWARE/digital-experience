@@ -34,8 +34,6 @@ Tagging and rating feature supports collaboration and interaction between users 
 You can create themes using modules to contribute to separate areas of pages to provide flexibility, enhance the user experience, and maximize performance. To optimize themes on your website, use the theme optimization module framework. The framework separates feature-specific logic and capabilities from the theme code.
 - **[Virtual Portal](./virtual_portal/index.md)**  
 Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL HCL Digital Experience (DX) installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
-- **[Woodburn Studio](./woodburn_studio/index.md)**  
-The Woodburn Studio is a website that demonstrates the use of some of the popular HCL Digital Experience features.
 
 ## HCLSoftware U learning materials
 

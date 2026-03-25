@@ -1,4 +1,4 @@
-# What's new in CF234
+# What's new in CF234 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF234 on supported platforms:
 
@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Presentation Designer - Canvas Context Preview
 - WCM AI Analysis - Additional configuration options for custom AI providers
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -49,12 +50,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
         - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
         - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
 
+    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
+
 === "On-Premises"
     The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers your questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![Doc IQ Logo](../../assets/Doc%20IQ%20Logo.png) on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
 
     !!!note 
         - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
         - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
+
+    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
 
 ### My HCLSoftware delivery portal
 
@@ -81,6 +86,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf234) section.
+
+### Presentation Designer - Canvas Context Preview
+
+=== "Containers"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### WCM AI Analysis - Additional configuration options for custom AI providers
 
