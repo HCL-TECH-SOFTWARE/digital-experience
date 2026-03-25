@@ -4,6 +4,8 @@ This section includes how-to articles about issues related to login, Portal Acce
 
 - **[How to add additional security realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
 Learn how to add additional security realms for Virtual Portals.  
+- **[How to configure multiple login properties in a federated repository in HCL DX](./FedReposDifferentLoginProps.md)**  
+Learn how to configure an HCL DX federated repository to support multiple login properties.  
 - **[How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX](./enable_http_security_http_only_samesite_K8.md)**  
 Learn how to enable HTTP-related security flags and attributes in your HCL DX environment.  
 - **[How to identify missing DX resource roles](./determineRequiredRole.md)**  
@@ -18,5 +20,3 @@ Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL 
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to configure HCL DX to allow users to login with different login properties in a federated repository](./FedReposDifferentLoginProps.md)**  
-Learn how to configure HCL DX to allow users to login with different login properties in a federated repository.  

@@ -1,4 +1,4 @@
-# How to configure HCL DX to allow users to login with different login properties in a federated repository
+# How to configure multiple login properties in a federated repository in HCL DX
 
 ## Applies to
 
@@ -6,25 +6,23 @@
 
 ## Introduction
 
-When HCL DX is configured with a federated LDAP, DX relies on Virtual Member Manager (VMM) for authentication.  When you want to leverage more than one login property, you need to configure VMM to support multiple login properties.  
+When HCL DX is configured with a federated LDAP, it relies on Virtual Member Manager (VMM) for authentication.  If you want to use more than one login property, you need to configure VMM to support multiple login properties.  
 
 !!!note
-    Login properties values should be unique across all repositories participating in a realm.  Work with your LDAP administrator to ensure this requirement is met. Additionally, this document assumes that the login property is already defined within the LDAP. If you want to extend the properties beyond the LDAP, that requires additional steps. For details please review [How to configure an extended property as a login property for the LDAP repository configuration in a federated repository setup](https://www.ibm.com/support/pages/how-configure-extended-property-login-property-ldap-repository-configuration-federated-repository-setup){target="_blank"}.
+    Login properties values should be unique across all repositories participating in a realm. Work with your LDAP administrator to ensure this requirement is met. Additionally, this article assumes that the login property is already defined within the LDAP. For more information on how to extend the properties beyond the LDAP, refer to [How to configure an extended property as a login property for the LDAP repository configuration in a federated repository setup](https://www.ibm.com/support/pages/how-configure-extended-property-login-property-ldap-repository-configuration-federated-repository-setup){target="_blank"}.
 
 ## Instructions
 
-1. Back up the wimconfig.xml file.
+1. Back up the `wimconfig.xml` file.
 
-    On a DX standalone server the file can be found in directory `<wp_profile_root>/config/cells/<cellname>/wim/config/wimconfig.xml`.
+    - In a DX standalone server, the file is located at `<wp_profile_root>/config/cells/<cellname>/wim/config/wimconfig.xml`.
 
-    When using a clustered environment the file need to be backup on the the Deployment Manager profile in directory `<profile_root>/config/cells/<cellname>/wim/config/wimconfig.xml`.
+    - In a clustered DX environment, the file is located in the Deployment Manager profile at `<profile_root>/config/cells/<cellname>/wim/config/wimconfig.xml`.
 
-2. Login into the IBM Integrated Solutions Console.
-
-3. Navigate to **Global security > Federated repositories > Configure > Manage repositories > <Repository_ID>**.
-
-4. In the **Login properties field**, specify **uid;mail**
-
-5. Click **Apply** and then **Save**.
-
-6. Restart the IBM WebSphere Application Server.  
+2. Log in to the IBM Integrated Solutions Console.
+3. Navigate to **Security > Global security**.
+4. Under **Available realm definitions**, select **Configure** for **Federated repositories**.
+5. Under **Related items**, select **Manage repositories**, and then select your specific LDAP repository identifier.
+6. In the **Login properties** field, specify `uid;mail`.
+7. Click **Apply**.
+8. Click **Save** at the top of the console messages. and then **Save**.
