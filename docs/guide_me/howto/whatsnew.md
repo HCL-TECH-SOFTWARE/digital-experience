@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
 |Migrated|Upgrade|[How to verify an HCL DX CF upgrade](./upgrade/checkSuccessfullUpgrade.md)|
 
 ## CF234
