@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
+|Migrated|Search|[How to search for WCM documents within a specific date range](./search/SearchByDateTime.md)|
 
 ## CF234
 

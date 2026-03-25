@@ -1,4 +1,4 @@
-# How to search documents created within a specific time range using WCM search
+# How to search for WCM documents within a specific date range
 
 ## Applies to
 
@@ -6,22 +6,20 @@
 
 ## Introduction
 
-This article describes how to search for content created or updated within a specified time range. For example all documents created in March 2023.  
+This article describes how to find Web Content Manager (WCM) content created or updated within a specified time range using WCM search.
 
 ## Instructions
 
-Starting in CF05 it is possible to search documents by date and date ranges. Please review the [Search Center](../../../build_sites/search/search_center/index.md){target="_blank"} for additional details. The supported format is `yyyy-MM-dd`.  
+1. Use the supported search format `yyyy-MM-dd` to find documents by specific dates and date ranges. For additional details and other supported search terms, refer to [Search Center](../../../build_sites/search/search_center/index.md).
 
-To search for date range you can use:  
+2. Enter the following syntax into the search bar in the WCM authoring portlet or the Search Center:
 
-```syntax
-update_date::>=yyyy-MM-dd<yyyy-MM-dd
-```
+    ```syntax
+    update_date::>=yyyy-MM-dd<yyyy-MM-dd
+    ```
 
-For example, to find all documents updates in March 2023 use:
+    For example, to find all documents updates in March 2023, use:
 
-```syntax
-update_date::>=2013-03-01<1013-03-01
-```
-
-For other supported search terms, please refer to documentation above.
+    ```syntax
+    update_date::>=2013-03-01<1013-03-01
+    ```
