@@ -3,7 +3,7 @@
 This guide provides detailed requirements for requesting certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI) for Search V2 deployment.
 
 !!! info "When to Use This Guide"
-    Use this guide if you are using certificates from your organization's CA/PKI instead of generating self-signed certificates. For self-signed certificate generation, refer to the [main Search V2 installation guide](optional_install_new_search.md).
+    Use this guide if you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). This guide provides the detailed certificate requirements to give to your CA team. After obtaining your certificates, proceed to [Creating Kubernetes secrets](optional_install_new_search.md#creating-kubernetes-secrets) in the main installation guide to continue with deployment.
 
 !!! note "OpenSearch Version Compatibility"
     These requirements apply to OpenSearch 2.x (currently using 2.19.2) and remain consistent across OpenSearch versions as they are based on X.509 v3 standards and Java TLS requirements.
@@ -64,21 +64,10 @@ All of these are stored in Kubernetes secrets as shown in the [main installation
 - `basicConstraints`: `CA:FALSE`
 - `keyUsage`: `digitalSignature, keyEncipherment`
 - `extendedKeyUsage`: `serverAuth, clientAuth` **(BOTH required)**
-- `subjectAltName`: Wildcard DNS pattern for Kubernetes pods (see example below)
 
 **Additional Requirements:**
 - Key algorithm: RSA 2048-bit minimum
 - Signature algorithm: SHA-256 or higher
-
-!!! note "Subject Alternative Name (SAN) for Node Certificates"
-    Use a wildcard DNS pattern to cover all OpenSearch pods in your Kubernetes deployment:
-    
-    - **For split deployment:** `DNS:*.{release-name}-open-search-manager.{namespace}.svc.cluster.local` and `DNS:*.{release-name}-open-search-data.{namespace}.svc.cluster.local`
-    - **For single deployment:** `DNS:*.{release-name}-open-search.{namespace}.svc.cluster.local`
-    
-    Replace `{release-name}` with your Helm release name and `{namespace}` with your Kubernetes namespace.
-    
-    Example: `DNS:*.dx-deployment-open-search-manager.dxns.svc.cluster.local`
 
 !!! warning "Critical: Both EKU Values Required for Node Certificates"
     Node certificates **MUST** have both `serverAuth` and `clientAuth` in Extended Key Usage. This is the most common issue with CA-signed certificates. OpenSearch nodes communicate peer-to-peer, with each node acting as both:
@@ -196,12 +185,10 @@ openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1
 openssl req -new -key node-key.pem -subj "/C=US/O=YourCompany/OU=IT/CN=opensearch-node1" -out node.csr
 
 # Create extension file with required X.509 v3 extensions
-# Replace {release-name} with your Helm release name and {namespace} with your Kubernetes namespace
 cat > node-ext.cnf << EOF
 basicConstraints = CA:FALSE
 keyUsage = digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth, clientAuth
-subjectAltName = DNS:*.{release-name}-open-search-manager.{namespace}.svc.cluster.local
 EOF
 
 # Sign the certificate with your CA
@@ -310,6 +297,6 @@ For more information about OpenSearch TLS certificate requirements, refer to the
 
 After obtaining your certificates from your CA:
 
-1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#generating-certificates)
+1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets)
 2. Configure the admin DN in your Helm values if using a custom admin certificate
 3. Deploy Search V2 following the standard installation process
