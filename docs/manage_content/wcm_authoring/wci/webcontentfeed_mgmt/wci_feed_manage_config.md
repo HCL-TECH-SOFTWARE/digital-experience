@@ -60,6 +60,6 @@ To manage your web content feeds, you need to create a feed configuration.
     -   **Absolute URL:** Alternatively, you can specify a direct URL to the XSLT file.
         -   `http://test_server/files/sample.xsl`
 
-12. Click either **Save** to save the configuration without consuming the feed, or **Save and Consume** to do both.
+11. Click either **Save** to save the configuration without consuming the feed, or **Save and Consume** to do both.
 
 
