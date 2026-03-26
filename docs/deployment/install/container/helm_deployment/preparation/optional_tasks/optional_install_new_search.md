@@ -33,6 +33,9 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in their respective secrets. Refer to the [DN format requirements](#dn-format-requirements) for more information about certificate Distinguished Name (DN) validation limitation.
 
+!!! info "Using In-House CA/PKI"
+    If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
+
 ### Understanding certificate roles
 
 The following types of certificates are required:
@@ -47,6 +50,9 @@ The following types of certificates are required:
     Only the admin certificate DN must be customized in your Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and work automatically if you follow the certificate generation commands.
 
 ### Generating certificates
+
+!!! info "Certificate Options"
+    The examples below show how to generate self-signed certificates for testing and development. **For production environments**, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements.
 
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 
