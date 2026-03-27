@@ -1,3 +1,7 @@
 {
-    "github-enterprise.uri": "https://git.cwp.pnp-hcl.com/"
+    "github-enterprise.uri": "https://git.cwp.pnp-hcl.com/",
+    "cSpell.words": [
+        "portlet",
+        "Portlets"
+    ]
 }
