@@ -95,6 +95,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - iFix PH68243
     - iFix PH68418
 
+    For more information, refer to [WAS, JDK, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+
 ## Notices of deprecation
 
 ### Advanced Rich Text Editor (CKEditor) (8.5, 9.0, and 9.5)
