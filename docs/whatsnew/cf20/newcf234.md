@@ -5,16 +5,20 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
-- HCL Doc IQ chatbot for the DX Help Center
 - My HCLSoftware delivery portal
 - New How-to articles now available
 - Presentation Designer - Canvas Context Preview
 - WCM AI Analysis - Additional configuration options for custom AI providers
+- Woodburn Studio demo site installation removed 
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- HCL Doc IQ chatbot for the DX Help Center
 
 **Digital Experience 9.5 Container Version**
 
@@ -27,7 +31,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
-- Woodburn Studio demo site installation removed (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -40,26 +43,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF234. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
-
-### HCL Doc IQ chatbot for the DX Help Center
-
-=== "Containers"
-    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers product-related questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![DOC IQ logo](./../../assets/dociq_logo.png){ width="24" } on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
-
-    !!!note 
-        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
-        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
-
-    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
-
-=== "On-Premises"
-    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers product-related questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![DOC IQ logo](./../../assets/dociq_logo.png){ width="24" } on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
-
-    !!!note 
-        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
-        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
-
-    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
 
 ### My HCLSoftware delivery portal
 
@@ -103,6 +86,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     You can now use two additional configuration parameters to connect the default AI provider to alternative, OpenAI-compatible services: `OPENAI_HOST` and `OPENAI_SCHEME`. Use `OPENAI_HOST` to connect to a different AI analysis host. Use `OPENAI_SCHEME` to set the protocol scheme for AI calls. For more information on these configuration options, refer to [OpenAI ChatGPT specific custom configurations](../../get_started/plan_deployment/traditional_deployment/wcm_env/wcm_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
 
+### Woodburn Studio demo site installation removed (9.5)
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. For more information, see [Deprecated features](../deprecated_features.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. For more information, see [Deprecated features](../deprecated_features.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -118,6 +109,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Version
+
+### HCL Doc IQ chatbot for the DX Help Center
+
+=== "Containers"
+    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers product-related questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![DOC IQ logo](./../../assets/dociq_logo.png){ width="24" } on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
+
+    !!!note 
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
+
+    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
+
+=== "On-Premises"
+    The HCL Doc IQ chatbot is now available in the DX Help Center. This AI tool answers product-related questions, summarizes information, and provides direct links to relevant documentation. To try this out yourself, select the chat bubble icon ![DOC IQ logo](./../../assets/dociq_logo.png){ width="24" } on the lower right corner of any DX Help Center page. To provide feedback, select the thumbs-up or thumbs-down button. If you select thumbs-down, a prompt appears asking for your name and the reason for your feedback.
+
+    !!!note 
+        - Doc IQ is currently in Feature Preview, with continued improvements planned for future releases.
+        - The chatbot takes up to 24 hours after release day to display information related to the latest CF.
+
+    For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
 
 ## Digital Experience 9.5 Container Version
 
@@ -140,13 +151,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### WAS, JDK, and iFix versions
 
-=== "Containers"
-    HCL DX 9.5 CF234 contains the following:
-
-    - [WebSphere Application Server 9.0.5.26](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.55](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - iFix PH68243
-    - iFix PH68418
 
 ## Notices of deprecation
 
@@ -162,14 +166,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-
-### Woodburn Studio demo site installation removed (9.5)
-
-=== "Containers"
-    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. For more information, see [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Woodburn Studio demo site in HCL DX was deprecated on August 5, 2025, and will reach End of Support (EOS) on August 4, 2026. Starting with CF234, it will no longer be available for installation. For more information, see [Deprecated features](../deprecated_features.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
