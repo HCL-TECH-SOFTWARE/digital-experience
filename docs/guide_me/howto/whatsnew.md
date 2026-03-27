@@ -21,6 +21,8 @@ This section contains the newly created and migrated how-to articles. The articl
 |------|----------|---------|
 |Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
 |Migrated|Performance|[How to identify WCM items causing performance issues](./performance/WCMItemPerformance.md)|
+|Migrated|Security|[How to configure multiple login properties in a federated repository in HCL DX](./security/FedReposDifferentLoginProps.md)|
+|Migrated|Security|[How to redirect users to a custom login page in HCL DX](./security/ChangeLoginPage.md)|
 
 ## CF234
 
