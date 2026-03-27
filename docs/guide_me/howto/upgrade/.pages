@@ -3,3 +3,4 @@ nav:
   - index.md
   - CommandLineIIM.md
   - XMLAccessExportImport.md
+  - checkSuccessfullUpgrade.md

@@ -9,6 +9,7 @@ This section contains the newly created and migrated how-to articles. The articl
 <!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
 
 ## CF###
+
 | Type | Category | Article |
 |------|----------|---------|
 ||||
@@ -24,6 +25,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Search|[How to search for WCM documents within a specific date range](./search/SearchByDateTime.md)|
 |Migrated|Security|[How to configure multiple login properties in a federated repository in HCL DX](./security/FedReposDifferentLoginProps.md)|
 |Migrated|Security|[How to redirect users to a custom login page in HCL DX](./security/ChangeLoginPage.md)|
+|Migrated|Upgrade|[How to verify an HCL DX CF upgrade](./upgrade/checkSuccessfullUpgrade.md)|
 
 ## CF234
 
