@@ -149,6 +149,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     The OpenSearch entrypoint script now automatically parses the Common Name (CN) from your `adminDN` and maps it to the `all_access` administrative role in the security configuration. For more information refer to [Installing the Search V2 backend](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
+### WAS, JDK, and iFix versions
+
+=== "Containers"
+    HCL DX 9.5 CF234 contains the following:
+
+    - [WebSphere Application Server 9.0.5.26](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit 8.0.8.55](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - iFix PH68243
+    - iFix PH68418
+
 ## Notices of deprecation
 
 ### Advanced Rich Text Editor (CKEditor) (8.5, 9.0, and 9.5)
