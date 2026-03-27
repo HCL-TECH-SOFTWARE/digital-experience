@@ -4,6 +4,8 @@ This section includes how-to articles about issues related to login, Portal Acce
 
 - **[How to add additional security realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
 Learn how to add additional security realms for Virtual Portals.  
+- **[How to configure multiple login properties in a federated repository in HCL DX](./FedReposDifferentLoginProps.md)**  
+Learn how to configure an HCL DX federated repository to support multiple login properties.  
 - **[How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX](./enable_http_security_http_only_samesite_K8.md)**  
 Learn how to enable HTTP-related security flags and attributes in your HCL DX environment.  
 - **[How to identify missing DX resource roles](./determineRequiredRole.md)**  
