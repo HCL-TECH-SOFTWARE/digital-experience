@@ -63,6 +63,7 @@ This table provides information about the Websphere Application Server (WAS), Ja
 
 |CF Level|WAS|JDK|iFix|
 |-----|--------|--------|-----------------------------|
+|CF235|9.0.5.27|8.0.8.60|N/A|
 |CF234|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
 |CF233|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
 |CF232|9.0.5.25|8.0.8.51|iFix PH67137<br/>iFix PH67817|
