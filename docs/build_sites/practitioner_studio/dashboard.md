@@ -2,16 +2,24 @@
 
 ## Overview
 
-The Practitioner Dashboard provides a personalized experience with widgets, action buttons, and quick links to help you access common tasks and information efficiently. The dashboard includes several key widgets: Tasks and Notifications for items that need approval or addressing, including expiring content; Recent Content Items for quick access to your latest work; and Personalization Rules (PZN) for managing user experiences. 
+The Practitioner Dashboard provides a personalized experience with widgets, action buttons, and quick links to help you access common tasks and information efficiently. The dashboard includes several key widgets: Status monitoring for items that need approval or addressing, including expiring content; Recent Content Items for quick access to your latest work; and Personalization Rules (PZN) for managing user experiences. 
 
-Additionally, the dashboard features an Interactive Banner that displays dynamic announcements, tips, and tutorials, such as notifications about new CF releases and helpful tutorials. Guided Activities are also available to provide product tours that accelerate the onboarding process for new users.
+Additionally, the dashboard features an Interactive Banner that displays dynamic announcements, tips, and tutorials, such as notifications about new CF releases and helpful tutorials.
 
 [](../../../../../assets/HCL_Practitioner_dashboard.png "Practitioner dashboard")
 
-## HCLSoftware U learning materials
+## Explore Digital Experience Info Hub
 
-For an introduction and a demo on how to use the Practitioner Dashboard, go to tutorial.
+The dashboard includes an "Explore Digital Experience" info hub section that provides quick access to helpful tutorials and documentation. This section features interactive cards with video tutorials and documentation links for common tasks such as:
 
+- **Create your first site** - Set up content, add assets, and customize your pages to fit your needs
+- **Upload media & files** - Get started by uploading images, videos, and files in Digital Assets Manager
+- **Manage theme** - Create, customize, and manage themes to control the visual appearance and user experience of your DX sites, including layout, styling, and branding elements
+- **Open search to Get Started** - Use the search bar to quickly find pages, documents, assets, or settings
+
+Each card offers two options: "Watch HCLSoftware U tutorial" for video demonstrations and "Read Documentation" for detailed written guides.
+
+The info hub section can be collapsed or expanded using the "Collapse info hub" toggle button to maximize your workspace.
 
 ## Quick Links
 
@@ -32,11 +40,15 @@ The Monitor section provides real-time visibility into content status and activi
 - **Published** - Shows the number of content items published within a customizable timeframe. Use the dropdown to filter by Today, Tomorrow, Within 7 days, Within 30 days, Within 90 days, or Within 365 days to track publishing activity and productivity.
 - **Drafts** - Indicates recently saved draft content items within a selected timeframe. Use the dropdown to filter by Today, Tomorrow, Within 7 days, Within 30 days, Within 90 days, or Within 365 days, making it easy to locate and resume work on in-progress content.
 
+!!! note 
+    - For **Expiring**: "Within 7 days" means from today to the next 6 days (future dates).
+    - For **Published** and **Drafts**: "Within 7 days" means from today to the previous 6 days (past dates).
+
 ![Monitor Section](../../assets/HCL_Practitioner_dashboard_monitor_section.png)
 
 ## Recent Content and Project
 
-The Recent Content and Project Widgets provides a comprehensive view of your most recently modified content items and projects. You can click on each items to view the content directly. A quick link to "Go to Web Content" is available in the top-right corner for quick access to the full Web Content management interface.
+The Recent Content and Project widget provides a comprehensive view of your most recently modified content items and projects. You can click on the eye icon of the content items to view the content directly. A quick link to "Go to Web Content" is available in the top-right corner for quick access to the full Web Content management interface.
 
 ![Recent Content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
@@ -46,16 +58,16 @@ The Recent Content and Project Widgets provides a comprehensive view of your mos
 
 ## Personalization Rules
 
-The Personalization Rules widget provides quick access to monitor personalization (PZN) rules and campaigns that customize user experiences on your website. The widget displays personalization rules with relevant information including the rule name, status, and modified date. Click on the "Go to Personalization" link to navigate to the full personalization page for comprehensive management and configuration of your personalization rules.
+The Personalization Rules widget provides quick access to monitor personalization (PZN) rules that customize user experiences on your website. The widget displays personalization rules with relevant information including the rule name, type, author and modified date. Click on the "Go to Personalization" link to navigate to the full personalization page for comprehensive management and configuration of your personalization rules.
 
 ![Personalization Rules](../../assets/HCL_Practitioner_dashboard_Personalization_Rules.png)
 
 !!! note 
-    This widget displays only four rules as the API returns only four types: Visibility Rule, Profiler, Select Action, and Binding Rules.
+    This widget displays only four rules types: Visibility Rule, Profiler, Select Action, and Binding Rules.
 
 ## Widget Configuration Parameters
 
-The Practitioner Dashboard provides configurable widget preferences accessible through Practitioner Dashboard page preferences (Click on pencil icon of the dashboard page). You can customize which widgets appear on your dashboard by enabling or disabling them through the configuration parameters.
+The Practitioner Dashboard provides configurable widget preferences that allow you to customize which widgets appear on your dashboard. To access these preferences, navigate to **Admin** > **Site Management** > **Pages** > **Content Root** > **Practitioner Studio** > **Dashboard**, click on the pencil icon of the dashboard page, and then click on **Edit Shared Settings** to enable or disable widgets through the configuration parameters.
 
 ### Configuration Parameters
 
