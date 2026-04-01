@@ -1,150 +1,191 @@
 # Using In-House CA/PKI for Search V2 Certificates
 
-This guide provides detailed requirements for requesting certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI) for Search V2 deployment.
+Use this guide to request certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployment.
 
-!!! info "When to Use This Guide"
-    Use this guide if you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). This guide provides the detailed certificate requirements to give to your CA team. After obtaining your certificates, proceed to [Creating Kubernetes secrets](optional_install_new_search.md#creating-kubernetes-secrets) in the main installation guide to continue with deployment.
+## When to use this guide
 
-!!! note "OpenSearch Version Compatibility"
-    These requirements apply to OpenSearch 2.x (currently using 2.19.2) and remain consistent across OpenSearch versions as they are based on X.509 v3 standards and Java TLS requirements.
+Use this guide if your deployment uses certificates issued by your organization’s CA or PKI. It explains the certificate requirements to share with your CA team. After you obtain the certificates, continue with [Creating Kubernetes secrets](optional_install_new_search.md#creating-kubernetes-secrets) in the main installation guide.
 
-## Can I Use My In-House CA?
+### OpenSearch version compatibility
+These requirements apply to OpenSearch 2.x (currently version 2.19.2). They remain consistent across OpenSearch versions because they are based on:
+
+- X.509 v3 standards
+- Java TLS requirements
+
+## Can I use my in-house CA?
 
 **Question:** Do the certificates have to be signed by a self-signed root CA?
 
-**Answer:** 
+**Answer:**  
 
-**No.** You can (and should) use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI) for production environments.
+No. For production environments, use certificates issued by your organization’s certificate authority (CA) or public key infrastructure (PKI). You can use any trusted CA:  
 
-- Any trusted CA works: in-house CA, commercial CA (DigiCert, Let's Encrypt, etc.), or self-signed CA
-- The key requirement is that the certificates must have the proper attributes (Extended Key Usage, DN format, etc.) documented below
-- You must provide your CA's root certificate to OpenSearch so it can validate the certificate chain
+- In-house CA  
+- Commercial CA (DigiCert, Let’s Encrypt, etc.)  
+- Self-signed CA  
 
-**What you need to provide to OpenSearch:**
+Certificates must include the proper attributes:  
 
-1. The three certificates (admin, node, client) signed by your CA
+- Extended Key Usage  
+- Distinguished Name (DN) format  
+- Other requirements documented below  
+
+Provide your CA’s root certificate to OpenSearch so it can validate the certificate chain.
+
+**What to provide to OpenSearch:**
+
+1. The three certificates signed by your CA:
+    - Admin
+    - Node
+    - Client
 2. The corresponding private keys
-3. Your CA's root certificate (and any intermediate certificates in the chain)
+3. Your CA’s root certificate (and any intermediate certificates)
 
-All of these are stored in Kubernetes secrets as shown in the [main installation guide](optional_install_new_search.md#generating-certificates).
+Store all of these in Kubernetes secrets as shown in the [main installation guide](optional_install_new_search.md#generating-certificates).
 
 ## Certificate Requirements
 
-### Admin Certificate
+### Admin certificate
+
+“The admin certificate secures administrative operations and configuration tasks in OpenSearch.
 
 **Purpose:** Administrative operations and configuration
 
-**Distinguished Name (DN) Format:**
-- Fully configurable - customize to match your organization
-- Example: `CN=SearchAdmin,OU=IT,O=YourCompany,C=US`
+Distinguished Name (DN) format:
 
-**X.509 v3 Extensions (Required):**
+- Fully configurable to match your organization
+- Example: 
+
+  `CN=SearchAdmin,OU=IT,O=YourCompany,C=US`
+
+X.509 v3 extensions (required):
+
 - `basicConstraints`: `CA:FALSE`
 - `keyUsage`: `digitalSignature, keyEncipherment`
 - `extendedKeyUsage`: `serverAuth, clientAuth` (recommended for consistency)
 
-**Additional Requirements:**
+Additional requirements:
+
 - Key algorithm: RSA 2048-bit minimum
 - Signature algorithm: SHA-256 or higher
 
-!!! note "Extended Key Usage for Admin Certificate"
-    The admin certificate is used for administrative operations (running securityadmin.sh, configuration changes), which are client operations to OpenSearch. Technically, only `clientAuth` is required. However, including both `serverAuth` and `clientAuth` is recommended for consistency and future compatibility.
+#### Extended Key Usage for Admin certificate
+The admin certificate is used for administrative operations, such as running `securityadmin.sh` or making configuration changes. These are client operations to OpenSearch.
 
-### Node Certificate
+Technically, only `clientAuth` is required. However, including both `serverAuth` and `clientAuth` is recommended for consistency and future compatibility.
 
-**Purpose:** Inter-node communication (dual role: client and server)
+### Node certificate
 
-**Distinguished Name (DN) Format:**
-- **CRITICAL:** CN must start with `opensearch-node` (wildcard pattern)
-- Examples: `CN=opensearch-node`, `CN=opensearch-node1`, `CN=opensearch-node-prod`
+The node certificate secures communication between OpenSearch nodes in the cluster.
+
+Purpose: Inter-node communication (each node acts as both client and server)
+
+Distinguished Name (DN) format:
+
+- Critical: CN must start with `opensearch-node` (wildcard pattern)
+- Examples:  
+  `CN=opensearch-node`, `CN=opensearch-node1`, `CN=opensearch-node-prod`
 - Other DN components (OU, O, C, etc.) can be customized to match your organizational structure
-- Example: `CN=opensearch-node1,OU=IT,O=YourCompany,C=US`
+- Example:  
 
-**X.509 v3 Extensions (Required):**
-- `basicConstraints`: `CA:FALSE`
-- `keyUsage`: `digitalSignature, keyEncipherment`
-- `extendedKeyUsage`: `serverAuth, clientAuth` **(BOTH required)**
+    `CN=opensearch-node1,OU=IT,O=YourCompany,C=US`
 
-**Additional Requirements:**
-- Key algorithm: RSA 2048-bit minimum
+X.509 v3 extensions (required):
+
+- `basicConstraints`: `CA:FALSE`  
+- `keyUsage`: `digitalSignature, keyEncipherment`  
+- `extendedKeyUsage`: `serverAuth, clientAuth` (both required)
+Additional requirements:
+
+- Key algorithm: RSA 2048-bit minimum  
 - Signature algorithm: SHA-256 or higher
 
-!!! warning "Critical: Both EKU Values Required for Node Certificates"
-    Node certificates **MUST** have both `serverAuth` and `clientAuth` in Extended Key Usage. This is the most common issue with CA-signed certificates. OpenSearch nodes communicate peer-to-peer, with each node acting as both:
-    
-    - **Server** - receiving connections from other nodes
-    - **Client** - initiating connections to other nodes
-    
-    Missing `clientAuth` will cause authentication failures and prevent nodes from joining the cluster. This was the exact issue the customer encountered.
+!!! warning "Critical: Both EKU values required for node certificates"
+    Node certificates must include both `serverAuth` and `clientAuth` in Extended Key Usage.  
 
-**Technical Detail:** The wildcard pattern `CN=opensearch-node*` is configured in `opensearch.yml` under `plugins.security.nodes_dn`.
+    This is the most common issue with CA-signed certificates. OpenSearch nodes communicate peer-to-peer, and each node acts as both:
 
-### Client Certificate
+    - Server: receives connections from other nodes
+    - Client: initiates connections to other nodes 
 
-**Purpose:** Search middleware authentication with OpenSearch
+    Missing `clientAuth` will cause authentication failures and prevent nodes from joining the cluster. This was the exact issue a customer encountered.
 
-**Distinguished Name (DN) Format:**
-- **CRITICAL:** CN must be exactly `opensearch-client`
+Technical detail: Configure the wildcard pattern `CN=opensearch-node*` in `opensearch.yml` under `plugins.security.nodes_dn`.
+
+---
+
+### Client certificate
+
+Purpose: Search middleware authentication with OpenSearch
+
+Name (DN) format:
+
+- Critical: CN must be exactly `opensearch-client`
 - Other DN components (OU, O, C, etc.) can be customized to match your organizational structure
-- Example: `CN=opensearch-client,OU=Security,O=YourCompany,C=US`
+- Example: 
+  
+    `CN=opensearch-client,OU=Security,O=YourCompany,C=US`
 
-**X.509 v3 Extensions (Required):**
-- `basicConstraints`: `CA:FALSE`
-- `keyUsage`: `digitalSignature, keyEncipherment`
+X.509 v3 extensions (required):
+
+- `basicConstraints`: `CA:FALSE`  
+- `keyUsage`: `digitalSignature, keyEncipherment`  
 - `extendedKeyUsage`: `serverAuth, clientAuth` (recommended for consistency)
 
-**Additional Requirements:**
-- Key algorithm: RSA 2048-bit minimum
+**Additional requirements:
+
+- Key algorithm: RSA 2048-bit minimum  
 - Signature algorithm: SHA-256 or higher
 
-!!! note "Extended Key Usage for Client Certificate"
-    The client certificate is used by the search middleware to connect to OpenSearch as a client. Technically, only `clientAuth` is required. However, including both `serverAuth` and `clientAuth` is recommended for consistency and future compatibility.
+#### Extended Key Usage for client certificate
 
-**Technical Detail:** OpenSearch extracts the CN from the certificate (`username_attribute: cn` in `config.yml`) and matches it against the hardcoded user `"opensearch-client"` in `roles_mapping.yml` to grant `all_access` role.
+The client certificate is used by the search middleware to connect to OpenSearch as a client. Technically, only `clientAuth` is required. However, including both `serverAuth` and `clientAuth` is recommended for consistency and future compatibility.
+
+**Technical detail:** OpenSearch extracts the CN from the certificate (`username_attribute: cn` in `config.yml`) and matches it against the hardcoded user `"opensearch-client"` in `roles_mapping.yml` to grant the `all_access` role.
 
 ## Understanding Certificate Attributes
 
 This section explains what each certificate attribute means in plain language:
 
-**basicConstraints: CA:FALSE**
-: Marks this as an end-entity certificate (not a Certificate Authority). This means the certificate can only be used for authentication and cannot sign other certificates. Think of it like a regular employee badge vs. an HR badge that can create new badges.
+- basicConstraints: CA:FALSE:  Indicates that this is an end-entity certificate (not a certificate authority). The certificate can be used for authentication but cannot sign other certificates.
 
-**keyUsage: digitalSignature, keyEncipherment**
-: Defines what cryptographic operations the certificate can perform. These values allow the certificate to create digital signatures and encrypt/decrypt keys.
+- keyUsage: digitalSignature, keyEncipherment: Defines what cryptographic operations the certificate can perform. These values allow the certificate to create digital signatures and encrypt/decrypt keys.
 
-**extendedKeyUsage: serverAuth, clientAuth**
-: Specifies the certificate can be used for both server authentication (TLS Web Server Authentication) and client authentication (TLS Web Client Authentication). This dual-purpose capability is **absolutely critical for node certificates** because OpenSearch nodes communicate peer-to-peer (each node acts as both client and server). For admin and client certificates, only `clientAuth` is technically required, but including both is recommended for consistency.
+- extendedKeyUsage: serverAuth, clientAuth: Indicates that the certificate can be used for both server authentication (TLS Web Server Authentication) and client authentication (TLS Web Client Authentication). This dual-purpose capability is critical for node certificates because OpenSearch nodes communicate peer-to-peer, and each node acts as both a client and a server.
 
-**subjectAltName**
-: Alternative names for the certificate subject, typically DNS names. Helps with hostname verification in distributed systems.
+For admin and client certificates, only `clientAuth` is required. However, including both values is recommended for consistency.
 
-## Understanding Certificate Authentication
+- subjectAltName: Alternative names for the certificate subject, typically DNS names. Helps with hostname verification in distributed systems.
 
-OpenSearch uses certificate-based authentication with the following mechanism:
+## Understanding certificate authentication
 
-1. **Certificate extraction:** OpenSearch uses the `clientcert_auth_domain` configured with `username_attribute: cn`
-2. **Username mapping:** OpenSearch extracts only the CN (Common Name) from the certificate DN and uses it as the username
-3. **Role assignment:** The `roles_mapping.yml` file maps usernames to roles
+OpenSearch uses certificate-based authentication as follows:
+
+1. Extract certificate information: OpenSearch uses the `clientcert_auth_domain` configured with `username_attribute: cn`
+2. Map username: OpenSearch extracts the Common Name (CN) from the certificate Distinguished Name (DN) and uses it as the username
+3. Assign roles: The `roles_mapping.yml` file maps usernames to roles
 
 **This explains why:**
 
-- **Client cert** must have `CN=opensearch-client` (but OU, O, C, etc. can vary) - the CN is mapped to the `all_access` role
-- **Node cert** must have CN starting with `opensearch-node` (but OU, O, C, etc. can vary) - matches the wildcard pattern in `plugins.security.nodes_dn`
-- **Admin cert** DN is fully configurable via Helm values - you specify the complete DN in your configuration
+- Client certificate: Must have `CN=opensearch-client` (OU, O, C, etc., can vary). The CN is mapped to the `all_access` role.
+- Node certificate: CN must start with `opensearch-node` (OU, O, C, etc., can vary). Matches the wildcard pattern in `plugins.security.nodes_dn`.
+- Admin certificate: DN is fully configurable via Helm values. Specify the complete DN in your configuration.
 
-## Certificate Generation Examples
+## Certificate generation examples
 
-### Two Workflows Supported
+### Two workflows supported
 
-**1. For customers who can sign certificates themselves** (have access to CA private key):
+Use one of the following workflows depending on whether you sign certificates yourself or rely on your enterprise CA team.
+
+1. For customers who can sign certificates themselves (have access to CA private key)
    - Generate private key → Generate CSR → Sign with CA → Get certificate
    - Examples below show this complete workflow
 
-**2. For customers using enterprise CA team** (most common):
-   - Generate private key → Generate CSR with extension requirements
-   - **Send CSR and extension requirements to CA team**
-   - Receive signed certificate back from CA team
-   - The extension file (.cnf) shows what to request from your CA
+2. For customers using an enterprise CA team (most common)
+    - Generate private key → Generate CSR with extension requirements
+    - Send CSR and extension requirements to CA team
+    - Receive signed certificate back from CA team
+    - The extension file (`.cnf`) shows what to request from your CA.
 
 ### Admin Certificate Example
 
@@ -248,44 +289,46 @@ X509v3 Extended Key Usage:
     TLS Web Server Authentication, TLS Web Client Authentication
 ```
 
-## Common Issues with CA-Signed Certificates
+## Common issues with CA-signed certificates
 
 ### Certificate authentication fails
 
-**Cause:** Missing `TLS Web Client Authentication` in Extended Key Usage
+**Cause:** Missing `TLS Web Client Authentication` in Extended Key Usage.
 
-**Solution:** Request certificate with both `serverAuth` and `clientAuth` in Extended Key Usage. This is the most common issue when using CA-signed certificates.
+**Solution:** Request a certificate that includes both `serverAuth` and `clientAuth` in Extended Key Usage. This is the most common issue with CA-signed certificates.
 
 ### Node cannot join cluster
 
-**Cause:** Node certificate DN doesn't match `CN=opensearch-node*` pattern
+**Cause:** Node certificate DN does not match the `CN=opensearch-node*` pattern.
 
-**Solution:** Ensure CN starts with `opensearch-node`. Valid examples:
+**Solution:** Ensure the CN starts with `opensearch-node`. Valid examples:
+
 - `CN=opensearch-node`
 - `CN=opensearch-node1`
 - `CN=opensearch-node-prod`
 
 ### Middleware cannot connect
 
-**Cause:** Client certificate CN doesn't match expected value
+**Cause:** Client certificate CN does not match the expected value.
 
-**Solution:** Client certificate must have `CN=opensearch-client`. Other DN components (OU, O, C) can be customized, but the CN must be exactly `opensearch-client`.
+**Solution:** The client certificate must have `CN=opensearch-client`. Other DN components (OU, O, C) can be customized, but the CN must be exactly `opensearch-client`.
 
 ### Certificate chain validation fails
 
-**Cause:** Root CA certificate not provided to OpenSearch
+**Cause:** Root CA certificate not provided to OpenSearch.
 
 **Solution:** Ensure your CA's root certificate (and any intermediate certificates) are included in the Kubernetes secrets. Each secret should contain:
-- The certificate file (e.g., `admin.pem`)
-- The private key file (e.g., `admin-key.pem`)
-- The root CA certificate (e.g., `root-ca.pem`)
+
+- The certificate file (for example, `admin.pem`)
+- The private key file (for example, `admin-key.pem`)
+- The root CA certificate (for example, `root-ca.pem`)
 
 ## Reference
 
 For more information about OpenSearch TLS certificate requirements, refer to the official OpenSearch documentation:
 
-- [OpenSearch 2.19 TLS Configuration](https://opensearch.org/docs/2.19/security/configuration/tls/)
-- [Separate client and server certificates for transport layer TLS](https://docs.opensearch.org/latest/security/configuration/tls/#separate-client-and-server-certificates-for-transport-layer-tls)
+- [OpenSearch 2.19 TLS Configuration](https://opensearch.org/docs/2.19/security/configuration/tls/){target="_blank"}
+- [Separate client and server certificates for transport layer TLS](https://docs.opensearch.org/latest/security/configuration/tls/#separate-client-and-server-certificates-for-transport-layer-tls){target="_blank"}
 
 !!! quote "OpenSearch Documentation"
     "By default, transport layer TLS certificates need to be configured as both the client (TLS Web Client Authentication) and server (TLS Web Server Authentication) in the certificate's Extended Key Usage section because the nodes using the TLS certificates assume the responsibility of serving and receiving the communication requests internally."
@@ -297,6 +340,6 @@ For more information about OpenSearch TLS certificate requirements, refer to the
 
 After obtaining your certificates from your CA:
 
-1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets)
-2. Configure the admin DN in your Helm values if using a custom admin certificate
-3. Deploy Search V2 following the standard installation process
+1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets).
+2. Configure the admin DN in your Helm values if using a custom admin certificate.
+3. Deploy Search V2 following the standard installation process.
