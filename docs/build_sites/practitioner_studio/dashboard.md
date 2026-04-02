@@ -54,7 +54,7 @@ The Recent Content and Project widget provides a comprehensive view of your most
 
 !!! note 
     - This widget displays only the most recent 50 content items.
-    - Each user can see only the recent contents they modified.
+    - Content items will appear in recent content only when the logged-in user has modified them, not when modified by other users.
 
 
 ## Personalization Rules
