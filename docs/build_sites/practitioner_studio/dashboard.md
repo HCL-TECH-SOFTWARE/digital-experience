@@ -48,12 +48,13 @@ The Monitor section provides real-time visibility into content status and activi
 
 ## Recent Content and Project
 
-The Recent Content and Project widget provides a comprehensive view of your most recently modified content items and projects. You can click on the eye icon of the content items to view the content directly. A quick link to "Go to Web Content" is available in the top-right corner for quick access to the full Web Content management interface.
+The Recent Content and Project widget provides a comprehensive view of your most recently modified content items and projects. You can click on the eye icon of the content items to view the content directly. A quick link to "Go to Authoring" is available in the top-right corner for quick access to the full Web Content management interface.
 
 ![Recent Content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
 !!! note 
-    This widget displays only the most recent 50 content items.
+    - This widget displays only the most recent 50 content items.
+    - Each user can see only the recent contents they modified.
 
 
 ## Personalization Rules
@@ -63,7 +64,7 @@ The Personalization Rules widget provides quick access to monitor personalizatio
 ![Personalization Rules](../../assets/HCL_Practitioner_dashboard_Personalization_Rules.png)
 
 !!! note 
-    This widget displays only four rules types: Visibility Rule, Profiler, Select Action, and Binding Rules.
+    This widget displays only four rule types: Visibility Rule, Profiler, Select Action, and Binding Rules.
 
 ## Widget Configuration Parameters
 
@@ -106,7 +107,7 @@ To support the Modern (React-based) Practitioner Studio in newly created Virtual
 
 **Asset Name:** VirtualPortal.zip
 
-The VirtualPortal.zip asset contains all XML files for both Modern and Classic dashboard configurations. The default shared setting uses the Modern PS configuration. To use the Classic (JSP-based) home page, users need to specify the `-preCF234` suffix for the XML file.
+The VirtualPortal.zip asset contains all XML files for both Modern and Classic dashboard configurations. The default shared setting uses the Modern PS configuration. To use the Classic (JSP-based) home page, users need to specify the `-preCF235` suffix for the XML file.
 
 **Default (Modern PS):**
 
@@ -117,19 +118,19 @@ Xml script to create virtual portal content tree:
 WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml
 ```
 
-**To use Classic (pre-CF234):**
+**To use Classic (pre-CF235):**
 
 Example:
 
 ```
 Xml script to create virtual portal content tree:
-WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn-preCF234.xml
+WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn-preCF235.xml
 ```
 
 **Key Points:**
 
 - The VirtualPortal.zip file is maintained containing all XML configurations
-- The `-preCF234` suffix in the XML filename indicates the classic dashboard version
+- The `-preCF235` suffix in the XML filename indicates the classic dashboard version
 - Users can switch between dashboard versions by modifying the XML file reference in the shared setting
 - Existing VPs remain unchanged
 
