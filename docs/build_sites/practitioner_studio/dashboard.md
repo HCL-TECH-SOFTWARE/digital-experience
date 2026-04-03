@@ -6,7 +6,7 @@ The Practitioner Dashboard provides a modernized interface with widgets, action 
 
 Additionally, the dashboard features an Interactive Banner that displays dynamic announcements, tips, and tutorials, such as notifications about new CF releases and helpful tutorials.
 
-[](../../../../../assets/HCL_Practitioner_dashboard.png "Practitioner dashboard")
+![Practitioner dashboard](../../assets/HCL_Practitioner_dashboard.png)
 
 ## Explore Digital Experience Info Hub
 
