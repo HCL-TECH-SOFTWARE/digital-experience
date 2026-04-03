@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Practitioner Dashboard provides a personalized experience with widgets, action buttons, and quick links to help you access common tasks and information efficiently. The dashboard includes several key widgets: Status monitoring for items that need approval or addressing, including expiring content; Recent Content Items for quick access to your latest work; and Personalization Rules (PZN) for managing user experiences. 
+The Practitioner Dashboard provides a modernized interface with widgets, action buttons, and quick links to help you access common tasks and information efficiently. The dashboard includes several key widgets: Status monitoring for items that need approval or addressing, including expiring content; Recent Content Items for quick access to your latest work; and Personalization Rules (PZN) for managing user experiences. 
 
 Additionally, the dashboard features an Interactive Banner that displays dynamic announcements, tips, and tutorials, such as notifications about new CF releases and helpful tutorials.
 
@@ -21,6 +21,10 @@ Each card offers two options: "Watch HCLSoftware U tutorial" for video demonstra
 
 The info hub section can be collapsed or expanded using the "Collapse info hub" toggle button to maximize your workspace.
 
+## Welcome Header
+
+The Practitioner Dashboard features a personalized welcome header that greets users with "Welcome to your experience," followed by their username. Below the greeting, it displays "Logged in as" with the current user's username and profile icon, providing immediate confirmation of the active user session.
+
 ## Quick Links
 
 The dashboard provides quick access to frequently used functions through convenient shortcuts:
@@ -37,8 +41,8 @@ The dashboard provides quick access to frequently used functions through conveni
 The Monitor section provides real-time visibility into content status and activity tracking across three key metrics, each with customizable timeframe filters:
 
 - **Expiring** - Displays the count of content items that will expire within a selected timeframe. Use the dropdown to filter by Today, Tomorrow, Within 7 days, Within 30 days, Within 90 days, or Within 365 days, helping you proactively address content that requires renewal or updates.
-- **Published** - Shows the number of content items published within a customizable timeframe. Use the dropdown to filter by Today, Tomorrow, Within 7 days, Within 30 days, Within 90 days, or Within 365 days to track publishing activity and productivity.
-- **Drafts** - Indicates recently saved draft content items within a selected timeframe. Use the dropdown to filter by Today, Tomorrow, Within 7 days, Within 30 days, Within 90 days, or Within 365 days, making it easy to locate and resume work on in-progress content.
+- **Published** - Shows the number of content items published within a customizable timeframe. Use the dropdown to filter by Today, Yesterday, Within 7 days, Within 30 days, Within 90 days, or Within 365 days to track publishing activity and productivity.
+- **Drafts** - Indicates recently saved draft content items within a selected timeframe. Use the dropdown to filter by Today, yesterday, Within 7 days, Within 30 days, Within 90 days, or Within 365 days, making it easy to locate and resume work on in-progress content.
 
 !!! note 
     - For **Expiring**: "Within 7 days" means from today to the next 6 days (future dates).
@@ -53,7 +57,7 @@ The Recent Content and Project widget provides a comprehensive view of your most
 ![Recent Content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
 !!! note 
-    - This widget displays only the most recent 50 content items.
+    - This widget displays only the most recent 100 content items.
     - Content items will appear in recent content only when the logged-in user has modified them, not when modified by other users.
 
 

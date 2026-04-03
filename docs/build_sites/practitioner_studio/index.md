@@ -38,6 +38,9 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 
 Practitioner Studio provides a modern and streamlined user experience for HCL DX. There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation. In time, this interface also serves as the launching point for newly developed features. Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
+- **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
+  Use the modern interface with widgets, action buttons, and quick links to efficiently manage common tasks and information.
+
 - **[Administration](../practitioner_studio/administration.md)**  
   Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
