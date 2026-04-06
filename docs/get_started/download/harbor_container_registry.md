@@ -48,7 +48,7 @@ ls -lah
     total 8868
     -rw-r--r--. 1 user user 136052 Jul  7 11:28 hcl-dx-deployment-2.7.1.tgz
     ```
-HCL Commerce provides all details on a single page. Another useful example, refer to[Downloading Docker images via the HCL Harbor Container Registry](https://help.hcl-software.com/commerce/9.1.0/install/tasks/tigharbor.html){target="_blank"}
+HCL Commerce provides all details on a single page. For another useful example, refer to [Downloading Docker images via the HCL Harbor Container Registry](https://help.hcl-software.com/commerce/9.1.0/install/tasks/tigharbor.html){target="_blank"}.
 ## Helm chart and CF versions
 
 Refer to the following table to identify which Helm chart version corresponds to each CF (Continuous Fix) version.
