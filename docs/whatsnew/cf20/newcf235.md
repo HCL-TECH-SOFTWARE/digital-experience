@@ -15,6 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Using In-House CA/PKI for Search V2 Certificates
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -79,6 +80,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### Using In-House CA/PKI for Search V2 Certificates
+
+=== "Containers"
+You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, see [Using In-House CA/PKI for Search V2 Certificates](http://127.0.0.1:8000/digital-experience/9.5/latest/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates/).
 
 ### Helm values updates <!--UPDATE-->
 
