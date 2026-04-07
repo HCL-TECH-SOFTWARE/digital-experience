@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner dashboard
 
 **Digital Experience 8.5 and 9.0 Versions**
 
