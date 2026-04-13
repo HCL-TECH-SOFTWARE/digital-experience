@@ -64,8 +64,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
 
+### Practitioner Dashboard    
+
 ## Digital Experience 8.5 and 9.0 Versions
 
+=== "Containers"
+    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to[Practitioner Dashboard  ](../../../docs/build_sites/practitioner_studio/)<!-- Tupdate link-->
+
+=== "On-Premises"
+    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to[Practitioner Dashboard  ](../../../docs/build_sites/practitioner_studio/)<!-- Tupdate link-->
 ### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
@@ -85,7 +92,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Using In-House CA/PKI for Search V2 Certificates
 
 === "Containers"
-You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, see [Using In-House CA/PKI for Search V2 Certificates](http://127.0.0.1:8000/digital-experience/9.5/latest/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates/).
+You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, see [Using In-House CA/PKI for Search V2 Certificates](../../deployment/install/container/helm_deployment/preparation/optional_tasks/).<!-- update this link -->
 
 ### Helm values updates <!--UPDATE-->
 
