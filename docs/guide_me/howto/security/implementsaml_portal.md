@@ -189,28 +189,28 @@ If your IdP supports using a metadata file to add the service provider as a fede
 
 3. Add the required custom properties to have the following data in place (some of them might already be there).  
 
-    | Name                          | Value                                                                                                              |
-    |-------------------------------|--------------------------------------------------------------------------------------------------------------------|
-    | `sso_1.sp.acsUrl`             | `https://<dx_hostname>:<sslport>/samlsps/wps/`                                                                     |
-    | `sso_1.sp.idMap`              | `localRealm`                                                                                                       |
-    | `sso_1.idp_1.certAlias`       | `<idpAlias>`                                                                                                       |
-    | `sso_1.idp_1.entityID`        | `https://<idphostname>/<idp required path>`                                                                        |
-    | `sso_1.idp_1.singleSignOnUrl` | `https://<idphostname>/saml/idp/profile/redirectorpost/sso`                                                        |
-    | `sso_1.sp.login.error.page`   | Indicate the URL of the IdP login page (for IdP-initiated flows). For more advanced use (like SP-initiated flows, which require custom code), check the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=swss-saml-web-single-sign-sso-trust-association-interceptor-tai-custom-properties){target="_blank"}. |
-    | `sso_1.sp.filter`             | `request-url%=/wps/myportal`                                                                                       |
-    | `sso_1.sp.targetUrl`          | `https://<dx_hostname>:<sslport>/wps/myortal`                                                                      |  
+    | Name                        | Value                                                                                                 |
+    |-----------------------------|-------------------------------------------------------------------------------------------------------|
+    |`sso_1.sp.acsUrl`            | `https://<dx_hostname>:<sslport>/samlsps/wps/`                                                        |
+    |`sso_1.sp.idMap`             | `localRealm`                                                                                          |
+    |`sso_1.idp_1.certAlias`      | `<idpAlias>`                                                                                          |
+    |`sso_1.idp_1.entityID`       | `https://<idphostname>/<idp required path>`                                                           |
+    |`sso_1.idp_1.singleSignOnUrl`| `https://<idphostname>/saml/idp/profile/redirectorpost/sso`                                           |
+    |`sso_1.sp.login.error.page`  | Indicate the URL of the IdP login page (for IdP-initiated flows).<BR>For more advanced use (like SP-initiated flows, which require custom code), check the [IBM documentation](https://www.ibm.com/docs/en/was/9.0.5?topic=swss-saml-web-single-sign-sso-trust-association-interceptor-tai-custom-properties){target="_blank"}.|
+    |`sso_1.sp.filter`            | `request-url%=/wps/myportal`                                                                          |
+    |`sso_1.sp.targetUrl`         | `https://<dx_hostname>:<sslport>/wps/myortal`                                                         |  
 
     Example configuration that might work when using Active Directory Federation Service (AD FS):  
 
-    | Name                          | Value                                                                                                              |
-    |-------------------------------|--------------------------------------------------------------------------------------------------------------------|
-    | `sso_1.sp.acsUrl`             | `https://<dx_hostname>/samlsps/wps/`                                                                     |
-    | `sso_1.sp.filter`             | `request-url%=/wps/myportal`                                                                                       |
-    | `sso_1.sp.idMap`              | `localRealm`                                                                                                       |
-    | `sso_1.idp_1.entityID`        | `https://<idp_hostname>/adfs/services/trust`                                                                       |
-    | `sso_1.sp.login.error.page`   | `https://<idp_hostname>/adfs/ls/IdpInitiatedSingOn.aspx?loginToRp=https://<dx_hostname>/samlsps/wps/`              |
-    | `sso_1.idp_1.certAlias`       | `<idpAlias>`                                                                                                       |
-    | `sso_1.sp.targetUrl`          | `https://<dx_hostname>/wps/myportal`                                                                               |  
+    | Name                       | Value                                                                                                 |
+    |----------------------------|-------------------------------------------------------------------------------------------------------|
+    |`sso_1.sp.acsUrl`           | `https://<dx_hostname>/samlsps/wps/`                                                                  |
+    |`sso_1.sp.filter`           | `request-url%=/wps/myportal`                                                                          |
+    |`sso_1.sp.idMap`            | `localRealm`                                                                                          |
+    |`sso_1.idp_1.entityID`      | `https://<idp_hostname>/adfs/services/trust`                                                          |
+    |`sso_1.sp.login.error.page` | `https://<idp_hostname>/adfs/ls/IdpInitiatedSingOn.aspx?loginToRp=https://<dx_hostname>/samlsps/wps/` |
+    |`sso_1.idp_1.certAlias`     | `<idpAlias>`                                                                                          |
+    |`sso_1.sp.targetUrl`        | `https://<dx_hostname>/wps/myportal`                                                                  |  
 
 ### Check login attribute
 
