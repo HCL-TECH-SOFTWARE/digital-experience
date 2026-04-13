@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience v8.5 and higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
@@ -189,15 +189,28 @@ If your IdP supports using a metadata file to add the service provider as a fede
 
 3. Add the required custom properties to have the following data in place (some of them might already be there).  
 
-    | Name                          | Value                                                                |
-    |-------------------------------|----------------------------------------------------------------------|
-    | `sso_1.sp.acsUrl`             | `https://<hostname>:<sslport>/samlsps/wps/`                          |
-    | `sso_1.sp.idMap`              | `localRealm`                                                         |
-    | `sso_1.idp_1.certAlias`       | `<idpAlias>`                                                         |
-    | `sso_1.idp_1.entityID`        | `https://<idphostname>/<idp required path>`                          |
-    | `sso_1.idp_1.singleSignOnUrl` | `https://<idphostname>/saml/idp/profile/redirectorpost/sso`          |
-    | `sso_1.sp.login.error.page`   | Use the same value as `sso_1.idp_1.entityID`                         |
-    | `sso_1.sp.filter`             | `request-url%=/wps/myportal`                                         |
+    | Name                          | Value                                                                                                              |
+    |-------------------------------|--------------------------------------------------------------------------------------------------------------------|
+    | `sso_1.sp.acsUrl`             | `https://<dx_hostname>:<sslport>/samlsps/wps/`                                                                     |
+    | `sso_1.sp.idMap`              | `localRealm`                                                                                                       |
+    | `sso_1.idp_1.certAlias`       | `<idpAlias>`                                                                                                       |
+    | `sso_1.idp_1.entityID`        | `https://<idphostname>/<idp required path>`                                                                        |
+    | `sso_1.idp_1.singleSignOnUrl` | `https://<idphostname>/saml/idp/profile/redirectorpost/sso`                                                        |
+    | `sso_1.sp.login.error.page`   | Use the same value as `sso_1.idp_1.entityID`                                                                       |
+    | `sso_1.sp.filter`             | `request-url%=/wps/myportal`                                                                                       |
+    | `sso_1.sp.targetUrl`          | `https://<dx_hostname>:<sslport>/wps/`                                                                             |  
+
+    Example configuration that might work when using Active Directory Federation Service (AD FS):  
+
+    | Name                          | Value                                                                                                              |
+    |-------------------------------|--------------------------------------------------------------------------------------------------------------------|
+    | `sso_1.sp.acsUrl`             | `https://<dx_hostname>/samlsps/wps/`                                                                     |
+    | `sso_1.sp.filter`             | `request-url%=/wps/myportal`                                                                                       |
+    | `sso_1.sp.idMap`              | `localRealm`                                                                                                       |
+    | `sso_1.idp_1.entityID`        | `https://<idp_hostname>/adfs/services/trust`                                                                       |
+    | `sso_1.sp.login.error.page`   | `https://<idp_hostname>/adfs/ls/IdpInitiatedSingOn.aspx?loginToRp=https://<dx_hostname>/samlsps/wps/`              |
+    | `sso_1.idp_1.certAlias`       | `<idpAlias>`                                                                                                       |
+    | `sso_1.sp.targetUrl`          | `https://<dx_hostname>/wps/myportal`                                                                               |  
 
 ### Check login attribute
 
@@ -238,3 +251,40 @@ The last step is to enable TAI. After this step, the only way to authenticate to
 5. Save the configuration.  
 
 6. Restart the WebSphere Application Server.  
+
+### Setting the SAML rule for the NameID mapping
+
+When using AD FS it might be needed to define a SAML rule on IdP side to make sure that the NameID will be included in the SAML response. This is needed, because the ACSTrustAssociationInterceptor require the nameID to handle the SAML response correctly.  
+
+Relying Party trust in ADFS need to be configured to issue the following claim:  
+
+**Claim rule name:** NameID Rule  
+**Rule template:** Transform an Incoming Claim  
+**Incoming claim type:** Common Name  
+**Incoming name ID format:** Unspecified  
+**Outgoing claim type:** Name ID  
+**Outgoing name ID format:** Unspecified  
+
+### Troubleshooting
+
+**Error:**  
+
+```log-entry
+CWSML7035E: The SAML Web Single Sign-on (SSO) Trust Association Interceptor (TAI) is unable to determine a redirect target URL. The redirect URL can come from the sso_<id>.sp.targetUrl SAML TAI custom property, the RelayState parameter in the SAMLResponse or the WasSamlSpReqUrl cookie. If you do not intend to have a value for the sso_<id>.sp.targetUrl SAML TAI custom property or have your IdP send a RelayState parameter in the SAMLResponse, then check earlier in the log to see if you have a CWSML7036W warning that indicates that the request URL host name is not the same as the ACS URL host name. If you see that warning, then that condition must be corrected to fix this error. The value for the relayState parameter on the SAMLResponse is [<null>].
+```
+
+**Action:**  
+Please check the `sso_<id>.sp.targetUrl` and make sure it is set correctly and/or not missing at all.  
+
+**Error:**
+
+```log-entry
+CWSML7010E: The [NameID] sub-element of the [Subject] element in the SAML assertion element is missing or empty.  
+```
+
+**Action:**
+The NameID is currently not part of the SAML response. Please check [Setting the SAML rule for the nameID mapping](#setting-the-saml-rule-for-the-nameid-mapping)
+
+???+ info "Related information"
+    - [SAML web single sign-on (SSO) trust association interceptor (TAI) custom properties](https://www.ibm.com/docs/en/was/9.0.5?topic=swss-saml-web-single-sign-sso-trust-association-interceptor-tai-custom-properties){target="_blank"}  
+    - [AD FS troubleshooting: AD FS metadata endpoints](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-endpoints){target="_blank"}
