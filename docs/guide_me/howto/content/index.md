@@ -7,8 +7,6 @@ Learn how to create a custom configuration file for use with the TinyMCE editor.
 - **[How to delete WCM libraries referenced by other libraries](./DeleteLibWithRefs.md)**  
 Learn how to resolve WCM cross-library dependencies to successfully delete libraries.
 - **[How to enable or disable managed pages on HCL DX](./disableManagedPages.md)**  
-Learn how to enable or disable the Managed Pages feature of HCL DX.  
-- **[How to export themes and skins in HCL DX](./OnlyExportThemeSkins.md)**  
 Learn how to export HCL DX themes and skins without exporting the entire server configuration.  
 - **[How to get the UUID and Path of WCM content objects using a command Line](./GetUUIDAndPathOfContent.md)**  
 Learn how to obtain the UUID and Path of WCM content objects through the Linux bash command line.  

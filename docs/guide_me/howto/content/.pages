@@ -5,7 +5,6 @@ nav:
     - customizeTinyMCE.md
     - DeleteLibWithRefs.md
     - disableManagedPages.md
-    - OnlyExportThemeSkins.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
     - JSF_hasBaseURL.md

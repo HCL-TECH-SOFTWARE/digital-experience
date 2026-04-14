@@ -24,7 +24,7 @@ To export your HCL DX themes and skins:
 
     - **Microsoft Windows:**
 
-        ```shell
+        ```bat
         <wp_profile_root>\PortalServer\bin\xmlaccess.bat -user <portal_admin_user> -password <portal_admin_password> -url http://<hostname>:<port>/wps/config -in <portal_server_root>\doc\xml-samples\ExportThemesAndSkins.xml -out result.xml 
         ```
 
