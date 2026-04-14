@@ -96,14 +96,14 @@ Use the HCL Digital Experience 9.5 DAM editor to download a media asset source, 
 
 3.  Click **Download** to proceed.
 
-## Deleting a media asset
+## Moving a media asset to trash
 
-Use the HCL Digital Experience 9.5 DAM editor to delete a media asset, including its renditions:
+Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
-2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
+2.  A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action.
 
-    ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
+    ![Check references and move media asset to trash](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
 
 ## Copying a media asset
 
@@ -113,7 +113,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Move to trash**.
 
 2. Click **Copy**.
 
@@ -135,7 +135,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Move to trash**.
 
 2. Click **Move**.
 
@@ -158,7 +158,7 @@ Refer to the following steps to modify the name of a media asset.
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Move to trash**.
 
 2. Click **Rename**.
 

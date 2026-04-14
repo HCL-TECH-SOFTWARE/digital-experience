@@ -53,7 +53,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
         - **Access control** tab - Allows you to set who can access the media assets in the collection.
 
     - **Move** - Moves the selected collection into another location.
-    - **Delete** - Deletes the selected collection.
+    - **Move to trash** - Moves the selected collection to trash.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
@@ -135,11 +135,11 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 6. Click **Add users and groups** to save changes.
 
-## Deleting a collection
+## Moving a collection to trash
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Delete**.
-A message appears to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
-3. Click **Delete collection** to delete the collection.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move to trash**.
+A message appears to confirm your action. Once a collection is moved to trash, all the corresponding subcollections,  media assets, renditions, and versions are moved to trash. Moving referenced items to the trash will render them unavailable in web content.
+3. Click **Move to trash** to move the collection to trash.
 
 ## Moving a collection
 
