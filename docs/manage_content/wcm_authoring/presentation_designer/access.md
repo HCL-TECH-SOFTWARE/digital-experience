@@ -6,6 +6,9 @@ This section provides the steps on how to access the Presentation Designer. User
 
 Presentation Designer is installed and deployed by default as part of the CF update process. You can access Presentation Designer from the Practitioner Studio interface.
 
+!!! note
+    Upon creation of Virtual portal with Practitioner Studio enabled and web content configured, the Presentation Designer is automatically included.
+
 To use Presentation Designer, you must have the following minimum set of roles. Note that the roles listed are the minimum; if you have a Manager or Administrator role, you can still access Presentation Designer.
 
 === "Presentation Designer page"

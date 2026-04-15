@@ -35,6 +35,9 @@ This section outlines how to enable Practitioner Studio in both base portal and 
 
         -   If **-DVirtualPortalContext=** has a space in the context name, please add quotes around the name of the context.
 
+        !!! note
+            To enable Practitioner Studio in an existing virtual portal, you must be running HCL Digital Experience 9.5 CF235 or later, and the virtual portal must already be created and configured with WCM enabled. Presentation Designer is automatically included.
+
 ## Enabling HCL DX site to be seen in SiteMap
 
 Enabling Practitioner Studio via the enable task has the following effect to your previous view: The Administration pages will be disabled, the Home pages will be excluded from the SiteMap, and first-level navigation drop downs in the toolbar and Practitioner Studio.
