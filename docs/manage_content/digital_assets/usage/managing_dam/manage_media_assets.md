@@ -103,7 +103,7 @@ Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, in
 1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
 2.  A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action.
 
-    ![Check references and move media asset to trash](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
+    ![Check references and move media asset to trash](../../../../images/Check_for_references_and_move_to_trash_HCL_DAM.png)
 
 ## Copying a media asset
 

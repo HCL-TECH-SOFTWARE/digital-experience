@@ -38,8 +38,9 @@ A collection admin can restore individual assets or entire collections from the 
 
 ### Dependency rules
 
+- Moving referenced items to the trash will render them unavailable in content. Therefore a dialog box pops up to check the references and move to trash.
 - If a sub-collection or asset is in the Trash and its parent collection is also in the Trash, the sub-item goes through move and restore dialog box where user can choose the new location for restore.
-- If the parent collection no longer exists (was permanently deleted), the child items cannot be restored. 
+- If the parent collection no longer exists (was permanently deleted), the child items are also consequently permanently deleted. 
 
 ### Name conflict resolution
 
