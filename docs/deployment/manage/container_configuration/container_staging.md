@@ -81,6 +81,9 @@ Follow these steps to export the source HCL DX server.
 
 Before starting the import, complete the Kubernetes deployment with the right CF level and configure the prerequisites. Ensure that the context root matches the previous deployment, and the security is configured (for example, connected to LDAP).
 
+!!! warning
+    When copying commands, ensure that all hyphens (-) are standard ASCII hyphens. En dashes (–) or other special characters may cause commands to fail if pasted into the terminal.
+
 1.  Log in to the machine to access your HCL DX Container.
 
 2.  Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
@@ -88,6 +91,8 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 3.  With only a single instance of an HCL DX container running, exec in, and ensure the `ulimit -n` value is at least **24000**.
 
 4.  Empty the base HCL DX server.
+
+
 
     1.  OpenShift:
       ```
