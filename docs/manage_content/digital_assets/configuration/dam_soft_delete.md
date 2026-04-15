@@ -1,4 +1,4 @@
-# DAM Soft Delete (Trash)
+# DAM Soft Delete
 
 The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users.
 

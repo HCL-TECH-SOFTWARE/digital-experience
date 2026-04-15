@@ -15,6 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM Soft Delete
 - Helm values updates
 - WAS, JDK, and iFix versions
 
@@ -79,6 +80,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### DAM Soft Delete
+
+=== "Containers"
+    The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users. For more information, refer to the [DAM Soft Delete](../../manage_content/digital_assets/configuration/dam_soft_delete.md).
 
 ### Helm values updates <!--UPDATE-->
 
