@@ -1,6 +1,6 @@
 # Using DAM Indexing
 
-This topic provides information about the indexing processes to make Digital Asset Management (DAM) a datasource for Search.
+This topic provides information about the indexing processes to make Digital Asset Management (DAM) a datasource for DX Picker.
 
 ## Initial indexing
 
