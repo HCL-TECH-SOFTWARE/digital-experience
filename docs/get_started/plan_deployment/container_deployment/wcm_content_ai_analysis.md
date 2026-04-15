@@ -101,6 +101,9 @@ To configure a custom AI class:
 2. Configure the content AI provider class in the Helm chart and run ```helm upgrade```.
 <!-- Did the preceding steps take the admin through configuring. It looks a though the actual configuring happens after the last step. -->
 
+To give users more insight on how to use a custom content UI provider, use the [Google Vertex sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample). It leverages [Google Vertex AI](https://cloud.google.com/vertex-ai) for sentiment analysis, summary and keyword generation. The build of the project is established via Apache Maven.
+
+
 ### Configuring a custom secret or API Key for the content AI provider
 
 The API key or custom secret of a content AI provider can be configured in the `security` section of the ```core```, as shown in the following example.
