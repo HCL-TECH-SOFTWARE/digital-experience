@@ -85,12 +85,9 @@ configuration:
     trashClearanceHeartbeatInMinutes: 60
 ```
 
-!!!note
-    When `enableSoftDelete` is set to `false`, delete operations immediately and permanently remove the records (hard delete). No items are moved to the Trash.
+## Staging
 
-## Cross-Environment Synchronization (Publisher/Subscriber)
-
-When DAM is used in a Publisher/Subscriber staging setup, soft delete actions on the Publisher propagate as hard delete to Subscribers.
+In a Publisher/Subscriber staging setup, soft delete actions on the Publisher propagate as hard delete to Subscribers.
 
 | Action on Publisher | Impact on Subscriber |
 |---|---|
