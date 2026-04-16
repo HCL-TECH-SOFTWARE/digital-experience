@@ -296,7 +296,7 @@ kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/star
 For Image Processor:
 ```bash
 POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-image-processor -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
+kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /home/dx_user/start_all_server.sh
 ```
 
 **3. Check OpenTelemetry packages are installed:**
