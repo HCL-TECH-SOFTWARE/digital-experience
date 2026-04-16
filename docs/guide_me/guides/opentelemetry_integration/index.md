@@ -257,7 +257,6 @@ incubator:
     services:
       dam:
         logLevel: "info"
-        resourceAttributes: "environment=production,team=platform"
       imageprocessor:
         logLevel: "info"
       ringapi:
