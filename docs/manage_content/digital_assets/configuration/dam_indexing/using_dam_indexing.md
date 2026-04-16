@@ -1,4 +1,4 @@
-# Using DAM Indexing
+# Using DAM Indexing 
 
 This topic provides information about the indexing processes required to make Digital Asset Management (DAM) a data source for the DX Picker.
 

@@ -1,4 +1,4 @@
-# DAM Indexing
+# DAM Indexing 
 
 You can use Digital Asset Management (DAM) as a data source of the DX Picker. Using DAM as a data source enables you to search DAM assets and images more efficiently with the help of [OpenSearch](../../../../deployment//install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md). To make DAM a prsupported data source for DX Picker, the following indexing processes are introduced:
 
