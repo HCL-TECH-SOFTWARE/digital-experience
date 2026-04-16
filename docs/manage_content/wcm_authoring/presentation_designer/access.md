@@ -86,32 +86,32 @@ Refer to the following instructions to access and navigate to Presentation Desig
 
 6. Select the presentation template you want to access by checking the box next to its title.
 
-    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Selected.png "HCL WCM Authoring - Select New Presentation Template")
+    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Selected.png "HCL WCM Authoring - Select a Presentation Template")
 
 7. Choose how you want to open the presentation template using the action buttons located in the toolbar:
     * **To edit the template in Presentation Designer:** Click the **Edit** drop-down menu and select **Edit in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Edit mode**.
 
-    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer")
+        ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer")
 
     * **To view the template in Presentation Designer:** Click the **Read** drop-down menu and select **Read in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Read only**.
 
-    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer")
+        ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer")
 
     !!! note
         You can also choose to open the template in the standard WCM HTML Editor by selecting **Edit in WCM HTML Editor** or **Read in WCM HTML Editor** from these same drop-down menus.
 
 8. You can also switch to the Presentation Designer while working within the standard WCM HTML Editor:
-    * When you open a presentation template using **Read in WCM HTML Editor**, the **Edit** button is available in the action bar. Click **Edit > Edit in Presentation Designer** to open the template in Presentation Designer in edit mode.
+    * If you are already viewing a template in the WCM HTML Editor (Read mode), click **Edit > Edit in Presentation Designer** in the action bar to switch to Presentation Designer in edit mode.
 
-    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer from WCM HTML Editor")
+        ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer from WCM HTML Editor")
 
-    * When you open a presentation template using **Edit in WCM HTML Editor**, the **Read** button is available in the action bar. Click **Read > Read in Presentation Designer** to open the template in Presentation Designer in read-only mode.
+    * If you are already editing a template in the WCM HTML Editor (Edit mode), click **Read > Read in Presentation Designer** in the action bar to switch to Presentation Designer in read-only mode.
 
-    ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer from WCM HTML Editor")
+        ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer from WCM HTML Editor")
 
-The Presentation Designer user interface appears. You can also refer to Step 6 to 8 to view or edit your existing presentation templates.  
+The Presentation Designer user interface appears. You can also use steps 6 to 8 to access any existing presentation template.
 
-![](../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Desinger - Blank Canvas")
+![](../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Designer - Blank Canvas")
 
 ## The Presentation Designer UI
 
