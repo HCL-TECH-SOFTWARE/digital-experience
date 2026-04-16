@@ -284,19 +284,19 @@ kubectl exec -it <pod-name> -n <namespace> -- ls -la /etc/global-config
 For DAM:
 ```bash
 POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-digital-asset-management -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /packages/start_all_server.sh
+kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
 ```
 
 For Ring API:
 ```bash
 POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-ring-api -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /packages/start_all_server.sh
+kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
 ```
 
 For Image Processor:
 ```bash
 POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-image-processor -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /packages/start_all_server.sh
+kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
 ```
 
 **3. Check OpenTelemetry packages are installed:**

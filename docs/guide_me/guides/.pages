@@ -1,5 +1,6 @@
 title: Guides
 nav:
     - index.md
+    - opentelemetry_integration
     - performance_tuning
     - SecurityHardeningGuide
