@@ -306,7 +306,7 @@ kubectl logs <pod-name> -n <namespace> | grep -i "opentelemetry\|otel"
 
 The following Java services in HCL DX include the OpenTelemetry Java Agent: DX Core, WebEngine, Runtime Controller, and License Manager.
 
-**Note**: The OpenTelemetry Java Agent is already included in the HCL DX container images at `/opt/otel/opentelemetry-javaagent.jar`. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended.
+**Note**: The OpenTelemetry Java Agent (version 2.23.0) is pre-bundled in all HCL DX container images at `/opt/otel/opentelemetry-javaagent.jar`. The agent JAR is downloaded from HCL's internal Maven repositories during the container image build process. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended.
 
 ### Enabling OpenTelemetry via Helm
 
@@ -568,12 +568,54 @@ Distributed traces may not show complete request flows if:
 This guide has covered the complete process of integrating OpenTelemetry with HCL Digital Experience:
 
 1. Deploying the OpenTelemetry Collector using Helm charts
-2. Instrumenting Node.js services (DAM, Image Processor, Ring API) with automatic instrumentation
-3. Instrumenting Java services (Core, WebEngine, Runtime Controller, License Manager) using the Java agent
-4. Configuring Helm deployments to include OpenTelemetry
-5. Monitoring and troubleshooting the integration
+2. Configuring Node.js services (DAM, Image Processor, Ring API) with built-in OpenTelemetry instrumentation
+3. Configuring Java services (Core, WebEngine, Runtime Controller, License Manager) with pre-bundled Java agent
+4. Enabling OpenTelemetry via HCL DX Helm chart incubator section
+5. Monitoring and troubleshooting the integration using Grafana and Prometheus
 
 By following these steps, you will have a comprehensive observability solution for your HCL DX deployment, enabling you to monitor performance, troubleshoot issues, and optimize your system effectively.
+
+## Technical Implementation Details
+
+For technical users and developers working with HCL DX container images:
+
+### Java Agent Distribution
+
+The OpenTelemetry Java Agent is integrated into all Java-based DX services during the container build process:
+
+- **Version**: 2.23.0
+- **Location**: `/opt/otel/opentelemetry-javaagent.jar` in all Java-based containers
+- **Source**: Downloaded from HCL's internal Artifactory Maven repository during Docker image build
+
+**Build-time Integration Methods:**
+
+1. **WebEngine (liberty-foundation)**: Uses Maven dependency management via `pom.xml`
+   ```xml
+   <dependency>
+       <groupId>prereq_fes.prereq.prereq-otel</groupId>
+       <artifactId>opentelemetry-javaagent.jar</artifactId>
+   </dependency>
+   ```
+
+2. **Core, Runtime Controller, License Manager**: Downloaded via curl in Dockerfile
+   ```dockerfile
+   RUN mkdir -p /opt/otel && \
+       curl -fSL \
+       https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-maven-prod/prereq_fes/prereq/prereq-otel/opentelemetry-javaagent.jar/2.23.0/opentelemetry-javaagent.jar-2.23.0.jar \
+       -o /opt/otel/opentelemetry-javaagent.jar
+   ```
+
+### Node.js Instrumentation Packages
+
+Node.js services include OpenTelemetry packages in their `package.json` dependencies:
+
+- `@opentelemetry/api`
+- `@opentelemetry/sdk-node`
+- `@opentelemetry/auto-instrumentations-node`
+- `@opentelemetry/exporter-trace-otlp-grpc`
+- `@opentelemetry/exporter-metrics-otlp-grpc`
+
+These packages are installed during the npm install phase of the container build process.
 
 ## Related Documentation
 
