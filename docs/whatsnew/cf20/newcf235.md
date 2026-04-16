@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -61,6 +62,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
+
+### Presentation Designer - New entry points from Authoring portlet
+
+=== "Containers"
+    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option in the **Edit** drop-down menu has also been updated. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
+
+=== "On-Premises"
+    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option in the **Edit** drop-down menu has also been updated. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
