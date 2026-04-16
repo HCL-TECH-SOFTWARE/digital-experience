@@ -9,7 +9,7 @@ By integrating OpenTelemetry with HCL DX, you can:
 - Collect distributed traces across all DX components
 - Monitor application metrics and performance indicators
 - Aggregate logs with correlation context
-- Export telemetry data to your preferred observability backend (Prometheus, Jaeger, Elastic, etc.)
+- Export telemetry data to your preferred observability backend (Prometheus, Grafana, Elastic, etc.)
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before proceeding with the integration, ensure you have:
 - Helm 3.0 or later installed and configured
 - kubectl access to your Kubernetes cluster
 - Administrative access to modify deployment configurations
-- An observability backend or endpoint to receive telemetry data (Jaeger, Prometheus, Grafana, etc.)
+- An observability backend or endpoint to receive telemetry data (Prometheus, Grafana, etc.)
 
 ## Architecture
 
@@ -86,15 +86,15 @@ config:
 
   exporters:
     # Configure your observability backend
-    # Example: Jaeger
-    jaeger:
-      endpoint: "jaeger-collector.observability.svc.cluster.local:14250"
-      tls:
-        insecure: true
-    
-    # Example: Prometheus
+    # Example: Prometheus for metrics
     prometheus:
       endpoint: "0.0.0.0:8889"
+    
+    # Example: OTLP exporter for Grafana Tempo (traces)
+    otlp:
+      endpoint: "tempo.observability.svc.cluster.local:4317"
+      tls:
+        insecure: true
     
     # Example: Logging exporter for debugging
     logging:
@@ -105,7 +105,7 @@ config:
       traces:
         receivers: [otlp]
         processors: [memory_limiter, batch]
-        exporters: [jaeger, logging]
+        exporters: [otlp, logging]
       
       metrics:
         receivers: [otlp, prometheus]
@@ -156,8 +156,9 @@ ports:
 
 **Important Configuration Notes:**
 
-- Update the `jaeger.endpoint` with your actual Jaeger collector endpoint
-- Configure additional exporters based on your observability stack (Prometheus, Grafana, Elastic, etc.)
+- Update the `otlp.endpoint` with your actual backend endpoint (Grafana Tempo, Elastic APM, etc.)
+- For Grafana setup, you can use Grafana Tempo for traces and Prometheus for metrics
+- Configure additional exporters based on your observability stack
 - Adjust resource limits based on your expected telemetry volume
 - Enable TLS for production deployments by configuring appropriate certificates
 
@@ -208,7 +209,12 @@ The following Node.js services in HCL DX include built-in OpenTelemetry instrume
 
 ### Enabling OpenTelemetry via Helm
 
-OpenTelemetry is enabled and configured through the HCL DX Helm chart values file. Add or update the following section in your `values.yaml`:
+OpenTelemetry is enabled and configured through the HCL DX Helm chart values file under the `incubator` section. The incubator section contains experimental features that are planned for production in future releases. For more information about experimental features, refer to [Experimental Features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
+
+!!!important
+    Features within the incubator section are experimental and not recommended for production environments. Configuration values are subject to change in future releases.
+
+Add or update the following section in your `values.yaml`:
 
 ```yaml
 incubator:
@@ -304,7 +310,7 @@ The following Java services in HCL DX include the OpenTelemetry Java Agent: DX C
 
 ### Enabling OpenTelemetry via Helm
 
-OpenTelemetry for Java services is configured through the same Helm chart section as Node.js services. Add or update the following in your `values.yaml`:
+OpenTelemetry for Java services is configured through the same Helm chart incubator section as Node.js services. Add or update the following in your `values.yaml`:
 
 ```yaml
 incubator:
@@ -334,10 +340,8 @@ incubator:
     services:
       core:
         logLevel: "info"
-        resourceAttributes: "deployment.environment=production"
       webengine:
         logLevel: "debug"
-        resourceAttributes: "environment=production,team=platform"
       runtimecontroller:
         logLevel: "info"
       licensemanager:
@@ -429,27 +433,47 @@ kubectl rollout status deployment/dx-deployment-ring-api -n <namespace>
 
 ## Monitoring and Troubleshooting
 
-### Viewing Traces
+### Viewing Traces and Metrics
 
-Access your tracing backend (e.g., Jaeger UI) to view distributed traces:
+Access Grafana to view distributed traces and metrics. If you've deployed Grafana as part of the `kube-prometheus-stack`, you can access it via port-forwarding:
 
 ```bash
-# Port-forward to Jaeger UI
-kubectl port-forward -n observability svc/jaeger-query 16686:16686
+# Port-forward to Grafana
+kubectl port-forward -n observability svc/prometheus-grafana 3000:80
 ```
 
-Open your browser to `http://localhost:16686` and search for traces by service name.
+Open your browser to `http://localhost:3000` (default credentials: admin/prom-operator).
 
-### Viewing Metrics
+**Viewing Traces in Grafana:**
 
-If using Prometheus, access the metrics:
+1. Navigate to **Explore** in the left menu
+2. Select **Tempo** as the data source (if configured)
+3. Search for traces by service name (e.g., `webengine-0`, `dam-0`)
+4. Filter by tags, duration, or time range
+
+**Viewing Metrics in Grafana:**
+
+1. Import DX-specific dashboards from the [Grafana dashboard page](https://grafana.com/grafana/dashboards/)
+2. Use the following dashboard IDs for HCL DX components:
+   - **14151**: [WebSphere Application Server PMI metrics](https://grafana.com/grafana/dashboards/14151) (Core, WebEngine)
+   - **11159**: [NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159) (DAM, Image Processor, Ring API)
+3. For detailed monitoring guidance, refer to [Monitor Helm Deployment Metrics](../../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md)
+
+### Querying Metrics in Prometheus
+
+If using Prometheus directly, you can also query metrics:
 
 ```bash
 # Port-forward to Prometheus
 kubectl port-forward -n observability svc/prometheus 9090:9090
 ```
 
-Query metrics with the prefix `otel_` or your custom metric names.
+Open `http://localhost:9090` and query OpenTelemetry metrics:
+
+- `otel_*` - OpenTelemetry SDK metrics
+- `http_server_duration_*` - HTTP server request duration
+- `rpc_server_duration_*` - RPC server request duration
+- Custom application metrics exported by DX services
 
 ### Common Issues
 
@@ -491,28 +515,6 @@ Distributed traces may not show complete request flows if:
 
 ## Best Practices
 
-### Production Deployment
-
-1. **Use Secret Management**: Store sensitive configuration (API keys, endpoints) in Kubernetes Secrets
-2. **Enable TLS**: Configure TLS between services and the collector for production
-3. **Implement Sampling**: Use intelligent sampling to reduce data volume while maintaining visibility
-4. **Set Resource Limits**: Define appropriate CPU and memory limits for the collector
-5. **Plan for High Availability**: Deploy multiple collector instances with load balancing
-
-### Performance Optimization
-
-1. **Batch Processing**: Configure appropriate batch sizes to optimize network usage
-2. **Sampling Strategies**: Implement tail-based sampling to keep interesting traces
-3. **Metric Aggregation**: Use the collector to aggregate metrics before export
-4. **Async Export**: Ensure telemetry export does not block application threads
-
-### Security
-
-1. **Network Policies**: Restrict communication to the collector using Kubernetes NetworkPolicies
-2. **Authentication**: Enable authentication on collector endpoints if exposed externally
-3. **Data Sanitization**: Configure processors to remove sensitive data from traces
-4. **RBAC**: Use Kubernetes RBAC to restrict access to collector configuration
-
 ### Observability
 
 1. **Monitor the Collector**: Set up monitoring for the collector itself
@@ -544,10 +546,16 @@ Distributed traces may not show complete request flows if:
 
 ### Observability Backends
 
-- **Jaeger**: [https://www.jaegertracing.io/](https://www.jaegertracing.io/)
-- **Prometheus**: [https://prometheus.io/](https://prometheus.io/)
 - **Grafana**: [https://grafana.com/](https://grafana.com/)
+- **Grafana Tempo** (traces): [https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/)
+- **Prometheus**: [https://prometheus.io/](https://prometheus.io/)
 - **Elastic Observability**: [https://www.elastic.co/observability](https://www.elastic.co/observability)
+
+### HCL Digital Experience Resources
+
+- **Monitor Helm Deployment Metrics**: [DX Monitoring Guide](../../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md)
+- **Experimental Features**: [Incubator Section Documentation](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md)
+- **Helm Values Reference**: [DX Helm Values Updates](../../../whatsnew/dx_helm_values_updates.md)
 
 ### Kubernetes
 
@@ -566,5 +574,12 @@ This guide has covered the complete process of integrating OpenTelemetry with HC
 5. Monitoring and troubleshooting the integration
 
 By following these steps, you will have a comprehensive observability solution for your HCL DX deployment, enabling you to monitor performance, troubleshoot issues, and optimize your system effectively.
+
+## Related Documentation
+
+- [Monitor Helm Deployment Metrics](../../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md) - Prometheus metrics and Grafana dashboards for DX
+- [Experimental Features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md) - Incubator section documentation
+- [Performance Tuning Guides](../performance_tuning/index.md) - Optimize your DX deployment
+- [Helm Values Reference](../../../whatsnew/dx_helm_values_updates.md) - Complete Helm chart configuration reference
 
 For additional support or questions, please contact HCL Software Support or refer to the official HCL DX documentation.
