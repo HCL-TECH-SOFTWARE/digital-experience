@@ -40,6 +40,16 @@ The OpenTelemetry Collector acts as a centralized telemetry data pipeline that r
 
 ## Quick Start: Deploying the OpenTelemetry Collector
 
+!!!important "Quick Start Configuration"
+    The following OpenTelemetry Collector deployment is provided as a **quick start example** for development and testing purposes. This configuration is **not production-ready** and should not be used in production environments without significant modifications.
+    
+    For production deployments, customers must:
+    
+    - Consult the [official OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/) for highly available setup patterns
+    - Implement proper security measures (TLS, authentication, authorization)
+    - Configure resource limits based on actual telemetry volume
+    - Follow the latest best practices and recommendations from the OpenTelemetry community
+
 ### Step 1: Add the OpenTelemetry Helm Repository
 
 The OpenTelemetry Collector can be deployed using the official Helm chart from the OpenTelemetry community.
@@ -155,6 +165,9 @@ ports:
 ```
 
 **Important Configuration Notes:**
+
+!!!warning "Production Deployment"
+    This is a basic configuration for testing purposes only. For production use, implement proper security controls, monitoring, and high availability patterns as documented in the [OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/).
 
 - Update the `otlp.endpoint` with your actual backend endpoint (Grafana Tempo, Elastic APM, etc.)
 - For Grafana setup, you can use Grafana Tempo for traces and Prometheus for metrics
@@ -562,66 +575,3 @@ Distributed traces may not show complete request flows if:
 - **Kubernetes Documentation**: [https://kubernetes.io/docs/](https://kubernetes.io/docs/)
 - **Kubernetes ConfigMaps**: [https://kubernetes.io/docs/concepts/configuration/configmap/](https://kubernetes.io/docs/concepts/configuration/configmap/)
 - **Kubernetes Secrets**: [https://kubernetes.io/docs/concepts/configuration/secret/](https://kubernetes.io/docs/concepts/configuration/secret/)
-
-## Summary
-
-This guide has covered the complete process of integrating OpenTelemetry with HCL Digital Experience:
-
-1. Deploying the OpenTelemetry Collector using Helm charts
-2. Configuring Node.js services (DAM, Image Processor, Ring API) with built-in OpenTelemetry instrumentation
-3. Configuring Java services (Core, WebEngine, Runtime Controller, License Manager) with pre-bundled Java agent
-4. Enabling OpenTelemetry via HCL DX Helm chart incubator section
-5. Monitoring and troubleshooting the integration using Grafana and Prometheus
-
-By following these steps, you will have a comprehensive observability solution for your HCL DX deployment, enabling you to monitor performance, troubleshoot issues, and optimize your system effectively.
-
-## Technical Implementation Details
-
-For technical users and developers working with HCL DX container images:
-
-### Java Agent Distribution
-
-The OpenTelemetry Java Agent is integrated into all Java-based DX services during the container build process:
-
-- **Version**: 2.23.0
-- **Location**: `/opt/otel/opentelemetry-javaagent.jar` in all Java-based containers
-- **Source**: Downloaded from HCL's internal Artifactory Maven repository during Docker image build
-
-**Build-time Integration Methods:**
-
-1. **WebEngine (liberty-foundation)**: Uses Maven dependency management via `pom.xml`
-   ```xml
-   <dependency>
-       <groupId>prereq_fes.prereq.prereq-otel</groupId>
-       <artifactId>opentelemetry-javaagent.jar</artifactId>
-   </dependency>
-   ```
-
-2. **Core, Runtime Controller, License Manager**: Downloaded via curl in Dockerfile
-   ```dockerfile
-   RUN mkdir -p /opt/otel && \
-       curl -fSL \
-       https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-maven-prod/prereq_fes/prereq/prereq-otel/opentelemetry-javaagent.jar/2.23.0/opentelemetry-javaagent.jar-2.23.0.jar \
-       -o /opt/otel/opentelemetry-javaagent.jar
-   ```
-
-### Node.js Instrumentation Packages
-
-Node.js services include OpenTelemetry packages in their `package.json` dependencies:
-
-- `@opentelemetry/api`
-- `@opentelemetry/sdk-node`
-- `@opentelemetry/auto-instrumentations-node`
-- `@opentelemetry/exporter-trace-otlp-grpc`
-- `@opentelemetry/exporter-metrics-otlp-grpc`
-
-These packages are installed during the npm install phase of the container build process.
-
-## Related Documentation
-
-- [Monitor Helm Deployment Metrics](../../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md) - Prometheus metrics and Grafana dashboards for DX
-- [Experimental Features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md) - Incubator section documentation
-- [Performance Tuning Guides](../performance_tuning/index.md) - Optimize your DX deployment
-- [Helm Values Reference](../../../whatsnew/dx_helm_values_updates.md) - Complete Helm chart configuration reference
-
-For additional support or questions, please contact HCL Software Support or refer to the official HCL DX documentation.
