@@ -1,6 +1,6 @@
 # Installing the Search V2 backend
 
-This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment. Search has the following limitations:
+This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment. Search has the following features:
 
 - WCM crawling
 - Push API for use with WCM content sources
@@ -28,9 +28,9 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 ## Preparing certificates for inter-service communication
 
-Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the [DN format requirements](#dn-format-requirements) for more information about certificate Distinguished Name (DN) validation limitation.
+Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
 
-If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -53,9 +53,10 @@ Use the following example to generate all required certificates, including real-
 The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
 
 
-# Root CA certificate – using a comprehensive test DN
+
 ```sh
 openssl genrsa -out root-ca-key.pem 2048
+# Root CA certificate – using a comprehensive test DN
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
 ```
 
