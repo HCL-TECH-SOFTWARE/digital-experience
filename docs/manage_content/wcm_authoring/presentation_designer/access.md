@@ -111,7 +111,7 @@ Refer to the following instructions to access and navigate to Presentation Desig
 
 The Presentation Designer user interface appears. You can also use steps 6 to 8 to access any existing presentation template.
 
-![](../../../assets/HCL_Presentation_Desinger_Blank_Canvas.png "HCL Presentation Designer - Blank Canvas")
+![](../../../assets/HCL_Presentation_Designer_Blank_Canvas.png "HCL Presentation Designer - Blank Canvas")
 
 ## The Presentation Designer UI
 
