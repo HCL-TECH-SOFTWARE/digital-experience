@@ -51,14 +51,14 @@ Follow these steps to export the source HCL DX server.
 4.  Navigate to the PortalServer/bin directory to export the base server.
 
     ```
-     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
     ```
 
 5.  Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for later use when importing to the target environment.
 6.  Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.
 
     ```
-     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config/vpcontextroot -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportUniqueRelease.xml -out /tmp/ExportVP1Results.xml
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
     ```
 
 7.  Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.
@@ -113,7 +113,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 5.  Clean up the deleted pages in the target server by using XML Access:
 
     ```
-     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
     ```
 
     The output displays a **BUILD SUCCESSFUL** message. If not, check the `/opt/HCL/wp_profile/logs/WebSphere_Portal/SystemOut.log` file for errors.
@@ -181,7 +181,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 
       
       ```
-      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
+       /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
       ```
 
     The output displays a successful execution. If not, check `/tmp/ExportReleaseResults_ImportResult.xml` for errors.
@@ -217,7 +217,7 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 17. For each virtual portal, import the content by using XMLAccess. Ensure that the context root and the virtual portal name match in the XMLAccess command.
 
     ```
-    /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
+     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
     ```
 
 18. Restart the HCL DX server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
