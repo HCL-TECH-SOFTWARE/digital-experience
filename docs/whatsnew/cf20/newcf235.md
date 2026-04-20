@@ -10,6 +10,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM Soft Delete
 - Using In-House CA/PKI for Search V2 Certificates
 - Helm values updates
 - WAS, JDK, and iFix versions
@@ -31,7 +32,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Practitioner Dashboard  
 
 === "Containers"
-    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to[Practitioner Dashboard  ](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/build_sites/practitioner_studio/dashboard/)<!-- Tupdate link-->
+    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard  ](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/build_sites/practitioner_studio/dashboard/)<!-- Tupdate link-->
 
 === "On-Premises"
     Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to[Practitioner Dashboard  ](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/build_sites/practitioner_studio/dashboard/)<!-- Tupdate link-->
@@ -43,6 +44,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ## Digital Experience 9.5 Version
 
 ## Digital Experience 9.5 Container Version
+
+### AM Soft Delete
+
+=== "Containers"
+The Soft Delete feature adds a safety net for accidental deletion of assets and collections in Digital Asset Management (DAM). Instead of being permanently removed, items are moved to a **Trash** state, where they are hidden from normal views but remain in the database for a configurable period. Authorized users can restore items or permanently delete them.
+
+For more information, see [DAM Soft Delete](../../manage_content/digital_assets/configuration/dam_soft_delete.md).
 
 ### Using In-House CA/PKI for Search V2 Certificates
 
