@@ -24,6 +24,17 @@ This table lists the Kubernetes platforms that HCL tested and supports. This is 
 |--------------|-----------------|
 |- Amazon EKS<br/>- Google GKE<br/>- Microsoft Azure AKS<br/>- Red Hat OpenShift|- Amazon EKS / AWS EC2<br/>- Red Hat OpenShift on AWS / AWS EC2|
 
+The following storage types are used in HCL internal DX test deployments. This is the set that HCL tests against for its own validation; other storage types might work but are not tested by HCL.
+
+ReadWriteOnce (RWO) volumes use the cloud provider's native block storage:
+
+* Amazon Elastic Kubernetes Service / Amazon Web Services - EBS (gp2 / gp3)
+* Azure Kubernetes Service / Microsoft - Azure Managed Disks (managed-premium)
+* Google Kubernetes Engine / Google Cloud - Persistent Disk (standard)
+* Red Hat OpenShift - AWS EBS (gp3)
+
+ReadWriteMany (RWX) volumes use NFS shared storage, which is a custom NFS server managed by HCL automation rather than a cloud-provided storage service. These volumes are used for Core Profile and Digital Asset Management shared data.
+
 ## Kubernetes version support policy
 
 The table 2 lists the Kubernetes versions that HCL tested and supports in HCL DX CF releases.
