@@ -5,7 +5,7 @@ The Soft Delete feature helps prevent accidental deletion of assets and collecti
 ## Soft Delete Lifecycle
 
 ### Moving an item to Trash
-When a user soft-deletes an asset or collection, the item moves from **Active** to **soft-deleted** (Trash). The system doesn't remove the item from the database. Instead, it sets an `is_deleted` flag on the record and records the deletion timestamp and the user who performed the action.
+The system uses a **soft delete** mechanism: instead of permanent removal, items are moved to a hidden **Trash** state. It automatically records the **deletion date** and the **user** who performed the action.
 
 **To move an item to Trash:**
 
@@ -42,6 +42,12 @@ A Collection Admin can restore individual assets or entire collections from the 
 - **Nested deletions:** If a subcollection or asset is in the Trash and its parent collection is also in the Trash, restoring the subitem prompts a dialog box to select a new location.
 - **Parent deletion:** If the parent collection has been permanently deleted, all child items are also permanently deleted and cannot be recovered.
 
+### Media item restore
+![Restore media item](../../../images/DAM_restore_media_item.png)
+
+### Collection restore
+![Restore collection](../../../images/DAM_restore_collection.png)
+
 ### Name conflict resolution
 
 If a new item with the same name is created in the original location after a soft delete, a name conflict occurs during restoration. In this case, a **Rename and restore** dialog appears, allowing the user to rename the item to resolve the conflict.
@@ -52,12 +58,17 @@ If a new item with the same name is created in the original location after a sof
 
 ### Individual permanent delete
 A Collection Admin can permanently delete a specific item from the Trash at any time, bypassing the retention period. This action is irreversible.
+![Permanent delete Collection](../../../images/DAM_collection_permanent_delete.png)
+![Permanent delete digital media asset](../../../images/DAM_permanent_delete_media_item.png)
+![Permanent delete confirmation dialog](../../../images/DAM_Permanent_delete_confimation_dialog.png)
 
-### Clear Trash (empty Trash)
+### Empty Trash
 A Collection Admin can clear all items from the Trash that they have administrative access to. This permanently removes those items immediately.
+![Empty Trash](../../../images/DAM_Empty_trash.png)
 
 ### Automated Trash clearance (heartbeat)
 A background heartbeat process runs at a configured interval to automatically purge items whose retention period has expired. This ensures the Trash is maintained without manual intervention.
+![Automated Trash clearance](../../../images/DAM_Automated_trash_clearance.png)
 
 ---
 
@@ -102,4 +113,4 @@ In a Publisher/Subscriber staging setup, soft delete actions on the Publisher ar
 
 - Search and filtering are not available in the Trash view.
 - Multi-select for bulk deletion or restoration is not supported.
--     Collections in the Trash cannot be traversed; their contents cannot be browsed while the collection is soft-deleted.
+- Collections in the Trash cannot be traversed; their contents cannot be browsed while the collection is soft-deleted.
