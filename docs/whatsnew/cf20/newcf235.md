@@ -85,15 +85,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf235).
 
-### WAS, JDK, and iFix versions <!--UPDATE-->
+### WAS, JDK, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF235 contains the following:
 
-    - [WebSphere Application Server 9.0.5.26](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.55](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - iFix PH68243
-    - iFix PH68418
+    - [WebSphere Application Server 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - No iFixes
+
+    For more information, refer to [WAS, JDK, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
 
 ## Notices of deprecation
 
