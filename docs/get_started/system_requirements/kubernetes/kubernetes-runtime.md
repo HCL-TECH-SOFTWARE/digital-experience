@@ -61,4 +61,21 @@ This table provides information about the Kubernetes versions that are tested an
 
 HCL DX provides a tool called "Prereqs Checker" that runs several checks to confirm whether the prerequisites for various components are met.  You can get the results of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configuring Prereqs Checker for DX deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).   
 
-For these checks, a separate sidecar container is deployed with the main application container. This is a lightweight container, so it does not affect main application performance. The primary objective of Prereqs Checker is to determine whether the specified prerequisites are met and to report the results in the logs. You can also use the checker to discover basic information about the file system of mounted volumes, which helps track file system-related issues.
+The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
+
+### WAS, JDK, and iFix versions
+
+This table provides information about the Websphere Application Server (WAS), Java Development Kit (JDK), and iFix versions for each CF.
+
+|CF Level|WAS|JDK|iFix|
+|-----|--------|--------|-----------------------------|
+|CF235|9.0.5.27|8.0.8.60|N/A|
+|CF234|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
+|CF233|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
+|CF232|9.0.5.25|8.0.8.51|iFix PH67137<br/>iFix PH67817|
+|CF231|9.0.5.25|8.0.8.51|iFix PH67137<br/>iFix PH67817|
+|CF230|9.0.5.24|8.0.8.45|iFix PH66674|
+|CF229|9.0.5.24|8.0.8.45|iFix PH66674|
+|CF228|9.0.5.23|8.0.8.40|N/A|
+|CF227|9.0.5.23|8.0.8.40|N/A|
+|CF226|9.0.5.22|8.0.8.35|N/A|
