@@ -23,8 +23,8 @@ Access to the Trash is restricted by role:
 
 | Role | Trash access |
 |---|---|
-| **Collection Admin** | Can view, restore, and permanently delete items. Can also clear the entire Trash. |
-| **Editor/Standard User** | Can view or access trash but no items would be displayed. |
+| **Collection Admin** | Can view, restore, and permanently delete items. Can also clear all the accessible items in the trash. |
+| **Editor/User** | Can view or access trash but no items would be displayed. |
 
 The Trash can be accessed via **Settings**.
 
@@ -59,7 +59,14 @@ If a new item with the same name is created in the original location after a sof
 ### Individual permanent delete
 A Collection Admin can permanently delete a specific item from the Trash at any time, bypassing the retention period. This action is irreversible.
 
-#### Permanent delete Collection
+**To permanently delete a collection/asset:**
+
+1. Open the overflow menu for the collection/asset in trash.
+2. Select **Permanently delete**.
+3. Confirm the action in the confirmation dialog.
+4. A snackbar notification will confirm the permanent delete.
+
+#### Permanent delete collection
 ![Permanent delete Collection](../../../images/DAM_collection_permanent_delete.png)
 
 #### Permanent delete media asset
