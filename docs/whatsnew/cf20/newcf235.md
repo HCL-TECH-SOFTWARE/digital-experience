@@ -65,12 +65,16 @@ You can now use certificates from your organization’s certificate authority (C
 ### WAS, JDK, and iFix versions <!--UPDATE-->
 
 === "Containers"
-    HCL DX 9.5 CF235 contains the following:
-
-    - [WebSphere Application Server 9.0.5.26](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.55](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - iFix PH68243
-    - iFix PH68418
+This table provides information about the Kubernetes versions that are tested and supported by HCL DX CF releases.
+Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
+<!-- Note: As per L2/L3, only keep three latest releases and delete older ones -->
+|CF Level|Kubernetes versions|
+|--------------|-----------------|
+|CF234| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF233| Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF232| Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+!!!important
+    To prevent a possible Kubernetes deployment failure in Kubernetes versions 1.28 and 1.29, it may be required to run the command `modprobe br_netfilter` before running `kubeadm init`. This is a potential solution to avoid a networking bridge/iptables issue.
 
 ## Notices of deprecation
 
