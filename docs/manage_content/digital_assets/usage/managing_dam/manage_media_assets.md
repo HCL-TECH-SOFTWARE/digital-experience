@@ -106,6 +106,9 @@ Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, in
     ![Check references and move media asset to trash](../../../../images/Check_for_references_and_move_to_trash_HCL_DAM.png)
     ![References found while moving media asset to trash](../../../../images/DAM_Move_to_trash_references_found.png)
 
+## Permanent delete of media asset from trash
+[Permanent delete of media asset from trash](../../configuration/dam_soft_delete.md#permanent-delete-media-asset)
+
 ## Copying a media asset
 
 When copying a media asset, only the latest version of the source assets is copied.

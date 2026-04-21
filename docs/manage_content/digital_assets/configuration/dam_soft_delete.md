@@ -34,7 +34,7 @@ The Trash can be accessed via **Settings**.
 
 ### Standard restore
 
-A Collection Admin can restore individual assets or entire collections from the Trash. Restoring a collection restores the container itself but doesn't automatically restore subcollections that were moved to the Trash separately before the parent was deleted.
+A Collection Admin can restore individual assets or entire collections from the Trash. Restoring a collection restores the collection and the items which are present in it while moving the collection to trash. Restore doesn't automatically restore subcollections/individual assets that were moved to the trash separately before the parent collection was soft deleted.
 
 ### Dependency rules
 
@@ -58,7 +58,11 @@ If a new item with the same name is created in the original location after a sof
 
 ### Individual permanent delete
 A Collection Admin can permanently delete a specific item from the Trash at any time, bypassing the retention period. This action is irreversible.
+
+#### Permanent delete Collection
 ![Permanent delete Collection](../../../images/DAM_collection_permanent_delete.png)
+
+#### Permanent delete media asset
 ![Permanent delete digital media asset](../../../images/DAM_permanent_delete_media_item.png)
 ![Permanent delete confirmation dialog](../../../images/DAM_Permanent_delete_confimation_dialog.png)
 
@@ -72,15 +76,13 @@ A background heartbeat process runs at a configured interval to automatically pu
 
 ---
 
-## Download, preview, and properties in Trash
+## Actions available in Trash for collections and assets
 
-Assets in the Trash retain their binary data during the retention period. The following read-only operations are available:
-
-- **Preview:** View the asset content.
-- **Download:** Download the original asset file.
+- **Preview:** View the content (for image and video assets).
+- **Download:** Download the content (for assets).
 - **Properties:** View asset or collection metadata.
-
-> **Note:** These operations are read-only. Items in the Trash can't be edited.
+- **Restore:** Restores the asset or collection
+- **Delete permanently:** Deletes the asset or collection permanently
 
 ---
 

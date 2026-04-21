@@ -143,6 +143,10 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 3. Click **Move to trash** to confirm the action.
 
+## Permanent delete of a collection from trash
+
+[Permanent delete of a collection from trash](../../configuration/dam_soft_delete.md#permanent-delete-collection)
+
 ## Moving a collection
 
 Refer to the following steps if you want to move a collection from one location to another.
