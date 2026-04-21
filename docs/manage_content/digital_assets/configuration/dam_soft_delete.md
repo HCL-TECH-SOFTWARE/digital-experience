@@ -24,7 +24,7 @@ Access to the Trash is restricted by role:
 | Role | Trash access |
 |---|---|
 | **Collection Admin** | Can view, restore, and permanently delete items. Can also clear the entire Trash. |
-| **Editor/Standard User** | Cannot view or access the Trash. |
+| **Editor/Standard User** | Can view or access trash but no items would be displayed. |
 
 The Trash can be accessed via **Settings**.
 
