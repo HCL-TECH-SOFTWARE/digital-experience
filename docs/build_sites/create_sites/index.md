@@ -22,7 +22,9 @@ URLs control how you access different sites, pages, components, and content that
 -   **[Social rendering](../../build_sites/social_rendering/index.md)**  
 HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.
 -   **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. 
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
+-   **[Information and Education | HCL Digital Experience](../../build_sites/create_sites/welcome_info.md)**  
+Access education, documentation, and in-product guidance to help you get started and use HCL Digital Experience effectively.
 
 
 ## HCLSoftware U learning materials
