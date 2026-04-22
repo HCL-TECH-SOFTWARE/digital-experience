@@ -1,11 +1,11 @@
 # Kubernetes runtime
 
-View the latest Kubernetes versions and platforms tested and supported for specific HCL Digital Experience (DX) 9.5 Kubernetes deployments.
+View the latest supported Kubernetes versions and platforms for HCL Digital Experience (DX) 9.5.
 
-!!! important "Operator-based deployments are discontinued"
-    Beginning with HCL DX 9.5 CF200, HCL discontinued [Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/deploy_container_platforms.html) and provides support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). No further updates or fixes will be provided for operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will support customers during the transition from operator-based deployments to Helm-based deployments. For more information about the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
+!!! important "HCL discontinued Operator-based deployments"
+    Beginning with HCL DX 9.5 CF200, HCL discontinued Operator-based deployments and provides support only for [Helm-based deployments](../../../deployment/install/container/helm_deployment/overview.md). No further updates or fixes will be provided for     Operator-based deployments. All customers must migrate to Helm-based deployments for their DX installations. HCL will support customers during the transition from     Operator-based deployments to Helm-based deployments. For more information about the migration process, see [Migrating from Operator-based to Helm-based deployments](../../../deployment/install/container/operator-migration/operator_migration_preparation.md).
 
-For best results, customers should stay up to date on the latest HCL DX and Kubernetes releases and be aware that HCL DX provides all fixes in the latest release. Customers might be asked to upgrade to the latest HCL DX release to assist with problem determination.
+For or best results, customers should stay up to date with the latest HCL DX and Kubernetes releases. Because all fixes are delivered in the latest HCL DX release, customers might be asked to upgrade to the latest version to assist with problem determination.
 
 ## Kubernetes platform support policy
 
@@ -65,7 +65,7 @@ The primary objective of the Prereqs Checker is to learn whether the specified p
 
 ### WAS, JDK, and iFix versions
 
-This table provides information about the Websphere Application Server (WAS), Java Development Kit (JDK), and iFix versions for each CF.
+This table provides information about the  WebSphere Application Server (WAS), Java Development Kit (JDK), and iFix versions for each CF.
 
 |CF Level|WAS|JDK|iFix|
 |-----|--------|--------|-----------------------------|
