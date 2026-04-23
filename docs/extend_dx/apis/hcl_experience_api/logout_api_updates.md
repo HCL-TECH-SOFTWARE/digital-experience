@@ -1,13 +1,13 @@
-# Sample process flow: Login, accessing content, and logout
+# Sample process flow: Login, access content, and logout
 
-1. Execute Login API endpoint `auth/login` by entering a valid username and password.
-2. Execute content API endpoint `/{accessType}/webcontent/contents/{contentId}` to fetch content.
+1. Call the `auth/login` API endpoint with a valid username and password.
+2. Call the `/{accessType}/webcontent/contents/{contentId}` API endpoint to retrieve content.
 3. Verify that the expected content payload is returned.
-4. Execute Logout API endpoint `auth/logout`.
+4. Call the `auth/logout` API endpoint to sign out.
 
 ## Logout API response (updated)
 
-The logout endpoint may include an optional `redirectUrl` field.
+The logout endpoint can include an optional `redirectUrl` field.
 
 ```json
 {
@@ -17,19 +17,19 @@ The logout endpoint may include an optional `redirectUrl` field.
 }
 ```
 
-### Response fields
+## Response fields
 
-- `statusCode` (number): `200` for successful logout
-- `data` (string): logout confirmation message
-- `redirectUrl` (string, optional): post-logout redirect URL when provided by WCM Core API
+- `statusCode` (number): 200 indicates a successful logout
+- `data` (string): Logout confirmation message
+- `redirectUrl` (string, optional): Post-logout redirect URL provided by the WCM Core API
 
 If `redirectUrl` is not present, use the application's default post-logout navigation.
 
 ## Backward compatibility
 
-No change is required for existing API consumers of `auth/logout`.
+No changes are required for existing API consumers of `auth/logout`.
 
-- Existing calls continue to work as-is.
+- Existing calls continue to work without modification.
 - `redirectUrl` is optional and additive.
 
 ## Sample API calls
@@ -76,6 +76,6 @@ curl -i -X GET "https://<portal-host>/<WPS_PERSONALIZED_HOME>/!ut/p/a1/04_SD9OPc
 
 Notes:
 
-- WCM Core API default logout behavior is unchanged. Without `autoRedirect=false`, WCM Core API continues its normal redirect behavior.
-- `autoRedirect=false` is an optional parameter used by Experience REST API to retrieve the redirect target and return it as `redirectUrl`.
+- The WCM Core API default logout behavior is unchanged. Without `autoRedirect=false`, the API continues its normal redirect behavior.
+- `autoRedirect=false` is an optional parameter used by the Experience REST API to retrieve the redirect target and return it as `redirectUrl`.
 - Existing WCM Core API logout consumers are not affected.

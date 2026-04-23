@@ -39,10 +39,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Logout API updates
 
 === "Containers"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL when provided by WCM Core API. The update is fully backward compatible; existing API consumers are not affected and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 === "On-Premises"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL when provided by WCM Core API. The update is fully backward compatible; existing API consumers are not affected and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 ### My HCLSoftware delivery portal
 
