@@ -36,7 +36,7 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
 Refer to the following steps to edit a presentation template in Presentation Designer.
 
-1. From the **Authoring portlet**, select the newly created presentation template then click **Edit > Edit in Presentation Designer**.
+1. From the **Authoring portlet**, select the newly created presentation template, and then click **Edit > Edit in Presentation Designer**.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_in_Presentation_Designer.png)
 
