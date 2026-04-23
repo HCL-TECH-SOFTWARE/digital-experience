@@ -33,6 +33,9 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in their respective secrets. Refer to the [DN format requirements](#dn-format-requirements) for more information about certificate Distinguished Name (DN) validation limitation.
 
+!!! info "Using In-House CA/PKI"
+    If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
+
 ### Understanding certificate roles
 
 The following types of certificates are required:
@@ -48,7 +51,13 @@ The following types of certificates are required:
 
 ### Generating certificates
 
+!!! info "Certificate Options"
+    The examples below show how to generate self-signed certificates for testing and development. **For production environments**, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements.
+
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
+
+!!! note "X.509 v3 Extensions"
+    The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
 
 ```sh
 # Root CA for certificates - using comprehensive test DN
@@ -59,29 +68,84 @@ openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hon
 openssl genrsa -out admin-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
 openssl req -new -key admin-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out admin.csr
-openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730
+cat > admin-ext.cnf << EOF
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth, clientAuth
+EOF
+openssl x509 -req -in admin.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out admin.pem -days 730 -extfile admin-ext.cnf
 
 # Node cert - using test DN components but with wildcard CN pattern
 openssl genrsa -out node-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in node-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out node-key.pem
 openssl req -new -key node-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=opensearch-node/DC=internal/DC=com" -utf8 -out node.csr
-openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730
+cat > node-ext.cnf << EOF
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth, clientAuth
+EOF
+openssl x509 -req -in node.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out node.pem -days 730 -extfile node-ext.cnf
 
 # Client cert - using test DN components but with fixed CN for middleware
 openssl genrsa -out client-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in client-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out client-key.pem
 openssl req -new -key client-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=opensearch-client/DC=internal/DC=com" -utf8 -out client.csr
-openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730
+cat > client-ext.cnf << EOF
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth, clientAuth
+EOF
+openssl x509 -req -in client.csr -CA root-ca.pem -CAkey root-ca-key.pem -CAcreateserial -sha256 -out client.pem -days 730 -extfile client-ext.cnf
 
-# Create Kubernetes secrets
-kubectl create secret generic search-admin-cert --from-file=admin.pem --from-file=admin-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
-kubectl create secret generic search-node-cert --from-file=node.pem --from-file=node-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
-kubectl create secret generic search-client-cert --from-file=client.pem --from-file=client-key.pem --from-file=root-ca.pem -n YOUR_NAMESPACE
+# Cleanup temporary files
+rm admin-key-temp.pem admin.csr admin-ext.cnf
+rm node-key-temp.pem node.csr node-ext.cnf
+rm client-key-temp.pem client.csr client-ext.cnf
 ```
 
-Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and Search are deployed.  
+### Creating Kubernetes secrets
 
-The OpenSearch entrypoint script automatically handles role mapping by reading the `adminDN` from your Helm chart, writing it to the security configuration, and granting the `all_access` role to the extracted Common Name (CN).
+After obtaining your certificates (either self-signed or from your CA), create the required Kubernetes secrets to store them.
+
+!!! note "Required Files"
+    For each certificate type, you need three files:
+    
+    - The certificate file (e.g., `admin.pem`, `node.pem`, `client.pem`)
+    - The private key file (e.g., `admin-key.pem`, `node-key.pem`, `client-key.pem`)
+    - The root CA certificate (e.g., `root-ca.pem`)
+
+Create the three required secrets:
+
+```sh
+kubectl create secret generic search-admin-cert \
+  --from-file=admin.pem \
+  --from-file=admin-key.pem \
+  --from-file=root-ca.pem \
+  -n YOUR_NAMESPACE
+
+kubectl create secret generic search-node-cert \
+  --from-file=node.pem \
+  --from-file=node-key.pem \
+  --from-file=root-ca.pem \
+  -n YOUR_NAMESPACE
+
+kubectl create secret generic search-client-cert \
+  --from-file=client.pem \
+  --from-file=client-key.pem \
+  --from-file=root-ca.pem \
+  -n YOUR_NAMESPACE
+```
+
+Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and Search are deployed.
+
+!!! tip "Using CA-Signed Certificates"
+    If you received certificates from your CA team, ensure you have:
+    
+    - Your CA's root certificate (and any intermediate certificates)
+    - All three signed certificates (admin, node, client)
+    - The corresponding private keys you generated
+    
+    Then use the same `kubectl create secret` commands above with your CA-signed certificate files.
 
 ### Extracting the DN from your certificate
 

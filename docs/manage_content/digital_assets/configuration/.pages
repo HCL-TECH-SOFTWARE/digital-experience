@@ -11,3 +11,4 @@ nav:
     - Rendition Version Regeneration and Cleanup: rendition_version_regeneration_and_cleanup.md
     - DAM Indexing: dam_indexing
     - Configuring an external database for DAM: external_dam_database.md
+    - DAM Soft Delete: dam_soft_delete.md

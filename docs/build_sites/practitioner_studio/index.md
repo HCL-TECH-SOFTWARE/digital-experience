@@ -7,7 +7,7 @@ Practitioner Studio provides a modern user experience for HCL Digital Experience
 
 ## Enhanced Practitioner Studio and toolbar
 
-![Screen capture of the Enhanced Practitioner Studio and toolbar.](../../assets/Enhanced_Practitioner_Studio_and_toolbar.png)
+![Screen capture of the Enhanced Practitioner Studio and Toolbar.](../../assets/Enhanced_Practitioner_Studio_and_toolbar.png)
 
 Starting from CF230, the Practitioner Studio toolbar and UI have undergone the following changes to enhance the user experience:
 
@@ -22,7 +22,7 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
   - **Digital Assets**  
     This section introduces HCL Digital Asset Management (DAM), which lets you manage rich media assets in HCL DX sites to create consistent, engaging digital experiences. The feature is available starting with HCL DX 9.5 CF181 and later.
 
-  - **Site Templates**  
+  - **Site templates**  
       The Site Template (Site Builder) application lets you create site and section templates in HCL Digital Experience (DX).
 
   - **Themes**  
@@ -38,6 +38,9 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 
 Practitioner Studio provides a modern and streamlined user experience for HCL DX. There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation. In time, this interface also serves as the launching point for newly developed features. Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
+- **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
+  Use the modern interface with widgets, action buttons, and quick links to manage common tasks and information efficiently.
+
 - **[Administration](../practitioner_studio/administration.md)**  
   Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
@@ -48,7 +51,7 @@ Practitioner Studio provides a modern and streamlined user experience for HCL DX
   Learn how to configure your HCL DX portal site as an administrator.
 
 - **[Site templates](../practitioner_studio/site_templates.md)**  
-  Site templates are configured and managed using Site Builder. If Practitioner Studio isn’t enabled, you can still manage site templates manually.
+  Site templates are configured and managed using Site Builder. If Practitioner Studio isn’t enabled, you can still manage Site templates manually.
 
 - **[Themes](../practitioner_studio/themes.md)**  
   Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer to create and develop theme web content.

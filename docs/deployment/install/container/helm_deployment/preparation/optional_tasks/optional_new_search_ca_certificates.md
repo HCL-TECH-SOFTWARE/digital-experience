@@ -343,3 +343,4 @@ After obtaining your certificates from your CA:
 1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets).
 2. Configure the admin DN in your Helm values if using a custom admin certificate.
 3. Deploy Search V2 following the standard installation process.
+
