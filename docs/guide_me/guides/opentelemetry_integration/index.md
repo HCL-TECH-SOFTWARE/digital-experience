@@ -2,57 +2,57 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for integrating OpenTelemetry (OTel) with HCL Digital Experience (DX) to enable observability across your deployment. OpenTelemetry is an open-source observability framework that provides a unified approach to collecting traces, metrics, and logs from your applications.
+This guide provides instructions for integrating OpenTelemetry (OTel) with HCL Digital Experience (DX) to enable observability across your deployment. OpenTelemetry is an open-source observability framework for collecting traces, metrics, and logs from your applications.
 
 By integrating OpenTelemetry with HCL DX, you can:
 
-- Collect distributed traces across all DX components
-- Monitor application metrics and performance indicators
+- Collect distributed traces across DX components
+- Monitor application metrics and performance
 - Aggregate logs with correlation context
-- Export telemetry data to your preferred observability backend (Prometheus, Grafana, Elastic, etc.)
+- Export telemetry data to observability backends such as Prometheus, Grafana, or Elastic
 
 ## Prerequisites
 
-Before proceeding with the integration, ensure you have:
+Before you begin, ensure that you have:
 
 - A running HCL Digital Experience deployment on Kubernetes
 - Helm 3.0 or later installed and configured
 - kubectl access to your Kubernetes cluster
 - Administrative access to modify deployment configurations
-- An observability backend or endpoint to receive telemetry data (Prometheus, Grafana, etc.)
+- An observability backend to receive telemetry data, such as Prometheus or Grafana
 
 ## Architecture
 
-HCL DX consists of multiple services that can be instrumented with OpenTelemetry:
+HCL DX includes multiple services that can be instrumented with OpenTelemetry.
 
-**Node.js Services:**
+### Node.js services
 - Digital Asset Management (DAM)
 - Image Processor
 - Ring API
 
-**Java Services:**
+### Java services
 - DX Core
 - WebEngine
 - Runtime Controller
 - License Manager
 
-The OpenTelemetry Collector acts as a centralized telemetry data pipeline that receives, processes, and exports observability data from all instrumented services.
+The OpenTelemetry Collector acts as a centralized telemetry pipeline that receives, processes, and exports observability data from all instrumented services.
 
-## Quick Start: Deploying the OpenTelemetry Collector
+## Quick start: Deploy the OpenTelemetry Collector
 
-!!!important "Quick Start Configuration"
-    The following OpenTelemetry Collector deployment is provided as a **quick start example** for development and testing purposes. This configuration is **not production-ready** and should not be used in production environments without significant modifications.
-    
-    For production deployments, customers must:
-    
-    - Consult the [official OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/) for highly available setup patterns
-    - Implement proper security measures (TLS, authentication, authorization)
-    - Configure resource limits based on actual telemetry volume
-    - Follow the latest best practices and recommendations from the OpenTelemetry community
+!!! important 
+    This OpenTelemetry Collector deployment is provided as a quick-start example for development and testing only. It is not production-ready and should not be used in production environments without significant changes.
+
+    For production deployments, ensure that you:
+
+    - Follow the official OpenTelemetry Collector documentation for highly available deployment patterns: https://opentelemetry.io/docs/collector/
+    - Implement appropriate security controls, including TLS, authentication, and authorization
+    - Configure resource limits based on expected telemetry volume
+    - Follow the latest OpenTelemetry community best practices and recommendations
 
 ### Step 1: Add the OpenTelemetry Helm Repository
 
-The OpenTelemetry Collector can be deployed using the official Helm chart from the OpenTelemetry community.
+The OpenTelemetry Collector can be deployed by using the official Helm chart from the OpenTelemetry community.
 
 ```bash
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
@@ -164,16 +164,16 @@ ports:
     protocol: TCP
 ```
 
-**Important Configuration Notes:**
+## Important configuration notes
 
-!!!warning "Production Deployment"
-    This is a basic configuration for testing purposes only. For production use, implement proper security controls, monitoring, and high availability patterns as documented in the [OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/).
+!!! warning
+    This configuration is intended for testing only. For production use, implement proper security controls, monitoring, and high-availability patterns as described in the OpenTelemetry Collector [documentation:](https://opentelemetry.io/docs/collector/){target="_blank"}
 
-- Update the `otlp.endpoint` with your actual backend endpoint (Grafana Tempo, Elastic APM, etc.)
-- For Grafana setup, you can use Grafana Tempo for traces and Prometheus for metrics
+- Update `otlp.endpoint` with your actual backend endpoint (for example, Grafana Tempo or Elastic APM)
+- For Grafana setups, use Grafana Tempo for traces and Prometheus for metrics
 - Configure additional exporters based on your observability stack
-- Adjust resource limits based on your expected telemetry volume
-- Enable TLS for production deployments by configuring appropriate certificates
+- Adjust resource limits based on expected telemetry volume
+- Enable TLS for production by configuring appropriate certificates
 
 ### Step 3: Deploy the OpenTelemetry Collector
 
@@ -214,18 +214,17 @@ View collector logs to ensure it is receiving and exporting data:
 kubectl logs -n <namespace> -l app.kubernetes.io/name=opentelemetry-collector --tail=100 -f
 ```
 
-## Configuring Node.js Services
+## Configuring Node.js services
 
 The following Node.js services in HCL DX include built-in OpenTelemetry instrumentation: Digital Asset Management (DAM), Image Processor, and Ring API.
 
-**Note**: OpenTelemetry packages and instrumentation modules are already included in the HCL DX container images. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended (e.g., `dam-0`, `ringapi-1`).
+OpenTelemetry packages and instrumentation modules are included in the HCL DX container images. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended (for example, `dam-0`, `ringapi-1`).
 
-### Enabling OpenTelemetry via Helm
+## Enabling OpenTelemetry via Helm
 
-OpenTelemetry is enabled and configured through the HCL DX Helm chart values file under the `incubator` section. The incubator section contains experimental features that are planned for production in future releases. For more information about experimental features, refer to [Experimental Features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
+Enable and configure OpenTelemetry through the HCL DX Helm chart values file under the `incubator` section. The `incubator` section contains experimental features planned for future production releases. For more information about experimental features, see [Experimental features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
 
-!!!important
-    Features within the incubator section are experimental and not recommended for production environments. Configuration values are subject to change in future releases.
+Features in the `incubator` section are experimental and are not recommended for production environments. Configuration values may change in future releases.
 
 Add or update the following section in your `values.yaml`:
 
@@ -263,66 +262,64 @@ incubator:
         logLevel: "info"
 ```
 
-**Configuration Details**:
+## Configuration details
 
-- **Service Names**: Automatically generated as `<service-type>-<pod-number>` (e.g., `dam-0`, `imageprocessor-1`)
-- **Configuration Source**: All settings are read from `/etc/global-config` ConfigMap mounted in each pod
-- **Resource Attributes**: Pod name and pod number are automatically added to all telemetry data
-- **Debug Mode**: When `debug.enabled: true`, startup scripts display OpenTelemetry configuration in pod logs
+- **Service names**: Automatically generated as `<service-type>-<pod-number>` (for example, `dam-0`, `imageprocessor-1`)
+- **Configuration source**: All settings are read from the `/etc/global-config` ConfigMap mounted in each pod
+- **Resource attributes**: Pod name and pod number are automatically added to all telemetry data
+- **Debug mode**: When `debug.enabled: true`, startup scripts display OpenTelemetry configuration in pod logs
 
 ### Verifying Node.js Configuration
 
 After enabling OpenTelemetry via Helm, verify the configuration:
 
-**1. Check ConfigMap is mounted:**
-```bash
-kubectl exec -it <pod-name> -n <namespace> -- ls -la /etc/global-config
-```
+1. Check that the ConfigMap is mounted:
 
-**2. View OpenTelemetry configuration (Debug Mode):**
+    ```bash
+    kubectl exec -it <pod-name> -n <namespace> -- ls -la /etc/global-config
+    ```
+2. View OpenTelemetry configuration (Debug Mode):
 
-For DAM:
-```bash
-POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-digital-asset-management -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
-```
+    For DAM:
+    ```bash
+    POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-digital-asset-management -o jsonpath='{.items[0].metadata.name}')
+    kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
+    ```
+    For Ring API:
+    ```bash
+    POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-ring-api -o jsonpath='{.items[0].metadata.name}')
+    kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
+    ```
+    For Image Processor:
+    ```bash
+    POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-image-processor -o jsonpath='{.items[0].metadata.name}')
+    kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /home/dx_user/start_all_server.sh
+    ```
+3. Check OpenTelemetry packages are installed:
 
-For Ring API:
-```bash
-POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-ring-api -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /opt/app/start_all_server.sh
-```
+    ```bash
+    kubectl exec -it $POD_NAME -n <namespace> -- npm list --depth=0 | grep opentelemetry
+    ```
+4. Verify environment variables:
 
-For Image Processor:
-```bash
-POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-image-processor -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- env OTEL_DRY_RUN=true /home/dx_user/start_all_server.sh
-```
+    ```bash
+    kubectl exec -it $POD_NAME -n <namespace> -- env | grep OTEL_
+    ```
+5. Check application logs for initialization:
 
-**3. Check OpenTelemetry packages are installed:**
-```bash
-kubectl exec -it $POD_NAME -n <namespace> -- npm list --depth=0 | grep opentelemetry
-```
-
-**4. Verify environment variables:**
-```bash
-kubectl exec -it $POD_NAME -n <namespace> -- env | grep OTEL_
-```
-
-**5. Check application logs for initialization:**
 ```bash
 kubectl logs <pod-name> -n <namespace> | grep -i "opentelemetry\|otel"
 ```
 
-## Configuring Java Services
+## Configuring Java services
 
 The following Java services in HCL DX include the OpenTelemetry Java Agent: DX Core, WebEngine, Runtime Controller, and License Manager.
 
-**Note**: The OpenTelemetry Java Agent (version 2.23.0) is pre-bundled in all HCL DX container images at `/opt/otel/opentelemetry-javaagent.jar`. The agent JAR is downloaded from HCL's internal Maven repositories during the container image build process. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended.
+The OpenTelemetry Java Agent (version 2.23.0) is pre-bundled in all HCL DX container images at `/opt/otel/opentelemetry-javaagent.jar`. The agent JAR is downloaded from HCL internal Maven repositories during the container image build process. Configuration is managed through the HCL DX Helm chart, which automatically generates service names with pod identifiers appended.
 
-### Enabling OpenTelemetry via Helm
+## Enabling OpenTelemetry via Helm
 
-OpenTelemetry for Java services is configured through the same Helm chart incubator section as Node.js services. Add or update the following in your `values.yaml`:
+Configure OpenTelemetry for Java services through the same Helm chart `incubator` section used for Node.js services. Add or update the following in your `values.yaml` file:
 
 ```yaml
 incubator:
@@ -360,62 +357,66 @@ incubator:
         logLevel: "info"
 ```
 
-**Configuration Details**:
+## Configuration details
 
-- **Service Names**: Automatically generated as `<service-type>-<pod-number>` (e.g., `webengine-0`, `runtimecontroller-1`)
-- **Java Agent Path**: Automatically configured via `JAVA_TOOL_OPTIONS` environment variable
-- **Configuration Source**: All settings are read from `/etc/global-config` ConfigMap
-- **Resource Attributes**: Pod name, pod number, and custom attributes are automatically included
+- **Service names**: Automatically generated as `<service-type>-<pod-number>` (for example, `webengine-0`, `runtimecontroller-1`)
+- **Java agent path**: Automatically configured through the `JAVA_TOOL_OPTIONS` environment variable
+- **Configuration source**: All settings are read from the `/etc/global-config` ConfigMap
+- **Resource attributes**: Pod name, pod number, and custom attributes are included automatically
 
 ### Verifying Java Configuration
 
 After enabling OpenTelemetry via Helm, verify the configuration:
 
-**1. Verify Java agent is configured:**
+1. Verify Java agent is configured:
 ```bash
 kubectl exec -it <pod-name> -n <namespace> -- bash -c 'echo $JAVA_TOOL_OPTIONS'
 # Expected output: -javaagent:/opt/otel/opentelemetry-javaagent.jar
 ```
 
-**2. Check Java agent JAR exists:**
+2. Check Java agent JAR exists:
 ```bash
 kubectl exec -it <pod-name> -n <namespace> -- ls -lh /opt/otel/opentelemetry-javaagent.jar
 ```
 
-**3. View OpenTelemetry configuration (Debug Mode):**
+3. View OpenTelemetry configuration (Debug Mode):
 
-For WebEngine:
-```bash
-kubectl exec -it dx-deployment-web-engine-0 -n <namespace> -- \
-  env OTEL_DRY_RUN=true /opt/openliberty/wlp/usr/svrcfg/entrypoint/entryPoint.sh
-```
+	For WebEngine:
 
-For Core:
-```bash
-kubectl exec -it dx-deployment-core-0 -n <namespace> -- \
-  env OTEL_DRY_RUN=true /opt/app/entrypoints/startNative.sh
-```
+	```bash
+	kubectl exec -it dx-deployment-web-engine-0 -n <namespace> -- \
+	env OTEL_DRY_RUN=true /opt/openliberty/wlp/usr/svrcfg/entrypoint/entryPoint.sh
+	```
 
-For Runtime Controller:
-```bash
-POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-runtime-controller -o jsonpath='{.items[0].metadata.name}')
-kubectl exec -it $POD_NAME -n <namespace> -- \
-  env OTEL_DRY_RUN=true /deployments/java-entrypoint.sh
-```
+	For Core:
 
-For License Manager:
-```bash
-kubectl exec -it dx-deployment-license-manager-0 -n <namespace> -- \
-  env OTEL_DRY_RUN=true ./commands.sh
-```
+	```bash
+	kubectl exec -it dx-deployment-core-0 -n <namespace> -- \
+	env OTEL_DRY_RUN=true /opt/app/entrypoints/startNative.sh
+	```
 
-**4. Check for Java agent initialization message:**
+	For Runtime Controller:
+
+	```bash
+	POD_NAME=$(kubectl get pods -n <namespace> -l app=dx-runtime-controller -o jsonpath='{.items[0].metadata.name}')
+	kubectl exec -it $POD_NAME -n <namespace> -- \
+	env OTEL_DRY_RUN=true /deployments/java-entrypoint.sh
+	```
+
+	For License Manager:
+
+	```bash
+	kubectl exec -it dx-deployment-license-manager-0 -n <namespace> -- \
+	env OTEL_DRY_RUN=true ./commands.sh
+	```
+
+4. Check for Java agent initialization message:
 ```bash
 kubectl logs <pod-name> -n <namespace> | grep -i "opentelemetry\|javaagent"
 # Look for: [otel.javaagent] OpenTelemetry automatic instrumentation enabled
 ```
 
-**5. Verify debug mode output (if enabled):**
+5. Verify debug mode output (if enabled):
 ```bash
 kubectl logs <pod-name> -n <namespace> | grep -i "Reading OpenTelemetry configuration"
 ```
@@ -430,9 +431,9 @@ helm upgrade dx-deployment hcl-dx-deployment \
   --values your-custom-values.yaml
 ```
 
-**Note**: Pods will automatically restart when OpenTelemetry configuration changes are detected.
+ Pods will automatically restart when OpenTelemetry configuration changes are detected.
 
-**Monitor the deployment:**
+Monitor the deployment:
 
 ```bash
 # Watch pod restarts
@@ -445,9 +446,9 @@ kubectl rollout status deployment/dx-deployment-ring-api -n <namespace>
 
 ## Monitoring and Troubleshooting
 
-### Viewing Traces and Metrics
+## View traces and metrics
 
-Access Grafana to view distributed traces and metrics. If you've deployed Grafana as part of the `kube-prometheus-stack`, you can access it via port-forwarding:
+Access Grafana to view distributed traces and metrics. If you deployed Grafana as part of the `kube-prometheus-stack`, access it by using port forwarding:
 
 ```bash
 # Port-forward to Grafana
@@ -465,10 +466,10 @@ Open your browser to `http://localhost:3000` (default credentials: admin/prom-op
 
 **Viewing Metrics in Grafana:**
 
-1. Import DX-specific dashboards from the [Grafana dashboard page](https://grafana.com/grafana/dashboards/)
+1. Import DX-specific dashboards from the [Grafana dashboard page](https://grafana.com/grafana/dashboards/){target="_blank"}
 2. Use the following dashboard IDs for HCL DX components:
-   - **14151**: [WebSphere Application Server PMI metrics](https://grafana.com/grafana/dashboards/14151) (Core, WebEngine)
-   - **11159**: [NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159) (DAM, Image Processor, Ring API)
+   - **14151**: [WebSphere Application Server PMI metrics](https://grafana.com/grafana/dashboards/14151){target="_blank"} (Core, WebEngine)
+   - **11159**: [NodeJS application dashboard](https://grafana.com/grafana/dashboards/11159){target="_blank"} (DAM, Image Processor, Ring API)
 3. For detailed monitoring guidance, refer to [Monitor Helm Deployment Metrics](../../../deployment/manage/container_configuration/monitoring/monitor_helm_deployment_metrics.md)
 
 ### Querying Metrics in Prometheus
@@ -538,30 +539,30 @@ Distributed traces may not show complete request flows if:
 
 ### Helm Charts
 
-- **OpenTelemetry Helm Charts Repository**: [https://github.com/open-telemetry/opentelemetry-helm-charts](https://github.com/open-telemetry/opentelemetry-helm-charts)
-- **Helm Official Documentation**: [https://helm.sh/docs/](https://helm.sh/docs/)
-- **Helm Chart Repository**: [https://artifacthub.io/packages/helm/opentelemetry-helm/opentelemetry-collector](https://artifacthub.io/packages/helm/opentelemetry-helm/opentelemetry-collector)
+- **OpenTelemetry Helm Charts Repository**: [https://github.com/open-telemetry/opentelemetry-helm-charts](https://github.com/open-telemetry/opentelemetry-helm-charts){target="_blank"}
+- **Helm Official Documentation**: [https://helm.sh/docs/](https://helm.sh/docs/){target="_blank"}
+- **Helm Chart Repository**: [https://artifacthub.io/packages/helm/opentelemetry-helm/opentelemetry-collector](https://artifacthub.io/packages/helm/opentelemetry-helm/opentelemetry-collector){target="_blank"}
 
 ### OpenTelemetry Documentation
 
-- **OpenTelemetry Official Website**: [https://opentelemetry.io/](https://opentelemetry.io/)
-- **OpenTelemetry Specification**: [https://opentelemetry.io/docs/specs/otel/](https://opentelemetry.io/docs/specs/otel/)
-- **OpenTelemetry Collector Documentation**: [https://opentelemetry.io/docs/collector/](https://opentelemetry.io/docs/collector/)
-- **OpenTelemetry Collector Configuration**: [https://opentelemetry.io/docs/collector/configuration/](https://opentelemetry.io/docs/collector/configuration/)
+- **OpenTelemetry Official Website**: [https://opentelemetry.io/](https://opentelemetry.io/){target="_blank"}
+- **OpenTelemetry Specification**: [https://opentelemetry.io/docs/specs/otel/](https://opentelemetry.io/docs/specs/otel/){target="_blank"}
+- **OpenTelemetry Collector Documentation**: [https://opentelemetry.io/docs/collector/](https://opentelemetry.io/docs/collector/){target="_blank"}
+- **OpenTelemetry Collector Configuration**: [https://opentelemetry.io/docs/collector/configuration/](https://opentelemetry.io/docs/collector/configuration/){target="_blank"}
 
 ### Language-Specific Instrumentation
 
-- **OpenTelemetry Node.js**: [https://opentelemetry.io/docs/languages/js/](https://opentelemetry.io/docs/languages/js/)
+- **OpenTelemetry Node.js**: [https://opentelemetry.io/docs/languages/js/](https://opentelemetry.io/docs/languages/js/){target="_blank"}
 - **OpenTelemetry Java**: [https://opentelemetry.io/docs/languages/java/](https://opentelemetry.io/docs/languages/java/)
-- **OpenTelemetry Java Agent**: [https://github.com/open-telemetry/opentelemetry-java-instrumentation](https://github.com/open-telemetry/opentelemetry-java-instrumentation)
-- **OpenTelemetry Java Agent Configuration**: [https://opentelemetry.io/docs/languages/java/automatic/configuration/](https://opentelemetry.io/docs/languages/java/automatic/configuration/)
+- **OpenTelemetry Java Agent**: [https://github.com/open-telemetry/opentelemetry-java-instrumentation](https://github.com/open-telemetry/opentelemetry-java-instrumentation){target="_blank"}
+- **OpenTelemetry Java Agent Configuration**: [https://opentelemetry.io/docs/languages/java/automatic/configuration/](https://opentelemetry.io/docs/languages/java/automatic/configuration/){target="_blank"}
 
 ### Observability Backends
 
-- **Grafana**: [https://grafana.com/](https://grafana.com/)
-- **Grafana Tempo** (traces): [https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/)
-- **Prometheus**: [https://prometheus.io/](https://prometheus.io/)
-- **Elastic Observability**: [https://www.elastic.co/observability](https://www.elastic.co/observability)
+- **Grafana**: [https://grafana.com/](https://grafana.com/){target="_blank"}
+- **Grafana Tempo** (traces): [https://grafana.com/oss/tempo/](https://grafana.com/oss/tempo/){target="_blank"}
+- **Prometheus**: [https://prometheus.io/](https://prometheus.io/){target="_blank"}
+- **Elastic Observability**: [https://www.elastic.co/observability](https://www.elastic.co/observability){target="_blank"}
 
 ### HCL Digital Experience Resources
 
@@ -571,6 +572,6 @@ Distributed traces may not show complete request flows if:
 
 ### Kubernetes
 
-- **Kubernetes Documentation**: [https://kubernetes.io/docs/](https://kubernetes.io/docs/)
-- **Kubernetes ConfigMaps**: [https://kubernetes.io/docs/concepts/configuration/configmap/](https://kubernetes.io/docs/concepts/configuration/configmap/)
+- **Kubernetes Documentation**: [https://kubernetes.io/docs/](https://kubernetes.io/docs/){target="_blank"}
+- **Kubernetes ConfigMaps**: [https://kubernetes.io/docs/concepts/configuration/configmap/](https://kubernetes.io/docs/concepts/configuration/configmap/){target="_blank"}
 - **Kubernetes Secrets**: [https://kubernetes.io/docs/concepts/configuration/secret/](https://kubernetes.io/docs/concepts/configuration/secret/)
