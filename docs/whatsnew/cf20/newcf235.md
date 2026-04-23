@@ -37,6 +37,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
+### Logout API updates
+
+=== "Containers"
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+
+=== "On-Premises"
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+
 ### My HCLSoftware delivery portal
 
 === "Containers"
