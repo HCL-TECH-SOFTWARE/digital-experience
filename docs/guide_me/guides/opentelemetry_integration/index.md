@@ -7,7 +7,7 @@ This guide provides instructions for integrating OpenTelemetry (OTel) with HCL D
 By integrating OpenTelemetry with HCL DX, you can:
 
 - Collect distributed traces across DX components
-- Monitor application metrics and performance
+- Monitor application metrics and performance data
 - Aggregate logs with correlation context
 - Export telemetry data to observability backends such as Prometheus, Grafana, or Elastic
 
@@ -101,7 +101,7 @@ config:
       endpoint: "0.0.0.0:8889"
     
     # Example: OTLP exporter for Grafana Tempo (traces)
-    otlp:
+    otlp:For more information 
       endpoint: "tempo.observability.svc.cluster.local:4317"
       tls:
         insecure: true
@@ -427,7 +427,7 @@ After adding the OpenTelemetry configuration to your `values.yaml`, upgrade your
 
 ```bash
 helm upgrade dx-deployment hcl-dx-deployment \
-  --namespace <your-namespace> \
+  --namespace <namespace>\
   --values your-custom-values.yaml
 ```
 
