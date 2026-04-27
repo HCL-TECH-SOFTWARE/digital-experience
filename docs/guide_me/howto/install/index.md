@@ -14,3 +14,5 @@ Learn how to install the IBM SDS Client tools version 6.4.0.27 (released June 20
 Learn how to run HCL Digital Experience (DX) 8.5 or 9.0 on Red Hat Linux (RHEL) 8.x or 9.x.
 - **[How to run the IBM Installation Manager as a different user](./RunIIMAsDifferentUser.md)**  
 Learn how to run the IBM Installation Manager (IIM) as a different user than the one who installed it.
+- **[How to Install HCL Digital Experience as a Non-Root User](./NonRootInstall.md)**  
+Learn how to install HCL Digital Experience as a non-root user.
