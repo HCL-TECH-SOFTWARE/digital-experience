@@ -5,8 +5,7 @@ Take note of the following limitations when using Presentation Designer:
 - Presentation Designer can only be used to view or edit presentation templates. For more information, refer to the [Editing and Viewing Presentation Templates in Presentation Designer](../presentation_designer/usage/edit_presentation_template.md) topic.
 - You cannot reuse presentation templates. must create a new template for each design.
 - The following features are currently not supported:
-    -         Locking a presentation template while it is being editedin Presentation Designer.
-    - Using a Virtual Portal.
+    - Locking a presentation template while it is being edited in Presentation Designer.
     - Undoing and redoing changes.
     - Previewing the template in Presentation Designer. Currently, you can only generate a preview through the Authoring portlet.
     - Reusing styles from a theme.
