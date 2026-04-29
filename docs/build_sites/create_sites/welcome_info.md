@@ -27,7 +27,7 @@ To support teams and administrators, the product documentation includes the help
 
 ## Get started with your digital experience
 
-Simple tutorials help new content authors and administrators learn about HCL Portal and Web Content Manager. Get started with your digital experience includes tutorials that can be completed in under 30 minutes. The tutorials are organized by user role.
+Simple tutorials help new content authors and administrators learn about HCL Portal and Web Content Manager. Get started with your digital experience includes tutorials that can be completed in under 30 minutes. The tutorials are organized by user role. 
 
-The application tracks your progress. If you cannot complete a tutorial, it saves your progress and reopens where you left off.
-
+The application tracks your progress. If you cannot complete a tutorial, it saves your progress and reopens where you left off. See [HCLSoftware U](https://hclsoftwareu.hcl-software.com/){target="_blank"} for more information.
+.
