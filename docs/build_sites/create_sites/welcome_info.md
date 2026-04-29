@@ -25,4 +25,4 @@ HCL Web Content Manager and HCL Portal are tightly integrated. To reflect this i
 
 To support teams and administrators, the product documentation includes the help system books. You cannot edit content in HCL Digital Experience product documentation, but you can provide feedback by adding comments.
 
-For additional learning resources,see [HCLSoftware U](https://hclsoftwareu.hcl-software.com/){target="_blank"}.
+For more information, refer to [HCLSoftware U](https://hclsoftwareu.hcl-software.com/){target="_blank"}.
