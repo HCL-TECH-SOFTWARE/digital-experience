@@ -21,9 +21,18 @@ The logout endpoint can include an optional `redirectUrl` field.
 
 - `statusCode` (number): 200 indicates a successful logout
 - `data` (string): Logout confirmation message
-- `redirectUrl` (string, optional): Post-logout redirect URL provided by the WCM Core API
+- `redirectUrl` (string, optional): Post-logout redirect URL provided by the WCM Core API. By default, this value is determined by the `redirect.logout.url` configuration property.
 
 If `redirectUrl` is not present, use the application's default post-logout navigation.
+
+### Configuring the logout redirect URL
+
+The `redirectUrl` returned by the logout endpoint uses the `redirect.logout.url` property configured in one of the following locations:
+
+- **ConfigService.properties**: The static configuration file for portal settings
+- **WAS Console**: Dynamically configured via **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**
+
+For detailed instructions on setting the logout redirect URL and related timeout properties, see [Redirect behavior and timeout settings](../../deployment/manage/security/people/authentication/sec_auth_consideration/redirect_timeout_settings.md).
 
 ## Backward compatibility
 
