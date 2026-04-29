@@ -7,7 +7,7 @@
 
 ## Logout API response (updated)
 
-The logout endpoint can include an optional `redirectUrl` field.
+The logout endpoint includes a `redirectUrl` field.
 
 ```json
 {
@@ -21,25 +21,27 @@ The logout endpoint can include an optional `redirectUrl` field.
 
 - `statusCode` (number): 200 indicates a successful logout
 - `data` (string): Logout confirmation message
-- `redirectUrl` (string, optional): Post-logout redirect URL provided by the WCM Core API. By default, this value is determined by the `redirect.logout.url` configuration property.
+- `redirectUrl` (string): Post-logout redirect URL provided by the WCM Core API. This value is determined by the `redirect.logout.url` configuration property. If no `redirect.logout.url` is specified, the portal determines the default page in the public portal area uses the url to that page.
 
-If `redirectUrl` is not present, use the application's default post-logout navigation.
+The returned value is either the configured logout redirect URL or the computed default public portal page.
 
 ### Configuring the logout redirect URL
 
-The `redirectUrl` returned by the logout endpoint uses the `redirect.logout.url` property configured in one of the following locations:
+The `redirectUrl` returned by the logout endpoint uses the `redirect.logout.url` property configured in one of the following locations(whichever is available for DX Compose or DX Core):
 
-- **ConfigService.properties**: The static configuration file for portal settings
+- **ConfigService.properties**: The static configuration file for portal settings (usually portal home url)
 - **WAS Console**: Dynamically configured via **Resources > Resource Environment > Resource Environment Providers > WP ConfigService > Custom properties**
 
-For detailed instructions on setting the logout redirect URL and related timeout properties, see [Redirect behavior and timeout settings](../../deployment/manage/security/people/authentication/sec_auth_consideration/redirect_timeout_settings.md).
+For detailed instructions on setting the logout redirect URL and related timeout properties, see [Redirect behavior and timeout settings](../../../guide_me/howto/administration/RedirectTimeout.md).
+
+For property-level behavior of `redirect.logout` and `redirect.logout.url` (including the default public-portal-page redirect when no URL is specified), see [Portal service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/index.md).
 
 ## Backward compatibility
 
 No changes are required for existing API consumers of `auth/logout`.
 
 - Existing calls continue to work without modification.
-- `redirectUrl` is optional and additive.
+- `redirectUrl` is provided in logout responses and can be used by clients for post-logout navigation.
 
 ## Sample API calls
 
@@ -57,15 +59,6 @@ Response example with redirect:
   "statusCode": 200,
   "data": "You are successfully logged out",
   "redirectUrl": "https://portal.example.com/home"
-}
-```
-
-Response example without redirect:
-
-```json
-{
-  "statusCode": 200,
-  "data": "You are successfully logged out"
 }
 ```
 
