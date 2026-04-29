@@ -25,8 +25,4 @@ HCL Web Content Manager and HCL Portal are tightly integrated. To reflect this i
 
 To support teams and administrators, the product documentation includes the help system books. You cannot edit content in HCL Digital Experience product documentation, but you can provide feedback by adding comments.
 
-## Get started with your digital experience
-
-Simple tutorials help new content authors and administrators learn about HCL Portal and Web Content Manager. Get started with your digital experience includes tutorials that can be completed in under 30 minutes. The tutorials are organized by user role. 
-
-The application tracks your progress. If you cannot complete a tutorial, it saves your progress and reopens where you left off. See [HCLSoftware U](https://hclsoftwareu.hcl-software.com/){target="_blank"} for more information.
+For additional learning resources,see [HCLSoftware U](https://hclsoftwareu.hcl-software.com/){target="_blank"}.
