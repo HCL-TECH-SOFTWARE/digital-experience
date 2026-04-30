@@ -55,24 +55,25 @@ Refer to the following table to identify which Helm chart version corresponds to
 
 | HCL DX Deployment version | HCL DX Search version | CF version |
 | :------------------------ | :-------------------- | :--------- |
-| 2.26.0                    |                       | CF217      |
-| 2.27.0                    |                       | CF218      |
-| 2.28.0                    |                       | CF219      |
-| 2.29.0                    |                       | CF220      |
-| 2.30.0                    |                       | CF221      |
-| 2.31.0                    |                       | CF222      |
-| 2.32.0                    |                       | CF223      |
-| 2.33.0                    |                       | CF224      |
-| 2.34.0                    | 2.23.0                | CF225      |
-| 2.35.0                    | 2.24.0                | CF226      |
-| 2.36.0                    | 2.25.0                | CF227      |
-| 2.37.3                    | 2.26.0                | CF228      |
-| 2.40.0                    | 2.27.0                | CF229      |
-| 2.41.0                    | 2.28.0                | CF230      |
-| 2.42.1                    | 2.29.0                | CF231      |
-| 2.43.0                    | 2.30.0                | CF232      |
-| 2.44.0                    | 2.31.0                | CF233      |
+| 2.46.0                    | 2.33.0                | CF235      |
 | 2.45.0                    | 2.32.0                | CF234      |
+| 2.44.0                    | 2.31.0                | CF233      |
+| 2.43.0                    | 2.30.0                | CF232      |
+| 2.42.1                    | 2.29.0                | CF231      |
+| 2.41.0                    | 2.28.0                | CF230      |
+| 2.40.0                    | 2.27.0                | CF229      |
+| 2.37.3                    | 2.26.0                | CF228      |
+| 2.36.0                    | 2.25.0                | CF227      |
+| 2.35.0                    | 2.24.0                | CF226      |
+| 2.34.0                    | 2.23.0                | CF225      |
+| 2.33.0                    |                       | CF224      |
+| 2.32.0                    |                       | CF223      |
+| 2.31.0                    |                       | CF222      |
+| 2.30.0                    |                       | CF221      |
+| 2.29.0                    |                       | CF220      |
+| 2.28.0                    |                       | CF219      |
+| 2.27.0                    |                       | CF218      |
+| 2.26.0                    |                       | CF217      |
 
 After downloading the Helm charts, the next step is [Retagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images) as part of your deployment process.
 
