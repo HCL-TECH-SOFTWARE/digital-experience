@@ -6,11 +6,11 @@
 
 ## Introduction
 
-When using HCL Digital Experience in a Kubernetes environment with the Nginx/Ingress controller, there might be a need to deny access to the IBM Integrated Solutions Console for some users. This document provide detailed steps that can be used to configure it.  
+When using HCL Digital Experience in a Kubernetes environment with the Nginx/Ingress controller, there might be a need to deny access to the IBM Integrated Solutions Console for some users. This document provides detailed steps that can be used to configure it.  
 
 ## Instructions
 
-Please create an ingress object in your namespace by creating a new yaml file and by adding then the following sample definitions in it:  
+Please create an ingress object in your namespace by creating a new yaml file and by adding the following sample definitions in it:  
 
 **Setting to be added in an ingress object on Kubernetes environments that provide Nginx:**
 
