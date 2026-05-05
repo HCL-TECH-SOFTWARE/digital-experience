@@ -21,6 +21,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
+|Migrated|Install|[How to install HCL DX as a non-root user](./install/NonRootInstall.md)|
 |Migrated|Performance|[How to identify WCM items causing performance issues](./performance/WCMItemPerformance.md)|
 |Migrated|Search|[How to search for WCM documents within a specific date range](./search/SearchByDateTime.md)|
 |Migrated|Security|[How to configure multiple login properties in a federated repository in HCL DX](./security/FedReposDifferentLoginProps.md)|
