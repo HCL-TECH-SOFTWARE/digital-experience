@@ -21,6 +21,9 @@ Before you begin, ensure that you have:
 - Administrative access to modify deployment configurations
 - An observability backend to receive telemetry data, such as Prometheus or Grafana
 
+!!! important 
+    Be aware that enabling continuous tracing capabilities, such as OTel, can affect performance because it processes and transports data. Test the OTel integration in your environments and adjust resource allocations for individual services as needed.
+
 ## Architecture
 
 HCL DX includes multiple services that can be instrumented with OpenTelemetry.
