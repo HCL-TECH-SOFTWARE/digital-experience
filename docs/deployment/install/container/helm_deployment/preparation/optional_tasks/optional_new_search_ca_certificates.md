@@ -1,6 +1,6 @@
-# Using In-House CA/PKI for Search V2 Certificates
+# Using in-house CA or PKI for Search V2 certificates
 
-Use this guide to request certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployment.
+This topic discusses how to request certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployment.
 
 ## When to use this guide
 
