@@ -1,25 +1,32 @@
 # What's new in CF235
- 
+
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF235 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
-- Practitioner dashboard
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Dashboard
 - Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
 
+- Extended Support option now available for DX versions 8.5 and 9.0
+- Automatically apply 9.5 from a later CF installation
+
 **Digital Experience 9.5 Container Version**
 
-- DAM Soft Delete
-- Using In-House CA/PKI for Search V2 Certificates
+- DAM - Soft Delete
 - Helm values updates
+- Search V2 - Using in-house CA or PKI for certificates
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
+
+- CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
+- Removal of automated Pod restart on ConfigMap updates (9.5)
+- Woodburn Studio demo site (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -36,10 +43,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Logout API updates
 
 === "Containers"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 === "On-Premises"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required.For more information, see [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
+    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 ### My HCLSoftware delivery portal
 
@@ -69,6 +76,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Practitioner Dashboard  
 
+=== "Containers"
+    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
+=== "On-Premises"
+    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
 ### Presentation Designer - New entry points from Authoring portlet
 
 === "Containers"
@@ -79,32 +92,34 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 8.5 and 9.0 Versions
 
-=== "Containers"
-    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard  ](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/build_sites/practitioner_studio/dashboard/)<!-- Tupdate link-->
+### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
-    Practitioner dashboard – A modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to[Practitioner Dashboard  ](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/build_sites/practitioner_studio/dashboard/)<!-- Tupdate link-->
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-## Digital Experience 8.5 and 9.0 Versions
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
 
 ### Automatically apply 9.5 from a later CF installation
 
-## Digital Experience 9.5 Version
+=== "On-Premises"
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
 
-### DAM Soft Delete
+### DAM - Soft Delete
 
 === "Containers"
     The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users. For more information, refer to the [DAM Soft Delete](../../manage_content/digital_assets/configuration/dam_soft_delete.md).
 
-### Helm values updates <!--UPDATE-->
+### Helm values updates
 
 === "Containers"
-The Soft Delete feature adds a safety net for accidental deletion of assets and collections in Digital Asset Management (DAM). Instead of being permanently removed, items are moved to a **Trash** state, where they are hidden from normal views but remain in the database for a configurable period. Authorized users can restore items or permanently delete them.
-For more information, see [DAM Soft Delete](../../manage_content/digital_assets/configuration/dam_soft_delete.md).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf235).
 
-### Using In-House CA/PKI for Search V2 Certificates
+### Search V2 - Using in-house CA or PKI for certificates
+
+=== "Containers"
+You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, refer to [Using in-house CA or PKI for Search V2 certificates](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md).
 
 ### WAS, JDK, and iFix versions
 
@@ -122,28 +137,23 @@ For more information, see [DAM Soft Delete](../../manage_content/digital_assets/
 ### Advanced Rich Text Editor (CKEditor) (8.5, 9.0, and 9.5)
 
 === "Containers"
-You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, see [Using in-house CA/PKI for Search V2 certificates](https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/in-progress/deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates/).<!-- update link-->
+    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
-### Helm values updates <!--UPDATE-->
+=== "On-Premises"
+    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
-=== "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf235).
-
-### WAS, JDK, and iFix versions <!--UPDATE-->
+### Removal of automated Pod restart on ConfigMap updates (9.5)
 
 === "Containers"
-This table provides information about the Kubernetes versions that are tested and supported by HCL DX CF releases.
-Review your chosen Kubernetes platform and ensure that it supports the following Kubernetes versions:
-<!-- Note: As per L2/L3, only keep three latest releases and delete older ones -->
-|CF Level|Kubernetes versions|
-|--------------|-----------------|
-|CF234| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-|CF233| Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-|CF232| Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-!!!important
-    To prevent a possible Kubernetes deployment failure in Kubernetes versions 1.28 and 1.29, it may be required to run the command `modprobe br_netfilter` before running `kubeadm init`. This is a potential solution to avoid a networking bridge/iptables issue.
+    Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-## Notices of deprecation
+### Woodburn Studio demo site (9.5)
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
