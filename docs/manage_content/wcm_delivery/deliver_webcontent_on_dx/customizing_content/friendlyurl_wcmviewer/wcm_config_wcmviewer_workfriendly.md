@@ -83,6 +83,20 @@ The `page\_id` portion of the friendly URL is always evaluated first. Because of
     |The user modifies the URL in the browsers address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2`|
     |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_2`Because the user removed the `rich\_state` portion of the URL when modifying the URL, the `path\_to\_content` portion of the URL is evaluated. The user is directed to the page where `content_item_2` is displayed.|
 
+## Overview of `<portal-core:stateBase method="friendly"/>` in HCL Digital Experience
+
+The `<portal-core:stateBase method="friendly"/>` JSP tag is used in HCL Digital Experience themes to generate a `<base>` tag for the friendly URL of the current page.
+
+### Purpose and usage
+
+When the theme is configured with `com.ibm.portal.theme.hasBaseURL=true`, the `<portal-core:stateBase method="friendly"/>` tag must be included in a JSP file that contributes to the `<head>` section of the page, typically `head.jsp`. This tag generates a `<base>` element in the HTML markup. It ensures that the base URL of the page is the friendly (stateless, human-readable) URL of the current DX page, excluding portal navigation state. The tag also ensures that the correct base URL is provided for stateless navigation. It enables SEO-friendly URLs and ensures correct resolution of relative paths on pages that use friendly URLs.
+
+!!! important
+    Friendly `<base>` tags are not compatible with components that require navigational state, such as Web Content Manager (WCM) pagination.
+
+### Configuration
+
+Setting only the `hasBaseURL` property is not sufficient. The JSP file that contributes to the page head (typically `head.jsp`) must explicitly include the `<portal-core:stateBase method="friendly"/>` tag.
 
 ## Content URL generation filters and friendly URLs
 
