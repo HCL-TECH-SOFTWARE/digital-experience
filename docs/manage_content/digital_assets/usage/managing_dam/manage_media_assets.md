@@ -67,6 +67,64 @@ The following are supported media asset file formats in HCL Digital Experience 9
 !!! note
     DAM does not scan uploaded files for any viruses or vulnerabilities. Files such as PDF files can be manipulated to contain active code. For users that have access to DAM, it is recommended to scan files for potential security issues. If scanning files is not possible, you can disable file types that could be exploited with active code (for example, PDF files).
 
+### Steps to Enable or Add Other File Types Using the DAM MediaTypeController API
+
+This section describes how to enable additional file types in HCL Digital Experience DAM that are not included in the default supported file formats. It explains how to add, configure, and activate new media types for asset uploads using the DAM MediaTypeController API.
+
+1. Authenticate with DAM API
+    Log in to the Ring API using:
+    ```http
+    POST https://<domain>/dx/api/core/v1/auth/login
+    ```
+
+2. Identify Media Type Group
+
+    Retrieve the list of media type groups (such as images, videos, etc.) to find the appropriate group for your file type:
+    ```http
+    GET https://<domain>/dx/api/dam/v1/mediatypegroups
+    ```
+
+3. Add a New MIME Type
+    To enable uploading a new file type (for example, WebP or other formats), send a `POST` request to add it to DAM:
+    ```http
+ POST https://<domain>/dx/api/dam/v1/mediatypes
+    ```
+    Payload Example for Adding a New File Type
+    ```
+    [
+    {
+    "mimeType": "image/webp",
+    "extensions": ["webp"],
+    "mediaTypeGroupId": "<mediaTypeGroupId>"
+    }
+    ]
+    ```
+    Replace "image/webp", ["webp"], and mediaTypeGroupId with your desired MIME type, file extensions, and the media type group ID retrieved earlier.
+
+4. Enable an Existing (or Newly Added) File Type
+    If a file type exists but is disabled, use a `PATCH` request to enable it:
+    ```
+    PATCH - https://<domain>/dx/api/dam/v1/mediatypes/<id>
+    ```
+    Payload example:
+    ```json
+    {
+    "enabled": true
+    }
+    ```
+    The `<id>` is the ID for the media type obtained from the `GET mediatypes` endpoint.
+
+5. Verification and Additional Configuration
+
+After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`. You can also check the DAM settings UI to confirm that the file type is enabled. For additional configuration (such as renditions or custom transformations), see the extensibility documentation.
+
+**Example:**
+
+To add and enable SVG or other custom formats, follow the `GET` media type group and `POST`/`PATCH` steps above. This allows uploading file types beyond those listed in the **[Supported file formats](#viewing-supported-file-formats) section.
+
+### Enabling other file types
+
+ To enable file types that are not listed in the [Viewing supported file formats](#viewing-supported-file-formats) section for HCL DX DAM, you can use the DAM MediaTypeController API. The process involves adding new file types and enabling or disabling them for uploads.
 
 ## Playing a video in DAM
 
@@ -84,7 +142,6 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player \(if 
 
         ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
 
-For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
@@ -173,6 +230,12 @@ Refer to the following steps to modify the name of a media asset.
 3. In the **Rename** dialogue box, enter the new name of the media asset. Click **Rename**. 
 
 Another way to modify the name of a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name** of the media asset in this panel, along with the **Title** and **Description**. Click **Save**.
+
+## Enabling/disabling files types
+
+Use the DAM MediaTypeController API to enable or disable supported file types for asset uploads in HCL Digital Experience DAM. For more infor mation on how configure the HCL DX server to recognize other images, refer to [How to enable support for additional image formats in HCL Web Content Manager](../../../../guide_me/howto/configuration/EnableImageFormats.md)
+
+The SVG file type is disabled by default. To enable the `.svg` file type (`image/svg+xml`) for asset uploads, use the `enabled` parameter with the [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById){target="_blank"} API described in this documentation topic.
 
 ## Changing duplicate asset names using DAM
 
