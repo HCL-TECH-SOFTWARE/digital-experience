@@ -2,7 +2,7 @@
 
 With friendly URLs for web content, you can construct URLs to content items that are clear and concise.
 
-You can construct friendly URLs that reference web content items, but HCL Web Content Manager itself does not generate friendly URLs by default. However, you can cause the web content viewer to generate friendly URLs. For more information, read *Changing the site URL after an installation*. For more detailed information, read *Defining friendly URLs without state information for pages in your site*
+You can construct friendly URLs that reference web content items, but HCL Web Content Manager itself does not generate friendly URLs by default. However, you can cause the web content viewer to generate friendly URLs. For more information, read [Changing the site URL after an installation](../../../../../deployment/manage/siteurl_cfg/changing_siteurl/index.md). For more detailed information, read [Defining friendly URLs without state information for pages in your site](../../../../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md).
 
 These URLs are easier for users to remember and share and are a convenient way for users to create bookmarks to content items. External applications can also use friendly URLs to provide links directly to content items in the portal. To create effective friendly URLs for web content, you must understand how friendly URLs for DX pages are constructed and how friendly URLs for web content extend those URLs.
 
@@ -31,11 +31,11 @@ http://www.example.com:10039/wps/portal/appliances
 ```
 
 !!! note
-    When the portal displays a page using a friendly URL, the URL can include an encoded suffix at the end of the URL with the form `!ut/p/base\_codec/rich\_state`. This suffix contains information about the portals state that the portal might use when displaying the page. However, when bookmarking or sharing friendly URLs, it is not necessary to include the suffix.
+    When the portal displays a page using a friendly URL, the URL can include an encoded suffix at the end of the URL with the form `!ut/p/base\_codec/rich\_state`. This suffix contains information about the portal's state that the portal might use when displaying the page. However, when bookmarking or sharing friendly URLs, it is not necessary to include the suffix.
 
 ## How friendly URLs for web content are constructed
 
-Friendly URLs for web content are constructed just as friendly URLs for pages but include additional information that identifies the path to a content item. When the portal decodes a friendly URL, it decodes the URL from beginning to end. Each path segment of the URL is matched with the friendly URL names of DX pages until no more matches can be located. The remainder of the URL is then considered to be path information to a content item.
+Friendly URLs for web content are constructed just like friendly URLs for pages, but include additional information that identifies the path to a content item. When the portal decodes a friendly URL, it decodes the URL from beginning to end. Each path segment of the URL is matched with the friendly URL names of DX pages until no more matches can be located. The remainder of the URL is then considered to be path information to a content item.
 
 This path information is mapped to a shared public render parameter that is scoped to the DX page identified by the URL. The fully qualified name of this path-info parameter is `http://www.ibm.com/xmlns/prod/websphere/portal/publicparams:path-info`. The path-info parameter can contain multiple values, with the individual values representing segments of a content path. The segments are concatenated using a forward slash \(`/`\) as a path separator.
 
@@ -67,22 +67,36 @@ The `page\_id` portion of the friendly URL is always evaluated first. Because of
 -   Clicking **Clear page context** when editing the settings of a web content viewer also clears the path-info parameter.
 -   If a friendly URL includes an encoded suffix, it takes this form: `!ut/p/base\_codec/rich\_state`. Because this information is encoded, it is not intended to be read by people. However, the portal itself might act on the information, which can sometimes cause the wrong page to be displayed.
 
-    If the path-info public shared render parameter is encoded in the `rich\_state` portion of the suffix, the path-info contents overwrites the `path\_to\_content` portion of the friendly URL. It is also possible that there could be a mismatch between the path-info contents and the path information encoded in the `rich\_state` section. If such a mismatch occurs, the portal replaces the `path\_to\_content` portion of the friendly URL with the `rich\_state` information and directs the user to that page.
+    If the path-info public shared render parameter is encoded in the `rich\_state` portion of the suffix,         the path-info contents overwrite the `path\_to\_content` portion of the friendly URL. It is also possible that there could be a mismatch between the path-info contents and the path information encoded in the `rich\_state` section. If such a mismatch occurs, the portal replaces the `path\_to\_content` portion of the friendly URL with the `rich\_state` information and directs the user to that page.
 
     The following tables demonstrate how the presence of `rich\_state` information affects the page that is shown:
 
     |Description|URL|
     |-----------|---|
-    |The user navigates to URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
-    |The user modifies the URL in the browsers address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2/!ut/p/b1/dY07Do...`|
+    |        The user navigates to a URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
+    |The user modifies the URL in the browser's address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2/!ut/p/b1/dY07Do...`|
     |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`Because the `rich\_state` portion of the URL still contains path information pointing to `content_item_1`, the portal overwrites the `path\_to\_content` portion of the URL. The user remains on the same page instead of being directed to the page where `content_item_2` is displayed.|
 
     |Description|URL|
     |-----------|---|
-    |The user navigates to URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
-    |The user modifies the URL in the browsers address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2`|
+    |        The user navigates to a URL in the portal.|`http://www.example.com:10039/wps/portal/home/content_item_1/!ut/p/b1/dY07Do...`|
+    |The user modifies the URL in the browser's address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2`|
     |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_2`Because the user removed the `rich\_state` portion of the URL when modifying the URL, the `path\_to\_content` portion of the URL is evaluated. The user is directed to the page where `content_item_2` is displayed.|
 
+## Overview of <portal-core:stateBase method="friendly"/> in HCL Digital Experience (DX)
+
+The `<portal-core:stateBase method="friendly"/>` JSP tag is used in HCL DX themes to generate a `<base>` tag for the friendly URL of the current page.
+
+### Purpose and usage
+
+When the theme is configured with `com.ibm.portal.theme.hasBaseURL=true`, the `<portal-core:stateBase method="friendly"/>` tag must be included in a JSP file that contributes to the `<head>` section of the page, typically `head.jsp`. This tag generates a `<base>` element in the HTML markup. It ensures that the base URL of the page is the friendly (stateless, human-readable) URL of the current DX page, excluding portal navigation state. The tag also ensures that the correct base URL is used for stateless navigation. It enables SEO-friendly URLs and ensures correct resolution of relative paths on pages that use friendly URLs.
+
+!!! important
+    Friendly `<base>` tags are not compatible with components that require navigational state, such as Web Content Manager (WCM) pagination.
+
+### Configuration
+
+Setting only the `hasBaseURL` property is not sufficient. The JSP file that contributes to the page head (typically `head.jsp`) must explicitly include the `<portal-core:stateBase method="friendly"/>` tag.
 
 ## Content URL generation filters and friendly URLs
 
@@ -103,9 +117,9 @@ http://host\_name:port\_number/context\_root/portal/page\_id/path\_to\_content/[
 
 -   The DX page specified in the friendly URL for web content must have a default content mapping to an existing web content site area. If there is no default content mapping on the page, any web content viewers on the page display a warning message about the missing page context.
 -   If the target page does not contain a web content viewer that is configured to receive links, the content item specified in the friendly URL for web content is not displayed.
--   If a web content viewer is not configured to broadcast links, links rendered by the viewer do not affect the friendly URL for web content.
+-   If a web content viewer is not configured to broadcast links, links rendered by the viewer do not affect friendly URLs for web content.
 -   The default DX page selection does not show the path of the default content item in the friendly URL. The `path\_to\_content` portion of the URL includes the content path information only after users browse web content using links displayed by the viewer.
--   Friendly URLs for web content are URL-encoded. When using friendly URLs for web content, special characters that show in any segment of the URL must be URL-encoded. For example, a space character in the URL would be replaced by its URL-encoded equivalent: `%20`. Some web browsers perform automatic decoding of the URL. In this case, you might see unencoded characters in the URL, but the portal always works with an encoded version of the URL.
+-   Friendly URLs for web content are URL-encoded. When using friendly URLs for web content, special characters that appear in any segment of the URL must be URL-encoded. For example, a space character in the URL would be replaced by its URL-encoded equivalent: `%20`. Some web browsers perform automatic decoding of the URL. In this case, you might see unencoded characters in the URL, but the portal always works with an encoded version of the URL.
 -   The segments of a friendly URL for web content are not localized for multiple languages. The `path\_to\_content` portion of a friendly URL for web content is composed of the unlocalized names of web content folders, site areas, and content items. For example, if you name these items with English terms, the friendly URL for web content is constructed of these English terms, even if the portal language is not English.
 
 
