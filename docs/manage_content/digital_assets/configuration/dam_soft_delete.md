@@ -79,7 +79,9 @@ A Collection Admin can clear all items from the Trash that they have administrat
 
 ### Automated Trash clearance (heartbeat)
 A background heartbeat process runs at a configured interval to automatically purge items whose retention period has expired. This ensures the Trash is maintained without manual intervention.
-![Automated Trash clearance](../../../images/DAM_Automated_trash_clearance.png)
+![Automated Trash clearance](../../../images/DAM_trash_grid_view.png)
+
+![Trash List view](../../../images/DAM_trash_list_view.png)
 
 ---
 

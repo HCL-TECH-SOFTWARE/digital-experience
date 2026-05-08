@@ -107,9 +107,10 @@ Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, in
     ![References found while moving media asset to trash](../../../../images/DAM_Move_to_trash_references_found.png)
 
 ## Permanent delete of media asset from trash
-[Permanent delete of media asset from trash](../../configuration/dam_soft_delete.md#permanent-delete-media-asset)
 
-Use the HCL Digital Experience 9.5 DAM editor to permanently delete a media asset:
+Use the HCL Digital Experience 9.5 DAM editor to [permanently delete a media asset](../../configuration/dam_soft_delete.md#permanent-delete-media-asset):
+
+![Accessing trash](../../../../images/DAM_access_trash.png)
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a media asset and click **Permanently delete**.
 

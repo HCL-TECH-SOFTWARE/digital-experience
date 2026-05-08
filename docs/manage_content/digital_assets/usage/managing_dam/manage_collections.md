@@ -145,7 +145,9 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Permanent delete of a collection from trash
 
-[Permanent delete of a collection from trash](../../configuration/dam_soft_delete.md#permanent-delete-collection)
+Use the HCL Digital Experience 9.5 DAM editor to [permanently delete a collection](../../configuration/dam_soft_delete.md#permanent-delete-collection):
+
+![Accessing trash](../../../../images/DAM_access_trash.png)
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a collection and click **Permanently delete**.
 
