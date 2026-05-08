@@ -2,3 +2,5 @@ title: Container
 
 nav:
     - index.md
+    - RestartPersistenceNodes.md
+    
