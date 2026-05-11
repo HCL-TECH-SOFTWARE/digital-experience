@@ -4,7 +4,7 @@ This section provides the steps on how to manage media assets and view configura
 
 ## Prerequisite
 
-HCL DAM CF181 or higher should be installed and configured for the HCL DX (HCL DX) 9.5 Container Release update, following these instructions in the [Install the HCL DX 9.5 Container components](../../index.md) topic.
+HCL DAM CF181 or higher should be installed and configured for the HCL Digital Experience (HCL DX) 9.5 Container Release update, following these instructions in the [Install the HCL DX 9.5 Container components](../../index.md) topic.
 
 ## Viewing supported file formats
 
@@ -52,7 +52,7 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 
     -   \\\\ju
     -   \\\\ju
-    -   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL Digital Asset Management that happens when any video is uploaded and when Kaltura integration is configured and enabled.
+    -   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL DAM that happens when any video is uploaded and when Kaltura integration is configured and enabled.
 
 |File type|Extension|
 |---------|---------|
@@ -71,20 +71,20 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 
 This section explains how to enable additional file types in HCL DX DAM that are not included in the default supported file formats. It also explains how to add, configure, and activate new media types for asset uploads by using the DAM MediaTypeController API.
 
-1. Authenticate with the DAM API
+1. Authenticate with the DAM API.
     Log in to the Ring API using:
     ```http
     POST https://<domain>/dx/api/core/v1/auth/login
     ```
 
-2. Identify the media type group
+2. Identify the media type group.
 
     Retrieve the list of media type groups (such as images, videos, etc.) to find the appropriate group for your file type:
     ```http
     GET https://<domain>/dx/api/dam/v1/mediatypegroups
     ```
 
-3. Add a new MIME type
+3. Add a new MIME type.
     To enable uploading a new file type (for example, WebP or other formats), send a `POST` request to add it to DAM:
     ```http
  POST https://<domain>/dx/api/dam/v1/mediatypes
@@ -101,7 +101,7 @@ This section explains how to enable additional file types in HCL DX DAM that are
     ```
     Replace "image/webp", ["webp"], and mediaTypeGroupId with your desired MIME type, file extensions, and the media type group ID retrieved earlier.
 
-4. Enable an existing or newly added file type
+4. Enable an existing or newly added file type.
     If a file type exists but is disabled, use a `PATCH` request to enable it:
     ```
     PATCH - https://<domain>/dx/api/dam/v1/mediatypes/<id>
@@ -114,7 +114,7 @@ This section explains how to enable additional file types in HCL DX DAM that are
     ```
     The `<id>` is the ID for the media type obtained from the `GET mediatypes` endpoint.
 
-5. Verify and add additional configuration
+5. Verify and add additional configuration.
 
 After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`. You can also check the DAM settings UI to confirm that the file type is enabled. For additional configuration (such as renditions or custom transformations), see the extensibility documentation.
 
@@ -122,9 +122,9 @@ After enabling or adding the new file type, verify its status using a `GET` requ
 
 To add and enable SVG or other custom formats, follow the `GET` media type group and `POST`/`PATCH` steps above. This allows uploading file types beyond those listed in the [Supported file formats](#viewing-supported-file-formats) section.
 
-### Enabling other file types
+### Enabling or disabling other file types
 
- To enable file types that are not listed in the [Viewing supported file formats](#viewing-supported-file-formats) section for HCL DX DAM, you can use the DAM MediaTypeController API. The process involves adding new file types and enabling or disabling them for uploads.
+ To enable file types that are not listed in the [Viewing supported file formats](#viewing-supported-file-formats) section for HCL DX DAM, you can use the DAM `MediaTypeController` API. The process involves adding new file types and enabling or disabling them for uploads.
 
 !!! note
     The SVG file type is disabled by default. To enable `.svg` files (`image/svg+xml`) for asset uploads, use the `enabled` parameter in the `MediaTypeController.updateById` API. For more information, see the [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById){target="_blank"} API documentation.
@@ -167,9 +167,9 @@ Use the HCL DX 9.5 DAM editor to delete a media asset, including its renditions:
 1.  From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
-Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, including its renditions:
+Use the HCL DX 9.5 DAM editor to move a media asset to trash, including its renditions:
 
-1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
+1.  From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
 2.  A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action. If there are references, additional dialog appears citing the presence of reference item. Clicking on that will complete the action
 
     ![Check references and move media asset to trash](../../../../images/Check_for_references_and_move_to_trash_HCL_DAM.png)
@@ -178,9 +178,9 @@ Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, in
 ## Permanent delete of media asset from trash
 [Permanent delete of media asset from trash](../../configuration/dam_soft_delete.md#permanent-delete-media-asset)
 
-Use the HCL Digital Experience 9.5 DAM editor to permanently delete a media asset:
+Use the HCL DX9.5 DAM editor to permanently delete a media asset:
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a media asset and click **Permanently delete**.
+1. From the HCL DX9.5 DAM interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a media asset and click **Permanently delete**.
 
 2. A message appears to confirm your action. Permanently deleting a media asset is an irreversible action which removes the data from the database.
 
