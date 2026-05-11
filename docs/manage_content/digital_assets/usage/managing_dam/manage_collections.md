@@ -53,7 +53,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
         - **Access control** tab - Allows you to set who can access the media assets in the collection.
 
     - **Move** - Moves the selected collection into another location.
-    - **Delete** - Deletes the selected collection.
+    - **Move to trash** - Moves the selected collection to trash.
 
 2. Select the **Filter** option to filter media asset results by **Favorites**, **Asset types**, or **Asset size**.
 
@@ -135,11 +135,23 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 6. Click **Add users and groups** to save changes.
 
-## Deleting a collection
+## Moving a collection to trash
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Delete**.
-A message appears to confirm your action. Once a collection is deleted, you can no longer retrieve it, including the media assets, renditions, and versions you have used as your web content.
-3. Click **Delete collection** to delete the collection.
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move to trash**.
+
+2. A message appears to confirm your action. Moving a collection to the trash also moves all associated subcollections, media assets, renditions, and versions. Note that moving referenced items to the trash makes them unavailable in web content.
+
+3. Click **Move to trash** to confirm the action.
+
+## Permanent delete of a collection from trash
+
+[Permanent delete of a collection from trash](../../configuration/dam_soft_delete.md#permanent-delete-collection)
+
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a collection and click **Permanently delete**.
+
+2. A message appears to confirm your action. Permanently deleting a collection is an irreversible action which removes the data from the database.
+
+3. Click **Delete permanently** to confirm the action.
 
 ## Moving a collection
 

@@ -1,6 +1,126 @@
-# DX Helm values updates 
+# DX Helm values updates
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
+
+### CF235
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| networking.haproxy.allowedHosts | [] | <!-- Commit: 945792e9, Author: Kevin Hendel, Date: 2026-04-09 -->
+| configuration.digitalAssetManagement.enableTrashAutoClearance | true | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| configuration.digitalAssetManagement.trashClearanceTimeInDays | 30 | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes | 60 | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| incubator.networking.internalTlsTraffic.enabled | false | <!-- Commit: e1001703, Author: Manish Kumar, Date: 2026-03-18 -->
+| incubator.networking.internalTlsTraffic.tlsCertSecret | dx-tls-cert | <!-- Commit: be00c32f, Author: Manish Kumar, Date: 2026-03-16 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.digitalAssetManagement.enableTrashAutoClearance |
+| incubator.configuration.digitalAssetManagement.trashClearanceTimeInDays |
+| incubator.configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes |
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| applications.dxPicker | true | false | <!-- Commit: 160ff26f, Author: Jan Carlo Cardama, Date: 2026-03-19 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.image-processor.url | http://RELEASE_NAME-image-processor:DAM_HTTP_PORT/dx/api/image-processor/v1/plugin | INTERNAL_APP_PROTOCOL://RELEASE_NAME-image-processor:DAM_HTTP_PORT/dx/api/image-processor/v1/plugin | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.image-processor.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin | INTERNAL_APP_PROTOCOL://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI | INTERNAL_APP_PROTOCOL://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | false | true | <!-- Commit: e20969ae, Author: butham-rakesh, Date: 2026-03-27 -->
+
+### CF234
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| volumes.persistenceNode.sharedmemorymount.sizeLimit | 64Mi | <!-- Commit: 04b54adc, Author: Jenny Bethea, Date: 2025-12-17 -->
+| networking.addon.ringApi.caTrustSecret | "" | <!-- Commit: 9bf70745, Author: Jack Derbyshire, Date: 2025-09-25 -->
+| networking.haproxy.customHeader | [] | <!-- Commit: 0d0efbeb, Author: Kevin Hendel, Date: 2025-08-25 -->
+| networking.haproxy.deleteHeader | [] | <!-- Commit: 0d0efbeb, Author: Kevin Hendel, Date: 2025-08-25 -->
+| networking.haproxy.sslDefaultBindCiphers | "" | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| networking.haproxy.sslDefaultBindCiphersuites | "" | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| networking.haproxy.sslDefaultBindOptions | [] | <!-- Commit: 263d4cbb, Author: Manish Kumar, Date: 2026-01-09 -->
+| security.webEngine.webEngineAdminGroup | wpsadmins | <!-- Commit: 2bc91385, Author: Neelkanth Patel, Date: 2026-02-08 -->
+| security.webEngine.basicRegistry.enabled | true | <!-- Commit: 2bc91385, Author: Neelkanth Patel, Date: 2026-02-08 -->
+| security.webEngine.basicRegistry.realm | defaultWIMFileBasedRealm | <!-- Commit: 2bc91385, Author: Neelkanth Patel, Date: 2026-02-08 -->
+| probes.core.readinessProbe.customProbeURL | "" | <!-- Commit: 21b45e19, Author: Kevin Hendel, Date: 2025-11-10 -->
+| probes.core.startupProbe.customProbeURL | "" | <!-- Commit: 21b45e19, Author: Kevin Hendel, Date: 2025-11-10 -->
+| configuration.core.invalidationDomain | RELEASE | <!-- Commit: ac247961, Author: Alex Lang, Date: 2025-09-03 -->
+| configuration.digitalAssetManagement.newDbManagement | false | <!-- Commit: 6a54ffb2, Author: Philipp Milich, Date: 2025-10-08 -->
+| configuration.digitalAssetManagement.defaultCollectionFetchLimit | 100 | <!-- Commit: 8bde0e11, Author: Ramachandran Mani, Date: 2026-01-21 -->
+| configuration.searchMiddleware.damIndexing | true | <!-- Commit: 3fcb5eee, Author: Kristine Gazeline Apalla, Date: 2026-02-03 -->
+| configuration.persistence.databaseName | dxmediadb | <!-- Commit: 216d4458, Author: Ramachandran Mani, Date: 2025-10-17 -->
+| configuration.persistence.ssl | false | <!-- Commit: a31b4597, Author: Ramachandran Mani, Date: 2025-04-24 -->
+| incubator.enableConfigurationSharing | false | <!-- Commit: 9ec286b5, Author: Alina Thomas, Date: 2025-09-09 -->
+| incubator.consumeSharedConfigs | [] | <!-- Commit: 6d929ed2, Author: Kevin Hendel, Date: 2025-12-24 -->
+| incubator.openTelemetry.enabled | false | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.collector.exportUrl | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.collector.protocol | http/protobuf | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.service.name | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.service.namespace | "" | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.default | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.core | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.contentComposer | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.digitalAssetManagement | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.imageProcessor | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.licenseManager | info | <!-- Commit: 1866b422, Author: srinath.tr@hcl.com, Date: 2025-12-05 -->
+| incubator.openTelemetry.logging.services.openLdap | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.persistence | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.remoteSearch | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.ringApi | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.runtimeController | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.logging.services.webEngine | info | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.openTelemetry.debug.enabled | false | <!-- Commit: d9b54d1a, Author: srinath.tr@hcl.com, Date: 2025-11-25 -->
+| incubator.networking.dxIqService | "" | <!-- Commit: 94692859, Author: Harshith, Date: 2025-10-30 -->
+| incubator.security.iq.dbUser | dx_iq_db_user | <!-- Commit: d2f61098, Author: rubyann.matias@hcl.com, Date: 2026-01-07 -->
+| incubator.security.iq.dbPassword | d1gitalExperience | <!-- Commit: e2d97aae, Author: rubyann.matias@hcl.com, Date: 2026-01-06 -->
+| incubator.security.iq.customDbSecret | "" | <!-- Commit: e2d97aae, Author: rubyann.matias@hcl.com, Date: 2026-01-06 -->
+| incubator.configuration.persistence.dbInitByDam | true | <!-- Commit: 94c17a45, Author: Ramachandran Mani, Date: 2025-07-14 -->
+| incubator.configuration.blueprint.enableAssets | true | <!-- Commit: 10ca0fe6, Author: Debendra Panigrahi, Date: 2025-11-03 -->
+| incubator.configuration.blueprint.enableNexHaven | true | <!-- Commit: 10ca0fe6, Author: Debendra Panigrahi, Date: 2025-11-03 -->
+| incubator.configuration.blueprint.skipAssetsUpdate | false | <!-- Commit: 10ca0fe6, Author: Debendra Panigrahi, Date: 2025-11-03 -->
+| incubator.configuration.blueprint.skipNexHavenUpdate | false | <!-- Commit: 10ca0fe6, Author: Debendra Panigrahi, Date: 2025-11-03 -->
+| incubator.configuration.cecv2.enabled | false | <!-- Commit: 78fd3198, Author: Kavitkar Harshal, Date: 2026-02-18 -->
+| incubator.configuration.cecv2.enableAssets | false | <!-- Commit: 8fc0e0ae, Author: Kavitkar Harshal, Date: 2026-02-12 -->
+| incubator.configuration.cecv2.skipAssetsUpdate | false | <!-- Commit: 8fc0e0ae, Author: Kavitkar Harshal, Date: 2026-02-12 -->
+| incubator.configuration.webEngine.validatePostgresIntegrity | false | <!-- Commit: 1f081d3c, Author: Priyanka Priya, Date: 2026-01-12 -->
+| incubator.configuration.digitalAssetManagement.enableTrashAutoClearance | false | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.trashClearanceTimeInDays | 30 | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | false | <!-- Commit: 8cd86d4c, Author: ANANDVARDHANCHILUMULA, Date: 2025-12-22 -->
+| incubator.configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes | 60 | <!-- Commit: 7da15046, Author: butham-rakesh, Date: 2026-01-21 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| hclFlexnetID | 
+| hclFlexnetURL | 
+| networking.licenseCertSecret | 
+| security.licenseManager.licenseManagerUser | 
+| security.licenseManager.licenseManagerPassword | 
+| security.licenseManager.customLicenseManagerSecret | 
+| security.licenseManager.customFlexnetLicenseManagerPrivateKeySecret | 
+| configuration.digitalAssetManagement.enableAssetMoveRename | 
+| configuration.digitalAssetManagement.enableCollectionMove | 
+| configuration.licenseManager.licenseServerId | 
+| configuration.licenseManager.licenseFeatureNameWithVersion | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | false | true | <!-- Commit: 94c8da7a, Author: ankit-raj, Date: 2025-05-22 -->
+| peopleservice.networking.contextRoot.api | dx/api/people/v1 | /dx/api/people/v1 | <!-- Commit: 93998581, Author: Vinayak Patil, Date: 2025-06-25 -->
+| peopleservice.networking.contextRoot.ui | dx/ui/people | /dx/ui/people | <!-- Commit: 93998581, Author: Vinayak Patil, Date: 2025-06-25 -->
 
 ### CF233
 

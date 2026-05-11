@@ -160,14 +160,31 @@ Use the HCL DX 9.5 DAM editor to download a media asset source, version, or rend
 
 3.  Click **Download** to proceed.
 
-## Deleting a media asset
+## Moving a media asset to trash
 
 Use the HCL DX 9.5 DAM editor to delete a media asset, including its renditions:
 
 1.  From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
 2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
-    ![Check references and delete media asset](../../../../images/Check_for_references_and_delete_HCL_DAM.png)
+Use the HCL Digital Experience 9.5 DAM editor to move a media asset to trash, including its renditions:
+
+1.  From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
+2.  A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action. If there are references, additional dialog appears citing the presence of reference item. Clicking on that will complete the action
+
+    ![Check references and move media asset to trash](../../../../images/Check_for_references_and_move_to_trash_HCL_DAM.png)
+    ![References found while moving media asset to trash](../../../../images/DAM_Move_to_trash_references_found.png)
+
+## Permanent delete of media asset from trash
+[Permanent delete of media asset from trash](../../configuration/dam_soft_delete.md#permanent-delete-media-asset)
+
+Use the HCL Digital Experience 9.5 DAM editor to permanently delete a media asset:
+
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a media asset and click **Permanently delete**.
+
+2. A message appears to confirm your action. Permanently deleting a media asset is an irreversible action which removes the data from the database.
+
+3. Click **Delete permanently** to confirm the action.
 
 ## Copying a media asset
 
@@ -177,7 +194,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Move to trash**.
 
 2. Click **Copy**.
 
@@ -199,7 +216,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename**, and **Move to trash**.
 
 2. Click **Move**.
 
@@ -222,7 +239,7 @@ Refer to the following steps to modify the name of a media asset.
 
 1. Click the **More actions** menu of the asset. 
 
-    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Delete**.
+    This displays more actions such as **Edit**, **Properties**, **Preview**, **Copy Link**, **Download**, **Copy**, **Move**, **Rename** and **Move to trash**.
 
 2. Click **Rename**.
 

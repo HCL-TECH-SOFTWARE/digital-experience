@@ -1,3 +1,8 @@
+/* Hides the 10th item and everything after it in the version dropdown */
+.md-version__list li:nth-child(n+10) {
+    display: none !important;
+}
+
 /* General flexbox styles */
 
 .align-top {

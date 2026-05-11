@@ -24,3 +24,5 @@ This section discusses the regeneration of missing renditions and versions and t
 This section describes how you can use DAM as a datasource of the Search service.
 - **[Configuring an external database for DAM](./external_dam_database.md)**  
 This section describes how to configure external database for DAM.
+- **[DAM Soft Delete](dam_soft_delete.md)**
+This section describes how DAM Soft delete feature works

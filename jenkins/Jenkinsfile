@@ -40,7 +40,8 @@ pipeline {
                     // The SSH Key is passed into the container for git checkout
                     // The script 01-publish-doc.sh is called and performs all steps
                     sh """
-                        docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "mkdir /build && mkdir /root/.ssh && tail -f /dev/null"
+                        docker run -d --name doc-builder quintana-docker.artifactory.cwp.pnp-hcl.com/dxubi:v1.0.0_8.5-204 /bin/bash -c "tail -f /dev/null"
+                        docker exec doc-builder /bin/bash -c "mkdir /build && mkdir /root/.ssh"
                         docker cp ${SSH_KEY} doc-builder:/root/.ssh/id_rsa
                         docker exec doc-builder /bin/bash -c 'microdnf install -y openssh-clients && ssh-keygen -p -P ${SSH_PASS} -N "" -f /root/.ssh/id_rsa'
                         docker cp ${WORKSPACE}/jenkins/helpers/01-publish-doc.sh doc-builder:/build
