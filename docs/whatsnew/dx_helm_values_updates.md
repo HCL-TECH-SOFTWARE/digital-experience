@@ -1,6 +1,40 @@
-# DX Helm values updates 
+# DX Helm values updates
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
+
+### CF235
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| networking.haproxy.allowedHosts | [] | <!-- Commit: 945792e9, Author: Kevin Hendel, Date: 2026-04-09 -->
+| configuration.digitalAssetManagement.enableTrashAutoClearance | true | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| configuration.digitalAssetManagement.trashClearanceTimeInDays | 30 | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes | 60 | <!-- Commit: d4a768b2, Author: ANANDVARDHANCHILUMULA, Date: 2026-04-17 -->
+| incubator.networking.internalTlsTraffic.enabled | false | <!-- Commit: e1001703, Author: Manish Kumar, Date: 2026-03-18 -->
+| incubator.networking.internalTlsTraffic.tlsCertSecret | dx-tls-cert | <!-- Commit: be00c32f, Author: Manish Kumar, Date: 2026-03-16 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.digitalAssetManagement.enableTrashAutoClearance |
+| incubator.configuration.digitalAssetManagement.trashClearanceTimeInDays |
+| incubator.configuration.digitalAssetManagement.trashClearanceHeartbeatInMinutes |
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| applications.dxPicker | true | false | <!-- Commit: 160ff26f, Author: Jan Carlo Cardama, Date: 2026-03-19 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.image-processor.url | http://RELEASE_NAME-image-processor:DAM_HTTP_PORT/dx/api/image-processor/v1/plugin | INTERNAL_APP_PROTOCOL://RELEASE_NAME-image-processor:DAM_HTTP_PORT/dx/api/image-processor/v1/plugin | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.image-processor.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.url | http://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin | INTERNAL_APP_PROTOCOL://RELEASE_NAME-dam-plugin-kaltura:DAM_HTTP_PORT/dx/api/kaltura/v1/plugin | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.kaltura-plugin.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.url | http://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI | INTERNAL_APP_PROTOCOL://RELEASE_NAME-dam-plugin-google-vision:DAM_HTTP_PORT/dx/api/google-vision/v1/googleVisionAI | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| configuration.digitalAssetManagement.pluginsConfiguration.google-vision.callBackHost | http://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | INTERNAL_APP_PROTOCOL://RELEASE_NAME-digital-asset-management:DAM_HTTP_PORT | <!-- Commit: a98bf849, Author: Kevin Hendel, Date: 2026-04-07 -->
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | false | true | <!-- Commit: e20969ae, Author: butham-rakesh, Date: 2026-03-27 -->
 
 ### CF234
 
