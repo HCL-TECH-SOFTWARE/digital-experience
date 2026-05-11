@@ -13,3 +13,4 @@ nav:
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
+    - DeleteDuplicateCheckSum.md
