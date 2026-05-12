@@ -1,56 +1,58 @@
 # Manage collections
 
-Learn more about creating, configuring, and deleting media asset collections using Digital Asset Management (DAM).
+Learn more about creating, configuring, and deleting media asset collections in Digital Asset Management (DAM).
 
 ## What is a collection unique-name?
 
-Collection unique-names are the unique identifier for each collection which can be used in friendly url instead of collection UUID to access DAM assets. Collection unique-names support all languages as per existing system. A collection unique-name does not support any URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]").
+Collection unique names are the unique identifier for each collection and can be used in the friendly URL instead of the collection UUID to access DAM assets. Collection unique names support all languages supported by the system. A collection unique name does not support URL-reserved characters (for example, "?!#$&%'*+/;:,=@()\[]").
 
 ## How are collection unique-names generated?
 
-- While creating a collection, the user has a provision to enter a custom collection unique-name.
+- While creating a collection, the user can enter a custom collection unique name.
 
 ![](../../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup"){ width=45% }
 ![](../../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup"){ width=47% }
 ![](../../../../images/CreateCollection_friendlyUrl-3.png "Create collection unsupported unique name"){ width=45% }
 
-- Collection unique-name is an optional field. If it is not provided by the user, the system will generate a collection unique-name based on the collection name replacing all the URL reserved characters (e.g. "?!#$&%'*+/;:,=@()\[]") with underscores.
-- Collection unique-names will follow simple format of adding “_Number” for collections having same collection-names.
-- For existing collections, the system will generate a collection unique-name based on the collection name by using the migration script.
+- Collection unique name is an optional field. If it is not provided, the system generates a collection unique name based on the collection name by replacing URL-reserved characters (for example, "?!#$&%'*+/;:,=@()\[]") with underscores.
+
+- Collection unique names follow a simple format by appending “_Number” to collections with the same name.
+- For existing collections, the system generates a collection unique name based on the collection name using a migration script.
 
 ## How can the user change the collection unique-names?
 
-Once the collection unique-name is generated, user can view/edit the collection unique-name in the collection Properties panel.
+After the collection unique name is generated, the user can view or edit it in the collection Properties panel.
 
 ![](../../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
 ![](../../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
 
 ## What happens if a collection unique-name already exists while creating or editing a collection?
 
-While creating or editing a collection, DAM checks for any duplication of the unique-name and prompts with an error message. It also suggests an available unique-name if a duplicate is found in any other collection.
+When creating or editing a collection, DAM checks for duplicate unique names and displays an error message. It also suggests an available unique name if a duplicate is found in another collection.
 
 ![](../../../../images/CreateCollectionError_friendlyUrl_1.png "Create collection duplicate unique name"){ width=45% }
 ![](../../../../images/CreateCollectionError_friendlyUrl_2.png "Create collection suggestion click"){ width=45% }
 
-When the user clicks on the suggested name, the unique-name input field gets pre-filled with the suggested unique-name.
+When the user clicks the suggested name, the unique-name field is automatically populated with the suggested unique name.
 
 ## Browsing and searching for media assets in a collection
 
-Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
+Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 Digital Asset Management (DAM).
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click **Collections**. The HCL DAM user user interface allows you to see previews of media assets for a specified collection. For example, a curated set of media assets are grouped in a collection named **Furniture Gallery** as shown below.
+1. From the HCL DX 9.5 DAM user interface, click **Collections**. The DAM user interface displays previews of media assets in the selected collection. For example, a curated set of media assets is grouped in a collection named **Furniture Gallery**, as shown below.
 
     ![Digital Asset Management user interface](../../../../images/dam_root_collections_page.png)
 
     The following options are displayed in Collections interface:
 
-    - **Create collection** - Create a new collection or a new nested collection (when used inside an existing collection).
-    - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
+ - **Create collection** - Create a new collection or a nested collection within an existing collection.
 
-        ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
+ - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
 
-        - **Properties** tab - Allows you to update the name and description.
-        - **Access control** tab - Allows you to set who can access the media assets in the collection.
+    ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
+
+    - **Properties** tab - Allows you to update the name and description.
+    - **Access control** tab - Allows you to set who can access the media assets in the collection.
 
     - **Move** - Moves the selected collection into another location.
     - **Move to trash** - Moves the selected collection to trash.
@@ -71,7 +73,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
     - **View as** - Lists options to view media assets or collections.
         - **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
-        - **List**- Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
+        - **List** - Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
     - **Sort by** - Lists options to sort media assets or collections:
         - **Date**
         - **Name**
@@ -97,7 +99,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
             ![Type > Descending](../../../../images/dam_grid_type_descending.png)
 
             - **Ascending**
-            -  *Descending**
+            -  **Descending**
             
         - **Size**
 
@@ -108,7 +110,7 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Modify information metadata of a media asset collection
 
-1. From the HCL Digital Experience 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
+1. From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
 
     ![DAM Collection Properties](../../../../images/dam_collection_information.png)
 
@@ -117,15 +119,15 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Manage user access permissions of a media asset collection
 
-**Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo)
+**Video**: [Configuring user access permissions to Digital Asset Management assets](https://youtu.be/vNJFcQViNVo){target="_blank"}
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
+1. From the HCL DX 9.5 DAM interface, click the **More actions** menu (three horizontal dots icon) of a collection and click **Properties**.
 2. Click **Access control**.
-3. Assign levels for other users to access media items stored within the collection by clicking **Add user**.
+3. Assign access levels for users to access media items in the collection by clicking **Add user**.
 
     ![Access Control > Add user](../../../../images/dam_access_panel.png)
 
-4. When you click **Add User**, a pop-up displays options to add these user access levels for individuals and groups as defined by the user directory integrated to your Digital Experience platform. Select the appropriate member. In this example, click **Administrator**.
+4. When you click **Add User**, a pop-up appears with options to add user access levels for individuals and groups defined in the user directory integrated with your DX platform. Select the appropriate member. In this example, click **Administrator**.
 
     ![Access Control > Assign members](../../../../images/dam_access_control_assign_members.png)
 
@@ -137,19 +139,21 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 
 ## Moving a collection to trash
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move to trash**.
+1. From the HCL DX 9.5 DAM interface, click the **More actions** menu of a collection and click **Move to trash**.
 
-2. A message appears to confirm your action. Moving a collection to the trash also moves all associated subcollections, media assets, renditions, and versions. Note that moving referenced items to the trash makes them unavailable in web content.
+2. A message appears to confirm your action. Moving a collection to the trash also moves all associated subcollections, media assets, renditions, and versions. Referenced items moved to the trash become unavailable in web content.
 
 3. Click **Move to trash** to confirm the action.
 
 ## Permanent delete of a collection from trash
 
-[Permanent delete of a collection from trash](../../configuration/dam_soft_delete.md#permanent-delete-collection)
+Use the HCL DX 9.5 DAM editor to [permanently delete a collection](../../configuration/dam_soft_delete.md#permanent-delete-collection):
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a collection and click **Permanently delete**.
+![Accessing trash](../../../../images/DAM_access_trash.png)
 
-2. A message appears to confirm your action. Permanently deleting a collection is an irreversible action which removes the data from the database.
+1. From the HCL DX 9.5 DAM interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click the **More actions** menu of a collection and click **Permanently delete**.
+
+2. A message appears to confirm your action. Permanently deleting a collection is an irreversible action that removes the data from the database.
 
 3. Click **Delete permanently** to confirm the action.
 
@@ -158,25 +162,23 @@ Follow these steps to work with Collections in HCL Digital Experience 9.5 DAM.
 Refer to the following steps if you want to move a collection from one location to another.
 
 !!! note 
-    If a collection is moved to another collection, permissions and access restrictions of the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
+    If a collection is moved to another collection, the permissions and access restrictions for the collection and its contents align with the permissions of the destination location. If the collection is moved to the root level, the permissions align with the source permissions. 
 
-1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move**.
+1. From the HCL DX 9.5 DAM interface, click the **More actions** menu of a collection and click **Move**.
 
     ![Move collection option](../../../../images/Move_collection_option.png)
 
-    A dialog box appears that shows the list of collections. You can search for a specific collection, or you can also navigate inside a collection.
+    A dialog box appears that shows the list of collections. You can search for a specific collection or navigate inside a collection.
 
     ![Move collection dialog box](../../../../images/move_collection.png)
 
-    !!!note
+    !!! note
         If the user does not have edit access for the collection, the row for that collection is disabled in the dialog.
 
-2. To move the collection, there are two options depending on the target location:
+2. To move a collection, use one of the following options depending on the target location:
 
-    - Navigate to the target collection where you want to move the collection and click **Move here**.
+    - Navigate to the target collection where you want to move the collection and click **Move here**. IIf a collection with the same name exists in the target location, a dialog box appears prompting you to rename the collection.
 
-        If a collection with the same name exists in the target collection, a dialog box to rename the collection appears.
+    - To move the collection to the root level, do not select any collection in the dialog box. Click **Move here** to move the collection to the root level.
 
-    - If you want to move the collection to root level, do not select any collection in the dialog box. Just click the **Move here** button to move the collection to the root level.
-
-3. Click **View Location** to navigate inside the collection.
+3. Click **View Location** to navigate to the collection.
