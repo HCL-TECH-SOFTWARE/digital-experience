@@ -33,7 +33,7 @@ To manage your web content feeds, you need to create a feed configuration.
 9. Select the option to check the publication date if you want to skip processing web content items that have the same publish date as the feed source.
 10. Select the **Enable XSLT** checkbox to use an XSLT style sheet. If enabled, specify the location of the file in the **XSLT File** field using either a relative path or an absolute URL:
 
-    - **Relative path:** Enter the path relative to the `/wp_profile/PortalServer/wcm/shared/app/` directory. For example, if your file is located at `/wp_profile/PortalServer/wcm/shared/app/config/xslt/sample.xsl`, enter `/config/xslt/sample.xsl`.
+    - **Relative path:** Enter the path relative to the `wp_profile_root/PortalServer/wcm/shared/app/` directory. For example, if your file is located at `wp_profile_root/PortalServer/wcm/shared/app/config/xslt/sample.xsl`, enter `/config/xslt/sample.xsl`.
 
         !!! note
             When you use a relative path, the WCI class loader loads the XSLT file. You must restart the server for the system to detect any new or modified XSLT files.
