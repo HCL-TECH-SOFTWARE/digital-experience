@@ -34,7 +34,7 @@ The Trash can be accessed via **Settings**.
 
 ### Standard restore
 
-A Collection Admin can restore individual assets or entire collections from the Trash. Restoring a collection restores the collection and the items which are present in it while moving the collection to trash. Restore doesn't automatically restore subcollections/individual assets that were moved to the trash separately before the parent collection was soft deleted.
+A Collection Admin can restore individual assets or entire collections from the Trash. Restoring a collection restores the collection and the items that were present in it when the collection was moved to Trash. Restore does not automatically restore subcollections or individual assets subcollections/individual assets that were moved to the trash separately before the parent collection was soft deleted.
 
 ### Dependency rules
 
@@ -61,7 +61,7 @@ A Collection Admin can permanently delete a specific item from the Trash at any 
 
 **To permanently delete a collection/asset:**
 
-1. Open the overflow menu for the collection/asset in trash.
+1. Open the overflow menu for the collection or asset in the Trash.
 2. Select **Permanently delete**.
 3. Confirm the action in the confirmation dialog.
 4. A snackbar notification will confirm the permanent delete.
