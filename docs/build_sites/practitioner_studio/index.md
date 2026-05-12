@@ -1,9 +1,24 @@
 # Practitioner Studio
 
-Practitioner Studio provides a modern user experience for HCL Digital Experience (DX). Please see the following pages to understand how the navigation is organized.
+Practitioner Studio provides a modern and streamlined user experience for HCL DX. There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation. In time, this interface also serves as the launching point for newly developed features. Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
 
 !!! note
     During the update, custom-created authoring pages may no longer contain the referenced portlets, if those specific portlets were part of the rearrangement of pages. To prevent this, simply export the custom authoring page before migration and import it again after the process is complete.
+
+- **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
+  Use the modern interface with widgets, action buttons, and quick links to manage common tasks and information efficiently.
+- **[Web content](../practitioner_studio/web_content.md)**  
+  Learn more about managing libraries, creating, editing, or cleaning up data, and setting up syndication for HCL DX web content management.
+- **[HCL Digital Asset Management (DAM)](../../manage_content/digital_assets/index.md)**  
+  Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
+- **[Site templates](../practitioner_studio/site_templates.md)**  
+  Site templates are configured and managed using Site Builder. If Practitioner Studio isn’t enabled, you can still manage Site templates manually.
+- **[Personalization](../practitioner_studio/personalization.md)**  
+  Learn how to configure your HCL DX portal site as an administrator.
+- **[Themes](../practitioner_studio/themes.md)**  
+  Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer to create and develop theme web content.
+- **[Administration](../practitioner_studio/administration.md)**  
+  Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
 ## Enhanced Practitioner Studio and toolbar
 
@@ -15,50 +30,8 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 
 - A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
 - The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
-
-  - **Web Content**  
-    This section provides access to applications used for the general administration of Web Content Management.
-
-  - **Digital Assets**  
-    This section introduces HCL Digital Asset Management (DAM), which lets you manage rich media assets in HCL DX sites to create consistent, engaging digital experiences. The feature is available starting with HCL DX 9.5 CF181 and later.
-
-  - **Site templates**  
-      The Site Template (Site Builder) application lets you create site and section templates in HCL Digital Experience (DX).
-
-  - **Themes**  
-      Use the Theme Manager and WebDAV to easily create, customize, and manage themes that define the look, layout, and behavior of your HCL Digital Experience portal.
-
-  - **Personalization**  
-    Personalization recognizes site visitors based on their profiles and behaviors to deliver targeted, region-specific content and a personalized page experience.
-
-  - **Administration**  
-    Administration portlets help you manage resources. Learn about each portlet and the tasks you can complete with it.
-
-## Overview
-
-Practitioner Studio provides a modern and streamlined user experience for HCL DX. There are several advantages to this new look. The consolidated navigation has a consistent look and feel for most administration tasks so that commonly used tasks are found together. User assistance is easily found and is provided for pages that are in the navigation. In time, this interface also serves as the launching point for newly developed features. Enabling Practitioner Studio deactivates the legacy Administration and Applications pages. However, all of these functions are still available.
-
-- **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
-  Use the modern interface with widgets, action buttons, and quick links to manage common tasks and information efficiently.
-
-- **[Administration](../practitioner_studio/administration.md)**  
-  Use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
-
-- **[HCL Digital Asset Management (DAM)](../../manage_content/digital_assets/index.md)**  
-  Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
-
-- **[Personalization](../practitioner_studio/personalization.md)**  
-  Learn how to configure your HCL DX portal site as an administrator.
-
-- **[Site templates](../practitioner_studio/site_templates.md)**  
-  Site templates are configured and managed using Site Builder. If Practitioner Studio isn’t enabled, you can still manage Site templates manually.
-
-- **[Themes](../practitioner_studio/themes.md)**  
-  Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer to create and develop theme web content.
-- **[Web content](../practitioner_studio/web_content.md)**  
-  Learn more about managing libraries, creating, editing, or cleaning up data, and setting up syndication for HCL DX web content management.
-
-
+    - **Content Management:** This section provides access to applications used for the general administration of Web Content Management.
+    - **Production:** This section includes applications designed to streamline essential administrative tasks for managing the portal.
 
 ## HCLSoftware U learning materials
 
