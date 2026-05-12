@@ -137,8 +137,9 @@ ConfigEngine/ConfigEngine.sh disable-practitioner-dashboard -DWasPassword=wpsadm
 ```
 
 !!! note
-    The Practitioner Dashboard is enabled by default and shows the React-based modern dashboard.  
-    You can disable it during deployment if preferred. When disabled, the classic JSP home page is displayed instead.
+    - The Practitioner Dashboard is enabled by default and shows the React-based modern dashboard.  
+    - You can disable it during deployment if preferred. When disabled, the classic JSP home page is displayed instead.
+    - You cannot disable the dashboard in DX Compose.
 
 ## Virtual portal configuration
 
