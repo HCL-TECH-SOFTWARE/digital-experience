@@ -2,6 +2,8 @@
 
 Learn how to use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
+![Screen capture of the updated Administration section](../../assets/Enhanced_Practitioner_Studio_and_toolbar_Administration.png)
+
 ## Site management
 
 Manage the structure and foundation of your portal environment, including pages, virtual portals, and templates.

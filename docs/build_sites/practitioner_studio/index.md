@@ -31,8 +31,6 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 - A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
 - The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
 
-    ![Screen capture of the updated Administration section](../../assets/Enhanced_Practitioner_Studio_and_toolbar_Administration.png)
-
     - **Content Management:** This section provides access to applications used for the general administration of Web Content Management.
     - **Production:** This section includes applications designed to streamline essential administrative tasks for managing the portal.
 
