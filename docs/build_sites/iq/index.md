@@ -1,0 +1,92 @@
+# IQ
+
+IQ is an AI-powered intelligent assistant integrated into HCL Digital Experience (DX) that provides real-time, context-aware assistance to help users accomplish tasks more efficiently. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment, enabling users to interact with AI capabilities seamlessly while managing content and sites.
+
+## Overview
+
+IQ provides the following functionalities:
+
+- Access AI-powered assistance through an intuitive chat interface integrated into DX.
+- Interact with IQ via a side panel or compact view, automatically determined by the available space on the current DX page.
+- Expand either the side panel or compact view to a full expanded dialog view for a more spacious experience.
+- Ask questions and receive intelligent responses powered by AI models.
+- Maintain conversational context within an active session.
+- Experience a responsive UI that supports all DX locales, including LTR and RTL layouts.
+- Benefit from real-time communication through WebSocket technology for instant responses.
+
+## Key Features
+
+### **Conversational AI Interface**
+IQ provides a natural language interface where users can ask questions, request assistance, and receive intelligent responses. The chat interface supports markdown formatting, code snippets, and structured responses.
+
+### **Adaptive Access**
+IQ automatically adapts its presentation based on the available space on the current DX page:
+
+- **Side Panel**: On pages with sufficient horizontal space, clicking the sparkle icon (✨) in the Toolbar opens IQ as a side panel from the right (LTR) or left (RTL).
+- **Compact View**: On pages where space is limited, IQ provides a Floating Action Button (FAB) at the bottom-right (LTR) or bottom-left (RTL) that opens a compact view.
+
+From either view, the **Full View** button in the header expands IQ into a full expanded dialog for a more spacious experience.
+
+### **Session Management**
+IQ maintains conversational context within an active session. You can start a new conversation at any time using the **"Start a new conversation"** button in the header.
+
+!!! note
+    Conversation history is not persisted in this initial release. Starting a new conversation or ending the session will permanently clear the current context.
+
+### **Real-Time Communication**
+Built on WebSocket technology, IQ provides instant responses and supports streaming content for longer responses, ensuring a smooth and responsive user experience.
+
+## Prerequisites
+
+To use IQ, ensure the following prerequisites are met:
+
+1. HCL Digital Experience (DX) version 236 or higher is installed and running.
+2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](./installation.md).
+3. Appropriate user permissions are configured to access IQ functionality.
+4. Network connectivity is available for WebSocket communication between the browser and the IQ backend service.
+
+## Documentation Overview
+
+Refer to the following pages for comprehensive information about IQ:
+
+- **[Installing IQ](./installation.md)**  
+  This section provides detailed instructions on installing, configuring, and deploying IQ in your DX environment.
+
+- **[Accessing IQ](./access.md)**  
+  This section explains the different methods to access IQ, including the toolbar sparkle icon and floating action button.
+
+- **[Using IQ](./usage.md)**  
+  This section provides a step-by-step guide on interacting with IQ, managing conversations, and leveraging its features effectively.
+
+- **[Configuration](./configuration.md)**  
+  This section details the configuration options available to administrators for customizing IQ behavior, including LLM provider settings, MCP server integration, and backend environment variables.
+
+- **[Limitations of IQ](./limitations.md)**  
+  This section highlights the current limitations and known issues of IQ.
+
+- **[Troubleshooting IQ](./troubleshooting.md)**  
+  This section provides guidance on resolving common issues and troubleshooting IQ connectivity or functionality problems.
+
+## Architecture Overview
+
+IQ consists of three main components:
+
+1. **Frontend UI**: Built with Lit web components, providing the chat interface, side panel, and FAB components.
+2. **Backend Service**: A Node.js/Koa server that handles WebSocket connections, manages sessions, and integrates with AI services.
+3. **MCP Integration**: Connects to Model Context Protocol servers to provide AI capabilities and tool execution.
+
+The architecture ensures secure, real-time communication between users and AI services while maintaining session state and providing a responsive user experience.
+
+## Getting Started
+
+To get started with IQ:
+
+1. Ensure all prerequisites are met, including DX version 236 or higher.
+2. Follow the installation instructions in [Installing IQ](./installation.md) to deploy IQ in your environment.
+3. Learn how to access IQ using the methods described in [Accessing IQ](./access.md).
+4. Explore the features and capabilities outlined in [Using IQ](./usage.md).
+
+For any issues or questions, refer to the [Troubleshooting](./troubleshooting.md) section or contact HCL Support.
+
+!!! note "Screenshots"
+    Screenshots throughout this documentation use placeholder images and will be updated with actual IQ screenshots in a future revision.
