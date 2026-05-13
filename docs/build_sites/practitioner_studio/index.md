@@ -8,7 +8,7 @@ Practitioner Studio provides a modern and streamlined user experience for HCL DX
 - **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
   Use the modern interface with widgets, action buttons, and quick links to manage common tasks and information efficiently.
 - **[Web content](../practitioner_studio/web_content.md)**  
-  Learn more about managing libraries, creating, editing, or cleaning up data, and setting up syndication for HCL DX web content management.
+Learn more about managing libraries, creating, editing, or cleaning up data and design for HCL DX web content management.
 - **[HCL Digital Asset Management (DAM)](../../manage_content/digital_assets/index.md)**  
   Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
 - **[Site templates](../practitioner_studio/site_templates.md)**  
@@ -30,6 +30,9 @@ Starting from CF230, the Practitioner Studio toolbar and UI have undergone the f
 
 - A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
 - The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
+
+    ![Screen capture of the updated Administration section](../../assets/Enhanced_Practitioner_Studio_and_toolbar_Administration.png)
+
     - **Content Management:** This section provides access to applications used for the general administration of Web Content Management.
     - **Production:** This section includes applications designed to streamline essential administrative tasks for managing the portal.
 
