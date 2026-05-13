@@ -4,12 +4,22 @@ The Soft Delete feature helps prevent accidental deletion of assets and collecti
 
 ## Soft Delete Lifecycle
 
-### Moving an item to Trash
-The system uses a **soft delete** mechanism: instead of permanent removal, items are moved to a hidden **Trash** state. It automatically records the **deletion date** and the **user** who performed the action.
+### Moving an item/collection to Trash
+The system uses a **soft delete** mechanism: instead of permanent removal, item/collection is moved to a hidden **Trash** state. It automatically records the **deletion date** and the **user** who performed the action.
 
-**To move an item to Trash:**
+**To move a item/collection to Trash:**
 
-1. Open the overflow menu for the asset or collection.
+<div class="grid" markdown>
+![Move collection to trash](../../../../images/DAM_collection_move_to_trash.png)
+![Move item to trash](../../../../images/DAM_item_move_to_trash.png)
+</div>
+
+<div class="grid" markdown>
+![Confirm collection move to trash](../../../../images/DAM_collection_move_to_trash_confirm.png)
+![Confirm item move to trash](../../../../DAM_item_move_to_trash_confirm.png)
+</div>
+
+1. Open the overflow menu for the  [item](manage_media_assets.md#moving-a-media-asset-to-trash)/[collection](manage_collections.md#moving-a-collection-to-trash).
 2. Select **Move to Trash**.
 3. Confirm the action in the confirmation dialog.
 4. A snackbar notification will confirm the move.
@@ -28,6 +38,19 @@ Access to the Trash is restricted by role:
 
 The Trash can be accessed via **Settings**.
 
+![Accessing trash](../../../../images/DAM_access_trash.png)
+
+![Trash View](../../../../images/DAM_permanent_delete_media_item.png)
+
+---
+
+## Actions available in Trash for collections and assets
+
+- **Preview:** View the content (for image and video assets).
+- **Download:** Download the content (for assets).
+- **Properties:** View asset or collection metadata.
+- **Restore:** Restores the asset or collection
+- **Delete permanently:** Deletes the asset or collection permanently
 ---
 
 ## Restore logic and conflict handling
@@ -43,10 +66,10 @@ A Collection Admin can restore individual assets or entire collections from the 
 - **Parent deletion:** If the parent collection has been permanently deleted, all child items are also permanently deleted and cannot be recovered.
 
 ### Media item restore
-![Restore media item](../../../images/DAM_restore_media_item.png)
+![Restore media item](../../../../images/DAM_restore_media_item.png)
 
 ### Collection restore
-![Restore collection](../../../images/DAM_restore_collection.png)
+![Restore collection](../../../../images/DAM_restore_collection.png)
 
 ### Name conflict resolution
 
@@ -67,48 +90,46 @@ A Collection Admin can permanently delete a specific item from the Trash at any 
 4. A snackbar notification will confirm the permanent delete.
 
 #### Permanent delete collection
-![Permanent delete Collection](../../../images/DAM_collection_permanent_delete.png)
+
+Use the HCL Digital Experience 9.5 DAM editor to permanently delete a collection:
+
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a collection and click **Permanently delete**.
+
+![Permanent delete Collection](../../../../images/DAM_collection_permanent_delete.png)
+
+2. A message appears to confirm your action. Permanently deleting a collection is an irreversible action which removes the data from the database.
+
+3. Click **Delete permanently** to confirm the action.
 
 #### Permanent delete media asset
-![Permanent delete digital media asset](../../../images/DAM_permanent_delete_media_item.png)
-![Permanent delete confirmation dialog](../../../images/DAM_Permanent_delete_confimation_dialog.png)
+
+Use the HCL Digital Experience 9.5 DAM editor to [permanently delete a media asset](../../configuration/dam_soft_delete.md#permanent-delete-media-asset):
+
+![Accessing trash](../../../../images/DAM_access_trash.png)
+
+1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **Settings** and go to Trash section and click **Go to trash**. Once trash is rendered click **More actions** menu of a media asset and click **Permanently delete**.
+
+![Permanent delete digital media asset](../../../../images/DAM_permanent_delete_media_item.png)
+
+![Permanent delete confirmation dialog](../../../../images/DAM_Permanent_delete_confimation_dialog.png)
+
+2. A message appears to confirm your action. Permanently deleting a media asset is an irreversible action which removes the data from the database.
+
+3. Click **Delete permanently** to confirm the action.
 
 ### Empty Trash
 A Collection Admin can clear all items from the Trash that they have administrative access to. This permanently removes those items immediately.
-![Empty Trash](../../../images/DAM_Empty_trash.png)
+
+![Empty Trash](../../../../images/DAM_Empty_trash.png)
 
 ### Automated Trash clearance (heartbeat)
 A background heartbeat process runs at a configured interval to automatically purge items whose retention period has expired. This ensures the Trash is maintained without manual intervention.
-![Automated Trash clearance](../../../images/DAM_trash_grid_view.png)
 
-![Trash List view](../../../images/DAM_trash_list_view.png)
+![Automated Trash clearance](../../../../images/DAM_trash_grid_view.png)
 
----
-
-## Actions available in Trash for collections and assets
-
-- **Preview:** View the content (for image and video assets).
-- **Download:** Download the content (for assets).
-- **Properties:** View asset or collection metadata.
-- **Restore:** Restores the asset or collection
-- **Delete permanently:** Deletes the asset or collection permanently
+![Trash List view](../../../../images/DAM_trash_list_view.png)
 
 ---
-
-## Configuration
-
-Soft delete and Trash clearance behaviors are controlled in `values.yaml` under the `configuration.digitalAssetManagement` section:
-
-```yaml
-configuration:
-  digitalAssetManagement:
-    # Enable or disable automatic Trash clearance
-    enableTrashClearance: true
-    # Number of days before items are permanently deleted
-    trashClearanceTimeInDays: 30
-    # Interval (in minutes) for the clearance heartbeat
-    trashClearanceHeartbeatInMinutes: 60
-```
 
 ## Staging
 
