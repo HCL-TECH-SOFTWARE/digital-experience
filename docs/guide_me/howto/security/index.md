@@ -20,5 +20,5 @@ Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL 
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
 - **[How to redirect users to a custom login page in HCL DX](./ChangeLoginPage.md)**  
 Learn how to create a custom login page for protected resources in HCL DX.
-- **[How To Integrate the Impersonation API with SAML](./ImpersonationAPIWithSAML.md)**  
-Learn how to integrate the Impersonation API with SAML.
+- **[How to integrate the impersonation API with SAML](./ImpersonationAPIWithSAML.md)**  
+Learn how to integrate the impersonation API with SAML.
