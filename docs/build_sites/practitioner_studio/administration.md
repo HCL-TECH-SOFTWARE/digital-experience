@@ -1,6 +1,6 @@
 # Administration
 
-Use the Portal administration portlets that are provided with HCL DX to perform various day-to-day administration tasks.
+Learn how to use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
 ## Site management
 

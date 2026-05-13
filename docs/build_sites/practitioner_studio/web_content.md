@@ -1,4 +1,4 @@
-# Web content
+# Web Content
 
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 

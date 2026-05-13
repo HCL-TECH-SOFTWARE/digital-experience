@@ -5,13 +5,13 @@ Practitioner Studio provides a modern and streamlined user experience for HCL DX
 !!! note
     During the update, custom-created authoring pages may no longer contain the referenced portlets, if those specific portlets were part of the rearrangement of pages. To prevent this, simply export the custom authoring page before migration and import it again after the process is complete.
 
-- **[Practitioner Dashboard](../practitioner_studio/dashboard.md)**  
+- **[Dashboard](../practitioner_studio/dashboard.md)**  
   Learn how to use the modern interface with widgets, action buttons, and quick links to manage common tasks and information efficiently.
-- **[Web content](../practitioner_studio/web_content.md)**  
+- **[Web Content](../practitioner_studio/web_content.md)**  
   Learn more about managing libraries, creating, editing, or cleaning up data and design for HCL DX web content management.
-- **[HCL Digital Asset Management (DAM)](../../manage_content/digital_assets/index.md)**  
+- **[Digital Assets](../../manage_content/digital_assets/index.md)**  
   Learn how to centrally store, manage, and add rich media assets to DX site content for consistent, engaging digital experiences across channels.
-- **[Site templates](../practitioner_studio/site_templates.md)**  
+- **[Site Templates](../practitioner_studio/site_templates.md)**  
   Learn how to configure and manage site templates using Site Builder. If Practitioner Studio isn’t enabled, you can still manage Site templates manually.
 - **[Personalization](../practitioner_studio/personalization.md)**  
   Learn how to configure your HCL DX portal site as an administrator.
