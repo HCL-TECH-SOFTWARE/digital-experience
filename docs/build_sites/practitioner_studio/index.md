@@ -18,7 +18,7 @@ Practitioner Studio provides a modern and streamlined user experience for HCL DX
 - **[Themes](../practitioner_studio/themes.md)**  
   Learn how to use the Theme Manager portlet and the Theme Optimization Analyzer to create and develop theme web content.
 - **[Administration](../practitioner_studio/administration.md)**  
-  Learn how to use the Portal administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
+  Learn how to use the Administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
 ## Enhanced Practitioner Studio and toolbar
 
