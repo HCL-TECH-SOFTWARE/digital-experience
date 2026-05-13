@@ -44,7 +44,7 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 |.webp|image/webp|
 
 !!! note
-    - YYou can set the maximum file size for DAM asset uploads. For more information on configuring file size, see the `MediaTypeGroupController.updateById` API documentation topic.
+    - You can set the maximum file size for DAM asset uploads. For more information on configuring file size, see the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
 
     - SVG files are disabled by default. To enable `.svg` files (extension `image/svg+xml`) for asset uploads, use the API and set the `enabled` parameter to `true`. For more information, see [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById). For step-by-step guidance, see [Add a new MIME type in DAM](../../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md/#adding-a-new-mime-type-in-dam).
 
@@ -58,12 +58,9 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 |.webm|video/webm|
 
 !!! notes
+    - Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL DAM that happens when any video is uploaded and when Kaltura integration is configured and enabled.
 
-<<
-    -   \\\\ju
-    -   Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL DAM that happens when any video is uploaded and when Kaltura integration is configured and enabled.
-=======
-    -   You can set the maximum file size for DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
+    - You can set the maximum file size for DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
 
     - Videos are automatically synchronized after they are uploaded. Auto-synchronization is a background process in HCL DAM that occurs when a video is uploaded and Kaltura integration is configured and enabled.
 
@@ -129,7 +126,7 @@ This section explains how to enable additional file types in HCL DX DAM that are
 
 5. Verify and add additional configuration.
 
-After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`. You can also check the DAM settings UI to confirm that the file type is enabled. For additional configuration (such as renditions or custom transformations), see the extensibility documentation.
+After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`. <!--REMOVE COMMENT AFTER FILE IS MERGED: You can also check the DAM settings UI to confirm that the file type is enabled. For additional configuration such as [Using DAM extensibility](../../../digital_assets/configuration/dam_extensibility/index.md), see the extensibility documentation.-->
 
 **Example:**
 
@@ -158,7 +155,7 @@ Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player (if t
     -   The Kaltura plugin is configured and enabled.
 
     ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
-
+    For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
 
 ## Downloading a media asset source, version, or rendition
 
@@ -276,7 +273,7 @@ Another way to rename a media asset is to edit the asset by clicking the **Penci
 
 ## Enabling or disabling file types
 
-Use the DAM MediaTypeController API to enable or disable supported file types for asset uploads in HCL DX DAM. For more infor mation on how configure the HCL DX server to recognize other images, refer to [How to enable support for additional image formats in HCL Web Content Manager](../../../../guide_me/howto/configuration/EnableImageFormats.md)
+Use the DAM MediaTypeController API to enable or disable supported file types for asset uploads in HCL DX DAM. For more information on how configure the HCL DX server to recognize other images, refer to [How to enable support for additional image formats in HCL Web Content Manager](../../../../guide_me/howto/configuration/EnableImageFormats.md)
 
 The SVG file type is disabled by default. To enable the `.svg` file type (`image/svg+xml`) for asset uploads, use the `enabled` parameter with the [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById){target="_blank"} API described in this documentation topic.
 
