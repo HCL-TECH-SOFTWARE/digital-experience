@@ -2,7 +2,7 @@
 
 This section explains how to access the IQ AI assistant from within HCL Digital Experience (DX).
 
-IQ automatically adapts its presentation based on the available space on the current DX page. On pages with sufficient horizontal space, IQ appears as a **side panel**. On pages where space is limited, IQ instead provides a **Floating Action Button (FAB)** that opens a **compact view**. You do not need to choose between these — DX allows developers to control the layout mode of individual pages. You can optimize the display by configuring a true/false parameter based on the page's available horizontal space.. 
+IQ automatically adapts its presentation based on the available space on the current DX page. On pages with sufficient horizontal space, IQ appears as a **side panel**. On pages where space is limited, IQ instead provides a **Floating Action Button (FAB)** that opens a **compact view**. You do not need to choose between these — DX allows developers to control the layout mode of individual pages. You can optimize the display by configuring a true/false parameter based on the page's available horizontal space.
 
 From either the side panel or compact view, you can expand IQ to a **Full View** (expanded dialog) for a more spacious and interactive experience.
 

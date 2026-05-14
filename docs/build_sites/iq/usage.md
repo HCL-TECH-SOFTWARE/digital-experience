@@ -122,6 +122,7 @@ While IQ is processing your request (indicated by the "Thinking..." loading indi
 - You can send a new message immediately.
 
    ![Stop Ongoing Request](../../assets/HCL_IQ_Stop_Ongoing_Request.png "Cancel ongoing request")
+
 ---
 
 ### Expanding IQ to Full View
@@ -142,7 +143,7 @@ From either the side panel or the compact view, you can expand IQ to a full expa
 
 ### Closing and Reopening IQ
 
-### **To Close IQ:**
+**To Close IQ:**
 
 - **Side Panel**:
    Side panel can be closed by any of the following way.
