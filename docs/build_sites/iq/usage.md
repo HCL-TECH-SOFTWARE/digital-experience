@@ -189,7 +189,6 @@ If something goes wrong, IQ displays an error message:
 
 Now that you know how to use IQ effectively:
 
-- **[Configuration](./configuration.md)** - Learn about customizing IQ behavior and settings
 - **[Limitations](./limitations.md)** - Understand current limitations and constraints
 - **[Troubleshooting](./troubleshooting.md)** - Get help resolving issues
 

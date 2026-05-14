@@ -785,7 +785,6 @@ Complex questions naturally take longer. If slowness is persistent, contact your
 ## Related Resources
 
 - **[Installation Guide](./installation.md)** - Setup and deployment instructions
-- **[Configuration Guide](./configuration.md)** - Configuration options and tuning
 - **[Usage Guide](./usage.md)** - How to use IQ effectively
 - **[Limitations](./limitations.md)** - Known limitations and constraints
 

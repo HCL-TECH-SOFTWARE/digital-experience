@@ -67,5 +67,4 @@ If you encounter issues not listed here:
 
 ## Next Steps
 
-- **[Configuration](./configuration.md)** — Administrator-level settings for the IQ backend service
 - **[Troubleshooting IQ](./troubleshooting.md)** — Resolve common issues with IQ
