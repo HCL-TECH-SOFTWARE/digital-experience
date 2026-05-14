@@ -9,98 +9,103 @@ Learn how to use the Administration portlets that are provided with HCL DX to do
 Manage the structure and foundation of your portal environment, including pages, virtual portals, and templates.
 
 - **[Manage Pages portlet](../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/index.md)**  
-    Learn how to use the Manage Pages portlet to create, edit, activate, order, and delete pages, external web pages, and labels.
+Learn how to use the Manage Pages portlet to create, edit, activate, order, and delete pages, external web pages, and labels.
 - **[Virtual Portal Manager](../../build_sites/virtual_portal/vp_mgr_portlet/index.md)**  
-    Learn how to use the Virtual Portal Manager portlet to create, configure, and manage virtual portals, including default content, access rights, and administration settings.
+Learn how to use the Virtual Portal Manager portlet to create, configure, and manage virtual portals, including default content, access rights, and administration settings.
 - **[Page templates](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/getting_started/wcm_delivery_webpagetemplate_about.md#web-content-pages-and-templates)**  
-    Learn how to use page templates to define the layout, style, and content structure for web content pages.
+Learn how to use page templates to define the layout, style, and content structure for web content pages.
 
 ## Applications
 
 Deploy and administer portlets, web modules, and applications across your DX platform.
 
 - **[Web Modules](../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/managing_web_modules/index.md)**  
-    Learn how to use the Manage Web Modules portlet to install, update, and manage portlets from web services or WAR files, and to view detailed information and access settings for each module.
+Learn how to use the Manage Web Modules portlet to install, update, and manage portlets from web services or WAR files, and to view detailed information and access settings for each module.
 - **[Applications](../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/managing_portlet_apps/index.md)**  
-    Learn how to use the Manage Applications portlet to enable portlet applications as web services, view their portlets, and edit their properties.
+Learn how to use the Manage Applications portlet to enable portlet applications as web services, view their portlets, and edit their properties.
 - **[Portlets](../../extend_dx/portlets_development/mng_portlets_apps_widgets/portlet_management/index.md)**  
-    Learn how to use Portlet Management tools to install, configure, and manage portlets and web services, including creating, modifying, and controlling access to portlets across your HCL DX environment.
+Learn how to use Portlet Management tools to install, configure, and manage portlets and web services, including creating, modifying, and controlling access to portlets across your HCL DX environment.
+
+## Themes and Skins
+
+Manage the visual design of your portal using the Themes and Skins portlet. 
+
+- **[Themes and Skins](../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/customizing_pages/admcustom_skins.md)**  
+Learn how to use the Themes and Skins portlet to set default themes and skins, manage their associations, and add or remove theme elements to ensure a consistent user experience.
 
 ## Content management
 
 Synchronize, syndicate, and organize your web content efficiently using dedicated management tools and extensions.
 
 - **[Syndicators and subscribers](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)**  
-    Learn how to use syndication to transfer and synchronize web content between HCL DX environments by configuring, monitoring, and managing syndicators and subscribers.
+Learn how to use syndication to transfer and synchronize web content between HCL DX environments by configuring, monitoring, and managing syndicators and subscribers.
 - **[Feed management](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)**  
-    Learn how to use Web Content Feed Management to create, configure, schedule, and manage web content feeds across your environment.
+Learn how to use Web Content Feed Management to create, configure, schedule, and manage web content feeds across your environment.
 - **[Multi-locale Library Copy application](../../manage_content/wcm_authoring/multi_lingual/mls_extension/wcm_mls_ext_library.md)**  
-    Learn how to use the Library Copy portlet extension to create a new locale by duplicating an existing library with a new name and locale.
+Learn how to use the Library Copy portlet extension to create a new locale by duplicating an existing library with a new name and locale.
 - **[WCM Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md)**  
-    Learn how to use the HCL Web Content Manager Support Tools portlet to view, analyze, and troubleshoot Java Content Repository (JCR) nodes and content directly.
-- **[Themes and Skins](../../deployment/manage/portal_admin_tools/portal_user_interface/managing_pages/manage_pages_portlets/customizing_pages/admcustom_skins.md)**  
-    Learn how to use the Themes and Skins portlet to manage the visual design of your portal by setting default themes and skins, associating them, and adding or removing theme elements to ensure a consistent user experience.
+Learn how to use the HCL Web Content Manager Support Tools portlet to view, analyze, and troubleshoot Java Content Repository (JCR) nodes and content directly.
 
 ## Security
 
 Secure your portal by managing users, defining resource permissions, and safeguarding credentials for authentication.
 
 - **[Users and Groups](../../deployment/manage/security/people/authorization/controlling_access/index.md)**  
-    Learn how to use the Users and Groups portlet to manage user accounts and group memberships, including creating, editing, deleting, and assigning roles and permissions.
+Learn how to use the Users and Groups portlet to manage user accounts and group memberships, including creating, editing, deleting, and assigning roles and permissions.
 - **[Resource Permissions](../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md)**  
-    Learn how to use the Resource Permissions portlet to manage access control by assigning roles, setting inheritance, and defining ownership or external security management.
+Learn how to use the Resource Permissions portlet to manage access control by assigning roles, setting inheritance, and defining ownership or external security management.
 - **[User and Group Permissions](../../deployment/manage/security/people/authorization/controlling_access/user_group_permission/index.md)**  
-    Learn how to use the User and Group Permissions portlet to assign roles and manage group memberships.
+Learn how to use the User and Group Permissions portlet to assign roles and manage group memberships.
 - **[Credential Vault](../../deployment/manage/security/people/authorization/controlling_access/managing_cred_info/index.md)**  
-    Learn how to use the Credential Vault portlet to securely manage and access stored credentials for single sign-on authentication.
+Learn how to use the Credential Vault portlet to securely manage and access stored credentials for single sign-on authentication.
 
 ## Search
 
 Administer search collections, scopes, and tagging capabilities to enhance content discoverability across your site.
 
 - **[Settings](../../build_sites/search/portal_search/administer_portal_search/index.md)**  
-    Learn how to use the Manage Search portlet to configure and administer portal search services, collections, and scopes.
+Learn how to use the Manage Search portlet to configure and administer portal search services, collections, and scopes.
 - **[Tag Center](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tagrate_managing/tag_center/index.md)**  
-    Learn how to use the Tag Center to search and browse portal resources by tags.
+Learn how to use the Tag Center to search and browse portal resources by tags.
 
 ## Production
 
 Integrate web services, manage virtual applications, and handle configuration imports for your production environment.
 
 - **[Web Services](../../extend_dx/portlets_development/usage/wsrp/configuration/cfg_portal_for_webservices/h_wserv_about.md)**  
-    Learn how to use the Web Service Configuration portlet to set up your portal to consume remote portlets through WSRP.
+Learn how to use the Web Service Configuration portlet to set up your portal to consume remote portlets through WSRP.
 - **[Virtual Application Manager](../../build_sites/virtual_portal/vp_mgr_portlet/index.md)**  
-    Learn how to use the Virtual Portal Manager portlet to create, configure, and administer virtual portals on demand.
+Learn how to use the Virtual Portal Manager portlet to create, configure, and administer virtual portals on demand.
 - **[XML Import](../../build_sites/virtual_portal/vp_mgr_portlet/index.md)**  
-    Learn how to use the XML Configuration portlet to import portal configuration files and review the import status.
+Learn how to use the XML Configuration portlet to import portal configuration files and review the import status.
 
 ## Tracing
 
 Monitor and troubleshoot your portal using client-side logging, content reporting, and diagnostic support tools to capture and analyze system behavior.
 
 - **[HCL Content Composer](../../manage_content/wcm_authoring/content_composer/index.md)**  
-    Learn how to use HCL Content Composer to create and manage site content.
+Learn how to use HCL Content Composer to create and manage site content.
 - **[HCL Content Reporting](../../manage_content/wcm_authoring/content_reporting/index.md)**  
-    Learn how to generate reports and update reported items in bulk.
+Learn how to generate reports and update reported items in bulk.
 - **[HCL Web Content Manager Support Tools](../../deployment/manage/troubleshooting/wcm_support_tools.md)**  
-    Learn how to use the Web Content Manager (WCM) Support Tools portlet to investigate and analyze Java Content Repository (JCR) nodes.
+Learn how to use the Web Content Manager (WCM) Support Tools portlet to investigate and analyze Java Content Repository (JCR) nodes.
 - **[Managing Syndicators and Subscribers](../../manage_content/wcm_delivery/syndication/manage_synd_subs/index.md)**  
-    Learn how to transport data between HCL Web Content Manager instances.
+Learn how to transport data between HCL Web Content Manager instances.
 - **[Web Content Feed Management](../../manage_content/wcm_authoring/wci/webcontentfeed_mgmt/index.md)**  
-    Learn how to create and manage content feeds.
+Learn how to create and manage content feeds.
 
 ## Settings
 
 Configure essential global properties, unique naming conventions, markup configurations, and client device support for your portal.
 
 - **[Global](../../build_sites/portal_settings/manage_global_setting/index.md)**  
-    Learn how to set portal server options, including the default language, home page, Find URL, and behavior for unauthorized portlets.
+Learn how to set portal server options, including the default language, home page, Find URL, and behavior for unauthorized portlets.
 - **[Custom Unique Names](../../build_sites/portal_settings/manage_custom_unique_names/index.md)**  
-    Learn how to configure unique naming conventions for portal resources to ensure consistent identification across environments.
+Learn how to configure unique naming conventions for portal resources to ensure consistent identification across environments.
 - **[Markups](../../build_sites/portal_settings/manage_markup_language/index.md)**  
-    Learn how to use Manage Markups to register markup types that the portal can support.
+Learn how to use Manage Markups to register markup types that the portal can support.
 - **[Clients](../../build_sites/portal_settings/manage_client_devices/index.md)**  
-    Learn how to define the types of devices that can access the portal and manage their client-specific settings.
+Learn how to define the types of devices that can access the portal and manage their client-specific settings.
 
 <!--- 
 -   **[Manage pages portlets](../admin-system/mp_manage_pages.md)**  
