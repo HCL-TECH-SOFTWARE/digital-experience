@@ -1,4 +1,4 @@
-# What's new in CF235 
+# What's new in CF235
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF235 on supported platforms:
 
