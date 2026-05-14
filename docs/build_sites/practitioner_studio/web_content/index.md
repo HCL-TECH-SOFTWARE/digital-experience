@@ -15,6 +15,8 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
 - [**Managing web content libraries**](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
+- [**Presentation Designer**](../../../manage_content/wcm_authoring/presentation_designer/index.md)<br>
+    Learn how to create and edit presentation templates with a visual drag-and-drop interface.
 
 ## Digital Assets
 The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform for storing and managing rich media assets, enabling engaging and consistently branded experiences across digital channels in HCL DX.

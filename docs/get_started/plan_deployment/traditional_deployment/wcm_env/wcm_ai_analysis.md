@@ -102,7 +102,11 @@ Only administrators can configure an AI class to use a custom content AI provide
 
 2. Run the following config engine task:
 
-	```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+```
+/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+```
+
+For an example of how to use a custom content UI provider, see the [Google Vertex sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample){target="_blank"} built using Apache Maven. This sample uses [Google Vertex AI](https://cloud.google.com/vertex-ai){target="_blank"} for sentiment analysis, summary, and keyword generation.
 
 ## Config engine task for disabling content AI analysis
 
