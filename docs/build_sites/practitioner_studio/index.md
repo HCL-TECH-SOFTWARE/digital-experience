@@ -20,20 +20,6 @@ Practitioner Studio provides a modern and streamlined user experience for HCL DX
 - **[Administration](../practitioner_studio/administration.md)**  
   Learn how to use the Administration portlets that are provided with HCL DX to do various day-to-day administration tasks.
 
-## Enhanced Practitioner Studio and toolbar
-
-![Screen capture of the Enhanced Practitioner Studio and Toolbar.](../../assets/Enhanced_Practitioner_Studio_and_toolbar.png)
-
-Starting from CF230, the Practitioner Studio toolbar and UI have undergone the following changes to enhance the user experience:
-
-- The toolbar now features a centralized search function, making it easier to locate content and tools.
-
-- A dedicated user profile menu has been introduced, providing quick access to profile management, impersonation, and logout options.
-- The Administration pages have been reorganized to improve usability. Two new sections have been introduced:
-
-    - **Content Management:** This section provides access to applications used for the general administration of Web Content Management.
-    - **Production:** This section includes applications designed to streamline essential administrative tasks for managing the portal.
-
 ## HCLSoftware U learning materials
 
 For an introduction and a demo on how to use Practitioner Studio, go to [Practitioner Studio](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D300){target="_blank"}.

@@ -7,7 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Dashboard
+- Practitioner Studio - Dashboard
 - Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -74,13 +74,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
 
-### Practitioner Dashboard  
+### Practitioner Studio - Dashboard  
 
 === "Containers"
-    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
 
 === "On-Premises"
-    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
 
 ### Presentation Designer - New entry points from Authoring portlet
 
