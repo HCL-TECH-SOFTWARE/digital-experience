@@ -1,6 +1,4 @@
-# Practitioner Dashboard
-
-## Overview
+# Dashboard
 
 The Practitioner Dashboard provides a modern interface with widgets, action buttons, and quick links that help you complete common tasks and access information efficiently.
 
