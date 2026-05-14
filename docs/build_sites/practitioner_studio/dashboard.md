@@ -1,6 +1,6 @@
 # Dashboard
 
-The Practitioner Studio Dashboard provides a modern interface with widgets, action buttons, and quick links that help you complete common tasks and access information efficiently.
+The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently.
 
 ![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
 
