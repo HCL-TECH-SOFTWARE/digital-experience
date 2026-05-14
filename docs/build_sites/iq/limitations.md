@@ -19,10 +19,17 @@ This page lists the known limitations of IQ in the initial release (compatible w
 - Text input only — rich text input editor, file attachments, images, and documents are not supported.
 - Voice input and text-to-speech are not supported.
 
-### Accessibility
-- Full keyboard navigation requires enabling it in your browser:
-    - **Firefox**: Settings > General > Browsing > *"Always use the cursor keys to navigate within pages"*
-    - **Safari**: Preferences > Advanced > *"Press Tab to highlight each item on a webpage"*
+## Accessibility
+
+To ensure full accessibility on the Search page, users must enable keyboard navigation settings in their browser.
+
+### Firefox
+
+![Firefox keyboard navigation settings](../../assets/HCL_Search_Browser_Firefox_Settings.png)
+
+### Safari
+
+![Safari keyboard navigation settings](../../assets/HCL_Search_Browser_Safari_Settings.png)
 
 ---
 

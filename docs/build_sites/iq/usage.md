@@ -14,15 +14,13 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
 ### Opening IQ for the First Time
 
-**Open IQ**
+1. **Open IQ**
 
-   Navigate to your HCL DX platform and log in with your credentials.
-   ```
-   https://your-dx-instance.com/wps/portal
-   ```
-   Depending on the current page, either click the **sparkle icon** in the Toolbar (side panel) or the **Floating Action Button (FAB)** at the bottom corner (compact view). DX automatically determines which is available based on the page layout. IQ opens with an empty chat interface, ready for your first interaction.
+    Navigate to your HCL DX platform and log in with your credentials.
 
-   ![IQ Side Panel Opens](../../assets/HCL_IQ_Side_Panel_Initial_View.png "IQ side panel opens")
+    Depending on the current page, either click the **sparkle icon** in the Toolbar (side panel) or the **Floating Action Button (FAB)** at the bottom corner (compact view). DX automatically determines which is available based on the page layout. IQ opens with an empty chat interface, ready for your first interaction.
+
+    ![IQ Side Panel Opens](../../assets/HCL_IQ_Side_Panel_Initial_View.png "IQ side panel opens")
 
 ---
 
@@ -32,23 +30,26 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
 1. **Type Your Question or Request**
 
-   Click in the input field at the bottom of the IQ interface and type your message. For example:
-   ```
-   Hello! Can you help me understand what you can do?
-   ```
-   Press **Enter** on your keyboard or click the **Send** button (paper plane icon) to send your message.
+    Click in the input field at the bottom of the IQ interface and type your message. For example:
 
-   ![IQ Side Panel Ready](../../assets/HCL_IQ_Side_Panel_First_Question.png "IQ side panel ready for interaction")
+    ```
+    Hello! Can you help me understand what you can do?
+    ```
+
+    Press **Enter** on your keyboard or click the **Send** button to send your message.
+
+    ![IQ Side Panel Ready](../../assets/HCL_IQ_Side_Panel_First_Question.png "IQ side panel ready for interaction")
 
 2. **View IQ's Response**
 
-   IQ processes your request and displays the response in the chat area. Responses may include:
-   - Plain text explanations
-   - Formatted content (bold, italic, lists)
-   - Code snippets with syntax highlighting
-   - Links to relevant resources
+    IQ processes your request and displays the response in the chat area. Responses may include:
 
-   ![View Response](../../assets/HCL_IQ_First_Question_Response.png "IQ displays its response")
+    - Plain text explanations
+    - Formatted content (bold, italic, lists)
+    - Code snippets with syntax highlighting
+    - Links to relevant resources
+
+    ![View Response](../../assets/HCL_IQ_First_Question_Response.png "IQ displays its response")
 
 ### Understanding Message States
 
@@ -72,19 +73,22 @@ IQ maintains context throughout your conversation session. You can ask follow-up
 **Example Conversation Flow:**
 
 1. **Initial Question**
-   ```
-   What is HCL Digital Experience?
-   ```
+
+    ```
+    What is HCL Digital Experience?
+    ```
 
 2. **Follow-up Question** (IQ remembers the context)
-   ```
-   What are its main features?
-   ```
+
+    ```
+    What are its main features?
+    ```
 
 3. **Another Follow-up** (context is maintained)
-   ```
-   How do I create a new page?
-   ```
+
+    ```
+    How do I create a new page?
+    ```
 
 ![Conversation Flow](../../assets/HCL_IQ_Maintain_Context_Across_Multiple_Messages.png "Maintain context across multiple messages")
 
@@ -94,21 +98,21 @@ To start a fresh conversation and clear the current context:
 
 1. **Locate the "Start a new conversation" button**
 
-   Look for the "Start a new conversation" icon in the IQ header (available in both the side panel and compact view).
+    Look for the **Start a new conversation** icon in the IQ header (available in both the side panel and compact view).
 
-   ![Start a new conversation Button](../../assets/HCL_IQ_Start_New_Confirmation_Icon.png "Start a new conversation button location")
+    ![Start a new conversation Button](../../assets/HCL_IQ_Start_New_Confirmation_Icon.png "Start a new conversation button location")
 
 2. **Click the Button**
 
-   A confirmation dialog appears warning you that the current context will be permanently cleared.
+    A confirmation dialog appears warning you that the current context will be permanently cleared.
 
-   ![New Conversation Confirmation Dialog](../../assets/HCL_IQ_Start_New_Chat_Confirmation_Dialog.png "Confirm starting a new conversation")
+    ![New Conversation Confirmation Dialog](../../assets/HCL_IQ_Start_New_Chat_Confirmation_Dialog.png "Confirm starting a new conversation")
 
 3. **Click Proceed**
 
-   A new session begins with a fresh context.
+    A new session begins with a fresh context.
 
-   ![New Conversation Started](../../assets/HCL_IQ_New_Conversation_Start.png "New conversation started")
+    ![New Conversation Started](../../assets/HCL_IQ_New_Conversation_Start.png "New conversation started")
 
 !!! warning
     Starting a new conversation clears the current session context permanently. Conversation history is **not** persisted in this release — once cleared, the previous conversation cannot be recovered.
@@ -121,76 +125,74 @@ While IQ is processing your request (indicated by the "Thinking..." loading indi
 - A message "You stopped the response." is displayed in the chat area.
 - You can send a new message immediately.
 
-   ![Stop Ongoing Request](../../assets/HCL_IQ_Stop_Ongoing_Request.png "Cancel ongoing request")
+![Stop Ongoing Request](../../assets/HCL_IQ_Stop_Ongoing_Request.png "Cancel ongoing request")
 
 ---
 
-### Expanding IQ to Full View
+## Expanding IQ to Full View
 
 From either the side panel or the compact view, you can expand IQ to a full expanded dialog view for better readability and more interactive space:
 
 1. **Click the Full View Button**
 
-   In the IQ header, click the **Full View** icon.
+    In the IQ header, click the **Full View** icon.
 
-   ![Full View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Full View button")
+    ![Full View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Full View button")
 
 2. **IQ Expands to Full View**
 
-   IQ expands to cover the full viewport in a dialog view. Click the **Compact View** icon in the header to return to the side panel or compact view.
+    IQ expands to cover the full viewport in a dialog view. Click the **Compact View** icon in the header to return to the side panel or compact view.
 
-   ![Full View Mode](../../assets/HCL_IQ_Full_Dialog_View.png "IQ in full view mode")
+    ![Full View Mode](../../assets/HCL_IQ_Full_Dialog_View.png "IQ in full view mode")
 
-### Closing and Reopening IQ
+---
 
-**To Close IQ:**
+## Closing IQ
 
-- **Side Panel**:
-   Side panel can be closed by any of the following way.
-   - Click the close (X) button in the header
-   - Click Sparkle icon at toolbar to close the side panel
+- **Side Panel**: Can be closed by either of the following:
+    - Click the **Close (X)** button in the header
+    - Click the **Sparkle icon** in the toolbar
 
-   ![Close Side Panel](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Side Panel view")
+    ![Close Side Panel](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Side Panel view")
 
-- **Compact View**:
-   Compact View can be closed by any of the following way.
-  - Click the close (X) button in the header
-  - Click FAB sparkle icon
+- **Compact View**: Can be closed by either of the following:
+    - Click the **Close (X)** button in the header
+    - Click the **FAB sparkle icon**
 
-   ![Close Compact View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Compact view")
+    ![Close Compact View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Compact view")
 
-- **Full View or Expanded View**:
-   Full View can be closed by
-   - Clicking the close (X) button in the header
+- **Full View**: Can be closed by:
+    - Clicking the **Close (X)** button in the header
 
-   ![Close Full View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Full View interface")
+    ![Close Full View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Full View interface")
 
-### Notification Badge
+---
 
-If IQ receives a new message while the interface is closed, you'll see a notification badge on the sparkle icon or FAB:
+## Notification Badge
 
-![Notification Badge FAB Icon](../../assets/HCL_IQ_FAB_Icon_With_Badge.png "Notification badge with FAB icon indicates unseen messages")
+If IQ receives a new message while the interface is closed, a notification badge appears on the sparkle icon or FAB.
 
-![Notification Badge Sparkle Icon](../../assets/HCL_IQ_Sparkle_Icon_With_Badge.png "Notification badge with sparkle icon indicates unseen messages for side panel")
+![Notification Badge FAB Icon](../../assets/HCL_IQ_FAB_Icon_With_Badge.png "Notification badge on FAB indicates unseen messages")
 
-**To View Unseen Messages:**
-1. Click the sparkle icon or FAB to open IQ
-2. IQ opens and scrolls to the top of the new message from IQ
-3. The badge disappears once you've viewed the message
+![Notification Badge Sparkle Icon](../../assets/HCL_IQ_Sparkle_Icon_With_Badge.png "Notification badge on sparkle icon indicates unseen messages")
+
+To view unseen messages:
+
+1. Click the sparkle icon or FAB to open IQ.
+2. IQ opens and scrolls to the new message.
+3. The badge disappears once you have viewed the message.
+
+---
 
 ## Handling Errors
 
-### Error Messages
-
-If something goes wrong, IQ displays an error message:
+If something goes wrong, IQ displays an error message in the chat area.
 
 ![Error Message](../../assets/HCL_IQ_With_Error_Message.png "Error message displayed in IQ")
 
+---
+
 ## Next Steps
 
-Now that you know how to use IQ effectively:
-
-- **[Limitations](./limitations.md)** - Understand current limitations and constraints
-- **[Troubleshooting](./troubleshooting.md)** - Get help resolving issues
-
-For additional assistance, contact HCL Support or refer to the HCL DX documentation portal.
+- **[Limitations](./limitations.md)** — Understand current limitations and constraints
+- **[Troubleshooting](./troubleshooting.md)** — Get help resolving issues
