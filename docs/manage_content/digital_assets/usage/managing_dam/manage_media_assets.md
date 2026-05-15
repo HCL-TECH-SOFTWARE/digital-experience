@@ -43,7 +43,7 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 |.tiff|image/tiff|
 |.webp|image/webp|
 
-!!! note
+!!! notes
     - You can set the maximum file size for DAM asset uploads. For more information on configuring file size, see the `MediaTypeGroupController.updateById` API documentation topic.
 
     - SVG files are disabled by default. To enable `.svg` files (extension `image/svg+xml`) for asset uploads, use the API and set the `enabled` parameter to `true`. For more information, see [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById). For step-by-step guidance, see [Add a new MIME type in DAM](../../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md/#adding-a-new-mime-type-in-dam).

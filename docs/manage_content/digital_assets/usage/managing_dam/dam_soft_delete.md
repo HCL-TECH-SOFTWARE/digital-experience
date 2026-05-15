@@ -9,7 +9,7 @@ The system uses a **soft delete** mechanism: instead of permanent removal, item/
 
 **To move a media item/collection to Trash:**
 
-1. Open the overflow menu for the  [item](manage_media_assets.md#moving-a-media-asset-to-trash)/[collection](manage_collections.md#moving-a-collection-to-trash).
+1. Open the overflow menu for the [item](manage_media_assets.md#moving-a-media-asset-to-trash)/[collection](manage_collections.md#moving-a-collection-to-trash).
     <div class="grid" markdown>
     ![Move collection to trash](../../../../images/DAM_collection_move_to_trash.png)
     ![Move media item to trash](../../../../images/DAM_item_move_to_trash.png)
