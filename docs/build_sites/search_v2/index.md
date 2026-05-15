@@ -17,7 +17,7 @@ Search V2 is made for, but is not limited to, the following sample use cases:
 Before you can use Search V2, complete the following prerequisites:
 
 1. Install Search V2. For more information on how to install Search V2, refer to [Installing Search V2](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
-2. Enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+2. Enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [Enabling Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 Refer to the following pages for more information:
 

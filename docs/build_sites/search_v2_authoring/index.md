@@ -17,7 +17,7 @@ Search V2 Authoring provides the following functionalities:
 To use Search V2 Authoring, ensure the following prerequisites are met:
 
 1. Install Search V2 Authoring. For detailed instructions on the installation process, refer to [Installing Search V2 Authoring](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
-2. Enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+2. Enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [Enabling Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 Refer to the following pages for more information:
 
