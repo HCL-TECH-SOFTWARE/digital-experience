@@ -140,8 +140,10 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
 ## Moving a collection to trash
 
 1. From the HCL Digital Experience 9.5 Digital Asset Management interface, click the **More actions** menu of a collection and click **Move to trash**.
+
 ![Move collection to trash](../../../../images/DAM_collection_move_to_trash.png)
 2. A message appears to confirm your action. Moving a collection to the trash also moves all associated subcollections, media assets, renditions, and versions. Note that moving referenced items to the trash makes them unavailable in web content.
+
 ![Confirm move to trash](../../../../images/DAM_collection_move_to_trash_confirm.png){ width=50% }
 3. Click **Move to trash** to confirm the action.
 
