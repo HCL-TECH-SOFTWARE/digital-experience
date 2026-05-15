@@ -26,5 +26,4 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[Go easy on your LDAP](./GoEasyOnLDAP.md)**  
-Learn how to go easy on your LDAP.
+
