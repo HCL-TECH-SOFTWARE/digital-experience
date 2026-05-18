@@ -7,7 +7,7 @@ IQ is an AI-powered intelligent assistant integrated into HCL Digital Experience
 IQ provides the following functionalities:
 
 - Access AI-powered assistance through an intuitive chat interface integrated into DX.
-- Interact with IQ via a Panel view or Floating view (Popper), determined by the available space on the current DX page.
+- Interact with IQ via a Panel view or Floating view (Popper), depending on the current DX page.
 - Expand either the Panel view or Floating view (Popper) to a Dialog view for a more spacious experience.
 - Ask questions and receive intelligent responses powered by AI models.
 - Maintain conversational context within an active session.
@@ -20,10 +20,13 @@ IQ provides the following functionalities:
 IQ provides a natural language interface where users can ask questions, request assistance, and receive intelligent responses. The chat interface supports markdown formatting, and structured responses.
 
 ### **Adaptive Access**
-IQ is rendered in one of two modes based on the available horizontal space on the current DX page. This is determined automatically and cannot be customized:
+IQ is rendered in one of two modes depending on the current DX page:
 
-- **Panel view**: On pages with sufficient horizontal space, clicking the sparkle icon in the Toolbar opens IQ as a Panel view from the right (LTR) or left (RTL).
-- **Floating view (Popper)**: On pages where space is limited, IQ provides a Floating Action Button (FAB) at the bottom-right (LTR) or bottom-left (RTL) that opens a Floating view (Popper).
+**Panel view**: Clicking the sparkle icon in the Toolbar opens IQ as a Panel view from the right (LTR) or left (RTL).
+
+**Floating view (Popper)**: A Floating Action Button (FAB) at the bottom-right (LTR) or bottom-left (RTL) opens a Floating view (Popper).
+
+For detailed information about when each mode is available, refer to [Accessing IQ](./access.md).
 
 From either view, the **Dialog view** button in the header expands IQ into a Dialog view for a more spacious experience.
 

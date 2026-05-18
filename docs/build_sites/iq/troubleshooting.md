@@ -8,12 +8,12 @@ This section provides guidance on resolving common issues you may encounter whil
 
 Before investigating specific issues, verify the following:
 
-- [ ] You are logged in to HCL DX with appropriate credentials and permissions
-- [ ] Your browser is up to date (Chrome, Firefox, Edge, or Safari — latest versions)
-- [ ] JavaScript is enabled in your browser
-- [ ] Network connectivity is stable
-- [ ] WebSocket connections are not blocked by a firewall or proxy
-- [ ] IQ is installed and enabled (check with your DX administrator if unsure)
+- You are logged in to HCL DX with appropriate credentials and permissions
+- Your browser is up to date (Chrome, Firefox, Edge, or Safari — latest versions)
+- JavaScript is enabled in your browser
+- Network connectivity is stable
+- WebSocket connections are not blocked by a firewall or proxy
+- IQ is installed and enabled (check with your DX administrator if unsure)
 
 ---
 

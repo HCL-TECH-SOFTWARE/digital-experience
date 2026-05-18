@@ -18,7 +18,7 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
     Navigate to your HCL DX platform and log in with your credentials.
 
-    Depending on the current page, either click the **sparkle icon** in the Toolbar (Side Panel view) or the **Floating Action Button (FAB)** at the bottom corner (Floating IQ view). DX automatically determines which is available based on the page properties. IQ opens with an empty chat interface, ready for your first interaction.
+    Depending on the current page, either click the **sparkle icon** in the Toolbar (Panel view) or the **Floating Action Button (FAB)** at the bottom corner (Floating view (Popper)). IQ opens with an empty chat interface, ready for your first interaction.
 
     ![IQ Side Panel Opens](../../assets/HCL_IQ_Side_Panel_Initial_View.png "IQ side panel opens")
 
@@ -134,19 +134,19 @@ While IQ is processing your request (indicated by the "Thinking..." loading indi
 
 ---
 
-## Expanding IQ to Full Screen View
+## Expanding IQ to Dialog View
 
-From either the Side Panel view or the Floating IQ view, you can expand IQ to a Full Screen view for better readability and more interactive space:
+From either the Panel view or the Floating view (Popper), you can expand IQ to a Dialog view for better readability and more interactive space:
 
-1. **Click the Full Screen View Button**
+1. **Click the Dialog View Button**
 
-    In the IQ header, click the **Full Screen view** icon.
+    In the IQ header, click the **Dialog view** icon.
 
-    ![Full Screen View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Full Screen view button")
+    ![Dialog View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Dialog view button")
 
-2. **IQ Expands to Full Screen View**
+2. **IQ Expands to Dialog View**
 
-    IQ expands to cover the full viewport in a Full Screen view. Click the **Floating IQ view** icon in the header to return to the Side Panel view or Floating IQ view.
+    IQ expands to cover the full viewport in a Dialog view. Click the collapse icon in the header to return to the Panel view or Floating view (Popper).
 
     ![Full View Mode](../../assets/HCL_IQ_Full_Dialog_View.png "IQ in full view mode")
 
@@ -154,22 +154,22 @@ From either the Side Panel view or the Floating IQ view, you can expand IQ to a 
 
 ## Closing IQ
 
-- **Side Panel view**: Can be closed by either of the following:
+- **Panel view**: Can be closed by either of the following:
     - Click the **Close (X)** button in the header
     - Click the **Sparkle icon** in the toolbar
 
-    ![Close Side Panel View](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Side Panel view")
+    ![Close Panel View](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Panel view")
 
-- **Floating IQ view**: Can be closed by either of the following:
+- **Floating view (Popper)**: Can be closed by either of the following:
     - Click the **Close (X)** button in the header
     - Click the **FAB sparkle icon**
 
-    ![Close Floating IQ View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Floating IQ view")
+    ![Close Floating View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Floating view (Popper)")
 
-- **Full Screen view**: Can be closed by:
+- **Dialog view**: Can be closed by:
     - Clicking the **Close (X)** button in the header
 
-    ![Close Full Screen View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Full Screen view")
+    ![Close Dialog View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Dialog view")
 
 ---
 
