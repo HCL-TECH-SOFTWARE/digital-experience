@@ -67,27 +67,27 @@ Before enabling IQ, ensure the following:
 
 #### Steps to enable IQ
 
-1. Identify your IQ service name
-   
-   Determine the Kubernetes service name for your IQ integrator deployment. This is typically `dx-iq-integrator` if deployed using the `hcl-dx-iq` Helm chart.
+1.  **Identify your IQ service name**
 
-2. Update your values.yaml file
-   
-   Add or modify the `networking.dxIqService` parameter in your custom `values.yaml`:
+    Determine the Kubernetes service name for your IQ integrator deployment. This is typically `dx-iq-integrator` if deployed using the `hcl-dx-iq` Helm chart.
 
-   ```yaml
-   networking:
-     # Set the IQ integrator service name to enable IQ
-     dxIqService: "dx-iq-integrator"
-   ```
+2.  **Update your values.yaml file**
 
-3. Apply the Helm chart update
-   
-   Deploy the updated configuration:
+    Add or modify the `networking.dxIqService` parameter in your custom `values.yaml`:
 
-   ```bash
-   helm upgrade <release-name> <chart-name> -f values.yaml
-   ```
+    ```yaml
+    networking:
+      # Set the IQ integrator service name to enable IQ
+      dxIqService: "dx-iq-integrator"
+    ```
+
+3.  **Apply the Helm chart update**
+
+    Deploy the updated configuration:
+
+    ```bash
+    helm upgrade <release-name> <chart-name> -f values.yaml
+    ```
 
 #### What happens when you enable IQ
 
@@ -129,23 +129,23 @@ To disable IQ in a Helm-based DX deployment, update your custom `values.yaml` fi
 
 #### Steps to disable IQ
 
-1. Update your values.yaml file
-   
-   Set the `networking.dxIqService` parameter to an empty string in your custom `values.yaml`:
+1.  **Update your values.yaml file**
 
-   ```yaml
-   networking:
-     # Set to empty string to disable IQ
-     dxIqService: ""
-   ```
+    Set the `networking.dxIqService` parameter to an empty string in your custom `values.yaml`:
 
-2. Apply the Helm chart update
-   
-   Deploy the updated configuration:
+    ```yaml
+    networking:
+      # Set to empty string to disable IQ
+      dxIqService: ""
+    ```
 
-   ```bash
-   helm upgrade <release-name> <chart-name> -f values.yaml
-   ```
+2.  **Apply the Helm chart update**
+
+    Deploy the updated configuration:
+
+    ```bash
+    helm upgrade <release-name> <chart-name> -f values.yaml
+    ```
 
 #### What happens when you disable IQ
 
