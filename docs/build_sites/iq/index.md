@@ -7,8 +7,8 @@ IQ is an AI-powered intelligent assistant integrated into HCL Digital Experience
 IQ provides the following functionalities:
 
 - Access AI-powered assistance through an intuitive chat interface integrated into DX.
-- Interact with IQ via a side panel or compact view, determined by the available space on the current DX page.
-- Expand either the side panel or compact view to a full expanded dialog view for a more spacious experience.
+- Interact with IQ via a Panel view or Floating view (Popper), determined by the available space on the current DX page.
+- Expand either the Panel view or Floating view (Popper) to a Dialog view for a more spacious experience.
 - Ask questions and receive intelligent responses powered by AI models.
 - Maintain conversational context within an active session.
 - Experience a responsive UI that supports all DX locales, including LTR and RTL layouts.
@@ -20,12 +20,12 @@ IQ provides the following functionalities:
 IQ provides a natural language interface where users can ask questions, request assistance, and receive intelligent responses. The chat interface supports markdown formatting, and structured responses.
 
 ### **Adaptive Access**
-IQ adapts its presentation based on the available space on the current DX page:
+IQ is rendered in one of two modes based on the available horizontal space on the current DX page. This is determined automatically and cannot be customized:
 
-- **Side Panel**: On pages with sufficient horizontal space, clicking the sparkle icon in the Toolbar opens IQ as a side panel from the right (LTR) or left (RTL).
-- **Compact View**: On pages where space is limited, IQ provides a Floating Action Button (FAB) at the bottom-right (LTR) or bottom-left (RTL) that opens a compact view.
+- **Panel view**: On pages with sufficient horizontal space, clicking the sparkle icon in the Toolbar opens IQ as a Panel view from the right (LTR) or left (RTL).
+- **Floating view (Popper)**: On pages where space is limited, IQ provides a Floating Action Button (FAB) at the bottom-right (LTR) or bottom-left (RTL) that opens a Floating view (Popper).
 
-From either view, the **Full View** button in the header expands IQ into a full expanded dialog for a more spacious experience.
+From either view, the **Dialog view** button in the header expands IQ into a Dialog view for a more spacious experience.
 
 ### **Session Management**
 IQ maintains conversational context within an active session. You can start a new conversation at any time using the **"Start a new conversation"** button in the header.

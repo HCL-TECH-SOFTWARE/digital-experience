@@ -18,7 +18,7 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
     Navigate to your HCL DX platform and log in with your credentials.
 
-    Depending on the current page, either click the **sparkle icon** in the Toolbar (side panel) or the **Floating Action Button (FAB)** at the bottom corner (compact view). DX automatically determines which is available based on the page layout. IQ opens with an empty chat interface, ready for your first interaction.
+    Depending on the current page, either click the **sparkle icon** in the Toolbar (Side Panel view) or the **Floating Action Button (FAB)** at the bottom corner (Floating IQ view). DX automatically determines which is available based on the page layout. IQ opens with an empty chat interface, ready for your first interaction.
 
     ![IQ Side Panel Opens](../../assets/HCL_IQ_Side_Panel_Initial_View.png "IQ side panel opens")
 
@@ -98,7 +98,7 @@ To start a fresh conversation and clear the current context:
 
 1. **Locate the "Start a new conversation" button**
 
-    Look for the **Start a new conversation** icon in the IQ header (available in both the side panel and compact view).
+    Look for the **Start a new conversation** icon in the IQ header.
 
     ![Start a new conversation Button](../../assets/HCL_IQ_Start_New_Confirmation_Icon.png "Start a new conversation button location")
 
@@ -117,6 +117,9 @@ To start a fresh conversation and clear the current context:
 !!! warning
     Starting a new conversation clears the current session context permanently. Conversation history is **not** persisted in this release — once cleared, the previous conversation cannot be recovered.
 
+!!! note
+    If you have IQ open in more than one browser tab or window and start a new conversation in one of them, a warning message may briefly appear in the other. This resolves automatically within a few seconds and no action is required.
+
 ### Stopping an Ongoing Request
 
 While IQ is processing your request (indicated by the "Thinking..." loading indicator), you can cancel it by clicking the **Stop** button that appears in the input area. Once stopped:
@@ -129,19 +132,19 @@ While IQ is processing your request (indicated by the "Thinking..." loading indi
 
 ---
 
-## Expanding IQ to Full View
+## Expanding IQ to Full Screen View
 
-From either the side panel or the compact view, you can expand IQ to a full expanded dialog view for better readability and more interactive space:
+From either the Side Panel view or the Floating IQ view, you can expand IQ to a Full Screen view for better readability and more interactive space:
 
-1. **Click the Full View Button**
+1. **Click the Full Screen View Button**
 
-    In the IQ header, click the **Full View** icon.
+    In the IQ header, click the **Full Screen view** icon.
 
-    ![Full View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Full View button")
+    ![Full Screen View Button](../../assets/HCL_IQ_Full_View_Icon.png "Click Full Screen view button")
 
-2. **IQ Expands to Full View**
+2. **IQ Expands to Full Screen View**
 
-    IQ expands to cover the full viewport in a dialog view. Click the **Compact View** icon in the header to return to the side panel or compact view.
+    IQ expands to cover the full viewport in a Full Screen view. Click the **Floating IQ view** icon in the header to return to the Side Panel view or Floating IQ view.
 
     ![Full View Mode](../../assets/HCL_IQ_Full_Dialog_View.png "IQ in full view mode")
 
@@ -149,22 +152,22 @@ From either the side panel or the compact view, you can expand IQ to a full expa
 
 ## Closing IQ
 
-- **Side Panel**: Can be closed by either of the following:
+- **Side Panel view**: Can be closed by either of the following:
     - Click the **Close (X)** button in the header
     - Click the **Sparkle icon** in the toolbar
 
-    ![Close Side Panel](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Side Panel view")
+    ![Close Side Panel View](../../assets/HCL_IQ_Close_Side_Panel_Icon.png "Close icon in Side Panel view")
 
-- **Compact View**: Can be closed by either of the following:
+- **Floating IQ view**: Can be closed by either of the following:
     - Click the **Close (X)** button in the header
     - Click the **FAB sparkle icon**
 
-    ![Close Compact View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Compact view")
+    ![Close Floating IQ View](../../assets/HCL_IQ_Close_Compact_View_Icon.png "Close icon in Floating IQ view")
 
-- **Full View**: Can be closed by:
+- **Full Screen view**: Can be closed by:
     - Clicking the **Close (X)** button in the header
 
-    ![Close Full View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Full View interface")
+    ![Close Full Screen View](../../assets/HCL_IQ_Close_Full_View_Icon.png "Close Full Screen view")
 
 ---
 
