@@ -1,3 +1,5 @@
 # Container
 
-This section will eventually include how-to articles about container-related content in HCL Digital Experience (DX).
+This section includes how-to articles associated with the containerized components in HCL Digital Experience (DX).
+
+- **[How to get helm chart values](./HelmChartValues.md)**  
