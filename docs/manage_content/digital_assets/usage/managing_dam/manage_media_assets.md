@@ -18,16 +18,16 @@ HCL DAM CF181 or later must be installed and configured for the HCL Digital Expe
 Follow these steps to view the list of file formats supported by HCL DX 9.5 DAM.
 
 
-1.  Log in to your HCL DX 9.5 platform and select **Digital Assets** from the Practitioner Studio navigator.
+1. Log in to your HCL DX 9.5 platform and select **Digital Assets** from the Practitioner Studio navigator.
 
     ![Digital Asset Management user interface](../../../../images/dam_upload_media_collections.png)
 
     The HCL DX 9.5 DAM can also be accessed from the Practitioner Studio **Digital Assets** tile.
 
 
-2.  From the HCL DX 9.5 DAM user interface, select the gear icon \(for **Settings**\) located at the top right of the DAM menu bar.
+2. From the HCL DX 9.5 DAM user interface, select the gear icon \(for **Settings**\) located at the top right of the DAM menu bar.
 
-3.  **Settings** will display the **Supported file formats** section by default.
+3. **Settings** will display the **Supported file formats** section by default.
 
     ![DAM > Settings > Files](../../../../images/dam_settings_supported_file_formats.png)
 
@@ -143,16 +143,16 @@ To add and enable SVG or other custom formats, follow the `GET` media type group
 
 Play uploaded videos in DAM using the DAM binary URL or the Kaltura Player (if the Kaltura plugin is configured and enabled):
 
--   Use the DAM binary URL when:
-    -   The uploaded video synchronization status is `SYNC FAILED`.
-    -   The Kaltura plugin is not configured and enabled.
+- Use the DAM binary URL when:
+    - The uploaded video synchronization status is `SYNC FAILED`.
+    - The Kaltura plugin is not configured and enabled.
 
     ![Using the DAM binary URL to play a video](../../../../images/dam_binary_url_for_failed.png)
 
--   Use the Kaltura Player when:
+- Use the Kaltura Player when:
 
-    -   The video synchronization status is `SYNCED`. Play the video based on the configured Player ID.
-    -   The Kaltura plugin is configured and enabled.
+    - The video synchronization status is `SYNCED`. Play the video based on the configured Player ID.
+    - The Kaltura plugin is configured and enabled.
 
     ![Playing a video using the Kaltura Player](../../../../images/dam_kaltura_player_for_synced.png)
     For more information on the video synchronization statuses for uploaded videos, see [Upload rich media assets](upload_rich_media_assets.md).
@@ -175,13 +175,13 @@ Use the HCL DX 9.5 DAM editor to download a media asset source, version, or rend
 
 Use the HCL DX 9.5 DAM editor to delete a media asset, including its renditions:
 
-1.  From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
-2.  A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
+1. From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Delete**.
+2. A pop-up will appear for you to select your Delete action. If the selected media assets will not affect any references, click **Check for references and delete** to complete action.
 
 Use the HCL DX 9.5 DAM editor to move a media asset to trash, including its renditions:
 
-1.  From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
-2.  A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action. If there are references, additional dialog appears citing the presence of reference item. Clicking on that will complete the action
+1. From the HCL DX 9.5 DAM user interface, click the **More actions** menu (three horizontal dots icon) of a media asset. Click **Move to trash**.
+2. A pop-up will appear for you to select your move to trash action. If the selected media assets will not affect any references, click **Check for references and move to trash** to complete action. If there are references, additional dialog appears citing the presence of reference item. Clicking on that will complete the action
 
 Use the HCL DX 9.5 DAM editor to move a media asset to trash, including its renditions:
 
@@ -246,7 +246,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 3. Navigate to the collection where you want to move the item and click **Check for references and move**.
 
-    The confirmation dialogue appears if the asset is referenced in WCM. If an asset with the same name exists in the target collection, a dialogue box to rename the asset appears. 
+    The confirmation dialogue appears if the asset is referenced in WCM. If an asset with the same name exists in the target collection, a dialogue box to rename the asset appears.
 
 4. Click **View Location** to navigate to the collection.
 
@@ -254,7 +254,7 @@ Refer to the following steps if you want to move a media asset from one collecti
 
 Refer to the following steps to modify the name of a media asset.
 
-!!! note 
+!!! note
     Renaming an asset breaks existing references to the asset name in WCM or external content. To update the asset name, manual relinking is required.
 
 1. Click the **More actions** menu for the asset.
@@ -266,7 +266,7 @@ Refer to the following steps to modify the name of a media asset.
     A dialogue box appears for renaming the media asset. 
 
     ![Rename a media asset](../../../../images/Rename_Media_Asset.png)
-    
+
 3. In the **Rename** dialog box, enter the new name of the media asset, then click **Rename**.
 
 Another way to rename a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name**, **Title**, and **Description** of the media asset. Click **Save**.
@@ -288,12 +288,6 @@ If an asset has the same name as another asset in a collection, a rename dialog 
 You can copy the friendly URL and UUID URL of an asset from the URLs section of the asset's inspector panel.
 
 ![](../../../../images/Copy_friendlyUrl.png "Copy friendly URL")
-
-## HCL DX Solution Feedback
-
-HCL DX is interested in your experience and feedback working with HCL DX 9.5 release software. To offer comments or issues on your findings, please access the [HCL DX 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
-
-HCL DX welcomes your feedback on HCL DX 9.5 release software. To provide comments or report issues, access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){target="_blank"}.
 
 ???+ info "Related information"
     - [URL Addressability](../../../../build_sites/create_sites/url_addressing/index.md)
