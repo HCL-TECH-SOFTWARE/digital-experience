@@ -83,6 +83,7 @@ Regardless of the view (Side Panel view, Floating IQ view, or Full Screen view),
 ### Header
 
 - **Title**: "IQ"
+- **Info Button**: Displays a tooltip with important information about the IQ, including a message that content is automatically generated and should be reviewed before use to avoid inclusion of personal or confidential information.
 - **Start a new conversation Button**: Starts a fresh session — current context will be cleared permanently
 - **Full Screen view / Floating IQ view Button**: Toggles between the Full Screen view and the current view
 - **Close Button**: Closes IQ

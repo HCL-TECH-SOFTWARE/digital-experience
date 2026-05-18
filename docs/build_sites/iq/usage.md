@@ -18,7 +18,7 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
     Navigate to your HCL DX platform and log in with your credentials.
 
-    Depending on the current page, either click the **sparkle icon** in the Toolbar (Side Panel view) or the **Floating Action Button (FAB)** at the bottom corner (Floating IQ view). DX automatically determines which is available based on the page layout. IQ opens with an empty chat interface, ready for your first interaction.
+    Depending on the current page, either click the **sparkle icon** in the Toolbar (Side Panel view) or the **Floating Action Button (FAB)** at the bottom corner (Floating IQ view). DX automatically determines which is available based on the page properties. IQ opens with an empty chat interface, ready for your first interaction.
 
     ![IQ Side Panel Opens](../../assets/HCL_IQ_Side_Panel_Initial_View.png "IQ side panel opens")
 
@@ -55,10 +55,10 @@ This section provides a comprehensive guide on how to use IQ, the AI-powered ass
 
 Messages in IQ go through different states:
 
-- **Sending**: Your message appears immediately after clicking Send
-- **Processing**: A loading indicator shows IQ is working on your request
-- **Delivered**: IQ's response appears in the chat area
-- **Error**: If something goes wrong, an error message is displayed
+- **Sending**: Your message appears immediately after clicking Send.
+- **Processing**: A loading indicator shows IQ is working on your request.
+- **Delivered**: IQ's response appears in the chat area.
+- **Error**: If something goes wrong, an error message is displayed.
 
 ![Message States](../../assets/HCL_IQ_Different_Message_State.png "Different message states in IQ")
 
@@ -122,11 +122,13 @@ To start a fresh conversation and clear the current context:
 
 ### Stopping an Ongoing Request
 
+
 While IQ is processing your request (indicated by the "Thinking..." loading indicator), you can cancel it by clicking the **Stop** button that appears in the input area. Once stopped:
 
 - IQ halts the response generation.
 - A message "You stopped the response." is displayed in the chat area.
-- You can send a new message immediately.
+- The stopped question is retained in the input field, allowing you to edit and resend it if desired.
+- You can also send a new message immediately.
 
 ![Stop Ongoing Request](../../assets/HCL_IQ_Stop_Ongoing_Request.png "Cancel ongoing request")
 
@@ -187,7 +189,7 @@ To view unseen messages:
 
 ---
 
-## Handling Errors
+## Error Messages
 
 If something goes wrong, IQ displays an error message in the chat area.
 
