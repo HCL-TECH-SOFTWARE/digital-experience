@@ -1,6 +1,6 @@
 # DAM Soft Delete
 
-Use the soft delete feature to prevent accidental deletion of assets and collections in Digital Asset Management (DAM). Soft delete moves assets and collections to a hidden **Trash** view instead of immediately removing them from the database. The system automatically records the deletion date and the user who performed the action. Authorized users can restore these assets and collections or permanently delete them.
+Use the Soft Delete feature to prevent accidental deletion of assets and collections in Digital Asset Management (DAM). Soft Delete moves assets and collections to a hidden **Trash** view instead of immediately removing them from the database. The system automatically records the deletion date and the user who performed the action. Authorized users can restore these assets and collections or permanently delete them.
 
 ## Moving an asset or collection to the Trash
 
@@ -51,7 +51,7 @@ Collection Admins can restore individual assets or entire collections from the T
 
 **Resolving a name conflict**
 
-If a new asset or collection with the same name is created in the original location after a soft delete, a name conflict occurs during restoration. To resolve the conflict, rename the asset or collection in the **Rename and restore** dialog.
+If a new asset or collection with the same name is created in the original location after a Soft Delete, a name conflict occurs during restoration. To resolve the conflict, rename the asset or collection in the **Rename and restore** dialog.
 
 ## Deleting an asset or collection permanently
 
@@ -82,7 +82,7 @@ A background heartbeat process runs at a configured interval to automatically pu
 
 ## Staging
 
-In a publisher-subscriber staging setup, soft delete actions on the publisher are propagated as hard deletes to subscribers.
+In a publisher-subscriber staging setup, Soft Delete actions on the publisher are propagated as hard deletes to subscribers.
 
 | Action on Publisher | Impact on Subscriber |
 |---------------------|----------------------|

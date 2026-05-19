@@ -1,6 +1,6 @@
 # DAM Soft Delete configuration
 
-Manage soft delete and trash clearance behaviors in the `values.yaml` file under the `configuration.digitalAssetManagement` section.
+Manage Soft Delete and trash clearance behaviors in the `values.yaml` file under the `configuration.digitalAssetManagement` section.
 
 Update the following parameters to configure automated trash clearance:
 
