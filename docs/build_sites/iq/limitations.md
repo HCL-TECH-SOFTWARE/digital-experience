@@ -29,7 +29,7 @@ To ensure full accessibility on the Search page, users must enable keyboard navi
 
 ### Safari
 
-![Safari keyboard navigation settings](../../assets/HCL_Search_Browser_Safari_Settings.png)
+![Safari keyboard navigation settings](../../assets/HCL_Search_Browser_Safari_Settings.png){ width="600" }
 
 ---
 
