@@ -24,7 +24,7 @@ The sparkle icon or FAB does not appear in the DX interface.
 **Possible causes:**
 
 - IQ is not installed or not enabled. Refer to [Installing IQ](./installation.md) and contact your DX administrator.
-- Your user account does not have the required role. Contact your DX administrator to verify role assignments. IQ is primarily designed for the Practitioner persona, but any authorized DX user can access it.
+- IQ is primarily designed for the Practitioner persona, but any authorized DX user can access it.
 - Browser cache is stale. Clear your browser cache and perform a hard refresh:
     - **Chrome / Firefox / Edge**: `Ctrl+Shift+R` (or `Cmd+Shift+R` on Mac)
     - **Safari**: `Cmd+Option+R`

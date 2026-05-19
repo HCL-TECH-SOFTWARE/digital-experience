@@ -103,7 +103,14 @@ Regardless of the view (Panel view, Floating view (Popper), or Dialog view), the
 ### Status Indicators
 
 - **Loading Indicator (Thinking...)**: Appears while IQ is processing
-- **Error Messages**: Displays connectivity or processing errors
+- **Error Messages**: Displays various error conditions including:
+    - **Connection Error**: WebSocket connection to IQ backend failed
+    - **Unable to connect to AI service**: IQ backend cannot reach the LLM provider
+    - **Request Timeout**: The request took too long to process
+    - **Session expired**: Session has timed out and requires a new conversation
+    - **Processing errors**: Other general errors during message processing
+    
+    For detailed error resolution steps, see [Troubleshooting IQ](./troubleshooting.md).
 
 ---
 

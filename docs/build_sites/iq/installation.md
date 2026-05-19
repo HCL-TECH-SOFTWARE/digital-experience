@@ -52,24 +52,29 @@ ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<
 
 ### Using Helm deployment
 
-To enable IQ in a Helm-based DX deployment, update your custom `values.yaml` file with the IQ service configuration.
+IQ is deployed using its own dedicated Helm chart (`hcl-dx-iq`), which is separate from the main DX Helm chart (`hcl-dx-deployment`). The IQ backend services run independently as Kubernetes microservices and are integrated with DX through service networking and HAProxy routing.
+
+To enable IQ in a Helm-based DX deployment, you need to:
+
+1. Deploy the IQ backend services using the `hcl-dx-iq` Helm chart (if not already deployed)
+2. Configure the DX Helm chart to enable IQ integration by referencing the IQ service
 
 #### Prerequisites
 
 Before enabling IQ, ensure the following:
 
-- The IQ backend service must be deployed in your Kubernetes cluster
-- The IQ service must be accessible from your DX Core or WebEngine pods
+- The `hcl-dx-iq` Helm chart is deployed in your Kubernetes cluster
+- The IQ backend service (`dx-iq-integrator`) is running and accessible from your DX Core or WebEngine pods
 - You have access to modify your DX Helm chart `values.yaml` file
 
 !!! note
-    HCL provides a separate Helm chart (`hcl-dx-iq`) for deploying the IQ backend services. Contact your HCL DX deployment team or HCL Support for assistance with deploying the IQ backend chart.
+    The `hcl-dx-iq` chart is distributed separately from the main DX Helm chart. Contact your HCL DX deployment team or HCL Support for assistance with obtaining and deploying the IQ Helm chart in your environment.
 
 #### Steps to enable IQ
 
 1.  **Identify your IQ service name**
 
-    Determine the Kubernetes service name for your IQ integrator deployment. This is typically `dx-iq-integrator` if deployed using the `hcl-dx-iq` Helm chart.
+    Determine the Kubernetes service name for your IQ integrator deployment. This is typically `{{ .Release.Name }}-integrator` if deployed using the `hcl-dx-iq` Helm chart. For example, if your `hcl-dx-iq` chart release name is `dx-iq`, it will be `dx-iq-integrator`.
 
 2.  **Update your values.yaml file**
 
@@ -125,13 +130,15 @@ After disabling IQ using the `disable-iq` config task, the IQ interface elements
 
 ### Using Helm deployment
 
+IQ integration in Helm-based deployments can be disabled by removing the IQ service reference from the DX Helm chart configuration. This stops HAProxy from routing traffic to the IQ backend services while leaving the `hcl-dx-iq` chart deployment intact.
+
 To disable IQ in a Helm-based DX deployment, update your custom `values.yaml` file to remove the IQ service configuration.
 
 #### Steps to disable IQ
 
 1.  **Update your values.yaml file**
 
-    Set the `networking.dxIqService` parameter to an empty string in your custom `values.yaml`:
+    Set the `networking.dxIqService` parameter to an empty string in your custom `values.yaml` for the DX deployment chart:
 
     ```yaml
     networking:
@@ -149,12 +156,12 @@ To disable IQ in a Helm-based DX deployment, update your custom `values.yaml` fi
 
 #### What happens when you disable IQ
 
-- HAProxy stops routing IQ-related requests
+- HAProxy stops routing `/dx/api/iq/v1/` and `/dx/ui/iq/` requests to the IQ service
 - IQ features are automatically disabled in DX Core or WebEngine
 - The IQ interface (sparkle icon or FAB) is removed from the DX toolbar
 
 !!! note
-    Disabling IQ in the DX Helm chart does not uninstall the IQ backend services (`dx-iq-integrator` and `dx-mcp-server`). If you want to completely remove IQ, you also need to uninstall the `hcl-dx-iq` Helm chart separately.
+    Disabling IQ in the DX Helm chart (`hcl-dx-deployment`) only removes the integration between DX and IQ. It does not uninstall or stop the IQ backend services deployed via the `hcl-dx-iq` Helm chart. If you want to completely remove IQ from your cluster, you must separately uninstall the `hcl-dx-iq` Helm chart release using `helm uninstall <iq-release-name>`.
 
 ---
 
