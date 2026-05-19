@@ -2,9 +2,9 @@
 
 This section explains how to access the IQ AI assistant from within HCL Digital Experience (DX).
 
-On DX pages, IQ is rendered in one of two modes: clicking the **Sparkle Icon** in the DX Toolbar opens IQ as a **Panel view**, while clicking the **Floating Action Button (FAB)** opens IQ in a **Floating view (Popper)**. Which mode is displayed is determined automatically by a page layout parameter. On certain DX pages where rendering the Panel view would break or negatively impact the page layout (for example, non-responsive or non-adaptive applications), IQ will display as a Floating view (Popper) via the FAB instead. This parameter is set by the product and cannot be customized.
+On DX pages, IQ is rendered in one of two modes: clicking the **Sparkle Icon** in the DX Toolbar opens IQ as a **Panel view**, while clicking the **Floating Action Button (FAB)** opens IQ in a **Compact view**. Which mode is displayed is determined automatically by a page layout parameter. On certain DX pages where rendering the Panel view would break or negatively impact the page layout (for example, non-responsive or non-adaptive applications), IQ will display as a Compact view via the FAB instead. This parameter is set by the product and cannot be customized.
 
-From either the Panel view or Floating view (Popper), you can expand IQ to a **Dialog view** for a more spacious and interactive experience.
+From either the Panel view or Compact view, you can expand IQ to a **Full view** for a more spacious and interactive experience.
 
 ## Prerequisites
 
@@ -37,12 +37,12 @@ On DX pages where the Panel view is compatible with the page layout, IQ is acces
 
 ---
 
-## Floating View (Popper) via FAB
+## Compact view via FAB
 
 On DX pages where the Panel view would break or negatively affect the page layout (for example, Site Templates pages or non-responsive/non-adaptive applications), IQ provides a **Floating Action Button (FAB)** instead of the toolbar sparkle icon.
 
-- In **LTR** locales, the FAB is at the **bottom-right** corner; the Floating view (Popper) opens on the **right**.
-- In **RTL** locales, the FAB is at the **bottom-left** corner; the Floating view (Popper) opens on the **left**.
+- In **LTR** locales, the FAB is at the **bottom-right** corner; the Compact view opens on the **right**.
+- In **RTL** locales, the FAB is at the **bottom-left** corner; the Compact view opens on the **left**.
 
 ### Steps
 
@@ -54,21 +54,21 @@ On DX pages where the Panel view would break or negatively affect the page layou
 
 2. **Click the FAB**
 
-    The IQ Floating view (Popper) opens on the same side.
+    The IQ Compact view opens on the same side.
 
-    ![IQ Floating View Opens](../../assets/HCL_IQ_Compact_Chat_Initial_View.png "IQ Floating view (Popper) opens")
+    ![IQ Compact view Opens](../../assets/HCL_IQ_Compact_Chat_Initial_View.png "IQ Compact view opens")
 
 3. **Interact with IQ**
 
     Type your question and press **Enter** or click **Send**.
 
-    ![IQ Floating View Ready](../../assets/HCL_IQ_Compact_Chat_First_Question_View.png "IQ Floating view (Popper) ready for interaction")
+    ![IQ Compact view Ready](../../assets/HCL_IQ_Compact_Chat_First_Question_View.png "IQ Compact view ready for interaction")
 
 ---
 
-## Expanding to Dialog View
+## Expanding to Full view
 
-From either the Panel view or Floating view (Popper), click the **Dialog view** icon in the IQ header to expand IQ into a Dialog view. Click the collapse icon in the header to return to the previous view.
+From either the Panel view or Compact view, click the **Full view** icon in the IQ header to expand IQ into a Full view. Click the collapse icon in the header to return to the previous view.
 
 ![IQ Full View](../../assets/HCL_IQ_Expanded_Initial_View.png "IQ expanded to full view")
 
@@ -76,7 +76,7 @@ From either the Panel view or Floating view (Popper), click the **Dialog view** 
 
 ## Understanding the IQ Interface
 
-Regardless of the view (Panel view, Floating view (Popper), or Dialog view), the IQ interface contains the following components:
+Regardless of the view (Panel view, Compact view, or Full view), the IQ interface contains the following components:
 
 ![IQ Interface Overview](../../assets/HCL_IQ_Introduction_Interface.png "Introduction of IQ interface")
 
@@ -85,7 +85,7 @@ Regardless of the view (Panel view, Floating view (Popper), or Dialog view), the
 - **Title**: "IQ"
 - **Info Button**: Displays a tooltip with important information about the IQ, including a message that content is automatically generated and should be reviewed before use to avoid inclusion of personal or confidential information.
 - **Start a new conversation Button**: Starts a fresh session — current context will be cleared permanently
-- **Dialog view / Collapse Button**: Toggles between the Dialog view and the previous view (Panel view or Floating view)
+- **Full view / Collapse Button**: Toggles between the Full view and the previous view (Panel view or Compact view)
 - **Close Button**: Closes IQ
 
 ### Chat Content Area
