@@ -33,9 +33,6 @@ Access to the Trash is restricted by user role:
 
 ## Actions available in Trash
 
-![Media asset preview in Trash](../../../../images/DAM_trash_asset_preview.png)
-![Actions available in Trash](../../../../images/DAM_trash_more_actions.png)
-
 - **Preview:** View the content (images and videos only).
 - **Download:** Download the content (assets only).
 - **Properties:** View asset or collection metadata.
@@ -55,8 +52,6 @@ Collection Admins can restore individual assets or entire collections from the T
 **Resolving a name conflict**
 
 If a new asset or collection with the same name is created in the original location after a soft delete, a name conflict occurs during restoration. To resolve the conflict, rename the asset or collection in the **Rename and restore** dialog.
-
-![Rename conflict while restore from Trash](../../../../images/DAM_trash_restore_asset_name_conflict.png){ width=50% }
 
 ## Deleting an asset or collection permanently
 
