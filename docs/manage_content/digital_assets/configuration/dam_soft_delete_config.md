@@ -1,6 +1,12 @@
 # DAM Soft Delete configuration
 
-Soft delete and Trash clearance behaviors are controlled in `values.yaml` under the `configuration.digitalAssetManagement` section. When enableTrashClearance is set to true, automated trash clearance feature is enabled. This runs a trash clearance heartbeat every trashClearanceHeartbeatInMinutes (by default 60) minutes and permanently deletes assets and collections which are older than a period of trashClearanceTimeInDays (by default 30) in trash.
+Manage soft delete and trash clearance behaviors in the `values.yaml` file under the `configuration.digitalAssetManagement` section.
+
+Update the following parameters to configure automated trash clearance:
+
+- `enableTrashClearance`: Set to `true` to enable automated trash clearance.
+- `trashClearanceTimeInDays`: The number of days items remain in the Trash before they are permanently deleted (Default: `30`).
+- `trashClearanceHeartbeatInMinutes`: The number of minutes between background clearance runs (Default: `60`).
 
 ```yaml
 configuration:
@@ -13,6 +19,12 @@ configuration:
     trashClearanceHeartbeatInMinutes: 60
 ```
 
+When automated trash clearance is enabled, a timer displays on items in the Trash to indicate when they will be permanently deleted.
+
+**Grid view**
+
 ![Automated Trash clearance](../../../images/DAM_trash_grid_view.png)
+
+**List view**
 
 ![Trash List view](../../../images/DAM_trash_list_view.png)

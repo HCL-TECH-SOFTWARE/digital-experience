@@ -4,19 +4,11 @@ This section describes how to manage media assets and view configuration setting
 
 ## Prerequisite
 
-
-HCL DAM CF181 or higher should be installed and configured for the HCL Digital Experience (HCL DX) 9.5 Container Release update, following these instructions in the [Install the HCL DX 9.5 Container components](../../index.md) topic.
-
-## Viewing supported file formats
-
-Follow these steps to view a list of file formats supported by HCL DX 9.5 DAM.
-
-HCL DAM CF181 or later must be installed and configured for the HCL Digital Experience (DX) 9.5 Container Release update by following the instructions in the [Install the HCL Digital Experience 9.5 Container components](../../index.md) topic.
+Ensure HCL DAM CF181 or higher is installed and configured for the HCL Digital Experience (HCL DX) 9.5 Container Release update. For more information, refer to [Install the HCL DX 9.5 Container components](../../index.md).
 
 ## Viewing supported file formats
 
 Follow these steps to view the list of file formats supported by HCL DX 9.5 DAM.
-
 
 1. Log in to your HCL DX 9.5 platform and select **Digital Assets** from the Practitioner Studio navigator.
 
@@ -24,17 +16,18 @@ Follow these steps to view the list of file formats supported by HCL DX 9.5 DAM.
 
     The HCL DX 9.5 DAM can also be accessed from the Practitioner Studio **Digital Assets** tile.
 
-
 2. From the HCL DX 9.5 DAM user interface, select the gear icon \(for **Settings**\) located at the top right of the DAM menu bar.
 
 3. **Settings** will display the **Supported file formats** section by default.
 
     ![DAM > Settings > Files](../../../../images/dam_settings_supported_file_formats.png)
 
-The following are supported media asset file formats in HCL DX 9.5 Container. From CF205 onwards, *WebP* file type extension is also supported.
+### Images
 
-|File type|Extension|
-|---------|---------|
+The following image file formats are supported media asset in HCL DX 9.5 Container:
+
+|File extension|MIME type|
+|--------------|---------|
 |.png|image/png|
 |.gif|image/gif|
 |.jpg|image/jpeg|
@@ -43,29 +36,32 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 |.tiff|image/tiff|
 |.webp|image/webp|
 
-!!! note
-    - You can set the maximum file size for DAM asset uploads. For more information on configuring file size, see the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
+- You can set the maximum file size for DAM asset uploads. For more information on configuring file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
+- SVG files are disabled by default. To enable `.svg` files (extension `image/svg+xml`) for asset uploads, use the API and set the `enabled` parameter to `true`. For more information, refer to [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById). For step-by-step guidance, refer to [Add a new MIME type in DAM](../../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md#adding-a-new-mime-type-in-dam).
+- If you cannot upload files to DAM, refer to [Cannot upload files to DAM](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129583){target="_blank"}.
 
-    - SVG files are disabled by default. To enable `.svg` files (extension `image/svg+xml`) for asset uploads, use the API and set the `enabled` parameter to `true`. For more information, see [`MediaTypeController.updateById`](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeController.updateById). For step-by-step guidance, see [Add a new MIME type in DAM](../../../../extend_dx/apis/hcl_experience_api/openapi_example_API_calls.md/#adding-a-new-mime-type-in-dam).
+### Videos
 
-    - If you cannot upload files to DAM, see [Cannot upload files to DAM](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129583){target="_blank"} for reference.
+The following video file formats are supported media asset in HCL DX 9.5 Container:
 
-
-|File type|Extension|
-|---------|---------|
+|File extension|MIME type|
+|--------------|---------|
 |.ogv|video/ogg|
 |.mp4|video/mp4|
 |.webm|video/webm|
 
-!!! notes
-    - Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL DAM that happens when any video is uploaded and when Kaltura integration is configured and enabled.
+- Videos are automatically synchronized once they are uploaded. Auto-synchronization is a background activity in HCL DAM that happens when any video is uploaded and when Kaltura integration is configured and enabled.
 
-    - You can set the maximum file size for DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
+- You can set the maximum file size for DAM asset uploads. For more information on configuring the file size, refer to the [MediaTypeGroupController.updateById](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/MediaTypeGroupController.updateById){target="_blank"} API documentation topic.
 
-    - Videos are automatically synchronized after they are uploaded. Auto-synchronization is a background process in HCL DAM that occurs when a video is uploaded and Kaltura integration is configured and enabled.
+- Videos are automatically synchronized after they are uploaded. Auto-synchronization is a background process in HCL DAM that occurs when a video is uploaded and Kaltura integration is configured and enabled.
 
-|File type|Extension|
-|---------|---------|
+### Documents
+
+The following document file formats are supported media asset in HCL DX 9.5 Container:
+
+|File extension|MIME type|
+|--------------|---------|
 |.pptx|application/vnd.openxmlformats-officedocument.presentationml.presentation|
 |.xls|application/vnd.ms-excel <br/> application/octet-stream <br/> application/x-msi|
 |.doc|application/msword|
@@ -82,6 +78,7 @@ The following are supported media asset file formats in HCL DX 9.5 Container. Fr
 This section explains how to enable additional file types in HCL DX DAM that are not included in the default supported file formats. It also explains how to add, configure, and activate new media types for asset uploads by using the DAM MediaTypeController API.
 
 1. Authenticate with the DAM API.
+
     Log in to the Ring API using:
     ```http
     POST https://<domain>/dx/api/core/v1/auth/login
@@ -90,16 +87,21 @@ This section explains how to enable additional file types in HCL DX DAM that are
 2. Identify the media type group.
 
     Retrieve the list of media type groups (such as images, videos, etc.) to find the appropriate group for your file type:
+
     ```http
     GET https://<domain>/dx/api/dam/v1/mediatypegroups
     ```
 
 3. Add a new MIME type.
+
     To enable uploading a new file type (for example, WebP or other formats), send a `POST` request to add it to DAM:
+
     ```http
- POST https://<domain>/dx/api/dam/v1/mediatypes
+    POST https://<domain>/dx/api/dam/v1/mediatypes
     ```
+
     Payload Example for Adding a New File Type
+
     ```
     [
     {
@@ -109,28 +111,34 @@ This section explains how to enable additional file types in HCL DX DAM that are
     }
     ]
     ```
-    Replace "image/webp", ["webp"], and mediaTypeGroupId with your desired MIME type, file extensions, and the media type group ID retrieved earlier.
+
+    Replace `"image/webp"`, `["webp"]`, and `mediaTypeGroupId` with your desired MIME type, file extensions, and the media type group ID retrieved earlier.
 
 4. Enable an existing or newly added file type.
+
     If a file type exists but is disabled, use a `PATCH` request to enable it:
+
     ```
     PATCH - https://<domain>/dx/api/dam/v1/mediatypes/<id>
     ```
+
     Payload example:
+
     ```json
     {
     "enabled": true
     }
     ```
+
     The `<id>` is the ID for the media type obtained from the `GET mediatypes` endpoint.
 
 5. Verify and add additional configuration.
 
-After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`. <!--REMOVE COMMENT AFTER FILE IS MERGED: You can also check the DAM settings UI to confirm that the file type is enabled. For additional configuration such as [Using DAM extensibility](../../../digital_assets/configuration/dam_extensibility/index.md), see the extensibility documentation.-->
+After enabling or adding the new file type, verify its status using a `GET` request to `mediatypes`.
 
 **Example:**
 
-To add and enable SVG or other custom formats, follow the `GET` media type group and `POST`/`PATCH` steps above. This allows uploading file types beyond those listed in the [Supported file formats](#viewing-supported-file-formats) section.
+To add and enable SVG or other custom formats, follow the `GET` media type group and `POST` or `PATCH` steps above. This allows uploading file types beyond those listed in the [Supported file formats](#viewing-supported-file-formats) section.
 
 ### Enabling or disabling other file types
 
@@ -208,7 +216,7 @@ Refer to the following steps if you want to copy a media asset from one collecti
 
 Refer to the following steps if you want to move a media asset from one collection to another.
 
-!!! note 
+!!! note
     Moving an asset can break its links if it is referenced in WCM or external systems. To update the link, manual relinking is required. To view asset references, go to **Properties > Insights**.
 
 1. Click the **More actions** menu for the asset.
@@ -243,7 +251,7 @@ Refer to the following steps to modify the name of a media asset.
     A dialogue box appears for renaming the media asset. 
 
     ![Rename a media asset](../../../../images/Rename_Media_Asset.png){ width=60% }
-    
+
 3. In the **Rename** dialog box, enter the new name of the media asset, then click **Rename**.
 
 Another way to rename a media asset is to edit the asset by clicking the **Pencil** icon. Go to **Properties**. You can edit the **Name**, **Title**, and **Description** of the media asset. Click **Save**.
