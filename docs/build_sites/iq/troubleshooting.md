@@ -87,6 +87,45 @@ You can capture detailed diagnostic information using browser developer tools to
     - Click the connection to view individual JSON-RPC messages exchanged between the browser and IQ.
 4. To capture a full trace, right-click in the Console and select **Save as** to export logs for sharing with HCL Support.
 
+![IQ Logs For Network Tab](../../assets/HCL_IQ_Debug_Network_Tab.png "Logs related to IQ networking")
+
+---
+
+## Server-Side Logging and Tracing
+
+IQ integrator logging is configured on the server side via the Helm chart. A configuration file (`log.aiIntegration`) is mounted into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This follows the same pattern used by other DX services.
+
+### Configuring Log Levels
+
+Log levels are configured in the `hcl-dx-iq` Helm chart under `logging` in `values.yaml`:
+
+```yaml
+logging:
+  integrator:
+    level:
+      - "api:*=info"   # Change to "debug" for detailed tracing
+  mcpServer:
+    level:
+      - "api:*=info"
+```
+
+You can adjust the granularity using patterns:
+
+| Pattern | Description |
+|---------|-------------|
+| `api:*=info` | Info-level logging for the API layer |
+| `api:*=debug` | Debug-level logging for the API layer |
+| `ui:*=info` | Info-level logging for the UI layer |
+| `ui:*=debug` | Debug-level logging for the UI layer |
+
+After updating `values.yaml`, apply the changes:
+
+```bash
+helm upgrade <release-name> hcl-dx-iq -f values.yaml
+```
+
+![IQ Console Logs](../../assets/HCL_IQ_Console_logs.png "Logs after enabling tracing in console")
+
 ---
 
 ## Related Resources
