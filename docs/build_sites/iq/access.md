@@ -2,7 +2,7 @@
 
 This section explains how to access the IQ AI assistant from within HCL Digital Experience (DX).
 
-On DX pages, IQ is rendered in one of two modes: clicking the **Sparkle Icon** in the DX Toolbar opens IQ as a **Panel view**, while clicking the **Floating Action Button (FAB)** opens IQ in a **Compact view**. Which mode is displayed is determined automatically by a page layout parameter. On certain DX pages where rendering the Panel view would break or negatively impact the page layout (for example, non-responsive or non-adaptive applications), IQ will display as a Compact view via the FAB instead. This parameter is set by the product and cannot be customized.
+On DX pages, IQ is rendered in one of two modes: clicking the **Sparkle Icon** in the DX Toolbar opens IQ as a **Panel view**, while clicking the **Floating Action Button (FAB)** opens IQ in a **Compact view**. Which mode is displayed is determined automatically by a page layout parameter. On certain DX pages where rendering the Panel view would break or negatively impact the page layout (for example, non-responsive or non-adaptive applications), IQ will display as a Compact view via the FAB instead.
 
 From either the Panel view or Compact view, you can expand IQ to a **Full view** for a more spacious and interactive experience.
 
@@ -103,6 +103,7 @@ Regardless of the view (Panel view, Compact view, or Full view), the IQ interfac
 ### Status Indicators
 
 - **Loading Indicator (Thinking...)**: Appears while IQ is processing
+- **Processing Status**: May display different states depending on where the request is being processed (e.g., integrator processing, API calls, or MCP server operations)
 - **Error Messages**: Displays various error conditions including:
     - **Connection Error**: WebSocket connection to IQ backend failed
     - **Unable to connect to AI service**: IQ backend cannot reach the LLM provider
