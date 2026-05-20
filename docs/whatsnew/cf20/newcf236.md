@@ -1,14 +1,12 @@
-# What's new in CF235
+# What's new in CF236
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF235 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF236 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio - Dashboard
-- Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -17,9 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- DAM - Soft Delete
 - Helm values updates
-- Search V2 - Using in-house CA or PKI for certificates
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -35,10 +31,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/235.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/235.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### Logout API updates
 
@@ -69,26 +65,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New How-to articles now available
 
 === "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
 
 === "On-Premises"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
-
-### Practitioner Studio - Dashboard  
-
-=== "Containers"
-    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
-
-=== "On-Premises"
-    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
-
-### Presentation Designer - New entry points from Authoring portlet
-
-=== "Containers"
-    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
-
-=== "On-Premises"
-    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -106,25 +86,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DAM - Soft Delete
-
-=== "Containers"
-    The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users. For more information, refer to the [DAM Soft Delete](../../manage_content/digital_assets/usage/managing_dam/dam_soft_delete.md).
-
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf235).
-
-### Search V2 - Using in-house CA or PKI for certificates
-
-=== "Containers"
-You can now use certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployments. For detailed instructions, refer to [Using in-house CA or PKI for Search V2 certificates](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md).
+    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ### WAS, JDK, and iFix versions
 
 === "Containers"
-    HCL DX 9.5 CF235 contains the following:
+    HCL DX 9.5 CF236 contains the following:
 
     - [WebSphere Application Server 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
