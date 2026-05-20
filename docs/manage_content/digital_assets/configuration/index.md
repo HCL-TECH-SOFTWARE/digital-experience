@@ -12,7 +12,7 @@ This section describes the DAM extensibility feature and how to configure your s
 This section provides steps on how to configure friendly URLs to access DAM resources.
 - **[DAM access control](../usage/managing_dam/dam_access_control.md)**  
 This section provides information about DAM access control, its features, and limitations. Steps on how to assign permission to users through the DAM user interface are also provided.
-- **[DAM Crop Aspect Ratio Configuration](./dam_crop_aspect_ratio.md)**
+- **[DAM Crop Aspect Ratio Configuration](./dam_crop_aspect_ratio.md)**  
 This section provides information on how to configure aspect ratios in DAM using the `cropAspectRatio` parameter.
 - **[Configure Digital Asset Management in virtual portals](./Configure_DAM_virtual_portals.md)**  
 This section provides steps to configure DAM support in virtual portals.
