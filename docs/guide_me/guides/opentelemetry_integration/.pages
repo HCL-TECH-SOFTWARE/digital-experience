@@ -1,0 +1,7 @@
+title: OpenTelemetry Integration Guide
+nav:
+    - index.md
+    - deploying_otel_collector.md
+    - configure_nodejs_services.md
+    - configure_java_services.md
+    - monitoring_and_troubleshooting.md
