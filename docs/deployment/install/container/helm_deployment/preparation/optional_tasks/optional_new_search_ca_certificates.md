@@ -1,6 +1,6 @@
-# Using In-House CA/PKI for Search V2 Certificates
+# Using in-house CA or PKI for Search V2 certificates
 
-Use this guide to request certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployment.
+This topic discusses how to request certificates from your organization’s certificate authority (CA) or public key infrastructure (PKI) for Search V2 deployment.
 
 ## When to use this guide
 
@@ -343,3 +343,4 @@ After obtaining your certificates from your CA:
 1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets).
 2. Configure the admin DN in your Helm values if using a custom admin certificate.
 3. Deploy Search V2 following the standard installation process.
+

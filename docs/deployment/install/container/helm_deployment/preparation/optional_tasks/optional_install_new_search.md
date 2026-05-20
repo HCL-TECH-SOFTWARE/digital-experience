@@ -1,11 +1,10 @@
 # Installing the Search V2 backend
 
-This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment.
-The search currently provides the following capabilities:
+This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment. Search has the following features:
 
 - WCM crawling
-- Pushing API for use with WCM Content Sources
-- Searching using REST API
+- Push API for use with WCM content sources
+- Search using REST API
 - Searching [Digital Asset Management (DAM) indexes](../../../../../../manage_content/digital_assets/configuration/dam_indexing/index.md)
 
 ## Prerequisites
@@ -13,8 +12,6 @@ The search currently provides the following capabilities:
 To use OpenSearch, your HCL Digital Experience (DX) deployment must be running in Kubernetes. The deployment must include DX Core, which provides Web Content Manager (WCM) and supports ACL lookup.
 
 ## Limitations
-
-The search currently has the following limitations:
 
 - The REST API request body size is limited to 5 MB.
 - A search result is limited to 10,000 results.
@@ -31,10 +28,9 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 ## Preparing certificates for inter-service communication
 
-Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in their respective secrets. Refer to the [DN format requirements](#dn-format-requirements) for more information about certificate Distinguished Name (DN) validation limitation.
+Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
 
-!!! info "Using In-House CA/PKI"
-    If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -46,24 +42,27 @@ The following types of certificates are required:
 |Node|Used for communication between OpenSearch cluster nodes.|Pre-configured as `CN=opensearch-node*` (wildcard pattern).|
 |Client|Used by the search middleware to authenticate with OpenSearch.|Pre-configured as `CN=opensearch-client`.|
 
-!!! important
-    Only the admin certificate DN must be customized in your Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and work automatically if you follow the certificate generation commands.
+Only the admin certificate DN must be customized in your Helm chart. The node and client certificate DNs are pre-configured in the OpenSearch image and work automatically if you follow the certificate generation commands.
 
 ### Generating certificates
 
-!!! info "Certificate Options"
-    The examples below show how to generate self-signed certificates for testing and development. **For production environments**, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](optional_new_search_ca_certificates.md) for detailed requirements.
+The examples below show how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
 
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 
-!!! note "X.509 v3 Extensions"
-    The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
+The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
+
+
 
 ```sh
-# Root CA for certificates - using comprehensive test DN
 openssl genrsa -out root-ca-key.pem 2048
+# Root CA certificate – using a comprehensive test DN
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
+```
 
+
+
+```
 # Admin cert - using same comprehensive test DN
 openssl genrsa -out admin-key-temp.pem 2048
 openssl pkcs8 -inform PEM -outform PEM -in admin-key-temp.pem -topk8 -nocrypt -v1 PBE-SHA1-3DES -out admin-key.pem
@@ -107,12 +106,11 @@ rm client-key-temp.pem client.csr client-ext.cnf
 
 After obtaining your certificates (either self-signed or from your CA), create the required Kubernetes secrets to store them.
 
-!!! note "Required Files"
-    For each certificate type, you need three files:
+For each certificate type, you need three files:
     
-    - The certificate file (e.g., `admin.pem`, `node.pem`, `client.pem`)
-    - The private key file (e.g., `admin-key.pem`, `node-key.pem`, `client-key.pem`)
-    - The root CA certificate (e.g., `root-ca.pem`)
+  - The certificate file (e.g., `admin.pem`, `node.pem`, `client.pem`)
+  - The private key file (e.g., `admin-key.pem`, `node-key.pem`, `client-key.pem`)
+  - The root CA certificate (e.g., `root-ca.pem`)
 
 Create the three required secrets:
 
@@ -138,12 +136,11 @@ kubectl create secret generic search-client-cert \
 
 Replace `YOUR_NAMESPACE` with your Kubernetes namespace where DX and Search are deployed.
 
-!!! tip "Using CA-Signed Certificates"
-    If you received certificates from your CA team, ensure you have:
+If you received certificates from your CA team, ensure you have the following:
     
-    - Your CA's root certificate (and any intermediate certificates)
-    - All three signed certificates (admin, node, client)
-    - The corresponding private keys you generated
+  - Your CA's root certificate (and any intermediate certificates)
+  - All three signed certificates (admin, node, client)
+  - The corresponding private keys you generated
     
     Then use the same `kubectl create secret` commands above with your CA-signed certificate files.
 
@@ -165,8 +162,7 @@ After you generate the admin certificate, extract its DN in RFC 2253 format. Use
 
     Replace `YOUR_NAMESPACE` with your deployment namespace.
 
-    !!!important
-        OpenSearch DN matching is strictly order-sensitive. You must use the `-nameopt RFC2253` parameter to preserve the exact component order from your certificate, correctly format special characters and Unicode, and ensure consistent output across all OpenSSL versions.
+    OpenSearch DN matching is strictly order-sensitive. You must use the `-nameopt RFC2253` parameter to preserve the exact component order from your certificate, correctly format special characters and Unicode, and ensure consistent output across all OpenSSL versions.
 
 3. Verify the output. For example:
 
@@ -286,12 +282,13 @@ CN=Admin,OU=IT,O=Smith, Jones,C=US       # Comma inside value must be escaped (s
 
 ## Preparing the `custom-search-values.yaml`
 
-To configure your search deployment, you have to prepare your `custom-search-values.yaml` which contains all configurable settings. This custom values file must only contain the parameters that you want to overwrite with your preferred settings.
+To configure your search deployment, prepare a `custom-search-values.yaml` file that contains all configurable settings. This file must include only the parameters that you want to override with your preferred settings.
 
-You can get a file with the default configuration using the following command:
+You can generate a file with the default configuration using the following command:
 
-``` sh
-# Command to extract values.yaml from Helm Chart
+### Command to extract `values.yaml` from the Helm chart
+
+```sh
 helm show values hcl-dx-search.tar.gz > values.yaml
 ```
 
@@ -381,7 +378,7 @@ configuration:
       - 'CN=SearchAdmin,OU=Platform,O=TechCorp,C=US'
     ```
 
-2. The role mapping (`roles_mapping.yml`) is updated to map the extracted CN to the admin role::
+2. The role mapping (`roles_mapping.yml`) is updated to map the extracted CN to the admin role:
 
     ```yaml
     all_access:

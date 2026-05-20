@@ -49,7 +49,7 @@ To opt in and install DX v9.5, refer to the following instructions:
 
     - **For Windows:** The `install_95` flag can fail in Windows environments.  It is recommended to complete the CF upgrade according to [legacy instructions](../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md) and then manually [upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079619){target="_blank"} using the repositories packaged within the cumulative fix.
 
-After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [Enabling Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 To opt out and upgrade to CF219 without installing v9.5, run the applyCF script without setting the install_95 parameter.
 
