@@ -19,9 +19,6 @@ Before you begin the integration, ensure that you have the following components 
 - Administrative access to modify deployment configurations
 - An observability backend to receive telemetry data
 
-!!! important
-    Enabling continuous tracing capabilities, such as OTel, can affect performance because it processes and transports data. Test the OTel integration in your environments and adjust resource allocations for individual services as needed.
-
 ### Architecture
 
 HCL DX includes multiple components that support OTel tracking across different runtimes, which all stream data through the OTel Collector pipeline:
@@ -32,6 +29,9 @@ HCL DX includes multiple components that support OTel tracking across different 
 | **Java** | DX Core, WebEngine, Runtime Controller, and License Manager |
 
 The OTel Collector acts as the centralized data pipeline that receives, processes, and exports this telemetry data to your backend systems.
+
+!!! warning "Performance impact"
+    Enabling continuous OTel tracking can affect system performance due to data processing and transport overhead. Test the integration in your staging environments and adjust service resource allocations as needed.
 
 - **[Deploying the OpenTelemetry Collector](deploying_otel_collector.md)**  
 Learn how to deploy the collector to your Kubernetes cluster using Helm, configure the telemetry pipeline, and verify that the service is running.
