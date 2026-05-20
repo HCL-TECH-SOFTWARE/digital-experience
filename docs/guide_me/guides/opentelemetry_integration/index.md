@@ -1,51 +1,41 @@
-# OpenTelemetry Integration with HCL DX
+# OpenTelemetry Integration Guide
 
-## Overview
-
-This guide provides comprehensive instructions for integrating OpenTelemetry (OTel) with HCL Digital Experience (DX) to enable observability across your deployment. OTel is an open-source observability framework that provides a unified approach to collecting traces, metrics, and logs from your applications.
+This guide provides comprehensive instructions for integrating OpenTelemetry (OTel) with HCL Digital Experience (DX) to enable observability across your containerized deployment. OTel is an open-source observability framework that provides a unified approach to collecting traces, metrics, and logs from your applications.
 
 By integrating OTel with HCL DX, you can:
 
-- Collect distributed traces across all DX components
-- Monitor application metrics and performance indicators
-- Aggregate logs with correlation context
-- Export telemetry data to your preferred observability backend (Prometheus, Grafana, Elastic, etc.)
+- Collect distributed traces across all DX components.
+- Monitor application metrics and performance indicators.
+- Aggregate logs with correlation context.
+- Export telemetry data to your preferred observability backend, such as Prometheus, Grafana, or Elastic.
 
 ## Prerequisites
 
-Before proceeding with the integration, ensure you have:
+Before you begin the integration, ensure that you have the following components and access:
 
-- A running HCL Digital Experience deployment on Kubernetes
+- A running HCL DX deployment on Kubernetes
 - Helm 3.0 or later installed and configured
-- kubectl access to your Kubernetes cluster
+- `kubectl` access to your Kubernetes cluster
 - Administrative access to modify deployment configurations
-- An observability backend to receive telemetry data, such as Prometheus or Grafana
+- An observability backend to receive telemetry data
 
 !!! important
-    Be aware that enabling continuous tracing capabilities, such as OTel, can affect performance because it processes and transports data. Test the OTel integration in your environments and adjust resource allocations for individual services as needed.
+    Enabling continuous tracing capabilities, such as OTel, can affect performance because it processes and transports data. Test the OTel integration in your environments and adjust resource allocations for individual services as needed.
 
-## Architecture
+### Architecture
 
-HCL DX consists of multiple services that can be instrumented with OTel:
+HCL DX includes multiple components that support OTel tracking across different runtimes, which all stream data through the OTel Collector pipeline:
 
-**Node.js Services:**
-- Digital Asset Management (DAM)
-- Image Processor
-- Ring API
+| Runtime | Supported Services |
+| :--- | :--- |
+| **Node.js** | Digital Asset Management (DAM), Image Processor, and Ring API |
+| **Java** | DX Core, WebEngine, Runtime Controller, and License Manager |
 
-**Java Services:**
-- DX Core
-- WebEngine
-- Runtime Controller
-- License Manager
-
-The OpenTelemetry Collector acts as a centralized telemetry data pipeline that receives, processes, and exports observability data from all instrumented services.
+The OTel Collector acts as the centralized data pipeline that receives, processes, and exports this telemetry data to your backend systems.
 
 - **[Deploying the OpenTelemetry Collector](deploying_otel_collector.md)**  
 Learn how to deploy the collector to your Kubernetes cluster using Helm, configure the telemetry pipeline, and verify that the service is running.
-- **[Configuring Node.js services](configure_nodejs_services.md)**  
-Learn how to enable built-in instrumentation for components like DAM, the Image Processor, and the Ring API using the HCL DX Helm chart.
-- **[Configuring Java services](configure_java_services.md)**  
-Learn how to activate the pre-bundled OpenTelemetry Java Agent for DX Core, WebEngine, the Runtime Controller, and the License Manager.
+- **[Enabling OTel for Java and Node.js services](configuring_services.md)**  
+Learn how to configure services using the HCL DX Helm chart. You can enable Node.js instrumentation for DAM, the Image Processor, and the Ring API, and activate the pre-bundled OTel Java agent for DX Core, WebEngine, the Runtime Controller, and the License Manager.
 - **[Monitoring and troubleshooting](monitoring_and_troubleshooting.md)**  
 Learn how to track distributed traces in Grafana, query performance metrics in Prometheus, and resolve common deployment issues.

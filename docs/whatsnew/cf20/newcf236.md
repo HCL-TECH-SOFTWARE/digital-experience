@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- OpenTelemetry Integration Guide
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -35,14 +36,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
-
-### Logout API updates
-
-=== "Containers"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
-
-=== "On-Premises"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 ### My HCLSoftware delivery portal
 
@@ -90,6 +83,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+
+### OpenTelemetry Integration Guide
+
+=== "Containers"
+    The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
 ### WAS, JDK, and iFix versions
 
