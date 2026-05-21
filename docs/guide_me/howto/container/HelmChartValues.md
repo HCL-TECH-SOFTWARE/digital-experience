@@ -1,25 +1,25 @@
-# How to get helm chart values
+# How to get Helm chart values
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This document describes how to retrieve the Helm chart values from the running environment if the custom-values.yaml file were deleted.
+If the original custom values file is lost or deleted, exporting the active settings ensures you can audit your current cluster configuration or reuse parameters for future deployment upgrades. This article describes how to retrieve Helm chart values from a running environment.
 
 ## Instructions
 
-It's possible to get the helm chart's values by running the following helm command:
+Run the following Helm command to retrieve the configuration values applied to your deployment:
 
-```text
+```bash
 helm get values -n NAMESPACE RELEASE_NAME
 ```
 
-Example:
+For example, to extract the values from a release named `dx-deployment` in the `dxns` namespace and save them directly to a new `values.yaml` file, run:
 
-```text
+```bash
 helm get values -n dxns dx-deployment > values.yaml
 ```
 
-For more information review [helm get values](https://helm.sh/docs/helm/helm_get_values/){target="_blank"}.
+For more information, review the [official helm get values documentation](https://helm.sh/docs/helm/helm_get_values/){target="_blank"}.

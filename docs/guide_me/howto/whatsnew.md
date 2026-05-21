@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
 
 ## CF235
 

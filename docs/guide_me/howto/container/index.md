@@ -1,5 +1,6 @@
 # Container
 
-This section includes how-to articles associated with the containerized components in HCL Digital Experience (DX).
+This section includes how-to articles about containerized components in HCL Digital Experience (DX).
 
-- **[How to get helm chart values](./HelmChartValues.md)**  
+- **[How to get Helm chart values](./HelmChartValues.md)**  
+Learn how to retrieve active Helm chart values from a running environment to audit your current configuration or prepare for future upgrades.
