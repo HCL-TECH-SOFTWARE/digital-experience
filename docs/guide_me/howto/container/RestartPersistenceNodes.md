@@ -1,75 +1,74 @@
-# How to safely restart the persistence nodes
+# How to safely restart persistence nodes
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This document provides step-by-step instructions on how to safely restart the persistence node(s) in order to avoid data loss in the PostGres database.
+When performing infrastructure maintenance on containerized environments, improperly terminating nodes can cause data corruption or unexpected connection drops within the PostgreSQL database layer. Relocating active persistence workloads to a stable worker node ensures continuous data integrity during cluster maintenance. This article describes how to safely isolate, migrate, and restart persistence nodes.
+
+!!!note
+    Using a defined grace period when draining a node is highly recommended. This allows active database transactions to complete cleanly rather than being forced to terminate abruptly with a termination signal (`SIGKILL`).
 
 ## Instructions
 
-!!!note
-    Optional but Recommended Step: Use a grace period when draining the node, as that gives you the ability to take the node down much more gently and reliably instead of utilizing a sigkill to immediately terminate.
+Perform the following steps to migrate workloads and safely restart your target infrastructure nodes:
 
-To perform the procedure no matter which way you go with the grace period, do the following:
+1. Before making any infrastructure or scaling modifications, ensure you have a verified, complete backup of your data assets. For detailed instructions, refer to [Back up and restore DAM](../../../manage_content/digital_assets/dam_backup_restore_image.md).
 
-1. First and foremost, make sure that you have full backups of everything as per the following product documentation:
-[Back up and restore DAM](../../../manage_content/digital_assets/dam_backup_restore_image.md){target="_blank"}
+2. Locate a worker node that will not undergo maintenance during this window. Retrieve its unique hostname by executing the appropriate command for your platform:
 
-2. Identify a node that will not be undergoing emergency maintenance and issue the command:
+    - **Kubernetes:**  
 
-    On Kubernetes:  
+        ```bash
+        kubectl -n dxns describe node xyz
+        ```
 
-    ```cmd
-    kubectl -n dxns describe node xyz
-    ```
+    - **OpenShift:**
 
-    On OpenShift:  
+        ```bash
+        oc describe node xyz
+        ```
 
-    ```cmd
-    oc describe node xyz
-    ```
+    Locate and record the exact `kubernetes.io/hostname` value from the output.
 
-    From that output, get the unique hostname of the node.
-
-3. Scale down to 1 pod for persistenceNode, digitalAssetManagement and persistenceConnectionPool by editing the helm chart as follows:
+3. Modify your custom Helm values file to reduce the replica count for the `digitalAssetManagement`, `persistenceConnectionPool`, and `persistenceNode` parameters to `1`. This prevents coordination issues during the migration:
 
     ```yaml
     scaling:
-     # The default amount of replicas per application
-     replicas:
-       digitalAssetManagement: 1
-       persistenceConnectionPool: 1
-       # You should not increase the number of persistence node to more than 5
-       persistenceNode: 1
+      # The default amount of replicas per application
+      replicas:
+        digitalAssetManagement: 1
+        persistenceConnectionPool: 1
+        # You should not increase the number of persistence node to more than 5
+        persistenceNode: 1
     ```
 
-4. Run the [**helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"} command to apply the changes to the chart.
+4. Run a [**Helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md) to apply the updated replica counts to your deployment.
 
-5. Edit the custom-values.yaml that contains your customizations for the DX deployment and add the following using the hostname from step 2:
+5. Edit your custom values file again to append a `nodeSelector` configuration. Use the unique hostname retrieved in Step 2 to force the pods to schedule onto the stable node:
 
     ```yaml
     # Application specific node selector
     # nodeSelector uses following notation: <NODE_LABEL_KEY>: <NODE_LABEL_VALUE>
-    # e.g. nodeSelector
+    # Example:
     # nodeSelector:
-    # contentComposer:
-    # diskType: ssd
+    #   contentComposer:
+    #     diskType: ssd
     nodeSelector:
       digitalAssetManagement:
         kubernetes.io/hostname:xyzhostname
       persistenceConnectionPool:
         kubernetes.io/hostname:xyzhostname
       persistenceNode:
-       kubernetes.io/hostname:xyzhostname
+        kubernetes.io/hostname:xyzhostname
     ```
 
-6. Run the [**helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"} command to apply the changes to the chart.
+6. Run a `helm upgrade` to migrate the pods to the designated safe node.
 
-7. Scale back up to your normal number of pods using the helm chart.
+7. Update your custom Helm values file to restore the original replica counts for your applications while keeping the `nodeSelector` properties in place. Run the `helm upgrade` command once more to deploy the full replica count safely on the designated node.
 
-8. Apply Maintenance.
+8. Execute your planned maintenance, updates, or restarts on the now-vacated cluster nodes.
 
-9. Once everything is stable again, remove the nodeSelector customizations from your helm chart and run the [**helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"} command to once again distribute the workload across nodes.
+9. Once the maintained nodes are fully online and healthy, remove the temporary `nodeSelector` blocks from your custom values file. Run the `helm upgrade` command a final time to allow the cluster to distribute the persistence workloads evenly across all available nodes.
