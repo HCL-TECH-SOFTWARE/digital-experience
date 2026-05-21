@@ -6,22 +6,22 @@
 
 ## Introduction
 
-Many login performance issues turn out to be delays in resolving group membership. HCL DX attempts to resolve group membership at each login. There are a few things a DX administrator can do to make the process of resolving group membership as efficient as possible.  Reducing the load on the LDAP is a bonus. This article provides some suggestions.
+Many login performance issues stem from delays when resolving group memberships, which HCL Digital Experience (DX) evaluates during every authentication request. Optimizing this process minimizes the transactional load on the directory server and improves authentication response times. This article describes how to tune your LDAP configuration to optimize group membership resolution.
 
 ## Instructions
 
-1. If your LDAP supports it, implement a membership attribute. Set the scope as broadly as your LDAP supports.  Hopefully, the LDAP's membership attribute lists all of a user's group memberships (direct, nested, and dynamic).
+1. **Implement a membership attribute:** If supported by your LDAP server, implement a direct membership attribute (such as `ibm-allGroups` or `memberOf`) and configure its scope as broadly as possible. This attribute should return all of a user's direct, nested, and dynamic group memberships in a single query.
 
     !!!note
-        Be sure that any groups returned by the membership attribute can be resolved within the realm defined in VMM.  Failures will occur if the membership attribute returns a group DN that VMM cannot look up.
+        Ensure that any groups returned by the membership attribute can be resolved within the realm defined in Virtual Member Manager (VMM). Lookups will fail if the attribute returns a group Distinguished Name (DN) that VMM cannot locate.
 
-2. Unless your application requires them, avoid using dynamic groups since resolving their membership exacts a high cost. If you need dynamic groups in your application, consider keeping them locally with [this alternative](https://help.hcl-software.com/digital-experience/9.5/sc-ls-test/deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/){target="_blank"}.  
+2. **Limit the use of dynamic groups:** Avoid using dynamic groups unless your business logic explicitly requires them, as calculating their membership dynamically incurs a high processing cost. If dynamic grouping is necessary, consider using local [rule-based user groups](../../../deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/index.md) within HCL DX instead.
 
-3. If the membership attribute resolves nested groups, [disable nested groups in Portal](https://help.hcl-software.com/digital-experience/9.5/sc-ls-test/deployment/manage/security/people/authorization/users_and_groups/adusrgrp_nested/){target="_blank"}.  
+3. **Disable nested group evaluation:** If your LDAP membership attribute already resolves nested groups natively, change your settings to [disable nested groups](../../../deployment/manage/security/people/authorization/users_and_groups/adusrgrp_nested.md) within the portal configuration to avoid redundant processing.
 
-4. Configure a federated repository so that VMM resolves group membership during the WAS login process. Then configure DX to reuse WAS group information (user management only, to maximize performance).
+4. **Reuse WebSphere Application Server (WAS) group information:** Configure a federated repository to ensure the VMM resolves group memberships during the initial WAS login process. You can then configure HCL DX to reuse this cached WAS group information for user management to maximize authentication speed.
 
     !!!note
-        You can reuse WAS group information even in a standalone LDAP configuration - I just like the VMM functionality for resolving group membership better.
+        Reusing WAS group information can also be applied to standalone LDAP configurations to leverage VMM group resolution behavior.
 
-There are some additional tweaks you can make with PAC caches, VMM caches, and context pooling, but these four items should help a great deal in resolving any performance delays in resolving group membership during Portal login.
+While further optimizations can be achieved by adjusting Portal Access Control (PAC) caches, VMM caches, and context pooling, implementing these four strategies will resolve most performance delays associated with group resolution during login.

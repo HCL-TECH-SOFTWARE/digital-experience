@@ -4,5 +4,5 @@ nav:
     - index.md
     - DB2DatabasePerformance.md
     - ImproveQueryPerformance.md
-    - WarmUpPortalSite.md
     - DX_Tune_LDAP.md
+    - WarmUpPortalSite.md

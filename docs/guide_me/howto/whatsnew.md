@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
 
 ## CF235
 
