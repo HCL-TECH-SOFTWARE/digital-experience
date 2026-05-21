@@ -1,22 +1,24 @@
-# Install HCL Digital Experience as a non-root user
+# How to install HCL DX as a non-root user
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-The root user has the required permissions to install HCL Digital Experience. However, for security reasons, organizations might choose not to use the root user for installation.
-
-IBM Installation Manager (IIM) supports installing HCL Digital Experience as a non-root user. On AIX and Linux systems, you can allow non-root users to install the product by granting them access to specific data directories.
-
-This task applies only to AIX and Linux systems. On Windows, the user must be a member of the Administrators group.
-
+While the root user has the necessary permissions to install HCL Digital Experience (DX), organizations often restrict root access for security reasons. This article describes how to install HCL DX as a non-root user using the IBM Installation Manager (IIM).
 
 ## Instructions
 
-See step 5 in the following HCL Digital Experience Help Center articles:
+Review the following instructions for your specific operating system.
 
-[Preparing the Installation Manager (Linux)](../../../deployment/install/traditional/installing_dx/linux/inst_iim-linux.md)
+### For AIX and Linux
 
-[Preparing the Installation Manager (AIX)](../../../deployment/install/traditional/installing_dx/aix/inst_iim-AIX.md)
+To permit non-root users to install the product, change their permissions to access specific data directories. Refer to step 5 in the following documentation:
+
+- [Preparing the Installation Manager (AIX)](../../../deployment/install/traditional/installing_dx/aix/inst_iim-AIX.md)
+- [Preparing the Installation Manager (Linux)](../../../deployment/install/traditional/installing_dx/linux/inst_iim-linux.md)
+
+### For Windows
+
+Ensure the non-root user is a member of the Administrator group.

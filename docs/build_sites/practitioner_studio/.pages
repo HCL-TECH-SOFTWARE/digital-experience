@@ -1,13 +1,11 @@
 title: Practitioner Studio
 nav:
     - index.md
-    - dashboard.md
     - Working with Practitioner Studio: working_with_ps
+    - dashboard.md
     - web_content.md
     - site_templates.md
     - themes.md
     - personalization.md
     - administration.md
-    - edit_my_profile.md
-
-
+    # - edit_my_profile.md
