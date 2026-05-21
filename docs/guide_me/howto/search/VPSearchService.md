@@ -2,18 +2,18 @@
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This document describes the detailed steps that need to be done to create a search service for a Virtual Portal.
+A search service enables users to query pages and web content, and configuring a dedicated service for a Virtual Portal ensures that search scopes and indices are isolated specifically to that environment. This article outlines the steps required to configure a search service for an HCL Digital Experience (DX) Virtual Portal environment.
 
 ## Instructions
 
-1. First of all, please make sure that the remote search server is using the same LDAP for both the remote search server and local portal server's Virtual Portal.
+1. Verify that the remote search server and the Virtual Portal on the local portal server use the same LDAP directory.
 
-2. Please follow the instructions mentioned in: [Configure remote search](../../../deployment/manage/container_configuration/kubernetes_remote_search.md){target="_blank"}
+2. Complete the initial remote search setup by following the procedures in [Configure Remote Search](../../../deployment/manage/container_configuration/kubernetes_remote_search.md).
 
-3. Set the PSE_TYPE=ejb.  The EJB and IIOP URL values are documented at [Search service configuration parameters](../../../build_sites/search/cfg_dx_search/search_service_params/index.md){target="_blank"}.
+3. Set the `PSE_TYPE` parameter to `ejb`. The required EJB and IIOP URL values are detailed in [Search service configuration parameters](../../../build_sites/search/cfg_dx_search/search_service_params/index.md).
 
-4. Please check the folder permission of DefaultCollectionsDirectory and CONFIG_FOLDER_PATH (example chmod -R 755).
+4. Verify the file system permissions for the `DefaultCollectionsDirectory` and `CONFIG_FOLDER_PATH` directories to ensure they are accessible (for example, using `chmod -R 755`).

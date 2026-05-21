@@ -1,7 +1,6 @@
 title: Search
-
 nav:
     - index.md
+    - VPSearchService.md
     - SearchByDateTime.md
     - DX_Search_and_Search_Center.md
-    - VPSearchService.md
