@@ -83,7 +83,7 @@ The `page\_id` portion of the friendly URL is always evaluated first. Because of
     |The user modifies the URL in the browser's address bar to go to `content_item_2`.|`http://www.example.com:10039/wps/portal/home/content_item_2`|
     |Resulting URL.|`http://www.example.com:10039/wps/portal/home/content_item_2`Because the user removed the `rich\_state` portion of the URL when modifying the URL, the `path\_to\_content` portion of the URL is evaluated. The user is directed to the page where `content_item_2` is displayed.|
 
-## Overview of <portal-core:stateBase method="friendly"/> in HCL Digital Experience (DX)
+## Overview of `<portal-core:stateBase method="friendly"/>` in HCL Digital Experience (DX)
 
 The `<portal-core:stateBase method="friendly"/>` JSP tag is used in HCL DX themes to generate a `<base>` tag for the friendly URL of the current page.
 
