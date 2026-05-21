@@ -6,16 +6,18 @@
 
 ## Introduction
 
-You've configured your DX deployment with SAML for SSO and find that you're unable to impersonate other users.
+When an HCL Digital Experience (DX) deployment is configured with SAML for Single Sign-On (SSO), the user impersonation feature may fail to function as expected. This behavior occurs due to specific security processing conflicts within the underlying application server. This article outlines the steps required to enable the impersonation API to work alongside a SAML configuration.
 
 ## Instructions
 
-In order for impersonation to work with SAML, the com.ibm.websphere.security.InvokeTAIbeforeSSO security custom property needs to be removed. Follow these steps to remove the custom property:  
+To enable user impersonation within a SAML-configured environment, you must remove the `com.ibm.websphere.security.InvokeTAIbeforeSSO` security custom property. Refer to the following steps to remove this custom property:
 
 1. Log in to the IBM WebSphere Integrated Solutions Console as the WebSphere administrator.
 2. Navigate to **Security > Global security > Custom properties**.
 3. Select the **com.ibm.websphere.security.InvokeTAIbeforeSSO** property.
-4. Click on the **Delete** button.
-5. Save the changes.
+4. Click **Delete**.
+5. Click **Save** at the top of the console messages.
 6. On clustered on-premise environments, synchronize the changes with all the nodes.
-7. Restart the dx-core pod on containerized environments or all nodes, including the Deployment Manager node, when running on a clustered on-premise environment.  
+7. Restart the environment to apply the changes:
+    - **Containerized environments:** Restart the `dx-core` pods.
+    - **Clustered on-premises environments:** Restart all nodes, including the Deployment Manager (Dmgr) node.
