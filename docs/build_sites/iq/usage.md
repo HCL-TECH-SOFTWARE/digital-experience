@@ -119,6 +119,7 @@ To start a fresh conversation and clear the current context:
 
 !!! note
     If you have IQ open in more than one browser tab or window and start a new conversation in one of them, a warning message may briefly appear in the other. This resolves automatically within a few seconds and no action is required.
+    ![Warning alert for concurrent session](../../assets/HCL_IQ_Concurrent_Session_Warning.png "Concurrent session warning")
 
 ### Stopping an Ongoing Request
 
