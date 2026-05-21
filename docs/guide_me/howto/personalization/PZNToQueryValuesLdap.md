@@ -6,11 +6,10 @@
 
 ## Introduction
 
-When using PZN, a question maybe comes up, if it is possible to use PZN to query values from an LDAP server that is not configured in a IBM WebSphere Application Server (WAS) / HCL DX server user repository. For that a requirement could be that WAS security need to be configured to use LDAP 1, while the PZN engine need to be configured to query records from LDAP 2.
-Important in that scenario could be to make sure that LDAP 2 will not be part of the WAS global security authentication / authorization services. (In other words, PZN maybe need to be configured to access LDAP 2 kind of like a JDBC datasource but using the LDAP protocol).
+Personalization (PZN) can query values from an external LDAP server that is not integrated into the IBM WebSphere Application Server (WAS) or HCL Digital Experience (DX) federated user repository. This scenario allows WAS security to manage authentication against a primary user directory, while the PZN engine independently queries a secondary LDAP directory for user attributes without including it in global security authentication or authorization services. This article describes how to configure PZN to access an external LDAP directory as an isolated data source.
 
 ## Instructions
 
-If the mentioned scenario should be implemented, it is needed to create a custom resource collection that provides the interface to the LDAP 2 and define that resource to PZN.
+To query an external LDAP directory that sits outside of your primary user repository, you must create a custom resource collection to serve as the interface between PZN and the secondary LDAP server.
 
-More information on resource collections can be found in [Creating and editing resource collections](../../../manage_content/pzn/personalization/personalization_2/pznCreateResourceCollection.md){target="_blank"}
+For detailed steps on creating and defining this interface, refer to [Creating and editing resource collections](../../../manage_content/pzn/personalization/personalization_2/pznCreateResourceCollection.md).

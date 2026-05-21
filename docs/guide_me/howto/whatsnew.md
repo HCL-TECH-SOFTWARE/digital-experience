@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
 
 ## CF235
 
