@@ -24,13 +24,13 @@ DAM Staging is a continuous sync process between environments. If you are using 
 
 The export command is used to export the DAM assets in the file system to default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will export to this location **store/folder_name/**.
 
--   **Commands description**
+- **Commands description**
 
     ```
     dxclient manage-dam-assets export-assets
     ```
 
--   **Help command**
+- **Help command**
 
     This command shows the help information for `manage-dam-assets` command usage:
 
@@ -38,8 +38,7 @@ The export command is used to export the DAM assets in the file system to defaul
     dxclient manage-dam-assets export-assets -h
     ```
 
-
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server:
 
@@ -108,19 +107,17 @@ The export command is used to export the DAM assets in the file system to defaul
 !!!important
     A new folder is created every time you run the `manage-dam-assets export-assets` command. If the specified `-exportPath` exists, the system throws the error `EBUSY: resource busy or locked,rmdir '/dxclient/store/<exportPath>`. Make sure to delete the existing `exportPath` before each run to export successfully.
 
-
 ## Validate exported DAM assets
 
 The validate command is used to validate exported DAM assets file at the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then validation of DAM assets will be done from this location **store/folder_name/**.
 
--   **Commands description**
+- **Commands description**
 
     ```
     dxclient manage-dam-assets validate-assets
     ```
 
-
--   **Help command**
+- **Help command**
 
     This command shows the help information for `manage-dam-assets` command usage:
 
@@ -128,7 +125,7 @@ The validate command is used to validate exported DAM assets file at the default
     dxclient manage-dam-assets validate-assets -h
     ```
 
--   **Commands Optional options**
+- **Commands Optional options**
 
 
     Use this attribute to specify a location **store/folder_name/** that is different from the default location to validate the DAM assets. The default location "export" is **store/outputFiles/dam-export-assets/**:
@@ -143,7 +140,7 @@ The validate command is used to validate exported DAM assets file at the default
     -importBinary <value>
     ```
 
-    !!! note 
+    !!! note
         Optional parameters are `exportPath` and `exportBinary`.
 
     !!! example
@@ -152,19 +149,18 @@ The validate command is used to validate exported DAM assets file at the default
         dxclient manage-dam-assets validate-assets -exportPath <exportPath> -importBinary <importBinary>
         ```
 
-
 ## Import DAM assets
 
 The import command is used to import the DAM assets to the target environment from the default location **store/outputFiles/dam-export-assets/** or if user specify a path, then DAM assets will import to this location **store/folder_name/**.
 
--   **Commands description**
+- **Commands description**
 
     ```
     dxclient manage-dam-assets import-assets -h
     ```
 
 
--   **Help command**
+- **Help command**
 
     This command shows the help information for `manage-dam-assets` command usage:
 
@@ -172,8 +168,7 @@ The import command is used to import the DAM assets to the target environment fr
     dxclient manage-dam-assets import-assets -h
     ```
 
-
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server:
 
@@ -229,7 +224,7 @@ The import command is used to import the DAM assets to the target environment fr
     -importBinary <value>
     ```
 
-    !!! note 
+    !!! note
         Optional parameters are `exportPath` and `exportBinary`.
 
     !!! example
@@ -240,7 +235,3 @@ The import command is used to import the DAM assets to the target environment fr
 
 ???+ info "Related information" 
     -   [DAM artifacts](../../../../extend_dx/development_tools/dxclient/dxclient_artifact_types/dam_artifacts/index.md)
-
-## HCL Digital Experience Solution Feedback
-
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).
