@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|API|[How to create a JSP using the WCM `QueryService` API](./api/createJSPUsingWCMAPI.md)|
 
 ## CF235
 
