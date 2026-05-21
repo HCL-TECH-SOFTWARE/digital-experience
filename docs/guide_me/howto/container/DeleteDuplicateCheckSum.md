@@ -1,4 +1,4 @@
-# How to delete duplicate CONFIG_CHECKSUM environment variables?
+# How to delete duplicate `CONFIG_CHECKSUM` environment variables
 
 ## Applies to
 
@@ -6,7 +6,8 @@
 
 ## Introduction
 
-There can be duplicate entries of "CONFIG_CHECKSUM" in the values.yaml file.
+Duplicate entries of `CONFIG_CHECKSUM` can sometimes accumulate within the live Kubernetes resource specifications or rendered deployment manifests.
+
 For example:
 
 ```log
@@ -18,20 +19,24 @@ For example:
   value: 1b7af3b626258eceda6977774fee28326c75e6750b97b051b2f7f5d7be2dfcd0
 ```
 
-Or warnings similar to this when performing helm upgrade:
+Or warnings similar to this when performing a Helm upgrade:
 
 ```log
 W0508 15:54:50.436745 2550 warnings.go:70] spec.template.spec.containers[0].env[2].name: duplicate name "CONFIG_CHECKSUM"
 ```
 
+This article describes how to remove those extra entries from the live cluster configuration.
+
 ## Instructions
 
-A way to remove the extra entries is to perform the following command:
+Refer to the following steps to remove the extra `CONFIG_CHECKSUM` entries:
 
-```log
-kubectl -n dxns delete sts dx-deployment-core --cascade=orphan
-```
+1. Run the following command:
 
-This command deletes the statefulset but keeps the Pods intact.
+    ```bash
+    kubectl -n dxns delete sts dx-deployment-core --cascade=orphan
+    ```
 
-After this command perform a [helm upgrade](../../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"}. The helm upgrade restarts all pods and ends up with just one checksum in each pod as well as in the statefulset.
+    This command deletes the live `statefulset` resource tracking object but keeps the actual running pods intact.
+
+2. Perform a [Helm upgrade](../../../deployment/install/container/helm_deployment/update_helm_deployment.md). The Helm upgrade rebuilds the `statefulset` cleanly, restarts the pods, and leaves just one valid checksum in each pod specification.
