@@ -1,4 +1,4 @@
-# Tips for using XSL with Portal and WCM
+# Tips for using XSL with HCL DX and WCM
 
 ## Applies to
 
@@ -10,19 +10,18 @@ If XML and associated XSL are not displayed properly, e.g. cannot preview, this 
 
 ## Instructions
 
-The return type for a content is text/html by default. To override this, on the URL you can put the parameter subtype=xml
+The return type for a content is **text/html** by default. To override this, on the URL you can put the parameter **subtype=xml**.
+This will make the XML include the XSL.  
 
-This will make the XML include the XSL.
+When previewing, you need to do this manually each time.  
 
-When previewing, you need to do this manually each time.
+For rendering, the links that are generated in the hrefs need to include this in the querystring.  
 
-For rendering, the links that are generated in the hrefs need to include this in the querystring.
+Another option is to use a JSP component and set the response type in the JSP writer. Note that JSP components cannot be pre-rendered.  
 
-Another option is to use a JSP component and set the response type in the JSP writer. Note that JSP components cannot be pre-rendered.
+If you are trying to use XSL to mark up XML in WCM and you uploaded an XSL file to a file resource component but you are not seeing the XML rendered as expected check the following scenario.  
 
-If you are trying to use XSL to mark up XML in WCM and you uploaded an XSL file to a file resource component but you are not seeing the XML rendered as expected check the following scenario.
-
-The issue is that the XSL is returned as a text file rather than XML. Convert the text to an XML object using a custom function to workaround that issue.  For example, define the following in an HTML element:
+The issue is that the XSL is returned as a text file rather than XML. Convert the text to an XML object using a custom function to workaround that issue.  For example, define the following in an HTML element:  
 
 ```xml
   function loadXMLDoc(dname) {
@@ -40,4 +39,5 @@ The issue is that the XSL is returned as a text file rather than XML. Convert th
   }
 ```
 
-See also: [Web Content Manager JSP tags](https://help.hcl-software.com/digital-experience/8.5/wcm/wcm_reference_wcm-jsp-tags.html)
+???+ info "Related information"
+    [Web Content Manager JSP tags](../../../manage_content/wcm_development/wcm_dev_api/wcm_reference_wcm-jsp-tags.md){target="_blank"}

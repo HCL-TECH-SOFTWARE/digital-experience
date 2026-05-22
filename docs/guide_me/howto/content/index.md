@@ -18,5 +18,5 @@ Learn how to use JSP components in HCL DX using WCM.
 Learn how to use the XML Access command line tool.  
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
-- **[Tips for using XSL with Portal and WCM](./UsingXSLWithPortalAndWCM.md)**  
-Learn tips for using XSL with Portal and WCM.
+- **[Tips for using XSL with HCL DX and WCM](./UsingXSLWithPortalAndWCM.md)**  
+Learn tips for using XSL with HCL DX and WCM.
