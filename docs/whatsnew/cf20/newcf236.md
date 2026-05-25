@@ -121,7 +121,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Removal of unused DAM Helm keys (9.5)
 
 === "Containers"
-    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236: `enableSoftDelete`, `renderNewUI`, and `enableRootCollectionSort`. For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237: `enableSoftDelete`, `renderNewUI`, and `enableRootCollectionSort`. For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
