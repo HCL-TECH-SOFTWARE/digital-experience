@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
 
 ## CF235
 
