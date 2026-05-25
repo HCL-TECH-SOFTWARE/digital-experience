@@ -1,11 +1,10 @@
 # Feature updates for intuitive design and editing experience
 
-Presentation Designer introduces multiple improvements to deliver a more intuitive design and editing experience. This topic summarizes the behavior and usage of the recent feature updates under epic DXQ-44699.
+Presentation Designer introduces several improvements to provide a more intuitive design and editing experience. This topic summarizes the behavior and usage of the latest feature updates under epic DXQ-44699.
 
 The updates include:
 
 - Image selection from HCL Digital Asset Management (DAM)
-- Enhanced color picker for styling
 - Correct back-button navigation to the authoring page
 - Stackable in-app notifications
 - Responsive grid controls by device context
@@ -20,50 +19,32 @@ Before using these feature updates, ensure the following:
 
 ## Select images from DAM
 
-Presentation Designer now supports selecting images from DAM directly from image configuration.
+Presentation Designer now supports selecting images from DAM directly in image configuration.
 
 ### What changed
 
 - The image source includes an HCL DAM option.
 - DAM picker integration allows selecting an asset from the DAM dialog.
 - Selected image metadata can populate image fields such as title and alternate text.
-- Source switching behavior prevents stale DAM values from persisting when switching back to URL mode.
+- Source switching prevents stale DAM values from persisting when switching back to URL mode.
+
++ [ADD IMAGE HERE]
 
 ### How to use
 
 1. Open a presentation template in Presentation Designer.
-2. Select an image element.
-3. In image configuration, change source to **HCL DAM**.
-4. Select **Select image** and choose an asset from the DAM picker.
-5. Confirm that image source and metadata are applied.
+2. In the sidebar, under **Static Elements**, drag and drop the **Image** element onto the canvas.
+3. Select the image element to display its configuration options.
+4. Click the **Configure** icon (third icon) to open the image configuration dialog.
+5. In **Asset source**, select **HCL DAM**. This opens the DAM picker dialog.
+6. Select the collection that contains the image you want to use.
+7. Click **Select image**, then choose an asset in the DAM picker.
+8. Verify that the selected DAM image name appears under **Asset source**.
 
 ### Notes
 
 - If DAM picker is unavailable in the environment, the DAM source option appears disabled.
 - DAM-specific selected image label is shown only for DAM-compatible image URLs.
-
-## Use the enhanced color picker
-
-Presentation Designer includes a dedicated color picker in styling workflows.
-
-### What changed
-
-- A dedicated color picker is available in text color styling.
-- Color editing supports HEX, RGB, and CSS modes.
-- Alpha/opacity handling is supported within the picker workflow.
-
-### How to use
-
-1. Select an element that supports color styling (for example, text).
-2. Open the style panel and go to text color.
-3. Select a color from the picker or enter values in a supported format.
-4. Adjust opacity if required.
-5. Save and verify the rendered result.
-
-### Notes
-
-- Switching between color modes preserves the current selected color.
-- Invalid inputs are validated and should not disrupt styling workflow.
 
 ## Back button returns to the correct authoring page
 
@@ -73,7 +54,9 @@ Back navigation has been improved so users return to the expected authoring cont
 
 - Authoring return URL handling is synchronized during app initialization.
 - Return context is retained during editing transitions.
-- Back action now prefers the stored authoring return URL and falls back to browser history when required.
+- The back action now prioritizes the stored authoring return URL and falls back to browser history when needed.
+
++ [ADD IMAGE HERE]
 
 ### Expected behavior
 
@@ -82,13 +65,15 @@ Back navigation has been improved so users return to the expected authoring cont
 
 ## Stackable notifications
 
-Presentation Designer now supports stacked notifications instead of replacing active messages immediately.
+Presentation Designer now supports stacked notifications instead of immediately replacing active messages. This allows multiple snackbars to appear in order, instead of showing only the latest message.
 
 ### What changed
 
 - Notifications are queued and rendered as multiple stacked messages.
 - Notification lifecycle supports add, remove, and clear actions.
-- Maximum simultaneous notification stack size is capped.
+- The maximum simultaneous notification stack size is capped.
+
++ [ADD IMAGE HERE]
 
 ### Expected behavior
 
@@ -107,16 +92,19 @@ Responsive grid controls are expanded to support per-device layout behavior.
 
 ### How to use
 
-1. Select a grid element.
-2. Open the style panel and locate responsive grid controls.
-3. Switch to the target device view (for example Tablet or Mobile).
-4. Set responsive rows, columns, and flow behavior.
-5. Save and verify rendering in each device view.
+1. Open a presentation template in Presentation Designer.
+2. In the sidebar, under **Static Elements**, drag and drop the **Grid** element onto the canvas.
+3. Click the grid and open the style panel.
+4. Add rows and columns to the grid (for example, 6 rows and 6 columns), then set the height to 600px for easier visualization.
+5. In Desktop view, the area layout is based on the rows and columns you define. This layout is used as the baseline for other device views.
+6. Switch to the target device view (for example, Tablet).
+7. In that device view, use **Area layout** to override rows and columns without affecting Desktop. The area layout is computed automatically based on your device-specific row and column settings.
+8. Optionally, enable **Auto-flow** and set it to **row** or **column** so grid items are placed automatically for the selected device view.
 
 ### Notes
 
 - Desktop structural grid sizing remains managed separately from responsive overrides.
-- Validate responsive behavior after save and reload.
+- Validate responsive behavior after saving and reloading.
 
 ## Troubleshooting
 
