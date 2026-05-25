@@ -18,3 +18,5 @@ Learn how to use JSP components in HCL DX using WCM.
 Learn how to use the XML Access command line tool.  
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
+- **[Some items contain an absolute URL in the ibmcontentwcm:digitalAsset after import library from other environment](./WCMObjectsHostname.md)**  
+Learn how some items contain an absolute URL in the ibmcontentwcm:digitalAsset after import library from other environment.
