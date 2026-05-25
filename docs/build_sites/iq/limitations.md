@@ -1,47 +1,33 @@
 # IQ Limitations
 
-This page lists the known limitations of IQ in the initial release (compatible with HCL Digital Experience version 236).
-
----
+This page lists the known limitations of IQ.
 
 ## UI Limitations
 
-### Conversation History
-- Conversation history is **not persisted** in this release.
-- Starting a new conversation or ending the session permanently clears the current context — it cannot be recovered.
-- There is no ability to export or review previous conversations.
+### Conversation history
+
+- Chat history does not persist across sessions.
+- Resetting a session or closing the interface permanently clears the active context. Conversations cannot be recovered.
+- Exporting and reviewing previous conversations are not supported.
 
 ### Localization
-- The IQ interface supports all DX locales, including both LTR and RTL layouts.
-- **Translations are available in English only** in this release. All other locales show placeholder (untranslated) text in the UI.
 
-### Input and Output
-- Text input only — rich text input editor, file attachments, images, and documents are not supported.
+- The IQ interface supports all DX locales, including both LTR and RTL layouts.
+- The UI displays text in English only. Non-English locales display the UI text in English.
+
+### Input and output
+
+- The interface supports text input only. Rich text, file attachments, images, and documents are not supported.
 - Voice input and text-to-speech are not supported.
 
 ## Accessibility
 
-To ensure full accessibility on the Search page, users must enable keyboard navigation settings in their browser.
+To enable full accessibility within the IQ interface, turn on keyboard navigation settings in your browser.
 
-### Firefox
+**Firefox**
 
 ![Firefox keyboard navigation settings](../../assets/HCL_Search_Browser_Firefox_Settings.png)
 
-### Safari
+**Safari**
 
 ![Safari keyboard navigation settings](../../assets/HCL_Search_Browser_Safari_Settings.png){ width="600" }
-
----
-
-## Reporting Issues
-
-If you encounter issues not listed here:
-
-1. Review the [Troubleshooting IQ](./troubleshooting.md) section.
-2. Contact your DX administrator.
-
----
-
-## Next Steps
-
-- **[Troubleshooting IQ](./troubleshooting.md)** — Resolve common issues with IQ

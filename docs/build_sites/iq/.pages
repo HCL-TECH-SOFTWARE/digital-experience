@@ -1,8 +1,8 @@
 title: IQ
 nav:
     - index.md
-    - Installing IQ: installation.md
-    - Accessing IQ: access.md
-    - Using IQ: usage.md
-    - Limitations of IQ: limitations.md
-    - Troubleshooting IQ: troubleshooting.md
+    - installation.md
+    - access.md
+    - usage.md
+    - limitations.md
+    - troubleshooting.md

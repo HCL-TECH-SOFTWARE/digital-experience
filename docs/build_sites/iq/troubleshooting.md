@@ -1,50 +1,63 @@
 # Troubleshooting IQ
 
-This section provides guidance on resolving common issues you may encounter while using IQ. HCL DX log files and browser developer tools can be used to capture detailed diagnostic information.
+This section provides guidance on resolving common issues and capturing diagnostic information while using IQ. HCL DX log files and browser developer tools help isolate and analyze interface and connection errors.
 
----
+## Initial validation
 
-## Quick Diagnostic Checklist
+Before investigating specific errors, perform these basic checks:
 
-Before investigating specific issues, verify the following:
+- Sign in to HCL DX with valid credentials and permissions.
+- Update your browser to the latest version of Chrome, Firefox, Edge, or Safari.
+- Turn on JavaScript in your browser settings.
+- Verify your network connection is stable.
+- Confirm your corporate firewall or proxy allows WebSocket connections.
+- Verify that IQ is installed and enabled on your deployment.
 
-- You are logged in to HCL DX with appropriate credentials and permissions
-- Your browser is up to date (Chrome, Firefox, Edge, or Safari — latest versions)
-- JavaScript is enabled in your browser
-- Network connectivity is stable
-- WebSocket connections are not blocked by a firewall or proxy
-- IQ is installed and enabled (check with your DX administrator if unsure)
+## Symptoms and solutions
 
----
+Review the following symptoms and solutions to resolve interface, performance, and connectivity issues with IQ.
 
-## IQ Icon is Not Visible
+### Interface and display issues
 
-The sparkle icon or FAB does not appear in the DX interface.
+If interface or display issues occur, clear the browser cache and perform a hard refresh using **Ctrl+Shift+R** (or **Cmd+Shift+R** on Mac). For Safari, use **Cmd+Option+R**.
 
-**Possible causes:**
+**Missing interface icon**
 
-- IQ is not installed or not enabled. Refer to [Installing IQ](./installation.md) and contact your DX administrator.
-- IQ is primarily designed for the Practitioner persona, but any authorized DX user can access it.
-- Browser cache is stale. Clear your browser cache and perform a hard refresh:
-    - **Chrome / Firefox / Edge**: `Ctrl+Shift+R` (or `Cmd+Shift+R` on Mac)
-    - **Safari**: `Cmd+Option+R`
+If the sparkle icon or floating action button (FAB) does not appear:
 
----
+- Verify if IQ is installed or enabled. For more information, refer to [Installing IQ](./installation.md).
+- Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
-## IQ Opens But Does Not Respond
+**Incorrect message display**
 
-IQ opens successfully but messages receive no response, or the "Thinking..." indicator runs indefinitely.
+If responses appear garbled, lack formatting, or fail to render code blocks:
 
-**Possible causes:**
+- Verify you are using the latest version of a supported browser.
+- Open an incognito window, log into HCL DX, and check if the messages display correctly. This rules out interference from browser extensions.
 
-- **WebSocket connection is blocked.** Open browser Developer Tools (F12), go to the **Network** tab, filter by **WS**, and look for a connection to `/dx/api/iq/v1/ws`. The status should be `101 Switching Protocols`. If the connection fails, check your corporate proxy or firewall settings and contact your IT team.
-- **IQ backend service is unavailable.** Contact your DX administrator to verify the `dx-iq-integrator` service is running and reachable.
-- **VPN or proxy interference.** Temporarily disable VPN and retry. If IQ responds, configure your VPN to allow WebSocket connections to the IQ endpoint.
-- **Session expired.** Click the **Start a new conversation** button in the IQ header. If the issue persists, close and reopen IQ, or refresh the DX page.
+### Connection and performance issues
 
----
+**Unresponsive interface**
 
-## Error Messages
+If the interface opens but messages receive no response, or the "Thinking..." indicator runs indefinitely:
+
+- Select **Start a new conversation** in the header, close and reopen the interface, or refresh the page to clear an expired session.
+- Temporarily disable your VPN to rule out network routing interference. If connectivity is restored, configure the VPN to allow WebSocket connections to the IQ endpoint.
+- Check if a corporate proxy or firewall is blocking the WebSocket connection to `/dx/api/iq/v1/ws`. Refer to [Client-side tracing](#client-side-tracing) for instructions on inspecting this connection in your browser.
+- If the network connection is valid but the interface remains frozen, contact your DX administrator to verify that the `dx-iq-integrator` backend service is running and reachable.
+
+**Slow response times**
+
+If IQ is consistently slow to respond:
+
+- Break complex or multi-part questions into shorter, more specific prompts.
+- Test the connection from an alternate network to isolate local network latency.
+- Temporarily disable your VPN to determine if the network tunnel is introducing latency.
+- Contact your system administrator to check the backend load. High usage may require scaling the IQ container service.
+
+## Error messages
+
+<!--For these errors, I don't think they match the error messages I saw in the chatbot, can we revise this to exactly match the error wording that appears in the chatbot? If the error is too long, we can always use "..." to shorten it -->
 
 | Error | Meaning | Resolution |
 |-------|---------|------------|
@@ -53,85 +66,53 @@ IQ opens successfully but messages receive no response, or the "Thinking..." ind
 | Request Timeout | The request took too long to process | Try a shorter or simpler question; contact administrator if timeouts are frequent |
 | Unauthorized | Your account does not have access to IQ | Contact your DX administrator to check role assignments |
 
----
+## Advanced diagnostics
 
-## Slow Response Times
+### Client-side tracing
 
-If IQ is consistently slow to respond:
-
-- Break complex questions into shorter, more specific ones.
-- Check your network connection and try from a different network.
-- Temporarily disable VPN to rule out latency introduced by the tunnel.
-- Contact your DX administrator — high backend load may require scaling the IQ service.
-
----
-
-## Messages Not Displaying Correctly
-
-If responses appear garbled, lack formatting, or code blocks do not render:
-
-- Ensure you are using a supported browser at its latest version.
-- Test in incognito or private browsing mode to rule out browser extension interference (ad blockers, dark mode tools, privacy extensions).
-- Clear your browser cache and hard refresh the page.
-
----
-
-## Client-Side Tracing
-
-You can capture detailed diagnostic information using browser developer tools to help investigate WebSocket and IQ interface issues.
+Capture detailed diagnostic information using browser developer tools to investigate WebSocket and interface issues.
 
 1. Open browser Developer Tools by pressing **F12** or right-clicking the page and selecting **Inspect**.
-2. Go to the **Console** tab and look for any errors (red) or warnings (yellow) related to IQ.
-3. Go to the **Network** tab and filter by **WS** to inspect the WebSocket connection:
-    - The connection to `/dx/api/iq/v1/ws` should show status `101`.
-    - Click the connection to view individual JSON-RPC messages exchanged between the browser and IQ.
-4. To capture a full trace, right-click in the Console and select **Save as** to export logs for sharing with HCL Support.
+2. Select the **Console** tab and check for error logs or warnings related to IQ.
+3. Select the **Network** tab and filter by **WS** to inspect the active WebSocket connection. Ensure the connection to `/dx/api/iq/v1/ws` shows a status code of `101`. Select the connection string to view the individual JSON-RPC messages exchanged between the browser and IQ.
 
-![IQ Logs For Network Tab](../../assets/HCL_IQ_Debug_Network_Tab.png "Logs related to IQ networking")
+    ![IQ WebSocket Message Trace](../../assets/HCL_IQ_Debug_Network_Tab.png "WebSocket JSON-RPC frames in the browser Network tab")
 
----
+4. To export a full trace for [HCL Support](https://support.hcl-software.com/csm){target="_blank"}, right-click inside the **Console** tab and select **Save as** to export the log file.
 
-## Server-Side Logging and Tracing
+### Server-side logging and tracing
 
-IQ integrator logging is configured on the server side via the Helm chart. A configuration file (`log.aiIntegration`) is mounted into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This follows the same pattern used by other DX services.
+IQ integrator logging is configured on the server side using the Helm chart. A configuration file (`log.aiIntegration`) mounts into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This matches the standard pattern used across other DX services.
 
-### Configuring Log Levels
+Follow these steps to configure and apply new log levels:
 
-Log levels are configured in the `hcl-dx-iq` Helm chart under `logging` in `values.yaml`:
+1. Configure log levels in the `hcl-dx-iq` Helm chart under the logging section of your `values.yaml` file.
 
-```yaml
-logging:
-  integrator:
-    level:
-      - ui:*=info,api:*=info  # Change to "debug" for detailed tracing
-  mcpServer:
-    level:
-      - "api:*=info"
-```
+    ```yaml
+    logging:
+      integrator:
+        level:
+          - ui:*=info,api:*=info  # Change to "debug" for detailed tracing
+      mcpServer:
+        level:
+          - "api:*=info"
+    ```
 
-You can adjust the granularity using patterns:
+    Adjust the logging granularity using these patterns:
 
-| Pattern | Description |
-|---------|-------------|
-| `api:*=info` | Info-level logging for the API layer |
-| `api:*=debug` | Debug-level logging for the API layer |
-| `ui:*=info` | Info-level logging for the UI layer |
-| `ui:*=debug` | Debug-level logging for the UI layer |
+    | Pattern | Description |
+    |---------|-------------|
+    | `api:*=info` | Info-level logging for the API layer |
+    | `api:*=debug` | Debug-level logging for the API layer |
+    | `ui:*=info` | Info-level logging for the UI layer |
+    | `ui:*=debug` | Debug-level logging for the UI layer |
 
-After updating `values.yaml`, apply the changes:
+2. Apply the configuration changes by running the `helm upgrade` command:
 
-```bash
-helm upgrade <release-name> hcl-dx-iq -f values.yaml
-```
+    ```bash
+    helm upgrade <release-name> hcl-dx-iq -f values.yaml
+    ```
 
-![IQ Console Logs](../../assets/HCL_IQ_Console_logs.png "Logs after enabling tracing in console")
+    ![IQ Console Logs](../../assets/HCL_IQ_Console_logs.png "Logs after enabling tracing in console")
 
----
-
-## Related Resources
-
-- **[Installing IQ](./installation.md)** — Setup and deployment instructions
-- **[Using IQ](./usage.md)** — How to use IQ effectively
-- **[Limitations of IQ](./limitations.md)** — Known limitations in this release
-
-For additional assistance, contact HCL Support.
+If you encounter issues that cannot be resolved using these steps, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
