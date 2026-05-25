@@ -103,7 +103,7 @@ Log levels are configured in the `hcl-dx-iq` Helm chart under `logging` in `valu
 logging:
   integrator:
     level:
-      - "api:*=info"   # Change to "debug" for detailed tracing
+      - ui:*=info,api:*=info  # Change to "debug" for detailed tracing
   mcpServer:
     level:
       - "api:*=info"

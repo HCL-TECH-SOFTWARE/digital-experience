@@ -15,7 +15,7 @@ For container-based deployments, you can enable or disable IQ using:
 - **Helm configuration** - For Kubernetes/Helm-based deployments
 
 !!! important
-    Before you can enable IQ, the IQ backend service (`dx-iq-integrator`) must be deployed and accessible in your environment. Contact your HCL DX deployment team or HCL Support for environment-specific guidance on deploying the IQ backend service.
+    Before you can enable IQ, the IQ backend services must be deployed and accessible in your environment. The `hcl-dx-iq` Helm chart deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`), which handles communication with the AI/LLM provider. Contact your HCL DX deployment team or HCL Support for environment-specific guidance on deploying the IQ backend services.
 
 ---
 
