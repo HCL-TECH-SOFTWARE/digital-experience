@@ -82,7 +82,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ### WAS, JDK, and iFix versions
 
@@ -121,7 +121,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Removal of unused DAM Helm keys (9.5)
 
 === "Containers"
-    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236: `enableSoftDelete`, `renderNewUI`, and `enableRootCollectionSort`. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236: `enableSoftDelete`, `renderNewUI`, and `enableRootCollectionSort`. For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

@@ -4,6 +4,14 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 ### CF236
 
+**Deprecated Keys:**
+
+| Key | Default Value |Removed in|
+|-----|---------------|----------|
+|`enableRootCollectionSort`|<!--insert default value-->|CF237|
+|`enableSoftDelete`|<!--insert default value-->|CF237|
+|`renderNewUI`|<!--insert default value-->|CF237|
+
 ### CF235
 
 **Added Keys:**
