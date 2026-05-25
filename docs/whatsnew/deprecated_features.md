@@ -8,6 +8,7 @@ Links to more information on the replacement for those items listed for deprecat
 
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
+|Deploying|Unused DAM Helm keys (`enableSoftDelete`, `renderNewUI`, `enableRootCollectionSort`)|These Helm keys are deprecated in CF236 and are planned for removal in CF237. Remove these keys from your Helm custom values files before upgrading to CF237.|CF236|
 |Dependent Products|Java JDK 7.x|Future Digital Experience releases will remove support for JDK 7.x|All customers must use JDK 8.0|December 10, 2025|
 |Setting up a website|Woodburn Studio demo site|Deprecated on August 05, 2025 and removed from the product starting with CF234. Woodburn Studio is not automatically uninstalled from existing environments.|August 05, 2025|
 |Manage Content|CKEditor Rich Text Editor component in HCL DX|The CKEditor Rich Text Editor component in the HCL Digital Experience software will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. |August 05, 2025|
