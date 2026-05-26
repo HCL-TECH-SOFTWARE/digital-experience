@@ -15,9 +15,9 @@ Many login performance issues stem from delays when resolving group memberships,
     !!!note
         Ensure that any groups returned by the membership attribute can be resolved within the realm defined in Virtual Member Manager (VMM). Lookups will fail if the attribute returns a group Distinguished Name (DN) that VMM cannot locate.
 
-2. **Limit the use of dynamic groups:** Avoid using dynamic groups unless your business logic explicitly requires them, as calculating their membership dynamically incurs a high processing cost. If dynamic grouping is necessary, consider using local [rule-based user groups](../../../deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/index.md) within HCL DX instead.
+2. **Limit the use of dynamic groups:** Avoid using dynamic groups unless your business logic explicitly requires them, as calculating their membership dynamically incurs a high processing cost. If dynamic grouping is necessary, consider using local [rule-based user groups](../../../deployment/manage/security/people/authorization/users_and_groups/rule_based_user_groups/index.md){target="_blank"} within HCL DX instead.
 
-3. **Disable nested group evaluation:** If your LDAP membership attribute already resolves nested groups natively, change your settings to [disable nested groups](../../../deployment/manage/security/people/authorization/users_and_groups/adusrgrp_nested.md) within the portal configuration to avoid redundant processing.
+3. **Disable nested group evaluation:** If your LDAP membership attribute already resolves nested groups natively, change your settings to [disable nested groups](../../../deployment/manage/security/people/authorization/users_and_groups/adusrgrp_nested.md){target="_blank"} within the portal configuration to avoid redundant processing.
 
 4. **Reuse WebSphere Application Server (WAS) group information:** Configure a federated repository to ensure the VMM resolves group memberships during the initial WAS login process. You can then configure HCL DX to reuse this cached WAS group information for user management to maximize authentication speed.
 
