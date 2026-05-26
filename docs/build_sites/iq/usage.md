@@ -12,13 +12,16 @@ Regardless of the active display mode, the interface contains the following core
 2. **Start a new conversation** button: Restarts the session and permanently clears the current chat context.
 3. **Full view**, **Panel view**, or **Compact view** button: Toggles between the standard view and the full view expanded workspace.
 4. **Close** button: Closes the assistant interface.
-5. **Status indicators**: Displays the processing state directly above the text input area. For more information about error indicators, refer to [Troubleshooting IQ](./troubleshooting.md).
-6. **Text input** field: The area to enter questions.
-7. **Send message** or **Stop request** button: Sends the question to the assistant, or cancels the active request while a response is generating.
+5. **Quick-chat** prompts: Displays clickable prompt suggestions for common tasks to quickly initiate a conversation.
+6. **Status indicators**: Displays the processing state directly above the text input area. For more information about error indicators, refer to [Troubleshooting IQ](./troubleshooting.md).
+7. **Text input** field: The area to enter questions.
+8. **Send message** or **Stop request** button: Sends the question to the assistant, or cancels the active request while a response is generating.
 
 ## Sending requests
 
-To submit a request, enter your prompt in the text input field at the bottom of the interface, and then select the **Send message** button. Your message appears in the chat timeline immediately while a "Thinking..." indicator shows that IQ is actively generating your response. Once IQ finishes generating, the indicator clears, and the finalized response populates the chat timeline using formatted rich text, lists, code snippets, or documentation links.
+To submit a request, select one of the **Quick-chat** prompts to send a pre-configured prompt automatically, or enter a custom prompt in the text input field at the bottom of the interface and select the **Send message** button.
+
+Your message appears in the chat timeline immediately while a "Thinking..." indicator shows that IQ is actively generating your response. Once IQ finishes generating, the indicator clears, and the finalized response populates the chat timeline using formatted rich text, lists, code snippets, or documentation links.
 
 ## Managing conversations
 
