@@ -4,7 +4,7 @@ IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that p
 
 ## Overview
 
-The IQ assistant is accessible through an adjustable chat interface integrated into DX. Depending on the page context, the interface displays in either a panel view or a compact view, both of which can expand to a fullscreen view for a more spacious experience. Responses are provided instantly by AI models over WebSocket connections that deliver the complete response once processing is finished. The assistant maintains conversational context within an active session and supports all DX locales, including LTR and RTL layouts.
+The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
 
 ## Prerequisites
 

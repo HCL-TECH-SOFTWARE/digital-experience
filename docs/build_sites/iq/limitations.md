@@ -12,7 +12,6 @@ This page lists the known limitations of IQ.
 
 ### Localization
 
-- The IQ interface supports all DX locales, including both LTR and RTL layouts.
 - The UI displays text in English only. Non-English locales display the UI text in English.
 
 ### Input and output
