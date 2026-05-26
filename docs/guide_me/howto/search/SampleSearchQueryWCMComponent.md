@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This document describes sample steps that can be used for implementing a search query using WCM HTML Component and Search Component.
+This article describes sample steps that can be used for implementing a search query using WCM HTML Component and Search Component.
 
 ???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corp.
@@ -58,6 +58,5 @@ This document describes sample steps that can be used for implementing a search 
     There are no results for your query. Please refine your search and try again.
     ```
 
-Be sure to select the desired collection to search when creating the Search Component.
-
+Be sure to select the desired collection to search when creating the Search Component.  
 For this to work, you need to reference both components created above in the SAME presentation template.  
