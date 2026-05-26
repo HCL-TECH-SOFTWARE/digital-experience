@@ -59,4 +59,4 @@ This article describes sample steps that can be used for implementing a search q
     ```
 
 Be sure to select the desired collection to search when creating the Search Component.  
-For this to work, you need to reference both components created above in the SAME presentation template.  
+For this to work, you need to reference both components created above in the same presentation template!   
