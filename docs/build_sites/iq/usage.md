@@ -31,10 +31,14 @@ IQ retains conversational context across an active session. You can ask consecut
 
 **Resetting a session**
 
-To clear the active timeline and reset the memory context, select the **Start a new conversation** button in the header bar, and then select **Proceed**. If IQ is open in multiple windows or tabs, a warning message may briefly display in the secondary instances before resolving automatically.
+To clear the active timeline and reset the memory context, select the **Start a new conversation** button in the header bar, and then select **Proceed**.
 
 !!! warning
     This action permanently deletes the active conversation history. Chat history currently does not persist across sessions, so cleared conversations cannot be recovered.
+
+If IQ is open in multiple windows or tabs, a warning message may briefly display in the secondary instances before resolving automatically.
+
+![IQ Concurrent Session Warning](../../assets/HCL_IQ_Concurrent_Session_Warning.png "Concurrent session warning message"){: style="width: 400px; display: block; margin: 0 auto;"}
 
 **Stopping a request**
 
