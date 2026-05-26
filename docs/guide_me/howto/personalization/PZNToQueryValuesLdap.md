@@ -12,4 +12,4 @@ Personalization (PZN) can query values from an external LDAP server that is not 
 
 To query an external LDAP directory that sits outside of your primary user repository, you must create a custom resource collection to serve as the interface between PZN and the secondary LDAP server.
 
-For detailed steps on creating and defining this interface, refer to [Creating and editing resource collections](../../../manage_content/pzn/personalization/personalization_2/pznCreateResourceCollection.md).
+For detailed steps on creating and defining this interface, refer to [Creating and editing resource collections](../../../manage_content/pzn/personalization/personalization_2/pznCreateResourceCollection.md){target="_blank"}.
