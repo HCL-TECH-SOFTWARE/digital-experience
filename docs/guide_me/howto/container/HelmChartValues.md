@@ -22,4 +22,4 @@ For example, to extract the values from a release named `dx-deployment` in the `
 helm get values -n dxns dx-deployment > values.yaml
 ```
 
-For more information, review the [official helm get values documentation](https://helm.sh/docs/helm/helm_get_values/){target="_blank"}.
+For more information, review the [official helm get values documentation](https://helm.sh/docs/helm/helm_get_values/){target="_blank"}.  
