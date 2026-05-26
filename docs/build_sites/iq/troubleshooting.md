@@ -57,16 +57,25 @@ If IQ is consistently slow to respond:
 
 ## Error messages
 
-<!--For these errors, I don't think they match the error messages I saw in the chatbot, can we revise this to exactly match the error wording that appears in the chatbot? If the error is too long, we can always use "..." to shorten it -->
+When a backend operation fails, the IQ interface displays a generic alert banner to the user:
+
+![IQ Error Message Display](../../assets/HCL_IQ_With_Error_Message.png "IQ error message display"){: style="width: 400px; display: block; margin: 0 auto;"}
+
+To identify the underlying cause behind this banner, administrators can review the backend response payloads within the browser developer tools or examine the container logs to classify the issue:
 
 | Error | Meaning | Resolution |
 |-------|---------|------------|
-| Connection Error | WebSocket connection to IQ backend failed | Check network connectivity and browser console for errors; contact administrator |
-| Unable to connect to AI service | IQ backend cannot reach the LLM provider | Wait and retry; contact administrator to check LLM provider credentials and connectivity |
-| Request Timeout | The request took too long to process | Try a shorter or simpler question; contact administrator if timeouts are frequent |
-| Unauthorized | Your account does not have access to IQ | Contact your DX administrator to check role assignments |
+| Communication error | An error occurred while communicating with the core DX server during a backend operation. | Make sure the core HCL DX server is active and reachable from the IQ integrator container. |
+| Connection error | The client-side WebSocket connection between the browser and the IQ backend failed to establish. | Check local network connectivity. Make sure corporate firewalls, VPNs, or reverse proxies allow WebSocket traffic on `/dx/api/iq/v1/ws`. |
+| Invalid format | The core DX server responded, but the data payload was in an unexpected or invalid format. | Make sure the HCL DX base platform and IQ components are running compatible versions. Check logs for API contract mismatches. |
+| No response or timeout | A backend request took too long, or the core DX server failed to return a response. | Try a shorter or simpler prompt. Check backend logs for connection drops or high resource utilization on the core platform. |
+| Unable to connect to AI service | The IQ backend is active but cannot establish a connection to the external LLM provider. | Wait and try the request again. Contact a system administrator to check the LLM provider credentials, API keys, and outbound network connectivity. |
+| Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
+| Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
 ## Advanced diagnostics
+
+Use advanced diagnostics to isolate complex network, interface, or server-side issues. Administrators can trace client-side browser traffic or adjust server log levels to capture detailed backend performance data.
 
 ### Client-side tracing
 
@@ -74,7 +83,7 @@ Capture detailed diagnostic information using browser developer tools to investi
 
 1. Open browser Developer Tools by pressing **F12** or right-clicking the page and selecting **Inspect**.
 2. Select the **Console** tab and check for error logs or warnings related to IQ.
-3. Select the **Network** tab and filter by **WS** to inspect the active WebSocket connection. Ensure the connection to `/dx/api/iq/v1/ws` shows a status code of `101`. Select the connection string to view the individual JSON-RPC messages exchanged between the browser and IQ.
+3. Select the **Network** tab and filter by **WS** to inspect the active WebSocket connection. Ensure the connection to `/dx/api/iq/v1/ws` shows a status code of `200`. Select the connection string to view the individual JSON-RPC messages exchanged between the browser and IQ.
 
     ![IQ WebSocket Message Trace](../../assets/HCL_IQ_Debug_Network_Tab.png "WebSocket JSON-RPC frames in the browser Network tab")
 
