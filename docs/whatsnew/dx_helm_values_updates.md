@@ -8,9 +8,9 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 | Key | Default Value |Removed in|
 |-----|---------------|----------|
-|`enableRootCollectionSort`|<!--insert default value-->|CF237|
-|`enableSoftDelete`|<!--insert default value-->|CF237|
-|`renderNewUI`|<!--insert default value-->|CF237|
+|`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`|<!--insert default value-->|CF237|
+|`incubator.configuration.digitalAssetManagement.enableSoftDelete`|<!--insert default value-->|CF237|
+|`incubator.configuration.digitalAssetManagement.renderNewUI`|<!--insert default value-->|CF237|
 
 ### CF235
 
