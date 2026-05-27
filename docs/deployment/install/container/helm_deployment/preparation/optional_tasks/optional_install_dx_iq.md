@@ -12,7 +12,7 @@ HCL DX IQ is a core communication and data management layer (referred to as the 
 - Integrating with Model Context Protocol (MCP) servers for enhanced AI capabilities
 - Ensuring robust, scalable, and seamless user experiences
 
-> **NOTE:** This document covers the backend server deployment. For information about the IQ UI components and chatbot features, refer to the [HCL Doc IQ chatbot documentation](../../../../../get_started/product_overview/doc_iq_chatbot.md).
+> **NOTE:** This document covers the backend server deployment. For information about the IQ UI components and chatbot features, refer to the [HCL Doc IQ chatbot documentation](../../../../../../get_started/product_overview/doc_iq_chatbot.md).
 
 ## Prerequisites
 
