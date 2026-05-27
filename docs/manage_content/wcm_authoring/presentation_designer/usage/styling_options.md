@@ -111,6 +111,8 @@ The **Layout** section allows users to control the structural positioning and se
     - **Supported Units**: `px`  
     - **Sample Values**: `10px`, `20px`
 
+- **Auto Flow**: Controls how the grid elements are distributed within the grid. Possible values include `row`, `column`, and `row or column dense`.
+
 - **Column Gap**: Defines the space between columns in the grid.  
     - **Supported Units**: `px`  
     - **Sample Values**: `15px`, `25px`
@@ -122,6 +124,8 @@ The **Layout** section allows users to control the structural positioning and se
 
 - **Grid Cell (Rows)**: Specifies the number of rows the grid cell will occupy.  
     - **Sample Values**: `1`, `2`, `3`
+
+- **Area Layout** : A count-based layout override that automates responsiveness for Tablet and Mobile viewports. It dynamically balances rows and columns based on the specified track count, eliminating manual calculations while keeping all grid cells perfectly equal and uniform.
 
 ### Position
 
