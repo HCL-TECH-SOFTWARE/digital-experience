@@ -4,3 +4,4 @@ nav:
     - index.md
     - DeleteDuplicateCheckSum.md
     - HelmChartValues.md
+    - RestartPersistenceNodes.md
