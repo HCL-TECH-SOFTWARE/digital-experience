@@ -12,3 +12,4 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
+    - DefaultPortletConfig.md
