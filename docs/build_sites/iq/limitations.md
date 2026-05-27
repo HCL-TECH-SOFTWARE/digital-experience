@@ -2,6 +2,8 @@
 
 This page lists the known limitations of IQ.
 
+For MCP service limitations, refer to [MCP Limitations](./mcp/limitations.md).
+
 ## UI Limitations
 
 ### Conversation history

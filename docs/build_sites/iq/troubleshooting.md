@@ -13,6 +13,8 @@ Before investigating specific errors, perform these basic checks:
 - Confirm your corporate firewall or proxy allows WebSocket connections.
 - Verify that IQ is installed and enabled on your deployment.
 
+If the issue appears to be MCP-related, also verify that the `dx-mcp-server` service is deployed, reachable, and matched to the IQ chart version you installed. For MCP-focused diagnostics, refer to [MCP Troubleshooting](./mcp/troubleshooting.md).
+
 ## Symptoms and solutions
 
 Review the following symptoms and solutions to resolve interface, performance, and connectivity issues with IQ.
@@ -45,6 +47,7 @@ If the interface opens but messages receive no response, or the "Thinking..." in
 - Temporarily disable your VPN to rule out network routing interference. If connectivity is restored, configure the VPN to allow WebSocket connections to the IQ endpoint.
 - Check if a corporate proxy or firewall is blocking the WebSocket connection to `/dx/api/iq/v1/ws`. Refer to [Client-side tracing](#client-side-tracing) for instructions on inspecting this connection in your browser.
 - If the network connection is valid but the interface remains frozen, contact your DX administrator to verify that the `dx-iq-integrator` backend service is running and reachable.
+- If IQ was recently upgraded, confirm that the `dx-mcp-server` service was upgraded at the same time and that the endpoint is responding.
 
 **Slow response times**
 
@@ -91,7 +94,9 @@ Capture detailed diagnostic information using browser developer tools to investi
 
 ### Server-side logging and tracing
 
-IQ integrator logging is configured on the server side using the Helm chart. A configuration file (`log.aiIntegration`) mounts into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This matches the standard pattern used across other DX services.
+IQ integrator logging is configured on the server side using the Helm chart. A configuration file (`log.aiIntegration`) mounts into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This matches the standard pattern used across other DX services. 
+
+For MCP-focused diagnostics, refer to [MCP Troubleshooting](./mcp/troubleshooting.md).
 
 Follow these steps to configure and apply new log levels:
 

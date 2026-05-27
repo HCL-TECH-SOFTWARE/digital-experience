@@ -6,6 +6,8 @@ IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that p
 
 The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
 
+IQ is delivered with backend services that include the IQ integrator and the DX MCP server. The MCP server provides the protocol layer used by IQ to support AI request and response workflows. For MCP architecture, configuration, and diagnostics, refer to [MCP Server for IQ](./mcp/index.md).
+
 ## Prerequisites
 
 Ensure your environment meets the following requirements:
@@ -14,6 +16,7 @@ Ensure your environment meets the following requirements:
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](./installation.md).
 3. Proper user permissions are assigned to access IQ features.
 4. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
+5. For MCP server prerequisites and deployment checks, refer to [MCP Configuration](./mcp/configuration.md).
 
 ## Topics
 
@@ -29,3 +32,14 @@ This section provides a step-by-step guide for interacting with IQ, managing con
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  
 This section provides guidance for resolving common connectivity or functionality problems.
+
+For MCP-specific operational guidance, refer to [MCP Server for IQ](./mcp/index.md):
+
+- **[MCP Configuration](./mcp/configuration.md)**  
+This section explains MCP deployment expectations, prerequisites, and post-deployment checks.
+- **[MCP Endpoints and Security](./mcp/endpoints_and_security.md)**  
+This section summarizes MCP endpoint behavior and customer-facing security considerations.
+- **[MCP Limitations](./mcp/limitations.md)**  
+This section lists known MCP service limitations and behavior boundaries.
+- **[MCP Troubleshooting](./mcp/troubleshooting.md)**  
+This section provides MCP-focused diagnostics, logging, and escalation guidance.

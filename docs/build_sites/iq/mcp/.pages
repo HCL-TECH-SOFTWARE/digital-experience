@@ -1,0 +1,7 @@
+title: MCP Server for IQ
+nav:
+    - index.md
+    - configuration.md
+    - endpoints_and_security.md
+    - limitations.md
+    - troubleshooting.md

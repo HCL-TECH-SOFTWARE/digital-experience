@@ -7,7 +7,9 @@ This section provides instructions for installing and deploying the IQ AI assist
 
 ## Overview
 
-IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets.
+IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets. The IQ deployment also includes the DX MCP server (`dx-mcp-server`), which provides the Model Context Protocol bridge used by IQ to communicate with supported AI and DX services.
+
+For detailed MCP deployment and operations guidance, refer to [MCP Server for IQ](./mcp/index.md).
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
@@ -27,6 +29,8 @@ Before installing IQ, verify that your environment meets the following requireme
 
 1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for assistance with obtaining and deploying the IQ Helm chart.
 2. Ensure you have access to modify your DX Helm chart `values.yaml` file.
+
+For additional MCP prerequisites and deployment checks, refer to [MCP Configuration](./mcp/configuration.md).
 
 ## Enabling IQ
 
@@ -73,7 +77,9 @@ IQ is deployed using a dedicated Helm chart (`hcl-dx-iq`), separate from the mai
     helm upgrade <release-name> <chart-name> -f values.yaml
     ```
 
-After the update is applied, HAProxy automatically routes the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the assistant interface elements become available on the DX toolbar.
+After the update is applied, HAProxy automatically routes the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the assistant interface elements become available on the DX toolbar. The MCP server remains part of the IQ deployment and continues to provide the protocol layer used by the assistant.
+
+For endpoint-level MCP details, refer to [MCP Endpoints and Security](./mcp/endpoints_and_security.md).
 
 !!! important
     - Use only the service name, not a full URL (for example, `dx-iq-integrator`, not `http://dx-iq-integrator:3000`).
@@ -120,6 +126,8 @@ Disable IQ integration in Helm-based deployments by removing the IQ service refe
     ```
 
 After the update is applied, HAProxy stops routing the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the interface elements are removed from the DX toolbar.
+
+For MCP service diagnostics after configuration changes, refer to [MCP Troubleshooting](./mcp/troubleshooting.md).
 
 !!! important
     Disabling IQ in the DX Helm chart (`hcl-dx-deployment`) only removes the integration between DX and IQ. It does not uninstall or stop the IQ backend services deployed with the `hcl-dx-iq` Helm chart. To completely remove IQ from your cluster, separately uninstall the `hcl-dx-iq` Helm chart release using the `helm uninstall <iq-release-name>` command.

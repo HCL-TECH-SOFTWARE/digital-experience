@@ -2,6 +2,8 @@
 
 This section provides a comprehensive guide on how to interact with IQ, manage active conversation sessions, and handle system alerts within HCL Digital Experience (DX).
 
+For MCP backend endpoint behavior, security guidance, and diagnostics, refer to [MCP Server for IQ](./mcp/index.md).
+
 ## Interface components
 
 Regardless of the active display mode, the interface contains the following core components as mapped in this overview:
