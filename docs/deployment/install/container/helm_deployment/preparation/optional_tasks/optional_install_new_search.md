@@ -32,6 +32,9 @@ Search V2 uses certificates to secure communication between OpenSearch nodes and
 
 If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
 
+!!!note
+    Beginning with CF236, the self-signed certificates and Kubernetes secrets required to secure communication between OpenSearch nodes and the search middleware can be generated during deployment for testing and development purposes. Entering a value for the `configuration.opensearch.security.rootCASubjectDN` property in the values.yaml file for your deployment, will trigger the certificate generation and secret creation. The `rootCASubjectDN` is expected in the X.509 Distinguished Name (DN) format. For example, `/C=DE/O=ORGANIZATION/OU=ORGANIZATION_UNIT` Leaving this property empty assumes the certificates and Kubernetes secrets will be manually created according to instructions below.
+
 ### Understanding certificate roles
 
 The following types of certificates are required:
