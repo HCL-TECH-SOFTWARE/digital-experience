@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Container|[How to delete duplicate `CONFIG_CHECKSUM` environment variables](./container/DeleteDuplicateCheckSum.md)|
 |Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
 |Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
 |Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
