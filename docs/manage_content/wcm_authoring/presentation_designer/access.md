@@ -133,8 +133,10 @@ The Presentation Designer user interface is composed of three main sections:
 5. **Rotate** button. For more information, see **[Canvas rotate](./usage/canvas_settings.md#canvas-rotate)**.
 6. **Edit/Read mode** toggle. Use this to switch from Edit to Read mode or from Read to Edit mode.
 7. **RTL** toggle. For more information, see **[RTL toggle](./usage/canvas_settings.md#rtl-toggle)**.
-8. **Cancel** button. Use this to cancel editing and go back to the Authoring portlet.
-9. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
+8. **Canvas Context Preview** For more information, see **[Canvas context preview](./usage/context_preview.md#canvas-context-preview)**.
+9. **Preview** For more information, see **[Preview](./usage/context_preview.md#preview)**.
+10. **Cancel** button. Use this to cancel editing and go back to the Authoring portlet.
+11. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
 
 ### Panel
 
