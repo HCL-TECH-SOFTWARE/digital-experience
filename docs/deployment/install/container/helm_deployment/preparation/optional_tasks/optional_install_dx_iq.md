@@ -14,8 +14,6 @@ HCL DX IQ is a core communication and data management layer (referred to as the 
 
 > **NOTE:** This document covers the backend server deployment. For information about the IQ UI components and chatbot features, refer to the [HCL Doc IQ chatbot documentation](../../../../../get_started/product_overview/doc_iq_chatbot.md).
 
-> **FIXME / PLACEHOLDER:** Product Owner to review and approve the description of IQ's purpose and capabilities.
-
 ## Prerequisites
 
 Before deploying the IQ backend server, ensure the following prerequisites are met:
@@ -221,8 +219,6 @@ The Runtime Controller can automatically provision and manage a PostgreSQL datab
     - `<YOUR_NAMESPACE>` with your Kubernetes namespace
 
 ### Step 2: Configure License Management
-
-> **FIXME / PLACEHOLDER:** Document the IQ License Key configuration and rotation process when license requirements are finalized.
 
 The IQ backend server requires a valid license key. To rotate or update the license:
 
@@ -802,22 +798,3 @@ kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-ai-integrator
 ```
 
 ---
-
-## Document Metadata / Sign-off
-
-> **Definition of Done (DoD) Guardrails**
->
-> - [ ] Tested by an independent technical reviewer following steps exactly as a customer would
-> - [ ] External documentation PR approved by technical reviewer
-> - [ ] Introduction and wording of limitations reviewed and approved by PAA and Product Owner
-> - [ ] Ready for Documentation Team staging merge
->
-> **Document Status:** Draft for Review
->
-> **Last Updated:** 22 May 2026
->
-> **Reviewer Notes:**
-> - This document requires Product Owner review for IQ description and limitations (marked with FIXME placeholders)
-> - CF baseline version needs to be specified
-> - License management section requires finalization
-> - MCP Server and IQ UI documentation links need to be added when available
