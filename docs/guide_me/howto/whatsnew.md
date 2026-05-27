@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|API|[How to create a JSP using the WCM `QueryService` API](./api/createJSPUsingWCMAPI.md)|
 |Migrated|Container|[How to delete duplicate `CONFIG_CHECKSUM` environment variables](./container/DeleteDuplicateCheckSum.md)|
 |Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
 |Migrated|Container|[How to safely restart persistence nodes](./container/RestartPersistenceNodes.md)|
