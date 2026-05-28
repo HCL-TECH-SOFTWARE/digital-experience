@@ -22,5 +22,5 @@ Learn how to remove or hide the X-Powered-By header.
 Learn how to remove state information from page URLs.  
 - **[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment.  
-- **[How to Change the Default Portlet Configuration](./DefaultPortletConfig.md)**  
+- **[How to change the default Portlet configuration](./DefaultPortletConfig.md)**  
 Learn how to change the default configuration of a portlet.
