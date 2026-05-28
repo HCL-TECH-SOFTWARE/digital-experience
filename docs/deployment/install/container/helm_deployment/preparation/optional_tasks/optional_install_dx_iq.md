@@ -35,7 +35,7 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 4. **Credentials and Secrets**
 
     - LITELLM API key for LLM integration (if using LiteLLM)
-    - Database credentials (for external or RTC-managed database)
+    - Database credentials (for external or Runtime Controller (RTC)-managed database)
 
 5. **Related Documentation**
 
