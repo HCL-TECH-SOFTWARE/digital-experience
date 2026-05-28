@@ -1,4 +1,4 @@
-# How to manually renew the DX Core Certificate and the Kubernetes secret
+# How to manually renew the DX Core certificate and the Kubernetes secret
 
 ## Applies to
 
