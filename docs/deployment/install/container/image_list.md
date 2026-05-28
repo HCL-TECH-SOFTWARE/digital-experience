@@ -1,8 +1,8 @@
-# Container and Supported OS File listings
+# Container and supported OS file listings
 
 This section presents the latest available HCL Digital Experience (DX) 9.5 Container images.
 
-You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL Digital Experience entitlements in the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} for HCL DX 9.5 entitlements.
+You can obtain the HCL DX 9.5 container update and supported OS releases from your HCL DX entitlements in the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} for HCL DX 9.5 entitlements.
 
 Video: [How to upload HCL DX 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
@@ -55,6 +55,15 @@ This section presents the latest available HCL DX file package listings for supp
 |HCL-DX-CF236_Express_Update|HCL-DX-CF236_Express_Update.zip|
 |HCL-DX-CF236_RemoteSearch_Update|HCL-DX-CF236_RemoteSearch_Update.zip|
 |HCL-DX-CF236_Server_Update|HCL-DX-CF236_Server_Update.zip|
+
+### HCL DX UBI levels
+
+This section presents the latest Red Hat Universal Base Image (UBI) level for HCL DX images.
+
+|Image|Level|
+|-----|-----|
+|Core and Remote Search|8.10-1776104706|
+|Other images|9.7-1776104705|
 
 See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
