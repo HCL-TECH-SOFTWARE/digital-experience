@@ -64,7 +64,7 @@ Be aware of the following limitations when deploying and using the IQ backend se
 
 - PostgreSQL database is required for session persistence
 - Database can be either RTC-managed or externally hosted
-- Database name for RTC-managed deployments is fixed as `iqdb` and cannot be customized
+- Database name for Runtime Controller (RTC)-managed deployments is fixed as `iqdb` and cannot be customized
 
 ### MCP Server Integration
 
