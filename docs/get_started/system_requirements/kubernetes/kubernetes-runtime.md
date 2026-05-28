@@ -63,19 +63,38 @@ HCL DX provides a tool called "Prereqs Checker" that runs several checks to conf
 
 The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
 
-### WAS, JDK, and iFix versions
+## WAS, JDK, UBI, and iFix versions
 
-This table provides information about the  WebSphere Application Server (WAS), Java Development Kit (JDK), and iFix versions for each CF.
+This table provides information about the WebSphere Application Server (WAS), Java Development Kit (JDK), Red Hat Universal Base Image (UBI) level, and iFix versions for each CF.
 
-|CF Level|WAS|JDK|iFix|
-|-----|--------|--------|-----------------------------|
-|CF235|9.0.5.27|8.0.8.60|N/A|
-|CF234|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
-|CF233|9.0.5.26|8.0.8.55|iFix PH68243<br/>iFix PH68418|
-|CF232|9.0.5.25|8.0.8.51|iFix PH67137<br/>iFix PH67817|
-|CF231|9.0.5.25|8.0.8.51|iFix PH67137<br/>iFix PH67817|
-|CF230|9.0.5.24|8.0.8.45|iFix PH66674|
-|CF229|9.0.5.24|8.0.8.45|iFix PH66674|
-|CF228|9.0.5.23|8.0.8.40|N/A|
-|CF227|9.0.5.23|8.0.8.40|N/A|
-|CF226|9.0.5.22|8.0.8.35|N/A|
+<!--Option #1-->
+
+|CF Level|WAS|JDK|UBI|iFix|
+|--------|---|---|---|----|
+|CF236|9.0.5.27|8.0.8.60|Core and Remote Search: 8.10-1776104706 <br/> Other Images: 9.7-1776104705|N/A|
+|CF235|9.0.5.27|8.0.8.60||N/A|
+|CF234|9.0.5.26|8.0.8.55||iFix PH68243<br/>iFix PH68418|
+|CF233|9.0.5.26|8.0.8.55||iFix PH68243<br/>iFix PH68418|
+|CF232|9.0.5.25|8.0.8.51||iFix PH67137<br/>iFix PH67817|
+|CF231|9.0.5.25|8.0.8.51||iFix PH67137<br/>iFix PH67817|
+|CF230|9.0.5.24|8.0.8.45||iFix PH66674|
+|CF229|9.0.5.24|8.0.8.45||iFix PH66674|
+|CF228|9.0.5.23|8.0.8.40||N/A|
+|CF227|9.0.5.23|8.0.8.40||N/A|
+|CF226|9.0.5.22|8.0.8.35||N/A|
+
+<!--Option #2-->
+
+|CF Level|WAS|JDK|UBI <br/> (Core and Remote Search)|UBI <br/> (Other Images)|iFix|
+|-----|--------|--------|---------------|--------------|---|
+|CF236|9.0.5.27|8.0.8.60|8.10-1776104706|9.7-1776104705|N/A|
+|CF235|9.0.5.27|8.0.8.60|||N/A|
+|CF234|9.0.5.26|8.0.8.55|||iFix PH68243<br/>iFix PH68418|
+|CF233|9.0.5.26|8.0.8.55|||iFix PH68243<br/>iFix PH68418|
+|CF232|9.0.5.25|8.0.8.51|||iFix PH67137<br/>iFix PH67817|
+|CF231|9.0.5.25|8.0.8.51|||iFix PH67137<br/>iFix PH67817|
+|CF230|9.0.5.24|8.0.8.45|||iFix PH66674|
+|CF229|9.0.5.24|8.0.8.45|||iFix PH66674|
+|CF228|9.0.5.23|8.0.8.40|||N/A|
+|CF227|9.0.5.23|8.0.8.40|||N/A|
+|CF226|9.0.5.22|8.0.8.35|||N/A|
