@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The default WebSphere certificate that ships with HCL Digital Experience will expire on April 26, 2021. Access to DX is not adversely affected. However scripts executed against the server will fail. For example stopServer or some ConfigEngine tasks. A new certificate will ship with HCL Digital Experience v9.5 CF194 or you can manually renew the certificate and the Kubernetes secret using the steps below.
+The default certificate that ships with HCL Digital Experience will expire on April 26, 2021. Access to DX is not adversely affected. However scripts executed against the server will fail. For example stopServer or some ConfigEngine tasks. A new certificate will ship with HCL Digital Experience v9.5 CF194 or you can manually renew the certificate and the Kubernetes secret using the steps below.
 
 !!!note
     The steps below use the out of box deployment name, dx-deployment. If you customized your deployment name please adjust the sample commands below accordingly.
