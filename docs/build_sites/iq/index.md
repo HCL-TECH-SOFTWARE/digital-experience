@@ -22,7 +22,7 @@ Ensure your environment meets the following requirements:
 Refer to the following pages for comprehensive information about IQ:
 
 - **[Installing IQ](./installation/index.md)**  
-This section provides detailed instructions for installing, configuring, and deploying IQ in your DX environment.
+This section provides instructions for deploying the containerized IQ backend services and enabling the conversational assistant interface within DX.
 - **[Accessing IQ](./access.md)**  
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  

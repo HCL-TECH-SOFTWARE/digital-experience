@@ -1,3 +1,5 @@
+<!--Delete page entirely? Since all of the info has been moved under IQ
+
 # Deploying and Managing HCL DX IQ Backend Server
 
 This topic explains how to deploy and manage the HCL DX IQ backend server (`hcl-dx-iq` Helm chart) alongside your HCL Digital Experience (DX) deployment.
@@ -46,35 +48,6 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
     > **FIXME / PLACEHOLDER:** [MCP Server Documentation](#) - *Add link to MCP Server documentation when available.*
 
     > **FIXME / PLACEHOLDER:** [IQ UI Documentation](#) - *Add link to IQ UI documentation when available.*
-
-## Limitations
-
-Be aware of the following limitations when deploying and using the IQ backend server:
-
-### Service Scope
-
-- IQ backend server is designed specifically for WebSocket-based AI integration and session management
-- The service manages only conversation state and AI communication orchestration
-- It does not replace or modify existing DX Core functionality
-
-### AI Model Limitations
-
-- **Training Data Cutoff:** The AI model is strictly limited by its training data cutoff date regarding existing HCL DX architecture
-- The model's knowledge of HCL DX features, APIs, and configuration is based on documentation available at the time of its training
-- For information about features released after the model's training date, users should consult the official HCL DX documentation
-- The model may not be aware of recent changes, new features, or updated best practices
-
-### Database Requirements
-
-- PostgreSQL database is required for session persistence
-- Database can be either RTC-managed or externally hosted
-- Database name for Runtime Controller (RTC)-managed deployments is fixed as `iqdb` and cannot be customized
-
-### MCP Server Integration
-
-- MCP servers must be accessible from the IQ backend pods
-- At least one of WCM or DAM integration should be enabled for MCP functionality
-- MCP standalone mode is configurable but may affect integration capabilities
 
 ## Preparation Steps
 
@@ -816,3 +789,4 @@ kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-ai-integrator
 ```
 
 ---
+-->

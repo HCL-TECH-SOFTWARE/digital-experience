@@ -25,7 +25,7 @@ If interface or display issues occur, clear the browser cache and perform a hard
 
 If the sparkle icon or floating action button (FAB) does not appear:
 
-- Verify if IQ is installed or enabled. For more information, refer to [Installing IQ](./installation.md).
+- Verify if IQ is installed or enabled. For more information, refer to [Enabling IQ](./installation/enable.md).
 - Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
 **Incorrect message display**
