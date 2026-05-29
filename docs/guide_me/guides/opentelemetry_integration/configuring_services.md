@@ -18,7 +18,6 @@ HCL DX container images already include the required OTel packages and modules. 
 Add or update the following section in your `values.yaml`:
 
 ```yaml
-incubator:
   openTelemetry:
     # Enable OTel integration
     enabled: true
@@ -60,7 +59,6 @@ HCL DX container images pre-bundle the OTel Java agent (version 2.23.0) at `/opt
 Add or update the following section in your `values.yaml` file:
 
 ```yaml
-incubator:
   openTelemetry:
     # Enable OTel integration
     enabled: true
