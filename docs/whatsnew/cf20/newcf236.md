@@ -92,6 +92,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that provides real-time, context-aware assistance to help you accomplish tasks more efficiently. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment, enabling you to interact with AI capabilities seamlessly while managing content and sites.
 
+    Unlike general-purpose AI assistants, IQ is purpose-built for HCL DX. It understands DX-specific concepts and workflows, and can both answer questions and perform actions directly on your DX system — such as creating and managing content, site areas, pages, projects, and digital assets.
+
     You can interact with the assistant in two ways:
 
     - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
