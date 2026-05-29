@@ -1,12 +1,12 @@
 # IQ
 
-IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that provides real-time, context-aware assistance to help you accomplish tasks more efficiently. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment, enabling you to interact with AI capabilities seamlessly while managing content and sites.
-
-Unlike general-purpose AI assistants, IQ is purpose-built for HCL DX. It understands DX-specific concepts, workflows, and APIs, and can both answer questions and perform actions directly on your DX system — such as creating and managing content, site areas, pages, projects, and digital assets. For a full list of supported capabilities, refer to [What can IQ do?](./usage.md#what-can-iq-do).
+IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
 ## Overview
 
 The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
+
+To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
 
 ## Prerequisites
 

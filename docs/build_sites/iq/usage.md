@@ -2,6 +2,34 @@
 
 This section provides a comprehensive guide on how to interact with IQ, manage active conversation sessions, and handle system alerts within HCL Digital Experience (DX).
 
+## Features
+
+IQ is an assistant purpose-built for HCL DX that understands DX-specific concepts, APIs, and workflows, and can both answer questions and perform actions directly on your DX system.
+
+!!! note
+    The available actions depend on the MCP tools deployed in your environment. The standard IQ deployment includes a default set of tools, which are described in the [Performing actions](#performing-actions) section. For more information, refer to [AI model limitations](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#ai-model-limitations).
+
+### Asking questions
+
+You can ask IQ about any HCL DX topic to get concise answers and guidance. The assistant answers questions about content authoring, workflows, approvals, Digital Asset Management (DAM), site structure, pages, and navigation. It also provides guidance on components, presentation templates, personalization, targeting, syndication, delivery, configuration, and troubleshooting.
+
+### Performing actions
+
+IQ can also perform actions directly on your DX system. When you give a direct instruction (for example, "Create a site area called News in the Web Content library"), IQ carries out the action using integrated MCP tools and reports the result.
+
+Supported actions include:
+
+| Category | Actions |
+|----------|---------|
+| **Libraries** | List all libraries |
+| **Site areas** | List, create, and delete site areas |
+| **Content** | List, create, update, and delete content items |
+| **Content templates** | List, create, and delete content templates |
+| **Presentation templates** | Create and delete presentation templates |
+| **Pages** | List parent pages, create and delete pages |
+| **Projects** | Create, delete, and publish projects; add and remove items from projects |
+| **Search** | Search content, collections, and assets |
+
 ## Interface components
 
 Regardless of the active display mode, the interface contains the following core components as mapped in this overview:
@@ -56,42 +84,3 @@ If IQ finishes generating a response or receives a system update while the chat 
 
 ![Notification badge on the toolbar button in panel view](../../assets/HCL_IQ_Panel_View.png "Notification badge on the toolbar button"){ height="100" } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Notification badge on the floating icon in compact view](../../assets/HCL_IQ_Compact_View.png "Notification badge on the floating icon"){ height="100" }
 {: style="text-align: center; margin: 24px 0;" }
-
-## What can IQ do?
-
-IQ is purpose-built for HCL Digital Experience. Unlike general-purpose AI assistants, IQ understands DX-specific concepts, APIs, and workflows, and can both answer questions and perform actions directly on your DX system.
-
-!!! note
-    The available actions depend on the MCP tools deployed in your environment. The capabilities listed below reflect the default tools included with the standard IQ deployment. For more information, refer to [AI model limitations](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#ai-model-limitations).
-
-### Ask questions
-
-You can ask IQ about any HCL DX topic, including:
-
-- Content authoring and workflows
-- Digital Asset Management (DAM)
-- Site structure, pages, and navigation
-- Components and presentation templates
-- Workflows and approvals
-- Personalization and targeting
-- Syndication and delivery
-- Configuration and troubleshooting
-
-IQ responds with concise, implementation-ready guidance tailored to HCL DX.
-
-### Perform actions
-
-IQ can also execute operations directly on your DX system. When you give a direct instruction (for example, "Create a site area called News in the Web Content library"), IQ carries out the action using integrated MCP tools and reports the result.
-
-Supported actions include:
-
-| Category | Actions |
-|----------|---------|
-| **Libraries** | List all libraries |
-| **Site areas** | List, create, and delete site areas |
-| **Content** | List, create, update, and delete content items |
-| **Content templates** | List, create, and delete content templates |
-| **Presentation templates** | Create and delete presentation templates |
-| **Pages** | List parent pages, create and delete pages |
-| **Projects** | Create, delete, and publish projects; add and remove items from projects |
-| **Search** | Search content, collections, and assets |
