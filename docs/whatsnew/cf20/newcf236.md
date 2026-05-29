@@ -15,6 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DX IQ assistant now available
 - Helm values updates
 - OpenTelemetry Integration Guide
 - WAS, JDK, and iFix versions
@@ -79,6 +80,18 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### DX IQ assistant now available
+
+=== "Containers"
+    IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
+
+    You can interact with the assistant in two ways:
+
+    - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
+    - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
+
+    For more information, refer to [IQ](../../build_sites/iq/index.md).
 
 ### Helm values updates
 
