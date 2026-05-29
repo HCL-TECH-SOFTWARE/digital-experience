@@ -1,5 +1,8 @@
 # Deploying the OpenTelemetry Collector
 
+!!!warning
+    This OTel Collector deployment is for development and testing only and is **not production-ready**. For production deployments, review the [official OTel Collector documentation](https://opentelemetry.io/docs/collector/){target="_blank"} for high-availability patterns, implement security controls such as TLS, and configure resource limits based on your telemetry volume.
+    
 The OpenTelemetry (OTel) Collector acts as a centralized telemetry gateway within your Kubernetes cluster. It receives data streams from your instrumented HCL DX services, processes or filters the telemetry according to your pipeline configurations, and routes the final outputs to your designated observability backends.
 
 Follow these steps to deploy the collector using the official OpenTelemetry Helm chart:
