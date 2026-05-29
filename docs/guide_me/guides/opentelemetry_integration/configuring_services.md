@@ -4,10 +4,7 @@ Configure OpenTelemetry (OTel) tracking across your Java and Node.js services to
 
 Use the Helm chart to enable built-in OTel instrumentation for Node.js services such as DAM, the Image Processor, and the Ring API. The chart also activates the pre-bundled OTel Java agent for DX Core, WebEngine, the Runtime Controller, and the License Manager.
 
-You can enable and configure OTel in the incubator section of the HCL DX Helm chart `values.yaml` file. The incubator section contains experimental features planned for future production releases.
-
-!!!warning
-    Features in the incubator section are experimental and are not recommended for production environments. Configuration values can change in future releases. For more information about experimental features, refer to [Experimental Features](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_experimental_features.md).
+You can enable and configure OTel in the HCL DX Helm chart `values.yaml` file.
 
 ## Enabling OTel for Node.js services using Helm
 
@@ -18,7 +15,6 @@ HCL DX container images already include the required OTel packages and modules. 
 Add or update the following section in your `values.yaml`:
 
 ```yaml
-incubator:
   openTelemetry:
     # Enable OTel integration
     enabled: true
@@ -60,7 +56,6 @@ HCL DX container images pre-bundle the OTel Java agent (version 2.23.0) at `/opt
 Add or update the following section in your `values.yaml` file:
 
 ```yaml
-incubator:
   openTelemetry:
     # Enable OTel integration
     enabled: true
