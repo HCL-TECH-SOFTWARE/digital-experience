@@ -35,7 +35,11 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 4. **Credentials and Secrets**
 
     - LITELLM API key for LLM integration (if using LiteLLM)
-    - Database credentials (for external or Runtime Controller (RTC)-managed database)
+    - Database option for IQ persistence (aligned with DAM patterns):
+      - internal non-RTC PostgreSQL
+      - external (customer-managed) database
+      - internal RTC-managed database
+    - Database credentials for the selected database option
 
 5. **Related Documentation**
 
@@ -774,9 +778,23 @@ DAM integration enabled
 2. Submit a test query (e.g., "What is HCL Digital Experience?")
 3. Verify that:
     - The WebSocket connection is established
+
+      You can verify this in your browser developer tools: open the **Network** tab, select **Socket/WS**, and confirm the `ws` connection is established.
+
+      ![HCL Doc IQ WebSocket connection established](../../../../../../assets/hcl_doc_iq_websocket_connection_established.png)
     - The query is processed
+
+      In your browser developer tools, open **Network** and select **Socket/WS**. Select the `ws` connection, open **Messages**, and verify an outbound JSON-RPC message with method `send_message` is sent for your query.
+
+      ![HCL Doc IQ send_message request in Network WebSocket messages](../../../../../../assets/hcl_doc_iq_send_message_request_network.png)
     - A response is returned from the AI model
+
+      In the same **Messages** view, verify an inbound JSON-RPC response is returned for your `send_message` request and includes the AI-generated answer payload.
+
+      ![HCL Doc IQ send_message response in Network WebSocket messages](../../../../../../assets/hcl_doc_iq_send_message_response_network.png)
     - The conversation state is preserved
+
+      You can validate this by reloading the page and confirming the prior conversation is still available. You can also log out and log back in, then verify the same conversation state is restored.
 
 ### Troubleshooting
 
