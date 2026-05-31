@@ -12,7 +12,7 @@ HCL DX IQ is a core communication and data management layer (referred to as the 
 - Integrating with Model Context Protocol (MCP) servers for enhanced AI capabilities
 - Ensuring robust, scalable, and seamless user experiences
 
-> **NOTE:** This document covers the backend server deployment. For information about the IQ UI components and chatbot features, refer to the [HCL Doc IQ chatbot documentation](../../../../../../get_started/product_overview/doc_iq_chatbot.md).
+> **NOTE:** This document covers the backend server deployment. For information about the IQ UI components and features, refer to the [IQ UI Documentation](../../index.md)
 
 ## Prerequisites
 
@@ -29,57 +29,60 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 3. **Required Components**
 
     - DX Core deployment must be operational
-    - Access to the HCL Artifactory repository containing the `hcl-dx-iq` Helm chart
+    - Access to your image or package repository containing the `hcl-dx-iq` Helm chart, the IQ Integrator and DX MCP Server images, and optionally, the Persistence Node and/or Runtime Controller images.
     - Valid Kubernetes namespace with appropriate permissions
 
-4. **Credentials and Secrets**
+4. **Database Configuration**
 
-    - LITELLM API key for LLM integration (if using LiteLLM)
-    - Database option for IQ persistence (aligned with DAM patterns):
-      - internal non-RTC PostgreSQL
-      - external (customer-managed) database
-      - internal RTC-managed database
-    - Database credentials for the selected database option
+    Choose one database option for IQ persistence:
+    - **Option A**: Internal database via DX Persistence Node (automatically provisioned by Helm)
+    - **Option B**: External database (cloud-managed, on-premises, or separate Kubernetes cluster)
+    - **Option C**: Runtime Controller (RTC)-managed database (advanced orchestration within DX deployment)
+    
+    Database credentials are required for the selected option.
 
-5. **Related Documentation**
+5. **LiteLLM API Key and Model Configuration**
+
+    You need to set up a LiteLLM proxy server to manage LLM model access. Refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy) for setup instructions.
+    
+    The IQ backend requires two configured proxy models:
+    
+    - **`iq-general-purpose`**: A premium, capable model (recommended: Claude 3.5 Sonnet or Opus) for handling general DX inquiries and executing tools with high accuracy
+    - **`iq-summary`**: A cost-efficient model (recommended: Claude 3.5 Haiku) for conversation summarization and context window reduction
+    
+    You can map these proxy models to any LLM provider of your choice (OpenAI, Anthropic, local models, etc.). Refer to [LiteLLM Model Management](https://docs.litellm.ai/docs/proxy/model_management) for configuration options and supported providers.
+    
+    **Early Testing**: While HCL is preparing the automated Deployment Key flow for production use, you can deploy and test IQ today by setting up your own LiteLLM proxy server. This allows you to validate IQ functionality with any LLM provider before the automated entitlement flow becomes available. 
+    
+    **Data Security**: IQ handles data responsibly:
+    - User authentication credentials (cookies) are **never** transmitted to any external LLM service. Credentials remain between the DX authentication layer and the MCP Server within your Kubernetes cluster.
+    - Conversation history is transmitted to your configured LLM to enable proper context and functionality. During this testing phase, you control the LiteLLM proxy server and determine where conversation data is routed (local models, managed APIs, etc.). In production deployments using the Deployment Key flow, HCL will manage the LiteLLM proxy to ensure secure, compliant LLM integration.
+
+6. **Related Documentation**
 
     > **FIXME / PLACEHOLDER:** [MCP Server Documentation](#) - *Add link to MCP Server documentation when available.*
 
-    > **FIXME / PLACEHOLDER:** [IQ UI Documentation](#) - *Add link to IQ UI documentation when available.*
+    > [IQ UI Documentation](../../index.md)
 
 ## Overview
 
-<!--introduction-->
+Follow the deployment workflow below to successfully set up and operate your HCL DX IQ backend environment. Each section guides you through the essential phases of deployment and operational management, from initial service deployment through optional database configuration and license setup. The validation section verifies your deployment at any stage, the backup section provides recovery procedures for disaster scenarios, and the limitations section helps you understand architectural constraints and service boundaries.
 
-- **[Preparing the database](prepare-database.md)**  
-This section provides instructions for provisioning PostgreSQL databases, creating required Kubernetes secrets, and configuring persistence settings for both external and Runtime Controller (RTC)-managed environments.
 - **[Deploying services](deploy-services.md)**  
-This section provides step-by-step instructions for configuring the custom values file, deploying the IQ Helm chart, and executing end-to-end validation tests to verify container health.
-- **[Backing up and restoring data](backup-restore.md)**  
-This section provides procedures for creating database dumps, downloading backups off-cluster, restoring data to a new database instance, and executing post-recovery pod restarts.
-- **[Limitations](limitations.md)**  
-This section outlines the architectural boundaries, service scopes, database naming constraints, and AI model knowledge cutoff limitations for the IQ backend environment.
+This section provides step-by-step instructions for configuring the custom values file, deploying the IQ Helm chart initially without persistence, and basic pod health checks.
+- **[Preparing the database](prepare-database.md)**  
+Optional: Configures persistent PostgreSQL storage for conversation and session persistence. This section provides instructions for provisioning databases, creating Kubernetes secrets, and configuring internal, external, or Runtime Controller (RTC)-managed database options.
+- **[Preparing the license and deployment key](prepare-license.md)**  
+Optional: For customers with HCL IQ subscriptions, this section guides you through obtaining a Deployment Key from [My HCLSoftware](https://my.hcltechsw.com/) and configuring the IQ Integrator to automatically acquire a LiteLLM API key based on your HCL entitlement.
 
-<!--
-## IQ install
+## Additional Resources
 
-- [Deploying and Managing HCL DX IQ Backend Server](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md)
-- [Installation and deployment steps](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#installation-deployment)
+> [Validating the IQ backend deployment](validation.md)  
+> Verify your deployment is healthy and operational at any stage of the installation process.
 
-## Configuring DB
+> [Backing up and restoring data](backup-restore.md)  
+> Database backup and restore procedures for disaster recovery (applies only if you configured a database).
 
-- [Configure values.yaml for persistence](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#step-1-configure-valuesyaml-for-persistence)
-- [External (Non-RTC) database configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#scenario-a-using-an-external-non-rtc-database)
-- [RTC-managed database configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#scenario-b-using-a-runtime-controller-rtc-managed-database)
+> [Limitations](limitations.md)  
+> Architectural constraints, service boundaries, and known limitations.
 
-## DB backup and restore
-
-- [Backup and restore](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#backup-and-restore)
-- [Backup persistence](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#backup-persistence)
-- [Restore persistence](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#restore-persistence)
-
-## Deployment key management
-
-- [Configure license management](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#step-2-configure-license-management)
-- [LiteLLM configuration](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#step-2-prepare-configuration-values)
--->

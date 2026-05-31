@@ -17,12 +17,13 @@ Be aware of the following limitations when deploying and using the IQ backend se
 
 ## Database Requirements
 
-- PostgreSQL database is required for session persistence
-- Database can be either RTC-managed or externally hosted
-- Database name for Runtime Controller (RTC)-managed deployments is fixed as `iqdb` and cannot be customized
+- **Database is optional**: IQ services can deploy without persistent storage using in-memory SQLite (development only)
+- **Database is strongly recommended for production**: PostgreSQL enables conversation persistence, session management, and safe multi-pod coordination
+- **Three database options available**: Option A (internal Persistence Node), Option B (external PostgreSQL), or Option C (RTC-managed PostgreSQL)
+- **Database name is fixed as `iqdb` for Options A and C**: Both Persistence Node (Option A) and Runtime Controller-managed (Option C) deployments use the fixed name `iqdb`. Option B (external) allows custom database names.
 
 ## MCP Server Integration
 
-- MCP servers must be accessible from the IQ backend pods
-- At least one of WCM or DAM integration should be enabled for MCP functionality
-- MCP standalone mode is configurable but may affect integration capabilities
+- **MCP Server is part of the hcl-dx-iq installation**: The MCP Server container is deployed alongside the Integrator as part of the same Helm chart. Network connectivity between the Integrator and MCP Server is automatic within the same deployment.
+- **WCM and DAM tools are optional and independently configurable**: Both WebContent Management and Digital Asset Management tool packages can be independently enabled or disabled via `enableWcm` and `enableDam` Helm configuration values. The MCP Server functions regardless of which tools are enabled.
+- **Standalone mode affects authentication handling**: When `standaloneMode` is false (default), the MCP Server integrates with DX user authentication. When true, it disables DX authentication integration and may function in isolation.

@@ -1,7 +1,9 @@
 title: Installing IQ backend services
 nav:
     - index.md
-    - prepare-database.md
     - deploy-services.md
+    - prepare-database.md
+    - prepare-license.md
+    - validation.md
     - backup-restore.md
     - limitations.md

@@ -4,7 +4,7 @@ This section provides instructions for enabling and configuring the IQ assistant
 
 ## Overview
 
-IQ is an AI-powered assistant integrated into DX and delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets.
+IQ is an AI-powered assistant integrated into DX and delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend Websocket API and the UI assets.
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
@@ -17,7 +17,7 @@ Before installing IQ, verify that your environment meets the following requireme
 
 **For all deployments**
 
-1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. For more information, refer to Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for environment-specific guidance. <!--Link to the backend services section?-->
+1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. For more information, refer to [Installing IQ backend services](../installation/backend/index.md)
 2. Enable Practitioner Studio. For more information, refer to [How to enable Practitioner Studio](../../practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 **For Kubernetes and Helm-based deployments**

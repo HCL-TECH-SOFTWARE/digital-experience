@@ -1,6 +1,9 @@
 # Backing up and restoring data
 
-The IQ backend server stores session and conversation data in a PostgreSQL database. Regular backups ensure data recovery in case of failures.
+!!! note "This guide assumes you configured a database"
+    This guide only applies if you completed the [Preparing the database](prepare-database.md) step. If you are using the IQ backend server without a database, you can skip this section.
+
+If you configured a PostgreSQL database following the [Preparing the database](prepare-database.md) guide, the IQ backend server stores session and conversation data in it. Regular backups ensure data recovery in case of failures.
 
 ## Backup Persistence
 
@@ -221,7 +224,7 @@ After completing the restore, the persistence connection pool may take time to r
 1. **Restart the IQ integrator pod:**
 
     ```bash
-    kubectl delete pod -n <YOUR_NAMESPACE> -l app=dx-ai-integrator
+    kubectl delete pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
     ```
 
     Kubernetes will automatically recreate the pod.
@@ -229,126 +232,13 @@ After completing the restore, the persistence connection pool may take time to r
 2. **Verify pod status:**
 
     ```bash
-    kubectl get pods -n <YOUR_NAMESPACE> | grep dx-ai-integrator
+    kubectl get pods -n <YOUR_NAMESPACE> | grep dx-iq-integrator
     ```
 
     Wait until the pod shows `Running` status with `1/1` ready.
 
 ## Validation
 
-After installation or upgrade, validate that the IQ backend server is functioning correctly.
+After restoring a backup, follow the [Validating the IQ backend deployment](validation.md) guide to verify that the database restore was successful and all IQ services are operational.
 
-### Step 1: Verify Pod Health
-
-Check that all IQ pods are running:
-
-```bash
-kubectl get pods -n <YOUR_NAMESPACE> | grep dx-ai
-```
-
-Expected output:
-
-```
-dx-ai-integrator-xxxxxxxxxx-xxxxx       1/1     Running   0          5m
-dx-ai-mcp-server-xxxxxxxxxx-xxxxx       1/1     Running   0          5m
-```
-
-### Step 2: Check Pod Logs
-
-Examine logs for any errors:
-
-```bash
-# Integrator logs
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-integrator --tail=50
-
-# MCP Server logs
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-mcp-server --tail=50
-```
-
-Look for startup messages indicating successful initialization.
-
-### Step 3: Verify Database Connection
-
-Check that the IQ service can connect to the database:
-
-```bash
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-integrator | grep -i "database"
-```
-
-Look for messages like:
-
-```
-Database connection established
-Database migration completed successfully
-```
-
-### Step 4: Test WebSocket Connectivity
-
-1. **Get the IQ service endpoint:**
-
-    ```bash
-    kubectl get service -n <YOUR_NAMESPACE> | grep dx-ai
-    ```
-
-2. **Access the DX environment and verify IQ UI components are loaded:**
-
-    Open your DX environment in a browser and navigate to a page with IQ chatbot integration. The chatbot should be visible and interactive.
-
-### Step 5: Verify MCP Server Integration
-
-Check MCP server logs for successful registration:
-
-```bash
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-mcp-server | grep -i "registered\|connected"
-```
-
-Look for messages indicating:
-
-```
-MCP server registered successfully
-WCM integration enabled
-DAM integration enabled
-```
-
-### Step 6: Test End-to-End Functionality
-
-1. Open the HCL Doc IQ chatbot interface in your DX environment
-2. Submit a test query (e.g., "What is HCL Digital Experience?")
-3. Verify that:
-    - The WebSocket connection is established
-
-      You can verify this in your browser developer tools: open the **Network** tab, select **Socket/WS**, and confirm the `ws` connection is established.
-
-      ![HCL Doc IQ WebSocket connection established](../../../../../../assets/hcl_doc_iq_websocket_connection_established.png)
-    - The query is processed
-
-      In your browser developer tools, open **Network** and select **Socket/WS**. Select the `ws` connection, open **Messages**, and verify an outbound JSON-RPC message with method `send_message` is sent for your query.
-
-      ![HCL Doc IQ send_message request in Network WebSocket messages](../../../../../../assets/hcl_doc_iq_send_message_request_network.png)
-    - A response is returned from the AI model
-
-      In the same **Messages** view, verify an inbound JSON-RPC response is returned for your `send_message` request and includes the AI-generated answer payload.
-
-      ![HCL Doc IQ send_message response in Network WebSocket messages](../../../../../../assets/hcl_doc_iq_send_message_response_network.png)
-    - The conversation state is preserved
-
-      You can validate this by reloading the page and confirming the prior conversation is still available. You can also log out and log back in, then verify the same conversation state is restored.
-
-### Troubleshooting
-
-If validation fails, check the following:
-
-| Issue | Possible Cause | Solution |
-|-------|----------------|----------|
-| Pods not starting | Image pull errors | Verify image tags and Artifactory access |
-| Database connection fails | Incorrect credentials or host | Verify database secret and configuration |
-| WebSocket errors | Network policy restrictions | Check Kubernetes network policies |
-| MCP integration issues | WCM/DAM not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings |
-| No AI responses | LiteLLM configuration issue | Check LITELLM_API_KEY and LITELLM_URL |
-
-For detailed logs:
-
-```bash
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-integrator --previous
-kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-ai-integrator
-```
+Focus on [Step 3: Verify Database Connection](validation.md#step-3-verify-database-connection) to confirm the IQ pod can connect to the restored database.

@@ -2,13 +2,19 @@
 
 This section provides step-by-step instructions for deploying the IQ backend server alongside an existing HCL DX deployment.
 
+!!! note "Database and License Configuration are Optional"
+    This deployment deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured. You can validate that the Integrator and MCP Server containers are healthy and operational immediately. After confirming services are running, you have two optional next steps.
+
+**[Preparing the database](prepare-database.md)** — Recommended for production. Enables conversation persistence, session storage, and safe multi-pod coordination for Deployment Key token management.
+
+**[Preparing the license and deployment key](prepare-license.md)** — If you have an HCL IQ subscription and want automated, entitlement-based LiteLLM key management instead of static keys.
+
 ### Step 1: Locate the Latest Helm Chart and Images
 
-1. **Find available IQ Helm chart versions:**
+1. **Find available IQ Helm chart versions from your artifactory:**
 
     ```bash
-    curl -u <USERNAME>:<TOKEN> \
-      "https://artifactory.cwp.pnp-hcl.com/artifactory/api/storage/quintana-helm/hcl-dx-iq/"
+    curl -u username:token "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
     ```
 
     Replace `<USERNAME>` and `<TOKEN>` with your Artifactory credentials.
@@ -18,8 +24,6 @@ This section provides step-by-step instructions for deploying the IQ backend ser
     The IQ deployment uses two container images:
     - **Integrator Image:** `dx-iq-integrator`
     - **MCP Server Image:** `dx-mcp-server`
-
-    Image tags are typically based on branch names (`develop`, `master`, `release`) or specific version numbers.
 
 ### Step 2: Prepare Configuration Values
 
@@ -34,17 +38,17 @@ images:
 
 # Application configuration
 configuration:
-  # DX host configuration
+  # DX deployment configuration
   dx:
-    host: "<DX_HOSTNAME>"
+    releaseName: "<DX_RELEASE_NAME>"
+    externalHost: "<DX_EXTERNAL_FQDN>"
+    internalHost: "http://<DX_RELEASE_NAME>-core:10039" # For web-engine use: http://<DX_RELEASE_NAME>-web-engine:9080
+    port: 443
+    ssl: true
   
-  # Database configuration (see Preparation Steps for details)
+  # Database configuration (optional - leave disabled initially, enable after preparation)
   database:
-    enabled: true
-    dbHost: "<DATABASE_HOST>"
-    dbPort: 5432
-    dbName: "iqdb"
-    dbCustomSecret: "<DB_SECRET_NAME>"
+    enabled: false
   
   # MCP Server configuration
   mcpServer:
@@ -52,75 +56,52 @@ configuration:
     enableWcm: "true"
     enableDam: "true"
   
-  # LiteLLM configuration (optional)
+  # LiteLLM Proxy configuration
   litellm:
     liteLlmUrl: "<LITELLM_URL>"
-
-# Environment variables for integrator pod
-environment:
-  pod:
-    integrator:
-      - name: "DX_HOST"
-        value: "http://<DX_SERVICE_NAME>:<DX_SERVICE_PORT>"
-      - name: "DX_CONTEXT_ROOT"
-        value: "/<CONTEXT_ROOT_PATH>"
-      - name: "LITELLM_API_KEY"
-        valueFrom:
-          secretKeyRef:
-            name: "<LITELLM_SECRET_NAME>"
-            key: "api-key"
 ```
 
 Replace placeholders with your environment-specific values:
 
 - `<INTEGRATOR_IMAGE_TAG>`: Tag for the dx-iq-integrator image
 - `<MCP_SERVER_IMAGE_TAG>`: Tag for the dx-mcp-server image
-- `<DX_HOSTNAME>`: Your DX deployment hostname
-- `<DATABASE_HOST>`: PostgreSQL database hostname
-- `<DB_SECRET_NAME>`: Name of the Kubernetes secret containing database credentials
-- `<LITELLM_URL>`: LiteLLM service URL (if applicable)
-- `<DX_SERVICE_NAME>`: DX Core service name (e.g., `dx-deployment-web-engine` or `dx-deployment-core`)
-- `<DX_SERVICE_PORT>`: DX Core service port (e.g., `9080` for web-engine, `10039` for core)
-- `<CONTEXT_ROOT_PATH>`: DX context root path (e.g., `wps`)
-- `<LITELLM_SECRET_NAME>`: Name of the secret containing LiteLLM API key
+- `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (e.g., `dx-deployment`)
+- `<DX_EXTERNAL_FQDN>`: Your DX external hostname used by the LLM for context (e.g., `dx.example.com`)
+- `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`)
 
-!!! note "Auto-detecting DX service configuration"
-    The deployment automatically detects whether you're using web-engine or core deployment based on the `DISABLE_CORE_OPENLIBERTY` setting. If not specified:
-    - Web-engine deployments use: `dx-deployment-web-engine:9080`
-    - Core deployments use: `dx-deployment-core:10039`
+!!! note "DX service discovery"
+    The `internalHost` value must match your DX deployment type:
+    - For **Web-Engine**: `http://dx-deployment-web-engine:9080`
+    - For **Core**: `http://dx-deployment-core:10039`
+    
+    Adjust the hostname prefix if your DX release name differs from `dx-deployment`.
 
 ### Step 3: Install the IQ Backend Server
 
 Run the Helm installation command:
 
 ```bash
-helm install dx-ai \
-  https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-helm/hcl-dx-iq/<HELM_CHART_VERSION>.tgz \
+helm install dx-iq \
+  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
   --values custom-iq-values.yaml
 ```
 
 Replace:
-- `<HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
+- `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
 - `<YOUR_NAMESPACE>` with your Kubernetes namespace
 
 Alternatively, you can specify values directly via command-line flags:
 
 ```bash
-helm install dx-ai \
-  https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-helm/hcl-dx-iq/<HELM_CHART_VERSION>.tgz \
+helm install dx-iq \
+  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
   --set images.tags.integrator="<INTEGRATOR_TAG>" \
   --set images.tags.mcpServer="<MCP_SERVER_TAG>" \
-  --set configuration.dx.host="<DX_HOSTNAME>" \
-  --set configuration.database.enabled=true \
-  --set configuration.database.dbHost="<DATABASE_HOST>" \
-  --set configuration.database.dbPort=5432 \
-  --set configuration.database.dbName="iqdb" \
-  --set configuration.database.dbCustomSecret="<DB_SECRET_NAME>" \
-  --set configuration.mcpServer.standaloneMode="false" \
-  --set configuration.mcpServer.enableWcm="true" \
-  --set configuration.mcpServer.enableDam="true"
+  --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
+  --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
+  --set configuration.litellm.liteLlmUrl="<LITELLM_URL>"
 ```
 
 ### Step 4: Verify the Installation
@@ -128,27 +109,27 @@ helm install dx-ai \
 1. **Check pod status:**
 
     ```bash
-    kubectl get pods -n <YOUR_NAMESPACE> | grep dx-ai
+    kubectl get pods -n <YOUR_NAMESPACE> | grep dx-iq
     ```
 
     Expected output:
 
     ```
-    dx-ai-integrator-xxxxxxxxxx-xxxxx       1/1     Running   0          2m
-    dx-ai-mcp-server-xxxxxxxxxx-xxxxx       1/1     Running   0          2m
+    dx-iq-integrator-xxxxxxxxxx-xxxxx       1/1     Running   0          2m
+    dx-iq-mcp-server-xxxxxxxxxx-xxxxx       1/1     Running   0          2m
     ```
 
 2. **Check deployment status:**
 
     ```bash
-    kubectl get deployment -n <YOUR_NAMESPACE> | grep dx-ai
+    kubectl get deployment -n <YOUR_NAMESPACE> | grep dx-iq
     ```
 
 3. **View logs:**
 
     ```bash
-    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-integrator
-    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-ai-mcp-server
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
 
 ## Helm Upgrade & Maintenance
@@ -166,14 +147,14 @@ To upgrade the IQ backend server to a new version or modify configuration:
 2. **Get current values:**
 
     ```bash
-    helm get values dx-ai -n <YOUR_NAMESPACE>
+    helm get values dx-iq -n <YOUR_NAMESPACE>
     ```
 
 3. **Upgrade with new chart version:**
 
     ```bash
-    helm upgrade dx-ai \
-      https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-helm/hcl-dx-iq/<NEW_HELM_CHART_VERSION>.tgz \
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<NEW_IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
       --reuse-values
     ```
@@ -181,39 +162,34 @@ To upgrade the IQ backend server to a new version or modify configuration:
 4. **Upgrade with new configuration:**
 
     ```bash
-    helm upgrade dx-ai \
-      https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-helm/hcl-dx-iq/<HELM_CHART_VERSION>.tgz \
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<NEW_IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
       --reuse-values \
       --set images.tags.integrator="<NEW_INTEGRATOR_TAG>" \
       --set images.tags.mcpServer="<NEW_MCP_SERVER_TAG>"
     ```
 
-### Applying Environment Variable Overrides
 
-To update environment variables without changing other configuration:
-
-```bash
-helm upgrade dx-ai \
-  https://artifactory.cwp.pnp-hcl.com/artifactory/quintana-helm/hcl-dx-iq/<HELM_CHART_VERSION>.tgz \
-  --namespace <YOUR_NAMESPACE> \
-  --reuse-values \
-  --set-json 'environment.pod.integrator=[
-    {"name":"DX_HOST","value":"http://<NEW_DX_SERVICE>:<PORT>"},
-    {"name":"DX_CONTEXT_ROOT","value":"/<NEW_CONTEXT_ROOT>"}
-  ]'
-```
 
 ### Uninstalling IQ Backend Server
 
 To remove the IQ backend server:
 
 ```bash
-helm uninstall dx-ai --namespace <YOUR_NAMESPACE>
+helm uninstall dx-iq --namespace <YOUR_NAMESPACE>
 ```
 
 Verify pods are terminated:
 
 ```bash
-kubectl get pods -n <YOUR_NAMESPACE> | grep dx-ai
+kubectl get pods -n <YOUR_NAMESPACE> | grep dx-iq
 ```
+
+## Next Steps
+
+After deploying the IQ services, follow the [Validating the IQ backend deployment](validation.md) guide to confirm pods are healthy and services are operational.
+
+Then, optionally configure:
+- **[Preparing the database](prepare-database.md)** — Recommended for production for conversation/session persistence
+- **[Preparing the license and deployment key](prepare-license.md)** — If you have an HCL IQ subscription
