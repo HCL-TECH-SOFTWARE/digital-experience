@@ -22,7 +22,7 @@ Before installing IQ, verify that your environment meets the following requireme
 
 **For Kubernetes and Helm-based deployments**
 
-1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for assistance with obtaining and deploying the IQ Helm chart. <!--Link to the backend services section?-->
+1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for assistance with obtaining and deploying the IQ Helm chart. For more information, refer to [Installing IQ backend services](../installation/backend/index.md).
 2. Ensure you have access to modify your DX Helm chart `values.yaml` file.
 
 ## Enabling IQ
