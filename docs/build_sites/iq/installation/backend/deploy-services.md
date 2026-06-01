@@ -113,6 +113,7 @@ helm install dx-iq \
   https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
   --values custom-iq-values.yaml \
+  --set images.repository="<YOUR_ARTIFACTORY>" \
   --set-json 'environment.pod.integrator=[
   {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
   {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
@@ -122,6 +123,7 @@ helm install dx-iq \
 Replace:
 - `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
 - `<YOUR_NAMESPACE>` with your Kubernetes namespace
+- `<YOUR_ARTIFACTORY>` with your image and chart packages artifactory
 - `<LITELLM_API_KEY>` with your LiteLLM API key provided by your LiteLLM proxy administrator. You can also skip it if you do not have it yet and set it later via helm upgrade.
 - `<DX_CONTEXT_ROOT>` with your known DX Deployment context root, for example: `/wps`
 

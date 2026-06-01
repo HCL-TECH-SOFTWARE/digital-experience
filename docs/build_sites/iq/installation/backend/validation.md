@@ -51,9 +51,9 @@ kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator | grep -i "database
 Look for messages like:
 
 ```
-Database initialized successfully.
+Database mode is ENABLED. Using PostgreSQL database.
 Database connection initialized.
-Using database: PostgreSQL
+Database initialized successfully.
 ```
 
 If you see errors like `Connection refused` or `Password authentication failed`, verify your database configuration in the Helm values and the database credentials in your secret. If database is disabled and you're using SQLite (the fallback), you'll see: `Using database: In-memory SQLite`
@@ -69,6 +69,8 @@ If you see errors like `Connection refused` or `Password authentication failed`,
 2. **Access the DX environment and verify IQ UI components are loaded:**
 
     Open your DX environment in a browser and navigate to a page with IQ chatbot integration. The chatbot should be visible and interactive.
+    
+    For detailed instructions on accessing your DX environment and configuring IQ UI components, see [Accessing the DX environment](../../access.md).
 
 ## Step 5: Verify MCP Server Integration
 
@@ -97,7 +99,7 @@ Check the Helm values `mcpServer.enableWcm` and `mcpServer.enableDam` to enable 
 
 ## Step 6: Test End-to-End Functionality
 
-1. Open the HCL Doc IQ chatbot interface in your DX environment
+1. Open the HCL IQ user interface in your DX environment
 2. Submit a test query (e.g., "What is HCL Digital Experience?")
 3. Verify that:
     - **The WebSocket connection is established**
@@ -138,6 +140,6 @@ If validation fails, check the following:
 For detailed logs:
 
 ```bash
-kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --previous
+kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
 kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
 ```
