@@ -9,9 +9,37 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 
 **[Preparing the license and deployment key](prepare-license.md)** — If you have an HCL IQ subscription and want automated, entitlement-based LiteLLM key management instead of static keys.
 
+## Overview of IQ Services
+
+Before deployment, it's helpful to understand the two main components you'll be deploying:
+
+### IQ Integrator
+
+The **IQ Integrator** is the primary WebSocket-based service that bridges HCL DX and AI models. It handles:
+
+- **Natural language question answering** — Receives questions from users about their DX content and system configuration, then forwards these to a configured LLM (like OpenAI's GPT or LiteLLM)
+- **Context aggregation** — Gathers contextual information from your DX deployment to provide the LLM with accurate, environment-specific answers
+- **Session management** — Maintains WebSocket connections and conversation history for interactive Q&A sessions
+- **User authentication** — Validates DX user credentials and maintains secure sessions
+
+In essence, the IQ Integrator is the "answering engine" that transforms DX data into LLM-consumable context and delivers AI-generated responses back to end users.
+
+### IQ MCP Server
+
+The **IQ MCP Server** (Model Context Protocol Server) provides tool execution capabilities for WCM (Web Content Management) and DAM (Digital Asset Management) operations. It enables:
+
+- **WCM tool execution** — Allows the LLM to create/read/update content libraries, site areas, content templates, and presentation templates
+- **DAM tool execution** — Supports searching and retrieving digital assets
+- **Secure API integration** — Connects to DX via authenticated REST APIs with proper error handling and logging
+- **Tool standardization** — Implements the MCP specification, allowing AI models to discover and invoke tools in a standardized way
+
+The MCP Server acts as the "action layer," allowing AI assistants to not just answer questions, but perform real operations within your DX environment when appropriate.
+
+---
+
 ### Step 1: Locate the Latest Helm Chart and Images
 
-1. **Find available IQ Helm chart versions from your artifactory:**
+1. **Find available IQ Helm chart versions, and available IQ Integrator and MCP Server images tags from your artifactory. For example, in JFrog Artifactory::**
 
     ```bash
     curl -u username:token "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
@@ -52,9 +80,9 @@ configuration:
   
   # MCP Server configuration
   mcpServer:
-    standaloneMode: "false"
-    enableWcm: "true"
-    enableDam: "true"
+    standaloneMode: false
+    enableWcm: true
+    enableDam: true
   
   # LiteLLM Proxy configuration
   litellm:
@@ -67,7 +95,7 @@ Replace placeholders with your environment-specific values:
 - `<MCP_SERVER_IMAGE_TAG>`: Tag for the dx-mcp-server image
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (e.g., `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: Your DX external hostname used by the LLM for context (e.g., `dx.example.com`)
-- `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`)
+- `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`) if you already have one. You can also leave it blank and helm upgrade with this later.
 
 !!! note "DX service discovery"
     The `internalHost` value must match your DX deployment type:
@@ -84,12 +112,18 @@ Run the Helm installation command:
 helm install dx-iq \
   https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
-  --values custom-iq-values.yaml
+  --values custom-iq-values.yaml \
+  --set-json 'environment.pod.integrator=[
+  {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+]'
 ```
 
 Replace:
 - `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
 - `<YOUR_NAMESPACE>` with your Kubernetes namespace
+- `<LITELLM_API_KEY>` with your LiteLLM API key provided by your LiteLLM proxy administrator. You can also skip it if you do not have it yet and set it later via helm upgrade.
+- `<DX_CONTEXT_ROOT>` with your known DX Deployment context root, for example: `/wps`
 
 Alternatively, you can specify values directly via command-line flags:
 
@@ -101,7 +135,11 @@ helm install dx-iq \
   --set images.tags.mcpServer="<MCP_SERVER_TAG>" \
   --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
   --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
-  --set configuration.litellm.liteLlmUrl="<LITELLM_URL>"
+  --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
+  --set-json 'environment.pod.integrator=[
+    {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+  ]'
 ```
 
 ### Step 4: Verify the Installation
