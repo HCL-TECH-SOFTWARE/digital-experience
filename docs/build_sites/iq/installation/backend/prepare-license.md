@@ -90,7 +90,7 @@ kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
 
 You're all set. The IQ Integrator will use your static key for all LLM requests. **You do not need to proceed with the rest of this document** unless you want to:
 - Add automated Deployment Key management once the KMS endpoint is available
-- Configure a database for conversation persistence
+- [Configure a database for conversation persistence](prepare-database.md) if not yet completed. 
 
 ---
 

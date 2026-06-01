@@ -56,7 +56,46 @@ Database connection initialized.
 Database initialized successfully.
 ```
 
-If you see errors like `Connection refused` or `Password authentication failed`, verify your database configuration in the Helm values and the database credentials in your secret. If database is disabled and you're using SQLite (the fallback), you'll see: `Using database: In-memory SQLite`
+If you see errors like `Connection refused` or `Password authentication failed`, the IQ Integrator cannot reach the database. The root cause is usually that the database or user was never created. Check the appropriate pod logs depending on how you configured the database:
+
+- **Option A (Internal DB)** — Check the persistence node logs for IQ database creation messages:
+
+    ```bash
+    kubectl logs -n <YOUR_NAMESPACE> <DX_RELEASE_NAME>-persistence-node-0 -c persistence-node | grep -i "iq"
+    ```
+
+    Expected messages on successful setup:
+    ```
+    Creating IQ user "dx_iq_db_user"...
+    Creating IQ database "iqdb"...
+    ```
+
+    If you see the following, it means `IQ_DB_PASSWORD` was not passed correctly — the DX Helm upgrade in Option A Step 2 likely did not include `security.iq.dbPassword`:
+    ```
+    WARNING: No password specified for "dx_iq_db_user". Skipping IQ user and database creation.
+    ```
+
+- **Option B (External DB)** — The database and user must already exist. Verify connectivity from within the cluster. An average sample is shown below but the correct command or tool to use may not even be kubectl, it all depends on your External DB setup:
+
+    ```bash
+    kubectl run pg-test --rm -it --image=postgres:16 --restart=Never -n <YOUR_NAMESPACE> -- \
+      psql "host=<DB_HOST> port=5432 dbname=iqdb user=<DB_USERNAME> password=<DB_PASSWORD> sslmode=require"
+    ```
+
+- **Option C (RTC-managed DB)** — Check the Runtime Controller logs:
+
+    ```bash
+    kubectl logs -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller | grep -i "iq database"
+    ```
+
+    Expected message on success:
+    ```
+    IQ database setup completed successfully.
+    ```
+
+    If you see `IQ database setup failed.`, verify the `custom-credentials-iq-db` secret exists and that `security.iq.customDbSecret` was set correctly in the DX Helm upgrade.
+
+If database is disabled and you're using SQLite (the fallback), you'll see: `Using database: In-memory SQLite`
 
 ## Step 4: Test WebSocket Connectivity
 

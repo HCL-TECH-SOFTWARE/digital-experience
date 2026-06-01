@@ -85,7 +85,7 @@ The Persistence Node in your DX deployment can automatically provision a Postgre
     Replace:
     - `<DX_RELEASE_NAME>` with your DX Helm release name
     - `<DX_NAMESPACE>` with your DX deployment namespace
-    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository fully qualified domain name and path
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<DX_HELM_CHART_VERSION>` with your DX Helm chart version
 
     !!! note
@@ -155,7 +155,7 @@ The Persistence Node in your DX deployment can automatically provision a Postgre
 
     Replace:
     - `<DX_NAMESPACE>` with your DX deployment namespace
-    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository fully qualified domain name and path
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<IQ_HELM_CHART_VERSION>` with your IQ Helm chart version
 
 6. **Verify the IQ secret was created:**
@@ -230,7 +230,7 @@ If you have an existing PostgreSQL database outside of the DX deployment, config
 
     Replace:
     - `<YOUR_NAMESPACE>` with your Kubernetes namespace
-    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository fully qualified domain name and path
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<IQ_HELM_CHART_VERSION>` with your IQ Helm chart version
 
 ---
@@ -240,6 +240,14 @@ If you have an existing PostgreSQL database outside of the DX deployment, config
 The DX Runtime Controller can automatically provision and manage a PostgreSQL database for IQ within your DX deployment.
 
 1. **Create the IQ database credentials secret:**
+
+    If the secret already exists from a previous installation, delete it first:
+
+    ```bash
+    kubectl delete secret custom-credentials-iq-db -n <YOUR_NAMESPACE> --ignore-not-found
+    ```
+
+    Then create it:
 
     ```bash
     kubectl create secret generic custom-credentials-iq-db \
@@ -287,7 +295,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
     - `<DX_RELEASE_NAME>` with your DX Helm release name (e.g., `dx-deployment`)
     - `<HELM_CHART_VERSION>` with your DX Helm chart version
     - `<YOUR_NAMESPACE>` with your Kubernetes namespace
-    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Repository fully qualified domain name and path to specified package or image.
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Repository full qualified domain name and path to specified package or image.
 
     !!! note
         To find available Helm chart versions in your Repository, search in the user interface or run a curl command. For example, in JFrog Artifactory:
@@ -314,6 +322,11 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
     ```bash
     kubectl exec -n <YOUR_NAMESPACE> <DX_RELEASE_NAME>-persistence-node-0 -c persistence-node -- \
       psql -U postgres -c "\l" | grep iq
+    ```
+
+    ```bash
+    kubectl exec -n <YOUR_NAMESPACE> <DX_RELEASE_NAME>-persistence-node-0 -c persistence-node -- \
+      psql -U postgres -c "\du" | grep iq
     ```
 
     Verify environment variables and secrets:
@@ -344,17 +357,14 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
+      --reuse-values \
       -f custom-iq-rtc-db-values.yaml
     ```
 
     Replace:
     - `<YOUR_NAMESPACE>` with your Kubernetes namespace
-    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository fully qualified domain name and path
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<IQ_HELM_CHART_VERSION>` with your IQ Helm chart version
-
-    Replace:
-    - `<DX_RELEASE_NAME>` with your DX Helm release name
-    - `<YOUR_NAMESPACE>` with your Kubernetes namespace
 
 ## Validation
 
