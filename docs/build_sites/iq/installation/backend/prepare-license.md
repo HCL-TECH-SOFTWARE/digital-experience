@@ -14,7 +14,7 @@ This section guides you through both approaches. Choose the Quick Start for imme
 **Existing deployments with a static `LITELLM_API_KEY` are completely unaffected** — the deployment key flow is only used when no static key is configured.
 
 !!! important "KMS Endpoint Required"
-    The Deployment Key flow requires access to the HCL Key Management Service (KMS) endpoint. **This feature will be available once HCL provisions and shares the KMS endpoint with your organization.** Until then, continue using a static `LITELLM_API_KEY` for LLM integration. Contact HCL Support to request KMS endpoint access or to check availability for your region.
+    The Deployment Key flow requires access to the HCL Key Management Service (KMS) endpoint. **This feature will be available once HCL provisions and shares the KMS endpoint with your organization.** Until then, continue using a static `LITELLM_API_KEY` for LLM integration.
 
 ---
 
@@ -372,7 +372,6 @@ To switch from static key to Deployment Key:
 2. Check firewall rules allow traffic to the KMS endpoint (configured via `configuration.licensing.kmsBaseUrl`)
 3. Verify DNS resolution of the KMS hostname
 4. If error mentions "Entitlement is invalid", verify your subscription in My HCLSoftware
-5. Contact HCL Support if KMS is down
 
 ### Issue: "Newly issued access token was immediately rejected"
 
@@ -383,7 +382,6 @@ To switch from static key to Deployment Key:
 
 **Solution**:
 1. Verify that `configuration.licensing.kmsBaseUrl` is correctly set or empty (to use HCL-managed KMS)
-2. Contact HCL Support with the log excerpt and your KMS configuration
 
 ### Issue: Key resolution exceeded deadline
 
@@ -408,7 +406,6 @@ To switch from static key to Deployment Key:
 1. Check the error details in the log for specific hints
 2. Verify database connectivity and Kubernetes cluster health
 3. Restart the pod: `kubectl delete pod <POD_NAME> -n <DX_NAMESPACE>`
-4. If the issue persists, contact HCL Support with the full error message and pod logs
 
 ### Issue: LLM calls fail with "LITELLM_API_KEY is required but not configured"
 
@@ -441,7 +438,8 @@ After successfully configuring the Deployment Key:
 
 ## Support
 
-For issues with your Deployment Key or KMS connectivity, contact HCL Support with:
+If you encounter issues that cannot be resolved using these steps, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
+
 - Your organization's MHS account ID
 - The deployment key name (from Step 1)
 - Relevant log excerpts from the IQ Integrator pod
