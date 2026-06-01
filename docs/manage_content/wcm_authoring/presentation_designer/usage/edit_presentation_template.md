@@ -171,8 +171,8 @@ Refer to the following steps to edit a presentation template in Presentation Des
 15. In the **Add Items** panel, set the element **source** to **Property tag** then drag and drop the **Last modified date** property tag under the **Project Description** (Rich Text Content Element).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Insert_Property_Tag_Date.png)
-
-16. Click **Save** to confirm your changes to the presentation template. The message "Presentation Template saved successfully." appears on the screen.
+    
+16. Click **Save** to confirm your changes to the presentation template. The message "Save! Your changes have been applied. The stlesheet xyz_override_uuid has beed created or updated" appears on the screen.
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Save_Presentation_Template.png)
 
@@ -180,7 +180,16 @@ Refer to the following steps to edit a presentation template in Presentation Des
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Markup_Generated.png)
 
-17. Click the **Back** button to return to the Authoring portlet and [preview the presentation template](#previewing-the-presentation-template).
+17. Use the Context preview feature in the Presentation Designer to see how the presentation template renders with actual content. Click the Context preview button in the header.
+    1. Search for Content items.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Select_Context.png)
+
+    2. After selecting the content item, the content will be mapped to the presentation template and its values will be rendered.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Context_Preview.png)
+
+18. Or You can go back to Authoring portlet by clicking the **Back** button to return to the Authoring portlet and [preview the presentation template](#previewing-the-presentation-template).
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Click_Back_Button.png)
 
@@ -198,19 +207,19 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
 
 3. See the preview generated in a new tab.
 
-    The following is a sample preview for **Project Content - Living Home Furnishings**:
+    The following is a sample preview for **Project Content - Nex Haven Smart Watch**:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Home_Furnishings.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_Watch.png)
 
     See the following sample previews for other content items:
 
     **Project Content - Architectural Concept**:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Architectural_Concept.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_VR.png)
 
     **Project Content - Classic Studio Ceramics**:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_TV.png)
 
 ### Sample presentation templates
 
