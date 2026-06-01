@@ -27,19 +27,27 @@ If you already have:
 
 Then skip the Deployment Key flow entirely and use this quick path:
 
-### Step 1: Create Your Helm Values File
+### Step 1: Create the LiteLLM API Key Secret
 
-Create a file called `custom-iq-values-static-key.yaml`:
+The IQ Integrator reads the LiteLLM API key from a Kubernetes secret named `iq-litellm-api-secret`. Create it in your namespace:
 
-```yaml
-environment:
-  pod:
-    integrator:
-      - name: LITELLM_API_KEY
-        value: "<YOUR_LITELLM_API_KEY>"
+```bash
+kubectl create secret generic iq-litellm-api-secret \
+  --from-literal=virtualKey="<YOUR_LITELLM_API_KEY>" \
+  --namespace <DX_NAMESPACE>
 ```
 
 Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy administrator.
+
+!!! tip "Updating an existing secret"
+    If the secret already exists from a previous installation, delete it first then recreate it:
+
+    ```bash
+    kubectl delete secret iq-litellm-api-secret -n <DX_NAMESPACE>
+    kubectl create secret generic iq-litellm-api-secret \
+      --from-literal=virtualKey="<YOUR_LITELLM_API_KEY>" \
+      --namespace <DX_NAMESPACE>
+    ```
 
 ### Step 2: Upgrade Your IQ Deployment
 
@@ -48,8 +56,10 @@ helm upgrade dx-iq \
   https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <DX_NAMESPACE> \
   --reuse-values \
-  -f custom-iq-values-static-key.yaml
+  --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>"
 ```
+
+Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You may omit this flag if you already set it during the initial IQ install.
 
 Wait for the pod to restart:
 
@@ -114,7 +124,7 @@ Use a static `LITELLM_API_KEY` instead if:
     If you use a static `LITELLM_API_KEY`, you do not need a database for LiteLLM key management. However, a database is **still recommended** for production deployments to preserve conversations and sessions across pod restarts. Go back to [Preparing the database](prepare-database.md) if you want that capability.
 
 !!! note "Both approaches coexist"
-    The IQ Integrator checks for `LITELLM_API_KEY` first. If it is set in the environment, the static key is used and the Deployment Key flow is completely bypassed. To use the Deployment Key approach, ensure `LITELLM_API_KEY` is **not** set in your Helm values.
+    The IQ Integrator checks for `LITELLM_API_KEY` first. If it is set in the environment (sourced from `iq-litellm-api-secret`), the static key is used and the Deployment Key flow is completely bypassed. To use the Deployment Key approach, delete the `iq-litellm-api-secret` Kubernetes secret from your namespace.
 
 ---
 
@@ -324,7 +334,7 @@ You can use **either** a static `LITELLM_API_KEY` **or** a Deployment Key, but n
 | Both empty | IQ starts without LLM capability (degraded mode) |
 
 To switch from static key to Deployment Key:
-1. Remove `LITELLM_API_KEY` from Helm values
+1. Delete the `iq-litellm-api-secret` Kubernetes secret: `kubectl delete secret iq-litellm-api-secret -n <DX_NAMESPACE>`
 2. Add `configuration.licensing.deploymentKey` with your MHS-generated key
 3. Helm upgrade and restart the pod
 
@@ -415,6 +425,37 @@ To switch from static key to Deployment Key:
 1. Check the startup logs: `kubectl logs deployment/dx-iq-integrator -n <DX_NAMESPACE> | grep -i "deployment"`
 2. If logs show "No Deployment Key configured", follow the troubleshooting steps above
 3. If logs show a successful key acquisition but LLM still fails, restart the pod and check logs again
+
+### Issue: `UPGRADE FAILED: cannot patch "dx-iq-integrator"` — env `valueFrom` conflict
+
+**Error message**:
+```
+Error: UPGRADE FAILED: cannot patch "dx-iq-integrator" with kind Deployment: Deployment.apps "dx-iq-integrator" is invalid: spec.template.spec.containers[0].env[0].valueFrom: Invalid value: "": may not be specified when `value` is not empty
+```
+
+**Cause**: The Deployment template always renders `LITELLM_API_KEY` via `valueFrom.secretKeyRef` pointing to `iq-litellm-api-secret`. When `LITELLM_API_KEY` is *also* present in `environment.pod.integrator` in the Helm release values, Kubernetes strategic merge patch collapses the two entries (same `name` key) into a single entry with both `value` and `valueFrom` set — which Kubernetes rejects.
+
+This is a migration issue: `LITELLM_API_KEY` was set in `environment.pod.integrator` in a previous installation (for example, by passing `--set-json 'environment.pod.integrator=[{"name":"LITELLM_API_KEY",...}]'` or by following an older version of this guide). The correct approach is to provide the key via `iq-litellm-api-secret` as described in [Step 1](#step-1-create-the-litellm-api-key-secret) — not via `environment.pod.integrator`.
+
+**Solution**:
+
+1. **Follow [Step 1](#step-1-create-the-litellm-api-key-secret) above** to create (or recreate) `iq-litellm-api-secret`.
+
+2. **Clear the stale `LITELLM_API_KEY` from the Helm release values** by running the upgrade with `--set-json` to empty the array:
+
+    ```bash
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <DX_NAMESPACE> \
+      --reuse-values \
+      --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>" \
+      --set-json 'environment.pod.integrator=[]'
+    ```
+
+    This removes the conflicting `LITELLM_API_KEY` entry from the Helm release values. The IQ Integrator will automatically pick up the key from `iq-litellm-api-secret`.
+
+    !!! note
+        If you have other custom variables in `environment.pod.integrator` that you want to preserve, include them in the array instead of leaving it empty: `--set-json 'environment.pod.integrator=[{"name":"OTHER_VAR","value":"..."}]'`
 
 ---
 

@@ -143,3 +143,48 @@ For detailed logs:
 kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
 kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
 ```
+
+## Server-side logging and tracing
+
+If you run into issues with the IQ Integrator or MCP Server, check the logs from both the IQ Integrator and the MCP Server. Looking at the timestamps in each log can help you pinpoint where the problem started.
+
+Follow these steps to turn on detailed logging:
+
+1. Update the `logging` section in your `custom-iq-debug-values.yaml` file:
+
+    ```yaml
+    logging:
+      integrator:
+        level:
+          - "api:server-v1:*=debug"  # Change back to "info" when done
+      mcpServer:
+        level:
+          - "api:server-v1:*=debug"  # Change back to "info" when done
+    ```
+
+    !!! warning
+        Debug logging produces a lot of output. Only use it while investigating an issue, then switch back to `info` when you're done.
+
+2. Apply the updated settings:
+
+    ```bash
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <YOUR_NAMESPACE> \
+      --reuse-values \
+      --values custom-iq-debug-values.yaml
+    ```
+
+Replace:
+- `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
+- `<YOUR_NAMESPACE>` with your Kubernetes namespace
+- `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Artifactory full-qualified domain name and path to the chart
+
+3. Reproduce the issue, then pull the logs from both services:
+
+    ```bash
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server --tail=200
+    ```
+
+If you still cannot resolve the issue, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.

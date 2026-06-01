@@ -60,9 +60,11 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 
 6. **Related Documentation**
 
-    > **FIXME / PLACEHOLDER:** [MCP Server Documentation](#) - *Add link to MCP Server documentation when available.*
+    You can make any inquiry about DX products and features limited to the LLM training. See [IQ Integrator limitations](limitations.md).
 
-    > [IQ UI Documentation](../../index.md)
+    For more information about the types of DX-related requests and tasks that can be accomplished i.e. managing sites and content, refer to the [MCP Server Documentation](../../mcp/index.md).
+
+    For more information on accessing the IQ user interface, refer to the [IQ UI Documentation](../../index.md)
 
 ## Overview
 
