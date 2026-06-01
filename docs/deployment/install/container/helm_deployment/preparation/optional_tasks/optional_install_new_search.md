@@ -28,12 +28,33 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 ## Preparing certificates for inter-service communication
 
-Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
+Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this secure communication, these certificates must be generated and stored in Kubernetes secrets. You can complete this setup using one of two methods:
 
-If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
+- **Automated generation:** The system automatically creates the certificates and Kubernetes secrets during deployment based on a property in your configuration file. This method is recommended for testing and development. <!--is this strictly for testing and development?-->
+- **Manual generation:** You manually generate the certificates using OpenSSL and create the Kubernetes secrets before deploying.
 
-!!!note
-    Beginning with CF236, the self-signed certificates and Kubernetes secrets required to secure communication between OpenSearch nodes and the search middleware can be generated during deployment for testing and development purposes. Entering a value for the `configuration.opensearch.security.rootCASubjectDN` property in the values.yaml file for your deployment, will trigger the certificate generation and secret creation. The `rootCASubjectDN` is expected in the X.509 Distinguished Name (DN) format. For example, `/C=DE/O=ORGANIZATION/OU=ORGANIZATION_UNIT` Leaving this property empty assumes the certificates and Kubernetes secrets will be manually created according to instructions below.
+**Method 1: Automated generation (CF236 and later)**
+
+Starting with CF236, you can automatically generate the self-signed certificates and Kubernetes secrets required to secure communication between OpenSearch nodes and the search middleware during the deployment phase.
+
+To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format.
+
+For example:
+
+```yaml
+configuration:
+  opensearch:
+    security:
+      rootCASubjectDN: '/C=DE/O=ORGANIZATION/OU=ORGANIZATION_UNIT'
+```
+
+If you use this method, proceed directly to the [Preparing the `custom-search-values.yaml`](#preparing-the-custom-search-valuesyaml) section.
+
+**Method 2: Manual certificate generation**
+
+If you leave the `rootCASubjectDN` property empty, or if you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), you must manually create the certificates and secrets by following the steps below.
+
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using in-house CA or PKI for Search V2 Certificates](./optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -55,15 +76,11 @@ Use the following example to generate all required certificates, including real-
 
 The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
 
-
-
 ```sh
 openssl genrsa -out root-ca-key.pem 2048
 # Root CA certificate – using a comprehensive test DN
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
 ```
-
-
 
 ```
 # Admin cert - using same comprehensive test DN
