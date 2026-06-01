@@ -42,10 +42,12 @@ The MCP Server acts as the "action layer," allowing AI assistants to not just an
 1. **Find available IQ Helm chart versions, and available IQ Integrator and MCP Server images tags from your artifactory. For example, in JFrog Artifactory::**
 
     ```bash
-    curl -u username:token "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
+    curl -u <USERNAME>:<TOKEN> "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
     ```
 
     Replace `<USERNAME>` and `<TOKEN>` with your Artifactory credentials.
+    Replace `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Artifactory full-qualified domain name and path to the chart
+
 
 2. **Identify the image tags:**
 
@@ -60,9 +62,13 @@ Create a `custom-iq-values.yaml` file with your deployment-specific configuratio
 ```yaml
 # Image configuration
 images:
+  repository: "<YOUR_ARTIFACTORY>"
   tags:
     integrator: "<INTEGRATOR_IMAGE_TAG>"
     mcpServer: "<MCP_SERVER_IMAGE_TAG>"
+  names:
+    integrator: "dx/dx-iq-integrator"
+    mcpServer: "dx/dx-mcp-server"
 
 # Application configuration
 configuration:
@@ -91,8 +97,10 @@ configuration:
 
 Replace placeholders with your environment-specific values:
 
+- `<YOUR_ARTIFACTORY>`: Your container image registry (e.g., `myregistry.example.com`)
 - `<INTEGRATOR_IMAGE_TAG>`: Tag for the dx-iq-integrator image
 - `<MCP_SERVER_IMAGE_TAG>`: Tag for the dx-mcp-server image
+- `images.names`: Image names within the repository. Defaults shown above match the standard HCL image paths. Update only if your registry uses different paths.
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (e.g., `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: Your DX external hostname used by the LLM for context (e.g., `dx.example.com`)
 - `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`) if you already have one. You can also leave it blank and helm upgrade with this later.
@@ -113,7 +121,6 @@ helm install dx-iq \
   https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
   --values custom-iq-values.yaml \
-  --set images.repository="<YOUR_ARTIFACTORY>" \
   --set-json 'environment.pod.integrator=[
   {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
   {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
@@ -123,9 +130,9 @@ helm install dx-iq \
 Replace:
 - `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
 - `<YOUR_NAMESPACE>` with your Kubernetes namespace
-- `<YOUR_ARTIFACTORY>` with your image and chart packages artifactory
 - `<LITELLM_API_KEY>` with your LiteLLM API key provided by your LiteLLM proxy administrator. You can also skip it if you do not have it yet and set it later via helm upgrade.
 - `<DX_CONTEXT_ROOT>` with your known DX Deployment context root, for example: `/wps`
+- `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Artifactory full-qualified domain name and path to the chart
 
 Alternatively, you can specify values directly via command-line flags:
 
@@ -133,10 +140,14 @@ Alternatively, you can specify values directly via command-line flags:
 helm install dx-iq \
   https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
   --namespace <YOUR_NAMESPACE> \
-  --set images.tags.integrator="<INTEGRATOR_TAG>" \
-  --set images.tags.mcpServer="<MCP_SERVER_TAG>" \
+  --set images.repository="<YOUR_ARTIFACTORY>" \
+  --set images.tags.integrator="<INTEGRATOR_IMAGE_TAG>" \
+  --set images.tags.mcpServer="<MCP_SERVER_IMAGE_TAG>" \
+  --set images.names.integrator="dx/dx-iq-integrator" \
+  --set images.names.mcpServer="dx/dx-mcp-server" \
   --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
   --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
+  --set configuration.dx.internalHost="http://<DX_RELEASE_NAME>-core:10039" \
   --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
   --set-json 'environment.pod.integrator=[
     {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},

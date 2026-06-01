@@ -35,7 +35,7 @@ The Persistence Node in your DX deployment can automatically provision a Postgre
 
 !!! note "Check if IQ Database Already Exists"
     
-    If your DX deployment was recently provisioned or upgraded with IQ database credentials, the `iqdb` database and user may already exist. **Skip Steps 1-3 below if both already exist** and jump directly to [Deploy IQ with Database Configuration](#deploy-iq-with-database-configuration).
+    If your DX deployment was recently provisioned or upgraded with IQ database credentials and networking config, the `iqdb` database and user may already exist. **Skip Steps 1-3 below if both already exist** and jump directly to [Deploy IQ with Database Configuration](#deploy-iq-with-database-configuration).
     
     **Check for existing IQ database:**
     ```bash
