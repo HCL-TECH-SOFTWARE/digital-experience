@@ -213,11 +213,11 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
 
     See the following sample previews for other content items:
 
-    **Project Content - Architectural Concept**:
+    **Project Content - Nex Haven VR**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_VR.png)
 
-    **Project Content - Classic Studio Ceramics**:
+    **Project Content - Nex Haven Smart TV**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_TV.png)
 
@@ -238,7 +238,7 @@ With Presentation Designer, you can create a wide range of custom designs and te
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Content_Section.png)
 
     See the preview of the rendered page:
-    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Studio_Ceramics.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_Watch.png)
 
 - **Recent Items Template**
 
