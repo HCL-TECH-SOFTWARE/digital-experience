@@ -1,5 +1,5 @@
 title: API
-
 nav:  
     - index.md
+    - createJSPUsingWCMAPI.md
     - searchPagesInPortalSiteLibrary.md

@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DX IQ assistant now available
 - Helm values updates
+- OpenTelemetry Integration Guide
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -24,6 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
+- Removal of unused DAM Helm keys (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -36,14 +38,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
-
-### Logout API updates
-
-=== "Containers"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
-
-=== "On-Premises"
-    The Experience REST API logout endpoint (`auth/logout`) has been updated to include an optional `redirectUrl` field in the response. This field specifies a post-logout redirect URL provided by the WCM Core API. The update is fully backward compatible. Existing API consumers are not affected, and no changes are required. For more information, refer to [Logout API updates](../../extend_dx/apis/hcl_experience_api/logout_api_updates.md).
 
 ### My HCLSoftware delivery portal
 
@@ -90,7 +84,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DX IQ assistant now available
 
 === "Containers"
-    IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that provides real-time, context-aware assistance to help you accomplish tasks more efficiently. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment, enabling you to interact with AI capabilities seamlessly while managing content and sites.
+    IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
     You can interact with the assistant in two ways:
 
@@ -102,7 +96,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+
+### OpenTelemetry Integration Guide
+
+=== "Containers"
+    The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
 ### WAS, JDK, and iFix versions
 
@@ -137,6 +136,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+
+### Removal of unused DAM Helm keys (9.5)
+
+=== "Containers"
+    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237: 
+
+    - `incubator.configuration.digitalAssetManagement.enableRootCollectionSort`
+    - `incubator.configuration.digitalAssetManagement.enableSoftDelete`
+    - `incubator.configuration.digitalAssetManagement.renderNewUI`
+    
+    For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 

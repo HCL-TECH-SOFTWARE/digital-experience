@@ -1,12 +1,14 @@
 # IQ
 
-IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that provides real-time, context-aware assistance to help you accomplish tasks more efficiently. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment, enabling you to interact with AI capabilities seamlessly while managing content and sites.
+IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
 ## Overview
 
 The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
 
-IQ is delivered with backend services that include the IQ integrator and the DX MCP server. The MCP server provides the protocol layer used by IQ to support AI request and response workflows. For MCP architecture, configuration, and diagnostics, refer to [MCP Server for IQ](./mcp/index.md).
+To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
+
+IQ is an AI-powered assistant integrated into DX, that includes DX-IQ integrator and DX-MCP server. The MCP server provides the protocol layer used by IQ to support AI request and response workflows. For MCP architecture, configuration, and diagnostics, refer to [MCP Server for IQ](./mcp/index.md).
 
 ## Prerequisites
 
