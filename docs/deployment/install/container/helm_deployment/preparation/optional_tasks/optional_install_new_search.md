@@ -30,7 +30,7 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this secure communication, these certificates must be generated and stored in Kubernetes secrets. You can complete this setup using one of two methods:
 
-- **Automated generation:** The system automatically creates the certificates and Kubernetes secrets during deployment based on a property in your configuration file. This method is recommended for testing and development. <!--is this strictly for testing and development?-->
+- **Automated generation:** The system automatically creates the certificates and Kubernetes secrets during deployment based on a property in your configuration file. This method is recommended for testing and development.
 - **Manual generation:** You manually generate the certificates using OpenSSL and create the Kubernetes secrets before deploying.
 
 **Method 1: Automated generation (CF236 and later)**
