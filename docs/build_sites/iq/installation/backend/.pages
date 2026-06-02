@@ -3,7 +3,6 @@ nav:
     - index.md
     - deploy-services.md
     - prepare-database.md
-    - prepare-license.md
     - validation.md
     - backup-restore.md
     - limitations.md

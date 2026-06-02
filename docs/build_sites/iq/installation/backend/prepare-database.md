@@ -1,7 +1,6 @@
 # Preparing the database
 
-**Previous step**: [Deploying services](deploy-services.md)  
-**Next step**: [Preparing the license and deployment key](prepare-license.md) (if using Deployment Key for automated LiteLLM key management)
+**Previous step**: [Deploying services](deploy-services.md)
 
 This section guides you through configuring persistent database storage for the IQ Integrator. For production deployments, a PostgreSQL database is **strongly recommended** to maintain conversation state and session memory across pod restarts and deployments. You have three configuration options for persistent storage, plus a fallback:
 
@@ -19,8 +18,6 @@ The IQ backend server works best with a PostgreSQL database for session persiste
 Configuring PostgreSQL provides:
 - **Conversation Persistence**: User conversations survive pod restarts
 - **Session Management**: IQ session state is preserved across restarts
-- **Deployment Key Reliability**: Access tokens are stored and reused (no redundant KMS calls on pod restart)
-- **Multi-Pod Safety**: Row locking prevents race conditions in multi-pod deployments
 - **Production Readiness**: SQLite fallback is development-only
 
 !!! warning "Fallback to SQLite Without Persistent Database"

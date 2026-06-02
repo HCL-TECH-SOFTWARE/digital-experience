@@ -5,9 +5,7 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 !!! note "Database and License Configuration are Optional"
     This deployment deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured. You can validate that the Integrator and MCP Server containers are healthy and operational immediately. After confirming services are running, you have two optional next steps.
 
-**[Preparing the database](prepare-database.md)** — Recommended for production. Enables conversation persistence, session storage, and safe multi-pod coordination for Deployment Key token management.
-
-**[Preparing the license and deployment key](prepare-license.md)** — If you have an HCL IQ subscription and want automated, entitlement-based LiteLLM key management instead of static keys.
+**[Preparing the database](prepare-database.md)** — Recommended for production. Enables conversation persistence and session storage.
 
 ## Overview of IQ Services
 
@@ -243,4 +241,3 @@ After deploying the IQ services, follow the [Validating the IQ backend deploymen
 
 Then, optionally configure:
 - **[Preparing the database](prepare-database.md)** — Recommended for production for conversation/session persistence
-- **[Preparing the license and deployment key](prepare-license.md)** — If you have an HCL IQ subscription

@@ -8,6 +8,12 @@ Be aware of the following limitations when deploying and using the IQ backend se
 - The service manages only conversation state and AI communication orchestration
 - It does not replace or modify existing DX Core functionality
 
+## Scaling Limitations
+
+- **Integrator must run as a single replica**: The IQ Integrator maintains active WebSocket connections in process memory. Each WebSocket connection is bound to the pod that accepted it, and cannot be shared across pods. Running multiple Integrator replicas will cause responses to be lost for sessions whose WebSocket connection is held by a different pod than the one processing the LLM response.
+- **Do not enable HPA for the Integrator**: The `scaling.horizontalPodAutoScaler.integrator.enabled` value must remain `false`. Enabling it will result in silent message delivery failures under load when Kubernetes scales the Integrator beyond one pod.
+- **MCP Server can be scaled freely**: The MCP Server is stateless and handles only HTTP/MCP requests. It can be scaled horizontally without restriction.
+
 ## AI Model Limitations
 
 - **Training Data Cutoff:** The AI model is strictly limited by its training data cutoff date regarding existing HCL DX architecture
@@ -18,7 +24,7 @@ Be aware of the following limitations when deploying and using the IQ backend se
 ## Database Requirements
 
 - **Database is optional**: IQ services can deploy without persistent storage using in-memory SQLite (development only)
-- **Database is strongly recommended for production**: PostgreSQL enables conversation persistence, session management, and safe multi-pod coordination
+- **Database is strongly recommended for production**: PostgreSQL enables conversation persistence and session management.
 - **Three database options available**: Option A (internal Persistence Node), Option B (external PostgreSQL), or Option C (RTC-managed PostgreSQL)
 - **Database name is fixed as `iqdb` for Options A and C**: Both Persistence Node (Option A) and Runtime Controller-managed (Option C) deployments use the fixed name `iqdb`. Option B (external) allows custom database names.
 

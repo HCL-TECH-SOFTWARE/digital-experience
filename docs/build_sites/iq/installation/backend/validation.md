@@ -1,9 +1,9 @@
 # Validating the IQ backend deployment
 
-After completing any of the installation steps—whether you deployed services via [deploy-services.md](deploy-services.md), configured a database via [prepare-database.md](prepare-database.md), or set up a deployment key via [prepare-license.md](prepare-license.md)—validate that the IQ backend server is functioning correctly using the steps below.
+After completing any of the installation steps — whether you deployed services via [deploy-services.md](deploy-services.md) or configured a database via [prepare-database.md](prepare-database.md) - validate that the IQ backend server is functioning correctly using the steps below.
 
 !!! note "When to use this guide"
-    Use this guide to verify the IQ services are running, pods are healthy, and the services can communicate with each other and external systems (database, KMS, WebSocket). This guide applies to all IQ installations, regardless of whether you configured a database or deployment key.
+    Use this guide to verify the IQ services are running, pods are healthy, and the services can communicate with each other and external systems (DX Core or DX Compose, LiteLLM Proxy). This guide applies to all IQ installations, regardless of whether you configured a database or not.
 
 ## Step 1: Verify Pod Health
 
@@ -173,8 +173,7 @@ If validation fails, check the following:
 | Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](prepare-database.md) |
 | WebSocket errors | Network policy restrictions | Check Kubernetes network policies |
 | MCP integration issues | WCM/DAM not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values |
-| No AI responses | LiteLLM configuration issue | Check LITELLM_API_KEY and LITELLM_URL in [Preparing the license and deployment key](prepare-license.md) |
-| Deployment Key not working | KMS connectivity issue | Verify KMS is reachable and [Deployment Key is valid](prepare-license.md#obtaining-the-deployment-key) |
+| No AI responses | LiteLLM configuration issue | Check LITELLM_API_KEY and LITELLM_URL in [Deploy services](deploy-services.md) |
 
 For detailed logs:
 

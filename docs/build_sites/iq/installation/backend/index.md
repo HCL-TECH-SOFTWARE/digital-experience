@@ -52,11 +52,9 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
     
     You can map these proxy models to any LLM provider of your choice (OpenAI, Anthropic, local models, etc.). Refer to [LiteLLM Model Management](https://docs.litellm.ai/docs/proxy/model_management) for configuration options and supported providers.
     
-    **Early Testing**: While HCL is preparing the automated Deployment Key flow for production use, you can deploy and test IQ today by setting up your own LiteLLM proxy server. This allows you to validate IQ functionality with any LLM provider before the automated entitlement flow becomes available. 
-    
     **Data Security**: IQ handles data responsibly:
     - User authentication credentials (cookies) are **never** transmitted to any external LLM service. Credentials remain between the DX authentication layer and the MCP Server within your Kubernetes cluster.
-    - Conversation history is transmitted to your configured LLM to enable proper context and functionality. During this testing phase, you control the LiteLLM proxy server and determine where conversation data is routed (local models, managed APIs, etc.). In production deployments using the Deployment Key flow, HCL will manage the LiteLLM proxy to ensure secure, compliant LLM integration.
+    - Conversation history is transmitted to your configured LLM to enable proper context and functionality. You control the LiteLLM proxy server and determine where conversation data is routed (local models, managed APIs, etc.).
 
 6. **Related Documentation**
 
@@ -74,8 +72,6 @@ Follow the deployment workflow below to successfully set up and operate your HCL
 This section provides step-by-step instructions for configuring the custom values file, deploying the IQ Helm chart initially without persistence, and basic pod health checks.
 - **[Preparing the database](prepare-database.md)**  
 Optional: Configures persistent PostgreSQL storage for conversation and session persistence. This section provides instructions for provisioning databases, creating Kubernetes secrets, and configuring internal, external, or Runtime Controller (RTC)-managed database options.
-- **[Preparing the license and deployment key](prepare-license.md)**  
-Optional: For customers with HCL IQ subscriptions, this section guides you through obtaining a Deployment Key from [My HCLSoftware](https://my.hcltechsw.com/) and configuring the IQ Integrator to automatically acquire a LiteLLM API key based on your HCL entitlement.
 
 ## Additional Resources
 
