@@ -7,6 +7,7 @@ This topic discusses how to request certificates from your organization’s cert
 Use this guide if your deployment uses certificates issued by your organization’s CA or PKI. It explains the certificate requirements to share with your CA team. After you obtain the certificates, continue with [Creating Kubernetes secrets](optional_install_new_search.md#creating-kubernetes-secrets) in the main installation guide.
 
 ### OpenSearch version compatibility
+
 These requirements apply to OpenSearch 2.x (currently version 2.19.2). They remain consistent across OpenSearch versions because they are based on:
 
 - X.509 v3 standards
@@ -70,6 +71,7 @@ Additional requirements:
 - Signature algorithm: SHA-256 or higher
 
 #### Extended Key Usage for Admin certificate
+
 The admin certificate is used for administrative operations, such as running `securityadmin.sh` or making configuration changes. These are client operations to OpenSearch.
 
 Technically, only `clientAuth` is required. However, including both `serverAuth` and `clientAuth` is recommended for consistency and future compatibility.
@@ -343,4 +345,3 @@ After obtaining your certificates from your CA:
 1. Store them in Kubernetes secrets as described in the [main installation guide](optional_install_new_search.md#creating-kubernetes-secrets).
 2. Configure the admin DN in your Helm values if using a custom admin certificate.
 3. Deploy Search V2 following the standard installation process.
-
