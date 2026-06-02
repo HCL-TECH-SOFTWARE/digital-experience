@@ -30,9 +30,8 @@ This page lists known limitations and behavior boundaries for the MCP server use
 
 ## Monitoring and readiness constraints
 
-- Readiness checks validate only currently enabled dependencies.
-- Readiness returns success when at least one enabled domain is healthy.
-- Readiness returns failure only when no enabled domain is healthy or when no domains are enabled.
 - A passing liveness check confirms process availability, not full backend dependency health.
+
+For probe endpoint behavior and readiness semantics, refer to [MCP Endpoints and Security](./endpoints_and_security.md).
 
 For operational diagnostics, refer to [MCP Troubleshooting](./troubleshooting.md).

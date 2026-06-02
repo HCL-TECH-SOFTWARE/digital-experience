@@ -11,10 +11,7 @@ Before investigating specific errors, perform these basic checks:
 3. Confirm network routing and DNS resolution between DX, IQ, and MCP services.
 4. Confirm no recent release mismatch between IQ and MCP server components.
 5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
-6. Confirm probe endpoint status:
-    - `/probe/live` returns healthy service status.
-  - `/probe/ready` returns readiness for enabled dependencies.
-  - Readiness passes if at least one enabled domain is healthy, and fails only when no enabled domain is healthy or no domains are enabled.
+6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass/fail behavior, refer to [MCP Endpoints and Security](./endpoints_and_security.md).
 
 ## Common symptoms and actions
 
@@ -26,7 +23,6 @@ Before investigating specific errors, perform these basic checks:
 | Payload-related request failures | Request body exceeds configured size limit | Validate payload size and review `BODY_PARSER_JSON_LIMIT` configuration |
 | Unable to connect to AI service | MCP server cannot reach configured AI provider dependencies | Check provider credentials, secrets, and outbound connectivity from cluster services |
 | Invalid format or protocol errors | Service version mismatch or contract mismatch across components | Verify compatible DX, IQ integrator, and MCP server versions, then review logs for parsing or schema failures |
-| Readiness probe fails | One or more enabled dependencies are unavailable | Check `/probe/ready` response details and validate connectivity to required backend services |
 
 ### Server-side logging and tracing
 

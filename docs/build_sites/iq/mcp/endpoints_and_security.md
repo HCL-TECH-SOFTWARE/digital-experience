@@ -20,9 +20,7 @@ The MCP server exposes probe endpoints for operational monitoring:
 - `/probe/live`: liveness endpoint for service process health.
 - `/probe/ready`: readiness endpoint that validates enabled backend dependencies.
 
-The readiness response reflects currently enabled tool domains. For example, DAM and WCM dependency checks are only executed when their corresponding feature flags are enabled.
-
-Readiness passes if at least one enabled domain is healthy. Readiness fails only when no enabled domain is healthy, or when no domains are enabled.
+Readiness is domain-aware: checks run only for enabled domains, passes when at least one enabled domain is healthy, and fails only when no enabled domain is healthy or when no domains are enabled.
 
 ## Security considerations
 
@@ -47,13 +45,6 @@ When troubleshooting end-to-end behavior, validate both:
 MCP tool responses are TOON-encoded for JSON payloads when encoder support is available. If encoding is unavailable, the server falls back to JSON text responses.
 
 TOON output is designed to be more compact than plain JSON, which can help reduce token usage in LLM-driven workflows.
-
-Many DAM and WCM tools also support response detail modes:
-
-- `summary` mode for concise output.
-- `full` mode for complete payload details.
-
-Mode availability depends on the specific tool schema.
 
 ## Session and request behavior
 
