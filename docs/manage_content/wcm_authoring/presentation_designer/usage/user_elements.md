@@ -91,20 +91,60 @@ Static elements are predefined elements that display content exactly as it looks
     !!! note
         When you click a static link element on the canvas, you will not be redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
 
-
 - **Image**
 
-    Static images (for example, ```<img src="image-url.jpg" alt="Description"/>```) are used to render visuals from various sources. You can manually set the `src` attribute by clicking the **Configure** button. In the **Add URL** field, enter an image URL or copy and paste the URL of image assets from Digital Asset Management (DAM). (Optional) Enter an alternate text for the image in the **Alternate text** field. 
-    
-    Styling options for this element are also available in the **Style** panel.
+    1. Adding the image using URL.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image.png)
+        Static images (for example, ```<img src="image-url.jpg" alt="Description"/>```) are used to render visuals from various sources. You can manually set the `src` attribute by clicking the **Configure** button. In the **Add URL** field, enter an image URL or copy and paste the URL of image assets from Digital Asset Management (DAM). (Optional) Enter an alternate text for the image in the **Alternate text** field. 
+        
+        Styling options for this element are also available in the **Style** panel.
 
-    !!! note
+        ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image.png)
+
+        !!! note
         The static image element displays a placeholder image icon when there is no image URL set. This placeholder is only a visual representation in Presentation Designer and no image source is saved.
 
         ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image_Placeholder.png)
 
+    2. Adding the image using DAM.
+
+        You can also select an image from the HCL DAM and apply it to the canvas. Once an image is selected from the DAM, it is rendered on the canvas, and its corresponding title is displayed below the **Asset source** field.
+
+        1. In image configuration, **Asset source** includes **HCL DAM** as an available source.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Option.png)
+
+        2. After selecting **HCL DAM**, the Select image button is shown.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Select_Image_Button.png)
+
+        3. Clicking the Select image button opens the DAM picker dialog, where users can browse and select an image asset.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_picker_Modal.png)
+
+        4. Select an image from the DAM picker dialog, and then click Select.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Select_Image.png)
+
+        5. After selecting an image, the dialog closes and the selected image is applied to the canvas.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Apply.png)
+
+        6. You can also apply a style to the selected image.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Apply_With_Style.png)
+
+        7. When you return to the image configuration, the selected image name appears under **Asset source**.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Asset_Source.png)
+
+        8. If you switch the source back to URL, DAM-specific values are cleared to prevent stale data.
+
+            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_URL_Mode.png)
+
+        !!! note
+        - If DAM picker is unavailable in the environment, the DAM source option appears disabled.
+        - The selected image label appears only for DAM-compatible image URLs.
 
 - **Grid**
 
@@ -117,6 +157,89 @@ Static elements are predefined elements that display content exactly as it looks
 
         ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Grid_Default.png)
 
+    ### Responsive Grid System
+    Responsive grid control now supports per-device layout behavior. This allows developers and content authors to fine-tune layouts uniquely across mobile, tablet, and desktop viewports.
+    > Key updates include:
+    - Context-Aware Overrides: Grid responsive layout controls can override rows and columns based on the active device context.
+    - Configurable Auto-Flow: Grid auto-flow settings are now configurable by device context to manage how wrapping content behaves on smaller screens.
+    - Media Block Application: Responsive overrides are applied dynamically through device-specific stylesheet media blocks (`@media` rules).
+
+    1. Drag a Grid element onto the canvas and configure its style. Enter the following values in the **Styles** section:
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_Styles.png)
+
+        **Layout**
+
+        - **Rows**: 3
+        - **Columns**: 3
+
+        **Dimensions**
+
+        - **Height**: 500px
+
+        **Spacing**
+
+        - **Padding top**: 4px
+        - **Padding right**: 4px
+        - **Padding bottom**: 4px
+        - **Padding left**: 4px
+
+    2. Add static text to each cell so you have a visual representation of how Auto flow and Area layout work.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_Add_Text.png)
+
+    3. In the Style panel for the Grid element, there are new sections called **Auto-flow** and **Area layout**.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_new_sections.png)
+
+        - **Auto Flow** controls how grid elements are distributed within the grid. Possible values include `row`, `column`, and `row or column dense`.
+        - **Area Layout** is a count-based layout override that automates responsiveness for Tablet and Mobile viewports. It dynamically balances rows and columns based on the specified track count, eliminating manual calculations while keeping all grid cells equal and uniform.
+
+        #### Desktop view
+
+        The Area layout is disabled in Desktop view because Desktop is the baseline and matches the rows and columns you set.
+
+        The Area flow is set to `row`, so the sequence runs from left to right.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_desktop.png)
+
+        The Area flow can also be set to `column`, which changes the sequence from top to bottom.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_desktop.png)
+
+        #### Tablet view
+
+        When you switch to Tablet view, Area layout is enabled and starts with the same values as the rows and columns you set.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet.png)
+
+        After changing Rows to 2, the Area layout is recalculated automatically. The Columns value changes to 5.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet_change_value.png)
+
+        After changing Auto flow to Row, the Area layout updates to Row.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_tablet_v1.png)
+
+        After changing Columns to 4, Rows updates to 3.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_tablet_v2.png)
+
+        #### Phone view
+
+        When you change the view from Tablet to Phone, the tablet styling is not carried over because the baseline is Desktop.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone.png)
+
+        After changing Columns to 1, Rows updates to 9. By using Area layout and Auto flow, you can achieve the expected result for each device view.
+
+        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone_change_column.png)
+
+    ### Notes
+
+    - Area layout values are calculated from the device-specific row and column settings.
+    - In Tablet and Mobile contexts, **Area layout** can override rows and columns without changing the Desktop baseline.
+    - After you save changes in one device view, they are retained without affecting the other views.
 
 ### Content elements
 

@@ -14,5 +14,3 @@ This section provides information on how to use the canvas settings in Presentat
 This section introduces how to use the Default and Override stylesheets in Presentation Designer to manage styling for presentation templates.
 - **[Handle multiple stylesheets](../usage/handle_multiple_stylesheets.md)**  
 This section explains how to manage multiple stylesheets in Presentation Designer to customize presentation templates effectively.
-- **[Feature updates for intuitive design and editing experience](../usage/intuitive_design_feature_updates.md)**  
-This section provides an overview of recent Presentation Designer enhancements for image selection, styling, navigation, notifications, and responsive grid behavior.

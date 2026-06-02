@@ -138,6 +138,38 @@ The Presentation Designer user interface is composed of three main sections:
 10. **Cancel** button. Use this to cancel editing and go back to the Authoring portlet.
 11. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
 
+## Back button returns to the correct authoring page
+
+Back navigation has been improved to ensure users return to the expected authoring context on new pages created in Authoring. 
+> Key updates include:
+- Synchronized URL Handling: Authoring return URL handling is now synchronized during application initialization.
+- Retained Return Context: Return context is preserved seamlessly during editing transitions.
+- Prioritized Navigation: The back action prioritizes the stored authoring return URL and gracefully falls back to browser history when necessary.
+
+1. After you create pages and add them to the Authoring Portlet, select the pages you created in Web Content.
+
+    ![](../../../assets/HCL_Presentation_Designer_pages.png)
+
+- Select a Presentation Template.
+
+    ![](../../../assets/HCL_Presentation_Designer_select_presentation_template.png)
+
+- Click the Back button.
+
+    ![](../../../assets/HCL_Presentation_Designer_back_button.png)
+
+- Back navigation should return to the Authoring page, and the selected page should be highlighted.
+
+    ![](../../../assets/HCL_Presentation_Designer_back_navigation.png)
+
+- Open the Presentation Template again, change the language to Arabic, and click the Back button. It should return to the Authoring page with the selected pages.
+
+    ![](../../../assets/HCL_Presentation_Designer_change_language.png)
+
+### Notes
+- Selecting **Back to authoring** returns users to the correct source authoring page.
+- Navigation remains consistent during typical editing and language-change workflows.
+
 ### Panel
 
 There are two panels you can use in Presentation Designer: [Add Items](#add-items) and [Style](#style).
@@ -170,3 +202,23 @@ Hovering or selecting an element on the canvas displays the element name and the
 2. Click the **Arrow Up** icon to automatically select the parent of the current element. 
 3. Click the **Configure** icon to display additional configuration options for the element. 
 4. Click the **Trash** icon to delete the element from the canvas.
+
+## Stackable notifications
+
+Presentation Designer now supports stacked notifications instead of immediately replacing active messages. This allows multiple snackbars to appear in order rather than showing only the latest message.
+
+### What changed
+
+- Notifications are queued and rendered as multiple stacked messages.
+- Notification lifecycle supports add, remove, and clear actions.
+- The maximum simultaneous notification stack size is capped.
+
+### Behavior
+
+- Rapid operations can show multiple messages in order.
+
+    ![](../../../assets/HCL_Presentation_Designer_multiple_notifications_1.png)
+
+- The oldest message is removed when the queue exceeds the configured cap.
+
+    ![](../../../assets/HCL_Presentation_Designer_multiple_notifications_2.png)
