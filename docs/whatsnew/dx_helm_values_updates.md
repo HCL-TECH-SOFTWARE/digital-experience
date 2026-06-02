@@ -6,12 +6,15 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 **Deprecated Keys:**
 
-| Key | Default Value |Removed in|
-|-----|---------------|----------|
-|`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`|<!--insert default value-->|CF237|
-|`incubator.configuration.digitalAssetManagement.enableSoftDelete`|<!--insert default value-->|CF237|
-|`incubator.configuration.digitalAssetManagement.renderNewUI`|<!--insert default value-->|CF237|
+| Key | Default Value |Removed in|Links|
+|-----|---------------|----------|-----|
+|`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`|<!--insert default value-->|CF237|Link to relevant DAM documentation|
+|`incubator.configuration.digitalAssetManagement.enableSoftDelete`|<!--insert default value-->|CF237|Link to relevant DAM documentation|
+|`incubator.configuration.digitalAssetManagement.renderNewUI`|<!--insert default value-->|CF237|Link to relevant DAM documentation|
 
+<!--
+Main suggestion here was to include links to relevant docs for every added/removed/deprecated/changed key. Either we add a new column, or my new idea was to add the link directly on each key so we don't have to repeat links for different keys that point to the same doc. For example: [`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`](URL to relevant doc)
+-->
 ### CF235
 
 **Added Keys:**
