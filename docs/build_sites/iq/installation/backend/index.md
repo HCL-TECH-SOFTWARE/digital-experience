@@ -43,7 +43,7 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 
 5. **LiteLLM API Key and Model Configuration**
 
-    You need to set up a LiteLLM proxy server to manage LLM model access. Refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy) for setup instructions.
+    You need to set up a LiteLLM proxy server to manage LLM model access. Refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy) for self-hosted setup instructions. You may also use [Deploy and Host LiteLLM on Railway](https://railway.com/deploy/litellm-proxy) for a Quick-Start approach.
     
     The IQ backend requires two configured proxy models:
     
