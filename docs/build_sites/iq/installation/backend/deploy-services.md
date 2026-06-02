@@ -1,6 +1,6 @@
 # Deploying services
 
-This section provides step-by-step instructions for deploying the IQ backend server alongside an existing HCL DX deployment.
+This section provides step-by-step instructions for deploying the IQ backend servers (Integrator and MCP Server) alongside an existing container-based HCL DX deployment starting DX 9.5 CF236.
 
 !!! note "Database and License Configuration are Optional"
     This deployment deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured. You can validate that the Integrator and MCP Server containers are healthy and operational immediately. After confirming services are running, you have two optional next steps.
@@ -17,7 +17,7 @@ Before deployment, it's helpful to understand the two main components you'll be 
 
 The **IQ Integrator** is the primary WebSocket-based service that bridges HCL DX and AI models. It handles:
 
-- **Natural language question answering** — Receives questions from users about their DX content and system configuration, then forwards these to a configured LLM (like OpenAI's GPT or LiteLLM)
+- **Natural language question answering** — Receives questions from users about their DX content and system configuration, then forwards these to a configured LLM (via LiteLLM Proxy)
 - **Context aggregation** — Gathers contextual information from your DX deployment to provide the LLM with accurate, environment-specific answers
 - **Session management** — Maintains WebSocket connections and conversation history for interactive Q&A sessions
 - **User authentication** — Validates DX user credentials and maintains secure sessions
@@ -33,7 +33,7 @@ The **IQ MCP Server** (Model Context Protocol Server) provides tool execution ca
 - **Secure API integration** — Connects to DX via authenticated REST APIs with proper error handling and logging
 - **Tool standardization** — Implements the MCP specification, allowing AI models to discover and invoke tools in a standardized way
 
-The MCP Server acts as the "action layer," allowing AI assistants to not just answer questions, but perform real operations within your DX environment when appropriate.
+The MCP Server acts as the "action layer," allowing AI assistants to not just answer questions, but perform real operations within your DX environment when requested by authorized DX end users interacting with the IQ natural language interface.
 
 ---
 

@@ -20,7 +20,7 @@ Before deploying the IQ backend server, ensure the following prerequisites are m
 
 1. **DX Core Component Baseline**
 
-    Starting with [CF236](../../../../../../whatsnew/cf20/newcf236.md), DX Core Component Baseline is required for IQ.
+    Starting with [CF236](../../../../../../whatsnew/cf20/newcf236.md), IQ can be enabled in container-based DX Core and DX Compose deployments.
 
 2. **Kubernetes Deployment**
 
