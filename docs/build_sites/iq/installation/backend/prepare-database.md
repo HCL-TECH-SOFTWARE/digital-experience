@@ -233,6 +233,39 @@ If you have an existing PostgreSQL database outside of the DX deployment, config
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<IQ_HELM_CHART_VERSION>` with your IQ Helm chart version
 
+5. **Upgrade your DX deployment to enable IQ and see it in DX portal:**
+
+    Get your current DX deployment Helm chart version:
+
+    ```bash
+    helm list -n <YOUR_NAMESPACE>
+    helm get all <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
+    ```
+
+    Determine the Kubernetes service name for your IQ deployment. The name typically follows the `{{ .Release.Name }}-integrator` format. For example, if the release name is `dx-iq`, the service name is `dx-iq-integrator`.
+
+    Upgrade the DX deployment with IQ database settings.
+
+    ```bash
+    helm upgrade <DX_RELEASE_NAME> \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<DX_HELM_CHART_VERSION>.tgz \
+      --namespace <YOUR_NAMESPACE> \
+      --reuse-values \
+      --set networking.dxIqService=dx-iq-integrator \
+    ```
+
+    Replace:
+    - `<DX_RELEASE_NAME>` with your DX Helm release name (e.g., `dx-deployment`)
+    - `<DX_HELM_CHART_VERSION>` with your DX Helm chart version
+    - `<YOUR_NAMESPACE>` with your Kubernetes namespace
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Repository full qualified domain name and path to specified package or image.
+
+    !!! note
+        To find available Helm chart versions in your Repository, search in the user interface or run a curl command. For example, in JFrog Artifactory:
+        ```bash
+        curl -u username:token "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
+        ```
+
 ---
 
 #### Option C: Using a Runtime Controller (RTC)-Managed Database
@@ -283,7 +316,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 
     ```bash
     helm upgrade <DX_RELEASE_NAME> \
-      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<HELM_CHART_VERSION>.tgz \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<DX_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
       --reuse-values \
       --set configuration.digitalAssetManagement.newDbManagement=true \
@@ -293,7 +326,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 
     Replace:
     - `<DX_RELEASE_NAME>` with your DX Helm release name (e.g., `dx-deployment`)
-    - `<HELM_CHART_VERSION>` with your DX Helm chart version
+    - `<DX_HELM_CHART_VERSION>` with your DX Helm chart version
     - `<YOUR_NAMESPACE>` with your Kubernetes namespace
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Repository full qualified domain name and path to specified package or image.
 
