@@ -1,6 +1,6 @@
 # MCP Endpoints and Security
 
-This page summarizes MCP endpoint behavior and customer-facing security considerations for DX IQ deployments.
+This page summarizes MCP endpoint behavior for DX IQ deployments.
 
 ## Endpoint options
 
@@ -9,9 +9,9 @@ The MCP server provides two endpoint patterns:
 - `/mcp` for the latest unprefixed endpoint path.
 - `/dx/api/iq/v1/mcp` for versioned endpoint usage.
 
-Both endpoint patterns provide MCP server functionality.
+Both endpoint patterns provide MCP server functionality. In production, either endpoint can act as the single MCP entry point for enabled DX tool domains.
 
-In production, either endpoint can act as the single MCP entry point for enabled DX tool domains.
+The MCP endpoints are internal to the IQ backend deployment and are accessed only by the IQ integrator service within the cluster. They are not exposed externally and are not routed through HAProxy.
 
 ## Probe endpoints
 
@@ -22,39 +22,11 @@ The MCP server exposes probe endpoints for operational monitoring:
 
 Readiness is domain-aware: checks run only for enabled domains, passes when at least one enabled domain is healthy, and fails only when no enabled domain is healthy or when no domains are enabled.
 
-## Security considerations
-
-Apply these security practices in customer environments:
-
-1. Restrict endpoint exposure to trusted networks.
-2. Route endpoint access through approved ingress or reverse proxy controls.
-3. Keep TLS and certificate management aligned with your platform standards.
-4. Monitor logs for repeated unauthorized access attempts or malformed request patterns.
-
-## Related IQ endpoints
-
-IQ interface and request processing also depend on IQ service endpoints, including WebSocket communication paths used by the chat experience.
-
-When troubleshooting end-to-end behavior, validate both:
-
-1. IQ endpoint connectivity.
-2. MCP endpoint connectivity.
-
 ## Response behavior
 
 MCP tool responses are TOON-encoded for JSON payloads when encoder support is available. If encoding is unavailable, the server falls back to JSON text responses.
 
 TOON output is designed to be more compact than plain JSON, which can help reduce token usage in LLM-driven workflows.
-
-## Session and request behavior
-
-MCP request handling is designed for stateless processing patterns.
-
-Operational implications:
-
-- Avoid assuming sticky-session behavior for MCP requests.
-- Validate load balancer and pod-routing behavior in multi-replica environments.
-- Use observability data to identify latency and failure patterns per service instance.
 
 ## Validation checks
 
