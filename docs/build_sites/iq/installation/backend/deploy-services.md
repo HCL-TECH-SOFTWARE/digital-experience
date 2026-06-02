@@ -71,10 +71,11 @@ images:
 # Application configuration
 configuration:
   # DX deployment configuration
+  # For web-engine use: http://<DX_RELEASE_NAME>-web-engine:9080
   dx:
     releaseName: "<DX_RELEASE_NAME>"
     externalHost: "<DX_EXTERNAL_FQDN>"
-    internalHost: "http://<DX_RELEASE_NAME>-core:10039" # For web-engine use: http://<DX_RELEASE_NAME>-web-engine:9080
+    internalHost: "http://<DX_RELEASE_NAME>-core:10039"
     port: 443
     ssl: true
   
@@ -101,7 +102,7 @@ Replace placeholders with your environment-specific values:
 - `images.names`: Image names within the repository. Defaults shown above match the standard HCL image paths. Update only if your registry uses different paths.
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (e.g., `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: Your DX external hostname used by the LLM for context (e.g., `dx.example.com`)
-- `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`) if you already have one. You can also leave it blank and helm upgrade with this later.
+- `<LITELLM_URL>`: LiteLLM Proxy URL (e.g., `https://litellm.example.com`). This is required for operational deployments.
 
 !!! note "DX service discovery"
     The `internalHost` value must match your DX deployment type:
@@ -128,9 +129,15 @@ helm install dx-iq \
 Replace:
 - `<IQ_HELM_CHART_VERSION>` with the Helm chart version (e.g., `hcl-dx-iq-v1.0.0_20260518-2104.tgz`)
 - `<YOUR_NAMESPACE>` with your Kubernetes namespace
-- `<LITELLM_API_KEY>` with your LiteLLM API key provided by your LiteLLM proxy administrator. You can also skip it if you do not have it yet and set it later via helm upgrade.
+- `<LITELLM_API_KEY>` with your LiteLLM API key provided by your LiteLLM proxy administrator. This is required for the Integrator to function.
 - `<DX_CONTEXT_ROOT>` with your known DX Deployment context root, for example: `/wps`
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your Artifactory full-qualified domain name and path to the chart
+
+!!! warning "LITELLM_API_KEY and LITELLM_URL are Required"
+    While `helm install` will complete successfully without these values, the Integrator and MCP Server pods **will not become Ready** without them. Health checks will fail and services will remain in a non-operational state.
+    
+    - **For production deployments:** Always provide both `LITELLM_API_KEY` and `LITELLM_URL` during initial installation.
+    - **For deferred configuration:** If you absolutely must defer these values, set `maintenanceMode.integrator: true` in your values file. This allows pods to start but keeps services non-functional. Update both values and restart via `helm upgrade` once LiteLLM is ready.
 
 Alternatively, you can specify values directly via command-line flags:
 
@@ -238,6 +245,8 @@ kubectl get pods -n <YOUR_NAMESPACE> | grep dx-iq
 ## Next Steps
 
 After deploying the IQ services, follow the [Validating the IQ backend deployment](validation.md) guide to confirm pods are healthy and services are operational.
+
+If you want to see IQ user interface inside DX portal right away, follow the [UI Enablement](../enable.md) guide.
 
 Then, optionally configure:
 - **[Preparing the database](prepare-database.md)** — Recommended for production for conversation/session persistence
