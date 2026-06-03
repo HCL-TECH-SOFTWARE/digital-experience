@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Presentation Designer - DAM integration and feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -18,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 - DX IQ assistant now available
 - Helm values updates
 - OpenTelemetry Integration Guide
+- Search V2 - Automatically generate certificates and Kubernetes secrets
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -65,6 +67,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
 
+### Presentation Designer - DAM integration and feature updates
+
+=== "Containers"
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+
+    Additional updates include the following enhancements:
+
+    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
+
+=== "On-Premises"
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+
+    Additional updates include the following enhancements:
+
+    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -103,6 +125,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
+### Search V2 - Automatically generate certificates and Kubernetes secrets
+
+=== "Containers"
+    You can now automatically generate certificates and Kubernetes secrets to secure communication during the deployment phase. To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
+
 ### WAS, JDK, and iFix versions
 
 === "Containers"
@@ -132,7 +159,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Removal of unused DAM Helm keys (9.5)
 
 === "Containers"
-    The following unused Digital Asset Management (DAM) Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237:
+    The following unused DAM Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237:
 
     - `incubator.configuration.digitalAssetManagement.enableRootCollectionSort`
     - `incubator.configuration.digitalAssetManagement.enableSoftDelete`
