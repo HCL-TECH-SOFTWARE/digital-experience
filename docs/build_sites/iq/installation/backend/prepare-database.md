@@ -313,13 +313,13 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
     If the secret already exists from a previous installation, delete it first:
 
     ```bash
-    kubectl delete secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE> --ignore-not-found
+    kubectl delete secret custom-credentials-iq-db -n <YOUR_NAMESPACE> --ignore-not-found
     ```
 
     Then create it:
 
     ```bash
-    kubectl create secret generic custom-credentials-iq-rtc-db \
+    kubectl create secret generic custom-credentials-iq-db \
       --namespace <YOUR_NAMESPACE> \
       --from-literal=username=<DB_USERNAME> \
       --from-literal=password=<DB_PASSWORD>
@@ -333,8 +333,8 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 2. **Verify the secret was created:**
 
     ```bash
-    kubectl get secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
-    kubectl describe secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
+    kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
+    kubectl describe secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
     ```
 
 3. **Upgrade your DX deployment to enable RTC database management for IQ:**
@@ -357,7 +357,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
       --reuse-values \
       --set configuration.digitalAssetManagement.newDbManagement=true \
       --set networking.dxIqService=dx-iq-integrator \
-      --set security.iq.customDbSecret=custom-credentials-iq-rtc-db
+      --set security.iq.customDbSecret=custom-credentials-iq-db
     ```
 
     Replace:
@@ -402,7 +402,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 
     ```bash
     kubectl exec -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller -- env | grep -E "IQ_|NEW_DB"
-    kubectl get secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
+    kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
     ```
 
 6. **Prepare your `custom-iq-rtc-db-values.yaml` with RTC-managed database configuration:**
@@ -417,7 +417,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
         dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<YOUR_NAMESPACE>.svc.cluster.local"
         dbPort: 5432
         dbName: "iqdb"
-        dbCustomSecret: "custom-credentials-iq-rtc-db"
+        dbCustomSecret: "custom-credentials-iq-db"
     ```
 
 7. **Upgrade your IQ deployment with RTC-managed database configuration:**
