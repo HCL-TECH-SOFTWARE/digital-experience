@@ -133,6 +133,7 @@ localStorage.getItem('presentationdesigner_canvas_settings_abc-123-def');
 ```
 
 ### Preview
+
 Allows you to save the template and preview it in a separate window. The selected content will be applied to the preview. This button detects if the template has unsaved changes and prompts you to save before generating the preview.
 
 ### Edit and View mode

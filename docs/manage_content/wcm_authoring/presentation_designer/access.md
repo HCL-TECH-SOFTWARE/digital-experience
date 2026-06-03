@@ -1,13 +1,13 @@
-# Accessing the Presentation Designer
+# Accessing Presentation Designer
 
-This section provides the steps on how to access the Presentation Designer. User interface details of the tool are also available.
+This section provides steps on how to access the Presentation Designer and navigate its user interface workspace.
 
 ## Prerequisites
 
 Presentation Designer is installed and deployed by default as part of the CF update process. You can access Presentation Designer from the Practitioner Studio interface.
 
 !!! note
-    Upon creation of Virtual portal with Practitioner Studio enabled and web content configured, the Presentation Designer is automatically included.
+    Presentation Designer is automatically included when you create a virtual portal with Practitioner Studio enabled and web content configured.
 
 To use Presentation Designer, you must have the following minimum set of roles. Note that the roles listed are the minimum; if you have a Manager or Administrator role, you can still access Presentation Designer.
 
@@ -53,7 +53,7 @@ To use Presentation Designer, you must have the following minimum set of roles. 
     2. Go to **Web Content Libraries**.
     3. Click the **Set permissions** icon to set the **Editor** role for any library as needed.
 
-(Optional) To select a library where you are an Editor and display it on the Library Explorer, set the **Privileged User** role on the **WCM Authoring page**. While **Privileged User** access is not needed to use Presentation Designer, this access is     is still recommended so users can view and edit presentation templates in specific libraries where they hold Editor permissions.
+(Optional) To select a library where you are an Editor and display it on the Library Explorer, set the **Privileged User** role on the **WCM Authoring page**. While **Privileged User** access is not needed to use Presentation Designer, this access is still recommended so users can view and edit presentation templates in specific libraries where they hold Editor permissions.
 
 To set the **Privileged User** role:
 
@@ -65,25 +65,25 @@ Refer to [Working with resource permissions](../../../deployment/manage/security
 
 ## Accessing Presentation Designer
 
-Refer to the following instructions to access and navigate to Presentation Designer.
+To access the Presentation Designer, follow these steps:
 
-1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
+1. Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
     ![](../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
-2.  In the **Web Content** menu, select **Authoring**. 
+2. In the **Web Content** menu, select **Authoring**.
 
     ![](../../../assets/HCL_WCM_Authoring_Portlet.png "HCL WCM Authoring Portlet")
 
-3.  In the Authoring portlet, select your library and navigate to the **Presentation Templates**.
+3. In the Authoring portlet, select your library and navigate to the **Presentation Templates**.
 
     ![](../../../assets/HCL_WCM_Authoring_Presentation_Templates.png "HCL WCM Authoring Presentation Templates")
 
-4.  Create a new presentation template by clicking **New** > **Presentation Template**.
-    
+4. Create a new presentation template by clicking **New** > **Presentation Template**.
+
     ![](../../../assets/HCL_WCM_Authoring_Create_New_Presentation_Template.png "HCL WCM Authoring - New Presentation Template")
 
-5.  In the Presentation Template, leave the markup blank. This way, you can start with a blank canvas in Presentation Designer. Click **Save and Close**.
+5. In the Presentation Template, leave the markup blank. This way, you can start with a blank canvas in Presentation Designer. Click **Save and Close**.
 
     ![](../../../assets/HCL_WCM_Authoring_Create_Presentation_Template.png "HCL WCM Authoring - Create New Presentation Template")
 
@@ -92,11 +92,12 @@ Refer to the following instructions to access and navigate to Presentation Desig
     ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Selected.png "HCL WCM Authoring - Select a Presentation Template")
 
 7. Choose how you want to open the presentation template using the action buttons located in the toolbar:
-    * **To edit the template in Presentation Designer:** Click the **Edit** dropdown menu and select **Edit in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Edit mode**.
+
+    - **To edit the template in Presentation Designer:** Click the **Edit** dropdown menu and select **Edit in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Edit mode**.
 
         ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer")
 
-    * **To view the template in Presentation Designer:** Click the **Read** dropdown menu and select **Read in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Read only**.
+    - **To view the template in Presentation Designer:** Click the **Read** dropdown menu and select **Read in Presentation Designer**. This opens the template in the Presentation Designer with the toggle button set to **Read only**.
 
         ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer")
 
@@ -104,11 +105,12 @@ Refer to the following instructions to access and navigate to Presentation Desig
         You can also choose to open the template in the standard WCM HTML Editor by selecting **Edit in WCM HTML Editor** or **Read in WCM HTML Editor** from these same dropdown menus.
 
 8. You can also switch to the Presentation Designer while working within the standard WCM HTML Editor:
-    * If you are already viewing a template in the WCM HTML Editor (Read mode), click **Edit > Edit in Presentation Designer** in the action bar to switch to Presentation Designer in edit mode.
+
+    - If you are already viewing a template in the WCM HTML Editor (Read mode), click **Edit > Edit in Presentation Designer** in the action bar to switch to Presentation Designer in edit mode.
 
         ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Edit_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Edit Presentation Template in Presentation Designer from WCM HTML Editor")
 
-    * If you are already editing a template in the WCM HTML Editor (Edit mode), click **Read > Read in Presentation Designer** in the action bar to switch to Presentation Designer in read-only mode.
+    - If you are already editing a template in the WCM HTML Editor (Edit mode), click **Read > Read in Presentation Designer** in the action bar to switch to Presentation Designer in read-only mode.
 
         ![](../../../assets/HCL_WCM_Authoring_Presentation_Template_Read_in_Presentation_Designer_from_WCM_Editor.png "HCL WCM Authoring - Read Presentation Template in Presentation Designer from WCM HTML Editor")
 
@@ -122,103 +124,63 @@ The Presentation Designer user interface is composed of three main sections:
 
 ![](../../../assets/HCL_Presentation_Designer_User_Interface.png)
 
-### Header
+### Toolbar
 
 ![](../../../assets/HCL_Presentation_Designer_Header.png)
 
-1. **Back** button. Use this to go back to the Authoring portlet. 
-2. Title of the presentation template.
-3. Canvas dimensions settings. For more information, see **[Canvas dimensions](./usage/canvas_settings.md#canvas-dimensions)**.
-4. **Zoom** selection. For more information, see **[Canvas zoom](./usage/canvas_settings.md#canvas-zoom)**.
-5. **Rotate** button. For more information, see **[Canvas rotate](./usage/canvas_settings.md#canvas-rotate)**.
-6. **Edit/Read mode** toggle. Use this to switch from Edit to Read mode or from Read to Edit mode.
-7. **RTL** toggle. For more information, see **[RTL toggle](./usage/canvas_settings.md#rtl-toggle)**.
-8. **Canvas Context Preview** For more information, see **[Canvas context preview](./usage/context_preview.md#canvas-context-preview)**.
-9. **Preview** For more information, see **[Preview](./usage/context_preview.md#preview)**.
-10. **Cancel** button. Use this to cancel editing and go back to the Authoring portlet.
-11. **Save** button. Use this to save the presentation template or click the dropdown icon to **Save and Close**.
-
-## Back button returns to the correct authoring page
-
-Back navigation has been improved to ensure users return to the expected authoring context on new pages created in Authoring. 
-> Key updates include:
-- Synchronized URL Handling: Authoring return URL handling is now synchronized during application initialization.
-- Retained Return Context: Return context is preserved seamlessly during editing transitions.
-- Prioritized Navigation: The back action prioritizes the stored authoring return URL and gracefully falls back to browser history when necessary.
-
-1. After you create pages and add them to the Authoring Portlet, select the pages you created in Web Content.
-
-    ![](../../../assets/HCL_Presentation_Designer_pages.png)
-
-- Select a Presentation Template.
-
-    ![](../../../assets/HCL_Presentation_Designer_select_presentation_template.png)
-
-- Click the Back button.
-
-    ![](../../../assets/HCL_Presentation_Designer_back_button.png)
-
-- Back navigation should return to the Authoring page, and the selected page should be highlighted.
-
-    ![](../../../assets/HCL_Presentation_Designer_back_navigation.png)
-
-- Open the Presentation Template again, change the language to Arabic, and click the Back button. It should return to the Authoring page with the selected pages.
-
-    ![](../../../assets/HCL_Presentation_Designer_change_language.png)
-
-### Notes
-- Selecting **Back to authoring** returns users to the correct source authoring page.
-- Navigation remains consistent during typical editing and language-change workflows.
+1. **Back** button: Returns you to the source page within the Authoring portlet. The Presentation Designer automatically synchronizes the return URL and preserves your active editing context, language settings, and selected page highlights.
+2. **Template Title**: Displays the name of the current presentation template.
+3. **[Canvas dimensions](./usage/canvas_settings.md#canvas-dimensions)** settings: Adjusts the width and height properties of the canvas workspace.
+4. **[Zoom](./usage/canvas_settings.md#zoom)** selection: Scales the magnification level of the active workspace view.
+5. **[Rotate](./usage/canvas_settings.md#rotate)** button: Switches the orientation of the layout canvas between portrait and landscape.
+6. **Edit** or **Read** mode toggle: Switches the workspace environment between **Edit** and **Read** modes.
+7. **[RTL](./usage/canvas_settings.md#rtl-toggle)** toggle: Switches the canvas orientation between left-to-right (LTR) and right-to-left (RTL) layouts.
+8. **[Canvas Context Preview](./usage/context_preview.md#canvas-context-preview)** button: Renders a real-time preview of the template using actual Web Content Manager (WCM) content items to verify data mapping, custom styling, and layouts across different device views before publishing.
+9. **[Preview](./usage/context_preview.md#preview)** button: Saves the template and opens a full preview in a separate window with the selected content applied. It automatically detects unsaved changes and prompts you to save the template before generating the file.
+10. **Cancel** button: Discards unsaved changes and exits the Presentation Designer to return to the Authoring portlet.
+11. **Save** button: Saves the presentation template or opens a dropdown menu to choose **Save and Close**.
 
 ### Panel
 
-There are two panels you can use in Presentation Designer: [Add Items](#add-items) and [Style](#style).
+There are two panels you can use in Presentation Designer: [Add Items](#add-items) and [Style Items](#style-items).
 
-#### Add Items
+#### Add items
 
 ![](../../../assets/HCL_Presentation_Designer_Add_Items_Panel.png)
 
-The **Add Items** panel contains the user elements that you can drag and drop to the canvas. The **Source** field contains a dropdown menu where you can select an element source. The list of elements you can drag in the **Add Items** panel depends on the element source you selected in this field.
+The **Add items** panel contains the user elements that you can drag and drop to the canvas. The **Source** field contains a dropdown menu where you can select an element source. The list of elements you can drag in the **Add items** panel depends on the element source you selected in this field.
 
-#### Style
+#### Style items
 
 ![](../../../assets/HCL_Presentation_Designer_Style_Panel.png)
 
-The **Style** panel contains the different styling options available for the selected element on the canvas. The styling options are updated accordingly based on the selected element on the canvas.
+The **Style items** panel contains the different styling options available for the selected element on the canvas. The styling options are updated accordingly based on the selected element on the canvas.
 
-For more information on the user elements and style options, see **[Usage of Presentation Designer](./usage/index.md)**.
+For more information on the user elements and style options, refer to **[Usage of Presentation Designer](./usage/index.md)**.
 
 ### Canvas
 
 ![](../../../assets/HCL_Presentation_Designer_Canvas.png)
 
-The Canvas serves as the central workspace in Presentation Designer. This where you can build your presentation templates. You can drag and drop elements right onto the canvas, making it simpler to create your layout. Any adjustments you make to the styling appear right away, giving you instant visual feedback as you work. This hands-on area lets content managers play around with different designs and setups.
+The Canvas serves as the central workspace in Presentation Designer. This is where you can build your presentation templates. You can drag and drop elements right onto the canvas, making it simpler to create your layout. Any adjustments you make to the styling appear right away, giving you instant visual feedback as you work. This workspace allows content managers to experiment with different layouts and designs.
 
-Hovering or selecting an element on the canvas displays the element name and the different action buttons available for the element. See the following actions you can do:
+Hovering or selecting an element on the canvas displays the element name and the different action buttons available for the element.
 
 ![](../../../assets/HCL_Presentation_Designer_Canvas_Item.png)
 
-1. Click the **Move** icon to rearrange the elements on the canvas     using drag and drop
-2. Click the **Arrow Up** icon to automatically select the parent of the current element. 
-3. Click the **Configure** icon to display additional configuration options for the element. 
-4. Click the **Trash** icon to delete the element from the canvas.
+1. **Move** icon: Rearranges elements on the canvas using drag and drop.
+2. **Arrow Up** icon: Selects the parent of the current element automatically.
+3. **Configure** icon: Displays additional configuration options for the element.
+4. **Trash** icon: Deletes the element from the canvas.
 
-## Stackable notifications
+#### Notifications
 
-Presentation Designer now supports stacked notifications instead of immediately replacing active messages. This allows multiple snackbars to appear in order rather than showing only the latest message.
+The Presentation Designer uses a stacked notification system to display real-time status updates and operation alerts directly on the workspace.
 
-### What changed
-
-- Notifications are queued and rendered as multiple stacked messages.
-- Notification lifecycle supports add, remove, and clear actions.
-- The maximum simultaneous notification stack size is capped.
-
-### Behavior
-
-- Rapid operations can show multiple messages in order.
+- Multiple notification snackbars queue up and display vertically in the bottom-left corner of the screen instead of instantly replacing active messages. This lets you track rapid operations without losing sight of previous alerts.
 
     ![](../../../assets/HCL_Presentation_Designer_multiple_notifications_1.png)
 
-- The oldest message is removed when the queue exceeds the configured cap.
+- The system automatically manages these active alerts using a maximum display cap. When a new action triggers an update and the stack reaches its limit, the oldest notification drops off the top of the stack to make room for the incoming message at the bottom.
 
     ![](../../../assets/HCL_Presentation_Designer_multiple_notifications_2.png)

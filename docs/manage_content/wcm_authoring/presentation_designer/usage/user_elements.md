@@ -1,37 +1,27 @@
-# User elements in Presentation Designer
+# User elements
 
-User elements refer to any element that you can edit or drag and drop onto the canvas. This section provides information on the different element types and how to use them in Presentation Designer
-
-
-To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access.md)** topic.
-
-To know the different styling options available in Presentation Designer, refer to the **[Styling Options in Presentation Designer](../usage/styling_options.md)** topic.
-
-
+User elements are components that you can drag, drop, and edit directly on the canvas. This section covers the available element types and how to use them in Presentation Designer.
 
 ## Element source
 
-You can change the source of the user elements that you can select from the **Add Items** panel. To change the source, go to the **Add Items** panel and select your preferred source from the **Source** dropdown menu. Static elements are loaded by default. 
+By default, the **Add items** panel displays static elements. To change the component source, select your preference from the **Source** dropdown menu.
 
 ![](../../../../assets/HCL_Presentation_Designer_Item_Source.png)
 
-
-
 ## Element actions
 
-Hovering or selecting an element on the canvas displays the element name and the different action buttons available for the element. See the following actions you can do:
+Hover over or select an element on the canvas to view its name and available actions:
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Item.png)
 
-1. Click the **Move** icon to rearrange the elements on the canvas through drag-and-drop.
-2. Click the **Arrow Up** icon to automatically select the parent of the current element. 
-3. Click the **Configure** icon to display additional configuration options for the element. 
-4. Click the **Trash** icon to delete the element from the canvas.
-
+1. **Move** icon: Rearrange the elements on the canvas through drag-and-drop.
+2. **Arrow Up** icon: Automatically select the parent of the current element.
+3. **Configure** icon: Display additional configuration options for the element.
+4. **Trash** icon: Delete the element from the canvas.
 
 ## Element types
 
-In Presentation Designer, user elements are divided into five types: 
+In Presentation Designer, user elements are divided into five categories:
 
 - [Static elements](#static-elements)
 - [Content elements](#content-elements)
@@ -39,7 +29,7 @@ In Presentation Designer, user elements are divided into five types:
 - [Generic element tags](#generic-element-tags)
 - [Generic tags](#generic-tags)
 
-Each type serves a different purpose and each user element comes with its own set of styling and configuration options.
+Each category serves a different purpose and each user element comes with its own set of styling and configuration options.
 
 ### Static elements
 
@@ -47,199 +37,160 @@ Static elements are predefined elements that display content exactly as it looks
 
 ![](../../../../assets/HCL_Presentation_Designer_Static_Elements_Panel.png)
 
-- **Container**
+**Container**
 
-    The container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container through the **Style** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
+The container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container through the **Style items** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
 
+**Text**
 
-- **Text**
+Static text elements (for example, ```<p>Content goes here</p>```) are used to display text content which you can also edit on the canvas itself. These elements can include headers, paragraphs, and any other textual information. You can apply formatting and styling from the **Style items** panel to enhance readability and visual appeal. To edit the text content, click the text element and enter your desired text.
 
-    Static text elements (for example, ```<p>Content goes here</p>```) are used to display text content which you can also edit on the canvas itself. These elements can include headers, paragraphs, and any other textual information. You can apply formatting and styling from the **Style** panel to enhance readability and visual appeal. To edit the text content, click the text element and enter your desired text.
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Text.png)
 
-    See the following sample static text elements:
+- The first line of text shows the placeholder text that appears when you drag and drop a static text element on the canvas. 
+- The second line of text is a static text element with actual text content after user input. 
+- The third line of text is a static text element with actual text content and applied styles.
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Text.png)
+!!! note
+    Placeholder text for the static text element is only a visual representation in Presentation Designer. It represents an empty value for the text content. The words "Static text element" is not saved in the actual markup.
 
-    - The first line of text shows the placeholder text that appears when you drag and drop a static text element on the canvas. 
-    - The second line of text is a static text element with actual text content after user input. 
-    - The third line of text is a static text element with actual text content and applied styles.
+**Links**
 
-    !!! note
-        Placeholder text for the static text element is only a visual representation in Presentation Designer. It represents an empty value for the text content. The words *Static text element* is not saved in the actual markup.
+Static links (for example, ```<a href="https://example.com">Click Here</a>```) enable users to create clickable hyperlinks to other websites or resources. You can edit the display text for the link element the same way as editing a text element. Different styling options are also available.
 
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link.png)
 
-- **Link**
+- The first line of text shows the default display text that appears when you drag and drop a static link element on the canvas.
+- The second line of text shows the placeholder text that appears when you remove the default display text of the link element.
+- The third line of text is a static link element with modified display text content after user input.
+- The fourth line of text is a static link element with modified display text content and applied styles.
 
-    Static links (for example, ```<a href="https://example.com">Click Here</a>```) enable users to create clickable hyperlinks to other websites or resources. You can edit the display text for the link element the same way as editing a text element. Different styling options are also available.
+To set the `href` attribute, click the **Configure** button and enter the URL.
 
-    See the following sample static text elements:
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link_Configure.png)
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link.png)
+!!! note
+    When you click a static link element on the canvas, you will not be redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
 
-    - The first line of text shows the default display text that appears when you drag and drop a static link element on the canvas.
-    - The second line of text shows the placeholder text that appears when you remove the default display text of the link element.
-    - The third line of text is a static link element with modified display text content after user input. 
-    - The fourth line of text is a static link element with modified display text content and applied styles.
+**Images**
 
-    To set the `href` attribute, click the **Configure** button and enter the URL.
+Static images (for example, ```<img src="image-url.jpg" alt="Description"/>```) are used to render visuals from various sources. You can add images in Presentation Designer using a URL, or using the Digital Asset Management (DAM) feature of HCL DX:
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Link_Configure.png)
+1. Drag an **Image** element onto the canvas.
+2. Select **Configure** on the element toolbar.
+3. Select an option from the **Asset source** dropdown:
 
-    !!! note
-        When you click a static link element on the canvas, you will not be redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
+    - **Import from URL:** Enter the image path directly in the Add URL field. For example: `https://picsum.photos/id/106/300/200`.
 
-- **Image**
+    - **HCL DAM:**
 
-    1. Adding the image using URL.
+        !!!note
+            If the DAM picker is not configured or available in the environment, the **HCL DAM** source option appears disabled.
 
-        Static images (for example, ```<img src="image-url.jpg" alt="Description"/>```) are used to render visuals from various sources. You can manually set the `src` attribute by clicking the **Configure** button. In the **Add URL** field, enter an image URL or copy and paste the URL of image assets from Digital Asset Management (DAM). (Optional) Enter an alternate text for the image in the **Alternate text** field. 
-        
-        Styling options for this element are also available in the **Style** panel.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image.png)
-
-        !!! note
-        The static image element displays a placeholder image icon when there is no image URL set. This placeholder is only a visual representation in Presentation Designer and no image source is saved.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Image_Placeholder.png)
-
-    2. Adding the image using DAM.
-
-        You can also select an image from the HCL DAM and apply it to the canvas. Once an image is selected from the DAM, it is rendered on the canvas, and its corresponding title is displayed below the **Asset source** field.
-
-        1. In image configuration, **Asset source** includes **HCL DAM** as an available source.
-
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Option.png)
-
-        2. After selecting **HCL DAM**, the Select image button is shown.
+        1. Choose the **Select image** button that appears.
 
             ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Select_Image_Button.png)
 
-        3. Clicking the Select image button opens the DAM picker dialog, where users can browse and select an image asset.
-
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_picker_Modal.png)
-
-        4. Select an image from the DAM picker dialog, and then click Select.
+        2. Browse and select an asset inside the DAM Picker dialog.
 
             ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Select_Image.png)
 
-        5. After selecting an image, the dialog closes and the selected image is applied to the canvas.
+        3. Choose **Select** to apply the image to the canvas.
 
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Apply.png)
+4. (Optional) Enter an alternate text for the image in the **Alternate text** field.
 
-        6. You can also apply a style to the selected image.
+!!! note
+    - The static image element displays a placeholder image icon when there is no image URL set. This placeholder is only a visual representation in Presentation Designer and no image source is saved.
+    - Switching the asset source back to URL clears DAM-specific values to prevent stale data.
+    - The selected image label displays only for DAM-compatible image URLs.
+    - Custom styles can be applied to DAM images through the **Style items** panel after selection.
 
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Apply_With_Style.png)
+**Grid**
 
-        7. When you return to the image configuration, the selected image name appears under **Asset source**.
+The **Grid** element (for example, ```<div class="grid">...</div>```) allows for a structured layout of multiple elements in rows and columns. This element is useful for organizing content in a visually appealing way, enabling practitioners to customize the grid structure to fit their content needs.
 
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_Asset_Source.png)
+To manage responsive layouts, you can customize row and column counts for each device context, configure **Auto flow** settings to control how content wraps on smaller screens, and apply layout changes dynamically using device-specific stylesheet media blocks (`@media` rules).
 
-        8. If you switch the source back to URL, DAM-specific values are cleared to prevent stale data.
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Grid.png){: style="display: block; margin: 0 auto;"}
 
-            ![](../../../../assets/HCL_Presentation_Designer_DAM_Picker_URL_Mode.png)
+!!! note
+    The **Grid** element displays a 1 x 3 grid by default. You can adjust the number of rows and column in the **Style items** panel. Different styling options for the grid element are also available.
 
-        !!! note
-        - If DAM picker is unavailable in the environment, the DAM source option appears disabled.
-        - The selected image label appears only for DAM-compatible image URLs.
+1. Drag a **Grid** element onto the canvas.
+2. Enter the following values in the **Style items** panel:
 
-- **Grid**
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_Styles.png)
 
-    The grid element (for example, ```<div class="grid">...</div>```) allows for a structured layout of multiple elements in rows and columns. This element is useful for organizing content in a visually appealing way, enabling practitioners to customize the grid structure to fit their content needs.
+    **Layout**
 
-    ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Grid.png)
+    - **Rows**: 3
+    - **Columns**: 3
 
-    !!! note
-        The grid element displays a 1 x 3 grid by default. You can adjust the number of rows and column in the **Style** panel. Different styling options for the grid element are also available.
+    **Dimensions**
 
-        ![](../../../../assets/HCL_Presentation_Designer_Static_Element_Grid_Default.png)
+    - **Height**: 500px
 
-    ### Responsive Grid System
-    Responsive grid control now supports per-device layout behavior. This allows developers and content authors to fine-tune layouts uniquely across mobile, tablet, and desktop viewports.
-    > Key updates include:
-    - Context-Aware Overrides: Grid responsive layout controls can override rows and columns based on the active device context.
-    - Configurable Auto-Flow: Grid auto-flow settings are now configurable by device context to manage how wrapping content behaves on smaller screens.
-    - Media Block Application: Responsive overrides are applied dynamically through device-specific stylesheet media blocks (`@media` rules).
+    **Spacing**
 
-    1. Drag a Grid element onto the canvas and configure its style. Enter the following values in the **Styles** section:
+    - **Padding top**: 4px
+    - **Padding right**: 4px
+    - **Padding bottom**: 4px
+    - **Padding left**: 4px
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_Styles.png)
+3. Add static text to each cell.
 
-        **Layout**
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_Add_Text.png)
 
-        - **Rows**: 3
-        - **Columns**: 3
+4. Configure the **Auto flow** and **Area layout** sections.
 
-        **Dimensions**
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_new_sections.png)
 
-        - **Height**: 500px
+    - **Auto flow:** Controls how grid elements are distributed within the layout. Options include **Row**, **Column**, **Row dense**, and **Column dense**.
+    - **Area Layout:** Provides a count-based layout override that automates responsiveness for **Tablet** and **Mobile**. It dynamically balances rows and columns based on the specified track count to keep cells uniform without manual calculations.
 
-        **Spacing**
+    **Device viewports**
 
-        - **Padding top**: 4px
-        - **Padding right**: 4px
-        - **Padding bottom**: 4px
-        - **Padding left**: 4px
+    **Grid** properties adapt dynamically to the active device context. Use the viewport switcher at the top of the canvas to configure and preview how these settings behave across different screen sizes:
 
-    2. Add static text to each cell so you have a visual representation of how Auto flow and Area layout work.
+    **Desktop**
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_Add_Text.png)
+    This view serves as the baseline layout. It disables the **Area layout** option and uses your primary **Rows** and **Columns** settings. Changing the **Auto flow** direction alters the sequence flow. For example:
 
-    3. In the Style panel for the Grid element, there are new sections called **Auto-flow** and **Area layout**.
+    **Row** sequences elements from left to right.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_new_sections.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row.png)
 
-        - **Auto Flow** controls how grid elements are distributed within the grid. Possible values include `row`, `column`, and `row or column dense`.
-        - **Area Layout** is a count-based layout override that automates responsiveness for Tablet and Mobile viewports. It dynamically balances rows and columns based on the specified track count, eliminating manual calculations while keeping all grid cells equal and uniform.
+    **Column** sequences elements from top to bottom.
 
-        #### Desktop view
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_desktop.png)
 
-        The Area layout is disabled in Desktop view because Desktop is the baseline and matches the rows and columns you set.
+    **Tablet**
 
-        The Area flow is set to `row`, so the sequence runs from left to right.
+    Switching to **Tablet** view enables **Area layout**, which initially inherits your baseline settings.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_desktop.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet.png)
 
-        The Area flow can also be set to `column`, which changes the sequence from top to bottom.
+    Changing either the **Rows** or **Columns** count automatically recalculates the opposite value to maintain a uniform layout balance. For example, reducing **Rows** to `2` automatically scales **Columns** to `5` to balance the remaining cells uniformly.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_desktop.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet_change_value.png)
 
-        #### Tablet view
+    **Mobile**
 
-        When you switch to Tablet view, Area layout is enabled and starts with the same values as the rows and columns you set.
+    Switching to **Mobile** view resets properties to the **Desktop** baseline. Adjustments made in **Tablet** view do not carry over.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone.png)
 
-        After changing Rows to 2, the Area layout is recalculated automatically. The Columns value changes to 5.
+    Reducing the **Columns** count forces the grid tracks to recalculate and stack content vertically for smaller screens. For example, changing **Columns** to `1` automatically updates **Rows** to `9`.
 
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_column_in_tablet_change_value.png)
+    ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone_change_column.png)
 
-        After changing Auto flow to Row, the Area layout updates to Row.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_tablet_v1.png)
-
-        After changing Columns to 4, Rows updates to 3.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_tablet_v2.png)
-
-        #### Phone view
-
-        When you change the view from Tablet to Phone, the tablet styling is not carried over because the baseline is Desktop.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone.png)
-
-        After changing Columns to 1, Rows updates to 9. By using Area layout and Auto flow, you can achieve the expected result for each device view.
-
-        ![](../../../../assets/HCL_Presentation_Designer_Grid_area_layout_row_in_phone_change_column.png)
-
-    ### Notes
-
-    - Area layout values are calculated from the device-specific row and column settings.
-    - In Tablet and Mobile contexts, **Area layout** can override rows and columns without changing the Desktop baseline.
-    - After you save changes in one device view, they are retained without affecting the other views.
+!!!note
+    - **Area layout** values calculate automatically from device-specific row and column settings.
+    - In **Tablet** and **Mobile** views, **Area layout** overrides rows and columns without modifying the baseline **Desktop** configuration.
+    - Layout modifications saved within a specific device context persist independently without affecting other viewports.
 
 ### Content elements
 
@@ -257,38 +208,34 @@ After selecting a content template, it automatically pulls the supported element
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Loaded_Panel.png)
 
-After you drag and drop an element on the canvas, a placeholder representing the element appears. You cannot edit placeholders in Presentation Designer as the actual display value comes from the content item. See the following content element structure:
+After you drag and drop an element on the canvas, a placeholder representing the element appears. You cannot edit placeholders in Presentation Designer as the actual display value comes from the content item.
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Structure.png)
 
-In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer needs to rely on the element tag to determine the element type. See the following sample after saving a presentation template in Presentation Designer with a text content element:
+In Presentation Designer, the ```<p></p>``` tag wrapper for the element tag is added with the type attribute to determine the element type. Element tags (for example, ```[Element context="current" type="content" key="Element name"]```) use the element name as `key` and authors can set any element name in a content template. This could produce inconsistencies if Presentation Designer needs to rely on the element tag to determine the element type.
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Markup.png)
 
-
 For more information on element tags in the Authoring portlet, refer to [Element tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements.md).
 
+Presentation Designer supports the following content elements:
 
-**Presentation Designer supports the following content elements:**
-
-- **Text Elements**
+- **Text elements**
 
     Text elements (**Text, Rich Text, Short Text, Date and Time, Number**) represent text content and the value changes based on the content item. In Presentation Designer, the element’s display title from the content template is the placeholder text that appears on the canvas except for **Date and Time** and **Number** elements that have their own assigned placeholder value.
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Text_Elements.png)
 
-    You can apply different styling options to the placeholder of the text elements except for **Rich Text**. **Rich Text** elements are set with their own styling in the content item. See the following sample style options for placeholders of text elements:
+    You can apply different styling options to the placeholder of the text elements except for **Rich Text**. **Rich Text** elements are set with their own styling in the content item.
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Text_Elements_Applied_Styles.png)
-    
 
     These styles are stored in the ```<p></p>``` tag style attribute. See the styled placeholder **Short Text** element and the markup generated after saving in the following images:
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_ShortText_Applied_Styles.png)
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_ShortText_Applied_Styles_Markup.png)
-    
 
-    Formatting options are also available for **Number** and **Date and Time elements**. The format is visually reflected on the placeholder value and is stored in the format parameter for the Element tag after saving. See the following samples:
+    Formatting options are also available for **Number** and **Date and Time elements**. The format is visually reflected on the placeholder value and is stored in the format parameter for the Element tag after saving.
 
     | Number Format   | Date and Time Format  |
     |-----------------|-----------------------|
@@ -296,19 +243,17 @@ For more information on element tags in the Authoring portlet, refer to [Element
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Format_Markup.png)
 
-
-- **Image Element**
+- **Image elements**
 
     An image content element represents an actual image. A placeholder image icon is displayed in Presentation Designer and the image source and image attributes (for example, width and height) set in the content item are followed in the preview.
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Image.png)
 
-- **Link Element**
-    
-    A link content element represents a hyperlink, which is a connection or reference to another resource depending on what is set on the content item. In Presentation Designer, a placeholder text using the element's display title is shown. You can apply styling options to the placeholder text through the **Style** panel, similar to text content elements.
+- **Link elements**
+
+    A link content element represents a hyperlink, which is a connection or reference to another resource depending on what is set on the content item. In Presentation Designer, a placeholder text using the element's display title is shown. You can apply styling options to the placeholder text through the **Style items** panel, similar to text content elements.
 
     ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Link.png)
-
 
 ### Property tags
 
@@ -325,7 +270,6 @@ See the following sample markup generated after saving:
 ![](../../../../assets/HCL_Presentation_Designer_Property_Tags_Markup.png)
 
 For more information on property tags in the Authoring portlet, refer to [Property tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_item-details_property.md).
-
 
 ### Generic element tags
 
@@ -345,7 +289,7 @@ In the following example, **Text** is selected as an element type, converting th
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Assigned.png)
 
-With the generic element converted into a **Text Content Element**, you can now apply styling options to the placeholder text from the **Style** panel.
+With the generic element converted into a **Text Content Element**, you can now apply styling options to the placeholder text from the **Style items** panel.
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Converted.png)
 
@@ -353,12 +297,10 @@ See the markup generated after saving:
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Element_Tags_Text_Type_Markup.png)
 
-
 For more information on element tags in the Authoring portlet, refer to [Element tag](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/wcm_dev_referencing_elements.md).
 
-
 ### Generic tags
-   
+
 Generic tags are any other web content tags that are added in a presentation template using the **Insert Tag** from the Authoring portlet.
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Tags.png)
@@ -366,5 +308,5 @@ Generic tags are any other web content tags that are added in a presentation tem
 When editing a presentation template that has a generic tag in Presentation Designer, a placeholder is rendered on the canvas to represent each tag. This makes users aware that there are other tags present when editing the presentation template in Presentation Designer.
 
 ![](../../../../assets/HCL_Presentation_Designer_Generic_Tags_Canvas.png)
- 
+
 For more information on web content tags in the Authoring portlet, refer to [Creating web content tags](../../../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/tags/creating_web_content_tags/index.md).
