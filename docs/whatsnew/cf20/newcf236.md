@@ -26,8 +26,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
-- Woodburn Studio demo site (9.5)
 - Removal of unused DAM Helm keys (9.5)
+- Woodburn Studio demo site (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
 
@@ -156,14 +156,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### Woodburn Studio demo site (9.5)
-
-=== "Containers"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
-
-=== "On-Premises"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
-
 ### Removal of unused DAM Helm keys (9.5)
 
 === "Containers"
@@ -172,8 +164,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - `incubator.configuration.digitalAssetManagement.enableRootCollectionSort`
     - `incubator.configuration.digitalAssetManagement.enableSoftDelete`
     - `incubator.configuration.digitalAssetManagement.renderNewUI`
-    
+
     For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+
+### Woodburn Studio demo site (9.5)
+
+=== "Containers"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+
+=== "On-Premises"
+    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
