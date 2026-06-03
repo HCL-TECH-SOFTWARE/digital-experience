@@ -225,4 +225,43 @@ Replace:
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server --tail=200
     ```
 
+## Contacting HCL Support
+
 If you still cannot resolve the issue, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
+
+!!! tip "Speed up your support case"
+    Before opening a ticket, collect your Helm deployment values for both your DX and IQ releases. Support engineers need both to diagnose configuration issues effectively.
+
+**Collect your DX deployment values:**
+
+```bash
+helm get values <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
+```
+
+**Collect your IQ deployment values:**
+
+```bash
+helm get values <IQ_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
+```
+
+Replace:
+- `<DX_RELEASE_NAME>` with your DX Helm release name (e.g., `dx-deployment`)
+- `<IQ_RELEASE_NAME>` with your IQ Helm release name (e.g., `dx-iq`)
+- `<YOUR_NAMESPACE>` with your Kubernetes namespace
+
+!!! warning "Sensitive values"
+    The output may contain passwords and secrets. Review the output before sharing and redact any sensitive credentials.
+
+**If you are using [Option B: Using an External Database](prepare-database.md#option-b-using-an-external-database)**, also include the following connectivity details:
+
+- Database host and port (e.g., `iq-postgres.c9akciq32.us-east-1.rds.amazonaws.com:5432`)
+- Database name (e.g., `iqdb`)
+- Whether TLS is enabled (`dbTlsEnabled: true/false`)
+- Network reachability confirmation — for example, the output of:
+
+    ```bash
+    kubectl run -it --rm debug --image=postgres:15 --restart=Never -n <YOUR_NAMESPACE> -- \
+      psql "host=<DB_HOST> port=<DB_PORT> dbname=<DB_NAME> user=<DB_USER> sslmode=require" -c "\conninfo"
+    ```
+
+- Any relevant error messages from the IQ Integrator pod logs related to the database connection
