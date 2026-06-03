@@ -119,26 +119,54 @@ The Persistence Node in your DX deployment can automatically provision a Postgre
 
 4. **Prepare your IQ deployment values:**
 
-    Create a custom IQ values file (e.g., `custom-iq-internal-db-values.yaml`) using the same credentials you configured in your DX deployment (Step 1):
+    Create a custom IQ values file (e.g., `custom-iq-internal-db-values.yaml`). You have two ways to supply the database credentials:
 
-    ```yaml
-    configuration:
-      database:
-        enabled: true
-        dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
-        dbPort: 5432
-        dbName: "iqdb"
-        dbUser: "dx_iq_db_user"
-        dbPassword: "<SECURE_PASSWORD>"
-    ```
+    === "Option 4a: Use dbUser and dbPassword"
 
-    Replace:
-    - `<DX_RELEASE_NAME>` with your DX Helm release name
-    - `<DX_NAMESPACE>` with your DX deployment namespace
-    - `<SECURE_PASSWORD>` with the same password you configured in Step 1
+        Supply the credentials directly using the same values you configured in your DX deployment (Step 1):
 
-    !!! important
-        The `dbUser` and `dbPassword` in this IQ values file **must match exactly** the `security.iq.dbUser` and `security.iq.dbPassword` values you configured in your DX deployment (Step 1). The Helm chart will create a secret from these credentials and the IQ Integrator will use it to connect to the database.
+        ```yaml
+        configuration:
+          database:
+            enabled: true
+            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbPort: 5432
+            dbName: "iqdb"
+            dbUser: "dx_iq_db_user"
+            dbPassword: "<SECURE_PASSWORD>"
+        ```
+
+        Replace:
+        - `<DX_RELEASE_NAME>` with your DX Helm release name
+        - `<DX_NAMESPACE>` with your DX deployment namespace
+        - `<SECURE_PASSWORD>` with the same password you configured in Step 1
+
+        !!! important
+            The `dbUser` and `dbPassword` **must match exactly** the `security.iq.dbUser` and `security.iq.dbPassword` values you configured in your DX deployment (Step 1).
+
+    === "Option 4b: Use dbCustomSecret (recommended for production)"
+
+        Reference the secret that was automatically created by your DX deployment upgrade in Step 2. No credentials need to be repeated here:
+
+        ```yaml
+        configuration:
+          database:
+            enabled: true
+            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbPort: 5432
+            dbName: "iqdb"
+            dbCustomSecret: "<DX_RELEASE_NAME>-iq-db-secret"
+        ```
+
+        Replace:
+        - `<DX_RELEASE_NAME>` with your DX Helm release name
+        - `<DX_NAMESPACE>` with your DX deployment namespace
+
+        !!! note
+            The secret `<DX_RELEASE_NAME>-iq-db-secret` was automatically created by the DX deployment Helm chart when you ran the upgrade in Step 2. It contains the `username` and `password` keys set from `security.iq.dbUser` and `security.iq.dbPassword`.
+
+        !!! important "Same namespace required"
+            This option only works when your IQ deployment is in the **same Kubernetes namespace** as your DX deployment. Kubernetes secrets are namespace-scoped and cannot be referenced across namespaces. If IQ is deployed in a different namespace, use **Option 4a** and supply the credentials directly instead.
 
 5. **Upgrade your IQ deployment with database configuration:**
 
@@ -155,14 +183,25 @@ The Persistence Node in your DX deployment can automatically provision a Postgre
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>` with your repository full qualified domain name and path
     - `<IQ_HELM_CHART_VERSION>` with your IQ Helm chart version
 
-6. **Verify the IQ secret was created:**
+6. **Verify database credentials are configured:**
 
-    ```bash
-    kubectl get secret -n <DX_NAMESPACE> dx-iq-iq-db-secret
-    kubectl describe secret -n <DX_NAMESPACE> dx-iq-iq-db-secret
-    ```
+    === "If you used Option 4a (dbUser + dbPassword)"
 
-    The Helm chart automatically creates this secret from the credentials in your IQ `values.yaml`.
+        The IQ chart stores these credentials in a ConfigMap. Verify the ConfigMap was created:
+
+        ```bash
+        kubectl get configmap -n <DX_NAMESPACE> dx-iq-integrator
+        kubectl describe configmap -n <DX_NAMESPACE> dx-iq-integrator
+        ```
+
+    === "If you used Option 4b (dbCustomSecret)"
+
+        Verify the referenced DX secret exists in the namespace:
+
+        ```bash
+        kubectl get secret -n <DX_NAMESPACE> <DX_RELEASE_NAME>-iq-db-secret
+        kubectl describe secret -n <DX_NAMESPACE> <DX_RELEASE_NAME>-iq-db-secret
+        ```
 
 ---
 
@@ -274,13 +313,13 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
     If the secret already exists from a previous installation, delete it first:
 
     ```bash
-    kubectl delete secret custom-credentials-iq-db -n <YOUR_NAMESPACE> --ignore-not-found
+    kubectl delete secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE> --ignore-not-found
     ```
 
     Then create it:
 
     ```bash
-    kubectl create secret generic custom-credentials-iq-db \
+    kubectl create secret generic custom-credentials-iq-rtc-db \
       --namespace <YOUR_NAMESPACE> \
       --from-literal=username=<DB_USERNAME> \
       --from-literal=password=<DB_PASSWORD>
@@ -294,8 +333,8 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 2. **Verify the secret was created:**
 
     ```bash
-    kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
-    kubectl describe secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
+    kubectl get secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
+    kubectl describe secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
     ```
 
 3. **Upgrade your DX deployment to enable RTC database management for IQ:**
@@ -318,7 +357,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
       --reuse-values \
       --set configuration.digitalAssetManagement.newDbManagement=true \
       --set networking.dxIqService=dx-iq-integrator \
-      --set security.iq.customDbSecret=custom-credentials-iq-db
+      --set security.iq.customDbSecret=custom-credentials-iq-rtc-db
     ```
 
     Replace:
@@ -363,7 +402,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
 
     ```bash
     kubectl exec -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller -- env | grep -E "IQ_|NEW_DB"
-    kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
+    kubectl get secret custom-credentials-iq-rtc-db -n <YOUR_NAMESPACE>
     ```
 
 6. **Prepare your `custom-iq-rtc-db-values.yaml` with RTC-managed database configuration:**
@@ -378,7 +417,7 @@ The DX Runtime Controller can automatically provision and manage a PostgreSQL da
         dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<YOUR_NAMESPACE>.svc.cluster.local"
         dbPort: 5432
         dbName: "iqdb"
-        dbCustomSecret: "custom-credentials-iq-db"
+        dbCustomSecret: "custom-credentials-iq-rtc-db"
     ```
 
 7. **Upgrade your IQ deployment with RTC-managed database configuration:**
