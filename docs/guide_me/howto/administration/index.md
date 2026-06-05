@@ -28,3 +28,7 @@ Learn how to create a system report to check DX configuration settings and compa
 Learn how to use JavaScript to find and replace text on a Portal page.  
 - **[How to determine if WebSphere Application Server is Traditional or Liberty](./DetermineWebsphereAppServer.md)**  
 Learn how to differentiate between WebSphere Traditional Server and WebSphere Liberty Server.
+- **[How to reset Web Content Viewer portlet to default state](./ResetWCMViewerPortlet.md)**  
+Learn how to reset Web Content Viewer portlet.
+
+
