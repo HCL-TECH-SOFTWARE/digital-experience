@@ -1,13 +1,57 @@
 # Installing IQ
 
-This section provides instructions for installing and deploying the IQ AI assistant in your HCL Digital Experience (DX) environment.
-
-<!--add more to intro?-->
+This topic provides instructions for deploying and managing the HCL DX IQ backend server (`hcl-dx-iq` Helm chart) alongside your HCL Digital Experience (DX) deployment.
 
 !!! note
     IQ is available starting with DX CF236 and is deployed as a container-based service.
 
-- **[Installing IQ backend services](./backend/index.md)**  
-This section provides detailed instructions for installing IQ backend services in your DX environment.
-- **[Enabling IQ](enable.md)**  
-This section provides detailed instructions for enablingg, configuring, and deploying IQ in your DX environment.
+HCL DX IQ is a core communication and data management layer, referred to as the integrator, that orchestrates the flow of information between the user interface (UI), large language models (LLMs), and user sessions. The IQ backend server:
+
+- Establishes and manages real-time communication channels through WebSocket connections.
+- Preserves and manages conversation state and memory for each user session.
+- Oversees and standardizes interactions with LLMs.
+- Integrates with Model Context Protocol (MCP) servers for enhanced AI capabilities.
+- Ensures robust, scalable, and seamless user experiences.
+
+## Prerequisites
+
+Before deploying the IQ backend server, verify that your environment includes the following components:
+
+- A container-based HCL DX Core or DX Compose deployment running in Kubernetes using Helm charts
+- An operational DX Core deployment
+- Access to the image or package repository containing the `hcl-dx-iq` Helm chart, the IQ Integrator and DX MCP server images, and optionally, the Persistence Node and Runtime Controller images
+- A valid Kubernetes namespace with appropriate permissions
+- One of the following database options for IQ persistence, along with the required database credentials:
+    - Internal database through DX Persistence Node (automatically provisioned by Helm)
+    - External database (cloud-managed, on-premises, or a separate Kubernetes cluster)
+    - Runtime Controller (RTC)-managed database
+- A LiteLLM proxy server set up to manage LLM access with two configured proxy models:
+    - `iq-general-purpose`: A premium model (such as Claude 3.5 Sonnet or Opus) for handling general DX inquiries and executing tools
+    - `iq-summary`: A cost-efficient model (such as Claude 3.5 Haiku) for conversation summarization and context window reduction
+
+    For instructions and a quick-start approach on self-hosted setups, refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy){target="_blank"} and [Deploy and Host LiteLLM on Railway](https://railway.com/deploy/litellm-proxy){target="_blank"}. For configuration options, refer to [LiteLLM Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
+
+    !!!note
+        IQ ensures that user authentication credentials (cookies) remain between the DX authentication layer and the MCP server within your Kubernetes cluster and are never transmitted to any external LLM service. Conversation history is transmitted to your configured LLM to enable proper context and functionality. You control the LiteLLM proxy server and determine where conversation data is routed (local models, managed APIs, or other endpoints).
+
+## Overview
+
+Use these topics to navigate the deployment, configuration, validation, and maintenance workflows for the IQ backend services alongside your container-based HCL DX deployment.
+
+- **[Deploying services](deploy-services.md)**  
+This section provides step-by-step instructions for deploying the IQ backend servers (integrator and MCP server) alongside an existing container-based HCL DX deployment.
+- **[Preparing the database](prepare-database.md)**  
+This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options. <!--Configuring MCP server above this entry-->
+- **[Validating the deployment](validation.md)**  
+This section provides instructions for verifying that your deployment is healthy and operational at any stage of the installation process.
+- **[Troubleshooting](troubleshooting.md)**  
+This section covers diagnostic workflows to isolate installation failures, service errors, and network issues across the infrastructure. <!--to be moved-->
+- **[Backing up and restoring data](backup-restore.md)**  
+This section provides the procedures for generating database backups and restoring the database state to prevent data loss during upgrades, migrations, or node failures.
+- **[Limitations](limitations.md)**  
+This section describes architectural constraints, service boundaries, and known limitations. <!--to be moved-->
+
+???+ info "Related information"
+    - [IQ UI documentation](../../index.md)
+    - MCP Server documentation <!--Update link, match page names if possible-->
+    - [IQ backend services limitations](limitations.md)

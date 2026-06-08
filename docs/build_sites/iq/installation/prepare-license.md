@@ -461,7 +461,7 @@ This is a migration issue: `LITELLM_API_KEY` was set in `environment.pod.integra
 
 ## Validation
 
-After configuring the Deployment Key, follow the [Validating the IQ backend deployment](validation.md) guide to verify:
+After configuring the Deployment Key, follow the [Validating the deployment](validation.md) guide to verify:
 - [Step 1: Verify Pod Health](validation.md#step-1-verify-pod-health) — Integrator and MCP Server pods are running
 - [Step 4: Test WebSocket Connectivity](validation.md#step-4-test-websocket-connectivity) — WebSocket connection is established
 - [Step 6: Test End-to-End Functionality](validation.md#step-6-test-end-to-end-functionality) — LLM can process queries

@@ -1,5 +1,9 @@
 title: Installing IQ
 nav:
     - index.md
-    - backend
-    - enable.md
+    - deploy-services.md
+    - prepare-database.md
+    - validation.md
+    - troubleshooting.md
+    - backup-restore.md
+    - limitations.md

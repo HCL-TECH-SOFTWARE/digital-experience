@@ -17,12 +17,12 @@ Before installing IQ, verify that your environment meets the following requireme
 
 **For all deployments**
 
-1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. For more information, refer to [Installing IQ backend services](../installation/backend/index.md)
-2. Enable Practitioner Studio. For more information, refer to [How to enable Practitioner Studio](../../practitioner_studio/working_with_ps/enable_prac_studio.md).
+1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. For more information, refer to [Installing IQ](./installation/index.md)
+2. Enable Practitioner Studio. For more information, refer to [Enabling Practitioner Studio](../practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 **For Kubernetes and Helm-based deployments**
 
-1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. For more information, refer to [Installing IQ backend services](../installation/backend/index.md).
+1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. For more information, refer to [Installing IQ backend services](./installation/index.md).
 2. Ensure you have access to modify your DX Helm chart `values.yaml` file.
 
 ## Enabling IQ
@@ -48,7 +48,7 @@ ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<
 !!! important
     Replace `{iq.backend.url}` with the exact IQ backend service hostname and port in your deployment. For example: `http://dx-iq-integrator:3000`.
 
-For more information on container-based deployments, refer to [Deploying using Helm](../../../deployment/install/container/helm_deployment/overview.md) and [Running DX Core configuration tasks](../../../deployment/manage/container_configuration/run_core_config_engine.md).
+For more information on container-based deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md) and [Running DX Core configuration tasks](../../deployment/manage/container_configuration/run_core_config_engine.md).
 
 ### Enable using Helm
 
@@ -64,7 +64,7 @@ IQ is deployed using a dedicated Helm chart (`hcl-dx-iq`), separate from the mai
       dxIqService: "dx-iq-integrator"
     ```
 
-3. Apply the Helm chart update by running a [Helm upgrade](../../../deployment/install/container/helm_deployment/overview.md):
+3. Apply the Helm chart update by running a [Helm upgrade](../../deployment/install/container/helm_deployment/overview.md):
 
     ```bash
     helm upgrade <release-name> <chart-name> -f values.yaml
@@ -110,7 +110,7 @@ Disable IQ integration in Helm-based deployments by removing the IQ service refe
       dxIqService: ""
     ```
 
-2. Deploy the updated configuration by running a [Helm upgrade](../../../deployment/install/container/helm_deployment/overview.md):
+2. Deploy the updated configuration by running a [Helm upgrade](../../deployment/install/container/helm_deployment/overview.md):
 
     ```bash
     helm upgrade <release-name> <chart-name> -f values.yaml
