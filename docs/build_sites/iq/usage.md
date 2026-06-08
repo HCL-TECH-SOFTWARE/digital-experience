@@ -9,7 +9,7 @@ For MCP backend endpoint behavior, security guidance, and diagnostics, refer to 
 IQ is an assistant purpose-built for HCL DX that understands DX-specific concepts, APIs, and workflows, and can both answer questions and perform actions directly on your DX system.
 
 !!! note
-    The available actions depend on the MCP tools deployed in your environment. The standard IQ deployment includes a default set of tools, which are described in the [Performing actions](#performing-actions) section. For more information, refer to [AI model limitations](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#ai-model-limitations).
+    The available actions depend on the MCP tools deployed in your environment. The standard IQ deployment includes a default set of tools, which are described in the [Performing actions](#performing-actions) section. For more information, refer to [AI model limitations](../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#ai-model-limitations). <!--Update in MCP doc-->
 
 ### Asking questions
 
