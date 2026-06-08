@@ -3,7 +3,7 @@
 This section explains how to access the IQ AI assistant from within HCL Digital Experience (DX).
 
 !!! info "Availability"
-    The IQ chat button is only visible to users whose environment and accounts meet the core [IQ Prerequisites](installation.md#prerequisites).
+    The IQ chat button is only visible to users whose environment and accounts meet the core [IQ Prerequisites](enable.md#prerequisites).
 
 To open the assistant, select the **Open IQ chat** button. Depending on the page or application you are using, the button location and display mode vary:
 

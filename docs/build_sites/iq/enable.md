@@ -1,13 +1,10 @@
-# Installing IQ
+# Enabling IQ
 
-This section provides instructions for installing and deploying the IQ AI assistant in your HCL Digital Experience (DX) environment.
-
-!!! note
-    IQ is available starting with DX CF236 and is deployed as a container-based service.
+This section provides instructions for enabling and configuring the IQ assistant integration within your HCL DX environment.
 
 ## Overview
 
-IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets.
+IQ is an AI-powered assistant integrated into DX and delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend Websocket API and the UI assets.
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
@@ -20,12 +17,12 @@ Before installing IQ, verify that your environment meets the following requireme
 
 **For all deployments**
 
-1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for environment-specific guidance.
-2. Enable Practitioner Studio. For more information, refer to [How to enable Practitioner Studio](../practitioner_studio/working_with_ps/enable_prac_studio.md).
+1. Deploy the IQ backend service (`dx-iq-integrator`) and ensure it is accessible in your environment. For more information, refer to [Installing IQ](./installation/index.md)
+2. Enable Practitioner Studio. For more information, refer to [Enabling Practitioner Studio](../practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 **For Kubernetes and Helm-based deployments**
 
-1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. Contact your HCL DX deployment team or [HCL Support](https://support.hcl-software.com/csm){target="_blank"} for assistance with obtaining and deploying the IQ Helm chart.
+1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. For more information, refer to [Installing IQ backend services](./installation/index.md).
 2. Ensure you have access to modify your DX Helm chart `values.yaml` file.
 
 ## Enabling IQ
