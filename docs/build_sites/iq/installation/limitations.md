@@ -5,12 +5,12 @@ This section describes the deployment and operational limitations for IQ backend
 ## Service scope
 
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
-- The service manages only conversation state and AI communication orchestration. <!--Is this accurate? "The service functions exclusively as a message router between the client browser and the AI model while maintaining the active chat session history." The original text seems a bit confusing-->
+- The service manages session state, conversation messages, and orchestration between the client, LLMs, and MCP servers.
 - The service does not replace or alter existing DX Core functionality.
 
 ## Integrator
 
-- Operations canceled through the user interface cannot instantly stop background tools that are already running. Use the **Cancel** button to stop processing safely. Closing the browser window or reloading the page while background operations are running cause incomplete or inconsistent data states.
+- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
 
 ## AI Model
 

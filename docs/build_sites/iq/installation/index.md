@@ -23,11 +23,12 @@ Before deploying the IQ backend server, verify that your environment includes th
 - A valid Kubernetes namespace with appropriate permissions
 - One of the following database options for IQ persistence, along with the required database credentials:
     - Internal database through DX Persistence Node (automatically provisioned by Helm)
-    - External database (cloud-managed, on-premises, or a separate Kubernetes cluster)
+    - External database (cloud-managed or a separate Kubernetes cluster)
     - Runtime Controller (RTC)-managed database
 - A LiteLLM proxy server set up to manage LLM access with two configured proxy models:
-    - `iq-general-purpose`: A premium model (such as Claude 3.5 Sonnet or Opus) for handling general DX inquiries and executing tools
-    - `iq-summary`: A cost-efficient model (such as Claude 3.5 Haiku) for conversation summarization and context window reduction
+    - `iq-general-purpose`: A premium model (such as Claude 4.6 Sonnet or 4.8 Opus) for handling general DX inquiries and executing tools
+    - `iq-summary`: A cost-efficient model (such as Claude 4.5 Haiku) for conversation summarization and context window reduction
+    - Note that these sample models were recommended at the time of writing, and newer models may be available when you configure your deployment.
 
     For instructions and a quick-start approach on self-hosted setups, refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy){target="_blank"} and [Deploy and Host LiteLLM on Railway](https://railway.com/deploy/litellm-proxy){target="_blank"}. For configuration options, refer to [LiteLLM Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
 
