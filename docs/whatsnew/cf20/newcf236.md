@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - OpenTelemetry Integration Guide
 - Search V2 - Automatically generate certificates and Kubernetes secrets
-- WAS, JDK, and iFix versions
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -130,16 +130,19 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now automatically generate certificates and Kubernetes secrets to secure communication during the deployment phase. To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
-### WAS, JDK, and iFix versions
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF236 contains the following:
 
-    - [WebSphere Application Server 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [WebSphere Application Server (WAS) 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit (JDK) 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
+        - Core and Remote Search: 8.10-1776104706
+        - Other Images: 9.7-1776104705
     - No iFixes
 
-    For more information, refer to [WAS, JDK, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
 
 ## Notices of deprecation
 
