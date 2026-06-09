@@ -239,3 +239,4 @@ To remove the IQ backend server and verify the component cleanup, complete the f
 
 ???+ info "Related information"
     - [Preparing the database](prepare-database.md)
+    - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)

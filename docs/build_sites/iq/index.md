@@ -6,8 +6,6 @@ The IQ assistant is accessible through a chat interface integrated into HCL DX. 
 
 To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
 
-IQ assistant includes DX-IQ integrator and DX-MCP server. The MCP server provides the protocol layer used by IQ to support AI request and response workflows. For MCP architecture, configuration, and diagnostics, refer to [MCP Server for IQ](./mcp/index.md).
-
 ## Prerequisites
 
 Ensure your environment meets the following requirements:
@@ -16,32 +14,20 @@ Ensure your environment meets the following requirements:
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Proper user permissions are assigned to access IQ features.
 4. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-5. For MCP server prerequisites and deployment checks, refer to [MCP Configuration](./mcp/configuration.md).
 
 ## Overview
 
 Refer to the following pages for comprehensive information about IQ:
 
 - **[Installing IQ](installation/index.md)**  
-This section describes the steps to install and configure the IQ backend services in your DX environment.
+This section describes the steps to install and configure the IQ backend services (IQ Integrator and MCP Server) in your DX environment.
 - **[Enabling IQ](enable.md)**  
 This section provides detailed instructions for enabling, configuring, and deploying IQ in your DX environment.
 - **[Accessing IQ](./access.md)**  
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
-- **[IQ Limitations](./limitations.md)**  
+- **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  
 This section provides guidance for resolving common connectivity or functionality problems.
-
-For MCP-specific operational guidance, refer to [MCP Server for IQ](./mcp/index.md):
-
-- **[MCP Configuration](./mcp/configuration.md)**  
-This section explains MCP deployment expectations, prerequisites, and post-deployment checks.
-- **[MCP Endpoints and Security](./mcp/endpoints_and_security.md)**  
-This section summarizes MCP endpoint behavior and customer-facing security considerations.
-- **[MCP Limitations](./mcp/limitations.md)**  
-This section lists known MCP service limitations and behavior boundaries.
-- **[MCP Troubleshooting](./mcp/troubleshooting.md)**  
-This section provides MCP-focused diagnostics, logging, and escalation guidance.

@@ -113,7 +113,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
     - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
 
-    For more information, refer to [IQ](../../build_sites/iq/index.md) and [MCP Server for IQ](../../build_sites/iq/mcp/index.md).
+    For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
 
 ### Helm values updates
 
