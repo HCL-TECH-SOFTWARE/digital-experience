@@ -36,13 +36,13 @@ To enable IQ manually, run the `enable-iq` configuration task. This task does no
 **AIX and Linux:**
 
 ```bash
-./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq.backend.url=http://{iq.backend.url}/dx/ui/iq
+./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
 ```
 
 **Windows:**
 
 ```bash
-ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq.backend.url=http://{iq.backend.url}/dx/ui/iq
+ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
 ```
 
 !!! important
