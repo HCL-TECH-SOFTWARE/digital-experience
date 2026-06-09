@@ -1,7 +1,8 @@
 title: IQ
 nav:
     - index.md
-    - installation.md
+    - installation
+    - enable.md
     - access.md
     - usage.md
     - limitations.md
