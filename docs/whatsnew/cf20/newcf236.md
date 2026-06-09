@@ -95,9 +95,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     HCL DX 9.5 CF236 contains the following:
 
-    - [WebSphere Application Server 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
-    - [Red Hat Universal Base Image (UBI)](<!--URL-->):
+    - [WebSphere Application Server (WAS) 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit (JDK) 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
         - Core and Remote Search: 8.10-1776104706
         - Other Images: 9.7-1776104705
     - No iFixes

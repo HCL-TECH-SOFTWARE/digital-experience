@@ -49,25 +49,23 @@ This table provides information about the Kubernetes versions that are tested an
 <!-- Note: As per L2/L3, only keep three latest releases and delete older ones -->
 
 |CF Level|Kubernetes versions|
-|--------------|-----------------|
+|--------|-------------------|
+|CF236| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF235| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF234| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
-|CF233| Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 
 !!! important
     To prevent a possible Kubernetes deployment failure in Kubernetes versions 1.28 and 1.29, you might need to run the `modprobe br_netfilter` command before running `kubeadm init`. This helps avoid a networking bridge/iptables issue.
 
 ## Prerequisites checker for DX deployment
 
-HCL DX provides a tool called "Prereqs Checker" that runs several checks to confirm whether the prerequisites for various components are met.  You can get the results of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configuring Prereqs Checker for DX deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).   
+HCL DX provides a tool called "Prereqs Checker" that runs several checks to confirm whether the prerequisites for various components are met.  You can get the results of these checks from the container logs of the `prereqs-checker` container in the pod where Prereqs Checker is installed. For more information, see [Configuring Prereqs Checker for DX deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md).
 
 The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
 
 ## WAS, JDK, UBI, and iFix versions
 
 This table provides information about the WebSphere Application Server (WAS), Java Development Kit (JDK), Red Hat Universal Base Image (UBI) level, and iFix versions for each CF.
-
-<!--Option #1-->
 
 |CF Level|WAS|JDK|UBI|iFix|
 |--------|---|---|---|----|
@@ -82,19 +80,3 @@ This table provides information about the WebSphere Application Server (WAS), Ja
 |CF228|9.0.5.23|8.0.8.40||N/A|
 |CF227|9.0.5.23|8.0.8.40||N/A|
 |CF226|9.0.5.22|8.0.8.35||N/A|
-
-<!--Option #2-->
-
-|CF Level|WAS|JDK|UBI <br/> (Core and Remote Search)|UBI <br/> (Other Images)|iFix|
-|-----|--------|--------|---------------|--------------|---|
-|CF236|9.0.5.27|8.0.8.60|8.10-1776104706|9.7-1776104705|N/A|
-|CF235|9.0.5.27|8.0.8.60|||N/A|
-|CF234|9.0.5.26|8.0.8.55|||iFix PH68243<br/>iFix PH68418|
-|CF233|9.0.5.26|8.0.8.55|||iFix PH68243<br/>iFix PH68418|
-|CF232|9.0.5.25|8.0.8.51|||iFix PH67137<br/>iFix PH67817|
-|CF231|9.0.5.25|8.0.8.51|||iFix PH67137<br/>iFix PH67817|
-|CF230|9.0.5.24|8.0.8.45|||iFix PH66674|
-|CF229|9.0.5.24|8.0.8.45|||iFix PH66674|
-|CF228|9.0.5.23|8.0.8.40|||N/A|
-|CF227|9.0.5.23|8.0.8.40|||N/A|
-|CF226|9.0.5.22|8.0.8.35|||N/A|
