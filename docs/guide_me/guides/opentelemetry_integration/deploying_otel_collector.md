@@ -125,15 +125,17 @@ Follow these steps to deploy the collector using the official OpenTelemetry Helm
     - Adjust resource limits based on your expected telemetry volume.
     - Enable TLS for production deployments by configuring appropriate certificates.
 
-3. Deploy the collector to your Kubernetes cluster in the same namespace as your DX deployment.
+3. Deploy the collector to your Kubernetes cluster. You can deploy it in the same namespace as your DX deployment or in a dedicated observability namespace.
 
+    **Option 1: Deploy in the same namespace as DX**
+    
     ```bash
     helm install otel-collector open-telemetry/opentelemetry-collector \
       --namespace <your-dx-namespace> \
       --values otel-collector-values.yaml
     ```
 
-    To deploy the collector in a dedicated observability namespace:
+    **Option 2: Deploy in a dedicated observability namespace**
 
     ```bash
     kubectl create namespace observability
@@ -141,6 +143,9 @@ Follow these steps to deploy the collector using the official OpenTelemetry Helm
       --namespace observability \
       --values otel-collector-values.yaml
     ```
+
+    !!! note
+        Using a dedicated `observability` namespace is recommended as it separates monitoring infrastructure from application workloads.
 
 4. Verify the deployment.
 
