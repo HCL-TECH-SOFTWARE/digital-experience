@@ -77,10 +77,6 @@ Add or update the following section in your `values.yaml`:
       enabled: false
 ```
 
-!!! note "Service-specific details"
-    - **Node.js services** (DAM, Image Processor, Ring API) use built-in OTel packages and modules
-    - **Java services** (Core, WebEngine, Runtime Controller, License Manager) use the pre-bundled OTel Java agent (version 2.22.0) at `/opt/otel/opentelemetry-javaagent.jar` <!--repeats Line 5?-->
-
 ## Deploying the configuration
 
 Before you deploy, review how the Helm chart manages your services:
