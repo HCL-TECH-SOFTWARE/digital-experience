@@ -29,6 +29,7 @@ Supported actions include:
 | **Pages** | List parent pages, create and delete pages |
 | **Projects** | Create, delete, and publish projects; add and remove items from projects |
 | **Search** | Search content, collections, and assets |
+| **DAM** | List, search, create, and view collections; list, search, view, and update assets, including keywords; view asset references; list favorites |
 
 ## Interface components
 
