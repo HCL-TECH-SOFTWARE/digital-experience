@@ -16,8 +16,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- DX IQ assistant now available
 - Helm values updates
+- IQ assistant now available
 - OpenTelemetry Integration Guide
 - Search V2 - Automatically generate certificates and Kubernetes secrets
 - WAS, JDK, UBI, and iFix versions
@@ -103,10 +103,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DX IQ assistant now available
+### Helm values updates
 
 === "Containers"
-    IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
+    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+
+### IQ assistant now available
+
+=== "Containers"
+    IQ is an AI-powered assistant integrated into HCL DX that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
     You can interact with the assistant in two ways:
 
@@ -114,11 +119,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
 
     For more information, refer to [IQ](../../build_sites/iq/index.md).
-
-### Helm values updates
-
-=== "Containers"
-    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ### OpenTelemetry Integration Guide
 
