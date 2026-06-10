@@ -1,99 +1,91 @@
 # Monitoring and troubleshooting
 
-After enabling OpenTelemetry (OTel) in your HCL DX deployment, verify that your configuration is correct and monitor the telemetry data flowing from your services. This guide helps you:
+After enabling OpenTelemetry (OTel) in your HCL DX deployment, verify your configuration and monitor the telemetry data flowing from your services:
 
-1. **Verify your OTel configuration** - Check that Helm values, ConfigMaps, and pod settings are correctly applied
-2. **View traces and metrics** - Access Grafana and Prometheus to monitor your instrumented services
-3. **Troubleshoot issues** - Diagnose and resolve configuration problems or connectivity issues
-
-Start by verifying that your OTel configuration is properly set up before checking traces and metrics in your observability backends.
+1. Check that Helm values, ConfigMaps, and pod settings are correctly applied.
+2. Access Grafana and Prometheus to monitor your instrumented services.
+3. Diagnose and resolve configuration problems or connectivity issues.
 
 ## Verifying OTel configuration
 
-Before checking traces and metrics in Grafana, verify that OTel is properly configured in your deployment. These commands help you confirm that your configuration values are correctly set and propagated to your pods.
+Before reviewing traces and metrics in Grafana, verify the OTel configuration in your deployment. Use these commands to confirm that the deployment sets and propagates configuration values to your pods.
 
-### Check Helm values configuration
+1. Check if OTel is enabled in your Helm deployment and review the active configuration:
 
-Verify that OTel is enabled in your Helm deployment and review the active configuration:
+    ```bash
+    # Check OTel enabled status and configuration in Helm values
+    helm get values <release-name> -n <namespace> | grep -A 10 openTelemetry
+    ```
 
-```bash
-# Check OTel enabled status and configuration in Helm values
-helm get values <release-name> -n <namespace> | grep -A 10 openTelemetry
-```
+    Replace the following placeholders:
 
-!!! note
-    Replace `<release-name>` with your Helm release name (e.g., `dx-deployment`) and `<namespace>` with your deployment namespace (e.g., `dxns`).
+    - `<release-name>`: Your Helm release name (for example, `dx-deployment`).
+    - `<namespace>`: Your deployment namespace (for example, `dxns`).
 
-### Check ConfigMap values
+2. Verify ConfigMap value propagation across the cluster. The global ConfigMap contains the OTel configuration that mounts into all pods.
 
-The global ConfigMap contains the OTel configuration that is mounted into all pods. Verify that the values are correctly propagated:
+    ```bash
+    # View all OTel configuration in the global ConfigMap
+    kubectl get configmap <release-name>-global -n <namespace> -o yaml | grep -i otel
 
-```bash
-# View all OTel configuration in the global ConfigMap
-kubectl get configmap <release-name>-global -n <namespace> -o yaml | grep -i otel
+    # Check specific OTel collector endpoint
+    kubectl get configmap <release-name>-global -n <namespace> -o jsonpath='{.data.otel\.exporter\.otlp\.endpoint}'
 
-# Check specific OTel collector endpoint
-kubectl get configmap <release-name>-global -n <namespace> -o jsonpath='{.data.otel\.exporter\.otlp\.endpoint}'
+    # Check service name base for all components
+    kubectl get configmap <release-name>-global -n <namespace> -o yaml | grep "otel.service.name.base"
 
-# Check service name base for all components
-kubectl get configmap <release-name>-global -n <namespace> -o yaml | grep "otel.service.name.base"
+    # Check if debug mode is enabled
+    kubectl get configmap <release-name>-global -n <namespace> -o jsonpath='{.data.debug\.otel\.enabled}'
+    ```
 
-# Check if debug mode is enabled
-kubectl get configmap <release-name>-global -n <namespace> -o jsonpath='{.data.debug\.otel\.enabled}'
-```
+    !!! tip "Understanding the output"
+        - The `otel.exporter.otlp.endpoint` property displays your OTel Collector endpoint (for example, `http://otel-collector.observability.svc.cluster.local:4318`).
+        - The `otel.service.name.base` property displays the base name used for all services in your deployment.
+        - The `debug.otel.enabled` property returns true if debug logging is enabled for OTel.
 
-!!! tip "Understanding the output"
-    - **otel.exporter.otlp.endpoint**: Should show your OTel Collector endpoint (e.g., `http://otel-collector.observability.svc.cluster.local:4318`)
-    - **otel.service.name.base**: Shows the base name used for all services in your deployment
-    - **debug.otel.enabled**: Returns `true` if debug logging is enabled for OTel
+3. Verify the presence of the OTel Java agent for Java services, including Core, WebEngine, Runtime Controller, and License Manager.
 
-### Verify Java agent installation
+    ```bash
+    # Verify OpenTelemetry Java agent exists in Core
+    kubectl exec -it <release-name>-core-0 -n <namespace> -- ls -lh /opt/otel/opentelemetry-javaagent.jar
 
-For Java services (Core, WebEngine, Runtime Controller, License Manager), confirm that the OTel Java agent is present:
+    # Verify Java agent is configured in JAVA_TOOL_OPTIONS
+    kubectl exec -it <release-name>-core-0 -n <namespace> -- bash -c 'echo $JAVA_TOOL_OPTIONS'
+    ```
 
-```bash
-# Verify OpenTelemetry Java agent exists in Core
-kubectl exec -it <release-name>-core-0 -n <namespace> -- ls -lh /opt/otel/opentelemetry-javaagent.jar
+    Expected output for `JAVA_TOOL_OPTIONS`:
 
-# Verify Java agent is configured in JAVA_TOOL_OPTIONS
-kubectl exec -it <release-name>-core-0 -n <namespace> -- bash -c 'echo $JAVA_TOOL_OPTIONS'
-```
+    ```text
+    -javaagent:/opt/otel/opentelemetry-javaagent.jar
+    ```
 
-Expected output for `JAVA_TOOL_OPTIONS`:
-```
--javaagent:/opt/otel/opentelemetry-javaagent.jar
-```
+4. Verify network connectivity between your application pods and the OTel Collector:
 
-### Test collector connectivity
+    ```bash
+    # Test connectivity to collector from Core pod
+    kubectl exec -it <release-name>-core-0 -n <namespace> -- curl -v <collector-endpoint>/v1/traces
 
-Verify network connectivity between your application pods and the OTel Collector:
+    # Example with default collector endpoint
+    kubectl exec -it <release-name>-core-0 -n <namespace> -- curl -v http://otel-collector.observability.svc.cluster.local:4318/v1/traces
+    ```
 
-```bash
-# Test connectivity to collector from Core pod
-kubectl exec -it <release-name>-core-0 -n <namespace> -- curl -v <collector-endpoint>/v1/traces
+    !!! success "Expected result"
+        A successful connection returns an HTTP response. The endpoint only accepts POST requests, so GET requests typically return `405 Method Not Allowed`. Connection failures indicate network or service discovery issues.
 
-# Example with default collector endpoint
-kubectl exec -it <release-name>-core-0 -n <namespace> -- curl -v http://otel-collector.observability.svc.cluster.local:4318/v1/traces
-```
+5. Review pod logs to confirm that OTel initialized correctly within your containers:
 
-!!! success "Expected result"
-    A successful connection returns an HTTP response (typically `405 Method Not Allowed` for GET requests is expected, as the endpoint accepts POST requests only). Connection failures indicate network or service discovery issues.
+    ```bash
+    # Check Java service logs (Core example)
+    kubectl logs <release-name>-core-0 -n <namespace> | grep -i "opentelemetry\|javaagent"
 
-### View pod logs for OTel initialization
+    # Check Node.js service logs (DAM example)
+    kubectl logs <release-name>-digital-asset-management-0 -n <namespace> | grep -i "opentelemetry\|otel"
+    ```
 
-Check that OTel initialized correctly in your pods:
+    Look for initialization messages such as:
 
-```bash
-# Check Java service logs (Core example)
-kubectl logs <release-name>-core-0 -n <namespace> | grep -i "opentelemetry\|javaagent"
-
-# Check Node.js service logs (DAM example)
-kubectl logs <release-name>-digital-asset-management-0 -n <namespace> | grep -i "opentelemetry\|otel"
-```
-
-Look for initialization messages such as:
-- Java: `[otel.javaagent] OpenTelemetry automatic instrumentation enabled`
-- Node.js: `OpenTelemetry instrumentation initialized`
+    - Java: `[otel.javaagent] OpenTelemetry automatic instrumentation enabled`
+    - Node.js: `OpenTelemetry instrumentation initialized`
 
 ## Viewing traces and metrics
 
@@ -139,9 +131,9 @@ Open `http://localhost:9090` in your browser to run queries against OTel data fi
 
 ## Troubleshooting
 
-**No traces appear in the visualization backend**
+Before troubleshooting the collector or backend, verify your basic OTel configuration using the commands in [Verifying OTel configuration](#verifying-otel-configuration).
 
-Before troubleshooting the collector or backend, verify your basic OTel configuration using the commands in the [Verifying OTel configuration](#verifying-otel-configuration) section above.
+**No traces appear in the visualization backend**
 
 1. Confirm that OTel is enabled in your Helm values:
 

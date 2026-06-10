@@ -1,9 +1,9 @@
-# Deploying the OpenTelemetry Collector
+# Deploying the OTel Collector
 
 !!!warning
-    This OTel Collector deployment is for development and testing only and is **not production-ready**. For production deployments, review the [official OTel Collector documentation](https://opentelemetry.io/docs/collector/){target="_blank"} for high-availability patterns, implement security controls such as TLS, and configure resource limits based on your telemetry volume.
+    This OpenTelemetry (OTel) Collector deployment is for development and testing only and is **not production-ready**. For production deployments, review the [official OTel Collector documentation](https://opentelemetry.io/docs/collector/){target="_blank"} for high-availability patterns, implement security controls such as TLS, and configure resource limits based on your telemetry volume.
 
-The OpenTelemetry (OTel) Collector acts as a centralized telemetry gateway within your Kubernetes cluster. It receives data streams from your instrumented HCL DX services, processes or filters the telemetry according to your pipeline configurations, and routes the final outputs to your designated observability backends.
+The OTel Collector acts as a centralized telemetry gateway within your Kubernetes cluster. It receives data streams from your instrumented HCL DX services, processes or filters the telemetry according to your pipeline configurations, and routes the final outputs to your designated observability backends.
 
 Follow these steps to deploy the collector using the official OpenTelemetry Helm chart:
 
@@ -127,22 +127,22 @@ Follow these steps to deploy the collector using the official OpenTelemetry Helm
 
 3. Deploy the collector to your Kubernetes cluster. You can deploy it in the same namespace as your DX deployment or in a dedicated observability namespace.
 
-    **Option 1: Deploy in the same namespace as DX**
-    
-    ```bash
-    helm install otel-collector open-telemetry/opentelemetry-collector \
-      --namespace <your-dx-namespace> \
-      --values otel-collector-values.yaml
-    ```
+    - To deploy it in the same namespace as DX:
 
-    **Option 2: Deploy in a dedicated observability namespace**
+        ```bash
+        helm install otel-collector open-telemetry/opentelemetry-collector \
+          --namespace <your-dx-namespace> \
+          --values otel-collector-values.yaml
+        ```
 
-    ```bash
-    kubectl create namespace observability
-    helm install otel-collector open-telemetry/opentelemetry-collector \
-      --namespace observability \
-      --values otel-collector-values.yaml
-    ```
+    - To deploy it in a dedicated observability namespace:
+
+        ```bash
+        kubectl create namespace observability
+        helm install otel-collector open-telemetry/opentelemetry-collector \
+          --namespace observability \
+          --values otel-collector-values.yaml
+        ```
 
     !!! note
         Using a dedicated `observability` namespace is recommended as it separates monitoring infrastructure from application workloads.

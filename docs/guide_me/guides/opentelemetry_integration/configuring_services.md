@@ -4,8 +4,8 @@ Configure OpenTelemetry (OTel) tracking across your Java and Node.js services to
 
 The Helm chart enables OTel instrumentation for both Java and Node.js services:
 
-- **Node.js services**: Digital Asset Management (DAM), Image Processor, and Ring API feature built-in OTel tracking.
-- **Java services**: DX Core, WebEngine, Runtime Controller, and License Manager use the pre-bundled OTel Java agent.
+- Digital Asset Management (DAM), Image Processor, and Ring API are Node.js services that feature built-in OTel tracking.
+- DX Core, WebEngine, Runtime Controller, and License Manager are Java services that use the pre-bundled OTel Java agent.
 
 HCL DX container images already include the required OTel packages and agents. The HCL DX Helm chart manages the configuration and automatically appends pod identifiers to service names.
 
@@ -79,7 +79,7 @@ Add or update the following section in your `values.yaml`:
 
 !!! note "Service-specific details"
     - **Node.js services** (DAM, Image Processor, Ring API) use built-in OTel packages and modules
-    - **Java services** (Core, WebEngine, Runtime Controller, License Manager) use the pre-bundled OTel Java agent (version 2.22.0) at `/opt/otel/opentelemetry-javaagent.jar`
+    - **Java services** (Core, WebEngine, Runtime Controller, License Manager) use the pre-bundled OTel Java agent (version 2.22.0) at `/opt/otel/opentelemetry-javaagent.jar` <!--repeats Line 5?-->
 
 ## Deploying the configuration
 
