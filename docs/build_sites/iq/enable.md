@@ -4,7 +4,7 @@ This section provides instructions for enabling and configuring the IQ assistant
 
 ## Overview
 
-IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets. The IQ deployment also includes the DX Model Context Protocol (MCP) Server (`dx-mcp-server`), which provides the MCP bridge used by IQ to communicate with supported AI and DX services.
+IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets. The IQ deployment also includes the DX Model Context Protocol (MCP) Server (`dx-mcp-server`), which provides the MCP bridge used by IQ to communicate with supported DX services, such as DAM and WCM.
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
