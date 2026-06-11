@@ -27,9 +27,9 @@ Supported actions include:
 | **Content templates** | List, create, and delete content templates |
 | **Presentation templates** | Create and delete presentation templates |
 | **Pages** | List parent pages, create and delete pages |
-| **Projects** | Create, delete, and publish projects; add and remove items from projects |
+| **Projects** | Create, delete, and publish projects, and add or remove project items |
 | **Search** | Search content, collections, and assets |
-| **DAM** | List, search, create, and view collections; list, search, view, and update assets, including keywords; view asset references; list favorites |
+| **DAM** | List, search, create, and view collections; list, search, view, and update assets, including keywords; view asset references; and list favorites |
 
 ## Interface components
 

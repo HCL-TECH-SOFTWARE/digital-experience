@@ -142,7 +142,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
         - Other Images: 9.7-1776104705
     - No iFixes
 
-    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
 
