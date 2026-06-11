@@ -1,8 +1,8 @@
 # Preparing the database
 
-This section guides you through configuring persistent database storage for your IQ Integrator.
+This section guides you through configuring the optional persistent database storage for your IQ Integrator.
 
-For production deployments, a PostgreSQL database is required to maintain your conversation state and session memory across pod restarts and deployments. Select one of the three persistent storage options based on your deployment environment.
+Production deployments require a PostgreSQL database to maintain conversation state and session memory across pod restarts and deployments. Select one of the three persistent storage options based on your deployment environment.
 
 !!!warning
     If you do not configure a persistent database, the system defaults to a temporary, in-memory SQLite database that deletes all session data whenever a pod restarts.

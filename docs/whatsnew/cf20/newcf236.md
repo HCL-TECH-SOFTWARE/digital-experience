@@ -118,7 +118,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
     - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
 
-    For more information, refer to [IQ](../../build_sites/iq/index.md).
+    For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
 
 ### OpenTelemetry Integration Guide
 
@@ -142,7 +142,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
         - Other Images: 9.7-1776104705
     - No iFixes
 
-    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
 

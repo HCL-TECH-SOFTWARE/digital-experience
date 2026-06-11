@@ -1,7 +1,7 @@
 # Backing up and restoring data
 
 !!! note "Database configuration required"
-    These procedures apply only if you completed the [Preparing the database](prepare-database.md) step. If you deploy the IQ backend server without a database, skip this section. For deployment options without a database, refer to [Limitations](limitations.md).
+    These procedures apply only if you completed the [Preparing the database](prepare-database.md) step. If you deploy the IQ backend server without a database, skip this section. For deployment options without a database, refer to [Limitations](../limitations.md).
 
 If you [configured a PostgreSQL database](prepare-database.md), the IQ backend server stores session and conversation data in that instance. Run regular backups to ensure data recovery if a failure occurs.
 

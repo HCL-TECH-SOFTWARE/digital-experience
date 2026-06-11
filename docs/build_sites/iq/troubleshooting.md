@@ -1,8 +1,6 @@
 # Troubleshooting IQ
 
-This section provides guidance on resolving common issues and capturing diagnostic information while using IQ. HCL DX log files and browser developer tools help isolate and analyze interface and connection errors.
-
-## Initial validation
+This section provides guidance on resolving common issues and capturing diagnostic information while using IQ. HCL Digital Experience (DX) log files and browser developer tools help isolate and analyze interface and connection errors.
 
 Before investigating specific errors, perform these basic checks:
 
@@ -13,11 +11,9 @@ Before investigating specific errors, perform these basic checks:
 - Confirm your corporate firewall or proxy allows WebSocket connections.
 - Verify that IQ is installed and enabled on your deployment.
 
-## Symptoms and solutions
+If the issue appears to be MCP-related, also verify that the `dx-mcp-server` service is deployed, reachable, and matched to the IQ chart version you installed.
 
-Review the following symptoms and solutions to resolve interface, performance, and connectivity issues with IQ.
-
-### Interface and display issues
+## User interface
 
 If interface or display issues occur, clear the browser cache and perform a hard refresh using **Ctrl+Shift+R** (or **Cmd+Shift+R** on Mac). For Safari, use **Cmd+Option+R**.
 
@@ -43,8 +39,9 @@ If the interface opens but messages receive no response, or the "Thinking..." in
 
 - Select **Start a new conversation** in the header, close and reopen the interface, or refresh the page to clear an expired session.
 - Temporarily disable your VPN to rule out network routing interference. If connectivity is restored, configure the VPN to allow WebSocket connections to the IQ endpoint.
-- Check if a corporate proxy or firewall is blocking the WebSocket connection to `/dx/api/iq/v1/ws`. Refer to [Client-side tracing](#client-side-tracing) for instructions on inspecting this connection in your browser.
+- Check if a corporate proxy or firewall is blocking the WebSocket connection to `/dx/api/iq/v1/ws`. Refer to [Client-side tracing](#enabling-client-side-tracing) for instructions on inspecting this connection in your browser.
 - If the network connection is valid but the interface remains frozen, contact your DX administrator to verify that the `dx-iq-integrator` backend service is running and reachable.
+- If IQ was recently upgraded, confirm that the `dx-mcp-server` service was upgraded at the same time and that the endpoint is responding.
 
 **Slow response times**
 
@@ -55,16 +52,16 @@ If IQ is consistently slow to respond:
 - Temporarily disable your VPN to determine if the network tunnel is introducing latency.
 - Contact your system administrator to check the backend load. High usage may require scaling the IQ container service.
 
-## Error messages
+### Error messages
 
 When a backend operation fails, the IQ interface displays a generic alert banner to the user:
 
 ![IQ Error Message Display](../../assets/HCL_IQ_With_Error_Message.png "IQ error message display"){: style="width: 400px; display: block; margin: 0 auto;"}
 
-To identify the underlying cause behind this banner, administrators can review the backend response payloads within the browser developer tools or examine the container logs to classify the issue:
+To identify the underlying cause behind this banner, review the backend response payloads within the browser developer tools or examine the container logs to classify the issue:
 
-| Error | Meaning | Resolution |
-|-------|---------|------------|
+| Error | Description | Solution |
+|-------|-------------|----------|
 | Communication error | An error occurred while communicating with the core DX server during a backend operation. | Make sure the core HCL DX server is active and reachable from the IQ integrator container. |
 | Connection error | The client-side WebSocket connection between the browser and the IQ backend failed to establish. | Check local network connectivity. Make sure corporate firewalls, VPNs, or reverse proxies allow WebSocket traffic on `/dx/api/iq/v1/ws`. |
 | Invalid format | The core DX server responded, but the data payload was in an unexpected or invalid format. | Make sure the HCL DX base platform and IQ components are running compatible versions. Check logs for API contract mismatches. |
@@ -73,11 +70,102 @@ To identify the underlying cause behind this banner, administrators can review t
 | Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
 | Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
+## Backend services
+
+If [validation](./installation/validation.md) fails, use this table to isolate the cause:
+
+| Issue | Possible cause | Solution |
+|-------|----------------|----------|
+| Pods not starting | Image pull errors | Verify image tags and repository access. |
+| Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](./installation/prepare-database.md). |
+| WebSocket errors | Network policy restrictions | Check Kubernetes network policies. |
+| Model Context Protocol (MCP) integration issues | Web Content Manager (WCM) or Digital Asset Management (DAM) not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values. |
+| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying services - Installing the IQ backend server](./installation/deploy-services.md#installing-the-iq-backend-server). |
+
+To inspect pod configurations and system logs:
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
+kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
+```
+
+### Connection failures
+
+If you encounter errors such as `Connection refused` or `Password authentication failed` while [verifying your database connectivity](./installation/validation.md#verifying-database-connectivity), the IQ Integrator cannot reach the database. Use the verification steps for your database type to locate the root cause.
+
+#### Internal database
+
+Check the persistence node logs to confirm the database and user were created automatically:
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> <DX_RELEASE_NAME>-persistence-node-0 -c persistence-node | grep -i "iq"
+```
+
+Expected output:
+
+```
+Creating IQ user "dx_iq_db_user"...
+Creating IQ database "iqdb"...
+```
+
+If the `security.iq.dbPassword` parameter was missing during the deployment upgrade, the log shows this warning:
+
+```text
+WARNING: No password specified for "dx_iq_db_user". Skipping IQ user and database creation.
+```
+
+#### External database
+
+Verify network connectivity from within the cluster to your external database instance. The correct tool, flags, and command structure depend entirely on your database type and network security configuration. Adjust the connection parameters in this sample command to match your specific database engine:
+
+```bash
+kubectl run pg-test --rm -it --image=postgres:16 --restart=Never -n <YOUR_NAMESPACE> -- \
+  psql "host=<DB_HOST> port=5432 dbname=iqdb user=<DB_USERNAME> password=<DB_PASSWORD> sslmode=require"
+```
+
+#### Runtime Controller (RTC)-managed database
+
+Check the Runtime Controller logs to confirm the automatic provisioning completed successfully:
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller | grep -i "iq database"
+```
+
+Expected output:
+
+```text
+IQ database setup completed successfully.
+```
+
+If the logs show `IQ database setup failed.`, verify that the `custom-credentials-iq-db` secret exists in the namespace and that `security.iq.customDbSecret` was defined correctly during deployment.
+
+## MCP Server
+
+Before investigating MCP-related errors, perform these basic checks:
+
+1. Confirm IQ is installed and enabled.
+2. Confirm `dx-iq-integrator` and `dx-mcp-server` services are running and healthy.
+3. Confirm network routing and DNS resolution between DX, IQ, and MCP services.
+4. Confirm no recent release mismatch between IQ and MCP server components.
+5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
+6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass or fail behavior, refer to [Managing endpoints and security](./installation/configuring-mcp.md#managing-endpoints-and-security).
+
+### Common symptoms and actions
+
+| Issue | Possible cause | Solution |
+|-------|----------------|----------|
+| IQ request does not return a response | MCP Server is unreachable, unhealthy, or routed incorrectly | Validate service health, route configuration, and MCP endpoint reachability. |
+| Repeated timeout behavior | Network latency, backend load, or upstream dependency delay | Test from an alternate network path, review backend load, and inspect IQ and MCP logs. |
+| Intermittent failures in scaled environments | Pod-level instability or routing inconsistency | Check pod health, replica status, and restart patterns. |
+| Payload-related request failures | Request body exceeds configured size limit | Validate payload size and review the `BODY_PARSER_JSON_LIMIT` configuration. |
+| Unable to connect to AI service | MCP Server cannot reach configured AI provider dependencies | Check provider credentials, secrets, and outbound connectivity from cluster services. |
+| Invalid format or protocol errors | Service version mismatch or contract mismatch across components | Verify compatible DX, IQ integrator, and MCP Server versions, and then review logs for parsing or schema failures. |
+
 ## Advanced diagnostics
 
 Use advanced diagnostics to isolate complex network, interface, or server-side issues. Administrators can trace client-side browser traffic or adjust server log levels to capture detailed backend performance data.
 
-### Client-side tracing
+### Enabling client-side tracing
 
 Capture detailed diagnostic information using browser developer tools to investigate WebSocket and interface issues.
 
@@ -87,27 +175,28 @@ Capture detailed diagnostic information using browser developer tools to investi
 
     ![IQ WebSocket Message Trace](../../assets/HCL_IQ_Debug_Network_Tab.png "WebSocket JSON-RPC frames in the browser Network tab")
 
-4. To export a full trace for [HCL Support](https://support.hcl-software.com/csm){target="_blank"}, right-click inside the **Console** tab and select **Save as** to export the log file.
+4. To export a full trace for [HCL Support](#contacting-hcl-support), right-click inside the **Console** tab and select **Save as** to export the log file.
 
-### Server-side logging and tracing
+### Enabling server-side logging and tracing
 
-IQ integrator logging is configured on the server side using the Helm chart. A configuration file (`log.aiIntegration`) mounts into the IQ integrator container at `/etc/global-config/log.aiIntegration`. This matches the standard pattern used across other DX services.
+To isolate deployment issues, enable debug logs for the IQ Integrator and MCP Server. Comparing timestamps across both logs helps pinpoint where processing failures occur.
 
-Follow these steps to configure and apply new log levels:
-
-1. Configure log levels in the `hcl-dx-iq` Helm chart under the logging section of your `values.yaml` file.
+1. Change the `logging` level in your `custom-iq-debug-values.yaml` file:
 
     ```yaml
     logging:
       integrator:
         level:
-          - ui:*=info,api:*=info  # Change to "debug" for detailed tracing
+          - "api:*=debug"  # Revert to "info" when done
       mcpServer:
         level:
-          - "api:*=info"
+          - "api:*=debug"  # Revert to "info" when done
     ```
 
     Adjust the logging granularity using these patterns:
+
+    !!! warning
+        `debug` logging produces high-volume output. Only use it while investigating an active issue, then revert the level to `info`.
 
     | Pattern | Description |
     |---------|-------------|
@@ -116,12 +205,67 @@ Follow these steps to configure and apply new log levels:
     | `ui:*=info` | Info-level logging for the UI layer |
     | `ui:*=debug` | Debug-level logging for the UI layer |
 
-2. Apply the configuration changes by running the `helm upgrade` command:
+2. Apply the updated settings:
 
     ```bash
-    helm upgrade <release-name> hcl-dx-iq -f values.yaml
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <YOUR_NAMESPACE> \
+      --reuse-values \
+      --values custom-iq-debug-values.yaml
     ```
 
-    ![IQ Console Logs](../../assets/HCL_IQ_Console_logs.png "Logs after enabling tracing in console")
+    - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
+    - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and chart path.
 
-If you encounter issues that cannot be resolved using these steps, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
+3. Reproduce the issue, then pull the logs from both services:
+
+    ```bash
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
+    kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server --tail=200
+    ```
+
+## Contacting HCL Support
+
+If you encounter issues that cannot be resolved using these steps, open a ticket through the [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}.
+
+!!! tip
+    Collect your Helm deployment values for both your HCL DX and IQ releases before opening a ticket. Support engineers require both datasets to diagnose configuration issues effectively.
+
+Collect your DX and IQ deployment values:
+
+```bash
+helm get values <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
+helm get values <IQ_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
+```
+
+- `<DX_RELEASE_NAME>`: The DX Helm release name (for example, `dx-deployment`).
+- `<IQ_RELEASE_NAME>`: The IQ Helm release name (for example, `dx-iq`).
+
+!!! warning "Sensitive values"
+    The output might contain passwords and secrets. Review and redact all sensitive credentials before sharing the data.
+
+If you are [using an external database](./installation/prepare-database.md#configuring-an-external-database), include these additional connectivity details:
+
+- Database host and port (for example, `iq-postgres.c9akciq32.us-east-1.rds.amazonaws.com:5432`).
+- Database name (for example, `iqdb`).
+- Whether TLS is enabled (`dbTlsEnabled: true` or `false`).
+- Network reachability confirmation, such as the output of this connection test:
+
+    ```bash
+    kubectl run -it --rm debug --image=postgres:15 --restart=Never -n <YOUR_NAMESPACE> -- \
+      psql "host=<DB_HOST> port=<DB_PORT> dbname=<DB_NAME> user=<DB_USER> sslmode=require" -c "\conninfo"
+    ```
+
+- Relevant database connection error segments from the IQ Integrator pod logs.
+
+???+ info "Related information"
+    - [Deploying services](./installation/deploy-services.md)
+    - [Configuring the MCP Server](./installation/configuring-mcp.md)
+    - [Preparing the database](./installation/prepare-database.md)
+    - [Validating the deployment](./installation/validation.md)
+    - [Enabling IQ](enable.md)
+    - [Using IQ](usage.md)
+    - [IQ limitations](limitations.md)
+    - [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}

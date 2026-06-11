@@ -20,14 +20,14 @@ Ensure your environment meets the following requirements:
 Refer to the following pages for comprehensive information about IQ:
 
 - **[Installing IQ](installation/index.md)**  
-This section describes the steps to install and configure the IQ backend services in your DX environment.
+This section describes the steps to install and configure the IQ backend services (IQ Integrator and MCP Server) in your DX environment.
 - **[Enabling IQ](enable.md)**  
 This section provides detailed instructions for enabling, configuring, and deploying IQ in your DX environment.
 - **[Accessing IQ](./access.md)**  
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
-- **[IQ Limitations](./limitations.md)**  
+- **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  
 This section provides guidance for resolving common connectivity or functionality problems.
