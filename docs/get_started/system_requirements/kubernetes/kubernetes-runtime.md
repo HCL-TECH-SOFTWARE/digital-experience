@@ -63,7 +63,7 @@ HCL DX provides a tool called "Prereqs Checker" that runs several checks to conf
 
 The primary objective of the Prereqs Checker is to learn whether the specified prerequisites are met and to inform users of the result in the logs. You can also use the checker to discover basic information about the file system of the mounted volumes, which helps track the issues related to the file systems.
 
-## WAS, JDK, UBI, and iFix versions
+## WAS, JDK, UBI, and iFix versions <!--pending IFixes-->
 
 This table provides information about the WebSphere Application Server (WAS), Java Development Kit (JDK), Red Hat Universal Base Image (UBI) level, and iFix versions for each CF.
 
