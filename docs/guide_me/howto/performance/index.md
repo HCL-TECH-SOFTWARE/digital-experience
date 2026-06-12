@@ -9,6 +9,6 @@ Learn how to improve DX database performance on a DB2 database.
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune Web Content Manager (WCM) to reduce your query time.  
 - **[How to warm up your Portal site](./WarmUpPortalSite.md)**  
-Learn how to improve DX performance by warming up your site at startup. 
+Learn how to improve DX performance by warming up your site at startup.  
 - **[How to analyze JCR and XPath query performance](./AnalyzingJCRQueryPerformanceXPath.md)**  
-Learn how to analyze JCR and XPath query performance.
+Learn how to analyze JCR and XPath query performance.  

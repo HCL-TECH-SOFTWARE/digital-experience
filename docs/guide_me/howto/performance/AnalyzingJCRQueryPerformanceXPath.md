@@ -2,50 +2,92 @@
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience 9.5 and higher
 
 ## Introduction
 
-This how to will help you analyze JCR and XPath query performance. 
+This article describes how to analyze the JCR and XPath query performance.  
 
 ## Instructions
 
-The following steps show how to search through a JCR trace for data showing the query performance. Note that this assumes a trace was collected using this tracestring:
+The following steps show how to search through a JCR trace for data showing the query performance. Note that this assumes a trace was collected using this trace string:
 
->com.ibm.icm.jcr.query.QueryImpl=finest:com.ibm.icm.ci.query.impl.ResultSetProcessor=finest:com.ibm.icm.da.portable.query.*=finest:com.ibm.icm.da.portable.common.sql.DefaultPConnection=finest:com.ibm.icm.da.portable.common.sql.PPreparedStatement=finest:com.ibm.icm.da.portable.common.sql.PStatement=finest:com.ibm.icm.jcr.query.QueryResultIteratorImpl=finest
+```text
+*=info:com.ibm.icm.jcr.query.QueryImpl=finest:com.ibm.icm.ci.query.impl.ResultSetProcessor=finest:com.ibm.icm.da.portable.query.*=finest:com.ibm.icm.da.portable.common.sql.DefaultPConnection=finest:com.ibm.icm.da.portable.common.sql.PPreparedStatement=finest:com.ibm.icm.da.portable.common.sql.PStatement=finest:com.ibm.icm.jcr.query.QueryResultIteratorImpl=finest
+```
 
 The following lines in the trace will show the XPath query being sent to JCR, the generated SQL being sent to the database, and the performance for each:
 
-- The entry to JCR query: Search string: QueryImpl execute includeLocks
+### The entry to JCR query
 
->Example: [datetime] 0000006c QueryImpl 2 com.ibm.icm.jcr.query.QueryImpl execute includeLocks=false includeReferences=false includePaths=false statement=//element(, icm:documentLibrary)[@jcr:uuid = '5375be0046c9f315bf53bf996f9fe841']//(element(, ibmcontentwcm:webContent) | element(*, ibmcontentwcm:draftSummary))[@ibmcontentwcm:workflowStage = '3d115a0046c9fef2bf88bf996f9fe841' and (not(@ibmcontentwcm:isPrototype) or @ibmcontentwcm:isPrototype = fn:false()) and (@ibmcontentwcm:classification = 'Content' or @ibmcontentwcm:draftClassification = 'Content')] propertiesToRetrieve=null
+Search string: QueryImpl execute includeLocks  
 
-- The SQL sent to the database: Search string: Generated SQL with param markers
+For example:  
 
->Example: [datetime] 0000006c ResultSetProc 3 Generated SQL with param markers included: WITH NONLEAFS AS (SELECT Links_18.SIID , Links_18.SVID , Links_19.TIID , Links_19.TVID , Links_19.TIX , Links_19.TCTID , <200 more lines....> NodesTab_17.IID)
+```logs
+[Timestamp] 0000006c QueryImpl 2 com.ibm.icm.jcr.query.QueryImpl execute includeLocks=false includeReferences=false includePaths=false statement=//element(, icm:documentLibrary)[@jcr:uuid = '5375be0046c9f315bf53bf996f9fe841']//(element(, ibmcontentwcm:webContent) | element(*, ibmcontentwcm:draftSummary))[@ibmcontentwcm:workflowStage = '3d115a0046c9fef2bf88bf996f9fe841' and (not(@ibmcontentwcm:isPrototype) or @ibmcontentwcm:isPrototype = fn:false()) and (@ibmcontentwcm:classification = 'Content' or @ibmcontentwcm:draftClassification = 'Content')] propertiesToRetrieve=null
+```
 
-- The actual query: Search string: executeQuery
+### The SQL sent to the database
 
->Example [datetime] 0000006c PPreparedStat 3 com.ibm.icm.da.portable.common.sql.PPreparedStatement executeQuery() ==> [...]
+Search string: Generated SQL with param markers  
 
-- The return from the query: Search string: openQueryCursor
+For example:  
 
->Example: [datetime] 0000006c Query 2 com.ibm.icm.da.portable.query.Query openQueryCursor()
+```logs
+[Timestamp] 0000006c ResultSetProc 3 Generated SQL with param markers included: WITH NONLEAFS AS (SELECT Links_18.SIID , Links_18.SVID , Links_19.TIID , Links_19.TVID , Links_19.TIX , Links_19.TCTID , <200 more lines....> NodesTab_17.IID)
+```
 
-NOTE: The difference between the executeQuery() and the openQueryCursor() is the time spent by the database server executing the SQL (about 15 seconds here).
+### The actual query
 
-- The result size of the query: Search string: query result size
+Search string: executeQuery  
 
->Example: [datetime] 0000006c QueryResultIt 2 com.ibm.icm.jcr.query.QueryResultIteratorImpl QueryResultIteratorImpl query result size=34
+For example:  
 
-- The query execute time: Search string: Time to execute
+```logs
+[Timestamp] 0000006c PPreparedStat 3 com.ibm.icm.da.portable.common.sql.PPreparedStatement executeQuery() ==> [...]
+```
 
->Example: PPreparedStat 3 executeQuery: Time to execute(msec): 54773
+### The return from the query
 
-- Before that, Query Prepare time will come out on a line like this:
->DefaultPConne 3 prepareStatement: Time to prepare(msec): 0
+Search string: openQueryCursor  
 
-**Xpath query issues**
+For example:  
+
+```logs
+[Timestamp] 0000006c Query 2 com.ibm.icm.da.portable.query.Query openQueryCursor()
+```
+
+!!!note
+    The difference between the executeQuery() and the openQueryCursor() is the time spent by the database server executing the SQL (about 15 seconds here).
+
+### The result size of the query
+
+Search string: query result size  
+
+For example:  
+
+```logs
+[Timestamp] 0000006c QueryResultIt 2 com.ibm.icm.jcr.query.QueryResultIteratorImpl QueryResultIteratorImpl query result size=34
+```
+
+### The query execute time
+
+Search string: Time to execute  
+
+For example:  
+
+```logs
+PPreparedStat 3 executeQuery: Time to execute(msec): 54773
+```
+
+Before that, query prepare time will come out on a line like this:
+
+```logs
+DefaultPConne 3 prepareStatement: Time to prepare(msec): 0
+```
+
+### Xpath query issues
 
 The JCR spec declares that nodes within the repository must be retrievable by way of a query language. The query language supported by our repository implementation is XPath. Technically, a subset of the full XPath specification is supported by the repository for retrieving nodes from the repository.
 
@@ -55,6 +97,6 @@ The execution of an XPath query against the repository includes two primary step
 
 In order to debug any issues with XPath queries that are valid but not returning results as expected, there are the following steps:
 
-1. Recreate the failing query with both the application trace (WCM trace) and JCR trace (com.ibm.icm.*=finest). The application trace will identify the XPath query being issued as well as the context of that query. The JCR trace will identify the generated SQL that has been generated from the XPath.
+1. Recreate the failing query with both the application trace (WCM trace) and JCR trace (**com.ibm.icm.*=finest**). The application trace will identify the XPath query being issued as well as the context of that query. The JCR trace will identify the generated SQL that has been generated from the XPath.
 
-2. Once you gather the traces, obtain the entry and exit points from the query, as well as the generated SQL.
+2. Once you gather the traces, obtain the entry and exit points from the query, as well as the generated SQL.  
