@@ -21,10 +21,10 @@ Learn how to expedite the purging of pending deletes when running the `clearVers
 - **[How to find the virtual portal name by ObjectID](./DetermineVPObjectID.md)**  
 Learn how to determine the virtual portal (VP) name associated an ObjectID (OID).  
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
-Learn how to increase the duration of transaction timeouts to reduce timeout errors.
+Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
-Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
+Learn how to create a system report to check DX configuration settings and compare them with other DX environments.  
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[How to determine if WebSphere Application Server is Traditional or Liberty](./DetermineWebsphereAppServer.md)**  
-Learn how to differentiate between WebSphere Traditional Server and WebSphere Liberty Server.
+Learn how to use JavaScript to find and replace text on a Portal page.    
+- **[How to determine the HCL DX application server runtime from the logs](./DetermineWebsphereAppServer.md)**  
+Learn how to determine the HCL DX application server runtime from the logs.  
