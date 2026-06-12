@@ -1,4 +1,4 @@
-# How to Add Applications to the Application Palette in Batches
+# How to add applications to the Application Palette in batches
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Within Portal, you can add applications to a page from the site toolbar.  You can add new categories to the site toolbar to organize your applications.  After you deploy Portal, you can customize the Create > Applications user interface in the site toolbar.  Add categories that reflect your business needs and website organization.
+Within HCL DX, you can add applications to a page from the site toolbar. You can add new categories to the site toolbar to organize your applications. After you deploy HCL DX, you can customize the Create > Applications user interface in the site toolbar. Add categories that reflect your business needs and website organization.
 
 It is possible to add applications to your custom application palette category one at a time, but for larger installations with many custom applications, you can follow steps below to create custom categories and bulk add portlets to the application palette.
 
@@ -14,7 +14,7 @@ It is possible to add applications to your custom application palette category o
 
 This is a two step process and requires XMLAccess and access to your Portal Administration (Managed Pages) view.
 
-1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML.
+1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML-file that you might need to create and use as input file for your XMLAccess command:
 
     ```html
     <request
@@ -32,20 +32,20 @@ This is a two step process and requires XMLAccess and access to your Portal Admi
     <tag action="update" resourceref="<portlet object ID>" domain="comm" owner="<your portal admin full distinguished name and domain>" locale="en">TagName</tag>
     ```
 
-    You can use this format to create a tag if it doesn't exist already and you can assign as many tags as you want to as many portlets as you want.  In this way you could have custom portlets show up under just one category or multiple different categories.
+    You can use this format to create a tag, if it doesn't exist already and you can assign as many tags as you want to as many portlets as you want. In this way you could have custom portlets show up under just one category or multiple different categories.
 
-    I can now get a portlet entity feed of all portlets tagged with my custom tag, called CustomAppCategory, by using this URL:
+    You can now get a portlet entity feed of all portlets tagged with your custom tag, called CustomAppCategory, by using this URL:
 
-    ```text
+    ```URL
     http://host:port/wps/mycontenthandler?uri=rm:empty?tmparam=tm%3aname%3aCustomAppCategory
     ```
 
-    This is the portlet entity feed.  We need to use this when we create a category in the next step.
+    This is the portlet entity feed.  You need to use this when you create a category in the next step.
 
-2. Next, you need to follow the steps here to create a new category:
+2. Next, please do the following steps to create a new category:
 
-    a. Navigate to Administration -> Managed Pages -> Content Root -> Hidden Pages -> Find the applications root. The unique name is: com.ibm.portal.toolbar.applications.category.label.root.
+    a. Navigate to **Administration > Managed Pages > Content Root > Hidden Pages > Find the applications root**. The unique name is: **com.ibm.portal.toolbar.applications.category.label.root**.  
 
-    b. Under the application category root label, create a new URL. Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For me, I pasted the following in: rm:empty?tmparam=tm%3aname%3aCustomAppCategory.
+    b. Under the application category root label, create a new URL. Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.
 
 This then created a category and added all portlets tagged with that category to the application category immediately.
