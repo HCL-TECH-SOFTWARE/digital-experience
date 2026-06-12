@@ -31,4 +31,6 @@ Run the ConfigEngine batch or script file with the import-libs-to-vp parameter t
 !!! note
     This task imports libraries for both Site Builder and the Script Application. If you have already run this task to import your Script Application libraries, you won't have to run this task again for Site Builder.
 
-For HCL DX Compose, the ConfigEngine utility is not available. Instead, you can use the Web Content Manager (WCM) Module utility to export and import the Site Builder Template library. For more information, see [Importing the Site Builder Template library onto a new virtual portal](https://help.hcl-software.com/digital-experience/dx-compose/CF235/deploy_dx/manage/cfg_webengine/import_site_builder_library/).
+If you are also exporting the Blueprint Site Template to the virtual portal, you must export all Blueprint Libraries. For more information, see [Install Blueprint in Virtual Portals](https://pages.git.cwp.pnp-hcl.com/websphere-portal/blueprint-micro-interaction-components/latest?path=/docs/how-to-install-blueprint-in-virtual-portals--documentation).
+
+For HCL DX Compose, the ConfigEngine utility is not available. Instead, you can use the Web Content Manager (WCM) Module utility to export and import the Site Builder Template library. For more information, see [Importing the Site Builder Template library onto a new virtual portal](https://help.hcl-software.com/digital-experience/dx-compose/latest/deploy_dx/manage/cfg_webengine/import_site_builder_library/).
