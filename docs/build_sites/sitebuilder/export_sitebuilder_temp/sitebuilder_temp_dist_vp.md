@@ -21,7 +21,7 @@ If the Site Builder template or page templates exist on the target virtual porta
 
     Site Builder exports the Site Builder template and then imports it to the target virtual portal. The process can take a few minutes.
 
-If you are also exporting the Blueprint Site Template to the virtual portal, you must export all Blueprint Libraries. For more information, see [Install Blueprint in Virtual Portals](https://pages.git.cwp.pnp-hcl.com/websphere-portal/blueprint-micro-interaction-components/latest?path=/docs/how-to-install-blueprint-in-virtual-portals--documentation).
+If you are also exporting the Blueprint Site Template to the virtual portal, you must export all Blueprint Libraries. For more information, see [Install Blueprint in Virtual Portals](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/how-to-install-blueprint-in-virtual-portals--documentation).
 
 <!--
 **Parent topic:**[Exporting Site Builder templates to other servers](../sitebuilder/sitebuilder_temp_dist.md)
