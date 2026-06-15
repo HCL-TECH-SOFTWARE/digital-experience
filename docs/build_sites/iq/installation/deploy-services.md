@@ -212,11 +212,13 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     
     - **MCP_SERVER_LIST misconfiguration**: If you see connection errors to the MCP Server in Integrator logs, verify:
       ```bash
-      kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}'
-      # Should return: <IQ_RELEASE_NAME>-mcp-server-<random>
+      kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}' && echo ""
+      # Expected output: <IQ_RELEASE_NAME>-mcp-server-<random>
       
-      # Verify the service DNS name resolves
-      kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAMESPACE> -- curl http://<IQ_RELEASE_NAME>-mcp-server:3000/probe/live
+      # Verify the service DNS name resolves and responds
+      kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAMESPACE> -- \
+        curl -w "\nHTTP Status: %{http_code}\n" http://<IQ_RELEASE_NAME>-mcp-server:3000/probe/live
+      # Expected output: "MCP server live" with "HTTP Status: 200"
       ```
     - **Incorrect release name used**: Confirm your release name matches the one used in the `MCP_SERVER_LIST` value (e.g., if installed with `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`).
     - **LiteLLM connectivity**: Check Integrator can reach the LiteLLM proxy with the correct API key set in `LITELLM_API_KEY`.
