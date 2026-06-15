@@ -88,6 +88,16 @@ configuration:
   # LiteLLM Proxy configuration
   litellm:
     liteLlmUrl: "<LITELLM_URL>"
+
+# CRITICAL: MCP Server list configuration
+# Must match your Helm release name. Default points to 'dx-ai' release.
+# If your release name is different (e.g., 'dx-iq'), update accordingly.
+# Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
+environment:
+  pod:
+    integrator:
+      - name: "MCP_SERVER_LIST"
+        value: "http://<IQ_RELEASE_NAME>-mcp-server:3000"
 ```
 
 - `<YOUR_ARTIFACTORY>`: The container image registry (for example, `myregistry.example.com`).
@@ -97,6 +107,7 @@ configuration:
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (for example, `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: The external DX hostname used by the LLM for gathering context (for example, `dx.example.com`)
 - `<LITELLM_URL>`: The LiteLLM Proxy URL (for example, `https://litellm.example.com`) for operational deployments.
+- **`<IQ_RELEASE_NAME>`** (**REQUIRED**): The Helm release name used when installing this IQ chart. This must match your deployment's release name (for example, if installing with `helm install dx-iq ...`, use `dx-iq-mcp-server`). The default in `defaults.json` assumes `dx-ai-mcp-server`, which will fail if your release name differs. Always override this value during installation.
 
 !!! note "DX service discovery"
     Ensure the `internalHost` value matches your DX deployment type:
@@ -117,9 +128,20 @@ helm install dx-iq \
   --values custom-iq-values.yaml \
   --set-json 'environment.pod.integrator=[
   {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+  {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
 ]'
 ```
+
+!!! warning "Release name must match MCP_SERVER_LIST"
+    The `MCP_SERVER_LIST` environment variable must reference the correct MCP Server deployment based on your IQ release name. In the example above, the release is `dx-iq`, so the MCP Server is `dx-iq-mcp-server`. 
+    
+    **If your release name differs**, update the value accordingly:
+    - IQ Release name: `dx-iq` → Use: `http://dx-iq-mcp-server:3000`
+    - IQ Release name: `dx-ai` → Use: `http://dx-ai-mcp-server:3000`
+    - IQ Release name: `my-iq` → Use: `http://my-iq-mcp-server:3000`
+    
+    **Failure to set this correctly will cause the Integrator pod to fail health checks** and enter a `CrashLoopBackOff` state.
 
 - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
 - `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
@@ -150,7 +172,8 @@ helm install dx-iq \
   --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
   --set-json 'environment.pod.integrator=[
     {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+    {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
   ]'
 ```
 
@@ -184,6 +207,19 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
+
+    **Common issues if Integrator pod fails to start:**
+    
+    - **MCP_SERVER_LIST misconfiguration**: If you see connection errors to the MCP Server in Integrator logs, verify:
+      ```bash
+      kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}'
+      # Should return: <IQ_RELEASE_NAME>-mcp-server-<random>
+      
+      # Verify the service DNS name resolves
+      kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAMESPACE> -- curl http://<IQ_RELEASE_NAME>-mcp-server:3000/probe/live
+      ```
+    - **Incorrect release name used**: Confirm your release name matches the one used in the `MCP_SERVER_LIST` value (e.g., if installed with `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`).
+    - **LiteLLM connectivity**: Check Integrator can reach the LiteLLM proxy with the correct API key set in `LITELLM_API_KEY`.
 
 ## Upgrading and maintaining the IQ backend components
 
