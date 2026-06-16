@@ -12,11 +12,11 @@ Learn how to enable or disable the Managed Pages feature of HCL DX.
 Learn how to obtain the UUID and Path of WCM content objects through the Linux bash command line.  
 - **[How to identify new managed pages in HCL DX](./IdentifyNewManagedPages.md)**  
 Learn how to identify new managed pages in HCL DX.  
-- **[How to use JavaServer Pages (JSPs) in WCM](./useJSPinWCM.md)**  
-Learn how to use JSP components in HCL DX using WCM.
+- **[How to use JSPs in WCM](./useJSPinWCM.md)**  
+Learn how to use JavaServer Pages (JSPs) components in HCL DX using WCM.
 - **[How to use XML Access](./xmlaccess_faq.md)**  
 Learn how to use the XML Access command line tool.  
-- **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
-Learn how to work with JSF portlets on HCL DX pages.
-- **[Tips for using XSL with HCL DX and WCM](./UsingXSLWithPortalAndWCM.md)**  
-Learn tips for using XSL with HCL DX and WCM.
+- **[How to use XSL with HCL DX and WCM](./UsingXSLWithPortalAndWCM.md)**  
+Learn how to resolve XML and XSL rendering issues by overriding default content types, managing query string parameters, and converting text data into XML objects.
+- **[How to work with JSFs on HCL DX pages](./JSF_hasBaseURL.md)**  
+Learn how to work with JavaServer Faces (JSFs) portlets on HCL DX pages.
