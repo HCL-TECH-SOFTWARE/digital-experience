@@ -10,7 +10,7 @@ Security Assertion Markup Language (SAML) is an OASIS standard for representing 
 
 HCL Digital Experience (DX) often runs in environments that include multiple integrated components. In these cases, SAML SSO is a common choice to provide a seamless user experience. Because HCL DX is based on WebSphere Application Server (WAS) middleware technology and uses the WAS security layer, SAML SSO is available in HCL DX through WAS.
 
-This article describes the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and the steps to implement it for HCL DX with a generic identity provider (IdP).  
+This article describes the SAML 2.0 standard, the SAML SSO capabilities available in WAS, and the steps to implement it for HCL DX with a generic identity provider.  
 
 ### SAML 2.0 standard
 
@@ -27,9 +27,9 @@ The SP supports four bindings, and the IdP supports three. This results in 12 po
 
 ### IdP-initiated SSO
 
-To access a protected resource on the SP, the user must first authenticate with the IdP. The IdP then redirects the user to the SP, including a **SAMLResponse** with the user’s authentication information.
+To access a protected resource on the SP, the user must first authenticate with the IdP. The IdP then redirects the user to the SP, including a SAML Response with the user’s authentication information.
 
-Because the SP trusts the IdP, it can validate the **SAMLResponse** and create an authenticated session without requiring additional credentials.
+Because the SP trusts the IdP, it can validate the SAML Response and create an authenticated session without requiring additional credentials.
 
 The IdP can also send the user directly to the SP without requiring a manual choice in these cases:
 
@@ -40,22 +40,22 @@ The IdP can also send the user directly to the SP without requiring a manual cho
 
 In this scenario, the SP is the first component contacted by the user.
 
-If the user is not authenticated, the SP redirects the user to the IdP. The redirect includes a **SAMLRequest** that provides the IdP with the information required to authenticate the user and redirect them back to the SP.
+If the user is not authenticated, the SP redirects the user to the IdP. The redirect includes a SAML Request that provides the IdP with the information required to authenticate the user and redirect them back to the SP.
 
-The key difference between IdP-initiated and SP-initiated SSO is the presence of the **SAMLRequest** when the IdP is contacted. The second part of the flow—from IdP to SP—is the same in both scenarios.  
+The key difference between IdP-initiated and SP-initiated SSO is the presence of the SAML Request when the IdP is contacted. The second part of the flow—from IdP to SP—is the same in both scenarios.  
 
 ### WebSphere Application Server limitation
 
-With WebSphere Application Server v8.5.5.x, WAS only supports IdP-initiated SSO. It cannot generate the required **SAMLRequest** defined by the SAML standard for SP-initiated SSO.
+WAS v8.5.5.x only supports IdP-initiated SSO. It cannot generate the required SAML Request defined by the SAML standard for SP-initiated SSO.
 
 To avoid requiring users to select the correct link for redirection to WAS, use this approach:
 
 1. The user requests a WAS-secured resource.  
 2. A SAML TAI is in place. If the user is not already authenticated, it redirects the user to the IdP URL. This URL should include a keyword as a URL parameter that the IdP can use after login.  
-3. The browser generates an additional cookie, **WasSamlSpReqURL**, which identifies the originally requested resource.  
+3. The browser generates an additional cookie, `WasSamlSpReqURL`, which identifies the originally requested resource.  
 4. The IdP authenticates the user and sends them back to WAS. The redirect goes to a SAML application deployed on WAS called the Assertion Consumer Service (ACS).  
-5. The ACS validates and processes the **SAMLResponse** from the IdP. It creates the authenticated session on WAS and issues the LTPA cookie for the user.  
-6. If the **WasSamlSpReqURL** cookie is available, the user is redirected to the originally requested resource as an authenticated user. Otherwise, the user is redirected to the URL configured in the TAI.  
+5. The ACS validates and processes the SAML Response from the IdP. It creates the authenticated session on WAS and issues the LTPA cookie for the user.  
+6. If the `WasSamlSpReqURL` cookie is available, the user is redirected to the originally requested resource as an authenticated user. Otherwise, the user is redirected to the URL configured in the TAI.  
 
 ![WAS IdP authentication flow diagram](./files/appnserverlimit.jpg)  
 
@@ -70,7 +70,7 @@ The sample configuration provided is from a real-world experience with an F5 as 
 
 Use the following instructions to implement SAML in HCL DX.  
 
-### Install the SAML ACS application
+### Installing the SAML ACS application
 
 A new enterprise application must be installed. In the WAS Admin Console, follow these steps:
 
@@ -78,21 +78,21 @@ A new enterprise application must be installed. In the WAS Admin Console, follow
    ![New enterprise application](./files/saml_acs_appn.jpg)
 2. Select **Remote file system** and choose the EAR file `/opt/IBM/WebSphere/AppServer/installableApps/WebSphereSamlSP.ear`.
    ![Choose EAR](./files/saml_acs_ear.jpg)
-3. Click **Next** three times.  
-4. Click **Finish**.  
+3. Select **Next** three times.  
+4. Select **Finish**.  
 5. Save the configuration.
 
-### Configure SAML TAI
+### Configuring SAML TAI
 
-Log on to the WebSphere Application Server administrative console.  
+Log on to the WAS administrative console.  
 
-1. Click **Security > Global security > Web and SIP security > Trust association**.  
+1. Go to **Security > Global security > Web and SIP security > Trust association**.  
 2. Under the **General Properties** heading, make sure the **Enable trust association** check box is not selected.  
-3. Click **Interceptors**.  
+3. Select **Interceptors**.  
     ![Enable trust association](./files/saml_tai.jpg)  
-4. Click **New** and enter `com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor` in the *Interceptor class name* field.  
+4. Select **New** and enter `com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor` in the **Interceptor class name** field.  
     ![Interceptor Name](./files/config_saml_tai2.jpg)  
-5. **Configure Custom Properties** — Under **Custom properties**, fill in the following information:  
+5. Under **Custom properties**, enter the following information:  
 
     ```text
     sso_1.sp.acsUrl = https://<hostname>:<sslport>/samlsps/wps/
@@ -100,30 +100,30 @@ Log on to the WebSphere Application Server administrative console.
     sso_1.sp.idMap = localRealm
     ```
 
-6. Click **OK**.  
-7. Go back to **Security > Global security** and click **Custom properties**.  
+6. Select **OK**.  
+7. Go to **Security > Global security** and select **Custom properties**.  
 8. Look for `com.ibm.websphere.security.DeferTAItoSSO` and replace the existing value with `com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor`.  
 
     !!! note
         The property `com.ibm.websphere.security.DeferTAItoSSO` was previously used in the default configuration of all installed servers.  
         Now it is only used as part of the SAML configuration.  
 
-9. Click **OK**.  
+9. Select **OK**.  
 10. Restart the WebSphere Application Server.  
 
-### Add IdP
+### Adding IdP
 
 To use the WebSphere Application Server SAML service provider for single sign-on with an identity provider, you need to add the identity provider as a partner. From the IdP, export the metadata in XML format, then follow this procedure:  
 
 1. Start the WebSphere Application Server.  
 
-2. Start the **wsadmin** command-line utility from the `<AppServer_root>/bin` directory by entering the following command:  
+2. Start the `wsadmin` command-line utility from the `<AppServer_root>/bin` directory by entering the following command:  
 
     ```bash
     /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
     ```
 
-3. At the wsadmin prompt, enter:  
+3. At the `wsadmin` prompt, enter:  
 
     ```wsadmin
     AdminTask.importSAMLIdpMetadata('-idpMetadataFileName <IdPMetaDataFile> -idpId 1 -ssoId 1 -signingCertAlias <idpAlias>')
@@ -138,7 +138,7 @@ To use the WebSphere Application Server SAML service provider for single sign-on
     AdminConfig.save()
     ```
 
-5. Exit the wsadmin command utility using the following command:  
+5. Exit the `wsadmin` command utility using the following command:  
 
     ```wsadmin
     quit
@@ -146,26 +146,26 @@ To use the WebSphere Application Server SAML service provider for single sign-on
 
 6. Restart the WebSphere Application Server.  
 
-### Add IdP realms as trusted realms
+### Adding IdP realms as trusted realms
 
-For each identity provider (IdP) used with your WebSphere Application Server service provider, you must grant inbound trust to all realms that the IdP uses.  
+For each IdP used with your WAS service provider, you must grant inbound trust to all realms that the IdP uses.  
 
-1. Log on to the WebSphere Application Server administrative console.  
-2. Click **Security > Global security**.  
+1. Log on to the WAS administrative console.  
+2. Go to **Security > Global security**.  
 3. Under **User account repository**, click **Configure**.  
-4. Click **Trusted authentication realms – inbound**.  
-5. Click **Add External Realm**.  
+4. Select **Trusted authentication realms – inbound**.  
+5. Select **Add External Realm**.  
 6. Enter the external realm name.  
-7. Click **OK**, and then click **Save** to update the master configuration.  
+7. Select **OK > Save** to update the master configuration.  
 
-### Export data for IdP
+### Exporting data for IdP
 
-Each identity provider (IdP) used with your WebSphere Application Server service provider must be configured to add the service provider as a single sign-on (SSO) partner. The procedure for adding a service provider partner to an IdP depends on the specific IdP. For instructions, see the documentation for your IdP.  
+Each IdP used with your WebSphere Application Server service provider must be configured to add the service provider as an SSO partner. The procedure for adding a service provider partner to an IdP depends on the specific IdP. For instructions, see the documentation for your IdP.  
 
-If your IdP supports using a metadata file to add the service provider as a federation partner, you can use the **wsadmin** command-line utility to export the service provider metadata.  
+If your IdP supports using a metadata file to add the service provider as a federation partner, you can use the `wsadmin` command-line utility to export the service provider metadata.  
 
 1. Start the WebSphere Application Server.  
-2. Start the **wsadmin** command-line utility from the `<AppServer_root>/bin` directory by entering:  
+2. Start the `wsadmin` command-line utility from the `<AppServer_root>/bin` directory by entering:  
 
     ```bash
     /opt/IBM/WebSphere/AppServer/bin/wsadmin.sh -lang jython
@@ -180,10 +180,10 @@ If your IdP supports using a metadata file to add the service provider as a fede
     - `<SpMetaDataFile>` is the full path name of the SP metadata file generated by the script.  
     - This file must be imported into your IdP.  
 
-### Configure the WAS security context
+### Configuring the WAS security context
 
-1. Log on to the WebSphere Application Server administrative console.  
-2. Click **Security > Global security > Web and SIP security > Trust association > com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor**.  
+1. Log on to the WAS administrative console.  
+2. Go to **Security > Global security > Web and SIP security > Trust association > com.ibm.ws.security.web.saml.ACSTrustAssociationInterceptor**.  
 
     ![Enable trust association](./files/confwas_sec_context.jpg)  
 
@@ -212,17 +212,17 @@ If your IdP supports using a metadata file to add the service provider as a fede
     |`sso_1.idp_1.certAlias`     | `<idpAlias>`                                                                                          |
     |`sso_1.sp.targetUrl`        | `https://<dx_hostname>/wps/myportal`                                                                  |  
 
-### Check login attribute
+### Verifying login attribute
 
 The IdP passes the user ID to be authenticated in the SAML request. This ID must match one of the user ID values available for standard HCL DX login.  
 
-1. Log on to the WebSphere Application Server administrative console.  
+1. Log on to the WAS administrative console.  
 
-2. Click **Security > Global security**.  
+2. Go to **Security > Global security**.  
 
 3. Under **User account repository**, click **Configure**.  
 
-4. Click the LDAP where users are stored.  
+4. Select the LDAP where users are stored.  
 
 5. In **Federated repository properties for login**, check the attributes that are used for login. Add additional attributes if needed (separate multiple attributes with a semicolon).  
 
@@ -232,21 +232,21 @@ The IdP passes the user ID to be authenticated in the SAML request. This ID must
     Federated repository properties for login = uid;mail
     ```
 
-6. Click **OK**.  
+6. Select **OK**.  
 
 7. Save the configuration.  
 
-### Enable TAI
+### Enabling TAI
 
 The last step is to enable TAI. After this step, the only way to authenticate to HCL DX is through the IdP, and it will work only for users who have a matching email in the HCL Portal User Registry.  
 
-1. Log in to the WebSphere Application Server administrative console.  
+1. Log in to the WAS administrative console.  
 
-2. Click **Security > Global security > Web and SIP security > Trust association**.  
+2. Go to **Security > Global security > Web and SIP security > Trust association**.  
 
 3. Under the **General Properties** heading, select the **Enable trust association** check box.  
 
-4. Click **OK**.  
+4. Select **OK**.  
 
 5. Save the configuration.  
 
@@ -254,36 +254,36 @@ The last step is to enable TAI. After this step, the only way to authenticate to
 
 ### Setting the SAML rule for the NameID mapping
 
-When using AD FS it might be needed to define a SAML rule on IdP side to make sure that the NameID will be included in the SAML response. This is needed, because the ACSTrustAssociationInterceptor require the nameID to handle the SAML response correctly.  
+When using Active Directory Federation Services (AD FS), you must define a SAML rule on the identity provider (IdP) side to ensure that the SAML response includes the NameID attribute. The `ACSTrustAssociationInterceptor` class requires the NameID attribute to process the SAML response correctly.
 
-Relying Party trust in ADFS need to be configured to issue the following claim:  
+Configure the relying party trust in AD FS to issue a claim with these configuration values:
 
-**Claim rule name:** NameID Rule  
-**Rule template:** Transform an Incoming Claim  
-**Incoming claim type:** Common Name  
-**Incoming name ID format:** Unspecified  
-**Outgoing claim type:** Name ID  
-**Outgoing name ID format:** Unspecified  
+| Setting | Value |
+|---------|-------|
+| Claim rule name | NameID Rule |
+| Rule template | Transform an Incoming Claim |
+| Incoming claim type | Common Name |
+| Incoming Name ID format | Unspecified |
+| Outgoing claim type | Name ID |
+| Outgoing Name ID format | Unspecified |
 
-### Troubleshooting
+### Troubleshooting SAML configurations
 
-**Error:**  
+**CWSML7035E**  
 
 ```log-entry
 CWSML7035E: The SAML Web Single Sign-on (SSO) Trust Association Interceptor (TAI) is unable to determine a redirect target URL. The redirect URL can come from the sso_<id>.sp.targetUrl SAML TAI custom property, the RelayState parameter in the SAMLResponse or the WasSamlSpReqUrl cookie. If you do not intend to have a value for the sso_<id>.sp.targetUrl SAML TAI custom property or have your IdP send a RelayState parameter in the SAMLResponse, then check earlier in the log to see if you have a CWSML7036W warning that indicates that the request URL host name is not the same as the ACS URL host name. If you see that warning, then that condition must be corrected to fix this error. The value for the relayState parameter on the SAMLResponse is [<null>].
 ```
 
-**Action:**  
-Please check the `sso_<id>.sp.targetUrl` and make sure it is set correctly and/or not missing at all.  
+Verify that the `sso_<id>.sp.targetUrl` custom property is defined and configured with the correct redirect URL. If the property is intentionally omitted, review the logs for host name mismatches between the request URL and the ACS URL.
 
-**Error:**
+**CWSML7010E**
 
 ```log-entry
 CWSML7010E: The [NameID] sub-element of the [Subject] element in the SAML assertion element is missing or empty.  
 ```
 
-**Action:**
-The NameID is currently not part of the SAML response. Please check [Setting the SAML rule for the nameID mapping](#setting-the-saml-rule-for-the-nameid-mapping)
+Configure the identity provider to include the NameID attribute in the SAML assertion. For more information, refer to [Setting the SAML rule for the nameID mapping](#setting-the-saml-rule-for-the-nameid-mapping).
 
 ???+ info "Related information"
     - [SAML web single sign-on (SSO) trust association interceptor (TAI) custom properties](https://www.ibm.com/docs/en/was/9.0.5?topic=swss-saml-web-single-sign-sso-trust-association-interceptor-tai-custom-properties){target="_blank"}  
