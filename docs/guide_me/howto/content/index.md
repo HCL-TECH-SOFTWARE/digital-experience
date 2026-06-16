@@ -18,3 +18,5 @@ Learn how to use JSP components in HCL DX using WCM.
 Learn how to use the XML Access command line tool.  
 - **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JSF portlets on HCL DX pages.
+- **[How to Render or Pre-render special characters on a non-windows system](./PreRenderSpecialCharacters.md)**  
+Learn how to Render or Pre-render special characters on a non-windows system.
