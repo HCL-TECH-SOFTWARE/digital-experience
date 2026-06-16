@@ -140,7 +140,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
         - Core and Remote Search: 8.10-1776104706
         - Other Images: 9.7-1776104705
-    - No iFixes
+    - iFix PH71422
+    - iFix PH71453
+    - iFix PH71453
 
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
