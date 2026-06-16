@@ -10,7 +10,7 @@ This article provides commands for installing HCL Digital Experience Fixes using
 
 ## Instructions
 
-If there are any questions about which parameters to pass when installing or uninstalling a package, use the command `imcl.exe -c` and respond to the prompts. An detailed example is described below. The parameter `-c` stands for console mode, which opens an interaction menu in text form. For detailed information on Combined Cumulative Fix (CF) installation, refer to the [Managing Interim Fixes for HCL Portal](../../../deployment/manage/manage_portal_using_iim/index.md){target="_blank"}.  
+If there are any questions about which parameters to pass when installing or uninstalling a package, use the command `imcl.exe -c` and respond to the prompts. An detailed example is described below. The parameter `-c` stands for console mode, which opens an interaction menu in text form. For detailed information on Combined Cumulative Fix (CF) installation, refer to the [Managing Interim Fixes for HCL Portal](../../../deployment/manage/manage_portal_using_iim/index.md).  
 
 ### Installation Manager command line to list installed packages
 

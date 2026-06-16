@@ -77,7 +77,7 @@ Refer to the following steps to identify missing resource permissions.
 
 To export the portal content associated with the ObjectID `Z6_00000000000000A0BR2B300GN4`, generate an XML Access export using the following steps:
 
-1. Generate an XML Access export file (`result.xml`) by following the instructions in [Generating a complete XML Access export of a Portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/gen_xmlaccessexpt_ptlconfig.md){target="_blank"}.  
+1. Generate an XML Access export file (`result.xml`) by following the instructions in [Generating a complete XML Access export of a Portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/gen_xmlaccessexpt_ptlconfig.md).  
 
 2. In the `result.xml` file, locate the resource with the missing role (`Z6_00000000000000A0BR2B300GN4`)
 
@@ -107,10 +107,10 @@ If you cannot identify the resource using the previous process, the issue might 
     grep -i "isGranted\|Permissions" trace.log
     ```
 
-If you need to verify whether the Markup Editor role is assigned to a static page where a user is attempting to change the layout, refer to [Access permissions](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md){target="_blank"}.
+If you need to verify whether the Markup Editor role is assigned to a static page where a user is attempting to change the layout, refer to [Access permissions](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_acc_rights.md).
 
 - The action **Modifying page properties includes Set page layout properties of a static page** requires the Markup Editor role.
-- In the role hierarchy, the Markup Editor role stands on its own, except in relation to the Administrator role. For more information, refer to [Resource Roles](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md){target="_blank"}.
+- In the role hierarchy, the Markup Editor role stands on its own, except in relation to the Administrator role. For more information, refer to [Resource Roles](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md).
 
 This requirement correlates with the following trace entry, where `AccessControlFederator` shows `hasPermission` returning `false`:
 
