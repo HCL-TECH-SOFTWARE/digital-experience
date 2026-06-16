@@ -27,6 +27,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
 |Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
 |Migrated|Search|[How to create a search service for a Virtual Portal](./search//VPSearchService.md)|
+|Migrated|Search|[How to implement a search query using WCM HTML and search components](./search/SampleSearchQueryWCMComponent.md)|
 |Migrated|Security|[How to integrate the impersonation API with SAML](./security/ImpersonationAPIWithSAML.md)|
 |Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
 

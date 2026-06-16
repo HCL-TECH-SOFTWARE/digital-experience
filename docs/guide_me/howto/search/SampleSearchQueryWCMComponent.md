@@ -1,4 +1,4 @@
-# How to implement a search query using WCM HTML Component and Search Component
+# How to implement a search query using WCM HTML and search components
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article describes sample steps that can be used for implementing a search query using WCM HTML Component and Search Component.
+Integrating search functionality into web content structures allows users to query specific collections and display targeted results. This article describes how to implement a search query using a Web Content Manager (WCM) HTML component and a search component.
 
 ???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corp.
@@ -15,7 +15,9 @@ This article describes sample steps that can be used for implementing a search q
 
 ## Instructions
 
-1. Create a HTML Component with these contents:
+To implement a search query, perform the following steps:
+
+1. Create an HTML component with the following contents:
 
     ```js
     <script>
@@ -31,7 +33,7 @@ This article describes sample steps that can be used for implementing a search q
     </form>
     ```
 
-2. Next create a Search Component with these contents:
+2. Create a search component with the following contents:
 
     ```html
     Header:
@@ -58,5 +60,6 @@ This article describes sample steps that can be used for implementing a search q
     There are no results for your query. Please refine your search and try again.
     ```
 
-Be sure to select the desired collection to search when creating the Search Component.  
-For this to work, you need to reference both components created above in the same presentation template!   
+3. Select the desired collection to search when creating the search component.
+
+4. Reference both created components within the same presentation template for the search functionality to work.
