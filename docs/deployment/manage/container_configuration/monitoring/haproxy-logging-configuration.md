@@ -5,7 +5,7 @@ This document outlines the HAProxy logging configuration for DX deployments. The
 
 ## Additive Logging Approach
 
-Instead of replacing the entire log format string, the deployment uses standard baseline strings for predefined log levels (INFO, WARN, DEBUG). To capture specific metrics—such as custom HTTP headers, SSL cipher suites, or client IPs—administrators can append custom variables to the end of the standard log line without modifying the base formatting.
+The deployment uses standard baseline strings for predefined log levels (INFO, WARN, DEBUG). To capture specific metrics—such as custom HTTP headers, SSL cipher suites, or client IPs—administrators can append custom variables to the end of the standard log line without modifying the base formatting.
 
 
 ## Configuration Guide
