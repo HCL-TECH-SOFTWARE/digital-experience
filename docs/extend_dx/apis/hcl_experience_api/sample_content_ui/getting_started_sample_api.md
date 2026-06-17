@@ -15,7 +15,7 @@ Follow the steps to get started with Sample Content UI application:
 3.  Open the ui/src/app/app.config.ts file and enter the following values : `SITE_AREA_UUID`, `WORKFLOW_UUID`, `CONTENT_TEMPLATE_UUID`, and `BASE_URL`.
     -   To find your `**SITE\_AREA\_UUID**`:
 
-        1.  Log in to HCL Portal and go to Practitioner Studio. If you have not enabled this feature yet, go here to learn [how to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+        1.  Log in to HCL Portal and go to Practitioner Studio. If you have not enabled this feature yet, go here to learn [Enabling Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
         2.  From the Library Explorer, click **Web Content \> Content**.
         3.  Select any one site area (e.g. "Articles"), click on **Read** then the **Properties** tab. If UUID is not visible, click **Show Hidden Fields**.
         4.  Find the UUID as seen below and save it for later: 

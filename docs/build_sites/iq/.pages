@@ -1,0 +1,9 @@
+title: IQ
+nav:
+    - index.md
+    - installation
+    - enable.md
+    - access.md
+    - usage.md
+    - limitations.md
+    - troubleshooting.md

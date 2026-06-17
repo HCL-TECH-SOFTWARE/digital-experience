@@ -1,6 +1,6 @@
 # Configuration
 
-This section includes How-to articles about configuration in HCL Digital Experience (DX).  
+This section includes how-to articles about configuration in HCL Digital Experience (DX).  
 
 - **[How to add a robots.txt file in DX container environments](./DeployRobots.md)**  
 Learn how to add a robots.txt file in your HCL DX environment to control how search engines crawl and index your site.  
@@ -11,14 +11,16 @@ Learn how to change the display language in your HCL DX log files without modify
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
-Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.  
-- **[How to integrate HCL DX with LDAP](./IntegrateLDAP.md)**  
-Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LDAP).  
-- **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
-Learn how to remove state information from page URLs.  
-- **[How to remove or hide the X-Powered-By header in HCL DX](./HideXPoweredByHeader.md)**  
-Learn how to remove or hide the X-Powered-By header.  
-- **[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
-Learn how to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment.  
+Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.
 - **[How to install and configure Ingress with Virtual Portals](./ConfigureIngressWithVPs.md)**  
 Learn how to install and configure Ingress with Virtual Portals.
+- **[How to integrate HCL DX with LDAP](./IntegrateLDAP.md)**  
+Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LDAP).  
+- **[How to modify the response header with `ForceType` when using HCL DX with the IBM HTTP server](./responseHeaderForceType.md)**  
+Learn how to modify the response header when using the IBM HTTP server as the frontend for your HCL DX environment.
+- **[How to remove or hide the X-Powered-By header in HCL DX](./HideXPoweredByHeader.md)**  
+Learn how to remove or hide the X-Powered-By header.  
+- **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
+Learn how to remove state information from page URLs.  
+- **[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
+Learn how to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment.  

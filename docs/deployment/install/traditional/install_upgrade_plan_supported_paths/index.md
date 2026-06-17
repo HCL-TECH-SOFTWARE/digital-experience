@@ -12,8 +12,8 @@ The following are the available options for installing and upgrading to HCL DX 9
 
 - [Installation and upgrade for customers running on DX 9.0 on WAS 8.5/9.0 and Java SDK 7.0 or 8.0](../install_upgrade_plan_supported_paths/Install_upgrade_customers_Portal_9_Java_SDK7.md): Upgrade your HCL DX 9.0 environment to HCL DX 9.5.
 
-- [Automatically upgrade to DX 9.5 through the CF installation process](../cf_install/index.md#about-version-95-cumulative-fixes): Customers deploying the latest DX continuous delivery release fix pack can automatically update their deployment to DX 9.5. This feature is available starting CF219.  
+- [Automatically upgrade to DX 9.5 through the CF installation process](../cf_install/index.md#about-version-95-cfs): Customers deploying the latest DX continuous delivery release fix pack can automatically update their deployment to DX 9.5. This feature is available starting CF219.  
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

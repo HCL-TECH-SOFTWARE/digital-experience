@@ -16,7 +16,7 @@ Rule events are usually email actions.
 
 3.  Select the rule that selects the users. Then, select the rule to use.
 
-4.  Select the start date or**Repeate**.
+4.  Select the start date or **Repeat**.
 
     Select a repeating rule event to select the frequency that you want the event to run. You must set a date and time that the rule event ceases to run.
 

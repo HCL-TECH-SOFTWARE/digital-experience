@@ -6,13 +6,12 @@ This enables a Digital Asset Management staging scenario in which an administrat
 
 !!! note
     This staging scenario presents some constraints:
-    
+
     -  All Digital Asset Management access control assets will be copied from the source deployment (staging) to the target deployment system.
     - The assets on the target system will be replaced.
     - Access Control is matched between environments, though it is possible to manipulate the access control data after completing the export.
     
 ![Digital Asset Management access control staging to production scenario using XML Access](../../../../images/admin-system-digital-asset-management-access-control-using-xml-access.png)
-
 
 ## Export Digital Asset Management Access Control Assets - Sample XML Access script
 
@@ -85,7 +84,3 @@ This enables a Digital Asset Management staging scenario in which an administrat
 <status element="all" result="ok"/>
 </request>
 ```
-
-## HCL Digital Experience Solution Feedback
-
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1).

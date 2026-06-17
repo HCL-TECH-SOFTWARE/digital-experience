@@ -1,16 +1,15 @@
 # WCM Content AI Analysis
 
-Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment. You can also learn  steps for configuring a content AI provider to be used for AI analysis. The AI analysis for a WCM Content feature is available in HCL Digital Experience 9.5 Container Update CF213 and later.
+Learn how to configure the AI analysis feature for WCM Content in a traditional, on-premise deployment, and how to set up a content AI provider. This feature is available from HCL Digital Experience (DX) 9.5 Container Update CF213 onward. The following table outlines AI capabilities by release:
 
-!!!note
-	OpenAI ChatGPT is the supported content AI provider in CF213 and later. Custom AI implementation is supported in CF214 and later.
+| Release | Feature updates |
+| :--- | :--- |
+| **CF224** | AI Workflows and AI Translation are available. |
+| **CF221** | The default AI model is updated to `gpt-4o`. |
+| **CF214** | Custom AI implementations are supported. |
+| **CF213** | OpenAI ChatGPT is the supported content AI provider. |
 
-Starting CF221, the AI model is switched to ```gpt-4o```. This model is the newest and the most capable model with up-to-date information.
-Starting CF224, AI Workflows and AI Translation are available.
-
-## Content AI provider overview
-
-### OpenAI ChatGPT overview
+## Content AI provider - Open AI's ChatGPT
 
 OpenAI is the AI research and deployment company that offers ChatGPT. When you sign up with ChatGPT, it provides API access through an API key. After signing up at [https://platform.openai.com/playground](https://platform.openai.com/playground){target="_blank"}, you can create a personal account with limited access or a corporate account. You can use the playground to experiment with the API also. A highlight of the API is that it accepts natural language commands similar to the ChatGPT chatbot. 
 
@@ -47,6 +46,9 @@ To enable content AI analysis:
 ### Configuring an AI class for a custom content AI provider
 
 Only administrators can configure an AI class to use a custom content AI provider.
+
+!!!note
+	If you wish to connect to an AI provider (such as LiteLLM) that is API-compatible with OpenAI models, you may be able to use the default provider class and just change its configuration parameters (see below).
 
 1. Write the custom content AI provider class by implementing the ```com.hcl.workplace.wcm.restv2.ai.IAIGeneration```. Optionally, starting CF224, you can also implement the ```com.hcl.workplace.wcm.restv2.ai.IAITranslation``` interface.
 
@@ -100,7 +102,11 @@ Only administrators can configure an AI class to use a custom content AI provide
 
 2. Run the following config engine task:
 
-	```/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin```
+```
+/opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh action-configure-wcm-content-ai-service -DContentAIProvider=CUSTOM -DCustomAIClassName={CustomerAIClass} -DContentAIProviderAPIKey={APIKey} -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+```
+
+For an example of how to use a custom content UI provider, see the [Google Vertex sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample){target="_blank"} built using Apache Maven. This sample uses [Google Vertex AI](https://cloud.google.com/vertex-ai){target="_blank"} for sentiment analysis, summary, and keyword generation.
 
 ## Config engine task for disabling content AI analysis
 
@@ -124,8 +130,10 @@ If AI analysis-related configurations require customization, log in to the WebSp
 
 ### OpenAI ChatGPT specific custom configurations
 
-1. ```OPENAI_MODEL```: The currently supported AI model is ```text-davinci-003```. However, AI model can be overriden by overriding this property.
-2. ```OPENAI_MAX_TOKENS```: Set positive integer values between 1 and 2048 for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response.
+1. ```OPENAI_MODEL```: The currently supported AI model is ```gpt-4o```. However, AI model can be overriden by overriding this property.
+2. ```OPENAI_MAX_TOKENS```: Set a positive integer value for GPT-3 models like ```text-davinci-003```. It specifies the maximum number of tokens that the model can output in its response and defaults to ```256```.
 3. ```OPENAI_TEMPERATURE```: Set positive float values ranging from ```0.0``` to ```1.0```. This parameter in OpenAI's GPT-3 API controls the randomness and creativity of the generated text. Higher values produce more diverse and random output. Lower values produce more focused and deterministic output.
+4. ```OPENAI_HOST```: The host to connect to for AI calls, defaults to ```api.openai.com```. Configuring this could allow you to connect to a different service that offers an OpenAI-compatible API, such as LiteLLM.
+5. ```OPENAI_SCHEME```: The scheme which AI calls will use, defaults to ```https```.
 
 After enabling the content AI analysis in DX deployment, use the [WCM REST V2 AI Analysis API](../../../../manage_content/wcm_development/wcm_rest_v2_ai_analysis/index.md) to call the AI analyzer APIs of the configured content AI provider.

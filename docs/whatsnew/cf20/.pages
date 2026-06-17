@@ -1,6 +1,10 @@
 title: CF200 and later
 order: desc
 nav:
+    - newcf236.md
+    - newcf235.md
+    - newcf234.md
+    - newcf233.md
     - newcf232.md
     - newcf231.md
     - newcf230.md

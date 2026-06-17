@@ -1,0 +1,163 @@
+# New and migrated articles
+
+This section contains the newly created and migrated how-to articles. The articles are arranged by Cumulative Fix (CF) and category.
+
+- **Migrated:** How-to articles migrated from the knowledge base to the DX Help Center.
+- **Moved:** How-to articles moved to a new category and link to new Help Center URLs.
+- **New:** Newly created how-to articles.
+
+<!--If a link breaks, it means the internal URL was moved. Delete the row with the broken link then create a new row in the latest CF. Set the **Type** to **Moved** then set their new **Category** and **Article** URL.
+
+## CF###
+
+| Type | Category | Article |
+|------|----------|---------|
+||||
+
+-->
+
+## CF236
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|API|[How to create a JSP using the WCM `QueryService` API](./api/createJSPUsingWCMAPI.md)|
+|Migrated|Container|[How to delete duplicate `CONFIG_CHECKSUM` environment variables](./container/DeleteDuplicateCheckSum.md)|
+|Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
+|Migrated|Container|[How to safely restart persistence nodes](./container/RestartPersistenceNodes.md)|
+|Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
+|Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
+|Migrated|Search|[How to create a search service for a Virtual Portal](./search//VPSearchService.md)|
+|Migrated|Security|[How to integrate the impersonation API with SAML](./security/ImpersonationAPIWithSAML.md)|
+|Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
+
+## CF235
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Content|[How to use XML Access](./content/xmlaccess_faq.md)|
+|Migrated|Install|[How to install HCL DX as a non-root user](./install/NonRootInstall.md)|
+|Migrated|Performance|[How to identify WCM items causing performance issues](./performance/WCMItemPerformance.md)|
+|Migrated|Search|[How to search for WCM documents within a specific date range](./search/SearchByDateTime.md)|
+|Migrated|Security|[How to configure multiple login properties in a federated repository in HCL DX](./security/FedReposDifferentLoginProps.md)|
+|Migrated|Security|[How to redirect users to a custom login page in HCL DX](./security/ChangeLoginPage.md)|
+|Migrated|Upgrade|[How to verify an HCL DX CF upgrade](./upgrade/checkSuccessfullUpgrade.md)|
+|Moved|Themes|[How to export themes and skins in HCL DX](./themes/OnlyExportThemeSkins.md)|
+
+## CF234
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to find the virtual portal name by ObjectID](./administration/DetermineVPObjectID.md)|
+|Migrated|Content|[How to delete WCM libraries referenced by other libraries](./content/DeleteLibWithRefs.md)|
+|Migrated|Content|[How to enable or disable managed pages on HCL DX](./content/disableManagedPages.md)|
+|Migrated|Security|[How to identify missing DX resource roles](./security/determineRequiredRole.md)|
+|Migrated|Security|[How to integrate HCL DX user authentication using Microsoft Azure AD](./security/AuthenticationMSAzure.md)|
+|Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
+|Migrated|Syndication|[How to create a syndicator-subscriber pair](./syndication/CreateSyndicatorSubsciberPair.md)|
+|Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
+|Migrated|Troubleshooting|[How to generate a PACDump](../troubleshooting/security/PumaDump.md)|
+
+## CF233
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Content|[How to create a custom configuration file for TinyMCE](./content/customizeTinyMCE.md)|
+|Migrated|Content|[How to work with JavaServer Faces (JSFs) on HCL DX pages](./content/JSF_hasBaseURL.md)|
+|Migrated|Development|[How to count WCM library content items on virtual portals using Java and JSPs](./development/countContentItemsLibsVP.md)|
+|Migrated|Development|[How to use the WCM API to render a WCM component in HCL DX](./development/WCMAPIRenderComponent.md)|
+|Migrated|Performance|[How to warm up your Portal site](./performance/WarmUpPortalSite.md)|
+|Migrated|Troubleshooting|[How to resolve caching issues with WCM menus](../troubleshooting/caching/MenuQueryCache.md)|
+|Moved|Development|[How to count WCM items and versions using the WCM API sample code](./development/APIToCountWCMItems.md)|
+|Moved|Performance|[How to improve query performance for WCM queries](./performance/ImproveQueryPerformance.md)|
+|Moved|Troubleshooting|[How to troubleshoot JDBC datasources](../troubleshooting/database/DataSourceTracing.md)|
+|Moved|Troubleshooting|[How to collect a Fiddler trace (HAR-file)](../troubleshooting/web-browser/collecting_fiddler_har.md)|
+
+!!!note
+    The Troubleshooting section has been moved to a [new location](../troubleshooting/index.md).
+
+## CF232
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Configuration|[How to modify the response header with `ForceType` when using HCL DX with the IBM HTTP server](./configuration/responseHeaderForceType.md)|
+|Migrated|Content|[How to use JavaServer Pages (JSPs) in WCM](./content/useJSPinWCM.md)|
+|Migrated|Install|[How to install HCL DX 9.5 standalone on Linux](./install/installDXConsoleMode.md)|
+|Migrated|Migration|[How to clone a Portal 8.5, 9.0 and 9.5 environment without PAA](./migration/Cloning_without_PAA.md)|
+|Migrated|Security|[How to replace an LDAP in HCL DX](./security/ReplacePortalLDAP.md)|
+|Migrated|Tools|[How to export single page or a page hierarchy](./tools/Export_Pages_xmlaccess.md)|
+
+## CF231
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to customize the error behavior when accessing WCM resources](./administration/CustomizeErrorBehavior.md)|
+|Migrated|API|[How to use WCM API to search for pages in the Portal site library](./api/searchPagesInPortalSiteLibrary.md)|
+|Migrated|Development|[How to convert a file to base64 encoded format](./development/SampleJSPtoConvertAfileToBase64EncodedFormat.md)|
+|Migrated|Development|[How to create a custom login or logout filter in HCL DX](./development/custom_login_filter_sample.md)|
+|Migrated|Development|[How to create a custom login portlet with credential vault handling in HCL DX](./development/CustomLoginPortlet.md)|
+|Migrated|Migration|[How to configure and performing a staging to production environment](./migration/StagingToProductionWithPAA.md)|
+|Migrated|Security|[How to implement SAML in HCL DX](./security/implementsaml_portal.md)|
+|Migrated|Upgrade|[How to use XML Access to export and import portal pages](./upgrade/XMLAccessExportImport.md)|
+|New|Configuration|[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./configuration/SetGenericJVMArgumentsCorePod.md)|
+|New|Security|[How to add additional security realms for Virtual Portals](./security/AddAdditionalWASRealms.md)|
+
+## CF230
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to clear the extension registry, OSGi caches, and temporary files](./administration/ClearOSGIandTempFiles.md)|
+|Migrated|Administration|[How to expedite the processing of asynchronous deletes in the JCR database](./administration/ExpediteAsyncDeletes.md)|
+|Migrated|Administration|[How to generate a system report to compare different DX environments](./administration/SystemReportForCompare.md)|
+|Migrated|Content|[How to get the UUID and Path of WCM content objects using a command Line](./content/GetUUIDAndPathOfContent.md)|
+|Migrated|Content|[How to identify new managed pages in HCL DX](./content/IdentifyNewManagedPages.md)|
+|Migrated|Database|[How to use the `RUNSTATS` and `REORG` commands](./database/RunstatsandReorg.md)|
+|Migrated|Development|[How to create a servlet to serve static files from HCL DX using the Rational Application Developer](./development/CreateAServletForStaticFiles.md)|
+|Migrated|Install|[How to install and configure an HCL DX v9.5 Cluster](./install/InstallandConfigureAnDXCluster.md)|
+|Migrated|Requirements|[How to choose the correct JDBC driver](./requirements/JDBCDriverSupport.md)|
+|Migrated|Security|[How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX](./security/enable_http_security_http_only_samesite_K8.md)|
+|Migrated|Security|[How to implement SAML in HCL DX](./security/implementsaml_portal.md)|
+|Migrated|Security|[How to integrate transient users with OpenID Connect](./security/transient_users_with_OpenID_Connect.md)|
+|Moved|Development|[How to access portlet development utilities and page creation samples](./development/Portletdevelopmentutilitiesandpagecreationsamples.md)|
+|New|Search|[How to use DX Search and the DX Search Center](./search/DX_Search_and_Search_Center.md)|
+
+## CF229
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to add MIME types to the DX server](./administration/SupportForAdditionalMIMETypes.md)|
+|Migrated|Administration|[How to change the redirect URL for Login, Logout, and Session Timeout](./administration/RedirectTimeout.md)|
+|Migrated|Administration|[How to increase the duration of transaction timeouts in HCL DX](./administration/IncreaseTransactionTimeout.md)|
+|Migrated|Administration|[How to use JavaScript to find and replace text on a Portal page](./administration/UseJavaScriptToReplaceText.md)|
+|Migrated|Configuration|[How to enable support for additional image formats in HCL Web Content Manager](./configuration/EnableImageFormats.md)|
+|Migrated|Configuration|[How to integrate HCL DX with LDAP](./configuration/IntegrateLDAP.md)|
+|Migrated|Configuration|[How to remove or hide the X-Powered-By header in HCL DX](./configuration/HideXPoweredByHeader.md)|
+|Migrated|Database|[How to determine portal database size when using DB2](./database/DB2DatabaseSize.md)|
+|Migrated|Install|[How to run HCL DX 8.5 or 9.0 on Red Hat Linux 8.x or 9.x](./install/SupportForRedHat.md)|
+|Migrated|Install|[How to run the IBM Installation Manager as a different user](./install/RunIIMAsDifferentUser.md)|
+|Migrated|Install|[How to install IBM SDS 6.4.0.27 LDAP Client Tools on Linux](./install/InstallLDAPTools.md)|
+|Migrated|Performance|[How to improve HCL DX database performance on a IBM DB2 database](./performance/DB2DatabasePerformance.md)|
+|Migrated|Upgrade|[How to use command-line syntax for installing Fixes with IBM Installation Manager](./upgrade/CommandLineIIM.md)|
+
+## CF228
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to clear WebSphere Dynacache caches](./administration/ClearWebSphereDynacache.md)|
+|Migrated|Administration|[How to decode long Portal URLs](./administration/DecodeLongURLs.md)|
+|Migrated|Configuration|[How to add a robots.txt file in DX container environments](./configuration/DeployRobots.md)|
+|Migrated|Configuration|[How to change the display language in HCL DX log files without changing the operating system's locale](./configuration/ChangeDisplayLanguage.md)|
+|Migrated|Configuration|[How to configure the IBM Rational Application Developer to use the HCL DX server](./configuration/ConfigureRAD.md)|
+|Migrated|Configuration|[How to remove state information from the URL](./configuration/RemoveStateInformationFromURL.md)|
+|Migrated|Development|[How to use the PUMA API within a WCM JSP component to print out the user and hostname sending the request](./development/CodeToPrintUserAndHostname.md)|
+|Migrated|Install|[How to deploy DX 9.5 on the Azure Kubernetes Service](./install/DeployOnAzure.md)|
+
+## CF227
+
+None
+
+## CF226
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to clear WCM caches with ConfigEngine task](./administration/ClearWCMCaches.md)|
+|Migrated|Configuration|[How to change cell and node names in a standalone HCL DX environment](./configuration/ChangeCellandNodeName.md)|

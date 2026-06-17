@@ -1,4 +1,6 @@
 title: Upgrade
 nav:
-  - Home: index.md
+  - index.md
   - CommandLineIIM.md
+  - XMLAccessExportImport.md
+  - checkSuccessfullUpgrade.md

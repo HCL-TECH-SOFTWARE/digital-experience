@@ -8,27 +8,26 @@ To move from a non-containerized deployment to a containerized deployment, it is
 
 The Kubernetes containerized deployment is different from the non-containerized deployment in the following ways:
 
-1. There is no http server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs. You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your http server.
+1. There is no HTTP server in front of your DX deployment. Instead, HAProxy is used for routing to the different pods and JVMs. You can configure your own ingress controller or deploy a proxy to customize cache headers, server static files, or other customizations you configured at your HTTP server.
 
 2. There is no WebSphere cluster.
 
-    - Distributed Enterprise Java Beans, JMS distribution, or cache replication of custom DynaCaches is not possible with containerized deployments because the system is using a farm-like deployment of DX Core. 
-    - Any product-based caches are cache-replicated so any changes are distributed to all Core pods.
-    - If you have custom DynaCaches that must be replicated, it is recommended to use external cache solutions such as Redis or Hazelcast.
-    - If you use session replication through in memory, you must switch to session persistence using the database instead.
+    - Distributed Enterprise JavaBeans, JMS distribution, and custom DynaCache replication are not supported in containerized deployments because DX uses a farm-based deployment model for DX Core.
+    - Product-based caches are replicated across all Core pods, ensuring changes are distributed automatically.
+    - If you have custom DynaCaches that must be replicated, use an external caching solution such as Redis or Hazelcast.
+    - If you use in-memory session replication, switch to database-based session persistence.
 
 ## Moving multiple environments
 
-Typically, an overall DX solution consists of multiple environments like development, staging, production authoring, and production rendering.
-While it is possible to move each environment to a new containerized deployment, it is recommended to move one environment to containers, test and validate, and then use that environment as source for the other environments. In case WCM is used, the Authoring environment is a good choice to use as the initial environment to stage to containers.
+A typical DX solution includes multiple environments, such as development, staging, production authoring, and production rendering. While it is possible to migrate each environment independently, the recommended approach is to migrate, test, and validate a single environment first. This initial deployment should not be used as a template to copy or clone. Instead, use the configuration settings of this working environment as a reference guide to help configure the remaining deployments.
 
 ## Prerequisites
 
-The target environment that is existing in a customer-owned Kubernetes environment requires HCL DX 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server product versions for the source and target environment must be at the same level, though it is sufficient to be on IBM WebSphere Application Server 8.5.5.x with JDK 8.
+The target environment in a customer-owned Kubernetes environment requires HCL DX 9.5 and IBM WebSphere Application Server 9.0.5. The HCL Digital Experience and IBM WebSphere Application Server versions for the source and target environments must be at the same level. It is also supported to use IBM WebSphere Application Server 8.5.5.x with JDK 8.
 
-Ensure the context root for DX Core and the security setup is the same as for the source system (for example, connection to the same LDAP).
+Ensure that the context root for DX Core and the security configuration match the source system (for example, the same LDAP connection).
 
-If you do not have the 9.5 UI features enabled in your source non-container environment, you should either enable it or disable it on the container environment. For information about enabling and disabling 9.5 UI features, refer to the following:
+If the 9.5 UI features are not enabled in the source non-container environment, enable or disable them in the container environment to ensure consistency.
 
 - [Enabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md)
 - [Disabling 9.5 UI features](../../../build_sites/practitioner_studio/working_with_ps/disable_prac_studio.md)
@@ -37,87 +36,92 @@ If you do not have the 9.5 UI features enabled in your source non-container envi
 
 Follow these steps to export the source HCL DX server.
 
-1.  Upgrade the source environment.
+1. Upgrade the source environment.
 
     Using the IBM Installation Manager, upgrade the HCL DX product to CF17 or later and HCL DX 9.5.
 
-2.  Log in to the machine where the source environment is located and set the `ulimit -n` to **24000**.
+2. Log in to the machine where the source environment is located and set the `ulimit -n` to **24000**.
 
-    For example, `ulimit - n 24000`.
+    For example, `ulimit -n 24000`.
 
-3.  Verify that the HCL DX server is started.
+3. Verify that the HCL DX server is started.
 
-4.  Navigate to the PortalServer/bin directory to export the base server.
-
-    ```
-    /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
-    ```
-
-5.  Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for later use when importing to the target environment.
-6.  Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.
+4. Navigate to the PortalServer/bin directory to export the base server.
 
     ```
-    /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config/vpcontextroot -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/ExportUniqueRelease.xml -out /tmp/ExportVP1Results.xml
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
     ```
 
-7.  Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.
+5. Save the output XML file (ExportReleaseResults.xml) to an external or shared drive, for later use when importing to the target environment.
+6. Export the content for each Virtual Portal that exists in the source environment, renaming each file uniquely for easy identification.
 
-8.  Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
+    ```
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://mysource.machine.fqdn:10039/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/ExportRelease.xml -out /tmp/ExportReleaseResults.xml
+    ```
 
-9.  If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
+7. Save the Virtual Portal output files to an external or shared drive for later use when importing to the target environment.
 
-    1.  Log in to the HCL DX Home Page.
-    2.  Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
-    3.  Save the output file.
+8. Save the /opt/HCL/wp_profile/PortalServer/deployed/archive directory files to an external or shared drive, for later use when importing to the target environment.
+
+9. If you are using PZN rules, export the PZN rules using the Personalization Administration Portlet functions and save the generated Workspace.nodes file to an external or shared drive, for later use when importing to the target environment.
+
+    1. Log in to the HCL DX Home Page.
+    2. Navigate to **Personalization > Business Rules* > Extra Actions > Export**.
+    3. Save the output file.
 
 10. When applicable, save all custom files (application and theme EAR files, WAR files) to an external or shared drive, for later use when importing to the target environment.
 
 11. Validate if you have any custom DynaCaches, URLs, JVM Environment Parameters, or other custom WebSphere configuration.
-    
+
     If you are not sure what customizations were applied, you can use the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct){target="_blank"}.
 
 ## Importing into the container HCL DX target server
 
 Before starting the import, complete the Kubernetes deployment with the right CF level and configure the prerequisites. Ensure that the context root matches the previous deployment, and the security is configured (for example, connected to LDAP).
 
-1.  Log in to the machine to access your HCL DX Container.
+!!! warning
+    When copying commands, ensure that all hyphens (-) are standard ASCII hyphens. En dashes (–) or other special characters may cause commands to fail if pasted into the terminal.
 
-2.  Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
+1. Log in to the machine to access your HCL DX Container.
 
-3.  With only a single instance of an HCL DX container running, exec in, and ensure the `ulimit -n` value is at least **24000**.
+2. Download, install, and log in to the command line client for your Kubernetes environment according to the client instructions. For OpenShift, that is Red Hat OpenShift Command Line Client. For Non OpenShift, that is the Kubectl command line tool.
 
-4.  Empty the base HCL DX server.
+3. With only a single instance of an HCL DX container running, exec in, and ensure the `ulimit -n` value is at least **24000**.
 
-    1.  OpenShift:
-      ```
-      oc exec –it dx-deployment-nnnnn /bin/bash
-      ```
+4. Empty the base HCL DX server.
 
-    2. Non OpenShift:
-      ```
-      kubectl exec –it dx-deployment-nnnnn /bin/bash
-      ```
+    1. OpenShift:
+
+        ```
+        oc exec -it dx-deployment-nnnnn /bin/bash
+        ```
+
+    2. Non OpenShift
+
+        ```
+        kubectl exec -it dx-deployment-nnnnn /bin/bash
+        ```
   
-    ```
-    /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal –DWasPassword=<your WAS admin user password> –DPortalAdminPwd=<your DX admin user password>
-    ```
-    
-    The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
+        ```
+        /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh empty-portal -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password>
+        ```
 
-5.  Clean up the deleted pages in the target server by using XML Access:
+    The output displays a **BUILD SUCCESSFUL** message. If not, check the `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log` file for errors.
+
+5. Clean up the deleted pages in the target server by using XML Access:
 
     ```
-    /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> –password <your DX admin user password> –in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
+      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
     ```
 
-    The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log for errors.
+    The output displays a **BUILD SUCCESSFUL** message. If not, check the `/opt/HCL/wp_profile/logs/WebSphere_Portal/SystemOut.log` file for errors.
 
-6.  Copy the output XML files, custom EAR and WAR files, Workspace.nodes file, and the ../deployed/archive directory files to a location on the local machine, making sure to preserve the file names and structure from the external or shared drive and then into the DX container.
-    1.  ```
+6. Copy the output XML files, custom EAR and WAR files, the `Workspace.nodes` file, and the `../deployed/archive` directory to a location on the local machine. Ensure that you preserve the file names and directory structure when transferring them from the external or shared drive to the DX container.
+    - ```
         cp /drive/* /tmp/
         ```
 
-    -   OpenShift:
+    - OpenShift:
 
         ```
         oc cp /tmp/* dx-deployment-nnnnn:/tmp/
@@ -129,56 +133,55 @@ Before starting the import, complete the Kubernetes deployment with the right CF
         kubectl cp /tmp/* dx-deployment-nnnnn:/tmp/
         ```
 
-7.  Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.
+7. Create a directory under /opt/HCL/wp_profile to house any custom code or shared libraries.
 
       ```
       mkdir –p /opt/HCL/wp_profile/customApps
       ```
 
     !!!note
-        In any containerized environment, all custom code and shared libraries need to exist under the persisted profile volume.
+        In a containerized environment, ensure that all custom code and shared libraries are stored in the persisted profile volume.
 
-8.  Move the copied files to the appropriate locations in the container.
-    -   ```
+8. Move the copied files to the appropriate locations in the container.
+    - ```
         mv /tmp/custom.ear /opt/HCL/wp_profile/customApps/
         ```
 
-    -   ```
+    - ```
         mv /tmp/deployed/archive/* /opt/HCL/wp_profile/PortalServer/deployed/archive/
         ```
 
-9. Deploy custom applications, predeployed portlets, or themes.
+9. Deploy custom applications, pre-deployed portlets, or themes.
 
-10. Configure any required syndication properties in the WCM ConfigService. For example, enabling memberfixer to run during syndication.
+10. Configure any required syndication properties in the WCM ConfigService. For example, enable memberfixer to run during syndication.
 
 11. Create any required configuration items. For example, URLs, namespace bindings, and so on. 
 
-    You can use the WebSphere Application Server UI or deploy using DXClient or wsadmin commands. It is recommended that you write a deployment script because you must perform the same deployment operation on your other environments.
+    You can use the WebSphere Application Server UI or deploy by using DXClient or wsadmin commands. It is recommended that you create a deployment script because you must perform the same deployment operation in other environments.
 
     It is also recommended to run a comparison report using the [WebSphere Configuration Comparison Tool](https://github.com/IBM/websphere-cct){target="_blank"}.
-    
+
     For information about possible configuration settings in Resource Environment Providers, refer to the [Resource Environment Providers](#resource-environment-providers) section.
 
 12. Import the source server base content into the HCL DX server in the container.
 
-    -   OpenShift:
+    - OpenShift:
 
         ```
-        oc exec –it dx-deployment-nnnnn /bin/bash
+        oc exec -it dx-deployment-nnnnn /bin/bash
         ```
 
-    -     Non OpenShift:
+    - Non OpenShift:
 
         ```
-        kubectl exec –it dx-deployment-nnnnn /bin/bash
+        kubectl exec -it dx-deployment-nnnnn /bin/bash
         ```
 
-      
-      ```
-      /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportReleaseResults.xml -out /tmp/ExportReleaseResults_ImportResult.xml
-      ```
+        ```
+        /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
+        ```
 
-    The output displays a successful execution. If not, check /tmp/ExportReleaseResults_ImportResult.xml for errors.
+    The output displays a successful execution. If not, check `/tmp/ExportReleaseResults_ImportResult.xml` for errors.
 
 13. Update the WCM content in the HCL DX server instance:
 
@@ -186,13 +189,13 @@ Before starting the import, complete the Kubernetes deployment with the right CF
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh update-wcm -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password>
     ```
 
-    The output displays a **BUILD SUCCESSFUL** message. If not, check the /opt/HCL/wp\_profile/ConfigEngine/log/ConfigTrace.log for errors.
+    The output displays a **BUILD SUCCESSFUL** message. If not, check the `/opt/HCL/wp_profile/ConfigEngine/log/ConfigTrace.log` file for errors.
 
-14. If you are using PZN rules, import the PZN rules by using the Personalization Administration Portlet functions.
+14. If you are using PZN rules, import the PZN rules by using the Personalization Administration portlet.
 
-    1.  Log in to the HCL DX home page.
-    2.  Navigate to **Personalization > Business Rules > Extra Actions > Import**.
-    3.  Browse to the /tmp/Workspace.nodes file and click **Import**.
+    1. Log in to the HCL DX home page.
+    2. Navigate to **Personalization > Business Rules > Extra Actions > Import**.
+    3. Browse to the /tmp/Workspace.nodes file and click **Import**.
 
 15. Log in to the HCL DX home page and verify that the base server is functioning correctly:
 
@@ -208,10 +211,10 @@ Before starting the import, complete the Kubernetes deployment with the right CF
     /opt/HCL/wp_profile/ConfigEngine/ConfigEngine.sh create-virtual-portal -DWasPassword=<your WAS admin user password> -DPortalAdminPwd=<your DX admin user password> -DVirtualPortalTitle=VirtualPortal1 -DVirtualPortalRealm=VirtualPortal1Realm -DVirtualPortalContext=VirtualPortal1
     ```
 
-17. For each Virtual Portal, import the content using XML Access. Make sure that the context root and the Virtual Portal name both match in the XML Access command:
+17. For each virtual portal, import the content by using XMLAccess. Ensure that the context root and the virtual portal name match in the XMLAccess command.
 
     ```
-    /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config/VirtualPortal1 -user <your DX admin user> -password <your DX admin user password> -in /tmp/ExportVP1Results.xml -out /tmp/ExportVP1Results_ImportResults.xml
+     /opt/HCL/wp_profile/PortalServer/bin/xmlaccess.sh -url http://my.target.fqdn/wps/config -user <your DX admin user> -password <your DX admin user password> -in /opt/HCL/PortalServer/doc/xml-samples/Task.xml -out /tmp/task_result.xml
     ```
 
 18. Restart the HCL DX server and check /opt/HCL/wp\_profile/logs/WebSphere\_Portal/SystemOut.log to ensure no startup errors.
@@ -221,39 +224,39 @@ Before starting the import, complete the Kubernetes deployment with the right CF
 Follow these steps to syndicate the source and target environments:
 
 !!!note
-    If you have larger libraries, the default database must be transferred to any of the supported databases. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). If you want to know more about transferring the default database of the DX 9.5 Container to IBM DB2, see [IBM DB2: Database transfer](../../../deployment/manage/db_mgmt_sys/dbtransfer_db2i/index.md).
+    If you have larger libraries, move the default database to a supported database. For information about supported databases, see [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md). To learn more about transferring the default DX 9.5 container database to IBM DB2, see [IBM DB2: Database transfer](../../../deployment/manage/db_mgmt_sys/dbtransfer_db2i/index.md).
 
-1.  Since the Kubernetes deployment typically allows only SSL traffic, you need to update the SSL Signer certificates for the Syndicator and Subscriber setups so that they can communicate with each other. To do this, log into the WAS console (`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`) and go to the **Signer certificates** page that is available in the **Security > SSL certificate and key management** menu:
+1. Because Kubernetes deployments typically allow only SSL traffic, update the SSL signer certificates for the syndicator and subscriber setups so they can communicate with each other. To do this, log in to the WebSphere Application Server console (`https://machine_name/ibm/console` or `https://machine_name:port/ibm/console`) and go to the **Signer certificates** page under **Security > SSL certificate and key management**.
 
     ![Signer certificates page](../../../images/signer_certificates_page.png)
 
-2.  Select **Retrieve from port** and create the signer certificate, and then save the certificate.
+2. Select **Retrieve from port** and create the signer certificate, and then save the certificate.
 
-3.  Log in to HCL DX instance to configure syndication: http://my.target.fqdn/wps/portal.
+3. Log in to the HCL DX instance to configure syndication: http://my.target.fqdn/wps/portal.
 
-4.  Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
+4. Navigate to **Administration > Security > Credential Vault > Add a Vault Slot**.
 
-5.  On the **Credential Vault** page, select **New** and provide the following:
+5. On the **Credential Vault** page, select **New** and provide the following:
 
-    1.  **Name** - enter the name for the vault slot.
-    2.  **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
-    3.  **Vault slot is shared** check box - tick this check box and provide the credentials for a user that has appropriate access on the source/syndication system: **Shared userid**, **Shared password**, and **Confirm password**.
-    4.  Click **OK** to save the changes.
+    1. **Name** - enter the name for the vault slot.
+    2. **Vault resource associated with vault slot** - select **new** and enter the vault resource name.
+    3. **Vault slot is shared** check box - tick this check box and provide the credentials for a user that has appropriate access on the source/syndication system: **Shared userid**, **Shared password**, and **Confirm password**.
+    4. Click **OK** to save the changes.
 
-5.  Navigate to **Portal Content > Subscribers**. Click **Subscribe Now**.
+6. Navigate to **Portal Content > Subscribers**. Click **Subscribe Now**.
 
-6.  In the **Subscribe to a syndicator** pop-up, provide the following:
+7. In the **Subscribe to a syndicator** pop-up, provide the following:
 
-    1.  **Syndicator URL**
-    2.  **Syndicator Name**
-    3.  **Subscriber Name**
-    4.  **Credential Vault Slot** created in step 2.
-    5.  Click **Next**.
+    1. **Syndicator URL**
+    2. **Syndicator Name**
+    3. **Subscriber Name**
+    4. **Credential Vault Slot** created in step 2.
+    5. Click **Next**.
 
-7.  Select the libraries to syndicate and the **Scope** of the syndication.
-8.  Click **Finish**.
-9.  If you have Virtual Portals, you must repeat the syndication steps for each Virtual Portal.
-10. If needed, configure library permissions when syndication is completed.
+8. Select the libraries to syndicate and the **Scope** of the syndication.
+9. Click **Finish**.
+10. If you have Virtual Portals, you must repeat the syndication steps for each Virtual Portal.
+11. If needed, configure library permissions when syndication is completed.
 
     !!!note
         As with syndication between on-premise setups, it is possible to do a one-way syndication from an earlier to a later release.
@@ -268,7 +271,7 @@ Syndicating large libraries, especially when syndicating all items if you need a
 
 HCL DX comprises a framework of configuration services to accommodate different scenarios that portals must address. You can configure some of these services.
 
-The configuration for each service is stored in and accessible for configuration through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, most of the portal configuration services are spelled as one word. Some services are abbreviated and preceded by the letters WP. For example, in the WebSphere Integrated Solutions Console, the portal Configuration Service is listed as WP ConfigService.
+The configuration for each service is stored in and accessed through the WebSphere® Integrated Solutions Console. In the WebSphere Integrated Solutions Console, most portal configuration services are spelled as a single word. Some services are abbreviated and prefixed with WP. For example, the portal Configuration Service appears as WP ConfigService in the WebSphere Integrated Solutions Console.
 
 For more information about each service, see [Service configuration](../../manage/config_portal_behavior/service_config_properties/portal_svc_cfg/index.md).
 
@@ -289,9 +292,9 @@ Additionally, anonymous sign up has been disabled on containers through access c
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
 
-To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     -   [Database Management Systems](../../../deployment/manage/db_mgmt_sys/index.md)

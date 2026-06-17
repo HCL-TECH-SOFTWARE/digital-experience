@@ -11,7 +11,10 @@ The following content sources are available for DX Picker:
 - [Java Content Repository (JCR)](../../../build_sites/search/cfg_dx_search/search_service_params/jcr_srrcfgsrvc.md)
 - [Web Content Manager (WCM)](../../../manage_content/wcm_authoring/authoring_portlet/index.md)
 
-When you open DX Picker with a default content source, the list of root collections from the DAM is displayed.
+When DX Picker is opened for the first time using the default content source, the list of root collections from the DAM is displayed.
+
+!!! note
+    To understand how DX Picker opens with a default content source after an item has been selected, refer to [Selecting an item](#selecting-an-item).
 
   ![](../../../assets/HCL_DX_Picker_DAM_Initial_View.png)
 
@@ -33,7 +36,10 @@ Clicking on an item row enables the **Select** button on the lower right corner 
 
   ![](../../../assets/HCL_DX_Picker_Select_Asset.png)
 
-Selecting an item triggers the [`HCL-DX-PICKER-SELECT`](./access.md#dx-picker-events) event.
+Selecting an item triggers the [`HCL-DX-PICKER-SELECT`](./access.md#dx-picker-events) event. The picker saves the selected item's last known location and displays it automatically when reopened.
+
+!!! note
+    The saved location persists until the session ends or expires. It then resets to the default location.
 
 ## Navigating collections
 
