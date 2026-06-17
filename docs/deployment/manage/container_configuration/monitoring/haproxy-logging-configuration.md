@@ -10,15 +10,17 @@ Instead of replacing the entire log format string, the deployment uses standard 
 
 ## Configuration Guide
 
-These settings are configured in the `values.yaml` file under the `logging.haproxy.level` array using a `key:=value` syntax.
+These settings are configured in the `values.yaml` file under the `logging.haproxy.level` array using a `key:=value` syntax. 
+
+The custom variables appended via `appendHttp:=` and `appendTcp:=` must strictly follow the native **HAProxy Custom Log Format**. For a comprehensive list of supported format variables, fetchers, and log tags, please refer to the official [HAProxy Configuration Manual - Custom Log Format](https://docs.haproxy.org/2.8/configuration.html#8.2.4).
 
 ### Supported Parameters
 
 | Parameter Key | Description | Valid Input Example |
 | :--- | :--- | :--- |
 | **`haproxy:=`** | Sets the base verbosity level for the logs. | `haproxy:=debug` |
-| **`appendHttp:=`** | Appends custom variables to Layer 7 (HTTP) traffic logs. | `appendHttp:=%{+Q}[ssl_c_s_dn]` |
-| **`appendTcp:=`** | Appends custom variables to Layer 4 (TCP) traffic logs. | `appendTcp:=%ci:%cp` |
+| **`appendHttp:=`** | Appends custom HAProxy format variables to Layer 7 (HTTP) traffic logs. | `appendHttp:=%{+Q}[ssl_c_s_dn]` |
+| **`appendTcp:=`** | Appends custom HAProxy format variables to Layer 4 (TCP) traffic logs. | `appendTcp:=%ci:%cp` |
 
 > **Note:** HTTP and TCP variables are decoupled to protect the HAProxy configuration. Ensure HTTP variables are applied only to `appendHttp` and TCP variables only to `appendTcp`.
 
