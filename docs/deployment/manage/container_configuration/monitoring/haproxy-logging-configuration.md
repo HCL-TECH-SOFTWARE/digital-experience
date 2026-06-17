@@ -33,7 +33,6 @@ logging:
       - "appendTcp:=%ci:%cp"             # Appends to TCP traffic
 ```
 
----
 
 ## Log Output Examples
 
@@ -48,7 +47,6 @@ The following examples demonstrate the expected log output based on the configur
 * **Additive Output (INFO Base + `appendHttp` SSL String):**
     `[09/Jun/2026:09:50:03.135] dx core-dx-home/core-dx-home1 0/0/3/84/87 302 586 - - --IR 2/1/0/0/0 0/0 "GET /wps/myportal HTTP/1.1" "CN=my-custom-cert,O=HCL"`
 
----
 
 ## Crash Protection and Validation
 
