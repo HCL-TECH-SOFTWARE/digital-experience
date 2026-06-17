@@ -24,5 +24,5 @@ Learn how to remove the Unified Task List and Script Application Import portlets
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to Configure Web Application Bridge (WAB) to Connect to Back-end Application That Requires Basic Authentication](./WABBasicAuthentication.md)**  
-Learn how to configure Web Application Bridge (WAB) to connect to a back-end application that requires Basic Authentication.
+- **[How to configure a Web Application Bridge (WAB) to connect to a back-end application that requires basic authentication](./WABBasicAuthentication.md)**  
+Learn how to configure Web Application Bridge (WAB) to connect to a back-end application that requires basic authentication.
