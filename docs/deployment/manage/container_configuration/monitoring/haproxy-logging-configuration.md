@@ -1,11 +1,11 @@
 # HAProxy Logging Configuration
 
-This document outlines the HAProxy logging configuration for DX deployments. Previously, overriding native HAProxy log levels could inadvertently remove critical log formatting and routing data. To address this, the Helm chart utilizes an **Additive Logging Approach**. This architecture maintains guaranteed baseline log data while providing the flexibility to append custom HAProxy variables.
+This document outlines the HAProxy logging configuration for DX deployments. The Helm chart utilizes an **Additive Logging Approach**. This architecture maintains guaranteed baseline log data while providing the flexibility to append custom HAProxy variables.
 
 
 ## Additive Logging Approach
 
-Instead of replacing the entire log format string, the deployment uses standard baseline strings for predefined log levels (INFO, WARN, DEBUG). To capture specific metrics—such as custom HTTP headers, SSL cipher suites, or client IPs—administrators can append custom variables to the end of the standard log line without modifying the base formatting.
+The deployment uses standard baseline strings for predefined log levels (INFO, WARN, DEBUG). To capture specific metrics—such as custom HTTP headers, SSL cipher suites, or client IPs—administrators can append custom variables to the end of the standard log line without modifying the base formatting.
 
 
 ## Configuration Guide
