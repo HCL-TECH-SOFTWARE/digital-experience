@@ -1,4 +1,4 @@
-# How to install and configure an HCL Digital Experience 9.5 cluster
+# How to install and configure an HCL DX 9.5 cluster
 
 ## Applies to
 
@@ -16,5 +16,4 @@ This article provides a step-by-step guide for installing, configuring, and buil
 
 ## Instructions
 
-To install and configure an HCL DX 9.5 cluster, refer to the PDF document for detailed instructions:  
-[Step by step guide to install and configure an HCL Digital Experience v9.5 Cluster](./files/InstallandConfigureAnDXCluster/A%20Step-By-Step%20Guide%20to%20Configuring%20a%20HCL%20Portal%20v9.5%20Cluster_v2.pdf){target="_blank"}  
+To install and configure an HCL DX 9.5 cluster, refer to [Step by step guide to install and configure an HCL Digital Experience v9.5 Cluster](./files/InstallandConfigureAnDXCluster/A%20Step-By-Step%20Guide%20to%20Configuring%20a%20HCL%20Portal%20v9.5%20Cluster_v2.pdf).

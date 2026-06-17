@@ -17,7 +17,7 @@ This article provides the sample code that you can use to determine the number o
 
 Refer to the following steps to download and use the sample code to create a login or logout filter:
 
-1. Download the [currentUserFilters.zip](./files/concurrentUserFilters.zip){target="_blank"} file containing the filter code and the binary JAR file.
+1. Download the [currentUserFilters.zip](./files/concurrentUserFilters.zip) file containing the filter code and the binary JAR file.
 
     The sample code includes the following classes:
 
