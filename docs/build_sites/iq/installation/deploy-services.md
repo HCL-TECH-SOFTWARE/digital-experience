@@ -91,7 +91,7 @@ configuration:
 
 # CRITICAL: MCP Server list configuration
 # Must match your Helm release name. Default points to 'dx-ai' release.
-# If your release name is different (e.g., 'dx-iq'), update accordingly.
+# If your release name is different (for example, 'dx-iq'), update accordingly.
 # Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
 environment:
   pod:
@@ -107,7 +107,7 @@ environment:
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (for example, `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: The external DX hostname used by the LLM for gathering context (for example, `dx.example.com`)
 - `<LITELLM_URL>`: The LiteLLM Proxy URL (for example, `https://litellm.example.com`) for operational deployments.
-- **`<IQ_RELEASE_NAME>`** (**REQUIRED**): The Helm release name used when installing this IQ chart. This must match your deployment's release name (for example, if installing with `helm install dx-iq ...`, use `dx-iq-mcp-server`). The default in `defaults.json` assumes `dx-ai-mcp-server`, which will fail if your release name differs. Always override this value during installation.
+- `<IQ_RELEASE_NAME>`: The Helm release name used to install the IQ chart. Ensure this value matches your deployment's release name. For example, if you installed the chart using `helm install dx-iq`, set this value to `dx-iq-mcp-server`. The `defaults.json` file uses `dx-ai-mcp-server` by default, so you must override this value during installation.
 
 !!! note "DX service discovery"
     Ensure the `internalHost` value matches your DX deployment type:
@@ -128,28 +128,23 @@ helm install dx-iq \
   --values custom-iq-values.yaml \
   --set-json 'environment.pod.integrator=[
   {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+  {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
   {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
   {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
 ]'
 ```
 
 !!! warning "Release name must match MCP_SERVER_LIST"
-    The `MCP_SERVER_LIST` environment variable must reference the correct MCP Server deployment based on your IQ release name. In the example above, the release is `dx-iq`, so the MCP Server is `dx-iq-mcp-server`. 
-    
-    **If your release name differs**, update the value accordingly:
-    - IQ Release name: `dx-iq` → Use: `http://dx-iq-mcp-server:3000`
-    - IQ Release name: `dx-ai` → Use: `http://dx-ai-mcp-server:3000`
-    - IQ Release name: `my-iq` → Use: `http://my-iq-mcp-server:3000`
-    
-    **Failure to set this correctly will cause the Integrator pod to fail health checks** and enter a `CrashLoopBackOff` state.
+    The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values will cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
 
 - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
 - `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
 - `<LITELLM_API_KEY>`: The LiteLLM API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
+- `<LITELLM_URL>`: <!--definition?-->
 - `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
-!!! warning "LITELLM_API_KEY and LITELLM_URL are Required"
+!!! warning "LITELLM_API_KEY and LITELLM_URL are required"
     Although the helm install command completes successfully without these values, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
 
     - For production deployments, provide both `LITELLM_API_KEY` and `LITELLM_URL` during the initial installation.
