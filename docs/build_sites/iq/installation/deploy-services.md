@@ -140,7 +140,7 @@ helm install dx-iq \
 - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
 - `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
 - `<LITELLM_API_KEY>`: The LiteLLM API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
-- `<LITELLM_URL>`: <!--definition?-->
+- `<LITELLM_URL>`: The LiteLLM proxy URL provided by the LiteLLM proxy administrator to enable Integrator functionality.
 - `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
@@ -203,20 +203,7 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
 
-    **Common issues if Integrator pod fails to start:**
-    
-    - **MCP_SERVER_LIST misconfiguration**: If you see connection errors to the MCP Server in Integrator logs, verify:
-      ```bash
-      kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}' && echo ""
-      # Expected output: <IQ_RELEASE_NAME>-mcp-server-<random>
-      
-      # Verify the service DNS name resolves and responds
-      kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAMESPACE> -- \
-        curl -w "\nHTTP Status: %{http_code}\n" http://<IQ_RELEASE_NAME>-mcp-server:3000/probe/live
-      # Expected output: "MCP server live" with "HTTP Status: 200"
-      ```
-    - **Incorrect release name used**: Confirm your release name matches the one used in the `MCP_SERVER_LIST` value (e.g., if installed with `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`).
-    - **LiteLLM connectivity**: Check Integrator can reach the LiteLLM proxy with the correct API key set in `LITELLM_API_KEY`.
+    For common issues and troubleshooting steps, refer to [Troubleshooting - Backend services](../troubleshooting.md#backend-services).
 
 ## Upgrading and maintaining the IQ backend components
 

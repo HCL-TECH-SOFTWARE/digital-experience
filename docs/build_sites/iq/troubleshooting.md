@@ -89,6 +89,32 @@ kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
 kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
 ```
 
+### Integrator pod startup issues
+
+If the Integrator pod fails to start, check the container logs and verify the following common issues:
+
+**MCP_SERVER_LIST misconfiguration**
+
+If you see connection errors to the MCP Server in Integrator logs, verify:
+
+```bash
+kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}' && echo ""
+# Expected output: <IQ_RELEASE_NAME>-mcp-server-<random>
+
+# Verify the service DNS name resolves and responds
+kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAMESPACE> -- \
+  curl -w "\nHTTP Status: %{http_code}\n" http://<IQ_RELEASE_NAME>-mcp-server:3000/probe/live
+# Expected output: "MCP server live" with "HTTP Status: 200"
+```
+
+**Incorrect release name used**
+
+Confirm your release name matches the one used in the `MCP_SERVER_LIST` value (for example, if installed with `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`).
+
+**LiteLLM connectivity**
+
+Check that the Integrator can reach the LiteLLM proxy with the correct API key set in `LITELLM_API_KEY`.
+
 ### Connection failures
 
 If you encounter errors such as `Connection refused` or `Password authentication failed` while [verifying your database connectivity](./installation/validation.md#verifying-database-connectivity), the IQ Integrator cannot reach the database. Use the verification steps for your database type to locate the root cause.
