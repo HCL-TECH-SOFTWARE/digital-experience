@@ -29,6 +29,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Search|[How to create a search service for a Virtual Portal](./search//VPSearchService.md)|
 |Migrated|Security|[How to integrate the impersonation API with SAML](./security/ImpersonationAPIWithSAML.md)|
 |Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
+|New|Configuration|[How to install and configure Ingress with virtual portals](./configuration/ConfigureIngressWithVPs.md)|
 
 ## CF235
 

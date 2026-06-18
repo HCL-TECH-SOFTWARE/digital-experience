@@ -7,9 +7,9 @@ nav:
     - ChangeDisplayLanguage.md
     - ConfigureRAD.md
     - EnableImageFormats.md
+    - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md
     - responseHeaderForceType.md
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
-    - ConfigureIngressWithVPs.md

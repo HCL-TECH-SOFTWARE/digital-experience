@@ -1,52 +1,57 @@
-# How to install and configure Ingress with Virtual Portals
+# How to install and configure Ingress with virtual portals
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
-In HCL Digital Experience there are two options available for implementing the Access Layer in the DX deployment, which is Ingress and Gateway API. For details, please check [Access Layer for DX deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md){target="_blank"}.
-On that page also some general settings can be found for installing and configuring ingress. In addition to that general configuration page this How-To document describes more details in how to install and configure Ingress in a Kubernetes environment for which a specific hostname will be used for the base portal (hostname: `BasePortal`) and a Virtual Portal (hostname `VirtualPortal1`).  
+You can implement the access layer in your HCL Digital Experience (DX) deployment using either Ingress or the Gateway API. For more information regarding general settings and installation processes, refer to [Access Layer for DX deployment](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-configure-access-layer.md).
+
+This article describes how to install and configure Ingress in a Kubernetes environment using a specific hostname for the base portal (`BasePortal`) and a virtual portal (`VirtualPortal1`).
 
 ## Prerequisites
 
-Before installing Ingress it is suggested to make sure that the helm version in the kubernetes environment is up to date. This can be done by download the file [get-helm-3.sh](https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3){target="_blank"} from the [Installing Helm](https://helm.sh/docs/intro/install/){target="_blank"} web page. After the file is downloaded, run the script to update the helm-version.  
+Before installing Ingress, ensure that the Helm version in the Kubernetes environment is up to date:
+
+1. Download the [get-helm-3.sh](https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3){target="_blank"} script from [Installing Helm](https://helm.sh/docs/intro/install/){target="_blank"}.
+2. Run the downloaded script to update the Helm version.
 
 ## Instructions
 
-**Step Overview:**  
-[1. Installing Ingress](#installing-ingress)  
-[2. Change the helm-chart to point to the ClusterIP](#change-the-helm-chart-to-point-to-the-clusterip)  
-[3. Add additional hostnames to the helm-chart](#add-additional-hostnames-to-the-helm-chart)  
-[4. Update the deployment to reflect the changes](#update-the-deployment-to-reflect-the-changes)  
-[5. Creating a Virtual Portal](#creating-a-virtual-portal)  
-[6. Creating Ingress resource rules](#creating-ingress-resource-rules)  
-[6a. Creating the BasePortal hostname resource rule](#creating-the-baseportal-hostname-resource-rule)  
-[6b. Creating the VirtualPortal1 hostname resource rule](#creating-the-virtualportal1-hostname-resource-rule)  
-[7. Testing](#testing)  
-[Optional - Rewrite options on ingress](#optional---rewrite-options-on-ingress)  
+To install and configure Ingress with virtual portals, perform the following steps:
 
-### Installing Ingress
+1. [Install the Ingress controller](#installing-the-ingress-controller)  
+2. [Change the HAProxy serviceType to ClusterIP](#changing-the-haproxy-servicetype-to-clusterip)  
+3. [Add the portal hostnames to the Helm chart](#adding-the-portal-hostnames-to-the-helm-chart)  
+4. [Update the deployment to reflect the changes](#updating-the-deployment-to-reflect-the-changes)  
+5. [Create a host-based virtual portal](#creating-a-virtual-portal)  
+6. [Create the Ingress resource rules](#creating-ingress-resource-rules)  
+    1. [Create the `BasePortal` hostname resource rule](#creating-the-baseportal-hostname-resource-rule)  
+    2. [Create the `VirtualPortal1` hostname resource rule](#creating-the-virtualportal1-hostname-resource-rule)  
+7. [Test the portal access routing](#testing-the-portal-access-routing)  
+8. [Configure optional rewrite options on Ingress](#configuring-optional-rewrite-options-on-ingress)  
 
-On an existing HCL DX environment on Kubernetes Ingress can be installed in different ways. The default installation can be done by executing the following command:  
+### Installing the Ingress controller
 
- ```shell
- helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace <your_namespace>
- ```
+1. Install the default Ingress configuration on your Kubernetes environment:
 
-If it is planed to apply more extensive ingress rules by using server-snippets, Ingress can also be installed by using the command:  
+    ```shell
+    helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace <your_namespace>
+    ```
 
-```shell
-helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace <your_namespace> --set controller.config.allow-snippet-annotations="true" --set controller.config.annotations-risk-level="Critical"
-```
+2. If your deployment requires extensive rules using server snippets, enable snippet annotations during installation:
+
+    ```shell
+    helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace <your_namespace> --set controller.config.allow-snippet-annotations="true" --set controller.config.annotations-risk-level="Critical"
+    ```
 
 !!!note
-    Please be aware that installing ingress with `--set controller.config.annotations-risk-level="Critical"` increase the risk level. It should only be used, if server snippets are really needed to fulfil a specific requirement. For details, please refer to [Annotations Scope and Risk](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations-risk/){target="_blank"}
+    Installing Ingress with `--set controller.config.annotations-risk-level="Critical"` increases the environment risk level. Only use this configuration if server snippets are required to fulfill a specific requirement. For more information, refer to [Annotations Scope and Risk](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations-risk/){target="_blank"}.
 
-### Change the helm-chart to point to the ClusterIP
+### Changing the HAProxy serviceType to ClusterIP
 
-By default in the values.yaml file, HAProxy serviceType is set to loadBalancer. To use the external Ingress, set the serviceType appropriate for your specific use case. In this example, ClusterIP is used for which the following need to be changed in the values.yaml file:  
+Configure the HAProxy `serviceType` to use an external Ingress. In the `values.yaml` file, change the `serviceType` from `loadBalancer` to `ClusterIP`:
 
 ```yaml
 networking:
@@ -54,11 +59,9 @@ networking:
     serviceType: ClusterIP
 ```
 
-### Add additional hostnames to the helm-chart
+### Adding the portal hostnames to the Helm chart
 
-In this sample a base portal will be configured with hostname `BasePortal` and a Virtual Portal will be configured with hostname `VirtualPortal1`.  To make these hostnames accessible from outside the host names need to be known in the hostAliases section in the helm chart. For details, please check [Setting the hostAliases for DX Pods](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_options_host_alias.md){target="_blank"}
-
-Update the values.yaml file in the hostAliases section as following:
+Map the base portal (`BasePortal`) and virtual portal (`VirtualPortal1`) hostnames inside the `hostAliases` section of the `values.yaml` file to make them accessible from outside the cluster. For more information, refer to [Setting the hostAliases for DX Pods](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_options_host_alias.md).
 
 ```yaml
 hostAliases:
@@ -70,30 +73,29 @@ hostAliases:
 ```
 
 !!!note
-    If more then just one VirtualPortal will be used, additional host aliases can be added under `hostnames`.
+    If your environment uses more than one virtual portal, add the hostnames directly under the `hostnames` list.
 
-### Update the deployment to reflect the changes
+### Updating the deployment to reflect the changes
 
-Run a helm upgrade command to reflect the new changes in your current DX deployment. For details, please check [Upgrading Helm Deployment](../../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"}.  
+Apply the configuration changes to your active HCL DX deployment. For more information, refer to [Upgrading Helm Deployment](../../../deployment/install/container/helm_deployment/update_helm_deployment.md).  
 
-For example:  
+For example:
 
 ```yaml
 helm upgrade -n your-namespace -f path/to/your/values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 ```
 
-### Creating a Virtual Portal
+### Creating a virtual portal
 
-Create a host based virtual portal (for example with hostname `VirtualPortal11`) by following the instructions of [Creating a virtual portal](../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/create_vp/index.md){target="_blank"}
+Create a host-based virtual portal using your designated hostname (for example, `VirtualPortal1`). For more information, refer to [Creating a virtual portal](../../../build_sites/virtual_portal/adm_vp_task/vp_adm_task/create_vp/index.md).
 
 ### Creating Ingress resource rules
 
-Ingress can be configured by specifying resources and rules in yaml files. In this section it will be described in how to configure such rules for different host names.
-It is best practice to create a new yaml file for each new rule.  
+Configure Ingress by defining resources and rules in YAML files. Create a new YAML file for each rule.
 
 #### Creating the BasePortal hostname resource rule
 
-1. create a new yaml file (for example base_portal_rule.yaml) and add the following content into it:  
+1. Create a YAML file named `base_portal_rule.yaml` with the following content:
 
     ```yaml
     apiVersion: networking.k8s.io/v1  
@@ -120,12 +122,11 @@ It is best practice to create a new yaml file for each new rule.
                     name: haproxy 
     ```
 
-    !!!note
-        Replace the `<deployment-name>` tag with your real deployment name. (for example: dx-deployment).  
-        Replace the `<your base portal hostname>` tag with your real base-portal hostname value.  
-        Replace the `<your virtual portal hostname>` tag with your virtual portal hostname.  
+    - `<deployment-name>`: Your actual deployment name (for example, `dx-deployment`).
+    - `<your base portal hostname>`: Your base portal hostname.
+    - `<your virtual portal hostname>`: Your virtual portal hostname.
 
-2. Run the following command to apply the new ingress resource rule for the `BasePortal` hostname:
+2. Apply the new Ingress resource rule for the `BasePortal` hostname:
 
     ```yaml
     kubectl apply -f base_portal_rule.yaml -n <namespace>
@@ -133,7 +134,7 @@ It is best practice to create a new yaml file for each new rule.
 
 #### Creating the VirtualPortal1 hostname resource rule
 
-1. create a new yaml file (for example VirtualPortal1_rule.yaml) and add the following content into it:  
+1. Create a YAML file named `VirtualPortal1_rule.yaml` with the following content:
 
     ```yaml
     apiVersion: networking.k8s.io/v1  
@@ -160,25 +161,24 @@ It is best practice to create a new yaml file for each new rule.
                     name: haproxy 
     ```
 
-    !!!note
-        Replace the `<deployment-name>` tag with your real deployment name. (for example: dx-deployment).  
-        Replace the `<your base portal hostname>` tag with your real base-portal hostname value.  
-        Replace the `<your virtual portal hostname>` tag with your virtual portal hostname.  
+    - `<deployment-name>`: Your actual deployment name (for example, `dx-deployment`).
+    - `<your base portal hostname>`: Your base portal hostname.
+    - `<your virtual portal hostname>`: Your virtual portal hostname.
 
-2. Run the following command to apply the new ingress resource rule for the `VirtualPortal1` hostname:
+2. Apply the new Ingress resource rule for the `VirtualPortal1` hostname:
 
     ```yaml
     kubectl apply -f base_portal_rule.yaml -n <namespace>
     ```
 
-    where the `<namespace>` tag need to be replaced with your deployment namespace. (for example `dxns`)  
+    -`<namespace>`: Your actual deployment namespace (for example `dxns`).  
 
     !!!note
-        If additional Virtual Portals will be created, follow the same instructions to extend the ingress rules.  
+        If you create additional virtual portals, follow the same instructions to extend the Ingress rules.
 
-### Testing
+### Testing the portal access routing
 
-For internal tests the local  `etc/hosts ` file can be modified to point to the dx-deployment IP-address and by mapping then the hostnames `BasePortal` and `VirtualPortal1` to that IP.
+For internal testing, modify the local `/etc/hosts` file to point to the HCL DX deployment IP address by mapping the `BasePortal` and `VirtualPortal1` hostnames to that IP.
 
 For example:  
 
@@ -188,49 +188,45 @@ For example:
 ```
 
 !!!note
-    In a production environment DNS entries need to be requested that then can be mapped to the official domain-names used in the HCL DX environment.
+    In a production environment, request DNS entries that map to the official domain names used in the HCL DX environment.
 
-As soon as the DNS entries exist either in the etc/hosts file or in the DNS-servers it can be tried to access the base portal or the virtual portal by using the URLs:
+Once the DNS entries exist in either the `/etc/hosts` file or your DNS servers, verify access to the portals using the following URLs:
 
-For base portal access URL: `https://BasePortal/wps/portal`
+- Base portal URL: `https://BasePortal/wps/portal`
+- Virtual portal URL: `https://VirtualPortal/wps/portal`
 
-For virtual portal access URL: `https://VirtualPortal/wps/portal`
+### Configuring optional rewrite options on Ingress
 
-### Optional - Rewrite options on ingress
+To configure a rewrite URL that redirects traffic from one host or domain name to another, define an additional Ingress resource.
 
-If you want to configure a rewrite-url to access any host/domain-name from another one, then a additional ingress resource can be specified as following:
+Create a YAML file named `VirtualPortal2_rule.yaml` with the following content:
 
-1. create a new file and name it VirtualPortal2_rule.yaml
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: nginx-ingress-vp2
+    annotations:
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/rewrite-target: "https://<hostname to redirect>/$1$2"
+spec:
+  rules:
+  - host: vp2
+    port: 443,80
+    http:
+      paths:
+        - path: '/([^/]*)(.*)'
+          pathType: ImplementationSpecific
+          backend:
+            service:
+              name: ingress-nginx
+              port:
+                number: 443
+```
 
-2. Add the following content in that file:  
-
-    ```yaml
-    apiVersion: networking.k8s.io/v1
-    kind: Ingress
-    metadata:
-        name: nginx-ingress-vp2
-        annotations:
-          nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-          nginx.ingress.kubernetes.io/use-regex: "true"
-          nginx.ingress.kubernetes.io/rewrite-target: "https://<hostname to redirect>/$1$2"
-    spec:
-     rules:
-     - host: vp2
-       port: 443,80
-       http:
-         paths:
-           - path: '/([^/]*)(.*)'
-             pathType: ImplementationSpecific
-             backend:
-               service:
-                 name: ingress-nginx
-                 port:
-                   number: 443
-    ```
-
-Replace the tag `<hostname to redirect>` with your backend hostname on which you want to redirect requests. For example, if you have a virtual portal with hostname `VirtualPortal1` and you want to access that virtual portal by using "VirtualPortal2" in the web-browser, then "VirtualPortal1" should be used to specify the target.  
-
-Replace the tag `<hostname to be used in web-browser>` with the real hostname that should be used to contact the backend hostname.  
+- `<hostname-to-redirect>`: The backend target hostname for the redirection (for example, `VirtualPortal1`).
+- `<hostname to be used in web-browser>`: The public hostname that users enter in their web browser (for example, `VirtualPortal2`).
 
 !!!note
-    Ingress has limitations. It is possible to configure a redirect rule, but the redirect then is also visible in the web-browser. A redirect to a backend server without changing the web-browser URL is not possible by using ingress!
+    Ingress redirect rules alter the URL displayed in the web browser. Standard Ingress resources cannot perform a masking backend redirect that hides the target URL from the user.
