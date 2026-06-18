@@ -89,13 +89,13 @@ kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator --tail=200
 kubectl describe pod -n <YOUR_NAMESPACE> -l app=dx-iq-integrator
 ```
 
-### Integrator pod startup issues
+### Integrator pod startup failures
 
-If the Integrator pod fails to start, check the container logs and verify the following common issues:
+If the Integrator pod fails to start, check the container logs and verify these common issues:
 
 **MCP_SERVER_LIST misconfiguration**
 
-If you see connection errors to the MCP Server in Integrator logs, verify:
+If connection errors to the MCP Server occur in the Integrator logs, run these commands to check the deployment status and network resolution:
 
 ```bash
 kubectl get pod -n <YOUR_NAMESPACE> -o jsonpath='{.items[?(@.metadata.labels.app=="<IQ_RELEASE_NAME>-mcp-server")].metadata.name}' && echo ""
@@ -109,11 +109,11 @@ kubectl run -it --rm debug --image=curlimages/curl --restart=Never -n <YOUR_NAME
 
 **Incorrect release name used**
 
-Confirm your release name matches the one used in the `MCP_SERVER_LIST` value (for example, if installed with `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`).
+Confirm your release name matches the value used in the `MCP_SERVER_LIST` property. For example, if you installed the chart using `helm install dx-iq`, use `http://dx-iq-mcp-server:3000`.
 
 **LiteLLM connectivity**
 
-Check that the Integrator can reach the LiteLLM proxy with the correct API key set in `LITELLM_API_KEY`.
+Verify that the Integrator can reach the LiteLLM proxy using the API key specified in the `LITELLM_API_KEY` variable.
 
 ### Connection failures
 

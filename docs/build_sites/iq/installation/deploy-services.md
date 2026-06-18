@@ -203,7 +203,7 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
 
-    For common issues and troubleshooting steps, refer to [Troubleshooting - Backend services](../troubleshooting.md#backend-services).
+    To resolve Integrator pod startup issues, refer to [Troubleshooting - Backend services](../troubleshooting.md#backend-services).
 
 ## Upgrading and maintaining the IQ backend components
 
