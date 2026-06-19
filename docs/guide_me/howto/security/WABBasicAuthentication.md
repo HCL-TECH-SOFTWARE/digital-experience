@@ -20,7 +20,7 @@ Some users require a secure connection to their back-end application using basic
 
 5. Under **Vault resource associated with vault slot** select **New**.  
 
-6. enter the name `BasicAuthResource`.
+6. Enter the name `BasicAuthResource`.
 
 7. Click box **Vault slot is shared**.
 
@@ -30,23 +30,22 @@ Some users require a secure connection to their back-end application using basic
 
 10. Click the button **Create Content Provider Profile**.
 
-11. In the Unique Profile Title enter `basicAuthProfile`.
-
-12. Specify the hostname in the format `http://server:port` where server/port is the location of the app requiring basic authentication. Then click to the **Save** button.
+11. In the Unique Profile Title enter `basicAuthProfile`, specify the hostname in the format `http://server:port` where server/port is the location of the app requiring basic authentication.
+    Then click to the **Save** button.
 
 13. At the **basicAuthProfile** entry click on the **default** button.  
 
-14. Then click to **edit**.
+14. Click **edit**.
 
-15. Click to the **Single Sign-On** tab and select "HTTP Basic Authentication".
+15. Click the **Single Sign-On** tab and select "HTTP Basic Authentication".
 
-16. Select **BasicAuthVaultSlot** and then to the **Save** button.
+16. Select **BasicAuthVaultSlot** and then click the **Save** button.
 
-17. Click on **Web Doc Applications** and then to **Create Web Dock Application**.  
+17. Click on **Web Doc Applications** and then click **Create Web Dock Application**.  
 
 18. Enter the Title `basicAuthDock` and select **basicAuthProfile**.
 
-19. Enter the resource path for the back-end application e.g. `/basicAuth/basicAuthClass` and then click to the **Save** button.
+19. Enter the resource path for the back-end application e.g. `/basicAuth/basicAuthClass` and then click the **Save** button.
 
 20. Activate the Portal Edit mode and create a new page. Then locate and add the **basicAuthDock** application from the Applications Palette.
 
