@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Some users require a secure connection to their back-end application using basic authentication. If there is a need to test these config steps in a secured manner below steps can be used.
+Some users require a secure connection to their back-end application using basic authentication. If there is a need to test these config steps in a secured manner, the steps below can be used.
 
 ## Instructions
 
