@@ -2,4 +2,7 @@ title: Container
 
 nav:
     - index.md
+    - DeleteDuplicateCheckSum.md
+    - HelmChartValues.md
     - ManualDXCoreCertUpdate.md
+    - RestartPersistenceNodes.md
