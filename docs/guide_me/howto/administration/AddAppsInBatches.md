@@ -14,7 +14,7 @@ It is possible to add applications to your custom application palette category o
 
 This is a two step process and requires XMLAccess and access to your Portal Administration (Managed Pages) view.
 
-1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML-file that you might need to create and use as input file for your XMLAccess command:
+1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML-code that you might need to create and use as input file for your XMLAccess command:
 
     ```html
     <request
@@ -48,4 +48,4 @@ This is a two step process and requires XMLAccess and access to your Portal Admi
 
     b. Under the application category root label, create a new URL. Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.
 
-This then created a category and added all portlets tagged with that category to the application category immediately.
+This creates a category and will add all portlets tagged with that category to the application category immediately.
