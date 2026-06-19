@@ -1,21 +1,23 @@
-# How DAM asset URLs will be used after an library import from other environment
+# How to manage DAM asset URLs after a library import from another environment
 
 ## Applies to
 
-> HCL Digital Experience 9.5 and higher  
+> HCL Digital Experience v9.5 and higher  
 
 ## Introduction
 
-After an library import from other environment, some items contain an absolute URL in the `ibmcontentwcm:digitalAsset`. This is however not in every item. Some items contain a relative path also. This article describe the reason for it.  
+After importing a library from another environment, some items contain an absolute URL in the `ibmcontentwcm:digitalAsset` attribute, while others contain a relative path. This variation occurs based on how the Digital Asset Management (DAM) repository handles asset references. This article explains how to configure DAM asset URL rendering parameters to ensure consistent asset pathing.
 
 ## Instructions
 
-The rendering behavior for end users will be controlled by the assetUrl and that is configured through `dam.host.overwrite` / `dam.host.relative` parameters per this documentation [Staging DAM to rendering environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md){target="_blank"}.
+To configure DAM asset URL parameters, perform the following steps:
 
-Without `dam.host.overwrite` or `dam.host.relative`, the original DAM asset URL will be used.
+1. Enable either the `dam.host.relative` or `dam.host.overwrite` parameter based on your environment requirements:
 
-Use the `dam.host.relative` and set it to `true`. As explained in the doc below, if the property is in place the returned DAM references have no hostname or port. For details, please read [Using WCM with DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md/#using-wcm-with-dam-staging){target="_blank"}.
+    - To remove the hostname and port from returned DAM references, set `dam.host.relative` to `true`. For more information, refer to [Using WCM with DAM staging](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#using-wcm-with-dam-staging).
+    - To specify a custom host for a DAM asset, configure `dam.host.overwrite`. For more information, refer to [Setting a unique custom URL for a media asset](../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_set_unique_custom_URL_media_asset.md#setting-a-unique-custom-url-for-a-media-asset).
 
-Meanwhile, there's also a configuration to specify custom host for a DAM asset and it is documented in [Setting a unique custom URL for a media asset](../../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_set_unique_custom_URL_media_asset.md/#setting-a-unique-custom-url-for-a-media-asset){target="_blank"}.
+2. Restart the server to apply the configuration changes.
 
-The absolute URL will be overwritten as soon as `dam.host.overwrite` or `dam.host.relative` is enabled, and the server is restarted to pick up the change. The absolute URLs in `ibmcontentwcm:digitalAsset` can be ignored, if `dam.host.overwrite` or `dam.host.relative` is set.
+    !!! note
+        The system overwrites the absolute URL as soon as the server restarts. You can safely ignore the absolute URLs in `ibmcontentwcm:digitalAsset` once either parameter is set. For more information on staging configurations, refer to [Staging DAM to rendering environments](../../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md).
