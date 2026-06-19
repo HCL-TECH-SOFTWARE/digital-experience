@@ -148,7 +148,7 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
 3. Click **Move to trash** to confirm the action.
 
 !!! note
-    To permanently delete a collection, see [Permanent delete collection](dam_soft_delete.md#permanent-delete-collection).
+    To permanently delete a collection, refer to [Deleting an asset or collection permanently](dam_soft_delete.md#deleting-an-asset-or-collection-permanently).
 
 ## Moving a collection
 
