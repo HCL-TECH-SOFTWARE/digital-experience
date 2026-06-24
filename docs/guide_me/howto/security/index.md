@@ -24,5 +24,5 @@ Learn how to remove the Unified Task List and Script Application Import portlets
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to Monitor User Logins in HCL Digital Experience](./MonitorUserLogins.md)**  
-Learn how to monitor user logins in HCL Digital Experience.
+- **[How to monitor user logins from traces on HCL Digital Experience](./MonitorUserLogins.md)**  
+Learn how to monitor user logins from traces on HCL Digital Experience.
