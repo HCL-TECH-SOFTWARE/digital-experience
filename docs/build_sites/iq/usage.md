@@ -9,6 +9,9 @@ IQ is an assistant purpose-built for HCL DX that understands DX-specific concept
 !!! note
     The available actions depend on the MCP tools deployed in your environment. The standard IQ deployment includes a default set of tools, which are described in the [Performing actions](#performing-actions) section. For more information, refer to [AI model limitations](limitations.md#ai-model).
 
+!!! note
+    The available actions depend on the access level of the logged-in user. For example, creating or updating items may be restricted to users with the Editor role, while listing items can typically be performed with the User role. For details on roles and permissions, see [Security roles](../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md).
+
 ### Asking questions
 
 You can ask IQ about any HCL DX topic to get concise answers and guidance. The assistant answers questions about content authoring, workflows, approvals, Digital Asset Management (DAM), site structure, pages, and navigation. It also provides guidance on components, presentation templates, personalization, targeting, syndication, delivery, configuration, and troubleshooting.
