@@ -3,3 +3,4 @@ nav:
     - index.md
     - DB2DatabaseSize.md
     - RunstatsandReorg.md
+    - TLSMSSQLDBConnection.md
