@@ -10,5 +10,7 @@ Learn how to improve DX database performance on a DB2 database.
 Learn how to tune Web Content Manager (WCM) to reduce your query time.  
 - **[How to tune the LDAP configuration in HCL DX](./DX_Tune_LDAP.md)**  
 Learn how to optimize group membership resolution and reduce directory server load to resolve authentication performance delays.  
-- **[How to warm up your Portal site](WarmUpPortalSite.md)**  
-Learn how to improve DX performance by warming up your site at startup.  
+- **[How to warm up your Portal site](./WarmUpPortalSite.md)**  
+Learn how to improve DX performance by warming up your site at startup.
+- **[How to identify WCM items causing performance issues](./WCMAuthoringPerformance.md)**  
+Learn how to identify WCM items causing performance issues.
