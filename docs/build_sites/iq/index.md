@@ -6,6 +6,9 @@ The IQ assistant is accessible through a chat interface integrated into HCL DX. 
 
 To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
 
+!!! note
+    IQ is a separate assistant from the Doc IQ chatbot. For more information, refer to [Differences between IQ and Doc IQ](../../get_started/product_overview/doc_iq_chatbot.md#differences-between-iq-and-doc-iq).
+
 ## Prerequisites
 
 Ensure your environment meets the following requirements:
@@ -13,7 +16,7 @@ Ensure your environment meets the following requirements:
 1. HCL Digital Experience (DX) version 236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ.
+4. Virtual Resource permission to access IQ. <!--instead of adding an image, can we link to deployment/manage/security/people/authorization/controlling_access/sec_rpp.md instead and specify that it's for IQ? not sure if this is accurate-->
 
 ![IQ Virtual Resource Permission](../../assets/HCL_IQ_Virtual_Resource.png "HCL DX Virtual Resource Permission for IQ")
 
