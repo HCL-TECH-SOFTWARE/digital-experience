@@ -12,4 +12,5 @@ nav:
     - UnifiedTaskListLog4j.md
     - ChangeLoginPage.md
     - ReplacePortalLDAP.md
+    - LDAPAttrForImpersonation.md
 

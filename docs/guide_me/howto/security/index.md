@@ -24,3 +24,5 @@ Learn how to remove the Unified Task List and Script Application Import portlets
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
+- **[How to Change the LDAP Attribute Used by the Impersonation Portlet](./LDAPAttrForImpersonation.md)**  
+Learn how to change the LDAP attribute used by the Impersonation portlet.
