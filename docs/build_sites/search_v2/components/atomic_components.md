@@ -2,25 +2,23 @@
 
 ## Overview
 
-Atomic Components (ACs) are reusable Web Components used across HCL Digital Experience products to provide a consistent user experience and design language.
+Atomic Components (ACs) are reusable Web Components used across HCL Digital Experience (DX) products to provide a consistent user experience and design language.
 
 The Atomic Components library is maintained as the public repository **enchanted-web-components**.
 Search v2 consumes these components, and this page serves as an entry point to the latest documentation and a list of components used within Search v2.
 
- ## Resources
+## Resources
 
 | **Resource** | **Description** | **Link** |
 | ------------ | ------------ | --------------|
 | **GitHub Repository** | Source code, installation instructions, and contribution guidelines | [enchanted-web-components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components) |
 | **Storybook** | Interactive component documentation, examples, APIs, and accessibility guidelines | [View Storybook](https://opensource.hcltechsw.com/enchanted-web-components/) |
 
----
-
 ## Components Used in Search v2
 
 The following Atomic Components are used within Search v2. For detailed APIs, usage examples, and accessibility guidance, refer to Storybook.
 
-| Component | Description | Stroybook |
+| Component | Description | Storybook |
 | ----------| ------------| ----------|
 | `enchanted-button` | Clickable button for actions | [View Storybook](https://opensource.hcltechsw.com/enchanted-web-components/?path=/story/input-enchanted-button--enchanted-button) |
 | `enchanted-textfield ` | Text input field for user queries. | [View Storybook](https://opensource.hcltechsw.com/enchanted-web-components/?path=/story/input-enchanted-textfield--default) |
@@ -36,17 +34,14 @@ The following Atomic Components are used within Search v2. For detailed APIs, us
 | `enchanted-header-layout` | Header section layout container |Documented with enchanted-header <br> [View Storybook](https://opensource.hcltechsw.com/enchanted-web-components/?path=/story/navigation-enchanted-header--enchanted-header)  |
 | `enchanted-ac-base-element` | Base class for Atomic Components | Internal component  |
 
----
-
 ## CSS Parts Reference
 
 The following CSS Parts are exposed by the Atomic Components used in Search v2. These Parts are part of the public styling API and can be targeted using the CSS ::part() selector to customize the appearance of the components.
 
----
-
 ### enchanted-button
-| **Part** | **Description**  |
-|-----------|-------------|
+
+| **Part** | **Description** |
+|----------|-----------------|
 | button | Represents the main button element. It is the default part for the button and is styled based on the button's state (such as disabled and focused) and variant (such as contained, outlined, or text). |
 | button-disabled | Represents the button in a disabled state when the `disabled` property is set to `true`. |
 | button-outlined | Represents the button with an outlined style when the `variant` property is set to `outlined`. |
@@ -69,8 +64,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | button-enchanted-outlined-focused | Represents the enchanted outlined button in a focused state when the `focused` property is set to `true` and the `variant` property is set to `outlined`. | 
 
 ### enchanted-textfield
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | label | Main field label styling hook. |
 | div | Root wrapper that contains label, input/textarea, and optional action icons. |
 | label-disabled | Label style when the textfield is disabled. |
@@ -90,8 +86,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | icon-action-disabled | Action icon state when textfield is disabled. |
 
 ### enchanted-select
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | div | Root select wrapper containing label area, trigger button, and dropdown list. |
 | div-label | Wrapper around label and optional remove label. |
 | label | Main select label styling hook. |
@@ -100,33 +97,38 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | remove-label-disabled | Remove-label style when disabled. |
 
 ### enchanted-link
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | result-title | Link rendered as a result title link. |
 | pagination-index-default | Pagination link in default state. |
 | pagination-index-selected | Pagination link in selected/active state. |
 | pagination-index-disabled | Pagination link in disabled state. |
 
 ### enchanted-list
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | unordered-list | Internal container for list content. |
 
 ### enchanted-list-item
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | list-item | Default list item row state. |
 | list-item-selected | Selected list item row state. |
 | menu-item | Menu role list item styling (used when role is menuitem). |
 
 ### enchanted-svg-ico
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | None | This component does not set any `part` attributes directly. |
 
 ### enchanted-circular-progress
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | circular-progress-root | Root wrapper for spinner and optional label. |
 | circular-progress-spinner | Spinner size container around the SVG. |
 | circular-progress-svg | SVG element containing track and progress circles. |
@@ -136,8 +138,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | circular-progress-label | Optional text label shown next to spinner. |
 
 ### enchanted-chip
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | chip-div | Root chip container. |
 | chip-div-disabled | Root chip disabled state styling. |
 | chip-name | Chip name/label text. |
@@ -145,8 +148,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | chip-count-rtl | Chip count badge text (RTL). |
 
 ### enchanted-toggle-button
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | toggle-button-div | Root wrapper for toggle button and optional badge/tooltip. |
 | toggle-button-badge-wrapper | Wrapper around badge slot content. |
 | toggle-single-button | Main clickable toggle button element. |
@@ -157,8 +161,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | toggle-button-icon | Icon slot styling hook inside the button. |
 
 ### enchanted-table-pagination
+
 | **Part** | **Description** |
-| -- | --- |
+|----------|-----------------|
 | container | Root pagination layout container. |
 | rows-section | Left section containing rows-per-page select and rows summary text. |
 | rows-description | Text showing current row range and total count. |
@@ -167,8 +172,9 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | pages-nav-button | Part applied to each navigation button host (first/prev/next/last). |
 
 ### enchanted-header-layout
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | main-header | Root header layout container for standard mode. |
 | chat-main-header | Root header layout container for chat mode. |
 | header-start-container | Wrapper for start slot area. |
@@ -181,10 +187,10 @@ The following CSS Parts are exposed by the Atomic Components used in Search v2. 
 | header-end | Inner end slot content container. |
 
 ### enchanted-ac-base-element
+
 | **Part** | **Description** |
-| --- | --- |
+|----------|-----------------|
 | None | Base class only. It does not render template markup or define part attributes. |
 
-**Note**
-
-Storybook is the primary source of documentation for Atomic Components. It contains component APIs, properties, usage examples, component states, accessibility guidance, and interactive playgrounds.
+!!! note
+    Storybook is the primary source of documentation for ACs. It contains component APIs, properties, usage examples, component states, accessibility guidance, and interactive playgrounds. For more information, refer to [](){target="_blank"}.
