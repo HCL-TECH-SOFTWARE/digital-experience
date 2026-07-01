@@ -8,3 +8,5 @@ Learn how to use command-line syntax for installing Fixes with IBM Installation 
 Learn how to export and import portal pages using XML Access.  
 - **[How to verify an HCL DX CF upgrade](./checkSuccessfullUpgrade.md)**  
 Learn how to verify if an HCL DX CF upgrade was installed successfully.
+- **[How to Skip the Health Checker While Running ApplyCF](./ApplyCFSkipHealthChecker.md)**  
+Learn how to skip the Health Checker while running applyCF.
