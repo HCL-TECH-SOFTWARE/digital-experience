@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article describes how to change the user profile LDAP attribute that's displayed within the DX Impersonation portlet.  For example, when using the common name (cn) LDAP attribute, the user profile name is displayed as follows:
+This documentation describes how to change the user profile LDAP attribute that's displayed within the DX Impersonation portlet.  For example, when using the common name (cn) LDAP attribute, the user profile name is displayed as follows:
 
 
 ![Example LDAP Profile](./files/LDAPAttrForImpersonation/Example_LDAP_Profile.jpg)
