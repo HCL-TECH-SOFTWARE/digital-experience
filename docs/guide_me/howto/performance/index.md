@@ -12,3 +12,5 @@ Learn how to tune Web Content Manager (WCM) to reduce your query time.
 Learn how to optimize group membership resolution and reduce directory server load to resolve authentication performance delays.  
 - **[How to warm up your Portal site](WarmUpPortalSite.md)**  
 Learn how to improve DX performance by warming up your site at startup.  
+- **[How to locate a recursive loop with a WCM item causing high CPU or JVM hang?](LocateWCMRecursiveLoop.md)**  
+Learn how to locate a recursive loop with a WCM item causing high CPU or JVM hang

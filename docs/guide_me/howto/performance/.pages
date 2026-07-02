@@ -6,3 +6,4 @@ nav:
     - ImproveQueryPerformance.md
     - DX_Tune_LDAP.md
     - WarmUpPortalSite.md
+    - LocateWCMRecursiveLoop.md
