@@ -2,3 +2,5 @@ title: Web Content Manager Library Management
 
 nav:
     - index.md
+    - SampleAPI_MoveContentWCMAPI.md
+    - WCM_CacheID.md
