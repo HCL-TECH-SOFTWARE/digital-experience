@@ -14,17 +14,13 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
-**Digital Experience 9.0 and 9.5 Versions**
-
-- Windows Server 2025 now supported
-
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
 - IQ assistant now available
 - OpenTelemetry Integration Guide
 - Search V2 - Automatically generate certificates and Kubernetes secrets
-- WAS, JDK, UBI, and iFix versions
+- WAS, JDK, UBI, iFix, and OS support versions
 
 **Notices of deprecation**
 
@@ -105,12 +101,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
-## Digital Experience 9.0 and 9.5 Versions
-
-### Windows Server 2025 now supported
-
-You can now deploy HCL DX on Windows Server 2025. For more information about supported platforms, refer to [Supported configurations - Windows family](../../get_started/system_requirements/traditional/supported_config.md#windows-family).
-
 ## Digital Experience 9.5 Container Version
 
 ### Helm values updates
@@ -140,7 +130,7 @@ You can now deploy HCL DX on Windows Server 2025. For more information about sup
 === "Containers"
     You can now automatically generate certificates and Kubernetes secrets to secure communication during the deployment phase. To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
-### WAS, JDK, UBI, and iFix versions
+### WAS, JDK, UBI, iFix, and OS support versions
 
 === "Containers"
     HCL DX 9.5 CF236 contains the following:
@@ -153,7 +143,8 @@ You can now deploy HCL DX on Windows Server 2025. For more information about sup
     - iFix PH71422
     - iFix PH71453
     - iFix PH71453
-
+    - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
+    
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
