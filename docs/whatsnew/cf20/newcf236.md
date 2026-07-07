@@ -18,7 +18,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Helm values updates
 - IQ assistant now available
-- OpenTelemetry Integration Guide
+- OpenTelemetry Integration now available
 - Search V2 - Automatically generate certificates and Kubernetes secrets
 - WAS, JDK, UBI, and iFix versions
 
