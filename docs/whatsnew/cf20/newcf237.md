@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- Search V2 - Open-source Enchanted Web Components
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -83,6 +84,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf237).
+
+### Search V2 - Open-source Enchanted Web Components
+
+Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
+
+- [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
+- [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
+- [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
 
 ### WAS, JDK, UBI, and iFix versions
 
