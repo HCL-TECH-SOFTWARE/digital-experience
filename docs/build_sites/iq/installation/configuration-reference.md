@@ -92,8 +92,6 @@ Each entry in the array follows the internal logger package format: `namespace=l
 | `error` | Error events only |
 | `info` | General operational messages (recommended for production) |
 | `debug` | Detailed diagnostic output |
-| `entry` | Logs function or operation entry points |
-| `exit` | Logs function or operation exit points |
 
 **Example** — enable debug output for all Integrator namespaces:
 
