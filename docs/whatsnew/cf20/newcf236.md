@@ -120,10 +120,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
 
-### OpenTelemetry Integration Guide
+### OpenTelemetry Integration now available
 
 === "Containers"
-    The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
+    You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
 ### Search V2 - Automatically generate certificates and Kubernetes secrets
 
