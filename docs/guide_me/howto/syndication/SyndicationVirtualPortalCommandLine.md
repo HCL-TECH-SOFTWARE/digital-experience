@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides an example syntax to create a WCM syndicator / subscriber pair for a virtual portal from the command line.
+This document provides an example syntax to create a WCM syndicator / subscriber pair for a virtual portal from the command line.
 
 ## Instructions
 
