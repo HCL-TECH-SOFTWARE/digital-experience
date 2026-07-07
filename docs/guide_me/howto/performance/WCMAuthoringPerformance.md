@@ -26,8 +26,8 @@ Due to the heavy load of computing these statistics, it is recommend that this m
 6. Collect this trace when executing long-running authoring query: `com.ibm.icm.da.portable.common.sql.*=all`
 
 - Search the trace files for `time to execute` and identify the query that takes the longest time to execute.
-- Run that query from a DB client.
-- Work with your DBA to reduce query execution time
+- Use the UUID to find the content that generates this query.  Review the design to see if it can be changed to request less data from the database.
+- If the content can't be changed to reduce the data retrieved, run that query from a DB client. Work with your DBA to reduce query execution time
 
 7. Preventing automatic manager-level access when artifacts are created
 - Ensure that the workflow.skipDefaultManagerAccess property is set to true to prevent creating manager-level access rights when artifacts are created or edited. This property improves performance. See: [Web content authoring options](https://help.hcl-software.com/digital-experience/9.5/latest/manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring/)
