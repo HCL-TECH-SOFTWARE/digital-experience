@@ -4,5 +4,6 @@ nav:
     - deploy-services.md
     - configuring-mcp.md
     - prepare-database.md
+    - configuration-reference.md
     - validation.md
     - backup-restore.md

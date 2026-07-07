@@ -51,6 +51,8 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 This section describes the configuration model, parameter properties, endpoint behavior, and security constraints required to manage tool execution and data exchange patterns for the MCP Server.
 - **[Preparing the database](prepare-database.md)**  
 This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options.
+- **[Configuration Reference](configuration-reference.md)**  
+This section lists all environment variables available for the IQ Integrator and DX MCP Server, including their types, defaults, and acceptable values.
 - **[Validating the deployment](validation.md)**  
 This section provides instructions for verifying that your deployment is healthy and operational at any stage of the installation process.
 - **[Backing up and restoring data](backup-restore.md)**  

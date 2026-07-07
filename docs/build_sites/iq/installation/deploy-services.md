@@ -144,6 +144,9 @@ helm install dx-iq \
 - `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
+!!! tip "Configuration Reference"
+    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [Configuration Reference](configuration-reference.md).
+
 !!! warning "LITELLM_API_KEY and LITELLM_URL are required"
     Although the helm install command completes successfully without these values, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
 

@@ -16,9 +16,7 @@ Ensure your environment meets the following requirements:
 1. HCL Digital Experience (DX) version 236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ. <!--instead of adding an image, can we link to deployment/manage/security/people/authorization/controlling_access/sec_rpp.md instead and specify that it's for IQ? not sure if this is accurate-->
-
-![IQ Virtual Resource Permission](../../assets/HCL_IQ_Virtual_Resource.png "HCL DX Virtual Resource Permission for IQ")
+4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Resource Permission Portlets](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Overview
 
@@ -36,3 +34,40 @@ This section provides a step-by-step guide for interacting with IQ, managing con
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  
 This section provides guidance for resolving common connectivity or functionality problems.
+- **[How IQ Works](#how-iq-works)**  
+This section describes the end-to-end communication flow between IQ components.
+
+## Architecture Overview
+
+![IQ Architecture](../../assets/IQ-architecture-236.png "IQ Architecture Overview")
+
+IQ is deployed as a set of services inside a Kubernetes cluster alongside your existing HCL DX environment. The following describes each component and its role:
+
+- **IQ Integrator** — the central backend service. It manages WebSocket sessions with the IQ UI, coordinates communication with the LLM via the LiteLLM Gateway Proxy, orchestrates tool execution through the DX MCP Server, and persists session data in PostgreSQL.
+- **DX MCP Server** — exposes DX capabilities as tools that the LLM can invoke. It communicates with DX services on behalf of the Integrator using the user's session cookies and virtual portal context.
+- **PostgreSQL Database** — stores session data and, when the KMS-based key flow is used, the deployment key and access token for LiteLLM authentication.
+- **DX** — the HCL Digital Experience services (DX Core or DX Compose) that the MCP Server calls to perform content and site management operations.
+- **IQ UI (Frontend)** — the browser-based chat interface. It connects to the Integrator over a persistent WebSocket connection using JSON-RPC.
+- **LiteLLM Gateway Proxy** — the single entry point for all AI calls (chat completions and embeddings). It abstracts the underlying LLM provider and handles routing, authentication, and model aliasing.
+- **LLM Services** — the external AI model providers (for example, OpenAI) reached exclusively through the LiteLLM Gateway Proxy.
+
+## How IQ Works
+
+![IQ Communication Flow](../../assets/IQ-data-flow.png "IQ Communication Flow")
+
+The following steps describe the end-to-end communication flow between IQ components:
+
+1. **Startup** — On startup, the IQ Integrator fetches the list of available tools from the DX MCP Server and sets up a watchdog to periodically re-check for tool updates based on configuration.
+
+2. **WebSocket Handshake** — When you open the IQ interface, your browser initiates a WebSocket connection to the IQ Integrator. The Integrator validates your cookies and verifies that you are authorized to access the IQ Virtual Resource (`wps.DX_IQ_INTEGRATOR_API`) against DX Core or DX Compose. Once validated, an open session is established scoped to your user and virtual portal context.
+
+3. **Sending a Message** — You can submit two types of requests: a **DX inquiry** (a question about DX) or an **imperative action** (an instruction to perform a task in DX). Your message is sent to the Integrator over the open WebSocket connection.
+
+4. **Forwarding to LLM** — The Integrator forwards your message to the LLM via the LiteLLM Gateway Proxy, along with the system prompt that defines IQ behavior, the conversation summary and most recent messages for context, and the list of currently available MCP tools.
+
+    - **Answer directly** — based on its training data, it responds without invoking any tools.
+    - **Execute tool(s)** — it requests one or more MCP tool executions to gather the information or perform the action needed.
+
+6. **Tool Execution (if applicable)** — If the LLM requests tool execution, the Integrator calls the DX MCP Server on your behalf, passing your cookies and virtual portal context. The MCP Server makes the necessary API calls to DX and returns the results. This can repeat for multiple iterations up to the configured limit. Sensitive data such as cookies is stripped before results are shared back with the LLM.
+
+7. **Final Response** — The LLM crafts a final response, which the Integrator broadcasts to the IQ UI over the WebSocket connection.
