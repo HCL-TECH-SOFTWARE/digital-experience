@@ -14,7 +14,7 @@ It is possible to add applications to your custom application palette category o
 
 This is a two step process and requires XMLAccess and access to your Portal Administration (Managed Pages) view.
 
-1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML-code that you might need to create and use as input file for your XMLAccess command:
+1. Create a custom tag and assign that tag to the applications you want in a custom application palette category. You can do that with the following XML-code that you will need to create and use as input file for your XMLAccess command:
 
     ```html
     <request
@@ -32,7 +32,7 @@ This is a two step process and requires XMLAccess and access to your Portal Admi
     <tag action="update" resourceref="<portlet object ID>" domain="comm" owner="<your portal admin full distinguished name and domain>" locale="en">TagName</tag>
     ```
 
-    You can use this format to create a tag, if it doesn't exist already and you can assign as many tags as you want to as many portlets as you want. In this way you could have custom portlets show up under just one category or multiple different categories.
+    You can use this format to create a tag, if it doesn't exist already.  You can assign as many tags as you want to as many portlets as you want. In this way you could have custom portlets show up under just one category or multiple different categories.
 
     You can now get a portlet entity feed of all portlets tagged with your custom tag, called CustomAppCategory, by using this URL:
 
