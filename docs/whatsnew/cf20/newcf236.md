@@ -14,6 +14,10 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.0 and 9.5 Versions**
+
+- Windows Server 2025 now supported
+
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
@@ -100,6 +104,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.0 and 9.5 Versions
+
+### Windows Server 2025 now supported
+
+You can now deploy HCL DX on Windows Server 2025. For more information about supported platforms, refer to [Supported configurations - Windows family](../../get_started/system_requirements/traditional/supported_config.md#windows-family).
 
 ## Digital Experience 9.5 Container Version
 
