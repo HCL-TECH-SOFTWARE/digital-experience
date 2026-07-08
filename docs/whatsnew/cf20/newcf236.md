@@ -19,7 +19,6 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - IQ assistant now available
 - OpenTelemetry Integration now available
-- Search V2 - Automatically generate certificates and Kubernetes secrets
 - WAS, JDK, UBI, iFix, and OS support versions
 
 **Notices of deprecation**
@@ -124,11 +123,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
-
-### Search V2 - Automatically generate certificates and Kubernetes secrets
-
-=== "Containers"
-    You can now automatically generate certificates and Kubernetes secrets to secure communication during the deployment phase. To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
 
 ### WAS, JDK, UBI, iFix, and OS support versions
 
