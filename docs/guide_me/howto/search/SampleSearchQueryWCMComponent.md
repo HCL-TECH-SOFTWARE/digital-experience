@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Integrating search functionality into web content structures allows users to query specific collections and display targeted results. This article describes how to implement a search query using a Web Content Manager (WCM) HTML component and a search component.
+Integrating search functionality into web content structures allows users to query specific collections and display targeted results. This documentation describes how to implement a search query using a Web Content Manager (WCM) HTML component and a search component.
 
 ???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corp.
