@@ -31,6 +31,9 @@ The IQ MCP Server provides tool execution capabilities for your Web Content Mana
 
 Deploy the IQ backend services by pulling the required images and charts, defining your environment configuration, and executing the Helm installation.
 
+!!! tip "IQ environment variables"
+    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [IQ environment variables](environment-variables.md).
+
 ### Locating the latest Helm chart and images
 
 Before beginning the installation, obtain the appropriate Helm chart versions and container image tags from your repository.
@@ -143,9 +146,6 @@ helm install dx-iq \
 - `<LITELLM_URL>`: The LiteLLM proxy URL provided by the LiteLLM proxy administrator to enable Integrator functionality.
 - `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
-
-!!! tip "Configuration Reference"
-    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [Configuration Reference](configuration-reference.md).
 
 !!! warning "LITELLM_API_KEY and LITELLM_URL are required"
     Although the helm install command completes successfully without these values, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
@@ -261,5 +261,6 @@ To remove the IQ backend server and verify the component cleanup, complete the f
     ```
 
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
     - [Preparing the database](prepare-database.md)
     - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)
