@@ -6,7 +6,7 @@
 
 ## Introduction
 
-When XML documents and their associated XSL stylesheets do not display or preview properly, the issue usually occurs when the content rendering type defaults to standard HTML or plain text. This article describes how to use XSL with HCL Digital Experience (DX) and Web Content Manager (WCM) to resolve these presentation issues.
+When XML documents and their associated XSL stylesheets do not display or preview properly, the issue usually occurs because the content rendering type defaults to standard HTML or plain text. This documentation describes how to use XSL with HCL Digital Experience (DX) and Web Content Manager (WCM) to resolve these presentation issues.
 
 ## Instructions
 
