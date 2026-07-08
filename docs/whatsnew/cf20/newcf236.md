@@ -18,8 +18,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - Helm values updates
 - IQ assistant now available
-- OpenTelemetry Integration Guide
-- WAS, JDK, UBI, and iFix versions
+- OpenTelemetry Integration now available
+- WAS, JDK, UBI, iFix, and OS support versions
 
 **Notices of deprecation**
 
@@ -119,12 +119,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
 
-### OpenTelemetry Integration Guide
+### OpenTelemetry Integration now available
 
 === "Containers"
-    The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
+    You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
-### WAS, JDK, UBI, and iFix versions
+### WAS, JDK, UBI, iFix, and OS support versions
 
 === "Containers"
     HCL DX 9.5 CF236 contains the following:
@@ -137,7 +137,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - iFix PH71422
     - iFix PH71453
     - iFix PH71453
-
+    - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
+    
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
