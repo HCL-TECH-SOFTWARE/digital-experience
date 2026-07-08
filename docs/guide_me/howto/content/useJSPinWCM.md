@@ -1,4 +1,4 @@
-# How to use JavaServer Pages (JSPs) in WCM
+# How to use JSPs in WCM
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article describes how to use JavaServer (JSP) components in HCL Digital Experience (DX) with the Web Content Manager (WCM).
+This article describes how to use JavaServer Pages (JSP) components in HCL Digital Experience (DX) with the Web Content Manager (WCM).
 
 !!! warning "Disclaimer"
     HCL Corporation created these sample steps and code to help you develop your applications. They are provided "AS IS," without warranty of any kind. HCL is not liable for any damages arising from your use of the sample code, even if HCL has been advised of the possibility of such damages.

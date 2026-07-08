@@ -15,8 +15,10 @@ Learn how to locate newly created or unreleased managed pages within the portal 
 - **[How to manage DAM asset URLs after a library import from another environment](./WCMObjectsHostname.md)**  
 Learn how to configure Digital Asset Management (DAM) asset URL parameters to ensure consistent pathing after a library import from another environment.
 - **[How to use JSPs in WCM](./useJSPinWCM.md)**  
-Learn how to embed dynamic JavaServer Pages (JSPs) into WCM components to execute server-side logic within templates.
+Learn how to use JavaServer Pages (JSPs) components in HCL DX using WCM.
 - **[How to use XML Access](./xmlaccess_faq.md)**  
-Learn how to execute the XML Access command-line tool to export, import, and alter portal resource configurations.
-- **[How to work with JavaServer Faces (JSFs) on HCL DX pages](./JSF_hasBaseURL.md)**  
-Learn how to deploy, configure, and manage base URL routing behaviors for JSF portlets.
+Learn how to use the XML Access command line tool.  
+- **[How to use XSL with HCL DX and WCM](./UsingXSLWithPortalAndWCM.md)**  
+Learn how to resolve XML and XSL rendering issues by overriding default content types, managing query string parameters, and converting text data into XML objects.
+- **[How to work with JSFs on HCL DX pages](./JSF_hasBaseURL.md)**  
+Learn how to work with JavaServer Faces (JSFs) portlets on HCL DX pages.
