@@ -99,7 +99,6 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to create a custom login or logout filter in HCL DX](./development/custom_login_filter_sample.md)|
 |Migrated|Development|[How to create a custom login portlet with credential vault handling in HCL DX](./development/CustomLoginPortlet.md)|
 |Migrated|Migration|[How to configure and performing a staging to production environment](./migration/StagingToProductionWithPAA.md)|
-|Migrated|Security|[How to implement SAML in HCL DX](./security/implementsaml_portal.md)|
 |Migrated|Upgrade|[How to use XML Access to export and import portal pages](./upgrade/XMLAccessExportImport.md)|
 |New|Configuration|[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./configuration/SetGenericJVMArgumentsCorePod.md)|
 |New|Security|[How to add additional security realms for Virtual Portals](./security/AddAdditionalWASRealms.md)|
