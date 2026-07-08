@@ -46,7 +46,7 @@ Using OCI commands requires an initial login before you can run the pull command
 
 ## Helm chart and CF versions
 
-Refer to the following table to identify which Helm chart version corresponds to each Continuous Fix (CF) version.
+Refer to the following table to identify which Helm chart version corresponds to each Cumulative Fix (CF) version.
 
 | HCL DX Deployment version | HCL DX Search version | HCL DX IQ version | CF version |
 | :------------------------ | :-------------------- | :---------------- |------------|
