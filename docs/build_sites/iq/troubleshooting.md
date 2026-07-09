@@ -207,6 +207,42 @@ Capture detailed diagnostic information using browser developer tools to investi
 
 To isolate deployment issues, enable debug logs for the IQ Integrator and MCP Server. Comparing timestamps across both logs helps pinpoint where processing failures occur.
 
+The `logging` block in the Helm values sets logging levels. The deployment writes these settings to a shared `ConfigMap ({{ .Release.Name }}-global-iq)` and mounts the configuration into each pod at `/etc/global-config/`. The Integrator reads its log settings from the file path defined by `LOG_SETTINGS_FILE` (default: `/etc/global-config/log.integrator`).
+
+| Helm values key | Type | Default | Description |
+|-----------------|------|---------|-------------|
+| `logging.integrator.level` | Array of strings | `["api:server-v1:*=info"]` | Log rules for the IQ Integrator pod. |
+| `logging.mcpServer.level` | Array of strings | `["api:server-v1:*=info"]` | Log rules for the DX MCP Server pod. |
+
+Each entry in the array follows the internal logger package format: `namespace=level`. The runtime joins multiple rules with commas. Both pods initialize logging with `LOG_CONTEXT=api`, so the root namespace prefix for all log rules is `api:server-v1`.
+
+| Level | Description |
+|-------|-------------|
+| `error` | Error events only |
+| `info` | General operational messages (recommended for production) |
+| `debug` | Detailed diagnostic output |
+
+The following example shows how to enable debug output for all integrator namespaces:
+
+```yaml
+logging:
+  integrator:
+    level:
+      - "api:server-v1:*=debug"
+```
+
+The following example shows how to mix levels across namespaces:
+
+```yaml
+logging:
+  integrator:
+    level:
+      - "api:server-v1:llm*=debug"
+      - "api:server-v1:*=info"
+```
+
+To apply these configurations during a troubleshooting session, update the custom values file and upgrade the Helm release.
+
 1. Change the `logging` level in your `custom-iq-debug-values.yaml` file:
 
     ```yaml
