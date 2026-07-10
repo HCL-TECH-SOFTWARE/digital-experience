@@ -25,4 +25,6 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page.  
+Learn how to use JavaScript to find and replace text on a Portal page. 
+- **[How to Use a Temporary Directory Other than /tmp with ConfigEngine](./ConfigEngineAltTempDir.md)**  
+Learn how to use a temporary directory other than /tmp with ConfigEngine. 
