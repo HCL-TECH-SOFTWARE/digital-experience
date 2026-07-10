@@ -52,15 +52,11 @@ Use the following example to generate all required certificates, including real-
 
 The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
 
-
-
 ```sh
 openssl genrsa -out root-ca-key.pem 2048
 # Root CA certificate – using a comprehensive test DN
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
 ```
-
-
 
 ```
 # Admin cert - using same comprehensive test DN

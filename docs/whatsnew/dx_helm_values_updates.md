@@ -2,6 +2,83 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+### CF236
+
+**Deprecated Keys:**
+
+| Key | Default Value |Removed in|
+|-----|---------------|----------|
+|[`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`](../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections)||CF237|
+|[`incubator.configuration.digitalAssetManagement.enableSoftDelete`](../manage_content/digital_assets/usage/managing_dam/dam_soft_delete.md)||CF237|
+|[`incubator.configuration.digitalAssetManagement.renderNewUI`](../manage_content/digital_assets/index.md)||CF237|
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| openTelemetry.enabled | false | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.collector.exportUrl | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.collector.protocol | http/protobuf | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.service.name | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.service.namespace | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.default | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.core | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.contentComposer | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.digitalAssetManagement | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.imageProcessor | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.licenseManager | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.openLdap | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.persistence | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.remoteSearch | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.ringApi | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.runtimeController | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.webEngine | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.debug.enabled | false | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| networking.dxIqService | "" | <!-- Commit: 39d8f73f, Author: Anamika Singh, Date: 2026-05-14 -->
+| networking.dxIqIntegratorMaxReplicas | 3 | <!-- Commit: 28c5ead4, Author: rubyann.matias@hcl.com, Date: 2026-06-03 -->
+| security.iq.dbUser | dx_iq_db_user | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| security.iq.dbPassword | d1gitalExperience | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| security.iq.customDbSecret | "" | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| configuration.webEngine.db2HadrEnabled | false | <!-- Commit: e5fb3f60, Author: jagadishramac.bhagw@hcl.com, Date: 2026-03-17 -->
+| configuration.webEngine.db2HadrStandbyHost | "" | <!-- Commit: 9cea6eeb, Author: jagadishramac.bhagw@hcl.com, Date: 2026-04-15 -->
+| configuration.webEngine.db2HadrStandbyPort | 50000 | <!-- Commit: 9cea6eeb, Author: jagadishramac.bhagw@hcl.com, Date: 2026-04-15 -->
+| configuration.webEngine.ldap.sslEnabled | false | <!-- Commit: beeb9294, Author: Neelkanth Patel, Date: 2026-05-03 -->
+| configuration.webEngine.ldap.recursiveSearch | false | <!-- Commit: beeb9294, Author: Neelkanth Patel, Date: 2026-05-03 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.openTelemetry.enabled | 
+| incubator.openTelemetry.collector.exportUrl | 
+| incubator.openTelemetry.collector.protocol | 
+| incubator.openTelemetry.service.name | 
+| incubator.openTelemetry.service.namespace | 
+| incubator.openTelemetry.logging.default | 
+| incubator.openTelemetry.logging.services.core | 
+| incubator.openTelemetry.logging.services.contentComposer | 
+| incubator.openTelemetry.logging.services.digitalAssetManagement | 
+| incubator.openTelemetry.logging.services.imageProcessor | 
+| incubator.openTelemetry.logging.services.licenseManager | 
+| incubator.openTelemetry.logging.services.openLdap | 
+| incubator.openTelemetry.logging.services.persistence | 
+| incubator.openTelemetry.logging.services.remoteSearch | 
+| incubator.openTelemetry.logging.services.ringApi | 
+| incubator.openTelemetry.logging.services.runtimeController | 
+| incubator.openTelemetry.logging.services.webEngine | 
+| incubator.openTelemetry.debug.enabled | 
+| incubator.security.iq.dbUser | 
+| incubator.security.iq.dbPassword | 
+| incubator.security.iq.customDbSecret | 
+| incubator.configuration.cecv2.enabled | 
+| incubator.configuration.cecv2.enableAssets | 
+| incubator.configuration.cecv2.skipAssetsUpdate | 
+| incubator.networking.dxIqService | 
+
+**Changed Values:**
+
+None
+
 ### CF235
 
 **Added Keys:**
