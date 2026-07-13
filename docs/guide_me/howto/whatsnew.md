@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Container|[How to manually renew the DX Core certificate and Kubernetes secret](./container/ManualDXCoreCertUpdate.md)|
+
 ## CF236
 
 | Type | Category | Article |
