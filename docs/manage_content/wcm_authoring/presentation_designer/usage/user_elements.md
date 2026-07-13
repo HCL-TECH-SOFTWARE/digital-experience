@@ -192,6 +192,36 @@ To manage responsive layouts, you can customize row and column counts for each d
     - In **Tablet** and **Mobile** views, **Area layout** overrides rows and columns without modifying the baseline **Desktop** configuration.
     - Layout modifications saved within a specific device context persist independently without affecting other viewports.
 
+**Button**
+
+The Button element functions as a pre-styled link element designed to look like a button out-of-the-box. It is ideal for quickly deploying Call-To-Action (CTA) links without needing to manually build standard link elements from scratch.
+
+- By clicking the button directly on the canvas, you can enable inline editing of its text content.
+- The destination URL or `href` is easily supplied via the button configuration menu. 
+- When clicking the button in Preview mode, it seamlessly redirects to the provided URL.
+- You can easily adjust button styles based on your preference using the available options in the style panel.
+- The element generates clean, standardized markup (for example, `<a href="..." class="pd-button-defclass">`).
+
+**Video**
+
+The Video element empowers users to seamlessly add video elements to presentation templates without any manual HTML coding. You can quickly integrate product demos or tutorial videos by simply dragging, dropping, and supplying the URL. 
+
+The element automatically generates clean HTML based on the source, outputting a standard `<video>` tag with `<source>` and fallback text, or an `<iframe>` for YouTube embeds. You can easily configure extensive customizations for the video, such as width, height, margins, paddings, and borders, via the style panel to fit any presentation layout perfectly.
+
+The Video element operates in three distinct render states on the canvas:
+
+- **Initial Placeholder:** An initial placeholder appears upon drag-and-drop. It displays as a 300x200px grey box with a video icon when sources are empty or if the Broken Video flag is set, and it resets on new URL input.
+- **Non-YouTube Native Video:** This state supports formats such as an MP4 supplied via an external URL or from HCL DAM video asset URL.
+- **Auto-detected YouTube iframe embed:** This state supports YouTube embeds through auto-detection. Pattern matching supports `youtube.com/watch?v=`, `youtube.com/embed/`, and `youtu.be/` formats. However, it does not support YouTube Shorts URLs (`youtube.com/shorts/`), which are treated as unrecognized and rendered as the placeholder state.
+
+**Custom HTML**
+
+The Custom HTML element provides full authoring flexibility by allowing you to enter raw HTML markup into a dedicated multiline code editor. This element is useful for embedding third-party iframes (such as YouTube, analytics scripts, or custom widgets) or authoring complex enterprise templates that require custom markup beyond the standard predefined components.
+
+- **Safe Editing and Rendering:** Content is rendered on the canvas via a shadow DOM and sanitized for safe editing. Executable content (like `<script>`, `on*` handlers, and `javascript:` URIs) is neutralized during template design to prevent accidental execution, while the actual markup is safely preserved and stored for the backend.
+- **Shadow DOM Scoping:** Any `<style>` rules you supply are automatically scoped to the shadow tree, preventing your custom styles from leaking into the global Presentation Designer UI. Document-level selectors like `body` and `html` are automatically rewritten so the rules apply directly to the element.
+- **Orphaned Tag Handling:** The element automatically wraps orphaned closing tags in comments (for example, `<!-- </tag> -->`) to ensure structural consistency between the canvas and the final preview without losing any data.
+
 ### Content elements
 
 Content elements (for example, ```[Element context="current" type="content" key="Element name"]```) are elements from a content template. You can search for a content template from which you want to pick elements from. Placeholders are rendered on the canvas in place of the elements.
@@ -200,7 +230,10 @@ After setting the element source to **Content elements**, no elements are initia
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Empty_Panel.png)
 
-To load the elements, search for a content template in the **Content template** field and select your desired template.
+To load the elements, you can use the dual-mode selection available in the **Content template** field to find and select your desired template. You can search by typing for autocomplete, or click the DX Picker icon to the right of the "Select or Search" field to open a rich browser dialog for discovery and selection. The integrated DX Picker enables you to browse and select content templates without manual typing. It improves discoverability by allowing you to visually browse content templates in a dedicated picker UI instead of relying on autocomplete search alone.
+
+!!! note
+    If the DX picker is not configured or available in the environment, the picker icon appears disabled.
 
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Search_Panel.png)
 
