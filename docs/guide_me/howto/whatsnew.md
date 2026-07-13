@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Configuration|[How to change the default portlet configuration](./configuration/DefaultPortletConfig.md)|
+
 ## CF236
 
 | Type | Category | Article |
