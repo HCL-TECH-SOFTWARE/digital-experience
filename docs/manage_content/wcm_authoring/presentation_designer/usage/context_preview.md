@@ -14,7 +14,7 @@ The **Apply canvas context preview** button in the header toolbar opens the cont
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Preview_Initial_State.png)
 
-In the **Canvas context** field that appears, you can search for content items and templates to preview.
+In the **Canvas context** field that appears, you have a dual-mode selection to find your desired context. You can search by typing (autocomplete) for content items, or you can click the DX Picker icon on the right side of the search field to open a rich browser dialog for discovery and selection.
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Search_PopupResult.png)
 
@@ -26,8 +26,10 @@ To select a context:
 
 1. Open an existing **Presentation template** or create a new one.
 2. Select the **Apply canvas context preview** icon.
-3. In the **Canvas context** field, enter keywords from the title or name of the content item.
-4. Select a content item from the results.
+3. In the **Canvas context** field, choose one of the following methods to locate your content item:
+    - **Search:** Enter keywords from the title or name of the content item.
+    - **Browse:** Click the DX Picker icon to visually browse the content tree and locate content items without typing UUIDs or paths or use the search field in it.
+4. Select a content item from the results or the picker dialog.
 5. View the updated canvas to see the selected content and mapped tags.
 
 !!!note
