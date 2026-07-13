@@ -19,7 +19,7 @@ Before you begin the integration, ensure that you have the following components 
 - Administrative access to modify deployment configurations
 - An observability backend to receive telemetry data
 
-### Architecture
+## Architecture
 
 HCL DX includes multiple components that support OTel tracking across different runtimes, which all stream data through the OTel Collector pipeline:
 
