@@ -174,3 +174,24 @@ Refer to the following tips on selecting the appropriate unit of measurement for
     - **`hex`**: Uses hex values for precise color definition. For example, you can use`#FFFFFF` for the color white.
     - **`rgb`**: Defines colors with red, green, and blue values. For example, you can enter `rgb(255, 165, 0)` for the color orange.
     - **`rgba`**: Adds alpha transparency to colors. For example, use `rgba(255, 99, 71, 0.5)` for a semi-transparent color.
+
+## Style validation
+
+Presentation Designer includes real-time validation within the **Style items** panel to ensure all custom layout inputs remain syntactically correct and secure before they are applied. This safeguard actively evaluates property inputs (such as font-size, colors, and spacing) to prevent malformed CSS from breaking page layouts.
+
+### How style validation works
+
+- **Real-Time Feedback:** As you input custom values into style fields, the system instantly validates your entry. If a value fails syntax requirements, the associated input field is highlighted with a red error layout and an inline helper message reading "Invalid value".
+- **Canvas Rendering Protection:** To keep your design environment stable, syntactically invalid style values are entirely blocked from rendering on the live canvas. The canvas will only update once the value is corrected to a valid state.
+- **Save Operation Prevention:** When active validation errors exist anywhere in the style panel, the application blocks template saving. The global **Save** button in the header toolbar is greyed out and disabled, displaying a "Resolve all errors to save your changes" warning tooltip upon hover.
+- **Empty Fields:** Empty input strings pass validation automatically. This allows the property to seamlessly fall back to default stylesheet configurations without causing active errors.
+
+![](../../../../assets/HCL_Presentation_Designer_Style_Validation_Error.png)
+*_Placeholder Description: Provide a full application window capture displaying multiple input fields in the style panel (such as Border Radius, Border Width, and Object Position offsets) highlighted with red borders, inline "Invalid value" helper strings underneath them, and a greyed out, disabled "Save" button in the top-right toolbar displaying the error tooltip popover text._*
+
+### Element and device context behavior
+
+Validation states and error tracking dynamically adapt based on user interactions across the canvas workspace:
+
+- **Element & Device Switching:** Selecting another element on the canvas or changing the device class context (Desktop, Tablet, or Mobile) in the canvas settings automatically clears out current error indicators on the previously selected element.
+- **State Reversion:** Upon switching elements or device viewports, the style values in the panel automatically revert to their last valid state. This automatic cleanup ensures that unresolved errors do not become stale or lost—especially when working on complex templates with multiple elements on the page—allowing you to return to a clean and predictable configuration baseline.
