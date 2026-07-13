@@ -7,10 +7,9 @@ Take note of the following limitations when using Presentation Designer:
 - The following features are currently not supported:
     - Locking a presentation template while it is being edited in Presentation Designer.
     - Undoing and redoing changes.
-    - Previewing the template in Presentation Designer. Currently, you can only generate a preview through the Authoring portlet.
     - Reusing styles from a theme.
     - Adding any script or custom markup.
-    - Using external CSS. All styles are applied as inline styles and different orientations through breakpoints are not yet supported. For more information, refer to the [Styling Options in Presentation Designer](../presentation_designer/usage/styling_options.md) topic.
+    - Using external CSS. For more information in styling, refer to the [Styling Options in Presentation Designer](../presentation_designer/usage/styling_options.md) topic. For more information in supported stylesheets, refer to the [Default and override stylesheet](../presentation_designer/usage/default_and_override_stylesheet.md) and [Handle multiple stylesheets](../presentation_designer/usage/handle_multiple_stylesheets.md) topics.
     - Blueprint Presentation Templates are not yet supported:
 
         Add this to the markup `<!-- BluePrint Template -->` and then open the Presentation Designer:
@@ -21,9 +20,10 @@ Take note of the following limitations when using Presentation Designer:
     -     Right-to-left layout, with certain elements not fully optimized for languages that require this layout.
     - WCM tags and their attributes. Presentation Designer is     currently supports different user elements. For more information, see the [User Elements in Presentation Designer](../presentation_designer/usage/user_elements.md) topic.
     - Translation to other languages. English is the default language used in Presentation Designer.
+    - Previewing the template in Presentation Designer. Currently, you can only select a content item as context when you use the Preview within Presentation Designer.
     - The fixed position style of the user element may result in overlap with the header under certain conditions, rather than remaining within the intended canvas boundary. This behavior is observed when setting the element's position to fixed with a top value of 10px in the styling properties. The overlap occurs because the canvas utilizes a root div structure integrated with the document's HTML markup, meaning boundaries may not be fully isolated. While using an iframe could more effectively isolate boundaries, this option is currently not implemented.
     - Adding breakpoints for media queries is not yet supported.
-    - The Paragraph format and Text decoration are not dynamically set based on     media queriesdue to the structure of these elements and how they are applied in Presentation Designer.
+    - The Paragraph format and Text decoration are not dynamically set based on media queries due to the structure of these elements and how they are applied in Presentation Designer.
     - An Override stylesheet component should only be used for the presentation template it was created for.
     - The Static Grid Element currently does not support the following styling properties in the override stylesheet:
         - Rows
@@ -34,7 +34,7 @@ Take note of the following limitations when using Presentation Designer:
         - External stylesheets
         - Style tags
     - The Style panel is currently designed to only display resolved styles from the Default and Override stylesheets. This means that custom styles from other stylesheet components will render on the canvas but will not be reflected in the Style panel's fields.
-    - Custom classes cannot be applied using the Presentation Designer interface. They must be added directly to the     element’s class attribute in the presentation template's markup in Authoring.
+    - Custom classes cannot be applied using the Presentation Designer interface. They must be added directly to the element’s class attribute in the presentation template's markup in Authoring.
     - CSS Selectors or CSS Rules:
         - ID Selectors
         - Universal Selector
