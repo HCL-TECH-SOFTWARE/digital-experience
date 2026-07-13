@@ -15,8 +15,9 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Helm values updates
+- Customizing HAProxy logs
 - Search V2 - Open-source Enchanted Web Components
+- Helm values updates
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -80,6 +81,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Customizing HAProxy logs
+
+The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffi (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
+
 ### Helm values updates
 
 === "Containers"
@@ -123,6 +128,17 @@ Atomic Components used within Search V2 are now open source as part of the [Ench
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
+
+### Removal of unused DAM Helm keys (9.5) <!--update-->
+
+=== "Containers"
+    The following unused DAM Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237:
+
+    - `incubator.configuration.digitalAssetManagement.enableRootCollectionSort`
+    - `incubator.configuration.digitalAssetManagement.enableSoftDelete`
+    - `incubator.configuration.digitalAssetManagement.renderNewUI`
+
+    For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ### Woodburn Studio demo site (9.5)
 
