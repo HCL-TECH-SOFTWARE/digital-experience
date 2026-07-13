@@ -31,6 +31,9 @@ The IQ MCP Server provides tool execution capabilities for your Web Content Mana
 
 Deploy the IQ backend services by pulling the required images and charts, defining your environment configuration, and executing the Helm installation.
 
+!!! tip "IQ environment variables"
+    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [IQ environment variables](environment-variables.md).
+
 ### Locating the latest Helm chart and images
 
 Before beginning the installation, obtain the appropriate Helm chart versions and container image tags from your repository.
@@ -258,5 +261,6 @@ To remove the IQ backend server and verify the component cleanup, complete the f
     ```
 
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
     - [Preparing the database](prepare-database.md)
     - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)

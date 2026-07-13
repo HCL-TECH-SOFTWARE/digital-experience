@@ -50,7 +50,7 @@ This table provides information about the Kubernetes versions that are tested an
 
 |CF Level|Kubernetes versions|
 |--------|-------------------|
-|CF236| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF236| Kubernetes 1.36<br/>Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF235| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF234| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 
