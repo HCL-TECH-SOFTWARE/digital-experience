@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
+
 ## CF236
 
 | Type | Category | Article |
