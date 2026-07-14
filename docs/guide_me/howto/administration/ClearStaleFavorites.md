@@ -1,4 +1,4 @@
-# How to clear stale Favorites from the Portal Dashboard
+# How to clear stale favorites from the portal dashboard
 
 ## Applies to
 
@@ -6,14 +6,14 @@
 
 ## Introduction
 
-You have Favorite locations on the Portal Dashboard that were saved but the locations have been deleted or moved. Because the favorites are no longer available, you can't remove the star as there is no star to uncheck. This article describes how to resolve this situation.
+If you delete or move locations saved as favorites on the portal dashboard, the orphaned locations are retained. This article describes how to clear stale favorites from the portal dashboard.
 
 ## Instructions  
 
 ???+ info "Warning"
-    Backup the DX database(s) before running the commands! It will clear out your Favorite items and locations!
+    Back up the DX databases before running the commands. These tasks clear your favorite items and locations.
 
-To clear out the orphaned favorites, run the following ConfigEngine tasks:
+To clear the orphaned favorites, run the following ConfigEngine tasks:
 
 ```bash
 ./ConfigEngine.sh remove-wcm-jpa-tables
