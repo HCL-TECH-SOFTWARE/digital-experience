@@ -1,5 +1,4 @@
 title: Content
-
 nav:
     - index.md
     - customizeTinyMCE.md
@@ -7,6 +6,8 @@ nav:
     - disableManagedPages.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
+    - WCMObjectsHostname.md
     - JSF_hasBaseURL.md
     - useJSPinWCM.md
+    - UsingXSLWithPortalAndWCM.md
     - xmlaccess_faq.md
