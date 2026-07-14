@@ -4,17 +4,9 @@
 - **Previous step**: [Deploying services](deploy-services.md) (required)
 - **Recommended but not required**: [Preparing the database](prepare-database.md) — Enables Deployment Key token persistence and multi-pod coordination. If you have a static `LITELLM_API_KEY` instead, database is still optional for your deployment, but still recommended for conversation/session persistence.
 
-This guide covers two approaches to LiteLLM API key management:
+This guide covers the current approach to LiteLLM API key management:
 
-1. **Quick Start**: Use a static `LITELLM_API_KEY` with your own LiteLLM proxy server (available to all customers)
-2. **Deployment Key Flow**: Automated LiteLLM API key acquisition for HCL IQ subscription customers (requires KMS endpoint availability)
-
-This section guides you through both approaches. Choose the Quick Start for immediate testing, or follow the full Deployment Key flow to enable automated, entitlement-based LiteLLM key management.
-
-**Existing deployments with a static `LITELLM_API_KEY` are completely unaffected** — the deployment key flow is only used when no static key is configured.
-
-!!! important "KMS Endpoint Required"
-    The Deployment Key flow requires access to the HCL Key Management Service (KMS) endpoint. **This feature will be available once HCL provisions and shares the KMS endpoint with your organization.** Until then, continue using a static `LITELLM_API_KEY` for LLM integration.
+**Quick Start**: Use a static `LITELLM_API_KEY` with your own LiteLLM proxy server
 
 ---
 
@@ -25,7 +17,7 @@ If you already have:
 - Two proxy models configured (`iq-general-purpose` and `iq-summary`)
 - A LiteLLM API key from your proxy administrator
 
-Then skip the Deployment Key flow entirely and use this quick path:
+Then use this quick path:
 
 ### Step 1: Create the LiteLLM API Key Secret
 
@@ -69,7 +61,7 @@ kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
 
 ### Step 3: Verify the Configuration
 
-1. **Check the deployment key logs for static key confirmation:**
+1. **Check the logs for static key confirmation:**
 
    ```bash
    kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
@@ -88,6 +80,5 @@ kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
 
 ### Done!
 
-You're all set. The IQ Integrator will use your static key for all LLM requests. **You do not need to proceed with the rest of this document** unless you want to:
-- Add automated Deployment Key management once the KMS endpoint is available
+You're all set. The IQ Integrator will use your static key for all LLM requests.
 - [Configure a database for conversation persistence](prepare-database.md) if not yet completed. 
