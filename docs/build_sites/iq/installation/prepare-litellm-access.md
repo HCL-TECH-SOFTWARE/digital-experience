@@ -1,4 +1,4 @@
-# Preparing the license and deployment key
+# Preparing the LiteLLM access
 
 **Prerequisites**:
 - **Previous step**: [Deploying services](deploy-services.md) (required)
