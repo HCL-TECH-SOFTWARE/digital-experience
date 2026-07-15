@@ -57,17 +57,17 @@ Complete the following steps to configure and verify the static key:
 
 3. Run the following command to check the logs for static key confirmation:
 
-   ```bash
-   kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
-   ```
+    ```bash
+    kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
+    ```
 
 4. Confirm that the output matches the following log entry:
 
-   ```
-   [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
-   ```
+    ```log
+    [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
+    ```
 
-   If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
+    If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
 
 5. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
 
