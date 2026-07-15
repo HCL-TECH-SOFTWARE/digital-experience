@@ -5,7 +5,7 @@ This section describes how to configure the IQ Integrator to authenticate with y
 ## Prerequisites
 
 - Deploy the [IQ Integrator and MCP Server services](deploy-services.md).
-- If you require deployment key token persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
+- If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
 
 ## Using a static LiteLLM API key
 
