@@ -187,7 +187,6 @@ Presentation Designer includes real-time validation within the **Style items** p
 - **Empty Fields:** Empty input strings pass validation automatically. This allows the property to seamlessly fall back to default stylesheet configurations without causing active errors.
 
 ![](../../../../assets/HCL_Presentation_Designer_Style_Validation_Error.png)
-*_Placeholder Description: Provide a full application window capture displaying multiple input fields in the style panel (such as Border Radius, Border Width, and Object Position offsets) highlighted with red borders, inline "Invalid value" helper strings underneath them, and a greyed out, disabled "Save" button in the top-right toolbar displaying the error tooltip popover text._*
 
 ### Element and device context behavior
 
