@@ -1,38 +1,34 @@
-# Preparing the LiteLLM access
+# Preparing LiteLLM access
 
-**Prerequisites**:
-- **Previous step**: [Deploying services](deploy-services.md) (required)
-- **Recommended but not required**: [Preparing the database](prepare-database.md) — Enables Deployment Key token persistence and multi-pod coordination. If you have a static `LITELLM_API_KEY` instead, database is still optional for your deployment, but still recommended for conversation/session persistence.
+This section describes how to configure the IQ Integrator to authenticate with your LiteLLM proxy server using a static API key. This configuration allows the integration service to access your designated LLM providers and models.
 
-This guide covers the current approach to LiteLLM API key management:
+## Prerequisites
 
-**Quick Start**: Use a static `LITELLM_API_KEY` with your own LiteLLM proxy server
+- Deploy the [IQ Integrator and MCP Server services](deploy-services.md).
+- If you require deployment key token persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
 
----
+## Using a static LiteLLM API key
 
-## Quick Start: Using a Static LiteLLM API Key
+The IQ Integrator uses the static LiteLLM API key to authenticate outgoing API requests sent to your LiteLLM proxy server. This key allows the integration service to access the configured LLM providers and models through the proxy.
+To use this path, you must have the following components:
 
-If you already have:
-- Your own LiteLLM proxy server deployed and running
-- Two proxy models configured (`iq-general-purpose` and `iq-summary`)
+- A deployed and running LiteLLM proxy server
+- Two configured proxy models (`iq-general-purpose` and `iq-summary`)
 - A LiteLLM API key from your proxy administrator
 
-Then use this quick path:
+Complete the following steps to configure and verify the static key:
 
-### Step 1: Create the LiteLLM API Key Secret
+1. Create the LiteLLM API key secret in your namespace. The IQ Integrator reads the key from a Kubernetes secret named `iq-litellm-api-secret`:
 
-The IQ Integrator reads the LiteLLM API key from a Kubernetes secret named `iq-litellm-api-secret`. Create it in your namespace:
+    ```bash
+    kubectl create secret generic iq-litellm-api-secret \
+      --from-literal=virtualKey="<YOUR_LITELLM_API_KEY>" \
+      --namespace <DX_NAMESPACE>
+    ```
 
-```bash
-kubectl create secret generic iq-litellm-api-secret \
-  --from-literal=virtualKey="<YOUR_LITELLM_API_KEY>" \
-  --namespace <DX_NAMESPACE>
-```
+    Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy administrator.
 
-Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy administrator.
-
-!!! tip "Updating an existing secret"
-    If the secret already exists from a previous installation, delete it first then recreate it:
+    If the secret already exists from a previous installation, delete the secret first and then recreate it:
 
     ```bash
     kubectl delete secret iq-litellm-api-secret -n <DX_NAMESPACE>
@@ -41,44 +37,40 @@ Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy adm
       --namespace <DX_NAMESPACE>
     ```
 
-### Step 2: Upgrade Your IQ Deployment
+2. Upgrade the IQ deployment:
 
-```bash
-helm upgrade dx-iq \
-  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
-  --namespace <DX_NAMESPACE> \
-  --reuse-values \
-  --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>"
-```
+    ```bash
+    helm upgrade dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <DX_NAMESPACE> \
+      --reuse-values \
+      --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>"
+    ```
 
-Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You may omit this flag if you already set it during the initial IQ install.
+    Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You can omit this flag if you already set the URL during the initial installation of the IQ Integrator.
 
-Wait for the pod to restart:
+    Monitor the rollout status of the deployment:
 
-```bash
-kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
-```
+    ```bash
+    kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
+    ```
 
-### Step 3: Verify the Configuration
-
-1. **Check the logs for static key confirmation:**
+3. Run the following command to check the logs for static key confirmation:
 
    ```bash
    kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
    ```
 
-   Expected output:
+4. Confirm that the output matches the following log entry:
+
    ```
    [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
    ```
 
    If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
 
-2. **Send a test message through the IQ chat interface:**
+5. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
 
-   If you receive an AI-generated response (not an error), your LiteLLM API key is working correctly with your LiteLLM proxy.
-
-### Done!
-
-You're all set. The IQ Integrator will use your static key for all LLM requests.
-- [Configure a database for conversation persistence](prepare-database.md) if not yet completed. 
+???+ info "Related information"
+    - [Deploying services](deploy-services.md)
+    - [Preparing the database](prepare-database.md)

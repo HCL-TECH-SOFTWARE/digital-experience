@@ -30,7 +30,7 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
 
-If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -46,7 +46,7 @@ Only the admin certificate DN must be customized in your Helm chart. The node an
 
 ### Generating certificates
 
-The examples below show how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
+The examples below show how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
 
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 

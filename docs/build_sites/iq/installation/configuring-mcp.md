@@ -18,7 +18,7 @@ Before validating the configuration, ensure your environment meets the following
 1. DX CF236 or later is installed.
 2. IQ is enabled in your DX environment.
 3. The IQ chart release is deployed successfully.
-4. Networking rules permit communication between DX, IQ integrator, and MCP server services.
+4. Networking rules permit communication between DX, IQ integrator, and MCP Server services.
 
 ## Verifying service-level expectations
 
@@ -26,14 +26,14 @@ Use these baseline checks in your environment:
 
 1. Confirm the `dx-mcp-server` pod is running and healthy.
 2. Confirm the service name and namespace resolution are correct.
-3. Confirm IQ integrator and MCP server are from compatible release levels.
+3. Confirm IQ integrator and MCP Server are from compatible release levels.
 
 !!! note
-    If IQ was upgraded, verify that the associated MCP server deployment was upgraded as part of the same release plan.
+    If IQ was upgraded, verify that the associated MCP Server deployment was upgraded as part of the same release plan.
 
 ## Configuring server parameters
 
-The MCP server relies on specific Helm chart configuration values to control tool availability, payload capacity, and session data context.
+The MCP Server relies on specific Helm chart configuration values to control tool availability, payload capacity, and session data context.
 
 Use the following feature flags to enable or disable tool domains to expose only the capabilities required by your deployment.
 
@@ -64,8 +64,8 @@ Route tool execution requests through the following endpoints to handle traffic 
 
 | Endpoint path {: style="width: 25%; white-space: nowrap;"}| Type | Network and runtime behavior {: style="width: 50%;"}|
 |:--------------|:-----|:-----------------------------|
-|`/mcp`|Tool API (Unprefixed)|Provides MCP server functionality as the unprefixed entry point for enabled DX tool domains.|
-|`/dx/api/iq/v1/mcp`|Tool API (Versioned)|Provides MCP server functionality as the versioned entry point for enabled DX tool domains to prevent breaking changes.|
+|`/mcp`|Tool API (Unprefixed)|Provides MCP Server functionality as the unprefixed entry point for enabled DX tool domains.|
+|`/dx/api/iq/v1/mcp`|Tool API (Versioned)|Provides MCP Server functionality as the versioned entry point for enabled DX tool domains to prevent breaking changes.|
 
 !!!note
     MCP tool responses use TOON encoding for JSON payloads when encoder support is available. If encoding is unavailable, the server falls back to standard JSON text responses. TOON output strips out repetitive structural syntax to make payloads more compact, which reduces token usage in LLM-driven workflows.
