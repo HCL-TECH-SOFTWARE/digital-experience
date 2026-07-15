@@ -196,31 +196,48 @@ To manage responsive layouts, you can customize row and column counts for each d
 
 The Button element functions as a pre-styled link element designed to look like a button out-of-the-box. It is ideal for quickly deploying Call-To-Action (CTA) links without needing to manually build standard link elements from scratch.
 
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Button_Sample.png)
+
 - By clicking the button directly on the canvas, you can enable inline editing of its text content.
-- The destination URL or `href` is easily supplied via the button configuration menu. 
-- When clicking the button in Preview mode, it seamlessly redirects to the provided URL.
+- The destination URL or `href` is easily supplied via the button configuration menu.
 - You can easily adjust button styles based on your preference using the available options in the style panel.
 - The element generates clean, standardized markup (for example, `<a href="..." class="pd-button-defclass">`).
 
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Button.png)
+
+!!! note
+    When you click the button element on the canvas, you will not be redirected to the configured URL. To test the provided URL, preview the presentation template.
+
 **Video**
 
-The Video element empowers users to seamlessly add video elements to presentation templates without any manual HTML coding. You can quickly integrate product demos or tutorial videos by simply dragging, dropping, and supplying the URL. 
+The Video element empowers users to seamlessly add video elements to presentation templates without any manual HTML coding. You can quickly integrate product demos or tutorial videos by simply dragging, dropping, and supplying the URL via the Video configuration.
 
-The element automatically generates clean HTML based on the source, outputting a standard `<video>` tag with `<source>` and fallback text, or an `<iframe>` for YouTube embeds. You can easily configure extensive customizations for the video, such as width, height, margins, paddings, and borders, via the style panel to fit any presentation layout perfectly.
+The element automatically generates clean HTML based on the source, outputting a standard `<video>` tag with `<source>` and fallback text, or an `<iframe>` for YouTube embeds. You can easily configure extensive customizations for the video, such as width, height, margins, paddings, and borders, via the style panel to fit any presentation layout.
+
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Video_Sample.png)
 
 The Video element operates in three distinct render states on the canvas:
 
 - **Initial Placeholder:** An initial placeholder appears upon drag-and-drop. It displays as a 300x200px grey box with a video icon when sources are empty or if the Broken Video flag is set, and it resets on new URL input.
 - **Non-YouTube Native Video:** This state supports formats such as an MP4 supplied via an external URL or from HCL DAM video asset URL.
-- **Auto-detected YouTube iframe embed:** This state supports YouTube embeds through auto-detection. Pattern matching supports `youtube.com/watch?v=`, `youtube.com/embed/`, and `youtu.be/` formats. However, it does not support YouTube Shorts URLs (`youtube.com/shorts/`), which are treated as unrecognized and rendered as the placeholder state.
+- **Auto-detected YouTube iframe embed:** This state supports YouTube embeds through auto-detection. Pattern matching supports `youtube.com/watch?v=`, `youtube.com/embed/`, and `youtu.be/` formats.
+
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_Video.png)
+
+!!! note
+    YouTube Shorts URLs (`youtube.com/shorts/`) are not supported. They are treated as unrecognized and rendered as the placeholder state.
 
 **Custom HTML**
 
 The Custom HTML element provides full authoring flexibility by allowing you to enter raw HTML markup into a dedicated multiline code editor. This element is useful for embedding third-party iframes (such as YouTube, analytics scripts, or custom widgets) or authoring complex enterprise templates that require custom markup beyond the standard predefined components.
 
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_CustomHTML.png)
+
 - **Safe Editing and Rendering:** Content is rendered on the canvas via a shadow DOM and sanitized for safe editing. Executable content (like `<script>`, `on*` handlers, and `javascript:` URIs) is neutralized during template design to prevent accidental execution, while the actual markup is safely preserved and stored for the backend.
 - **Shadow DOM Scoping:** Any `<style>` rules you supply are automatically scoped to the shadow tree, preventing your custom styles from leaking into the global Presentation Designer UI. Document-level selectors like `body` and `html` are automatically rewritten so the rules apply directly to the element.
 - **Orphaned Tag Handling:** The element automatically wraps orphaned closing tags in comments (for example, `<!-- </tag> -->`) to ensure structural consistency between the canvas and the final preview without losing any data.
+
+![](../../../../assets/HCL_Presentation_Designer_Static_Element_CustomHTML_Sample.png)
 
 ### Content elements
 
