@@ -153,6 +153,18 @@ helm install dx-iq \
     - For production deployments, provide both `LITELLM_API_KEY` and `LITELLM_URL` during the initial installation.
     - For deferred configuration, set `maintenanceMode.integrator: true` in the values file. This setting allows pods to start but keeps services non-functional. Update both values and run a `helm upgrade` after the LiteLLM proxy is ready.
 
+!!! note "LiteLLM model configuration"
+    Follow the [Deploying LiteLLM for IQ](../../../../../../build_sites/iq/installation/deploy-litellm.md) guide strictly to configure the required proxy models (`iq-general-purpose` and `iq-summary`).
+
+    If you deploy LiteLLM with different models or providers, you must adjust the `LLM_MAX_TOKENS` and `LLM_TEMPERATURE` environment variables to match your model's constraints:
+
+    ```json
+    {"name":"LLM_MAX_TOKENS","value":"<MODEL_MAX_TOKENS>"}
+    {"name":"LLM_TEMPERATURE","value":"<MODEL_TEMPERATURE>"}
+    ```
+
+    For example, if your model supports a maximum of 16,384 tokens and requires a temperature of 1, add these parameters to the `environment.pod.integrator` list. Refer to [IQ environment variables - LiteLLM](../../../../../../build_sites/iq/installation/environment-variables.md#litellm) for details.
+
 Alternatively, specify configuration values directly by using command-line flags:
 
 ```bash

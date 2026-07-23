@@ -10,6 +10,8 @@ This page lists the environment variables available for the IQ Integrator and DX
 |----------------------|-----------------|------|---------|-------------|-----------------|
 | `LITELLM_API_KEY` | `iq-litellm-api-secret` | String | — | Specifies the static LiteLLM API key set through a Kubernetes secret. When you set this key, the system bypasses the deployment key flow entirely. This variable is mutually exclusive with `IQ_DEPLOYMENT_KEY`. | Any valid LiteLLM virtual key |
 | `LITELLM_URL` | `configuration.litellm.liteLlmUrl` | String | — | Specifies the base URL of the LiteLLM Gateway Proxy. | A valid HTTPS URL (for example, `https://litellm.example.com`) |
+| `LLM_MAX_TOKENS` | `environment.pod.integrator` | Integer | — | Specifies the maximum number of tokens for LLM completion responses. IQ sets a default that must be overridden based on your LLM model's token limits. Failure to set an appropriate value may result in errors from models that enforce stricter token limits (for example, some models support a maximum of 16,384 tokens). | Any positive integer within the model's supported range (for example, `16384`, `8192`, `4096`) |
+| `LLM_TEMPERATURE` | `environment.pod.integrator` | Float | — | Specifies the temperature parameter for LLM response generation, controlling randomness and determinism. IQ sets a default that must be overridden based on your LLM model's constraints. Some models enforce specific temperature values (for example, some models only support `1` while others support `0.7`). | Any float value within the model's supported range (for example, `0.7`, `1`, `0`) |
 
 ### DX integration
 
