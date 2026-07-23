@@ -4,7 +4,7 @@ In order to fine-tune the security measures of your HCL Digital Experience envir
 
 Review the following information to learn more about resources, roles, access rights, and initial access control settings:
 
--   **[Resources](../resources_roles/resources/)**  
+-   **[Resources](../resources_roles/resources/index.md)**  
 Resources are organized in a hierarchy. Resources in the hierarchy propagate their access control configuration to all of their child resources. If a user has the Editor role on the Market News page, then that user also has the Editor role on child pages of the Market News page. Resource instances are specific resources, such as a single portlet or page. Each resource instance belongs to only one resource type. For example, the resource instance Market News Page would belong to the Content Nodes resource type.
 -   **[Roles](../resources_roles/sec_roles.md)**  
 Roles provide task permissions for users on resources. For example, Editor is a role that allows users to view, modify, and create resources. Roles are denoted as Role@Resource; for example, Editor@Portal Page.

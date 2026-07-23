@@ -10,11 +10,11 @@ This section details how to generate a content report in HCL Content Reporting.
 
 ## Generating a report
 
-A report is a list of items that matches a set or combined sets of criteria. Content managers generate reports of content items that they are planning to analyze or update. They have a set of criteria that the content items have to match. In this feature, content managers can combine the required criteria into a single report to get the list of items that need updating.
+A report is a list of items that matches a combination of criteria. Content managers generate reports of content items that they are planning to analyze or update. They have a set of criteria that the content items have to match. In this feature, content managers can combine the required criteria into a single report to get the list of items that need updating.
 
 1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content**, then select **Content Reporting** from the Practitioner Studio navigator.
 
-2.  Close the sidebar. On the **Search Criteria** section, select the appropriate criteria to generate a report of matching contents.
+2.  Collapse the side navigation panel. On the **Search Criteria** section, select the appropriate criteria to generate a report of matching contents.
     ![](../../../../assets/HCL_Content_Reporting_Criteria_Dropdown.png)
 
     !!!note

@@ -85,7 +85,7 @@ What can and cannot be syndicated:
         ```
 
     !!! note
-        For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers. Refer to [Syndicate the source and target environments](../../../../deployment/manage/container_configuration/container_staging.md#syndicate-the-source-and-target-environments) for more information.
+        For syndication to work in HTTPs, you have to import the SSL certificates between syndicator and subscriber servers. Refer to [Syndicate the source and target environments](../../../../deployment/manage/container_configuration/container_staging.md#syndicating-the-source-and-target-environments) for more information.
 
     -   **Once the syndication pair has been created, you must edit the syndicator. The Subscriber URL field needs to be modified to look like this:**
 

@@ -1,0 +1,11 @@
+title: Install
+
+nav:
+    - index.md
+    - DeployOnAzure.md
+    - InstallandConfigureAnDXCluster.md
+    - installDXConsoleMode.md
+    - InstallLDAPTools.md
+    - SupportForRedHat.md
+    - RunIIMAsDifferentUser.md
+    - NonRootInstall.md

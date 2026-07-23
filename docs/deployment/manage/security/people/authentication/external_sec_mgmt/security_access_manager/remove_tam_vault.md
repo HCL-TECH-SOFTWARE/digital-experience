@@ -14,7 +14,7 @@ Perform the following steps to remove the credential vault adapter:
     !!!note
         Do not remove the systemcred.dn parameter.
 
-3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/PortalServer/config/config directory.
+3.  Remove the accessmanagervault.properties file from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/PortalServer/config/config directory.
 
     **Clustered environments:** Perform this step on all portal nodes.
 

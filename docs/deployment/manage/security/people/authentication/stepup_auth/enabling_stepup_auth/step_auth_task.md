@@ -34,7 +34,7 @@ You can use step-up authentication with Web Services for Remote Portlets (WSRP) 
     -   authenticated
 
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -59,7 +59,7 @@ You can use step-up authentication with Web Services for Remote Portlets (WSRP) 
 
 6.  Open a command prompt.
 
-7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 8.  Choose one of the following tasks to modify your environment:
 
@@ -77,7 +77,7 @@ You can use step-up authentication with Web Services for Remote Portlets (WSRP) 
 
 9.  Check the output for any error messages before you run any additional tasks. If any of the configuration tasks fail, verify the values in the wkplc.properties file.
 
-10. In a clustered environment, copy the wp.auth.base.sua\_loginmodule.jar file in the [AppServer\_root](../../../../../../../guide_me/wpsdirstr.md#appserver_root)/lib/ext/ directory of one of the Portal nodes to the [AppServer\_root](../../../../../../../guide_me/wpsdirstr.md#appserver_root)/lib/ext/ directory of the deployment manager.
+10. In a clustered environment, copy the wp.auth.base.sua\_loginmodule.jar file in the [AppServer\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#appserver_root)/lib/ext/ directory of one of the Portal nodes to the [AppServer\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#appserver_root)/lib/ext/ directory of the deployment manager.
 
 11. Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 

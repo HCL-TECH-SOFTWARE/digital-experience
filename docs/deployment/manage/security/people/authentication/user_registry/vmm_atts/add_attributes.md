@@ -27,7 +27,7 @@ The resource tag includes attributes that are specific for the property: propert
 
     1.  Open a command line.
 
-    2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
     3.  Run the following task:
 
@@ -41,7 +41,7 @@ The resource tag includes attributes that are specific for the property: propert
 
 3.  Stop and restart the appropriate servers to propagate the changes. For instructions, go to [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 
-4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+4.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 5.  Find the *VMM Property Extension Properties* heading. You can either add a single attribute or multiple attributes.
 

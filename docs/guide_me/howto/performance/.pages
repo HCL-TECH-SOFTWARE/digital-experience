@@ -1,0 +1,8 @@
+title: Performance
+nav:
+    - WCMItemPerformance.md
+    - index.md
+    - DB2DatabasePerformance.md
+    - ImproveQueryPerformance.md
+    - DX_Tune_LDAP.md
+    - WarmUpPortalSite.md

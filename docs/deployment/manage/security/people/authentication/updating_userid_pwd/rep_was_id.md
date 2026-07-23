@@ -9,10 +9,10 @@ Complete the following steps to replace the WebSphere® Application Server admin
 2.  Run the following task to replace the old WebSphere Application Server administrative user with the new user:
 
 
-    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
-    -   IBM® i: ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
-    -   Windows™: ConfigEngine.bat wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
-    -   z/OS®: ./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupID parameter is needed only if you plan to replace the old administrative group ID.
+    -   AIX® HP-UX Linux™ Solaris: ./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   IBM® i: ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+    -   Windows™: ConfigEngine.bat wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.
+    -   z/OS®: ./ConfigEngine.sh wp-change-was-admin-user -DWasPassword=password -DnewAdminId=newadminid -DnewAdminPw=newpassword from the [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory. The -DnewAdminGroupID parameter is needed only if you plan to replace the old administrative group ID.
 
     !!!note
         Refer to the description of the newAdminId property in wkplc.properties under wp\_profile\_root\\ConfigEngine\\properties\\ for guidance on populating the value in the command line.

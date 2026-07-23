@@ -1,7 +1,5 @@
 # Portlet management
 
-
-
 Manage the portlets and Web services that the site uses.
 
 -   **[Managing Web modules](../portlet_management/managing_web_modules/index.md)**  

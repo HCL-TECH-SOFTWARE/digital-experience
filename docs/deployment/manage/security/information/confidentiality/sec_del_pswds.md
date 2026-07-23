@@ -13,9 +13,9 @@ Complete the following steps to delete passwords and other security-sensitive in
 
     |Operating system|Steps|
     |----------------|-----|
-    |Windows™|Complete the following steps to access the configuration directory:<br> 1.  Open a command prompt.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.|
-    |AIX®SolarisLinux™|Complete the following steps to access the configuration directory:<br> 1.  Open a terminal session.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
-    |IBM® i|Complete the following steps to access the configuration directory:<br> 1.  Type STRQSH on an OS/400 command line to start the Qshell Interpreter.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
+    |Windows™|Complete the following steps to access the configuration directory:<br> 1.  Open a command prompt.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory.|
+    |AIX®SolarisLinux™|Complete the following steps to access the configuration directory:<br> 1.  Open a terminal session.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
+    |IBM® i|Complete the following steps to access the configuration directory:<br> 1.  Type STRQSH on an OS/400 command line to start the Qshell Interpreter.<br> 2. Change to the [wp\_profile\_root](../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.|
 
 2.  Remove the work directory that was created during the installation:
 

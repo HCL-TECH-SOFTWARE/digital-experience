@@ -1,46 +1,58 @@
-# Canvas settings in Presentation Designer
+# Canvas settings
 
-With canvas settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. Presentation Designer retains the last used canvas settings for the user in the browser. These settings include the width, height, zoom level, canvas orientation, and the RTL toggle. This topic outlines the available settings in the **Header** section of Presentation Designer.
+Canvas settings configure the width, height, zoom level, orientation, and language direction of the presentation workspace.
 
-To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access/index.md)** topic.
+To access Presentation Designer and understand its user interface, refer to **[Access Presentation Designer](../access.md)**.
 
-To learn how to use the different user elements in Presentation Designer, refer to the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
+To learn how to use the different user elements in Presentation Designer, refer to **[User Elements in Presentation Designer](../usage/user_elements.md)**.
 
 ## Canvas dimensions
 
-The canvas dimensions settings in Presentation Designer can be used to set the width and height of the canvas to adapt to specified size requirements. You can also use the dimensions settings to select from predefined sizes such as **Desktop**, **Tablet**, and **Mobile**.
-
-In the following image, you can see the options for selecting predefined sizes and for entering specific dimensions for width and height.
+Canvas dimensions adjust the workspace size to meet specific layout requirements. Predefined sizes such as **Desktop**, **Tablet**, and **Mobile** are also available.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions.png)
 
-1. **Predefined sizes:** Select from the predefined sizes for **Desktop**, **Tablet**, or **Mobile**.
-2. **Width and Height:** Enter specific dimensions to adjust the width and height of the canvas.
+1. **Predefined sizes:** Sets the workspace to standard **Desktop**, **Tablet**, or **Mobile** resolutions.
+2. **Width and Height:** Sets custom pixel dimensions for the workspace boundaries.
 
-## Canvas rotate
+## Rotate
 
-You can rotate the canvas using the **Rotate** button in Presentation Designer.
-
-The following image shows the **Rotate** button.
+The **Rotate** button switches the canvas layout between portrait and landscape orientations.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Rotate.png)
 
 ## RTL toggle
 
-You can switch the canvas orientation from left-to-right (LTR) to right-to-left (RTL), and vice versa using the **RTL** toggle in Presentation Designer.
-
-The following image shows the **RTL** toggle. Use this to switch from LTR to RTL and vice versa.
+The **RTL** toggle switches the canvas layout orientation between left-to-right (LTR) and right-to-left (RTL) text paths.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Direction.png)
 
-## Canvas zoom
+## Zoom
 
-In the **Zoom** field, you can select how much you want to zoom in or out of the canvas. There is a minimum zoom level of 50% up to a maximum of 200%. You can also select a zoom level to fit your window.
-
-The following image shows the zoom level options in Presentation Designer.
+The **Zoom** field scales the workspace magnification level between a minimum of 50% and a maximum of 200%.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Zoom.png)
 
-The following image shows an example of a canvas when the **Fit to window** zoom option is selected.
+The **Fit to window** option automatically scales the active canvas view to match your current browser window boundaries.
 
 ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Zoom_Fit_to_Window.png)
+
+## Responsive Canvas setting
+
+The Presentation Designer Header automatically responds to changes in browser window widths to preserve workspace usability.
+
+- For widths below 1280 pixels, an ellipsis button **(...)** replaces individual header controls.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis.png)
+
+    Clicking this button opens a menu containing the width, height, zoom, and rotate parameters.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_dimension.png)
+
+- Predefined **Desktop**, **Tablet**, and **Mobile** resolutions also move inside the ellipsis menu.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_predefined.png)
+
+- For widths below 800 pixels, a modal warning message overlays the screen prompting you to resize the browser window.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Canvas_Settings_Dimensions_Ellipsis_modal_message.png)

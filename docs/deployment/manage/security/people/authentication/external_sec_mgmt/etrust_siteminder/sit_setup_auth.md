@@ -9,7 +9,7 @@ Install Computer Associates eTrust SiteMinder Trust Association Interceptor (TAI
 
 Perform the following steps to enable the eTrust SiteMinder TAI and create a new interceptor:
 
-1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/properties directory:
+1.  Copy the smagent.properties file from the eTrust SiteMinder application server agent installation directory to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/properties directory:
 
     **Clustered environments:** Complete this step on all nodes.
 
@@ -22,8 +22,8 @@ Perform the following steps to enable the eTrust SiteMinder TAI and create a new
 
 3.  Run the following task to enable eTrust SiteMinder TAI:
 
-    -   Windows™: ConfigEngine.bat enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   AIX®SolarisLinux™: ./ConfigEngine.sh enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   Windows™: ConfigEngine.bat enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
+    -   AIX®SolarisLinux™: ./ConfigEngine.sh enable-sm-tai -DWasPassword=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
 
 4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 

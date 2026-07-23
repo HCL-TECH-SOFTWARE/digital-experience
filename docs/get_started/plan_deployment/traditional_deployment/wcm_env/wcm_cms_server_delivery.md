@@ -1,14 +1,12 @@
 # Web content delivery environments
 
-If you only have an HCL Web Content Manager license, you can deliver your website without using HCL Digital Experience features.
+If you only have an HCL Web Content Manager license, you can deliver your website without using HCL Digital Experience (DX) features.
 
 ## Pre-rendered delivery
 
-Deploy a pre-rendered site when you are not using HCL Digital Experience features, such as portlets, and your content is static and updated only periodically. When you set up a pre-rendered delivery environment, your complete website is converted to static HTML files.
+Deploy a pre-rendered site when you are not using HCL DX features, such as portlets, and your content is static and updated only periodically. When you set up a pre-rendered delivery environment, your complete website is converted to static HTML files.
 
 In a pre-rendered delivery environment, live items are syndicated from the authoring environment to the delivery environment. The content is converted into a set of static HTML files, which are then displayed to users through a web server.
-
-![](../../../../images/wcm_prerendering.jpg)
 
 ![Pre-render delivery environment](../../../../images/wcm_prerendering.jpg)
 
@@ -34,8 +32,5 @@ In a remote portlet delivery environment, content is syndicated from the authori
 
 ![Remote portlet delivery environment](../../../../images/wcm_remote_rendering.jpg)
 
-
-
 ???+ info "Related information"
     - [HCL Web Content Manager \(WCM\) environments](../wcm_env/index.md)
-

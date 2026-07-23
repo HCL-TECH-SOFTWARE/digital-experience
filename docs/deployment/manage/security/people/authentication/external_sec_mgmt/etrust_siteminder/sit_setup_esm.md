@@ -29,10 +29,10 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
 
 3.  Use a text editor to open the wkplc\_comp.properties file in the following directory:
 
-    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-    -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
-    -   z/OS®: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   AIX® HP-UX Linux™Solaris: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+    -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
+    -   z/OS®: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
 
 4.  Update the Namespace management parameters in the wkplc\_comp.properties file
 
@@ -95,8 +95,8 @@ Complete the following steps to configure eTrust SiteMinder for authorization:
 
 8.  Run the following task to configure eTrust SiteMinder for authorization:
 
-    -   Windows: ConfigEngine.bat enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
-    -   AIXSolarisLinux: ./ConfigEngine.sh enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
+    -   Windows: ConfigEngine.bat enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine directory
+    -   AIXSolarisLinux: ./ConfigEngine.sh enable-sm-authorization -DWasPassword=password -Dwp.ac.impl.SmAgentPw=password -Dwp.ac.impl.SmAdminPw=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory
     **Clustered environments:** Complete this step on all nodes.
 
 9.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).

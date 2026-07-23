@@ -1,0 +1,4 @@
+site_name: Troubleshooting container deployments problems
+nav:
+    - index.md
+    - collectDataOpenShiftAndK8.md

@@ -11,7 +11,7 @@ If necessary, modify the input properties files before you run the *tune-initial
 All the properties files are located in the *{PortalServer_root}/installer/wp.config/config/TuningTask* subdirectories.
 
 !!!note "Remember"
-    Review the HCL Digital Experience Performance Tuning Guide located in the [Guide Me section of the DX Help Center](../../../guide_me/performance_tuning/index.md) for information first. Before you modify the properties files, make a local copy of the *PortalServer_root\installer\wp.config\config\TuningTask* directory. Modify the files in the local copy. Then, add the *-DTuningPropertiesDirectory=local_dir_path* parameter to the *tune-initial-portal-performance* task.
+    Review the HCL Digital Experience Performance Tuning Guide located in the [Guide Me section of the DX Help Center](../../../guide_me/guides/performance_tuning/index.md) for information first. Before you modify the properties files, make a local copy of the *PortalServer_root\installer\wp.config\config\TuningTask* directory. Modify the files in the local copy. Then, add the *-DTuningPropertiesDirectory=local_dir_path* parameter to the *tune-initial-portal-performance* task.
 
 !!!note
 

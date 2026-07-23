@@ -1,6 +1,6 @@
-# Sample Pipeline Settings using DXClient
+# Sample pipeline settings using DXClient
 
-A CI/CD pipeline can help automate processes in the development and test cycle, including code deployment to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, and the export and import of Web Content Manager (WCM) libraries can be automated.
+A CI/CD pipeline can help automate processes in the development and test cycle, including code deployment to test and production environments. HCL Digital Experience (DX) 9.5 provides sample pipelines for use with the DXClient tool to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, and the export and import of Web Content Manager (WCM) libraries can be automated.
 
 You can find a sample pipeline code under the samples folder in the DXClient root folder. This code uses a container version of DXClient to deploy the portlet, theme, and script application. Developers and administrators can also use [this sample](https://github.com/HCL-TECH-SOFTWARE/dxclient-scripts/blob/main/samples/sample-pipeline-files/sample-pipeline.groovy){target="_blank"} as a basis for Jenkins automation server jobs.
 
@@ -163,9 +163,9 @@ This sample shows how to install the DXClient tool in a pipeline and then enable
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
+For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
 
-To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
+To learn how to use staging tools such as DXClient, Syndication, XMLAccess, ReleaseBuilder/Solution Installer, and ConfigEngine, go to [Staging for Intermediate Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3328){target="_blank"}. You can try it out using the [Staging Lab for Intermediate Users](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab.pdf){target="_blank"} and corresponding [Staging Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Staging_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information" 
     - [How to translate WCM library content using export and import WCM with DXClient](../dxclient/dxclient_artifact_types/wcm_mls_export_import.md)

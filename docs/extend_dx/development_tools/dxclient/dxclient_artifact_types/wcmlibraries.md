@@ -199,4 +199,4 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
 1. The attribute `-dxConnectHostname` is deprecated in CF202 and later releases. It is recommended that you start using the replacement parameter `-hostname` starting from CF202 wherever necessary.
 2. CF206 onwards, we are supporting the `zip/tar.gz` file formats to export and import WCM libraries.
 3. Ensure that the size of the `zip/tar.gz` file of WCM import is not more than 256MB. This limitation will be addressed in the future release.
-4. In the Kubernetes environment, import could fail because of connection timeout set in load balancer. Find troubleshooting tips [here](../troubleshooting_dxclient.md#troubleshooting-for-some-known-issues). 
+4. In the Kubernetes environment, import could fail because of connection timeout set in load balancer. Find troubleshooting tips [here](../troubleshooting_dxclient.md#troubleshooting-known-issues). 

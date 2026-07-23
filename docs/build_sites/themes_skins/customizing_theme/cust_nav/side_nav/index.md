@@ -14,7 +14,7 @@ The side navigation is composed of three parts:
 
     The dynamic content spot recursively loops over the navigation hierarchy to render the pages. The dynamic content spot is a JSP that uses expression logic to access the navigation and provides easy to read code. You can customize the start level parameter of the dynamic content spot to render different sets of pages.
 
-    Location: [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots\\sideNavigation.jsp
+    Location: [PortalServer\_root](../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes\\html\\dynamicSpots\\sideNavigation.jsp
 
 -   **Styles**
 

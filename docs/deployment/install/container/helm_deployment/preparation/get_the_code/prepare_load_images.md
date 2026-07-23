@@ -22,7 +22,7 @@ It is possible to have your Kubernetes deployment pull images directly from a co
 Ensure that you have configured your deployment to authenticate to the container registry, as described in [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md).
 
 !!! tip
-    If you configure your deployment to use the HCL Harbor container registry you do not need to retrieve, re-tag and push the images manually. This is very handy for quick deployments or if you do not have a local container image registry. The steps to do this are described in the [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md#configure-deployment-to-use-the-hcl-harbor-container-registry) page.
+    If you configure your deployment to use the HCL Harbor container registry you do not need to retrieve, re-tag and push the images manually. This is very handy for quick deployments or if you do not have a local container image registry. The steps to do this are described in the [Using ImagePullSecrets](../optional_tasks/optional_imagepullsecrets.md#configuring-deployment-to-use-the-hcl-harbor-container-registry) page.
 
 ### Pull directly from Harbor container registry
 

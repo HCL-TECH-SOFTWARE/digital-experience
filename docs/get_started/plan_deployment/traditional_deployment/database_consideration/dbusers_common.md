@@ -14,7 +14,7 @@ The database runtime user has fewer privileges than the database configuration u
 
 The following tables identify the minimum privileges that the configuration users and runtime users require to function correctly. The privileges that are listed pertain to all HCL Portal database domains.
 
-### Configuration users
+### Runtime users
 
 |Permission in the database domain|Release|Community|Customization|JCR|Feedback|LikeMinds|
 |-------------------------------------|-------|---------|-------------|---|--------|---------|
@@ -27,7 +27,7 @@ The following tables identify the minimum privileges that the configuration user
 |Create indexes|No|No|No|No|No|No|
 |Use sequences|No|No|No|No|Yes|No|
 
-### Runtime users
+### Configuration users
 
 |Permission in the database domain|Release|Community|Customization|JCR|Feedback|LikeMinds|
 |-------------------------------------|-------|---------|-------------|---|--------|---------|

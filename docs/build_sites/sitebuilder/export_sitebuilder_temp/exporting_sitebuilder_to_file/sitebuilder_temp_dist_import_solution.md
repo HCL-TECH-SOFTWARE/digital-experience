@@ -11,7 +11,7 @@ The Site Builder template can be installed by using the Solution Installer by ru
 
 Further information on using the Solution Installer can be found here: [Installing add-ons](../../../../deployment/install/traditional/install_addons/index.md).
 
-1.  Go to the [wp\_profile\_root](../../../../guide_me/wpsdirstr.md) directory.
+1.  Go to the [wp\_profile\_root](../../../../guide_me/glossary/wpsdirstr.md) directory.
 
 2.  Run the ConfigEngine batch or script file with the install-paa parameter. For example:
 

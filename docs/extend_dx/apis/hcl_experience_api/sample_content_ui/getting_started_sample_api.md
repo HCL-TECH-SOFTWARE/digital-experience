@@ -6,7 +6,7 @@ Learn how to get started with the Sample Content UI application on HCL Digital E
 
 Follow the steps to get started with Sample Content UI application:
 
-1.  Go to [HCL Software License Portal page](https://www.hcltech.com/software/support/release) and download the Sample Content UI application files.
+1.  Go to [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} and download the Sample Content UI application files.
 
     !!! note
         You will find the sample file inside the CF package: HCL DX 9.5 CFXXX (eg. HCL DX 9.5 CF199) and called hcl-dx-experience-api-sample-ui-vX.X.X.XXXXXXXX-XXX.zip (eg. hcl-dx-experience-api-sample-ui-v0.2.0.20211029-1354.zip).
@@ -15,7 +15,7 @@ Follow the steps to get started with Sample Content UI application:
 3.  Open the ui/src/app/app.config.ts file and enter the following values : `SITE_AREA_UUID`, `WORKFLOW_UUID`, `CONTENT_TEMPLATE_UUID`, and `BASE_URL`.
     -   To find your `**SITE\_AREA\_UUID**`:
 
-        1.  Log in to HCL Portal and go to Practitioner Studio. If you have not enabled this feature yet, go here to learn [how to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+        1.  Log in to HCL Portal and go to Practitioner Studio. If you have not enabled this feature yet, go here to learn [Enabling Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
         2.  From the Library Explorer, click **Web Content \> Content**.
         3.  Select any one site area (e.g. "Articles"), click on **Read** then the **Properties** tab. If UUID is not visible, click **Show Hidden Fields**.
         4.  Find the UUID as seen below and save it for later: 

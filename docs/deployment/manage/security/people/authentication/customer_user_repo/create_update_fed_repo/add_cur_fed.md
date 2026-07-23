@@ -9,9 +9,9 @@ You must create a custom user registry adapter before you create your repository
     1.  Open wkplc.properties with any text editor from the following directory:
 
 
-        -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
-        -   AIX®SolarisLinux™: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-        -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+        -   Windows™: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
+        -   AIX®SolarisLinux™: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+        -   IBM® i: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
 
     2.  Specify values for the following parameters under the **VMM Federated CUR Properties** heading:
 
@@ -27,7 +27,7 @@ You must create a custom user registry adapter before you create your repository
     3.  Save and close wkplc.properties.
 
 
-    4.  Run the following task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
+    4.  Run the following task from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
 
 
         -   Windows: ConfigEngine.bat wp-create-cur -DWasPassword=password
@@ -41,9 +41,9 @@ You must create a custom user registry adapter before you create your repository
     1.  Open wkplc.properties with any text editor from the following directory:
 
 
-        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
-        -   AIXSolarisLinux: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
-        -   IBM i: [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+        -   Windows: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\ConfigEngine\\properties
+        -   AIXSolarisLinux: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
+        -   IBM i: [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties
 
     2.  Specify values for the following parameters under the **VMM Federated CUR Properties** heading in wkplc.properties:
 
@@ -54,7 +54,7 @@ You must create a custom user registry adapter before you create your repository
     3.  Save and close wkplc.properties.
 
 
-    4.  Run the following task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
+    4.  Run the following task from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory:
 
 
         -   Windows: ConfigEngine.bat wp-create-cur-custom-property -DWasPassword=password

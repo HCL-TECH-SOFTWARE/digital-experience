@@ -1,4 +1,15 @@
 title: Administration
 nav:
     - index.md
-    - ClearWCMCaches.md  
+    - SupportForAdditionalMIMETypes.md
+    - RedirectTimeout.md
+    - ClearOSGIandTempFiles.md
+    - ClearWCMCaches.md
+    - ClearWebSphereDynacache.md
+    - CustomizeErrorBehavior.md
+    - DecodeLongURLs.md
+    - ExpediteAsyncDeletes.md
+    - DetermineVPObjectID.md
+    - IncreaseTransactionTimeout.md
+    - SystemReportForCompare.md
+    - UseJavaScriptToReplaceText.md

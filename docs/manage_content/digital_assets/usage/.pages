@@ -1,4 +1,6 @@
 nav:
     - index.md
     - Accessing DAM: access_digital_asset_mgmt.md
+    - Digital Asset Search: search_dam.md
+    - DX Content Picker for DAM: dxpicker.md
     - Managing DAM: managing_dam

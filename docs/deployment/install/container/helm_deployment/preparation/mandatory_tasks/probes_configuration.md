@@ -19,28 +19,51 @@ You can modify `liveness` and `readiness` probes such as the status thresholds a
       timeoutSeconds: 30
 ```
 
-If you want to configure probe target values, Core provides a `customProbeURL` value.  This is a relative URL that you can use to overwrite the default `liveness` probe target value.
+## Core probes configuration
+
+Core offers additional flexibility for the probe configuration. In addition to the previously listed options, Core provides a `customProbeURL` value as well as a configuration section for the `startup` probe.
+
+If you want to configure probe target values, Core provides a `customProbeURL` value. This is a relative URL that you can use to overwrite the default probe target values.
 
 ```yaml
-# The liveness probe for Core provides a customProbeURL value. 
-# You may add a custom relative URL, e.g., "/sample/url". 
-  core:  
+probes:
+ core:
+    # Liveness probe using the application shell based probe
     livenessProbe:
-      failureThreshold: 4
-      initialDelaySeconds: 30
+      failureThreshold: 6
+      initialDelaySeconds: 0
       periodSeconds: 30
       successThreshold: 1
-      timeoutSeconds: 30
-      customProbeURL: "/sample/url"
-```
-
-When the `customProbeURL` is empty, the `liveness` probe target value for Core is `"/ibm/console"` by default.
-
-```yaml
-# The liveness probe target value for Core in this case is "/ibm/console"
+      timeoutSeconds: 10
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to "/ibm/console" when this is empty. 
+      customProbeURL: ""
+    # Readiness probe using the application shell based probe
+    readinessProbe:
+      failureThreshold: 1
+      initialDelaySeconds: 0
+      periodSeconds: 30
+      successThreshold: 1
+      timeoutSeconds: 10
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
+      customProbeURL: ""
+    # Startup probe using the application shell based probe
+    startupProbe:
+      failureThreshold: 4320
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 10
+      # You may add a custom URL, for example, "/sample/url". The leading slash is required. The URL defaults to the DX home page when this is empty.
       customProbeURL: ""
 ```
 
+When the `customProbeURL` is empty, the default targets are used:
+
+| Probe Type   | Default Target Value        |
+|--------------|-----------------------------|
+| Liveness     | `/ibm/console`              |
+| Readiness    | Path created from `networking.core.contextRoot` and `.networking.core.home` (for example, `/wps/portal`)    |
+| Startup      | Path created from `networking.core.contextRoot` and `.networking.core.home` (for example, `/wps/portal`)    |
+
 !!!important
-    - Setting the `probeURL` to a path that is slow or unreliable can cause the pod to restart. Change the path only if it is necessary for your specific use case.
-    - Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `probeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. Refer to the [Kubernetes documentation](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes) for more details on what to consider when defining a `liveness` probe.
+    Carefully pick the values for `customProbeURL`, `timeoutSeconds`, and `initialDelaySeconds`. If the page referenced by the `customProbeURL` takes significant time to load while the DX server is initializing, the probe could fail repeatedly, leading to a restart loop. For more details on what to consider when defining a probe, refer to [Configure Liveness, Readiness and Startup Probes - Configure Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes){target="_blank"}.

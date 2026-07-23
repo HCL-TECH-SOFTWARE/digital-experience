@@ -88,7 +88,7 @@ The syntax for naming the component is important. There are dependencies within 
 
 When you register the names in the sdd.xml files, you must adhere to the following syntax: components/componentName. This syntax is necessary for the Solution Installer to resolve the component name. It must contain the full path from the directory that contains the assembly level sdd.xml file, usually the root directory, to the component level sdd.xml file.
 
-Looking at the [PortalServer\_root](../../../../../guide_me/wpsdirstr.md)/doc/paa-samples/sample1.paa file, it contains one component in the components directory called 'Sample1'. Therefore, The component name would appear in the sdd.xml file as follows: components/Sample1. It is the full path relative to the directory that contains the assembly level sdd.xml file.
+Looking at the [PortalServer\_root](../../../../../guide_me/glossary/wpsdirstr.md)/doc/paa-samples/sample1.paa file, it contains one component in the components directory called 'Sample1'. Therefore, The component name would appear in the sdd.xml file as follows: components/Sample1. It is the full path relative to the directory that contains the assembly level sdd.xml file.
 
 The Solution Installer follows the feature pack approach that is provided by the ConfigEngine to install the individual components. The advantage of this approach is that the ConfigEngine manages the installation order of the individual components. Using the feature pack approach ensures a distinction between portal core extension points and those points that are used to install the PAA content. This approach reduces the risk of a user accidentally removing portal core components when you run a remove extension point.
 

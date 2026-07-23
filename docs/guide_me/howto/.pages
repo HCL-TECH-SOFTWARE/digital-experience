@@ -1,5 +1,25 @@
 title: How-to articles
 nav:
-    - index.md
-    - administration
-    - configuration
+  - index.md
+  - New and migrated articles: whatsnew.md
+  - Administration: administration
+  - API: api
+  - Configuration: configuration
+  - Container: container
+  - Content: content
+  - Digital Asset Management: dam
+  - Database: database
+  - Development: development
+  - Install: install
+  - Migration: migration
+  - Performance: performance
+  - Personalization: personalization
+  - Requirements: requirements
+  - Search: search
+  - Security: security
+  - Syndication: syndication
+  - Themes: themes
+  - Tools: tools
+  - Upgrade: upgrade
+  - Web Content Manager Library Management: wcmlibrarymanagement
+  

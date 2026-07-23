@@ -22,5 +22,5 @@ Manually run the two following ConfigEngine tasks from the wp_profile_root/Confi
 ???+ info "Related information"  
     -   [Roadmaps for migration](../../../../../deployment/manage/migrate/planning_migration/rm_migration/index.md)
     -   [Migrate data using the configuration wizard](../../../../../deployment/manage/migrate/migrate_using_cfgwizard/index.md)
-    -   [HCL Digital Experience 9.5 Overview](../../../../../get_started/product_overview/index.md#hcl-digital-experience-cloud-native)
+    -   [HCL Digital Experience 9.5 Overview](../../../../../get_started/product_overview/index.md#hcl-digital-experience-overview)
 

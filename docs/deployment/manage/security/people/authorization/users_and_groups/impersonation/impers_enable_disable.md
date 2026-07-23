@@ -4,7 +4,7 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 
 1.  Complete the following steps to disable or enable the impersonation feature:
 
-    -   To disable the impersonation feature, run the `disable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   To disable the impersonation feature, run the `disable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
         -   **Windows™**
 
@@ -22,7 +22,7 @@ By default, user impersonation is enabled, but you can manually disable or enabl
 
             ./ConfigEngine.sh disable-impersonation -DWasPassword=password -DPortalAdminPwd=password -DCategoriesList=wp.auth.base
 
-    -   To enable the impersonation feature, run the `enable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+    -   To enable the impersonation feature, run the `enable-impersonation` task from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
         -   **Windows™**
 

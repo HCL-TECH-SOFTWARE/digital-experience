@@ -2,7 +2,7 @@
 
 Map the attributes between HCL Digital Experience and your LDAP user registries.
 
-1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Use a text editor to open the wkplc.properties file in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Enter values for the following set of parameters to identify your LDAP server:
 
@@ -29,7 +29,7 @@ Map the attributes between HCL Digital Experience and your LDAP user registries.
     -   Windows™: ConfigEngine.bat wp-validate-federated-ldap-attribute-config -DWasPassword=password
     -   z/OS®: ./ConfigEngine.sh wp-validate-federated-ldap-attribute-config -DWasPassword=password
 
-4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
+4.  Open the ConfigTrace.log file, in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)\\log directory. Review the following output for the PersonAccount and Group entity type:
 
     -   **The following attributes are defined in HCL Portal but not in the LDAP server**
 

@@ -194,7 +194,7 @@ The response of the API call looks similar to the following sample:
 }
 ```
 
-The response contains the `id` of the content source, which is required when you [configure a crawler](#configuring-the-crawler).
+The response contains the `id` of the content source, which is required when you [configure a crawler](./configure_a_crawler_api.md).
 
 ## Configuring content sources for virtual portals and alternate context roots
 
@@ -215,4 +215,4 @@ The Search V2 UI uses the  `aclLookupPath` to determine which content sources ar
 
 ## Out-of-the-box content sources
 
-If enabled in the Helm chart during deployment, the Search V2 configures the content sources out-of-the-box. These content sources are for the `wcm`, `dam`, `jcr` and `portal` types and are scoped at your configured context root and base portal.
+If enabled in the Helm chart during deployment, the Search V2 configures the content sources out-of-the-box. These content sources are for `wcm`, `jcr` and `portal` types and are scoped at your configured context root and base portal. A content source for `dam` is also pre-configured out-of-the-box but the Search V2 UI currently does not support it.

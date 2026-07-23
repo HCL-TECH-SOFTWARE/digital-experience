@@ -32,8 +32,8 @@ From the DAM perspective, each individual root-level collection and child collec
 | Edit collection details                    | No        | Yes         | Yes                |
 | Upload items                               | No        | Yes         | Yes                |
 | Create collections                         | No        | Yes         | Yes                |
-| Delete items in a collection               | No        | No          | Yes                |
-| Delete a collection                        | No        | No          | Yes                |
+| Move items in a collection to trash        | No        | No          | Yes                |
+| Move a collection to trash                 | No        | No          | Yes                |
 | Manage permissions for other users         | No        | No          | Yes                |
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.
@@ -71,7 +71,8 @@ In DAM, the user can assign permission to a collection tree at the root level if
 ## Nested collection permissions
 
 !!! note
-    While upgrading from pre-CF220 to CF220 or later, resources are created for all the existing nested collections through migration. It is recommended to deregister DAM Staging before upgrading the environments. You can re-enable DAM staging after completing the upgrade. For more information, see [Registering or deregistering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#registering-or-deregistering-for-dam-staging).
+    While upgrading from pre-CF220 to CF220 or later, resources are created for all the existing nested collections through migration. It is recommended to deregister DAM Staging before upgrading the environments. You can re-enable DAM staging after completing the upgrade. For more information, see [Registering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#registering-for-dam-staging) and
+    [Deregistering for DAM staging](../../../digital_assets/configuration/staging_dam/dam_subscription_staging.md#deregistering-for-dam-staging).
 
 A nested collection inherits the permission from its root collection by default. In the following screenshot, the Editor permission is inherited from the root collection.
 

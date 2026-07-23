@@ -16,7 +16,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf226.md)
+    [:octicons-arrow-right-24: Go to What's New](./whatsnew/cf20/newcf237.md)
     
 -   :material-code-braces-box:{ .lg .middle } __DX Architecture__
 
@@ -32,7 +32,7 @@ hide:
 
     ---
 
-    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms. 
+    Learn how to deploy DX through container-based, traditional, hybrid, and Docker platforms.
 
     ---
 
@@ -52,11 +52,11 @@ hide:
 
     ---
 
-    The DX Help Center contains a section for tutorials and how-to guides to help you use DX.
+    The DX Help Center contains a section for guides and how-to articles to help you use DX.
 
     ---
 
-    [:octicons-arrow-right-24: Go to Tutorials](./guide_me/tutorials/index.md)
+    [:octicons-arrow-right-24: Go to Guide Me](./guide_me/index.md)
 
 -   :material-school:{ .lg .middle } __HCLSoftware U__
 
@@ -68,7 +68,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"}
+    [:octicons-arrow-right-24: Visit HCL Software U](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"}
 
 -   :material-lifebuoy:{ .lg .middle } __HCL Support__
 
@@ -88,7 +88,7 @@ hide:
 
     ---
 
-    [:octicons-arrow-right-24: Go to Community Forums](https://support.hcltechsw.com/community){target="_blank"}
+    [:octicons-arrow-right-24: Go to Community Forums](https://developer.ds.hcl-software.com/c/hcl-dx/dx-forum/25){target="_blank"}
 
 -   :material-account-group:{ .lg .middle } __DXers User Group__
 

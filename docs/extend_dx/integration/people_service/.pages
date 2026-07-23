@@ -4,7 +4,7 @@ nav:
     - Deployment: deployment
     - Administration: administration
     - Integration: integration
-    - API documentation: api
+    - People Service API: api
     - User guides: user_guides
     - limitations.md
     - ...

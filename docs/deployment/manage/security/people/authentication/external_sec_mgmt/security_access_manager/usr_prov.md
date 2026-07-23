@@ -15,7 +15,7 @@ Complete the following steps to enable user provisioning within Security Access 
 
 1.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Digital Experience and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Digital Experience and the Security Access Manager server works:
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Digital Experience node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -97,10 +97,10 @@ Complete the following steps to enable user provisioning within Security Access 
 
     |Operating system|Task|
     |----------------|----|
-    |AIX HP-UX Linux Solaris|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory|
-    |IBM i|ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory|
-    |Windows|ConfigEngine.bat enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine directory|
-    |z/OS|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_rootwpt)/ConfigEngine directory|
+    |AIX HP-UX Linux Solaris|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory|
+    |IBM i|ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)/ConfigEngine directory|
+    |Windows|ConfigEngine.bat enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwp)\\ConfigEngine directory|
+    |z/OS|./ConfigEngine.sh enable-tam-userprov -DPortalAdminId=password -DPortalAdminPwd=password from the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_rootwpt)/ConfigEngine directory|
 
 4.  Stop and restart the appropriate servers to propagate the changes. For specific instructions, see [Starting and stopping servers, deployment managers, and node agents](../../../../../stopstart.md).
 

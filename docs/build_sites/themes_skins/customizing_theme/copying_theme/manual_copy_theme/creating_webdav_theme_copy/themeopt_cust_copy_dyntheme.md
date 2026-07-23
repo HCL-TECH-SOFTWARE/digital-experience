@@ -14,17 +14,17 @@ You need to make a unique copy of the dynamic resources for your theme. Make sur
 
 6.  Expand your new CustomTheme project and find and expand the WebContent folder.
 
-7.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
+7.  Find the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\skins folder on file system and drag it onto the WebContent folder. This step copies and imports the skins folder into your dynamic web project.
 
-8.  Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
+8.  Find the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\themes folder on file system and drag it onto the WebContent folder. This step copies and imports the themes folder into your dynamic web project.
 
 9.  In your CustomTheme project, find the WEB-INF folder inside the WebContent folder.
 
-10. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
+10. Find the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\decorations.xml file on file system and drag it onto the WEB-INF folder. This step copies and imports the file into your dynamic web project.
 
-11. Find the [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
+11. Find the [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\tld folder on file system and drag it onto the WEB-INF folder. This step copies and imports the tld folder into your dynamic web project.
 
-12. Copy the following plugin.xml file into your dynamic resources and drag it into the WEB-INF folder: [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml.
+12. Copy the following plugin.xml file into your dynamic resources and drag it into the WEB-INF folder: [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)\\theme\\wp.theme.themes\\default85\\installedApps\\DefaultTheme85.ear\\DefaultTheme85.war\\WEB-INF\\plugin.xml.
 
 13. Create a whitelist and a blacklist. For security reasons, the WAR data source does not serve content until a special context parameter is set. This context parameter defines which files from your web module HCL Digital Experience is able to serve. You can set your whitelist and blacklist in two ways: in a context parameter in the web.xml of the web application, or in the Resource Environment Provider settings.
 

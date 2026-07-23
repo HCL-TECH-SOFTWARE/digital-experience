@@ -1,4 +1,4 @@
-# Program Requirements
+# Program requirements
 
 **In this article**
 

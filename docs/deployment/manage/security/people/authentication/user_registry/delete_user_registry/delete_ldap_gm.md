@@ -5,7 +5,7 @@ If you changed your LDAP user registry and no longer require the group member, y
 In a stand-alone server environment, you can complete the following task when the servers are either stopped or started. In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
 
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 
 2.  Open the wkplc.properties file with a text editor.
@@ -23,7 +23,7 @@ In a stand-alone server environment, you can complete the following task when th
 5.  Open a command prompt.
 
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to delete the group member information for your LDAP user registry:
 

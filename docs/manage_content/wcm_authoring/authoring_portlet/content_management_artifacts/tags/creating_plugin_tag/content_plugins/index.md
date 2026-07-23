@@ -1,4 +1,4 @@
-# Content plug-ins
+# Content plug-ins 
 
 
 Content plug-ins are used with the current content item.
@@ -73,7 +73,6 @@ Content plug-ins are used with the current content item.
     -   Placeholders in the text are replaced with the values of all optional parameters that are specified in the plug-in tag.
     -   From CF09, you can also use the tag alias of `Localize` for this tag. This can be more applicable when you use this tag purely to render localized text. For example: `[Plugin:Localize provider="translated" key="title"]`.
     -   If you intend to use the TextProvider plug-in tag more than once in a component design or presentation template design, you can specify the default text provider name path in one tag:
-
         ```
         [Plugin:TextProvider defaultProvider="library/sitearea/contentitem"]
         ```
@@ -85,7 +84,6 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider key="key1"]
         [Plugin:TextProvider key="key2"]
         [Plugin:TextProvider key="key3"]
-        
         ```
 
         The default provider is applied in all presentation template designs and component designs, including component designs that are included by using the tags, such as a component tag.
@@ -96,6 +94,93 @@ Content plug-ins are used with the current content item.
         [Plugin:TextProvider defaultProvider=""]
         ```
 
+**Use Localized Text from Text Providers**
+
+     You can retrieve localized text using the `Localize` plugin:
+     `[Plugin:Localize provider="<provider>" key="<key>" defaultValue="" param.0="" param.1="" param.X=""]` 
+     
+
+**When No Provider Is Specified**
+
+     If you do not set a provider, the plugin uses the Text Provider associated with the current content item’s title.
+
+**Set a Default Provider**
+
+If you use the plugin multiple times, you can set a default provider and omit the `provider` parameter in later calls. For example:
+
+`[Plugin:Localize defaultProvider="library/sitearea/contentitem"]`
+`[Plugin:Localize key="keyname1"]`
+
+---
+
+#### Using Text Providers in Your Design 
+
+You can use the **Content plugin Localize** or the **TextProvider tag** (Localize is an alias of TextProvider):
+`[Plugin:Localize provider=”” key=”” defaultValue=”” param.0=”” param.1=”” param.X=””]`
+or
+`[Plugin:TextProvider provider=”” key=”” defaultValue=”” param.0=”” param.1=”” param.X=””]`
+- **provider**: path to the Text Provider content, site area, or UUID  
+- **key**: name of the translated text key  
+- **defaultValue** (optional): value if no translation is found  
+- **param.X**: parameters by number, e.g., `param.0`, `param.1`
+
+Example:
+`[Plugin:Localize key=“welcome” provider=“library/sitearea/contentitem” defaultValue=“Hi”]`
+
+Parameters example:
+`[Plugin:Localize key=“welcomeUser” provider=“Global/Texts/MsgTranslations” param.0=“Bob” param.1=“3”]`
+- English locale: `Hello Bob, you have 3 new messages`  
+- French locale: `Bonjour Bob, vous avez 3 nouveaux messages`
+
+---
+#### Managing Multilingual Content with Text Providers
+
+HCL Digital Experience Web Content Management supports multilingual content. You can use text providers to manage translated text in your designs, including Presentation Templates, Components, Script Applications, and external applications. Text providers can be maintained by developers using National Language Support (NLS) files or created directly as web content. When managed in Web Content, business users can easily translate and maintain the text. 
+
+Next, create a set of text elements for each language used on your site, using the appropriate language code (for example, `en` for English and `fr` for French). Enter the translated text in each field using the format:
+`keyname=translated-text`
+Use consistent key names for each language, following the Java Properties File Format.  
+
+Example: managing all translations for the intranet in English and French:
+
+#### How Text Providers Work
+
+Text providers store all translation strings and support parameters. For example, you can create a welcome message:
+`‘Hello, <first name>, you have <number of new messages> new messages`
+
+- `<first name>` is replaced with the user’s first name.  
+- `<number of new messages>` is replaced with the user’s unread message count.  
+- The message can be translated into any language, and parameters can be reordered for each language.
+
+![Example](exampletext_provider.png){ width="500" }<br>
+![Text Provider](textprovider2.png){ width="500" }<br>
+
+- You can use parameters with `{}` to reference parameter numbers.
+Text providers can be managed in two ways:
+
+1. By developers using National Language Support (NLS) files.  
+2. Directly in web content, where business users can translate and manage text easily.
+3. To manage text providers in web content, ensure the content items or site areas include the keyword:`ibm.wcm.TextProvider`
+![Text Provider](textprovider1.png){ width="500" }
+4. Next, create text elements for each language using the correct language code (for example, `en` for English, `fr` for French). Enter translated text in each field using the format:
+`keyname=translated-text`
+5. Use consistent key names for each language, following the Java Properties File Format. You can also use parameters with `{}` referencing parameter numbers.
+
+You can use the Content plugin Localize or the TextProvider tag (Localize is an alias for TextProvider):
+
+```text
+[Plugin:Localize provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]
+[Plugin:TextProvider provider="" key="" defaultValue="" param.0="" param.1="" param.X=""]
+```
+### Localizing Fields
+
+Some fields support localized text. Click the **Localizations** link next to the field title to:
+
+- Select the content item or site area where the translated text is stored.  
+- Choose the key name.
+
+This allows content authors to automatically localize fields such as **Display Title**.
+![Text Provider](textprovider3.png)
 
 ## Additional information
 
@@ -108,6 +193,9 @@ Learn how to use the AnalyticsData rendering plug-in tag to inject microformats 
 -   **[Tagging and rating plug-ins for web content](../content_plugins/tagging_rating_plugins/index.md)**  
 Learn how to tag and rate portal resources, such as pages and portlets. You can also tag and rate content items that were generated with HCL Web Content Manager and are shown with the web content viewer. Two plug-in components are available to support the tagging and rating of content items in your web content system. You can add the `[Plugin:tags]` component and `[Plugin:ratings]` component in a presentation template to quickly integrate tagging and rating widgets into the current content item.
 
+
+
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+

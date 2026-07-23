@@ -16,7 +16,7 @@ The difference between the deprecated Social Lists 1.0 library and the Social li
 
 6.  Remove references in your applications to Social Lists 1.0 library and its related configuration artifacts.
 
-7.  Change to the [wp\_profile\_root](../../../guide_me/wpsdirstr.md)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](../../../guide_me/glossary/wpsdirstr.md)/ConfigEngine directory.
 
 8.  Run the following command.
 

@@ -38,7 +38,7 @@ The HCL Experience API describes a high-level API through which the following sp
 
 It is recommended that developers building solutions for HCL DX 9.5 running on Kubernetes automatically use the HCL Experience API for the scenarios that are covered.
 
-The HCL Experience API is a component of the HCL DX offerings. HCL DX offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [HCL Software License Portal](https://www.hcltech.com/software/support/release){:target="_blank"}.
+The HCL Experience API is a component of the HCL DX offerings. HCL DX offering license and download packages are provided with HCL Digital Experience entitlements available to customers on the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"}.
 
 !!!note
     Beginning with Container Update and CF196, additional Experience APIs are introduced, which support development of [Web Content Manager](../../../deployment/manage/migrate/next_steps/post_mig_activities/portal_task/wcm_post_mig_update/index.md) functions.
@@ -67,7 +67,7 @@ Learn how to use the Sample Content UI application for HCL Experience API.
 
 ## HCLSoftware U learning materials
 
-For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
+For an introduction and a demo on how to use Experience API, go to [Experience API](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D416){target="_blank"}. To try it out yourself, refer to [Experience API Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_for_Beginners.pdf){target="_blank"} and corresponding [Experience API Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Experience_API_Lab_Resouces.zip).
 
 ???+ info "Related information"
     - [API explorers](../hcl_experience_api/api_explorers.md)

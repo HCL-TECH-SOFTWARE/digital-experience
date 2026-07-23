@@ -10,7 +10,7 @@ The PAA format can be employed to handle deployments that range from application
 
 The PAA format can reduce the work that is required to create a deployable solution. Many deployment tasks can use a default configuration that is found in the Solution Installer. For complex applications, extra work is required to provide custom installation features. Using the PAA format with the Solution Installer reduces the production time for creating a deployable solution for your application.
 
-A number of sample files that demonstrate the overall structure and usage of the PAA file format are included in the [PortalServer\_root](../../../../guide_me/wpsdirstr.md)/doc/paa-samples directory. These examples act as reference material for the remainder of the file specification documentation.
+A number of sample files that demonstrate the overall structure and usage of the PAA file format are included in the [PortalServer\_root](../../../../guide_me/glossary/wpsdirstr.md)/doc/paa-samples directory. These examples act as reference material for the remainder of the file specification documentation.
 
 -   **[PAA file structure overview](../creating_paa_file/paa_file_structure/index.md)**  
 Each PAA file is a structured ZIP compression file. Because the Solution installer uses Ant tasks to expand or parse the PAA file, it needs to be a ZIP compression file that can be decoded by the java.util.zip class.

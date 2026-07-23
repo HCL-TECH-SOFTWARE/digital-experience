@@ -10,9 +10,9 @@ Configure your HCL Digital Experience (DX) installation to leverage OpenID Conne
 
 The scope of this document is limited to automating DX LDAP and transient user's authentication with OIDC considering Keycloak as the OpenID Provider (OP).
 
-This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-webshpere-for-oidc.md).
+This document provides guidance on using automated configuration tasks via the HCL DX ConfigEngine to ease OIDC deployments. Specifically, it provides an alternative to exhaustive manual configuration actions in IBM WebSphere and HCL DX. For context, see the manual steps in [Updating WebSphere to support OIDC Authentication for DX](../dx-update-websphere-for-oidc.md).
 
-This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-webshpere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
+This document also provides guidance on using automated configuration tasks to configure OIDC Authentication for DX using Transient Users with softgroups using DB2 and derby database. For context, see [Updating WebSphere to support OIDC Authentication for DX with Transient Users](../transient-users/dx-update-websphere-for-oidc-transient-users.md) and [Configuring Rule-based user groups adapter for Transient Users](../transient-users/transient-users-softgroups-configuration.md).
 
 Currently, the scope of this work covers kube-based DX deployments only. It is not supported or suggested to be used for other deployment types.
 
@@ -23,7 +23,7 @@ Use this procedure as a general reference and make adjustments to accommodate th
 - The cloud native distribution of DX is used.
 - In case of LDAP user authentications, running DX instance with Open ldap configured.
 - We have tested this config tasks for transient users with softgroups and database like derby abd Db2. 
-- An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks. For more information on how an IdP is configured, see [Configure Keycloak as an OIDC IdP for HCL Digital Experience](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/blob/main/docs/integration/ds-integration/dx/dx-keycloak-configuration.md).
+- An IdP is set up and configured. Required details like the client id or secrets are available to configure during the tasks. For more information on how an IdP is configured, see [Configure Keycloak as an OIDC IdP for HCL Digital Experience](https://github.com/HCL-TECH-SOFTWARE/hclds-keycloak/blob/main/docs/integration/ds-integration/dx/dx-keycloak-configuration.md){target="_blank"}.
 
 ### Creating config properties file
 
@@ -141,10 +141,10 @@ Then, run the config engine tasks to start the OIDC configuration for DX. To do 
 
 Softgroups require additional manual steps for creating and managing groups and mapping users to roles/groups.
 
-- [Define Rule-Based User Groups](../transient-users/transient-users-softgroups-configuration#define-rule-based-user-groups)
-- [Assigning users to groups in your IdP](../transient-users/transient-users-softgroups-configuration#assigning-users-to-groups-in-your-idp)
-- [Creating a test portal page](../transient-users/transient-users-softgroups-configuration#creating-a-test-portal-page)
-- [Managing permissions for test portal page](../transient-users/transient-users-softgroups-configuration#managing-permissions-for-test-portal-page)
+- [Define Rule-Based User Groups](../transient-users/transient-users-softgroups-configuration.md#define-rule-based-user-groups)
+- [Assigning users to groups in your IdP](../transient-users/transient-users-softgroups-configuration.md#assigning-users-to-groups-in-your-idp)
+- [Creating a test portal page](../transient-users/transient-users-softgroups-configuration.md#creating-a-test-portal-page)
+- [Managing permissions for test portal page](../transient-users/transient-users-softgroups-configuration.md#managing-permissions-for-test-portal-page)
 
 
 ### Testing the OIDC login flow

@@ -9,7 +9,7 @@ To create a copy of your theme by using the Theme Manager, see [Copy Theme](../.
 
 -   **[Creating a WebDAV-based theme copy](../manual_copy_theme/creating_webdav_theme_copy/index.md)**  
 With a WebDAV-based theme, static theme content is deployed through WebDAV. Use this option if your theme developers update static theme content by using WebDAV.
--   **[Creating a WAR-based theme copy](../manual_copy_theme/creating_war_theme_copy/)**  
+-   **[Creating a WAR-based theme copy](../manual_copy_theme/creating_war_theme_copy/index.md)**  
 With a WAR-based theme, you deploy both static and dynamic content as an EAR file. You can easily deploy your theme to your Portal server when your static and dynamic contents are contained in a single EAR file. Use this option when your theme is ready for production.
 
 

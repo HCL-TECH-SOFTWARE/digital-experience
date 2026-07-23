@@ -3,5 +3,6 @@ order: desc
 nav:
     - index.md
     - ...
+    - dx_helm_values_updates.md
     - deprecated_features.md
     - unsupported_features.md

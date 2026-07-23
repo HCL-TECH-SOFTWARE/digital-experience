@@ -62,10 +62,10 @@ Administrators can override each CSS class that is used by the widget by adding 
 
 The CSS classes used to customize the visual appearance of the tag and rating widgets are located in the following files:
 
-[PortalServer\_root](../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.1/com/ibm/widgets/css/widgets_combined.css
+[PortalServer\_root](../../../guide_me/glossary/wpsdirstr.md#portalserver_root)/theme/wp.theme.dojo/installedApps/dojo.ear/dojo.war/v1.4.1/com/ibm/widgets/css/widgets_combined.css
 
 
-[PortalServer\_root](../../../guide_me/wpsdirstr.md#portalserver_root)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/modules/portalclient/css/trcWidgets.css
+[PortalServer\_root](../../../guide_me/glossary/wpsdirstr.md#portalserver_root)/theme/wp.theme.modules/webapp/installedApps/ThemeModules.ear/ThemeModules.war/modules/portalclient/css/trcWidgets.css
 
 These files contain CSS classes specific to tagging and rating. They either start with the prefix `trc`, for example `trc Editable` or `trc Delete` or they are otherwise scoped to the tagging and rating context, for example ul.trcEdit. To customize the visual appearance of tag and rating widgets, you override these definitions in the CSS file. To do this, you add class definitions at the end of the file trcWidgets.css based on the CSS class hierarchy given by the Hierarchy of CSS classes list.
 

@@ -1,8 +1,11 @@
-# Editable property tag
+---
+id: wcm_dev_item-details_property_edit
+title: Editable Property tag
+---
 
-An editable property tag is used to make fields and metadata from content items and site areas editable when rendered by using a web content viewer portlet when the page is in edit mode.
+Use the Editable Property (`EditableProperty`) tag to enable inline editing for content fields and metadata. When the portal page is in Edit Mode, these properties become directly editable within the Web Content Viewer portlet.
 
-An example of the format of an editable property tag:
+See the format of an `EditableProperty` tag:
 
 ```
 [EditableProperty field=" " context=" " type=" " name=" " format=" " pre=" "
@@ -14,13 +17,15 @@ An example of the format of an editable property tag:
 !!! note
     This tag doesn't work correctly if basic or advanced rendering caches are enabled because authoring updates cannot immediately be displayed on the rendered page.
 
-To create an editable property tag:
+## Creating an Editable Property tag
 
-1.  Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
+To create an `EditableProperty` tag:
 
-2.  Select **EditableProperty** as the tag type.
+1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
 
-3.  Select a property type. This parameter is added to the tag as the field=" " parameter:
+2. Select **EditableProperty** as the tag type.
+
+3. Select a property type. This parameter is added to the tag as the field=" " parameter:
 
     !!! note
         Only these property types are editable:
@@ -34,7 +39,7 @@ To create an editable property tag:
         -   GeneralDateOne
         -   GeneralDateTwo
 
-4.  Select the item type and the context that is used to determine which item to reference:
+4. Select the item type and the context that is used to determine which item to reference:
 
     |Context and Item Type|type="auto"|type="content"|type="sitearea"|type="parent"|type="top"|
     |---------------------|-----------|--------------|---------------|-------------|----------|
@@ -42,10 +47,9 @@ To create an editable property tag:
     |**context="Current"**If selected, the context is set by the current item.|This parameter makes the property of the item currently being rendered editable when the page is in edit mode.|This parameter makes the property from the current content item editable when the page is in edit mode.If a site area is selected, then nothing is editable.|If the item currently being rendered is a site area, this parameter makes the property of the current site area editable when the page is in edit mode.If the item currently being rendered is a content item, this parameter makes the property of the parent site area editable when the page is in edit mode.|This parameter makes the property of the parent site area of the item currently being rendered editable when the page is in edit mode.|This parameter makes the property of the first item in the path of the item currently being rendered editable when the page is in edit mode.|
     |**context="Autofill"**Use this option when the item that is referenced is determined by the search parameters of a menu, navigator, or taxonomy component. If the tag is not used within a menu, navigator, or taxonomy component, the context reverts to the current item.|This parameter makes the property of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property from a content item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.If a site area is selected, then nothing is editable.|If the current item returned by a menu, navigator, or taxonomy component is a site area, then the property from the site area is editable when the page is in edit mode.If the current item returned by a menu, navigator, or taxonomy component is a content item, this parameter makes the property of the parent site area editable when the page is in edit mode.|This parameter makes the property of the parent item of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property of the first item in the path of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|
 
-5.  Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
+5. Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
 
-6.  Click **OK** to add the tag to your navigator design.
-
+6. Click **OK** to add the tag to your navigator design.
 
 When you add this tag to your design, you can also add the following parameters to the tag:
 
@@ -58,7 +62,7 @@ When you add this tag to your design, you can also add the following parameters 
 |`callback=" "`|This parameter is used to reference an i$ promise. The promise is resolved if the inline edit is completed, and rejected if the inline edit is canceled.See the Javadoc for more information about i$ promises. <br>For example: <br>-   A standard callback can be written like this: `var myCallBack=new i$.Promise(); myCallBack.then(function(){window.alert('resolved')}, function(){window.alert('rejected')});return myCallBack;` <br>-   If `myCallBack` is an `i$` promise, then the callback can be written like this:`myCallBack`. <br>-   A function that itself returns a new promise each time it is executed can be written like this: `return (function() {var myCallBack = new i$.Promise(); myCallBack.then(function() {window.alert('resolved');}, function() {window.alert('rejected');}); return myCallBack;})();`|
 |`stateChangeCallback=" "`|This parameter is used to reference JavaScript state change callbacks for all state changes. See the Javadoc for more information. <br>For example, to specify `stateChangeCallback="myStateChangeCallback"` you might create the following state change callback function. <br> \```  <br> /** <br>  *  element: id of the current editing element region <br>   *  state    : the new state <br>  *  additionalData: some additional data like tag type, element name, messages <br> */ <br> function myStateChangeCallback(element, state, additionalData) <br> State Constants: <br> // loading value <br>   StateChangeEvent.STATE_LOADING = 0; <br>   // editing <br>   StateChangeEvent.STATE_EDITING = 1; <br>   // saving <br>   StateChangeEvent.STATE_SAVING = 2; <br>   // saved <br>   StateChangeEvent.STATE_SAVED = 3; <br>   // cancelled <br>   StateChangeEvent.STATE_CANCELLED = 4; <br>   // error <br>   StateChangeEvent.STATE_ERROR = 5; <br> \```<br>The registered JavaScript function is run each time the state changes.<br>**Note:** The loading state is run only the first time that a user edits the element.|
 |`refreshValueOnEdit=" "`|This setting forces the tag value to be refreshed when the field is edited by a user. This setting is on by default. <br>If you want to disable this feature, set this setting to false. <br>**Restriction:** <br>-   If set to false, there is no loading state for the field.|
-|`class=" "`|This parameter is used to specify a CSS class to the div or span tag that is specified by using the format parameter.**Note:** The custom class that you specify here must include styles with the names "saving", "editing" and "error." These parameters are required for displaying the editable field in edit mode, when an item is saved, and to display error messages. <br> The default css class that is used for inplace editable fields is **wcm-default-inplace-editable**. <br> This class can be overridden by adding the following setting in the `WCM WCMConfigService` service that uses the WebSphere® Integrated Solutions Console: `inplaceEdit.defaultClasses=class1 class2` <br> As many classes as required are added to this setting, which is separated by spaces. <br> You must base your custom classes on the default style sheet at `[AppServer\_root](../../../../../../guide_me/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`. <br> **Note:** Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value. <br> If you need to use the default css class as well, add it to the list of classes. For example: `inplaceEdit.defaultClasses=wcm-default-inplace-editable class1 class2`|
+|`class=" "`|This parameter is used to specify a CSS class to the div or span tag that is specified by using the format parameter.**Note:** The custom class that you specify here must include styles with the names "saving", "editing" and "error." These parameters are required for displaying the editable field in edit mode, when an item is saved, and to display error messages. <br> The default css class that is used for inplace editable fields is **wcm-default-inplace-editable**. <br> This class can be overridden by adding the following setting in the `WCM WCMConfigService` service that uses the WebSphere® Integrated Solutions Console: `inplaceEdit.defaultClasses=class1 class2` <br> As many classes as required are added to this setting, which is separated by spaces. <br> You must base your custom classes on the default style sheet at `[AppServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md#was_root)\installedApps\nodename\wcm.ear\wcm-inplaceEdit.war\css\default-style.css`. <br> **Note:** Any classes that are specified on the EditableElement or EditableProperty tag takes precedence over this value. <br> If you need to use the default css class as well, add it to the list of classes. For example: `inplaceEdit.defaultClasses=wcm-default-inplace-editable class1 class2`|
 |`placeholder=" "`|The text entered here is displayed when there is no initial value for the body of the editable property field.For example: `placeholder="Enter title"` <br> It can also be used in combination with a text provider to render translated text. For example: `placeholder="[Plugin:TextProvider provider="com.mycompany.mybundle" key="enter_title"]"` <br> These special values are used to render text from existing sources: <br> -   **placeholder="useName"** <br> This parameter renders the name of the property. <br> -   **placeholder="useTitle"** <br> This parameter renders the title of the property. <br> -   **placeholder="useHelpText"** <br> This parameter renders the help text of the property. <br>-   **placeholder="useNone"** <br>This parameter shows no placeholder.|
 
 Extra text, HTML, or tags must be added between the `[EditableProperty]` and `[/EditableProperty]` tags. The text and tags added here is what is rendered on the page. When the page is in edit mode, this region is editable. When first added to your design, a corresponding property tag is added by default.
@@ -86,7 +90,7 @@ For example:
 
 ## HCLSoftware U learning materials
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [Inline editing](../../../../inline_editing/index.md)

@@ -30,7 +30,7 @@ HCL Digital Experience and Web Services for Remote Portlets are installed with a
     3.  Use a text editor to open the wkplc.properties file and enter the appropriate value for your environment in the WpsContextRoot property.
 
         !!!note
-            Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets).
+            Leaving this value empty might cause system conflict. If you leave this value empty, validate this setting by using the Configuration Wizard or by following the steps that are described in [ConfigEngine validation targets](../../siteurl_cfg/changing_siteurl/cfg_validation_targets.md).
 
     4.  Save and close the file.
 

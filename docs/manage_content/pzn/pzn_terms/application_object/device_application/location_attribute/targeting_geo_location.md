@@ -18,13 +18,13 @@ Key concepts for determining the location of a device:
 
 1.  Enable the reverse geocoding class in the PersonalizationService.properties file to receive the latitude and longitude coordinates of the client that accesses your portal.
 
-    1.  Locate the PersonalizationService.properties in the following directory: [wp\_profile\_root](../../../../../../guide_me/wpsdirstr.md)/PortalServer/config/config/service
+    1.  Locate the PersonalizationService.properties in the following directory: [wp\_profile\_root](../../../../../../guide_me/glossary/wpsdirstr.md)/PortalServer/config/config/service
     2.  Create a backup copy of the PersonalizationService.properties file.
     3.  Add the class name to the key. For example: pzn.externalGeolocation=com.acme.geolocation.ReverseGeolocationExample
 
 2.  Create a JAR file, and place this file on the portal server class path.
 
-    For example, place your JAR file in the following directory: [PortalServer\_root](../../../../../../guide_me/wpsdirstr.md)/shared
+    For example, place your JAR file in the following directory: [PortalServer\_root](../../../../../../guide_me/glossary/wpsdirstr.md)/shared
 
 3.  Restart the HCL Portal server.
 

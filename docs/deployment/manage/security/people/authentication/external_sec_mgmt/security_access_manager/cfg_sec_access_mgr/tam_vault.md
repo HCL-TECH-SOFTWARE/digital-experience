@@ -9,7 +9,7 @@ You can use IBM Security Access Manager in the HCL Digital Experience Credential
 
 1.  **Clustered environments:** Complete this step on all nodes.
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Portal node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -99,7 +99,7 @@ You can use IBM Security Access Manager in the HCL Digital Experience Credential
 
     **If the task does not run successfully:** Run the run-svrssl-config task to create the properties file. For information, refer to *Creating the PdPerm.properties file*. Then, run the validate-pdadmin-connection task again. If the task is not successful after a second attempt, do not proceed with any subsequent steps. The fact that the task does not run successfully indicates that your portal cannot connect to the Security Access Manager server. Troubleshoot the connectivity issue between your portal instance and the Security Access Manager server.
 
-2.  Run the following task to create and populate the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/accessmanagervault.properties file:
+2.  Run the following task to create and populate the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/PortalServer/config/config/accessmanagervault.properties file:
 
     |Operating system|Task|
     |----------------|----|

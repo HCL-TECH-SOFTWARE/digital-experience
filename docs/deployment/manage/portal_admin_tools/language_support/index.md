@@ -75,7 +75,7 @@ HCL Digital Experience language codes:
 
 - uk  =   Ukrainian
 
-HCL Digital Experience uses the *ISO 639 Codes for the Representation of Names of Languages* to represent localized resources. The names for directories containing language-dependent resources follow the ISO 639 naming convention, for more information see [Directory structure](../../../../guide_me/wpsdirstr.md).
+HCL Digital Experience uses the *ISO 639 Codes for the Representation of Names of Languages* to represent localized resources. The names for directories containing language-dependent resources follow the ISO 639 naming convention, for more information see [Directory structure](../../../../guide_me/glossary/wpsdirstr.md).
 
 ???+ info "Related information" 
     -   [Setting the language of the portal](../../../../deployment/manage/config_portal_behavior/adlang.md)

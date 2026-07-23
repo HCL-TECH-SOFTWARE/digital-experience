@@ -26,7 +26,7 @@ A set of search results is generated based on the keywords or phrases you enter 
 
 4.  Refine the search results further by selecting a content source and attribute, then click **Search** again.
 
-    1. Click the **Select a content source** dropdown and select a content source, such as "MyWCM".
+    1. Click the **Select a content source** dropdown and select a content source, such as "wcm_default_content_source".
 
         ![](../../assets/HCL_Search_04_Input_Scope.png "Click on Select a content source and choose one option")
 

@@ -40,7 +40,7 @@ The Security Access Manager object space entries might be different from the def
 1.  **Clustered environments:** Complete this step on all nodes.
 
 
-    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
+    Run the following task in the [wp\_profile\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory to validate that the PdPerm.properties file is correct and that communication between HCL Portal and the Security Access Manager server works:
 
     !!!tip
         Run the validate-pdadmin-connection task on the HCL Portal node or on each node in a clustered environment. In a clustered environment, WasPassword is the Deployment Manager administrator password. The wp.ac.impl.PDAdminPwd is the Security Access Manager administrative user password.
@@ -188,7 +188,7 @@ The Security Access Manager object space entries might be different from the def
 After you complete the authorization procedure, you can then use the HCL Portal administration tools (the Resource Permission portlet or XMLAccess scripting) to externalize the access control decisions for Portal resources. For any resources placed under IBM Security Manager access control, the Security Access Manager protected object space contains entries for roles in the following format
 
 
-[PortalServer\_root](../../../../../../../../guide_me/wpsdirstr.md#portalserver_root)/role\_name/application\_name/server\_name/cell\_name
+[PortalServer\_root](../../../../../../../../guide_me/glossary/wpsdirstr.md#portalserver_root)/role\_name/application\_name/server\_name/cell\_name
 
 
 For example: If the wp.ac.impl.PDRoot value was Portal\_Instance\_1 and wp.ac.impl.EACcellName was Cell\_A, Wp.ac.impl.EACserverName was Server\_B, and wp.ac.impl.EACappName was Application\_C, then an object space entry corresponding to a Portal role name approximately looks like

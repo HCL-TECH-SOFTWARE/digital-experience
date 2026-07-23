@@ -11,7 +11,7 @@ For more information, go to [IBM WebSphere Application Server Documentation](htt
 
 To access different administration user interfaces during the configuration process, you can use default URLs if needed.
 
-Use the following default URLs to access the HCL WebSphere® Integrated Solutions Console and the Configuration Wizard:
+Use the following default URLs to access the IBM WebSphere® Integrated Solutions Console and the Configuration Wizard:
 
 -   **WebSphere® Integrated Solutions Console**
 

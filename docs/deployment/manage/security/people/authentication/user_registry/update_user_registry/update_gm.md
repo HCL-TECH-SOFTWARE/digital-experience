@@ -6,7 +6,7 @@ In a stand-alone server environment, you can complete the following task when th
 
 1.  Open a command prompt.
 
-2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+2.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 3.  Run the following task to list the names and types of configured repositories:
 
@@ -14,7 +14,7 @@ In a stand-alone server environment, you can complete the following task when th
     -   IBM® i: ConfigEngine.sh wp-query-repository -DWasPassword=password
     -   Windows™: ConfigEngine.bat wp-query-repository -DWasPassword=password
 
-4.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+4.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 5.  Open the wkplc.properties file with a text editor.
 

@@ -1,4 +1,15 @@
 title: Configuration
+
 nav:
     - index.md
+    - DeployRobots.md
     - ChangeCellandNodeName.md
+    - ChangeDisplayLanguage.md
+    - ConfigureRAD.md
+    - EnableImageFormats.md
+    - ConfigureIngressWithVPs.md
+    - IntegrateLDAP.md
+    - responseHeaderForceType.md
+    - HideXPoweredByHeader.md
+    - RemoveStateInformationFromURL.md
+    - SetGenericJVMArgumentsCorePod.md

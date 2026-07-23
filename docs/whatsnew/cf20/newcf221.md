@@ -95,22 +95,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New options for installing DXClient
 
 === "Containers"
-    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
+    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/installing_dxclient.md#installing-from-the-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/installing_dxclient.md#installing-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
 
     After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
 
 === "On-Premises"
-    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/index.md#installing-or-uninstalling-dxclient-from-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/index.md#installing-dxclient-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
+    You can now install DXClient [from the NpmJS public registry](../../extend_dx/development_tools/dxclient/installing_dxclient.md#installing-from-the-npmjs-registry) or [from the container image in the public Harbor repository](../../extend_dx/development_tools/dxclient/installing_dxclient.md#installing-using-the-container-image-in-the-harbor-repository). The open distribution of DXClient makes it easier for DX developers to download and work with the tool. Previously, developers need Administrator access to get DXClient.
 
     After openly distributing DXClient, the versioning format is now changed from 1.xx.x to <CFNumber\>.x.x. For CF221, the DXClient version is 221.0.0. For more information, see [DXClient](../../extend_dx/development_tools/dxclient/index.md).
 
 ### New DXClient command `accept-license`
 
 === "Containers"
-    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/dxclient_commands.md#information-commands).
 
 === "On-Premises"
-    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/index.md#dxclient-information-commands).
+    HCL DX introduces a license agreement in DXClient which can be accepted using the command `accept-license`. For command details, see [DXClient information commands](../../extend_dx/development_tools/dxclient/dxclient_commands.md#information-commands).
 
 ### Notice of deprecation of Textbox.io Rich Text Editor 
 
@@ -181,4 +181,4 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcltechsw.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcltechsw.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.

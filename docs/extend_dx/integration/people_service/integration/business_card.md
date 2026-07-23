@@ -8,4 +8,4 @@ Business Cards appear when users hover over names such as the author of a blog e
 
 If the pre-built UI components do not cover your specific needs, the robust set of APIs from People Service offers a flexible alternative. These APIs allow you to create custom user experiences that mirror the functionality of native services while adhering to the unique design and interaction requirements.
 
-For more information, refer to [API documentation](../api/index.md).
+For more information, refer to [People Service API](../api/index.md).

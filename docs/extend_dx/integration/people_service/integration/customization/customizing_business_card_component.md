@@ -38,6 +38,6 @@ You can inject these styles into your theme module or any other method you prefe
 For more information on customizing styles in HCL Digital Experience, refer to [Customizing Theme Styles](../../../../../build_sites/themes_skins/customizing_theme/styles/index.md).
 
 ???+ info "Related information"
-    - [Deploy JavaScript Libraries/Dependencies as a DX Module](../../../../../guide_me/tutorials/scriptapps/how_to/02_dependencies_as_module.md)
+    - [Deploy JavaScript Libraries/Dependencies as a DX Module](../../../../script_application/scriptapps/how_to/02_dependencies_as_module.md)
     - [The module framework](../../../../../build_sites/themes_skins/the_module_framework/index.md)
     - [Writing modules](../../../../../build_sites/themes_skins/the_module_framework/writing_module/index.md)

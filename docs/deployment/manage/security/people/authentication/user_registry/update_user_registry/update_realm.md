@@ -2,7 +2,7 @@
 
 After you create and use the realm in the default federated repository, you might find that your realm configuration is not working correctly. You can update the realm configurations and make the necessary changes.
 
-1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+1.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 2.  Open the wkplc.properties file with a text editor.
 
@@ -19,7 +19,7 @@ After you create and use the realm in the default federated repository, you migh
 
 5.  Open a command prompt.
 
-6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+6.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 7.  Run the following task to delete the old entity types before you add the RDN attribute as the only entry in the RDN list:
 

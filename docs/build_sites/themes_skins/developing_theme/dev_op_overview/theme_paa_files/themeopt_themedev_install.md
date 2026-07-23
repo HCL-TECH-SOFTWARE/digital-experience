@@ -6,7 +6,7 @@ Exported theme PAA files contain only the static resources of the exported theme
 
 You can install theme PAA files by using the Configuration Wizard or by using the command line. To install by using the Configuration Wizard, learn more about how to [Add on new capability](../../../../../extend_dx/paa/developing_basic_paa_app/creating_paa_file/paa_file_structure/index.md). Use the following steps to install by using the command line.
 
-1.  Change the directory to [wp\_profile\_root](../../../../../guide_me/wpsdirstr.md)/ConfigEngine.
+1.  Change the directory to [wp\_profile\_root](../../../../../guide_me/glossary/wpsdirstr.md)/ConfigEngine.
 
 2.  Run the following commands:
 

@@ -1,4 +1,4 @@
-# API documentation
+# People Service API
 
 In this section, you will learn about the available APIs in People Service and how to interact with them. This section serves as a reference for developers and administrators looking to leverage People Service APIs to enhance their platforms. It includes details on the available APIs such as OpenAPI, Swagger Explorer, and [Experience API documentation](https://opensource.hcltechsw.com/experience-api-documentation/people-service-api/){target="_blank"} to help users understand and work with People Service APIs effectively.
 

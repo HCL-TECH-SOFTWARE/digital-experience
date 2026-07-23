@@ -2,17 +2,20 @@
 
 This topic contains the commands that administrators can use to configure the staging of [Digital Asset Management](../../index.md) (DAM) content. This allows you to manage subscriber registration or configure periodic sync.
 
+!!! warning "Deprecated parameters (CF221+)"
+    Starting from CF221, the parameters `dxWASUsername`, `dxWASPassword`, `targetServerWASUsername`, and `targetServerWASPassword` are deprecated and should no longer be used in DAM staging commands.
 
 ## Differences between DAM staging and WCM syndication
+
 !!! note
         WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
+
 | Aspect                               | WCM                                  | DAM                                                        |
 | -------------------------------------|--------------------------------------|------------------------------------------------------------|
 | `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as Kubernetes Secrets and used for file transfer authentication and authorization from publisher to subscriber. The user credentials stored in secret is the primary portal administrator credential. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
 | `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
 | `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
 | `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
-
 
 ## DAM staging framework
 
@@ -26,12 +29,14 @@ The DAM staging framework allows you to stage your DAM content from an authoring
         A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
 
 ### Configure staging hostname
+
 The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
 
 !!! note
         In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
-     
+
 ### Configuring LTPA Token Refresh Time
+
 LTPA token stored in cache refreshes every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under the `configurations` section of `digitalAssetManagement`.
 
 ```yaml
@@ -39,6 +44,7 @@ configuration:
   digitalAssetManagement:
     ltpaTokenRefreshTimeInMinutes: 5
 ```
+
 `ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
 
 ### Configuring LDAP
@@ -165,39 +171,27 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
         dxclient manage-dam-staging trigger-staging -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
         ```
 
-## Registering or deregistering for DAM staging
+## Registering for DAM staging
 
 !!! note
-    For hybrid deployments, refer to the ["Setting up staging for hybrid deployments"](#setting-up-staging-for-hybrid-deployments) section. 
+    For hybrid deployments, refer to [Setting up staging for hybrid deployments](#setting-up-staging-for-hybrid-deployments).
 
-Use the `manage-dam-staging register-dam-subscriber` command to register or the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
+Use the `manage-dam-staging register-dam-subscriber` command to register the subscriber for DAM staging.
 
 -   **Command description**
 
-    You can **register** a subscriber for DAM staging with the following command:
+    Use the following command to register a subscriber for DAM staging:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber
     ```
 
-    You can **deregister** a subscriber for DAM staging with the following command:
-
-    ```
-    dxclient manage-dam-staging deregister-dam-subscriber
-    ```
-
 -   **Help command**
 
-    The following command shows the help information for `manage-dam-staging register-dam-subscriber` command usage:
+    Use the following command to show the help information for the `manage-dam-staging register-dam-subscriber` command:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber -h
-    ```
-
-    The following command shows the help information for `manage-dam-staging deregister-dam-subscriber` command usage:
-
-    ```
-    dxclient manage-dam-staging deregister-dam-subscriber -h
     ```
 
 -   **Command options**
@@ -275,12 +269,6 @@ Use the `manage-dam-staging register-dam-subscriber` command to register or the 
     -targetServerPassword <value>
     ```
 
-    Use this attribute to specify the subscriber ID of the target environment of the subscriber:
-
-    ```
-    -subscriberId <value>
-    ```
-
     Use this attribute to specify the interval between two sync cycles. The unit of interval is in minutes. (default: "2 minutes")
 
     ```
@@ -288,8 +276,6 @@ Use the `manage-dam-staging register-dam-subscriber` command to register or the 
     ```
 
 -   **Commands:**
-
-    To register:
 
     ```
     dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword> -interval <interval>
@@ -301,7 +287,90 @@ Use the `manage-dam-staging register-dam-subscriber` command to register or the 
         dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com -interval 2
         ```
 
-    To deregister:
+## Deregistering for DAM staging
+
+Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
+
+-   **Command description**
+
+    Use the following command to deregister a subscriber for DAM staging:
+
+    ```
+    dxclient manage-dam-staging deregister-dam-subscriber
+    ```
+
+-   **Help command**
+
+    Use the following command to show the help information for the `manage-dam-staging deregister-dam-subscriber` command:
+
+    ```
+    dxclient manage-dam-staging deregister-dam-subscriber -h
+    ```
+
+-   **Command options**
+
+    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+
+    ```
+    -dxProtocol <value>
+    ```
+
+    Use this attribute to specify the host name of the DX server of the publisher
+    (default: "")
+
+    ```
+    -hostname <value>
+    ```
+
+    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -dxPort <value>
+    ```
+
+    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
+
+    ```
+    -dxUsername <value> 
+    ```
+
+    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
+
+    ```
+    -dxPassword <value>
+    ```
+
+    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -damAPIPort <value>
+    ```
+
+    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
+
+    ```
+    -ringAPIPort <value>
+    ```
+
+    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
+
+    ```
+    -damAPIVersion <value>
+    ```
+
+    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
+
+    ```
+    -ringAPIVersion <value>
+    ```
+
+    Use this attribute to specify the subscriber ID of the target environment of the subscriber:
+
+    ```
+    -subscriberId <value>
+    ```
+
+-   **Commands:**
 
     ```
     dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
@@ -581,7 +650,7 @@ If the properties are in place when using the REST API or WCM Admin UI or WCM AP
 
 The following sections also apply for hybrid deployments:
 
-- [Configuring staging hostname](#configuring-staging-hostname)
+- [Configuring staging hostname](#configure-staging-hostname)
 - [Configuring LTPA Token Refresh Time](#configuring-ltpa-token-refresh-time)
 - [Configuring LDAP](#configuring-ldap)
 

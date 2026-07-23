@@ -11,13 +11,13 @@ If you plan to change the database where data is stored, populate the new databa
 If you change the database administrator password, complete the steps in [Changing database passwords that are used by HCL Portal](../../updating_userid_pwd/db_passwords.md) before you run this task.
 
 !!!note
-    Use the wp\_add\_DB.properties helper file in the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory to ensure that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_add\_DB.properties helper file.
+    Use the wp\_add\_DB.properties helper file in the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/config/helpers directory to ensure that the correct properties are entered. In the following instructions, where the step refers to the wkplc.properties file, use your wp\_add\_DB.properties helper file.
 
 1.  Prepare your servers.
 
     -   In a stand-alone server environment, you can complete the following task when the servers are either stopped or started.
     -   In a clustered environment, start the deployment manager and node agent. Then, verify that they are able to synchronize.
-2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
+2.  Go to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine/properties directory.
 
 3.  Open the wkplc.properties file with a text editor.
 
@@ -37,7 +37,7 @@ If you change the database administrator password, complete the steps in [Changi
 
 6.  Open a command prompt.
 
-7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
+7.  Change to the [wp\_profile\_root](../../../../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root)/ConfigEngine directory.
 
 8.  Run the following task to delete the required repository:
 

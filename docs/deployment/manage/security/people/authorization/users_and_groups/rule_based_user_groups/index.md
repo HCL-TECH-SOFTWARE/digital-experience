@@ -24,7 +24,7 @@ Rule-based user groups are implemented as a custom repository adapter for Virtua
     1.  Rule based user groups can contain only individual users, but not groups.
     2.  After defining a rule-based user group, you cannot change the unique group name.
 
--   **[Configuring the rule-based user groups adapter](../rule_based_user_groups/cfg_rule_based_user_groups/)**  
+-   **[Configuring the rule-based user groups adapter](../rule_based_user_groups/cfg_rule_based_user_groups/index.md)**  
 To install rule-based user groups on your HCL Portal, you must set up a database, and configure VMM rule based groups.
 
 
