@@ -31,12 +31,10 @@ Before deploying the IQ backend server, verify that your environment includes th
     - Internal database through DX Persistence Node (automatically provisioned by Helm)
     - External database (cloud-managed or a separate Kubernetes cluster)
     - Runtime Controller (RTC)-managed database
-- A LiteLLM proxy server set up to manage LLM access with two configured proxy models:
+- A LiteLLM proxy server configured with two proxy models:
     - `iq-general-purpose`: A premium model (such as Claude 4.6 Sonnet or 4.8 Opus) for handling general DX inquiries and executing tools
     - `iq-summary`: A cost-efficient model (such as Claude 4.5 Haiku) for conversation summarization and context window reduction
-    - Note that these sample models were recommended at the time of writing, and newer models may be available when you configure your deployment.
-
-    For instructions and a quick-start approach on self-hosted setups, refer to [LiteLLM Proxy Deployment](https://docs.litellm.ai/docs/proxy/deploy){target="_blank"} and [Deploy and Host LiteLLM on Railway](https://railway.com/deploy/litellm-proxy){target="_blank"}. For configuration options, refer to [LiteLLM Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
+    - See [Deploying LiteLLM for IQ](deploy-litellm.md) for step-by-step instructions on setting up LiteLLM in your DX Kubernetes cluster or as an external service.
 
     !!!note
         IQ ensures that user authentication credentials (cookies) remain between the DX authentication layer and the MCP server within your Kubernetes cluster and are never transmitted to any external LLM service. Conversation history is transmitted to your configured LLM to enable proper context and functionality. You control the LiteLLM proxy server and determine where conversation data is routed (local models, managed APIs, or other endpoints).
@@ -45,6 +43,8 @@ Before deploying the IQ backend server, verify that your environment includes th
 
 Use these topics to navigate the deployment, configuration, validation, and maintenance workflows for the IQ backend services alongside your container-based HCL DX deployment.
 
+- **[Deploying LiteLLM for IQ](deploy-litellm.md)**  
+This section provides step-by-step instructions for deploying LiteLLM, a prerequisite service that manages access to large language models. It covers in-cluster deployment using Helm, secret management, model configuration for IQ-specific use cases, and troubleshooting guidance.
 - **[Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)**  
 This section provides step-by-step instructions for deploying the IQ backend servers (IQ Integrator and MCP Server) alongside an existing container-based HCL DX deployment.
 - **[Configuring the MCP Server](configuring-mcp.md)**  
@@ -52,7 +52,7 @@ This section describes the configuration model, parameter properties, endpoint b
 - **[Preparing the database](prepare-database.md)**  
 This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options.
 - **[Preparing LiteLLM access](prepare-litellm-access.md)**  
-This section describes how to configure the IQ Integrator to authenticate with your LiteLLM proxy server using a static API key.  
+This section describes how to configure the IQ Integrator to authenticate with your deployed LiteLLM proxy server using a static API key.  
 - **[IQ environment variables](environment-variables.md)**  
 This section lists all environment variables available for the IQ Integrator and DX MCP Server, including their types, defaults, and accepted values.
 - **[Validating the deployment](validation.md)**  
