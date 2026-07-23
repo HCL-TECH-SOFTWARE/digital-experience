@@ -1,4 +1,4 @@
-# Deploying services
+# Deploying IQ services
 
 This section provides step-by-step instructions for deploying the IQ backend servers, IQ Integrator and IQ Model Context Protocol (MCP) Server, alongside an existing container-based HCL Digital Experience (DX) deployment.
 
@@ -32,7 +32,7 @@ The IQ MCP Server provides tool execution capabilities for your Web Content Mana
 Deploy the IQ backend services by pulling the required images and charts, defining your environment configuration, and executing the Helm installation.
 
 !!! tip "IQ environment variables"
-    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [IQ environment variables](environment-variables.md).
+    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [IQ environment variables](../../../../../../build_sites/iq/installation/environment-variables.md).
 
 ### Locating the latest Helm chart and images
 
@@ -206,7 +206,7 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
 
-    To resolve Integrator pod startup issues, refer to [Troubleshooting - Backend services](../troubleshooting.md#backend-services).
+    To resolve Integrator pod startup issues, refer to [Troubleshooting - Backend services](../../../../../../build_sites/iq/troubleshooting.md#backend-services).
 
 ## Upgrading and maintaining the IQ backend components
 
@@ -261,6 +261,6 @@ To remove the IQ backend server and verify the component cleanup, complete the f
     ```
 
 ???+ info "Related information"
-    - [IQ environment variables](environment-variables.md)
-    - [Preparing the database](prepare-database.md)
-    - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)
+    - [IQ environment variables](../../../../../../build_sites/iq/installation/environment-variables.md)
+    - [Preparing the database](../../../../../../build_sites/iq/installation/prepare-database.md)
+    - [Troubleshooting - Backend services](../../../../../../build_sites/iq/troubleshooting.md#backend-services)
