@@ -1,65 +1,62 @@
-# Automount Service Account Token
+# Managing service account token automounting
 
-By default, the DX deployment does not require API access to Kubernetes, with the exception of `runtimeController`. To support cluster security policies that restrict or require explicit service account token configuration, two Helm parameters are available.
+By default, most HCL DX components operate without direct access to the Kubernetes API. The `runtimeController` component is an exception as it requires API access to monitor pod statuses, apply dynamic runtime updates, and manage license validation across the cluster.
+
+To enforce the principle of least privilege, cluster security policies frequently restrict automatic service account token mounting. These policies mitigate privilege escalation risks by requiring explicit boolean declarations (`true` or `false`) or by prohibiting automatic token mounting entirely across all workloads. Two Helm parameters are available to support these security policies.
 
 ## Parameters
 
-### `automountServiceAccountToken`
+- `automountServiceAccountToken` controls whether each pod's service account token is automatically mounted into its container. This parameter is configured per component.
 
-Controls whether each pod's service account token is automatically mounted. This parameter is configured per component.
+    | Value | Behavior |
+    |-------|----------|
+    | Empty or null | Mounts the token by default. |
+    | `true` | Enables token mounting in the pod specification to satisfy policies requiring boolean declarations. |
+    | `false` | Disables token mounting in the pod specification. |
 
-| Value | Behavior |
-|---|---|
-| *(empty / null)* | Field is omitted from the pod spec; Kubernetes default applies (token is mounted). |
-| `true` | Field is explicitly set to `true` in the pod spec. Use this to satisfy policies that require an explicit declaration. |
-| `false` | Field is explicitly set to `false`; the token is not mounted into the pod. |
+- `configuration.runtimeController.projectedServiceAccountToken` provides a projected token volume for the `runtime-controller` pod when `automountServiceAccountToken` is set to `false`, ensuring the pod retains Kubernetes API access.
 
-### `configuration.runtimeController.projectedServiceAccountToken`
+    | Parameter | Type | Default | Description |
+    |-----------|------|---------|-------------|
+    | `enabled` | boolean | `false` | Adds the projected volume and mount to the `runtime-controller` pod. |
+    | `expirationSeconds` | integer | `3600` | Token lifetime in seconds. The kubelet rotates the token automatically before expiry. |
+    | `audience` | string | `""` | OpenID Connect (OIDC) audience for the issued token. Must match the audience expected by the cloud provider. |
 
-Provides a manual projected token volume for `runtime-controller` when auto-mount is disabled. This ensures `runtime-controller` retains access to the Kubernetes API even when `automountServiceAccountToken` is set to `false`.
+## Configuring token settings for cluster security policies
 
-| Parameter | Type | Default | Description |
-|---|---|---|---|
-| `enabled` | boolean | `false` | Adds the projected volume and mount to the `runtime-controller` pod. |
-| `expirationSeconds` | integer | `3600` | Token lifetime in seconds. The kubelet rotates the token automatically before expiry. |
-| `audience` | string | `""` | OIDC audience the token is issued for. Must match the value expected by your cloud provider. |
+Select the configuration approach that aligns with your cluster security requirements.
 
-## Scenarios
+### Setting explicit boolean token values
 
-### Scenario A — Policy requires an explicit `true` or `false` (most common)
-
-If your cluster policy rejects pods where the `automountServiceAccountToken` field is absent but still permits `true`, set the field explicitly for each component:
+If your cluster policy rejects pods where the `automountServiceAccountToken` field is absent but still permits `true`, set the field explicitly for each component to ensure `runtime-controller` continues to use its automounted token normally.
 
 ```yaml
 automountServiceAccountToken:
   <componentName>: true
 ```
 
-No further changes are needed. `runtime-controller` continues to use its auto-mounted token normally.
+### Disabling token automounting with projected tokens
 
-### Scenario B — Strict policy where `true` is also disallowed
+If your environment prohibits setting `automountServiceAccountToken` to `true`, set the field to `false` for all components, including `runtimeController`. The chart mounts a projected service account token volume to maintain Kubernetes API access.
 
-Some environments disallow `automountServiceAccountToken: true` entirely. In this case, you must set the field to `false` for all components, including `runtimeController`. However, `runtime-controller` still requires a token to communicate with the Kubernetes API. The chart handles this by mounting a projected service account token volume, so the application behavior is unaffected.
+1. Disable automount for all pods, including `runtimeController`:
 
-**Step 1** — Disable auto-mount for all pods, including `runtimeController`:
+    ```yaml
+    automountServiceAccountToken:
+      runtimeController: false
+      # set false for all other components as required
+    ```
 
-```yaml
-automountServiceAccountToken:
-  runtimeController: false
-  # set false for all other components as required
-```
+2. Enable the projected token volume for `runtime-controller`:
 
-**Step 2** — Enable the projected token volume for `runtime-controller`:
-
-```yaml
-configuration:
-  runtimeController:
-    projectedServiceAccountToken:
-      enabled: true
-      expirationSeconds: 3600
-      audience: "<your-cloud-provider-audience>"
-```
+    ```yaml
+    configuration:
+      runtimeController:
+        projectedServiceAccountToken:
+          enabled: true
+          expirationSeconds: 3600
+          audience: "<your-cloud-provider-audience>"
+    ```
 
 !!! warning
-    Set `projectedServiceAccountToken.enabled: true` only when `automountServiceAccountToken.runtimeController` is explicitly `false`. Enabling it while auto-mount is active is redundant and results in two token volumes competing for the same mount path.
-
+    Set `projectedServiceAccountToken.enabled` to `true` only when `automountServiceAccountToken.runtimeController` is set to `false`. Enabling it while automount is active is redundant and results in two token volumes competing for the same mount path.
