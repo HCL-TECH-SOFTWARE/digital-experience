@@ -78,4 +78,4 @@ This page lists the environment variables available for the IQ Integrator and DX
     - [Deploying services](deploy-services.md)
     - [Configuring the MCP Server](configuring-mcp.md)
     - [Preparing the database](prepare-database.md)
-    - [Preparing a license](prepare-license.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)

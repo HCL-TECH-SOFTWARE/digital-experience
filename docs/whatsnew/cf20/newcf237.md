@@ -1,13 +1,12 @@
-# What's new in CF236 
+# What's new in CF237
 
-The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF236 on supported platforms:
+The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF237 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - DAM integration and feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,10 +15,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Customizing HAProxy logs
+- Search V2 - Open-source Enchanted Web Components
 - Helm values updates
-- IQ assistant now available
-- OpenTelemetry Integration now available
-- WAS, JDK, UBI, iFix, and OS support versions
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -35,10 +34,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/236.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/236.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -61,30 +60,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New How-to articles now available
 
 === "Containers"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
 === "On-Premises"
-    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
-
-### Presentation Designer - DAM integration and feature updates
-
-=== "Containers"
-    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
-
-    Additional updates include the following enhancements:
-
-    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
-    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
-    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
-
-=== "On-Premises"
-    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
-
-    Additional updates include the following enhancements:
-
-    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
-    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
-    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
+    A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -102,32 +81,27 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### Customizing HAProxy logs
+
+The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
+
 ### Helm values updates
 
 === "Containers"
-    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf237).
 
-### IQ assistant now available
+### Search V2 - Open-source Enchanted Web Components
 
-=== "Containers"
-    IQ is an AI-powered assistant integrated into HCL DX that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
+Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
 
-    You can interact with the assistant in two ways:
+- [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
+- [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
+- [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
 
-    - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
-    - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
-
-    For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
-
-### OpenTelemetry Integration now available
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
-    You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
-
-### WAS, JDK, UBI, iFix, and OS support versions
-
-=== "Containers"
-    HCL DX 9.5 CF236 contains the following:
+    HCL DX 9.5 CF237 contains the following:
 
     - [WebSphere Application Server (WAS) 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit (JDK) 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
@@ -137,8 +111,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - iFix PH71422
     - iFix PH71453
     - iFix PH71453
-    - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
-    
+
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
@@ -156,7 +129,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
 
-### Removal of unused DAM Helm keys (9.5)
+### Removal of unused DAM Helm keys (9.5) <!--update-->
 
 === "Containers"
     The following unused DAM Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237:
