@@ -227,18 +227,6 @@ The Video element operates in three distinct render states on the canvas:
 !!! note
     YouTube Shorts URLs (`youtube.com/shorts/`) are not supported. They are treated as unrecognized and rendered as the placeholder state.
 
-**Custom HTML**
-
-The Custom HTML element provides full authoring flexibility by allowing you to enter raw HTML markup into a dedicated multiline code editor. This element is useful for embedding third-party iframes (such as YouTube, analytics scripts, or custom widgets) or authoring complex enterprise templates that require custom markup beyond the standard predefined components.
-
-![](../../../../assets/HCL_Presentation_Designer_Static_Element_CustomHTML.png)
-
-- **Safe Editing and Rendering:** Content is rendered on the canvas via a shadow DOM and sanitized for safe editing. Executable content (like `<script>`, `on*` handlers, and `javascript:` URIs) is neutralized during template design to prevent accidental execution, while the actual markup is safely preserved and stored for the backend.
-- **Shadow DOM Scoping:** Any `<style>` rules you supply are automatically scoped to the shadow tree, preventing your custom styles from leaking into the global Presentation Designer UI. Document-level selectors like `body` and `html` are automatically rewritten so the rules apply directly to the element.
-- **Orphaned Tag Handling:** The element automatically wraps orphaned closing tags in comments (for example, `<!-- </tag> -->`) to ensure structural consistency between the canvas and the final preview without losing any data.
-
-![](../../../../assets/HCL_Presentation_Designer_Static_Element_CustomHTML_Sample.png)
-
 ### Content elements
 
 Content elements (for example, ```[Element context="current" type="content" key="Element name"]```) are elements from a content template. You can search for a content template from which you want to pick elements from. Placeholders are rendered on the canvas in place of the elements.
