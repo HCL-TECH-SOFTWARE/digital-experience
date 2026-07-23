@@ -4,8 +4,11 @@ This section describes how to configure the IQ Integrator to authenticate with y
 
 ## Prerequisites
 
-- Deploy the [IQ Integrator and MCP Server services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md).
-- If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
+Before configuring IQ to access LiteLLM, ensure:
+- LiteLLM proxy server is deployed and running (see [Deploying LiteLLM for IQ](deploy-litellm.md))
+- Two proxy models are configured: `iq-general-purpose` and `iq-summary`
+- The IQ Integrator and MCP Server services are deployed (see [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md))
+- If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md) (optional but recommended)
 
 ## Using a static LiteLLM API key
 

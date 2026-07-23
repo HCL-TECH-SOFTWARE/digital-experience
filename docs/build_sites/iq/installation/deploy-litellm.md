@@ -287,9 +287,9 @@ curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
 
 ## Integration with IQ
 
-After LiteLLM is deployed and verified, configure IQ to use it:
+After LiteLLM is deployed and verified, configure IQ to use it.
 
-### Obtain LiteLLM Service Endpoint
+### LiteLLM Service Endpoint
 
 LiteLLM is now accessible within your cluster at:
 
@@ -297,28 +297,14 @@ LiteLLM is now accessible within your cluster at:
 http://litellm.dxns.svc.cluster.local:4000
 ```
 
-Or if using an Ingress:
+### Configure IQ to Use LiteLLM
 
-```
-https://litellm.dxns.svc.cluster.local
-```
+Refer to [Preparing LiteLLM Access](prepare-litellm-access.md) for detailed step-by-step instructions on:
+- Creating the LiteLLM API key secret
+- Upgrading the IQ Integrator deployment with the LiteLLM endpoint
+- Verifying the configuration is working correctly
 
-### Configure IQ for LiteLLM
-
-When deploying the `hcl-dx-iq` Helm chart, set the following environment variables:
-
-```yaml
-env:
-  - name: LITELLM_BASE_URL
-    value: "http://litellm.dxns.svc.cluster.local:4000"
-  - name: LITELLM_API_KEY
-    valueFrom:
-      secretKeyRef:
-        name: litellm-masterkey
-        key: LITELLM_MASTER_KEY
-```
-
-Refer to [IQ Environment Variables](environment-variables.md) for the complete list of configuration options.
+For additional IQ configuration options, refer to [IQ Environment Variables](environment-variables.md).
 
 ---
 
