@@ -45,7 +45,7 @@ Before deploying the IQ backend server, verify that your environment includes th
 
 Use these topics to navigate the deployment, configuration, validation, and maintenance workflows for the IQ backend services alongside your container-based HCL DX deployment.
 
-- **[Deploying services](deploy-services.md)**  
+- **[Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)**  
 This section provides step-by-step instructions for deploying the IQ backend servers (IQ Integrator and MCP Server) alongside an existing container-based HCL DX deployment.
 - **[Configuring the MCP Server](configuring-mcp.md)**  
 This section describes the configuration model, parameter properties, endpoint behavior, and security constraints required to manage tool execution and data exchange patterns for the MCP Server.

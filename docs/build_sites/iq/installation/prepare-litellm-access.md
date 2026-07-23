@@ -4,7 +4,7 @@ This section describes how to configure the IQ Integrator to authenticate with y
 
 ## Prerequisites
 
-- Deploy the [IQ Integrator and MCP Server services](deploy-services.md).
+- Deploy the [IQ Integrator and MCP Server services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md).
 - If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
 
 ## Using a static LiteLLM API key
@@ -72,5 +72,5 @@ Complete the following steps to configure and verify the static key:
 5. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
 
 ???+ info "Related information"
-    - [Deploying services](deploy-services.md)
+    - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Preparing the database](prepare-database.md)

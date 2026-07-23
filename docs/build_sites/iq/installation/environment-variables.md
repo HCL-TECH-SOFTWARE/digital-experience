@@ -75,7 +75,7 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `MAINTENANCE_MODE` | `maintenanceMode.mcpServer` | Boolean | `false` | Starts the MCP Server pod in maintenance mode. The application does not run, but the container remains active to let you debug inside the container. | `true`, `false` |
 
 ???+ info "Related information"
-    - [Deploying services](deploy-services.md)
+    - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](configuring-mcp.md)
     - [Preparing the database](prepare-database.md)
     - [Preparing LiteLLM access](prepare-litellm-access.md)
