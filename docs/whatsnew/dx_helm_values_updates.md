@@ -2,6 +2,9 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+!!!note
+    For more information on the keys described in this page, including their possible values and usage, refer to the downloadable sample `values.yaml` in [Prepare Configuration - The default HCL DX 9.5 `values.yaml` file](../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
+
 ### CF236
 
 **Deprecated Keys:**
