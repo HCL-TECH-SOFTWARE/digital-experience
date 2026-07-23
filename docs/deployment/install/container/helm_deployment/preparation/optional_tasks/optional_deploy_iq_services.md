@@ -2,6 +2,9 @@
 
 This section provides step-by-step instructions for deploying the IQ backend servers, IQ Integrator and IQ Model Context Protocol (MCP) Server, alongside an existing container-based HCL Digital Experience (DX) deployment.
 
+!!! tip "Get started with IQ overview"
+    For a complete overview of IQ capabilities, architecture, and concepts, see [IQ documentation](../../../../../../build_sites/iq/index.md).
+
 !!! note "Database and license configuration are optional"
     This procedure deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured.
 

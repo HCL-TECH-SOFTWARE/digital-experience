@@ -1,18 +1,24 @@
 nav:
-    - optional_internal_networking.md
-    - optional_imagepullsecrets.md
-    - optional_options_spread_pods_across_nodes.md
-    - optional_disable_apps.md
+    - optional-configure-access-layer.md
+    - optional-configure-additonal-ca.md
+    - optional-core-prereqs-checker.md
+    - optional_changing_portal_uri_in_kubernetes.md
+    - optional_configure-timezone.md
     - optional_configure_apps.md
+    - optional_configure_credentials.md
+    - optional_configure_ltpa_key.md
     - optional_configure_scaling.md
     - optional_container_resources.md
-    - optional_configure_credentials.md
     - optional_core_sidecar_log.md
-    - optional_rs_sidecar_log.md
-    - optional_labels_annotations.md
+    - optional_deploy_iq_services.md
+    - optional_disable_apps.md
+    - optional_enable_new_db_management.md
     - optional_experimental_features.md
+    - optional_imagepullsecrets.md
     - optional_install_new_search.md
+    - optional_internal_networking.md
+    - optional_labels_annotations.md
     - optional_new_search_ca_certificates.md
-    - optional_changing_portal_uri_in_kubernetes.md
-    - optional_configure_ltpa_key.md
-    - ...
+    - optional_options_host_alias.md
+    - optional_options_spread_pods_across_nodes.md
+    - optional_rs_sidecar_log.md
