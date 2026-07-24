@@ -29,6 +29,9 @@ To select a context:
 3. In the **Canvas context** field, choose one of the following methods to locate your content item:
     - **Search:** Enter keywords from the title or name of the content item.
     - **Browse:** Click the DX Picker icon to visually browse the content tree and locate content items without typing UUIDs or paths or use the search field in it.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Context_Search_DX_Picker.png)
+
 4. Select a content item from the results or the picker dialog.
 5. View the updated canvas to see the selected content and mapped tags.
 

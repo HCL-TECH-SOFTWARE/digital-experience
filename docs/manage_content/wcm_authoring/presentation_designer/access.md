@@ -122,6 +122,8 @@ The Presentation Designer user interface appears. You can also use steps 6 to 8 
 
 To prevent data loss and content collisions in multi-author environments, Presentation Designer automatically locks presentation templates during active editing sessions.
 
+![](../../../assets/HCL_Presentation_Designer_Locked_PT.png "HCL Presentation Designer - Locked Presentation Template")
+
 **How presentation template locking works**
 
 - **Lock Acquisition:** Opening a presentation template in **Edit** mode or toggling from Read to Edit mode automatically acquires an editing lock on the presentation template item.
@@ -135,7 +137,7 @@ To prevent data loss and content collisions in multi-author environments, Presen
 For more information on locked items, refer to **[Locked items](../../../../manage_content/wcm_authoring/authoring_portlet/change_management/item_locks#locked-items)**.
 
 !!! note
-    **Lock indicator visibility:** The lock indicator is currently only visible on the Authoring page. No lock indicator is visible on the Presentation Designer's interface.
+    The **lock indicator** (lock icon) is currently only visible on the Authoring page. No lock indicator is visible on the Presentation Designer's interface.
 
 ## The Presentation Designer UI
 
@@ -178,6 +180,8 @@ The **Style items** panel contains the different styling options available for t
 For more information on the user elements and style options, refer to **[Usage of Presentation Designer](./usage/index.md)**.
 
 #### Layers
+
+![](../../../assets/HCL_Presentation_Designer_Layers_Panel.png)
 
 The **Layers** panel provides a hierarchical tree view of all the elements currently on your canvas, helping you visually navigate and manage complex presentation templates without needing to click through nested layers in the main workspace.
 

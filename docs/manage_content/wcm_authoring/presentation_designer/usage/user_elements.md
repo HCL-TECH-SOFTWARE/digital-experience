@@ -210,7 +210,7 @@ The Button element functions as a pre-styled link element designed to look like 
 
 **Video**
 
-The Video element empowers users to seamlessly add video elements to presentation templates without any manual HTML coding. You can quickly integrate product demos or tutorial videos by simply dragging, dropping, and supplying the URL via the Video configuration.
+The Video element enables users to seamlessly add video elements to presentation templates without any manual HTML coding. You can quickly integrate product demos or tutorial videos by simply dragging, dropping, and supplying the URL via the Video configuration.
 
 The element automatically generates clean HTML based on the source, outputting a standard `<video>` tag with `<source>` and fallback text, or an `<iframe>` for YouTube embeds. You can easily configure extensive customizations for the video, such as width, height, margins, paddings, and borders, via the style panel to fit any presentation layout.
 
@@ -240,7 +240,14 @@ To load the elements, you can use the dual-mode selection available in the **Con
 !!! note
     If the DX picker is not configured or available in the environment, the picker icon appears disabled.
 
+
+**Content templates loaded from search field:**
+
 ![](../../../../assets/HCL_Presentation_Designer_Content_Elements_Search_Panel.png)
+
+**Content templates loaded from DX Picker:**
+
+![](../../../../assets/HCL_Presentation_Designer_Content_Elements_DX_Picker.png)
 
 After selecting a content template, it automatically pulls the supported elements from the content template. Each element tag uses the element's display title that is set from the content template.
 
