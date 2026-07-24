@@ -11,3 +11,4 @@ nav:
   - CreateAServletForStaticFiles.md
   - CodeToPrintUserAndHostname.md
   - WCMAPIRenderComponent.md
+  - ExternalJARinvokeJSP.md
