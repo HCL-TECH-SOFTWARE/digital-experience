@@ -52,6 +52,9 @@ Before deploying LiteLLM in-cluster, ensure:
 - `kubectl` is configured to access your cluster
 - A Helm values file prepared for LiteLLM configuration
 
+!!! tip "Capacity Planning"
+    Before deploying LiteLLM, verify that your Kubernetes nodes have sufficient unallocated resources to schedule the pod. By default, LiteLLM requests **100m CPU** and **512Mi Memory**. You can check your available node capacity by running `kubectl describe nodes` and reviewing the **Allocated resources** section. If your nodes are near capacity, you may need to provision additional nodes or use a larger instance type.
+
 ### Step 1: Add the LiteLLM Helm Repository
 
 ```bash
@@ -107,7 +110,26 @@ kubectl create secret generic litellm-anthropic-credentials \
   -n dxns
 ```
 
-### Step 3: Create the Helm Values File
+### Step 3: Validate Database Connectivity
+
+Before proceeding, verify that your database is accessible from the Kubernetes cluster. This prevents `CrashLoopBackOff` errors due to misconfigured credentials.
+
+```bash
+kubectl run db-validator --rm -i --restart=Never \
+  --image=postgres:alpine \
+  --env="PGPASSWORD=<DB_PASSWORD>" \
+  -n dxns \
+  --command -- psql -h <RDS_ENDPOINT> -p 5432 -U <DB_USERNAME> -d litellm -c "SELECT 1;"
+```
+
+Replace the placeholder values:
+- `<DB_PASSWORD>` - Your database password
+- `<RDS_ENDPOINT>` - Your database endpoint (e.g., `litellm-db.xxxx.us-east-1.rds.amazonaws.com`)
+- `<DB_USERNAME>` - Your database username
+
+Expected output: `1` (if the connection is successful)
+
+### Step 4: Create the Helm Values File
 
 Create a file named `litellm-values.yaml` with the configuration below. Customize the placeholder values:
 
@@ -115,7 +137,18 @@ Create a file named `litellm-values.yaml` with the configuration below. Customiz
 image:
   repository: ghcr.io/berriai/litellm-database
   pullPolicy: Always
-  tag: "main-latest"  # Use specific version in production
+  tag: "main-latest"
+```
+
+!!! warning "Use Specific Version in Production"
+    The `main-latest` tag with `pullPolicy: Always` means the image can change unpredictably between pod restarts. For production deployments, specify a pinned version tag (e.g., `1.45.0`) to ensure consistent, reproducible deployments. Refer to [LiteLLM releases](https://github.com/BerriAI/litellm/releases){target="_blank"} for available versions.
+
+```yaml
+
+# Security context - LiteLLM requires root for Prisma binary download
+securityContext:
+  runAsUser: 0
+  runAsGroup: 0
 
 # External PostgreSQL database configuration
 db:
@@ -162,11 +195,16 @@ proxy_config:
   litellm_settings:
     callbacks:
       - prometheus  # Enable Prometheus metrics
-    drop_params: true  # Prevent unsupported parameters from being forwarded
+    drop_params: true  # Critical: Prevents unsupported parameters from being forwarded to the LLM provider
   
   general_settings:
     master_key: os.environ/LITELLM_MASTER_KEY
+```
 
+!!! important "Understanding `drop_params: true`"
+    This setting is critical for IQ deployments. When `drop_params: true`, LiteLLM automatically discards any parameters that a specific LLM provider does not support. Without this setting, unsupported parameters passed by IQ would cause API errors and fail requests. This ensures compatibility across different LLM providers (AWS Bedrock, OpenAI, Anthropic, etc.) by gracefully handling parameter mismatches.
+
+```yaml
 # Ingress configuration - Expose LiteLLM within cluster
 ingress:
   enabled: true
@@ -231,12 +269,26 @@ envVars:
 !!! note "Model Configuration"
     The example above uses **AWS Bedrock** as the LLM provider. If using a different provider (OpenAI, Anthropic, etc.), adjust the `model` names and `api_key` references accordingly. Refer to [LiteLLM Proxy Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for provider-specific syntax.
 
-### Step 4: Deploy LiteLLM Using Helm
+### Step 4.5: (Optional) Validate Helm Configuration
 
-Deploy LiteLLM to your DX namespace:
+Before deploying, validate your Helm configuration to catch errors early:
 
 ```bash
-helm install litellm litellm/litellm \
+helm upgrade --install litellm litellm/litellm \
+  -f litellm-values.yaml \
+  -n dxns \
+  --dry-run \
+  --debug
+```
+
+Review the output for any syntax errors or misconfigurations. If successful, the command will display the rendered Kubernetes manifests without actually creating resources.
+
+### Step 5: Deploy LiteLLM Using Helm
+
+Deploy LiteLLM to your DX namespace using `helm upgrade --install` for idempotent operations:
+
+```bash
+helm upgrade --install litellm litellm/litellm \
   -f litellm-values.yaml \
   -n dxns
 ```
@@ -257,7 +309,7 @@ kubectl wait --for=condition=ready pod \
   --timeout=300s
 ```
 
-### Step 5: Verify LiteLLM Deployment
+### Step 6: Verify LiteLLM Deployment
 
 Test the LiteLLM service health:
 
@@ -283,6 +335,21 @@ curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
   http://localhost:8000/v1/models
 ```
 
+Test chat completion (end-to-end validation):
+
+```bash
+curl -X POST http://localhost:8000/v1/chat/completions \
+  -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "iq-general-purpose",
+    "messages": [{"role": "user", "content": "Hello, are you ready?"}],
+    "max_tokens": 100
+  }'
+```
+
+Expected response: A JSON object with a `choices` array containing the model's response. This confirms that LiteLLM can process requests end-to-end.
+
 ---
 
 ## Integration with IQ
@@ -296,6 +363,22 @@ LiteLLM is now accessible within your cluster at:
 ```
 http://litellm.dxns.svc.cluster.local:4000
 ```
+
+### Configure LLM Model Parameters
+
+If your chosen LLM models have specific constraints on token limits or temperature parameters, configure the following environment variables in the IQ Integrator:
+
+- **`LLM_MAX_TOKENS`**: Specifies the maximum number of tokens for LLM completion responses. Must match or be less than your model's maximum (e.g., `16384`, `8192`, `4096`)
+- **`LLM_TEMPERATURE`**: Controls randomness in LLM responses. Some models enforce specific values (e.g., `0.7`, `1.0`, or `0`)
+
+**Example**: If using GPT with a 16,384 token limit and temperature of 1:
+
+```json
+{"name":"LLM_MAX_TOKENS","value":"16384"}
+{"name":"LLM_TEMPERATURE","value":"1"}
+```
+
+Refer to [IQ Environment Variables - LiteLLM](environment-variables.md#litellm) and [Deploying IQ Services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md) for detailed configuration instructions.
 
 ### Configure IQ to Use LiteLLM
 
