@@ -10,3 +10,5 @@ Learn how to configure an HTML input form to pass search queries to a search com
 Learn how to search for Web Content Manager (WCM) content created within a specific time range using WCM search.
 - **[How to use DX Search and the DX Search Center](./DX_Search_and_Search_Center.md)**  
 Learn how to use DX Search and the DX Search Center to find documents used in HCL DX and configure WCM documents to be more easily searched using the search service.
+- **[How to include pages containing Web Content Viewer Portlet in Portal Seedlist](./IncludeWebContentViewerPortlet.md)**  
+Learn how to include pages containing Web Content Viewer Portlet in Portal Seedlist.
