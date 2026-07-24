@@ -7,7 +7,7 @@ The Practitioner Studio Dashboard is a modern, React-based dashboard that replac
 The dashboard includes the following widgets:
 
 - **Status monitoring:** Shows items that require approval or attention, including expiring content.
-- **My Projects:** Displays your projects in a paginated data grid with status tracking.
+- **My Projects:** Displays your projects with status tracking.
 - **Recent content items:** Provides quick access to your latest work.
 - **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
 - **Personalization rules (PZN):** Helps you manage user experiences.
@@ -75,7 +75,7 @@ Use the **My Projects** widget to view and manage your projects.
 - **Go to My Projects:** Select this link in the top-right corner to access the full Web Content Management interface for comprehensive project management.
 
 !!! note
-    - Users must have at least Editor level access for WCM services to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting/index.md).
+    - Users must have at least Editor level access for WCM services to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
 
 ## Recent content and project
 
@@ -126,7 +126,8 @@ The right pane displays filtered content with the following options:
 
 - **Tag results:** View content items that match your selected tags.
 - **Filter mode toggle:** Switch between **Any** (content matching any selected tag) and **All** (content matching all selected tags) filtering modes.
-- **Content details:** View titles, metadata, and other relevant information for matched content.
+- **Content details:** View the title, last modified date, and tags and keywords attached to each content item.
+- **Navigate to content:** Select the title of a content item to be redirected to the related content source.
 
 !!! note
     - This widget requires Search V2 to be enabled in your HCL DX deployment.
