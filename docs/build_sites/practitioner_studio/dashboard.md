@@ -132,8 +132,8 @@ The right pane displays filtered content with the following options:
 !!! note
     - This widget requires Search V2 to be enabled in your HCL DX deployment.
     - The widget displays a subset of the top 100 tags. Use search to find specific items.
-    - New tags are reflected in the widget only after crawler indexing (~15 minutes).
-    - Keywords associated with draft WCM elements are not displayed in the widget.
+    - Newly added or updated tags appear after the Search V2 crawler completes indexing.
+    - WCM keywords are displayed only for published content. 
 
 ## Widget configuration parameters
 
