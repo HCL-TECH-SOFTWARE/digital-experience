@@ -65,6 +65,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities: **My Projects** and **Tags & Keywords Manager**.For more information, refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities: **My Projects** and **Tags & Keywords Manager**.For more information, refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0

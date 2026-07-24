@@ -7,7 +7,9 @@ The Practitioner Studio Dashboard is a modern, React-based dashboard that replac
 The dashboard includes the following widgets:
 
 - **Status monitoring:** Shows items that require approval or attention, including expiring content.
+- **My Projects:** Displays your projects in a paginated data grid with status tracking.
 - **Recent content items:** Provides quick access to your latest work.
+- **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
 - **Personalization rules (PZN):** Helps you manage user experiences.
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
@@ -62,6 +64,18 @@ Each metric includes a customizable time filter: **Today**, **Tomorrow**, **With
 !!! note
     - For **Expiring**, **Within 7 days** includes the current day and the next six days.
     - For **Published** and **Drafts**, **Within 7 days** includes the current day and the previous six days.
+    
+## My Projects
+
+Use the **My Projects** widget to view and manage your projects.
+
+![My Projects](../../assets/HCL_Practitioner_dashboard_My_Projects.png)
+
+- The widget displays the following details: **Projects title**, **Last Modified** and **Status**.
+- **Go to My Projects:** Select this link in the top-right corner to access the full Web Content Management interface for comprehensive project management.
+
+!!! note
+    - Users must have at least Editor level access for WCM services to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting/index.md).
 
 ## Recent content and project
 
@@ -86,6 +100,40 @@ Use the **Personalization Rules** widget to monitor the personalization (PZN) ru
 - **Rule Types** for this widget include **Visibility Rule**, **Profiler**, **Select Action**, and **Binding Rules**.
 - Select **Go to Personalization** to open the full Personalization page for complete management and configuration of your rules.
 
+
+## Tags & Keywords Manager
+
+Use the **Tags & Keywords Manager** widget to search and filter content based on tags and keywords using a two-pane interface.
+
+![Tags & Keywords Manager](../../assets/HCL_Practitioner_dashboard_Tags_Keywords.png)
+
+The widget provides a split-pane layout:
+
+### Search pane (left)
+
+The left pane includes the following features:
+
+- **Tag selection:** Select multiple tags to filter content.
+- **Show selected toggle:** Use the **Show selected** toggle button to display only the selected tags in the search pane.
+- **Type-ahead search:** Begin typing to find tags quickly with autocomplete suggestions.
+- **Recent searches:** Access previously used tag searches for quick filtering.
+- **Help tooltips:** Select the help icon for guidance on using the search features.
+
+
+### Results pane (right)
+
+The right pane displays filtered content with the following options:
+
+- **Tag results:** View content items that match your selected tags.
+- **Filter mode toggle:** Switch between **Any** (content matching any selected tag) and **All** (content matching all selected tags) filtering modes.
+- **Content details:** View titles, metadata, and other relevant information for matched content.
+
+!!! note
+    - This widget requires Search V2 to be enabled in your HCL DX deployment.
+    - The widget displays a subset of the top 100 tags. Use search to find specific items.
+    - New tags are reflected in the widget only after crawler indexing (~15 minutes).
+    - Keywords associated with draft WCM elements are not displayed in the widget.
+
 ## Widget configuration parameters
 
 Use the dashboard to customize which widgets appear on your screen. To change these settings:
@@ -101,6 +149,8 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `RECENT_CONTENT_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recent Content** widget, which displays recently accessed or modified content items. |
 | `RECENT_STATUS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Status Monitor** widget, which displays system health and alerts. |
 | `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent PZN activities and campaigns. |
+| `PROJECTS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Projects** widget, which displays your projects in a paginated data grid. |
+| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget. Note: This widget also requires Search V2 to be enabled. |
 
 ## Main portal configuration
 
