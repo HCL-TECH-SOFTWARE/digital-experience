@@ -75,7 +75,7 @@ Use the **My Projects** widget to view and manage your projects.
 - **Go to My Projects:** Select this link in the top-right corner to access the full Web Content Management interface for comprehensive project management.
 
 !!! note
-    - Users must have at least Editor level access for WCM services to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
+    - Users must have at least Editor level access for WCM REST Service under Virtual Resources to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
 
 ## Recent content and project
 
@@ -84,7 +84,7 @@ Use the **Recent Content and Project** widget to view your most recently modifie
 ![Recent content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
 - Select the **eye icon** on a content item to view it directly.  
-- Use the **Go to Authoring** link in the top-right corner for quick access to the full Web Content management interface.
+- Use the **Go to Authoring** link in the top-right corner for quick access to the full [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/).
 
 !!! note
     - This widget shows only the 100 most recent content items.
@@ -103,7 +103,7 @@ Use the **Personalization Rules** widget to monitor the personalization (PZN) ru
 
 ## Tags & Keywords Manager
 
-Use the **Tags & Keywords Manager** widget to search and filter content based on tags and keywords using a two-pane interface.
+Use the **Tags & Keywords Manager** widget to Search and filter content by WCM keywords, DAM keywords, and Social tags using a two-pane interface
 
 ![Tags & Keywords Manager](../../assets/HCL_Practitioner_dashboard_Tags_Keywords.png)
 
@@ -128,11 +128,12 @@ The right pane displays filtered content with the following options:
 - **Filter mode toggle:** Switch between **Any** (content matching any selected tag) and **All** (content matching all selected tags) filtering modes.
 - **Content details:** View the title, last modified date, and tags and keywords attached to each content item.
 - **Navigate to content:** Select the title of a content item to be redirected to the related content source.
+- **DAM keyword links:** If DAM is not enabled in a Virtual Portal, DAM keyword links are disabled.
 
 !!! note
-    - This widget requires Search V2 to be enabled in your HCL DX deployment.
+    - This widget requires [Search V2](../search_v2/) to be enabled in your HCL DX deployment.
     - The widget displays a subset of the top 100 tags. Use search to find specific items.
-    - Newly added or updated tags appear after the Search V2 crawler completes indexing.
+    - Newly added or updated tags do not appear immediately in the widget. They become visible only after the Search V2 crawler completes its next indexing cycle. The timing depends on your crawler schedule configuration.
     - WCM keywords are displayed only for published content. 
 
 ## Widget configuration parameters
