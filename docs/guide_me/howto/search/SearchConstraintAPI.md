@@ -1,38 +1,42 @@
-# How to use REST API constraints for searches in contents and authoring templates
+# How to use REST API constraints for searches in content and authoring templates
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-Constraint limits search results to the ones that match specific metadata values. It is an alternative for client-side applications, which include filters and advanced search options. It is possible to include multiple constraint to optimize the search. For example:
+Search constraints limit search results to items that match specific metadata values. Client-side applications use constraints as an alternative to filters and advanced search options. You can combine multiple constraints to optimize the search. For example:
 
-```text
-constraint={"type":"field","id":"contentpath","values":["<SiteArea Path>"]} 
-```
+- To find content located in particular `SiteArea` path:
 
-to find contents located in particular SiteArea Path.
+    ```text
+    constraint={"type":"field","id":"contentpath","values":["<SiteArea Path>"]} 
+    ```
 
-```text
-constraint={"type":"field","id":"authoringtemplate","values":["<Authoring template name>"]} 
-```
+- To find content that uses a specific authoring template:
 
-to find contents with authoring template name.
+    ```text
+    constraint={"type":"field","id":"authoringtemplate","values":["<Authoring template name>"]} 
+    ```
 
-For details, please check: [Search constraints REST API specification](../../../build_sites/search/search-rest-api/constraints-spec.md){target="_blank"}
+For more information, refer to [Search constraints REST API specification](../../../build_sites/search/search-rest-api/constraints-spec.md).
+
+Content links and the content itself are both included in the search collection. The Search Center Portlet queries all configured search scopes by default; as a result, search queries can return duplicate entries unless managed with a dedicated search scope.
+
+This article explains how to use REST API constraints for searches in content and authoring templates.
 
 ## Instructions
 
-To use REST API constraints for searches in contents and authoring templates, you need to create a new search scope in the portal administration page when navigating to **Administration > Manage Search > Search Scopes > New Scope**. For details, please check
-[Creating a search scope](../../../build_sites/search/manage_search/searchscopes_customlinks/crt_nw_srch_scp.md){target="_blank"}
+To use REST API constraints for searches in content and authoring templates, perform the following steps:
 
-???+ info "More relevant information"
-    - Creating a new search scope will also avoid creating duplicate entries.
-    - If you move the new search scope to the top of the list, it will be used by default for Search Center Portlet.
-    - Content links are included in the search collection as well as the content itself.
-    - Search Center Portlet is configured for all search scopes. Results are returned from all scopes resulting in duplicate entries.
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Administration > Manage Search > Search Scopes**.
+3. Select **New Scope** to create a custom search scope.
+4. (Optional) Move the new search scope to the top of the list to set it as the default scope for the Search Center Portlet.
+
+For more information, refer to [Creating a search scope](../../../build_sites/search/manage_search/searchscopes_customlinks/crt_nw_srch_scp.md).
 
 ???+ info "Related information"
-    [How Portal Search handles special characters when indexing](../../../build_sites/search/portal_search/hint_tips/srrhinttips_spechars.md){target="_blank"}  
-    [Search constraints REST API specification](../../../build_sites/search/search-rest-api/constraints-spec.md){target="_blank"}
+    - [How Portal Search handles special characters when indexing](../../../build_sites/search/portal_search/hint_tips/srrhinttips_spechars.md) 
+    - [Search constraints REST API specification](../../../build_sites/search/search-rest-api/constraints-spec.md)

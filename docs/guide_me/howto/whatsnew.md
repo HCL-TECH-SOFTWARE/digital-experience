@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
+
 ## CF236
 
 | Type | Category | Article |
