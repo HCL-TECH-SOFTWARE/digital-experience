@@ -15,7 +15,7 @@ It is possible that JDBC drivers running properly on Java 6 may not run correctl
 !!! Important
     It is highly recommended to use only JDBC drivers that are certified for the specific HCL DX Java runtime version, preferably the latest certified version. Before running any JDBC driver on HCL DX, read  the JDBC driver vendor support information to ensure you select the correct driver.
 
-HCL DX supports any JDBC driver that is compliant with the JDBC specification 4.0 or earlier. A detailed system requirement information about all supported databases can be found at: [System requirements](../../../get_started/system_requirements/index.md){target="_blank"}.
+HCL DX supports any JDBC driver that is compliant with the JDBC specification 4.0 or earlier. A detailed system requirement information about all supported databases can be found at: [System requirements](../../../get_started/system_requirements/index.md).
 
 For more information, refer to the following topics:
 

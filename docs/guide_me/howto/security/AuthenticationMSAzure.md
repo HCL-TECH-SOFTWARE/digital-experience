@@ -21,18 +21,18 @@ To integrate your architecture with Azure, choose from the following deployment 
 
 ### OIDC authentication with a local repository
 
-HCL DX locates users in a local repository. This would generally be an LDAP hosted in your intranet, which would be kept in synch with Azure. With this option, a custom JAAS login module is NOT required. For more information, refer to [Configuring OIDC for HCL Digital Experience](../../../deployment/manage/security/people/authentication/oidc/index.md){target="_blank"}.
+HCL DX locates users in a local repository. This would generally be an LDAP hosted in your intranet, which would be kept in synch with Azure. With this option, a custom JAAS login module is NOT required. For more information, refer to [Configuring OIDC for HCL Digital Experience](../../../deployment/manage/security/people/authentication/oidc/index.md).
 
 ### OIDC authentication with transient users
 
-This approach uses an in-memory repository and requires a custom JAAS login module. HCL provides sample code and a white paper for this implementation. For more information, refer to [Integrating Transient Users with OpenID Connect](../../../deployment/manage/security/people/authentication/integrate_oid/index.md?h=integrating+transient+users+openid+connect+with){target="_blank"}.
+This approach uses an in-memory repository and requires a custom JAAS login module. HCL provides sample code and a white paper for this implementation. For more information, refer to [Integrating Transient Users with OpenID Connect](../../../deployment/manage/security/people/authentication/integrate_oid/index.md?h=integrating+transient+users+openid+connect+with).
 
 !!! important
     From an access control perspective, transient users are assigned only the "All Authenticated Portal Users" role. The system will not honor any role assignments made to specific user groups for these users.
 
 ### OIDC authentication with transient users and mirror groups
 
-This approach expands on using transient users by adding mirror groups to handle role assignments. However, it introduces administrative overhead, as you must maintain local groups and keep them synchronized with the user groups held in Azure. For more information, refer to [Integrating Transient Users with OpenID Connect](../../../deployment/manage/security/people/authentication/integrate_oid/index.md?h=integrating+transient+users+openid+connect+with){target="_blank"}.
+This approach expands on using transient users by adding mirror groups to handle role assignments. However, it introduces administrative overhead, as you must maintain local groups and keep them synchronized with the user groups held in Azure. For more information, refer to [Integrating Transient Users with OpenID Connect](../../../deployment/manage/security/people/authentication/integrate_oid/index.md?h=integrating+transient+users+openid+connect+with).
 
 ### Keycloak integration (containerized environments)
 
@@ -46,4 +46,4 @@ If you run a containerized environment, you can use Keycloak as an interface to 
 After implementing any of the approaches above, you must clean up references to the old users in the DX database. Refer to the following procedures to resolve the old references:
 
 - [Understanding the CleanupUsers Process](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079138){target="_blank"}
-- [How to use the member fixer task](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md){target="_blank"}
+- [How to use the member fixer task](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_member_fixer/wcm_admin_member-fixer.md)

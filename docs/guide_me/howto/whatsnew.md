@@ -21,6 +21,18 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|API|[How to create a JSP using the WCM `QueryService` API](./api/createJSPUsingWCMAPI.md)|
+|Migrated|Container|[How to delete duplicate `CONFIG_CHECKSUM` environment variables](./container/DeleteDuplicateCheckSum.md)|
+|Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
+|Migrated|Container|[How to safely restart persistence nodes](./container/RestartPersistenceNodes.md)|
+|Migrated|Content|[How to manage DAM asset URLs after a library import from another environment](./content/WCMObjectsHostname.md)|
+|Migrated|Content|[How to use XSL with HCL DX and WCM](./content/UsingXSLWithPortalAndWCM.md)|
+|Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
+|Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
+|Migrated|Search|[How to create a search service for a Virtual Portal](./search//VPSearchService.md)|
+|Migrated|Search|[How to implement a search query using WCM HTML and search components](./search/SampleSearchQueryWCMComponent.md)|
+|Migrated|Security|[How to integrate the impersonation API with SAML](./security/ImpersonationAPIWithSAML.md)|
+|Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
+|New|Configuration|[How to install and configure Ingress with virtual portals](./configuration/ConfigureIngressWithVPs.md)|
 
 ## CF235
 
@@ -88,7 +100,6 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to create a custom login or logout filter in HCL DX](./development/custom_login_filter_sample.md)|
 |Migrated|Development|[How to create a custom login portlet with credential vault handling in HCL DX](./development/CustomLoginPortlet.md)|
 |Migrated|Migration|[How to configure and performing a staging to production environment](./migration/StagingToProductionWithPAA.md)|
-|Migrated|Security|[How to implement SAML in HCL DX](./security/implementsaml_portal.md)|
 |Migrated|Upgrade|[How to use XML Access to export and import portal pages](./upgrade/XMLAccessExportImport.md)|
 |New|Configuration|[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./configuration/SetGenericJVMArgumentsCorePod.md)|
 |New|Security|[How to add additional security realms for Virtual Portals](./security/AddAdditionalWASRealms.md)|

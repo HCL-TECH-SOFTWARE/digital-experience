@@ -1,4 +1,4 @@
-# Default and Override stylesheets in Presentation Designer
+# Default and Override stylesheets
 
 In Presentation Designer, stylesheets play a crucial role in defining the appearance and behavior of elements within a presentation. There are two types of stylesheets that work together to ensure flexibility and consistency in design: the **Default stylesheet** and the **Override stylesheet**. These stylesheets support the handling of type selectors and class selectors.
 

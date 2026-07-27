@@ -11,4 +11,4 @@ The XML file contains statements or instructions to modify a DX configuration. T
 
 ## Instructions
 
-For more information on how to use XML Access, refer to the [XMLAccess Frequently Asked Questions](./files/xmlaccess_faq/XMLAccess%20Frequently%20Asked%20Questions.pdf){target="_blank"}.  
+For more information on how to use XML Access, refer to the [XMLAccess Frequently Asked Questions](./files/xmlaccess_faq/XMLAccess%20Frequently%20Asked%20Questions.pdf).  

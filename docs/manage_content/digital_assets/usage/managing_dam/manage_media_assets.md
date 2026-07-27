@@ -190,7 +190,7 @@ Use the HCL DX 9.5 DAM editor to move a media asset to trash, including its rend
     ![References found while moving media asset to trash](../../../../images/DAM_Move_to_trash_references_found.png){ width=50% }
 
 !!! note
-    To permanently delete an asset, see [Permanent delete media asset](dam_soft_delete.md#permanent-delete-media-asset).
+    To permanently delete an asset, refer to [Deleting an asset or collection permanently](dam_soft_delete.md#deleting-an-asset-or-collection-permanently).
 
 ## Copying a media asset
 

@@ -1,4 +1,4 @@
-# Canvas Context Preview in Presentation Designer
+# Canvas Context Preview
 
 The Canvas Context Preview feature in HCL Digital Experience (DX) Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. This feature allows you to:
 
@@ -131,6 +131,10 @@ To retrieve settings for a specific template, use the following command in the b
 // Format: presentationdesigner_canvas_settings_{template-id}
 localStorage.getItem('presentationdesigner_canvas_settings_abc-123-def');
 ```
+
+### Preview
+
+Allows you to save the template and preview it in a separate window. The selected content will be applied to the preview. This button detects if the template has unsaved changes and prompts you to save before generating the preview.
 
 ### Edit and View mode
 

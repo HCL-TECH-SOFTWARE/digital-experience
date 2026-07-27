@@ -4,22 +4,19 @@ With Presentation Designer, you can edit presentation templates through a drag-a
 
 Presentation Designer is ideal for, but not limited to, the following sample use cases:
 
--  Allowing content managers to edit and customize presentation templates without relying on developers.
--  Reducing editorial friction by enabling content managers to design and manage presentation templates independently.
--  Simplifying the creation process for web content layouts by offering a visual interface where users can drag and drop elements and instantly see the output in real-time on the canvas.
--  Enabling an interactive design experience, minimizing the need for users to preview the final output separately as changes are immediately visible on the canvas.
--  Generating HTML markup automatically from the designs created in Presentation Designer, ensuring that the final output is ready to be used in websites without further manual coding.
-
+- Allowing content managers to edit and customize presentation templates without relying on developers.
+- Reducing editorial friction by enabling content managers to design and manage presentation templates independently.
+- Simplifying the creation process for web content layouts by offering a visual interface where users can drag and drop elements and instantly see the output in real-time on the canvas.
+- Enabling an interactive design experience, minimizing the need for users to preview the final output separately as changes are immediately visible on the canvas.
+- Generating HTML markup automatically from the designs created in Presentation Designer, ensuring that the final output is ready to be used in websites without further manual coding.
 
 Refer to the following pages for more information:
 
-- **[Access Presentation Designer](../presentation_designer/access.md)**<br>
+- **[Access Presentation Designer](../presentation_designer/access.md)**  
 This section provides the steps on how to access the Presentation Designer and details on the user interface.
-
-- **[Using Presentation Designer](../presentation_designer/usage/index.md)**<br>
+- **[Using Presentation Designer](../presentation_designer/usage/index.md)**  
 This section provides information on how to edit presentation templates and how to utilize user elements and styling options in Presentation Designer.
-
-- **[Presentation Designer limitations](../presentation_designer/limitations.md)**<br>
+- **[Presentation Designer limitations](../presentation_designer/limitations.md)**  
 This section lists the current limitations when using Presentation Designer.
 
 ## HCLSoftware U learning materials

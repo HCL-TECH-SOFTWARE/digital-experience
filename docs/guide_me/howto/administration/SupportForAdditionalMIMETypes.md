@@ -14,7 +14,7 @@ To add support for additional MIME types, refer to the following options:
 
 ### Image files
 
-For image files such as JPEG 2000 (JP2), JPEG XR (JXR), Scalable Vector Graphics (SVG), and Web Picture (WEBP), refer to [How to enable support for additional image formats in HCL Web Content Manager](../configuration/EnableImageFormats.md){target="_blank"}.
+For image files such as JPEG 2000 (JP2), JPEG XR (JXR), Scalable Vector Graphics (SVG), and Web Picture (WEBP), refer to [How to enable support for additional image formats in HCL Web Content Manager](../configuration/EnableImageFormats.md).
 
 ### Microsoft Office files
 
@@ -40,7 +40,7 @@ Depending on the use case, you may need to set `imageresourcecmpnt.allowedmimety
 1. In the WAS admin console, navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
 2. Click **New...**.
 3. Under **Name**, enter `imageresourcecmpnt.allowedmimetypes`
-4. Under **Value**, enter the value of the MIME type you want to allow. For example, `image/gif,image/jpeg` allows GIF and JPEG MIME types. For more information, refer to [Defining valid mime types for the image element](../../../manage_content/wcm_configuration//cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}.
+4. Under **Value**, enter the value of the MIME type you want to allow. For example, `image/gif,image/jpeg` allows GIF and JPEG MIME types. For more information, refer to [Defining valid mime types for the image element](../../../manage_content/wcm_configuration//cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element).
 
     !!!note
         The same values can be used when setting the property name `mimetype.list`.
@@ -60,7 +60,7 @@ Additionally, verify all mimetype settings in all the files that belong to the f
 
 For more information, refer to the following articles:
 
-- [Web content authoring options - Defining valid mime types for the image element](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element){target="_blank"}
+- [Web content authoring options - Defining valid mime types for the image element](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-valid-mime-types-for-the-image-element)
 - [PI63742: ADD JAVASCRIPT MIMETYPE EXTENSION TYPE FOR RESOURCES WITHIN WCM](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0061304){target="_blank"}
 - [How to be able to use SVG formatted files in HCL Web Content Manager](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0078940){target="_blank"}.
 

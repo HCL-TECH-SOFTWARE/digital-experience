@@ -12,6 +12,8 @@ Learn how to change the display language in your HCL DX log files without modify
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.  
+- **[How to install and configure Ingress with virtual portals](./ConfigureIngressWithVPs.md)**  
+Learn how to install the Ingress controller, update Helm deployment configurations, and create Ingress resource rules for virtual portals.
 - **[How to integrate HCL DX with LDAP](./IntegrateLDAP.md)**  
 Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LDAP).  
 - **[How to modify the response header with `ForceType` when using HCL DX with the IBM HTTP server](./responseHeaderForceType.md)**  
