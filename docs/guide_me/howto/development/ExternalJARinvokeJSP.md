@@ -10,6 +10,9 @@ The following example shows the steps to create an external application JAR that
 
 ## Instructions
 
+???+ info "DISCLAIMER OF WARRANTIES"
+    The following code is provided "AS IS" without warranty of any kind, either expressed or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of the code is with you. Should the code prove defective, you assume the cost of all necessary servicing, repair or correction.
+
 1. Create a new Java Project in Rational Application Developer (RAD):
 
     * Create a new package named `simplesystemout`.
@@ -43,11 +46,9 @@ The following example shows the steps to create an external application JAR that
 4. Copy `JDRPrint.jsp` to `wcm.ear/ilwwcm.war/jsp/html`.
 
 5. Render `JDRPrint.jsp` using the direct URL:
-    ```text
+
+    ```URL
     http://host:port/wps/wcm/jsp/html/JDRPrint.jsp
     ```
 
-6. Verify the output entry in `SystemOut.log`.
-
-???+ info "DISCLAIMER OF WARRANTIES"
-    The following code is provided "AS IS" without warranty of any kind, either expressed or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of the code is with you. Should the code prove defective, you assume the cost of all necessary servicing, repair or correction.
+6. Verify the output entry in `SystemOut.log`.  
