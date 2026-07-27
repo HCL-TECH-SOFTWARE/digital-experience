@@ -24,9 +24,7 @@ Learn how to determine the virtual portal (VP) name associated an ObjectID (OID)
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
+- **[How to reset the Web Content Viewer portlet to its default state](./ResetWCMViewerPortlet.md)**  
+Learn how to reset the Web Content Viewer portlet to clear corrupted preference keys and restore default configuration settings.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.  
-- **[How to determine if WebSphere Application Server is Traditional or Liberty](./DetermineWebsphereAppServer.md)**  
-Learn how to differentiate between WebSphere Traditional Server and WebSphere Liberty Server.
-- **[How to reset the Web Content Viewer portlet to default state](./ResetWCMViewerPortlet.md)**  
-Learn how to reset the Web Content Viewer portlet.

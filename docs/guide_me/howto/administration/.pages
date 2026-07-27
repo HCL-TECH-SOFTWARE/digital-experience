@@ -12,6 +12,5 @@ nav:
     - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
-    - UseJavaScriptToReplaceText.md
     - ResetWCMViewerPortlet.md
- 
+    - UseJavaScriptToReplaceText.md

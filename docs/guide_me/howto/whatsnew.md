@@ -15,6 +15,11 @@ This section contains the newly created and migrated how-to articles. The articl
 ||||
 
 -->
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to reset the Web Content Viewer portlet to its default state](./administration/ResetWCMViewerPortlet.md)|
 
 ## CF236
 
