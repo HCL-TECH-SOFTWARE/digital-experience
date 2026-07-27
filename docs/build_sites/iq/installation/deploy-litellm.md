@@ -46,11 +46,27 @@ Before deploying LiteLLM in-cluster, ensure:
 
 - Your DX Kubernetes cluster is running and accessible
 - A valid DX namespace exists (e.g., `dxns`)
-- An external PostgreSQL database is available (or RDS instance in AWS) for LiteLLM session storage
-- Database credentials are available (username, password, endpoint, port, database name)
 - Valid credentials/API keys for your LLM provider (AWS Bedrock, OpenAI, etc.)
 - `kubectl` is configured to access your cluster
-- A Helm values file prepared for LiteLLM configuration
+
+**Optional prerequisites** (only if using external database for persistence):
+- An external PostgreSQL database is available (or RDS instance in AWS)
+- Database credentials are available (username, password, endpoint, port, database name)
+
+## LiteLLM Image Variants
+
+LiteLLM provides two Docker image variants. Choose based on your deployment mode:
+
+| Image Variant | Repository | Deployment Mode | Use Case |
+|---|---|---|---|
+| **Standard** | `ghcr.io/berriai/litellm` | Stateless (no database) | Development, testing, quick-start deployments |
+| **Database** | `ghcr.io/berriai/litellm-database` | With external PostgreSQL | Production, requires persistence |
+
+**Key Differences:**
+- **Standard**: Lightweight, fast startup, model configs stored in memory only. Configs reset on pod restart.
+- **Database**: Requires PostgreSQL and Prisma, but persists model configurations and user keys across pod restarts.
+
+Choose **Standard** for quick-start deployments. Choose **Database** for production environments requiring persistent configuration storage.
 
 !!! tip "Capacity Planning"
     Before deploying LiteLLM, verify that your Kubernetes nodes have sufficient unallocated resources to schedule the pod. By default, LiteLLM requests **100m CPU** and **512Mi Memory**. You can check your available node capacity by running `kubectl describe nodes` and reviewing the **Allocated resources** section. If your nodes are near capacity, you may need to provision additional nodes or use a larger instance type.
@@ -62,24 +78,33 @@ helm repo add litellm https://ghcr.io/berriai/litellm-helm
 helm repo update
 ```
 
-### Step 2: Create Kubernetes Secrets
+### Step 2: Decide on Deployment Mode
+
+Choose one of two deployment approaches:
+
+**Quick Start (No Database)** — Recommended for development and testing
+- LiteLLM stateless mode, no persistence
+- Simpler configuration, faster startup
+- Model list stored in memory (reset on pod restart)
+- Proceed to **Step 3: Create Kubernetes Secrets**
+
+**Production (With Database)** — Recommended for production deployments
+- LiteLLM with external PostgreSQL for persistence
+- Model configurations persist across pod restarts
+- More complex setup, requires database provisioning
+- Proceed to **Step 3: Create Kubernetes Secrets** + **Step 3.5: Validate Database Connectivity**
+
+### Step 3: Create Kubernetes Secrets
 
 Store sensitive credentials as Kubernetes secrets in your DX namespace:
 
-**Database credentials secret:**
-
-```bash
-kubectl create secret generic litellm-db-credentials \
-  --from-literal=username=<DB_USERNAME> \
-  --from-literal=password=<DB_PASSWORD> \
-  -n dxns
-```
+**For Both Quick Start and Production:**
 
 **LiteLLM master key secret:**
 
 ```bash
 kubectl create secret generic litellm-masterkey \
-  --from-literal=LITELLM_MASTER_KEY=<GENERATED_RANDOM_KEY> \
+  --from-literal=PROXY_MASTER_KEY=<GENERATED_RANDOM_KEY> \
   -n dxns
 ```
 
@@ -91,8 +116,9 @@ openssl rand -base64 32
 **LLM provider credentials secret (AWS Bedrock example):**
 
 ```bash
-kubectl create secret generic litellm-bedrock-credentials \
+kubectl create secret generic litellm-env \
   --from-literal=AWS_BEARER_TOKEN_BEDROCK=<YOUR_AWS_BEARER_TOKEN> \
+  --from-literal=PROXY_MASTER_KEY=<GENERATED_RANDOM_KEY> \
   -n dxns
 ```
 
@@ -100,17 +126,35 @@ For other providers (OpenAI, Anthropic, etc.), adapt accordingly:
 
 ```bash
 # OpenAI example
-kubectl create secret generic litellm-openai-credentials \
+kubectl create secret generic litellm-env \
   --from-literal=OPENAI_API_KEY=<YOUR_OPENAI_KEY> \
+  --from-literal=PROXY_MASTER_KEY=<GENERATED_RANDOM_KEY> \
   -n dxns
 
 # Anthropic example
-kubectl create secret generic litellm-anthropic-credentials \
+kubectl create secret generic litellm-env \
   --from-literal=ANTHROPIC_API_KEY=<YOUR_ANTHROPIC_KEY> \
+  --from-literal=PROXY_MASTER_KEY=<GENERATED_RANDOM_KEY> \
   -n dxns
 ```
 
-### Step 3: Validate Database Connectivity
+!!! tip "Consolidated Secrets"
+    For simplicity, combine all environment variables (provider credentials and master key) into a single `litellm-env` secret as shown above. This reduces the number of secrets to manage.
+
+---
+
+**For Production Only (With Database):**
+
+If using a production deployment with database persistence, also create the database credentials secret:
+
+```bash
+kubectl create secret generic litellm-db-credentials \
+  --from-literal=username=<DB_USERNAME> \
+  --from-literal=password=<DB_PASSWORD> \
+  -n dxns
+```
+
+### Step 3.5: (Production Only) Validate Database Connectivity
 
 Before proceeding, verify that your database is accessible from the Kubernetes cluster. This prevents `CrashLoopBackOff` errors due to misconfigured credentials.
 
@@ -131,19 +175,72 @@ Expected output: `1` (if the connection is successful)
 
 ### Step 4: Create the Helm Values File
 
-Create a file named `litellm-values.yaml` with the configuration below. Customize the placeholder values:
+#### Quick Start Configuration (No Database)
+
+For development and testing, use this minimal stateless configuration:
 
 ```yaml
+replicaCount: 1
+
 image:
-  repository: ghcr.io/berriai/litellm-database
-  pullPolicy: Always
+  repository: ghcr.io/berriai/litellm
+  pullPolicy: IfNotPresent
   tag: "main-latest"
+
+masterkeySecretName: litellm-masterkey
+masterkeySecretKey: PROXY_MASTER_KEY
+
+environmentSecrets:
+  - litellm-env
+
+db:
+  deployStandalone: false
+  useExisting: false
+
+migrationJob:
+  enabled: false
+
+proxy_config:
+  model_list:
+    - model_name: iq-general-purpose
+      litellm_params:
+        model: "bedrock/us.anthropic.claude-sonnet-4-6-20250514-v1:0"
+        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+    
+    - model_name: iq-summary
+      litellm_params:
+        model: "bedrock/us.anthropic.claude-haiku-4-5-20251001-v1:0"
+        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+
+  litellm_settings:
+    json_logs: true  # Structured JSON logging for easier log parsing
+    drop_params: true  # Critical: Prevents unsupported parameters from being forwarded to the LLM provider
+  
+  general_settings:
+    master_key: os.environ/PROXY_MASTER_KEY
+
+logLevel: INFO
 ```
 
-!!! warning "Use Specific Version in Production"
-    The `main-latest` tag with `pullPolicy: Always` means the image can change unpredictably between pod restarts. For production deployments, specify a pinned version tag (e.g., `1.45.0`) to ensure consistent, reproducible deployments. Refer to [LiteLLM releases](https://github.com/BerriAI/litellm/releases){target="_blank"} for available versions.
+!!! note "For OpenAI or Other Providers"
+    Replace the `model` and `api_key` values in `proxy_config.model_list` with your provider's configuration. Refer to [LiteLLM Proxy Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax.
+
+!!! warning "Model Compatibility"
+    Do not use OpenAI reasoning model variants (`gpt-5.4`, `gpt-5.5`, `gpt-5.6-sol`, etc.) with IQ. The base models `gpt-5` and `gpt-5-mini` may work. We recommend AWS Bedrock Claude models for production. See [IQ limitations](../limitations.md#ai-model) for details.
+
+---
+
+#### Production Configuration (With Database)
+
+For production deployments with persistence, use the following configuration:
 
 ```yaml
+replicaCount: 1
+
+image:
+  repository: ghcr.io/berriai/litellm-database
+  pullPolicy: IfNotPresent
+  tag: "1.45.0"  # Use specific version in production
 
 # Security context - LiteLLM requires root for Prisma binary download
 securityContext:
@@ -162,14 +259,16 @@ db:
     usernameKey: username
     passwordKey: password
 
+migrationJob:
+  enabled: true  # Enable for database migrations on first deployment
+
 # Master key for API authentication
 masterkeySecretName: litellm-masterkey
-masterkeySecretKey: LITELLM_MASTER_KEY
+masterkeySecretKey: PROXY_MASTER_KEY
 
 # Inject secrets as environment variables for model access
 environmentSecrets:
-  - litellm-masterkey
-  - litellm-bedrock-credentials  # Or substitute with your provider
+  - litellm-env
 
 # Pod annotations for Prometheus monitoring (if using Prometheus)
 podAnnotations:
@@ -195,16 +294,14 @@ proxy_config:
   litellm_settings:
     callbacks:
       - prometheus  # Enable Prometheus metrics
+    json_logs: true  # Structured JSON logging for easier log parsing
     drop_params: true  # Critical: Prevents unsupported parameters from being forwarded to the LLM provider
   
   general_settings:
-    master_key: os.environ/LITELLM_MASTER_KEY
-```
+    master_key: os.environ/PROXY_MASTER_KEY
 
-!!! important "Understanding `drop_params: true`"
-    This setting is critical for IQ deployments. When `drop_params: true`, LiteLLM automatically discards any parameters that a specific LLM provider does not support. Without this setting, unsupported parameters passed by IQ would cause API errors and fail requests. This ensures compatibility across different LLM providers (AWS Bedrock, OpenAI, Anthropic, etc.) by gracefully handling parameter mismatches.
+logLevel: INFO
 
-```yaml
 # Ingress configuration - Expose LiteLLM within cluster
 ingress:
   enabled: true
@@ -227,9 +324,6 @@ resources:
   limits:
     cpu: "1000m"
     memory: "2Gi"
-
-# Number of LiteLLM replicas
-replicaCount: 1
 
 # Health probe configuration
 livenessProbe:
@@ -266,8 +360,8 @@ envVars:
   STORE_MODEL_IN_DB: true
 ```
 
-!!! note "Model Configuration"
-    The example above uses **AWS Bedrock** as the LLM provider. If using a different provider (OpenAI, Anthropic, etc.), adjust the `model` names and `api_key` references accordingly. Refer to [LiteLLM Proxy Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for provider-specific syntax.
+!!! important "Understanding `drop_params: true`"
+    This setting is critical for IQ deployments. When `drop_params: true`, LiteLLM automatically discards any parameters that a specific LLM provider does not support. Without this setting, unsupported parameters passed by IQ would cause API errors and fail requests. This ensures compatibility across different LLM providers (AWS Bedrock, OpenAI, Anthropic, etc.) by gracefully handling parameter mismatches.
 
 ### Step 4.5: (Optional) Validate Helm Configuration
 

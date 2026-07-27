@@ -46,6 +46,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
+- **OpenAI reasoning model variants are not supported.** IQ is incompatible with OpenAI's reasoning model variants (GPT-5.x decimal-versioned models like `gpt-5.4`, `gpt-5.5`, `gpt-5.6-sol`). These automatically inject `reasoning_effort`, which conflicts with IQ's function tools, resulting in: `Function tools with reasoning_effort are not supported`. The base models `gpt-5` and `gpt-5-mini` may work. **We recommend AWS Bedrock Claude models** (Sonnet, Haiku) for production deployments. See [Deploying LiteLLM](../installation/deploy-litellm.md) for configuration details.
 
 ### Database
 
