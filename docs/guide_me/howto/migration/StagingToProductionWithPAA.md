@@ -25,4 +25,4 @@ This article provides a comprehensive guide to the staging-to-production process
 ## Instructions
 
 To configure and perform a staging to production using PAA, refer to
-[A Step-By-Step Guide to performing staging to production using Portal Application Archive in HCL Portal 8.5](./files/StagingToProductionWithPAA/Portal_8.5_Staging_to_Production_with_PAA_v2.0.pdf){target="_blank"}.
+[A Step-By-Step Guide to performing staging to production using Portal Application Archive in HCL Portal 8.5](./files/StagingToProductionWithPAA/Portal_8.5_Staging_to_Production_with_PAA_v2.0.pdf).
