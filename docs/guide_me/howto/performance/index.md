@@ -11,4 +11,4 @@ Learn how to tune Web Content Manager (WCM) to reduce your query time.
 - **[How to warm up your Portal site](./WarmUpPortalSite.md)**  
 Learn how to improve DX performance by warming up your site at startup.  
 - **[How to analyze JCR and XPath query performance](./AnalyzingJCRQueryPerformanceXPath.md)**  
-Learn how to analyze JCR and XPath query performance.  
+Learn how to enable query tracing, locate SQL execution metrics in trace logs, and debug valid XPath queries that return unexpected results.

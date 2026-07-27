@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
+
 ## CF236
 
 | Type | Category | Article |
