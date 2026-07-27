@@ -6,17 +6,17 @@
 
 ## Introduction
 
-After creating a Portal Search Collection, you may notice that pages containing the Web Content Viewer portlet are excluded from the search index. By default, the Web Content Viewer portlet is configured to be excluded from the Portal Seedlist. 
+After creating a Portal Search Collection, you may notice that pages containing the Web Content Viewer portlet are excluded from the search index. By default, the Web Content Viewer portlet is configured to be excluded from the Portal Seedlist.  
 
 Follow the procedure below to modify this behavior and include these pages in search results.
 
 ## Instructions
 
-1. Log in to WebSphere Portal and navigate to the Administration interface.
+1. Log in to Portal and navigate to the **Administration** page.
 
-2. Go to Portlet Management > Portlets.
+2. On the Administration page expand in the **menu Applications** and click to **Portlets**.
 
-3. Search for "Web Content Viewer" using the search bar.
+3. Search for **Web Content Viewer** using the search bar.
 
 4. Click the Configure Portlet icon (wrench button) for the Web Content Viewer portlet.
 
@@ -24,4 +24,4 @@ Follow the procedure below to modify this behavior and include these pages in se
 
 6. Click the edit action for `INCLUDE_IN_SEARCH_INDEX` and set its value to `true`.
 
-7. Save your changes, re-crawl/regather the search collection documents, and verify the pages appear in search results.
+7. Save your changes, re-crawl/regather the search collection documents, and verify the pages appear in search results.  
