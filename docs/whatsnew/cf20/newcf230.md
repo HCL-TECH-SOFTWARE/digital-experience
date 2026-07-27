@@ -56,13 +56,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
 
     - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+    - [Practitioner Studio](../../build_sites/practitioner_studio/index.md#practitioner-studio)
 
 === "On-Premises"
     The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
 
     - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+    - [Practitioner Studio](../../build_sites/practitioner_studio/index.md#practitioner-studio)
 
 ### My HCLSoftware delivery portal
 

@@ -50,7 +50,7 @@ This table provides information about the Kubernetes versions that are tested an
 
 |CF Level|Kubernetes versions|
 |--------|-------------------|
-|CF236| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
+|CF236| Kubernetes 1.36<br/>Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF235| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 |CF234| Kubernetes 1.35<br/>Kubernetes 1.34<br/>Kubernetes 1.33<br/>Kubernetes 1.32<br/>Kubernetes 1.31<br/>Kubernetes 1.30<br/>Kubernetes 1.29<br/>Kubernetes 1.28<br/>Kubernetes 1.27<br/>Kubernetes 1.26<br/>|
 
@@ -69,7 +69,7 @@ This table provides information about the WebSphere Application Server (WAS), Ja
 
 |CF Level|WAS|JDK|UBI|iFix|
 |--------|---|---|---|----|
-|CF236|9.0.5.27|8.0.8.60|Core and Remote Search: 8.10-1776104706 <br/> Other Images: 9.7-1776104705|N/A|
+|CF236|9.0.5.27|8.0.8.60|Core and Remote Search: 8.10-1776104706 <br/> Other Images: 9.7-1776104705|iFix PH71422<br/>iFix PH71453<br/> iFix PH71453|
 |CF235|9.0.5.27|8.0.8.60||N/A|
 |CF234|9.0.5.26|8.0.8.55||iFix PH68243<br/>iFix PH68418|
 |CF233|9.0.5.26|8.0.8.55||iFix PH68243<br/>iFix PH68418|

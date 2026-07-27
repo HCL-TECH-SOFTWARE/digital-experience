@@ -28,33 +28,9 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 ## Preparing certificates for inter-service communication
 
-Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this secure communication, these certificates must be generated and stored in Kubernetes secrets. You can complete this setup using one of two methods:
+Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
 
-- **Automated generation:** The system automatically creates the certificates and Kubernetes secrets during deployment based on a property in your configuration file. This method is recommended for testing and development.
-- **Manual generation:** You manually generate the certificates using OpenSSL and create the Kubernetes secrets before deploying.
-
-**Method 1: Automated generation (CF236 and later)**
-
-Starting with CF236, you can automatically generate the self-signed certificates and Kubernetes secrets required to secure communication between OpenSearch nodes and the search middleware during the deployment phase.
-
-To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format.
-
-For example:
-
-```yaml
-configuration:
-  opensearch:
-    security:
-      rootCASubjectDN: '/C=DE/O=ORGANIZATION/OU=ORGANIZATION_UNIT'
-```
-
-If you use this method, proceed directly to the [Preparing the `custom-search-values.yaml`](#preparing-the-custom-search-valuesyaml) section.
-
-**Method 2: Manual certificate generation**
-
-If you leave the `rootCASubjectDN` property empty, or if you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), you must manually create the certificates and secrets by following the steps below.
-
-If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using in-house CA or PKI for Search V2 Certificates](./optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -70,7 +46,7 @@ Only the admin certificate DN must be customized in your Helm chart. The node an
 
 ### Generating certificates
 
-The examples below show how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
+The following examples describe how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
 
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 

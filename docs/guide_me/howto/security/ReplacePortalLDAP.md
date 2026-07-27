@@ -21,4 +21,4 @@ This article provides a step-by-step approach to replacing an LDAP server config
 9. Run the `member-fixer` task with `treatAllUsersAsMissing`.
 
 ???+ info "Related information"
-    - [Step-by-Step Guide: How to Replace Your HCL Portal's LDAP](./files/ReplacePortalLDAP/How_To_Change_Portal_LDAP_v1.pdf){target="_blank"}
+    - [Step-by-Step Guide: How to Replace Your HCL Portal's LDAP](./files/ReplacePortalLDAP/How_To_Change_Portal_LDAP_v1.pdf)

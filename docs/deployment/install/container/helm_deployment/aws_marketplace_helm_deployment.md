@@ -12,7 +12,7 @@ The latest DX 9.5 container images and Helm charts available for HCL DX 9.5 is a
 
 ### Configuring TLS certificate
 
-The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to [Use certificate](./preparation/mandatory_tasks/prepare_configure_networking.md#use-certificate) for more information.
+The default setting for HAProxy is SSL enabled. Make sure that the secret containing the certificate is correctly created within the cluster. Refer to [Using certificate](./preparation/mandatory_tasks/prepare_configure_networking.md#using-a-certificate) for more information.
 
 ### Configuring volumes
 

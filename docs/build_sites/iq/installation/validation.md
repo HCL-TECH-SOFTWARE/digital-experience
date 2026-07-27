@@ -58,7 +58,7 @@ Expected output (SQLite fallback):
 Using database: In-memory SQLite
 ```
 
-If the initial command returns errors such as `Connection refused` or `Password authentication failed`, the IQ Integrator cannot reach the database. For steps on troubleshooting database connection issues, refer to [Troubleshooting connection failures](./troubleshooting.md#troubleshooting-connection-failures).
+If the initial command returns errors such as `Connection refused` or `Password authentication failed`, the IQ Integrator cannot reach the database. For steps on troubleshooting database connection issues, refer to [Troubleshooting - Connection failures](../troubleshooting.md#connection-failures).
 
 ## Testing WebSocket connectivity
 
@@ -72,9 +72,9 @@ Verify that the client can establish a WebSocket connection to the IQ backend:
 
 2. Open your DX environment in a browser and navigate to a page with the IQ chatbot integration. The chatbot should be visible and interactive. For detailed instructions on accessing your DX environment and configuring IQ UI components, refer to [Accessing the DX environment](../access.md).
 
-## Verifying MCP server integration
+## Verifying MCP Server integration
 
-Check the Model Context Protocol (MCP) server logs to confirm tool registration status:
+Check the Model Context Protocol (MCP) Server logs to confirm tool registration status:
 
 ```bash
 kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server | grep -i "Registering\|disabled"
@@ -131,4 +131,4 @@ If tools are unexpectedly disabled, verify that `mcpServer.enableWcm` and `mcpSe
 
 ???+ info "Related information"
     - [Accessing IQ](../access.md)
-    - [Troubleshooting](troubleshooting.md)
+    - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)

@@ -1,6 +1,6 @@
-# Deploying services
+# Deploying IQ services
 
-This section provides step-by-step instructions for deploying the IQ backend servers, IQ Integrator and IQ Model Context Protocol (MCP) Server, alongside an existing container-based HCL Digital Experience (DX) deployment.
+This section provides step-by-step instructions for deploying the IQ backend servers, IQ Integrator and IQ Model Context Protocol (MCP) Server, alongside an existing container-based HCL Digital Experience (DX) deployment. For a complete overview of IQ capabilities, architecture, and concepts, refer to the [IQ documentation](../../../../../../build_sites/iq/index.md).
 
 !!! note "Database and license configuration are optional"
     This procedure deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured.
@@ -30,6 +30,9 @@ The IQ MCP Server provides tool execution capabilities for your Web Content Mana
 ## Deploying the IQ backend components
 
 Deploy the IQ backend services by pulling the required images and charts, defining your environment configuration, and executing the Helm installation.
+
+!!! tip "IQ environment variables"
+    For a complete list of all configurable environment variables, their types, defaults, and acceptable values, refer to [IQ environment variables](../../../../../../build_sites/iq/installation/environment-variables.md).
 
 ### Locating the latest Helm chart and images
 
@@ -88,6 +91,16 @@ configuration:
   # LiteLLM Proxy configuration
   litellm:
     liteLlmUrl: "<LITELLM_URL>"
+
+# CRITICAL: MCP Server list configuration
+# Must match your Helm release name. Default points to 'dx-ai' release.
+# If your release name is different (for example, 'dx-iq'), update accordingly.
+# Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
+environment:
+  pod:
+    integrator:
+      - name: "MCP_SERVER_LIST"
+        value: "http://<IQ_RELEASE_NAME>-mcp-server:3000"
 ```
 
 - `<YOUR_ARTIFACTORY>`: The container image registry (for example, `myregistry.example.com`).
@@ -97,6 +110,7 @@ configuration:
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (for example, `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: The external DX hostname used by the LLM for gathering context (for example, `dx.example.com`)
 - `<LITELLM_URL>`: The LiteLLM Proxy URL (for example, `https://litellm.example.com`) for operational deployments.
+- `<IQ_RELEASE_NAME>`: The Helm release name used to install the IQ chart. Ensure this value matches your deployment's release name. For example, if you installed the chart using `helm install dx-iq`, set this value to `dx-iq-mcp-server`. The `defaults.json` file uses `dx-ai-mcp-server` by default, so you must override this value during installation.
 
 !!! note "DX service discovery"
     Ensure the `internalHost` value matches your DX deployment type:
@@ -117,17 +131,23 @@ helm install dx-iq \
   --values custom-iq-values.yaml \
   --set-json 'environment.pod.integrator=[
   {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+  {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
+  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+  {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
 ]'
 ```
+
+!!! warning "Release name must match MCP_SERVER_LIST"
+    The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values will cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
 
 - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
 - `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
 - `<LITELLM_API_KEY>`: The LiteLLM API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
+- `<LITELLM_URL>`: The LiteLLM proxy URL provided by the LiteLLM proxy administrator to enable Integrator functionality.
 - `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
-!!! warning "LITELLM_API_KEY and LITELLM_URL are Required"
+!!! warning "LITELLM_API_KEY and LITELLM_URL are required"
     Although the helm install command completes successfully without these values, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
 
     - For production deployments, provide both `LITELLM_API_KEY` and `LITELLM_URL` during the initial installation.
@@ -150,7 +170,8 @@ helm install dx-iq \
   --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
   --set-json 'environment.pod.integrator=[
     {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"}
+    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+    {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
   ]'
 ```
 
@@ -184,6 +205,8 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-integrator
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server
     ```
+
+    To resolve Integrator pod startup issues, refer to [Troubleshooting - Backend services](../../../../../../build_sites/iq/troubleshooting.md#backend-services).
 
 ## Upgrading and maintaining the IQ backend components
 
@@ -238,4 +261,6 @@ To remove the IQ backend server and verify the component cleanup, complete the f
     ```
 
 ???+ info "Related information"
-    - [Preparing the database](prepare-database.md)
+    - [IQ environment variables](../../../../../../build_sites/iq/installation/environment-variables.md)
+    - [Preparing the database](../../../../../../build_sites/iq/installation/prepare-database.md)
+    - [Troubleshooting - Backend services](../../../../../../build_sites/iq/troubleshooting.md#backend-services)

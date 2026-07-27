@@ -11,7 +11,7 @@ TinyMCE is a what-you-see-is-what-you-get (WYSIWYG) editor that you can use with
 ## Instructions
 
 !!! important
-    The Textbox.io component in HCL DX is deprecated as of January 31, 2023, and reached end of support (EOS) on January 31, 2024. Starting with CF208, you can use the TinyMCE editor as the embedded rich text editor. For more information, see [Deprecated features](../../../whatsnew/deprecated_features.md){target="_blank"}.  
+    The Textbox.io component in HCL DX is deprecated as of January 31, 2023, and reached end of support (EOS) on January 31, 2024. Starting with CF208, you can use the TinyMCE editor as the embedded rich text editor. For more information, see [Deprecated features](../../../whatsnew/deprecated_features.md).  
 
 ### Enabling TinyMCE
 
@@ -81,5 +81,5 @@ Access HCL Web Content Manager (WCM), create or edit an HTML or rich text elemen
     Several TinyMCE defects have been fixed in the latest CF versions. For more information, see the [Fixes integrated in HCL Digital Experience 8.5.0.0, 9.0, and 9.5 Combined Cumulative Fixes](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0013939){target="_blank"} knowledge base article.
 
 ???+ info "Related information"
-    - [Enhanced rich text editor configuration options](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md){target="_blank"}
-    - [Editor options](../../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md){target="_blank"}
+    - [Enhanced rich text editor configuration options](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_ephox_custom.md)
+    - [Editor options](../../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md)

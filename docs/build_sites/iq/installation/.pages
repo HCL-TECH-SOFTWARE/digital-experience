@@ -1,9 +1,9 @@
 title: Installing IQ
 nav:
     - index.md
-    - deploy-services.md
+    - configuring-mcp.md
     - prepare-database.md
+    - prepare-litellm-access.md
+    - environment-variables.md
     - validation.md
-    - troubleshooting.md
     - backup-restore.md
-    - limitations.md

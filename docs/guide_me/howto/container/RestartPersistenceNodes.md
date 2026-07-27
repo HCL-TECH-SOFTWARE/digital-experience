@@ -15,7 +15,7 @@ When performing infrastructure maintenance on containerized environments, improp
 
 Perform the following steps to migrate workloads and safely restart your target infrastructure nodes:
 
-1. Before making any infrastructure or scaling modifications, ensure you have a verified, complete backup of your data assets. For detailed instructions, refer to [Back up and restore DAM](../../../manage_content/digital_assets/dam_backup_restore_image.md){target="_blank"}.
+1. Before making any infrastructure or scaling modifications, ensure you have a verified, complete backup of your data assets. For detailed instructions, refer to [Back up and restore DAM](../../../manage_content/digital_assets/dam_backup_restore_image.md).
 
 2. Locate a worker node that will not undergo maintenance during this window. Retrieve its unique hostname by executing the appropriate command for your platform:
 
@@ -45,7 +45,7 @@ Perform the following steps to migrate workloads and safely restart your target 
         persistenceNode: 1
     ```
 
-4. Run a [**Helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md){target="_blank"} to apply the updated replica counts to your deployment.
+4. Run a [**Helm upgrade**](..//../../deployment/install/container/helm_deployment/update_helm_deployment.md) to apply the updated replica counts to your deployment.
 
 5. Edit your custom values file again to append a `nodeSelector` configuration. Use the unique hostname retrieved in Step 2 to force the pods to schedule onto the stable node:
 

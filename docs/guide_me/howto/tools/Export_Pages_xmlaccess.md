@@ -78,9 +78,9 @@ You can use XML Access to export pages. Sample XML configuration files are locat
 7. Verify the imported pages in the Manage Pages portlet to confirm the result. If you prefer export a page hierarchy, use the `ExportSubTree.xml` sample for exporting subtree of the content hierarchy. This script exports the page customizer place with all contained pages.
 
 ???+ info "Related information"
-    - [Exporting and transferring parts of a portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/adxmltsk_xfer_partl_cfg.md){target="_blank"}  
-    - [Sample XML configuration files](../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md){target="_blank"}  
+    - [Exporting and transferring parts of a portal configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/adxmltsk_xfer_partl_cfg.md)
+    - [Sample XML configuration files](../../../deployment/manage/portal_admin_tools/xml_config_interface/xml_config_ref/admxmsmp.md)
     - [What are the recommended ways to move a Portal environment to a different/updated OS?](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0077427){target="_blank"}  
-    - [Transferring a complete configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/adxmltsk_xfer_compl_cfg.md){target="_blank"}  
+    - [Transferring a complete configuration](../../../deployment/manage/portal_admin_tools/xml_config_interface/working_xml_config_interface/using_xml_config_cmd_line/transfer_portal_cfg_using_xml_config_int/adxmltsk_xfer_compl_cfg.md)
     - [Using ReleaseBuilder effectively](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012741){target="_blank"}  
-    [How to generate a complete XMLAccess export of a Portal configuration](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012516){target="_blank"}
+    - [How to generate a complete XMLAccess export of a Portal configuration](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0012516){target="_blank"}
