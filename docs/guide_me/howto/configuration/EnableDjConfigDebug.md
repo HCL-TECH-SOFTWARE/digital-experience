@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article provides information on what code you need to add to your JavaScript in order to write debug statements to the browser console.
+This documentation provides information on what code you need to add to your JavaScript in order to write debug statements to the browser console.
 
 ## Instructions
 
