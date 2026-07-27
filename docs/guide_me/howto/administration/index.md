@@ -16,6 +16,8 @@ Learn how to clear WebSphere Dynacache caches using the sample JSP code.
 Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when accessing WCM resources.  
 - **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
 Learn about long Portal URLs and how to decode them.  
+- **[How to determine the HCL DX application server runtime](./DetermineWebsphereAppServer.md)**  
+Learn how to determine whether your DX environment runs on traditional WebSphere Application Server or IBM Open Liberty by inspecting server log files.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
 - **[How to find the virtual portal name by ObjectID](./DetermineVPObjectID.md)**  
@@ -25,6 +27,4 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.  
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page.    
-- **[How to determine the HCL DX application server runtime from the logs](./DetermineWebsphereAppServer.md)**  
-Learn how to determine the HCL DX application server runtime from the logs.  
+Learn how to use JavaScript to find and replace text on a Portal page.

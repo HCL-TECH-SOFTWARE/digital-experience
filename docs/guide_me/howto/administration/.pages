@@ -8,9 +8,9 @@ nav:
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
+    - DetermineWebsphereAppServer.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
-    - DetermineWebsphereAppServer.md
