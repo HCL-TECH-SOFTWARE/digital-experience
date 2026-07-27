@@ -72,8 +72,11 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
     ![Open view options](../../../../images/dam_collections_open_view_as.png)
 
     - **View as** - Lists options to view media assets or collections.
-        - **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
+        - **Grid** - Shows media assets in an equal-sized thumbnail view.
         - **List** - Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
+
+    !!! note
+        The initial collections view is configurable by users through the Helm value `incubator.configuration.digitalAssetManagement.defaultView` with supported values `grid` or `list`.
     - **Sort by** - Lists options to sort media assets or collections:
         - **Date**
         - **Name**
