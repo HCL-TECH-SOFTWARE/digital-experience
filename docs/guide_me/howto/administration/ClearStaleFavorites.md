@@ -6,7 +6,7 @@
 
 ## Introduction
 
-If you delete or move locations saved as favorites on the portal dashboard, the orphaned locations are retained. This article describes how to clear stale favorites from the portal dashboard.
+If you delete or move locations saved as favorites on the portal dashboard, the orphaned locations are retained. This document describes how to clear stale favorites from the portal dashboard.
 
 ## Instructions  
 
