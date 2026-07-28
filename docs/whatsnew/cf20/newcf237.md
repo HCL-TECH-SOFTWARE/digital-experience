@@ -16,8 +16,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Customizing HAProxy logs
-- Search V2 - Open-source Enchanted Web Components
 - Helm values updates
+- New parameters for `runtimeController` automatic service account token mounting
+- Search V2 - Open-source Enchanted Web Components
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -83,20 +84,32 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Customizing HAProxy logs
 
-The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
+=== "Containers"
+    The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
 
 ### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf237).
 
+### New parameters for `runtimeController` automatic service account token mounting
+
+=== "Containers"
+    Two new Helm parameters are now available to support cluster security policies that restrict automatic service account token mounting:
+
+    - The `automountServiceAccountToken` parameter allows explicit configuration of token mounting per component. If your environment prohibits token automounting, set this parameter to `false` to revoke token access. 
+    - The `configuration.runtimeController.projectedServiceAccountToken` parameter specifies settings for projected token volumes in `runtimeController`. If token automounting is disabled, set `enabled` to `true` to supply a projected token volume and maintain Kubernetes API access.
+
+    For configuration details and examples, refer to [Managing service account token automounting](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_automount_service_token.md).
+
 ### Search V2 - Open-source Enchanted Web Components
 
-Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
+=== "Containers"
+    Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
 
-- [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
-- [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
-- [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
+    - [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
+    - [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
+    - [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
 
 ### WAS, JDK, UBI, and iFix versions
 
