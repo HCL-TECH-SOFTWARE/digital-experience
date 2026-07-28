@@ -13,3 +13,4 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
+    - friendlyURLadmin.md

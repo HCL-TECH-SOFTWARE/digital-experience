@@ -22,8 +22,6 @@ Learn how to develop applications, portlets, JavaServer Pages (JSP), JS, Web App
 Learn how to do specific Digital Asset Management (DAM) tasks in your HCL DX environment.
 - **[Install](./install/index.md)**  
 Learn how to install HCL DX software and features.
-- **[Managed Pages](./managedpages/index.md)**  
-Learn how to configure pages in your HCL DX environment.
 - **[Migration](./migration/index.md)**  
 Learn how to migrate content in your HCL DX environment.
 - **[Performance](./performance/index.md)**  

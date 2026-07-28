@@ -11,7 +11,6 @@ nav:
   - Database: database
   - Development: development
   - Install: install
-  - Managed Pages: managedpages
   - Migration: migration
   - Performance: performance
   - Personalization: personalization
