@@ -72,7 +72,7 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
     ![Open view options](../../../../images/dam_collections_open_view_as.png)
 
     - **View as** - Lists options to view media assets or collections.
-        - **Grid** - Shows media assets in an equal-sized thumbnail view.
+        - **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
         - **List** - Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
 
     !!! note
