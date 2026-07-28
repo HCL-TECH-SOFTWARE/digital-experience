@@ -72,7 +72,7 @@ Use the **My Projects** widget to view and manage your projects.
 ![My Projects](../../assets/HCL_Practitioner_dashboard_My_Projects.png)
 
 - The widget displays the following details: **Projects title**, **Last Modified** and **Status**.
-- **Go to My Projects:** Select this link in the top-right corner to access the full Web Content Management interface for comprehensive project management.
+- **Go to My Projects:** Select this link in the top-right corner to access the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/) for comprehensive project management.
 
 !!! note
     - Users must have at least Editor level access for WCM REST Service under Virtual Resources to view and manage projects in this widget. For more information, see [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
