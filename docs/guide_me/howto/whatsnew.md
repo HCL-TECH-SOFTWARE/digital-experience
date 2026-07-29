@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to clear stale favorites from the portal dashboard](./administration/ClearStaleFavorites.md)|
 |Migrated|Administration|[How to determine the HCL DX application server runtime](./administration/DetermineWebsphereAppServer.md)|
 |Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
 |Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|

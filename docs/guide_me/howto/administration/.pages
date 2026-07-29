@@ -3,6 +3,7 @@ nav:
     - index.md
     - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
+    - ClearStaleFavorites.md
     - ClearOSGIandTempFiles.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
