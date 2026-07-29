@@ -3,4 +3,5 @@ nav:
     - index.md
     - DeleteDuplicateCheckSum.md
     - HelmChartValues.md
+    - RollbackCFinContainers.md
     - RestartPersistenceNodes.md
