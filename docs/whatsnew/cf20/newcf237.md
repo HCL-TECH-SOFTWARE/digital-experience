@@ -68,10 +68,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
-    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities: **My Projects** and **Tags & Keywords Manager**. For more information, refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
 
 === "On-Premises"
-    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities: **My Projects** and **Tags & Keywords Manager**. For more information, refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
