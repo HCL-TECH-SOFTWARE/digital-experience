@@ -2,11 +2,11 @@
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience 9.5 and higher
 
 ## Introduction
 
-This article provides details on how to determine the WCM default configuration values.
+This documentation provides details on how to determine the WCM default configuration values.
 
 ## Instructions
 
