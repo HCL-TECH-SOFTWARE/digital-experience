@@ -17,7 +17,7 @@ Using OCI commands requires an initial login before you can run the pull command
 1. Log in to the Helm registry by using the following command:
 
     ```bash
-    helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET> https://hclcr.io/
+    helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET> hclcr.io
     ```
 
 2. Run the following OCI-based pull command:

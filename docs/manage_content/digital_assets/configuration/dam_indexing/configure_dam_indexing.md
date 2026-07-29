@@ -6,9 +6,9 @@ This page contains instructions on how to add configurations of the OpenSearch m
 
 OpenSearch must be enabled.
 
-## Adding OpenSearch middleware configurations and enabling DAM Indexing
+## Adding OpenSearch middleware configurations
 
-Go to the `values.yaml` file and refer to the following sample Helm values to configure OpenSearch middleware and enable DAM Indexing:
+In your `values.yaml` file, configure OpenSearch middleware and enable DAM Indexing using the following sample Helm values:
 
 ```yaml
 configuration:
