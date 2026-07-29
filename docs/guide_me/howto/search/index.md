@@ -9,4 +9,6 @@ Learn how to configure an HTML input form to pass search queries to a search com
 - **[How to search for WCM documents within a specific date range](./SearchByDateTime.md)**  
 Learn how to search for Web Content Manager (WCM) content created within a specific time range using WCM search.
 - **[How to use DX Search and the DX Search Center](./DX_Search_and_Search_Center.md)**  
-Learn how to use DX Search and the DX Search Center to find documents used in HCL DX and configure WCM documents to be more easily searched using the search service.
+Learn how to use DX Search and the DX Search Center to find documents used in HCL DX and configure Web Content Management (WCM) documents to be more easily searched using the search service.
+- **[How to use REST API constraints for searches in content and authoring templates](./SearchConstraintAPI.md)**  
+Learn how to apply REST API search constraints and configure search scopes to filter content items and authoring templates while preventing duplicate search results.
