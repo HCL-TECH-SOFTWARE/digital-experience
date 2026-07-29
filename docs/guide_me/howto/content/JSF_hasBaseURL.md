@@ -1,4 +1,4 @@
-# How to work with JavaServer Faces (JSFs) portlets on HCL DX pages
+# How to work with JSFs portlets on HCL DX pages
 
 ## Applies to
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-JSF portlets in HCL Digital Experience (DX) that use AJAX tags (such as `<f:ajax>`) might experience issues where the server fails to handle requests correctly. For example, a button might render a result only once, ignoring subsequent clicks.
+JavaServer Faces (JSF) portlets in HCL Digital Experience (DX) that use AJAX tags (such as `<f:ajax>`) might experience issues where the server fails to handle requests correctly. For example, a button might render a result only once, ignoring subsequent clicks.
 
 This problem typically stems from resource caching in the JSF framework. To resolve this, use one of the following methods:
 
