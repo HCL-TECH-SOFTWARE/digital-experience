@@ -57,6 +57,10 @@ Use the **Monitor** section to track real-time content status and activity acros
 
 Each metric includes customizable time filters ranging from **Today** to **Within 365 days**.
 
+!!! note
+    - For **Expiring**, **Within 7 days** includes the current day and the next six days.
+    - For **Published** and **Drafts**, **Within 7 days** includes the current day and the previous six days.
+
 ## My Projects
 
 Use the **My Projects** widget to view and manage your projects.
