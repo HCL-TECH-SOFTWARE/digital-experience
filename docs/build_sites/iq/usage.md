@@ -6,8 +6,10 @@ This section provides a comprehensive guide on how to interact with IQ, manage a
 
 IQ is an assistant purpose-built for HCL DX that understands DX-specific concepts, APIs, and workflows, and can both answer questions and perform actions directly on your DX system.
 
-!!! note
-    The available actions depend on the MCP tools deployed in your environment. The standard IQ deployment includes a default set of tools, which are described in the [Performing actions](#performing-actions) section. For more information, refer to [AI model limitations](../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_dx_iq.md#ai-model-limitations). <!--Update in MCP doc-->
+The available actions depend on the MCP tools deployed in your environment and the access level of the logged-in user:
+
+- The standard IQ deployment includes a [default set of tools](#performing-actions). For more information, refer to [AI model limitations](limitations.md#ai-model).
+- Certain actions are only available for specific roles. For example, creating or updating items may be restricted to users with the Editor role, while listing items can typically be performed with the User role. For details on roles and permissions, refer to [Security roles](../../deployment/manage/security/people/authorization/controlling_access/resources_roles/sec_roles.md).
 
 ### Asking questions
 
@@ -27,8 +29,9 @@ Supported actions include:
 | **Content templates** | List, create, and delete content templates |
 | **Presentation templates** | Create and delete presentation templates |
 | **Pages** | List parent pages, create and delete pages |
-| **Projects** | Create, delete, and publish projects; add and remove items from projects |
+| **Projects** | Create, delete, and publish projects, and add or remove project items |
 | **Search** | Search content, collections, and assets |
+| **DAM** | List, search, create, and view collections; list, search, view, and update assets, including keywords; view asset references; and list favorites |
 
 ## Interface components
 

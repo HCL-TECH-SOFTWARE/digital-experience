@@ -46,7 +46,7 @@ networking:
     $ kubectl get service -n <namespace>
     ```
 
-3. You can configure the connection between Ingress and HAProxy to use either `http` or `https` for the internal traffic. For more information, refer to [Configure HAProxy networking](../mandatory_tasks/prepare_configure_networking.md#configure-haproxy-networking).
+3. You can configure the connection between Ingress and HAProxy to use either `http` or `https` for the internal traffic. For more information, refer to [Configuring HAProxy networking](../mandatory_tasks/prepare_configure_networking.md#configuring-haproxy-networking).
 
 4. Define an [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource){target="_blank"} that is used to configure the routing rules that point to the existing deployment of HAProxy as the internal service. You can configure a host in the Ingress resource to ensure all of the requests received by the host are handled by `<helm release name>-haproxy`. A `secretName` is passed in the `tls` section to allow the Ingress controller to serve `https` traffic.
 

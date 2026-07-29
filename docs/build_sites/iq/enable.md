@@ -4,7 +4,7 @@ This section provides instructions for enabling and configuring the IQ assistant
 
 ## Overview
 
-IQ is an AI-powered assistant integrated into DX and delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend Websocket API and the UI assets.
+IQ is an AI-powered assistant integrated into DX. It is delivered as a containerized microservice (`dx-iq-integrator`) that serves both the backend API and the UI assets. The IQ deployment also includes the DX Model Context Protocol (MCP) Server (`dx-mcp-server`), which provides the MCP bridge used by IQ to communicate with supported DX services, such as DAM and WCM.
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
@@ -22,7 +22,7 @@ Before installing IQ, verify that your environment meets the following requireme
 
 **For Kubernetes and Helm-based deployments**
 
-1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ integrator service (`dx-iq-integrator`) and the MCP server (`dx-mcp-server`) to handle communication with the AI or LLM provider. For more information, refer to [Installing IQ backend services](./installation/index.md).
+1. Deploy the `hcl-dx-iq` Helm chart in your Kubernetes cluster. This separate Helm chart and deploys both the IQ Integrator service (`dx-iq-integrator`) and the MCP Server (`dx-mcp-server`) to handle communication with the AI or LLM provider. For more information, refer to [Installing IQ backend services](./installation/index.md).
 2. Ensure you have access to modify your DX Helm chart `values.yaml` file.
 
 ## Enabling IQ
@@ -36,13 +36,13 @@ To enable IQ manually, run the `enable-iq` configuration task. This task does no
 **AIX and Linux:**
 
 ```bash
-./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq.backend.url=http://{iq.backend.url}/dx/ui/iq
+./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
 ```
 
 **Windows:**
 
 ```bash
-ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq.backend.url=http://{iq.backend.url}/dx/ui/iq
+ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
 ```
 
 !!! important
@@ -70,7 +70,7 @@ IQ is deployed using a dedicated Helm chart (`hcl-dx-iq`), separate from the mai
     helm upgrade <release-name> <chart-name> -f values.yaml
     ```
 
-After the update is applied, HAProxy automatically routes the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the assistant interface elements become available on the DX toolbar.
+After the update is applied, HAProxy automatically routes the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the assistant interface elements become available on the DX toolbar. The MCP Server remains part of the IQ deployment and continues to provide the protocol layer used by the assistant. For endpoint-level MCP details regarding internal cluster routing paths, versioned entry points, and operational probes, refer to [Managing endpoints and security](installation/configuring-mcp.md#managing-endpoints-and-security).
 
 !!! important
     - Use only the service name, not a full URL (for example, `dx-iq-integrator`, not `http://dx-iq-integrator:3000`).
@@ -120,3 +120,6 @@ After the update is applied, HAProxy stops routing the `/dx/api/iq/v1/` and `/dx
 
 !!! important
     Disabling IQ in the DX Helm chart (`hcl-dx-deployment`) only removes the integration between DX and IQ. It does not uninstall or stop the IQ backend services deployed with the `hcl-dx-iq` Helm chart. To completely remove IQ from your cluster, separately uninstall the `hcl-dx-iq` Helm chart release using the `helm uninstall <iq-release-name>` command.
+
+???+ info "Related information"
+    - [Troubleshooting - User interface](troubleshooting.md#user-interface)

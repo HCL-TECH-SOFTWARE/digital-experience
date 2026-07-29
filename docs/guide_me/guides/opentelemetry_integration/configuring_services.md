@@ -2,92 +2,96 @@
 
 Configure OpenTelemetry (OTel) tracking across your Java and Node.js services to monitor the performance of your HCL DX applications. Managing these configurations centrally within your HCL DX Helm chart ensures consistent telemetry collection across your entire deployment.
 
-Use the Helm chart to enable built-in OTel instrumentation for Node.js services such as DAM, the Image Processor, and the Ring API. The chart also activates the pre-bundled OTel Java agent for DX Core, WebEngine, the Runtime Controller, and the License Manager.
+The Helm chart enables OTel instrumentation for both Java and Node.js services:
 
-You can enable and configure OTel in the HCL DX Helm chart `values.yaml` file.
+- Digital Asset Management (DAM), Image Processor, and Ring API are Node.js services that feature built-in OTel tracking.
+- DX Core, WebEngine, Runtime Controller, and License Manager are Java services that use the pre-bundled OTel Java agent.
 
-## Enabling OTel for Node.js services using Helm
+HCL DX container images already include the required OTel packages and agents. The HCL DX Helm chart manages the configuration and automatically appends pod identifiers to service names.
 
-You can configure OTel tracking to monitor the performance of Node.js services in your HCL DX deployment. The Digital Asset Management (DAM), Image Processor, and Ring API Node.js services feature built-in OTel tracking.
+## Enabling OTel using Helm
 
-HCL DX container images already include the required OTel packages and modules. The HCL DX Helm chart manages the configuration and automatically appends pod identifiers to service names, such as `dam-0` or `ringapi-1`.
+You can enable and configure OTel in the HCL DX Helm chart `values.yaml` file. The configuration applies to all services regardless of their runtime (Java or Node.js).
 
 Add or update the following section in your `values.yaml`:
 
 ```yaml
-  openTelemetry:
-    # Enable OTel integration
-    enabled: true
+openTelemetry:
+  # Master toggle - Enable or disable OpenTelemetry instrumentation globally
+  # Set to true to enable, false to disable
+  enabled: true
+  
+  # Collector configuration
+  # Ensure that your OpenTelemetry collector is reachable from your Kubernetes deployment
+  collector:
+    # URL pointing to your OpenTelemetry collector OTLP HTTP endpoint
+    # Format: "http://<service-name>.<namespace>.svc.cluster.local:4318"
+    # 
+    # Examples:
+    #   - In-cluster collector: "http://deployment-opentelemetry-collector.otel.svc.cluster.local:4318"
+    #   - External collector: "http://otel-collector.monitoring:4318"
+    #   - Cloud service: "https://otlp.example.com:4318"
+    #
+    # Port 4318 = OTLP HTTP endpoint (recommended)
+    # Port 4317 = OTLP gRPC endpoint (alternative)
+    exportUrl: "http://deployment-opentelemetry-collector.otel.svc.cluster.local:4318"
     
-    # OTel Collector endpoint
-    collectorEndpoint: "http://otel-collector.observability.svc.cluster.local:4318"
-    
-    # Protocol: http/protobuf (default) or grpc
+    # Protocol to be used for communication with the collector
+    # Supported values: "http/protobuf" (recommended), "grpc"
     protocol: "http/protobuf"
+  
+  # Service configuration
+  # Allows for easy identification of your telemetry data in observability backends
+  service:
+    # Base name to be used with the telemetry data
+    # Defaults to the Helm release name chosen during helm install if left empty
+    # 
+    # Actual service names will be: <name>-<service-type>-<pod-number>
+    # Examples:
+    #   - "dx-prod" → "dx-prod-digital-asset-management-0", "dx-prod-digital-asset-management-1"
+    #   - "my-dx" → "my-dx-core-0", "my-dx-core-1"
+    #
+    # Leave empty to use Helm release name automatically
+    name: "otel-dx"
     
-    # Exporters configuration
-    tracesExporter: "otlp"
-    metricsExporter: "otlp"
-    logsExporter: "otlp"
+    # Namespace to be used with the telemetry data
+    # Defaults to the namespace of your deployment if left empty
+    # This is added as "deployment.environment" resource attribute
+    # 
+    # Leave empty to use deployment namespace automatically
+    namespace: "otel"
+  
+  # OpenTelemetry SDK log level configuration
+  # NOTE: This controls ONLY the OpenTelemetry SDK's internal diagnostic logging
+  # (e.g., span export messages, SDK initialization, instrumentation loading).
+  # This does NOT affect your application's log output (application logs are controlled separately).
+  logging:
+    # Global default log level for all services (none, error, warn, info, debug, verbose)
+    # Default: info
+    default: "info"
     
-    # Debug mode - shows OTel config in pod logs
-    debug:
-      enabled: true
-    
-    # Global log level for OTel SDK diagnostics
-    logLevel: "info"  # options: debug, info, warn, error
-    
-    # Per-service configuration (optional overrides)
+    # Per-service log level overrides (optional)
+    # Use these to enable debug logging for specific services without affecting others
     services:
-      dam:
-        logLevel: "info"
-      imageprocessor:
-        logLevel: "info"
-      ringapi:
-        logLevel: "info"
-```
-
-## Enabling OTel for Java services using Helm
-
-You can configure OTel tracking to monitor the performance of Java services in your HCL DX deployment. The DX Core, WebEngine, Runtime Controller, and License Manager Java services include the OTel Java agent.
-
-HCL DX container images pre-bundle the OTel Java agent (version 2.23.0) at `/opt/otel/opentelemetry-javaagent.jar`. The HCL DX Helm chart manages the configuration and automatically appends pod identifiers to service names.
-
-Add or update the following section in your `values.yaml` file:
-
-```yaml
-  openTelemetry:
-    # Enable OTel integration
-    enabled: true
-    
-    # OTel Collector endpoint
-    collectorEndpoint: "http://otel-collector.observability.svc.cluster.local:4318"
-    
-    # Protocol: http/protobuf (default) or grpc
-    protocol: "http/protobuf"
-    
-    # Exporters configuration
-    tracesExporter: "otlp"
-    metricsExporter: "otlp"
-    logsExporter: "otlp"
-    
-    # Debug mode
-    debug:
-      enabled: true
-    
-    # Global log level
-    logLevel: "info"
-    
-    # Per-service configuration
-    services:
-      core:
-        logLevel: "info"
-      webengine:
-        logLevel: "debug"
-      runtimecontroller:
-        logLevel: "info"
-      licensemanager:
-        logLevel: "info"
+      # Core DX services
+      core: "info"
+      contentComposer: "info"
+      digitalAssetManagement: "info"
+      imageProcessor: "info"
+      licenseManager: "info"
+      openLdap: "info"
+      persistence: "info"
+      remoteSearch: "info"
+      ringApi: "info"
+      runtimeController: "info"
+      webEngine: "info"
+  
+  # Debug configuration
+  debug:
+    # Enable debug output from OTel startup scripts
+    # Prints all environment variables during container startup
+    # Default: false
+    enabled: false
 ```
 
 ## Deploying the configuration
@@ -99,7 +103,7 @@ Before you deploy, review how the Helm chart manages your services:
     - **Java services**: Uses the standard deployment component identifiers, such as `core`, `webengine`, `runtimecontroller`, or `licensemanager`.
 - **Configuration source**: All pods read their OTel settings from the shared `/etc/global-config` ConfigMap mounted inside each container.
 - **Resource attributes**: The configuration automatically adds the pod name and pod number to all telemetry data.
-- **Debug mode (Java services only)**: When `debug.enabled` is set to `true`, the startup scripts print the active OTel configuration directly into the container logs during startup.
+- **Debug mode**: When `debug.enabled` is set to `true`, the startup scripts print the active OTel configuration directly into the container logs during startup.
 
 Apply the changes using the following steps:
 

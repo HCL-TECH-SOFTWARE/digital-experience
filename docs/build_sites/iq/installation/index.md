@@ -13,6 +13,12 @@ HCL DX IQ is a core communication and data management layer, referred to as the 
 - Integrates with Model Context Protocol (MCP) servers for enhanced AI capabilities.
 - Ensures robust, scalable, and seamless user experiences.
 
+The `hcl-dx-iq` Helm chart deploys both the IQ Integrator service (`dx-iq-integrator`) and the MCP server service (`dx-mcp-server`). Depending on the configuration, these services run either as a unified stack or with the MCP server operating independently in standalone mode. Within this deployment, components divide operational responsibilities across the cluster:
+
+- The IQ user interface handles the customer-facing chat experience inside HCL DX.
+- The IQ Integrator service manages request orchestration and backend integration logic.
+- The MCP Server provides standardized communication and handles backend tool operations.
+
 ## Prerequisites
 
 Before deploying the IQ backend server, verify that your environment includes the following components:
@@ -39,20 +45,22 @@ Before deploying the IQ backend server, verify that your environment includes th
 
 Use these topics to navigate the deployment, configuration, validation, and maintenance workflows for the IQ backend services alongside your container-based HCL DX deployment.
 
-- **[Deploying services](deploy-services.md)**  
-This section provides step-by-step instructions for deploying the IQ backend servers (integrator and MCP server) alongside an existing container-based HCL DX deployment.
+- **[Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)**  
+This section provides step-by-step instructions for deploying the IQ backend servers (IQ Integrator and MCP Server) alongside an existing container-based HCL DX deployment.
+- **[Configuring the MCP Server](configuring-mcp.md)**  
+This section describes the configuration model, parameter properties, endpoint behavior, and security constraints required to manage tool execution and data exchange patterns for the MCP Server.
 - **[Preparing the database](prepare-database.md)**  
-This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options. <!--Configuring MCP server above this entry-->
+This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options.
+- **[Preparing LiteLLM access](prepare-litellm-access.md)**  
+This section describes how to configure the IQ Integrator to authenticate with your LiteLLM proxy server using a static API key.  
+- **[IQ environment variables](environment-variables.md)**  
+This section lists all environment variables available for the IQ Integrator and DX MCP Server, including their types, defaults, and accepted values.
 - **[Validating the deployment](validation.md)**  
 This section provides instructions for verifying that your deployment is healthy and operational at any stage of the installation process.
-- **[Troubleshooting](troubleshooting.md)**  
-This section covers diagnostic workflows to isolate installation failures, service errors, and network issues across the infrastructure. <!--to be moved-->
 - **[Backing up and restoring data](backup-restore.md)**  
 This section provides the procedures for generating database backups and restoring the database state to prevent data loss during upgrades, migrations, or node failures.
-- **[Limitations](limitations.md)**  
-This section describes architectural constraints, service boundaries, and known limitations. <!--to be moved-->
 
 ???+ info "Related information"
-    - [IQ UI documentation](../../index.md)
-    - MCP Server documentation <!--Update link, match page names if possible-->
-    - [IQ backend services limitations](limitations.md)
+    - [Enabling IQ](../enable.md)
+    - [IQ limitations](../limitations.md)
+    - [Troubleshooting IQ](../troubleshooting.md)

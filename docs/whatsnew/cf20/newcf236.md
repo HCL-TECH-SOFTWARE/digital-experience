@@ -1,4 +1,4 @@
-# What's new in CF236
+# What's new in CF236 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF236 on supported platforms:
 
@@ -16,11 +16,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- DX IQ assistant now available
 - Helm values updates
-- OpenTelemetry Integration Guide
-- Search V2 - Automatically generate certificates and Kubernetes secrets
-- WAS, JDK, UBI, and iFix versions
+- IQ assistant now available
+- OpenTelemetry Integration now available
+- WAS, JDK, UBI, iFix, and OS support versions
 
 **Notices of deprecation**
 
@@ -36,10 +35,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/236.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF236. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/236.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -103,34 +102,29 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
-### DX IQ assistant now available
+### Helm values updates
 
 === "Containers"
-    IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
+    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
+
+### IQ assistant now available
+
+=== "Containers"
+    IQ is an AI-powered assistant integrated into HCL DX that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
     You can interact with the assistant in two ways:
 
     - **In the DX toolbar:** Select the **Open IQ chat** sparkle button in the top toolbar on standard DX pages to open the panel view sidebar.
     - **In Site Templates pages:** Select the **Open IQ chat** floating sparkle button to open the compact view chat window.
 
-    For more information, refer to [IQ](../../build_sites/iq/index.md).
+    For more information, refer to the [IQ documentation](../../build_sites/iq/index.md).
 
-### Helm values updates
-
-=== "Containers"
-    Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf236).
-
-### OpenTelemetry Integration Guide
+### OpenTelemetry Integration now available
 
 === "Containers"
-    The new OpenTelemetry (OTel) Integration Guide provides comprehensive instructions for integrating OTel with HCL DX to enable distributed tracing, metrics, and log collection across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
+    You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
 
-### Search V2 - Automatically generate certificates and Kubernetes secrets
-
-=== "Containers"
-    You can now automatically generate certificates and Kubernetes secrets to secure communication during the deployment phase. To use automated generation, specify a value for the `configuration.opensearch.security.rootCASubjectDN` property in your `values.yaml` file. The value must use the X.509 Distinguished Name (DN) format. For more information, refer to [Preparing certificates for inter-service communication](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md#preparing-certificates-for-inter-service-communication).
-
-### WAS, JDK, UBI, and iFix versions
+### WAS, JDK, UBI, iFix, and OS support versions
 
 === "Containers"
     HCL DX 9.5 CF236 contains the following:
@@ -140,9 +134,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
         - Core and Remote Search: 8.10-1776104706
         - Other Images: 9.7-1776104705
-    - No iFixes
-
-    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+    - iFix PH71422
+    - iFix PH71453
+    - iFix PH71453
+    - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
+    
+    For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
 
