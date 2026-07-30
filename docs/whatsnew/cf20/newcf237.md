@@ -67,7 +67,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
-### Presentation Designer - DAM integration and feature updates
+### Presentation Designer - Feature updates
 
 === "Containers"
     The following features have been added to Presentation Designer:
