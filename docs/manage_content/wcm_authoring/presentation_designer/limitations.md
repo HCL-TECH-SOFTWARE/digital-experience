@@ -7,9 +7,7 @@ Take note of the following limitations when using Presentation Designer:
 - Presentation Designer can only be used to view or edit presentation templates. For more information, refer to the [Editing a presentation template](../presentation_designer/usage/edit_presentation_template.md) topic.
 - Presentation templates cannot be reused across designs. Create a new template for each design.
 - Override stylesheet components must only be used for the presentation template they were created for.
-- Blueprint Presentation Templates are not supported:
-
-    Add this to the markup `<!-- BluePrint Template -->` and then open the Presentation Designer:
+- Blueprint Presentation Templates are not supported. Adding the `<!-- BluePrint Template -->` markup in your presentation template results in an error:
 
     ![](../../../assets/HCL_Presentation_Designer_Blueprint_snackbar.png)
 
