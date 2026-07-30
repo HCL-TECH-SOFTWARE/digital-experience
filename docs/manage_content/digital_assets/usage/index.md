@@ -28,7 +28,7 @@ The DX Digital Asset Search helps you quickly find and retrieve digital assets a
 
 ## DX Picker Overview
 
-The Digital Asset Content Picker provides a consistent interface that you can use in any application to search for and select an asset. This unified experience makes it easier to find, preview, and insert digital assets without switching tools or workflows. For more details, refer to [Using DX Picker](https://help.hcl-software.com/digital-experience/9.5/CF229/manage_content/wcm_authoring/dx_picker/usage/).
+The Digital Asset Content Picker provides a consistent interface that you can use in any application to search for and select an asset. This unified experience makes it easier to find, preview, and insert digital assets without switching tools or workflows. For more details, refer to [Using DX Picker](../../wcm_authoring/dx_picker/usage.md).
 
 <img src="filter_asset.png" alt="Filtering options in the Digital Asset Picker" width="600">
 

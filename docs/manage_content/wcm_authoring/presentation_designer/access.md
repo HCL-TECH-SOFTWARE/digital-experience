@@ -63,7 +63,7 @@ To set the **Privileged User** role:
 
 Refer to [Working with resource permissions](../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
-## Accessing Presentation Designer
+## Accessing the interface
 
 To access the Presentation Designer, follow these steps:
 
@@ -118,28 +118,7 @@ The Presentation Designer user interface appears. You can also use steps 6 to 8 
 
 ![](../../../assets/HCL_Presentation_Designer_Blank_Canvas.png "HCL Presentation Designer - Blank Canvas")
 
-### Presentation Template Locking
-
-To prevent data loss and content collisions in multi-author environments, Presentation Designer automatically locks presentation templates during active editing sessions.
-
-![](../../../assets/HCL_Presentation_Designer_Locked_PT.png "HCL Presentation Designer - Locked Presentation Template")
-
-**How presentation template locking works**
-
-- **Lock Acquisition:** Opening a presentation template in **Edit** mode or toggling from Read to Edit mode automatically acquires an editing lock on the presentation template item.
-- **Forced Read Mode:** If you attempt to edit a template currently locked by another user, Presentation Designer automatically switches to **Read only** mode and displays a notification identifying the current lock owner (for example, `"{Title}" is locked by {username}`).
-- **Lock Persistence during Save:** Clicking **Save** updates the template content while maintaining your active lock so you can continue editing without interruption.
-- **Automatic Lock Release:** The lock is automatically released whenever you:
-    - Toggle from **Edit** to **Read** mode.
-    - Click **Save and Close**.
-    - Click **Cancel** or navigate back to the Authoring portlet.
-
-For more information on locked items, refer to **[Locked items](../../../../manage_content/wcm_authoring/authoring_portlet/change_management/item_locks#locked-items)**.
-
-!!! note
-    The **lock indicator** (lock icon) is currently only visible on the Authoring page. No lock indicator is visible on the Presentation Designer's interface.
-
-## The Presentation Designer UI
+## User interface
 
 The Presentation Designer user interface is composed of three main sections:
 
@@ -163,7 +142,7 @@ The Presentation Designer user interface is composed of three main sections:
 
 ### Panel
 
-There are three panels you can use in Presentation Designer: [Add Items](#add-items), [Style Items](#style-items) and [Layers](#layers).
+There are three panels you can use in Presentation Designer: [Add items](#add-items), [Style items](#style-items) and [Layers](#layers).
 
 #### Add items
 
@@ -177,18 +156,17 @@ The **Add items** panel contains the user elements that you can drag and drop to
 
 The **Style items** panel contains the different styling options available for the selected element on the canvas. The styling options are updated accordingly based on the selected element on the canvas.
 
-For more information on the user elements and style options, refer to **[Usage of Presentation Designer](./usage/index.md)**.
+For more information on the user elements and style options, refer to **[Using Presentation Designer](./usage/index.md)**.
 
 #### Layers
 
 ![](../../../assets/HCL_Presentation_Designer_Layers_Panel.png)
 
-The **Layers** panel provides a hierarchical tree view of all the elements currently on your canvas, helping you visually navigate and manage complex presentation templates without needing to click through nested layers in the main workspace.
+The **Layers** panel provides a hierarchical tree view of all elements on the canvas, mapping out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace.
 
-- **Synchronized Selection:** Selecting an element directly on the canvas instantly highlights its corresponding node in the Layers panel, and conversely, clicking an item in the panel selects it on the canvas.
-- **Hierarchy Visualization:** Deeply nested elements are clearly mapped out in the tree view; selecting a parent container automatically highlights it and groups its nested contents.
-- **Visibility Toggle:** You can easily toggle the visibility of any element on or off using the view icon. Hiding a parent element automatically hides all of its descendants. This visibility state is persistent; the panel modifies both the editor's hidden state and the override stylesheet (`display: none`) to ensure the hidden state survives a save or reload.
-- **Element Deletion:** Click the three-dots menu next to an element to safely delete it right from the panel.
+- Select an element in either the canvas or the **Layers** panel to highlight and select it in both locations.
+- Toggle element visibility using the eye icon to update both the editor state and the override stylesheet (`display: none`), ensuring hidden states persist after saving or reloading. Hiding a parent element hides all nested elements.
+- Delete an element by clicking the three-dot icon next to it and selecting **Delete**. This removes it from both the panel and the canvas layout.
 
 ### Canvas
 
