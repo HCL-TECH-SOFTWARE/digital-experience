@@ -8,40 +8,34 @@ The Canvas Context Preview feature in HCL Digital Experience (DX) Presentation D
 - Retain the selected content context across different device views and sessions.
 - Automatically map content elements and property tags to the template.
 
-## Working with Canvas Context Preview
+## Selecting a context
 
-The **Apply canvas context preview** button in the header toolbar opens the context preview.
-
-![](../../../../assets/HCL_Presentation_Designer_Context_Preview_Initial_State.png)
-
-In the **Canvas context** field that appears, you can search for content items and templates to preview.
-
-![](../../../../assets/HCL_Presentation_Designer_Context_Search_PopupResult.png)
-
-Selecting an item from the results automatically updates the canvas with the new context. As you type, the search results update automatically. Each result displays the item type and its full path so you can easily identify the correct content.
-
-### Selecting a context
-
-To select a context:
-
-1. Open an existing **Presentation template** or create a new one.
-2. Select the **Apply canvas context preview** icon.
-3. In the **Canvas context** field, enter keywords from the title or name of the content item.
-4. Select a content item from the results.
-5. View the updated canvas to see the selected content and mapped tags.
+Select a canvas context using the **Apply canvas context preview** icon.
 
 !!!note
     The selected context persists across sessions.
 
-The following example shows the canvas updated with the selected context and actual content values:
+1. Open an existing **Presentation template** or create a new one.
+2. Select the **Apply canvas context preview** icon.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Context_Preview_Initial_State.png)
+
+3. In the **Canvas context** field, search for content items by typing, or select the **Open picker** icon to browse for content.
+
+    ![](../../../../assets/HCL_Presentation_Designer_Context_Search_PopupResult.png)
+
+4. Select a content item from the results or the picker dialog. Selecting an item automatically updates the canvas with the new context. As you type, the search results update automatically. Each result displays the item type and its full path so you can easily identify the correct content.
+5. View the updated canvas to see the selected content and mapped tags.
+
+The updated canvas displays the selected context and content values:
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Selected.png)
 
-### Content mapping
+## Content mapping
 
 Canvas Context Preview automatically maps content elements and property tags:
 
-#### Content elements
+### Content elements
 
 Content elements map to corresponding fields in your selected content item. After selecting a canvas context, content elements display different states based on the availability and values of the selected content item:
 
@@ -53,7 +47,7 @@ For example:
 
 ![](../../../../assets/HCL_Presentation_Designer_Context_Element_States.png) 
 
-#### Property tags
+### Property tags
 
 Property tags map to standard WCM content properties. The following property tags are supported:
 

@@ -7,6 +7,8 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Studio Dashboard - New widgets
+- Presentation Designer - Feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -83,6 +85,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
     
     For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+### Presentation Designer - Feature updates
+
+=== "Containers"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the Layers panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the Layers panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ## Digital Experience 8.5 and 9.0 Versions
 

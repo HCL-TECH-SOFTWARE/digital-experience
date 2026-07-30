@@ -1,9 +1,4 @@
----
-title: Locked and Draft Items
----
-
 # Locked and draft items
-
 
 As you collaborate with other users, you might encounter items that are locked because they are being edited by another user or because a draft item has been created.
 
@@ -24,4 +19,3 @@ When locks are enabled for site areas, you cannot create any children within the
 ## Draft items
 
 When a new draft of a published item is created, a check mark displays for the published page that is checked out because it has a draft. No other user can create a draft until the current draft progresses through a workflow and its state changes to published.
-
