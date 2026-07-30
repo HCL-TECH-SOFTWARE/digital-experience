@@ -22,5 +22,5 @@ Learn how to use the XML Access command line tool.
 Learn how to resolve XML and XSL rendering issues by overriding default content types, managing query string parameters, and converting text data into XML objects.
 - **[How to work with JSFs on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JavaServer Faces (JSFs) portlets on HCL DX pages.
-- **[How to Configure WCM Feed Import File Size Settings](./WCMFeedImportConfig.md)**  
-Learn how to configure WCM feed import file size settings.
+- **[How to configure WCM Feed import file size settings](./WCMFeedImportConfig.md)**  
+Learn how to configure WCM Feed import file size settings.
