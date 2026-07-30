@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Studio Dashboard - New widgets
 - Presentation Designer - Feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -67,6 +68,24 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
 ### Presentation Designer - Feature updates
 
 === "Containers"
@@ -94,7 +113,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
 
 ### Automatically apply 9.5 from a later CF installation
 

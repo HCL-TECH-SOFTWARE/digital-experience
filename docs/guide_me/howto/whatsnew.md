@@ -16,6 +16,17 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to clear stale favorites from the portal dashboard](./administration/ClearStaleFavorites.md)|
+|Migrated|Administration|[How to determine the HCL DX application server runtime](./administration/DetermineWebsphereAppServer.md)|
+|Migrated|Configuration|[How to change the default portlet configuration](./configuration/DefaultPortletConfig.md)|
+|Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
+|Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
+|Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
+
 ## CF236
 
 | Type | Category | Article |
