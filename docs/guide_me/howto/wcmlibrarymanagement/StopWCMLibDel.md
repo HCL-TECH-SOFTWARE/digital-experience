@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This article describes the procedure to stop the WCM Library deletion process that is running in the background.
+This documentation describes the procedure to stop the WCM Library deletion process that is running in the background.
 
 This can also be used when the WCM deletion process is stuck in "Deleting" even after restarting the environment.
 
