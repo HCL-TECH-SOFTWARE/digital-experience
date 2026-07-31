@@ -6,17 +6,13 @@
 
 ## Introduction
 
-According to HCL web-page:
-
-[HCL Web Content Manager Tracing](https://help.hcl-software.com/digital-experience/9.5/latest/deployment/manage/troubleshooting/logging_and_tracing/wcm_logs/)
-
-HCL usually suggest to trace WCM component problems with the following trace-string:
+According to [HCL Web Content Manager Tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/wcm_logs.md){target="_blank"} it is usually suggested to trace WCM component problems with the following trace-string:
 
 `com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all`
 
 This may result in a HUGE set of traces that will take support 6 hours to analyze and identify the site area in question. An entry like this occurred approximately 8 thousand times in the trace:
 
-```text
+```log
 BaseReference > com.aptrix.pluto.cmpnt.BaseReferenceCmpnt retrieveCmpnt
 ENTRY RenderContext [PlutoRequestContext
 [hasDelegatedContentMappings=false, m_webAppUrl=WebAppURL
@@ -27,22 +23,22 @@ When determining a loop in the content there is a smarter way to do it. This doc
 
 ## Instructions
 
-Instead of using trace-string:
+Instead of using trace-string:  
 
-`com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all`
+`com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all`  
 
-use these trace strings:
+use trace string:  
 
-`com.aptrix.pluto.cmpnt.*=all`
-  
-Then grep trace.log for "retrieveCmpnt" eg:
+`com.aptrix.pluto.cmpnt.*=all`  
 
-`tail -f trace.log |grep -i retrieveCmpnt`
+Then grep trace.log for `retrieveCmpnt` eg:  
 
-or perhaps:
+`tail -f trace.log |grep -i retrieveCmpnt`  
 
-`grep -e retrieveCmpnt -e itemPath trace*.log`
+or perhaps:  
 
-Look for any WCM items that are re-occurring far out of proportion to other items in the trace. This will identify the WCM items involved in the recursive loop.
+`grep -e retrieveCmpnt -e itemPath trace*.log`  
 
-Loops can also be found out by searching for "getByUUID Getting object with UUID" messages backwards through the trace.
+Look for any WCM items that are re-occurring far out of proportion to other items in the trace. This will identify the WCM items involved in the recursive loop.  
+
+Loops can also be found out by searching for `getByUUID Getting object with UUID` messages backwards through the trace.  
