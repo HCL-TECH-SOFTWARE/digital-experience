@@ -32,6 +32,25 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
        ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Presentation_Template_Empty_Markup.png)
 
+## Automatic presentation template locking
+
+Presentation Designer automatically locks presentation templates during active editing sessions to prevent conflicting edits.
+
+![](../../../../assets/HCL_Presentation_Designer_Locked_PT.png "HCL Presentation Designer - Locked Presentation Template")
+
+!!! note
+    The lock icon is visible only on the **Authoring** page.
+
+Opening a template in **Edit mode** or switching from **Read only** to **Edit mode** locks the template for your active session. If you attempt to edit a template locked by another user, Presentation Designer switches to **Read only** mode and displays a notification identifying the lock owner, such as `"{Title}" is locked by {username}`.
+
+Clicking **Save** updates the template content while maintaining your active lock so you can continue editing without interruption. The lock releases when you:
+
+- Toggle from **Edit** to **Read** mode.
+- Click **Save and Close**.
+- Click **Cancel** or navigate back to the Authoring portlet.
+
+For more information, refer to **[Locked items](../../../../manage_content/wcm_authoring/authoring_portlet/change_management/item_locks.md#locked-items)**.
+
 ## Editing presentation templates
 
 Refer to the following steps to edit a presentation template in Presentation Designer.
@@ -249,6 +268,6 @@ With Presentation Designer, you can create a wide range of custom designs and te
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Recent_Items_Preview.png)
 
 ???+ info "Related information"
-    - [Presentation Designer UI](../access.md#the-presentation-designer-ui)
-    - [User Elements](../usage/user_elements.md)
-    - [Styling Options](../usage/styling_options.md)
+    - [User interface](../access.md#user-interface)
+    - [User elements](../usage/user_elements/index.md)
+    - [Styling options](../usage/styling_options.md)

@@ -1,51 +1,49 @@
 # Dashboard
 
-The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently.
+The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
 
 ![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
 
 The dashboard includes the following widgets:
 
 - **Status monitoring:** Shows items that require approval or attention, including expiring content.
-- **Recent content items:** Provides quick access to your latest work.
-- **Personalization rules (PZN):** Helps you manage user experiences.
+- **My Projects:** Displays project names, last modified timestamps, and status.
+- **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
+- **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
+- **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
 ## Explore Digital Experience info hub
 
-The dashboard includes an Explore Digital Experience info hub that provides quick access to tutorials and documentation.
+The Explore Digital Experience info hub provides direct access to tutorials and documentation through interactive cards for common tasks. Toggle **Collapse info hub** to collapse or expand this section to manage screen space.
 
-This section features interactive cards with resources for common tasks, such as:
+The section features the following task cards:
 
 - **Create your first site:** Set up content, add assets, and customize pages to meet your needs.
-- **Upload media and files:** Upload images, videos, and files in Digital Assets Manager.
-- **Manage themes:** Create, customize, and manage themes to control the visual appearance and user experience of your DX sites, including layout, styling, and branding.
-- **Use search to get started:** Use the search bar to quickly find pages, documents, assets, or settings.
+- **Upload media and files:** Upload images, videos, and files in Digital Asset Management (DAM).
+- **Manage themes:** Create, customize, and manage themes to control layout, styling, and branding.
+- **Use search to get started:** Locate pages, documents, assets, or settings using the search bar.
 
 Each card includes the following options:
 
-- **Watch HCLSoftware U tutorial:** View video demonstrations.
-- **Read documentation:** Access detailed written guidance.
-
-You can collapse or expand the info hub by using the **Collapse info hub** toggle to maximize your workspace.
+- **Watch HCLSoftware U tutorial:** Opens video demonstrations for the task.
+- **Read documentation:** Opens detailed written guidance for the task.
 
 ## Welcome header
 
-The Practitioner Dashboard includes a personalized welcome header that greets you with "Welcome to your experience," followed by your username.
-
-Below the greeting, the header displays "Logged in as" with your username and profile icon to indicate the active session.
+The Practitioner Dashboard includes a personalized welcome header that greets you with "Welcome to your experience," followed by your username. Below the greeting, the header displays "Logged in as" with your username and profile icon to indicate the active session.
 
 ## Quick links
 
-The dashboard provides quick access to common tasks through the following shortcuts:
+Quick links provide shortcuts to common tasks in Practitioner Studio.
 
 ![Quick links](../../assets/HCL_Practitioner_dashboard_quick_Links.png)
 
-- **Manage assets:** Upload, organize, and manage digital files in the Digital Assets interface.  
-- **Create report:** Create and customize reports to filter and analyze content based on your needs.  
-- **Manage themes:** Create, customize, and update themes to maintain consistent branding and design.  
-- **Create site templates:** Create templates for a full site or a site section to streamline development.  
+- **Manage assets:** Opens [**Digital Assets**](../../manage_content/digital_assets/index.md) to upload, organize, and manage digital files.
+- **Create report:** Opens [**Content Reporting**](../../manage_content/wcm_authoring/content_reporting/index.md) to generate and customize content reports.
+- **Manage themes:** Opens [**Themes**](themes.md) to configure layouts, styling, and site branding.
+- **Create site templates:** Opens [**Site Builder**](../sitebuilder/index.md) to create templates for sites or site sections.
 
 ## Monitor
 
@@ -53,28 +51,36 @@ Use the **Monitor** section to track real-time content status and activity acros
 
 ![Monitor section](../../assets/HCL_Practitioner_dashboard_monitor_section.png)
 
-- **Expiring:** Shows the number of content items that will expire within a selected timeframe to help you proactively manage content that requires renewal or updates.
-- **Published:** Shows the number of content items published within a selected timeframe to track publishing activity.
-- **Drafts:** Shows recently saved draft content within a selected timeframe to help you quickly find and resume in-progress work.
+- **Expiring:** Displays content items expiring within a selected timeframe.
+- **Published:** Displays content items published within a selected timeframe.
+- **Drafts:** Displays draft content saved within a selected timeframe.
 
-Each metric includes a customizable time filter: **Today**, **Tomorrow**, **Within 7 days**, **Within 30 days**, **Within 90 days**, and **Within 365 days**.
+Each metric includes customizable time filters ranging from **Today** to **Within 365 days**.
 
 !!! note
     - For **Expiring**, **Within 7 days** includes the current day and the next six days.
     - For **Published** and **Drafts**, **Within 7 days** includes the current day and the previous six days.
 
+## My Projects
+
+Use the **My Projects** widget to view and manage your projects.
+
+![My Projects](../../assets/HCL_Practitioner_dashboard_My_Projects.png)
+
+- View the **Projects**, **Last Modified** date, and **Status**.
+- Select **Go to My Projects** to view your projects in the [Web Content Manager (WCM) Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+
+!!! note
+    Viewing and managing projects in this widget requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
+
 ## Recent content and project
 
-Use the **Recent Content and Project** widget to view your most recently modified content items and projects.
+Use the **Recent content and project** widget to view up to 100 of your most recently modified content items and projects.
 
 ![Recent content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
-- Select the **eye icon** on a content item to view it directly.  
-- Use the **Go to Authoring** link in the top-right corner for quick access to the full Web Content management interface.
-
-!!! note
-    - This widget shows only the 100 most recent content items.
-    - **Recent Content** displays only the content items you modify.
+- Select the eye icon on a content item to view it directly.  
+- Select **Go to Authoring** to view the library explorer in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 ## Personalization rules
 
@@ -82,63 +88,83 @@ Use the **Personalization Rules** widget to monitor the personalization (PZN) ru
 
 ![Personalization Rules](../../assets/HCL_Practitioner_dashboard_Personalization_Rules.png)
 
-- The widget displays the following details: **Rule**, **Rule Type**, **Author**, and **Last Modified**.
-- **Rule Types** for this widget include **Visibility Rule**, **Profiler**, **Select Action**, and **Binding Rules**.
-- Select **Go to Personalization** to open the full Personalization page for complete management and configuration of your rules.
+- View the **Rule**, **Rule Type**, **Author**, and **Last Modified** date.
+- Filter or review rules by **Rule Type** such as **Visibility Rule**, **Profiler**, **Select Action**, and **Binding Rules**.
+- Select **Go to Personalization** to manage and configure rules on the main Personalization page.
 
-## Widget configuration parameters
+## Tags & Keywords Manager
+
+Use the **Tags & Keywords Manager** widget to search and filter content by WCM keywords, DAM keywords, and social tags using a two-pane interface. The widget uses a split-pane layout to separate search controls from content results.
+
+!!! note
+    - This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
+    - If DAM is not enabled in a virtual portal, DAM keyword links are disabled.
+
+![Tags & Keywords Manager](../../assets/HCL_Practitioner_dashboard_Tags_Keywords.png)
+
+The **Search** pane allows you to combine search filters by selecting multiple tags.
+
+- Toggle **Show selected** to display active tags only.
+- Type tag names to display autocomplete suggestions.
+- Select recent searches for quick filtering.
+- Select the help icon to display tooltips.
+
+The **Results** pane displays content items that match your selected tags.
+
+- View content items matching selected tags, including **Title**, **Last Modified**, and **Tags and keywords**.
+- Select **any** or **all** to filter content matching any or all selected tags.
+- Select a content title to open its source location.
+
+## Configuring widget parameters
 
 Use the dashboard to customize which widgets appear on your screen. To change these settings:
 
-1. Navigate to **Admin** > **Site Management** > **Pages** > **Content Root** > **Practitioner Studio** > **Dashboard**.  
-2. Select the **pencil icon** on the dashboard page.  
-3. Select **Edit Shared Settings** to enable or disable widgets using the configuration parameters.
-
-### Configuration parameters
+1. Navigate to **Administration > Site Management > Pages > Content Root > Practitioner Studio**.  
+2. Select the **Edit Page Layout** pencil icon for **Dashboard**.
+3. Open the **Practitioner Dashboard portlet** and select the widgets you want to enable.
+4. Select **Save**.
 
 | Parameter name | Type | Default value | Description |
 |----------------|------|---------------|-------------|
 | `RECENT_CONTENT_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recent Content** widget, which displays recently accessed or modified content items. |
 | `RECENT_STATUS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Status Monitor** widget, which displays system health and alerts. |
-| `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent PZN activities and campaigns. |
+| `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent Personalization (PZN) activities and campaigns. |
+| `PROJECTS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Projects** widget, which displays your projects in a paginated data grid. |
+| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
 
-## Main portal configuration
+## Configuring main portals
 
-Use the following ConfigEngine targets to switch between the new React-based dashboard and the classic JSP home page.
+The Practitioner Dashboard displays the React-based modern dashboard by default. To display the classic JSP home page, disable the dashboard during deployment. Run the following ConfigEngine tasks to switch between the new React-based dashboard and the classic JSP home page.
 
-**Enable the Practitioner Dashboard (modern React dashboard)**
+!!!note
+    You cannot disable the dashboard in DX Compose.
 
-```bash
-ConfigEngine/ConfigEngine.sh enable-practitioner-dashboard -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-```
+- To enable the Practitioner Dashboard:
 
-**Disable the Practitioner Dashboard (classic JSP home page)**
+    ```bash
+    ConfigEngine/ConfigEngine.sh enable-practitioner-dashboard -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+    ```
 
-```bash
-ConfigEngine/ConfigEngine.sh disable-practitioner-dashboard -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
-```
+- To disable the Practitioner Dashboard and revert to the classic JSP home page:
 
-!!! note
-    - The Practitioner Dashboard is enabled by default and shows the React-based modern dashboard.  
-    - You can disable it during deployment if preferred. When disabled, the classic JSP home page is displayed instead.
-    - You cannot disable the dashboard in DX Compose.
+    ```bash
+    ConfigEngine/ConfigEngine.sh disable-practitioner-dashboard -DWasPassword=wpsadmin -DPortalAdminPwd=wpsadmin
+    ```
 
-## Virtual portal configuration
+## Configuring virtual portals
 
-To support the modern (React-based) Practitioner Studio in new virtual portals, the existing `VirtualPortal.zip` asset includes XML configurations for boththe modern and classic dashboards. You can switch between dashboard versions by modifying the XML file reference in the shared setting, which ensuresexisting virtual portals remain unchanged.
+New virtual portals use the modern Practitioner Studio configuration by default, while existing virtual portals remain unchanged. The `VirtualPortal.zip` asset includes XML configurations for both modern and classic dashboards. Modify the XML script reference in the shared setting to switch between the modern dashboard and classic JSP home page in new virtual portals.
 
-By default, the shared setting uses the modern Practitioner Studio configuration. To use the classic (JSP-based) home page, add the `-preCF235` suffix to the XML file name.
+- To use the default React-based Practitioner Studio:
 
-**Default (Modern Practitioner Studio)**
+    ```bash
+    # XML script to create virtual portal content tree
+    WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml
+    ```
 
-```bash
-# XML script to create virtual portal content tree
-WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn.xml
-```
+- To use the classic JSP home page:
 
-**Classic (pre-CF235)**
-
-```bash
-# XML script to create virtual portal content tree
-WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn-preCF235.xml
-```
+    ```bash
+    # XML script to create virtual portal content tree
+    WebSphere:assetname=VirtualPortal.zip:InitVirtualContentPortalV9.5NoWoodburn-preCF235.xml
+    ```
