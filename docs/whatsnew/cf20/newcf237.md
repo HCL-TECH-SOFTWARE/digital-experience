@@ -156,14 +156,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     HCL DX 9.5 CF237 contains the following:
 
-    - [WebSphere Application Server (WAS) 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit (JDK) 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [WebSphere Application Server (WAS) 9.0.5.28](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit (JDK) 8.0.8.65](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
         - Core and Remote Search: 8.10-1776104706
         - Other Images: 9.7-1776104705
-    - iFix PH71422
     - iFix PH71453
-    - iFix PH71453
+    - iFix PH71454
+    - iFix PH71590
 
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
