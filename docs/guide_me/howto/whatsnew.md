@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to add applications to the Application Palette in batches](./administration/AddAppsInBatches.md)|
 |Migrated|Administration|[How to clear stale favorites from the portal dashboard](./administration/ClearStaleFavorites.md)|
 |Migrated|Administration|[How to determine the HCL DX application server runtime](./administration/DetermineWebsphereAppServer.md)|
 |Migrated|Configuration|[How to change the default portlet configuration](./configuration/DefaultPortletConfig.md)|

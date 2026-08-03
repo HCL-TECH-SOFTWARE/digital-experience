@@ -1,6 +1,7 @@
 title: Administration
 nav:
     - index.md
+    - AddAppsInBatches.md
     - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
     - ClearStaleFavorites.md
@@ -15,4 +16,4 @@ nav:
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
-    - AddAppsInBatches.md
+

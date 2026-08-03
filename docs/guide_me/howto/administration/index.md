@@ -3,7 +3,7 @@
 This section includes how-to articles about administration in HCL Digital Experience (DX).  
 
 - **[How to add applications to the Application Palette in batches](./AddAppsInBatches.md)**  
-Learn how to add applications to the Application Palette in batches.
+Learn how to create custom categories and assign portlets to the Application Palette in batches.
 - **[How to add MIME types to the DX server](./SupportForAdditionalMIMETypes.md)**  
 Learn how to add support for additional MIME types to your DX server.  
 - **[How to change the redirect URL for Login, Logout, and Session Timeout](./RedirectTimeout.md)**  
