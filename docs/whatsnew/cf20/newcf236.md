@@ -136,7 +136,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
         - Other Images: 9.7-1776104705
     - iFix PH71422
     - iFix PH71453
-    - iFix PH71453
+    - iFix PH71454
     - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
     
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
