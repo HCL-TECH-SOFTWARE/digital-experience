@@ -80,7 +80,7 @@ If [validation](./installation/validation.md) fails, use this table to isolate t
 | Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](./installation/prepare-database.md). |
 | WebSocket errors | Network policy restrictions | Check Kubernetes network policies. |
 | Model Context Protocol (MCP) integration issues | Web Content Manager (WCM) or Digital Asset Management (DAM) not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values. |
-| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying services - Installing the IQ backend server](./installation/deploy-services.md#installing-the-iq-backend-server). |
+| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying IQ services - Installing the IQ backend server](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#installing-the-iq-backend-server). |
 
 To inspect pod configurations and system logs:
 
@@ -323,7 +323,7 @@ If you are [using an external database](./installation/prepare-database.md#confi
 - Relevant database connection error segments from the IQ Integrator pod logs.
 
 ???+ info "Related information"
-    - [Deploying services](./installation/deploy-services.md)
+    - [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](./installation/configuring-mcp.md)
     - [Preparing the database](./installation/prepare-database.md)
     - [Validating the deployment](./installation/validation.md)

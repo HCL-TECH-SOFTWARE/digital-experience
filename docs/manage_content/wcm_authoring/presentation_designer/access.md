@@ -63,7 +63,7 @@ To set the **Privileged User** role:
 
 Refer to [Working with resource permissions](../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md) for more information.
 
-## Accessing Presentation Designer
+## Accessing the interface
 
 To access the Presentation Designer, follow these steps:
 
@@ -118,7 +118,7 @@ The Presentation Designer user interface appears. You can also use steps 6 to 8 
 
 ![](../../../assets/HCL_Presentation_Designer_Blank_Canvas.png "HCL Presentation Designer - Blank Canvas")
 
-## The Presentation Designer UI
+## User interface
 
 The Presentation Designer user interface is composed of three main sections:
 
@@ -142,7 +142,7 @@ The Presentation Designer user interface is composed of three main sections:
 
 ### Panel
 
-There are two panels you can use in Presentation Designer: [Add Items](#add-items) and [Style Items](#style-items).
+There are three panels you can use in Presentation Designer: [Add items](#add-items), [Style items](#style-items) and [Layers](#layers).
 
 #### Add items
 
@@ -156,7 +156,17 @@ The **Add items** panel contains the user elements that you can drag and drop to
 
 The **Style items** panel contains the different styling options available for the selected element on the canvas. The styling options are updated accordingly based on the selected element on the canvas.
 
-For more information on the user elements and style options, refer to **[Usage of Presentation Designer](./usage/index.md)**.
+For more information on the user elements and style options, refer to **[Using Presentation Designer](./usage/index.md)**.
+
+#### Layers
+
+![](../../../assets/HCL_Presentation_Designer_Layers_Panel.png)
+
+The **Layers** panel provides a hierarchical tree view of all elements on the canvas, mapping out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace.
+
+- Select an element in either the canvas or the **Layers** panel to highlight and select it in both locations.
+- Toggle element visibility using the eye icon to update both the editor state and the override stylesheet (`display: none`), ensuring hidden states persist after saving or reloading. Hiding a parent element hides all nested elements.
+- Delete an element by clicking the three-dot icon next to it and selecting **Delete**. This removes it from both the panel and the canvas layout.
 
 ### Canvas
 

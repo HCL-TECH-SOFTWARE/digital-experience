@@ -7,6 +7,8 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Studio Dashboard - New widgets
+- Presentation Designer - Feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,8 +18,9 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Customizing HAProxy logs
-- Search V2 - Open-source Enchanted Web Components
 - Helm values updates
+- New parameters for `runtimeController` automatic service account token mounting
+- Search V2 - Open-source Enchanted Web Components
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -65,6 +68,44 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+### Presentation Designer - Feature updates
+
+=== "Containers"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -72,7 +113,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
 
 ### Automatically apply 9.5 from a later CF installation
 
@@ -83,20 +124,32 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Customizing HAProxy logs
 
-The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
+=== "Containers"
+    The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
 
 ### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf237).
 
+### New parameters for `runtimeController` automatic service account token mounting
+
+=== "Containers"
+    Two new Helm parameters are now available to support cluster security policies that restrict automatic service account token mounting:
+
+    - The `automountServiceAccountToken` parameter allows explicit configuration of token mounting per component. If your environment prohibits token automounting, set this parameter to `false` to revoke token access. 
+    - The `configuration.runtimeController.projectedServiceAccountToken` parameter specifies settings for projected token volumes in `runtimeController`. If token automounting is disabled, set `enabled` to `true` to supply a projected token volume and maintain Kubernetes API access.
+
+    For configuration details and examples, refer to [Managing service account token automounting](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_automount_service_token.md).
+
 ### Search V2 - Open-source Enchanted Web Components
 
-Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
+=== "Containers"
+    Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
 
-- [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
-- [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
-- [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
+    - [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
+    - [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
+    - [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
 
 ### WAS, JDK, UBI, and iFix versions
 
