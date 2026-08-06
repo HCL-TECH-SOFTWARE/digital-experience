@@ -148,7 +148,7 @@ If the IQ backend service cannot establish network communication with LiteLLM:
 - Verify cluster DNS resolution:
 
     ```bash
-    kubectl exec -it <iq-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
+    kubectl exec -it <iq-integrator-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
     ```
 
 ## Backend services
