@@ -4,11 +4,11 @@ This section describes how to configure the IQ Integrator to authenticate with y
 
 ## Prerequisites
 
-Before configuring IQ to access LiteLLM, ensure:
-- LiteLLM proxy server is deployed and running (see [Deploying LiteLLM for IQ](deploy-litellm.md))
-- Two proxy models are configured: `iq-general-purpose` and `iq-summary`
-- The IQ Integrator and MCP Server services are deployed (see [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md))
-- If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md) (optional but recommended)
+Before configuring IQ to access LiteLLM:
+
+- Deploy the [LiteLLM proxy server](deploy-litellm.md) and ensure the `iq-general-purpose` and `iq-summary` proxy models are configured.
+- Deploy the [IQ Integrator and MCP Server services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md).
+- (Optional) If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md).
 
 ## Using a static LiteLLM API key
 
@@ -52,19 +52,19 @@ Complete the following steps to configure and verify the static key:
 
     Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You can omit this flag if you already set the URL during the initial installation of the IQ Integrator.
 
-    Monitor the rollout status of the deployment:
+3. Monitor the rollout status of the deployment:
 
     ```bash
     kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
     ```
 
-3. Run the following command to check the logs for static key confirmation:
+4. Check the logs for static key confirmation:
 
     ```bash
     kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
     ```
 
-4. Confirm that the output matches the following log entry:
+5. Confirm that the output matches the following log entry:
 
     ```log
     [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
@@ -72,8 +72,18 @@ Complete the following steps to configure and verify the static key:
 
     If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
 
-5. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
+6. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
+
+## Next steps
+
+After configuring IQ Integrator authentication with your LiteLLM proxy server:
+
+1. [Validate your deployment](validation.md).
+2. [Enable and configure](../enable.md) the IQ assistant.
 
 ???+ info "Related information"
-    - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
+    - [Enabling IQ](../enable.md)
+    - [IQ environment variables](environment-variables.md)
     - [Preparing the database](prepare-database.md)
+    - [Troubleshooting - LiteLLM](../troubleshooting.md#litellm)
+    - [Validating the deployment](validation.md)

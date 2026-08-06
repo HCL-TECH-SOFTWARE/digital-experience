@@ -13,10 +13,10 @@ To streamline your workflow, IQ performs actions directly within your DX system.
 
 Ensure your environment meets the following requirements:
 
-1. HCL DX version 236 or higher is installed and running in a container-based deployment.
+1. HCL DX CF236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Resource Permission Portlets](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
+4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Architecture
 
@@ -43,31 +43,31 @@ sequenceDiagram
     participant Browser as Browser
     participant Integrator as IQ Integrator
     participant MCP as DX MCP Server
-    participant DX as DX Core / DX Compose
+    participant DX as DX Core or DX Compose
     participant LiteLLM as LiteLLM
     participant LLM as LLM Provider
 
-    Note over Integrator: 1. Startup: Retrieve tools & start watchdog
-    Integrator->>MCP: Get available tools list
-    MCP-->>Integrator: Tools + metadata
+    Note over Integrator: 1. IQ retrieves tools and starts watchdog
+    Integrator->>MCP: Retrieves available tools list
+    MCP-->>Integrator: Tools and metadata
     Integrator->>Integrator: Start watchdog process
 
     Note over Browser,Integrator: 2. User opens interface
     Browser->>Integrator: WebSocket connection
-    Integrator->>DX: Validate user cookies & permissions
+    Integrator->>DX: Validate user cookies and permissions
     DX-->>Integrator: Authorization confirmed
     Integrator->>Browser: Session opened
 
     Note over Browser,Integrator: 3. User submits message
     Browser->>Integrator: DX inquiry or action request
 
-    Note over Integrator,LLM: 4. Route to LLM with context
-    Integrator->>LiteLLM: Message + system prompt + tools list
+    Note over Integrator,LLM: 4. IQ routes request to LLM with context
+    Integrator->>LiteLLM: Message, system prompt, and tools list
     LiteLLM->>LLM: Chat completion request
     LLM-->>LiteLLM: Response (direct or tool request)
 
     alt LLM needs tool execution
-        Note over Integrator,MCP: 5. Execute tool(s)
+        Note over Integrator, MCP: 5. IQ executes tools
         LiteLLM-->>Integrator: Tool call required
         Integrator->>MCP: Execute tool (with user context)
         MCP->>DX: API calls with user cookies
@@ -80,27 +80,26 @@ sequenceDiagram
         Note over LLM: Use training data
     end
 
-    Note over Integrator,Browser: 6. Send response to user
+    Note over Integrator,Browser: 6. IQ sends response to user
     LiteLLM-->>Integrator: Final response
-    Integrator->>Browser: Response via WebSocket
+    Integrator->>Browser: Response delivered through WebSocket
     Browser-->>Browser: Display in chat interface
 ```
 
-**Communication flow steps:**
+1. **IQ retrieves tools and starts watchdog:** The Integrator retrieves the list of available tools from the MCP Server and starts a watchdog process to check for tool updates based on your configuration.
 
-1. **Startup initialization** — The Integrator retrieves the list of available tools from the MCP Server and starts a watchdog process to check for tool updates based on your configuration.
+2. **User opens interface:** When you open the user interface, your browser starts a WebSocket connection to the Integrator. The Integrator validates your cookies and verifies your authorization to access the `wps.DX_IQ_INTEGRATOR_API` virtual resource against DX Core or DX Compose. After validation, the Integrator opens a session scoped to your user and virtual portal context.
 
-2. **Session establishment** — When you open the user interface, your browser starts a WebSocket connection to the Integrator. The Integrator validates your cookies and verifies your authorization to access the `wps.DX_IQ_INTEGRATOR_API` virtual resource against DX Core or DX Compose. After validation, the Integrator opens a session scoped to your user and virtual portal context.
+3. **User submits message:** You submit a DX-related inquiry to ask a question or trigger a task. Your browser sends this message to the Integrator over the active WebSocket connection.
 
-3. **User request** — You submit a DX inquiry to ask a question about DX, or an imperative action to trigger a task. Your browser sends this message to the Integrator over the active WebSocket connection.
+4. **IQ routes request to LLM with context:** The Integrator routes your message to the LLM through the LiteLLM Gateway Proxy along with the system prompt that defines IQ behavior, the conversation summary, recent messages for context, and the list of available MCP tools. The LLM then selects one of the following actions:
 
-4. **LLM routing** — The Integrator routes your message to the LLM through the LiteLLM Gateway Proxy along with the system prompt that defines IQ behavior, the conversation summary, recent messages for context, and the list of available MCP tools. The LLM then selects one of the following actions:
-    - Responds directly using its training data without running tools
-    - Requests one or more MCP tool executions to collect data or complete the task
+    - Respond directly using its training data without running tools.
+    - Request one or more MCP tool executions to collect data or complete the task.
 
-5. **Tool execution** — If the LLM requires a tool, the Integrator calls the MCP Server on your behalf and passes your cookies and virtual portal context. The MCP Server runs the corresponding API calls against DX and returns the results. This loop can repeat up to the configured iteration limit. The Integrator removes sensitive data, such as cookies, before it sends the results back to the LLM.
+5. **IQ executes tools:** If the LLM requires a tool, the Integrator calls the MCP Server on your behalf and passes your cookies and virtual portal context. The MCP Server runs the corresponding API calls against DX and returns the results. This loop can repeat up to the configured iteration limit. The Integrator removes sensitive data, such as cookies, before sending the results back to the LLM.
 
-6. **Response delivery** — The LLM generates the final response, and the Integrator sends it to the user interface over the WebSocket connection.
+6. **IQ sends response to user:** The LLM generates the final response, and the Integrator sends it to the user interface over the WebSocket connection.
 
 ## Overview
 

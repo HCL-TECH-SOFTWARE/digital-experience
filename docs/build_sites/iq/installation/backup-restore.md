@@ -229,5 +229,6 @@ The persistence connection pool restarts after the database restoration complete
 
     Ensure that the pod status reaches the `Running` state and displays `1/1` in the `Ready` column.
 
-???+ info "Validation"
-    After configuring your database, [validate your deployment](validation.md#verifying-database-connectivity) to verify that the IQ pod can connect to the database successfully.
+## Next step
+
+After configuring your database, [validate your deployment](validation.md#verifying-database-connectivity) to verify that the IQ pod can connect to the database successfully.

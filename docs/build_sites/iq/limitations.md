@@ -46,7 +46,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
-- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. These models automatically inject a `reasoning_effort` parameter to every request, which conflicts with IQ's function tools, and returns the following error: `Function tools with reasoning_effort are not supported`. The base models `gpt-5` and `gpt-5-mini` may work technically but are not validated for production use. **We recommend AWS Bedrock Claude models**, such as Sonnet or Haiku, for production deployments. For more configuration details, refer to [Deploying LiteLLM](./installation/deploy-litellm.md).
+- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. The base models (`gpt-5` and `gpt-5-mini`) may work, but are not validated for production use. AWS Bedrock Claude models, such as Sonnet or Haiku, are recommended for production deployments. For more configuration details, refer to Step 4 of [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
 
 ### Database
 

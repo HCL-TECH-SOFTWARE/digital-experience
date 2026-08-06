@@ -70,6 +70,87 @@ To identify the underlying cause behind this banner, review the backend response
 | Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
 | Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
+## LiteLLM
+
+**LiteLLM pod startup failure**
+
+If the LiteLLM pod fails to start and remains in a `CrashLoopBackOff` state:
+
+- Run the following command to examine recent deployment logs:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm --tail=50
+    ```
+
+- Verify external database endpoints and credentials if database connections fail.
+- Check the `proxy_config` structure in the Helm values file for syntax errors.
+- Confirm all referenced secrets exist in the `dxns` namespace.
+- Verify that Kubernetes nodes have sufficient unallocated CPU and memory resources.
+
+**Health probe failure**
+
+If the readiness probe fails and the pod does not accept traffic:
+
+- Diagnose pod deployment issues:
+
+    ```bash
+    kubectl describe pod -n dxns -l app=litellm
+    ```
+
+- Test database network accessibility from the pod:
+
+    ```bash
+    kubectl exec -it <litellm-pod> -- nc -zv <db-host> 5432
+    ```
+
+- Increase the `failureThreshold` parameter in the startup probe to give database migrations more time to complete.
+- Review LiteLLM pod logs to identify database initialization errors.
+
+**Models not available**
+
+If IQ cannot locate the `iq-general-purpose` or `iq-summary` models:
+
+- Check for upstream API errors and startup failures:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm
+    ```
+
+- Verify the available proxy models:
+
+    ```bash
+    curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
+      http://litellm.dxns.svc.cluster.local:4000/v1/models
+    ```
+
+- Verify model names (`iq-general-purpose`, `iq-summary`) match the values defined in proxy_config.
+- Confirm LLM provider credentials exist in Kubernetes secrets.
+- Verify the upstream provider account has access to the specified models.
+
+**Connection refused from IQ**
+
+If the IQ backend service cannot establish network communication with LiteLLM:
+
+- Test endpoint accessiblity from the IQ pod:
+
+    ```bash
+    kubectl exec -it <iq-pod> -n dxns -- \
+      curl http://litellm.dxns.svc.cluster.local:4000/health/readiness
+    ```
+
+- Verify that the LiteLLM service is running:
+
+    ```bash
+    kubectl get svc -n dxns litellm
+    ```
+
+- Check Kubernetes network policies to ensure traffic is allowed between IQ and LiteLLM pods.
+- Verify cluster DNS resolution:
+
+    ```bash
+    kubectl exec -it <iq-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
+    ```
+
 ## Backend services
 
 If [validation](./installation/validation.md) fails, use this table to isolate the cause:
@@ -175,8 +256,6 @@ Before investigating MCP-related errors, perform these basic checks:
 4. Confirm no recent release mismatch between IQ and MCP server components.
 5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
 6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass or fail behavior, refer to [Managing endpoints and security](./installation/configuring-mcp.md#managing-endpoints-and-security).
-
-### Common symptoms and actions
 
 | Issue | Possible cause | Solution |
 |-------|----------------|----------|
