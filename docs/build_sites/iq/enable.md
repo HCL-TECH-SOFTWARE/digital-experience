@@ -8,8 +8,8 @@ IQ is an AI-powered assistant integrated into DX. It is delivered as a container
 
 Depending on your environment, enable or disable IQ using one of the following methods:
 
-- **ConfigEngine tasks:**  For traditional deployments and container-based Core deployments.
-- **Helm configuration:**  For Kubernetes and Helm-based deployments.
+- **ConfigEngine tasks:** For traditional deployments and container-based Core deployments.
+- **Helm configuration:** For Kubernetes and Helm-based deployments.
 
 ## Prerequisites
 
@@ -31,22 +31,26 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
 
 === "Using ConfigEngine"
 
-    To enable IQ manually, run the `enable-iq` configuration task. This task does not require a server restart.
+    To enable IQ manually, run the `enable-iq` configuration task. 
 
-    **AIX and Linux:**
+    1. Run the following command for your operating system:
 
-    ```bash
-    ./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
-    ```
+        - **AIX and Linux:**
 
-    **Windows:**
+        ```bash
+        ./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
+        ```
 
-    ```bash
-    ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
-    ```
+        - **Windows:**
 
-    !!! important
+        ```bash
+        ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
+        ```
+
         Replace `{iq.backend.url}` with the exact IQ backend service hostname and port in your deployment. For example: `http://dx-iq-integrator:3000`.
+
+    2. 
+
 
     For more information on container-based deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md) and [Running DX Core configuration tasks](../../deployment/manage/container_configuration/run_core_config_engine.md).
 
@@ -83,22 +87,26 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
 === "Using ConfigEngine"
     To disable IQ manually, run the `disable-iq` configuration task.
 
-    **AIX and Linux:**
+    1. Run the following command for your operating system:
 
-    ```bash
-    ./ConfigEngine.sh disable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-    ```
+        - **AIX and Linux:**
 
-    **Windows:**
+            ```bash
+            ./ConfigEngine.sh disable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
 
-    ```bash
-    ConfigEngine.bat disable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-    ```
+        - **Windows:**
 
-    After the task completes, the IQ interface elements are removed from the toolbar. To re-enable the assistant, run the [`enable-iq` configuration task](#enable-using-configengine) again.
+            ```bash
+            ConfigEngine.bat disable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
+
+    2. 
+
+    After the task completes, the IQ interface elements are removed from the toolbar.
 
 === "Using Helm"
-    Disable IQ integration in Helm-based deployments by removing the IQ service reference from the DX Helm chart configuration. This stops HAProxy from routing traffic to the IQ backend services while leaving the underlying `hcl-dx-iq` chart deployment intact.
+    To disable IQ integration in Helm-based deployments, remove the IQ service reference from the DX Helm chart configuration. This stops HAProxy from routing traffic to the IQ backend services while leaving the underlying `hcl-dx-iq` chart deployment intact.
 
     1. Set the `networking.dxIqService` parameter to an empty string in your custom `values.yaml` file:
 
@@ -108,7 +116,7 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
         dxIqService: ""
         ```
 
-    2. Deploy the updated configuration by running a [Helm upgrade](../../deployment/install/container/helm_deployment/overview.md):
+    2. Apply the updated configuration by running a [Helm upgrade](../../deployment/install/container/helm_deployment/overview.md):
 
         ```bash
         helm upgrade <release-name> <chart-name> -f values.yaml
