@@ -134,7 +134,7 @@ If the IQ backend service cannot establish network communication with LiteLLM:
 - Test endpoint accessiblity from the IQ pod:
 
     ```bash
-    kubectl exec -it <iq-pod> -n dxns -- \
+    kubectl exec -it <iq-integrator-pod> -n dxns -- \
       curl http://litellm.dxns.svc.cluster.local:4000/health/readiness
     ```
 
