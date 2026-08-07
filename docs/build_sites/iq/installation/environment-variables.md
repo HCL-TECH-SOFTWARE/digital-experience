@@ -10,6 +10,8 @@ This page lists the environment variables available for the IQ Integrator and DX
 |----------------------|-----------------|------|---------|-------------|-----------------|
 | `LITELLM_API_KEY` | `iq-litellm-api-secret` | String | — | Specifies the static LiteLLM API key set through a Kubernetes secret. When you set this key, the system bypasses the deployment key flow entirely. This variable is mutually exclusive with `IQ_DEPLOYMENT_KEY`. | Any valid LiteLLM virtual key |
 | `LITELLM_URL` | `configuration.litellm.liteLlmUrl` | String | — | Specifies the base URL of the LiteLLM Gateway Proxy. | A valid HTTPS URL (for example, `https://litellm.example.com`) |
+| `LLM_MAX_TOKENS` | `environment.pod.integrator` | Integer | — | Specifies the maximum number of tokens for LLM completion responses. You must override the default value based on the token limits of your LLM model to prevent errors from models that enforce strict token limits. | Any positive integer within the model's supported range (for example, `16384`, `8192`, `4096`) |
+| `LLM_TEMPERATURE` | `environment.pod.integrator` | Float | — | Specifies the temperature parameter for LLM response generation, controlling randomness and determinism. You must override the default value based on the constraints of your LLM model as some models require specific temperature values. | Any float value within the model's supported range (for example, `0.7`, `1`, `0`) |
 
 ### DX integration
 
@@ -75,6 +77,7 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `MAINTENANCE_MODE` | `maintenanceMode.mcpServer` | Boolean | `false` | Starts the MCP Server pod in maintenance mode. The application does not run, but the container remains active to let you debug inside the container. | `true`, `false` |
 
 ???+ info "Related information"
+    - [Deploying LiteLLM](deploy-litellm.md)
     - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](configuring-mcp.md)
     - [Preparing the database](prepare-database.md)

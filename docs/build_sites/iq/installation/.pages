@@ -1,9 +1,11 @@
 title: Installing IQ
 nav:
     - index.md
+    - deploy-litellm.md
+    - Deploying IQ services: deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services/
     - configuring-mcp.md
     - prepare-database.md
     - prepare-litellm-access.md
-    - environment-variables.md
     - validation.md
     - backup-restore.md
+    - environment-variables.md

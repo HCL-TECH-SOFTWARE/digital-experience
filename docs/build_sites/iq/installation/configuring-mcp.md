@@ -2,7 +2,7 @@
 
 This page describes the configuration model, parameter properties, and capability constraints for the Model Context Protocol (MCP) Server in HCL Digital Experience (DX) IQ deployments.
 
-The MCP Server establishes the communication layer that enables HCL DX IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
+The MCP Server establishes the communication layer that enables IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
 
 The configuration architecture delivers these capabilities through the following features:
 
@@ -87,5 +87,15 @@ After deployment, upgrade, or configuration updates, validate the following base
 4. Requests process reliably without repeated timeout or payload-limit failures.
 5. No persistent MCP connectivity errors, timeout logs, or unauthorized access patterns appear in the system logs.
 
+## Next steps
+
+After configuring the MCP Server:
+
+1. (Optional) Set up a [PostgreSQL database](prepare-database.md) for persistence.
+2. Configure [IQ Integrator authentication for LiteLLM access](prepare-litellm-access.md).
+
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
+    - [Preparing the database](prepare-database.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)
     - [Troubleshooting - MCP Server](../troubleshooting.md#mcp-server)
