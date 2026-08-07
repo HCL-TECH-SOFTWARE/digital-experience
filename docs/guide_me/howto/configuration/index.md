@@ -6,6 +6,8 @@ This section includes how-to articles about configuration in HCL Digital Experie
 Learn how to add a robots.txt file in your HCL DX environment to control how search engines crawl and index your site.  
 - **[How to change cell and node names in a standalone HCL DX environment](./ChangeCellandNodeName.md)**  
 Learn how to change cell and node names after installing HCL DX.  
+- **[How to change the default portlet configuration](./DefaultPortletConfig.md)**  
+Learn how to modify the default settings of a portlet across all deployed pages and virtual portals within HCL DX.
 - **[How to change the display language in HCL DX log files without changing the operating system's locale](./ChangeDisplayLanguage.md)**  
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.  
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  

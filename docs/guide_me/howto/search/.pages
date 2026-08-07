@@ -6,3 +6,4 @@ nav:
     - SearchByDateTime.md
     - DX_Search_and_Search_Center.md
     - IncludeWebContentViewerPortlet.md
+    - SearchConstraintAPI.md

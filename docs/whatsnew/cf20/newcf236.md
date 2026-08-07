@@ -69,21 +69,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Presentation Designer - DAM integration and feature updates
 
 === "Containers"
-    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Image](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#image).
 
     Additional updates include the following enhancements:
 
     - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
-    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
     - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
 
 === "On-Premises"
-    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Images](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Image](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#image).
 
     Additional updates include the following enhancements:
 
     - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
-    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements.md#static-elements).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
     - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
 
 ## Digital Experience 8.5 and 9.0 Versions
@@ -136,7 +136,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
         - Other Images: 9.7-1776104705
     - iFix PH71422
     - iFix PH71453
-    - iFix PH71453
+    - iFix PH71454
     - New support for [MS Windows Server 2025](../../get_started/system_requirements/traditional/supported_config.md#windows-family)
     
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
