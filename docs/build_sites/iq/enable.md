@@ -51,7 +51,7 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
 
     2. If IQ does not appear in the portal toolbar, restart the DX portal server.
 
-            - **AIX and Linux:**
+        - **AIX and Linux:**
 
         ```bash
         ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
@@ -115,7 +115,7 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
 
     2. If IQ still appears in the portal toolbar, restart the DX portal server.
 
-            - **AIX and Linux:**
+        - **AIX and Linux:**
 
         ```bash
         ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
