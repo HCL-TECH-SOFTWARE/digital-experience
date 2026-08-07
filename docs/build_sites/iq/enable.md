@@ -37,15 +37,15 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
 
         - **AIX and Linux:**
 
-        ```bash
-        ./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
-        ```
+            ```bash
+            ./ConfigEngine.sh enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
+            ```
 
         - **Windows:**
 
-        ```bash
-        ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
-        ```
+            ```bash
+            ConfigEngine.bat enable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password> -Diq=true -Diq.uri=http://{iq.backend.url}/dx/ui/iq
+            ```
 
         Replace `{iq.backend.url}` with the exact IQ backend service hostname and port in your deployment. For example: `http://dx-iq-integrator:3000`.
 
@@ -53,15 +53,15 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
 
         - **AIX and Linux:**
 
-        ```bash
-        ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-        ```
+            ```bash
+            ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
 
         - **Windows:**
 
-        ```bash
-        ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-        ```
+            ```bash
+            ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
 
 
     For more information on container-based deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md) and [Running DX Core configuration tasks](../../deployment/manage/container_configuration/run_core_config_engine.md).
@@ -117,15 +117,15 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
 
         - **AIX and Linux:**
 
-        ```bash
-        ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-        ```
+            ```bash
+            ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
 
         - **Windows:**
 
-        ```bash
-        ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
-        ```
+            ```bash
+            ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+            ```
 
     After the task completes, the IQ interface elements are removed from the toolbar.
 
