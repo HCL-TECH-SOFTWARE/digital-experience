@@ -11,10 +11,13 @@ After creating a Portal Search collection, pages containing the Web Content View
 ## Instructions
 
 1. Log in to HCL DX as an administrator.
-2. Navigate to **Administration > Applications > Portlets**.
+2. Click to the Home icon in the menubar and navigate to **Administration > Applications > Portlets**.
 3. Search for **Web Content Viewer**.
 4. Select the **Configure Portlet** wrench icon.
 5. Locate the **INCLUDE_IN_SEARCH_INDEX** preference and select the **Edit value** pencil icon.
 6. Change the **value** to `true`, and then select **OK**
 7. Select **OK** to save your changes.
-8. <!--re-crawl/regather the search collection documents, and verify the pages appear in search results.-->
+8. Then in the left side menu expand **Search** and click to **Settings**.  
+9. Click to **Search Collections**.
+10. Click to the Collection name and then click to the **start Crawler** icon to re-crawl/regather the search collection documents.
+11. As soon as the crawler finished verify if the pages appear in the search results.  
