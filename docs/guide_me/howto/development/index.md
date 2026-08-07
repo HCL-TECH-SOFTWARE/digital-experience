@@ -7,7 +7,7 @@ Learn about the sample codes for portlet development utilities and page creation
 - **[How to convert a file to base64 encoded format](./SampleJSPtoConvertAfileToBase64EncodedFormat.md)**  
 Learn how to convert a file to base64 encoded format using JSP code.  
 - **[How to count WCM items and versions using the WCM API sample code](./APIToCountWCMItems.md)**  
-Learn about the WCM API sample code to count WCM items and versions.  
+Learn about the Web Content Manager (WCM) API sample code to count WCM items and versions.  
 - **[How to count WCM library content items on virtual portals using Java and JSPs](./countContentItemsLibsVP.md)**  
 Learn how to count content items of a WCM library on virtual portals using Java and JSPs.  
 - **[How to create a custom login or logout filter in HCL DX](custom_login_filter_sample.md)**  
@@ -16,9 +16,9 @@ Learn how to create a custom login or logout filter to determine the number of c
 Learn how to create a custom login with credential vault handling in HCL DX.  
 - **[How to create a servlet to serve static files from HCL DX using the Rational Application Developer](CreateAServletForStaticFiles.md)**  
 Learn how to create a servlet that serves static files.  
+- **[How to create an external application JAR file and invoke it using a JSP component](./ExternalJARinvokeJSP.md)**  
+Learn how to create a custom Java class, package it into an external application JAR file, and invoke it using a WCM JSP component.
 - **[How to use the PUMA API within a WCM JSP component to print out the user and hostname sending the request](CodeToPrintUserAndHostname.md)**  
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[How to use the WCM API to render a WCM component in HCL DX](./WCMAPIRenderComponent.md)**  
 Learn how to use the WCM API to render a WCM component in HCL DX.  
-- **[How to create an external application JAR and invoke via JSP Component](./ExternalJARinvokeJSP.md)**  
-Learn how to create an external application JAR that later can be invoked via a Web Content Manager (WCM) JSP component.  
