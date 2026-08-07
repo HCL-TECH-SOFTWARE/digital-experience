@@ -27,6 +27,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
 |Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
 |Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
+|Migrated|Web Content Manager|[How to use `RefreshAllItems` for WCM libraries](./wcm/SampleInvocationRefreshLibrary.md)|
 
 ## CF236
 

@@ -1,4 +1,4 @@
-# How to use RefreshAllItems for WCM Libraries
+# How to use `RefreshAllItems` for WCM libraries
 
 ## Applies to
 
@@ -11,7 +11,7 @@ The `RefreshAllItems` module processes items across Web Content Manager (WCM) li
 ## Instructions
 
 !!! important
-   Take a coordinated backup of the HCL DX file system and database before executing this task. Contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"} before running this module in a production environment.
+    Take a coordinated backup of the HCL DX file system and database before executing this task. Contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"} before running this module in a production environment.
 
 ### Updating items using HTTP requests
 

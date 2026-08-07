@@ -42,8 +42,8 @@ Learn how to do specific Web Distributed Authoring and Versioning (WebDAV) and t
 Learn how to use specific tools such as XMLAccess, DXClient, WCM Support Tools portlet, and other tools for your HCL DX environment.
 - **[Upgrade](./upgrade/index.md)**  
 Learn how to do specific upgrade tasks in your HCL DX environment.
-- **[Web Content Manager Library Management](./wcmlibrarymanagement/index.md)**  
-Learn how to do specific Web Content Manager (WCM) Library Management tasks such as importing and exporting in your HCL DX environment.
+- **[Web Content Manager](./wcm/index.md)**  
+Learn how to do specific Web Content Manager (WCM) library management tasks such as importing and exporting in your HCL DX environment.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
