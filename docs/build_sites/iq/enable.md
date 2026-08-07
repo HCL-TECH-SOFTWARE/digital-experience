@@ -49,7 +49,19 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
 
         Replace `{iq.backend.url}` with the exact IQ backend service hostname and port in your deployment. For example: `http://dx-iq-integrator:3000`.
 
-    2. 
+    2. If IQ does not appear in the portal toolbar, restart the DX portal server.
+
+            - **AIX and Linux:**
+
+        ```bash
+        ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+        ```
+
+        - **Windows:**
+
+        ```bash
+        ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+        ```
 
 
     For more information on container-based deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md) and [Running DX Core configuration tasks](../../deployment/manage/container_configuration/run_core_config_engine.md).
@@ -101,7 +113,19 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
             ConfigEngine.bat disable-iq -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
             ```
 
-    2. 
+    2. If IQ still appears in the portal toolbar, restart the DX portal server.
+
+            - **AIX and Linux:**
+
+        ```bash
+        ./ConfigEngine.sh stop-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+        ```
+
+        - **Windows:**
+
+        ```bash
+        ConfigEngine.bat start-portal-server -DWasPassword=<WAS admin password> -DPortalAdminPwd=<Portal admin password>
+        ```
 
     After the task completes, the IQ interface elements are removed from the toolbar.
 
