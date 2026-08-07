@@ -6,56 +6,58 @@
 
 ## Introduction
 
-There are some situations where you would want to "touch" update all items in a WCM library. The refreshAllItems module was designed for this purpose. This document will demonstrate some sample invocations of the module.
+The `RefreshAllItems` module processes items across Web Content Manager (WCM) libraries without modifying content. Executing this module updates security permissions, refreshes scheduled items, resolves item errors, or triggers reindexing across WCM items. This article describes how to run the `RefreshAllItems` module using HTTP requests or ConfigEngine tasks.
 
 ## Instructions
 
-!!! note "Important Safeguard"
-    You should take a coordinated backup of the HCL DX file system and database before executing this! It is also a good idea to discuss with HCL Support before running the module.  
+!!! important
+   Take a coordinated backup of the HCL DX file system and database before executing this task. Contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"} before running this module in a production environment.
 
-1. Here are some sample uses of the module via HTTP requests:
+### Updating items using HTTP requests
 
-    * Refresh scheduled items across all libraries without loading resources:  
+- Refresh scheduled items across all libraries without loading resources:  
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&allLibraries=true&preserve_dates=true&scheduleOnly=true&loadResources=false
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&allLibraries=true&preserve_dates=true&scheduleOnly=true&loadResources=false
+    ```
 
-    * Update security permissions across all libraries while preserving dates:  
+- Update security permissions across all libraries while preserving dates:  
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&allLibraries=true&preserve_dates=true&securityOnly=true&removeExistingPerms=&removeVirtualUserPerms=true&inheritPerms=&loadResources=false&processDrafts=false&libSecurity=true
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&allLibraries=true&preserve_dates=true&securityOnly=true&removeExistingPerms=&removeVirtualUserPerms=true&inheritPerms=&loadResources=false&processDrafts=false&libSecurity=true
+    ```
 
-    * Restrict execution to components within a specific library:  
+- Restrict execution to components within a specific library:
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&library=mylib&restrictOn=Cmpnt
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&library=mylib&restrictOn=Cmpnt
+    ```
 
-    * Refresh scheduled items for the default library:  
+- Refresh scheduled items for the default library:
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&scheduleOnly=true&loadResources=false
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=RefreshAllItems&scheduleOnly=true&loadResources=false
+    ```
 
-        !!!note
-            The module by default does not load the child nodes. With `loadResources=true` it loads the child nodes like controls and components. This can increase run time for the module dramatically.
+    !!!note
+        By default, the module does not load child nodes. Setting `loadResources=true` loads child nodes such as controls and components, which can significantly increase module execution time.
 
-    * Fix SiteArea items in a specific library and preserve dates:  
+- Fix site area items in a specific library while preserving dates:
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=refreshAllItems&library=mylib&restrictOn=SiteArea&preserve_dates=true&fix=true
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=refreshAllItems&library=mylib&restrictOn=SiteArea&preserve_dates=true&fix=true
+    ```
 
-    * Sample usage to update the PAC Permissions/Tables for a set of items in a library (in this case all Content Links):  
+- Update Portal Access Control (PAC) permissions or tables for specific library items (such as content links):
 
-        ```URL
-        http://host:port/wps/wcm/myconnect?MOD=refreshAllItems&library=myLibrary&restrictOn=ContentLink&securityOnly=true&preserve_dates=true&removeExistingPerms=true
-        ```
+    ```URL
+    http://host:port/wps/wcm/myconnect?MOD=refreshAllItems&library=myLibrary&restrictOn=ContentLink&securityOnly=true&preserve_dates=true&removeExistingPerms=true
+    ```
 
-2. Sample ConfigEngine invocation:  
+### Updating items using ConfigEngine tasks
 
-    ```bash
-    ./ConfigEngine.sh run-wcm-admin-task -Dtask=refreshAllItems -DrestrictOn=WorkflowAction -Dlibrary=mylibraryname
-    ```  
+Restrict execution to workflow action items within a specific library:
+
+```bash
+./ConfigEngine.sh run-wcm-admin-task -Dtask=refreshAllItems -DrestrictOn=WorkflowAction -Dlibrary=mylibraryname
+```  
