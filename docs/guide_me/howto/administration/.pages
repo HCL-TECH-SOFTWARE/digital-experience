@@ -3,11 +3,13 @@ nav:
     - index.md
     - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
+    - ClearStaleFavorites.md
     - ClearOSGIandTempFiles.md
     - ClearWCMCaches.md
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
+    - DetermineWebsphereAppServer.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md
