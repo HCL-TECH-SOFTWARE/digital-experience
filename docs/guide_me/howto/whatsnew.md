@@ -29,6 +29,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
 |Migrated|Search|[How to include pages containing the Web Content Viewer portlet in a portal seedlist](./search/IncludeWebContentViewerPortlet.md)|
 |Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
+|Migrated|Web Content Manager|[How to use `RefreshAllItems` for WCM libraries](./wcm/SampleInvocationRefreshLibrary.md)|
 
 ## CF236
 
