@@ -3,6 +3,7 @@ nav:
     - index.md
     - VPSearchService.md
     - SampleSearchQueryWCMComponent.md
+    - IncludeWebContentViewerPortlet.md
     - SearchByDateTime.md
     - DX_Search_and_Search_Center.md
     - SearchConstraintAPI.md

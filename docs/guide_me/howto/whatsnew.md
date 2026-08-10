@@ -27,6 +27,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
 |Migrated|Development|[How to create an external application JAR file and invoke it using a JSP component](./development/ExternalJARinvokeJSP.md)|
 |Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
+|Migrated|Search|[How to include pages containing the Web Content Viewer portlet in a portal seedlist](./search/IncludeWebContentViewerPortlet.md)|
 |Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
 
 ## CF236
