@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Custom Java logic can be packaged externally into a JAR file and called directly from within Web Content Manager (WCM) components to extend portal capabilities. This document describes how to create an external application JAR file and invoke a custom Java class using a WCM JSP component.
+Custom Java logic can be packaged externally into a JAR file and called directly from within Web Content Manager (WCM) components to extend portal capabilities. This article describes how to create an external application JAR file and invoke a custom Java class using a WCM JSP component.
 
 ## Instructions
 
