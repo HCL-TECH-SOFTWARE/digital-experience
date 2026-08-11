@@ -80,6 +80,10 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
         dxIqService: "dx-iq-integrator"
         ```
 
+        !!! important
+            - Use only the service name, not a full URL (for example, `dx-iq-integrator`, not `http://dx-iq-integrator:3000`).
+            - Use the fully qualified service name if the service resides in a different Kubernetes namespace than the DX deployment (for example, `dx-iq-integrator.namespace.svc.cluster.local`).
+
     3. Apply the Helm chart update by running a [Helm upgrade](../../deployment/install/container/helm_deployment/overview.md):
 
         ```bash
@@ -87,10 +91,6 @@ Enable the IQ assistant using either ConfigEngine tasks or Helm configuration, d
         ```
 
     After the update is applied, HAProxy automatically routes the `/dx/api/iq/v1/` and `/dx/ui/iq/` endpoints to the IQ service, and the assistant interface elements become available on the DX toolbar. The MCP Server remains part of the IQ deployment and continues to provide the protocol layer used by the assistant. For endpoint-level MCP details regarding internal cluster routing paths, versioned entry points, and operational probes, refer to [Managing endpoints and security](installation/configuring-mcp.md#managing-endpoints-and-security).
-
-    !!! important
-        - Use only the service name, not a full URL (for example, `dx-iq-integrator`, not `http://dx-iq-integrator:3000`).
-        - Use the fully qualified service name if the service resides in a different Kubernetes namespace than the DX deployment (for example, `dx-iq-integrator.namespace.svc.cluster.local`).
 
 ## Disabling IQ
 
