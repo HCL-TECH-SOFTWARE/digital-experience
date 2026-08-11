@@ -22,7 +22,7 @@ If interface or display issues occur, clear the browser cache and perform a hard
 If the sparkle icon or floating action button (FAB) does not appear:
 
 - Verify that IQ is installed and enabled. For instructions, refer to [Enabling IQ](enable.md).
-- Confirm that all IQ components upgraded successfully and the deployment is healthy after a Helm upgrade.
+- Confirm that all IQ components upgraded successfully and the deployment is healthy after a DX Core Helm upgrade.
 - Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
 **Incorrect message display**
@@ -132,7 +132,7 @@ If IQ cannot locate the `iq-general-purpose` or `iq-summary` models:
 
 If the IQ backend service cannot establish network communication with LiteLLM:
 
-- Test endpoint accessiblity from the IQ pod:
+- Test endpoint accessibility from the IQ pod:
 
     ```bash
     kubectl exec -it <iq-integrator-pod> -n dxns -- \
