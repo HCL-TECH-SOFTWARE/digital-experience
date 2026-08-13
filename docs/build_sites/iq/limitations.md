@@ -58,7 +58,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### Deployment
 
 - The MCP Server must be deployed within the same Helm chart as the Integrator to establish automatic network connectivity.
-- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. The MCP Server functions regardless of which tools are enabled.
+- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. At least one of these tool domains must remain enabled for the readiness probe to report the MCP Server as healthy.
 - The `standaloneMode` parameter disables HCL DX user authentication integration, causing the MCP Server to function in isolation.
 
 ### Scope and enablement
