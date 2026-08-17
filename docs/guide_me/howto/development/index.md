@@ -20,5 +20,5 @@ Learn how to create a servlet that serves static files.
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[How to use the WCM API to render a WCM component in HCL DX](./WCMAPIRenderComponent.md)**  
 Learn how to use the WCM API to render a WCM component in HCL DX.  
-- **[How to Use WebSphere DynaCache to Store and Share Data](./DynaCacheToStoreData.md)**  
-Learn how to use the sample code from HCL to use WebSphere DynaCache to store and share data.
+- **[How to use IBM WebSphere DynaCache to store and share data](./DynaCacheToStoreData.md)**  
+Learn how to use IBM WebSphere DynaCache in custom code to store and share data.  
