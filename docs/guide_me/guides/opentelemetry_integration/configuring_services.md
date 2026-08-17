@@ -16,16 +16,30 @@ You can enable and configure OTel in the HCL DX Helm chart `values.yaml` file. T
 Add or update the following section in your `values.yaml`:
 
 ```yaml
-  openTelemetry:
-    # Enable OTel integration
-    enabled: true
+openTelemetry:
+  # Master toggle - Enable or disable OpenTelemetry instrumentation globally
+  # Set to true to enable, false to disable
+  enabled: true
+  
+  # Collector configuration
+  # Ensure that your OpenTelemetry collector is reachable from your Kubernetes deployment
+  collector:
+    # URL pointing to your OpenTelemetry collector OTLP HTTP endpoint
+    # Format: "http://<service-name>.<namespace>.svc.cluster.local:4318"
+    # 
+    # Examples:
+    #   - In-cluster collector: "http://deployment-opentelemetry-collector.otel.svc.cluster.local:4318"
+    #   - External collector: "http://otel-collector.monitoring:4318"
+    #   - Cloud service: "https://otlp.example.com:4318"
+    #
+    # Port 4318 = OTLP HTTP endpoint (recommended)
+    # Port 4317 = OTLP gRPC endpoint (alternative)
+    exportUrl: "http://deployment-opentelemetry-collector.otel.svc.cluster.local:4318"
     
-    # OTel Collector endpoint
-    collectorEndpoint: "http://otel-collector.observability.svc.cluster.local:4318"
-
-    # Protocol: http/protobuf (default) or grpc
+    # Protocol to be used for communication with the collector
+    # Supported values: "http/protobuf" (recommended), "grpc"
     protocol: "http/protobuf"
-
+  
   # Service configuration
   # Allows for easy identification of your telemetry data in observability backends
   service:
@@ -38,14 +52,14 @@ Add or update the following section in your `values.yaml`:
     #   - "my-dx" → "my-dx-core-0", "my-dx-core-1"
     #
     # Leave empty to use Helm release name automatically
-    name: ""
+    name: "otel-dx"
     
     # Namespace to be used with the telemetry data
     # Defaults to the namespace of your deployment if left empty
     # This is added as "deployment.environment" resource attribute
     # 
     # Leave empty to use deployment namespace automatically
-    namespace: ""
+    namespace: "otel"
   
   # OpenTelemetry SDK log level configuration
   # NOTE: This controls ONLY the OpenTelemetry SDK's internal diagnostic logging
@@ -71,10 +85,13 @@ Add or update the following section in your `values.yaml`:
       ringApi: "info"
       runtimeController: "info"
       webEngine: "info"
-    
-    # Debug mode - shows OTel config in pod logs
-    debug:
-      enabled: false
+  
+  # Debug configuration
+  debug:
+    # Enable debug output from OTel startup scripts
+    # Prints all environment variables during container startup
+    # Default: false
+    enabled: false
 ```
 
 ## Deploying the configuration
