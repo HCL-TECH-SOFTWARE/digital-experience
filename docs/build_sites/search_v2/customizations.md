@@ -106,7 +106,7 @@ This section explains the default styles for search components and how to custom
 Each component comes with default styles. See the following examples of different default styles:
 
 ```scss
-dx-button::part(button) {
+enchanted-button::part(button) {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -120,7 +120,7 @@ dx-button::part(button) {
   height: 32px;
   padding: 8px 12px;
 }
-dx-button::part(button-disabled) {
+enchanted-button::part(button-disabled) {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -137,18 +137,18 @@ dx-button::part(button-disabled) {
   color: darkgray;
   cursor: not-allowed;
 }
-dx-button::part(button-text) {
+enchanted-button::part(button-text) {
   font-size: 16px;
   line-height: 1;
   overflow: hidden;
 }
 ...
 
-dx-input-textfield::part(div) {
+enchanted-textfield::part(div) {
   width: 100%;
   position: relative;
 }
-dx-input-textfield::part(label) {
+enchanted-textfield::part(label) {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -158,7 +158,7 @@ dx-input-textfield::part(label) {
   display: block;
   color: rgba(0, 0, 0, 0.87);
 }
-dx-input-textfield::part(input) {
+enchanted-textfield::part(input) {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -176,19 +176,21 @@ dx-input-textfield::part(input) {
 
 ### Style customization
 
-You can override styles by targeting the component's class names or part attribute. You can override other components in a similar manner. Refer to the following styling examples for `dx-button` and `dx-input-textfield`.
+You can override styles by targeting the component's class names or part attribute. You can override other components in a similar manner. Refer to the following styling examples for `enchanted-button` and `enchanted-textfield`.
 
 !!! note
-    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM. For more information about supported `part` attributes, see [Atomic Components](components/atomic_components.md).
+    The `part` attribute is used to name parts of a shadow tree, which can then be styled from outside the shadow DOM using the `::part()` pseudo-element. This allows you to apply CSS styles to shadow tree elements from the parent DOM.
+    The available CSS Parts for each Atomic Component are documented in that component's Storybook documentation. Refer to the corresponding component's Storybook document page for complete list of supported CSS Parts and their descriptions.
+
 
 ```css
-/* for dx-button */
-dx-button::part(button-text) {
+/* for enchanted-button */
+enchanted-button::part(button-text) {
   color: #FF0000; /* is overriding the button-start-icon color */
 }
 
-/* for dx-input-textfield */
-dx-input-textfield::part(label) {
+/* for enchanted-textfield */
+enchanted-textfield::part(label) {
   color: #FF0000; /* is overriding the button label color */
 }
 ```
