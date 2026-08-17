@@ -6,32 +6,55 @@
 
 ## Introduction
 
-When running HCL Digital Experience with a database running on Microsoft SQL Server, it might be needed to ensure that SSL-connections use a specific TLS version. This article provides detailed steps that can be used to configure a specific SSL/TLS version for the backend database connection.  
+When using Microsoft SQL Server as the backend database for HCL Digital Experience (DX), security policy or compliance standards may require restricting database connections to a specific TLS protocol. This article explains how to configure WebSphere Application Server data source properties to use a required TLS version.
 
 ## Instructions
 
-1. Login into the IBM Integrated Solutions Console (WebSphere Application Server admin console) of the HCL DX server.
+To configure a specific TLS version for the backend database connection, perform the following steps:
 
-2. Navigate to **Resources > JDBC > Datasources > (Datasource Name) > Custom Properties**.
+1. Log in to the IBM Integrated Solutions Console (WAS admin console).
+2. Navigate to **Resources > JDBC > Data sources**.
+3. Select the data source corresponding to your MS-SQL database (for example, **jcrdb** or **wpdb**).
+4. Under **Additional Properties**, select **Custom properties**.
+5. Check whether the **URL** custom property exists:
 
-3. Search for the **URL** property. If it does not exist, create it. If it exists, modify the value.  
+    - If the property exists:
 
-4. Change the value of the URL property as following:  
+        1. Select **URL**.
+        2. In the **Value** field, enter the connection string using the following syntax:
 
-    **Syntax:**  
+            ```url
+            jdbc:sqlserver://<hostname>:<port>;database=<database-name>;sslProtocol=<protocol version>
+            ```
 
-    ```url
-    jdbc:sqlserver://<hostname>:<port>;database=<database-name>;sslProtocol=<protocol version>
-    ```
+            Potential values for the `sslProtocol` connection property include `TLS`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`. For more information on this property, refer to [Setting the connection properties](https://learn.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver16){target="_blank"}
 
-    **Sample:**  
+            For example:
 
-    ```url
-    jdbc:sqlserver://mssqlservername:1414;database=jcrdb;sslProtocol=TLSv1.2
-    ```
+            ```url
+            jdbc:sqlserver://mssqlservername:1414;database=jcrdb;sslProtocol=TLSv1.2
+            ```
 
-   Potential values for the sslProtocol connection property are: TLS, TLSv1, TLSv1.1, TLSv1.2 and so on. for details, please check [Setting the connection properties](https://learn.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver16)
+    - If the property does not exist:
 
-???+ info "Additional information"
-    The custom datasource property URL overwrites the general connection settings that will be used under:
-    Resources > JDBC > Datasources > (Datasource Name)
+        1. Select **New**
+        2. In the **Name** field, enter **URL**.
+        3. In the **Value** field, enter the connection string using the following syntax:
+
+            ```url
+            jdbc:sqlserver://<hostname>:<port>;database=<database-name>;sslProtocol=<protocol version>
+            ```
+
+            Potential values for the `sslProtocol` connection property include `TLS`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`. For more information on this property, refer to [Setting the connection properties](https://learn.microsoft.com/en-us/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver16){target="_blank"}
+
+            For example:
+
+            ```url
+            jdbc:sqlserver://mssqlservername:1414;database=jcrdb;sslProtocol=TLSv1.2
+            ```
+
+6. Select **Apply**.
+7. Select **Save** at the top of the console messages.
+
+!!!note
+    The custom data source property URL overrides the general connection settings configured for the selected data source (such as **jcrdb** or **wpdb**).

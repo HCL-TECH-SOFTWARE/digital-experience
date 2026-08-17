@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF238
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
+
 ## CF237
 
 | Type | Category | Article |
