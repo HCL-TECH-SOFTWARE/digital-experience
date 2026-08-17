@@ -43,6 +43,9 @@ Use the following feature flags to enable or disable tool domains to expose only
 |`ENABLE_WCM`|Enables Web Content Manager (WCM) and DX Core content-related tools.|`false`|
 |`STANDALONE_MODE`|Controls authentication tool enablement and determines whether the server integrates with HCL DX user authentication or runs in isolation.|`false`|
 
+!!! warning
+    At least one of `ENABLE_DAM` or `ENABLE_WCM` must be set to `true`. If both parameters are disabled, the MCP Server does not expose any DAM or WCM tool domains and the readiness probe reports the service as unhealthy.
+
 Use the following parameter to adjust the payload handling limit:
 
 | Parameter {: style="width: 25%; white-space: nowrap;"}| Description {: style="width: 45%;"}| Default value {: style="width: 15%;"}|
