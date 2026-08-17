@@ -1,4 +1,4 @@
-# How to monitor user logins from traces on HCL Digital Experience
+# How to monitor user logins from traces in HCL DX
 
 ## Applies to
 
@@ -6,21 +6,23 @@
 
 ## Introduction
 
-This document provides steps to monitor user logins from traces on the HCL Digital Experience server.
+Monitoring user logins through trace files helps troubleshoot authentication issues on your HCL Digital Experience (DX) server. This article explains how to monitor user logins from traces.
 
 ## Instructions
 
-1. Login into the IBM Integrated Solutions Console (WAS admin console)
+To monitor user logins from traces, perform the following steps:
 
-2. Navigate to **Troubleshooting > Logs and trace > WebSphere_Portal > Diagnostic trace > Change log detail levels**.
+1. Log in to the IBM Integrated Solutions Console (WAS admin console).
 
-3. In the **Configuration tab** enter the trace string:
+2. Navigate to **Troubleshooting > Logs and trace > WebSphere_Portal > Diagnostic Trace > Change log detail levels**.
+
+3. Under **Change log detail levels** in the **Configuration tab**, enter the following trace string:
 
     ```log
     com.ibm.wps.services.authentication.impl.AuthenticationServiceImpl=fine
     ```
 
-4. Then tail and grep the trace.log with this command :
+4. In your terminal, run the following command to tail and filter the `trace.log` file:
 
     ```shell
     tail -f trace.log | grep "Trying to authenticate user"

@@ -18,11 +18,11 @@ Learn how to migrate HCL DX user authentication from an IBM Directory Server to 
 Learn how to integrate the user impersonation API with SAML SSO by modifying conflicting WebSphere application server security custom properties.
 - **[How to integrate transient users with OpenID Connect](./transient_users_with_OpenID_Connect.md)**  
 Learn how to integrate transient users using OpenID Connect (OIDC) for your HCL DX environment.  
+- **[How to monitor user logins from traces in HCL DX](./MonitorUserLogins.md)**  
+Learn how to enable authentication trace logging and filter log files to track user login attempts.
 - **[How to prevent Log4j warnings from security scanners](./UnifiedTaskListLog4j.md)**  
 Learn how to remove the Unified Task List and Script Application Import portlets to resolve scanner flags on outdated Log4j JAR files.
 - **[How to redirect users to a custom login page in HCL DX](./ChangeLoginPage.md)**  
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
 Learn how to replace an LDAP server configuration step by step in HCL DX.
-- **[How to monitor user logins from traces on HCL Digital Experience](./MonitorUserLogins.md)**  
-Learn how to monitor user logins from traces on HCL Digital Experience.
