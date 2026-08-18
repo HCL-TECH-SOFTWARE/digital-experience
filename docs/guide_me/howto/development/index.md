@@ -16,9 +16,9 @@ Learn how to create a custom login or logout filter to determine the number of c
 Learn how to create a custom login with credential vault handling in HCL DX.  
 - **[How to create a servlet to serve static files from HCL DX using the Rational Application Developer](CreateAServletForStaticFiles.md)**  
 Learn how to create a servlet that serves static files.  
+- **[How to use the IBM WebSphere DynaCache to store and share data](./DynaCacheToStoreData.md)**  
+Learn how to configure an object cache instance in the IBM WebSphere Application Server and write custom JSP code to store and retrieve shared data across cluster members.
 - **[How to use the PUMA API within a WCM JSP component to print out the user and hostname sending the request](CodeToPrintUserAndHostname.md)**  
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[How to use the WCM API to render a WCM component in HCL DX](./WCMAPIRenderComponent.md)**  
 Learn how to use the WCM API to render a WCM component in HCL DX.  
-- **[How to use IBM WebSphere DynaCache to store and share data](./DynaCacheToStoreData.md)**  
-Learn how to use IBM WebSphere DynaCache in custom code to store and share data.  
