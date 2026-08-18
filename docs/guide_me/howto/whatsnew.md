@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF238
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|
+
 ## CF237
 
 | Type | Category | Article |
