@@ -9,9 +9,9 @@ Production deployments require a PostgreSQL database to maintain conversation st
 
 Choose from the following database configurations:
 
-- An internal PostgreSQL database provisioned automatically by your Digital Experience (DX) Persistence Node for Kubernetes-only deployments
-- An external PostgreSQL instance located outside your DX deployment, such as a cloud-managed, on-premises, or separate Kubernetes cluster database
-- A PostgreSQL database provisioned and managed automatically within your DX deployment by your DX Runtime Controller (RTC)
+- An internal PostgreSQL database provisioned automatically by your Digital Experience (DX) Persistence Node for Kubernetes-only deployments.
+- An external PostgreSQL instance located outside your DX deployment, such as a cloud-managed, on-premises, or separate Kubernetes cluster database.
+- A PostgreSQL database provisioned and managed automatically within your DX deployment by your DX Runtime Controller (RTC).
 
 ## Configuring an internal database
 
@@ -406,5 +406,17 @@ Use this option to automatically provision and manage a PostgreSQL database with
     - `<IQ_HELM_CHART_VERSION>`: The IQ Helm chart version.
     - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
 
-???+ info "Validation"
-    After configuring your database, [validate your deployment](validation.md#verifying-database-connectivity) to verify that the IQ pod can connect to the database successfully.
+## Next steps
+
+After configuring your database:
+
+1. Verify that the [IQ pod can connect to the database](validation.md#verifying-database-connectivity) successfully.
+2. Configure [IQ Integrator authentication for LiteLLM access](prepare-litellm-access.md).
+3. Run [regular backups](backup-restore.md) to ensure data recovery if a failure occurs.
+
+???+ info "Related information"
+    - [Backing up and restoring data](backup-restore.md)
+    - [IQ environment variables](environment-variables.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)
+    - [Troubleshooting - Connection failures](../troubleshooting.md#connection-failures)
+    - [Validating the deployment](validation.md#verifying-database-connectivity)

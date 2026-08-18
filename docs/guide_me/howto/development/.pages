@@ -8,6 +8,7 @@ nav:
     - custom_login_filter_sample.md
     - CustomLoginPortlet.md
     - CreateAServletForStaticFiles.md
+    - ExternalJARinvokeJSP.md
     - DynaCacheToStoreData.md
     - CodeToPrintUserAndHostname.md
     - WCMAPIRenderComponent.md
