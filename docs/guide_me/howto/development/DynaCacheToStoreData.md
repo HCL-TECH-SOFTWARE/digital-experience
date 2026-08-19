@@ -13,7 +13,7 @@ IBM WebSphere DynaCache provides an in-memory caching service that stores object
 To use IBM WebSphere DynaCache to store and share data, perform the following steps:
 
 ???+ info "Disclaimer of Warranties"
-      The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.  
+    The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.  
 
 1. Log in to the IBM Integrated Solutions Console (WAS admin console)
 2. Navigate to **Resources > Cache instances > Object cache instances**.
@@ -21,30 +21,30 @@ To use IBM WebSphere DynaCache to store and share data, perform the following st
 4. Select **New...**.
 5. Enter a **Name** and a **JNDI name**. For example:  
 
-   - **Name:** `SampleCache`
-   - **JNDI Name:** `custom/cache/SampleCache`
+    - **Name:** `SampleCache`
+    - **JNDI Name:** `custom/cache/SampleCache`
 
 6. Select **Apply**.
 7. Click **Save** at the top of the console messages.
 8. Restart the HCL DX server.
 
-   !!!note
-      If the new object cache does not display when monitoring DynaCaches after restarting, select **Refresh Instances** <!--where is this button located?-->.
+    !!!note
+        If the new object cache does not display when monitoring DynaCaches after restarting, select **Refresh Instances** <!--where is this button located?-->.
 
 9. Add the following code to the `view.jsp` file used by your portlet:
 
-   ```jsp
-   <%@ page import="com.ibm.websphere.cache.DistributedObjectCache" %>
-   Context context = new InitialContext();
-   DistributedObjectCache myCache = (DistributedObjectCache)context.lookup("custom/cache/SampleCache");
-   myCache.put("SampleParm", "hello");
-   System.out.println("distributedMap Size: " + myCache.size(true));
-   System.out.println("SampleParm: " + myCache.get("SampleParm"));
-   ```
+    ```jsp
+    <%@ page import="com.ibm.websphere.cache.DistributedObjectCache" %>
+    Context context = new InitialContext();
+    DistributedObjectCache myCache = (DistributedObjectCache)context.lookup("custom/cache/SampleCache");
+    myCache.put("SampleParm", "hello");
+    System.out.println("distributedMap Size: " + myCache.size(true));
+    System.out.println("SampleParm: " + myCache.get("SampleParm"));
+    ```
 
 10. Render the portlet and verify that lines similar to the following appear in `SystemOut.log`:
 
-   ```log
-   [Timestamp] 000001a5 SystemOut O distributedMap Size: 1
-   [Timestamp] 000001a5 SystemOut O SampleParm: hello
-   ```  
+    ```log
+    [Timestamp] 000001a5 SystemOut O distributedMap Size: 1
+    [Timestamp] 000001a5 SystemOut O SampleParm: hello
+    ```  
