@@ -1,4 +1,4 @@
-# IQ limitations
+# IQ limitations 
 
 This page lists the known limitations of IQ.
 
