@@ -1,4 +1,4 @@
-# What's new in CF237
+# What's new in CF237 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF237 on supported platforms:
 
