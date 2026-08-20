@@ -70,7 +70,7 @@ Refer to the following table to determine the appropriate reporting method for y
 
 In addition to verifying entitlement to the contract period for purchased subscription software, HCL Software delivery portals can present usage information of HCL Software offerings that have been developed to report usage metrics. This information includes HCL DX Cloud Native v9.5 Tier 1 – 7 offerings for production deployments.
 
-HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually. A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources, excluding deliveries to a content-delivery network.
+HCL DX Cloud Native 9.5 Tier 1 – 7 offerings are purchased according to the number of user sessions to be consumed annually. A user session is defined as a single web session or other online interaction by anonymous or authenticated users of the program when it is deployed for production use. User sessions also include API calls, which deliver production-use website content or application data to external resources.
 
 - A user session begins when a user (authenticated or anonymous) visits a DX deployment operating for production use and then interacts with program website pages and is identified through appropriate tags that use the appropriate scripts for each site page view request. User session interactions can include one or more production-use website page views.
 

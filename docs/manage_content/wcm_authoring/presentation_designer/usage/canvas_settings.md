@@ -2,9 +2,9 @@
 
 Canvas settings configure the width, height, zoom level, orientation, and language direction of the presentation workspace.
 
-To access Presentation Designer and understand its user interface, refer to **[Access Presentation Designer](../access.md)**.
+To access Presentation Designer and understand its user interface, refer to **[Accessing Presentation Designer](../access.md)**.
 
-To learn how to use the different user elements in Presentation Designer, refer to **[User Elements in Presentation Designer](../usage/user_elements.md)**.
+To learn how to use the different user elements in Presentation Designer, refer to **[User elements](../usage/user_elements/index.md)**.
 
 ## Canvas dimensions
 

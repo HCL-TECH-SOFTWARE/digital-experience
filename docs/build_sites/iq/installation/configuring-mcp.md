@@ -2,7 +2,7 @@
 
 This page describes the configuration model, parameter properties, and capability constraints for the Model Context Protocol (MCP) Server in HCL Digital Experience (DX) IQ deployments.
 
-The MCP Server establishes the communication layer that enables HCL DX IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
+The MCP Server establishes the communication layer that enables IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
 
 The configuration architecture delivers these capabilities through the following features:
 
@@ -18,7 +18,7 @@ Before validating the configuration, ensure your environment meets the following
 1. DX CF236 or later is installed.
 2. IQ is enabled in your DX environment.
 3. The IQ chart release is deployed successfully.
-4. Networking rules permit communication between DX, IQ integrator, and MCP server services.
+4. Networking rules permit communication between DX, IQ integrator, and MCP Server services.
 
 ## Verifying service-level expectations
 
@@ -26,14 +26,14 @@ Use these baseline checks in your environment:
 
 1. Confirm the `dx-mcp-server` pod is running and healthy.
 2. Confirm the service name and namespace resolution are correct.
-3. Confirm IQ integrator and MCP server are from compatible release levels.
+3. Confirm IQ integrator and MCP Server are from compatible release levels.
 
 !!! note
-    If IQ was upgraded, verify that the associated MCP server deployment was upgraded as part of the same release plan.
+    If IQ was upgraded, verify that the associated MCP Server deployment was upgraded as part of the same release plan.
 
 ## Configuring server parameters
 
-The MCP server relies on specific Helm chart configuration values to control tool availability, payload capacity, and session data context.
+The MCP Server relies on specific Helm chart configuration values to control tool availability, payload capacity, and session data context.
 
 Use the following feature flags to enable or disable tool domains to expose only the capabilities required by your deployment.
 
@@ -42,6 +42,9 @@ Use the following feature flags to enable or disable tool domains to expose only
 |`ENABLE_DAM`|Enables Digital Asset Management (DAM) tools.|`false`|
 |`ENABLE_WCM`|Enables Web Content Manager (WCM) and DX Core content-related tools.|`false`|
 |`STANDALONE_MODE`|Controls authentication tool enablement and determines whether the server integrates with HCL DX user authentication or runs in isolation.|`false`|
+
+!!! warning
+    At least one of `ENABLE_DAM` or `ENABLE_WCM` must be set to `true`. If both parameters are disabled, the MCP Server does not expose any DAM or WCM tool domains and the readiness probe reports the service as unhealthy.
 
 Use the following parameter to adjust the payload handling limit:
 
@@ -64,8 +67,8 @@ Route tool execution requests through the following endpoints to handle traffic 
 
 | Endpoint path {: style="width: 25%; white-space: nowrap;"}| Type | Network and runtime behavior {: style="width: 50%;"}|
 |:--------------|:-----|:-----------------------------|
-|`/mcp`|Tool API (Unprefixed)|Provides MCP server functionality as the unprefixed entry point for enabled DX tool domains.|
-|`/dx/api/iq/v1/mcp`|Tool API (Versioned)|Provides MCP server functionality as the versioned entry point for enabled DX tool domains to prevent breaking changes.|
+|`/mcp`|Tool API (Unprefixed)|Provides MCP Server functionality as the unprefixed entry point for enabled DX tool domains.|
+|`/dx/api/iq/v1/mcp`|Tool API (Versioned)|Provides MCP Server functionality as the versioned entry point for enabled DX tool domains to prevent breaking changes.|
 
 !!!note
     MCP tool responses use TOON encoding for JSON payloads when encoder support is available. If encoding is unavailable, the server falls back to standard JSON text responses. TOON output strips out repetitive structural syntax to make payloads more compact, which reduces token usage in LLM-driven workflows.
@@ -87,5 +90,15 @@ After deployment, upgrade, or configuration updates, validate the following base
 4. Requests process reliably without repeated timeout or payload-limit failures.
 5. No persistent MCP connectivity errors, timeout logs, or unauthorized access patterns appear in the system logs.
 
+## Next steps
+
+After configuring the MCP Server:
+
+1. (Optional) Set up a [PostgreSQL database](prepare-database.md) for persistence.
+2. Configure [IQ Integrator authentication for LiteLLM access](prepare-litellm-access.md).
+
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
+    - [Preparing the database](prepare-database.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)
     - [Troubleshooting - MCP Server](../troubleshooting.md#mcp-server)

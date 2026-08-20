@@ -12,7 +12,7 @@ Presentation Designer is ideal for, but not limited to, the following sample use
 
 Refer to the following pages for more information:
 
-- **[Access Presentation Designer](../presentation_designer/access.md)**  
+- **[Accessing Presentation Designer](../presentation_designer/access.md)**  
 This section provides the steps on how to access the Presentation Designer and details on the user interface.
 - **[Using Presentation Designer](../presentation_designer/usage/index.md)**  
 This section provides information on how to edit presentation templates and how to utilize user elements and styling options in Presentation Designer.

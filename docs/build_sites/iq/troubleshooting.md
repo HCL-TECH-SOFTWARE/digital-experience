@@ -21,7 +21,8 @@ If interface or display issues occur, clear the browser cache and perform a hard
 
 If the sparkle icon or floating action button (FAB) does not appear:
 
-- Verify if IQ is installed or enabled. For more information, refer to [Enabling IQ](enable.md).
+- Verify that IQ is installed and enabled. For instructions, refer to [Enabling IQ](enable.md).
+- Confirm that all IQ components upgraded successfully and the deployment is healthy after a DX Core Helm upgrade.
 - Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
 **Incorrect message display**
@@ -70,6 +71,87 @@ To identify the underlying cause behind this banner, review the backend response
 | Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
 | Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
+## LiteLLM
+
+**LiteLLM pod startup failure**
+
+If the LiteLLM pod fails to start and remains in a `CrashLoopBackOff` state:
+
+- Run the following command to examine recent deployment logs:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm --tail=50
+    ```
+
+- Verify external database endpoints and credentials if database connections fail.
+- Check the `proxy_config` structure in the Helm values file for syntax errors.
+- Confirm all referenced secrets exist in the `dxns` namespace.
+- Verify that Kubernetes nodes have sufficient unallocated CPU and memory resources.
+
+**Health probe failure**
+
+If the readiness probe fails and the pod does not accept traffic:
+
+- Diagnose pod deployment issues:
+
+    ```bash
+    kubectl describe pod -n dxns -l app=litellm
+    ```
+
+- Test database network accessibility from the pod:
+
+    ```bash
+    kubectl exec -it <litellm-pod> -- nc -zv <db-host> 5432
+    ```
+
+- Increase the `failureThreshold` parameter in the startup probe to give database migrations more time to complete.
+- Review LiteLLM pod logs to identify database initialization errors.
+
+**Models not available**
+
+If IQ cannot locate the `iq-general-purpose` or `iq-summary` models:
+
+- Check for upstream API errors and startup failures:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm
+    ```
+
+- Verify the available proxy models:
+
+    ```bash
+    curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
+      http://litellm.dxns.svc.cluster.local:4000/v1/models
+    ```
+
+- Verify model names (`iq-general-purpose`, `iq-summary`) match the values defined in proxy_config.
+- Confirm LLM provider credentials exist in Kubernetes secrets.
+- Verify the upstream provider account has access to the specified models.
+
+**Connection refused from IQ**
+
+If the IQ backend service cannot establish network communication with LiteLLM:
+
+- Test endpoint accessibility from the IQ pod:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- \
+      curl http://litellm.dxns.svc.cluster.local:4000/health/readiness
+    ```
+
+- Verify that the LiteLLM service is running:
+
+    ```bash
+    kubectl get svc -n dxns litellm
+    ```
+
+- Check Kubernetes network policies to ensure traffic is allowed between IQ and LiteLLM pods.
+- Verify cluster DNS resolution:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
+    ```
+
 ## Backend services
 
 If [validation](./installation/validation.md) fails, use this table to isolate the cause:
@@ -80,7 +162,7 @@ If [validation](./installation/validation.md) fails, use this table to isolate t
 | Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](./installation/prepare-database.md). |
 | WebSocket errors | Network policy restrictions | Check Kubernetes network policies. |
 | Model Context Protocol (MCP) integration issues | Web Content Manager (WCM) or Digital Asset Management (DAM) not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values. |
-| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying services - Installing the IQ backend server](./installation/deploy-services.md#installing-the-iq-backend-server). |
+| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md). |
 
 To inspect pod configurations and system logs:
 
@@ -175,8 +257,6 @@ Before investigating MCP-related errors, perform these basic checks:
 4. Confirm no recent release mismatch between IQ and MCP server components.
 5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
 6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass or fail behavior, refer to [Managing endpoints and security](./installation/configuring-mcp.md#managing-endpoints-and-security).
-
-### Common symptoms and actions
 
 | Issue | Possible cause | Solution |
 |-------|----------------|----------|
@@ -323,7 +403,7 @@ If you are [using an external database](./installation/prepare-database.md#confi
 - Relevant database connection error segments from the IQ Integrator pod logs.
 
 ???+ info "Related information"
-    - [Deploying services](./installation/deploy-services.md)
+    - [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](./installation/configuring-mcp.md)
     - [Preparing the database](./installation/prepare-database.md)
     - [Validating the deployment](./installation/validation.md)
