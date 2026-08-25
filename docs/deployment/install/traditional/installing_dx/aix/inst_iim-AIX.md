@@ -5,7 +5,7 @@ The IBM Installation Manager (IIM) is used to install installation packages such
 ## Procedure
 
 !!!note "Important / Warning"
-    - By default HCL DX provides an outdated Installation Manager version. It is strongly recommended to download the latest IIM v1.9 version first, before starting the installation. For details, please review [Installation Manager shipped with Portal 8.5 fails to install on AIX Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0091447){target="_blank"}.  
+    - It is a best practice to update your IIM to the latest available version, especially in the case of AIX deployments it is strongly recommended to download the latest IIM v1.9 version first, before starting the installation. For details, please review [Installation Manager shipped with Portal 8.5 fails to install on AIX Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0091447){target="_blank"}.  
     - Due to incompatibilities between recent IIM levels and DX install packages, do not update IBM Installation Manager to version 1.10.  
 
 If you do not have an existing Installation Manager, then complete the following procedure:
