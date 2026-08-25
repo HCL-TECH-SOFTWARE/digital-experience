@@ -15,6 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
@@ -77,6 +78,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - New parameters for setting the initial collections view
+
+=== "Containers"
+
+You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
 ### Helm values updates
 
