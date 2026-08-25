@@ -1,4 +1,4 @@
-# What's new in CF238
+# What's new in CF238 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF238 on supported platforms:
 
