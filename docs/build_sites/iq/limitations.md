@@ -1,4 +1,4 @@
-# IQ limitations
+# IQ limitations 
 
 This page lists the known limitations of IQ.
 
@@ -46,6 +46,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
+- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. The base models (`gpt-5` and `gpt-5-mini`) may work, but are not validated for production use. AWS Bedrock Claude models, such as Sonnet or Haiku, are recommended for production deployments. For more configuration details, refer to Step 4 of [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
 
 ### Database
 
@@ -57,7 +58,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### Deployment
 
 - The MCP Server must be deployed within the same Helm chart as the Integrator to establish automatic network connectivity.
-- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. The MCP Server functions regardless of which tools are enabled.
+- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. At least one of these tool domains must remain enabled for the readiness probe to report the MCP Server as healthy.
 - The `standaloneMode` parameter disables HCL DX user authentication integration, causing the MCP Server to function in isolation.
 
 ### Scope and enablement

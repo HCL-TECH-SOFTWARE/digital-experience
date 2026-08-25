@@ -14,6 +14,19 @@ Sample styling options for a static container element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Container_Sample.png)
 
+### Style validation
+
+Presentation Designer includes real-time validation within the **Style items** panel to ensure custom layout inputs remain syntactically correct. The system evaluates property inputs such as font size, colors, and spacing to prevent invalid CSS from breaking page layouts.
+
+When validating style inputs, the system applies the following rules:
+
+- Entering an invalid value highlights the input field in red and displays an inline "Invalid value" error message.
+- Syntactically invalid style values do not render on the live canvas.
+- Active validation errors block template saving. The **Save** button in the header toolbar is disabled and displays a "Resolve all errors to save your changes" tooltip on hover.
+- Empty input fields pass validation automatically and fall back to default stylesheet configurations.
+- Selecting another element on the canvas or changing the device context (**Desktop**, **Tablet**, or **Mobile**) clears error indicators from the previously selected element.
+- Switching elements or device viewports automatically reverts style values in the panel to their last valid state to prevent unresolved errors from persisting across template configurations.
+
 ## Inline styles
 
 In Presentation Designer, styling options are applied directly to the selected elements through inline styles.

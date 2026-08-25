@@ -1,4 +1,4 @@
-# What's new in CF237
+# What's new in CF237 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF237 on supported platforms:
 
@@ -7,6 +7,8 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Studio Dashboard - New widgets
+- Presentation Designer - Feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,15 +18,15 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Customizing HAProxy logs
-- Search V2 - Open-source Enchanted Web Components
 - Helm values updates
+- New parameters for `runtimeController` automatic service account token mounting
+- Search V2 - Open-source Enchanted Web Components
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
 - CKEditor Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
-- Removal of unused DAM Helm keys (9.5)
 - Woodburn Studio demo site (9.5)
 
 Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){target="_blank"} for the list of software fixes, including Container Update releases.
@@ -34,10 +36,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/237.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/237.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -65,6 +67,44 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard includes two new widgets to enhance content management and project tracking capabilities:
+
+    - **My Projects**: Tracks assigned project workflows, approval statuses, and recent updates to streamline content delivery.
+    - **Tags & Keywords Manager**: Centralizes tag and keyword administration to manage content taxonomies across sites. 
+    
+    For more information, refer to [My Projects](../../build_sites/practitioner_studio/dashboard.md#my-projects) and [Tags & Keywords Manager](../../build_sites/practitioner_studio/dashboard.md#tags-keywords-manager).
+
+### Presentation Designer - Feature updates
+
+=== "Containers"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The following features have been added to Presentation Designer:
+
+    - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
+    - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
+    - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
+    - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -72,7 +112,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
 
 ### Automatically apply 9.5 from a later CF installation
 
@@ -83,34 +123,46 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ### Customizing HAProxy logs
 
-The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
+=== "Containers"
+    The DX Helm chart now supports an additive logging approach for HAProxy deployments. This feature allows you to append custom HAProxy variables for Layer 4 (TCP) and Layer 7 (HTTP) traffic (such as client IPs or SSL cipher suites) directly to the baseline log lines without changing the core format. The architecture also includes an automated validation fallback feature to protect the deployment from pod crashes if the custom configuration contains syntax errors. For more information, refer to [HAProxy logging configuration](../../deployment/manage/container_configuration/monitoring/haproxy-logging-configuration.md).
 
 ### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf237).
 
+### New parameters for `runtimeController` automatic service account token mounting
+
+=== "Containers"
+    Two new Helm parameters are now available to support cluster security policies that restrict automatic service account token mounting:
+
+    - The `automountServiceAccountToken` parameter allows explicit configuration of token mounting per component. If your environment prohibits token automounting, set this parameter to `false` to revoke token access. 
+    - The `configuration.runtimeController.projectedServiceAccountToken` parameter specifies settings for projected token volumes in `runtimeController`. If token automounting is disabled, set `enabled` to `true` to supply a projected token volume and maintain Kubernetes API access.
+
+    For configuration details and examples, refer to [Managing service account token automounting](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_automount_service_token.md).
+
 ### Search V2 - Open-source Enchanted Web Components
 
-Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
+=== "Containers"
+    Atomic Components used within Search V2 are now open source as part of the [Enchanted Web Components](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"} library. This update renames the component prefix from `dx-` to `enchanted-` and connects you directly to the public Storybook repository for interactive component APIs, properties, and testing playgrounds. The Search V2 documentation is also streamlined to show only the components utilized by the feature and now includes definitions for CSS shadow parts, allowing you to use `::part()` selectors to apply custom styles to the components. For more information, refer to the following topics:
 
-- [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
-- [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
-- [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
+    - [Atomic Components](../../build_sites/search_v2/components/atomic_components.md)
+    - [Enchanted Web Components storybook](https://opensource.hcltechsw.com/enchanted-web-components/){target="_blank"}
+    - [Enchanted Web Components library](https://github.com/HCL-TECH-SOFTWARE/enchanted-web-components){target="_blank"}
 
 ### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF237 contains the following:
 
-    - [WebSphere Application Server (WAS) 9.0.5.27](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit (JDK) 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [WebSphere Application Server (WAS) 9.0.5.28](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit (JDK) 8.0.8.65](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
-        - Core and Remote Search: 8.10-1776104706
-        - Other Images: 9.7-1776104705
-    - iFix PH71422
+        - Core and Remote Search: 8.10-1780550539
+        - Other Images: 9.8-1780378819
     - iFix PH71453
-    - iFix PH71453
+    - iFix PH71454
+    - iFix PH71590
 
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
@@ -128,17 +180,6 @@ Atomic Components used within Search V2 are now open source as part of the [Ench
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-
-### Removal of unused DAM Helm keys (9.5) <!--update-->
-
-=== "Containers"
-    The following unused DAM Helm keys in HCL DX are deprecated in CF236 and scheduled for removal in CF237:
-
-    - `incubator.configuration.digitalAssetManagement.enableRootCollectionSort`
-    - `incubator.configuration.digitalAssetManagement.enableSoftDelete`
-    - `incubator.configuration.digitalAssetManagement.renderNewUI`
-
-    For more information, refer to [DX Helm values updates](../dx_helm_values_updates.md#cf236).
 
 ### Woodburn Studio demo site (9.5)
 

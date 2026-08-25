@@ -2,7 +2,7 @@
 
 This page describes the configuration model, parameter properties, and capability constraints for the Model Context Protocol (MCP) Server in HCL Digital Experience (DX) IQ deployments.
 
-The MCP Server establishes the communication layer that enables HCL DX IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
+The MCP Server establishes the communication layer that enables IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
 
 The configuration architecture delivers these capabilities through the following features:
 
@@ -42,6 +42,9 @@ Use the following feature flags to enable or disable tool domains to expose only
 |`ENABLE_DAM`|Enables Digital Asset Management (DAM) tools.|`false`|
 |`ENABLE_WCM`|Enables Web Content Manager (WCM) and DX Core content-related tools.|`false`|
 |`STANDALONE_MODE`|Controls authentication tool enablement and determines whether the server integrates with HCL DX user authentication or runs in isolation.|`false`|
+
+!!! warning
+    At least one of `ENABLE_DAM` or `ENABLE_WCM` must be set to `true`. If both parameters are disabled, the MCP Server does not expose any DAM or WCM tool domains and the readiness probe reports the service as unhealthy.
 
 Use the following parameter to adjust the payload handling limit:
 
@@ -87,5 +90,15 @@ After deployment, upgrade, or configuration updates, validate the following base
 4. Requests process reliably without repeated timeout or payload-limit failures.
 5. No persistent MCP connectivity errors, timeout logs, or unauthorized access patterns appear in the system logs.
 
+## Next steps
+
+After configuring the MCP Server:
+
+1. (Optional) Set up a [PostgreSQL database](prepare-database.md) for persistence.
+2. Configure [IQ Integrator authentication for LiteLLM access](prepare-litellm-access.md).
+
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
+    - [Preparing the database](prepare-database.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)
     - [Troubleshooting - MCP Server](../troubleshooting.md#mcp-server)

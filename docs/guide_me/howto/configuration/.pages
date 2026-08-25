@@ -1,5 +1,4 @@
 title: Configuration
-
 nav:
     - index.md
     - DeployRobots.md
@@ -13,3 +12,4 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
+    - DefaultPortletConfig.md

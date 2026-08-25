@@ -5,6 +5,10 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 !!! note "Database and license configuration are optional"
     This procedure deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured.
 
+## Prerequisites
+
+Before installing the IQ backend server, deploy the LiteLLM service to configure the required proxy models (`iq-general-purpose` and `iq-summary`). For more information, refer to [Deploying LiteLLM](../../../../../../build_sites/iq/installation/deploy-litellm.md).
+
 ## Understanding IQ services
 
 Installing IQ requires two core components: the IQ Integrator and the IQ MCP Server.
@@ -124,21 +128,48 @@ environment:
 
 Run the Helm installation command to deploy the IQ backend server:
 
-```bash
-helm install dx-iq \
-  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
-  --namespace <YOUR_NAMESPACE> \
-  --values custom-iq-values.yaml \
-  --set-json 'environment.pod.integrator=[
-  {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-  {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
-  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
-  {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
-]'
-```
+!!!note
+    To configure optional token limits or temperature parameters for specific models, refer to [Configuring LLM model parameters](#configuring-llm-model-parameters).
+
+=== "Using a custom values file"
+
+    ```bash
+    helm install dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <YOUR_NAMESPACE> \
+      --values custom-iq-values.yaml \
+      --set-json 'environment.pod.integrator=[
+      {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+      {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
+      {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+      {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
+    ]'
+    ```
+
+=== "Using command-line flags"
+
+    ```bash
+    helm install dx-iq \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <YOUR_NAMESPACE> \
+      --set images.repository="<YOUR_ARTIFACTORY>" \
+      --set images.tags.integrator="<INTEGRATOR_IMAGE_TAG>" \
+      --set images.tags.mcpServer="<MCP_SERVER_IMAGE_TAG>" \
+      --set images.names.integrator="dx/dx-iq-integrator" \
+      --set images.names.mcpServer="dx/dx-mcp-server" \
+      --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
+      --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
+      --set configuration.dx.internalHost="http://<DX_RELEASE_NAME>-core:10039" \
+      --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
+      --set-json 'environment.pod.integrator=[
+        {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+        {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+        {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
+      ]'
+    ```
 
 !!! warning "Release name must match MCP_SERVER_LIST"
-    The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values will cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
+    The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP Server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
 
 - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
 - `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
@@ -148,32 +179,39 @@ helm install dx-iq \
 - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
 !!! warning "LITELLM_API_KEY and LITELLM_URL are required"
-    Although the helm install command completes successfully without these values, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
+    While the `helm install` command completes successfully without the `LITELLM_API_KEY` and `LITELLM_URL`, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.
 
     - For production deployments, provide both `LITELLM_API_KEY` and `LITELLM_URL` during the initial installation.
-    - For deferred configuration, set `maintenanceMode.integrator: true` in the values file. This setting allows pods to start but keeps services non-functional. Update both values and run a `helm upgrade` after the LiteLLM proxy is ready.
+    - For deferred configuration, set `maintenanceMode.integrator` to `true` in the values file. This setting allows pods to start but keeps services non-functional. Update both values and run a `helm upgrade` after the LiteLLM proxy is ready.
 
-Alternatively, specify configuration values directly by using command-line flags:
+#### Configuring LLM model parameters
 
-```bash
-helm install dx-iq \
-  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
-  --namespace <YOUR_NAMESPACE> \
-  --set images.repository="<YOUR_ARTIFACTORY>" \
-  --set images.tags.integrator="<INTEGRATOR_IMAGE_TAG>" \
-  --set images.tags.mcpServer="<MCP_SERVER_IMAGE_TAG>" \
-  --set images.names.integrator="dx/dx-iq-integrator" \
-  --set images.names.mcpServer="dx/dx-mcp-server" \
-  --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
-  --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
-  --set configuration.dx.internalHost="http://<DX_RELEASE_NAME>-core:10039" \
-  --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
-  --set-json 'environment.pod.integrator=[
-    {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-    {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
-    {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
-  ]'
+If your chosen LLM models have specific constraints on token limits or temperature parameters, configure the following environment variables in the IQ Integrator:
+
+- `LLM_MAX_TOKENS`: Specifies the maximum number of tokens for LLM completion responses. Must match or be less than your model's maximum (for example, `16384`, `8192`, `4096`).
+- `LLM_TEMPERATURE`: Controls randomness in LLM responses. Some models enforce specific values (for example, `0.7`, `1.0`, or `0`).
+
+```json
+[
+  {"name":"LLM_MAX_TOKENS","value":"<TOKEN_VALUE>"},
+  {"name":"LLM_TEMPERATURE","value":"TEMP_VALUE"}
+]'
 ```
+
+For example, if you are using an AWS Bedrock Claude model that requires a maximum token limit of `16384` and a temperature of `1`, include `LLM_MAX_TOKENS` and `LLM_TEMPERATURE` in the `environment.pod.integrator` array during deployment:
+
+```json
+--set-json 'environment.pod.integrator=[
+  {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
+  {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
+  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
+  {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"},
+  {"name":"LLM_MAX_TOKENS","value":"16384"},
+  {"name":"LLM_TEMPERATURE","value":"1"}
+]'
+```
+
+For configuration details, refer to [IQ environment variables - LiteLLM](../../../../../../build_sites/iq/installation/environment-variables.md#litellm).
 
 ### Verifying the deployment
 
@@ -260,7 +298,12 @@ To remove the IQ backend server and verify the component cleanup, complete the f
     kubectl get pods -n <YOUR_NAMESPACE> | grep dx-iq
     ```
 
+## Next step
+
+After deploying the IQ backend services, [configure the MCP Server](../../../../../../build_sites/iq/installation/configuring-mcp.md).
+
 ???+ info "Related information"
+    - [Configuring the MCP Server](../../../../../../build_sites/iq/installation/configuring-mcp.md)
     - [IQ environment variables](../../../../../../build_sites/iq/installation/environment-variables.md)
     - [Preparing the database](../../../../../../build_sites/iq/installation/prepare-database.md)
     - [Troubleshooting - Backend services](../../../../../../build_sites/iq/troubleshooting.md#backend-services)

@@ -19,6 +19,7 @@ nav:
     - optional_internal_networking.md
     - optional_labels_annotations.md
     - optional_new_search_ca_certificates.md
-    - optional_options_host_alias.md
-    - optional_options_spread_pods_across_nodes.md
-    - optional_rs_sidecar_log.md
+    - optional_changing_portal_uri_in_kubernetes.md
+    - optional_automount_service_token.md
+    - optional_configure_ltpa_key.md
+    - ...
