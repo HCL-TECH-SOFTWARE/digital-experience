@@ -111,7 +111,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - New required configuration to enable Indexing
 
 === "Containers"
-    Starting from CF233, to enable DAM Indexing, you need to set the `damIndexing` parameter to `true` in your `values.yaml` file and ensure all required `searchMiddleware` configurations are set. For more information, refer to [Adding OpenSearch middleware configurations and enabling DAM Indexing](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#adding-opensearch-middleware-configurations-and-enabling-dam-indexing).
+    Starting from CF233, to enable DAM Indexing, you need to set the `damIndexing` parameter to `true` in your `values.yaml` file and ensure all required `searchMiddleware` configurations are set. For more information, refer to [Adding OpenSearch middleware configurations](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#adding-opensearch-middleware-configurations).
 
 ### Helm values updates
 
