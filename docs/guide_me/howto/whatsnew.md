@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
 
 ## CF237
 

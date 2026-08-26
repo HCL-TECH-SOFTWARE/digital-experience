@@ -10,9 +10,9 @@ Learn how to determine which WCM content items are causing performance issues.
 Learn how to improve DX database performance on a DB2 database.  
 - **[How to improve query performance for WCM queries](./ImproveQueryPerformance.md)**  
 Learn how to tune Web Content Manager (WCM) to reduce your query time.  
+- **[How to optimize WCM authoring performance](./WCMAuthoringPerformance.md)**  
+Learn how to optimize database maintenance, clear content versions, trace long-running queries, and configure authoring properties to resolve performance issues in HCL DX.
 - **[How to tune the LDAP configuration in HCL DX](./DX_Tune_LDAP.md)**  
 Learn how to optimize group membership resolution and reduce directory server load to resolve authentication performance delays.  
 - **[How to warm up your Portal site](./WarmUpPortalSite.md)**  
 Learn how to improve DX performance by warming up your site at startup.
-- **[How to identify WCM items causing performance issues](./WCMAuthoringPerformance.md)**  
-Learn how to identify WCM items causing performance issues.
