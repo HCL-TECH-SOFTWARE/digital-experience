@@ -1,30 +1,31 @@
-# How to create a Syndication pair on a virtual portal at the command line
+# How to create a virtual portal syndicator-subscriber pair using the command line
 
 ## Applies to
 
-> HCL Digital Experience version 9.5 and higher  
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This document provides an example syntax to create a WCM syndicator / subscriber pair for a virtual portal from the command line.
+In Web Content Manager (WCM), content updates can be distributed across virtual portals using the command line. This article describes how to create a virtual portal syndicator-subscriber pair using the command line in HCL DX.
 
 ## Instructions
 
-Use this command to create a syndication / subscription pair between two virtual portals from the command line:
-```cmd
-ConfigEngine.bat run-wcm-admin-task-subscribe-now
--Dsyndicator=http://<myHost>:<myPort>/wps/wcm/<context>
--DvaultSlotName=syndicationSlot
--DsyndicatorName=mySyndicator
--DsubscriberName=mySubscriber
--DliveItems="Portal Site"
--DisEnabled=false
--DsubscriberURL=http://localhost:10039/wps/wcm/myVirtualPortal
--DVirtualPortalContext="myVirtualPortal"
-```
+To create a virtual portal syndicator-subscriber pair using the command line in HCL DX, perform the following steps:
 
+1. Open a command prompt and navigate to the `ConfigEngine` directory on the subscriber server.
+2. Execute the the `run-wcm-admin-task-subscribe-now` ConfigEngine task. For example:
 
-Run the command from the configengine directory on the SUBSCRIBER machine.
+    ```cmd
+    ConfigEngine.bat run-wcm-admin-task-subscribe-now
+    -Dsyndicator=http://<myHost>:<myPort>/wps/wcm/<context>
+    -DvaultSlotName=syndicationSlot
+    -DsyndicatorName=mySyndicator
+    -DsubscriberName=mySubscriber
+    -DliveItems="Portal Site"
+    -DisEnabled=false
+    -DsubscriberURL=http://localhost:10039/wps/wcm/myVirtualPortal
+    -DVirtualPortalContext="myVirtualPortal"
+    ```
 
-In the example above, both the syndicator and subscriber portal servers had a virtual portal with name "myVirtualPortal".
-
+    - On AIX, Linux, or Unix operating systems, execute `ConfigEngine.sh` instead of `ConfigEngine.bat`.
+    - In this example, both the syndicator and subscriber portal servers use a virtual portal named `myVirtualPortal`. Replace `myVirtualPortal` with your virtual portal context name.
