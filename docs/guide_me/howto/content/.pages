@@ -6,9 +6,9 @@ nav:
     - disableManagedPages.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
+    - IsolateWCMItemsMarkup.md
     - WCMObjectsHostname.md
     - JSF_hasBaseURL.md
     - useJSPinWCM.md
     - UsingXSLWithPortalAndWCM.md
     - xmlaccess_faq.md
-    - IsolateWCMItemsMarkup.md

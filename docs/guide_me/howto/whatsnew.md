@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 
 ## CF237
 
