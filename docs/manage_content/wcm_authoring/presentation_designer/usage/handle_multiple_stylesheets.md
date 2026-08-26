@@ -1,4 +1,4 @@
-# Handle multiple stylesheets
+# Handling multiple stylesheets
 
 In Presentation Designer, you can apply multiple stylesheet components to a presentation template for more advanced control and structured styling. While Presentation Designer automatically manages a **Default stylesheet** and an **Override stylesheet**, adding other stylesheet components gives you more freedom to define styles beyond the limitations of the Presentation Designer interface.
 
@@ -64,7 +64,7 @@ Presentation Designer will automatically load the stylesheets and apply styles t
     HTML ```head``` with custom stylesheet loaded:
     ![](../../../../assets/HCL_Presentation_Designer_handle_multiple_stylesheets_html_head_custom_loaded.png)
 
-    The applied stylesheets can also be viewed from the style panel then click the **gear icon** to display the style settings:
+    You can also view the applied stylesheets from the **Style items** panel and click the **gear icon** to display the style settings:
     ![](../../../../assets/HCL_Presentation_Designer_handle_multiple_stylesheets_style_settings.png)
 
 2. The canvas renders the elements with the **default class**, **override class**, and **custom class**, showing the computed styles. Any rules defined in the CSS file will be visible on the corresponding elements.

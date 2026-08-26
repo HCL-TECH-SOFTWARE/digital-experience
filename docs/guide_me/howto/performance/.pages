@@ -1,5 +1,6 @@
 title: Performance
 nav:
+    - AnalyzingJCRQueryPerformanceXPath.md
     - WCMItemPerformance.md
     - index.md
     - DB2DatabasePerformance.md

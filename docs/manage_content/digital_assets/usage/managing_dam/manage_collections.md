@@ -2,13 +2,13 @@
 
 Learn more about creating, configuring, and deleting media asset collections in Digital Asset Management (DAM).
 
-## What is a collection unique-name?
+## Collection unique names
 
 Collection unique names are the unique identifier for each collection and can be used in the friendly URL instead of the collection UUID to access DAM assets. Collection unique names support all languages supported by the system. A collection unique name does not support URL-reserved characters (for example, "?!#$&%'*+/;:,=@()\[]").
 
-## How are collection unique-names generated?
+## Generating collection unique names
 
-- While creating a collection, the user can enter a custom collection unique name.
+- While creating a collection, you can enter a custom collection unique name.
 
 ![](../../../../images/CreateCollection_friendlyUrl-1.png "Create collection popup"){ width=45% }
 ![](../../../../images/CreateCollection_friendlyUrl-2.png "Create collection popup"){ width=47% }
@@ -19,14 +19,12 @@ Collection unique names are the unique identifier for each collection and can be
 - Collection unique names follow a simple format by appending “_Number” to collections with the same name.
 - For existing collections, the system generates a collection unique name based on the collection name using a migration script.
 
-## How can the user change the collection unique-names?
+## Updating collection unique names
 
 After the collection unique name is generated, the user can view or edit it in the collection Properties panel.
 
 ![](../../../../images/CollectionEdit_friendlyUrl.png "Collection edit panel"){ width=47% }
 ![](../../../../images/CollectionEdit_friendlyUrl-1.png "Collection edit panel"){ width=45% }
-
-## What happens if a collection unique-name already exists while creating or editing a collection?
 
 When creating or editing a collection, DAM checks for duplicate unique names and displays an error message. It also suggests an available unique name if a duplicate is found in another collection.
 
@@ -45,15 +43,13 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
 
     The following options are displayed in Collections interface:
 
- - **Create collection** - Create a new collection or a nested collection within an existing collection.
-
- - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
+    - **Create collection** - Create a new collection or a nested collection within an existing collection.
+    - **Properties** - Opens the Properties panel. The Properties panel has two tabs: Properties and Access control.
 
     ![Properties Panel](../../../../images/dam_collections_interface_view_information.png)
 
     - **Properties** tab - Allows you to update the name and description.
     - **Access control** tab - Allows you to set who can access the media assets in the collection.
-
     - **Move** - Moves the selected collection into another location.
     - **Move to trash** - Moves the selected collection to trash.
 
@@ -62,6 +58,7 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
     - **Favorites** - Filters media assets added to your favorites.
     - **Asset types** - Filters media assets by type. You can further refine search results by selecting a specific file type.
     - **Asset size** - Filters media assets by size.
+
     ![Filter options](../../../../images/dam_filter_by_asset_types_asset_size.png)
 
     !!! note
@@ -74,11 +71,16 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
     - **View as** - Lists options to view media assets or collections.
         - **Grid** - Shows media assets in an equal-sized thumbnail view. This is the default display view.
         - **List** - Shows media assets in a standard list. Use this view to access a media asset when you can recognize the asset by its attributes, such as its file name.
+
+    !!! note
+        You can set the initial collections view through the Helm value `configuration.digitalAssetManagement.defaultView`. Supported values are `grid` or `list`.
+
     - **Sort by** - Lists options to sort media assets or collections:
         - **Date**
         - **Name**
         - **Type**
         - **Size**
+
     - **Order** - Lists options to sort order of media assets or collections depending on the selected **Sort by** option:
         - **Date**
 
@@ -99,8 +101,8 @@ Follow these steps to work with collections in HCL Digital Experience (DX) 9.5 D
             ![Type > Descending](../../../../images/dam_grid_type_descending.png)
 
             - **Ascending**
-            -  **Descending**
-            
+            - **Descending**
+
         - **Size**
 
             ![Size > Larger to smaller](../../../../images/dam_grid_size_larger_to_smaller.png)

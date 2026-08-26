@@ -2,6 +2,8 @@
 
 This section includes how-to articles about issues related to CPU, out-of-memory, and other performance-related content in HCL Digital Experience (DX).
 
+- **[How to analyze JCR and XPath query performance](./AnalyzingJCRQueryPerformanceXPath.md)**  
+Learn how to enable query tracing, locate SQL execution metrics in trace logs, and debug valid XPath queries that return unexpected results.
 - **[How to identify WCM items causing performance issues](WCMItemPerformance.md)**  
 Learn how to determine which WCM content items are causing performance issues.  
 - **[How to improve HCL DX database performance on a IBM DB2 database](DB2DatabasePerformance.md)**  
@@ -10,5 +12,5 @@ Learn how to improve DX database performance on a DB2 database.
 Learn how to tune Web Content Manager (WCM) to reduce your query time.  
 - **[How to tune the LDAP configuration in HCL DX](./DX_Tune_LDAP.md)**  
 Learn how to optimize group membership resolution and reduce directory server load to resolve authentication performance delays.  
-- **[How to warm up your Portal site](WarmUpPortalSite.md)**  
+- **[How to warm up your Portal site](./WarmUpPortalSite.md)**  
 Learn how to improve DX performance by warming up your site at startup.  
