@@ -1,4 +1,4 @@
-# How to determine the default WCM configuration values
+# How to determine default WCM configuration values
 
 ## Applies to
 
@@ -6,16 +6,16 @@
 
 ## Introduction
 
-This documentation provides details on how to determine the WCM default configuration values.
+Web Content Manager (WCM) uses default configuration properties across HCL DX environments. These settings govern repository behavior, cache management, and service operations. This article describes how to determine default WCM configuration values.
 
 ## Instructions
 
-Most of the WCM configuration values are populated here:
+To determine default WCM configuration values, perform the following steps:
 
-`Dmgr/WAS Admin Console > Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > custom properties.`
+1. Log in to the IBM WebSphere Integrated Solutions Console (WAS admin console).
+2. Navigate to **Resources > Resource Environment > Resource Environment Providers > WCM_WCMConfigService > Custom properties**.
+3. Search for a property to review its assigned value.
+4. If the parameter is not listed in the Resource Environment Provider (REP), open the `WCMConfigService.properties` file in the following directory to locate the default value: `<wp_profile_root>\PortalServer\wcm\shared\app\config\wcmservices`
 
-However, for the parameters not populated in the REP (Resource Environment Provider), to determine the default values look in the file WCMConfigService.properties located here:
-
-`<wp_profile_root>\PortalServer\wcm\shared\app\config\wcmservices`
-
-Note you cannot change the values used by WCM by updating this file.  Instead add or update the values in the REP.
+!!!note
+    Updating the `WCMConfigService.properties` file does not change the active values used by WCM. Add or update values in the Resource Environment Providers instead.

@@ -6,6 +6,7 @@ nav:
     - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
     - ConfigureRAD.md
+    - DefaultWCMValues.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md
@@ -13,4 +14,3 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
-    - DefaultWCMValues.md

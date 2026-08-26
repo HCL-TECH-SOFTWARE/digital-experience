@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
 
 ## CF237
 

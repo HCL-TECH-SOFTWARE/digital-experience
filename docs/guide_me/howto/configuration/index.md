@@ -12,6 +12,8 @@ Learn how to modify the default settings of a portlet across all deployed pages 
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.  
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
+- **[How to determine default WCM configuration values](./DefaultWCMValues.md)**  
+Learn how to check default WCM configuration properties using the WebSphere console or local configuration files.  
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.  
 - **[How to install and configure Ingress with virtual portals](./ConfigureIngressWithVPs.md)**  
@@ -26,5 +28,3 @@ Learn how to remove or hide the X-Powered-By header.
 Learn how to remove state information from page URLs.  
 - **[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment.  
-- **[How to determine the default WCM configuration values](./DefaultWCMValues.md)**  
-Learn how to determine the default WCM configuration values.
