@@ -9,7 +9,7 @@ This topic explains how to configure search based on OpenSearch (Search V2) for 
 
 ## Prerequisites
 
-To use OpenSearch, your HCL Digital Experience (DX) deployment must be running in Kubernetes. The deployment must include DX Core, which provides Web Content Manager (WCM) and supports ACL lookup.
+To use OpenSearch, your HCL Digital Experience (DX) deployment must be running in Kubernetes. The deployment must include DX Core or DX Compose, which provides the Web Content Manager (WCM) feature and supports ACL lookup.
 
 ## Limitations
 
@@ -642,6 +642,9 @@ kubectl get pods -n YOUR_NAMESPACE
 Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace.
 
 The result should look similar to this, with your Pods entering the `Running` and ready state after a short while.
+
+!!!note
+    <!--DX Compose name?-->
 
 ```text
 NAME                                                         READY   STATUS              RESTARTS        AGE
