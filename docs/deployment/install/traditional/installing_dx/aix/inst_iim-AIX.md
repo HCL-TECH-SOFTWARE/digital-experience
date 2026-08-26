@@ -1,6 +1,6 @@
 # Preparing the Installation Manager
 
-The IBM Installation Manager (IIM) is used to install installation packages such as HCL Digital Experience and IBM WebSphere Application Server.  
+In an on-premise environment the IBM Installation Manager (IIM) is used to install installation packages such as HCL Digital Experience and IBM WebSphere Application Server.  
 
 ## Procedure
 
