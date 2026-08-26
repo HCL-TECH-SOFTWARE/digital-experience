@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
 
 ## CF237
 
