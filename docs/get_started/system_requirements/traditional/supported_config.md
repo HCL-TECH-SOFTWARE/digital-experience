@@ -54,6 +54,7 @@ HCL Digital Experience (DX) V9.5 supports the following operating systems, which
 |Windows Server 2019 Datacenter Edition|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|8.5|
 |Windows Server 2019 Essential Edition|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|8.5|
 |Windows Server 2022|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.0 CF199|
+|Windows Server 2025|Base and later maintenance releases|x86-64|64-Exploit, 64-Tolerate|9.0 CF236|
 
 *Support for developer platform only.
 
