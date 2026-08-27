@@ -602,6 +602,7 @@ Run the installation of your prepared configurations using Helm with the followi
 ```sh
 # Helm install command
 helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-release-name path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz
+```
 
 ## Configuring DX install to pass through search
 
@@ -618,11 +619,11 @@ helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-rele
 
 2. After adjusting the `custom-values.yaml`, use Helm upgrade to apply the changes:
 
-  ```sh
-  helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-  ```
+    ```sh
+    helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+    ```
 
-  Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you chose during the DX install.
+    Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you chose during the DX install.
 
 ## Validating the setup
 
