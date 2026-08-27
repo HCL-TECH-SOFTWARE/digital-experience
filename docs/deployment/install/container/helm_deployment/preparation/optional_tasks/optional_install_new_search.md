@@ -1,6 +1,6 @@
 # Installing the Search V2 backend
 
-This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment. Search has the following features:
+This topic explains how to configure search based on OpenSearch (Search V2) for your HCL Digital Experience (DX) deployment. Search has the following features:
 
 - WCM crawling
 - Push API for use with WCM content sources
@@ -9,7 +9,7 @@ This topic explains how to configure search based on OpenSearch (Search V2) for 
 
 ## Prerequisites
 
-To use OpenSearch, your HCL Digital Experience (DX) deployment must be running in Kubernetes. The deployment must include DX Core or DX Compose, which provides the Web Content Manager (WCM) feature and supports ACL lookup.
+To use OpenSearch, your DX deployment must be running in Kubernetes. The deployment must include DX Core or DX Compose, which provides the Web Content Manager (WCM) feature and supports ACL lookup.
 
 ## Limitations
 
@@ -644,7 +644,7 @@ Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace.
 The result should look similar to this, with your Pods entering the `Running` and ready state after a short while.
 
 !!!note
-    <!--DX Compose name?-->
+    For DX Compose environments, the deployment name is `dx-deployment-web-engine-0`.
 
 ```text
 NAME                                                         READY   STATUS              RESTARTS        AGE
