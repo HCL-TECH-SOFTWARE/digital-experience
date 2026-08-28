@@ -67,7 +67,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
-The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
 
     - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
     - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
@@ -75,7 +75,7 @@ The Practitioner Studio Dashboard introduces two new widgets to streamline site 
     For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
 === "On-Premises"
-The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
 
     - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
     - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
