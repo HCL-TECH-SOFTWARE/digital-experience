@@ -1,10 +1,8 @@
 # Deprecated features
 
-Deprecated features in HCL Digital Experience (DX) are features that are supported at this time but can be removed in an upcoming CF. It is recommended to remove deprecated item as soon as possible to avoid unpredictable behavior in your DX environment.
+Deprecated features in HCL Digital Experience (DX) remain supported until a future Cumulative Fix (CF) removes them. Remove deprecated items as soon as possible to avoid unpredictable behavior in your HCL DX environment.
 
-Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.
-
-## Recently Deprecated Features
+## Recently deprecated features
 
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
@@ -40,9 +38,7 @@ Links to more information on the replacement for those items listed for deprecat
 |Integrating |iNotes portlet |Effective November 2021, integration with Domino will be deprecated. The iFrame integration approach is already obsolete and not used. |November 2021|
 |Migrating |IBM® JSF Bridge |In WAS 9.0.5.2 and 8.5.5.17, IBM removed the JSF Bridge from WAS. To address this, an updated JSF Portlet Bridge is included in DX CF18 release. Customers installing HCL DX CF18, and using an IBM WebSphere Application Server Network Deployment version later than 8.5.5.17 or 9.0.5.2 should utilize the new JSF Portlet Bridge. The HCL JSF Portlet Bridge is built using the same class names as the IBM JSF Portlet Bridge provided in WAS 9.0.0.7 thru 9.0.5.1 and WAS 8.5.5.16 respectively. User applications should be able to continue to function without any modification.|December 2020|
 
-## Deprecated Dependent Products
-
-These are the lists of Dependent Products that are already Out of Support.
+## Deprecated dependent products
 
 ### Linux OS family
 
@@ -69,7 +65,7 @@ These are the lists of Dependent Products that are already Out of Support.
 
 *Support for developer platform only.  
 
-### Hypervisor - AIX Summary
+### Hypervisor - AIX summary
 
 |Hypervisor|Product minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
@@ -79,7 +75,7 @@ These are the lists of Dependent Products that are already Out of Support.
 
     Portal Express offering does not support AIX.  
 
-### Hypervisor - Linux Summary
+### Hypervisor - Linux summary
 
 |Hypervisor|Product Minimum|Deployment Units|Supported Guest Operating System|
 |---------|-----|-----|----------------------------------|
@@ -92,7 +88,8 @@ These are the lists of Dependent Products that are already Out of Support.
 |z/VM 6.2 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|
 |z/VM 6.3 and later|8.5|Server|All supported operating systems:<br>- SUSE Linux Enterprise Server (SLES) 11 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 and 8 x86-64<br>- SUSE Linux Enterprise Server (SLES) 12 IBM z Systems<br>- Red Hat Enterprise Linux (RHEL) Server 7 IBM z Systems<br>- Ubuntu 16.04 LTS x86-64<br>- Ubuntu 16.04 LTS POWER System - Little Endian<br>- Red Hat Enterprise Linux (RHEL) Server 7 POWER System - Little Endian|  
 
-### Hypervisor - Windows Summary  
+### Hypervisor - Windows summary  
+
 |Hypervisor|Product Minimum|Deployment Units|Supported Guest Operating System|
 |----------|-----|-----|----------------------------------------|
 |KVM in SUSE Linux Enterprise Server (SLES) 11 and later|8.5|Server|All supported operating systems:<br/>- Windows Server 2012 Datacenter Edition x86-64<br/>- Windows Server 2012 Standard Edition x86-64<br/>- Windows 8.1 Enterprise x86-64<br/>- Windows 8.1 Professional x86-64<br/>- Windows 8.1 Standard x86-64<br/>- Windows Server 2012 R2 Datacenter Edition x86-64<br/>- Windows Server 2012 R2 Standard Edition x86-64<br/>- Windows 10 Pro x86-64<br/>- Windows 10 Enterprise x86-64<br/>- Windows Server 2016 Datacenter Edition x86-64<br/>- Windows Server 2016 Standard Edition x86-64<br/>- Windows Server 2016 Essentials Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Datacenter Edition x86-64<br/>- Windows Server 2019 Essentials Edition x86-64|
@@ -137,14 +134,14 @@ As of CF232 JDK 7.x is deprecated and support will be removed in a future releas
 |HCL Sametime Communicate|9.0 and later maintenance|8.5|
 |HCL Sametime Complete|9.0 and later maintenance|8.5|  
 
-### JDBC Drivers
+### JDBC drivers
 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |DB2 Connect Enterprise Edition|11.1, and later maintenance releases|8.5|
 |Microsoft SQL Server JDBC Driver|4.2, and later maintenance releases|8.5|
 
-### Security Management
+### Security management
 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
@@ -152,13 +149,13 @@ As of CF232 JDK 7.x is deprecated and support will be removed in a future releas
 |IBM Security Access Manager|9.0, and later maintenance releases|8.5|
 |Tivoli Directory Integrator|7.1.1, and later maintenance releases|8.5|  
 
-### Web Browsers
+### Web browsers
 
 |Supported Software|Supported software minimum|Product minimum|
 |-----------|------------------|-----|
 |Microsoft Internet Explorer|11|8.5|
 
-## Previously Deprecated Features
+## Previously deprecated features
 
 |Category|Unsupported|Recommended Action|
 |--------|-----------|------------------|
