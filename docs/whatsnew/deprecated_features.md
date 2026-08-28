@@ -1,6 +1,6 @@
 # Deprecated features
 
-Deprecation feature in HCL Digital Experience (DX) are features that are supported at this time but can be removed in an upcoming CF. It is recommended to remove deprecated item as soon as possible to avoid unpredictable behavior in your DX environment.
+Deprecation feature in HCL Digital Experience (DX) are features that are supported at this time but can be removed in an upcoming CF. It is recommended to remove deprecated items as soon as possible to avoid unpredictable behavior in your DX environment.
 
 Links to more information on the replacement for those items listed for deprecation will be posted as they become available to provide help as you move away from these features.
 
