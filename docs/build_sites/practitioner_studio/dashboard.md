@@ -11,6 +11,8 @@ The dashboard includes the following widgets:
 - **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
 - **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
 - **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
+- **My Sites:** Displays user-created sites in a card layout with thumbnails, status indicators, and direct navigation.
+- **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site, featuring quick-search capabilities.
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
@@ -115,6 +117,25 @@ The **Results** pane displays content items that match your selected tags.
 - Select **any** or **all** to filter content matching any or all selected tags.
 - Select a content title to open its source location.
 
+## My Sites
+
+Use the **My Sites** widget to quickly access and monitor your managed sites, featuring thumbnails and status indicators.
+
+![My Sites](../../assets/HCL_Practitioner_dashboard_My_Sites.png)
+
+- **Site Cards:** Displays sites in a grid layout containing the site thumbnail (or fallback image), site title, status badge, and last modified timestamp.
+- **Direct Navigation:** Select the **View** icon on a site card to open the target site in a new browser tab.
+
+## Recently Modified Pages
+
+Use the **Recently Modified Pages** widget to explore and search the page structure of your most recently modified site.
+
+![Recently Modified Pages](../../assets/HCL_Practitioner_dashboard_Recently_Modified_Pages.png)
+
+- **Hierarchical Tree View:** Displays the root site name along with nested site and child pages. Expand or collapse site levels to navigate the hierarchy.
+- **Direct Navigation:** Select any page or site in the tree to navigate directly to that item.
+- **In-Site Search:** Use the search bar to locate specific pages within the current site tree.
+
 ## Configuring widget parameters
 
 Use the dashboard to customize which widgets appear on your screen. To change these settings:
@@ -131,6 +152,8 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent Personalization (PZN) activities and campaigns. |
 | `PROJECTS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Projects** widget, which displays your projects in a paginated data grid. |
 | `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
+| `MY_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Sites** widget, which displays user-created managed sites with thumbnails and status indicators in a grid view. |
+| `RECENT_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recently Modified Pages** widget, which displays a hierarchical tree view of pages and site areas within the most recently modified site. |
 
 ## Configuring main portals
 
