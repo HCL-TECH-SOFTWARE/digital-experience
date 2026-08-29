@@ -1,111 +1,99 @@
-# Preparing the Installation Manager
+# Setting up the IBM Installation Manager on AIX
 
-In an on-premise environment the IBM Installation Manager (IIM) is used to install installation packages such as HCL Digital Experience and IBM WebSphere Application Server.  
+Use the IBM Installation Manager (IIM) to install packages such as HCL Digital Experience (DX) and IBM WebSphere Application Server on AIX.
 
-## Procedure
+Before you begin, ensure to update IIM to the latest available version. On AIX deployments, download IIM version 1.9 before starting the installation. For more information, refer to [Installation Manager shipped with Portal 8.5 fails to install on AIX Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0091447){target="_blank"}.  
 
-!!!note "Important / Warning"
-    - It is a best practice to update your IIM to the latest available version, especially in the case of AIX deployments it is strongly recommended to download the latest IIM v1.9 version first, before starting the installation. For details, please review [Installation Manager shipped with Portal 8.5 fails to install on AIX Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0091447){target="_blank"}.  
-    - Due to incompatibilities between recent IIM levels and DX install packages, do not update IBM Installation Manager to version 1.10.  
+!!!warning
+    Do not update IBM Installation Manager to version 1.10. Recent IBM Installation Manager versions conflict with HCL DX installation packages.
 
-If you do not have an existing Installation Manager, then complete the following procedure:
-
-1. Download the latest IBM Installation Manager v1.9 version from the IBM Download pages (for example version 1.9.3.4).  
-    See download page [Installation Manager and Packaging Utility download documents](https://www.ibm.com/support/pages/installation-manager-and-packaging-utility-download-documents){target="_blank"}.  
+1. Download the latest IBM Installation Manager v1.9 version from the IBM Download pages (for example version 1.9.3.4) For more information, refer to [Installation Manager and Packaging Utility download documents](https://www.ibm.com/support/pages/installation-manager-and-packaging-utility-download-documents){target="_blank"}.  
 
     !!!note
-        Make sure to download the `agent.installer.aix.gtk.ppc_<version>.zip` to get the full installation binaries instead of the update packages.  
+        Download the `agent.installer.aix.gtk.ppc_<version>.zip` file to obtain full installation binaries instead of update packages.  
 
-2. Navigate into the `<PRODUCT_ROOT>/SETUP/IIM` directory folder of the HCL DX shipped product and delete all sub folders and files in it. (Empty the entire `<PRODUCT_ROOT>/SETUP/IIM` folder).  
+2. Navigate to the `<PRODUCT_ROOT>/SETUP/IIM` in the HCL DX product directory and delete all files and subdirectories.
+3. Extract `agent.installer.aix.gtk.ppc_<version>.zip` into the `<PRODUCT_ROOT>/SETUP/IIM` folder.
+4. Start all servers and applications that require a port number to avoid port conflicts during HCL DX installation.
+5. Run `ping yourserver.yourcompany.com` from the command line to verify that the fully qualified domain name is properly configured.
+6. Run `ping localhost` from the command line to verify network configuration.
 
-3. Extract the `agent.installer.aix.gtk.ppc_<version>.zip` in the `<PRODUCT_ROOT>/SETUP/IIM` folder.
+!!!note
+    - Disable active firewalls, antivirus software, screensavers, or desktop search engines before installing. Active applications can trigger warnings or cause the installation to fail.
+    - If the user interface does not support the current language setting, the interface defaults to English.
 
-4. Start all servers and applications that require a port number to avoid port conflicts when installing HCL Digital Experience.
+## Non-root user installation
 
-5. Type `ping yourserver.yourcompany.com` on a command line to verify that your fully qualified host name is properly configured.
-
-6. Type ping localhost on a command line to verify that your network is properly configured.
-
-    !!!note
-        If you are installing on a server with a firewall, antivirus, screen saver, or desktop search engine that is enabled, disable them before you install. If you do not disable them and the installation program detects them, a warning message displays during the installation or the installation might fail.
-
-### Non-root user installation
-
-Complete the following steps to install as a non-root user:
+To install IIM as a non-root user:
 
 1. Log in to the operating system as the root user.
-
 2. Open a command line.
+3. Create a non-root group and user:
 
-3. Use the appropriate system commands to create the following items:
+    ```bash
+    mkgroup <group_name>
+    mkuser pswdrequired=true groups=<group_name> <user_name>
+    passwd <user_name>
+    ```
 
-    - Non-root user, including password
-    - Group
-
-4. Set the user profile for the number of open files. Set the value to ulimit -n 10240.
-
+4. Set the open files limit in the user profile to `ulimit -n 10240`.
 5. Add the non-root user to the new group.
-
-6. Run the following task to change the owner of the `IIM` directory to the non-root user:
+6. Change ownership of the `IIM` directory to the non-root user:
 
     ```bash
     chown user:group IIM
     ```
 
-7. Run the following task to change permissions for the directory:
+7. Change directory permissions:
 
     ```bash
     chmod -R 755 IIM
     ```
 
 8. Log in as the non-root user.
+9. Install IIM to `/IBM/InstallationManager`.
 
-9. Use the following command to install IBM Installation Manager:
+    - GUI mode:
 
-   If you want to install IIM in GUI mode:  
+        ```bash
+        ./userinst 
+        ```
 
-   ```bash
-   ./userinst 
-   ```
+    - Console mode:
 
-   If you want to install IIM in Console mode:
+        ```bash
+        ./userinstc -acceptLicense
+        ```
 
-   ```bash
-   ./userinstc -acceptLicense
-   ```
+10. Navigate to `/IBM/InstallationManager` to start IIM.
 
-   Set the IBM Installation Manager installation location to `/IBM/InstallationManager`.  
+    - GUI mode:
 
-10. Navigate to folder `/IBM/InstallationManager`. You can start the Installation Manager with the following commands:  
+        ```bash
+        ./IBMIM 
+        ```
 
-     If you want to start it in GUI mode:  
+    - Console mode:
 
-     ```bash
-     ./IBMIM 
-     ```
+        ```bash
+        cd tools
+        ./imcl -c
+        ```
 
-     If you want to start it in Console mode:  
+## Root user installation
 
-     ```bash
-     cd tools
-     ./imcl -c
-     ```
+To install IIM as a root user, run the command for your preferred installation mode:
 
-### Root user installation
+- GUI mode:
 
-If you want to install IIM in GUI mode use command:  
+    ```bash
+    ./install
+    ```
 
-```bash
-./install
-```
+- Console mode:
 
-If you want to install IIM in Console mode use command:  
+    ```bash
+    ./installc -acceptLicense
+    ```
 
-```bash
-./installc -acceptLicense
-```
-
-!!!note
-    - For details, please check [Installing IBM Installation Manager](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=manager-installing-installation){target="_blank"}
-    - If the language is not currently supported for the user interface, you might see the English version.
-    After you complete all necessary steps, verify that your installation was successful.
+For more information, refer to [Installing IBM Installation Manager](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=manager-installing-installation){target="_blank"}. Verify that the installation was successful after completing all required steps.

@@ -1,6 +1,7 @@
+Title: Installing HCL Digital Experience
 nav:
     - index.md
+    - Installing HCL DX on AIX: aix
+    - Installing HCL DX on Linux: linux
+    - Installing HCL DX on Windows: windows
     - inst_portal_express_95.md
-    - AIX - Install HCL Digital Experience and HCL Web Content Manager: aix
-    - Linux - Install HCL Digital Experience and HCL Web Content Manager: linux
-    - Windows - Install HCL Digital Experience and HCL Web Content Manager: windows

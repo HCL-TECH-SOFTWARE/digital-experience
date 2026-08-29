@@ -1,57 +1,60 @@
-# HCL Portal Express 9.5 - Server startup and installation
+# Troubleshooting HCL DX Express 9.5 server startup and installation
 
-Learn how to resolve HCL Portal server startup/restart failure on HCL Portal Express 8.5 or 9.0 or new HCL Portal Express installation failures.
+Starting October 1, 2018, attempts to start or restart the server on HCL DX Express 8.5 or 9.0 fail with the following error in `SystemOut.log`:
 
-## Overview
-
-Starting October 1st, 2018, attempts to start/restart the server on HCL Portal Express 8.5 or 9.0 will fail with the following error in SystemOut.log:
-
-```
-CLFBD0026E: The product HCL Portal Express does not have a valid license key installed and the evaluation period has expired. 
+```text
+CLFBD0026E: The product HCL Digital Experience Express does not have a valid license key installed and the evaluation period has expired. 
 Functions specific to this product are not enabled.
 ```
 
 or
 
-```
+```text
 CLFBD0030E: Caught error, message: Past the expiration date on license.
 ```
 
+Product installation attempts also fail. Installation logs show the same CLFBD0026E and CLFBD0030E errors. An invalid license duration in the `wpe85.lic` license file causes this issue. This issue affects trial (evaluation) and non-trial versions of HCL DX Express 8.5 and 9.0, as well as new installations.
 
-Similarly, attempts to install the product will also fail. A review of the installation logs will show the same CLFBD0026E and CLFBD0030E errors. The cause of this issue is an invalid license duration in the license file (wpe85.lic). This issue impacts both trial (evaluation) and non-trial versions of HCL Portal Express 8.5, 9.0 and new installations.
+## Recommended solution
 
-## Recommended Solution
-
-To apply iFix PH03610 solution, users need to visit the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"} page and download the fix.
+To resolve this issue, download and apply iFix PH03610 from the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}.
 
 ## Workaround
 
-To address a server startup failure, remove the License Check application via the following steps:
+To resolve server startup failures, remove the License Check application:
 
-1.  Replace the existing file of the same name with the following: lc_adv_cfg.xml. Where
+1. Replace `lc_adv_cfg.xml` at the following path with the updated file:
 
-    ```
+    ```xml
     <PortalHome>/installer/wp.exp.wart/lcComponent/config/includes/lc_adv_cfg.xml
     ```
 
-    where <PortalHome\> represents the installed location. By default, this is:
+    Default `<PortalHome>` directory:
 
-    -   Windows: C:\\IBM\WebSphere\PortalServer
-    -   Linux: /opt/IBM/WebSphere/PortalServer
+    - Windows: `C:\\IBM\WebSphere\PortalServer`
+    - Linux: `/opt/IBM/WebSphere/PortalServer`
 
-2.  In the `ConfigEngine` directory of your Portal profile, run the following `ConfigEngine` task:
+2. From the `ConfigEngine` directory of your profile, run the `ConfigEngine` task for your operating system:
 
-    -   Windows: `ConfigEngine.bat action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>`
-    -   Linux: `./ConfigEngine.sh action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>`
+    - Windows:
+
+        ```bash
+        ConfigEngine.bat action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>
+        ```
+
+    - Linux:
+
+        ```bash
+        ./ConfigEngine.sh action-remove-ear-wp.exp.wart/lcComponent -DWasPassword=<Was_admin-password>
+        ```
 
     The server should now start successfully.
 
+## Resolving installation issues
 
-To address a failed installation:
+To resolve installation failures:
 
-1.  Temporarily reset the system clock for the operating system to a date prior to Oct 1, 2018.
-2.  Install the product.
-3.  Run through the steps above to remove the License Check application and avoid any subsequent server startup failures.
-4.  Reset system clock back to current date.
-
-
+1. Temporarily set the system clock to a date before October 1, 2018.
+2. Install the product.
+3. Remove the License Check application using the steps in the **[Workaround](#workaround)** section.
+4. Reset the system clock to the current date.
