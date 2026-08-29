@@ -3,6 +3,7 @@ nav:
     - index.md
     - DeployRobots.md
     - ChangeCellandNodeName.md
+    - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
     - ConfigureRAD.md
     - EnableImageFormats.md
@@ -12,4 +13,3 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
-    - DefaultPortletConfig.md
