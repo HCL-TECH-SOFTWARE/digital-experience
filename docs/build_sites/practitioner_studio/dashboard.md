@@ -123,8 +123,18 @@ Use the **My Sites** widget to quickly access and monitor your managed sites, fe
 
 ![My Sites](../../assets/HCL_Practitioner_dashboard_My_Sites.png)
 
-- **Site Cards:** Displays sites in a grid layout containing the site thumbnail (or fallback image), site title, status badge, and last modified timestamp.
+- **Site Cards:** Displays sites in a grid layout containing the site thumbnail, site title, status badge, and last modified timestamp.
 - **Direct Navigation:** Select the **View** icon on a site card to open the target site in a new browser tab.
+
+### Adding a thumbnail to a site
+
+You can add a thumbnail to a site using either of the following methods:
+
+- **Method 1:** Create a site using a template that includes a theme with `og:image` metadata already configured. The thumbnail is automatically displayed based on the OG image defined in the theme.
+- **Method 2:** Navigate to **Authoring → Portal Site → Content → Content Root**, edit the desired site, add an Image element named `thumbnail` under **Portal Page Properties → Manage Elements**, upload a thumbnail image, and save the changes.
+
+!!! note
+    If both an OG image (`og:image`) and a Thumbnail are configured for a site, the OG image takes precedence and is displayed as the site's thumbnail.
 
 ## Recently Modified Pages
 
@@ -135,6 +145,9 @@ Use the **Recently Modified Pages** widget to explore and search the page struct
 - **Hierarchical Tree View:** Displays the root site name along with nested site and child pages. Expand or collapse site levels to navigate the hierarchy.
 - **Direct Navigation:** Select any page or site in the tree to navigate directly to that item.
 - **In-Site Search:** Use the search bar to locate specific pages within the current site tree.
+
+!!! note
+    The widget displays only the 20 most recently modified pages.
 
 ## Configuring widget parameters
 
