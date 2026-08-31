@@ -28,9 +28,7 @@ Once an application meets the above criteria, the browser will display a button 
 
 When the install button is clicked, a dialog will appear that prompts the user to install the application.
 
-Once the application is installed, the application icon will display \(in the following example as a Google Chrome application\) and the application will be launched.
-
-![Progressive Web Application](../../images/progressive_web_application.png)
+Once the application is installed, the application icon will display as a Chrome application and the application will be launched.
 
 For a Progressive Web Application to function correctly, the scope of both the manifest and the service-worker needs to be set correctly. The web application manifest file provides information about a web application in JSON format.
 
