@@ -26,11 +26,7 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
 
 Once an application meets the above criteria, the browser will display a button that allows the application to be installed. See the install option example below.
 
-![Sample site install prompt](../../images/woodburn_studio_demo_site.png)
-
 When the install button is clicked, a dialog will appear that prompts the user to install the application.
-
-![Install application for offline use](../../images/Install%20Woodburn%20studio%20PWA%20offline%20option.png)
 
 Once the application is installed, the application icon will display \(in the following example as a Google Chrome application\) and the application will be launched.
 
@@ -163,7 +159,7 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 2.  **Create a pwas directory in the root of the theme static files**. This directory will contain all of the PWA configurations. Each sub-directory under `pwas` represents a single configuration. For example, these directories/files can exist:
 
     -   pwas \(folder\)
-        -   site1 \(folder\)
+        -   nexhaven \(folder\)
             -   images \(folder\)
             -   manifest.json
             -   service-worker.js
@@ -239,63 +235,16 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../themes_skins/the_module_framework/themeopt_analyzer/index.md) Help Center topic for instructions to analyze and clear theme caches.
 10. **Add any necessary metadata values** to the pages:
 
-    -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme `pwas` directory that will apply. For example, this page metadata parameter can be set to `site1` on your site root label.
+    -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme `pwas` directory that will apply. For example, this page metadata parameter can be set to `nexhaven` on your site root label.
     -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
-    -   **Optional: `com.hcl.dx.pwa.serviceworker.scope`** - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser \(typically the URL for the root page of the site, for example, /wps/myportal/site1\). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter. The value of this parameter will default to auto.
+    -   **Optional: `com.hcl.dx.pwa.serviceworker.scope`** - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser \(typically the URL for the root page of the site, for example, /wps/myportal/nexhaven\). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter. The value of this parameter will default to auto.
     -   **Optional: `com.hcl.dx.pwa.preload_urls`** - Set on the root label or page of the site to define a list of URLs that can be preloaded by the service-worker. This list is comma-separated and will be dynamically added to the service-worker using the variable preloadURLs.
-    -   **Optional: `com.hcl.dx.pwa.manifest.scope`** - Set on a label or page in the site to override the `scope` specified in the PWA manifest \(typically the URL for the root page of the site, for example, /wps/myportal/site1\). The scope can also be set to auto which will cause the scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
+    -   **Optional: `com.hcl.dx.pwa.manifest.scope`** - Set on a label or page in the site to override the `scope` specified in the PWA manifest \(typically the URL for the root page of the site, for example, /wps/myportal/nexhaven\). The scope can also be set to auto which will cause the scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
     -   **Optional: `com.hcl.dx.pwa.manifest.start_url`** - See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
     -   **Optional: `pwa.Hidden`** - Set on a label or page in the site to exclude a page from the PWA application navigation \(true or false\).
     
 11. **Optionally, update the theme files for hiding pages in PWA application mode**. See the *Hiding pages in PWA application mode* guidance above in this section for explanations and guidance to apply these changes.
 
 PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through [Virtual Portal](../virtual_portal/vp_planning/advppln_scope.md) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.
-
-## Creating a custom PWA install button
-
-It is possible to create a custom PWA install button within the site itself by changing the theme.
-
-![](../../images/pwa-woodburn-button.png)
-
-The button also appears when the site is in responsive mode.
-
-![](../../images/pwa-woodburn-button-responsive.png)
-
-The following changes can be made to a custom theme to implement the button:
-
-1.  The pwa.js file was updated to include handling PWA specific events such as `beforeinstallprompt` and `appinstalled`. These events handle displaying the install button when the install criteria is met, not displaying the button when in PWA application mode and other processing.
-2.  The theme custom CSS was updated to style the button \(for example, in `main.css`\).
-
-    For example:
-
-    ```
-    .wb-hide-pwa-button {
-      display:none;
-    }
-    :
-    .wb-navigation-list
-        ul.nav-list
-        li.pwa-install-button
-        {
-      color: white;
-      background-color: #ef1212;
-      line-height: 2.25em;
-      width: 60px;
-      text-align: center;
-    }
-    ```
-
-3.  The theme custom navigation JSP was updated to include the button in the navigation \(for example, in `mainNav.jsp`\).
-
-    For example:
-
-    ```
-    <li class="list-item pwa-install-button wb-hide-pwa-button">
-        <a href="#" onclick="pwaInstall(event)"><c:out value="GET APP"/></a>
-    </li>
-    ```
-
-
-For additional information on PWA custom install options, see the following link from the Web.dev site: [How to provide your own in-app install experience](https://web.dev/customize-install/)
 
 
