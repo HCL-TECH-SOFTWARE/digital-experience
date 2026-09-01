@@ -12,20 +12,21 @@ You can also use the console mode to generate a response file. Go to [Installing
 2. Go to the `InstallationManager_root/eclipse directory`.
 3. Run the following task to start the recording:
 
-    ```
+    ```bash
     ./IBMIM -record pathtoresponsexmlfile -skipInstall tempinstalldirectory
     ```
 
-    - `-record`: Indicates recording the actions and parameters into the response file.
-    - `pathtoresponsexmlfile`: The name of the response file, (for example, `Wp8SampleResp.xml`).
-    - `-skipInstall`: Indicates that no actual installation is completed even though it leads to the final pane.
-    - `tempinstalldirectory`: The directory where the response file is recorded.
+    !!!note
+        - `-record`: Indicates recording the actions and parameters into the response file.
+        - `pathtoresponsexmlfile`: The name of the response file, (for example, `WpSampleResp.xml`).
+        - `-skipInstall`: Indicates that no actual installation is completed even though it leads to the final pane.
+        - `tempinstalldirectory`: The directory where the response file is recorded.
 
 4. Complete the following steps to add the repositories where the installation media exists:
 
     1. Open the IBM Installation Manager and go to **File > Preferences > Repositories**.
     2. Select **Add Repositories**.
-    3. Select **Browse**, go to the `Portal-install-eimage/Setup/repository.config` file, and then click **OK**.
+    3. Select **Browse**, go to the `<install-root>/Setup/repository.config` file, and then click **OK**.
     4. Ensure that all required repositories are checked. Then, click **Test Connections** to ensure that the IBM Installation Manager can successfully access the directory where the service repositories are stored.
     5. Select **Apply**.
     6. Select **OK**.

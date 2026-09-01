@@ -96,4 +96,4 @@ To install IIM as a root user, run the command for your preferred installation m
     ./installc -acceptLicense
     ```
 
-For more information, refer to [Installing IBM Installation Manager](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=manager-installing-installation){target="_blank"}. Verify that the installation was successful after completing all required steps.
+For more information, refer to [Installing IBM Installation Manager](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=manager-installing-installation){target="_blank"}. Verify that the installation was successful after completing all required steps.  

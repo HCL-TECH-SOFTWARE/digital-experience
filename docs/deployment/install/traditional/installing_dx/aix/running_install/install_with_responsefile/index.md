@@ -13,30 +13,30 @@ The installation program verifies the operating system and its prerequisites, av
 
     The secure **Storage File** stores the credentials that are needed for the repositories. The IBM Installation Manager command-line tool imutilsc is available from the installation tools directory. The following information is an example of the imutilsc key ring file command:
 
-    ```
-    ./imutilsc saveCredential -url repository_URL -userName credential_userName
-    	-userPassword password -secureStorageFile storage_file [ -masterPasswordFile master_password_file ]
+    ```bash
+    ./imutilsc saveCredential -url repository_URL -userName credential_userName -userPassword password -secureStorageFile storage_file [ -masterPasswordFile master_password_file ]
     [ -preferences com.ibm.cic.common.core.preferences.ssl.nonsecureMode=true|false ]
-    	[ -proxyHost proxy_host -proxyPort proxy_port
-    		[ -proxyUsername proxy_username -proxyUserPassword proxyuser_password ]
-    		[ -useSocks ] ]
-    	[ -verbose ]
+    [ -proxyHost proxy_host -proxyPort proxy_port
+    [ -proxyUsername proxy_username -proxyUserPassword proxyuser_password ]
+    [ -useSocks ] ]
+    [ -verbose ]
     ```
 
-    !!! tip 
+    !!! tip
         If you install on a different computer, copy the secure **Storage File** to that computer.
 
-2. Go to the `InstallationManager_root/eclipse/tools` directory.
+2. Navigate to the `InstallationManager_root/eclipse/tools` directory.
+
 3. Run the following task to install HCL DX on an existing WebSphere Application Server:
 
     ```bash
-    ./imcl -acceptLicense input pathtoresponse.xml -log dirpath/logfilename
+    ./imcl -acceptLicense input pathtoresponse.xml -log <file_path>/<filename>
     ```
 
     !!! tip
         Add `-secureStorageFile`, `pathtosecureStorageFile`, `-masterPasswordFile`, and `pathtomasterPasswordFile` to the `imcl` command if you are using a secure **Storage File** to store credentials.
 
-Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement (POE) or invoice. Go to [Configuring software license information](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.installation.nd.iseries.doc/ae/tins_is_cfglic.html?cp=SSAW57_8.5.5%2F2-5-0-7-1){target="_blank"} for information.
+Before you access WebSphere Application Server, configure the software license agreement to set the usage limit from the Proof of Entitlement (POE) or invoice. Go to [Configuring software license information](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=i-configuring-software-license-information){target="_blank"} for information.
 
 - **[Creating a response file for installing HCL Digital Experience in AIX](inst_response-AIX.md)**  
 Use IBM Installation Manager to record a response file based on your environment, and also to automate your installation on multiple servers.
