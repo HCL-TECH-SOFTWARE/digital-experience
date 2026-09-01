@@ -19,7 +19,7 @@ This section explains how to update IQ and its integration with an HCL Digital E
 
 ## Get the Helm chart
 
-For the official source and version information for the IQ Helm chart, see [Installing IQ](installation/index.md).
+For the official source and version information for the IQ Helm chart, see [Installing IQ](installation/index.md) and [Downloading and deploying HCL products from a Harbor Repository](../../get_started/download/harbor_container_registry.md).
 
 ## Recover missing values files
 
