@@ -48,7 +48,10 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
 
 ### Provisioning the database
 
-1. Create or update your custom DX values file (for example, `custom-dx-iq-db-setup.yaml`) for IQ database provisioning:
+!!! note "DX Configuration Management"
+    The DX deployment uses a `custom-values.yaml` file as the single source of truth for all configuration. For detailed information on how to create and manage this file, refer to [Prepare Configuration](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
+
+1. Add the IQ database configuration to your DX `custom-values.yaml` file:
 
     ```yaml
     security:
@@ -61,7 +64,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
     ```
 
     - `<SECURE_PASSWORD>`: A secure password for the IQ database user.
-    - `<IQ_RELEASE_NAME>`: The IQ Helm release name (for example,, `dx-iq`). The service name typically follows the `<IQ_RELEASE_NAME>-integrator` format.
+    - `<IQ_RELEASE_NAME>`: The IQ Helm release name (for example, `dx-iq`). The service name typically follows the `<IQ_RELEASE_NAME>-integrator` format.
 
     !!! important
         Setting `networking.dxIqService` enables the Persistence Node to pass the `IQ_DB_USER` and `IQ_DB_PASSWORD` environment variables to the PostgreSQL initialization script. This is required for automatic database and user creation.
@@ -72,14 +75,16 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
     helm upgrade <DX_RELEASE_NAME> \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<DX_HELM_CHART_VERSION>.tgz \
       --namespace <DX_NAMESPACE> \
-      --reuse-values \
-      -f custom-dx-iq-db-setup.yaml
+      -f custom-values.yaml
     ```
 
     - `<DX_RELEASE_NAME>`: The DX Helm release name.
     - `<DX_NAMESPACE>`: The DX deployment namespace.
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and path.
-    - `<DX_HELM_CHART_VERSION>`. The DX Helm chart version.
+    - `<DX_HELM_CHART_VERSION>`: The DX Helm chart version.
+    
+    !!! tip "Configuration management"
+        This configuration is merged into your main `custom-values.yaml` file, which is the single source of truth for your DX deployment. Never use `--reuse-values` in production, as it can cause configuration drift.
 
     To find available Helm chart versions in your repository, search in the user interface or run a `curl` command. For example, in JFrog Artifactory:
 
@@ -261,21 +266,31 @@ Use this option to connect to an existing PostgreSQL database located outside of
         helm get all <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
         ```
 
-    2. Upgrade the DX deployment with IQ database settings.
+    2. Add the IQ service configuration to your DX `custom-values.yaml` file:
+
+        ```yaml
+        networking:
+          dxIqService: "<IQ_SERVICE_NAME>"
+        ```
+
+        - `<IQ_SERVICE_NAME>`: The Kubernetes service name for the IQ deployment, which typically follows the `{{ .Release.Name }}-integrator` format (for example, if the release name is `dx-iq`, the service name is `dx-iq-integrator`).
+
+    3. Upgrade the DX deployment with your updated `custom-values.yaml` file:
 
         ```bash
         helm upgrade <DX_RELEASE_NAME> \
           https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<DX_HELM_CHART_VERSION>.tgz \
           --namespace <YOUR_NAMESPACE> \
-          --reuse-values \
-          --set networking.dxIqService=<IQ_SERVICE_NAME> \
+          -f custom-values.yaml
         ```
 
         - `<DX_RELEASE_NAME>`: The DX Helm release name (for example, `dx-deployment`).
         - `<DX_HELM_CHART_VERSION>`: The DX Helm chart version.
         - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
         - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository FQDN and path to specified package or image.
-        - `<IQ_SERVICE_NAME>`: The Kubernetes service name for the IQ deployment, which typically follows the `{{ .Release.Name }}-integrator` format (for example, if the release name is `dx-iq`, the service name is `dx-iq-integrator`).
+        
+        !!! tip "Configuration management"
+            Always use your `custom-values.yaml` file for configuration changes rather than --set flags, as recommended in the [DX configuration documentation](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
 
         To find available Helm chart versions in your repository, search in the user interface or run a `curl` command. For example, in JFrog Artifactory:
 
@@ -324,16 +339,30 @@ Use this option to automatically provision and manage a PostgreSQL database with
         helm get all <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
         ```
 
-    2. Upgrade the DX deployment with the IQ database settings:
+    2. Add the RTC database configuration to your DX `custom-values.yaml` file:
+
+        ```yaml
+        configuration:
+          digitalAssetManagement:
+            newDbManagement: true
+        
+        networking:
+          dxIqService: "<IQ_SERVICE_NAME>"
+        
+        security:
+          iq:
+            customDbSecret: "custom-credentials-iq-db"
+        ```
+
+        - `<IQ_SERVICE_NAME>`: The Kubernetes service name for the IQ deployment (for example, `dx-iq-integrator`).
+
+    3. Upgrade the DX deployment with your updated `custom-values.yaml` file:
 
         ```bash
         helm upgrade <DX_RELEASE_NAME> \
           https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<DX_HELM_CHART_VERSION>.tgz \
           --namespace <YOUR_NAMESPACE> \
-          --reuse-values \
-          --set configuration.digitalAssetManagement.newDbManagement=true \
-          --set networking.dxIqService=<IQ_SERVICE_NAME> \
-          --set security.iq.customDbSecret=custom-credentials-iq-db
+          -f custom-values.yaml
         ```
 
         - `<DX_RELEASE_NAME>`: The DX Helm release name (for example, `dx-deployment`).
