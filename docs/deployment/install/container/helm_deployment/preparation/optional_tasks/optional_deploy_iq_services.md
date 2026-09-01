@@ -58,7 +58,7 @@ Before beginning the installation, obtain the appropriate Helm chart versions an
 
 ### Preparing configuration values
 
-Create a `custom-iq-values.yaml` file to define your deployment-specific configuration:
+Create a `custom-iq-values.yaml` file to define your deployment-specific configuration. This file is your **single source of truth** for all IQ configuration and should be used for both initial installation and all future upgrades.
 
 ```yaml
 # Image configuration
@@ -96,15 +96,32 @@ configuration:
   litellm:
     liteLlmUrl: "<LITELLM_URL>"
 
-# CRITICAL: MCP Server list configuration
-# Must match your Helm release name. Default points to 'dx-ai' release.
-# If your release name is different (for example, 'dx-iq'), update accordingly.
-# Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
+# Environment variables configuration
 environment:
   pod:
     integrator:
+      # CRITICAL: LiteLLM authentication
+      - name: "LITELLM_API_KEY"
+        value: "<LITELLM_API_KEY>"
+      - name: "LITELLM_URL"
+        value: "<LITELLM_URL>"
+      
+      # DX context root
+      - name: "DX_CONTEXT_ROOT"
+        value: "/wps"
+      
+      # CRITICAL: MCP Server list configuration
+      # Must match your Helm release name. Default points to 'dx-ai' release.
+      # If your release name is different (for example, 'dx-iq'), update accordingly.
+      # Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
       - name: "MCP_SERVER_LIST"
         value: "http://<IQ_RELEASE_NAME>-mcp-server:3000"
+      
+      # Optional: LLM model parameters (uncomment and adjust if your model requires specific values)
+      # - name: "LLM_MAX_TOKENS"
+      #   value: "16384"
+      # - name: "LLM_TEMPERATURE"
+      #   value: "1"
 ```
 
 - `<YOUR_ARTIFACTORY>`: The container image registry (for example, `myregistry.example.com`).
@@ -113,8 +130,12 @@ environment:
 - `images.names`: The image names within the repository. The default values shown match standard HCL image paths. Update these only if your registry uses a different path structure.
 - `<DX_RELEASE_NAME>`: The Helm release name of your DX deployment (for example, `dx-deployment`)
 - `<DX_EXTERNAL_FQDN>`: The external DX hostname used by the LLM for gathering context (for example, `dx.example.com`)
+- `<LITELLM_API_KEY>`: The LiteLLM API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
 - `<LITELLM_URL>`: The LiteLLM Proxy URL (for example, `https://litellm.example.com`) for operational deployments.
 - `<IQ_RELEASE_NAME>`: The Helm release name used to install the IQ chart. Ensure this value matches your deployment's release name. For example, if you installed the chart using `helm install dx-iq`, set this value to `dx-iq-mcp-server`. The `defaults.json` file uses `dx-ai-mcp-server` by default, so you must override this value during installation.
+- `DX_CONTEXT_ROOT`: The DX deployment context root (for example, `/wps`). Update this if your DX deployment uses a different context root.
+- `LLM_MAX_TOKENS` (optional): Specifies the maximum number of tokens for LLM completion responses. Only required if your chosen LLM model enforces strict token limits (for example, `16384`, `8192`, `4096`).
+- `LLM_TEMPERATURE` (optional): Controls randomness in LLM responses. Only required if your chosen LLM model enforces specific temperature values (for example, `0.7`, `1.0`, or `0`).
 
 !!! note "DX service discovery"
     Ensure the `internalHost` value matches your DX deployment type:
@@ -124,6 +145,9 @@ environment:
 
     Adjust the hostname prefix if your DX release name differs from `dx-deployment`.
 
+!!! tip "Configuration management best practice"
+    Keep your `custom-iq-values.yaml` file in version control and use it for all deployments and upgrades. Never use `--reuse-values` or scattered `--set` flags in production, as they can cause configuration drift and make your deployment state difficult to audit.
+
 ### Installing the IQ backend server
 
 Run the Helm installation command to deploy the IQ backend server:
@@ -131,42 +155,28 @@ Run the Helm installation command to deploy the IQ backend server:
 !!!note
     To configure optional token limits or temperature parameters for specific models, refer to [Configuring LLM model parameters](#configuring-llm-model-parameters).
 
-=== "Using a custom values file"
+```bash
+helm install dx-iq \
+  https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+  --namespace <YOUR_NAMESPACE> \
+  -f custom-iq-values.yaml
+```
 
+!!! tip "Alternative: Using --set-json for initial installation"
+    If you prefer to provide sensitive values (like `LITELLM_API_KEY`) via command-line flags during initial installation rather than storing them in the values file, you can use:
+    
     ```bash
     helm install dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
-      --values custom-iq-values.yaml \
+      -f custom-iq-values.yaml \
       --set-json 'environment.pod.integrator=[
       {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-      {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
-      {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
-      {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
+      {"name":"LITELLM_URL","value":"<LITELLM_URL>"}
     ]'
     ```
-
-=== "Using command-line flags"
-
-    ```bash
-    helm install dx-iq \
-      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
-      --namespace <YOUR_NAMESPACE> \
-      --set images.repository="<YOUR_ARTIFACTORY>" \
-      --set images.tags.integrator="<INTEGRATOR_IMAGE_TAG>" \
-      --set images.tags.mcpServer="<MCP_SERVER_IMAGE_TAG>" \
-      --set images.names.integrator="dx/dx-iq-integrator" \
-      --set images.names.mcpServer="dx/dx-mcp-server" \
-      --set configuration.dx.releaseName="<DX_RELEASE_NAME>" \
-      --set configuration.dx.externalHost="<DX_EXTERNAL_FQDN>" \
-      --set configuration.dx.internalHost="http://<DX_RELEASE_NAME>-core:10039" \
-      --set configuration.litellm.liteLlmUrl="<LITELLM_URL>" \
-      --set-json 'environment.pod.integrator=[
-        {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-        {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
-        {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"}
-      ]'
-    ```
+    
+    However, for all future upgrades, always use `-f custom-iq-values.yaml` without any --set flags.
 
 !!! warning "Release name must match MCP_SERVER_LIST"
     The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP Server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
@@ -186,29 +196,30 @@ Run the Helm installation command to deploy the IQ backend server:
 
 #### Configuring LLM model parameters
 
-If your chosen LLM models have specific constraints on token limits or temperature parameters, configure the following environment variables in the IQ Integrator:
+If your chosen LLM models have specific constraints on token limits or temperature parameters, add the following environment variables to your `custom-iq-values.yaml` file in the `environment.pod.integrator` section:
 
 - `LLM_MAX_TOKENS`: Specifies the maximum number of tokens for LLM completion responses. Must match or be less than your model's maximum (for example, `16384`, `8192`, `4096`).
 - `LLM_TEMPERATURE`: Controls randomness in LLM responses. Some models enforce specific values (for example, `0.7`, `1.0`, or `0`).
 
-```json
-[
-  {"name":"LLM_MAX_TOKENS","value":"<TOKEN_VALUE>"},
-  {"name":"LLM_TEMPERATURE","value":"TEMP_VALUE"}
-]'
+For example, if you are using an AWS Bedrock Claude model that requires a maximum token limit of `16384` and a temperature of `1`, add these lines to your `custom-iq-values.yaml` file:
+
+```yaml
+environment:
+  pod:
+    integrator:
+      # ... existing configuration ...
+      - name: "LLM_MAX_TOKENS"
+        value: "16384"
+      - name: "LLM_TEMPERATURE"
+        value: "1"
 ```
 
-For example, if you are using an AWS Bedrock Claude model that requires a maximum token limit of `16384` and a temperature of `1`, include `LLM_MAX_TOKENS` and `LLM_TEMPERATURE` in the `environment.pod.integrator` array during deployment:
+Then run the helm install or upgrade command with your updated values file:
 
-```json
---set-json 'environment.pod.integrator=[
-  {"name":"LITELLM_API_KEY","value":"<LITELLM_API_KEY>"},
-  {"name":"LITELLM_URL","value":"<LITELLM_URL>"},
-  {"name":"DX_CONTEXT_ROOT","value":"<DX_CONTEXT_ROOT>"},
-  {"name":"MCP_SERVER_LIST","value":"http://dx-iq-mcp-server:3000"},
-  {"name":"LLM_MAX_TOKENS","value":"16384"},
-  {"name":"LLM_TEMPERATURE","value":"1"}
-]'
+```bash
+helm install dx-iq <chart> -f custom-iq-values.yaml
+# or
+helm upgrade dx-iq <chart> -f custom-iq-values.yaml
 ```
 
 For configuration details, refer to [IQ environment variables - LiteLLM](../../../../../../build_sites/iq/installation/environment-variables.md#litellm).
@@ -248,7 +259,7 @@ Follow these steps to verify the pods, deployments, and logs. Replace `<YOUR_NAM
 
 ## Upgrading and maintaining the IQ backend components
 
-Upgrade and maintain the IQ backend services by listing current deployments, retrieving active configuration values, and executing the Helm upgrade. Replace `<YOUR_NAMESPACE>` in each command with the target Kubernetes namespace.
+Upgrade and maintain the IQ backend services by updating your configuration values file and executing the Helm upgrade. Replace `<YOUR_NAMESPACE>` in each command with the target Kubernetes namespace.
 
 1. List the current deployments within the namespace:
 
@@ -256,31 +267,68 @@ Upgrade and maintain the IQ backend services by listing current deployments, ret
     helm list -n <YOUR_NAMESPACE>
     ```
 
-2. Retrieve the active configuration values for the deployment:
+2. Update your `custom-iq-values.yaml` file with any configuration changes needed for the upgrade (for example, new image tags, environment variables, or database settings).
 
-    ```bash
-    helm get values dx-iq -n <YOUR_NAMESPACE>
-    ```
-
-3. Run the upgrade command with the path to the new chart version. The `--reuse-values` flag maintains the existing configuration options:
+3. Run the upgrade command with the path to the new chart version and your updated values file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<NEW_IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
-      --reuse-values
+      -f custom-iq-values.yaml
     ```
 
-4. Run the upgrade command with the `--set` flag to update the container image tags:
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and path to the chart.
+    - `<NEW_IQ_HELM_CHART_VERSION>`: The new Helm chart version (for example, `hcl-dx-iq-v1.0.1_20260601-1234.tgz`).
 
-    ```bash
-    helm upgrade dx-iq \
-      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<NEW_IQ_HELM_CHART_VERSION>.tgz \
-      --namespace <YOUR_NAMESPACE> \
-      --reuse-values \
-      --set images.tags.integrator="<NEW_INTEGRATOR_TAG>" \
-      --set images.tags.mcpServer="<NEW_MCP_SERVER_TAG>"
-    ```
+!!! tip "Updating image tags"
+    To update the IQ Integrator or MCP Server image tags, edit the `images.tags.integrator` and `images.tags.mcpServer` values in your `custom-iq-values.yaml` file, then run the upgrade command above. This approach maintains a complete, auditable record of your configuration in version control.
+
+## Configuration management best practices
+
+To ensure reliable, auditable, and reproducible IQ deployments, follow these best practices when managing your IQ configuration:
+
+### Use a custom values file as your single source of truth
+
+Your `custom-iq-values.yaml` file should contain all configuration for your IQ deployment. This approach provides:
+
+- **Auditability**: All configuration changes are tracked in version control
+- **Reproducibility**: Deployments are consistent and predictable
+- **Drift prevention**: Configuration remains stable across upgrades
+- **Visibility**: Complete understanding of your deployment state
+
+### Never use `--reuse-values` in production
+
+The `--reuse-values` flag preserves old values from previous deployments that may not be in your `custom-iq-values.yaml` file. This causes configuration drift and makes your deployment state difficult to audit. Always use `-f custom-iq-values.yaml` instead.
+
+### Never use scattered `--set` flags in production
+
+Using multiple `--set` flags for configuration makes it difficult to:
+
+- Track what configuration is actually deployed
+- Reproduce deployments consistently
+- Maintain configuration in version control
+- Understand the complete deployment state
+
+Always update your `custom-iq-values.yaml` file and use `-f custom-iq-values.yaml` instead.
+
+### Recommended upgrade workflow
+
+For any IQ upgrade or configuration change:
+
+1. Update your `custom-iq-values.yaml` file with the required changes
+2. Commit the changes to version control
+3. Run: `helm upgrade dx-iq <chart> -f custom-iq-values.yaml`
+4. Verify the deployment with `kubectl get pods` and `kubectl logs`
+
+### When `--set` flags are acceptable
+
+`--set` flags are only acceptable for:
+
+- Temporary testing or debugging in non-production environments
+- Quick validation of configuration changes before committing to your values file
+
+Never use `--set` flags for production deployments.
 
 ## Uninstalling the IQ backend server
 

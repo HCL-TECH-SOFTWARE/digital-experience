@@ -40,31 +40,40 @@ Complete the following steps to configure and verify the static key:
       --namespace <DX_NAMESPACE>
     ```
 
-2. Upgrade the IQ deployment:
+2. Update your `custom-iq-values.yaml` file with the LiteLLM URL if you haven't already:
+
+    In your `custom-iq-values.yaml` file (created in [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#preparing-configuration-values)), ensure the LiteLLM URL is set:
+
+    ```yaml
+    configuration:
+      litellm:
+        liteLlmUrl: "<YOUR_LITELLM_URL>"
+    ```
+
+    Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server (for example, `https://litellm.example.com`). You can skip this step if you already set the URL during the initial installation of the IQ Integrator.
+
+3. Upgrade the IQ deployment with your `custom-iq-values.yaml` file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <DX_NAMESPACE> \
-      --reuse-values \
-      --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>"
+      -f custom-iq-values.yaml
     ```
 
-    Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You can omit this flag if you already set the URL during the initial installation of the IQ Integrator.
-
-3. Monitor the rollout status of the deployment:
+4. Monitor the rollout status of the deployment:
 
     ```bash
     kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
     ```
 
-4. Check the logs for static key confirmation:
+5. Check the logs for static key confirmation:
 
     ```bash
     kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
     ```
 
-5. Confirm that the output matches the following log entry:
+6. Confirm that the output matches the following log entry:
 
     ```log
     [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
@@ -72,7 +81,7 @@ Complete the following steps to configure and verify the static key:
 
     If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
 
-6. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
+7. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
 
 ## Next steps
 

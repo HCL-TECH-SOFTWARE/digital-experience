@@ -321,9 +321,9 @@ logging:
       - "api:server-v1:*=info"
 ```
 
-To apply these configurations during a troubleshooting session, update the custom values file and upgrade the Helm release.
+To apply these configurations during a troubleshooting session, update your `custom-iq-values.yaml` file (the same file you created in [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#preparing-configuration-values)) and upgrade the Helm release.
 
-1. Change the `logging` level in your `custom-iq-debug-values.yaml` file:
+1. Add the `logging` configuration to your `custom-iq-values.yaml` file:
 
     ```yaml
     logging:
@@ -347,19 +347,21 @@ To apply these configurations during a troubleshooting session, update the custo
     | `ui:*=info` | Info-level logging for the UI layer |
     | `ui:*=debug` | Debug-level logging for the UI layer |
 
-2. Apply the updated settings:
+2. Apply the updated settings by upgrading with your `custom-iq-values.yaml` file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
-      --reuse-values \
-      --values custom-iq-debug-values.yaml
+      -f custom-iq-values.yaml
     ```
 
     - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
     - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and chart path.
+    
+    !!! tip "Reverting debug logging"
+        When you're done troubleshooting, remember to revert the logging levels back to `info` in your `custom-iq-values.yaml` file and run the upgrade command again.
 
 3. Reproduce the issue, then pull the logs from both services:
 
