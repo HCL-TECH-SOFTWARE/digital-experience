@@ -16,48 +16,53 @@ To reset the Web Content Viewer portlet to its default state, perform the follow
 
 Updating the portlet deployment restores underlying application binaries, JavaServer Pages (JSPs), and system portlet definitions. Perform these steps if application files or web module configurations are corrupted:
 
-1. Updating the portlet from the copy in installableApps. <!--Can we get more specific steps here?-->
+1. Updating the portlet from the copy in installableApps.  
+    a. Login into the HCL DX Portal as portal administrator.  
+    b. In the menubar click to the **home icon** (open application menu) and then click to **Administration**.  
+    c. Navigate to **Applications > Web Modules**.  
+    d. Search for the **ilwwcm-localrenderingportlet-jsr.war**.  
+    e. Click the **Update Web module** icon located to the right of the module properties.  
+    f. Click **Browse** and open the following file location:  
+        `<PortalServer_root>/pzn.ext/portlet.localrendering.jsr/localrendering.war/installableApps/ilwwcm-localrenderingportlet-jsr.war`.  
+    g. Click **Next**, review the selection, and click **Finish**.  
 
-    <!--
-    a. Go to Administration > Portlet Management > Web Modules.
-    b. Locate ilwwcm-localrenderingportlet-jsr.war.
-    c. Click the Update Web module icon located to the right of the module properties.
-    d. Click Browse and select PortalServer_root/pzn.ext/portlet.localrendering.jsr/localrendering.war/installableApps/ilwwcm-localrenderingportlet-jsr.war.
-    e. Click Next, review the selection, and click Finish.
-    -->
+2. Run the **update-wcm** ConfigEngine task.  
+    a. Open a command prompt or terminal session.  
+    b. Navigate to the `<wp_profile_root>/ConfigEngine` directory.  
+    c. Run the following command:  
+        **On Linux/UNIX:**  
+        ```bash
+        ./ConfigEngine.sh update-wcm  
+        ```
+        **On Microsoft Windows:**  
+        ```bash
+        ConfigEngine.bat update-wcm  
+        ```
 
-2. Run the **update-wcm** ConfigEngine task. <!--Can we get more specific steps here?-->
-
-    <!--
-    a. Open a command prompt or terminal session.
-    b. Navigate to the wp_profile_root/ConfigEngine directory.
-    c. Run ./ConfigEngine.sh update-wcm on Linux/UNIX or ConfigEngine.bat update-wcm on Windows.
-    -->
-
-3. Creating a copy or clone of the portlet and placed the copy on a page. <!--Can we get more specific steps here?-->
-
-    <!--
-    a. Go to Administration > Portlet Management > Portlets.
-    b. Search for Web Content Viewer.
-    c. Click the Copy portlet icon in the row of the Web Content Viewer portlet.
-    d. Enter a unique name for the new portlet copy and click OK.
-    e. Navigate to the target page and enable Edit Mode using the toolbar.
-    f. Open the Applications palette, search for the newly created portlet copy, and drag it onto the page layout.
-    g. Save the page changes.
-    -->
+3. Creating a copy or clone of the portlet and placed the copy on a page.  
+    a. Login into the HCL DX Portal as portal administrator.  
+    b. In the menubar click to the **home icon** (open application menu) and then click to **Administration**.  
+    c. Navigate to **Applications > Portlets**.  
+    d. Search for **Web Content Viewer**.  
+    e. Click the **Copy portlet** icon in the row of the Web Content Viewer portlet.  
+    f. Enter a unique name for the new portlet copy and click **OK**.  
+    g. Navigate to the target page and enable Edit Mode using the toolbar.  
+    h. Open the Applications palette, search for the newly created portlet copy, and drag it onto the page layout.  
+    i. Save the page changes.  
 
 ### Resetting portlet preferences
 
-If updating the portlet deployment does not resolve the issue, collect a full XMLAccess export and database backup, and then perform the following steps:
+If updating the portlet deployment does not resolve the issue, collect a full XMLAccess export and database backup, and then perform the following steps:  
 
-1. Log in to HCL DX as an administrator.
-2. Navigate to **Administration > Portlet Management > Portlets**.
-3. Search for **Web Content Viewer**.
-4. Select the **Configure portlet** icon.
-5. Delete any of the following preferences that appear:
-    - **SECTION_STATES**
-    - **WCM_COMPONENT_IDR**
-    - **WCM_CONTENT_CONTEXT_BEHAVIOUR**
-    - **WCM_CONTENT_CONTEXT_IDR**
-    - **LOCKED_WCM_CONFIG_KEY**
-6. Select **OK**.
+1. Log in to HCL DX as an administrator.  
+2. In the menubar click to the **home icon** (open application menu) and then click to **Administration**.  
+3. Navigate to **Applications > Portlets**.  
+4. Search for **Web Content Viewer**.  
+5. Select the **Configure portlet** icon.  
+6. Delete any of the following preferences that appear:  
+    - **SECTION_STATES**  
+    - **WCM_COMPONENT_IDR**  
+    - **WCM_CONTENT_CONTEXT_BEHAVIOUR**  
+    - **WCM_CONTENT_CONTEXT_IDR**  
+    - **LOCKED_WCM_CONFIG_KEY**  
+7. Select **OK**.  
