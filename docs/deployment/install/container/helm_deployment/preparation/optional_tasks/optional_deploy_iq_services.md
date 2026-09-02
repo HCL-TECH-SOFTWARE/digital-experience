@@ -2,7 +2,7 @@
 
 This section provides step-by-step instructions for deploying the IQ backend servers, IQ Integrator and IQ Model Context Protocol (MCP) Server, alongside an existing container-based HCL Digital Experience (DX) deployment. For a complete overview of IQ capabilities, architecture, and concepts, refer to the [IQ documentation](../../../../../../build_sites/iq/index.md).
 
-!!! note "Database and license configuration are optional"
+!!! note "Database and license configuration are optional at first but recommended for production"
     This procedure deploys the IQ services with persistence disabled (`database.enabled: false`) and uses a static LiteLLM key if configured.
 
 ## Prerequisites
@@ -26,7 +26,7 @@ The IQ Integrator is a WebSocket-based service that connects your HCL DX deploym
 
 The IQ MCP Server provides tool execution capabilities for your Web Content Management (WCM) and Digital Asset Management (DAM) operations. It acts as the action layer that allows your AI assistant to perform live operations within your DX environment when authorized users issue commands through the natural language interface. This component provides the following capabilities:
 
-- Grants your LLM the ability to create, read, update, and delete content libraries, site areas, content templates, and presentation templates.
+- Grants your LLM the ability to create, read, update, and delete DX resources including but not limited to content libraries, site areas, content templates, and presentation templates.
 - Helps you search, filter, and retrieve digital assets.
 - Connects to HCL DX using authenticated REST APIs that feature structured error handling and logging.
 - Implements the open MCP specification, allowing your AI models to discover and invoke system tools uniformly.
@@ -180,13 +180,6 @@ helm install dx-iq \
 
 !!! warning "Release name must match MCP_SERVER_LIST"
     The `MCP_SERVER_LIST` environment variable must reference the MCP Server deployment associated with your release name. Use your release name as the prefix for the MCP Server host name. For example, if you set `<IQ_RELEASE_NAME>` to `my-iq`, the host name must be `http://my-iq-mcp-server:3000`. Incorrect values cause the Integrator pod to fail health checks and enter a `CrashLoopBackOff` state.
-
-- `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
-- `<YOUR_NAMESPACE>`: The target Kubernetes namespace.
-- `<LITELLM_API_KEY>`: The LiteLLM API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
-- `<LITELLM_URL>`: The LiteLLM proxy URL provided by the LiteLLM proxy administrator to enable Integrator functionality.
-- `<DX_CONTEXT_ROOT>`: The DX deployment context root (for example, `/wps`).
-- `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The complete repository FQDN and path to the chart.
 
 !!! warning "LITELLM_API_KEY and LITELLM_URL are required"
     While the `helm install` command completes successfully without the `LITELLM_API_KEY` and `LITELLM_URL`, the Integrator and MCP Server pods do not enter a `Ready` state. Health checks fail and services remain non-operational.

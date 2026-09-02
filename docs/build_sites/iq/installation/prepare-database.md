@@ -126,7 +126,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbHost: "dx-deployment-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
             dbUser: "dx_iq_db_user"
@@ -146,7 +146,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbHost: "dx-deployment-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
             dbCustomSecret: "<DX_RELEASE_NAME>-iq-db-secret"
@@ -194,6 +194,15 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
 ## Configuring an external database
 
 Use this option to connect to an existing PostgreSQL database located outside of your DX deployment. Create a Kubernetes secret to store the credentials, and then deploy IQ to connect to it.
+
+!!!warning "Network connectivity requirement"
+    Your Kubernetes cluster must have outbound network access to reach the external database server. If your cluster is isolated or behind a firewall, ensure that:
+    
+    - **Egress rules** allow outbound traffic on the database port (typically TCP 5432 for PostgreSQL)
+    - **Security groups** (AWS) or **firewall rules** (GCP/Azure) permit connections to the external database host
+    - **Network policies** (if using Calico or other CNI) allow egress traffic to external networks
+    
+    If connectivity fails with `ENETUNREACH` or `Network is unreachable` errors, contact your infrastructure team to enable outbound access to the external database.
 
 1. Create a Kubernetes secret to store your external database credentials:
 
