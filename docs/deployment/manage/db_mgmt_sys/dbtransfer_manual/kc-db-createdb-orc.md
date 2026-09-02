@@ -16,8 +16,8 @@ Manual steps from the Configuration Wizard are included in HCL Digital Experienc
     - **Oracle 19c and Oracle 21c**: Configure database transfer and runtime with the `ojdbc11.jar` library file. The `xdb6.jar` file is not required for Oracle 19c and 21c. Use the `ojdbc11.jar` driver provided by Oracle for your specific Oracle Database version. Refer to the [Oracle JDBC Downloads page](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html){target="blank"} for the latest driver.
 
     !!! note
-        * **Kubernetes Deployments:** Store the required Oracle database library (`.jar`) files within your wp_profile directory structure.
-        * **Support Notice:** HCL DX is tested against Oracle 19c and Oracle 21c. Oracle 12c is no longer covered by standard Oracle support. If you are using Oracle 12c, plan an upgrade to a supported Oracle version.
+        - For Kubernetes deployments, store the required Oracle database library (`.jar`) files within your [wp_profile](../../../../guide_me/glossary/wpsdirstr.md#wp_profile_root) directory structure.
+        - HCL DX is tested against Oracle 19c and Oracle 21c. Oracle 12c is no longer covered by standard Oracle support. If you are using Oracle 12c, plan an upgrade to a supported Oracle version.
 
 6. Set the buffer pools allocated to the Oracle database in order for HCL DX to communicate with the Java Content Repository database. Refer to the Oracle product documentation for information on how to set the buffer pools. Use these recommended buffer pool values as a guide for setting your values:
 
