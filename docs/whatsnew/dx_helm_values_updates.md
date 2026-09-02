@@ -5,6 +5,8 @@ This page summarizes Helm values updates across DX releases. Each table below de
 !!!note
     For more information on the keys described in this page, including their possible values and usage, refer to the downloadable sample `values.yaml` in [Prepare Configuration - The default HCL DX 9.5 `values.yaml` file](../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
 
+### CF238
+
 ### CF237
 
 **Added Keys:**
