@@ -245,20 +245,4 @@ Hidden pages are implemented via CSS included in the theme. There are two places
 
 PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through [Virtual Portal](../virtual_portal/vp_planning/advppln_scope.md) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.
 
-## Known issues and workarounds
-
-### macOS Chrome: blank app icon on first install
-
-On macOS with Google Chrome, the installed PWA icon in the Dock and Finder may appear as a blank or default tile after the first install. This is a known Chromium platform behavior on macOS caused by a race between Chrome's `.app` bundle assembly and the macOS LaunchServices icon cache. It affects PWAs generally, not just HCL DX.
-
-**Workaround:** Reinstall the app. The specific steps are:
-
-1. Locate the installed PWA in `~/Applications/Chrome Apps.localized/` and move it to the Trash. \(This removes the app bundle but leaves Chrome's PWA registration intact.\)
-2. Return to the PWA site in Google Chrome. Where the install \(**+**\) icon used to be, an "Open" button will now appear in the address bar.
-3. Click **Open**. Chrome rewrites the `.app` bundle to `~/Applications/Chrome Apps.localized/` with the correct icon, which macOS LaunchServices then picks up.
-
-After this workaround, the correct icon persists for all subsequent launches.
-
-This behavior is specific to macOS Chrome. Windows Chrome, Linux Chrome, Android Chrome, and iOS Safari \("Add to Home Screen"\) use different icon-write mechanisms and do not exhibit this race.
-
 
