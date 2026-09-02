@@ -48,14 +48,18 @@ The product provides features for **content managers** to create and manage web 
 
 To enable the use cases and users mentioned earlier, HCL DX provides the following key features:
 
-* With [**Application integration**](application_integration.md) and [**API Access**](api_access.md), you can build a digital experience that integrates functionality from multiple back-end systems simultaneously.
-* With [**Content management**](content_management.md) and [**asset management**](asset_management.md), you can manage the web content and digital assets you need to serve your users.
-* With [**Site building**](site_building.md), you can combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role_based_access.md) to tailor what your users see.
-* With [**Personalization**](personalization.md), you can tailor the digital experience to serve diverse user populations from a single platform.
-* With [**Forms building**](forms_building.md), non-technical users can quickly build data capture applications.
+- With [**Application integration**](application_integration.md) and [**API Access**](api_access.md), you can build a digital experience that integrates functionality from multiple back-end systems simultaneously.
+- With [**Content management**](content_management.md) and [**asset management**](asset_management.md), you can manage the web content and digital assets you need to serve your users.
+- With [**Site building**](site_building.md), you can combine applications with content into the customized and personalized experience your organization demands, combined with [**Role Based Access Control**](role_based_access.md) to tailor what your users see.
+- With [**Personalization**](personalization.md), you can tailor the digital experience to serve diverse user populations from a single platform.
+- With [**Forms building**](forms_building.md), non-technical users can quickly build data capture applications.
 
 You can read more about the platform's architecture and technical capabilities in the [Architecture overview](../architecture_overview/index.md) section.
 
+## See it in action
+
+<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/I4tcGeWFA6xl37SU7Rdb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="HCL Digital Experience Introduction for Business Users" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## HCLSoftware U learning materials
 
-For an introduction to HCL Digital Experience, go to [HDX-INTRO HCL Digital Experience Introduction](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Fcourse%2Fhcl-digital-experience-introduction){target="_blank"}.
+For an introduction to HCL Digital Experience, go to the free [HDX-INTRO HCL Digital Experience Introduction](https://hclsoftwareu.hcl-software.com/courses/course/hcl-digital-experience-introduction){target="_blank"} course. [Log in](https://hclsoftwareu.hcl-software.com/hclsoftwareu-userlogin){target="_blank"} to get started. If you are new to HCLSoftware U, you can [Sign Up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} for free. If you cannot access the course, go to [Contact Us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"}.
