@@ -26,9 +26,15 @@ To make a Progressive Web Application installable \(as noted in the [Introductio
 
 Once an application meets the above criteria, the browser will display a button that allows the application to be installed. See the install option example below.
 
+![Nex Haven PWA install prompt](../../assets/Nex-Haven_PWA_Install_Prompt.png)
+
 When the install button is clicked, a dialog will appear that prompts the user to install the application.
 
+![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Install_Dialog.png)
+
 Once the application is installed, the application icon will display as a Chrome application and the application will be launched.
+
+![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Installed.png)
 
 For a Progressive Web Application to function correctly, the scope of both the manifest and the service-worker needs to be set correctly. The web application manifest file provides information about a web application in JSON format.
 
