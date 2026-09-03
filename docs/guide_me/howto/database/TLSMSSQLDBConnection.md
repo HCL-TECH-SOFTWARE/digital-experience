@@ -14,7 +14,7 @@ To configure a specific TLS version for the backend database connection, perform
 
 1. Log in to the IBM Integrated Solutions Console (WAS admin console).
 2. Navigate to **Resources > JDBC > Data sources**.
-3. Select the data source corresponding to your MS-SQL database (for example, **jcrdb** or **wpdb**).
+3. Select the data source corresponding to your MS-SQL database (for example, **JCRDB** or **WPSDB**).
 4. Under **Additional Properties**, select **Custom properties**.
 5. Check whether the **URL** custom property exists:
 
@@ -32,7 +32,7 @@ To configure a specific TLS version for the backend database connection, perform
             For example:
 
             ```url
-            jdbc:sqlserver://mssqlservername:1414;database=jcrdb;sslProtocol=TLSv1.2
+            jdbc:sqlserver://mssqlservername:1414;database=WPSDB;sslProtocol=TLSv1.2
             ```
 
     - If the property does not exist:
@@ -50,11 +50,11 @@ To configure a specific TLS version for the backend database connection, perform
             For example:
 
             ```url
-            jdbc:sqlserver://mssqlservername:1414;database=jcrdb;sslProtocol=TLSv1.2
+            jdbc:sqlserver://mssqlservername:1414;database=WPSDB;sslProtocol=TLSv1.2
             ```
 
 6. Select **Apply**.
 7. Select **Save** at the top of the console messages.
 
 !!!note
-    The custom data source property URL overrides the general connection settings configured for the selected data source (such as **jcrdb** or **wpdb**).
+    The custom data source property URL overrides the general connection settings configured for the selected data source (such as **JCRDB** or **WPSDB**).
