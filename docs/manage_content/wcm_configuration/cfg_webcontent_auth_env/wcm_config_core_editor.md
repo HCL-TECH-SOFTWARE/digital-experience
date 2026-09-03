@@ -1,0 +1,192 @@
+# Core Editor configuration options
+
+This topic describes the configuration options for Core Editor in HCL Web Content Manager (WCM).
+
+## Overview
+
+Core Editor is a rich text editor available in HCL Digital Experience (DX). It provides support for text formatting, content structuring, and styling features. Core Editor can be used as an alternative to TinyMCE and CKEditor.
+
+Core Editor is available in two contexts:
+
+- **WCM Authoring Portlet** — Used for editing rich text elements in the traditional authoring form.
+- **Site Manager (Inplace Editing)** — Used for inline editing of rich text content directly on the rendered page.
+
+## Enabling Core Editor
+
+Core Editor is enabled by default. You can control its availability and set it as the default RTE using Helm values (for container deployments) or WCM WCMConfigService resource environment provider (REP) properties.
+
+### Using Helm values (Containers)
+
+=== "Containers"
+    Configure the following Helm values to control Core Editor behavior:
+
+    ```yaml
+    incubator:
+      configuration:
+        coreEditor:
+          # If true, includes the Core Editor as a Rich Text Editor option.
+          enabled: true
+          # If true, sets the Core Editor as the default Rich Text Editor.
+          default: false
+    ```
+
+    | Helm Value | Type | Default | Description |
+    |------------|------|---------|-------------|
+    | `incubator.configuration.coreEditor.enabled` | boolean | `true` | If `true`, Core Editor appears as an RTE option in the authoring portlet and is accepted as a valid inplace RTE. If `false`, Core Editor is hidden and any existing selections fall back silently to the platform default. |
+    | `incubator.configuration.coreEditor.default` | boolean | `false` | If `true` (and `enabled` is also `true`), Core Editor is set as the default RTE for both the authoring portlet and Site Manager inplace editing. |
+
+    After changing Helm values, run `helm upgrade` to apply the changes. The affected Pods restart automatically.
+
+### Using REP properties (On-Premises)
+
+=== "On-Premises"
+    Configure the following custom properties in the **WCM WCMConfigService** resource environment provider using the WebSphere Integrated Solutions Console:
+
+    1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
+    2. Navigate to **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
+    3. Click **Custom properties**.
+    4. Edit or create the following properties:
+
+    | Property | Default | Description |
+    |----------|---------|-------------|
+    | `core.editor.enabled` | `true` | If `true`, Core Editor appears as an RTE option in the authoring portlet and is accepted as a valid inplace RTE. If `false`, Core Editor is hidden and any existing selections fall back silently to the platform default. |
+    | `authoring.defaultRichTextEditor` | *(unset)* | Set to `CoreEditor` to make Core Editor the default RTE for new or unconfigured authoring portlet instances. Other supported values: `TinyMCE`, `CKEditor`. |
+    | `inplaceEdit.defaultRichTextEditor` | *(unset)* | Set to `CoreEditor` to make Core Editor the default RTE for Site Manager inplace editing. Other supported values: `TinyMCE`, `CKEditor`. |
+
+    5. Save your changes.
+    6. Restart the Portal server to apply the changes.
+
+## Using Core Editor in the WCM authoring portlet
+
+You can use Core Editor in the WCM authoring portlet for editing rich text elements.
+
+Follow these steps to start using Core Editor in the authoring portlet:
+
+1. In the authoring portlet page, go to **Preferences > Edit Shared Settings**.
+
+2. Open the **Editor Options** menu.
+
+3. Click the **Select the rich text editor to use in rich text fields** dropdown menu and choose **Core Editor**.
+
+4. Click **OK**.
+
+After configuring your authoring portlet to use Core Editor, you can create and edit content with rich text using the Core Editor.
+
+!!! note
+    You can also set the editor through **Configure** mode, which sets the default for all users of that portlet instance. **Edit Shared Settings** overrides the **Configure** value when both are set. For more information, see [Authoring portlet settings](../../wcm_authoring/authoring_portlet/auth_portlet_settings/index.md).
+
+## Using Core Editor in Site Manager (Inplace Editing)
+
+Core Editor can also be used as the rich text editor for Site Manager inplace editing. When Core Editor is set as the inplace RTE, clicking a rich text element in Site Manager opens the Core Editor inline on the page.
+
+To set Core Editor as the inplace editor:
+
+=== "Containers"
+    Set the following Helm value:
+
+    ```yaml
+    incubator:
+      configuration:
+        coreEditor:
+          enabled: true
+          default: true
+    ```
+
+    When `default` is set to `true`, Core Editor is used for both authoring portlet and Site Manager inplace editing.
+
+=== "On-Premises"
+    Add the following custom property to the **WCM WCMConfigService** resource environment provider:
+
+    - `inplaceEdit.defaultRichTextEditor` = `CoreEditor`
+
+    Restart the Portal server after making this change.
+
+## Setting Core Editor as the default RTE
+
+When Core Editor is set as the default, it is automatically selected for new or unconfigured authoring portlet instances and for Site Manager inplace editing.
+
+=== "Containers"
+    Set `incubator.configuration.coreEditor.default` to `true` in your Helm values:
+
+    ```yaml
+    incubator:
+      configuration:
+        coreEditor:
+          enabled: true
+          default: true
+    ```
+
+    This provisions both `authoring.defaultRichTextEditor=CoreEditor` and `inplaceEdit.defaultRichTextEditor=CoreEditor` in the WCM configuration.
+
+=== "On-Premises"
+    Create or update the following custom properties in the **WCM WCMConfigService** resource environment provider:
+
+    - `authoring.defaultRichTextEditor` = `CoreEditor`
+    - `inplaceEdit.defaultRichTextEditor` = `CoreEditor`
+
+    Restart the Portal server after making these changes.
+
+!!! note
+    The `core.editor.enabled` property must be `true` for the default setting to take effect. If `core.editor.enabled` is `false`, the default setting is ignored and the platform default editor is used instead.
+
+## Disabling Core Editor
+
+To hide Core Editor from the RTE dropdown and prevent it from being used:
+
+=== "Containers"
+    Set `incubator.configuration.coreEditor.enabled` to `false` in your Helm values:
+
+    ```yaml
+    incubator:
+      configuration:
+        coreEditor:
+          enabled: false
+    ```
+
+=== "On-Premises"
+    Set the `core.editor.enabled` property to `false` in the **WCM WCMConfigService** resource environment provider and restart the Portal server.
+
+When Core Editor is disabled:
+
+- Core Editor does not appear in the authoring portlet RTE dropdown.
+- Any authoring portlet instances previously configured to use Core Editor silently fall back to the platform default editor (TinyMCE on Liberty/WebEngine, CKEditor on WebSphere/Core).
+- Site Manager inplace editing falls back to the platform default editor if `inplaceEdit.defaultRichTextEditor` was set to `CoreEditor`.
+
+## Supported features
+
+Core Editor supports the following editing features:
+
+| Feature | Description |
+|---------|-------------|
+| Bold, italic, underline, strikethrough | Applies inline text emphasis and decoration styles. |
+| Subscript, superscript | Applies subscript or superscript formatting to selected text. |
+| Font family and font size | Changes the font family and font size of selected text. |
+| Font color and background color | Sets the text color or highlight background color of selected text. |
+| Text alignment | Aligns text to the left, center, right, or justified. |
+| Bullet and ordered lists | Creates unordered (bullet) or ordered (numbered) lists. |
+| Indent and outdent | Increases or decreases the indentation level of content. |
+| Blockquote | Wraps selected content in a blockquote element. |
+| Block formats | Applies block-level formats including Heading 1 through Heading 6, Preformatted, and Normal paragraph. |
+| Horizontal rule | Inserts a horizontal divider line between content sections. |
+| Find and replace | Searches for text within the editor and optionally replaces matches. |
+| Undo and redo | Reverts or reapplies recent editing actions. |
+| Emoji | Inserts emoji characters from a built-in emoji picker. |
+| Line height | Adjusts the line spacing of selected text. |
+| Clear formatting | Removes all inline formatting from selected text. |
+| Fullscreen mode | Expands the editor to fill the entire viewport. Available in the authoring portlet only. |
+
+## Known limitations
+
+The following limitations apply to Core Editor:
+
+- **Links** — Existing hyperlinks in content are displayed, but the link toolbar button is hidden. The WCM link picker for inserting managed content links, component reference links, and other WCM-specific link types is not available.
+- **Images** — The image toolbar button is not available. The WCM image picker for inserting images from Digital Asset Management or WCM libraries is not supported.
+- **Tables** — Table creation and editing is not available.
+- **Spell check** — Browser-native spell check is supported. A dedicated spell check service (such as TinyMCEServices for the Enhanced Editor) is not included.
+- **Custom plugins** — A plugin API for extending functionality is not available.
+
+???+ info "Related information"
+    - [Editor options](../../wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md)
+    - [Web content authoring options](wcm_config_prop_authoring.md)
+    - [Enhanced rich text editor configuration options](wcm_config_ephox_custom.md)
+    - [WebSphere Integrated Solutions Console](../../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

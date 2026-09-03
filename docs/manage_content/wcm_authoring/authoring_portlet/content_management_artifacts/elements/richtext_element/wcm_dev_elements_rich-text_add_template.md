@@ -67,11 +67,15 @@ You add a rich text element to an authoring template when you want a section of 
 
         If you create a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different help text for each language it is configured for. The text that is entered in the **Field help** field is used if an appropriate help text is not available from the selected text provider, or if the text provider is not available.
 
-    9.  You can also select to use either the default rich text editor of the authoring portlet, or a third-party rich text editor as the rich text editor for a rich text element:
+    9.  You can also select to use either the default rich text editor of the authoring portlet, Core Editor, or a third-party rich text editor as the rich text editor for a rich text element:
 
         -   **Portlet default editor**
 
             If selected, the default rich text editor of the current authoring portlet is used. If the default editor is not available, the standard rich text editor is used.
+
+        -   **Core Editor**
+
+            If selected, the Core Editor is used as the rich text editor for this element. If Core Editor is not available or has been disabled, the default rich text editor of the authoring portlet is used. For more information, see [Core Editor configuration options](../../../../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
         -   **Custom**
 

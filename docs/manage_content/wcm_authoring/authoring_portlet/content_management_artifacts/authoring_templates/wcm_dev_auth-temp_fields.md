@@ -118,11 +118,15 @@ You can define the display properties of field and elements that are displayed o
 
             Select this option to prevent users from saving active content, such as scripts, in the rich text element.
 
-    16. You can also select to use either the default rich text editor of the authoring portlet, or a third-party rich text editor as the rich text editor for a rich text element:
+    16. You can also select to use either the default rich text editor of the authoring portlet, Core Editor, or a third-party rich text editor as the rich text editor for a rich text element:
 
         -   **Portlet default editor**
 
             If selected, the default rich text editor of the current authoring portlet is used. If the default editor is not available, the standard rich text editor is used.
+
+        -   **Core Editor**
+
+            If selected, the Core Editor is used as the rich text editor for this element. If Core Editor is not available or has been disabled, the default rich text editor of the authoring portlet is used. For more information, see [Core Editor configuration options](../../../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
         -   **Custom**
 

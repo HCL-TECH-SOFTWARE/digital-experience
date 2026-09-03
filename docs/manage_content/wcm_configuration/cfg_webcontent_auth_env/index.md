@@ -11,6 +11,8 @@ Further authoring portlet configuration options can be specified by using the po
 You can tailor the authoring behavior of your web content environment by changing configuration settings such as workflow, profiling, and version control.
 -   **[Rich text editor toolbar configuration options](wcm_config_ephox_custom.md)**  
 Run these configuration tasks to change the configuration of the rich text editor toolbar.
+-   **[Core Editor configuration options](wcm_config_core_editor.md)**  
+Learn how to enable, configure, and set Core Editor as the default rich text editor for the authoring portlet and Site Manager inplace editing.
 -   **[How to configure authoring portlet search](wcm_config_advanced_search.md)**  
 You can change the configuration of the authoring portlet to change how search works.
 -   **[Importing large files and images](wcm_config_importbuffer.md)**  

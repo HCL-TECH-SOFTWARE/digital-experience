@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- Core Editor - New Rich Text Editor option
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
 - WAS, JDK, UBI, and iFix versions <!--update values-->
@@ -98,6 +99,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
+
+### Core Editor - New Rich Text Editor option
+
+=== "Containers"
+    Core Editor is a new Rich Text Editor option built on the TipTap framework. It is enabled by default and available in both the WCM Authoring Portlet and Site Manager inplace editing. It can be configured using Helm values. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+=== "On-Premises"
+    Core Editor is a new Rich Text Editor option built on the TipTap framework. It is enabled by default and available in both the WCM Authoring Portlet and Site Manager inplace editing. It can be configured using WCM WCMConfigService resource environment provider properties. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### DAM - New parameters for setting the initial collections view
 

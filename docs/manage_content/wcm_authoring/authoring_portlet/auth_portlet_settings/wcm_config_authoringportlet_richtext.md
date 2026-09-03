@@ -12,6 +12,10 @@ You can configure HCL Web Content Manager to use different editors for rich text
 
     Select this option to use the TinyMCE editor. Browser pop-up windows must be enabled. TinyMCE spellcheck requires the TinyMCEServices application, which is not started by default.
 
+- **Core Editor**
+
+    Select this option to use the Core Editor. If Core Editor is not available or has been disabled, the platform default editor is used. For more information, see [Core Editor configuration options](../../../wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
 - **Custom**
 
     Select **Custom** to use a third-party rich text editor as your default editor. Before you enable a compatible third-party rich text editor, read the installation and configuration instructions of the third-party rich text editor. These instructions should include steps for enabling the third-party rich text editor to be used in a Web Content Manager solution.
