@@ -24,6 +24,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
+|Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
 
 ## CF237
 
