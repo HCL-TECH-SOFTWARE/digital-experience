@@ -6,7 +6,7 @@ The Practitioner Studio Dashboard is a modern, React-based dashboard that replac
 
 The dashboard includes the following widgets:
 
-- **Monitor:** Shows items that require approval or attention, including expiring content.
+- **Status monitoring:** Shows items that require approval or attention, including expiring content.
 - **My Projects:** Displays project names, last modified timestamps, and status.
 - **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
 - **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
