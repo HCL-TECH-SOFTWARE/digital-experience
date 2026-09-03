@@ -17,7 +17,13 @@ To use IBM WebSphere DynaCache to store and share data, perform the following st
 
 1. Log in to the IBM Integrated Solutions Console (WAS admin console)
 2. Navigate to **Resources > Cache instances > Object cache instances**.
-3. In the **Scope** dropdown list, select a scope. <!--how do you determine which scope should be used?-->
+3. In the **Scope** dropdown list, select a scope.  
+
+    !!!note
+        - If you run on a HCL DX standalone server, the scope can be limited to server scope.  
+        - If you are running HCL DX on a cluster with multiple HCL DX servers, you may want to choice the cluster scope to share the Dynacache object between all cluster members.  
+        - If you want to use the Dynacache object in the entire HCL DX cell (multiple clusters) may select cell scope.
+
 4. Select **New...**.
 5. Enter a **Name** and a **JNDI name**. For example:  
 
