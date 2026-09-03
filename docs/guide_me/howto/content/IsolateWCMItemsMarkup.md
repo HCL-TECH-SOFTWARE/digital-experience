@@ -14,7 +14,7 @@ To isolate the WCM item generating specific output or markup, perform the follow
 
 ### Enabling trace logging
 
-1. Log in to the Websphere Integration Solutions Console (WAS admin console) as an administrator.
+1. Log in to the WebSphere Integration Solutions Console (WAS admin console) as an administrator.
 2. Navigate to **Troubleshooting > Logs and trace > WebSphere_Portal > Change log detail levels**.
 3. Select the **Runtime** tab to apply changes immediately without a server restart, or select the **Configuration** tab to persist changes across server restarts.
 4. Under **Change log detail levels**, append the following trace string:
