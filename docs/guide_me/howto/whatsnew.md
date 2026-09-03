@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 
 ## CF237
 
