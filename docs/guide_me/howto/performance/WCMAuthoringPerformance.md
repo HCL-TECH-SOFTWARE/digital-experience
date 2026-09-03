@@ -30,7 +30,7 @@ To identify and resolve WCM items causing performance issues in HCL DX, perform 
 ### Tracing queries and setting authoring options
 
 - Collect the following trace when executing long-running authoring queries: `com.ibm.icm.da.portable.common.sql.*=all`
-    - Search trace files for `time to execute` to identify long-running queries.
-    - Use the UUID to locate the content generating the query, then adjust the design to request less data.
-    - If the design cannot be changed, run the query directly from a database client and consult a database administrator to optimize execution time.
+  - Search trace files for `time to execute` to identify long-running queries.
+  - Use the UUID to locate the content generating the query, then adjust the design to request less data.
+  - If the design cannot be changed, run the query directly from a database client and consult a database administrator to optimize execution time.
 - Set `workflow.skipDefaultManagerAccess` to true to prevent automatic manager-level access creation during artifact generation or editing. For more information, refer to [Web content authoring options](../../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md).
