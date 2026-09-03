@@ -4,3 +4,4 @@ nav:
   - CommandLineIIM.md
   - XMLAccessExportImport.md
   - checkSuccessfullUpgrade.md
+  - upgradeJava8Requirement.md

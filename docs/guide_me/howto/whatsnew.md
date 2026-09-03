@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Upgrade|[How to Avoid Java Runtime Failures During CF Upgrade on Older DX Systems](./upgrade/upgradeJava8Requirement.md)|
 
 ## CF237
 
