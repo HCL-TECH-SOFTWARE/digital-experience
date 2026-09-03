@@ -12,7 +12,7 @@ In Web Content Manager (WCM), content updates can be distributed across virtual 
 
 To create a virtual portal syndicator-subscriber pair using the command line in HCL DX, perform the following steps:
 
-1. Open a command prompt and navigate to the `ConfigEngine` directory on the subscriber server.
+1. Open a command prompt and navigate to the `<wp_profile_root>/ConfigEngine` directory on the subscriber server.
 2. Execute the the `run-wcm-admin-task-subscribe-now` ConfigEngine task. For example:
 
     ```cmd
