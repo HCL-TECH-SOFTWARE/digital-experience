@@ -8,6 +8,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- Practitioner Studio dashboard - New widgets
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -74,6 +75,24 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf238) section.
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
 ## Digital Experience 8.5 and 9.0 Versions
 

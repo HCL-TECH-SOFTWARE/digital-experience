@@ -104,7 +104,7 @@ To enable SSO, ensure you have:
         - `<OAUTH_PROVIDER_NAME>` is the name of the specified provider (for example, OAuthConfig).
         - `<OAUTH_SECRET>` is a complex, random secret (for example, a UUID). This secret will be required later.
         - `<VOLT_MX_HOST>` is the URL of the Volt MX deployment.
-        - `<CALLBACK_URL_ENDPOINT>` endpoint found in the **Callback URL** under [Indentity Service](#image-section) configuration page.
+        - `<CALLBACK_URL_ENDPOINT>` endpoint found in the **Callback URL** under the Identity Service configuration page.
 
         For example:
 
