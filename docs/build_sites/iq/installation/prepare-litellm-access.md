@@ -29,7 +29,7 @@ Complete the following steps to configure and verify the static key:
       --namespace <DX_NAMESPACE>
     ```
 
-    Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy administrator.
+    `<YOUR_LITELLM_API_KEY>`: The key provided by your LiteLLM proxy administrator.
 
     If the secret already exists from a previous installation, delete the secret first and then recreate it:
 
@@ -50,7 +50,7 @@ Complete the following steps to configure and verify the static key:
         liteLlmUrl: "<YOUR_LITELLM_URL>"
     ```
 
-    Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server (for example, `https://litellm.example.com`). You can skip this step if you already set the URL during the initial installation of the IQ Integrator.
+    `<YOUR_LITELLM_URL>`: The URL of your LiteLLM proxy server (for example, `https://litellm.example.com`). You can skip this step if you already set the URL during the initial installation of the IQ Integrator.
 
 3. Upgrade the IQ deployment with your `custom-iq-values.yaml` file:
 
@@ -61,11 +61,16 @@ Complete the following steps to configure and verify the static key:
       -f custom-iq-values.yaml
     ```
 
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and path.
+    - `<IQ_HELM_CHART_VERSION>`: The IQ Helm chart version.
+
 4. Monitor the rollout status of the deployment:
 
     ```bash
     kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
     ```
+
+    `<DX_NAMESPACE>`: The DX deployment namespace.
 
 5. Check the logs for static key confirmation:
 
