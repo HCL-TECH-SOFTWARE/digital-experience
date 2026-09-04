@@ -179,11 +179,13 @@ Core Editor supports the following editing features:
 
 The following limitations apply to Core Editor:
 
-- **Links** — Existing hyperlinks in content are displayed, but the link toolbar button is hidden. The WCM link picker for inserting managed content links, component reference links, and other WCM-specific link types is not available.
-- **Images** — The image toolbar button is not available. The WCM image picker for inserting images from Digital Asset Management or WCM libraries is not supported.
-- **Tables** — Table creation and editing is not available.
+- **Links** — Link insertion through the toolbar is not supported. Pasted URLs are displayed as hyperlinks in the content area, but there is no toolbar button for creating or editing links. The WCM link picker for inserting managed content links, component reference links, and other WCM-specific link types is not available.
+- **Images** — Image insertion is not supported. The WCM image picker for browsing and inserting images from Digital Asset Management (DAM) collections or WCM libraries is not available.
+- **Tables** — Table creation and editing is not supported.
+- **Source view** — An HTML source view mode is not available. Content can only be edited through the visual rich text interface.
 - **Spell check** — Browser-native spell check is supported. A dedicated spell check service (such as TinyMCEServices for the Enhanced Editor) is not included.
-- **Custom plugins** — A plugin API for extending functionality is not available.
+- **Custom plugins** — A plugin API for adding custom toolbar actions or extending editor functionality is not available.
+- **Toolbar reordering** — Reordering of toolbar items is not supported. The toolbar layout is fixed and cannot be changed through configuration.
 
 ???+ info "Related information"
     - [Editor options](../../wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md)

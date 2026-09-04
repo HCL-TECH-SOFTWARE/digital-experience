@@ -103,10 +103,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Core Editor - New Rich Text Editor option
 
 === "Containers"
-    Core Editor is a new Rich Text Editor option built on the TipTap framework. It is enabled by default and available in both the WCM Authoring Portlet and Site Manager inplace editing. It can be configured using Helm values. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 === "On-Premises"
-    Core Editor is a new Rich Text Editor option built on the TipTap framework. It is enabled by default and available in both the WCM Authoring Portlet and Site Manager inplace editing. It can be configured using WCM WCMConfigService resource environment provider properties. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### DAM - New parameters for setting the initial collections view
 
