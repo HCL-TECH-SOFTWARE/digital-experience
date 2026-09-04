@@ -264,6 +264,21 @@ Upgrade and maintain the IQ backend services by updating your configuration valu
 
 2. Update your `custom-iq-values.yaml` file with any configuration changes needed for the upgrade (such as new image tags, environment variables, or database settings).
 
+    For example, to update image tags:
+
+    ```yaml
+    images:
+      tags:
+        integrator: "v1.0.1"
+        mcpServer: "v1.0.1"
+    ```
+
+    !!! tip "Updating image tags"
+        To update the IQ Integrator or MCP Server image tags, edit the `images.tags.integrator` and `images.tags.mcpServer` values in your `custom-iq-values.yaml` file, then run the upgrade command below. This approach maintains a complete, auditable record of your configuration in version control.
+
+    !!! warning "Avoid configuration drift"
+        Never use `--reuse-values` or scattered `--set` flags during upgrades. These approaches can cause configuration drift and make your deployment state difficult to audit. Always use `-f custom-iq-values.yaml` to ensure your configuration file remains the single source of truth.
+
 3. Run the `upgrade` command with the path to the new chart version and your updated values file:
 
     ```bash
@@ -275,60 +290,6 @@ Upgrade and maintain the IQ backend services by updating your configuration valu
 
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository FQDN and path to the chart.
     - `<NEW_IQ_HELM_CHART_VERSION>`: The new Helm chart version (for example, `hcl-dx-iq-v1.0.1_20260601-1234.tgz`).
-
-<!--Can this tip be integrated into step 2 as a specific example?  not sure how important it is to specifically point out image tags compared to other examples in step 2 (environment variables/database settings-->
-!!! tip "Updating image tags"
-    To update the IQ Integrator or MCP Server image tags, edit the `images.tags.integrator` and `images.tags.mcpServer` values in your `custom-iq-values.yaml` file, then run the upgrade command above. This approach maintains a complete, auditable record of your configuration in version control.
-
-<!--
-
-## Configuration management best practices
-
-To ensure reliable, auditable, and reproducible IQ deployments, follow these best practices when managing your IQ configuration:
-
-### Use a custom values file as your single source of truth
-
-Your `custom-iq-values.yaml` file should contain all configuration for your IQ deployment. This approach provides:
-
-- **Auditability**: All configuration changes are tracked in version control
-- **Reproducibility**: Deployments are consistent and predictable
-- **Drift prevention**: Configuration remains stable across upgrades
-- **Visibility**: Complete understanding of your deployment state
-
-### Never use `--reuse-values` in production
-
-The `--reuse-values` flag preserves old values from previous deployments that may not be in your `custom-iq-values.yaml` file. This causes configuration drift and makes your deployment state difficult to audit. Always use `-f custom-iq-values.yaml` instead.
-
-### Never use scattered `--set` flags in production
-
-Using multiple `--set` flags for configuration makes it difficult to:
-
-- Track what configuration is actually deployed
-- Reproduce deployments consistently
-- Maintain configuration in version control
-- Understand the complete deployment state
-
-Always update your `custom-iq-values.yaml` file and use `-f custom-iq-values.yaml` instead.
-
-### Recommended upgrade workflow
-
-For any IQ upgrade or configuration change:
-
-1. Update your `custom-iq-values.yaml` file with the required changes
-2. Commit the changes to version control
-3. Run: `helm upgrade dx-iq <chart> -f custom-iq-values.yaml`
-4. Verify the deployment with `kubectl get pods` and `kubectl logs`
-
-### When `--set` flags are acceptable
-
-`--set` flags are only acceptable for:
-
-- Temporary testing or debugging in non-production environments
-- Quick validation of configuration changes before committing to your values file
-
-Never use `--set` flags for production deployments.
-
--->
 
 ## Uninstalling the IQ backend server
 
