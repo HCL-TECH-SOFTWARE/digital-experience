@@ -10,7 +10,7 @@ This section explains how to update IQ and its integration with an HCL Digital E
 
 ## Before you begin
 
-- Obtain the `hcl-dx-iq` Helm chart for the IQ version you want to install. The chart supplies the corresponding IQ images.
+- Obtain the `hcl-dx-iq` Helm chart for the IQ version you want to upgrade to. The chart provides the corresponding IQ images.
 - Confirm that the IQ and DX versions are no more than two releases apart.
 - Back up IQ data and the database associated with the Core deployment before applying an update. For more information, see [Backing up and restoring data](installation/backup-restore.md).
 
