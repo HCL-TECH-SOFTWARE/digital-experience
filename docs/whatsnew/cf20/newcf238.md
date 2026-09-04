@@ -40,7 +40,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
         This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
 
-        For older WebSphere Application Server 8.5.5 environments, review [How to Avoid Java Runtime Failures During CF Upgrades on Older DX Systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path **prior to CF14** and requires upgrade planning or hands-on assistance, **engage HCL Services** before proceeding.
+        For older WebSphere Application Server 8.5.5 environments, review [How to Avoid Java Runtime Failures During CF Upgrade on Older DX Systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path **prior to CF14** and requires upgrade planning or hands-on assistance, **engage HCL Services** before proceeding.
 
 ### Blueprint updates
 
