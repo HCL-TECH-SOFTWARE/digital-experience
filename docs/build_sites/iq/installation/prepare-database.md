@@ -176,7 +176,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
 
     === "Using database credentials"
 
-        Verify the ConfigMap was created:
+        Verify that the ConfigMap was created:
 
         ```bash
         kubectl get configmap -n <DX_NAMESPACE> dx-iq-integrator
@@ -185,7 +185,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
 
     === "Using a secret"
 
-        Verify the referenced DX secret exists in the namespace:
+        Verify that the referenced DX secret exists in the namespace:
 
         ```bash
         kubectl get secret -n <DX_NAMESPACE> <DX_RELEASE_NAME>-iq-db-secret
@@ -319,50 +319,63 @@ Use this option to automatically provision and manage a PostgreSQL database with
         kubectl delete secret <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value -n <YOUR_NAMESPACE> --ignore-not-found
         ```
 
+        - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
+        - `<DX_RELEASE_NAME>`: The DX Helm release name (for example, `dx-deployment`).
+
     2. Create the new secrets:
 
-        ```bash
-        kubectl create secret generic custom-credentials-iq-db \
-          --namespace <YOUR_NAMESPACE> \
-          --from-literal=username=<DB_USERNAME> \
-          --from-literal=password=<DB_PASSWORD>
-        ```
+        1. Create the base secret:
+
+            ```bash
+            kubectl create secret generic custom-credentials-iq-db \
+            --namespace <YOUR_NAMESPACE> \
+            --from-literal=username=<DB_USERNAME> \
+            --from-literal=password=<DB_PASSWORD>
+            ```
+
+            - `<DB_USERNAME>`: The database username.
+            - `<DB_PASSWORD>`: The database password.
+
+        2. Create the release-specific secret:
+
+            ```bash
+            kubectl create secret generic <DX_RELEASE_NAME>-custom-credentials-iq-db \
+            --namespace <YOUR_NAMESPACE> \
+            --from-literal=username=<DB_USERNAME> \
+            --from-literal=password=<DB_PASSWORD>
+            ```
+
+        3. Create the previous-value secret:
+
+            ```bash
+            kubectl create secret generic <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value \
+            --namespace <YOUR_NAMESPACE> \
+            --from-literal=username=<DB_USERNAME> \
+            --from-literal=password=<DB_PASSWORD>
+            ```
+
+2. Verify that the secrets were created:
+
+    1. Verify that the base secret exists:
 
         ```bash
-        kubectl create secret generic <DX_RELEASE_NAME>-custom-credentials-iq-db \
-          --namespace <YOUR_NAMESPACE> \
-          --from-literal=username=<DB_USERNAME> \
-          --from-literal=password=<DB_PASSWORD>
+        kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
+        kubectl describe secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
         ```
+
+    2. Verify that the release-specific secret exists:
 
         ```bash
-        kubectl create secret generic <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value \
-          --namespace <YOUR_NAMESPACE> \
-          --from-literal=username=<DB_USERNAME> \
-          --from-literal=password=<DB_PASSWORD>
+        kubectl get secret <DX_RELEASE_NAME>-custom-credentials-iq-db -n <YOUR_NAMESPACE>
+        kubectl describe secret <DX_RELEASE_NAME>-custom-credentials-iq-db -n <YOUR_NAMESPACE>
         ```
 
-        - `<DX_RELEASE_NAME>`: The DX Helm release name.
-        - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
-        - `<DB_USERNAME>`: The database username.
-        - `<DB_PASSWORD>`: The database password.
+    3. Verify that the previous-value secret exists:
 
-2. Verify the secrets were created:
-
-    ```bash
-    kubectl get secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
-    kubectl describe secret custom-credentials-iq-db -n <YOUR_NAMESPACE>
-    ```
-
-    ```bash
-    kubectl get secret <DX_RELEASE_NAME>-custom-credentials-iq-db -n <YOUR_NAMESPACE>
-    kubectl describe secret <DX_RELEASE_NAME>-custom-credentials-iq-db -n <YOUR_NAMESPACE>
-    ```
-
-    ```bash
-    kubectl get secret <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value -n <YOUR_NAMESPACE>
-    kubectl describe secret <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value -n <YOUR_NAMESPACE>
-    ```
+        ```bash
+        kubectl get secret <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value -n <YOUR_NAMESPACE>
+        kubectl describe secret <DX_RELEASE_NAME>custom-credentials-iq-db-previous-value -n <YOUR_NAMESPACE>
+        ```
 
 3. Upgrade the DX deployment to enable RTC database management for IQ:
 
@@ -372,8 +385,6 @@ Use this option to automatically provision and manage a PostgreSQL database with
         helm list -n <YOUR_NAMESPACE>
         helm get all <DX_RELEASE_NAME> --namespace <YOUR_NAMESPACE>
         ```
-
-        `<DX_RELEASE_NAME>`: The DX Helm release name (for example, `dx-deployment`).
 
     2. Add the RTC database configuration to your DX `custom-values.yaml` file:
 
@@ -423,15 +434,14 @@ Use this option to automatically provision and manage a PostgreSQL database with
     ```
 
     To verify persistence layer initialization:
+
     ```bash
     kubectl logs -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller | grep -E "persistence|pgpool"
     ```
 
-5. Add the IQ user to the PgPool connection pool:
+5. After the RTC pod is running and the database is initialized, run a shell script to configure `pgpool` to recognize the IQ database user:
 
-    After the RTC pod is running and the database is initialized, configure PgPool to recognize the IQ database user by creating and running the following shell script:
-
-    1. Create the script file `add-iq-user-to-pgpool.sh`:
+    1. Create the `add-iq-user-to-pgpool.sh` script file:
 
         ```bash
         #!/bin/bash
@@ -455,10 +465,6 @@ Use this option to automatically provision and manage a PostgreSQL database with
         kubectl exec -n $NAMESPACE $POD_NAME -- tail -n 1 /conf/pool_passwd
         ```
 
-        - `<DB_USERNAME>`: The same database username you configured in Step 1.
-        - `<DB_PASSWORD>`: The same database password you configured in Step 1.
-        - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
-
     2. Make the script executable:
 
         ```bash
@@ -480,14 +486,14 @@ Use this option to automatically provision and manage a PostgreSQL database with
         Done! Current configuration:
         ```
 
-    4. Verify the IQ user was added to the PgPool configuration:
+    4. Verify that the IQ user was added to the `pgpool` configuration:
 
         ```bash
         POD_NAME=$(kubectl get pods -n <YOUR_NAMESPACE> -l app=dx-deployment-persistence-connection-pool -o jsonpath='{.items[0].metadata.name}')
         kubectl exec -n <YOUR_NAMESPACE> $POD_NAME -- cat /conf/pool_passwd
         ```
 
-        Verify that the output includes the IQ user entry with the MD5 hash (for example: `<DB_USERNAME>:md5<HASH_VALUE>`).
+        Verify that the output includes the IQ user entry with the MD5 hash (for example, `<DB_USERNAME>:md5<HASH_VALUE>`).
 
 6. Verify that the database, user, environment variables, and secrets are successfully created and configured:
 

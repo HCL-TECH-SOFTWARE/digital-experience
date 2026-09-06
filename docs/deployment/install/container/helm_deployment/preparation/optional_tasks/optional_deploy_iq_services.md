@@ -61,8 +61,9 @@ Before beginning the installation, obtain the appropriate Helm chart versions an
 
 Create a `custom-iq-values.yaml` file to define your deployment-specific settings. This is your primary configuration file for IQ and applies to both initial installations and future upgrades.
 
-!!! tip "Configuration management best practice"
-    Keep your `custom-iq-values.yaml` file in version control and use it for all deployments and upgrades. Avoid using   `--reuse-values` or scattered `--set` flags in production to prevent configuration drift and simplify deployment tracking.
+!!! warning "Avoiding configuration drift"
+    - Keep your `custom-iq-values.yaml` file in version control and use it for all deployments and upgrades.
+    - Avoid using `--reuse-values` or scattered `--set` flags in production to prevent configuration drift and simplify deployment tracking.
 
 ```yaml
 # Image configuration
@@ -264,7 +265,7 @@ Upgrade and maintain the IQ backend services by updating your configuration valu
 
 2. Update your `custom-iq-values.yaml` file with any configuration changes needed for the upgrade (such as new image tags, environment variables, or database settings).
 
-    For example, to update image tags:
+    For example, to update image tags, edit the following values:
 
     ```yaml
     images:
@@ -273,11 +274,9 @@ Upgrade and maintain the IQ backend services by updating your configuration valu
         mcpServer: "v1.0.1"
     ```
 
-    !!! tip "Updating image tags"
-        To update the IQ Integrator or MCP Server image tags, edit the `images.tags.integrator` and `images.tags.mcpServer` values in your `custom-iq-values.yaml` file, then run the upgrade command below. This approach maintains a complete, auditable record of your configuration in version control.
-
-    !!! warning "Avoid configuration drift"
-        Never use `--reuse-values` or scattered `--set` flags during upgrades. These approaches can cause configuration drift and make your deployment state difficult to audit. Always use `-f custom-iq-values.yaml` to ensure your configuration file remains the single source of truth.
+    !!! warning "Avoiding configuration drift"
+        - Keep your `custom-iq-values.yaml` file in version control and use it for all deployments and upgrades.
+        - Avoid using `--reuse-values` or scattered `--set` flags in production to prevent configuration drift and simplify deployment tracking.
 
 3. Run the `upgrade` command with the path to the new chart version and your updated values file:
 
