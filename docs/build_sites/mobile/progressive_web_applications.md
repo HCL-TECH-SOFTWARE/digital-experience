@@ -1,93 +1,94 @@
 # Progressive Web Applications
 
-Develop support that adds native mobile application experience and performance to your web site using browser-based functionality.
+Progressive Web Applications (PWAs) offer a delivery pattern that can transform a website into an experience that feels like a native application using browser-based functionality. PWAs use web browser APIs and features along with progressive enhancement strategy. Using PWA artifacts such as a service worker, caching provisions, and a manifest file can deliver faster load times, easier navigation, and responsive behavior. PWAs allow offline capability and access to native device capabilities without writing any native code.
 
-Progressive Web Applications \(PWAs\) offer a delivery pattern that can transform a web site into an experience that feels like a native application using browser-based functionality. Progressive Web Applications use web browser APIs and features along with progressive enhancement strategy. Using PWA artifacts such as a service worker, caching provisions, and a manifest file can deliver faster load times, easier navigation, and responsive behavior. PWAs allow offline capability and access to native device capabilities without writing any native code.
+For more information, refer to [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction){target="_blank"} and [Progressive Web Applications with HCL Digital Experience (DX) 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k){target="_blank"}.
 
-For additional information please consult [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) at the developer.mozilla.org site.
+!!!note
+    PWAs typically serve a single site. HCL DX uses virtual portals to extend PWA capabilities across multiple sites. For more information on virtual portal support, refer to [Separating and sharing resources between virtual portals](../virtual_portal/vp_planning/advppln_scope.md).
 
-**Video**: [Progressive Web Applications with HCL Digital Experience (DX) 9.5](https://www.youtube.com/watch?v=JP1cWlM1s2k)
+## Prerequisites
 
-## Progressive Web Application requirements
+Ensure the application meets these criteria before installation:
 
-To make a Progressive Web Application installable \(as noted in the [Introduction to Progressive Web Applications](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) topic\), the following items and configurations are required:
+- Serve over HTTPS with a valid certificate (or use localhost for development).
+- Include a Web App manifest file that contains the following:
+    - `short_name` or `name`
+    - `icons` (must include a 192px and a 512px icon)
+    - `start_url`
+    - `display` (must be either `fullscreen`, `standalone`, or `minimal-ui`)
 
-1.  Must be served over HTTPS with a valid certificate \(or using localhost for development\).
-2.  Include a Web App manifest file that includes the following information:
-    -   `short_name` or `name`
-    -   icons \(must include a 192px and a 512px icon\)
-    -   `start_url`
-    -   display \(must be either `fullscreen`, `standalone`, or `minimal-ui`\)
-
-        !!! note
-            `prefer_related_applications` must not be present, or be false.
-
-3.  Register a service worker with a functional fetch handler.
-
-Once an application meets the above criteria, the browser will display a button that allows the application to be installed. See the install option example below.
-
-![Nex Haven PWA install prompt](../../assets/Nex-Haven_PWA_Install_Prompt.png)
-
-When the install button is clicked, a dialog will appear that prompts the user to install the application.
-
-![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Install_Dialog.png)
-
-Once the application is installed, the application icon will display as a Chrome application and the application will be launched.
-
-![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Installed.png)
-
-For a Progressive Web Application to function correctly, the scope of both the manifest and the service-worker needs to be set correctly. The web application manifest file provides information about a web application in JSON format.
-
-The combination of modules, files and metadata allows HCL DX 9.5 to serve files required by the \(PWA\) application, and restrict which web pages should be viewed while the manifest is applied, while still maintaining the appropriate scope settings. If the user navigates outside the scope, it reverts to a normal web page inside a browser tab or window.
-
-HCL Digital Experience 9.5 CF19 and Container Update CF192 add new platform and component support to add these capabilities to HCL DX 9.5 and higher sites. These include:
-
-1.  **Updated System module** delivered in HCL DX 9.5 CF19. This module serves the manifest and service worker files.
-2.  **New Theme scope module** that is defined in the theme.json file. This loads the pwa.js.
-3.  **New page metadata** is created that can be used on the root page of the site \(or other pages in some cases\).
-4.  A sample site configured as a Progressive Web Application that is enabled for installation and display on supported mobile platforms. PWA installation and display have been tested and verified on the following mobile browser platforms:
-
-    -   Apple Safari must be used for Apple Mobile devices. \(Not supported for desktop access\). Apple iOS v13 and v14 are tested and verified.
-    -   Google Chrome 85 on Mac and Windows
-    -   Microsoft Edge 85 on Mac and Windows 10
-    -   Tablet running Android v7 and Google Pixel 3 running on v11 \(Google Chrome 85\)
-    -   Google Chrome 86 on Linux
     !!! note
-        Progressive Web Application functionality is not supported on all web browser platforms, for example, [Microsoft Internet Explorer 11.](https://www.microsoft.com/en-us/download/details.aspx?id=41628) Developers are encouraged to verify if Progressive Web Application support is available for web browser platforms intended for use.
+        `prefer_related_applications` must not be present, or be `false`.
 
+- Register a service worker with a functional fetch handler.
 
-Many of these files \(theme.json, pwa.js, service-worker.js, etc.\) can be included and re-used in other HCL DX 9.5 CF19 and higher themes. See details below:
+To install an application in Google Chrome that meets these criteria:
 
-Manifest Scope: Defines the navigation scope of the application. It restricts which web pages can be viewed while the manifest is applied. If the user navigates outside the scope, the application will signal that the page is out of scope and native operations included on the page may not work. The scope can be set directly in the manifest files or using the `com.hcl.dx.pwa.manifest.scope` page metadata parameter on the Progressive Web Application configuration node. The scope can be set to a hardcoded value of auto which will result in the friendly name of the page being used.
+1. Open the application in the browser.
+2. Select **Install** in the address bar to open the confirmation dialog.
 
-Service worker: The scope of the service worker determines which files the service worker controls. In other words, scope determines from which path the service worker will intercept requests. The default scope is generally the location of the service worker file and extends to all directories below.
+    ![Nex Haven PWA install prompt](../../assets/Nex-Haven_PWA_Install_Prompt.png)
 
-!!! note
-    When registering a service worker, you can specify a scope with a more restrictive path, but that path should be a child of the path where the service worker was loaded. In this situation, this pattern poses a problem in HCL DX since the path of the theme \(where the service worker resides\) and the path of the site pages are not in the same path hierarchy. For this reason, HCL DX 9.5 will default the scope to the friendly URL of the root label or page of the PWA site. If a less restrictive scope is set, a `Service-Worker-Allowed` header must be included on the response for the service worker.
+3. Select **Install** in the dialog to complete installation and launch the application.
 
-The PWA theme module will use the friendly URL of the root page of the PWA site for the value of the `Service-Worker-Allowed` header. This value will also need to be set as the scope when registering the service worker in the theme.
+    ![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Install_Dialog.png)
 
-## Authenticated versus Unauthenticated
+4. Launch the application and display the icon as a Chrome application.
 
-HCL DX generates URLs differently based on whether or not a user is logged into the site. For anonymous sites \(unauthenticated\), the URL for a given page would be of the form /wps/portal/ whereas authenticated pages would be of the form /wps/myportal/. These differences in URL generation have a large effect on PWA processing. For this reason, a site scoped metadata parameter for protected versus non-protected is needed \(`com.hcl.dx.pwa.app.protected`\). The protected parameter impacts the generation of scope and start URL settings in the manifest file and the service worker scope \(i.e. should they be /portal or /myportal\) when `auto` is used. In addition, the PWA configuration cache key \(`pwaConfigCacheKey` in the service-worker.js file\) is generated differently if the protected parameter is set to true.
+    ![Nex Haven PWA install dialog](../../assets/Nex-Haven_PWA_Installed.png)
 
-The protected parameter defaults to false, which means that the **+** sign to install the application, visible in the browser address bar, will display when the home page of the site is accessed by an unauthenticated user. At this point, the PWA application could be installed. If the user logs into the site before the PWA application is installed, the **+** will no longer be visible in the browser address bar.
+## Architecture and scope
 
-If the protected parameter is set to true, the **+** sign to install the application will not be visible in the browser address bar until the user logs into the site. 
+PWAs require correct scope configuration for both the manifest and the service worker. The web application manifest file provides information about a web application in JSON format.
+
+The combination of modules, files, and metadata allows HCL DX 9.5 to serve files required by the PWA application and restrict which web pages users can view while applying the manifest. Navigating outside the scope reverts the application to a standard web page in a browser tab or window.
+
+HCL DX 9.5 CF19 and Container Update CF192 add new platform and component support to add these capabilities to HCL DX 9.5 and higher sites. These include:
+
+1. System module updated in HCL DX 9.5 CF19 to serve manifest and service worker files.
+2. Theme scope module defined in `theme.json` to load `pwa.js`.
+3. Page metadata created for use on the root page of the site or designated subpages.
+4. Sample site configured as an installable PWA. PWA installation and display are verified on the following mobile browser platforms:
+
+    - Apple Safari on Apple mobile devices running iOS v13 and v14 (desktop access is not supported)
+    - Google Chrome 85 on macOS and Windows
+    - Microsoft Edge 85 on macOS and Windows 10
+    - Google Chrome 85 on Android v7 tablets and Google Pixel 3 running Android v11
+    - Google Chrome 86 on Linux
+    !!! note
+        PWA functionality is not supported on all web browser platforms (for example, [Microsoft Internet Explorer 11.](https://www.microsoft.com/en-us/download/details.aspx?id=41628){target="_blank"}) Developers are encouraged to verify if PWA support is available for web browser platforms intended for use.
+
+You can reuse file artifacts such as `theme.json`, `pwa.js`, and `service-worker.js` in other HCL DX 9.5 CF19 and higher themes.
+
+- Manifest scope defines the navigation boundary of the application and restricts accessible web pages while the manifest applies. Navigating outside the scope signals an out-of-scope state, which can disable native page operations. Set the scope directly in manifest files or by using the `com.hcl.dx.pwa.manifest.scope` page metadata parameter on the Progressive Web Application configuration node. Setting the scope value to `auto` uses the friendly name of the page.
+
+- Service worker scope determines which paths and files the service worker controls and intercepts. The default scope uses the directory of the service worker file and applies to all descendant directories.
+
+    !!! note
+        - When registering a service worker, you can specify a scope with a more restrictive path, but that path must be a child of the directory containing the service worker. In HCL DX, the theme path containing the service worker and the site page path reside in different hierarchies. HCL DX 9.5 defaults the scope to the friendly URL of the root label or page of the PWA site. Setting a less restrictive scope requires a `Service-Worker-Allowed` header on the service worker response. - The PWA theme module uses the friendly URL of the root page of the PWA site for the `Service-Worker-Allowed` header value. Set this same value as the scope when registering the service worker in the theme.
+
+## Authenticated and unauthenticated access
+
+HCL DX generates URLs differently based on user authentication. Unauthenticated sites use `/wps/portal/` while authenticated sites use `/wps/myportal/`. These URL generation differences significantly affect PWA processing. Use the site-scoped metadata parameter `com.hcl.dx.pwa.app.protected` to distinguish between protected and non-protected states. This parameter affects how the manifest file generates `start_url` and scope settings, as well as the service worker scope (`/portal` or `/myportal`) when using `auto`.
+
+Setting `com.hcl.dx.pwa.app.protected` also alters how `service-worker.js` generates the PWA configuration cache key (`pwaConfigCacheKey`).
+
+- When set to `false` (default), the `+` install icon in the browser address bar displays when an unauthenticated user accesses the home page. An unauthenticated user can install the application at this point. If the user authenticates before installing the application, the `+` icon disappears from the address bar.
+- When set to `true`, the `+` install icon does not display in the address bar until the user authenticates.
 
 ## Localization
 
-By default, the manifest.json file does not provide any localization information. There is a single name and description field that sets the name of the PWA application. To handle localization for DX PWA applications, the following manifest.json fields are extended to include an array of localized values:
+By default, the `manifest.json` file does not provide localization information. A single `name` and `descriptions` field sets the application name. To handle localization for HCL DX PWA applications, the following `manifest.json` fields extend to include an array of localized values:
 
--   descriptions
--   names
--   short\_names
--   shortcuts:
+- `descriptions`
+- `names`
+- `short_names`
+- `shortcuts`:
+    - `names`
+    - `descriptions`
 
-    -   names
-    -   descriptions
-
-```
+        ```json
         "name": "Sample App",
         "names": [
             {
@@ -99,135 +100,127 @@ By default, the manifest.json file does not provide any localization information
                 "lang": "de"
             }
         ],
-```
+        ```
 
-In this example, if the user accesses the DX Progressive Web Application using German language preferences, the name of the application displayed will be **Beispielanwendung**. However, if the user were to access the application in a language that is not defined in the manifest, the value from the name field would be used as a fallback.
+In this example, if a user accesses the HCL DX PWA using German language preferences, the application name displays as **Beispielanwendung**. If a user accesses the application in a language that is not defined in the manifest, HCL DX uses the value from the name field as a fallback.
 
 ## Hiding pages in PWA application mode
 
-It is important to be able to exclude pages when the site is in PWA application mode. Applications on smaller devices may not appropriately display the entire site as it would be shown on a desktop. For this reason, page metadata has been added to hide pages in application mode. If the `pwa.Hidden` metadata is set to true on a page in the site, that page will not be displayed in the PWA application.
+Smaller devices might not appropriately display an entire site designed for desktop. Setting the `pwa.Hidden` metadata to `true` on a page hides that page in PWA application mode.
 
-Hidden pages are implemented via CSS included in the theme. There are two places where the theme must be changed:
+Theme CSS implements hidden pages in two locations:
 
--   Add the following CSS to the default.css file located in the css/default directory in the root of the static files.
+- Add CSS to `css/default/default.css` in the static files directory. For example, to set the display mode to `hidden` for HCL DX pages in PWA application mode:
 
-    **Example : Setting display mode to `hidden` for DX pages using PWA application mode**
-
-    ```
-            @media all and (display-mode: standalone){
-            .pwaHidden {
-            display: none
-            }
-    ```
-
--   Update the navigation JSP for the theme; usually located in the themes/html/dynamicSpots directory in the root of the dynamic files. The `pwa.Hidden` page metadata parameter is checked and if it is true the `pwa.Hidden` CSS class will be applied to the `li` element to hide the page. In the example below, the hidden parameter is added to the `mainNav.jsp` in a custom theme.
-
-    **Example : Adding a hidden page metadata parameter to a custom theme**
-
-    ```
-        <c:set var="pwaHidden" value="${node.metadata['pwa.Hidden']}"></c:set>
-        <li class="list-item <c:if test='${pwaHidden == true}'>pwaHIdden</c:if>">
-            <a href="$
-        {fn:escapeXml(node.urlGeneration.autoNavigationalState.clearScreenTemplate)}">
-            <c:out value="${node.title}" />
-            </a>
-        </li>
+    ```css
+            @media all and (display-mode: standalone) {
+        .pwaHidden {
+            display: none;
+        }
+    }
     ```
 
+- Update the theme navigation JSP in `themes/html/dynamicSpots` in the dynamic files directory. When `pwa.Hidden` is `true`, apply the `pwaHidden` CSS class to the `li` element to hide the page. For example, to add the hidden page metadata parameter to `mainNav.jsp` in a custom theme:
 
-## Steps required to enable Progressive Web Application capabilities in a Digital Experience site
+    ```java
+    <c:set var="pwaHidden" value="${node.metadata['pwa.Hidden']}"></c:set>
+    <li class="list-item <c:if test='${pwaHidden == true}'>pwaHIdden</c:if>">
+        <a href="$
+    {fn:escapeXml(node.urlGeneration.autoNavigationalState.clearScreenTemplate)}">
+        <c:out value="${node.title}" />
+        </a>
+    </li>
+    ```
 
-1.  **Apply Stateless URLs**. In order for a PWA application to function properly in HCL DX 9.5 CF19 and higher, the site is required to use stateless, or friendly URLs. See [Defining friendly URLs without state information for pages in your site](../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md) to learn how to configure stateless or friendly URLs.
+## Enabling PWA in an HCL DX site
 
-    The use of friendly URLs can also be configured by doing the following steps:
+1. Configure stateless URLs required for PWAs in HCL DX 9.5 CF19 and higher using one of the following methods:
 
-    -   Set the following `WP_ConfigService` resource environment variables as follows:
+    - Use the Configuration Wizard or page properties UI. For more information, refer to [Defining friendly URLs without state information for pages in your site](../../deployment/manage/siteurl_cfg/changing_siteurl/cw_navstate/mp_friendly_short_url.md).
 
-        -   stateless.urls.enabled=true
-        -   generate.stateless.urls=true
-        -   generate.stateless.redirect.urls=true
+    - Manually configure system environment variables and theme parameters:
 
-    -   Update the theme parameters to include the following parameters:
+        1. Set the following `WP_ConfigService` resource environment variables as follows:
 
-        ```
+            - `stateless.urls.enabled=true`
+            - `generate.stateless.urls=true`
+            - `generate.stateless.redirect.urls=true`
+
+        2. Update theme parameters to include:
+
+            ```xml
             <parameter name="com.ibm.portal.theme.hasBaseURL" type="string"
             update="set"><![CDATA[true]]></parameter>
-        ```
+            ```
 
-    -   Restart the HCL DX 9.5 server.
+        3. Restart the HCL DX 9.5 server.
 
-    Note the display of the PWA install option will vary depending on the device you are using \(e.g. Chrome on MacOS and Safari on iOS\).
+        !!!note
+            PWA installation options vary by device and browser (for example, Chrome on macOS or Safari on iOS). Steps 2 through 11 apply to custom themes or sites.
 
-    All further steps apply to custom themes and/or to custom sites.
+2. Create a `pwas` directory in the root of the theme static files. This directory contains PWA configurations. Each subdirectory under `pwas` represents a single configuration. For example:
 
-2.  **Create a pwas directory in the root of the theme static files**. This directory will contain all of the PWA configurations. Each sub-directory under `pwas` represents a single configuration. For example, these directories/files can exist:
-
-    -   pwas \(folder\)
-        -   nexhaven \(folder\)
-            -   images \(folder\)
-            -   manifest.json
-            -   service-worker.js
-
-3.  **Create a new folder under the pwas directory** to represent the site configuration.
-4.  **Create a manifest.json file in the PWA configuration folder**. The manifest file should include the following information:
-
-    -   `short_name` or name
-    -   icons \(must include a 192px and a 512px icon\)
-    -   scope, which defines the navigation scope of the application. It restricts which web pages can be viewed while the manifest is applied. If the user navigates outside the scope, the application will signal that the page is out of scope and native operations included on the page may not work. The scope can be set directly in the manifest file, or using the `com.hcl.dx.pwa.manifest.scope` page metadata parameter on the PWA configuration node \(usually the root label or page of the site\). The scope can be set to a value of auto which will result in the friendly name of the page/label being used.
-
-        !!! note
-            The scope is not a required field in the manifest.
-
-    -   `start_url` or the preferred URL that should be loaded when the user launches the web application. The scope can be set directly in the manifest file or using the `com.hcl.dx.pwa.manifest.start_url` page metadata parameter on the PWA configuration node \(usually the root label or page of the site\). The scope can be set to a value of auto which will result in the friendly name of the root page being used \(if the root is a label, the `start_url` will default to the path of the first child under the label\). 
-    -   display \(must be either fullscreen, standalone, or minimal-ui\)
-    -   `prefer_related_applications` must not be present, or be false
-    See the implementation examples below for a reference pattern.
-
-5.  **Create a service-worker.js file in the PWA configuration folder.** It is possible to use the same service worker file across multiple PWA configurations. HCL DX will first look for the service-worker.js file in the PWA configuration directory. If a service-worker.js file cannot be found there, it will next look in the root `pwas` directory.
-6.  **Create a theme scoped module in the theme.json file** located in the contributions directory in the root of the static files. This module will be used to load the pwa.js file that is responsible for registering the PWA service worker. An example of this module could be presented as follows:
-
-    **Example : Registering the PWA service worker**
-
-    ```
-                {
-                    "id":"wp_theme+pwa",
-                    "prereqs": [
-                        {
-                            "id":"wp_pwa"
-                        }
-                    ],
-                    "contributions": [
-                        {
-                            "type":"config",
-                            "sub-contributions": [
-                                {
-                                    "type":"js",
-                                    "uris": [
-                                        {
-                                            "value":"/js/pwa.js"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "titles": [
-                        {
-                            "value":"PWA support",
-                            "lang":"en"
-                        }
-                    ],
-                    "descriptions": [
-                        {
-                            "value":"PWA support",
-                            "lang":"en"
-                        }
-                    ]
-                },
+    ```plaintext
+    pwas/
+        nexhaven/
+            images/
+                manifest.json
+                service-worker.js
     ```
 
-7.  **Add the pwa.js file referenced in the theme scoped module to the js directory** in the root of the static files. The `pwa.js` file is responsible for registering the service worker with the browser.
-8.  **Add the new theme scoped module** \(`wp_theme_pwa` from the theme.json file\) to the theme profile\(s\). For example, the deferred\_profile.json might be updated to: 
+3. Create a folder in the `pwas` directory to represent the site configuration.
+4. Create a `manifest.json` file in the PWA configuration folder. Include the following fields:
+
+    - `short_name` or `name`
+    - `icons` (must include a `192px` and a `512px` icon)
+    - `scope` (optional) restricts accessible web pages while applying the manifest. Navigating outside the scope signals an out-of-scope state, which can disable native page operations. Set the scope directly in the manifest file or by using the `com.hcl.dx.pwa.manifest.scope` page metadata parameter on the PWA configuration node (typically the root label or page of the site). Setting the scope value to `auto` uses the friendly name of the page or label.
+    - `start_url` specifies the preferred URL loaded when a user launches the web application. Set `start_url` directly in the manifest file or by using the `com.hcl.dx.pwa.manifest.start_url` page metadata parameter on the PWA configuration node, which is typically the root label or page of the site. Setting the value to `auto` uses the friendly name of the root page. If the root is a label, `start_url` defaults to the path of the first child under that label.
+    - `display` (`fullscreen`, `standalone`, or `minimal-ui`)
+    - `prefer_related_applications` (must not be present, or must be `false`)
+
+5. Create a `service-worker.js` file in the PWA configuration folder. Multiple PWA configurations can share the same service worker file. HCL DX checks for `service-worker.js` in the PWA configuration directory first. If `service-worker.js` is not present in that directory, HCL DX checks the root `pwas` directory.
+6. Create a theme-scoped module in the `theme.json` file in the contributions directory in the root of the static files. This module loads `pwa.js` to register the PWA service worker. For example:
+
+    ```json
+    {
+        "id":"wp_theme+pwa",
+        "prereqs": [
+            {
+                "id":"wp_pwa"
+            }
+        ],
+        "contributions": [
+            {
+                "type":"config",
+                "sub-contributions": [
+                    {
+                        "type":"js",
+                        "uris": [
+                            {
+                                "value":"/js/pwa.js"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "titles": [
+            {
+                "value":"PWA support",
+                "lang":"en"
+            }
+        ],
+        "descriptions": [
+            {
+                "value":"PWA support",
+                "lang":"en"
+            }
+        ]
+    },
+    ```
+
+7. Add the `pwa.js` file referenced in the theme-scoped module to the `js` directory in the root of the static files. The `pwa.js` file registers the service worker with the browser.
+8. Add the theme-scoped module (`wp_theme_pwa` from `theme.json`) to the theme profiles. For example, `update deferred_profile.json`:
 
     ```
                 "wp_one_ui",
@@ -236,19 +229,20 @@ Hidden pages are implemented via CSS included in the theme. There are two places
             ],
     ```
 
-9.  **Depending on how the theme is deployed, the theme caches may need to be cleared** using the Theme Analyzer. See the [Theme Analyzer](../themes_skins/the_module_framework/themeopt_analyzer/index.md) Help Center topic for instructions to analyze and clear theme caches.
-10. **Add any necessary metadata values** to the pages:
+9. If required by your deployment, clear the theme caches using the Theme Analyzer. For more information, refer to [Theme Analyzer](../themes_skins/the_module_framework/themeopt_analyzer/index.md).
 
-    -   **Required: `com.hcl.dx.pwa.configuration`** - Set on the root label or page of the site to identify the PWA configuration located in the theme `pwas` directory that will apply. For example, this page metadata parameter can be set to `nexhaven` on your site root label.
-    -   **Optional: `com.hcl.dx.pwa.app.protected`** - Set on the root label or page of the site to identify whether or not the application will apply to authenticated \(true\) or anonymous \(false\) parts of the site. The value of this parameter will default to false.
-    -   **Optional: `com.hcl.dx.pwa.serviceworker.scope`** - Set on the root label or page of the site to override the service worker scope that will be used to register the service worker with the browser \(typically the URL for the root page of the site, for example, /wps/myportal/nexhaven\). The service worker scope can also be set to auto which will cause the service worker scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter. The value of this parameter will default to auto.
-    -   **Optional: `com.hcl.dx.pwa.preload_urls`** - Set on the root label or page of the site to define a list of URLs that can be preloaded by the service-worker. This list is comma-separated and will be dynamically added to the service-worker using the variable preloadURLs.
-    -   **Optional: `com.hcl.dx.pwa.manifest.scope`** - Set on a label or page in the site to override the `scope` specified in the PWA manifest \(typically the URL for the root page of the site, for example, /wps/myportal/nexhaven\). The scope can also be set to auto which will cause the scope to be set to the friendly path of the PWA configuration node. See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
-    -   **Optional: `com.hcl.dx.pwa.manifest.start_url`** - See the *Authenticated versus Unauthenticated* section for further explanation of how this parameter is affected by the `com.hcl.dx.pwa.app.protected` metadata parameter.
-    -   **Optional: `pwa.Hidden`** - Set on a label or page in the site to exclude a page from the PWA application navigation \(true or false\).
-    
-11. **Optionally, update the theme files for hiding pages in PWA application mode**. See the *Hiding pages in PWA application mode* guidance above in this section for explanations and guidance to apply these changes.
+10. Add metadata values to pages. For details on how `com.hcl.dx.pwa.app.protected` affects parameter behavior, refer to [Authenticated and unauthenticated access](#authenticated-and-unauthenticated-access).
 
-PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL Digital Experience is capable of serving multiple sites through [Virtual Portal](../virtual_portal/vp_planning/advppln_scope.md) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.
+    - `com.hcl.dx.pwa.configuration` (required): Set on the root label or page of the site to identify the PWA configuration in the theme `pwas` directory. For example, set this parameter to `nexhaven` on the site root label.
+    - `com.hcl.dx.pwa.app.protected` (optional): Set on the root label or page of the site to specify whether the application applies to authenticated (`true`) or unauthenticated (`false`) site sections. Defaults to `false`.
+    - `com.hcl.dx.pwa.serviceworker.scope` (optional): Set on the root label or page of the site to override the service worker scope used to register the service worker with the browser (typically `/wps/myportal/nexhaven`). Setting the value to `auto` (default) sets the service worker scope to the friendly path of the PWA configuration node.
+    - `com.hcl.dx.pwa.preload_urls` (optional): Set on the root label or page of the site to define a comma-separated list of preloaded URLs. The service worker dynamically adds this list using the `preloadURLs` variable.
+    - `com.hcl.dx.pwa.manifest.scope` (optional): Set on a label or page to override the `scope` specified in the PWA manifest (typically `/wps/myportal/nexhaven`). Setting the value to `auto` sets the scope to the friendly path of the PWA configuration node.
+    - `com.hcl.dx.pwa.manifest.start_url` (optional): Set on a label or page to override the `start_url` specified in the PWA manifest.
+    - `pwa.Hidden` (optional): Set on a label or page to exclude a page from PWA application navigation (`true` or `false`).
+
+11. Update theme files to hide pages in PWA application mode (optional). For more information, refer to [Hiding pages in PWA application mode](#hiding-pages-in-pwa-application-mode).
+
+PWA support in Virtual Portals: Typically, PWAs are designed to serve a single site. Because HCL DX is capable of serving multiple sites through [Virtual Portal](../virtual_portal/vp_planning/advppln_scope.md) support, HCL DX administrators should be able to configure multiple sites to implement PWA capabilities.
 
 
