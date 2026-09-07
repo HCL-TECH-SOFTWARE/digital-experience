@@ -488,6 +488,25 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
         dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
         ```
 
+## Handling secret rotation and subscriber verification
+
+Available from CF238, DAM staging verifies the bidirectional connection between the publisher and each subscriber through a periodic heartbeat.
+
+- New API [endpoint to verify](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController) bidirectional connections between publishers and subscribers.
+- Heartbeat verification for detecting connectivity issues and automatically disabling/enabling subscribers after secret rotation.
+- Staging process will be paused for disabled subscriber and resumes automatically once enabled.
+
+!!! note
+    If a subscriber was manually disabled, it will not be automatically re-enabled. You must manually re-enable it using DXClient after verifying the configuration is correct.
+
+### Heartbeat configuration
+
+Configure the verification interval in Helm values:
+
+```yaml
+verifySubscribersIntervalInMinutes: 10
+```
+
 ## Getting all subscribers details for DAM staging
 
 
@@ -581,6 +600,19 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         ```
         dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
+
+#### Subscriber disabled by heartbeat
+
+```json
+{
+    "status": "disabled",
+    "syncStatus": "Failed",
+    "disabledReason": "AUTH_FAILURE",
+    "message": "Authentication failed because of invalid secrets/credentials"
+}
+```
+
+For an active subscriber, `status` is `enabled` and `disabledReason` and `message` are `null`. A manually disabled subscriber has `disabledReason` set to `MANUAL` and `AUTH_FAILURE` if disabled by heartbeat.
 
 !!! note
         Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.

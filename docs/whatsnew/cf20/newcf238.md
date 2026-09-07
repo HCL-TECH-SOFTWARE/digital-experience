@@ -89,7 +89,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - Enhanced staging to handle secret rotation
 
 === "Containers"
-    Staging in DAM has now been enhanced to handle secret rotation, refer for more details [ DAM Staging enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_staging_enhancement).
+    Staging in DAM has now been enhanced to handle secret rotation, refer for more details in [DAM staging subscription](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#handling-secret-rotation-and-subscriber-verification).
 
 ### Helm values updates <!--update values-->
 
