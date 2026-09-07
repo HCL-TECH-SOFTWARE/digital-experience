@@ -128,7 +128,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "dx-deployment-persistence.dxns.svc.cluster.local"
+            dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
             dbUser: "dx_iq_db_user"
@@ -148,14 +148,13 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "dx-deployment-persistence.dxns.svc.cluster.local"
+            dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
-            dbCustomSecret: "<DX_RELEASE_NAME>-iq-db-secret"
+            dbCustomSecret: "custom-credentials-iq-db"
         ```
 
         - `<DX_RELEASE_NAME>`: The DX Helm release name.
-        - `<DX_NAMESPACE>`: The DX deployment namespace.
 
         !!! important "Same namespace required"
             This option only works when your IQ deployment is in the same Kubernetes namespace as your DX deployment. Kubernetes secrets are namespace-scoped and cannot be referenced across namespaces. If IQ is deployed in a different namespace, use the database credentials option.
@@ -188,8 +187,8 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         Verify that the referenced DX secret exists in the namespace:
 
         ```bash
-        kubectl get secret -n <DX_NAMESPACE> <DX_RELEASE_NAME>-iq-db-secret
-        kubectl describe secret -n <DX_NAMESPACE> <DX_RELEASE_NAME>-iq-db-secret
+        kubectl get secret -n <DX_NAMESPACE> custom-credentials-iq-db
+        kubectl describe secret -n <DX_NAMESPACE> custom-credentials-iq-db
         ```
 
 ## Configuring an external database
@@ -525,11 +524,13 @@ Use this option to automatically provision and manage a PostgreSQL database with
     configuration:
       database:
         enabled: true
-        dbHost: "dx-deployment-persistence.dxns.svc.cluster.local"
+        dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
         dbPort: 5432
         dbName: "iqdb"
         dbCustomSecret: "custom-credentials-iq-db"
     ```
+
+    `<DX_RELEASE_NAME>`: The DX Helm release name.
 
 8. Upgrade the IQ deployment with your updated `custom-iq-values.yaml` file:
 
