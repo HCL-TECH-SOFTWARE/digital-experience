@@ -192,3 +192,4 @@ The following limitations apply to Core Editor:
     - [Authoring template fields](../../wcm_authoring/authoring_portlet/content_management_artifacts/authoring_templates/wcm_dev_auth-temp_fields.md)
     - [Adding a rich text element to a template](../../wcm_authoring/authoring_portlet/content_management_artifacts/elements/richtext_element/wcm_dev_elements_rich-text_add_template.md)
     - [WebSphere Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+    - [WCM logging and tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/wcm_logs.md)
