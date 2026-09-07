@@ -70,19 +70,10 @@ kubectl rollout status deployment/dx-mcp-server --namespace <YOUR_NAMESPACE>
 
 Confirm that IQ opens, connects to the backend, and returns a response.
 
-## Rollback
-
-If an upgrade fails, review the relevant Helm and pod logs. Roll back the IQ release to the previous known-good revision:
-
-```bash
-helm rollback dx-iq <IQ_REVISION> --namespace <YOUR_NAMESPACE>
-```
-
-After the rollback, verify pod readiness and test IQ again. For additional troubleshooting guidance, see [Troubleshooting IQ](./troubleshooting.md).
-
 ## Related information
 
 - [Installing IQ](installation/index.md)
 - [Enabling IQ](enable.md)
 - [Upgrading Helm Deployment](../../deployment/install/container/helm_deployment/update_helm_deployment.md)
 - [Core container version-to-version upgrade](../../deployment/manage/container_configuration/core_interactions_kubernetes.md)
+- [Troubleshooting IQ](./troubleshooting.md)
