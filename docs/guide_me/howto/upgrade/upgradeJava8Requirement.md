@@ -206,6 +206,7 @@ See the following IBM documentation for full Java installation instructions:
 - [IBM Fix Central (SDK downloads)](https://www.ibm.com/support/fixcentral)
 - [WAS 8.5.5 system requirements](https://www.ibm.com/docs/en/was/8.5.5?topic=environment-installing-websphere-application-server-distributed-operating-systems)
 - [Switching Java of WebSphere Profiles](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java)
+- [Switching Java for all Nodes in Cluster](https://www.ibm.com/docs/en/bpm/8.6.0?topic=installation-switching-edition-java-used-in-bpm)
 
 For the full operating system-specific SDK upgrade procedures, see the following references:
 
