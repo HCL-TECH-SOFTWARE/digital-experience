@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Core Editor - New Rich Text Editor option
 - My HCLSoftware delivery portal
 - New How-to articles now available
 - Practitioner Studio dashboard - New widgets
@@ -16,7 +17,6 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- Core Editor - New Rich Text Editor option
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
 - WAS, JDK, UBI, and iFix versions <!--update values-->
@@ -39,6 +39,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Core Editor - New Rich Text Editor option
+
+=== "Containers"
+    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+=== "On-Premises"
+    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### My HCLSoftware delivery portal
 
@@ -99,14 +107,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
-
-### Core Editor - New Rich Text Editor option
-
-=== "Containers"
-    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
-
-=== "On-Premises"
-    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### DAM - New parameters for setting the initial collections view
 
