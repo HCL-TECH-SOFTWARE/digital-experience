@@ -530,8 +530,6 @@ Use this option to automatically provision and manage a PostgreSQL database with
         dbCustomSecret: "custom-credentials-iq-db"
     ```
 
-    `<DX_RELEASE_NAME>`: The DX Helm release name.
-
 8. Upgrade the IQ deployment with your updated `custom-iq-values.yaml` file:
 
     ```bash
