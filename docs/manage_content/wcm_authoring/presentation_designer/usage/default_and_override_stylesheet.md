@@ -151,3 +151,5 @@ The **Draft override stylesheet** functions exactly like the standard Override s
 ![](../../../../assets/HCL_Presentation_Designer_draft_override_stylesheet_path.png)
 
 - **Publishing & Cleanup:** When you select **Save and Publish**, the system merges all your draft style edits and content back into the published presentation template and standard override stylesheet. To avoid conflicts on the backend, the draft override stylesheet is cleanly deleted only *after* the presentation template successfully saves and publishes.
+
+For more information on saving, refer to **[Saving a presentation template as draft](../usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft)**
