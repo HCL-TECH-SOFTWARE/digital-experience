@@ -410,7 +410,7 @@ If you are [using an external database](./installation/prepare-database.md#confi
     - [Preparing the database](./installation/prepare-database.md)
     - [Validating the deployment](./installation/validation.md)
     - [Enabling IQ](enable.md)
-    - [Updating IQ](updating.md)
     - [Using IQ](usage.md)
+    - [Updating IQ](updating.md)
     - [IQ limitations](limitations.md)
     - [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}
