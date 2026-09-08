@@ -160,13 +160,37 @@ Installing the SDK does not automatically switch profiles to use it. Each profil
 
 Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve to Java 8, not Java 7.
 
-### Ensuring IBM IIM is on Java 8 or newer
+- To verify IBMIM JRE:
+
+    === "Linux or AIX"
+        ```bash
+        ${IBMIM_INSTALL_ROOT}/eclipse/jre/bin/java -version
+        ```
+
+    === "Windows"
+        ```bash
+        "${IBMIM_INSTALL_ROOT}\eclipse\jre\bin\java.exe" -version
+        ```
+
+- To verify ConfigEngine JRE:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/java/bin/java -version
+        ```
+
+    === "Windows"
+        ```bash
+        "${WAS_INSTALL_ROOT}\AppServer\java\bin\java.exe" -version
+        ```
+
+### Ensuring IBMIM is on Java 8 or newer
 
 If Installation Manager is still running on an older Java level, update or reconfigure it before using it to install or maintain the required WAS Java 8 content. See [Installation Manager installs a Java Runtime Environment (JRE)](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment).
 
 ### Applying CF packages to your environment
 
-`applyCF.sh` or `applyCF.bat`
+Once all Java versions have been verified, proceed with upgrade. See [Applying a Combined Cumulative Fix](https://help.hcl-software.com/digital-experience/9.5/CF237/deployment/install/traditional/cf_install/)
 
 There is no supported path to apply a new CF while remaining on Java 7. This requirement applies to all future CFs.
 
