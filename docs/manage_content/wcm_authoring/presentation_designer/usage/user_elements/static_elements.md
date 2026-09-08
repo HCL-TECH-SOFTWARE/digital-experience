@@ -6,10 +6,17 @@ Static elements are predefined elements that display content exactly as it looks
 
 ## Container
 
-The Container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. You can resize the container through the **Style items** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
+The Container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. 
+
+You can resize the container directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This allows you to quickly adjust its width and height without needing to open the style panel. If your container's dimensions are currently set to relative units (such as `%` or `auto`) in the **Style items** panel, dragging a resize handle automatically converts those dimensions into a concrete pixel (`px`) measurement based on the element's current size on the screen. Once you release the handle, the newly computed pixel values are committed to the active override stylesheet and will display in your **Style items** panel.
+
+Alternatively, you can resize the container through the **Style items** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
 
 ![](../../../../../assets/HCL_Presentation_Designer_Static_Element_Container.png)
 ![](../../../../../assets/HCL_Presentation_Designer_Static_Element_Container_Applied_Styles.png)
+
+!!! note
+    The root `Container` (the main canvas boundary) does not display drag handles and cannot be resized directly on the canvas.
 
 ## Text
 
@@ -91,6 +98,13 @@ Static images (for example, ```<img src="image-url.jpg" alt="Description"/>```) 
 ## Grid
 
 The **Grid** element (for example, ```<div class="grid">...</div>```) allows for a structured layout of multiple elements in rows and columns. This element is useful for organizing content in a visually appealing way, enabling practitioners to customize the grid structure to fit their content needs.
+
+Aside from adjusting the width and height of the grid in the **Style items** panel, you can also easily resize the Grid container's overall footprint directly on the canvas by dragging the handles around its edges.
+
+When you use the canvas drag handles, any existing non-pixel units (such as `%` or `auto`) are automatically converted into an exact pixel (`px`) measurement to guarantee precise sizing. Releasing the handle commits the final computed pixel values to the active override stylesheet, and these updated `px` values will immediately replace the previous units in your **Style items** panel. This commit targets the currently active device viewport, allowing you to easily set responsive, per-device sizing overrides.
+
+!!! note
+    Drag handles are only available for the main `Grid` container. Individual `GridCell` cannot be resized using drag handles; their sizing remains controlled via row and column span settings.
 
 To manage responsive layouts, you can customize row and column counts for each device context, configure **Auto flow** settings to control how content wraps on smaller screens, and apply layout changes dynamically using device-specific stylesheet media blocks (`@media` rules).
 
