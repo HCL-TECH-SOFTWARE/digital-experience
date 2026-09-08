@@ -185,3 +185,20 @@ The Video element operates in three render states on the canvas:
 
 !!! note
     YouTube Shorts URLs (`[youtube.com/shorts/](https://youtube.com/shorts/)`) are not supported. Unrecognized URLs render in the placeholder state.
+
+
+## Custom HTML
+
+The Custom HTML element allows you to embed raw HTML markup directly into a presentation template via a code editor popup. This element eliminates the need to force custom markup into existing structured components, making it ideal for embedding third-party widgets (such as forms, analytics snippets, etc.), custom-styled markup, or pre-built HTML fragments.
+
+![](../../../../../assets/HCL_Presentation_Designer_Custom_HTML_Canvas.png)
+
+To add and edit your markup, select the **Configure** icon on the element toolbar to open the syntax-highlighted, resizable code editor.
+
+![](../../../../../assets/HCL_Presentation_Designer_Custom_HTML_Editor.png)
+
+The Custom HTML element includes several features to ensure a safe and consistent authoring experience:
+
+- **Shadow DOM Scoping:** The element is rendered inside a shadow DOM host on the canvas. This ensures that any custom `<style>` rules you supply are scoped directly to the element and do not leak into or break the main Presentation Designer document.
+- **Safe Execution Surface:** Scripts and event handlers are neutralized at render time on the canvas so they do not execute while you are authoring. However, they are preserved as-is in the saved markup, ensuring production rendering remains completely unaffected.
+- **Auto-Correction:** The editor automatically wraps orphaned closing tags in HTML comments. This prevents mismatched tags from prematurely closing ancestor elements and breaking your layout.
