@@ -21,9 +21,9 @@ This topic contains the commands that administrators can use to configure the st
 
 The DAM staging framework allows you to stage your DAM content from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}, you can configure DAM staging to:
 
--   Trigger a manual staging or use periodic staging processes.
--   Set the cycle length (default: 2 minutes, maximum: 24 hours) for periodic sync.
--   Register a subscriber with a publisher.
+- Trigger a manual staging or use periodic staging processes.
+- Set the cycle length (default: 2 minutes, maximum: 24 hours) for periodic sync.
+- Register a subscriber with a publisher.
 
     !!! note
         A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
@@ -73,7 +73,7 @@ The DAM Cross-CF staging feature allows the staging of DAM content from one cumu
 
 Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
--   **Command description**
+- **Command description**
 
     You can trigger the DAM staging with the following command:
 
@@ -81,7 +81,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
     dxclient manage-dam-staging trigger-staging
     ```
 
--   **Help command**
+- **Help command**
 
     This command shows the help information for `manage-dam-staging trigger-staging` command usage:
 
@@ -89,7 +89,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
     dxclient manage-dam-staging trigger-staging -h
     ```
 
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
 
@@ -158,7 +158,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
     -interval <value>
     ```
 
--   **Command:**
+- **Command:**
 
     ```
     dxclient manage-dam-staging trigger-staging -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname>
@@ -178,7 +178,7 @@ Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
 
 Use the `manage-dam-staging register-dam-subscriber` command to register the subscriber for DAM staging.
 
--   **Command description**
+- **Command description**
 
     Use the following command to register a subscriber for DAM staging:
 
@@ -186,7 +186,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register the sub
     dxclient manage-dam-staging register-dam-subscriber
     ```
 
--   **Help command**
+- **Help command**
 
     Use the following command to show the help information for the `manage-dam-staging register-dam-subscriber` command:
 
@@ -194,7 +194,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register the sub
     dxclient manage-dam-staging register-dam-subscriber -h
     ```
 
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
 
@@ -275,7 +275,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register the sub
     -interval <value>
     ```
 
--   **Commands:**
+- **Commands:**
 
     ```
     dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword> -interval <interval>
@@ -291,7 +291,7 @@ Use the `manage-dam-staging register-dam-subscriber` command to register the sub
 
 Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
 
--   **Command description**
+- **Command description**
 
     Use the following command to deregister a subscriber for DAM staging:
 
@@ -299,7 +299,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
     dxclient manage-dam-staging deregister-dam-subscriber
     ```
 
--   **Help command**
+- **Help command**
 
     Use the following command to show the help information for the `manage-dam-staging deregister-dam-subscriber` command:
 
@@ -307,7 +307,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
     dxclient manage-dam-staging deregister-dam-subscriber -h
     ```
 
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
 
@@ -370,7 +370,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
     -subscriberId <value>
     ```
 
--   **Commands:**
+- **Commands:**
 
     ```
     dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
@@ -386,7 +386,7 @@ Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the
 
 Use the `manage-dam-staging update-secrets` command to update secrets of the publisher and subscriber for DAM staging.
 
--   **Command description**
+- **Command description**
 
     You can update the secrets of a publisher and subscriber for DAM staging with the following command:
 
@@ -394,7 +394,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     dxclient manage-dam-staging update-secrets
     ```
 
--   **Help command**
+- **Help command**
 
     The following command shows the help information for `manage-dam-staging update-secrets` command usage:
 
@@ -402,7 +402,7 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     dxclient manage-dam-staging update-secrets -h
     ```
 
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):
 
@@ -465,18 +465,18 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
     ```
 
     Use this attribute to specify the Username of the DX Core server of the subscriber (default: ""):
-    
+
     ```
     -targetServerUsername <value>
     ```
 
     Use this attribute to specify the Password of the DX Core server of the subscriber (default: ""):
-    
+
     ```
     -targetServerPassword <value>
     ```
 
--   **Commands:**
+- **Commands:**
 
     ```
     dxclient manage-dam-staging update-secrets -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
@@ -488,31 +488,58 @@ Use the `manage-dam-staging update-secrets` command to update secrets of the pub
         dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
         ```
 
-## Handling secret rotation and subscriber verification
+## Verifying subscriber connectivity during secret rotation
 
-Available from CF238, DAM staging verifies the bidirectional connection between the publisher and each subscriber through a periodic heartbeat.
+DAM staging verifies the bidirectional connection between the publisher and each subscriber through a periodic heartbeat.
 
-- New API [endpoint to verify](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController) bidirectional connections between publishers and subscribers.
-- Heartbeat verification for detecting connectivity issues and automatically disabling/enabling subscribers after secret rotation.
-- Staging process will be paused for disabled subscriber and resumes automatically once enabled.
+- The `SubscriberInterfaceController` API endpoint is now available to verify bidirectional connections between publishers and subscribers. For more information, refer to [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"}.
+- Heartbeat verification detects connectivity issues and automatically disables or enables subscribers after secret rotation.
+- The staging process pauses for disabled subscribers and resumes automatically when enabled.
 
 !!! note
-    If a subscriber was manually disabled, it will not be automatically re-enabled. You must manually re-enable it using DXClient after verifying the configuration is correct.
+    If you manually disable a subscriber, the system does not automatically re-enable it. You must manually re-enable the subscriber by using DXClient after verifying the configuration is correct.
 
-### Heartbeat configuration
+To configure the verification interval in the Helm values:
 
-Configure the verification interval in Helm values:
+1. Open the `values.yaml` file for your deployment.
+2. Add or update the `verifySubscribersIntervalInMinutes` property with the interval in minutes.
 
-```yaml
-verifySubscribersIntervalInMinutes: 10
+    ```yaml
+    verifySubscribersIntervalInMinutes: 10
+    ```
+
+3. Run `helm upgrade` to apply the updated values to the cluster.
+
+Enabled subscriber response:
+
+```json
+{
+    "status": "enabled",
+    "syncStatus": "Success",
+    "disabledReason": null,
+    "message": null
+}
 ```
+
+Disabled subscriber response:
+
+```json
+{
+    "status": "disabled",
+    "syncStatus": "Failed",
+    "disabledReason": "AUTH_FAILURE",
+    "message": "Authentication failed because of invalid secrets/credentials"
+}
+```
+
+!!!note
+    A manually disabled subscriber sets `disabledReason` to `MANUAL`, whereas a subscriber disabled by a heartbeat check sets `disabledReason` to `AUTH_FAILURE`.
 
 ## Getting all subscribers details for DAM staging
 
-
 Use the `manage-dam-staging get-all-subscribers` command to get all the registered subscribers details for DAM staging.
 
--   **Command description**
+- **Command description**
 
     You can get all subscribers details for DAM staging with the following command:
 
@@ -520,7 +547,7 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     dxclient manage-dam-staging get-all-subscribers
     ```
 
--   **Help command**
+- **Help command**
 
     The following command shows the help information for `manage-dam-staging get-all-subscribers` command usage:
 
@@ -528,7 +555,7 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     dxclient manage-dam-staging get-all-subscribers -h
     ```
 
--   **Command options**
+- **Command options**
 
     Use this attribute to specify the protocol with which to connect to the DX server  of the publisher (default: "")
 
@@ -587,7 +614,7 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
     -ringAPIVersion <value>
     ```
 
--   **Commands:**
+- **Commands:**
 
     To get all subscribers details:
 
@@ -600,19 +627,6 @@ Use the `manage-dam-staging get-all-subscribers` command to get all the register
         ```
         dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
         ```
-
-#### Subscriber disabled by heartbeat
-
-```json
-{
-    "status": "disabled",
-    "syncStatus": "Failed",
-    "disabledReason": "AUTH_FAILURE",
-    "message": "Authentication failed because of invalid secrets/credentials"
-}
-```
-
-For an active subscriber, `status` is `enabled` and `disabledReason` and `message` are `null`. A manually disabled subscriber has `disabledReason` set to `MANUAL` and `AUTH_FAILURE` if disabled by heartbeat.
 
 !!! note
         Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.

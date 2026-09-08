@@ -20,5 +20,3 @@ This section provides information about DAM access control, its features, and li
 This section provides Digital Asset Management (DAM) Database Analysis feature, which includes comprehensive metrics and insights into their DAM deployment for monitoring performance, storage utilization, media asset distribution, broken collection and media assets.
 - **[DAM Soft Delete](dam_soft_delete.md)**  
 This section describes the Soft Delete feature for HCL DAM.
-- **[Enhance DAM staging](../../configuration/staging_dam/dam_subscription_staging.md#handling-secret-rotation-and-subscriber-verification)**
-This section describes Verify Subscriber and the authentication-related enhancements for DAM staging.

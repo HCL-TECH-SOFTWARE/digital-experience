@@ -15,8 +15,8 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
-- DAM - New parameters for setting the initial collections view.
-- DAM - Enhanced staging to handle secret rotation.
+- DAM - Enhanced staging to handle secret rotation
+- DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
@@ -81,15 +81,17 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - Enhanced staging to handle secret rotation
+
+=== "Containers"
+    DAM staging in HCL DX now supports periodic heartbeat verification to manage subscriber connections during secret rotation. The system uses the [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"} API endpoint to detect connectivity issues and automatically disable or re-enable subscribers when authentication credentials change.
+
+    Configure the verification frequency by using the `verifySubscribersIntervalInMinutes` Helm parameter in `values.yaml`. For more information, refer to [Verifying subscriber connectivity during secret rotation](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#verifying-subscriber-connectivity-during-secret-rotation).
+
 ### DAM - New parameters for setting the initial collections view
 
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
-
-### DAM - Enhanced staging to handle secret rotation
-
-=== "Containers"
-    Staging in DAM has now been enhanced to handle secret rotation, refer for more details in [DAM staging subscription](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#handling-secret-rotation-and-subscriber-verification).
 
 ### Helm values updates <!--update values-->
 
