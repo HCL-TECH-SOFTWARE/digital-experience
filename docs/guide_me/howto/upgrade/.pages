@@ -1,7 +1,7 @@
 title: Upgrade
 nav:
-  - index.md
-  - CommandLineIIM.md
-  - XMLAccessExportImport.md
-  - checkSuccessfullUpgrade.md
-  - upgradeJava8Requirement.md
+    - index.md
+    - upgradeJava8Requirement.md
+    - CommandLineIIM.md
+    - XMLAccessExportImport.md
+    - checkSuccessfullUpgrade.md

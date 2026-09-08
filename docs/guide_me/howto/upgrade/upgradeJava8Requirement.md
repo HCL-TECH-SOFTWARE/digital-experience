@@ -1,4 +1,4 @@
-# How to Avoid Java Runtime Failures During CF Upgrade on Older DX Systems
+# How to avoid Java Runtime failures during CF upgrade on older DX systems
 
 ## Applies to
 
@@ -6,215 +6,197 @@
 
 ## Introduction
 
-Starting from the CFs that include Java 8 binaries (CF238), **customers must be running Java 8 before applying any new Cumulative Fix (CF)**. Environments still on Java 7 will fail during upgrade with class version incompatibility errors.
+Starting from Cumulative Fix (CF) 238, CF packages include Java 8 binaries. Your HCL DX environment must run Java 8 before you apply new CFs. Environments that run on Java 7 fail during upgrade with class version incompatibility errors.
 
-This is a permanent baseline requirement for future CF upgrades. All new CF packages are compiled for Java 8 and will continue to be. There is no fallback path for Java 7 environments.
+!!! important
+    This requirement is a permanent baseline for future CF upgrades. All new CF packages require Java 8. No fallback path exists for Java 7 environments.
 
----
+## Instructions
 
-> This page provides a summarized guide for updating profile Java levels before applying a CF. For full operating system-specific installation and upgrade procedures, see **[Full Documentation References](#full-documentation-references)**.
+To avoid Java Runtime failures during CF upgrades, perform the following steps:
 
----
+### Installing Java 8 using the IBM IIM
 
-## Required Customer Action Before Applying Any New CF
+The IBM Java 8 Software Development Kit (SDK) for the WebSphere Application Server (WAS) is distributed as a fix pack through IBM Fix Central and installed using IBM Installation Manager (IIM). Do not replace the Java Development Kit (JDK) manually. Install it through IIM to ensure proper package tracking.
 
-Customers must complete all of the following **before running `applyCF.sh` or `applyCF.bat`**:
+Before using IBM Installation Manager for this upgrade path, ensure the IBM IIM runtime is running on Java 8 or newer. For more information, refer to [Installing a Java SDK using Installation Manager](https://www.ibm.com/docs/en/was/8.5.5?topic=iusjtev8dos-installing-websphere-sdk-java-technology-edition-version-80-using-gui){target="_blank"}.
 
-1. **Install Java 8 for WAS** — Java 8 must be available as a WAS SDK on the system. See [Installing a Java SDK using Installation Manager](#installing-java-8-via-ibm-installation-manager) below.
-2. **Switch all relevant profiles to Java 8** — Use the WAS `managesdk` utility to point every profile to the Java 8 SDK. See [Switching profiles to Java 8](#switching-was-profiles-to-java-8-managesdk) below.
-3. **Verify end-to-end resolution** — Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve to Java 8, not Java 7.
-4. **Ensure IBM Installation Manager is also on Java 8 or newer** — If Installation Manager is still running on an older Java level, update or reconfigure it before using it to install or maintain the required WAS Java 8 content. See [Installation Manager installs a Java Runtime Environment (JRE)](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment).
-5. **Only then run `applyCF.sh` or `applyCF.bat`.**
+1. Download the IBM Java 8 SDK package:
+
+    1. Go to [IBM Fix Central](https://www.ibm.com/support/fixcentral){target="_blank"}.
+    2. Under **Find product**, in the **Product selector** box, search for and select **WebSphere Application Server**.
+    3. In the **Installed Version** box, select your version (for example, **8.5.5.0**).
+    4. In the **Platform** box, select your platform (for example, AIX), and then select **Continue**.
+    5. Search for **Individual fix IDs** matching the pattern `8.5.5.*-WS-IBMWASJAVA*` (for example, `8.5.5.24-WS-IBMWASJAVA-LinuxX64`), and then select **Continue**.
+    6. Download the appropriate SDK package for your OS and architecture.
+
+2. Install the IBM Java 8 SDK using the IBM IIM in silent mode:
+
+    ```bash
+    ${IIM_INSTALL_ROOT}/eclipse/tools/imcl install \
+    com.ibm.java.jdk.v8 \
+    -repositories /path/to/sdk/repo \
+    -installationDirectory ${WAS_INSTALL_ROOT}/AppServer \
+    -acceptLicense
+    ```
+
+    - `/path/to/sdk/repo`: The directory containing the extracted SDK package. 
+    - `com.ibm.java.jdk.v8`: The offering ID that installs the IBM Java 8 SDK into the WAS installation directory.
+
+        To confirm the exact offering ID in your downloaded package:
+
+        ```bash
+        imcl listAvailablePackages -repositories /path/to/sdk/repo
+        ```
+
+3. Verify that WAS recognizes the new SDK:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh -listAvailable
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat -listAvailable
+        ```
+
+    You should see an entry for `1.8` in the output.
+
+### Switching WAS profiles to Java 8
+
+Installing the SDK does not automatically switch profiles to use it. Each profile must be explicitly updated using the `managesdk` command. For more information, refer to [managesdk command](https://www.ibm.com/docs/en/was/8.5.5?topic=tools-managesdk-command){target="_blank"} and [Upgrading to Java 8](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java){target="_blank"}.
+
+- To switch to a specific profile:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
+        -enableProfile \
+        -profileName <ProfileName> \
+        -sdkname 1.8_64
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
+        -enableProfile \
+        -profileName <ProfileName> \
+        -sdkname 1.8_64
+        ```
+
+    - `<ProfileName>`: The profile name (For example, `wp_profile`)
+    - `1.8_64`: The exact SDK name. To check the SDK name, run `-listAvailable`.
+
+- To switch all profiles at once:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
+        -enableProfileAll \
+        -sdkname 1.8_64
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
+        -enableProfileAll \
+        -sdkname 1.8_64
+        ```
+
+    This command updates every profile registered under the WAS installation to use Java 8.
+
+- To set Java 8 as the default SDK for WAS:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
+        -setNewProfileDefault \
+        -sdkname 1.8_64
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
+        -setNewProfileDefault \
+        -sdkname 1.8_64
+        ```
+
+    This ensures future profile creations default to Java 8.
+
+- To set Java 8 as the command-line default:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
+        -setCommandDefault \
+        -sdkname 1.8_64
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
+        -setCommandDefault \
+        -sdkname 1.8_64
+        ```
+
+    This command configures administrative scripts to use Java 8 by default.
+
+- To verify that all profiles run Java 8:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh -listEnabledProfileAll
+        ```
+
+    === "Windows"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat -listEnabledProfileAll
+        ```
+
+    All profiles used during the CF application process must show `1.8` (Java 8).
+
+### Verifying end-to-end resolution
+
+Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve to Java 8, not Java 7.
+
+### Ensuring IBM IIM is on Java 8 or newer
+
+If Installation Manager is still running on an older Java level, update or reconfigure it before using it to install or maintain the required WAS Java 8 content. See [Installation Manager installs a Java Runtime Environment (JRE)](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment).
+
+### Applying CF packages to your environment
+
+`applyCF.sh` or `applyCF.bat`
 
 There is no supported path to apply a new CF while remaining on Java 7. This requirement applies to all future CFs.
 
----
-
-## Installing Java 8 via IBM Installation Manager
-
-> **IBM Documentation:** [Installing a Java SDK using Installation Manager](https://www.ibm.com/docs/en/was/8.5.5?topic=iusjtev8dos-installing-websphere-sdk-java-technology-edition-version-80-using-gui)
-
-The IBM Java 8 SDK for WAS is distributed as a fix pack through IBM Fix Central and installed using IBM Installation Manager (IIM). Customers should not replace the JDK manually — it must go through IIM to ensure proper package tracking.
-
-Before using IBM Installation Manager for this upgrade path, **ensure the IBM Installation Manager runtime itself is on Java 8 or newer**.
-
-### Step 1 — Download the Java 8 SDK Package
-
-1. Go to [IBM Fix Central](https://www.ibm.com/support/fixcentral).
-2. Select **WebSphere Application Server** as the product, version **8.5.5**, and your platform.
-3. Search for fix IDs matching the pattern `8.5.5.*-WS-IBMWASJAVA*` (e.g., `8.5.5.24-WS-IBMWASJAVA-LinuxX64`).
-4. Download the appropriate SDK package for your OS and architecture.
-
-### Step 2 — Install via IBM Installation Manager (Console/Silent)
-
-Using IBM Installation Manager command line (silent install):
-
-```bash
-${IIM_INSTALL_ROOT}/eclipse/tools/imcl install \
-  com.ibm.java.jdk.v8 \
-  -repositories /path/to/sdk/repo \
-  -installationDirectory ${WAS_INSTALL_ROOT}/AppServer \
-  -acceptLicense
-```
-
-Replace `/path/to/sdk/repo` with the directory containing the extracted SDK package. The `com.ibm.java.jdk.v8` offering ID installs the IBM Java 8 SDK into the WAS installation directory.
-
-> **Tip:** Run `imcl listAvailablePackages -repositories /path/to/sdk/repo` to confirm the exact offering ID in your downloaded package before installing.
-
-### Step 3 — Verify the SDK is Registered with WAS
-
-After installation, confirm that WAS recognizes the new SDK:
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh -listAvailable
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat -listAvailable
-    ```
-
-You should see an entry for `1.8` in the output.
-
----
-
-## Switching WAS Profiles to Java 8 (`managesdk`)
-
-> **IBM Documentation:** [managesdk command reference](https://www.ibm.com/docs/en/was/8.5.5?topic=tools-managesdk-command)
-
-> **IBM Documentation:** [Switching Java of WebSphere Profiles](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java)
-
-Installing the SDK does not automatically switch profiles to use it. Each profile must be explicitly updated using the `managesdk` utility.
-
-### Switch a Specific Profile
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
-    -enableProfile \
-    -profileName <ProfileName> \
-    -sdkname 1.8_64
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
-    -enableProfile \
-    -profileName <ProfileName> \
-    -sdkname 1.8_64
-    ```
-
-Replace `<ProfileName>` with the actual profile name (e.g., `wp_profile`) and `1.8_64` with the exact SDK name as shown by `-listAvailable`.
-
-### Switch All Profiles at Once
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
-    -enableProfileAll \
-    -sdkname 1.8_64
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
-    -enableProfileAll \
-    -sdkname 1.8_64
-    ```
-
-This updates every profile registered under the WAS installation to use Java 8.
-
-### Set Java 8 as the WAS Default SDK
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
-    -setNewProfileDefault \
-    -sdkname 1.8_64
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
-    -setNewProfileDefault \
-    -sdkname 1.8_64
-    ```
-
-This ensures any future profile creation will default to Java 8.
-
-### Set Java 8 as the Command-Line Default
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh \
-    -setCommandDefault \
-    -sdkname 1.8_64
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat \
-    -setCommandDefault \
-    -sdkname 1.8_64
-    ```
-
-This tells administrative scripts to use Java 8 by default.
-
-### Verify All Profiles Are Now on Java 8
-
-=== "Linux/AIX"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.sh -listEnabledProfileAll
-    ```
-
-=== "Windows"
-    ```bash
-    ${WAS_INSTALL_ROOT}/AppServer/bin/managesdk.bat -listEnabledProfileAll
-    ```
-
-All profiles used during the CF apply must show `1.8` (Java 8).
-
----
-
-## Common Misconfiguration Scenarios
+### Troubleshooting
 
 | Scenario | Symptom | Resolution |
-|---|---|---|
-| Java 8 installed on machine but profile still points to Java 7 | Class version errors during `applyCF.sh` | Run `managesdk` to switch the profile to Java 8 |
-| WAS SDK and profiles are on Java 8, but the IBM Installation Manager JRE is still on Java 7 | Class version errors | Update IBM Installation Manager to use Java 8 |
-| Multiple nodes in topology with inconsistent SDK | Linkage errors (`NoSuchMethodError`, etc.) on specific nodes | Update all nodes to Java 8 SDK |
+|----------|---------|------------|
+| Java 8 is installed on the machine but the profile still points to Java 7. | Class version errors during `applyCF.sh` | Run `managesdk` to switch the profile to Java 8. |
+| WAS SDK and profiles are on Java 8, but the IBM IIM JRE is still running on Java 7. | Class version errors | Update IBM IIM to use Java 8. |
+| Multiple nodes in the topology use inconsistent SDK versions. | Runtime class and method resolution failures (for example, `NoSuchMethodError`) on non-upgraded nodes.| Update all nodes to Java 8 SDK. |
 
----
+???+ info "Related information"
+    Java installation instructions:
 
-## Scope of Change
+    - [Installing a Java SDK using Installation Manager](https://www.ibm.com/docs/en/was/8.5.5?topic=iusjtev8dos-installing-websphere-sdk-java-technology-edition-version-80-using-gui){target="_blank"}
+    - [Migrating to Java Platform, Standard Edition 7 or 8](https://www.ibm.com/docs/en/was/8.5.5?topic=applications-migrating-java-se-7-8){target="_blank"}
+    - [managesdk command](https://www.ibm.com/docs/en/was/8.5.5?topic=tools-managesdk-command){target="_blank"}
+    - [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}
+    - [IBM Fix Central (SDK downloads)](https://www.ibm.com/support/fixcentral){target="_blank"}
+    - [WAS 8.5.5 system requirements](https://www.ibm.com/docs/en/was/8.5.5?topic=environment-installing-websphere-application-server-distributed-operating-systems){target="_blank"}
+    - [Switching Java of WebSphere Profiles](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java){target="_blank"}
+    - [Switching Java for all Nodes in Cluster](https://www.ibm.com/docs/en/bpm/8.6.0?topic=installation-switching-edition-java-used-in-bpm){target="_blank"}
 
-- **Applies to:** All CFs released after the Java 8 binary shift (CF238)
-- **Affected environments:** WebSphere Portal 8.5.0.0 on WAS 8.5.5.x
-- **Permanent:** All future CFs will continue to be Java 8 compiled. This is not a temporary condition.
+    Operating system-specific SDK upgrade procedure:
 
----
+    - [Upgrading the SDK for AIX](../../../deployment/install/traditional/installing_dx/aix/sdk_upgrade-AIX.md)
+    - [Upgrading the SDK for Linux](../../../deployment/install/traditional/installing_dx/linux/sdk_upgrade-linux.md)
+    - [Upgrading the SDK for Windows](../../../deployment/install/traditional/installing_dx/windows/sdk_upgrade-windows.md)
 
-## Full Documentation References
+    Other related topics:
 
-See the following IBM documentation for full Java installation instructions:
-
-- [Installing a Java SDK using Installation Manager](https://www.ibm.com/docs/en/was/8.5.5?topic=iusjtev8dos-installing-websphere-sdk-java-technology-edition-version-80-using-gui)
-- [Migrating to Java Platform, Standard Edition 7 or 8](https://www.ibm.com/docs/en/was/8.5.5?topic=applications-migrating-java-se-7-8)
-- [managesdk command reference](https://www.ibm.com/docs/en/was/8.5.5?topic=tools-managesdk-command)
-- [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment)
-- [IBM Fix Central (SDK downloads)](https://www.ibm.com/support/fixcentral)
-- [WAS 8.5.5 system requirements](https://www.ibm.com/docs/en/was/8.5.5?topic=environment-installing-websphere-application-server-distributed-operating-systems)
-- [Switching Java of WebSphere Profiles](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java)
-- [Switching Java for all Nodes in Cluster](https://www.ibm.com/docs/en/bpm/8.6.0?topic=installation-switching-edition-java-used-in-bpm)
-
-For the full operating system-specific SDK upgrade procedures, see the following references:
-
-- [Upgrading the SDK for AIX](../../../deployment/install/traditional/installing_dx/aix/sdk_upgrade-AIX.md)
-- [Upgrading the SDK for Linux](../../../deployment/install/traditional/installing_dx/linux/sdk_upgrade-linux.md)
-- [Upgrading the SDK for Windows](../../../deployment/install/traditional/installing_dx/windows/sdk_upgrade-windows.md)
-
-Other related topics:
-
-- [Supported installation and upgrade paths](../../../deployment/install/traditional/install_upgrade_plan_supported_paths/index.md)
-- [Cumulative Fix instructions: Stand-alone | HCL Digital Experience 8.5](https://help.hcl-software.com/digital-experience/8.5/overview/ccf_85_standalone.html)
+    - [Supported installation and upgrade paths](../../../deployment/install/traditional/install_upgrade_plan_supported_paths/index.md)
+    - [Cumulative Fix instructions: Stand-alone | HCL Digital Experience 8.5](https://help.hcl-software.com/digital-experience/8.5/overview/ccf_85_standalone.html){target="_blank"}
