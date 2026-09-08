@@ -6,3 +6,5 @@ This section includes how-to articles about importing and exporting Web Content 
 Learn how to terminate a background WCM library deletion process and restore normal library status in HCL DX.
 - **[How to use `RefreshAllItems` for WCM libraries](./SampleInvocationRefreshLibrary.md)**  
 Learn how to run the `RefreshAllItems` module using HTTP requests or ConfigEngine tasks to update security permissions, refresh scheduled items, or fix specific item types across WCM libraries.
+- **[How to add profiles to WCM items using ProfileEnablement utility](./ProfileEnablementUtility.md)**  
+Learn how to add profiles to WCM items using ProfileEnablement utility.
