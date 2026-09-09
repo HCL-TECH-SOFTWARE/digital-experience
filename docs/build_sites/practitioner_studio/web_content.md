@@ -1,18 +1,17 @@
-# Web content
+# Web Content
 
 Learn more about managing libraries, creating, editing or cleaning up data, and setting up syndication for HCL Digital Experience (DX) web content management.
 
-
-- [**Authoring portlet**](../create_sites/authoring_tools/site_auth_portlet.md)<br>
-    Learn how to use authoring templates to add content to your website.
-- [**HCL Content Composer**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
-    Learn how to use the HCL Content Composer to create and manage DX site content.
-- [**HCL Content Reporting**](../../manage_content/wcm_authoring/content_composer/index.md)<br>
-    Learn how o generate reports and perform bulk updates on reported items.
-- [**Preview**](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)<br>
-    Learn how to preview content items in a portal environment to see how they would be displayed to users.
-- [**Managing web content libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
-    Learn how to organize and manage your web content.
+- **[Authoring](../create_sites/authoring_tools/site_auth_portlet.md)**  
+Learn how to create and manage website content efficiently through the Authoring Portlet by using customizable authoring templates.
+- **[Content Composer](../../manage_content/wcm_authoring/content_composer/index.md)**  
+Learn how to create and manage of DX site content.
+- **[Content Reporting](../../manage_content/wcm_authoring/content_composer/index.md)**  
+Learn how to generate reports and perform bulk updates on content items.
+- **[Preview](../../manage_content/wcm_delivery/deliver_webcontent_on_dx/customizing_content/mp_wcm_prevcontent.md)**  
+Learn how to preview content items in a portal environment to see how they would be displayed to users.
+- **[Web Content Libraries**](../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)**  
+Learn how to organize and manage your web content.
 
 ## HCLSoftware U learning materials
 

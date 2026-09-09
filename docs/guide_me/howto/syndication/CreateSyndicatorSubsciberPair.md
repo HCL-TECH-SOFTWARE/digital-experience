@@ -1,8 +1,8 @@
-# How to create a syndicator-subscriber pair
+# How to create a syndicator-subscriber pair in WCM
 
 ## Applies to
 
-> HCL Digital Experience version 9.5 and higher  
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
@@ -132,5 +132,5 @@ If the syndicator-subscriber pair connection continues to fail, check the `Syste
 
 ???+ info "Additional information"
     - [HCL Digital Experience - Setting up HCL Portal Syndication](https://www.youtube.com/watch?v=yUlddDkrY9w){target="_blank"}
-    - [Syndication troubleshooting](../../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md){target="_blank"}
+    - [Syndication troubleshooting](../../../manage_content/wcm_delivery/syndication/wcm_syndication_troubleshooting.md)
     - [Troubleshooting Syndication Issues](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0102792){target="_blank"}

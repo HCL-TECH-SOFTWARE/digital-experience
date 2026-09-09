@@ -4,6 +4,7 @@ nav:
     - Building Sites: create_sites
     - Themes and Skins: themes_skins
     - Practitioner Studio: practitioner_studio
+    - IQ: iq
     - Manage site settings: portal_settings
     - Site Builder: sitebuilder
     - blueprint.md

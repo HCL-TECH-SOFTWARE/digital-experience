@@ -7,7 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Dashboard
+- Practitioner Studio - Dashboard
 - Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -35,10 +35,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/235.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF235. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/235.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### Logout API updates
 
@@ -74,13 +74,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
 
-### Practitioner Dashboard  
+### Practitioner Studio - Dashboard  
 
 === "Containers"
-    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
 
 === "On-Premises"
-    The Practitioner Dashboard is a modern, React-based dashboard with widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Practitioner Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
 
 ### Presentation Designer - New entry points from Authoring portlet
 
@@ -109,7 +109,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### DAM - Soft Delete
 
 === "Containers"
-    The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users. For more information, refer to the [DAM Soft Delete](../../manage_content/digital_assets/configuration/dam_soft_delete.md).
+    The Soft Delete feature provides a safety net for accidental deletions of assets and collections in Digital Asset Management (DAM). Instead of permanently removing items immediately, a soft delete moves them to a **Trash** state where they are hidden from normal views but remain in the database for a configurable period. Items in the Trash can be restored or permanently deleted by authorized users. For more information, refer to the [DAM Soft Delete](../../manage_content/digital_assets/usage/managing_dam/dam_soft_delete.md).
 
 ### Helm values updates
 
@@ -130,7 +130,7 @@ You can now use certificates from your organization’s certificate authority (C
     - [Java Development Kit 8.0.8.60](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - No iFixes
 
-    For more information, refer to [WAS, JDK, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-and-ifix-versions).
+    For more information, refer to [WAS, JDK, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
 ## Notices of deprecation
 

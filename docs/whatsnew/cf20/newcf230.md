@@ -56,13 +56,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
 
     - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+    - [Practitioner Studio](../../build_sites/practitioner_studio/index.md#practitioner-studio)
 
 === "On-Premises"
     The HCL DX Action Bar and Practitioner Studio UI have been updated with a new side navigation and improved navigation structure for enhanced usability and design. For more information, refer to the following topics:
 
     - [Exploring the Site Toolbar and Site Manager - Action Bar](../../build_sites/create_sites/adding_pages_content_more/toolbar_sm_ovr.md#action-bar)
-    - [Practitioner Studio - Enhanced Practitioner Studio and toolbar](../../build_sites/practitioner_studio/index.md#enhanced-practitioner-studio-and-toolbar)
+    - [Practitioner Studio](../../build_sites/practitioner_studio/index.md#practitioner-studio)
 
 ### My HCLSoftware delivery portal
 
@@ -90,13 +90,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf230) section.
 
-### Presentation Designer - Handle multiple stylesheets components
+### Presentation Designer - Handling multiple stylesheets components
 
 === "Containers"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handling multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
 
 === "On-Premises"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handling multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
 
 ## Digital Experience 8.5 and 9.0 Versions
 

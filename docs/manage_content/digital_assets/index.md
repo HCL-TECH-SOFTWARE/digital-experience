@@ -1,4 +1,4 @@
-# HCL Digital Asset Management
+# Digital Assets
 
 The Digital Asset Management (DAM) feature of HCL Digital Experience (DX) helps you centrally organize, share, and control all your digital assets. Use these assets in any UI design, content, sites, applications, or emails. DAM enables you to reduce costs, accelerate team workflows, and build content consistency. You can access the HCL DAM features in HCL DX 9.5 Container Update Release CF181 and higher releases.
 

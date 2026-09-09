@@ -12,11 +12,11 @@ Content Composer is accessible from the Practitioner Studio interface (after ima
 
 Follow the instructions below to access content with the HCL Digital Experience 9.5 Content Composer from the Practitioner Studio.
 
-1.  Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
+1. Log in to your HCL Digital Experience 9.5 platform, and select **Web Content** from the Practitioner Studio navigator.
 
     ![](../../../../assets/HCL_DX_95_Practitioner_Studio_interface.png "Log in to HCL Digital Experience 9.5")
 
-2.  Select **Content Composer** from the **Web Content** menu to access the HCL Digital Experience 9.5 Content Composer user interface (Dashboard).
+2. Select **Content Composer** from the **Web Content** menu to access the HCL Digital Experience 9.5 Content Composer user interface (Dashboard).
 
     ![](../../../../images/HCL%20Content%20Composer%20dashboard.png "HCL Content Composer Dashboard")
 
@@ -29,29 +29,20 @@ The HCL Content Composer Dashboard has the following components:
 
 ![](../../../../assets/HCL%20CC%20Dashboard.png)
 
--   **Main header** - This contains the HCL Content Composer **Create** content actions and content item Search Bar.
--   **Content collections column** - This shows the content collections inside the HCL Content Composer library in a cascading menu system. When you select a collection, sub-collections are displayed off to the right side when applicable.
--   **Metadata column** - This shows the details of a selected content or content template, which includes:
+- **Main header**: Contains the HCL Content Composer **Create** content actions and content item Search Bar.
+- **Content collections column**: Displays the content collections inside the HCL Content Composer library in a cascading menu system. When you select a collection, sub-collections are displayed off to the right side when applicable.
+- **Metadata column**: Shows the details of a selected content or content template, which includes:
 
-    -   Content title
-
-    -   Content icon that represents the content's file type
-
-    -   Content description
-
-    -   Content Status
-
-    -   Content UUID
-
-    -   Date last modified
-
-    -   Date created
-
-    -   Content author
-
-    -   Content location
-
-    -   Content type
+    - Content title
+    - Content icon that represents the content's file type
+    - Content description
+    - Content Status
+    - Content UUID
+    - Date last modified
+    - Date created
+    - Content author
+    - Content location
+    - Content type
 
     ![Content metadata column](../../../../images/Content_metadata_column.png)
 
@@ -59,24 +50,24 @@ The HCL Content Composer Dashboard has the following components:
 
     ![Content view, editing and delete options](../../../../images/Content%20view%2C%20editing%20and%20delete%20options.png)
 
-    -   Documentation resource: [Author and manage content items](./author_and_manage_content_items/index.md)
-    -   Documentation resource: [Author and manage content templates](./author_and_manage_content_templates/index.md)
+    - Documentation resource: [Author and manage content items](./author_and_manage_content_items/index.md)
+    - Documentation resource: [Author and manage content templates](./author_and_manage_content_templates/index.md)
 
 ## Search content and content templates with Content Composer
 
 Follow the instructions below to search for content with the HCL Digital Experience 9.5 Content Composer from the Practitioner Studio.
 
-1.  Log in to your HCL Digital Experience 9.5 platform and select **Web Content > Content Composer** from the Practitioner Studio navigator.
+1. Log in to your HCL Digital Experience 9.5 platform and select **Web Content > Content Composer** from the Practitioner Studio navigator.
 
-2.  From **Content Composer**, type in and enter the content you are looking for on the Search Bar to view. Content Composer will display all search results related to the keyword or keywords you entered.
+2. From **Content Composer**, type in and enter the content you are looking for on the Search Bar to view. Content Composer will display all search results related to the keyword or keywords you entered.
 
     In the example below, the Search Results page displays all content results related to the keyword “Article”. Click **X** to collapse the **Web Content** menu and view the Search Results in full.
 
-    ![Search results view](../../../../images/Search%20results%20view.png) 
-    
+    ![Search results view](../../../../images/Search%20results%20view.png)
+
     ![Search results full view](../../../../images/Search%20results%20view-2.png)
 
-3.  When you select a single content item from Search Results, the content **Edit**, **Delete** and **Overview** buttons will be displayed on the Main Header and on the right side along the selected content item.
+3. When you select a single content item from Search Results, the content **Edit**, **Delete** and **Overview** buttons will be displayed on the Main Header and on the right side along the selected content item.
 
     ![Edit, Delete and view Overview of selected content item](../../../../images/Edit,%20Delete%20and%20view%20Overview.png)
 
@@ -94,10 +85,3 @@ Follow the instructions below to search for content with the HCL Digital Experie
 ## HCLSoftware U learning materials
 
 For an introduction and a demo on how to use Search for business users, go to [Search](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2804){target="_blank"}. To try it out yourself, refer to [Search Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Search_Lab.pdf){target="_blank"}.
-
-<!--
-## HCL Digital Experience Solution Feedback
-
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1){:target="_blank"}. -->
-
-

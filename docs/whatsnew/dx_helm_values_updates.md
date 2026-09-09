@@ -2,6 +2,128 @@
 
 This page summarizes Helm values updates across DX releases. Each table below details changes introduced in a specific release, including added properties, removed properties, and properties with changed defaults. Use this as a reference when upgrading to ensure compatibility and to guide configuration updates.
 
+!!!note
+    For more information on the keys described in this page, including their possible values and usage, refer to the downloadable sample `values.yaml` in [Prepare Configuration - The default HCL DX 9.5 `values.yaml` file](../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
+
+### CF238
+
+### CF237
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| automountServiceAccountToken.contentComposer | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.core | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.damPluginGoogleVision | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.digitalAssetManagement | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.imageProcessor | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.openLdap | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.persistenceConnectionPool | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.persistenceNode | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.remoteSearch | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.ringApi | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.runtimeController | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.haproxy | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.licenseManager | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.damPluginKaltura | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.webEngine | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.enabled | false | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.audience | "" | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.expirationSeconds | 3600 | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.searchMiddleware.searchReleaseName | dx-search | <!-- Commit: 39eab526, Author: Priyanshu Dubey, Date: 2026-07-07 -->
+| configuration.webEngine.db2HadrMaxRetries | 20 | <!-- Commit: 1d0d37ed, Author: Priyanka Priya, Date: 2026-05-14 -->
+| configuration.webEngine.db2HadrRetryInterval | 5 | <!-- Commit: 1d0d37ed, Author: Priyanka Priya, Date: 2026-05-14 -->
+| incubator.configuration.webEngine.wcmApiV3Enabled | false | <!-- Commit: f3b480ca, Author: Neelkanth Patel, Date: 2026-07-23 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| networking.dxIqIntegratorMaxReplicas | 
+| incubator.configuration.digitalAssetManagement.renderNewUI | 
+| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | 
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| security.digitalAssetManagement.dbPassword | d1gitalExperience | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.digitalAssetManagement.replicationPassword | d1gitalExperience | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.digitalAssetManagement.damPassword | 1234 | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.persistence.connectionPoolPassword | adminpassword | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| configuration.searchMiddleware.pushAdminPassword | adminpush | "" | <!-- Commit: 64d9e83b, Author: Priyanshu Dubey, Date: 2026-06-21 -->
+
+### CF236
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| openTelemetry.enabled | false | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.collector.exportUrl | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.collector.protocol | http/protobuf | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.service.name | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.service.namespace | "" | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.default | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.core | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.contentComposer | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.digitalAssetManagement | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.imageProcessor | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.licenseManager | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.openLdap | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.persistence | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.remoteSearch | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.ringApi | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.runtimeController | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.logging.services.webEngine | info | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| openTelemetry.debug.enabled | false | <!-- Commit: 108159d8, Author: srinath.tr@hcl.com, Date: 2026-05-06 -->
+| networking.dxIqService | "" | <!-- Commit: 39d8f73f, Author: Anamika Singh, Date: 2026-05-14 -->
+| networking.dxIqIntegratorMaxReplicas | 3 | <!-- Commit: 28c5ead4, Author: rubyann.matias@hcl.com, Date: 2026-06-03 -->
+| security.iq.dbUser | dx_iq_db_user | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| security.iq.dbPassword | d1gitalExperience | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| security.iq.customDbSecret | "" | <!-- Commit: f678f4f5, Author: Anamika Singh, Date: 2026-05-14 -->
+| configuration.webEngine.db2HadrEnabled | false | <!-- Commit: e5fb3f60, Author: jagadishramac.bhagw@hcl.com, Date: 2026-03-17 -->
+| configuration.webEngine.db2HadrStandbyHost | "" | <!-- Commit: 9cea6eeb, Author: jagadishramac.bhagw@hcl.com, Date: 2026-04-15 -->
+| configuration.webEngine.db2HadrStandbyPort | 50000 | <!-- Commit: 9cea6eeb, Author: jagadishramac.bhagw@hcl.com, Date: 2026-04-15 -->
+| configuration.webEngine.ldap.sslEnabled | false | <!-- Commit: beeb9294, Author: Neelkanth Patel, Date: 2026-05-03 -->
+| configuration.webEngine.ldap.recursiveSearch | false | <!-- Commit: beeb9294, Author: Neelkanth Patel, Date: 2026-05-03 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.openTelemetry.enabled | 
+| incubator.openTelemetry.collector.exportUrl | 
+| incubator.openTelemetry.collector.protocol | 
+| incubator.openTelemetry.service.name | 
+| incubator.openTelemetry.service.namespace | 
+| incubator.openTelemetry.logging.default | 
+| incubator.openTelemetry.logging.services.core | 
+| incubator.openTelemetry.logging.services.contentComposer | 
+| incubator.openTelemetry.logging.services.digitalAssetManagement | 
+| incubator.openTelemetry.logging.services.imageProcessor | 
+| incubator.openTelemetry.logging.services.licenseManager | 
+| incubator.openTelemetry.logging.services.openLdap | 
+| incubator.openTelemetry.logging.services.persistence | 
+| incubator.openTelemetry.logging.services.remoteSearch | 
+| incubator.openTelemetry.logging.services.ringApi | 
+| incubator.openTelemetry.logging.services.runtimeController | 
+| incubator.openTelemetry.logging.services.webEngine | 
+| incubator.openTelemetry.debug.enabled | 
+| incubator.security.iq.dbUser | 
+| incubator.security.iq.dbPassword | 
+| incubator.security.iq.customDbSecret | 
+| incubator.configuration.cecv2.enabled | 
+| incubator.configuration.cecv2.enableAssets | 
+| incubator.configuration.cecv2.skipAssetsUpdate | 
+| incubator.networking.dxIqService | 
+
+**Changed Values:**
+
+None
+
 ### CF235
 
 **Added Keys:**

@@ -10,3 +10,4 @@ nav:
   - Modify Media Assets: modify_dam
   - Access control management: dam_access_control.md
   - Access Control Cache: dam_access_control_cache.md
+  - DAM Soft Delete: dam_soft_delete.md

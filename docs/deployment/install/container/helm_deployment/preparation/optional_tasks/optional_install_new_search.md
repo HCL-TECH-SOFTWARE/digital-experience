@@ -1,6 +1,6 @@
 # Installing the Search V2 backend
 
-This topic explains how to configure search based on OpenSearch (Search V2) for your DX deployment. Search has the following features:
+This topic explains how to configure search based on OpenSearch (Search V2) for your HCL Digital Experience (DX) deployment. Search has the following features:
 
 - WCM crawling
 - Push API for use with WCM content sources
@@ -9,7 +9,7 @@ This topic explains how to configure search based on OpenSearch (Search V2) for 
 
 ## Prerequisites
 
-To use OpenSearch, your HCL Digital Experience (DX) deployment must be running in Kubernetes. The deployment must include DX Core, which provides Web Content Manager (WCM) and supports ACL lookup.
+To use OpenSearch, your DX deployment must be running in Kubernetes. The deployment must include DX Core or DX Compose, which provides the Web Content Manager (WCM) feature and supports ACL lookup.
 
 ## Limitations
 
@@ -30,7 +30,7 @@ For more information about OpenSearch settings, refer to [Important Settings](ht
 
 Search V2 uses certificates to secure communication between OpenSearch nodes and the search middleware. To establish this communication, you must create certificates and store them in the corresponding Kubernetes secrets. Refer to the DN format requirements for more information about certificate Distinguished Name (DN) validation rules.
 
-If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using In-House CA/PKI for Search V2 Certificates](.) for detailed requirements to provide to your CA team.
+If you are using certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI), refer to [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements to provide to your CA team.
 
 ### Understanding certificate roles
 
@@ -46,21 +46,17 @@ Only the admin certificate DN must be customized in your Helm chart. The node an
 
 ### Generating certificates
 
-The examples below show how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using In-House CA/PKI for Search V2 Certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
+The following examples describe how to generate self-signed certificates for testing and development. For production environments, you can use certificates from your organization's Certificate Authority (CA) or Public Key Infrastructure (PKI). See [Using in-house CA or PKI for Search V2 certificates](../../../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_new_search_ca_certificates.md) for detailed requirements.
 
 Use the following example to generate all required certificates, including real-world special characters, Unicode, and multiple components.
 
 The certificate generation commands include X.509 v3 extensions (`basicConstraints`, `keyUsage`, `extendedKeyUsage`) to ensure the certificates meet OpenSearch security requirements. These are the same extensions required when requesting certificates from your CA team.
-
-
 
 ```sh
 openssl genrsa -out root-ca-key.pem 2048
 # Root CA certificate – using a comprehensive test DN
 openssl req -new -x509 -sha256 -key root-ca-key.pem -subj "/C=DE/ST=Bayern/L=Hong Kong/O=Smith, Jones & Co./OU=Área Técnica/OU=Research \+ Development/CN=Patrick O'Brien/DC=internal/DC=com" -utf8 -out root-ca.pem -days 730
 ```
-
-
 
 ```
 # Admin cert - using same comprehensive test DN
@@ -606,6 +602,7 @@ Run the installation of your prepared configurations using Helm with the followi
 ```sh
 # Helm install command
 helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-release-name path/to/hcl-dx-search-vX.X.X_XXXXXXXX-XXXX.tar.gz
+```
 
 ## Configuring DX install to pass through search
 
@@ -622,11 +619,11 @@ helm install -n my-namespace -f path/to/your/custom-search-values.yaml your-rele
 
 2. After adjusting the `custom-values.yaml`, use Helm upgrade to apply the changes:
 
-  ```sh
-  helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-  ```
+    ```sh
+    helm upgrade DX_DEPLOYMENT_NAME -n YOUR_NAMESPACE -f custom-values.yaml path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
+    ```
 
-  Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you chose during the DX install.
+    Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace and the `DX_DEPLOYMENT_NAME` with the name that you chose during the DX install.
 
 ## Validating the setup
 
@@ -646,6 +643,9 @@ kubectl get pods -n YOUR_NAMESPACE
 Replace the `YOUR_NAMESPACE` placeholder with your deployment namespace.
 
 The result should look similar to this, with your Pods entering the `Running` and ready state after a short while.
+
+!!!note
+    For DX Compose environments, the deployment name is `dx-deployment-web-engine-0`.
 
 ```text
 NAME                                                         READY   STATUS              RESTARTS        AGE

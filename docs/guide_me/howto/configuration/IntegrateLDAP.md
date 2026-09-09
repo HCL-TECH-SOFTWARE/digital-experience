@@ -12,11 +12,11 @@ In most organizations, different groups administer HCL DX and the LDAP server. I
 
 ## Instructions
 
-To integrate HCL DX with LDAP, refer to the [HCL Portal v8.5 and LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf){target="_blank"}.
+To integrate HCL DX with LDAP, refer to the [HCL Portal v8.5 and LDAP Integration Guide](./files/HCL%20Portal%20v8.5%20and%20LDAP%20Integration%20Guide.pdf).
 
 The following samples and worksheets are also available:
 
-- [Sample LDIFs](./files/HCL_sample_LDIFs.pdf){target="_blank"}
-- [Worksheet Task 3 - PartA](./files/HCL_Worksheet_Task3PartA.pdf){target="_blank"}
-- [Worksheet Task 4](./files/HCL_Worksheet_Task4.pdf){target="_blank"}
-- [Worksheet Tasks 5 to 9](./files/HCL_Worksheet_Tasks_5_to_9.pdf){target="_blank"}
+- [Sample LDIFs](./files/HCL_sample_LDIFs.pdf)
+- [Worksheet Task 3 - PartA](./files/HCL_Worksheet_Task3PartA.pdf)
+- [Worksheet Task 4](./files/HCL_Worksheet_Task4.pdf)
+- [Worksheet Tasks 5 to 9](./files/HCL_Worksheet_Tasks_5_to_9.pdf)

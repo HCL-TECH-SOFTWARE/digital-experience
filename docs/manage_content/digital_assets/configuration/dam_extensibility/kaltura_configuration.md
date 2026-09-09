@@ -4,13 +4,10 @@ This section provides the steps on how the DAM extensibility allows the Kaltura 
 
 ## Architecture
 
-
 ![Kaltura plugin 2](../../../../images/Kaltura_configuration_Kaltura-Plugin-Design.png)
 ![Kaltura Plugin](../../../../images/kaltura_configuration_Kaltura-Plugin.png)
 
-
-
-## Kaltura configuration via DAM Extensibility
+## Kaltura configuration through DAM Extensibility
 
 Following kaltura configuration changes are required to configure through DAM extensibility in values.yaml
 
@@ -41,9 +38,10 @@ kaltura-plugin:
             url: "/delete"
 ```
 
-**Kaltura Plugin Server Configurations**
+**Kaltura Plugin server configurations**
 
 - Config Map
+
 ```
 {
   "thumbnailUrlPattern":string,
@@ -60,6 +58,7 @@ kaltura-plugin:
     ```
 
 - Video Configuration in DAM
+
 ```
 video/mp4:
         rendition:
@@ -131,7 +130,6 @@ OPERATION_WAIT_INTERVAL is used as environment variable with default value of 2 
 
 ## How is the configuration setup for Kaltura Plugin
 
-
 ### Plugin security Configuration
 In DAM Extensibility, plugins come with the security enabled. So, the API requests are authenticated with the security key, which is transmitted and validated in every call, both for plugin and callback calls, and the user can write this in the same config file under security configuration and give the value to the authenticationKey parameter. This value is then passed for plugin configuration key attribute, so that DAM sends this with each request to authenticate.
 
@@ -162,10 +160,4 @@ The following DAM APIs are removed and no longer in use:-
 - GET: /plugins<br/>
 
 !!! note
-    Please take a note of all Kaltura Plugin configuration details before upgrading.
-
-<!--
-
-## HCL Digital Experience Solution Feedback
-
-HCL Digital Experience is interested in your experience and feedback working with HCL Digital Experience 9.5 release software. To offer comments or issues on your findings, please access the [HCL Digital Experience 9.5 Feedback Reporting application](https://www.hclleap.com/apps/secure/org/app/158bbc7c-f357-4ef0-8023-654dd90780d4/launch/index.html?form=F_Form1). -->
+    Take a note of all Kaltura Plugin configuration details before upgrading.

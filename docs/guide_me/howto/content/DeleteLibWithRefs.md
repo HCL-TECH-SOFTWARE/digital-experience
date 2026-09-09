@@ -25,6 +25,6 @@ To delete a WCM library that contains items referenced by another library, you c
 !!! important
     To successfully delete the libraries, you must include every referenced library in the module.
 
-1. Clear all locks on the library using the `UnlockLibrary` module. For more information on this module, refer to [Unlocking a library](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/wcm_admin_library_unlock.md){target="_blank"}.
+1. Clear all locks on the library using the `UnlockLibrary` module. For more information on this module, refer to [Unlocking a library](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/wcm_admin_library_unlock.md).
 
-2. Run the ConfigEngine task to delete the referenced libraries. For more information, refer to [Deleting libraries by using the delete libraries tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_library_delete.md){target="_blank"}.
+2. Run the ConfigEngine task to delete the referenced libraries. For more information, refer to [Deleting libraries by using the delete libraries tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_library_delete.md).
