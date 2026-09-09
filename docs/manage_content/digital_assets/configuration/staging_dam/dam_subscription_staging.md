@@ -115,7 +115,7 @@ dxclient manage-dam-staging trigger-staging -dxProtocol https -hostname native-k
 !!! note
     For hybrid deployments, refer to [Setting up staging for hybrid deployments](#setting-up-staging-for-hybrid-deployments).
 
-Use the `manage-dam-staging trigger-staging` command to trigger DAM staging:
+Use the `manage-dam-staging register-dam-subscriber` command to trigger DAM staging:
 
 ```bash
 dxclient manage-dam-staging register-dam-subscriber
@@ -245,7 +245,7 @@ dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-ku
 
 DAM staging verifies the bidirectional connection between the publisher and each subscriber through a periodic heartbeat.
 
-- The `SubscriberInterfaceController` API endpoint is now available to verify bidirectional connections between publishers and subscribers. For more information, refer to [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"}.
+- A new API endpoint is available to verify bidirectional connections between publishers and subscribers. For more information, refer to [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"}.
 - Heartbeat verification detects connectivity issues and automatically disables or enables subscribers after secret rotation.
 - The staging process pauses for disabled subscribers and resumes automatically when enabled.
 
