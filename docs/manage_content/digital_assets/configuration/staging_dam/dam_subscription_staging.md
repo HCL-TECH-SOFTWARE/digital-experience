@@ -7,486 +7,239 @@ This topic contains the commands that administrators can use to configure the st
 
 ## Differences between DAM staging and WCM syndication
 
-!!! note
-        WCM syndication and DAM staging are two distinct processes that have similar goals but just differ in some details. To learn more about differences have a look at the following table.
+DAM staging and Web Content Manager (WCM) syndication are two distinct processes with key differences:
 
-| Aspect                               | WCM                                  | DAM                                                        |
-| -------------------------------------|--------------------------------------|------------------------------------------------------------|
-| `Credentials for authentication` |Authentication via credentials Vault slot. |The credentials given during registration are stored as Kubernetes Secrets and used for file transfer authentication and authorization from publisher to subscriber. The user credentials stored in secret is the primary portal administrator credential. For more information, see [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md).|
-| `Configuration syndication` |WCM syndication can be configured via UI or REST API one time. Sync can be triggered via REST API or UI.|Subscriber can be configured by dxclient.|
-| `Syndication ordering` |One-way or two-way syndication is possible, with one or many subscriber's resource. |DAM staging only supports one-way syndication.|
-| `Different user repository support per environment` |Supported via member fixer in WCM|Not supported by DAM at this time |Not supported by DAM at this time.|
+| Feature | WCM | DAM |
+| ------- | --- | --- |
+| Credentials for authentication | Authentication uses the Credential Vault slot. | The credentials provided during registration are stored as Kubernetes secrets and used for file transfer authentication and authorization from publisher to subscriber. The user credentials stored in the secret are the primary portal administrator credentials. For more information, refer to [Configure Credentials](../../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure_credentials.md). |
+| Syndication configuration | Configured once using the user interface or REST API. Synchronization is triggered using the REST API or user interface. | Subscribers are configured using DXClient. |
+| Syndication direction | Supports one-way or two-way syndication with one or multiple subscriber resources. | Supports one-way staging only. |
+| User repository support per environment | Supported using the Member Fixer tool in WCM. | Not supported. |
 
 ## DAM staging framework
 
-The DAM staging framework allows you to stage your DAM content from an authoring environment (source environment/publisher) to multiple rendering environments (target environment/subscriber). Using [DXClient](https://help.hcltechsw.com/digital-experience/9.5/containerization/dxclient.html){:target="_blank"}, you can configure DAM staging to:
+The DAM staging framework allows you to stage your DAM content from an authoring environment (publisher) to multiple rendering environments (subscriber). Using [DXClient](../../../../extend_dx/development_tools/dxclient/index.md){:target="_blank"}, you can configure DAM staging to:
 
-- Trigger a manual staging or use periodic staging processes.
-- Set the cycle length (default: 2 minutes, maximum: 24 hours) for periodic sync.
+- Trigger manual staging or use periodic staging processes.
+- Set the cycle length (default: 2 minutes, maximum: 24 hours) for periodic synchronization.
 - Register a subscriber with a publisher.
 
     !!! note
-        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, uid=wpsadmin,o=hcl.com) in both publisher's and subscriber's Lightweight Directory Access Protocol (LDAP) or other user registry.
+        A subscriber must be registered with a publisher. Access rights to DAM staging assets are not transferred for subscribers who do not have the same distinguished names (for example, `uid=wpsadmin,o=hcl.com`) in both publisher and subscriber Lightweight Directory Access Protocol (LDAP) or other user registry.
 
-### Configure staging hostname
+### Configuring staging hostname
 
-The hostname configuration for the DAM staging publisher and subscriber must be specified in the values.yaml file of HCL DX's helm charts. If the value is empty, the default host details will be the load balancer hostname. In case of a hybrid deployment, the hostname details must be specified.
+You must specify the hostname configuration for the DAM staging publisher and subscriber in the `values.yaml` file of your HCL DX Helm charts. If left empty, the host defaults to the load balancer hostname. For hybrid deployments, you must specify the hostname details.
 
 !!! note
-        In values.yaml, the host, port, and ssl settings can be configured under `networking.addon.digitalAssetManagement.staging`.
+    In `values.yaml`, configure host, port, and SSL settings under `networking.addon.digitalAssetManagement.staging`.
 
-### Configuring LTPA Token Refresh Time
+### Configuring LTPA token refresh time
 
-LTPA token stored in cache refreshes every `5 minutes` by default.`ltpaTokenRefreshTimeInMinutes` can be configured in `values.yaml` under the `configurations` section of `digitalAssetManagement`.
+By default, the Lightweight Third-Party Authentication (LTPA) token stored in cache refreshes every 5 minutes. To update the LTPA token refresh time:
 
-```yaml
-configuration:
-  digitalAssetManagement:
-    ltpaTokenRefreshTimeInMinutes: 5
-```
+1. Open the `values.yaml` file for your deployment.
 
-`ltpaTokenRefreshTimeInMinutes` is a token refresh time configuration in minutes, which is passed to DAM as an environment variable.
+2. Add or update `ltpaTokenRefreshTimeInMinutes` under `configuration.digitalAssetManagement`. This parameter specifies the token refresh time in minutes, which the system passes to DAM as an environment variable:
+
+    ```yaml
+    configuration:
+      digitalAssetManagement:
+        ltpaTokenRefreshTimeInMinutes: 5
+    ```
+
+3. Run a [helm upgrade](../../../../deployment/install/container/helm_deployment/update_helm_deployment.md) to apply the updated values to the cluster.
 
 ### Configuring LDAP
 
-**DAM staging supports different LDAP for publisher and subscriber**: <br>
-DAM staging works with environments that use a different LDAP. An LDAP user with portal admin rights can be used for stage registration.
+DAM staging supports environments that use different LDAP user registries. You can use an LDAP user account with portal administrator privileges for staging registration.
 
 ### Credentials used during staging
 
-**Registration and file transfer:** <br>
-You must use the portal admin user credentials for staging registration. These credentials are then stored as Kubernetes secrets. The user credentials in the secret can be the identical or different on the transferring server and the subscriber.
-The credentials used in the registration are used for authentication and authorization during DXClient registration and for transferring files during staging.
+You must use portal administrator credentials for staging registration. HCL DX stores these credentials as Kubernetes secrets. User credentials in the secret can be identical or different on the publisher and subscriber. HCL DX uses the credentials provided during registration for authentication and authorization during DXClient registration and file transfers during staging.
 
-**To update staging secret**:<br>
-The `manage-dam-staging update-secrets` command can be used to update the publisher and subscriber staging secrets.
+Use the `manage-dam-staging update-secrets` command to update publisher and subscriber staging secrets. For more information, refer to [Updating secrets for DAM staging](#updating-secrets-for-dam-staging).
 
-### DAM Cross-CF staging
+### DAM cross-CF staging
 
-The DAM Cross-CF staging feature allows the staging of DAM content from one cumulative fix (CF) version to another. Note the following limitations:
+DAM cross-CF staging allows staging content across different Cumulative Fix (CF) versions, with the following limitations:
 
-- DAM Cross-CF staging is supported only from higher to lower CF versions.
-- Tests were conducted for up to two lower CF versions. For example, if the publisher is on CF225, staging up to the CF223 version of the subscriber is supported.
-- The subscriber must be at least on CF223.
+- Supports staging only from higher to lower CF versions.
+- Supports staging up to two lower CF versions. For example, if the publisher is on CF225, you can stage to a subscriber on CF223.
+- Requires the subscriber to run CF223 or higher.
 
 ## Managing DAM staging
 
-Use the `manage-dam-staging trigger-staging` command to trigger DAM staging.
+Use the `manage-dam-staging trigger-staging` command to trigger DAM staging:
 
-- **Command description**
+```bash
+dxclient manage-dam-staging trigger-staging
+```
 
-    You can trigger the DAM staging with the following command:
+Run the following command to display help information:
 
-    ```
-    dxclient manage-dam-staging trigger-staging
-    ```
+```bash
+dxclient manage-dam-staging trigger-staging -h
+```
 
-- **Help command**
+The following options are also available for this command:
 
-    This command shows the help information for `manage-dam-staging trigger-staging` command usage:
+| Command option | Description | Default |
+|----------------|-------------|---------|
+|`-dxProtocol <value>`|Specifies the protocol to connect to the publisher DX server.|""|
+|`-hostname <value>`|Specifies the hostname of the publisher DX server.|""|
+|`-dxPort <value>`|Specifies the port to connect to the publisher DX server.|"" (`443` for Kubernetes environments)|
+|`-dxUsername <value>`|Specifies the username required to authenticate with the publisher DX server.|""|
+|`-dxPassword <value>`|Specifies the password required to authenticate with the publisher DX server.|""|
+|`-damAPIPort <value>`|Specifies the port number of the publisher DAM server.|"" (`443` for Kubernetes environments)|
+|`-ringAPIPort <value>`|Specifies the port number of the publisher DX Core API server.|"" (`443` for Kubernetes environments)|
+|`-damAPIVersion <value>`|Specifies the publisher DAM API version number.|"" (`v1` for Kubernetes environments)|
+|`-ringAPIVersion <value>`|Specifies the publisher DX Core API version number.|"" (`v1` for Kubernetes environments)|
+|`-targetHostname <value>`|Specifies the subscriber target environment hostname.||
+|`-interval <value>`|Specifies the interval between sync cycles in minutes.|`2`|
 
-    ```
-    dxclient manage-dam-staging trigger-staging -h
-    ```
+Sample command containing the available options:
 
-- **Command options**
+```bash
+dxclient manage-dam-staging trigger-staging -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname>
+```
 
-    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+Sample command with specified values:
 
-    ```
-    -dxProtocol <value>
-    ```
-
-    Use this attribute to specify the host name of the DX server of the publisher (default: "")
-
-    ```
-    -hostname <value>
-    ```
-
-    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -dxPort <value>
-    ```
-
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
-
-    ```
-    -dxUsername <value> 
-    ```
-
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
-    (default: "")
-
-    ```
-    -dxPassword <value>
-    ```
-
-    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -damAPIPort <value>
-    ```
-
-    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -ringAPIPort <value>
-    ```
-
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -damAPIVersion <value>
-    ```
-
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -ringAPIVersion <value>
-    ```
-
-    Use this attribute to specify the host name of the target environment of the subscriber:
-
-    ```
-    -targetHostname <value>
-    ```
-
-    Use this attribute to specify the interval between two sync cycles. The unit of interval is in minutes. (default: "2 minutes")
-
-    ```
-    -interval <value>
-    ```
-
-- **Command:**
-
-    ```
-    dxclient manage-dam-staging trigger-staging -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname>
-    
-    ```
-
-    !!! example
-
-        ```
-        dxclient manage-dam-staging trigger-staging -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
-        ```
+```bash
+dxclient manage-dam-staging trigger-staging -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
+```
 
 ## Registering for DAM staging
 
 !!! note
     For hybrid deployments, refer to [Setting up staging for hybrid deployments](#setting-up-staging-for-hybrid-deployments).
 
-Use the `manage-dam-staging register-dam-subscriber` command to register the subscriber for DAM staging.
+Use the `manage-dam-staging trigger-staging` command to trigger DAM staging:
 
-- **Command description**
+```bash
+dxclient manage-dam-staging register-dam-subscriber
+```
 
-    Use the following command to register a subscriber for DAM staging:
+Run the following command to display help information:
 
-    ```
-    dxclient manage-dam-staging register-dam-subscriber
-    ```
+```bash
+dxclient manage-dam-staging register-dam-subscriber -h
+```
 
-- **Help command**
+The following options are also available for this command:
 
-    Use the following command to show the help information for the `manage-dam-staging register-dam-subscriber` command:
+| Command option | Description | Default |
+|----------------|-------------|---------|
+|`-dxProtocol <value>`|Specifies the protocol to connect to the publisher DX server.|""|
+|`-hostname <value>`|Specifies the hostname of the publisher DX server.|""|
+|`-dxPort <value>`|Specifies the port to connect to the publisher DX server.|"" (`443` for Kubernetes environments)|
+|`-dxUsername <value>`|Specifies the username required to authenticate with the publisher DX server.|""|
+|`-dxPassword <value>`|Specifies the password required to authenticate with the publisher DX server.|""|
+|`-damAPIPort <value>`|Specifies the port number of the publisher DAM server.|"" (`443` for Kubernetes environments)|
+|`-ringAPIPort <value>`|Specifies the port number of the publisher DX Core API server.|"" (`443` for Kubernetes environments)|
+|`-damAPIVersion <value>`|Specifies the publisher DAM API version number.|"" (`v1` for Kubernetes environments)|
+|`-ringAPIVersion <value>`|Specifies the publisher DX Core API version number.|"" (`v1` for Kubernetes environments)|
+|`-targetHostname <value>`|Specifies the subscriber target environment hostname.||
+|`-targetServerUsername <value>`|Specifies the subscriber DX Core server username.|""|
+|`-targetServerPassword <value>`|Specifies the subscriber DX Core server password.|""|
+|`-interval <value>`|Specifies the interval between sync cycles in minutes.|`2`|
 
-    ```
-    dxclient manage-dam-staging register-dam-subscriber -h
-    ```
+Sample command containing the available options:
 
-- **Command options**
+```bash
+dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword> -interval <interval>
+```
 
-    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+Sample command with specified values:
 
-    ```
-    -dxProtocol <value>
-    ```
-
-    Use this attribute to specify the host name of the DX server of the publisher
-    (default: "")
-
-    ```
-    -hostname <value>
-    ```
-
-    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -dxPort <value>
-    ```
-
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
-
-    ```
-    -dxUsername <value> 
-    ```
-
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
-
-    ```
-    -dxPassword <value>
-    ```
-
-    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -damAPIPort <value>
-    ```
-
-    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -ringAPIPort <value>
-    ```
-
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -damAPIVersion <value>
-    ```
-
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -ringAPIVersion <value>
-    ```
-
-    Use this attribute to specify the host name of the target environment of the subscriber:
-
-    ```
-    -targetHostname <value>
-    ```
-
-    Use this attribute to specify the Username of the DX Core server of the subscriber (default: ""):
-    
-    ```
-    -targetServerUsername <value>
-    ```
-
-    Use this attribute to specify the Password of the DX Core server of the subscriber (default: ""):
-    
-    ```
-    -targetServerPassword <value>
-    ```
-
-    Use this attribute to specify the interval between two sync cycles. The unit of interval is in minutes. (default: "2 minutes")
-
-    ```
-    -interval <value>
-    ```
-
-- **Commands:**
-
-    ```
-    dxclient manage-dam-staging register-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword> -interval <interval>
-    ```
-
-    !!! example
-
-        ```
-        dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com -interval 2
-        ```
+```bash
+dxclient manage-dam-staging register-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com -interval 2
+```
 
 ## Deregistering for DAM staging
 
-Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging.
+Use the `manage-dam-staging deregister-dam-subscriber` command to deregister the subscriber for DAM staging:
 
-- **Command description**
+```bash
+dxclient manage-dam-staging deregister-dam-subscriber
+```
 
-    Use the following command to deregister a subscriber for DAM staging:
+Run the following command to display help information:
 
-    ```
-    dxclient manage-dam-staging deregister-dam-subscriber
-    ```
+```bash
+dxclient manage-dam-staging deregister-dam-subscriber -h
+```
 
-- **Help command**
+The following options are also available for this command:
 
-    Use the following command to show the help information for the `manage-dam-staging deregister-dam-subscriber` command:
+| Command option | Description | Default |
+|----------------|-------------|---------|
+|`-dxProtocol <value>`|Specifies the protocol to connect to the publisher DX server.|""|
+|`-hostname <value>`|Specifies the hostname of the publisher DX server.|""|
+|`-dxPort <value>`|Specifies the port to connect to the publisher DX server.|"" (`443` for Kubernetes environments)|
+|`-dxUsername <value>`|Specifies the username required to authenticate with the publisher DX server.|""|
+|`-dxPassword <value>`|Specifies the password required to authenticate with the publisher DX server.|""|
+|`-damAPIPort <value>`|Specifies the port number of the publisher DAM server.|"" (`443` for Kubernetes environments)|
+|`-ringAPIPort <value>`|Specifies the port number of the publisher DX Core API server.|"" (`443` for Kubernetes environments)|
+|`-damAPIVersion <value>`|Specifies the publisher DAM API version number.|"" (`v1` for Kubernetes environments)|
+|`-ringAPIVersion <value>`|Specifies the publisher DX Core API version number.|"" (`v1` for Kubernetes environments)|
+|`-subscriberId <value>`|Specifies the subscriber ID of the target environment.||
 
-    ```
-    dxclient manage-dam-staging deregister-dam-subscriber -h
-    ```
+Sample command containing the available options:
 
-- **Command options**
+```bash
+dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
+```
 
-    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: "")
+Sample command with specified values:
 
-    ```
-    -dxProtocol <value>
-    ```
-
-    Use this attribute to specify the host name of the DX server of the publisher
-    (default: "")
-
-    ```
-    -hostname <value>
-    ```
-
-    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -dxPort <value>
-    ```
-
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
-
-    ```
-    -dxUsername <value> 
-    ```
-
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: "")
-
-    ```
-    -dxPassword <value>
-    ```
-
-    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -damAPIPort <value>
-    ```
-
-    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -ringAPIPort <value>
-    ```
-
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -damAPIVersion <value>
-    ```
-
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -ringAPIVersion <value>
-    ```
-
-    Use this attribute to specify the subscriber ID of the target environment of the subscriber:
-
-    ```
-    -subscriberId <value>
-    ```
-
-- **Commands:**
-
-    ```
-    dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -subscriberId <subscriberId>
-    ```
-
-    !!! example
-
-        ```
-        dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId d7e5e014-12a0-4dc5-a5d7-971fd4fa86f3
-        ```
+```bash
+dxclient manage-dam-staging deregister-dam-subscriber -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -subscriberId d7e5e014-12a0-4dc5-a5d7-971fd4fa86f3
+```
 
 ## Updating secrets for DAM staging
 
-Use the `manage-dam-staging update-secrets` command to update secrets of the publisher and subscriber for DAM staging.
+Use the `manage-dam-staging update-secrets` command to update the publisher and subscriber secrets for DAM staging:
 
-- **Command description**
+```bash
+dxclient manage-dam-staging update-secrets
+```
 
-    You can update the secrets of a publisher and subscriber for DAM staging with the following command:
+Run the following command to display help information:
 
-    ```
-    dxclient manage-dam-staging update-secrets
-    ```
+```bash
+dxclient manage-dam-staging update-secrets -h
+```
 
-- **Help command**
+The following options are also available for this command:
 
-    The following command shows the help information for `manage-dam-staging update-secrets` command usage:
+| Command option | Description | Default |
+|----------------|-------------|---------|
+|`-dxProtocol <value>`|Specifies the protocol to connect to the publisher DX server.|""|
+|`-hostname <value>`|Specifies the hostname of the publisher DX server.|""|
+|`-dxPort <value>`|Specifies the port to connect to the publisher DX server.|"" (`443` for Kubernetes environments)|
+|`-dxUsername <value>`|Specifies the username required to authenticate with the publisher DX server.|""|
+|`-dxPassword <value>`|Specifies the password required to authenticate with the publisher DX server.|""|
+|`-damAPIPort <value>`|Specifies the port number of the publisher DAM server.|"" (`443` for Kubernetes environments)|
+|`-ringAPIPort <value>`|Specifies the port number of the publisher DX Core API server.|"" (`443` for Kubernetes environments)|
+|`-damAPIVersion <value>`|Specifies the publisher DAM API version number.|"" (`v1` for Kubernetes environments)|
+|`-ringAPIVersion <value>`|Specifies the publisher DX Core API version number.|"" (`v1` for Kubernetes environments)|
+|`-targetHostname <value>`|Specifies the subscriber target environment hostname.||
+|`-targetServerUsername <value>`|Specifies the subscriber DX Core server username.|""|
+|`-targetServerPassword <value>`|Specifies the subscriber DX Core server password.|""|
 
-    ```
-    dxclient manage-dam-staging update-secrets -h
-    ```
+Sample command containing the available options:
 
-- **Command options**
+```bash
+dxclient manage-dam-staging update-secrets -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
+```
 
-    Use this attribute to specify the protocol with which to connect to the DX server of the publisher (default: ""):
+Sample command with specified values:
 
-    ```
-    -dxProtocol <value>
-    ```
-
-    Use this attribute to specify the host name of the DX server of the publisher (default: ""):
-
-    ```
-    -hostname <value>
-    ```
-
-    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -dxPort <value>
-    ```
-
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: ""):
-
-    ```
-    -dxUsername <value> 
-    ```
-
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/> (default: ""):
-
-    ```
-    -dxPassword <value>
-    ```
-
-    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -damAPIPort <value>
-    ```
-
-    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -ringAPIPort <value>
-    ```
-
-    Use this attribute to specify the API version number of DAM of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -damAPIVersion <value>
-    ```
-
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -ringAPIVersion <value>
-    ```
-
-    Use this attribute to specify the host name of the target environment of the subscriber:
-
-    ```
-    -targetHostname <value>
-    ```
-
-    Use this attribute to specify the Username of the DX Core server of the subscriber (default: ""):
-
-    ```
-    -targetServerUsername <value>
-    ```
-
-    Use this attribute to specify the Password of the DX Core server of the subscriber (default: ""):
-
-    ```
-    -targetServerPassword <value>
-    ```
-
-- **Commands:**
-
-    ```
-    dxclient manage-dam-staging update-secrets -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion> -targetHostname <targetHostname> -targetServerUsername <targetServerUsername> -targetServerPassword <targetServerPassword>
-    ```
-
-    !!! example
-
-        ```
-        dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
-        ```
+```bash
+dxclient manage-dam-staging update-secrets -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -targetServerUsername xxxx -targetServerPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1 -targetHostname native-kube-dam-production.team-q-dev.com
+```
 
 ## Verifying subscriber connectivity during secret rotation
 
@@ -508,7 +261,47 @@ To configure the verification interval in the Helm values:
     verifySubscribersIntervalInMinutes: 10
     ```
 
-3. Run `helm upgrade` to apply the updated values to the cluster.
+3. Run a [helm upgrade](../../../../deployment/install/container/helm_deployment/update_helm_deployment.md) to apply the updated values to the cluster.
+
+## Getting all subscriber details for DAM staging
+
+Use the `manage-dam-staging get-all-subscribers` command to get details for all registered subscribers for DAM staging:
+
+```bash
+dxclient manage-dam-staging get-all-subscribers
+```
+
+Run the following command to display help information:
+
+```bash
+dxclient manage-dam-staging get-all-subscribers -h
+```
+
+The following options are also available for this command:
+
+| Command option | Description | Default |
+|----------------|-------------|---------|
+|`-dxProtocol <value>`|Specifies the protocol to connect to the publisher DX server.|""|
+|`-hostname <value>`|Specifies the hostname of the publisher DX server.|""|
+|`-dxPort <value>`|Specifies the port to connect to the publisher DX server.|"" (`443` for Kubernetes environments)|
+|`-dxUsername <value>`|Specifies the username required to authenticate with the publisher DX server.|""|
+|`-dxPassword <value>`|Specifies the password required to authenticate with the publisher DX server.|""|
+|`-damAPIPort <value>`|Specifies the port number of the publisher DAM server.|"" (`443` for Kubernetes environments)|
+|`-ringAPIPort <value>`|Specifies the port number of the publisher DX Core API server.|"" (`443` for Kubernetes environments)|
+|`-damAPIVersion <value>`|Specifies the publisher DAM API version number.|"" (`v1` for Kubernetes environments)|
+|`-ringAPIVersion <value>`|Specifies the publisher DX Core API version number.|"" (`v1` for Kubernetes environments)|
+
+Sample command containing the available options:
+
+```bash
+dxclient manage-dam-staging get-all-subscribers -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion>
+```
+
+Sample command with specified values:
+
+```bash
+dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
+```
 
 Enabled subscriber response:
 
@@ -535,174 +328,92 @@ Disabled subscriber response:
 !!!note
     A manually disabled subscriber sets `disabledReason` to `MANUAL`, whereas a subscriber disabled by a heartbeat check sets `disabledReason` to `AUTH_FAILURE`.
 
-## Getting all subscribers details for DAM staging
+### Handling unstaged items
 
-Use the `manage-dam-staging get-all-subscribers` command to get all the registered subscribers details for DAM staging.
+Media assets and collections are not staged from publisher to subscriber if they share the same name but have different unique IDs on the publisher and subscriber servers.
 
-- **Command description**
+Items are not staged in these scenarios:
 
-    You can get all subscribers details for DAM staging with the following command:
+- A collection shares the same name on the same level but has a different unique ID across collections.
+- A media asset shares the same file name in the same collection.
+- A rendition shares the same custom URL in the set.
+- A version is created for a rendition (for example, v1, v2, or v3).
 
-    ```
-    dxclient manage-dam-staging get-all-subscribers
-    ```
-
-- **Help command**
-
-    The following command shows the help information for `manage-dam-staging get-all-subscribers` command usage:
-
-    ```
-    dxclient manage-dam-staging get-all-subscribers -h
-    ```
-
-- **Command options**
-
-    Use this attribute to specify the protocol with which to connect to the DX server  of the publisher (default: "")
-
-    ```
-    -dxProtocol <value>
-    ```
-
-    Use this attribute to specify the host name of the DX server of the publisher
-     (default: "")
-
-    ```
-    -hostname <value>
-    ```
-
-    Use this attribute to specify the port on which to connect to the DX server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -dxPort <value>
-    ```
-
-    Use this attribute to specify the user name that is required for authenticating with the DX server of the publisher (default: "")
-
-    ```
-    -dxUsername <value> 
-    ```
-
-    Use this attribute to specify the password that is required for authenticating with the DX server of the publisher <br/>
-    (default: "")
-
-    ```
-    -dxPassword <value>
-    ```
-
-    Use this attribute to specify the port number of the DAM server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -damAPIPort <value>
-    ```
-
-    Use this attribute to specify the port number of the DX Core API server of the publisher (default: ""; default port for any Kubernetes environment is 443):
-
-    ```
-    -ringAPIPort <value>
-    ```
-
-    Use this attribute to specify the API version number of DAM of the publisher 
-    (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -damAPIVersion <value>
-    ```
-
-    Use this attribute to specify the API version number of DX Core of the publisher (default: ""; default version for any Kubernetes environment is v1):
-
-    ```
-    -ringAPIVersion <value>
-    ```
-
-- **Commands:**
-
-    To get all subscribers details:
-
-    ```
-    dxclient manage-dam-staging get-all-subscribers -dxProtocol <dxProtocol> -hostname <hostname> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -damAPIPort <damAPIPort> -ringAPIPort <ringAPIPort> -damAPIVersion <damAPIVersion> -ringAPIVersion <ringAPIVersion>
-    ```
-
-    !!! example
-
-        ```
-        dxclient manage-dam-staging get-all-subscribers -dxProtocol https -hostname native-kube-dam-staging.team-q-dev.com -dxPort 443 -dxUsername xxxx -dxPassword xxxx -damAPIPort 443 -ringAPIPort 443 -damAPIVersion v1 -ringAPIVersion v1
-        ```
-
-!!! note
-        Media assets and collections are not staged from publisher to subscriber if the media assets or collections exist with the same name and have a different unique id on the publisher and the subscriber servers.
-
-        The following list enumerates the scenarios where items are not staged from publisher to subscriber:
-        
-        - Collection - When there is a same collection name on the same level, but a unique name in the entire set of collections
-        - Media - When there is a same file name in the same collection 
-        - Rendition - When there is a same custom URL in the entire set
-        - Version - When the version is for a rendition (for example, v1, v2, v3)
-
-        If items are not staged to the subscriber, you can find the respective log messages in the DAM logs of the subscriber.
+If items are not staged to the subscriber, check the subscriber DAM logs for error messages.
 
 ## Using WCM with DAM staging
 
-The typical setup involves a WCM staging/authoring server connected to DAM staging/authoring, and a separate WCM rendering connected to DAM rendering (there could be multiple WCM rendering/DAM rendering environments, for example, a Blue/Green setup).
+When WCM content containing DAM asset references syndicates from an authoring environment to a rendering environment, the embedded DAM URLs must resolve to the rendering server instead of the authoring server.
 
-Syndication is set up for WCM between staging/authoring and WCM rendering.
+To prevent broken asset links, configure one of two host-resolution methods in `WCMConfigService` using the WebSphere Application Server administration console:
 
-DAM staging is set up between DAM staging/authoring and DAM rendering.
+- Configure `WCMConfigService` to replace the authoring hostname and port with rendering server details:
 
-**(Optional)** You can configure WCM `WCMConfigService` in the WAS Admin Console to allow switching the host name (and port) used for DAM references in WCM using the following:
+    1. Add or update the following properties in `WCMConfigService`:
 
-```
-dam.host.overwrite.port=... dam.host.overwrite=...
-```
+        ```properties
+        dam.host.overwrite=<rendering-hostname>
+        dam.host.overwrite.port=<rendering-port>
+        ```
 
-!!! example
+        For example:
 
-    ```
-    dam.host.overwrite=myserver.com
-    dam.host.overwrite.port=3000
-    ```
+        ```properties
+        dam.host.overwrite=myserver.com
+        dam.host.overwrite.port=3000
+        ```
 
-You must restart the DX Core JVM for changes to take effect.
+    2. Restart the DX Core JVM.
 
-**Effect**
+        When set, the REST API, WCM Authoring UI, and WCM API replace the authoring hostname and port in DAM references with the configured values. For example, if content syndicates from staging to production with `dam.host.overwrite=production.hcl.com` and `dam.host.overwrite.port=3000`:
 
-If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have the overwritten host name and port.
+        DAM receives:
 
-!!! example 
-    If a content item is moved from the staging environment to production, and production has the host overwrite set to `production.hcl.com`, then all DAM references are returned with `production.hcl.com`. <br>For instance, `production.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
+        ```text
+        [staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true](https://staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true)
+        ```
 
+        DAM returns:
 
-**(Optional)** Starting CF210, you can configure WCM `WCMConfigService` in the WAS Admin Console to use relative URLs for DAM references in WCM using the following:
+        ```text
+        [production.hcl.com:3000/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true](https://production.hcl.com:3000/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true)
+        ```
 
-```
-dam.host.relative=true
-```
+- Configure `WCMConfigService` to convert DAM asset references to relative paths:
 
-!!! example
+    1. Add or update the following property in `WCMConfigService`:
 
-    ```
-    dam.host.relative=true
-    ```
+        ```properties
+        dam.host.relative=true
+        ```
 
-You must restart the DX Core JVM for changes to take effect.
+    2. Restart the DX Core JVM.
 
-**Effect**
+        When set to `true`, the REST API, WCM Authoring UI, and WCM API strip the hostname and port from DAM references. For example, if content syndicates from staging to production with relative URLs enabled:
 
-If the properties are in place when using the REST API or WCM Admin UI or WCM API, the returned DAM references have no hostname or port.
+        DAM receives:
 
-!!! example 
-    If a content item is moved from the staging environment to production, and production has the relative URL option enabled, then all DAM references are returned relatively. <br>For instance, `/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true` even if we received the following from syndication: `staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true`.
+        ```text
+        [staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true](https://staging.hcl.com/dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true)
+        ```
+
+        DAM returns:
+
+        ```text
+        /dx/api/dam/v1/collections/390e9808-a6d2-4ebe-b6fb-f10046ebf642/items/fd18083c-d84b-4816-af6e-583059c73122/renditions/7855bfae-d741-41f7-815f-d15f427a4da0?binary=true
+        ```
 
 ## Setting up staging for hybrid deployments
 
 The following sections also apply for hybrid deployments:
 
-- [Configuring staging hostname](#configure-staging-hostname)
-- [Configuring LTPA Token Refresh Time](#configuring-ltpa-token-refresh-time)
+- [Configuring staging hostname](#configuring-staging-hostname)
+- [Configuring LTPA token refresh time](#configuring-ltpa-token-refresh-time)
 - [Configuring LDAP](#configuring-ldap)
 
-### Creating Kubernetes secrets containing the portal admin user credentials 
+### Creating Kubernetes secrets containing portal administrator credentials
 
-Run the following command on each environment to make the credentials known for staging:
+Run the following command on each environment to create staging credentials:
 
 ```sh
 kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
@@ -712,15 +423,13 @@ kubectl -n <namespace> create secret generic <helm release name>-dam-staging \
 --from-literal='password-<hostname2>'='<base64 encoded username from hostname2>'
 ```
 
-The secrets consist of the username and password for each environment. You can create secrets for two or more hostnames depending on the number of subscribers.
-
-When creating secrets, you must manually encode all credentials in Base64.
+Secrets contain the username and password for each environment. Create secrets for additional hostnames based on the number of subscribers, and encode all credentials in base64.
 
 ### Registering the subscriber using REST API
 
-1. Log in and get an LTPA token by using the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin).
+1. Request an LTPA token using the [RingAPI `POST /auth/login` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/ring-api/#operation/authLogin){target="_blank"}.
 
-2. Use the [DAM API `POST /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.create) on the Publisher with the LTPA token from Step 1 and register the subscriber. For example: 
+2. Register the subscriber using the [DAM API `POST /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.create){target="_blank"} on the publisher with the LTPA token you requested from Step 1. For example:
 
     ```json
     {
@@ -729,5 +438,5 @@ When creating secrets, you must manually encode all credentials in Base64.
       "status": true
     }
     ```
-    
-3. (Optional) Verify the registration by using the [DAM API `GET /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.findAll).
+
+3. (Optional) Verify registration using the [DAM API `GET /staging/subscriber` endpoint](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/StagingController.findAll){target="_blank"}.
