@@ -8,7 +8,7 @@ This section explains how to update IQ and its integration with an HCL Digital E
 
 ## Prerequisites
 
-- Obtain the `hcl-dx-iq` Helm chart for the IQ version you want to upgrade to. The chart provides the corresponding IQ images. For the official source and version information, see [Installing IQ](installation/index.md) and [Downloading and deploying HCL products from a Harbor Repository](../../get_started/download/harbor_container_registry.md).
+- Obtain the `hcl-dx-iq` Helm chart for the IQ version you want to upgrade to. The chart provides the corresponding IQ images. For more information on the Helm chart and IQ version, refer to [Installing IQ](installation/index.md) and [Downloading and deploying HCL products from a Harbor Repository](../../get_started/download/harbor_container_registry.md){target="_blank"}.
 - Confirm that the IQ and DX versions are no more than two releases apart:
 
     1. List the Helm releases in the namespace:
@@ -17,9 +17,11 @@ This section explains how to update IQ and its integration with an HCL Digital E
         helm list --namespace <YOUR_NAMESPACE>
         ```
 
+        `<YOUR_NAMESPACE>`: The Kubernetes namespace.
+
     2. Use the [Helm chart and CF versions](../../get_started/download/harbor_container_registry.md#helm-chart-and-cf-versions) table to identify the CF version associated with each chart version.
 
-    3. Confirm that the target IQ chart is available in your repository. For instructions, see [Deploying the IQ backend components](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#locating-the-latest-helm-chart-and-images).
+    3. Confirm that the target IQ chart is available in your repository. For instructions, refer to [Deploying the IQ backend components](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#locating-the-latest-helm-chart-and-images).
 
 - Back up IQ data and the database associated with the Core deployment before applying an update. For more information, refer to [Backing up and restoring data](installation/backup-restore.md).
 
