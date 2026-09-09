@@ -13,13 +13,13 @@ Starting from Cumulative Fix (CF) 238, CF packages include Java 8 binaries. Your
 
 ## Instructions
 
-To avoid Java Runtime failures during CF upgrades, perform the following steps:
+To avoid Java Runtime Environment (JRE) failures during CF upgrades, perform the following steps:
 
 ### Installing Java 8 using the IIM
 
 The IBM Java 8 Software Development Kit (SDK) for the WebSphere Application Server (WAS) is distributed as a fix pack through IBM Fix Central and installed using IBM Installation Manager (IIM). Do not replace the Java Development Kit (JDK) manually. Install it through IIM to ensure proper package tracking.
 
-Before using IBM Installation Manager (IIM) for this upgrade path, ensure the IIM runtime itself is running on Java 8 or newer. For more information, refer to [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
+Before using IBM Installation Manager (IIM) for this upgrade path, ensure the IIM runtime itself is running on Java 8 or newer. For more information, refer to [Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
 
 1. Download the IBM Java 8 SDK package:
 
@@ -158,19 +158,7 @@ Installing the SDK does not automatically switch profiles to use it. Each profil
 
 ### Verifying end-to-end resolution
 
-Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve to Java 8, not Java 7.
-
-- To verify IIM JRE:
-
-    === "Linux or AIX"
-        ```bash
-        ${IIM_INSTALL_ROOT}/eclipse/jre/bin/java -version
-        ```
-
-    === "Windows"
-        ```bash
-        "${IIM_INSTALL_ROOT}\eclipse\jre\bin\java.exe" -version
-        ```
+Confirm that the ConfigEngine JRE, the profile JVM and command defaults, and the IIM JRE all resolve to Java 8, not Java 7. <!--we mentioned confirming profile JVM, are there commands for that?-->
 
 - To verify ConfigEngine JRE:
 
@@ -184,10 +172,21 @@ Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve t
         "${WAS_INSTALL_ROOT}\AppServer\java\bin\java.exe" -version
         ```
 
+- To verify IIM JRE:
+
+    === "Linux or AIX"
+        ```bash
+        ${IIM_INSTALL_ROOT}/eclipse/jre/bin/java -version
+        ```
+
+    === "Windows"
+        ```bash
+        "${IIM_INSTALL_ROOT}\eclipse\jre\bin\java.exe" -version
+        ```
 
 ### Applying CF packages to your environment
 
-Once all Java versions have been verified, proceed with upgrade. See [Applying a Combined Cumulative Fix](https://help.hcl-software.com/digital-experience/9.5/CF237/deployment/install/traditional/cf_install/)
+Once all Java versions are verified, proceed with the upgrade. For details, refer to [Applying a Combined Cumulative Fix](../../../deployment/install/traditional/cf_install/index.md)
 
 There is no supported path to apply a new CF while remaining on Java 7. This requirement applies to all future CFs.
 
@@ -205,7 +204,7 @@ There is no supported path to apply a new CF while remaining on Java 7. This req
     - [Installing a Java SDK using Installation Manager](https://www.ibm.com/docs/en/was/8.5.5?topic=iusjtev8dos-installing-websphere-sdk-java-technology-edition-version-80-using-gui){target="_blank"}
     - [Migrating to Java Platform, Standard Edition 7 or 8](https://www.ibm.com/docs/en/was/8.5.5?topic=applications-migrating-java-se-7-8){target="_blank"}
     - [managesdk command](https://www.ibm.com/docs/en/was/8.5.5?topic=tools-managesdk-command){target="_blank"}
-    - [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}
+    - [Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}
     - [IBM Fix Central (SDK downloads)](https://www.ibm.com/support/fixcentral){target="_blank"}
     - [WAS 8.5.5 system requirements](https://www.ibm.com/docs/en/was/8.5.5?topic=environment-installing-websphere-application-server-distributed-operating-systems){target="_blank"}
     - [Switching Java of WebSphere Profiles](https://www.ibm.com/docs/en/tnpm/1.4.5?topic=management-upgrading-java){target="_blank"}
