@@ -121,7 +121,7 @@ Alternatively, the cache settings can be set in the Access`ControlDataManagement
 
 In rendering environments, retain the default value of `false`.
 
-SBe cautious when configuring `accessControlDataManagement.acucIgnoreResourceTypes`, as it can interfere with strict access controls in environments where role assignments vary by workflow stage.
+Be cautious when configuring `accessControlDataManagement.acucIgnoreResourceTypes`, as it can interfere with strict access controls in environments where role assignments vary by workflow stage.
 
 #### WCM Configuration Service
 
@@ -137,7 +137,7 @@ SBe cautious when configuring `accessControlDataManagement.acucIgnoreResourceTyp
 
 Enable the user cache and subscriberOnly setting. The `subscriberOnly` setting should be enabled only for environments that will be subscribed to and not syndicated from. We recommend this be enabled in a production rendering environment.
 
-**HSettingProperties in the Integrated Solutions Console**
+**Setting Properties in the Integrated Solutions Console**
 
 To set the properties in the WebSphere Integrated Solutions Console, follow these steps:
 
