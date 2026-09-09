@@ -232,15 +232,7 @@ The default in-place editing mode can be overridden in EditableElement tags by u
 
 ## Defining the editor used for in-place editing
 
-From CF208 onwards, the TinyMCE editor can be used as the embedded editor, and the CK editor is used as the in-place editor. To use TinyMCE as the in-place editor, add this setting:
-
-- `inplaceEdit.defaultRichTextEditor=TinyMCE`
-
-To use the Core Editor as the in-place editor, add this setting:
-
-- `inplaceEdit.defaultRichTextEditor=CoreEditor`
-
-The supported values for `inplaceEdit.defaultRichTextEditor` are:
+From CF208 onwards, the `inplaceEdit.defaultRichTextEditor` property controls which rich text editor is used for in-place editing.
 
 | Value | Description |
 |-------|-------------|
@@ -248,13 +240,11 @@ The supported values for `inplaceEdit.defaultRichTextEditor` are:
 | `TinyMCE` | Uses the TinyMCE editor for inplace editing. |
 | `CKEditor` | Uses the CKEditor for inplace editing. |
 
-If `inplaceEdit.defaultRichTextEditor` is set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
+If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
 
 ## Defining the default authoring rich text editor
 
-The `authoring.defaultRichTextEditor` property controls which rich text editor is used as the default for new or unconfigured authoring portlet instances. This property is set in the **WCM WCMConfigService** resource environment provider.
-
-The supported values are:
+The `authoring.defaultRichTextEditor` property controls which rich text editor is used as the default for new or unconfigured authoring portlet instances.
 
 | Value | Description |
 |-------|-------------|
@@ -262,9 +252,7 @@ The supported values are:
 | `TinyMCE` | Uses the TinyMCE editor as the default. |
 | `CKEditor` | Uses the CKEditor as the default. |
 
-If this property is not set, the platform default is used (TinyMCE on Liberty/WebEngine, CKEditor on WebSphere/Core).
-
-If `authoring.defaultRichTextEditor` is set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
+If this property is not set, the platform default is used (TinyMCE on Liberty/WebEngine, CKEditor on WebSphere/Core). If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
 
 ## Default css styles for in-place editable fields
 

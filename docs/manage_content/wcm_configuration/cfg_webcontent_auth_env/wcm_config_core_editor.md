@@ -11,6 +11,9 @@ Core Editor is available in two contexts:
 - **WCM Authoring Portlet** — Used for editing rich text elements in the traditional authoring form.
 - **Site Manager (Inplace Editing)** — Used for inline editing of rich text content directly on the rendered page.
 
+!!! danger "Content transformation when switching editors"
+    Opening and saving rich text elements or rich text components that were originally created using another editor (TinyMCE or CKEditor) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed. Review the [Known limitations](#known-limitations) and [Content security](#content-security) sections before switching editors on existing content.
+
 ## Enabling Core Editor
 
 Core Editor is enabled by default. You can control its availability and set it as the default RTE using Helm values (for container deployments) or WCM WCMConfigService resource environment provider (REP) properties.
@@ -35,17 +38,14 @@ Core Editor is enabled by default. You can control its availability and set it a
     | `incubator.configuration.coreEditor.enabled` | boolean | `true` | If `true`, Core Editor appears as an RTE option in the authoring portlet and is accepted as a valid inplace RTE. If `false`, Core Editor is hidden and any existing selections fall back silently to the platform default. |
     | `incubator.configuration.coreEditor.default` | boolean | `false` | If `true` (and `enabled` is also `true`), Core Editor is set as the default RTE for both the authoring portlet and Site Manager inplace editing. |
 
-    After changing Helm values, run `helm upgrade` to apply the changes. The affected Pods restart automatically.
+    These Helm values provision the corresponding WCM WCMConfigService REP custom properties described in the [On-Premises section](#using-rep-properties-on-premises). Specifically, `coreEditor.enabled` maps to `core.editor.enabled`, and `coreEditor.default` sets both `authoring.defaultRichTextEditor` and `inplaceEdit.defaultRichTextEditor` to `CoreEditor`.
+
+    For instructions on applying Helm value changes, see [Upgrading Helm Deployment](../../../deployment/install/container/helm_deployment/update_helm_deployment.md).
 
 ### Using REP properties (On-Premises)
 
 === "On-Premises"
-    Configure the following custom properties in the **WCM WCMConfigService** resource environment provider using the WebSphere Integrated Solutions Console:
-
-    1. Log in to the **WebSphere Integrated Solutions Console** as an administrator.
-    2. Navigate to **Resources** > **Resource Environment** > **Resource Environment Providers** > **WCM WCMConfigService**.
-    3. Click **Custom properties**.
-    4. Edit or create the following properties:
+    Configure the following custom properties in the **WCM WCMConfigService** resource environment provider. For instructions on setting service configuration properties, see [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md).
 
     | Property | Default | Description |
     |----------|---------|-------------|
@@ -53,8 +53,7 @@ Core Editor is enabled by default. You can control its availability and set it a
     | `authoring.defaultRichTextEditor` | *(unset)* | Set to `CoreEditor` to make Core Editor the default RTE for new or unconfigured authoring portlet instances. Other supported values: `TinyMCE`, `CKEditor`. |
     | `inplaceEdit.defaultRichTextEditor` | *(unset)* | Set to `CoreEditor` to make Core Editor the default RTE for Site Manager inplace editing. Other supported values: `TinyMCE`, `CKEditor`. |
 
-    5. Save your changes.
-    6. Restart the Portal server to apply the changes.
+    Restart the Portal server after making changes.
 
 ## Using Core Editor in the WCM authoring portlet
 
@@ -81,50 +80,15 @@ Core Editor can also be used as the rich text editor for Site Manager inplace ed
 
 To set Core Editor as the inplace editor:
 
-=== "Containers"
-    Set the following Helm value:
-
-    ```yaml
-    incubator:
-      configuration:
-        coreEditor:
-          enabled: true
-          default: true
-    ```
-
-    When `default` is set to `true`, Core Editor is used for both authoring portlet and Site Manager inplace editing.
-
-=== "On-Premises"
-    Add the following custom property to the **WCM WCMConfigService** resource environment provider:
-
-    - `inplaceEdit.defaultRichTextEditor` = `CoreEditor`
-
-    Restart the Portal server after making this change.
+- **Containers:** Set `coreEditor.default` to `true` in your Helm values. See [Using Helm values](#using-helm-values-containers) for the configuration reference.
+- **On-Premises:** Set `inplaceEdit.defaultRichTextEditor` to `CoreEditor` in the **WCM WCMConfigService** resource environment provider and restart the Portal server.
 
 ## Setting Core Editor as the default RTE
 
 When Core Editor is set as the default, it is automatically selected for new or unconfigured authoring portlet instances and for Site Manager inplace editing.
 
-=== "Containers"
-    Set `incubator.configuration.coreEditor.default` to `true` in your Helm values:
-
-    ```yaml
-    incubator:
-      configuration:
-        coreEditor:
-          enabled: true
-          default: true
-    ```
-
-    This provisions both `authoring.defaultRichTextEditor=CoreEditor` and `inplaceEdit.defaultRichTextEditor=CoreEditor` in the WCM configuration.
-
-=== "On-Premises"
-    Create or update the following custom properties in the **WCM WCMConfigService** resource environment provider:
-
-    - `authoring.defaultRichTextEditor` = `CoreEditor`
-    - `inplaceEdit.defaultRichTextEditor` = `CoreEditor`
-
-    Restart the Portal server after making these changes.
+- **Containers:** Set `coreEditor.default` to `true` in your Helm values. This provisions both `authoring.defaultRichTextEditor=CoreEditor` and `inplaceEdit.defaultRichTextEditor=CoreEditor`. See [Using Helm values](#using-helm-values-containers) for the configuration reference.
+- **On-Premises:** Set both `authoring.defaultRichTextEditor` and `inplaceEdit.defaultRichTextEditor` to `CoreEditor` in the **WCM WCMConfigService** resource environment provider and restart the Portal server.
 
 !!! note
     The `core.editor.enabled` property must be `true` for the default setting to take effect. If `core.editor.enabled` is `false`, the default setting is ignored and the platform default editor is used instead.
@@ -133,18 +97,8 @@ When Core Editor is set as the default, it is automatically selected for new or 
 
 To hide Core Editor from the RTE dropdown and prevent it from being used:
 
-=== "Containers"
-    Set `incubator.configuration.coreEditor.enabled` to `false` in your Helm values:
-
-    ```yaml
-    incubator:
-      configuration:
-        coreEditor:
-          enabled: false
-    ```
-
-=== "On-Premises"
-    Set the `core.editor.enabled` property to `false` in the **WCM WCMConfigService** resource environment provider and restart the Portal server.
+- **Containers:** Set `coreEditor.enabled` to `false` in your Helm values. See [Using Helm values](#using-helm-values-containers) for the configuration reference.
+- **On-Premises:** Set `core.editor.enabled` to `false` in the **WCM WCMConfigService** resource environment provider and restart the Portal server.
 
 When Core Editor is disabled:
 
@@ -174,6 +128,12 @@ Core Editor supports the following editing features:
 | Line height | Adjusts the line spacing of selected text. |
 | Clear formatting | Removes all inline formatting from selected text. |
 | Fullscreen mode | Expands the editor to fill the entire viewport.
+
+## Content security
+
+Core Editor enforces content security through its schema-based architecture. Only HTML elements and attributes that correspond to registered editor extensions are accepted. Content that does not match the editor schema is removed when the content is loaded or saved.
+
+`<iframe>` elements are not accepted by Core Editor due to its current content security settings. Embedded frames are removed from content when loaded or saved in the editor.
 
 ## Known limitations
 
