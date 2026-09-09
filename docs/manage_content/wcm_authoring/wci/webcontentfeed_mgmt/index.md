@@ -1,8 +1,8 @@
-# Web Content feed management
+# Web content feed management
 
 To access a feed you created on your source server, you must create a feed configuration.
 
-- **[Creating a feed configuration](wci_feed_manage_working.md)**  
+- **[Creating a feed configuration](wci_feed_manage_config.md)**  
 To manage your web content feeds, you need to create a feed configuration.
 - **[Creating a feed job](wci_feed_manage_schedule.md)**  
 You use a feed job to manage a group of feed configurations and apply a schedule to them.

@@ -2,7 +2,7 @@
 
 To manage your web content feeds, you need to create a feed configuration.
 
-1. Go to **Administration** \> **Portal Content** \> **Feed Configurations**.
+1. Go to **Administration > Content Management > Feed Configurations**.
 2. Click **New**.
 3. Enter a name for the feed configuration.
 4. Enter the URL to the feed.
