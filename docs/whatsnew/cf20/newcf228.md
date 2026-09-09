@@ -6,7 +6,6 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Additional units of measurement for style properties
 - TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 **Digital Experience 8.5 and 9.0 Versions**
@@ -17,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - DAM - New parameter for bulk upload warning
+- Presentation Designer - Additional units of measurement for style properties
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 - WAS, JDK, and iFix versions
@@ -51,14 +51,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf228) section.
 
-### Presentation Designer - Additional units of measurement for style properties
-
-=== "Containers"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
-
-=== "On-Premises"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
-
 ### TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 === "Containers"
@@ -87,6 +79,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now configure a warning to appear if the number of rich media assets intended for bulk upload exceeds a certain limit using the `maxBulkUploadWithoutWarning` parameter. You can configure this parameter in Helm. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md).
+
+### Presentation Designer - Additional units of measurement for style properties
+
+=== "Containers"
+    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
