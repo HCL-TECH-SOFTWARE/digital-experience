@@ -19,7 +19,7 @@ To avoid Java Runtime failures during CF upgrades, perform the following steps:
 
 The IBM Java 8 Software Development Kit (SDK) for the WebSphere Application Server (WAS) is distributed as a fix pack through IBM Fix Central and installed using IBM Installation Manager (IIM). Do not replace the Java Development Kit (JDK) manually. Install it through IIM to ensure proper package tracking.
 
-Before using IBM Installation Manager for this upgrade path, ensure the IIM runtime is running on Java 8 or newer. For more information, refer to [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
+Before using IBM Installation Manager (IIM) for this upgrade path, ensure the IIM runtime itself is running on Java 8 or newer. For more information, refer to [IBM Installation Manager Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
 
 1. Download the IBM Java 8 SDK package:
 
@@ -30,7 +30,7 @@ Before using IBM Installation Manager for this upgrade path, ensure the IIM runt
     5. Search for **Individual fix IDs** matching the pattern `8.5.5.*-WS-IBMWASJAVA*` (for example, `8.5.5.24-WS-IBMWASJAVA-LinuxX64`), and then select **Continue**.
     6. Download the appropriate SDK package for your OS and architecture.
 
-2. Install the IBM Java 8 SDK using the IBM IIM in silent mode:
+2. Install the IBM Java 8 SDK using the IIM in silent mode:
 
     ```bash
     ${IIM_INSTALL_ROOT}/eclipse/tools/imcl install \
@@ -160,16 +160,16 @@ Installing the SDK does not automatically switch profiles to use it. Each profil
 
 Confirm that ConfigEngine, the profile JVM, and any launch scripts all resolve to Java 8, not Java 7.
 
-- To verify IBMIM JRE:
+- To verify IIM JRE:
 
     === "Linux or AIX"
         ```bash
-        ${IBMIM_INSTALL_ROOT}/eclipse/jre/bin/java -version
+        ${IIM_INSTALL_ROOT}/eclipse/jre/bin/java -version
         ```
 
     === "Windows"
         ```bash
-        "${IBMIM_INSTALL_ROOT}\eclipse\jre\bin\java.exe" -version
+        "${IIM_INSTALL_ROOT}\eclipse\jre\bin\java.exe" -version
         ```
 
 - To verify ConfigEngine JRE:
@@ -196,7 +196,7 @@ There is no supported path to apply a new CF while remaining on Java 7. This req
 | Scenario | Symptom | Resolution |
 |----------|---------|------------|
 | Java 8 is installed on the machine but the profile still points to Java 7. | Class version errors during `applyCF.sh` | Run `managesdk` to switch the profile to Java 8. |
-| WAS SDK and profiles are on Java 8, but the IBM IIM JRE is still running on Java 7. | Class version errors | Update IBM IIM to use Java 8. |
+| WAS SDK and profiles are on Java 8, but the IIM JRE is still running on Java 7. | Class version errors | Update IIM to use Java 8. |
 | Multiple nodes in the topology use inconsistent SDK versions. | Runtime class and method resolution failures (for example, `NoSuchMethodError`) on non-upgraded nodes.| Update all nodes to Java 8 SDK. |
 
 ???+ info "Related information"
