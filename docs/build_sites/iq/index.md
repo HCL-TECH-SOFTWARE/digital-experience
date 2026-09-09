@@ -113,6 +113,8 @@ This section provides detailed instructions for enabling, configuring, and deplo
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
+- **[Updating IQ using Helm](./updating.md)**  
+This section explains how to update the IQ Helm chart independently from the DX Helm chart while maintaining the supported version difference of up to two releases.
 - **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  

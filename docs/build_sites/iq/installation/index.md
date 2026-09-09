@@ -60,5 +60,6 @@ This section lists all environment variables available for the IQ Integrator and
 
 ???+ info "Related information"
     - [Enabling IQ](../enable.md)
+    - [Updating IQ](../updating.md)
     - [IQ limitations](../limitations.md)
     - [Troubleshooting IQ](../troubleshooting.md)
