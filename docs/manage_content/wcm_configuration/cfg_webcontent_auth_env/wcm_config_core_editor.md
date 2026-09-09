@@ -11,7 +11,7 @@ Core Editor is available in two contexts:
 - **WCM Authoring Portlet** — Used for editing rich text elements in the traditional authoring form.
 - **Site Manager (Inplace Editing)** — Used for inline editing of rich text content directly on the rendered page.
 
-!!! danger "Content transformation when switching editors"
+!!! important "Important note before proceeding with the Core Editor"
     Opening and saving rich text elements or rich text components that were originally created using another editor (TinyMCE or CKEditor) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed. Review the [Known limitations](#known-limitations) and [Content security](#content-security) sections before switching editors on existing content.
 
 ## Enabling Core Editor
