@@ -43,7 +43,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Java 8 required for future CF upgrades <!--Is this update only for On-Premises?-->
 
 === "On-Premises"
-    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. Subsequent CF packages include Java 8 binaries. Upgrades fail if the environment uses Java 7.
+    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
 
     !!!important
         This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
