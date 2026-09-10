@@ -37,7 +37,7 @@ Under typical circumstances, a valid user ID and password can contain the follow
     Linux™ only: Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space, such as `cn=wpsadmin,cn=users,l=SharedLDAP`,`c=US,ou=Lotus`,`o=Software Group`,`dc=ibm`,`dc=com`, place the user ID in the properties file or a parent properties file, not as a flag on the command line. For example, create a parent properties file called `mysecurity.properties`. Then, enter the fully qualified user ID, and run the task: `./ConfigEngine.sh task_name -DparentProperties=/opt/mysecurity.properties`.
 
 !!! note
-    Windows only: Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space, such as `cn=wpsadmin`,`cn=users`, `l=SharedLDAP`,`c=US`, `ou=Lotus`, `o=Software Group`, `dc=ibm`, `dc=com`, place quotations around the user ID before you run the task. For example, the user ID is enclosed in parentheses: `"cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com"`.
+    Windows only: Some tasks might require you to enter the fully qualified user ID. If your fully qualified user ID contains a space, such as `cn=wpsadmin`,`cn=users`, `l=SharedLDAP`,`c=US`, `ou=Lotus`, `o=Software Group`, `dc=ibm`, `dc=com`, place quotations around the user ID before you run the task. For example, the user ID is enclosed in quotations: `"cn=wpsadmin,cn=users,l=SharedLDAP,c=US,ou=Lotus,o=Software Group,dc=ibm,dc=com"`.
 
 The following table contains a list of the required fields on the user information form and the supported characters.
 
