@@ -142,6 +142,22 @@ Installing the SDK does not automatically switch profiles to use it. Each profil
 
     This command configures administrative scripts to use Java 8 by default.
 
+### Verifying end-to-end resolution
+
+Confirm that the ConfigEngine JRE, the profile JVM, and the IIM JRE all resolve to Java 8, not Java 7.
+
+- To verify ConfigEngine JRE:
+
+    === "Linux or AIX"
+        ```bash
+        ${WAS_INSTALL_ROOT}/AppServer/java/bin/java -version
+        ```
+
+    === "Windows"
+        ```bash
+        "${WAS_INSTALL_ROOT}\AppServer\java\bin\java.exe" -version
+        ```
+
 - To verify that all profiles run Java 8:
 
     === "Linux or AIX"
@@ -155,22 +171,6 @@ Installing the SDK does not automatically switch profiles to use it. Each profil
         ```
 
     All profiles used during the CF application process must show `1.8` (Java 8).
-
-### Verifying end-to-end resolution
-
-Confirm that the ConfigEngine JRE, the profile JVM and command defaults, and the IIM JRE all resolve to Java 8, not Java 7. <!--we mentioned confirming profile JVM, are there commands for that?-->
-
-- To verify ConfigEngine JRE:
-
-    === "Linux or AIX"
-        ```bash
-        ${WAS_INSTALL_ROOT}/AppServer/java/bin/java -version
-        ```
-
-    === "Windows"
-        ```bash
-        "${WAS_INSTALL_ROOT}\AppServer\java\bin\java.exe" -version
-        ```
 
 - To verify IIM JRE:
 
