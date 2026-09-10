@@ -17,9 +17,9 @@ To avoid Java Runtime Environment (JRE) failures during CF upgrades, perform the
 
 ### Installing Java 8 using the IIM
 
-The IBM Java 8 Software Development Kit (SDK) for the WebSphere Application Server (WAS) is distributed as a fix pack through IBM Fix Central and installed using IBM Installation Manager (IIM). Do not replace the Java Development Kit (JDK) manually. Install it through IIM to ensure proper package tracking.
+The IBM Java 8 Software Development Kit (SDK) for the WebSphere Application Server (WAS) is distributed as a fix pack through IBM Fix Central and installed using the IBM Installation Manager (IIM). Do not replace the Java Development Kit (JDK) manually. Install it through IIM to ensure proper package tracking.
 
-Before using IBM Installation Manager (IIM) for this upgrade path, ensure the IIM runtime itself is running on Java 8 or newer. For more information, refer to [Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
+Before using the IIM for this upgrade path, ensure the IIM runtime itself is running on Java 8 or newer. For more information, refer to [Java Runtime Environment](https://www.ibm.com/docs/en/installation-manager/1.9.2?topic=installations-java-runtime-environment){target="_blank"}.
 
 1. Download the IBM Java 8 SDK package:
 
