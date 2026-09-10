@@ -8,7 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 - Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio dashboard - New widgets
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -17,8 +16,10 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
+- Practitioner Studio dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
 **Notices of deprecation**
@@ -76,24 +77,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf238) section.
 
-### Practitioner Studio Dashboard - New widgets
-
-=== "Containers"
-    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
-
-    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
-    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
-    
-    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
-
-=== "On-Premises"
-    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
-
-    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
-    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
-    
-    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -110,6 +93,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - Enhanced staging to handle secret rotation
+
+=== "Containers"
+    DAM staging in HCL DX now supports periodic heartbeat verification to manage subscriber connections during secret rotation. The system uses the [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"} API endpoint to detect connectivity issues and automatically disable or re-enable subscribers when authentication credentials change.
+
+    Configure the verification frequency by using the `verifySubscribersIntervalInMinutes` Helm parameter in `values.yaml`. For more information, refer to [Verifying subscriber connectivity during secret rotation](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#verifying-subscriber-connectivity-during-secret-rotation).
+
 ### DAM - New parameters for setting the initial collections view
 
 === "Containers"
@@ -119,6 +109,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
