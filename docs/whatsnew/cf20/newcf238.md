@@ -6,6 +6,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - Blueprint updates
 - Core Editor - New Rich Text Editor option
+- Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
 
@@ -44,10 +45,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Core Editor - New Rich Text Editor option
 
 === "Containers"
-    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as an optional Rich Text Editor for HCL Web Content Manager. It can be used as an alternative to TinyMCE and CKEditor in both the WCM Authoring Portlet and Site Manager inplace editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 === "On-Premises"
-    Core Editor is now available as a Rich Text Editor option for HCL Web Content Manager. It is enabled by default and can be used in both the WCM Authoring Portlet and Site Manager inplace editing. For more information, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as an optional Rich Text Editor for HCL Web Content Manager. It can be used as an alternative to TinyMCE and CKEditor in both the WCM Authoring Portlet and Site Manager inplace editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+### Java 8 required for future CF upgrades
+
+=== "On-Premises"
+    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
+
+    !!!important
+        This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
+
+    For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
