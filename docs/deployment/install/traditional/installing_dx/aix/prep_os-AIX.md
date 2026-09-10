@@ -8,7 +8,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 
     For example, run the following command to set the file descriptor limit:
 
-    ```
+    ```bash
     ulimit -n 10240
     ```
 
@@ -27,7 +27,9 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 5. Install and configure X server on AIX (such as X Window System or GNOME) to use the graphical user interface the installation program provides.
 
     !!!note
-        If you plan to use a response file to install the software, X server is not required.
+        - Ensure that gtk2 package is installed (command: `dnf install gtk2`).
+        - Ensure that the LIBPATH is set correctly to start the Installation Manager. (command: `export LIBPATH=/opt/freeware/lib:$LIBPATH`)
+        - If you plan to use a response file to install the software, X server is not required.
 
 6. Increase the paging space 1024 - 8192 MB.
 7. Complete the following steps to use the Work Load Partition (WPAR) software that is installed with your AIX operating system software:
@@ -42,7 +44,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 
         For example:
 
-        ```
+        ```bash
         mkwpar -r -l -n newhostname
         ```
 
