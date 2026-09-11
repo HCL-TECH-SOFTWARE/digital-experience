@@ -3,3 +3,4 @@ nav:
     - index.md
     - createJSPUsingWCMAPI.md
     - searchPagesInPortalSiteLibrary.md
+    - updateWcmLibraryRoles.md
