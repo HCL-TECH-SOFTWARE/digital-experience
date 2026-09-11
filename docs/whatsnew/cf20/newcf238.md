@@ -25,7 +25,6 @@ The following features and updates are available to customers installing HCL Dig
 **Notices of deprecation**
 
 - Advanced Rich Text Editor (8.5, 9.0, and 9.5)
-- Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
@@ -145,14 +144,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
-
-=== "Containers"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
