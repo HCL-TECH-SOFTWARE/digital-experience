@@ -27,4 +27,6 @@ Learn how to remove or hide the X-Powered-By header.
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.  
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
-Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  
+Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.
+- **[How to configure JMS to send messages to all nodes in a cluster when using Topics](./configureJMSMessages.md)**  
+Learn how to configure JMS to send messages to all nodes in a cluster when using Topics.
