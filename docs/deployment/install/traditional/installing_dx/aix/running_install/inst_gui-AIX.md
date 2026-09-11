@@ -279,7 +279,10 @@ The installation program verifies the operating system and its prerequisites, av
 
 ## Next Steps
 
-It is highly recommended to update the IBM WebSphere Application Server and it's SDK to the latest Fixpack as well by using the Installation Manager. For details, see [Recommended updates for WebSphere Application Server](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server){target="_blank"}
+- You may also want to enable the v95 UI features next. For details, please check:  
+[Enabling Practitioner Studio](../../../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md){target="_blank"}
+
+- It is highly recommended to update the IBM WebSphere Application Server and it's SDK to the latest Fixpack as well by using the Installation Manager. For details, see [Recommended updates for WebSphere Application Server](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server){target="_blank"}
 
 ???+ info "Related information"
     [A Step-by-Step Guide to Installing Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079596){target="_blank"}  
