@@ -6,9 +6,11 @@ The installation program verifies the operating system and its prerequisites, av
 
 ## Prepare the Installation
 
-1. Please download the latest HCL DX cumulative Fix from [MHS Download Portal](https://my.hcltechsw.com/downloads/dx/cloudnative/DX){target="_blank"} before starting the installation. For example: `HCL-DX-CF237_Server_Update.zip`
+1. Please download the latest HCL DX cumulative Fix from [MHS Download Portal](https://my.hcltechsw.com/downloads/dx/cloudnative/DX){target="_blank"} before starting the installation.  
+    For example: `HCL-DX-CF237_Server_Update.zip`
 
-2. Extract the zip-files into a folder. For example: `/opt/HCL/INSTALL/CF237`
+2. Extract the zip-files into a folder.  
+    For example: `/opt/HCL/INSTALL/CF237`
 
 3. Start all servers and applications that require a port number to avoid port conflicts when you install the HCL DX. If you are installing multiple copies of HCL DX on your server, start the existing Configuration Wizard servers.
 
@@ -256,7 +258,7 @@ The installation program verifies the operating system and its prerequisites, av
 1. In the IBM Installation Manager click to the **Install** button.
 2. On the **Install Packages** screen select all the 9.5 packages of the HCL offering and then click **Next**.
     For example:  
-    `- HCL Portal Server 9.5`
+    `- HCL Portal Server 9.5`  
     `- HCL Web Content Manager 9.5`  
 
     !!!note
@@ -279,10 +281,9 @@ The installation program verifies the operating system and its prerequisites, av
 
 ## Next Steps
 
-- You may also want to enable the v95 UI features next. For details, please check:  
-[Enabling Practitioner Studio](../../../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md){target="_blank"}
+- You may also want to enable the v95 UI features next. For details, please review [Enabling Practitioner Studio](../../../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md){target="_blank"}.
 
-- It is highly recommended to update the IBM WebSphere Application Server and it's SDK to the latest Fixpack as well by using the Installation Manager. For details, see [Recommended updates for WebSphere Application Server](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server){target="_blank"}
+- It is highly recommended to update the IBM WebSphere Application Server and it's SDK to the latest Fixpack as well by using the Installation Manager. For details, see [Recommended updates for WebSphere Application Server](https://www.ibm.com/support/pages/recommended-updates-websphere-application-server){target="_blank"}.
 
 ???+ info "Related information"
     [A Step-by-Step Guide to Installing Portal 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079596){target="_blank"}  
