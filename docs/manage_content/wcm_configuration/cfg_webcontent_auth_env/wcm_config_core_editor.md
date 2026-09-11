@@ -12,11 +12,13 @@ Core Editor is available in two contexts:
 - **Site Manager (Inplace Editing)** — Used for inline editing of rich text content directly on the rendered page.
 
 !!! important "Important note before proceeding with the Core Editor"
-    Opening and saving rich text elements or rich text components that were originally created using another editor (TinyMCE or CKEditor) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed. Review the [Known limitations](#known-limitations) and [Content security](#content-security) sections before switching editors on existing content.
+    Opening and saving rich text elements or rich text components that were originally created using another editor (TinyMCE or CKEditor) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed.
+    
+    **We recommend using Core Editor only for new content.** For existing content, review the [Known limitations](#known-limitations) and [Content security](#content-security) sections before switching editors to avoid unintended markup and styling changes.
 
 ## Enabling Core Editor
 
-Core Editor is enabled by default. You can control its availability and set it as the default RTE using Helm values (for container deployments) or WCM WCMConfigService resource environment provider (REP) properties.
+Core Editor is an optional Rich Text Editor that is available by default. It is not set as the default editor unless explicitly configured. You can control its availability and set it as the default RTE using Helm values (for container deployments) or WCM WCMConfigService resource environment provider (REP) properties.
 
 ### Using Helm values (Containers)
 
@@ -127,7 +129,7 @@ Core Editor supports the following editing features:
 | Emoji | Inserts emoji characters from a built-in emoji picker. |
 | Line height | Adjusts the line spacing of selected text. |
 | Clear formatting | Removes all inline formatting from selected text. |
-| Fullscreen mode | Expands the editor to fill the entire viewport.
+| Fullscreen mode | Expands the editor to fill the entire viewport. |
 
 ## Content security
 

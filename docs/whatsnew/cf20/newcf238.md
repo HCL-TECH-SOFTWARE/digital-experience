@@ -55,7 +55,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
 
-    !!!important
+    !!! important
         This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
 
     For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
