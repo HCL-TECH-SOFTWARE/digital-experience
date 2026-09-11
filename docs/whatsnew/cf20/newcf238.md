@@ -26,7 +26,6 @@ The following features and updates are available to customers installing HCL Dig
 **Notices of deprecation**
 
 - Advanced Rich Text Editor (8.5, 9.0, and 9.5)
-- Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
@@ -55,7 +54,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
 
-    !!! important
+    !!!important
         This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
 
     For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
@@ -154,14 +153,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
-
-=== "Containers"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
