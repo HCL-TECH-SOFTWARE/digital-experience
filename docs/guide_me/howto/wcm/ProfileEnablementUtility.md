@@ -14,14 +14,12 @@ On some occasions, required profiles are found to be missing from Web Content Ma
 
 Sample URLs to invoke the profileEnablement module:
 
-```text
+```URL
 http://<host>:<port>/wps/wcm/myconnect/?MOD=profileEnablement&library=[NEW_LIBRARY]&restrictOn=Cmpnt&fix=true&mode=remove
 ```
 
-```text
+```URL
 http://<host>:<port>/wps/wcm/myconnect?MOD=ProfileEnablement&library=&fix=false&restrictOn=content&preserve_dates=true
 ```
 
-To execute the module via ConfigEngine task, see the following documentation:
-
-[Running the profile enablement tool | HCL Digital Experience](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md){target="_blank"}
+To execute the module via ConfigEngine task, please review [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md){target="_blank"}.
