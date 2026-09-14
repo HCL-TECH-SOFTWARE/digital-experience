@@ -22,3 +22,5 @@ Learn how to create a custom Java class, package it into an external application
 Learn about the sample code for using the PUMA API within a WCM JSP component to print out the user and hostname that initiated the request.  
 - **[How to use the WCM API to render a WCM component in HCL DX](./WCMAPIRenderComponent.md)**  
 Learn how to use the WCM API to render a WCM component in HCL DX.  
+- **[How to retrieve the language requested by the browser](./returnLanguageRequestedByBrowser.md)**  
+Lean how to retrieve the language requested by the browser.  

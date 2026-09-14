@@ -11,3 +11,4 @@ nav:
     - ExternalJARinvokeJSP.md
     - CodeToPrintUserAndHostname.md
     - WCMAPIRenderComponent.md
+    - returnLanguageRequestedByBrowser.md  
