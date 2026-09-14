@@ -28,3 +28,5 @@ Learn how to remove or hide the X-Powered-By header.
 Learn how to remove state information from page URLs.  
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  
+- **[How to resolve intermittent Portal/WCM image display issues in Firefox](./WcmImageDisplayIssueInFirefox.md)**  
+Learn how to resolve intermittent Portal/WCM image display issue in Firefox.  
