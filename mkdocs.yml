@@ -91,17 +91,17 @@ extra_javascript:
 plugins:
   - awesome-pages
   - search
-#  - tags
-#  - meta-descriptions:
-#      export_csv: false
-#      quiet: false
-#      enable_checks: false
-#      min_length: 50
-#      max_length: 160
-#      trim: false
-#      fallback_if_short: false
+  - tags
+  - meta-descriptions:
+      export_csv: false
+      quiet: false
+      enable_checks: false
+      min_length: 50
+      max_length: 160
+      trim: false
+      fallback_if_short: false
   - mike:
       canonical_version: latest
       alias_type: redirect
-#  - git-revision-date-localized:
-#      type: date
+  - git-revision-date-localized:
+      type: date
