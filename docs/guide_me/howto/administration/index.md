@@ -28,5 +28,5 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.  
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use JavaScript to find and replace text on a Portal page.
-- **[How to prevent startup of an application when it is blocking the HCL Digital Experience Server startup](./PreventApplicationStartUp.md)**  
+- **[How to prevent startup of an application when it is blocking the HCL DX server startup](./PreventApplicationStartUp.md)**  
 Learn how to prevent startup of an application when it is blocking the HCL Digital Experience server startup.  
