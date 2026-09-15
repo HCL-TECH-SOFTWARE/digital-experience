@@ -13,4 +13,6 @@ Learn how to search for Web Content Manager (WCM) content created within a speci
 - **[How to use DX Search and the DX Search Center](./DX_Search_and_Search_Center.md)**  
 Learn how to use DX Search and the DX Search Center to find documents used in HCL DX and configure WCM documents to be more easily searched using the search service.
 - **[How to use REST API constraints for searches in content and authoring templates](./SearchConstraintAPI.md)**  
-Learn how to apply REST API search constraints and configure search scopes to filter content items and authoring templates while preventing duplicate search results.
+Learn how to apply REST API search constraints and configure search scopes to filter content items and authoring templates while preventing duplicate search results.  
+- **[How to access the WAS Admin Console after successfully installing the Remote Search Server](./AccessWasAfterRemoteSearchInstall.md)**  
+Learn how to access the WAS Admin Console after successfully installing the Remote Search Server.  
