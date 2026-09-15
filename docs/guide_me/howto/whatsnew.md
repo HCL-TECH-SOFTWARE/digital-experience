@@ -24,6 +24,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
 |Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
+|Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 |Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
 |Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
