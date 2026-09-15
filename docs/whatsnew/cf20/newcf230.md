@@ -9,7 +9,6 @@ The following features and updates are available to customers installing HCL Dig
 - HCL DX Action Bar and Practitioner Studio UI updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Handle multiple stylesheet components
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -21,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - Enabling OIDC SSO between HCL DX and HCL Leap in Kubernetes
 - Guide Me section restructured
+- Presentation Designer - Handle multiple stylesheet components
 - Search V2 Authoring - Advanced search filters
 - WAS, JDK, and iFix versions
 
@@ -90,14 +90,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf230) section.
 
-### Presentation Designer - Handle multiple stylesheets components
-
-=== "Containers"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
-
-=== "On-Premises"
-    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handle multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md ).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -128,6 +120,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Guide Me section has been restructured to include three main subtopics: Guides, How-to articles, and Glossary. For more information, refer to [Guide Me](../../guide_me/index.md).
+
+### Presentation Designer - Handling multiple stylesheets components
+
+=== "Containers"
+    You can now apply multiple stylesheet components to a presentation template for more advanced control and structured styling, giving you the freedom to define styles beyond the limitations of the Default and Override stylesheets in Presentation Designer. For more information, refer to [Handling multiple stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/handle_multiple_stylesheets.md).
 
 ### Search V2 Authoring - Advanced search filters
 

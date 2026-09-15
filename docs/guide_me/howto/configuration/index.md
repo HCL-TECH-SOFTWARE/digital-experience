@@ -6,12 +6,18 @@ This section includes how-to articles about configuration in HCL Digital Experie
 Learn how to add a robots.txt file in your HCL DX environment to control how search engines crawl and index your site.  
 - **[How to change cell and node names in a standalone HCL DX environment](./ChangeCellandNodeName.md)**  
 Learn how to change cell and node names after installing HCL DX.  
+- **[How to change the default portlet configuration](./DefaultPortletConfig.md)**  
+Learn how to modify the default settings of a portlet across all deployed pages and virtual portals within HCL DX.
 - **[How to change the display language in HCL DX log files without changing the operating system's locale](./ChangeDisplayLanguage.md)**  
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.  
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
+- **[How to determine default WCM configuration values](./DefaultWCMValues.md)**  
+Learn how to check default WCM configuration properties using the WebSphere console or local configuration files.  
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.  
+- **[How to install and configure Ingress with virtual portals](./ConfigureIngressWithVPs.md)**  
+Learn how to install the Ingress controller, update Helm deployment configurations, and create Ingress resource rules for virtual portals.
 - **[How to integrate HCL DX with LDAP](./IntegrateLDAP.md)**  
 Learn how to integrate HCL DX with the Lightweight Directory Access Protocol (LDAP).  
 - **[How to modify the response header with `ForceType` when using HCL DX with the IBM HTTP server](./responseHeaderForceType.md)**  
@@ -20,5 +26,5 @@ Learn how to modify the response header when using the IBM HTTP server as the fr
 Learn how to remove or hide the X-Powered-By header.  
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.  
-- **[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
-Learn how to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment.  
+- **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
+Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  

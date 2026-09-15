@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience 9.5  
+> HCL Digital Experience v9.5
 
 ## Introduction
 
