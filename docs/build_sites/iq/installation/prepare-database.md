@@ -128,7 +128,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
             dbUser: "dx_iq_db_user"
@@ -148,7 +148,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         configuration:
           database:
             enabled: true
-            dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+            dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
             dbPort: 5432
             dbName: "iqdb"
             dbCustomSecret: "custom-credentials-iq-db"
@@ -525,7 +525,7 @@ Use this option to automatically provision and manage a PostgreSQL database with
     configuration:
       database:
         enabled: true
-        dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"
+        dbHost: "<DX_RELEASE_NAME>-persistence.dxns.svc.cluster.local"
         dbPort: 5432
         dbName: "iqdb"
         dbCustomSecret: "custom-credentials-iq-db"
