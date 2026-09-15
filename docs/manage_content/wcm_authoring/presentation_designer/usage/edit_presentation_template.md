@@ -51,41 +51,7 @@ Clicking **Save** updates the template content while maintaining your active loc
 
 For more information, refer to **[Locked items](../../../../manage_content/wcm_authoring/authoring_portlet/change_management/item_locks.md#locked-items)**.
 
-## Saving a presentation template as a draft
-
-Presentation Designer allows you to safely iterate on your presentation templates without immediately impacting your live website. You can save published presentation templates as drafts, providing a secure staging environment for your content and styling updates.
-
-**Save as draft workflow**
-
-When you save a template as a draft, the system ensures your published presentation template remains completely untouched.
-
-- Authors can stage layout and style changes before pushing them to published template.
-- Reviewers can inspect the draft version safely without breaking the currently published template.
-- In-progress style edits are safely isolated into a separate draft override stylesheet to avoid partially-broken published CSS.
-
-![](../../../../assets/HCL_Presentation_Designer_Published_Badge.png)
-
-**Managing your draft session**
-
-The Presentation Designer header tracks your workflow and displays a `PUBLISHED` or `DRAFT` status badge so you always know which version you are editing.
-
-- Draft sessions are safely persisted, allowing authors to resume an in-progress session even after a page refresh.
-- The system actively blocks conflicting edits; if a draft template exists, other users cannot overwrite it.
-
-**Save and publish workflow**
-Once your layout and styling updates are complete and reviewed, you can push the draft to your published template.
-
-- Selecting **Save and Publish** automatically merges your draft's style and content edits back into the published presentation template.
-- Your draft CSS rules are seamlessly integrated back into the published override stylesheet.
-- To prevent backend conflicts, the system safely deletes the temporary draft stylesheet only after the template successfully publishes.
-
-For more information on draft override stylesheet, refer to **[Draft override stylesheet](../usage/default_and_override_stylesheet.md#draft-override-stylesheet)**
-
-![](../../../../assets/HCL_Presentation_Designer_Draft_Badge.png)
-
 ## Editing presentation templates
-
-Refer to the following steps to edit a presentation template in Presentation Designer.
 
 1. From the **Authoring portlet**, select the newly created presentation template, and then click **Edit > Edit in Presentation Designer**.
 
@@ -272,6 +238,33 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
     **Project Content - Nex Haven Smart TV**:
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_TV.png)
+
+## Saving a presentation template as a draft
+
+Use the **Save as draft** option in your canvas to save your presentation template as a draft, ensuring your published presentation template remains completely untouched.
+
+![](../../../../assets/HCL_Presentation_Designer_Save_As_Draft.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Authors can stage layout and style changes before pushing them to published template.
+- Reviewers can inspect the draft version safely without breaking the currently published template.
+- In-progress style edits are safely isolated into a separate draft override stylesheet to avoid partially-broken published CSS.
+
+The Presentation Designer header tracks your workflow and displays a **PUBLISHED** or **DRAFT** status badge so you always know which version you are editing.
+
+![](../../../../assets/HCL_Presentation_Designer_Published_Badge.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Draft sessions are safely persisted, allowing authors to resume an in-progress session even after a page refresh.
+- The system actively blocks conflicting edits. If a draft template exists, other users cannot overwrite it.
+
+Once your layout and styling updates are completed and reviewed, select **Save and publish** to push the draft to your published template.
+
+![](../../../../assets/HCL_Presentation_Designer_Save_And_Publish.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Your style and content edits of your draft are merged back into the published presentation template.
+- Your draft CSS rules are seamlessly integrated back into the published override stylesheet.
+- The system deletes the temporary draft stylesheet is deleted only after the template successfully publishes to prevent backend conflicts.
+
+For more information on draft override stylesheet, refer to **[Draft override stylesheet](../usage/default_and_override_stylesheet.md#draft-override-stylesheet)**.
 
 ### Sample presentation templates
 

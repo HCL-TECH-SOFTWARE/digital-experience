@@ -1,6 +1,6 @@
 # Static elements
 
-Static elements are predefined elements that display content exactly as it looks, ensuring a What You See Is What You Get (WYSIWYG) experience. After you add these elements in your presentation template, they will not change, even if you apply them to different content items. This consistency helps users create organized layouts with confidence, knowing that the design remains the same regardless of the content.
+Static elements are predefined elements that display content exactly as it looks, ensuring a What You See Is What You Get (WYSIWYG) experience. After you add these elements in your presentation template, they do not change, even if you apply them to different content items. This consistency helps users create organized layouts with confidence, knowing that the design remains the same regardless of the content.
 
 ![](../../../../../assets/HCL_Presentation_Designer_Static_Elements_Panel.png)
 
@@ -8,7 +8,7 @@ Static elements are predefined elements that display content exactly as it looks
 
 The Container element (```<div>...</div>```) serves as a foundational block for organizing and structuring content. This element allows users to group elements together. 
 
-You can resize the container directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This allows you to quickly adjust its width and height without needing to open the style panel. If your container's dimensions are currently set to relative units (such as `%` or `auto`) in the **Style items** panel, dragging a resize handle automatically converts those dimensions into a concrete pixel (`px`) measurement based on the element's current size on the screen. Once you release the handle, the newly computed pixel values are committed to the active override stylesheet and will display in your **Style items** panel.
+You can resize the container directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. If your container's dimensions are set to relative units (such as `%` or `auto`) in the **Style items** panel, dragging a resize handle automatically converts those dimensions into a concrete pixel (`px`) measurement based on the element's current size on the screen. Once you release the handle, the newly computed pixel values are committed to the active override stylesheet and display in your **Style items** panel.
 
 Alternatively, you can resize the container through the **Style items** panel by setting its width and height to fit different design needs. You can also apply other styling options to a container and add other user elements inside it.
 
@@ -47,7 +47,7 @@ To set the `href` attribute, click the **Configure** button and enter the URL.
 ![](../../../../../assets/HCL_Presentation_Designer_Static_Element_Link_Configure.png)
 
 !!! note
-    When you click a static link element on the canvas, you will not be redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
+    When you click a static link element on the canvas, you are not redirected to the configured URL. To test the link, preview the presentation template in the Authoring portlet.
 
 ## Button
 
@@ -101,10 +101,10 @@ The **Grid** element (for example, ```<div class="grid">...</div>```) allows for
 
 Aside from adjusting the width and height of the grid in the **Style items** panel, you can also easily resize the Grid container's overall footprint directly on the canvas by dragging the handles around its edges.
 
-When you use the canvas drag handles, any existing non-pixel units (such as `%` or `auto`) are automatically converted into an exact pixel (`px`) measurement to guarantee precise sizing. Releasing the handle commits the final computed pixel values to the active override stylesheet, and these updated `px` values will immediately replace the previous units in your **Style items** panel. This commit targets the currently active device viewport, allowing you to easily set responsive, per-device sizing overrides.
+When you use the canvas drag handles, any existing non-pixel units (such as `%` or `auto`) are automatically converted into an exact pixel (`px`) measurement to guarantee precise sizing. Releasing the handle commits the final computed pixel values to the active override stylesheet, and these updated `px` values are immediately replace the previous units in your **Style items** panel. This commit targets the currently active device viewport, allowing you to easily set responsive, per-device sizing overrides.
 
 !!! note
-    Drag handles are only available for the main `Grid` container. Individual `GridCell` cannot be resized using drag handles; their sizing remains controlled via row and column span settings.
+    Drag handles are only available for the main `Grid` container. Individual `GridCell` cannot be resized using drag handles. Their sizing remains controlled using row and column span settings.
 
 To manage responsive layouts, you can customize row and column counts for each device context, configure **Auto flow** settings to control how content wraps on smaller screens, and apply layout changes dynamically using device-specific stylesheet media blocks (`@media` rules).
 
@@ -200,19 +200,16 @@ The Video element operates in three render states on the canvas:
 !!! note
     YouTube Shorts URLs (`[youtube.com/shorts/](https://youtube.com/shorts/)`) are not supported. Unrecognized URLs render in the placeholder state.
 
-
 ## Custom HTML
 
-The Custom HTML element allows you to embed raw HTML markup directly into a presentation template via a code editor popup. This element eliminates the need to force custom markup into existing structured components, making it ideal for embedding third-party widgets (such as forms, analytics snippets, etc.), custom-styled markup, or pre-built HTML fragments.
+The Custom HTML element allows you to embed raw HTML markup directly into a presentation template. Use it to add third-party widgets (such as forms or analytics snippets), custom styles, or pre-built HTML fragments without modifying existing structured components.
 
 ![](../../../../../assets/HCL_Presentation_Designer_Custom_HTML_Canvas.png)
 
-To add and edit your markup, select the **Configure** icon on the element toolbar to open the syntax-highlighted, resizable code editor.
+To add and edit your markup, select **Configure** on the element toolbar to open the resizable, syntax-highlighted code editor.
 
 ![](../../../../../assets/HCL_Presentation_Designer_Custom_HTML_Editor.png)
 
-The Custom HTML element includes several features to ensure a safe and consistent authoring experience:
-
-- **Shadow DOM Scoping:** The element is rendered inside a shadow DOM host on the canvas. This ensures that any custom `<style>` rules you supply are scoped directly to the element and do not leak into or break the main Presentation Designer document.
-- **Safe Execution Surface:** Scripts and event handlers are neutralized at render time on the canvas so they do not execute while you are authoring. However, they are preserved as-is in the saved markup, ensuring production rendering remains completely unaffected.
-- **Auto-Correction:** The editor automatically wraps orphaned closing tags in HTML comments. This prevents mismatched tags from prematurely closing ancestor elements and breaking your layout.
+- On the canvas, the element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout.
+- Scripts and event handlers are disabled during authoring but run normally in saved output.
+- The editor also wraps orphaned closing tags in HTML comments to prevent structural breaks in your layout.
