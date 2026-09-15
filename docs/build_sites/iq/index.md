@@ -16,7 +16,11 @@ Ensure your environment meets the following requirements:
 1. HCL DX CF236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
+4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource.
+
+    ![Resource Permissions - IQ Virtual Resource](../../assets/HCL_IQ_Virtual_Resource.png "Virtual Resource Permissions - IQ Integration API")
+
+    For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Architecture
 

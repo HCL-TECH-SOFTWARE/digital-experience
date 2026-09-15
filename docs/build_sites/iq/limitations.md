@@ -1,4 +1,4 @@
-# IQ limitations 
+# IQ limitations
 
 This page lists the known limitations of IQ.
 
@@ -52,6 +52,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 - Multi-pod and production deployments do not support in-memory SQLite due to session state inconsistency across instances. For multi-pod environments, use PostgreSQL to ensure consistent session state and conversation history across all service instances.
 - Database names are fixed to `iqdb` for internal and Runtime Controller (RTC)-managed databases. External databases allow custom database names.
+- Multiple replica persistence node replicas are not supported due to incomplete IQ persistence connection pool configuration. IQ can write data only to the `dbHost: "<DX_RELEASE_NAME>-persistence-node-0.<DX_RELEASE_NAME>-persistence-headless-svc.<DX_NAMESPACE>.svc.cluster.local"`.
 
 ## MCP Server
 
