@@ -109,7 +109,7 @@ Alternatively, the cache settings can be set in the Access`ControlDataManagement
     - Use the `loadRolesParentBased` setting in WCM authoring environments only. In rendering environments, retain the default value of `false`.
     - Be cautious when configuring `accessControlDataManagement.acucIgnoreResourceTypes`, as it can interfere with strict access controls in environments where role assignments vary by workflow stage.
 
-#### WCM Configuration Service
+#### WCM configuration service setting
 
 | Cache name | Default value | WCM rendering value | WCM authoring value |
 | --- | --- | --- | --- |
