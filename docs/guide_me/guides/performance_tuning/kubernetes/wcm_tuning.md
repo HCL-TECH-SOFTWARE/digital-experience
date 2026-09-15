@@ -111,8 +111,6 @@ Alternatively, the cache settings can be set in the Access`ControlDataManagement
 
 #### WCM Configuration Service
 
-**WCM configuration service settings**
-
 | Cache name | Default value | WCM rendering value | WCM authoring value |
 | --- | --- | --- | --- |
 | `deployment.subscriberOnly` | false | true | False |
