@@ -18,11 +18,9 @@ Ensure your environment meets the following requirements:
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
 4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource.
 
-   ![Resource Permissions - IQ Virtual Resource](../../assets/HCL_IQ_Virtual_Resource.png "Virtual Resource Permissions - IQ Integration API")
+    ![Resource Permissions - IQ Virtual Resource](../../assets/HCL_IQ_Virtual_Resource.png "Virtual Resource Permissions - IQ Integration API")
 
-   For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
-
-
+    For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Architecture
 
