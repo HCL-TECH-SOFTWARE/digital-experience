@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
 
@@ -15,14 +16,15 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Container Version**
 
+- DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
+- Practitioner Studio dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
 **Notices of deprecation**
 
 - Advanced Rich Text Editor (8.5, 9.0, and 9.5)
-- Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
@@ -37,6 +39,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Java 8 required for future CF upgrades
+
+=== "On-Premises"
+    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
+
+    !!!important
+        This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
+
+    For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -80,6 +92,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 9.5 Container Version
 
+### DAM - Enhanced staging to handle secret rotation
+
+=== "Containers"
+    DAM staging in HCL DX now supports periodic heartbeat verification to manage subscriber connections during secret rotation. The system uses the [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"} API endpoint to detect connectivity issues and automatically disable or re-enable subscribers when authentication credentials change.
+
+    Configure the verification frequency by using the `verifySubscribersIntervalInMinutes` Helm parameter in `values.yaml`. For more information, refer to [Verifying subscriber connectivity during secret rotation](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#verifying-subscriber-connectivity-during-secret-rotation).
+
 ### DAM - New parameters for setting the initial collections view
 
 === "Containers"
@@ -89,6 +108,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
@@ -115,14 +144,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
-
-=== "Containers"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 

@@ -6,7 +6,6 @@ Deprecated features in HCL Digital Experience (DX) remain supported until a futu
 
 |Category|Deprecated|Recommended Action|Effective Date|
 |--------|----------|------------------|--------------|
-|Manage Content|Enhanced Rich Text Editor (TinyMCE) component in HCL DX|The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027.|September 30, 2026|
 |Dependent Products|Java JDK 7.x|Future DX releases will remove support for JDK 7.x. All customers must use JDK 8.0.|December 10, 2025|
 |Setting up a website|Woodburn Studio demo site|Deprecated on August 05, 2025 and removed from the product starting with CF234. Woodburn Studio is not automatically uninstalled from existing environments.|August 05, 2025|
 |Manage Content|Advanced Rich Text Editor (CKEditor) component in HCL DX|The Advanced Rich Text Editor (CKEditor) component in the HCL DX software will be deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. |August 05, 2025|
