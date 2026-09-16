@@ -528,6 +528,9 @@ In the WebSphere® Integrated Solutions Console, the portal Configuration Servic
     This does not happen if the user hits a link on the anonymous areas of DX after the timeout (for example, `wps/portal/...`).
     By setting this property to **true** and restarting in the case of a session timeout and hitting an anonymous link (before the LTPA token timeout), the session timeout error screen is displayed. This property is introduced in CF210 and can be used in CF210 or higher.
 
+## HCLSoftware U learning materials
+
+To learn how to do a traditional installation, go to [Deployment for Intermediate Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will also learn about additional installation tasks that apply to both container-based and traditional deployments using the Configuration Wizard, DXClient, ConfigEngine, and more. You can try it out using the [Deployment Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab.pdf){target="_blank"} and corresponding [Deployment Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information" 
     -   [How administrators define persistent session options](../../../../config_portal_behavior/user_session_persistence/adm_define_user_session_persistence/index.md)

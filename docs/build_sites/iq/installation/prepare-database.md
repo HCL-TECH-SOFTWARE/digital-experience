@@ -155,6 +155,7 @@ If both exist, you can go directly to [Deploying IQ with database configuration]
         ```
 
         - `<DX_RELEASE_NAME>`: The DX Helm release name.
+        - `<DX_NAMESPACE>`: The DX deployment namespace.
 
         !!! important "Same namespace required"
             This option only works when your IQ deployment is in the same Kubernetes namespace as your DX deployment. Kubernetes secrets are namespace-scoped and cannot be referenced across namespaces. If IQ is deployed in a different namespace, use the database credentials option.
@@ -529,6 +530,8 @@ Use this option to automatically provision and manage a PostgreSQL database with
         dbName: "iqdb"
         dbCustomSecret: "custom-credentials-iq-db"
     ```
+
+    `<DX_NAMESPACE>`: The DX deployment namespace.
 
 8. Upgrade the IQ deployment with your updated `custom-iq-values.yaml` file:
 
