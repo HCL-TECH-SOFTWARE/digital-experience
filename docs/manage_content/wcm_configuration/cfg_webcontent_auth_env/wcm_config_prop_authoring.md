@@ -1,4 +1,4 @@
-# Web content authoring options
+# Configuring web content authoring
 
 You can tailor the authoring behavior of your web content environment by changing configuration settings such as workflow, profiling, and version control.
 
@@ -18,27 +18,27 @@ The workflow is only applied to items created after you update this setting. To 
 
 You can enable workflow for the following item types:
 
--   Content items \(`control.Content`\)
--   Presentation templates \(`control.Style`\)
--   Authoring templates \(`control.Template`\)
--   Taxonomy items \(`control.Taxonomy`\)
--   Categories \(`control.Category`\)
--   Site area items \(`control.SiteArea`\)
--   Library components \(`control.Cmpnt`\)
+- Content items \(`control.Content`\)
+- Presentation templates \(`control.Style`\)
+- Authoring templates \(`control.Template`\)
+- Taxonomy items \(`control.Taxonomy`\)
+- Categories \(`control.Category`\)
+- Site area items \(`control.SiteArea`\)
+- Library components \(`control.Cmpnt`\)
 
 For example: to enable workflows for an authoring template, you add `com.aptrix.pluto.workflow.WorkflowControl` to the `control.Template` property:
 
--   Property name: `control.Template`
--   Value: `com.aptrix.pluto.taxonomy.ProfileControl, com.aptrix.pluto.workflow.WorkflowControl`
+- Property name: `control.Template`
+- Value: `com.aptrix.pluto.taxonomy.ProfileControl, com.aptrix.pluto.workflow.WorkflowControl`
 
 To disable workflows for an item type, you remove `com.aptrix.pluto.workflow.WorkflowControl` from the item's property type.
 
 !!! note
     If workflows are enabled for the following items, a workflow view is not available in the item views navigator.
 
--   Site areas.
--   Taxonomies and categories.
--   Workflows, workflow stages, or workflow actions.
+- Site areas.
+- Taxonomies and categories.
+- Workflows, workflow stages, or workflow actions.
 
 Individual items can still be moved through workflow stages by accessing them through the normal item views and approving them.
 
@@ -55,18 +55,18 @@ The profiling feature is only applied to items created after you update this set
 
 You can enable profiling for the following item types:
 
--   Content items \(`control.Content`\)
--   Presentation templates \(`control.Style`\)
--   Authoring templates \(`control.Template`\)
--   Taxonomy items \(`control.Taxonomy`\)
--   Categories \(`control.Category`\)
--   Site area items \(`control.SiteArea`\)
--   Library components \(`control.Cmpnt`\)
+- Content items \(`control.Content`\)
+- Presentation templates \(`control.Style`\)
+- Authoring templates \(`control.Template`\)
+- Taxonomy items \(`control.Taxonomy`\)
+- Categories \(`control.Category`\)
+- Site area items \(`control.SiteArea`\)
+- Library components \(`control.Cmpnt`\)
 
 For example: to enable profiling for components, you need to add `com.aptrix.pluto.taxonomy.ProfileControl` to the `control.Cmpnt` property:
 
--   Property name: `control.Cmpnt`
--   Value: `com.aptrix.pluto.workflow.WorkflowControl, com.aptrix.pluto.taxonomy.ProfileControl`
+- Property name: `control.Cmpnt`
+- Value: `com.aptrix.pluto.workflow.WorkflowControl, com.aptrix.pluto.taxonomy.ProfileControl`
 
 !!! note
     From CF08 onwards, all items are enabled to use the profiling feature by default.
@@ -77,29 +77,28 @@ To disable profiling for an item type, you remove `com.aptrix.pluto.taxonomy.Pro
 
 By default version control is enabled with the following properties:
 
--   `versioningStrategy.AuthoringTemplate`
--   `versioningStrategy.Component`
--   `versioningStrategy.Content`
--   `versioningStrategy.PresentationTemplate`
--   `versioningStrategy.Taxonomy`
--   `versioningStrategy.Workflow`
--   `versioningStrategy.Default`
+- `versioningStrategy.AuthoringTemplate`
+- `versioningStrategy.Component`
+- `versioningStrategy.Content`
+- `versioningStrategy.PresentationTemplate`
+- `versioningStrategy.Taxonomy`
+- `versioningStrategy.Workflow`
+- `versioningStrategy.Default`
 
 You can use the following values to specify version control settings:
 
--   **always**
+- **always**
 
     A version is saved every time a non-workflow item is saved, or every time a workflow item is published.
 
-
--   **manual**
+- **manual**
 
     Versions are saved when a user with at least editor access chooses to save a version. This setting causes the following changes in the interface:
 
-    -   The **Save Version** option is available in the read mode of non-workflow items and in workflow items in the published state.
-    -   The **Save and Version** option is available in the edit mode of non-workflow items and in workflow items in the published state.
+    - The **Save Version** option is available in the read mode of non-workflow items and in workflow items in the published state.
+    - The **Save and Version** option is available in the edit mode of non-workflow items and in workflow items in the published state.
 
--   **never**
+- **never**
 
     Disable version control for an item type.
 
@@ -128,8 +127,8 @@ versioning.service.auto.crop.threshold = 1
 
 By default, inheritance is automatically propagated down to each item. You can disable automatic inheritance by specifying the following property:
 
--   Property name: `default.inherit.permissions.enabled`
--   Value: `false`
+- Property name: `default.inherit.permissions.enabled`
+- Value: `false`
 
 When this setting is specified, it is applied only to new items. The inheritance on existing items remains unchanged.
 
@@ -150,8 +149,8 @@ When locking is enabled for site areas, you cannot create any children within th
 
 You define the mime types of files that are allowed to be uploaded into the image element by using the `imageresourcecmpnt.allowedmimetypes` property and a list of mime types for the value. For example:
 
--   Property name: `imageresourcecmpnt.allowedmimetypes`
--   Value: `image/gif,image/jpeg`
+- Property name: `imageresourcecmpnt.allowedmimetypes`
+- Value: `image/gif,image/jpeg`
 
 This feature prevents users from uploading non-image files into the image element.
 
@@ -186,17 +185,17 @@ You can set the parameter **wcm.authoringui.childPlacementDefault** to specify t
 |`start`|This setting will, by default, place a new content item as the first content item within a site area.|
 |`end`|This setting will, by default, place a new content item as the last content item within a site area.|
 
--   If this parameter is not set, the default child position is "end".
--   The default placement position that is specified in an authoring template overrides this setting for content items that are created with that authoring template.
+- If this parameter is not set, the default child position is "end".
+- The default placement position that is specified in an authoring template overrides this setting for content items that are created with that authoring template.
 
 ## Setting the size of the breadcrumb library drop-down
 
 You can set the parameter **wcm.authoringui.breadcrumbLibrariesMaximum** to specify the number of libraries that are shown in the authoring interface breadcrumb. For example, wcm.authoringui.breadcrumbLibrariesMaximum=16
 
--   If this parameter is not set, only the first 10 libraries are displayed.
--   The value of this parameter must be an integer 5 - 50.
--   Its value should be 10 - 20.
--   If more than this number of libraries exist, the remaining libraries are accessible by using the **Select from all libraries** option.
+- If this parameter is not set, only the first 10 libraries are displayed.
+- The value of this parameter must be an integer 5 - 50.
+- Its value should be 10 - 20.
+- If more than this number of libraries exist, the remaining libraries are accessible by using the **Select from all libraries** option.
 
 ## Expired items
 
@@ -204,22 +203,22 @@ By default, expired items are displayed alongside published and draft items.
 
 To determine whether expired items are listed in views, you can specify the `wcm.authoringui.showexpireditems` property in the `WCM WCMConfigService` service by using the WebSphere Integrated Solutions Console:
 
--   If set to `true`, expired items are displayed alongside published and draft items.
--   If set to `false`, only published and draft items are displayed.
--   If not specified, this setting defaults to `true`.
+- If set to `true`, expired items are displayed alongside published and draft items.
+- If set to `false`, only published and draft items are displayed.
+- If not specified, this setting defaults to `true`.
 
 ## Default in-place editing mode
 
 These parameters are used to define the default - editing mode for text fields and rich text fields:
 
--   `inplaceEdit.defaultModeForRichText`
--   `inplaceEdit.defaultModeForText`
+- `inplaceEdit.defaultModeForRichText`
+- `inplaceEdit.defaultModeForText`
 
 Use these values to specify the editing mode for text and rich text fields:
 
--   Specify `inplace` to enable in-place editing of an element. Not all fields support in-place mode. If an element does not support in-place mode, dialog mode is used instead.
--   Specify `embed` to enable embedded editing of an element. Not all fields support embed mode. If an element does not support embed mode, dialog mode is used instead.
--   Specify `dialog` to enable editing in a dialog. This is useful for larger elements such as rich text elements that may not be suitable for in-place editing. All fields support dialog mode.
+- Specify `inplace` to enable in-place editing of an element. Not all fields support in-place mode. If an element does not support in-place mode, dialog mode is used instead.
+- Specify `embed` to enable embedded editing of an element. Not all fields support embed mode. If an element does not support embed mode, dialog mode is used instead.
+- Specify `dialog` to enable editing in a dialog. This is useful for larger elements such as rich text elements that may not be suitable for in-place editing. All fields support dialog mode.
 
 If this setting is not specified, in-place editing mode is used by text fields by default, and dialog editing mode is used by rich text fields by default.
 
@@ -240,7 +239,7 @@ From CF208 onwards, the `inplaceEdit.defaultRichTextEditor` property controls wh
 | `TinyMCE` | Uses the TinyMCE editor for inplace editing. |
 | `CKEditor` | Uses the CKEditor for inplace editing. |
 
-If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
+If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor reverts to the platform default. For more information, refer to [Configuring Core Editor](wcm_config_core_editor.md).
 
 ## Defining the default authoring rich text editor
 
@@ -252,7 +251,7 @@ The `authoring.defaultRichTextEditor` property controls which rich text editor i
 | `TinyMCE` | Uses the TinyMCE editor as the default. |
 | `CKEditor` | Uses the CKEditor as the default. |
 
-If this property is not set, the platform default is used (TinyMCE on Liberty/WebEngine, CKEditor on WebSphere/Core). If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor silently falls back to the platform default. For more information, see [Core Editor configuration options](wcm_config_core_editor.md).
+If this property is not set, the platform default is used (TinyMCE on Liberty or WebEngine, and CKEditor on WebSphere or Core). If set to `CoreEditor` but `core.editor.enabled` is `false`, the editor reverts to the platform default. For more information, refer to [Configuring Core Editor](wcm_config_core_editor.md).
 
 ## Default css styles for in-place editable fields
 

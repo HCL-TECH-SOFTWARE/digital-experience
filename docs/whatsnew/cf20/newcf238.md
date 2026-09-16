@@ -5,7 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
-- Core Editor - New Rich Text Editor option
+- Core Editor - New rich text editor option
 - Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
@@ -41,13 +41,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
-### Core Editor - New Rich Text Editor option
+### Core Editor - New rich text editor option
 
 === "Containers"
-    Core Editor is now available as an optional Rich Text Editor for HCL Web Content Manager. It can be used as an alternative to TinyMCE and CKEditor in both the WCM Authoring Portlet and Site Manager inplace editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 === "On-Premises"
-    Core Editor is now available as an optional Rich Text Editor for HCL Web Content Manager. It can be used as an alternative to TinyMCE and CKEditor in both the WCM Authoring Portlet and Site Manager inplace editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Core Editor configuration options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### Java 8 required for future CF upgrades
 
@@ -146,13 +146,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Notices of deprecation
 
-### Advanced Rich Text Editor (8.5, 9.0, and 9.5)
+### Advanced rich text editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
