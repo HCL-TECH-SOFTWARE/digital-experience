@@ -186,7 +186,7 @@ Modifications were also made to the initial Helm chart configuration during the 
 
 For convenience, these values were added to the `medium-config-values.yaml` file in the hcl-dx-deployment Helm chart. To use these values, complete the following steps:
 
-1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+1. Download the `hcl-dx-deployment` Helm chart from [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} or Harbor.
 
 2. Extract the `hcl-dx-deployment-XXX.tgz` file.
 
