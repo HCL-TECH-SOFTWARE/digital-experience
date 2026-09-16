@@ -14,12 +14,16 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio dashboard - New widgets
+- Presentation Designer - Feature updates
+
 **Digital Experience 9.5 Container Version**
 
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
-- Practitioner Studio dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
 **Notices of deprecation**
@@ -90,6 +94,44 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
+
+    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
+    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
+    
+    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
+
+### Presentation Designer - Feature updates
+
+=== "Containers"
+
+    The following features are now available in Presentation Designer:
+
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static element directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
+
+=== "On-Premises"
+
+    The following features are now available in Presentation Designer:
+
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static element directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
+
 ## Digital Experience 9.5 Container Version
 
 ### DAM - Enhanced staging to handle secret rotation
@@ -108,16 +150,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
-
-### Practitioner Studio Dashboard - New widgets
-
-=== "Containers"
-    The Practitioner Studio Dashboard introduces two new widgets to streamline site navigation and content management:
-
-    - **My Sites**: Displays your managed sites as visual cards with thumbnails, status indicators, and direct access links.
-    - **Recently Modified Pages**: Displays an expandable tree structure and search tool to quickly locate and open recent modified pages.
-    
-    For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
