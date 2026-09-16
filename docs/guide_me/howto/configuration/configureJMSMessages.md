@@ -1,4 +1,4 @@
-# How to configure JMS to send messages to all members in a cluster when using Topics
+# How to configure JMS to send messages to all members in a cluster when using topics
 
 ## Applies to  
 
@@ -6,16 +6,17 @@
 
 ## Introduction  
 
-This document describes the steps required to configure HCL DX and it's underlying IBM WebSphere Application Server (WAS) so that all application servers in a cluster can actively receive messages for Message-Driven Beans (MDBs).
+In a clustered IBM WebSphere Application Server (WAS) environment running HCL Digital Experience (DX), Message-Driven Beans (MDBs) listening to a Java Message Service (JMS) topic can default to single-consumer processing depending on activation specification topology. Enabling cluster-wide activation ensures every application server instance maintains an active subscriber connection and processes each published topic message concurrently. This article describes how to configure HCL DX and its underlying WebSphere Application Server activation specifications to deliver topic messages to all cluster members.
 
 ## Instructions  
 
-1. Log in to the IBM Integrated Solutions Console (Administration Console).
+To configure JMS to send messages to all members in a cluster when using topics, perform the following steps:
 
+1. Log in to the IBM Integrated Solutions Console (WAS admin console).
 2. In the navigation tree, navigate to **Resources > JMS > Activation Specification**.
+3. Select the appropriate topic where your activation specification is defined. <!-- how to determine the appropriate topic -->
+4. Select the **Always activate MDBs in all servers** checkbox.
+5. Select **Apply**.
+6. Select **Save** at the top of the console messages.
 
-3. Select the appropriate topic where your activation specification is defined.
-
-4. Check **Always activate MDBs in all servers**.
-
-For further details on MDB connection topology, failover behaviors, and messaging engine placement within a cluster, refer to the official IBM WebSphere Application Server documentation [How a message-driven bean connects in a cluster](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=bus-how-message-driven-bean-connects-in-cluster){target="_blank"}.  
+For further details on MDB connection topology, failover behaviors, and messaging engine placement within a cluster, refer to [How a message-driven bean connects in a cluster](https://www.ibm.com/docs/en/was-nd/9.0.5?topic=bus-how-message-driven-bean-connects-in-cluster){target="_blank"}.

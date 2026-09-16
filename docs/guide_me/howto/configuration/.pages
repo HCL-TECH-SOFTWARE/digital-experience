@@ -5,6 +5,7 @@ nav:
     - ChangeCellandNodeName.md
     - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
+    - configureJMSMessages.md
     - ConfigureRAD.md
     - DefaultWCMValues.md
     - EnableImageFormats.md
@@ -14,4 +15,3 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
-    - configureJMSMessages.md
