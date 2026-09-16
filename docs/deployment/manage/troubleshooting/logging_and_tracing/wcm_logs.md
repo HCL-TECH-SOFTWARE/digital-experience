@@ -74,8 +74,8 @@ This table lists all trace strings available in HCL DX 8.5 and later.
 
 Virtual Member Manager writes the resulting traces to the following locations:
 
-- **AIX® and Linux™:** `wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log`
-- **Windows™:** `wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log`
+- AIX® and Linux: `wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log`
+- Windows: `wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log`
 
 ## HCLSoftware U learning materials
 
