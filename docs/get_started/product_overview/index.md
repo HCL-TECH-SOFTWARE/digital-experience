@@ -62,4 +62,7 @@ You can read more about the platform's architecture and technical capabilities i
 
 ## HCLSoftware U learning materials
 
-For an introduction to HCL Digital Experience, go to the free [HDX-INTRO HCL Digital Experience Introduction](https://hclsoftwareu.hcl-software.com/courses/course/hcl-digital-experience-introduction){target="_blank"} course. [Log in](https://hclsoftwareu.hcl-software.com/hclsoftwareu-userlogin){target="_blank"} to get started. If you are new to HCLSoftware U, you can [Sign Up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} for free. If you cannot access the course, go to [Contact Us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"}.
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+
+For an introduction to HCL Digital Experience, go to the free [HDX-INTRO HCL Digital Experience Introduction](https://hclsoftwareu.hcl-software.com/courses/course/hcl-digital-experience-introduction){target="_blank"} course.
