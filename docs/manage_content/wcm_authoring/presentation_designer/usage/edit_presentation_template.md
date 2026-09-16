@@ -264,6 +264,9 @@ Once your layout and styling updates are completed and reviewed, select **Save a
 - Your draft CSS rules are seamlessly integrated back into the published override stylesheet.
 - The system deletes the temporary draft stylesheet is deleted only after the template successfully publishes to prevent backend conflicts.
 
+!!!note
+    When you build a presentation template using Presentation Designer, you must also use Presentation Designer for its lifecycle workflows (such as **Save as draft** and **Save and Publish**). Only Presentation Designer has the capability to create and handle override stylesheets (both draft and published). The standard Authoring portlet does not support these unique capabilities, including the handling, merging, and deleting of draft override stylesheets during the publish workflow.
+
 For more information on draft override stylesheet, refer to **[Draft override stylesheet](../usage/default_and_override_stylesheet.md#draft-override-stylesheet)**.
 
 ### Sample presentation templates

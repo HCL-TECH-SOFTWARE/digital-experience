@@ -7,7 +7,6 @@ Take note of the following limitations when using Presentation Designer:
 - Presentation Designer can only be used to view or edit presentation templates. For more information, refer to the [Editing a presentation template](../presentation_designer/usage/edit_presentation_template.md) topic.
 - Presentation templates cannot be reused across designs. Create a new template for each design.
 - Override stylesheet components must only be used for the presentation template they were created for.
-- When you build a presentation template using Presentation Designer, you must also use Presentation Designer for its lifecycle workflows (such as **Save as draft** and **Save and Publish**). Only Presentation Designer has the capability to create and handle override stylesheets (both draft and published). The standard Authoring portlet does not support these unique capabilities, including the handling, merging, and deleting of draft override stylesheets during the publish workflow. <!--Is this not more of a limitation for Authoring portlet than PD-->
 - Blueprint Presentation Templates are not supported. Adding the `<!-- BluePrint Template -->` markup in your presentation template results in an error:
 
     ![](../../../assets/HCL_Presentation_Designer_Blueprint_snackbar.png)
