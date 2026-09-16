@@ -1,6 +1,6 @@
 title: API
 nav:  
     - index.md
+    - updateWcmLibraryRoles.md
     - createJSPUsingWCMAPI.md
     - searchPagesInPortalSiteLibrary.md
-    - updateWcmLibraryRoles.md

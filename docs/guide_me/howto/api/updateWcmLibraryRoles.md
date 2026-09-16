@@ -6,16 +6,17 @@
 
 ## Introduction
 
-You might routinely update the WCM library roles/permissions. This can be time-consuming using the WCM Libraries Portlet/UI. Using a JSP can reduce time required for this task.  
+You can streamline the Web Content Manager (WCM) library role updates by using a JavaServer Pages (JSP) file instead of manually modifying permissions through the user interface. This article describes how to create and execute a JSP file to update WCM library roles using the WCM API in HCL Digital Experience (DX).
 
 ## Instructions
 
-???+ info "Disclaimer of warranties"
-    The following code sample was created by HCL Corporation. It is provided solely to help you develop your applications. This sample is provided as is, without warranties of any kind. HCL is not liable for any damages that result from your use of this sample, even if HCL has been advised of the possibility of such damages.
+To update WCM library roles using a JSP file, perform the following steps:
 
-1. Create this JSP file: `<wp_profile_root>/installedApps/<cell name>/wcm.ear/ilwwcm.war/jsp/html/libraryRoles.jsp`
+1. Create a JSP file named `libraryRoles.jsp` in `<wp_profile_root>/installedApps/<cell name>/wcm.ear/ilwwcm.war/jsp/html/`.
+2. Paste the following sample code into the JSP file:
 
-2. Paste these contents into the JSP:
+    ???+ info "Disclaimer of warranties"
+        The following code sample was created by HCL Corporation. It is provided solely to help you develop your applications. This sample is provided as is, without warranties of any kind. HCL is not liable for any damages that result from your use of this sample, even if HCL has been advised of the possibility of such damages.
 
     ```java
     <%@ page import="com.ibm.workplace.wcm.api.*"%>
@@ -44,7 +45,9 @@ You might routinely update the WCM library roles/permissions. This can be time-c
     %>
     ```
 
-3. Modify the jsp for a **library name** (in this sample `jdrLibrary`) and **user CN** (in this sample `john doe`) appropriate for your environment then execute the jsp using a url similar to this:
+3. In the JSP file, replace the placeholder target library name (`jdrLibrary`) and user Common Name (CN) (`john doe`) with the values for your environment.
+
+4. Execute the JSP using a URL similar to this:
 
     ```URL
     http://<dx_host>:<port>/wps/wcm/jsp/html/libraryRoles.jsp
