@@ -9,9 +9,9 @@ nav:
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
     - DetermineWebsphereAppServer.md
+    - DetermineCredentials.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - UseJavaScriptToReplaceText.md
-    - DetermineCredentials.md

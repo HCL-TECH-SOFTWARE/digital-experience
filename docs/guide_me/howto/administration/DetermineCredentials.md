@@ -1,4 +1,4 @@
-# How to determine which user credentials are associated with any given method or thread using the HCL DX trace.log
+# How to determine user credentials for a method or thread using the HCL DX trace.log
 
 ## Applies to
 
@@ -6,23 +6,23 @@
 
 ## Introduction
 
-This document provides instructions on how to determine the user id that is responsible for a given thread observed in HCL DX server logs.
+Use trace logging to identify the user associated with a specific method or thread when troubleshooting authentication, authorization, or access-related issues in HCL Digital Experience (DX). This article describes how to determine user credentials for a method or thread using the trace.log.
 
 ## Instructions
 
-1. Review the logs and determine the thread id for the log message you want to work with.  Make note of the id.
-2. Enable this trace string: `com.ibm.workplace.wcm.util.LocalDataManager=all`.  For more information on enabling trace refer to [Quick start detailed steps for collecting a Portal Trace](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0088079){target="_blank"}.
-3. Reproduce the the problem or wait for the issue to happen again.
-4. Monitor the trace for this key: `USER_UTILS_CURRENT_USER`. You should see lines like:
+To determine the user credentials for a method or thread, perform the following steps:
+
+1. Review the logs and identify the thread ID for the log message that you want to investigate. Record the thread ID.
+2. Enable the trace string: `com.ibm.workplace.wcm.util.LocalDataManager=all`. For more information about enabling trace, refer to [Quick start detailed steps for collecting a Portal Trace](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0088079){target="_blank"}.
+3. Reproduce the issue or wait for it to occur again.
+4. Monitor the log for this key: `USER_UTILS_CURRENT_USER`. You should find entries similar to the following:
 
     ```log
     [Timestamp] 0000003e LocalDataMana 3 Put key: USER_UTILS_CURRENT_USER object [uid=AuthorUser,o=defaultWIMFileBasedRealm/652a7f8e-1fca-48af-96a9-e36ad04838e7] attributeSubset: null objectID: [ExtIDImpl 'Z9eAeM9D4JGT663EAMM466RO2MMG6O9OCMM47M9OIJMKCJHD26I16K1E63SKCN1', USER, 652a7f8e-1fca-48af-96a9-e36ad04838e7, [Domain: rel]] com.ibm.wps.um.UserImpl on thread WebContainer : 8
     ```
 
-5. Find an entry like the one above the uses the same thread id as the one you noted in step 1.  
-
-6. The user identified in the trace message from step 4 is the user responsible for the original message.  
+5. Locate an entry that contains the thread ID recorded in Step 1.  
+6. The user identified in the trace message from Step 4 is the user associated with the thread that generated the original log message.
 
 !!!note
-    Another option might be to enable detailed IBM WebSphere Application Server Security traces as described on the IBM page
-    [MustGather: Core Security problems for WebSphere traditional and Liberty](https://www.ibm.com/support/pages/mustgather-core-security-problems-websphere-traditional-and-liberty?view=full){target="_blank"} and then to follow the thread ID in question to find out user information that belongs to it.  
+    Alternatively, enable detailed IBM WebSphere Application Server (WAS) security traces and follow the relevant thread ID to identify the authenticated user associated with the request. For more information, refer to [MustGather: Core Security problems for WebSphere traditional and Liberty](https://www.ibm.com/support/pages/mustgather-core-security-problems-websphere-traditional-and-liberty?view=full){target="_blank"}.
