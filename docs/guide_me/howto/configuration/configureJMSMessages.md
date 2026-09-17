@@ -14,7 +14,13 @@ To configure JMS to send messages to all members in a cluster when using topics,
 
 1. Log in to the IBM Integrated Solutions Console (WAS admin console).
 2. In the navigation tree, navigate to **Resources > JMS > Activation Specification**.
-3. Select the appropriate topic where your activation specification is defined. <!-- how to determine the appropriate topic -->
+3. Select the appropriate topic where your activation specification is defined. 
+
+    !!! note
+        To determine the appropriate topic, identify the JMS topic by the JNDI name using one of the following methods:  
+        - Check the application binding files (`ibm-ejb-jar-bnd.xml` or `ibm-web-bnd.xmi`) for the `destinationJndiName` entry.  
+        - In WAS admin console, navigate to **Resources** > **JMS** > **Topics** to view the list of configured topics and corresponding JNDI names.
+
 4. Select the **Always activate MDBs in all servers** checkbox.
 5. Select **Apply**.
 6. Select **Save** at the top of the console messages.
