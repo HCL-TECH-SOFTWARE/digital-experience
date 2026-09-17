@@ -23,7 +23,6 @@ To prevent the application from starting, perform the following steps:
     ...
     ```
 
-
 3. Identify the application causing the issue from the class or package name. In the example above, `com.myCo.myApp` indicates the application is myApp.
 4. Navigate to the deployment configuration file for the identified application. On a standalone server, the location is typically in
 `<wp_profile_root>\config\cells\myCell\applications\myApp.ear\deployments\myApp\deployment.xml`
