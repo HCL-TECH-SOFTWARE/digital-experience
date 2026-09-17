@@ -140,3 +140,14 @@ The **Override stylesheet** allows users to customize styles for specific elemen
     3. Locate the downloaded file and open it. This contains the CSS data inside the override stylesheet, including both LTR and RTL styles (if RTL-specific styles were applied).
 
         ![](../../../../assets/HCL_Presentation_Designer_override_stylesheet_component.png)
+
+### Draft override stylesheet
+
+A **Draft override stylesheet** is generated when you save a published Presentation Template as a **Draft**. This stylesheet works the same as a standard **Override stylesheet**.
+
+- It isolates your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes.
+- To distinguish the draft from the published version in your library, the draft override stylesheet follows the `pd_[Presentation template name]_draft_override_[(6)uuid]` format, using the `_draft_override_` naming convention instead of `_override_`.
+
+    ![](../../../../assets/HCL_Presentation_Designer_draft_override_stylesheet_path.png)
+
+- When you select **Save and Publish**, the system merges all of your draft style edits and content back into the published presentation template and standard override stylesheet. To avoid conflicts on the backend, the draft override stylesheet is cleanly deleted only after the presentation template successfully saves and publishes. For more information on saving, refer to [Saving a presentation template as draft](../usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft).

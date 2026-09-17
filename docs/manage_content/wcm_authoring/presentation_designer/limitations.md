@@ -15,7 +15,7 @@ Take note of the following limitations when using Presentation Designer:
 
 - Undoing and redoing changes is not supported.
 - Reusing styles from a theme is not supported.
-- Adding scripts or custom markup is not supported.
+- Adding scripts or custom markup is only supported using the Custom HTML element. If your markup contains executable code, Presentation Designer disables the code on the canvas, but preserves it when saved. For more information, refer to [Custom HTML](../presentation_designer/usage/user_elements/static_elements.md#custom-html).
 - WCM tags and attributes are not supported. Presentation Designer supports specific user elements. For more information, refer to [User elements](../presentation_designer/usage/user_elements/index.md).
 
 ## Localization and preview
