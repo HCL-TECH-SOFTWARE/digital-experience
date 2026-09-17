@@ -28,5 +28,3 @@ Learn how to remove or hide the X-Powered-By header.
 Learn how to remove state information from page URLs.  
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  
-- **[How to serve Microsoft Office with WCM e.g. XLS files](./ServeMsOfficeWithWcm.md)**  
-Learn how to serve Microsoft Office with WCM e.g. XLS files.  
