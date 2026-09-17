@@ -88,3 +88,6 @@ For more information, see [Apply Combined Cumulative Fix](../../../../../deploym
     -   [HCL Digital Experience Combined cumulative fix instructions: Farm](../../../../../deployment/install/traditional/cf_install/ccf_95_farm.md)
     -   [HCL Digital Experience Combined cumulative fix instructions: Remote search](../../../../../deployment/install/traditional/cf_install/ccf_95_remote_search.md)
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
