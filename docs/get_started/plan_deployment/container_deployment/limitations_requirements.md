@@ -117,6 +117,9 @@ The main objective of the Prereqs Checker is to learn whether the specified prer
 
 Starting CF213, [Core Profile Check](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#configure-prereqs-checker-for-dx-deployment) is introduced to check whether the file system has the minimum storage capacity available for upgrade. You can [print the logs](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md#how-to-manually-trigger-the-checks) of the Prereqs Checker to see whether the check passed or failed. For best results, clean up the previous profile if the check failed before upgrading.
 
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
 
 <!--
 ???+ info "Related information"
