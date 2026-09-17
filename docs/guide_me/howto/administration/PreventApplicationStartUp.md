@@ -1,4 +1,4 @@
-# How to prevent startup of an application when it is blocking the HCL DX server startup
+# How to disable an application that is blocking the HCL DX server startup
 
 ## Applies to
 
@@ -6,43 +6,30 @@
 
 ## Introduction
 
-The HCL Digital Experience server may fail to start with the following message in the SystemOut.log:
-
-```log
-ThreadMonitor W CWWSR0605W: Thread "server.startup : 7" (0000010e) has been active for 749284 milliseconds and may be hung. There is/are 1 thread(s) in total in the server that may be hung.
-```
-
-In such a situation the IBM Integrated Solutions Console (admin-console) can not be accessed anymore to disable the application that is causing it. This document describes detailed steps that can be used to prevent the application from starting and blocking the server startup.
+The HCL Digital Experience (DX) server may fail to start, producing a hanging thread warning in the `SystemOut.log` file. When this occurs, the IBM Integrated Solutions Console becomes inaccessible, preventing administrators from disabling the problematic application through the user interface. This article describes how to prevent the application from starting and blocking the server startup.
 
 ## Instructions
+To prevent the application from starting, perform the following steps:
 
-The first step is to identify the application that is causing the hang. That can be checked by reviewing the stack-trace of the hanging thread warning message.  
+1. Open the `SystemOut.log` file.
+2. Locate the hanging thread warning message and review the stack trace. For example:
 
-For example:  
+    ```log
+    [Timestamp] 000000cc ThreadMonitor W CWWSR0605W: Thread "server.startup : 7" (0000010e) has been active for 749284 milliseconds and may be hung. There is/are 1 thread(s) in total in the server that may be hung. at java.net.SocketInputStream.socketRead0(Native Method)
+    ...
+    at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:644)
+    ...
+    at com.myCo.myApp.web.db.ProdSessions.session(ProdSessions.java:66)
+    ...
+    ```
 
-```log
-[Timestamp] 000000cc ThreadMonitor W CWWSR0605W: Thread "server.startup : 7" (0000010e) has been active for 749284 milliseconds and may be hung. There is/are 1 thread(s) in total in the server that may be hung. at java.net.SocketInputStream.socketRead0(Native Method)
-...
-at com.ibm.ws.rsadapter.jdbc.WSJdbcDataSource.getConnection(WSJdbcDataSource.java:644)
-...
-at com.myCo.myApp.web.db.ProdSessions.session(ProdSessions.java:66)
-...
-```
 
-In the sample above the application **myApp** is causing the issue for which class/package `com.myCo.myApp` provides the information about the application that is causing it.  
-
-To prevent the startup of the application, modify the `deployment.xml` for **myApp**.
-
-On a standalone server the location of that file is usually in:  
-
+3. Identify the application causing the issue from the class or package name. In the example above, `com.myCo.myApp` indicates the application is myApp.
+4. Navigate to the deployment configuration file for the identified application. On a standalone server, the location is typically in
 `<wp_profile_root>\config\cells\myCell\applications\myApp.ear\deployments\myApp\deployment.xml`
-
-Change this line:
-
+5. Open the `deployment.xml` file.
+6. Locate the `targetMappings` line for the application.  
 `targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="true"`
-
-to this:
-
+7. Change the `enable` attribute to `false`.  
 `targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="false"`
-
-The HCL Digital Experience Server should now start without starting **myApp**.  
+8. Save the changes to the file. The HCL DX Server should now start successfully without initiating the problematic application.
