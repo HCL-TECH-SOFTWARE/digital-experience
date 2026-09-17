@@ -1,4 +1,4 @@
-# How to disable an application that is blocking the HCL DX server startup
+# How to disable an application blocking the HCL DX server startup
 
 ## Applies to
 
@@ -6,9 +6,10 @@
 
 ## Introduction
 
-The HCL Digital Experience (DX) server may fail to start, producing a hanging thread warning in the `SystemOut.log` file. When this occurs, the IBM Integrated Solutions Console becomes inaccessible, preventing administrators from disabling the problematic application through the user interface. This article describes how to prevent the application from starting and blocking the server startup.
+During startup, HCL Digital Experience (DX) can fail and log a hanging thread warning in the `SystemOut.log` file. When this occurs, the IBM Integrated Solutions Console becomes inaccessible, preventing administrators from disabling the problematic application through the user interface. This article describes how to prevent the application from starting and blocking the server startup.
 
 ## Instructions
+
 To prevent the application from starting, perform the following steps:
 
 1. Open the `SystemOut.log` file.
@@ -23,12 +24,19 @@ To prevent the application from starting, perform the following steps:
     ...
     ```
 
-3. Identify the application causing the issue from the class or package name. In the example above, `com.myCo.myApp` indicates the application is myApp.
-4. Navigate to the deployment configuration file for the identified application. On a standalone server, the location is typically in
-`<wp_profile_root>\config\cells\myCell\applications\myApp.ear\deployments\myApp\deployment.xml`
+3. Identify the application causing the issue from the class or package name. In the previous example, `com.myCo.myApp` indicates the application is `myApp`.
+4. Navigate to the deployment configuration file for the identified application. On a standalone server, the file is typically located in `<wp_profile_root>\config\cells\myCell\applications\myApp.ear\deployments\myApp\deployment.xml`.
 5. Open the `deployment.xml` file.
-6. Locate the `targetMappings` line for the application.  
-`targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="true"`
-7. Change the `enable` attribute to `false`.  
-`targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="false"`
-8. Save the changes to the file. The HCL DX Server should now start successfully without initiating the problematic application.
+6. Locate the `targetMappings` line for the application. For example:
+
+    ```xml
+    targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="true"
+    ```
+
+7. Change the `enable` attribute to `false`. For example:
+
+    ```xml
+    targetMappings xmi:id="DeploymentTargetMapping_1475773622265" enable="false"
+    ```
+
+8. Save the changes to the file. The HCL DX server should now start successfully without initiating the problematic application.

@@ -18,7 +18,7 @@ Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when ac
 Learn about long Portal URLs and how to decode them.  
 - **[How to determine the HCL DX application server runtime](./DetermineWebsphereAppServer.md)**  
 Learn how to determine whether your DX environment runs on traditional WebSphere Application Server or IBM Open Liberty by inspecting server log files.  
-- **[How to disable an application that is blocking the HCL DX server startup](./PreventApplicationStartUp.md)**  
+- **[How to disable an application blocking the HCL DX server startup](./PreventApplicationStartUp.md)**  
 Learn how to identify and disable a hanging application to allow the HCL DX server to start successfully.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
