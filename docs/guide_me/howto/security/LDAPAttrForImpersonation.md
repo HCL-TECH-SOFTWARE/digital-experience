@@ -23,17 +23,16 @@ This article describes how to change the user profile LDAP attribute that displa
 
 To change the user profile LDAP attribute that displays within the HCL DX Impersonation portlet, perform the following steps:
 
-1. As an administrator, log in to the WebSphere Integrated Solutions Console of the Portal application server in a standalone environment or the deployment manager (DMGR) in a clustered environment.
+1. Log in to the WebSphere Integrated Solutions Console as an administrator on the standalone application server or the deployment manager (DMGR) in a clustered environment.
 2. Go to **Resources > Resource Environment > Resource Environment Providers > WP GlobalThemeConfig > Custom properties**.
 3. Select the **user.displaynameattribute** custom property.
-4. In the **Value** box, enter the LDAP attribute that you want to use (for example, `cn`, `uid`, or `displayName`). <!-- are these examples accurate?-->
+4. In the **Value** box, enter the LDAP attribute that you want to use (for example, `cn`, `uid`, or `displayName`).
 5. Select **Apply**.
-6. Select **Save** at the top of the console messages
+6. Select **Save** at the top of the console messages.
 7. If you have a clustered environment, synchronize the nodes:
-    1. Log in to the IBM Integrated Solutions Console (WAS admin console)
-    2. Expand the **System administration** section and then click **Nodes**.
-    3. Select the nodes that you want to synchronize (most likely all of them).
-    4. Click **Synchronize** or **Full Resynchronize**. Make sure that all nodes showing a **green** status icon, indicating that the nodes are now in sync.
+    1. Navigate to **System administration > Nodes**.
+    2. Select the nodes you want to synchronize.
+    3. Select **Synchronize** or **Full Resynchronize**. Ensure all nodes showing a green status icon indicating that the nodes are now in sync.
 
 !!!note
     Changing the value of the `user.displaynameattribute` custom property changes how the user profile name is displayed throughout the theme, not just in the Impersonation portlet. This change does not affect how the user profile name is displayed in areas of the product where it is not rendered through the theme.
