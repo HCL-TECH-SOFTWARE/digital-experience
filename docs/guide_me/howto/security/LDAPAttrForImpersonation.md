@@ -30,7 +30,10 @@ To change the user profile LDAP attribute that displays within the HCL DX Impers
 5. Select **Apply**.
 6. Select **Save** at the top of the console messages
 7. If you have a clustered environment, synchronize the nodes:
-    <!-- What are the steps to synchronize the nodes?-->
+    1. Log in to the IBM Integrated Solutions Console (WAS admin console)
+    2. Expand the **System administration** section and then click **Nodes**.
+    3. Select the nodes that you want to synchronize (most likely all of them).
+    4. Click **Synchronize** or **Full Resynchronize**. Make sure that all nodes showing a **green** status icon, indicating that the nodes are now in sync.
 
 !!!note
     Changing the value of the `user.displaynameattribute` custom property changes how the user profile name is displayed throughout the theme, not just in the Impersonation portlet. This change does not affect how the user profile name is displayed in areas of the product where it is not rendered through the theme.
