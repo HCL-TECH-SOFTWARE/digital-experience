@@ -58,7 +58,7 @@ You can read more about the platform's architecture and technical capabilities i
 
 ## See it in action
 
-<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/I4tcGeWFA6xl37SU7Rdb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="HCL Digital Experience Introduction for Business Users" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/I4tcGeWFA6xl37SU7Rdb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="HCL Digital Experience Introduction for Business Users" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 ## HCLSoftware U learning materials
 
