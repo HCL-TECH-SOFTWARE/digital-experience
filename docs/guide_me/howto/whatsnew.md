@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Development|[How to retrieve the language requested by the browser](./development/returnLanguageRequestedByBrowser.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|

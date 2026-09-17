@@ -6,27 +6,24 @@
 
 ## Introduction
 
-Java method **request.getHeader** is not reliably returning the language requested by the browser.
-HCL DX provides sophisticated locale and language computation and uses a set of request wrappers to provide this and other information to the user components.  
+Java `request.getHeader` method might not always return the language requested by the browser. HCL DX provides locale and language computation and uses request wrappers that can modify the information exposed to the user components. This article explains how to retrieve the language requested by the browser.
 
 ## Instructions
+
+To retrieve the language requested by the browser, perform the following steps:
 
 ???+ info "DISCLAIMER OF WARRANTIES"  
     The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
-At least one request wrapper returns a modified **Accept-Language** header.
+1. Check the value returned by `request.getHeader ("Accept-Language")`.
+2. Determine whether the returned value matches the language requested by the browser.
+3. Unwrap the request object to access the original client request. For example:
 
-To get the header value of the original client request, you can unwrap the request object first, for example:
+    ```java
+    HttpServletRequest unwrapped = request;
 
-```java
-HttpServletRequest unwrapped = request;
-
-while(unwrapped instanceof HttpServletRequestWrapper) {
-    unwrapped = (HttpServletRequest) ((HttpServletRequestWrapper)unwrapped).getRequest();
-    System.out.println(unwrapped.getHeader("Accept-Language"));
-}
-```
-
-It might be possible that the following method call returning the language set in the user's profile instead of the language submitted by the browser:
-
-`request.getHeader("Accept-Language")`
+    while(unwrapped instanceof HttpServletRequestWrapper) {
+        unwrapped = (HttpServletRequest) ((HttpServletRequestWrapper)unwrapped).getRequest();
+        System.out.println(unwrapped.getHeader("Accept-Language"));
+    }
+    ```

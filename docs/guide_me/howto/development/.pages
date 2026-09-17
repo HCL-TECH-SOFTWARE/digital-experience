@@ -9,7 +9,7 @@ nav:
     - CustomLoginPortlet.md
     - CreateAServletForStaticFiles.md
     - ExternalJARinvokeJSP.md
+    - returnLanguageRequestedByBrowser.md  
     - DynaCacheToStoreData.md
     - CodeToPrintUserAndHostname.md
     - WCMAPIRenderComponent.md
-    - returnLanguageRequestedByBrowser.md  
