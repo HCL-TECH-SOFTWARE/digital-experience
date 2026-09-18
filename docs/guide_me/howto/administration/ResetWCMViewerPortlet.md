@@ -20,8 +20,8 @@ Updating the portlet deployment restores underlying application binaries, JavaSe
     1. Log in into the HCL DX as an administrator.  
     2. Navigate to **Open applications menu > Administration > Applications > Web Modules**.  
     3. Search and select **ilwwcm-localrenderingportlet-jsr.war**.  
-    4. Select the **Update Web module** icon located to the right of the module properties.  
-    5. Select **Browse** and open the following file location:
+    4. Select the **Update Web module** icon located to the right of the module name.  
+    5. Select **Choice File** and open the following file location:
 
         ```text
         <PortalServer_root>/pzn.ext/portlet.localrendering.jsr/localrendering.war/installableApps/ilwwcm-localrenderingportlet-jsr.war
