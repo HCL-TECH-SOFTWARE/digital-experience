@@ -15,16 +15,12 @@ This section contains the newly created and migrated how-to articles. The articl
 ||||
 
 -->
-## CF237
-
-| Type | Category | Article |
-|------|----------|---------|
-|Migrated|Administration|[How to reset the Web Content Viewer portlet to its default state](./administration/ResetWCMViewerPortlet.md)|
 
 ## CF238
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to reset the Web Content Viewer portlet to its default state](./administration/ResetWCMViewerPortlet.md)|
 |Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
