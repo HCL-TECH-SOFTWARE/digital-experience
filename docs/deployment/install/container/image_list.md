@@ -6,6 +6,71 @@ You can obtain the HCL DX 9.5 container update and supported OS releases from yo
 
 Video: [How to upload HCL DX 9.5 CF container images to a private repository](https://youtu.be/XJONRdpgCuo)
 
+## HCL DX 9.5 CF238
+
+If you are deploying the HCL DX 9.5 CF238 Container update release, the package name and images are as follows.
+
+### HCL DX 9.5 CF238 DXClient files
+
+```
+hcl-dxclient-image-v95_CF238_20260915-2027.zip
+hcl-dxclient-v95_CF238_20260915-2027.zip
+```
+
+### hcl-dx-kubernetes-v95-CF238.zip
+
+```shell
+HCL DX notices V9.5 CF238.txt
+hcl-dx-content-composer-image-v1.51.0_20260915-2014.tar.gz
+hcl-dx-core-image-v95_CF238_20260915-2234.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20260915-2024.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20260915-2023.tar.gz
+hcl-dx-deployment-v2.49.0_20260917-1304.tgz
+hcl-dx-digital-asset-manager-image-v1.50.0_20260915-2020.tar.gz
+hcl-dx-file-processor-image-v2.0.0_20260915-2017.tar.gz
+hcl-dx-haproxy-image-v1.34.0_20260915-2015.tar.gz
+hcl-dx-image-processor-image-v1.51.0_20260915-2026.tar.gz
+hcl-dx-iq-integration-image-v1.0.2_20260916-0154.tar.gz
+hcl-dx-iq-v1.0.2_20260917-1304.tgz
+hcl-dx-license-manager-image-v95_CF238_20260915-2013.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20260915-2017.tar.gz
+hcl-dx-mcp-service-image-v1.0.2_20260915-2011.tar.gz
+hcl-dx-openldap-image-v2.6.8_20260915-2011.tar.gz
+hcl-dx-opensearch-image-v2.0.0_20260915-2023.tar.gz
+hcl-dx-people-service-image-v1.0.0_20260915-2011.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.48.0_20260915-2026.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.46.0_20260915-2026.tar.gz
+hcl-dx-persistence-node-image-v1.38_20260915-2026.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20260915-2022.tar.gz
+hcl-dx-remote-search-image-v95_CF238_20260915-2234.tar.gz
+hcl-dx-ringapi-image-v1.51.0_20260915-2011.tar.gz
+hcl-dx-runtime-controller-image-v95_CF238_20260915-2023.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20260915-2017.tar.gz
+hcl-dx-search-v2.36.0_20260917-1304.tgz
+```
+
+### HCL DX file package listings (supported OS platforms)
+
+This section presents the latest available HCL DX file package listings for supported OS platforms.
+
+|File name|Folder name|
+|---------|-----------|
+|HCL-DX-CF238_Express_Update|HCL-DX-CF238_Express_Update.zip|
+|HCL-DX-CF238_RemoteSearch_Update|HCL-DX-CF238_RemoteSearch_Update.zip|
+|HCL-DX-CF238_Server_Update|HCL-DX-CF238_Server_Update.zip|
+
+### HCL DX UBI levels
+
+This section presents the latest Red Hat Universal Base Image (UBI) level for HCL DX images.
+
+|Image|Level|
+|-----|-----|
+|Core and Remote Search|8.10-1788741895|
+|Other images|9.8-1788166357|
+
+See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
+
+<!--
 ## HCL DX 9.5 CF237
 
 If you are deploying the HCL DX 9.5 CF237 Container update release, the package name and images are as follows.
@@ -70,7 +135,6 @@ This section presents the latest Red Hat Universal Base Image (UBI) level for HC
 
 See the [System Requirements](../../../get_started/system_requirements/index.md) section for more information about the supported Container and Operating Systems.
 
-<!--
 ## HCL DX 9.5 CF236
 
 If you are deploying the HCL DX 9.5 CF236 Container update release, the package name and images are as follows.

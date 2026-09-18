@@ -5,6 +5,7 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Core Editor - New rich text editor option
 - Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
@@ -16,15 +17,15 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Practitioner Studio dashboard - New widgets
+- Practitioner Studio Dashboard - New widgets
 - Presentation Designer - Feature updates
 
 **Digital Experience 9.5 Container Version**
 
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
-- Helm values updates <!--update values-->
-- WAS, JDK, UBI, and iFix versions <!--update values-->
+- Helm values updates
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -43,6 +44,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Core Editor - New rich text editor option
+
+=== "Containers"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+=== "On-Premises"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### Java 8 required for future CF upgrades
 
@@ -146,12 +155,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
-### Helm values updates <!--update values-->
+### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF238 contains the following:
@@ -169,13 +178,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Notices of deprecation
 
-### Advanced Rich Text Editor (8.5, 9.0, and 9.5)
+### Advanced rich text editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 

@@ -9,6 +9,7 @@ nav:
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
     - DetermineWebsphereAppServer.md
+    - PreventApplicationStartUp.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
     - IncreaseTransactionTimeout.md

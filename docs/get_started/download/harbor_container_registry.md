@@ -50,6 +50,7 @@ Refer to the following table to identify which Helm chart version corresponds to
 
 | CF version | HCL DX Deployment version | HCL DX Search version | HCL DX IQ version |
 | :--------- | :------------------------ | :-------------------- | :---------------- |
+| CF238      | 2.49.0                    | 2.36.0                | 1.0.2             |
 | CF237      | 2.48.0                    | 2.35.0                | 1.0.1             |
 | CF236      | 2.47.0                    | 2.34.0                | 1.0.0             |
 | CF235      | 2.46.0                    | 2.33.0                |                   |
