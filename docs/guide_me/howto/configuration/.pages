@@ -1,11 +1,12 @@
 title: Configuration
-
 nav:
     - index.md
     - DeployRobots.md
     - ChangeCellandNodeName.md
+    - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
     - ConfigureRAD.md
+    - DefaultWCMValues.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md

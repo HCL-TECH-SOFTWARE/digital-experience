@@ -7,7 +7,6 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -25,6 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - Dynacache invalidation domain configuration
 - HAProxy custom headers now available
 - Helm values updates
+- Presentation Designer - Direction-specific styling for bidirectional text layouts
 - WAS, JDK, and iFix versions
 
 **Notices of deprecation**
@@ -70,14 +70,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf232) section.
-
-### Presentation Designer - Direction-specific styling for bidirectional text layouts
-
-=== "Containers"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
-=== "On-Premises"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ## Digital Experience 8.5 and 9.0 Versions
 
@@ -135,6 +127,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf232).
+
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
+
+=== "Containers"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ### WAS, JDK, and iFix versions
 

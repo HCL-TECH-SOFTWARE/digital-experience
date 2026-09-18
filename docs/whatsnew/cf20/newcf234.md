@@ -7,9 +7,8 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Canvas Context Preview
 - WCM AI Analysis - Additional configuration options for custom AI providers
-- Woodburn Studio demo site installation removed 
+- Woodburn Studio demo site installation removed
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -24,6 +23,7 @@ The following features and updates are available to customers installing HCL Dig
 
 - DAM - New actions available in Database Analysis
 - Helm values updates
+- Presentation Designer - Canvas Context Preview
 - Search V2 - Expanded support for Certificate DNs
 
 **Notices of deprecation**
@@ -69,14 +69,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf234) section.
-
-### Presentation Designer - Canvas Context Preview
-
-=== "Containers"
-    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
-
-=== "On-Premises"
-    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### WCM AI Analysis - Additional configuration options for custom AI providers
 
@@ -141,6 +133,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf234).
+
+### Presentation Designer - Canvas Context Preview
+
+=== "Containers"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### Search V2 - Expanded support for Certificate DNs
 

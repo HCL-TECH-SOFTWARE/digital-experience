@@ -1,57 +1,25 @@
-#  Database Tuning
+# Database Tuning
 
+HCL Digital Experience (DX) and Web Content Manager 9.5 use **multiple database domains** to store and manage various types of data. The primary databases and their usage are:
 
-HCL Portal and Web Content Manager 9.5 use **multiple database domains** to store and manage various types of data. The primary databases and their usage are:
+1. **Release** (release domain): The main database domain used by the base Portal scenario.
+2. **Customization** (customization domain): Receives light traffic in typical scenarios.
+3. **Community** (community domain): Also receives light traffic in our benchmark scenarios.
+4. **JCR** (JCR domain): Heavily used in Web Content Management (WCM) scenarios. Receives light traffic in other measured benchmark scenarios.
+5. **Likeminds** database: Used for Likeminds-enabled systems. Not utilized in the performance benchmark scenarios.
+6. **Feedback** database: Used by the feedback subsystem. Also not used in the benchmarked scenarios.
 
-
-1. **Release** (release domain):  
-   The main database domain used by the base Portal scenario.
-
-
-2. **Customization** (customization domain):  
-   Receives light traffic in typical scenarios.
-
-
-3. **Community** (community domain):  
-   Also receives light traffic in our benchmark scenarios.
-
-
-4. **JCR** (JCR domain):  
-   Heavily used in Web Content Management (WCM) scenarios.  
-   Receives light traffic in other measured benchmark scenarios.
-
-
-5. **Likeminds** database:  
-   Used for Likeminds-enabled systems. Not utilized in the performance benchmark scenarios.
-
-
-6. **Feedback** database:  
-   Used by the feedback subsystem. Also not used in the benchmarked scenarios.
-
-
----
-
-
-##  Learn More
-
+## Learn More
 
 - [Database Management Systems](../../../../deployment/manage/db_mgmt_sys/index.md) — Creating and configuring databases  
 - [Supported Databases](../../../../get_started/system_requirements/kubernetes/databases.md)  
 - [Shared Database Domains](../../../../get_started/plan_deployment/traditional_deployment/database_consideration/db_domains_shared.md)
 
-
----
-
-
 For the **base Portal configuration**, the **Release domain** is the primary database in use.
-
-
-
-
 
 ## DB2 Tuning
 
-HCL Portal relies on database servers to support its core functionality. In our test environment, a DB2 database server was used for the Portal application. The LDAP server—IBM Security Verify Directory (`ISVD`)—also utilized a DB2 database as its repository; however, this database is configured indirectly through the LDAP administration tools.
+HCL DX relies on database servers to support its core functionality. In our test environment, a DB2 database server was used for the Portal application. The LDAP server—IBM Security Verify Directory (`ISVD`)—also utilized a DB2 database as its repository; however, this database is configured indirectly through the LDAP administration tools.
 
 We recommend using a remote database server for high throughput workloads. For our measurements we used IBM DB2 Enterprise Edition 11.5 as our database server.
 
@@ -75,30 +43,31 @@ db2 reorgchk update statistics on table all
 
 This command not only counts and records catalog statistics but also generates a report that can help identify table organization issues. However, in our experience, it sometimes provides insufficient information for the optimizer to choose an efficient access plan for complex SQL queries—especially those involving the JCR database.
 
-
-
 We have determined a technique that has the same convenience of the `reorgchk` command and provides the detailed statistics preferred by the optimizer.
 
 **Generating and Running `RUNSTATS` Commands in DB2**
 
 1. Generate the `runstats.db2` file with the following command:
 
-```
+    ```
     db2 -x -r "runstats.db2" "select rtrim(concat('runstats on table',concat(rtrim(tabSchema),concat('.',concat(rtrim(tabname),' on all columns with distribution on all columns and sampled detailed indexes all allow write access'))))) from syscat.tables where type='T'"
-```
+    ```
 
 2. Execute the `runstats.db2` file:
-```
+
+    ```
     db2 -v -f "runstats.db2"
-```    
+    ```
 
 The first command generates a file named `runstats.db2` that contains `RUNSTATS` commands for all relevant tables. The second command executes these statements using the DB2 command processor. It is recommended to run these commands on each Portal database—particularly the JCR and Release databases—after significant content population or structural changes.
 To determine which tables might benefit from reorganization, we use the command:
+
 ```
 db2 reorgchk current statistics on table all > "reorgchk.txt"
 ```
 
 For those tables which require reorganization, we use the following command to reorganize the table based upon its primary key:
+
 ```
 db2 reorg table tableschema.tablename
 ```
@@ -125,8 +94,7 @@ We recommend that you refer to the Oracle Administrator’s Guide to help you ma
 - **Database block size:** `8k`
 - The following tablespace sizing was required to support a Portal with 100,000 authenticated users, approximately 1,000 pages and 50,000 WCM content items with a load generally consisting of database read operations.
 
-# Tablespace Sizes
-
+**Tablespace sizes**
 
 | Tablespace     | Size          |
 | :------------- | ------------: |
@@ -141,9 +109,6 @@ We recommend that you refer to the Oracle Administrator’s Guide to help you ma
 | **ICMVFQ04**   | 1 MB          |
 | **Redo Logs**  | 500 MB each   |
 
-
-
-
 ### Tuning Oracle Enterprise Edition Parameter
 
 Database performance is very important for obtaining good overall performance from WebSphere Portal.
@@ -152,12 +117,9 @@ The following table shows a list of tuning applied on our Oracle database server
 
 **Command used:** `ALTER SYSTEM SET <parameter> SCOPE=SPFILE;`
 
----
-
 ## Oracle Database Tuning
 
 The following configuration parameters were used for tuning the Oracle database:
-
 
 | Parameter              | Value  |
 | :--------------------- | :----- |
@@ -167,9 +129,6 @@ The following configuration parameters were used for tuning the Oracle database:
 | **Processes** | 750    |
 | **`open_cursors`** | 1500   |
 | **`db_files`** | 1024   |
-
-
-
 
 ### Oracle Database Maintenance
 
@@ -187,9 +146,10 @@ EXECUTE dbms_stats.gather_schema_stats(
     cascade => TRUE
 );
 ```
+
 ## SQL Tuning
 
-### SQL Server Database Maintenance
+### SQL Server database maintenance
 
 Update the SQL Server statistics for Portal and JCR databases by opening **SQL Server Management Studio**, selecting **New Query**, and running the following query:
 
