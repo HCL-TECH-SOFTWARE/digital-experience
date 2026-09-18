@@ -19,7 +19,7 @@ To configure JMS to send messages to all members in a cluster when using topics,
     To determine the appropriate topic, identify the JMS topic by the Java Naming and Directory Interface (JNDI) name using one of the following methods:
 
     - Check the application binding files (`ibm-ejb-jar-bnd.xml` or `ibm-web-bnd.xmi`) for the `destinationJndiName` entry.  
-    - In the WAS admin console, navigate to **Resources > JMS > Topics** to view the list of configured topics and corresponding JNDI names.
+    - In the WAS admin console, navigate to **Resources > JMS > Topics** to view the list of configured topics and corresponding JNDI names and destinations.
 
     For more information, refer to [JMS topic resources and service integration](https://www.ibm.com/docs/en/was/9.0.5?topic=messaging-jms-topic-resources-service-integration){target="_blank"}.
 
