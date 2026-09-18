@@ -5,6 +5,7 @@ nav:
     - LDAPAttrForImpersonation.md
     - FedReposDifferentLoginProps.md
     - enable_http_security_http_only_samesite_K8.md
+    - DetermineCredentials.md
     - determineRequiredRole.md
     - implementsaml_portal.md
     - AuthenticationMSAzure.md
@@ -14,4 +15,3 @@ nav:
     - UnifiedTaskListLog4j.md
     - ChangeLoginPage.md
     - ReplacePortalLDAP.md
-    - DetermineCredentials.md
