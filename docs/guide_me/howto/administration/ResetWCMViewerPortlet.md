@@ -21,7 +21,7 @@ Updating the portlet deployment restores underlying application binaries, JavaSe
     2. Navigate to **Open applications menu > Administration > Applications > Web Modules**.  
     3. Search and select **ilwwcm-localrenderingportlet-jsr.war**.  
     4. Select the **Update Web module** icon located to the right of the module name.  
-    5. Select **Choice File** and open the following file location:
+    5. Select **Choose File** and open the following file location:
 
         ```text
         <PortalServer_root>/pzn.ext/portlet.localrendering.jsr/localrendering.war/installableApps/ilwwcm-localrenderingportlet-jsr.war
@@ -65,8 +65,9 @@ Updating the portlet deployment restores underlying application binaries, JavaSe
     4. In the **Web Content Viewer** row, select the **Copy portlet** icon.
     5. Enter a unique name for the new portlet copy and click **OK**.  
     6. Navigate to the target page and enable **Edit Mode** using the toolbar.  
-    7. Open the Applications palette, search for the newly created portlet copy, and drag it onto the page layout.  
-    8. Save the page changes.  
+    7. On the left-side panel, select **Add page components and applications**.
+    8. In the **Applications** tab, search for the newly created portlet copy and drag it onto the page layout.
+    9. Disable **Edit Mode** to save the changes.
 
 ### Resetting portlet preferences
 
