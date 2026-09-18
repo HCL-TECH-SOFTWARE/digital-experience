@@ -31,7 +31,7 @@ To add profiles to WCM items, perform the following steps:
         http://<host>:<port>/wps/wcm/myconnect?MOD=ProfileEnablement&library=&fix=false&restrictOn=content&preserve_dates=true
         ```
 
-3. Run the URL in the browser to invoke the `profileEnablement` module.
+3. Enter the URL in the browser to trigger the `profileEnablement` module.
 
 !!!note
     To execute the module using a ConfigEngine task instead of a browser URL, refer to [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md).
