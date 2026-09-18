@@ -25,4 +25,4 @@ To determine the user credentials for a method or thread, perform the following 
 
     !!!note
         - The user identified in the trace message from Step 4 is the user associated with the thread that generated the original log message.
-        - Alternatively, enable detailed IBM WebSphere Application Server (WAS) security traces and follow the relevant thread ID to identify the authenticated user associated with the request. For more information, refer to [MustGather: Core Security problems for WebSphere traditional and Liberty](https://www.ibm.com/support/pages/mustgather-core-security-problems-websphere-traditional-and-liberty?view=full){target="_blank"}. <!--This URL requires an IBM login unless we remove ?view=full. Can we remove that?-->
+        - Alternatively, enable detailed IBM WebSphere Application Server (WAS) security traces and follow the relevant thread ID to identify the authenticated user associated with the request. For more information, refer to [MustGather: Core Security problems for WebSphere traditional and Liberty](https://www.ibm.com/support/pages/mustgather-core-security-problems-websphere-traditional-and-liberty){target="_blank"}.
