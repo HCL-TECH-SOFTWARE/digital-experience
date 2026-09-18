@@ -36,7 +36,7 @@ You can define the display properties of field and elements that are displayed o
     9. Select the users or groups you want to grant exclusive view access to a field or element by clicking **Add Viewers**.
     10. You can restrict the range of dates and times that users can select in date and time fields by selecting a start and end date or time. You either select a specific date, or select the number of days, hours, or minutes after the creation date to begin the range, or the number of days, hours, or minutes after the start date to end the range.
     11. You restrict the items available to be selected on fields such as "Select Categories" or "Select Workflows" by selecting the items that you want a user to select from. You can also restrict a user to select a single item.
-    12. You can choose not to use workflows for items you create with an authoring template by selecting **Dis able workflows for items using this authoring template** in the workflow properties view. Selecting this option also disables the workflow section on item forms. Users are instead able to directly create drafts instead of progressing an item through a workflow.
+    12. You can choose not to use workflows for items you create with an authoring template by selecting **Disable workflows for items using this authoring template** in the workflow properties view. Selecting this option also disables the workflow section on item forms. Users are instead able to directly create drafts instead of progressing an item through a workflow.
     13. You can restrict the maximum and minimum sizes of files added to a file resource element. You can also restrict the mime type of files that can be added to file resource elements. You add multiple mime types, separated by a space.
     14. A **custom JSP** field is available on some element types. You use this field to reference a JSP file to use instead of the default element view in the user interface. You can write JSP to control the look and feel of an element, and to restrict the values that can be entered into an element.
 
@@ -100,7 +100,7 @@ You can define the display properties of field and elements that are displayed o
 
             Select this option to prevent content creators from inserting images from the file system. They can only select images that are stored as image components.
 
-        - **Dis able source mode**
+        - **Disable source mode**
 
             Select this option to prevent content creators from viewing the rich text editor in source mode.
 

@@ -72,7 +72,7 @@ This table lists all trace strings available in HCL DX 8.5 and later.
 
     - By default, the Kubernetes probe targets the server's landing page. To reduce the impact of page loads on your site, adjust the [Probes configuration](../../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/probes_configuration.md) or change the landing page to one with a smaller footprint. Starting with CF229, the [out-of-the-box sample site](../../../../build_sites/blueprint.md) is configured as the default site. This site has a larger footprint as it demonstrates the new design system capabilities. It is recommended to move the sample site to a secondary position (or non-default location) to minimize resource consumption and improve responsiveness during tracing and monitoring.
 
-Virtual Member Manager writes the resulting traces to the following locations: <!--Was the location name changed from HCL Portal to HCL Digital Experience?-->
+Virtual Member Manager writes the resulting traces to the following locations:
 
 - AIX® and Linux: `wp_profile_root/logs/HCL Portal and HCL Web Content Manager/trace.log`
 - Windows: `wp_profile_root\logs\HCL Portal and HCL Web Content Manager\trace.log`

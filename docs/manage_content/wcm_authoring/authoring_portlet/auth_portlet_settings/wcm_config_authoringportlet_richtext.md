@@ -4,7 +4,7 @@ You can configure HCL Web Content Manager (WCM) to use different editors for ric
 
 ## Rich text editor
 
-- **Default** <!--The other pages say Portlet default editor, Can you confirm the correct UI name?-->
+- **Default**
 
     Select this option to use the default JavaScript editor. This editor does not require a working Java runtime environment on the client computer.
 

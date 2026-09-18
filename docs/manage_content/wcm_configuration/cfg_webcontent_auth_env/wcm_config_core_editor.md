@@ -6,7 +6,7 @@ This topic describes the configuration options for Core Editor in HCL Web Conten
 
 Core Editor is a rich text editor (RTE) available in HCL Digital Experience (DX). It provides support for text formatting, content structuring, and styling features. You can use Core Editor as an alternative to TinyMCE and CKEditor.
 
-Core Editor is available in two contexts: <!--Let me know if the links are correct-->
+Core Editor is available in two contexts:
 
 - **[WCM Authoring Portlet](../../../build_sites/create_sites/authoring_tools/site_auth_portlet.md)**: Used for editing rich text elements in the traditional authoring form.
 - **[Site Manager](../../wcm_authoring/inline_editing/index.md)**: Used for inline editing of rich text content directly on the rendered page.
