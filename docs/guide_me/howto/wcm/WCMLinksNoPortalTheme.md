@@ -10,15 +10,16 @@ This document provides instructions on how to create links that display content 
 
 ## Instructions
 
-While there may be alternate approaches, one approach is to use a menu item.  This produces links that will open a new window containing the specific content only
- (will not wrap in the Portal context/theme etc).
+While there may be alternate approaches, one approach is to use a menu item. This produces links that will open a new window containing the specific content only (will not wrap in the Portal context/theme etc).
 
 Use something similar to this in "Design for each menu search result":
 
 ```html
-<tr><td>
-<a href="[Placeholder tag="noprefixhref"]" target="_blank">
-[Placeholder tag="name"]
-</a><br>
-</td></tr>
+<tr>
+    <td>
+        <a href="[Placeholder tag="noprefixhref"]" target="_blank">
+            [Placeholder tag="name"]
+        </a><br>
+    </td>
+</tr>
 ```
