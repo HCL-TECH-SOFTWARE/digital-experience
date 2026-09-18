@@ -7,6 +7,13 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 ### CF238
 
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| [`incubator.configuration.coreEditor.enabled`](../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md) | true |
+| [`incubator.configuration.coreEditor.default`](../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md) | false |
+
 ### CF237
 
 **Added Keys:**
