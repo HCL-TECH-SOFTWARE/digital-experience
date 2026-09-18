@@ -1,4 +1,4 @@
-# How to install the authoring portlet
+# Installing the authoring portlet
 
 Pages that include the Web Content Manager authoring portlet and the local rendering portlet are created when you install HCL Portal. You run the authoring portlet configuration task only if you have previously uninstalled your authoring or local rendering portlets. The authoring portlet configuration task automatically creates Web Content Manager pages and installs the authoring portlet and local rendering portlets.
 
