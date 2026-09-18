@@ -1,8 +1,8 @@
-# How to add profiles to WCM items using the `profileEnablement` utility
+# How to add profiles to WCM items
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Later
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
@@ -16,19 +16,22 @@ To add profiles to WCM items, perform the following steps:
     - `<host>` is the host name or IP address of your HCL DX server.
     - `<port>` is the port number used to access your server.
     - `[NEW_LIBRARY]` is the name of the specific WCM library.
+
 2. Construct the URL based on your required action:
 
     - To execute and add missing profiles to components, use the following URL:
-        ```URL
+
+        ```url
         http://<host>:<port>/wps/wcm/myconnect/?MOD=profileEnablement&library=[NEW_LIBRARY]&restrictOn=Cmpnt&fix=true&mode=remove
         ```
 
     - To run the module in report mode to preview the items without applying changes, use the following URL:
-        ```URL
+
+        ```url
         http://<host>:<port>/wps/wcm/myconnect?MOD=ProfileEnablement&library=&fix=false&restrictOn=content&preserve_dates=true
         ```
 
 3. Run the URL in the browser to invoke the `profileEnablement` module.
 
 !!!note
-    To execute the module using a ConfigEngine task instead of a browser URL, refer to [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md){target="_blank"}.
+    To execute the module using a ConfigEngine task instead of a browser URL, refer to [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md).

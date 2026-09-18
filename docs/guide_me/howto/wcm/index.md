@@ -1,9 +1,9 @@
 # Web Content Manager
 
-This section includes how-to articles about importing and exporting Web Content Manager (WCM) Library and other WCM-related content in HCL Digital Experience (DX).
+This section includes how-to articles about importing and exporting Web Content Manager (WCM) library and other WCM-related content in HCL Digital Experience (DX).
 
-- **[How to add profiles to WCM items using the `profileEnablement` utility](./ProfileEnablementUtility.md)**  
-Learn how to use the profileEnablement module to add missing profiles to WCM items.
+- **[How to add profiles to WCM items](./ProfileEnablementUtility.md)**  
+Learn how to use the `profileEnablement` module to add missing profiles to WCM items.
 - **[How to stop a background WCM library delete](./StopWCMLibDel.md)**  
 Learn how to terminate a background WCM library deletion process and restore normal library status in HCL DX.
 - **[How to use `RefreshAllItems` for WCM libraries](./SampleInvocationRefreshLibrary.md)**  
