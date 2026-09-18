@@ -13,5 +13,5 @@ nav:
     - responseHeaderForceType.md
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
-    - SetGenericJVMArgumentsCorePod.md
     - WcmImageDisplayIssueInFirefox.md
+    - SetGenericJVMArgumentsCorePod.md

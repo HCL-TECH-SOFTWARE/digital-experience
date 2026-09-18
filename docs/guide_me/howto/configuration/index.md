@@ -26,7 +26,7 @@ Learn how to modify the response header when using the IBM HTTP server as the fr
 Learn how to remove or hide the X-Powered-By header.  
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.  
+- **[How to resolve intermittent Portal or WCM image display issues in Firefox](./WcmImageDisplayIssueInFirefox.md)**  
+Learn how to configure Firefox connection timeout settings to resolve intermittent image display issues caused by network or server performance delays.
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  
-- **[How to resolve intermittent Portal/WCM image display issues in Firefox](./WcmImageDisplayIssueInFirefox.md)**  
-Learn how to resolve intermittent Portal/WCM image display issue in Firefox.  

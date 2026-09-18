@@ -22,6 +22,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |------|----------|---------|
 |Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
+|Migrated|Configuration|[How to resolve intermittent Portal or WCM image display issues in Firefox](./configuration/WcmImageDisplayIssueInFirefox.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
 |Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|

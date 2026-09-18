@@ -1,4 +1,4 @@
-# How to resolve intermittent Portal/WCM image display issues in Firefox
+# How to resolve intermittent Portal or WCM image display issues in Firefox
 
 ## Applies to
 
@@ -6,14 +6,15 @@
 
 ## Introduction
 
-When using Firefox web-browser with HCL Digital Experience it might be possible that images are only displayed intermittently. This might be happens, because of a wrong configuration setting in the Firefox Web-Browser.  
+Intermittent image display issues can occur when accessing HCL Digital Experience (DX) in Firefox. This typically happens due to an incorrect configuration setting in the browser. This article describes how to resolve intermittent image display issues in Firefox. 
 
 ## Instructions
 
-In the Firefox web-browser, enter `about:config` in the address field then change:
+To resolve the image display issues, perform the following steps:
 
-- network.ftp.idleConnectionTimeout `300` to `600`
+1. Open Firefox and enter `about:config` in the address bar.
+2. Search for the `network.ftp.idleConnectionTimeout` preference and change the value from `300` to `600`.
+3. Search for the `network.http.keep-alive.timeout` and change the value from `300` to `600`.
 
-- network.http.keep-alive.timeout `300` to `600`
-
-This should only be seen for environments where there is a very serious network or server performance delay.  
+!!!note
+    These adjustments are only required for environments experiencing severe network or server performance delays.
