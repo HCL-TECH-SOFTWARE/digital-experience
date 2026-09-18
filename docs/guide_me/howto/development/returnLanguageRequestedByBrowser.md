@@ -27,4 +27,4 @@ To retrieve the language requested by the browser, perform the following steps:
     }
     ```
 
-3. Call `unwrapped.getHeader("Accept-Language")` to retrieve the original client header value. <!--Added this new step, are the instructions still accurate?-->
+3. Call `unwrapped.getHeader("Accept-Language")` to retrieve the original client header value.
