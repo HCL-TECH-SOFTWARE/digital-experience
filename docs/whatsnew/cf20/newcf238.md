@@ -17,7 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Practitioner Studio dashboard - New widgets
+- Practitioner Studio Dashboard - New widgets
 - Presentation Designer - Feature updates
 
 **Digital Experience 9.5 Container Version**
