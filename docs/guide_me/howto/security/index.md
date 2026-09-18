@@ -27,4 +27,6 @@ Learn how to remove the Unified Task List and Script Application Import portlets
 - **[How to redirect users to a custom login page in HCL DX](./ChangeLoginPage.md)**  
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
-Learn how to export system configuration, switch to the internal file repository, remove the old LDAP server, run user cleanup, and execute the member-fixer task.
+Learn how to export system configuration, switch to the internal file repository, remove the old LDAP server, run user cleanup, and execute the member-fixer task.  
+- **[How to determine user credentials for a method or thread using the HCL DX trace.log](./DetermineCredentials.md)**  
+Learn how to identify the user associated with a specific method or thread in HCL DX for troubleshooting authentication, authorization, and access-related issues.  
