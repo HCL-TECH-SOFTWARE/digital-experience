@@ -6,14 +6,13 @@ The following features and updates are available to customers installing HCL Dig
 
 - AI Translation and Workflow capabilities in WCM
 - Disabled SSL hostname verification
-- Presentation Designer
 - DXClient - LiveSync Pull and Push commands for WCM Design Library
 - Support for portlets built and published by Volt MX Iris
 - Notice of deprecation of Textbox.io Rich Text Editor
 
 **Digital Experience 8.5 and 9.0 Versions**
 
-- Extended Support option now available for DX versions 8.5 and 9.0 
+- Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
 **Digital Experience 9.5 Container Version**
@@ -22,6 +21,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - Cross-CF staging
 - Search V2 - New search interface
 - People Service
+- Presentation Designer
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -57,14 +57,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For information about the changes from IBM WebSphere Application Server and steps how to disable the verification, see [Hostname verification for WebSphere Application Server traditional](https://www.ibm.com/support/pages/hostname-verification-websphere-application-server-traditional){target="_blank"}.
 
-### Presentation Designer
-
-=== "Containers"
-    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
-
-=== "On-Premises"
-    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
-
 ### DXClient - LiveSync Pull and Push commands for WCM Design Library
 
 === "Containers"
@@ -81,7 +73,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     With the release of HCL DX CF224 and HCL Volt MX Iris 9.5.45, developers can now use the Iris integrated development environment (IDE) to build web applications and publish them as portlets directly to a designated HCL DX environment. For more information, see the topics [Deploying HCL Volt MX portlet into HCL DX](../../extend_dx/integration/mx/example/integrate_mx_portlet_to_dx.md) and [Enabling SSO between HCL DX and Volt MX](../../extend_dx/integration/mx/configuration/enable_sso.md).
 
-### Notice of deprecation of Textbox.io Rich Text Editor 
+### Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and End of Support (EOS) is on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
@@ -91,11 +83,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Digital Experience 8.5 and 9.0 Versions
 
-### Extended Support option now available for DX versions 8.5 and 9.0 
+### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-    
+
     To accommodate customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support until June 30, 2025. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
     
 ### Automatically apply 9.5 from a later CF installation
@@ -109,7 +101,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     The Digital Asset Management (DAM) user interface (UI) is now using a new theme to provide an improved visual experience for managing digital assets. Note that this update is limited to the UI theme only; no changes are made to DAM functionality. For more information, see [Digital Asset Management](../../manage_content/digital_assets/index.md).
-    
+
 ### DAM - Cross-CF staging
 
 === "Containers"
@@ -128,6 +120,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Within the DX environment, authored content is linked to actual users, adding interactivity through pop-up business cards and profile links. The service is also supported by a robust API layer compatible with OpenAPI, ensuring third-party support and extensibility.
 
     For more information, see [People Service](../../extend_dx/integration/people_service/index.md).
+
+### Presentation Designer
+
+=== "Containers"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
 
 ### New guidance for configuring `hostAliases` for DX Pods
 

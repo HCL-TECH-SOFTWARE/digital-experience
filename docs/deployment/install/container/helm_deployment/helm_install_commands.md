@@ -125,6 +125,10 @@ override.dam.url
 Sample values below
 ![WAS override variables](../helm_deployment/_img/was_override_cc_dam_url.png)
 
-## Additional reference
+## HCLSoftware U learning materials
 
-Step-by-step guide: [How to deploy HCL DX Container Update CF197 and higher to Microsoft Azure Kubernetes Service (AKS) using Helm](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344)
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
+
+???+ info "Related information"
+    - [How to deploy HCL DX Container Update CF197 and higher to Microsoft Azure Kubernetes Service (AKS) using Helm](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0091344){target="_blank"}
+

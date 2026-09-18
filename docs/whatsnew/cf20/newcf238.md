@@ -5,17 +5,23 @@ The following features and updates are available to customers installing HCL Dig
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio dashboard - New widgets
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio dashboard - New widgets
+- Presentation Designer - Feature updates
+
 **Digital Experience 9.5 Container Version**
 
+- DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
 - WAS, JDK, UBI, and iFix versions <!--update values-->
@@ -23,7 +29,6 @@ The following features and updates are available to customers installing HCL Dig
 **Notices of deprecation**
 
 - Advanced Rich Text Editor (8.5, 9.0, and 9.5)
-- Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
@@ -38,6 +43,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Java 8 required for future CF upgrades
+
+=== "On-Premises"
+    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
+
+    !!!important
+        This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
+
+    For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -65,6 +80,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf238) section.
 
+## Digital Experience 8.5 and 9.0 Versions
+
+### Extended Support option now available for DX versions 8.5 and 9.0
+
+=== "On-Premises"
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
+
+### Automatically apply 9.5 from a later CF installation
+
+=== "On-Premises"
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
@@ -83,21 +114,32 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     
     For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
-## Digital Experience 8.5 and 9.0 Versions
+### Presentation Designer - Feature updates
 
-### Extended Support option now available for DX versions 8.5 and 9.0
+=== "Containers"
+
+    The following features are now available in Presentation Designer:
+
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static elements directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 === "On-Premises"
-    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
 
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
+    The following features are now available in Presentation Designer:
 
-### Automatically apply 9.5 from a later CF installation
-
-=== "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static elements directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - Enhanced staging to handle secret rotation
+
+=== "Containers"
+    DAM staging in HCL DX now supports periodic heartbeat verification to manage subscriber connections during secret rotation. The system uses the [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"} API endpoint to detect connectivity issues and automatically disable or re-enable subscribers when authentication credentials change.
+
+    Configure the verification frequency by using the `verifySubscribersIntervalInMinutes` Helm parameter in `values.yaml`. For more information, refer to [Verifying subscriber connectivity during secret rotation](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#verifying-subscriber-connectivity-during-secret-rotation).
 
 ### DAM - New parameters for setting the initial collections view
 
@@ -117,8 +159,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [WebSphere Application Server (WAS) 9.0.5.28](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit (JDK) 8.0.8.65](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
-        - Core and Remote Search: 8.10-1780550539
-        - Other Images: 9.8-1780378819
+        - Core and Remote Search: XXXXXXXXXXXXXX
+        - Other Images: XXXXXXXXXXXXXX
     - iFix PH71453
     - iFix PH71454
     - iFix PH71590
@@ -134,14 +176,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
-
-=== "Containers"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
