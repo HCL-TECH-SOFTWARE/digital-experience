@@ -1,4 +1,4 @@
-# How to add profiles to WCM items using ProfileEnablement utility
+# How to add profiles to WCM items using the `profileEnablement` utility
 
 ## Applies to
 
@@ -6,20 +6,29 @@
 
 ## Introduction
 
-This document provide samples to add profiles to Web Content Manager (WCM) items using the Profile Enablement utility.
+Required profiles may be missing from Web Content Manager (WCM) items within HCL Digital Experience (DX). This article explains how to add profiles to WCM items using the `profileEnablement` utility.
 
 ## Instructions
 
-On some occasions, required profiles are found to be missing from Web Content Manager (WCM) items.
+To add profiles to WCM items, perform the following steps:
 
-Sample URLs to invoke the profileEnablement module:
+1. Identify your environment's specific values for the following URL placeholders:
+    - `<host>` is the host name or IP address of your HCL DX server.
+    - `<port>` is the port number used to access your server.
+    - `[NEW_LIBRARY]` is the name of the specific WCM library.
+2. Construct the URL based on your required action:
 
-```URL
-http://<host>:<port>/wps/wcm/myconnect/?MOD=profileEnablement&library=[NEW_LIBRARY]&restrictOn=Cmpnt&fix=true&mode=remove
-```
+    - To execute and add missing profiles to components, use the following URL:
+        ```URL
+        http://<host>:<port>/wps/wcm/myconnect/?MOD=profileEnablement&library=[NEW_LIBRARY]&restrictOn=Cmpnt&fix=true&mode=remove
+        ```
 
-```URL
-http://<host>:<port>/wps/wcm/myconnect?MOD=ProfileEnablement&library=&fix=false&restrictOn=content&preserve_dates=true
-```
+    - To run the module in report mode to preview the items without applying changes, use the following URL:
+        ```URL
+        http://<host>:<port>/wps/wcm/myconnect?MOD=ProfileEnablement&library=&fix=false&restrictOn=content&preserve_dates=true
+        ```
 
-To execute the module via ConfigEngine task, please review [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md){target="_blank"}.
+3. Run the URL in the browser to invoke the `profileEnablement` module.
+
+!!!note
+    To execute the module using a ConfigEngine task instead of a browser URL, refer to [Running the profile enablement tool](../../../manage_content/wcm_configuration/wcm_adm_tools/wcm_admin_profile_enable.md){target="_blank"}.
