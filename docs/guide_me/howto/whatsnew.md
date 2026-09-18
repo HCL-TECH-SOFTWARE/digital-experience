@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to disable an application blocking the HCL DX server startup](./administration/PreventApplicationStartUp.md)|
 |Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
 |Migrated|Configuration|[How to configure JMS to send messages to all members in a cluster when using topics](./configuration/configureJMSMessages.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
