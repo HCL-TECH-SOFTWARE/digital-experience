@@ -17,7 +17,7 @@ Refer to the following steps to use the sample code:
 2. Copy and paste the following code in the `puma.jsp` file:
 
     !!! Important
-        DISCLAIMER OF WARRANTIES:
+        Disclaimer of warranties:
         The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
     ```jsp

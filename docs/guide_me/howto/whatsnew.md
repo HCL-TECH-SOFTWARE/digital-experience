@@ -26,6 +26,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
+|Migrated|Development|[How to retrieve the language requested by the browser](./development/returnLanguageRequestedByBrowser.md)|
 |Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|
 |Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
 |Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|

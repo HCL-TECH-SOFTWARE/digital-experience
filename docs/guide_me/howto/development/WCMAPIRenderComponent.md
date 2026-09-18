@@ -10,7 +10,7 @@ This article demonstrates how to use the WCM API to programmatically render a co
 
 By creating a `RenderingContext`, you can force a component to render using a specific site path and library, regardless of the user's current location on the site.
 
-???+ info "DISCLAIMER OF WARRANTIES"
+???+ info "Disclaimer of warranties"
     The following enclosed code is sample code created by HCL Corporation.
     This sample code is provided to you solely for the purpose of assisting you in the development of your applications.
     The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
