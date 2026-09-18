@@ -1,24 +1,28 @@
-# How to determine which theme JSP is rendering a particular section segment of the theme
+# How to identify the JSP file that renders a specific theme segment
 
 ## Applies to
 
 > HCL Digital Experience v9.5 and Later
 
+## Introduction
+
+To troubleshoot layout or display issues, enable the inline debug utility in HCL Digital Experience (DX) to visually map page segments to the underlying files. This article describes how to identify the JavaServer Pages (JSP) file that renders a specific theme segment.
+
+
 ## Instructions
 
-1. Login to the Portal as a administrator.
+To identify the JSP file, perform the following steps:
 
-2. Open the Applications menu (house icon) and navigate to **Themes > Analyzer >  Utilities > Control Center**.
+!!!tip
+    Use a separate browser window or session to manage administrative settings to avoid navigation issues caused by visual debug highlights.
 
-3. Click to the link **Click to turn on** right to the option **Dynamic Content Spot (Inline) Debug is turned off.**
-
-## Result
-
-When the option is turned on and a Portal page is rendered, the individual segments of the theme are highlighted with different colors.
-
-The path\name of the JSP file that renders that segment of the theme is identified in the upper left corner of the colored block.
-
-It's possible to toggle this setting on and off from a different browser as it can be a bit difficult to navigate through the Portal when this option is on.  
+1. Log in to HCL DX as an administrator.
+2. Select the **Applications menu** (house icon) in the toolbar.
+3. Navigate to **Themes > Analyzer >  Utilities > Control Center**.
+4. Locate the **Dynamic Content Spot (Inline) Debug is turned off** setting and select **Click to turn on**.
+5. Open the HCL DX page to view the highlighted theme segments and the corresponding JSP paths.
 
 !!!note
-    This setting does not persist through a Portal restart.  
+
+    - The path and file name of the JSP that renders a specific segment are displayed in the upper-left corner of the colored blcok.
+    - The debug setting is temporary and resets automatically when HCL DX restarts.

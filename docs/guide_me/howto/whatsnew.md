@@ -29,6 +29,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 |Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
+|Migrated|Themes|[How to identify the JSP file that renders a specific theme segment](./themes/ThemeJSPinSegment.md)|
 |Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
 |New|Upgrade|[How to avoid Java Runtime failures during CF upgrade on older DX systems](./upgrade/upgradeJava8Requirement.md)|
 
