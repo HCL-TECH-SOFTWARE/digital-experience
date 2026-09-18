@@ -24,8 +24,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
-- Helm values updates <!--update values-->
-- WAS, JDK, UBI, and iFix versions <!--update values-->
+- Helm values updates
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -155,12 +155,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
-### Helm values updates <!--update values-->
+### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF238 contains the following:
