@@ -8,7 +8,6 @@ The following features and updates are available to customers installing HCL Dig
 - DXClient - TLS certificate validation
 - My HCLSoftware delivery portal
 - New section for How-to articles
-- Presentation Designer - Canvas settings
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -21,6 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - RingAPI - Extending the trust store
 - DAM - New parameter for access control
 - People Service and Search V2 integration
+- Presentation Designer - Canvas settings
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
 
@@ -70,17 +70,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     There is a new section in the DX Help Center containing How-to articles. For more information, see [How-to articles](../../guide_me/howto/index.md).
 
-### Presentation Designer - Canvas settings
-
-=== "Containers"
-    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
-
-=== "On-Premises"
-    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
-### Extended Support option now available for DX versions 8.5 and 9.0 
+### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
@@ -116,6 +108,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can integrate [People Service](../../extend_dx/integration/people_service/index.md) with [Search V2](../../build_sites/search_v2/index.md) to enhance user discoverability and search performance. With this integration, you can access user profile data with real-time synchronization. For more information, see [People Service and Search V2 Integration](../../extend_dx/integration/people_service/integration/people_service_search_v2_integration.md).
+
+### Presentation Designer - Canvas settings
+
+=== "Containers"
+    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 

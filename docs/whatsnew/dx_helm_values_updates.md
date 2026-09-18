@@ -7,6 +7,13 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 ### CF238
 
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| [`incubator.configuration.coreEditor.enabled`](../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md) | true |
+| [`incubator.configuration.coreEditor.default`](../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md) | false |
+
 ### CF237
 
 **Added Keys:**
@@ -828,3 +835,7 @@ None
 | configuration.searchMiddleware.pushAdminUser | pushAdmin | pushadmin |
 | configuration.searchMiddleware.pushAdminPassword | adminPush | adminpush |
 | incubator.configuration.digitalAssetManagement.renderNewUI | false | true |
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
