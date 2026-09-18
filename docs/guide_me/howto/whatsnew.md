@@ -27,6 +27,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|
 |Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
 |Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|
+|Migrated|Security|[How to determine user credentials for a method or thread using trace logs](./security/DetermineCredentials.md)|
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 |Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
 |Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
