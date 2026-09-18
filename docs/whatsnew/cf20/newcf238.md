@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates <!--update values-->
-- Practitioner Studio dashboard - New widgets
+- Practitioner Studio Dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions <!--update values-->
 
 **Notices of deprecation**
