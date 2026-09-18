@@ -152,4 +152,5 @@ Disable the IQ assistant using either ConfigEngine tasks or Helm configuration, 
         Disabling IQ in the DX Helm chart (`hcl-dx-deployment`) only removes the integration between DX and IQ. It does not uninstall or stop the IQ backend services deployed with the `hcl-dx-iq` Helm chart. To completely remove IQ from your cluster, separately uninstall the `hcl-dx-iq` Helm chart release using the `helm uninstall <iq-release-name>` command.
 
 ???+ info "Related information"
-    [Troubleshooting - User interface](troubleshooting.md#user-interface)
+    - [Updating IQ](updating.md)
+    - [Troubleshooting - User interface](troubleshooting.md#user-interface)

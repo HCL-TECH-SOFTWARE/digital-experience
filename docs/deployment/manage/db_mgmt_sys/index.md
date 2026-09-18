@@ -23,6 +23,9 @@ Optional: To prevent data loss on DB2, modify the JCR schema to support high ava
 -   **[Connecting to existing database domains](../db_mgmt_sys/connect_domains.md)**  
 View the steps to share a database domain between two separate HCL Digital Experience instances (instance1 and instance2), where instance2 is connected to an instance1 database domain.
 
+## HCLSoftware U learning materials
+
+To learn how to do a traditional installation, go to [Deployment for Intermediate Users](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3086){target="_blank"}. In this course, you will also learn about additional installation tasks that apply to both container-based and traditional deployments using the Configuration Wizard, DXClient, ConfigEngine, and more. You can try it out using the [Deployment Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab.pdf){target="_blank"} and corresponding [Deployment Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Deployment_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"  
     -   [Container Staging](../../manage/container_configuration/container_staging.md)
