@@ -15,13 +15,16 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Presentation Designer
+
 **Digital Experience 9.5 Container Version**
 
 - DAM - New UI theme
 - DAM - Cross-CF staging
 - Search V2 - New search interface
 - People Service
-- Presentation Designer
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -95,6 +98,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Presentation Designer
+
+=== "Containers"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
+=== "On-Premises"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
 ## Digital Experience 9.5 Container Version
 
 ### DAM - New UI theme
@@ -120,11 +133,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     Within the DX environment, authored content is linked to actual users, adding interactivity through pop-up business cards and profile links. The service is also supported by a robust API layer compatible with OpenAPI, ensuring third-party support and extensibility.
 
     For more information, see [People Service](../../extend_dx/integration/people_service/index.md).
-
-### Presentation Designer
-
-=== "Containers"
-    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
 
 ### New guidance for configuring `hostAliases` for DX Pods
 

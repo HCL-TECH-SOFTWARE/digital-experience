@@ -7,6 +7,29 @@ This page summarizes Helm values updates across DX releases. Each table below de
 
 ### CF238
 
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| configuration.digitalAssetManagement.defaultView | grid | <!-- Commit: 38c9c781, Author: ANANDVARDHANCHILUMULA, Date: 2026-07-20 -->
+| configuration.digitalAssetManagement.verifySubscriberHeartbeatIntervalTimeInMinutes | 10 | <!-- Commit: b451e054, Author: rakeshbutham5, Date: 2026-08-20 -->
+| configuration.webEngine.wcmApiV3Enabled | true | <!-- Commit: 50f79f88, Author: Neelkanth Patel, Date: 2026-08-17 -->
+| incubator.configuration.coreEditor.enabled | true | <!-- Commit: 367d0028, Author: Cedric Jastine Marcelino, Date: 2026-08-04 -->
+| incubator.configuration.coreEditor.default | false | <!-- Commit: 1b03ca76, Author: Cedric Jastine Marcelino, Date: 2026-08-17 -->
+| incubator.configuration.searchMiddleware.adminUI.enabled | false | <!-- Commit: aaa90b04, Author: Kristine Gazeline Apalla, Date: 2026-07-17 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.webEngine.wcmApiV3Enabled | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| security.openLdap.ldapPassword | p0rtal4u | "" | <!-- Commit: 3db4dd0a, Author: Mary Dooley, Date: 2026-07-13 -->
+
 ### CF237
 
 **Added Keys:**
