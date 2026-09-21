@@ -17,6 +17,10 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Presentation Designer - Default and Override stylesheets now available
+
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
@@ -24,7 +28,6 @@ The following features and updates are available to customers installing HCL Dig
 - Integrating HCL Leap and HCL Volt MX Foundry with HCL DX
 - DAM - Cancel ongoing uploads through the progress bar
 - DAM - Collection sorting
-- Presentation Designer - Default and Override stylesheets now available
 - Search V2 Authoring - Deleting items from search results now available
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 - Removal of automated Pod restart on ConfigMap updates
@@ -114,6 +117,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Presentation Designer - Default and Override stylesheets now available
+
+=== "Containers"
+    Default and Override stylesheets have been added to Presentation Designer. The Default stylesheet provides a foundational set of styles that are automatically applied to various elements while the Override stylesheet allows users to customize styles for specific elements. These stylesheets support the handling of type selectors and class selectors. For more information, refer to [Default and Override stylesheets](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md).
+
+=== "On-Premises"
+    Default and Override stylesheets have been added to Presentation Designer. The Default stylesheet provides a foundational set of styles that are automatically applied to various elements while the Override stylesheet allows users to customize styles for specific elements. These stylesheets support the handling of type selectors and class selectors. For more information, refer to [Default and Override stylesheets](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md).
+
 ## Digital Experience 9.5 Container Version
 
 ### Helm values updates
@@ -151,11 +164,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now sort collections and their contents to find them more efficiently. Sorting options are available for root-level collections and the assets and sub-collections within them. This feature is available in both Grid and List views. A dedicated icon allows you to switch between ascending and descending order. For more information, refer to [Uploading rich media assets](../../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections).
-
-### Presentation Designer - Default and Override stylesheets now available
-
-=== "Containers"
-    Default and Override stylesheets have been added to Presentation Designer. The Default stylesheet provides a foundational set of styles that are automatically applied to various elements while the Override stylesheet allows users to customize styles for specific elements. These stylesheets support the handling of type selectors and class selectors. For more information, refer to [Default and Override stylesheets in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md).
 
 ### Search V2 Authoring - Deleting items from search results now available
 
