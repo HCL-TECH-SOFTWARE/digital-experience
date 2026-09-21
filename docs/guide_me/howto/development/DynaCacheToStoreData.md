@@ -12,7 +12,7 @@ IBM WebSphere DynaCache provides an in-memory caching service that stores object
 
 To use IBM WebSphere DynaCache to store and share data, perform the following steps:
 
-???+ info "Disclaimer of Warranties"
+???+ info "Disclaimer of warranties"
     The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.  
 
 1. Log in to the IBM Integrated Solutions Console (WAS admin console)
