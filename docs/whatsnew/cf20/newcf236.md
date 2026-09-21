@@ -13,12 +13,15 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Presentation Designer - DAM integration and feature updates
+
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
 - IQ assistant now available
 - OpenTelemetry Integration now available
-- Presentation Designer - DAM integration and feature updates
 - WAS, JDK, UBI, iFix, and OS support versions
 
 **Notices of deprecation**
@@ -79,6 +82,28 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Presentation Designer - DAM integration and feature updates
+
+=== "Containers"
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Image](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#image).
+
+    Additional updates include the following enhancements:
+
+    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
+    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
+
+=== "On-Premises"
+    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Image](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#image).
+
+    Additional updates include the following enhancements:
+
+    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
+    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
+    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
+
 ## Digital Experience 9.5 Container Version
 
 ### Helm values updates
@@ -102,17 +127,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     You can now integrate OpenTelemetry (OTel) with HCL DX to collect distributed tracing, metrics, and logs across your deployment. For more information, refer to the [OpenTelemetry Integration Guide](../../guide_me/guides/opentelemetry_integration/index.md).
-
-### Presentation Designer - DAM integration and feature updates
-
-=== "Containers"
-    You can now insert Digital Asset Management (DAM) assets directly into your Presentation Designer canvas. The **Image configuration** panel now includes a native DX picker dialog to choose and apply DAM assets directly to the canvas, eliminating manual URL copying and ensuring automatic metadata cleanup when switching asset sources. For more information, refer to [Static elements - Image](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#image).
-
-    Additional updates include the following enhancements:
-
-    - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
-    - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
-    - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
 
 ### WAS, JDK, UBI, iFix, and OS support versions
 
