@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience 9.5 and higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
@@ -10,7 +10,7 @@ HCL Digital Experience (DX) leverages a large number of caches throughout the pr
 
 This article outlines the approach of warming up the Portal server using a series of scripted operating system commands. The code may be freely used or modified as needed for your Portal sever.
 
-???+ info "DISCLAIMER OF WARRANTIES"
+???+ info "Disclaimer of warranties"
     The enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting in troubleshooting current issues or developing your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages. Note that debug of custom applications is beyond the scope of the HCL Support Contract.
 
 ## Instructions

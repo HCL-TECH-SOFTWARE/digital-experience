@@ -26,7 +26,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
  * disclosure restricted by GSA ADP Schedule Contract with IBM
  * Corp.
  *
- * DISCLAIMER OF WARRANTIES.  The following [enclosed] code is
+ * Disclaimer of warranties.  The following [enclosed] code is
  * sample code created by IBM Corporation.  This sample code is
  * not part of any standard or IBM product and is provided to you
  * solely for the purpose of assisting you in the development of

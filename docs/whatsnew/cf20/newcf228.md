@@ -6,13 +6,16 @@ The following features and updates are available to customers installing HCL Dig
 
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Additional units of measurement for style properties
 - TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- Presentation Designer - Additional units of measurement for style properties
 
 **Digital Experience 9.5 Container Version**
 
@@ -51,14 +54,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf228) section.
 
-### Presentation Designer - Additional units of measurement for style properties
-
-=== "Containers"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
-
-=== "On-Premises"
-    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
-
 ### TinyMCE Enhanced Rich Text Editor updated to version 7.8
 
 === "Containers"
@@ -80,6 +75,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
+### Presentation Designer - Additional units of measurement for style properties
+
+=== "Containers"
+    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
+
+=== "On-Premises"
+    You can now change the unit of measurement for the different styling properties in Presentation Designer. Click the measuring unit next to a style property to reveal a list of units you can choose from. For more information, refer to [Styling options - Style sections](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-sections).
 
 ## Digital Experience 9.5 Container Version
 

@@ -12,9 +12,9 @@ This information is primarily aimed at system administrators.
 
 - **[Web content administration tools](wcm_adm_tools/index.md)**  
 HCL Web Content Manager (WCM) includes tasks and tools to help maintain your content management system such as the member fixer task and the workflow checker and updater tools.
-- **[Configure authoring environment](cfg_webcontent_auth_env/index.md)**  
+- **[Configuring your web authoring environment](cfg_webcontent_auth_env/index.md)**  
 Set up the authoring environment by installing the authoring portlet and enabling other features that are required to support the authoring environment.
-- **[Configure web content delivery environment](cfg_webcontent_delivery_env/index.md)**  
+- **[Configuring your web content delivery environment](cfg_webcontent_delivery_env/index.md)**  
 Set up your delivery environment by installing web content viewers and enabling other required features.
 - **[Custom Caching](custom_caching/index.md)**  
 With custom caching, you can overrule the default caching parameters of a site by using the `cache` and `expire` parameters in URLs and HCL WCM tags.
@@ -25,8 +25,11 @@ Clean up old Web Content Manager (WCM) items to improve system performance.
 
 ## HCLSoftware U learning materials
 
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+
 For an introduction and a demo on security for DX and WCM, go to [Security](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D545){target="_blank"}. To try it out yourself, refer to Part 4: Manage Access of a Web Content Library in the [DX Security for Beginners Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DX_Security_for_Beginners.pdf){target="_blank"}.
 
 For an introduction and a demo on the development aspects of web content management, go to [Web Content](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D414){target="_blank"}. To try it out yourself, refer to [Web Content Developer Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_for_Beginners.pdf){target="_blank"} and corresponding [Web Content Developer Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip).
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcltechsw.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcltechsw.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcltechsw.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=3&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com/%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

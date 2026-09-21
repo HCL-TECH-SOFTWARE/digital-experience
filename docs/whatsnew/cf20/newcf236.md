@@ -7,12 +7,15 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - DAM integration and feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- Presentation Designer - DAM integration and feature updates
 
 **Digital Experience 9.5 Container Version**
 
@@ -65,6 +68,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf236) section.
 
+## Digital Experience 8.5 and 9.0 Versions
+
+### Extended Support option now available for DX versions 8.5 and 9.0
+
+=== "On-Premises"
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
+
+### Automatically apply 9.5 from a later CF installation
+
+=== "On-Premises"
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
 ### Presentation Designer - DAM integration and feature updates
 
 === "Containers"
@@ -84,20 +103,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - Multiple workspace notifications now queue vertically in the bottom-left corner instead of overwriting active messages, allowing you to track rapid operations sequentially. For more information, refer to [Accessing Presentation Designer - Notifications](../../manage_content/wcm_authoring/presentation_designer/access.md#notifications).
     - **Grid** elements now include **Auto-flow** and **Area layout** configurations to support independent layout behavior across **Desktop**, **Tablet**, and **Mobile** viewports. **Tablet** and **Mobile** layouts allow count-based overrides that automatically recalculate row or column tracks without modifying the baseline **Desktop** layout. For more information, refer to [Static elements - Grid](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#grid).
     - The **Back** button now synchronizes the return URL during initialization, ensuring you return to your previous workspace view with your context intact, even if the user interface language changes mid-session. For more information, refer to [Accessing Presentation Designer - Toolbar](../../manage_content/wcm_authoring/presentation_designer/access.md#toolbar).
-
-## Digital Experience 8.5 and 9.0 Versions
-
-### Extended Support option now available for DX versions 8.5 and 9.0
-
-=== "On-Premises"
-    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}. Extended support will be offered from June 30, 2025 until June 30, 2026.
-
-### Automatically apply 9.5 from a later CF installation
-
-=== "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
 

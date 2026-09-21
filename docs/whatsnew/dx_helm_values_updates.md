@@ -5,6 +5,31 @@ This page summarizes Helm values updates across DX releases. Each table below de
 !!!note
     For more information on the keys described in this page, including their possible values and usage, refer to the downloadable sample `values.yaml` in [Prepare Configuration - The default HCL DX 9.5 `values.yaml` file](../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
 
+### CF238
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| configuration.digitalAssetManagement.defaultView | grid | <!-- Commit: 38c9c781, Author: ANANDVARDHANCHILUMULA, Date: 2026-07-20 -->
+| configuration.digitalAssetManagement.verifySubscriberHeartbeatIntervalTimeInMinutes | 10 | <!-- Commit: b451e054, Author: rakeshbutham5, Date: 2026-08-20 -->
+| configuration.webEngine.wcmApiV3Enabled | true | <!-- Commit: 50f79f88, Author: Neelkanth Patel, Date: 2026-08-17 -->
+| incubator.configuration.coreEditor.enabled | true | <!-- Commit: 367d0028, Author: Cedric Jastine Marcelino, Date: 2026-08-04 -->
+| incubator.configuration.coreEditor.default | false | <!-- Commit: 1b03ca76, Author: Cedric Jastine Marcelino, Date: 2026-08-17 -->
+| incubator.configuration.searchMiddleware.adminUI.enabled | false | <!-- Commit: aaa90b04, Author: Kristine Gazeline Apalla, Date: 2026-07-17 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.webEngine.wcmApiV3Enabled | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| security.openLdap.ldapPassword | p0rtal4u | "" | <!-- Commit: 3db4dd0a, Author: Mary Dooley, Date: 2026-07-13 -->
+
 ### CF237
 
 **Added Keys:**
@@ -826,3 +851,7 @@ None
 | configuration.searchMiddleware.pushAdminUser | pushAdmin | pushadmin |
 | configuration.searchMiddleware.pushAdminPassword | adminPush | adminpush |
 | incubator.configuration.digitalAssetManagement.renderNewUI | false | true |
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

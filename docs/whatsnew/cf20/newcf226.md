@@ -8,12 +8,15 @@ The following features and updates are available to customers installing HCL Dig
 - DXClient - TLS certificate validation
 - My HCLSoftware delivery portal
 - New section for How-to articles
-- Presentation Designer - Canvas settings
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- Presentation Designer - Canvas settings
 
 **Digital Experience 9.5 Container Version**
 
@@ -70,17 +73,9 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     There is a new section in the DX Help Center containing How-to articles. For more information, see [How-to articles](../../guide_me/howto/index.md).
 
-### Presentation Designer - Canvas settings
-
-=== "Containers"
-    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
-
-=== "On-Premises"
-    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, see [Accessing the Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
-### Extended Support option now available for DX versions 8.5 and 9.0 
+### Extended Support option now available for DX versions 8.5 and 9.0
 
 === "On-Premises"
     HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
@@ -91,6 +86,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
+### Presentation Designer - Canvas settings
+
+=== "Containers"
+    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
+
+=== "On-Premises"
+    Canvas settings are now available in Presentation Designer. With these settings, you can configure various aspects of the presentation such as canvas dimensions, direction, zoom level, and orientation. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md) and [Canvas settings in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/canvas_settings.md).
 
 ## Digital Experience 9.5 Container Version
 

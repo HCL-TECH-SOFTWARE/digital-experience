@@ -3,8 +3,11 @@ nav:
     - index.md
     - DeployRobots.md
     - ChangeCellandNodeName.md
+    - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
+    - configureJMSMessages.md
     - ConfigureRAD.md
+    - DefaultWCMValues.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md
@@ -12,4 +15,3 @@ nav:
     - HideXPoweredByHeader.md
     - RemoveStateInformationFromURL.md
     - SetGenericJVMArgumentsCorePod.md
-    - DefaultPortletConfig.md

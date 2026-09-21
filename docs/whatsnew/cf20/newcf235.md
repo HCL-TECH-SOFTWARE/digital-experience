@@ -7,13 +7,16 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio - Dashboard
-- Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio - Dashboard
+- Presentation Designer - New entry points from Authoring portlet
 
 **Digital Experience 9.5 Container Version**
 
@@ -74,22 +77,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf235) section.
 
-### Practitioner Studio - Dashboard  
-
-=== "Containers"
-    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
-
-=== "On-Premises"
-    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
-
-### Presentation Designer - New entry points from Authoring portlet
-
-=== "Containers"
-    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
-
-=== "On-Premises"
-    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option has been added to the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. You can additionally switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -103,6 +90,24 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
+### Practitioner Studio - Dashboard  
+
+=== "Containers"
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences more efficiently. For more information refer to [Dashboard](../../build_sites/practitioner_studio/dashboard.md).
+
+### Presentation Designer - New entry points from Authoring portlet
+
+=== "Containers"
+    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option is available in the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. Additionally, you can switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
+
+=== "On-Premises"
+    New entry points to Presentation Designer are now available from the Authoring portlet. A new **Read in Presentation Designer** option is available in the **Read** drop-down menu, allowing you to open a presentation template in read-only mode. The existing **Edit in Presentation Designer** option has been moved from the **More** drop-down menu to the **Edit** drop-down menu. Additionally, you can switch between the standard WCM HTML Editor and Presentation Designer without leaving the authoring workflow. For more information, refer to [Accessing Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/access.md).
 
 ## Digital Experience 9.5 Container Version
 

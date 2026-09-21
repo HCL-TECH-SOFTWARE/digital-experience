@@ -26,7 +26,7 @@ This enables a Digital Asset Management staging scenario in which an administrat
  * disclosure restricted by GSA ADP Schedule Contract with IBM
  * Corp.
  *
- * DISCLAIMER OF WARRANTIES.  The following [enclosed] code is
+ * Disclaimer of warranties.  The following [enclosed] code is
  * sample code created by IBM Corporation.  This sample code is
  * not part of any standard or IBM product and is provided to you
  * solely for the purpose of assisting you in the development of
@@ -89,6 +89,9 @@ This enables a Digital Asset Management staging scenario in which an administrat
 ```
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on DX staging, go to [Staging for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D505){target="_blank"}.
 
