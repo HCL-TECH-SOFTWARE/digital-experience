@@ -4,7 +4,7 @@ This topic describes the configuration options for Core Editor in HCL Web Conten
 
 ## Overview
 
-Core Editor is a rich text editor (RTE) available in HCL Digital Experience (DX). It provides support for text formatting, content structuring, and styling features. You can use Core Editor as an alternative to TinyMCE and CKEditor.
+Core Editor is a rich text editor (RTE) available in HCL Digital Experience (DX). It provides support for text formatting, content structuring, and styling features. You can use Core Editor as an alternative to the Enhanced Editor (TinyMCE) and Advanced Editor (CKEditor).
 
 Core Editor is available in two contexts:
 
@@ -12,7 +12,7 @@ Core Editor is available in two contexts:
 - **[Site Manager](../../wcm_authoring/inline_editing/index.md)**: Used for inline editing of rich text content directly on the rendered page.
 
 !!! warning
-    Opening and saving rich text elements or rich text components that were originally created using another editor (TinyMCE or CKEditor) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed.
+    Opening and saving rich text elements or rich text components that were originally created using another editor (Enhanced or Advanced) in Core Editor will transform the saved markup, even if no visible changes are made. HTML elements and styling that are unsupported by Core Editor (such as tables, images, iframes, and custom markup) may be removed.
 
     It is recommended to use Core Editor only for new content. For existing content, review the [Limitations](#limitations) and [Content security](#content-security) sections before switching editors to avoid unintended markup and styling changes.
 
@@ -111,7 +111,7 @@ To hide Core Editor from the RTE dropdown:
     1. Set `core.editor.enabled` to `false` in the **WCM WCMConfigService** REP.
     2. Restart the Portal server. <!--DX server instead of Portal?-->
 
-When Core Editor is disabled, Core Editor does not appear in the authoring portlet RTE dropdown. Any authoring portlet instances previously configured to use Core Editor revert to the platform default editor (TinyMCE on Liberty or WebEngine, and CKEditor on WebSphere or Core). Site Manager in-place editing falls back to the platform default editor if `inplaceEdit.defaultRichTextEditor` was set to `CoreEditor`.
+When Core Editor is disabled, Core Editor does not appear in the authoring portlet RTE dropdown. Any authoring portlet instances previously configured to use Core Editor revert to the platform default editor (Enhanced Editor on Liberty or WebEngine, and Advanced Editor on WebSphere or Core). Site Manager in-place editing falls back to the platform default editor if `inplaceEdit.defaultRichTextEditor` was set to `CoreEditor`.
 
 ## Supported features
 
