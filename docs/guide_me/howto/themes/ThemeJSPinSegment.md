@@ -16,10 +16,9 @@ To identify the JSP file, perform the following steps:
     Use a separate browser window or session to manage administrative settings to avoid navigation issues caused by visual debug highlights.
 
 1. Log in to HCL DX as an administrator.
-2. Select the **Applications menu** (house icon) in the toolbar.
-3. Navigate to **Themes > Analyzer >  Utilities > Control Center**.
-4. Locate the **Dynamic Content Spot (Inline) Debug is turned off** setting and select **Click to turn on**.
-5. Open the HCL DX page to view the highlighted theme segments and the corresponding JSP paths.
+2. Navigate to **Applications menu > Themes > Analyzer > Utilities > Control Center**.
+3. Locate the **Dynamic Content Spot (Inline) Debug is turned off** setting and select **Click to turn on**.
+4. Open the HCL DX page to view the highlighted theme segments and the corresponding JSP paths.
 
 !!!note
 
