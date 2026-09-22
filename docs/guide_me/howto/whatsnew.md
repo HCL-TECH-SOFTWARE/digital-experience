@@ -16,6 +16,12 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF239
+
+| Type | Category | Article |
+|------|----------|---------|
+||||
+
 ## CF238
 
 | Type | Category | Article |
