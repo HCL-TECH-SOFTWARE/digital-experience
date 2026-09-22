@@ -1,4 +1,4 @@
-# What's new in CF238
+# What's new in CF238 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF238 on supported platforms:
 
@@ -24,8 +24,8 @@ The following features and updates are available to customers installing HCL Dig
 
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
-- Helm values updates <!--update values-->
-- WAS, JDK, UBI, and iFix versions <!--update values-->
+- Helm values updates
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -126,7 +126,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Presentation Designer - Feature updates
 
 === "Containers"
-
     The following features are now available in Presentation Designer:
 
     - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
@@ -134,7 +133,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 === "On-Premises"
-
     The following features are now available in Presentation Designer:
 
     - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
@@ -155,12 +153,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
-### Helm values updates <!--update values-->
+### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF238 contains the following:
