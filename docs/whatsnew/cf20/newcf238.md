@@ -1,10 +1,11 @@
-# What's new in CF238
+# What's new in CF238 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF238 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Core Editor - New rich text editor option
 - Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
@@ -16,15 +17,15 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Practitioner Studio dashboard - New widgets
+- Practitioner Studio Dashboard - New widgets
 - Presentation Designer - Feature updates
 
 **Digital Experience 9.5 Container Version**
 
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
-- Helm values updates <!--update values-->
-- WAS, JDK, UBI, and iFix versions <!--update values-->
+- Helm values updates
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
@@ -43,6 +44,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Core Editor - New rich text editor option
+
+=== "Containers"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+=== "On-Premises"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
 
 ### Java 8 required for future CF upgrades
 
@@ -117,7 +126,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Presentation Designer - Feature updates
 
 === "Containers"
-
     The following features are now available in Presentation Designer:
 
     - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
@@ -125,7 +133,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 === "On-Premises"
-
     The following features are now available in Presentation Designer:
 
     - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
@@ -146,12 +153,12 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
-### Helm values updates <!--update values-->
+### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF238 contains the following:
@@ -169,13 +176,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Notices of deprecation
 
-### Advanced Rich Text Editor (8.5, 9.0, and 9.5)
+### Advanced rich text editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 

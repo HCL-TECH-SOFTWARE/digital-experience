@@ -18,12 +18,12 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Version**
 
 - HCL Doc IQ chatbot for the DX Help Center
+- Presentation Designer - Canvas Context Preview
 
 **Digital Experience 9.5 Container Version**
 
 - DAM - New actions available in Database Analysis
 - Helm values updates
-- Presentation Designer - Canvas Context Preview
 - Search V2 - Expanded support for Certificate DNs
 
 **Notices of deprecation**
@@ -122,6 +122,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information on how to use the chatbot, refer to [HCL Doc IQ chatbot (Preview)](../../get_started/product_overview/doc_iq_chatbot.md).
 
+### Presentation Designer - Canvas Context Preview
+
+=== "Containers"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
+=== "On-Premises"
+    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
+
 ## Digital Experience 9.5 Container Version
 
 ### DAM - New actions available in Database Analysis
@@ -133,11 +141,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf234).
-
-### Presentation Designer - Canvas Context Preview
-
-=== "Containers"
-    The Canvas Context Preview feature in Presentation Designer lets you preview how presentation templates render with Web Content Manager (WCM) content items. Visualizing templates with real data helps you verify layouts and data mapping across different device views before publishing. For more information on this feature, refer to [Canvas Context Preview in Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 ### Search V2 - Expanded support for Certificate DNs
 
