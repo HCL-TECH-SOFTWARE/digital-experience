@@ -24,6 +24,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
 |Migrated|Configuration|[How to configure JMS to send messages to all members in a cluster when using topics](./configuration/configureJMSMessages.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
+|Migrated|Configuration|[How to resolve intermittent Portal or WCM image display issues in Firefox](./configuration/WcmImageDisplayIssueInFirefox.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
 |Migrated|Development|[How to retrieve the language requested by the browser](./development/returnLanguageRequestedByBrowser.md)|
@@ -34,6 +35,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 |Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
 |Migrated|Themes|[How to identify the JSP file that renders a specific theme segment](./themes/ThemeJSPinSegment.md)|
+|Migrated|Web Content Manager|[How to add profiles to WCM items](./wcm/ProfileEnablementUtility.md)|
 |Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
 |New|Upgrade|[How to avoid Java Runtime failures during CF upgrade on older DX systems](./upgrade/upgradeJava8Requirement.md)|
 
