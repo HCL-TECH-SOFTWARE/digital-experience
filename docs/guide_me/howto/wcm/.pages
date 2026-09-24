@@ -3,5 +3,5 @@ nav:
     - index.md
     - ProfileEnablementUtility.md
     - StopWCMLibDel.md
-    - SampleInvocationRefreshLibrary.md
+    - WCMUUIDCommandLine.md
     
