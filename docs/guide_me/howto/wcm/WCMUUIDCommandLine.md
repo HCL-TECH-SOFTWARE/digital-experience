@@ -10,29 +10,35 @@ Sometimes, you need the UUID of a given object in WCM. When you have the whole p
 
 ## Instructions
 
-Before you begin, your environment should have `curl` and `perl` installed. If you don't, you can install them using "yum", "dnf" or "apt", depending on your linux distribution.
+Before you begin, your environment should have `curl` and `perl` installed. If you don't, you can install them using `yum`, `dnf` or `apt`, depending on your linux distribution.
 
 1. To begin you need to define some environment variables. Change these variables, according to your environment.
 
-    **The name of the WCM object you want the UUID:**
-`OBJECT_NAME="Article"`
+    **The name of the WCM object you want the UUID:**  
 
-    **Some other DX needed values:**
-```
-WPS_ADMIN_USR="wpsadmin"
-WPS_ADMIN_PWD="wpsadmin"
-WP_PROFILE_HOME="/opt/IBM/WebSphere/wp_profile"
-HOSTNAME=`hostname -f`
-PORT=`grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2`
-```
+    ```bash
+    OBJECT_NAME="Article"
+    ```
 
-2. Now that all required variables have been set up, let's get the UUID of the WCM Object, as defined above, in "OBJECT_NAME":
-```
-curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?options=item-path" --data-urlencode "title=$OBJECT_NAME" 2>/dev/null | grep -v 'query?options' | egrep 'wcm:type|<id>|wcm:title xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<wcm:type>|Type: |g' 
-```
+    **Some other DX needed values:**  
 
-You should see the command return something like including UUIDs:
-```
+    ```bash
+    WPS_ADMIN_USR="wpsadmin"
+    WPS_ADMIN_PWD="wpsadmin"
+    WP_PROFILE_HOME="/opt/HCL/wp_profile"
+    HOSTNAME=`hostname -f`
+    PORT=`grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2`
+    ```
+
+2. Now that all required variables have been set up, let's get the UUID of the WCM Object, as defined above, in `OBJECT_NAME`:
+
+    ```bash
+    curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?options=item-path" --data-urlencode "title=$OBJECT_NAME" 2>/dev/null | grep -v 'query?options' | egrep 'wcm:type|<id>|wcm:title xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<wcm:type>|Type: |g' 
+    ```
+
+    You should see the command return something like including UUIDs:  
+
+    ```bash
     UUID: 9f0826ff-9601-49c7-9411-7672e6adce33
     Type: ContentTemplate
     Path: Web Content
@@ -72,3 +78,4 @@ You should see the command return something like including UUIDs:
     UUID: 88740cea-c541-4a1e-bf74-65b26d1d7acd
     Type: Content
     Path: Portal Site/Content Root/Home/Wes_Tab/RSS Test
+    ```
