@@ -4,3 +4,4 @@ nav:
     - updateWcmLibraryRoles.md
     - createJSPUsingWCMAPI.md
     - searchPagesInPortalSiteLibrary.md
+    - generateURLWCMAPI.md
