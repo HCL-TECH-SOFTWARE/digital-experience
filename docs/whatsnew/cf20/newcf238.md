@@ -201,7 +201,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 !!!note
     - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
-    - To learn more about the new features in CF238, take the [DX CF238 interactive lesson](https://hclsoftwareu.hcl-software.com/courses/lesson/?id=4727){target="_blank"} on HCLSoftware U.
+    - To learn more about the new features in CF238, take the [DX CF238 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D4727){target="_blank"} on HCLSoftware U.
 
 HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
 
