@@ -6,5 +6,6 @@ nav:
     - access.md
     - usage.md
     - updating.md
+    - cross-version.md
     - limitations.md
     - troubleshooting.md
