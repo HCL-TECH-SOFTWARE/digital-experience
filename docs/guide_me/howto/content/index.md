@@ -16,6 +16,8 @@ Learn how to locate newly created or unreleased managed pages within the portal 
 Learn how to enable trace logging and analyze HCL DX trace logs to identify the WCM item or component generating target output or markup.
 - **[How to manage DAM asset URLs after a library import from another environment](./WCMObjectsHostname.md)**  
 Learn how to configure Digital Asset Management (DAM) asset URL parameters to ensure consistent pathing after a library import from another environment.
+- **[How to render or pre-render special characters in a Unix or Linux environment](./PreRenderSpecialCharacters.md)**  
+Learn how to resolve character encoding discrepancies between UTF-8 and ISO-8859-1 when rendering or pre-rendering special characters on Unix or Linux systems.
 - **[How to use JSPs in WCM](./useJSPinWCM.md)**  
 Learn how to use JavaServer Pages (JSPs) components in HCL DX using WCM.
 - **[How to use XML Access](./xmlaccess_faq.md)**  
@@ -24,6 +26,3 @@ Learn how to use the XML Access command line tool.
 Learn how to resolve XML and XSL rendering issues by overriding default content types, managing query string parameters, and converting text data into XML objects.
 - **[How to work with JSFs on HCL DX pages](./JSF_hasBaseURL.md)**  
 Learn how to work with JavaServer Faces (JSFs) portlets on HCL DX pages.
-
-- **[How to render or pre-render special characters on a Unix/Linux environment](./PreRenderSpecialCharacters.md)**  
-Learn how to render or pre-render special characters on a Unix/Linux environment.

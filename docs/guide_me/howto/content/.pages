@@ -8,8 +8,8 @@ nav:
     - IdentifyNewManagedPages.md
     - IsolateWCMItemsMarkup.md
     - WCMObjectsHostname.md
+    - PreRenderSpecialCharacters.md
     - JSF_hasBaseURL.md
     - useJSPinWCM.md
     - UsingXSLWithPortalAndWCM.md
     - xmlaccess_faq.md
-    - PreRenderSpecialCharacters.md
