@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF215 on supported platforms:
 
-**All  Digital Experience Versions (8.5, 9.0, 9.5)**
+**All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Sample integrations of HCL Leap
 - Sample integrations of HCL Volt MX Foundry and Iris
@@ -12,7 +12,7 @@ The following features and updates are available to customers installing HCL Dig
 
 **Digital Experience 9.5 Version**
 
-- Web Content Manager - Sorting search results in Content Reporting 
+- Web Content Manager - Sorting search results in Content Reporting
 
 **Digital Experience 9.5 Container Version**
 
@@ -22,7 +22,7 @@ The following features and updates are available to customers installing HCL Dig
 - Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 - Digital Asset Management - Moving and renaming media assets
 
-## All  Digital Experience Versions (8.5, 9.0, 9.5)
+## All Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Sample integrations of HCL Leap
 
@@ -43,7 +43,7 @@ The following features and updates are available to customers installing HCL Dig
 ### New documentation for URLs in DX
 
 === "Containers"
-    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md). 
+    New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md).
 
 === "On-Premises"
     New documentation containing an overview of URLs in DX and useful links when creating short and SEO-friendly URLs is added. For more information, see the Help Center topic [URL Addressability](../../build_sites/create_sites/url_addressing/index.md).
@@ -51,10 +51,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager REST API - Web Content Manager Find References from WCM Artifacts
 
 === "Containers"
-    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
+    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available.
 
 === "On-Premises"
-    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available. 
+    A new document about the [Web Content Manager Find References from WCM Artifacts](../../manage_content/wcm_development/wcm_rest/wcm_REST_web_content_manager_find_references.md) is now available.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -66,7 +66,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Digital Experience 9.5 Version
 
-### Web Content Manager - Sorting search results in Content Reporting 
+### Web Content Manager - Sorting search results in Content Reporting
 
 === "Containers"
     Starting CF215, you can sort search results in HCL Content Reporting by **Title**, by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. See the Help Center topics [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/access/index.md) and [Generating a content report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md) for additional information.
@@ -79,7 +79,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Updated documentation for configuring timezone
 
 === "Containers"
-    The `incubator.containerTimezone` field for configuring the timezone is changed to `configuration.containerTimezone`. See the Help Center topic [Configuring Timezone](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure-timezone.md) for the updated documentation. 
+    The `incubator.containerTimezone` field for configuring the timezone is changed to `configuration.containerTimezone`. See the Help Center topic [Configuring Timezone](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure-timezone.md) for the updated documentation.
 
 ### Updated documentation for running DX Core configuration tasks
 
@@ -90,7 +90,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "Containers"
     Steps on how to install DX Picker for hybrid deployments have been added. Instructions for Kubernetes deployments have also been updated. See the Help Center topic [Installing and Deploying DX Picker](../../manage_content/wcm_authoring/dx_picker/enable.md) for more information.
-
 
 ### Digital Asset Management - Finding the DAM Staging mismatch between publisher and subscriber
 
@@ -104,5 +103,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF215, take the [DX CF215 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2119){target="_blank"} on HCLSoftware U.
 
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

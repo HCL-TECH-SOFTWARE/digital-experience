@@ -1,4 +1,4 @@
-# How to configure authoring portlet search
+# Configuring authoring portlet search
 
 You can change the configuration of the authoring portlet to change how search works.
 
@@ -27,8 +27,6 @@ You can specify the following properties:
     -   If set to `false`, only exact matches to the text entered in the advanced search field are searched for.
     -   If the property is not specified, this setting defaults to the `false` behavior.
 
-
 ???+ info "Related information"
     - [Setting service configuration properties](../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
     - [WebSphere® Integrated Solutions Console](../../../deployment/manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
-
