@@ -45,3 +45,7 @@ Newly unsupported features and themes must be removed prior to migration.
 |IBM Portlet API remote web content viewer portlet |The remote web content viewer portlet based on the IBM Portlet API is no longer supported. To display web content on a portal where Web Content Manager is not installed, use WSRP and the JSR 286 web content viewer.|
 |IBM API Rendering Portlet  |The IBM API Rendering Portlet  is no longer supported.|
 |Private wire APIs  |The WireModel artifacts referring to private wires is no longer supported.|
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

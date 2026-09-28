@@ -3,9 +3,13 @@
 This section includes how-to articles about issues related to login, Portal Access Control (PAC), authentication, authorization, security vulnerabilities, and other security-related content in HCL Digital Experience (DX).  
 
 - **[How to add additional security realms for Virtual Portals](./AddAdditionalWASRealms.md)**  
-Learn how to add additional security realms for Virtual Portals.  
+Learn how to create a secondary WebSphere security domain and configure a standalone LDAP registry to isolate user bases across virtual portals in HCL DX.
+- **[How to change the LDAP attribute used by the Impersonation portlet](./LDAPAttrForImpersonation.md)**  
+Learn how to configure the WP GlobalThemeConfig resource environment provider to update the LDAP user profile attribute displayed throughout the theme and Impersonation portlet.
 - **[How to configure multiple login properties in a federated repository in HCL DX](./FedReposDifferentLoginProps.md)**  
 Learn how to configure an HCL DX federated repository to support multiple login properties.  
+- **[How to determine user credentials for a method or thread using trace logs](./DetermineCredentials.md)**  
+Learn how to identify the user associated with a specific method or thread in HCL DX for troubleshooting authentication, authorization, and access-related issues.  
 - **[How to enable HTTP Security, HttpOnly, and SameSite DX cookies in HCL DX](./enable_http_security_http_only_samesite_K8.md)**  
 Learn how to enable HTTP-related security flags and attributes in your HCL DX environment.  
 - **[How to identify missing DX resource roles](./determineRequiredRole.md)**  
@@ -25,4 +29,4 @@ Learn how to remove the Unified Task List and Script Application Import portlets
 - **[How to redirect users to a custom login page in HCL DX](./ChangeLoginPage.md)**  
 Learn how to create a custom login page for protected resources in HCL DX.
 - **[How to replace an LDAP in HCL DX](./ReplacePortalLDAP.md)**  
-Learn how to replace an LDAP server configuration step by step in HCL DX.
+Learn how to export system configuration, switch to the internal file repository, remove the old LDAP server, run user cleanup, and execute the member-fixer task.   

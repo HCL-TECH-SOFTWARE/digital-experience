@@ -10,6 +10,8 @@ Learn how to change cell and node names after installing HCL DX.
 Learn how to modify the default settings of a portlet across all deployed pages and virtual portals within HCL DX.
 - **[How to change the display language in HCL DX log files without changing the operating system's locale](./ChangeDisplayLanguage.md)**  
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.  
+- **[How to configure JMS to send messages to all members in a cluster when using topics](./configureJMSMessages.md)**  
+Learn how to configure HCL DX and WebSphere Application Server (WAS) activation specifications to deliver Java Message Service (JMS) topic messages to all active application servers in a cluster.  
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
 - **[How to determine default WCM configuration values](./DefaultWCMValues.md)**  
@@ -26,5 +28,7 @@ Learn how to modify the response header when using the IBM HTTP server as the fr
 Learn how to remove or hide the X-Powered-By header.  
 - **[How to remove state information from the URL](./RemoveStateInformationFromURL.md)**  
 Learn how to remove state information from page URLs.  
+- **[How to resolve intermittent Portal or WCM image display issues in Firefox](./WcmImageDisplayIssueInFirefox.md)**  
+Learn how to configure Firefox connection timeout settings to resolve intermittent image display issues caused by network or server performance delays.
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
-Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.  
+Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.
