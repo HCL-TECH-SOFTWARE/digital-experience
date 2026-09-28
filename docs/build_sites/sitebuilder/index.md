@@ -2,7 +2,7 @@
 
 Site Builder is an application that you can use to create site templates or section templates for use with HCL Digital Experience (DX).
 
-## Prerequisites for using Site Builder
+## Prerequisites
 
 - Site Builder is installed out of the box with HCL DX 8.5 CF08 or higher and HCL DX Compose 9.5 CF231 and higher.
 - Managed Pages must be enabled for use with HCL DX v8.5 CF08 and higher. For more information, refer to [Enabling managed pages](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/cfg_managed_pages/wcm_config_mngpages_enable.md). If you are using HCL DX Compose 9.5 CF231 and higher, this step is not required.
@@ -25,7 +25,14 @@ Site Builder uses a set of wizards to guide HCL Digital Experience users in crea
 - **[Troubleshooting issues with Site Builder](../sitebuilder/sitebuilder_issues.md)**  
 Find solutions to problems when you use Site Builder in the latest version of HCL Digital Experience.
 
+## See it in action
+
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to use Site Builder, go to [Site Builder](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2801){target="_blank"}. To try it out yourself, refer to [Site Builder Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Site_Builder_Lab.pdf){target="_blank"} and corresponding [Site Builder Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-200_Site_Builder_Lab_Resources.zip).
 

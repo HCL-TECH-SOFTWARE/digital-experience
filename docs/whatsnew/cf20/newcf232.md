@@ -7,7 +7,6 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -17,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Version**
 
 - German and French translations now available
+- Presentation Designer - Direction-specific styling for bidirectional text layouts
 
 **Digital Experience 9.5 Container Version**
 
@@ -71,14 +71,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf232) section.
 
-### Presentation Designer - Direction-specific styling for bidirectional text layouts
-
-=== "Containers"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
-=== "On-Premises"
-    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
-
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -102,6 +94,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     The HCL DX Help Center is now available in German and French. To switch languages, select an option from the dropdown menu in the top-right corner of any page.
+
+### Presentation Designer - Direction-specific styling for bidirectional text layouts
+
+=== "Containers"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to Step 2 of [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
+
+=== "On-Premises"
+    Override styles now support direction-specific styling for bidirectional text layouts through the **Canvas direction toggle** in the Presentation Designer header. This allows you to create distinct styles for RTL (Right-to-Left) and LTR (Left-to-Right) text directions. For more information, refer to Step 2 of [Override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#override-stylesheet).
 
 ## Digital Experience 9.5 Container Version
 
@@ -171,4 +171,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF232, take the [DX CF232 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D4109){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

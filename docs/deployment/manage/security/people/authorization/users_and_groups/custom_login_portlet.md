@@ -108,7 +108,7 @@ You can find the full code for a custom login portlet in the following code samp
 */
 ```-->
 
-!!!note "DISCLAIMER OF WARRANTIES"
+!!!note "Disclaimer of warranties"
     The files in the [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war) and [LoginPortletWithCV.war](downloads/LoginPortletWithCV.war) files are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
 
 - Sample code for a custom login portlet: [CustomLoginPortlet.war](downloads/CustomLoginPortlet.war)

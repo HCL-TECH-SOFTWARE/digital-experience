@@ -165,7 +165,10 @@ For a complete history of features added in each release, refer to the [Feature 
         -   [XML Access](../dxclient/dxclient_artifact_types/xmlaccess.md)
         -   [Restore Script Application](../dxclient/dxclient_artifact_types/scriptapplications.md)
 
-## HCLSoftware U Learning Materials
+## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 To get an introduction to development for HCL DX, go to [HCL DX for Developers (Beginners)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D412){target="_blank"}. Ensure you setup the DXClient that allows you to develop locally using the [DXClient for Beginners Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-100_DXClient_for_Beginners.pdf){target="_blank"}.
 
