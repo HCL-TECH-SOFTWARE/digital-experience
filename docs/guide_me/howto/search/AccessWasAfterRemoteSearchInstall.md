@@ -1,4 +1,4 @@
-# How to access the Remote Search Server Integrated Solutions Console (on-premise)
+# How to access the WAS admin console after installing the remote search service
 
 ## Applies to
 
@@ -6,32 +6,36 @@
 
 ## Introduction
 
-The HCL DX Remote Search Server has been installed successfully following the procedure mentioned at [Installing remote search service by using IBM Installation Manager](../../../build_sites/search/remotesearch/installrssim.md){target="_blank"}
-
-This document explains how to access the IBM Integrated Solutions Console (WAS Admin Console) to manage the Remote Search Service after a successful install.
+Running search indexing and query workloads in HCL Digital Experience (DX) requires managing the remote search service through the IBM Integrated Solutions Console (WAS admin console). For installation prerequisites, refer to [Installing remote search service by using IBM Installation Manager](../../../build_sites/search/remotesearch/installrssim.md). This article explains how to access the WAS admin console after installing the remote search service.
 
 ## Instructions
 
-The profile is most likely installed on location:
+To access the WAS admin console after installing the remote search service, perform the following steps:
 
-`/opt/HCL/AppServer/profiles/prs_profile`
+1. Open a terminal and locate the profile directory:
 
-and can be stopped and started from:
+    ```
+    /opt/HCL/AppServer/profiles/prs_profile
+    ```
 
-`/opt/HCL/AppServer/profiles/prs_profile/bin`
+2. Navigate to the `bin` directory:
 
-using the following commands:  
+    ```
+    /opt/HCL/AppServer/profiles/prs_profile/bin
+    ```
 
-```bash
-./stopServer.sh server1
-```
+3. Restart the server by executing the stop and start scripts:
 
-```bash
-./startServer.sh server1
-```
+    ```
+    ./stopServer.sh server1
+    ```
 
-After the profile is started, you can access the IBM Integrated Solutions Console by default via the following URL:
+    ```
+    ./startServer.sh server1
+    ```
 
-```URL
-https://myclientserver.yourco.com:9043/ibm/console
-```
+4. Open a browser and access the WAS admin console:
+
+    ```URL
+    https://myclientserver.yourco.com:9043/ibm/console
+    ```

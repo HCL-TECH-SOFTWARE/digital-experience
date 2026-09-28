@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 
 ## CF238
 
