@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
 
 ## CF238
 
