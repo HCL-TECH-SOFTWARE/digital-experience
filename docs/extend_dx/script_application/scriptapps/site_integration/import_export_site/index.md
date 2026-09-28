@@ -108,7 +108,7 @@ This xml will be used to export the metadata xml of theme.
     * disclosure restricted by GSA ADP Schedule Contract with IBM
     * Corp.
     *
-    * DISCLAIMER OF WARRANTIES.  The following [enclosed] code is
+    * Disclaimer of warranties.  The following [enclosed] code is
     * sample code created by IBM Corporation.  This sample code is
     * not part of any standard or IBM product and is provided to you
     * solely for the purpose of assisting you in the development of
@@ -163,7 +163,7 @@ This xml is used to export the Page metadata and hierarchy xml of your site.
       *disclosure restricted by GSA ADP Schedule Contract with IBM
       * Corp.
       *
-      * DISCLAIMER OF WARRANTIES.  The following [enclosed] code is
+      * Disclaimer of warranties.  The following [enclosed] code is
       *sample code created by IBM Corporation.  This sample code is
       * not part of any standard or IBM product and is provided to you
       *solely for the purpose of assisting you in the development of
