@@ -20,7 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
-||||
+|Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 
 ## CF238
 
