@@ -6,7 +6,11 @@
 
 ## Introduction
 
-Running search indexing and query workloads in HCL Digital Experience (DX) requires managing the remote search service through the IBM Integrated Solutions Console (WAS admin console). For installation prerequisites, refer to [Installing remote search service by using IBM Installation Manager](../../../build_sites/search/remotesearch/installrssim.md). This article explains how to access the WAS admin console after installing the remote search service.
+Running search indexing and query workloads in HCL Digital Experience (DX) requires managing the remote search service through the IBM Integrated Solutions Console (WAS admin console). This article explains how to access the WAS admin console after installing the remote search service.
+
+## Prerequisites
+
+For installation prerequisites, refer to [Installing remote search service by using IBM Installation Manager](../../../build_sites/search/remotesearch/installrssim.md).
 
 ## Instructions
 
@@ -24,7 +28,7 @@ To access the WAS admin console after installing the remote search service, perf
     /opt/HCL/AppServer/profiles/prs_profile/bin
     ```
 
-3. Restart the server by executing the stop and start scripts:
+3. Restart the server by executing the `stop` and `start` scripts:
 
     ```
     ./stopServer.sh server1
@@ -34,7 +38,7 @@ To access the WAS admin console after installing the remote search service, perf
     ./startServer.sh server1
     ```
 
-4. Open a browser and access the WAS admin console:
+4. Open a browser and access the WAS admin console using a URL similar to the following:
 
     ```URL
     https://myclientserver.yourco.com:9043/ibm/console
