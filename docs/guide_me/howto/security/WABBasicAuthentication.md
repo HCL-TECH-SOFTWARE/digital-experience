@@ -12,7 +12,7 @@ Some back-end applications require basic authentication to establish a secure co
 
 ### Creating a credential vault slot
 
-1. Log in to HCL DX as an administrator.  
+1. Log in to HCL DX as an portal administrator.  
 2. Navigate to **Open applications menu > Administration > Security > Credential Vault**.  
 3. Select **Add a vault slot**.
 4. In the **Name** box, enter `BasicAuthVaultSlot`
@@ -35,7 +35,7 @@ Some back-end applications require basic authentication to establish a secure co
 
 1. In **Content Provider Profiles**, select the **default** tab next to **basicAuthProfile**.
 2. Select **Edit**.
-3. Select the **Single Sign-On** tab
+3. Select the **Single Sign-On** tab.
 4. Under **Authentication Mechanism**, select **HTTP Basic authentication**.
 5. From the **Credential slot** drop-down list, select **BasicAuthVaultSlot**.
 6. Select **Save**.
