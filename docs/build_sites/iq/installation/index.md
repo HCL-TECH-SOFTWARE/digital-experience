@@ -55,6 +55,8 @@ This section describes how to configure the IQ Integrator to authenticate with y
 This section provides instructions for verifying that your deployment is healthy and operational at any stage of the installation process.
 - **[Backing up and restoring data](backup-restore.md)**  
 This section provides the procedures for generating database backups and restoring the database state to prevent data loss during upgrades, migrations, or node failures.
+- **[Enabling cross-session memory (RAG)](enable-rag.md)**  
+This section describes how to enable and configure cross-session memory, which allows IQ to retrieve relevant context from past conversations and inject it into the current session.
 - **[IQ environment variables](environment-variables.md)**  
 This section lists all environment variables available for the IQ Integrator and DX MCP Server, including their types, defaults, and accepted values.
 

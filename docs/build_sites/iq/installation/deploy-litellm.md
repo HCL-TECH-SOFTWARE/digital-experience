@@ -443,6 +443,51 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
 
         Expected response: A JSON object with a `choices` array containing the model's response.
 
+## Registering embedding models for cross-session memory
+
+If you plan to use [cross-session memory (RAG)](enable-rag.md), your LiteLLM proxy must include two embedding model aliases in addition to the chat models. IQ uses these fixed aliases to generate and store vector embeddings for past conversations.
+
+| Alias | Purpose | When used |
+|---|---|---|
+| `iq-multilingual-embed` | Multilingual embedding model | Default — used when `USE_MULTILINGUAL_EMBEDDINGS=true` (the default) |
+| `iq-text-embed` | Monolingual embedding model | Used when `USE_MULTILINGUAL_EMBEDDINGS=false` |
+
+Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock:
+
+```yaml
+proxy_config:
+  model_list:
+    # ... existing iq-general-purpose and iq-summary entries ...
+
+    # Multilingual embedding model (default path for RAG)
+    - model_name: iq-multilingual-embed
+      litellm_params:
+        model: "bedrock/us.cohere.embed-v4:0"
+        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+        dimensions: 1024
+
+    # Monolingual embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false)
+    - model_name: iq-text-embed
+      litellm_params:
+        model: "bedrock/amazon.titan-embed-text-v2:0"
+        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+        dimensions: 1024
+```
+
+!!! important "Dimension alignment"
+    The `dimensions` value in the LiteLLM config must match the `EMBEDDING_DIMENSIONS` environment variable in your IQ configuration. If these values diverge after initial startup, IQ enters graceful degradation mode and disables cross-session memory while continuing to serve requests. The default `EMBEDDING_DIMENSIONS` value is `1024`.
+
+!!! note "For other LLM providers"
+    Replace the `model` and `api_key` values with the embedding model available from your provider. For example, for OpenAI use `model: "openai/text-embedding-3-small"` with `api_key: os.environ/OPENAI_API_KEY`. Verify that the `dimensions` value matches both the model's actual output dimension and your `EMBEDDING_DIMENSIONS` setting. For more information, refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
+
+After adding the embedding models, redeploy LiteLLM to apply the updated configuration:
+
+```bash
+helm upgrade --install litellm litellm/litellm \
+  -f litellm-values.yaml \
+  -n dxns
+```
+
 ### LiteLLM service endpoint
 
 After LiteLLM is deployed and verified, LiteLLM is accessible within your cluster at:

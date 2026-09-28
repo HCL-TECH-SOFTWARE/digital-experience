@@ -40,6 +40,21 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `DB_PASSWORD` | `configuration.database.dbPassword` | String | — | Specifies the PostgreSQL password. The system ignores this value when `dbCustomSecret` is set. Do not commit this password to version control. Use `dbCustomSecret` for production deployments. | Any valid PostgreSQL password |
 | `DB_TLS_ENABLED` | `configuration.database.dbTlsEnabled` | Boolean | `false` | Enables TLS encryption for the database connection. | `true`, `false` |
 
+### Cross-session memory (RAG)
+
+| Environment variable | Helm values key | Type | Default | Description | Accepted values |
+|----------------------|-----------------|------|---------|-------------|-----------------|
+| `RAG_ENABLED` | `environment.pod.integrator` | Boolean | `false` | Enables cross-session memory. When enabled, IQ stores semantic chunks of past conversations in a vector database and retrieves relevant context at query time. Requires a PostgreSQL database (`DB_ENABLED=true`) and a registered embedding model. | `true`, `false` |
+| `EMBEDDING_ADAPTER` | `environment.pod.integrator` | String | Inherits from `LLM_ADAPTER_NAME` | Specifies the adapter used for embedding calls. Override this variable to decouple the embedding provider from the LLM provider. | `litellm` |
+| `EMBEDDING_DIMENSIONS` | `environment.pod.integrator` | Integer | `1024` | Specifies the vector dimension produced by your embedding model. This value must exactly match the output dimension of the model registered in LiteLLM. A mismatch causes a hard startup failure. | Any positive integer matching your embedding model's output dimension (for example, `1024`, `1536`) |
+| `USE_MULTILINGUAL_EMBEDDINGS` | `environment.pod.integrator` | Boolean | `true` | When set to `true`, IQ uses the `iq-multilingual-embed` LiteLLM proxy alias. When set to `false`, IQ uses `iq-text-embed`. | `true`, `false` |
+| `RAG_CHUNK_SIZE` | `environment.pod.integrator` | Integer | `512` | Specifies the maximum number of characters per text chunk. Changing this value after first startup requires recreating the `rag_chunks` table. Refer to [Enabling cross-session memory](enable-rag.md). | Any positive integer (for example, `256`, `512`, `1024`) |
+| `RAG_CHUNK_OVERLAP` | `environment.pod.integrator` | Integer | `50` | Specifies the number of characters that adjacent chunks share. Changing this value after first startup requires recreating the `rag_chunks` table. Refer to [Enabling cross-session memory](enable-rag.md). | Any non-negative integer less than `RAG_CHUNK_SIZE` (for example, `0`, `50`, `100`) |
+| `RAG_CHUNK_SEPARATORS` | `environment.pod.integrator` | JSON string array | `["\n\n","\n",". ","? ","! "," ",""]` | Specifies the ordered list of separator strings used by the chunker. The chunker tries each separator from first to last, splitting on the coarsest boundary that produces chunks within `RAG_CHUNK_SIZE`. Provide this value as a JSON-encoded string array. Changing this value after first startup requires recreating the `rag_chunks` table. Refer to [Enabling cross-session memory](enable-rag.md). | A valid JSON string array (for example, `["\n\n","\n",". "]`) |
+| `RAG_TOP_K` | `environment.pod.integrator` | Integer | `5` | Specifies the number of most-similar chunks returned per query. You can change this value without restarting the pod using the dynamic configuration file. | Any positive integer (for example, `3`, `5`, `10`) |
+| `RAG_MIN_SIMILARITY` | `environment.pod.integrator` | Float | `0` | Specifies the minimum cosine similarity score (0–1) that a chunk must reach to be included in retrieval results. Set a non-zero value to filter out low-relevance chunks. You can change this value without restarting the pod using the dynamic configuration file. | A float between `0` and `1` (for example, `0`, `0.5`, `0.7`) |
+| `RAG_DEBUG` | `environment.pod.integrator` | Boolean | `false` | Enables verbose debug logging for RAG ingestion and retrieval. Do not enable in production environments. | `true`, `false` |
+
 ### Operations
 
 | Environment variable | Helm values key | Type | Default | Description | Accepted values |
