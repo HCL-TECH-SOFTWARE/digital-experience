@@ -10,6 +10,15 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 
 Before installing the IQ backend server, deploy the LiteLLM service to configure the required proxy models (`iq-general-purpose` and `iq-summary`). For more information, refer to [Deploying LiteLLM](../../../../../../build_sites/iq/installation/deploy-litellm.md).
 
+If MCP Server HTTPS is enabled, create the `dx-tls-cert` TLS secret in the target namespace before installing the IQ chart. The secret must contain the standard `tls.crt` and `tls.key` entries.
+
+```bash
+kubectl create secret tls dx-tls-cert \
+  --cert=<PATH_TO_CERTIFICATE> \
+  --key=<PATH_TO_PRIVATE_KEY> \
+  --namespace <YOUR_NAMESPACE>
+```
+
 ## Understanding IQ services
 
 Installing IQ requires two core components: the IQ Integrator and the IQ MCP Server.
@@ -94,6 +103,7 @@ configuration:
   
   # MCP Server configuration
   mcpServer:
+    httpsEnabled: true
     standaloneMode: false
     enableWcm: true
     enableDam: true
@@ -119,9 +129,9 @@ environment:
       # CRITICAL: MCP Server list configuration
       # Must match your Helm release name. Default points to 'dx-ai' release.
       # If your release name is different (for example, 'dx-iq'), update accordingly.
-      # Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
+      # Format: https://<IQ_RELEASE_NAME>-mcp-server:<PORT>
       - name: "MCP_SERVER_LIST"
-        value: "http://<IQ_RELEASE_NAME>-mcp-server:3000"
+        value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
       
       # Optional: LLM model parameters (uncomment and adjust if your model requires specific values)
       # - name: "LLM_MAX_TOKENS"
@@ -140,6 +150,7 @@ environment:
 - `<LITELLM_API_KEY>`: The API key provided by the LiteLLM proxy administrator to enable Integrator functionality.
 - `<LITELLM_URL>`: The LiteLLM Proxy URL (for example, `https://litellm.example.com`) for operational deployments.
 - `<IQ_RELEASE_NAME>`: The Helm release name used to install the IQ chart. Ensure this value matches your deployment's release name. For example, if you installed the chart using `helm install dx-iq`, set this value to `dx-iq-mcp-server`. The `defaults.json` file uses `dx-ai-mcp-server` by default, so you must override this value during installation.
+- `dx-tls-cert`: The Kubernetes TLS secret used by the MCP Server. Create this secret in `<YOUR_NAMESPACE>` before installing the chart. It must contain the `tls.crt` and `tls.key` entries.
 - `DX_CONTEXT_ROOT`: The DX deployment context root (for example, `/wps`). Update this value if your DX deployment uses a different context root.
 - `LLM_MAX_TOKENS` (optional): The maximum number of tokens for LLM completion responses. Include this parameter if your chosen LLM model enforces strict token limits (for example, `16384`, `8192`, `4096`).
 - `LLM_TEMPERATURE` (optional): The level of randomness in LLM responses. Include this parameter if your chosen LLM model enforces specific temperature values (for example, `0.7`, `1.0`, or `0`).

@@ -69,6 +69,9 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `ENABLE_DAM` | `configuration.mcpServer.enableDam` | Boolean | `true` | Enables Digital Asset Management (DAM) tools. | `true`, `false` |
 | `STANDALONE_MODE` | `configuration.mcpServer.standaloneMode` | Boolean | `false` | When set to `true`, this variable disables DX authentication tools and runs the MCP Server in isolation, without integrating with HCL DX user authentication. Use this mode for development or testing only. | `true`, `false` |
 | `BODY_PARSER_JSON_LIMIT` | `configuration.mcpServer.bodyParserJsonLimit` | String | `1mb` | Specifies the maximum size for incoming JSON-RPC payloads. This setting uses Express.js byte notation (lowercase units). Increase this value if your deployment requires larger tool payloads. | A size string with lowercase units (for example, `1mb`, `5mb`, `10mb`) |
+| `HTTPS_ENABLED` | `configuration.mcpServer.httpsEnabled` | Boolean | `true` | Enables HTTPS for the MCP Server. The chart uses the `dx-tls-cert` Kubernetes secret for the server certificate and private key. | `true`, `false` |
+| `HTTPS_KEY_PATH` | Fixed chart path | String | `/etc/mcp-tls-config/tls.key` | Specifies the mounted TLS private-key path used by the MCP Server. This path is provided by the chart and should not normally be changed. | A path to a mounted private-key file |
+| `HTTPS_CERT_PATH` | Fixed chart path | String | `/etc/mcp-tls-config/tls.crt` | Specifies the mounted TLS certificate path used by the MCP Server. This path is provided by the chart and should not normally be changed. | A path to a mounted certificate file |
 
 ### Operations
 
