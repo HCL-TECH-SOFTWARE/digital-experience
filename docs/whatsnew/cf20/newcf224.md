@@ -15,13 +15,16 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Presentation Designer
+
 **Digital Experience 9.5 Container Version**
 
 - DAM - New UI theme
 - DAM - Cross-CF staging
 - Search V2 - New search interface
 - People Service
-- Presentation Designer
 - New topic for configuring of `hostAliases` for DX Pods
 - New guidance for rendering in the upper limit of a single-node configuration
 - Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
@@ -95,6 +98,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Presentation Designer
+
+=== "Containers"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
+=== "On-Premises"
+    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
+
 ## Digital Experience 9.5 Container Version
 
 ### DAM - New UI theme
@@ -121,11 +134,6 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
     For more information, see [People Service](../../extend_dx/integration/people_service/index.md).
 
-### Presentation Designer
-
-=== "Containers"
-    You can now edit presentation templates through a drag-and-drop interface using Presentation Designer. You can select available user elements and use a variety of styling options for your presentation template. Changes you make are instantly reflected on the canvas, providing you with a real-time, visual editing experience. For more information, see [Presentation Designer](../../manage_content/wcm_authoring/presentation_designer/index.md).
-
 ### New guidance for configuring `hostAliases` for DX Pods
 
 === "Containers"
@@ -145,7 +153,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Runtime Controller triggering Pod restarts for [direct configuration changes](../../deployment/manage/container_configuration/index.md#rollout-of-configuration-changes) in ConfigMaps is removed. You must restart the appropriate Pods manually to apply the changes made to the ConfigMaps for testing configurations. For more information, see [Deprecated features](../deprecated_features.md).
-    
+
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF224, take the [DX CF224 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3456){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

@@ -16,17 +16,35 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF239
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
+|Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
+|Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
+
 ## CF238
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to disable an application blocking the HCL DX server startup](./administration/PreventApplicationStartUp.md)|
+|Migrated|Administration|[How to reset the Web Content Viewer portlet to its default state](./administration/ResetWCMViewerPortlet.md)|
+|Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
+|Migrated|Configuration|[How to configure JMS to send messages to all members in a cluster when using topics](./configuration/configureJMSMessages.md)|
 |Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
+|Migrated|Configuration|[How to resolve intermittent Portal or WCM image display issues in Firefox](./configuration/WcmImageDisplayIssueInFirefox.md)|
 |Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
 |Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
+|Migrated|Development|[How to retrieve the language requested by the browser](./development/returnLanguageRequestedByBrowser.md)|
 |Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|
 |Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
+|Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|
+|Migrated|Security|[How to determine user credentials for a method or thread using trace logs](./security/DetermineCredentials.md)|
 |Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
 |Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
+|Migrated|Themes|[How to identify the JSP file that renders a specific theme segment](./themes/ThemeJSPinSegment.md)|
+|Migrated|Web Content Manager|[How to add profiles to WCM items](./wcm/ProfileEnablementUtility.md)|
 |Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
 |New|Upgrade|[How to avoid Java Runtime failures during CF upgrade on older DX systems](./upgrade/upgradeJava8Requirement.md)|
 
