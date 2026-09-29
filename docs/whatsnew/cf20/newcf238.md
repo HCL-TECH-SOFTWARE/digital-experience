@@ -1,4 +1,4 @@
-# What's new in CF238  
+# What's new in CF238 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF238 on supported platforms:
 
@@ -56,7 +56,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Java 8 required for future CF upgrades
 
 === "On-Premises"
-    If you are upgrading older or unchanged HCL DX 8.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
+    If you are upgrading older or unchanged HCL DX 8.5, 9.0, or 9.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
 
     !!!important
         This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
@@ -199,4 +199,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF238, take the [DX CF238 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D4727){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

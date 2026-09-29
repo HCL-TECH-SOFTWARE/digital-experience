@@ -3,13 +3,13 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF208 on supported platforms:
 
-- Kubernetes deployment Pre-requisites checking 
+- Kubernetes deployment Pre-requisites checking
 - Web Content Manager Author options now include Tiny MCE
 - Web Content Manager set SVG to disabled by default
 - Digital Asset Management set SVG to disabled by default
-- Digital Asset Management Staging Obtain Subscribers List 
+- Digital Asset Management Staging Obtain Subscribers List
 - Config Option to set absolute value Content Composer and DAM syndication
-- Move or duplicate content items in Content Composer 
+- Move or duplicate content items in Content Composer
 - WCM column sorting enhancement  
 - New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 - Experience API update
@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Kubernetes deployment Pre-requisites checking  
 
-=== "Containers"                                  
+=== "Containers"
     DX 9.5 Container Update CF208 adds deployment pre-requisites checking for Helm deployments to supported Kubernetes platforms. See the topic [Configure Prereqs Checker For DX Deployment](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional-core-prereqs-checker.md) for more information.
 
 <!--
@@ -32,8 +32,7 @@ The following features and updates are available to customers installing HCL Dig
 ## Web Content Manager Author options now include Tiny MCE
 
 === "Containers"
-    Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information. 
-
+    Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information.
 
 === "On-Premises"
     Content Authors can now choose to use TinyMCE as the default editor for creating and editing WCM content. See the topic [Web Content Author Editor options](../../manage_content/wcm_authoring/authoring_portlet/auth_portlet_settings/wcm_config_authoringportlet_richtext.md), and [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md#defining-the-editor-used-for-in-place-editing) for more information.
@@ -41,7 +40,7 @@ The following features and updates are available to customers installing HCL Dig
 ## Web Content Manager set SVG to disabled by default
 
 === "Containers"
-    Configuration updates set SVG to disabled by default. 
+    Configuration updates set SVG to disabled by default.
 
     Since SVG files can post a security concern, beginning with CF208, the uploading of SVG image files is disabled by default unless already customized. 
 
@@ -55,7 +54,7 @@ The following features and updates are available to customers installing HCL Dig
     See the Help Center topic [Web content authoring options](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_prop_authoring.md) for more information. 
 
 === "On-Premises"
-    Configuration updates set SVG to disabled by default. 
+    Configuration updates set SVG to disabled by default.
 
     Since SVG files can post a security concern, beginning with CF208, the uploading of SVG image files is disabled by default unless already customized. 
 
@@ -71,13 +70,13 @@ The following features and updates are available to customers installing HCL Dig
 ## Digital Asset Management set SVG to disabled by default
 
 === "Containers"
-    Configuration updates set SVG to disabled by default. 
+    Configuration updates set SVG to disabled by default.
 
     See the Help Center topic [Manage Media Assets](../../manage_content/digital_assets/usage/managing_dam/manage_media_assets.md) for more information 
 
-## Digital Asset Management Staging Obtain Subscribers List 
+## Digital Asset Management Staging Obtain Subscribers List
 
-=== "Containers"                                                      
+=== "Containers"
     A new command is available to display the details of all the registered DAM Staging subscribers. See the topic [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) for more information.
 
 ## Config Option to set absolute value Content Composer and DAM syndication
@@ -85,48 +84,49 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     When syndicating DAM assets and Content Composer items that point to DAM assets, the target URLs need to be updated to point to the new server. A new option can be configured to control syndication of staging documents in production operations so that references will point to the appropriate server location. See the topic [(Optional) Override Content Composer and DAM URL](../../deployment/install/container/helm_deployment/helm_install_commands.md#optional-override-content-composer-and-dam-url) for more information.
 
-
-## Move or duplicate content items in Content Composer 
+## Move or duplicate content items in Content Composer
 
 === "Containers"
     Content items can now be moved or duplicated through Content Composer. See the topic [authoring actions in dashboard view](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md#create-new-content-with-default-keywords) for more information.
-
 
 ## WCM column sorting enhancement  
 
 === "Containers"
     A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order.
 
-
 ===  "On-Premises"
-    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order. 
+    A new option to set the sort order of the last modified date column from the WCM Library Explorer to descending in addition to ascending default order.
 
-
-##  New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
+## New Configuration task for integration of Unica Campaign segments with DX Personalization Rules
 
 === "Containers"
-    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.     
-
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.
 
 ===  "On-Premises"
-    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information. 
-
+    See the topic [Out-of-box application object for shipping Unica with PZN](../../manage_content/pzn/pzn_unica_integration/out_of_box_method.md) for more information.
 
 ## Experience API update  
 
 === "Containers"
-    The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information. 
+    The Content Controller PUT /webcontent/contents/{content_id} endpoint has been updated to accept new optional parameters; "parent" and "library". This enables moving content items from one location to another. See the [HCL Experience API on HCL Software Github](https://github.com/HCL-TECH-SOFTWARE/experience-api-documentation) for more information.
 
-## New option to configure a local HCL Flexnet Entitlement server 
+## New option to configure a local HCL Flexnet Entitlement server
 
-=== "Containers"    
+=== "Containers"
     Customers with HCL Digital Experience Cloud Native 9.5 entitlements deploying to supported Kubernetes environments can optionally install a local Flexnet Entitlement server. See the topic [Configuring a local HCL Flexnet entitlement server](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_local_flexnet_entitlement_server.md) for more information.
 
 ## DAM Keyword enhancements
 
-=== "Containers" 
+=== "Containers"
     Added new sections "Remove All Keywords tagged in a media asset" and "Error validation on adding duplicate keywords". See the topic [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) for more information.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF208, take the [DX CF208 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1078){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
