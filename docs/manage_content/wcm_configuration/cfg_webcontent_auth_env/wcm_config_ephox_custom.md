@@ -1,4 +1,4 @@
-# Enhanced rich text editor configuration options
+# Configuring the Enhanced rich text editor
 
 This topic explains the different enhanced rich text editor configuration options using the TinyMCE editor for HCL Web Content Manager (WCM).
 

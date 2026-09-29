@@ -1,4 +1,4 @@
-# Further authoring portlet configuration options
+# Configuring the authoring portlet
 
 Further authoring portlet configuration options can be specified by using the portlet administration view.
 

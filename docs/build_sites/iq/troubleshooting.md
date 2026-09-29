@@ -21,7 +21,8 @@ If interface or display issues occur, clear the browser cache and perform a hard
 
 If the sparkle icon or floating action button (FAB) does not appear:
 
-- Verify if IQ is installed or enabled. For more information, refer to [Enabling IQ](enable.md).
+- Verify that IQ is installed and enabled. For instructions, refer to [Enabling IQ](enable.md).
+- Confirm that all IQ components upgraded successfully and the deployment is healthy after a DX Core Helm upgrade.
 - Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
 **Incorrect message display**
@@ -70,6 +71,87 @@ To identify the underlying cause behind this banner, review the backend response
 | Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
 | Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
+## LiteLLM
+
+**LiteLLM pod startup failure**
+
+If the LiteLLM pod fails to start and remains in a `CrashLoopBackOff` state:
+
+- Run the following command to examine recent deployment logs:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm --tail=50
+    ```
+
+- Verify external database endpoints and credentials if database connections fail.
+- Check the `proxy_config` structure in the Helm values file for syntax errors.
+- Confirm all referenced secrets exist in the `dxns` namespace.
+- Verify that Kubernetes nodes have sufficient unallocated CPU and memory resources.
+
+**Health probe failure**
+
+If the readiness probe fails and the pod does not accept traffic:
+
+- Diagnose pod deployment issues:
+
+    ```bash
+    kubectl describe pod -n dxns -l app=litellm
+    ```
+
+- Test database network accessibility from the pod:
+
+    ```bash
+    kubectl exec -it <litellm-pod> -- nc -zv <db-host> 5432
+    ```
+
+- Increase the `failureThreshold` parameter in the startup probe to give database migrations more time to complete.
+- Review LiteLLM pod logs to identify database initialization errors.
+
+**Models not available**
+
+If IQ cannot locate the `iq-general-purpose` or `iq-summary` models:
+
+- Check for upstream API errors and startup failures:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm
+    ```
+
+- Verify the available proxy models:
+
+    ```bash
+    curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
+      http://litellm.dxns.svc.cluster.local:4000/v1/models
+    ```
+
+- Verify model names (`iq-general-purpose`, `iq-summary`) match the values defined in proxy_config.
+- Confirm LLM provider credentials exist in Kubernetes secrets.
+- Verify the upstream provider account has access to the specified models.
+
+**Connection refused from IQ**
+
+If the IQ backend service cannot establish network communication with LiteLLM:
+
+- Test endpoint accessibility from the IQ pod:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- \
+      curl http://litellm.dxns.svc.cluster.local:4000/health/readiness
+    ```
+
+- Verify that the LiteLLM service is running:
+
+    ```bash
+    kubectl get svc -n dxns litellm
+    ```
+
+- Check Kubernetes network policies to ensure traffic is allowed between IQ and LiteLLM pods.
+- Verify cluster DNS resolution:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
+    ```
+
 ## Backend services
 
 If [validation](./installation/validation.md) fails, use this table to isolate the cause:
@@ -80,7 +162,7 @@ If [validation](./installation/validation.md) fails, use this table to isolate t
 | Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](./installation/prepare-database.md). |
 | WebSocket errors | Network policy restrictions | Check Kubernetes network policies. |
 | Model Context Protocol (MCP) integration issues | Web Content Manager (WCM) or Digital Asset Management (DAM) not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values. |
-| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying services - Installing the IQ backend server](./installation/deploy-services.md#installing-the-iq-backend-server). |
+| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md). |
 
 To inspect pod configurations and system logs:
 
@@ -149,9 +231,9 @@ kubectl run pg-test --rm -it --image=postgres:16 --restart=Never -n <YOUR_NAMESP
   psql "host=<DB_HOST> port=5432 dbname=iqdb user=<DB_USERNAME> password=<DB_PASSWORD> sslmode=require"
 ```
 
-#### Runtime Controller (RTC)-managed database
+#### RTC-managed database
 
-Check the Runtime Controller logs to confirm the automatic provisioning completed successfully:
+Check the Runtime Controller (RTC) logs to confirm the automatic provisioning completed successfully:
 
 ```bash
 kubectl logs -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller | grep -i "iq database"
@@ -175,8 +257,6 @@ Before investigating MCP-related errors, perform these basic checks:
 4. Confirm no recent release mismatch between IQ and MCP server components.
 5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
 6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass or fail behavior, refer to [Managing endpoints and security](./installation/configuring-mcp.md#managing-endpoints-and-security).
-
-### Common symptoms and actions
 
 | Issue | Possible cause | Solution |
 |-------|----------------|----------|
@@ -207,7 +287,43 @@ Capture detailed diagnostic information using browser developer tools to investi
 
 To isolate deployment issues, enable debug logs for the IQ Integrator and MCP Server. Comparing timestamps across both logs helps pinpoint where processing failures occur.
 
-1. Change the `logging` level in your `custom-iq-debug-values.yaml` file:
+The `logging` block in the Helm values sets logging levels. The deployment writes these settings to a shared `ConfigMap ({{ .Release.Name }}-global-iq)` and mounts the configuration into each pod at `/etc/global-config/`. The Integrator reads its log settings from the file path defined by `LOG_SETTINGS_FILE` (default: `/etc/global-config/log.integrator`).
+
+| Helm values key | Type | Default | Description |
+|-----------------|------|---------|-------------|
+| `logging.integrator.level` | Array of strings | `["api:server-v1:*=info"]` | Log rules for the IQ Integrator pod. |
+| `logging.mcpServer.level` | Array of strings | `["api:server-v1:*=info"]` | Log rules for the DX MCP Server pod. |
+
+Each entry in the array follows the internal logger package format: `namespace=level`. The runtime joins multiple rules with commas. Both pods initialize logging with `LOG_CONTEXT=api`, so the root namespace prefix for all log rules is `api:server-v1`.
+
+| Level | Description |
+|-------|-------------|
+| `error` | Error events only |
+| `info` | General operational messages (recommended for production) |
+| `debug` | Detailed diagnostic output |
+
+The following example shows how to enable debug output for all integrator namespaces:
+
+```yaml
+logging:
+  integrator:
+    level:
+      - "api:server-v1:*=debug"
+```
+
+The following example shows how to mix levels across namespaces:
+
+```yaml
+logging:
+  integrator:
+    level:
+      - "api:server-v1:llm*=debug"
+      - "api:server-v1:*=info"
+```
+
+To apply these configurations during a troubleshooting session, update your `custom-iq-values.yaml` file (the same file you created in [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#preparing-configuration-values)) and upgrade the Helm release.
+
+1. Add the `logging` configuration to your `custom-iq-values.yaml` file:
 
     ```yaml
     logging:
@@ -231,19 +347,21 @@ To isolate deployment issues, enable debug logs for the IQ Integrator and MCP Se
     | `ui:*=info` | Info-level logging for the UI layer |
     | `ui:*=debug` | Debug-level logging for the UI layer |
 
-2. Apply the updated settings:
+2. Apply the updated settings by upgrading with your `custom-iq-values.yaml` file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
-      --reuse-values \
-      --values custom-iq-debug-values.yaml
+      -f custom-iq-values.yaml
     ```
 
     - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
     - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and chart path.
+
+    !!! tip "Reverting debug logging"
+        After troubleshooting, reset the log level to `info` in your `custom-iq-values.yaml` file and run the `upgrade` command again.
 
 3. Reproduce the issue, then pull the logs from both services:
 
@@ -287,11 +405,12 @@ If you are [using an external database](./installation/prepare-database.md#confi
 - Relevant database connection error segments from the IQ Integrator pod logs.
 
 ???+ info "Related information"
-    - [Deploying services](./installation/deploy-services.md)
+    - [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](./installation/configuring-mcp.md)
     - [Preparing the database](./installation/prepare-database.md)
     - [Validating the deployment](./installation/validation.md)
     - [Enabling IQ](enable.md)
     - [Using IQ](usage.md)
+    - [Updating IQ](updating.md)
     - [IQ limitations](limitations.md)
     - [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}

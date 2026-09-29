@@ -2,13 +2,13 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF206 on [supported platforms](../../deployment/install/index.md):
 
--   Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
--   Extension to Personalization Java APIs supporting page metadata operations with custom application objects
--   Digital Asset Management view keywords details
--   DX Experience API updates
--   Sample Script Application integration and Theme modernization, plus How-to guides
--   New HCL Digital Experience Help Center with enhanced search and improved content architecture
--   New complementary DX training modules in the HCLSoftware U, and more
+- Development sample integrating HCL Unica Campaign segments in DX Personalization Rules
+- Extension to Personalization Java APIs supporting page metadata operations with custom application objects
+- Digital Asset Management view keywords details
+- DX Experience API updates
+- Sample Script Application integration and Theme modernization, plus How-to guides
+- New HCL Digital Experience Help Center with enhanced search and improved content architecture
+- New complementary DX training modules in the HCLSoftware U, and more
 
 !!!note
     Tabs in each section indicate the supported platforms/deployments each feature is available on.
@@ -18,17 +18,16 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Developers can access a new sample to integrate [HCL Unica Campaign Segments](https://help.hcltechsw.com/unica/Campaign/en/12.1.0/Campaign/Sessions/About_strategic_segments.html) in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md).
 
-=== "On-Premises" 
+=== "On-Premises"
     Developers can access a new sample to integrate HCL Unica Campaign Segments in DX Personalization rules using REST APIs supporting targeted campaign management in HCL DX solutions. See [Sample for leveraging Unica segments in PZN rules](../../manage_content/pzn/pzn_unica_integration/sample_code_method.md).
-
 
 ## Extension to Personalization Java APIs supporting page metadata operations with custom application objects
 
 === "Containers"
     Developers can apply new extensions to the Personalization Java APIs that return the evaluated page metadata when using a custom application object. See [Personalization REST API Explorer](../../extend_dx/apis/hcl_experience_api/api_explorers.md).
 
-=== "On-Premises" 
-    Developers can apply new extensions to the Personalization Java APIs that return the evaluated page metadata when using a custom application object. See [Personalization REST API Explorer](../../extend_dx/apis/hcl_experience_api/api_explorers.md). 
+=== "On-Premises"
+    Developers can apply new extensions to the Personalization Java APIs that return the evaluated page metadata when using a custom application object. See [Personalization REST API Explorer](../../extend_dx/apis/hcl_experience_api/api_explorers.md).
 
 ## Digital Asset Management view keywords details
 
@@ -36,7 +35,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Capability to display DAM asset Keyword details for user-added and plugin-generated keywords, for example as added with plugin integration to Google Vision AI asset tagging,  is available with the Container Update CF206 release. See [DAM Keyword Metadata](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_metadata_properties.md#keyword-details).
 
-## Experience API Updates 
+## Experience API Updates
 
 === "Containers"
 
@@ -66,8 +65,15 @@ The following features and updates are available to customers installing HCL Dig
 
 ## The new HCL Digital Experience Help Center
 
-At HCL, we are continuously improving the quality and overall user experience of our product documentation. We have moved the HCL Digital Experience 9.5 product documentation to a new site, which has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. 
+At HCL, we are continuously improving the quality and overall user experience of our product documentation. We have moved the HCL Digital Experience 9.5 product documentation to a new site, which has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF206, take the [DX CF206 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D817){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
