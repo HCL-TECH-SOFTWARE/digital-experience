@@ -449,8 +449,10 @@ If you plan to use [cross-session memory (RAG)](enable-rag.md), your LiteLLM pro
 
 | Alias | Purpose | When used |
 |---|---|---|
-| `iq-multilingual-embed` | Multilingual embedding model | Default — used when `USE_MULTILINGUAL_EMBEDDINGS=true` (the default) |
-| `iq-text-embed` | Monolingual embedding model | Used when `USE_MULTILINGUAL_EMBEDDINGS=false` |
+| `iq-multilingual-embed` | Primary embedding model | Default — used when `USE_MULTILINGUAL_EMBEDDINGS=true` (the default) |
+| `iq-embed` | Alternative embedding model | Used when `USE_MULTILINGUAL_EMBEDDINGS=false` |
+
+The alias determines which registered model IQ calls. IQ does not verify whether the model bound to each alias is actually multilingual, so you can bind either alias to any embedding model available from your provider.
 
 Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock:
 
@@ -466,12 +468,13 @@ proxy_config:
         api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
         dimensions: 1024
 
-    # Monolingual embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false)
-    - model_name: iq-text-embed
+    # Fallback embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false). Cohere v4 above is the newer model and is recommended even for multilingual workloads.
+    - model_name: iq-embed
       litellm_params:
-        model: "bedrock/amazon.titan-embed-text-v2:0"
+        model: "bedrock/cohere.embed-multilingual-v3"
         api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
-        dimensions: 1024
+        embedding_types: ["float"]
+        additional_drop_params: ["output_dimension", "dimensions"]
 ```
 
 !!! important "Dimension alignment"

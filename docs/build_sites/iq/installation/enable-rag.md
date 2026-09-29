@@ -8,12 +8,14 @@ Cross-session memory is powered by Retrieval-Augmented Generation (RAG) and uses
 
 Before enabling cross-session memory, verify that the following conditions are met:
 
-- A PostgreSQL database is configured and connected to IQ. For setup instructions, refer to [Preparing the database](prepare-database.md). If you are using an internal database provisioned by the DX Persistence Node or DX Runtime Controller, the `pgvector` extension is included by default. If you are using an external PostgreSQL database (cloud-managed, on-premises, or separate cluster), the `pgvector` extension must be explicitly enabled in your database.
-- Your LiteLLM proxy has the embedding model aliases registered. IQ uses `iq-text-embed` (monolingual) or `iq-multilingual-embed` (multilingual) as the proxy model alias. For instructions, refer to [Registering embedding models for cross-session memory](deploy-litellm.md#registering-embedding-models-for-cross-session-memory).
+- A PostgreSQL database is configured and connected to IQ, and `DB_ENABLED` is set to `true`. For setup instructions, refer to [Preparing the database](prepare-database.md). If you are using an internal database provisioned by the DX Persistence Node or DX Runtime Controller, the `pgvector` extension is included by default. If you are using an external PostgreSQL database (cloud-managed, on-premises, or separate cluster), the `pgvector` extension must be explicitly enabled in your database.
+- Your LiteLLM proxy has the embedding model aliases registered. IQ calls one of two fixed aliases, `iq-multilingual-embed` or `iq-embed`, depending on the value of `USE_MULTILINGUAL_EMBEDDINGS`. For instructions, refer to [Registering embedding models for cross-session memory](deploy-litellm.md#registering-embedding-models-for-cross-session-memory).
 - The value of `EMBEDDING_DIMENSIONS` matches the output dimension of the registered embedding model.
 
 ???+ info "Embedding model dimension requirements"
-    Different embedding models produce vectors of different sizes. For example, Amazon Titan Embed Text v2 produces 1024-dimensional vectors. Set `EMBEDDING_DIMENSIONS` to match the dimension your model produces. Mismatches cause a hard startup failure.
+    Different embedding models produce vectors of different sizes. Set `EMBEDDING_DIMENSIONS` to match the output dimension of the model you registered in LiteLLM. Cohere Embed v4 (`bedrock/us.cohere.embed-v4:0`) is recommended over Cohere Embed v3, because v4 is the newer model and supports configurable output dimensions.
+
+    Matching dimensions does not make two models interchangeable. Models that both produce 1024-dimensional vectors still generate different embeddings, so chunks embedded by one model cannot be meaningfully compared against chunks embedded by another. If you change the embedding model or its dimension after the first startup, IQ detects the mismatch and enters graceful degradation mode, disabling cross-session memory while continuing to serve requests. To apply the change, recreate the RAG tables. Refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 ## Enabling cross-session memory
 
@@ -48,14 +50,12 @@ On startup, IQ automatically creates the `rag_chunks` and `rag_embedding_metadat
 
 ## Configuring the embedding model
 
-IQ selects the embedding model based on the `USE_MULTILINGUAL_EMBEDDINGS` and `EMBEDDING_ADAPTER` settings.
+IQ selects which LiteLLM proxy alias to call based on the `USE_MULTILINGUAL_EMBEDDINGS` setting.
 
 | Setting | Default | Effect |
 |---|---|---|
 | `USE_MULTILINGUAL_EMBEDDINGS=true` | Default | Uses `iq-multilingual-embed` via LiteLLM |
-| `USE_MULTILINGUAL_EMBEDDINGS=false` | — | Uses `iq-text-embed` via LiteLLM |
-
-To override the embedding adapter independently from the LLM adapter, set `EMBEDDING_ADAPTER` explicitly. When not set, `EMBEDDING_ADAPTER` inherits from `LLM_ADAPTER_NAME`.
+| `USE_MULTILINGUAL_EMBEDDINGS=false` | — | Uses `iq-embed` via LiteLLM |
 
 Set `EMBEDDING_DIMENSIONS` to match the vector dimension of your registered embedding model:
 
@@ -72,13 +72,13 @@ environment:
 IQ splits conversation messages into overlapping text chunks before embedding them. The chunking parameters determine chunk boundaries and therefore the shape of the vectors stored in the database.
 
 !!! warning "RAG and embedding parameters are locked after first startup"
-    IQ records the RAG and embedding configuration in the database at first startup. The following parameters cannot be changed after startup and require pod restart or table recreation to apply:
+    IQ records the RAG and embedding configuration in the database at first startup. Changing any of the following parameters requires recreating the RAG tables and restarting the pod:
     
     - Chunking: `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, `RAG_CHUNK_SEPARATORS`
     - Vector database: `VECTOR_DB_BACKEND`, `EMBEDDING_DIMENSIONS`
-    - Embedding model: `EMBEDDING_ADAPTER`, `USE_MULTILINGUAL_EMBEDDINGS`, `BEDROCK_TEXT_EMBED_MODEL`, `BEDROCK_MULTILINGUAL_EMBED_MODEL`, `LITELLM_TEXT_EMBED_MODEL`, `LITELLM_MULTILINGUAL_EMBED_MODEL`
+    - Embedding model: `USE_MULTILINGUAL_EMBEDDINGS`
     
-    If you change any of these values, IQ detects the mismatch on the next restart and enters graceful degradation mode, disabling RAG while the pod continues to serve requests. To apply new values, you must recreate the `rag_chunks` table. See [Changing chunking configuration](#changing-chunking-configuration).
+    If you change any of these values, IQ detects the mismatch on the next restart and enters graceful degradation mode, disabling RAG while the pod continues to serve requests. To apply new values, you must recreate the RAG tables. Refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 | Parameter | Default | Description |
 |---|---|---|
@@ -182,3 +182,4 @@ WHERE "sessionId" = '<SESSION_ID>';
     - [IQ environment variables](environment-variables.md)
     - [Preparing the database](prepare-database.md)
     - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
+    - [Troubleshooting cross-session memory (RAG)](../troubleshooting.md#cross-session-memory-rag)

@@ -370,6 +370,42 @@ To apply these configurations during a troubleshooting session, update your `cus
     kubectl logs -n <YOUR_NAMESPACE> deployment/dx-iq-mcp-server --tail=200
     ```
 
+## Cross-session memory (RAG)
+
+This section applies only if you enabled [cross-session memory](./installation/enable-rag.md). Cross-session memory is an optional, additive feature, so the rest of IQ continues to operate normally when it fails.
+
+When cross-session memory cannot initialize, IQ enters graceful degradation mode. The Integrator pod stays healthy and continues to answer questions, but it silently stops storing and retrieving context from past conversations. Because there is no visible error in the user interface, check the Integrator logs to confirm whether cross-session memory is active.
+
+All related entries are prefixed with `[RAG]` or `[Embedding]`:
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> deployment/<IQ_RELEASE_NAME>-integrator --tail=500 | grep -E "\[RAG\]|\[Embedding\]"
+```
+
+A healthy startup produces these entries:
+
+```text
+[RAG] Initializing vector DB backend: pgvector
+[RAG] INITIALIZED: active backend=pgvector, RAG_ENABLED=true
+```
+
+Use the following table to interpret failure entries:
+
+| Log entry | Cause | Solution |
+|-----------|-------|----------|
+| `[RAG] RAG_ENABLED=false (false by default; set RAG_ENABLED=true to enable)` | Cross-session memory is not enabled. | Set `RAG_ENABLED` to `true`. Refer to [Enabling cross-session memory](./installation/enable-rag.md#enabling-cross-session-memory). |
+| `[RAG] vector dimension mismatch: configured=<N>, model=<M>` | `EMBEDDING_DIMENSIONS` does not match the output dimension of the model registered in LiteLLM. | Set `EMBEDDING_DIMENSIONS` to the value reported as `model=<M>`, or change the `dimensions` value in your LiteLLM model configuration. Refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+| `[RAG] backend init failed; RAG will be inactive this run` | The vector store could not be initialized. | Verify that `DB_ENABLED` is `true`, that the database is reachable, and that the `pgvector` extension is enabled. Refer to [Preparing the database](./installation/prepare-database.md). |
+| `[RAG] RAG disabled due to embedding model/schema drift.` | The stored configuration no longer matches the current embedding or chunking settings. | Recreate the RAG tables. Refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration). |
+| `[RAG] initialization failure handled; continuing without RAG context` | Confirms the pod is running in graceful degradation mode. | Resolve the preceding `[RAG]` error entry. Initialization retries on the next ingestion or retrieval call. |
+| `[RAG] Vector DB not initialized!` | A retrieval was attempted before initialization succeeded. | Resolve the preceding initialization error. |
+| `[RAG] RETRIEVAL FAILED: <error>` | The similarity query failed against the database. | Check database connectivity and confirm the `rag_chunks` table exists. |
+| `[RAG] ingest failed (sessionId=<id>, messageId=<id>)` | A message could not be chunked, embedded, or stored. | Check the accompanying `[Embedding]` entries and confirm the LiteLLM proxy is reachable. |
+| `[Embedding] LITELLM_API_KEY is required for the LiteLLM embedding adapter.` | The Integrator has no LiteLLM API key. | Configure the key. Refer to [Preparing LiteLLM access](./installation/prepare-litellm-access.md). |
+| `[Embedding] Provider returned no embedding vector.` | The embedding alias is missing from the LiteLLM proxy or the provider rejected the request. | Confirm `iq-multilingual-embed` or `iq-embed` is registered and callable. Refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+
+To capture detailed ingestion and retrieval activity while reproducing an issue, set `RAG_DEBUG` to `true`. Disable it afterwards, because it logs conversation content.
+
 ## Contacting HCL Support
 
 If you encounter issues that cannot be resolved using these steps, open a ticket through the [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}.

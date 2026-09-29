@@ -6,9 +6,10 @@ This page lists the known limitations of IQ.
 
 ### Conversation history
 
-- Chat history does not persist across sessions.
-- Resetting a session or closing the interface permanently clears the active context. Conversations cannot be recovered.
+- Chat history does not persist across sessions in the user interface.
+- Resetting a session or closing the interface permanently clears the active context. Conversations cannot be recovered or replayed in the chat window.
 - Exporting and reviewing previous conversations are not supported.
+- Enabling [cross-session memory (RAG)](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session. It does not restore the previous transcript in the user interface.
 
 ### Localization
 
