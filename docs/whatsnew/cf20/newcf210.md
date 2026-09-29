@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF210 on supported platforms:
 
-**All  Digital Experience Versions (8.5, 9.0, 9.5)**
+**All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Guidance to configure a custom TinyMCE editor toolbar
 - Notice of deprecation of Textbox.io Rich Text Editor
@@ -24,8 +24,7 @@ The following features and updates are available to customers installing HCL Dig
 - Option to configure Content-Security-Policy Frame Options
 - Option to configure SameSite Cookie Attribute
 
-
-## All  Digital Experience Versions (8.5, 9.0, 9.5)
+## All Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Guidance to configure a custom TinyMCE editor toolbar
 
@@ -57,7 +56,7 @@ The following features and updates are available to customers installing HCL Dig
     The Managed Pages feature enables the storing of pages in the Digital Experience Portal Site WCM library. A new feature is provided to sync the title of DX pages in addition to storage of page object ids, improving page sorting and search functions. See the Help Center topic [Update Sorting Page by Title](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_sorting_pages.md) for more information.
 
 === "On-Premises"
-    The Managed Pages feature enables the storing of pages in the Digital Experience Portal Site WCM library. A new feature is provided to sync the title of DX pages in addition to storage of page object ids, improving page sorting and search functions. See the Help Center topic [Update Sorting Page by Title](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_sorting_pages.md) for more information. 
+    The Managed Pages feature enables the storing of pages in the Digital Experience Portal Site WCM library. A new feature is provided to sync the title of DX pages in addition to storage of page object ids, improving page sorting and search functions. See the Help Center topic [Update Sorting Page by Title](../../manage_content/wcm_authoring/authoring_portlet/content_management_artifacts/pages/managed_pages/advadmin_managedpages/wcm_mngpages_sorting_pages.md) for more information.
 
 ### Menu Element Sorting Options
 
@@ -70,10 +69,10 @@ The following features and updates are available to customers installing HCL Dig
 ### New Portlet Development Utilities and Page creation samples on HCL GitHub
 
 === "Containers"
-    Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities) for details. 
+    Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities) for details.
 
 === "On-Premises"
-    Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities) for details. 
+    Developers can access a new repository of Portlet Development Utilities to automate creating pages, also pages from templates and option to deploy through DXClient, using the DX Java API and as a custom maven archetype to create a new JSR286 portlet. See the [HCL Github repositories](https://github.com/HCL-TECH-SOFTWARE/dx-portlet-development-utilities) for details.
 
 ### DXClient Updates
 
@@ -90,7 +89,6 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     A new configuration option is provided to control the display of timeout error messaging for users accessing anonymous site pages. See the Help Center topic [Configuration Service](../../deployment/manage/config_portal_behavior/service_config_properties/portal_svc_cfg/cfg_svc/index.md) for more information.
-    
 
 ## Digital Experience 9.5 Container Version
 
@@ -117,11 +115,10 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     A new option is available to configure Web Content Manager services in the IBM WebSphere Administrative Console to use relative URLs for DAM references in WCM content during staging to production operations. See the topic [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md) for more information.
 
-
 ### Option to configure aspect ratios for cropping of images in DAM
 
 === "Containers"
-    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.   
+    It is now possible to [define custom aspect rations for cropping](../../manage_content/digital_assets/configuration/dam_crop_aspect_ratio.md) of images in DAM.
 
 ### Design Studio Beta Update
 
@@ -135,7 +132,6 @@ The following features and updates are available to customers installing HCL Dig
     - /content-pages - Used to manage content-page objects.
     - /content-sites - Used to manage content-site objects.
     - /contentsRest - Used to manage content objects with API configuration including endpoint and HTTP methods.
-
 
 ### Option to Configure Credentials from Secrets
 
@@ -152,7 +148,13 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     A new configuration option in the `custom-values.yaml` file allows to configure [SameSite Cookie Attribute](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configure_networking.md#configuring-samesite-cookie-attribute) for DX Core and all the add-on applications to Core such as Digital Asset Management and Ring API.
 
-
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF210, take the [DX CF210 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1463){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
