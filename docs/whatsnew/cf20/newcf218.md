@@ -20,7 +20,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Version**
 
 - Web Content Manager - New filters to enhance search for users and groups in Content Reporting
-- Web Content Manager - Resuming bulk updates in Content Reporting 
+- Web Content Manager - Resuming bulk updates in Content Reporting
 
 **Digital Experience 9.5 Container Version**
 
@@ -40,16 +40,16 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### Web Content Manager REST API v2 - New APIs available in Swagger Explorer
 
 === "Containers"
-    There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
-    
+    There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md).
+
     You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
 === "On-Premises"
-    There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md). 
-    
+    There are new V2 APIs related to Components (such as LibraryAuthoringToolsComponent and LibraryListPresentationComponent), Custom Workflow Actions Factory, Item Version Update and Restore, Syndication, Presentation Template, Favorite Items, Recent Items, Apply Content Templates, Page References, and Rendering Content. See [REST service for Web Content Manager v2](../../manage_content/wcm_development/wcm_rest_v2/wcm_rest_v2_starting.md) for more information. There is also new documentation that discusses the [differences between V1 and V2 APIs](../../manage_content/wcm_development/wcm_rest_v2/comparison_v1_v2.md).
+
     You can check the APIs in [WCM REST V2 API documentation](https://opensource.hcltechsw.com/experience-api-documentation/wcm-api/).
 
-### Site Manager - Resizable navigation panel 
+### Site Manager - Resizable navigation panel
 
 === "Containers"
     In the Site Manager, you can now control the size of your side toolbar. For more information, see [Site toolbar](../../manage_content/wcm_authoring/inline_editing/index.md#site-toolbar).
@@ -60,10 +60,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### DX Search - Configuring DX Search and Improving Search Quality documentation
 
 === "Containers"
-    The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center. 
+    The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center.
 
 === "On-Premises"
-    The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center. 
+    The topics [Configuring DX Search](../../build_sites/search/cfg_dx_search/index.md) and [Improving search quality in HCL Digital Experience](../../build_sites/search/improving_search_quality/index.md) are available in the DX Help Center.
 
 ### Updated Javadocs now available
 
@@ -96,10 +96,10 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 ### New documentation for OIDC in HCL DX
 
 === "Containers"
-    Documentation for [Automating OIDC configuration for HCL DX](../../deployment/manage/security/people/authentication/oidc/automation/dx-oidc-automation.md) and [Troubleshooting OIDC configuration](../../deployment/manage/security/people/authentication/oidc/oidc-troubleshooting.md) are now available. 
+    Documentation for [Automating OIDC configuration for HCL DX](../../deployment/manage/security/people/authentication/oidc/automation/dx-oidc-automation.md) and [Troubleshooting OIDC configuration](../../deployment/manage/security/people/authentication/oidc/oidc-troubleshooting.md) are now available.
 
 === "On-Premises"
-    Documentation for [Automating OIDC configuration for HCL DX](../../deployment/manage/security/people/authentication/oidc/automation/dx-oidc-automation.md) and [Troubleshooting OIDC configuration](../../deployment/manage/security/people/authentication/oidc/oidc-troubleshooting.md) are now available. 
+    Documentation for [Automating OIDC configuration for HCL DX](../../deployment/manage/security/people/authentication/oidc/automation/dx-oidc-automation.md) and [Troubleshooting OIDC configuration](../../deployment/manage/security/people/authentication/oidc/oidc-troubleshooting.md) are now available.
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -108,7 +108,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
-
 
 <!-- ### DXClient - New Github repository
 
@@ -134,7 +133,6 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 === "On-Premises"
     There are new attributes for users and groups that you can select as additional filters when searching for items in HCL Content Reporting. With these new fields, you can filter the items owned and authored by users and groups when generating a report or when updating existing items in a report. For more information, see [Generating a report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md#generating-a-report) and [Using the Content Reporting Bulk Update Owners/Authors feature](../../manage_content/wcm_authoring/content_reporting/usage/bulk_update_report.md#using-the-content-reporting-bulk-update-ownersauthors-feature).
-
 
 ### Web Content Manager - Resuming bulk updates in Content Reporting
 
@@ -175,4 +173,11 @@ Go to the [HCL Software Support Site/ HCL DX Software Fix list](https://support
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF218, take the [DX CF218 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2747){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
