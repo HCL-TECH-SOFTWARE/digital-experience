@@ -12,10 +12,10 @@ Exclude specific portlets or pages from an HCL Digital Experience (DX) search co
 
 To exclude portlets or pages from a search collection, perform the following steps:
 
-1. Log in to HCL DX as portal administrator and open the applications menu.
-2. Go to **Administration > Applications > Portlets** and select your target web content library.
-3. Search for the portlet you want to exclude and select the Configure Portlet icon.
-4. Add the following parameters:
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Open applications menu > Administration > Applications > Portlets**. 
+3. Search for the portlet you want to exclude and select the **Configure Portlet** icon.
+4. Enter the following parameters:
     - New preference: `INCLUDE_IN_SEARCH_INDEX`
     - New value: `false`
 5. Select **Add > OK** to save changes.
