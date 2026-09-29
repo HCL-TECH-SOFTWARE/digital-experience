@@ -21,6 +21,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
+|Migrated|Performance|[How to locate a recursive loop in WCM](./performance/LocateWCMRecursiveLoop.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 
 ## CF238

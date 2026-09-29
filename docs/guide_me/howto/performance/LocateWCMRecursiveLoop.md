@@ -1,4 +1,4 @@
-# How to locate a recursive loop with a WCM item causing high CPU or JVM hang?
+# How to locate a recursive loop in WCM
 
 ## Applies to
 
@@ -6,11 +6,13 @@
 
 ## Introduction
 
-According to [HCL Web Content Manager Tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/wcm_logs.md){target="_blank"} it is usually suggested to trace WCM component problems with the following trace-string:
+Broad trace strings in HCL Digital Experience (DX) Web Content Manager (WCM) generate high log volumes that increase analysis time when troubleshooting high CPU usage or JVM hangs. Standard WCM troubleshooting typically uses the following trace string:
 
-`com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all`
+```text
+com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all
+```
 
-This may result in a HUGE set of traces that will take support 6 hours to analyze and identify the site area in question. An entry like this occurred approximately 8 thousand times in the trace:
+This broad trace string can result in log files containing thousands of repetitive entries, such as:
 
 ```log
 BaseReference > com.aptrix.pluto.cmpnt.BaseReferenceCmpnt retrieveCmpnt
@@ -19,26 +21,33 @@ ENTRY RenderContext [PlutoRequestContext
 [m_url=https://myserver.mycompany.com/wps/wcm/connect/mySite/home/mySiteArea1/mySiteArea2/myContent,
 ```
 
-When determining a loop in the content there is a smarter way to do it. This documentation describe in how to find that out at best.
+Targeted component tracing provides a faster method to isolate specific WCM items caught in a recursive loop without generating excessive log data. This article describes how to isolate WCM items involved in recursive loops causing high CPU usage or JVM hangs using targeted component tracing.
 
 ## Instructions
 
-Instead of using trace-string:  
+To locate a recursive loop caused by a WCM item, perform the following steps:
 
-`com.ibm.workplace.wcm.*=all:com.aptrix.*=all:com.presence.connect.*=all:com.ibm.wps.engine.Servlet=all`  
+1. Enable targeted tracing using the following trace string:
 
-use trace string:  
+    ```text
+    com.aptrix.pluto.cmpnt.*=all
+    ```
 
-`com.aptrix.pluto.cmpnt.*=all`  
+    For detailed instructions on setting trace levels in the WebSphere Application Server (WAS) administration console, refer to [HCL Web Content Manager Tracing](../../../deployment/manage/troubleshooting/logging_and_tracing/wcm_logs.md).
 
-Then grep trace.log for `retrieveCmpnt` eg:  
+2. Parse `trace.log` for `retrieveCmpnt` entries using one of the following commands:
 
-`tail -f trace.log |grep -i retrieveCmpnt`  
+    - Monitor log output in real time:
 
-or perhaps:  
+        ```bash
+        tail -f trace.log | grep -i retrieveCmpnt
+        ```
 
-`grep -e retrieveCmpnt -e itemPath trace*.log`  
+    - Search across multiple trace log files for component retrievals and item paths:
 
-Look for any WCM items that are re-occurring far out of proportion to other items in the trace. This will identify the WCM items involved in the recursive loop.  
+        ```bash
+        grep -e retrieveCmpnt -e itemPath trace*.log
+        ```
 
-Loops can also be found out by searching for `getByUUID Getting object with UUID` messages backwards through the trace.  
+3. Review the command output for WCM items that recur disproportionately compared to other items to identify items involved in the recursive loop.
+4. Search backward through trace files for `getByUUID Getting object with UUID` messages to locate recurring objects.
