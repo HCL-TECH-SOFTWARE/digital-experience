@@ -1,4 +1,4 @@
-# How to configure friendly URLs for Hidden Pages
+# How to configure friendly URLs for hidden pages
 
 ## Applies to
 
@@ -6,23 +6,22 @@
 
 ## Introduction
 
-This document describes how to configure a friendly URL on Administration or Hidden Pages and their respective child pages (such as the Login page).
+In HCL Digital Experience (DX), friendly URLs are constructed hierarchically based on the portal page tree structure. Each page node defines its own segment in the final URL path, where parent page friendly URLs establish the base path and child page friendly URLs establish the subpath. The Hidden Pages node allow administrators to manage site navigation paths for specific pages without displaying them in standard navigation menus. This article describes how to configure friendly URLs for Hidden Pages and its child pages (such as the Login page) in HCL DX.
 
 ## Instructions
 
-1. **Configure the Hidden Pages parent context**
-    Since the *Hidden Pages* is the parent context of the *Login* page, you must first set the Friendly URL on it.
+To configure friendly URLs for Hidden Pages and child pages, perform the following steps.
 
-    1. Log in as an administrator in the Portal and navigate to **Administration > Site Management > Pages (Manage Pages)**.
-    2. Go to the **Edit Page Properties** of the **Hidden Pages**.
-    3. Set the Friendly URL name as desired (e.g., `test`).
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Open applications menu > Administration > Site Management > Pages > Content Root**.
+3. In the **Hidden Pages** row, select **Edit Page Properties**.
+4. In the **Friendly URL name** box, enter your desired URL name (for example, `test`).
+5. Select **Hidden Pages** to view its child pages.
+6. Locate the target child page (for example, **Login**) in the site structure.
+7. In the child page row, select **Edit Page Properties**.
+8. In the **Friendly URL name** box, enter your desired URL name (for example, `login`).
 
-2. **Configure the Login child page**
-    Now that your Hidden Pages are configured, apply the same steps to the Login page to complete the path.
-
-    1. Navigate to **Administration > Site Management > Pages (Manage Pages)**.
-    2. Find the **Login page** in your site structure and click to the **Edit Page Properties** icon of the **Login** page.
-    3. Set the Friendly URL name as desired (e.g., `PortalLogin`).
+    The child page is now accessible using the combined friendly URL path (for example, `/test/login`).
 
 !!! note
-     You do not have to restart the server; these changes will be applied immediately.
+    These changes do not require a server restart.

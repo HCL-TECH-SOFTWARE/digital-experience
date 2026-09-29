@@ -5,6 +5,7 @@ nav:
     - ChangeCellandNodeName.md
     - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
+    - friendlyURLadmin.md
     - configureJMSMessages.md
     - ConfigureRAD.md
     - DefaultWCMValues.md
@@ -16,4 +17,3 @@ nav:
     - RemoveStateInformationFromURL.md
     - WcmImageDisplayIssueInFirefox.md
     - SetGenericJVMArgumentsCorePod.md
-    - friendlyURLadmin.md

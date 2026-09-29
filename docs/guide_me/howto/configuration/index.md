@@ -10,6 +10,8 @@ Learn how to change cell and node names after installing HCL DX.
 Learn how to modify the default settings of a portlet across all deployed pages and virtual portals within HCL DX.
 - **[How to change the display language in HCL DX log files without changing the operating system's locale](./ChangeDisplayLanguage.md)**  
 Learn how to change the display language in your HCL DX log files without modifying the locale set in your operating system.  
+- **[How to configure friendly URLs for hidden pages](./friendlyURLadmin.md)**  
+Learn how to establish custom site navigation paths for unlisted portal pages and configure child page routing in HCL DX.
 - **[How to configure JMS to send messages to all members in a cluster when using topics](./configureJMSMessages.md)**  
 Learn how to configure HCL DX and WebSphere Application Server (WAS) activation specifications to deliver Java Message Service (JMS) topic messages to all active application servers in a cluster.  
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
@@ -32,6 +34,3 @@ Learn how to remove state information from page URLs.
 Learn how to configure Firefox connection timeout settings to resolve intermittent image display issues caused by network or server performance delays.
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.
-
-- **[How to configure friendly URLs for Hidden Pages](./friendlyURLadmin.md)**  
-Learn how create friendly URL for administration pages or hidden pages.  

@@ -20,6 +20,7 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Configuration|[How to configure friendly URLs for hidden pages](./configuration/friendlyURLadmin.md)|
 |Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 
