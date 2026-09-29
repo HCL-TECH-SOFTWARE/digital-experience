@@ -18,23 +18,23 @@ To access the WAS admin console after installing the remote search service, perf
 
 1. Open a terminal and locate the profile directory:
 
-    ```
+    ```bash
     /opt/HCL/AppServer/profiles/prs_profile
     ```
 
 2. Navigate to the `bin` directory:
 
-    ```
+    ```bash
     /opt/HCL/AppServer/profiles/prs_profile/bin
     ```
 
 3. Restart the server by executing the `stop` and `start` scripts:
 
-    ```
+    ```bash
     ./stopServer.sh server1
     ```
 
-    ```
+    ```bash
     ./startServer.sh server1
     ```
 
