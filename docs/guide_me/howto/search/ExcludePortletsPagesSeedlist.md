@@ -1,4 +1,4 @@
-# How to exclude portlets or pages from a search collection?
+# How to exclude portlets or pages from a search collection
 
 ## Applies to
 
@@ -6,23 +6,19 @@
 
 ## Introduction
 
-In certain situations, you may wish to exclude some portlets or pages from a search collection. This document provide steps that need to be done to exclude the portlets and pages.  
+Exclude specific portlets or pages from an HCL Digital Experience (DX) search collection seedlist to prevent unwanted content from being indexed in search results. This article describes how to exclude portlets and pages from a search collection.
 
 ## Instructions
 
-To exclude portlets from a search collection (seedlist), configure the portlet in Portal Administration ()`Administration > Applications > Portlets`) and add a parameter (preference):  
+To exclude portlets or pages from a search collection, perform the following steps:
 
-Parameter name: `INCLUDE_IN_SEARCH_INDEX`  
-Parameter value: `false`  
+1. Log in to HCL DX as portal administrator and open the applications menu.
+2. Go to **Administration > Applications > Portlets** and select your target web content library.
+3. Search for the portlet you want to exclude and select the Configure Portlet icon.
+4. Add the following parameters:
+    - New preference: `INCLUDE_IN_SEARCH_INDEX`
+    - New value: `false`
+5. Select **Add > OK** to save changes.
 
-## Detailed steps
-
-1. Login into the HCL DX as portal administrator
-2. In the menu bar click to the **home icon** (open application menu) and click to the **Administration** menu item.  
-3. In the left side menu expand the **Applications** menu entry and click to **Portlets**.
-4. Search for the portlet that you want to exclude from the search collection.  
-5. In the portlet list, click to the **Configure Portlet** icon of the portlet and add the parameter (preference) mentioned above.  
-
-!!!Note
-    All portlets on a page must have this parameter configured for the page to be excluded by the search collection.
-    This change required fix [PI65690](https://www.ibm.com/support/pages/apar/PI65690){target="_blank"} to be installed for the parameter to be honored. This fix was shipped in CF22 and is included in current versions of HCL DX.
+!!!note
+    To exclude an entire page, all portlets on that page must have the `INCLUDE_IN_SEARCH_INDEX` parameter set to `false`. This parameter requires fix [PI65690](https://www.ibm.com/support/pages/apar/PI65690){target="_blank"} (included in Combined Cumulative Fix 22 [CF22] and higher).
