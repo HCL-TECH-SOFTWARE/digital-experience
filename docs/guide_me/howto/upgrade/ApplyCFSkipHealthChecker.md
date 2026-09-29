@@ -1,14 +1,14 @@
-# How to Skip the Health Checker While Running ApplyCF
+# How to skip the Health Checker while running `applyCF`
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This document describes how to skip the Health Checker while running applyCF when it's causing an inopportune server shut down and it won't let the main part of the profile update run.
+When running the `applyCF` ConfigEngine task in HCL Digital Experience (DX), the Health Checker runs pre-validation tests to verify credentials, database connectivity, and configuration prerequisites. If any health check test fails, the validation framework issues an administrative stop command to shut down the server. Because the server is stopped, subsequent `xmlaccess` tasks fail to connect and generate a connection refused error.
 
-ConfigTrace.log shows a connection refused:
+When this issue occurs, `ConfigTrace.log` records a connection refused error:
 
 ```text
  define-device-classes:
@@ -23,8 +23,7 @@ ConfigTrace.log shows a connection refused:
  the client: Connection refused: connect
 ```
 
-
-The SystemOut.log revealed that something caused the server to shut down before the XML Access attempt:
+`SystemOut.log` indicates that the server stopped before the XML Access attempt:
 
 ```text
  [DateTime] 000003fe AdminHelper   A   CWWMN1020I: An
@@ -37,10 +36,20 @@ The SystemOut.log revealed that something caused the server to shut down before 
  WebSphere_Portal stopped
 ```
 
+This article describes how to skip the Health Checker while running the `applyCF` task.
+
 ## Instructions
 
-Run the applyCF task with the following parameter:
+To skip the Health Checker while running `applyCF`, append `-Dskip.cf.validation=true` to the command. For example:
 
-```text
--Dskip.cf.validation=true
-```
+- Linux or Unix:
+
+    ```bash
+    ./ConfigEngine.sh applyCF -Dskip.cf.validation=true
+    ```
+
+- Windows:
+
+    ```dos
+    ConfigEngine.bat applyCF -Dskip.cf.validation=true
+    ```
