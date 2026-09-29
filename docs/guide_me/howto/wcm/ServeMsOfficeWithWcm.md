@@ -16,19 +16,21 @@ To host Microsoft Office files with WCM, perform the following steps:
 2. Go to **Web Content > Authoring** and select your target web content library.
 3. Select **New > Component > File** and enter a name for the component (for example, `xlsFileResourceComponent`).
 4. Under File Element, select **Upload** and choose the Microsoft Office file.
-5. Select **Save and Close**.
-6. Select **New > Presentation Template** and enter a name for the presentation template.   
+5. Click the **Save and Close** button.
+6. Select **New > Presentation Template** and enter a name for the presentation template.  
 7. Edit the presentation template to include a link referencing the file resource component similar to the following:
 
     ```html
     <a href='[Component name="web content/xlsfileresourcecomponent"]'>xlsLink</a>
     ```
 
-8. Preview the content and verify that the link opens the spreadsheet in a new window.
-9. (Optional) To display the spreadsheet directly on a Portal page without requiring a user to select a link, update the component reference in the presentation template to:
+8. Click the **Save** button.
+9. Preview the content by clicking to the **Preview** button and verify that the link opens the spreadsheet in a new window.
+10. (Optional) To display the spreadsheet directly on a Portal page without requiring a user to select a link, update the component reference in the presentation template to:
 
     ```html
     [Component name="xlsfilerescomponent" format="HTML"]
     ```
 
-10. Select **Save and Close**.
+    !!!note
+        The conversion to HTML just works, if the document conversion service is configured correctly! For details, please review [Document Conversion Services](../../../manage_content/wcm_authoring/dcs/index.md){target="_blank"}  
