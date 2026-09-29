@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience v8.5 and later
+> HCL Digital Experience v8.5 and higher
 
 ##  Introduction
 

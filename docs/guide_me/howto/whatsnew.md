@@ -16,6 +16,51 @@ This section contains the newly created and migrated how-to articles. The articl
 
 -->
 
+## CF239
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
+|Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
+
+## CF238
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to disable an application blocking the HCL DX server startup](./administration/PreventApplicationStartUp.md)|
+|Migrated|Administration|[How to reset the Web Content Viewer portlet to its default state](./administration/ResetWCMViewerPortlet.md)|
+|Migrated|API|[How to create a JSP to update WCM library roles using WCM API](./api/updateWcmLibraryRoles.md)|
+|Migrated|Configuration|[How to configure JMS to send messages to all members in a cluster when using topics](./configuration/configureJMSMessages.md)|
+|Migrated|Configuration|[How to determine default WCM configuration values](./configuration/DefaultWCMValues.md)|
+|Migrated|Configuration|[How to resolve intermittent Portal or WCM image display issues in Firefox](./configuration/WcmImageDisplayIssueInFirefox.md)|
+|Migrated|Content|[How to isolate the WCM item generating a specific output or markup](./content/IsolateWCMItemsMarkup.md)|
+|Migrated|Database|[How to configure a specific TLS version for MS-SQL backend connections](./database/TLSMSSQLDBConnection.md)|
+|Migrated|Development|[How to retrieve the language requested by the browser](./development/returnLanguageRequestedByBrowser.md)|
+|Migrated|Development|[How to use the IBM WebSphere DynaCache to store and share data](./development/DynaCacheToStoreData.md)|
+|Migrated|Performance|[How to optimize WCM authoring performance](./performance/WCMAuthoringPerformance.md)|
+|Migrated|Security|[How to change the LDAP attribute used by the Impersonation portlet](./security/LDAPAttrForImpersonation.md)|
+|Migrated|Security|[How to determine user credentials for a method or thread using trace logs](./security/DetermineCredentials.md)|
+|Migrated|Security|[How to monitor user logins from traces in HCL DX](./security/MonitorUserLogins.md)|
+|Migrated|Syndication|[How to create a virtual portal syndicator-subscriber pair using the command line](./syndication/SyndicationVirtualPortalCommandLine.md)|
+|Migrated|Themes|[How to identify the JSP file that renders a specific theme segment](./themes/ThemeJSPinSegment.md)|
+|Migrated|Web Content Manager|[How to add profiles to WCM items](./wcm/ProfileEnablementUtility.md)|
+|Migrated|Web Content Manager|[How to stop a background WCM library delete](./wcm/StopWCMLibDel.md)|
+|New|Upgrade|[How to avoid Java Runtime failures during CF upgrade on older DX systems](./upgrade/upgradeJava8Requirement.md)|
+
+## CF237
+
+| Type | Category | Article |
+|------|----------|---------|
+|Migrated|Administration|[How to determine the HCL DX application server runtime](./administration/DetermineWebsphereAppServer.md)|
+|Migrated|Configuration|[How to change the default portlet configuration](./configuration/DefaultPortletConfig.md)|
+|Migrated|Container|[How to manually renew the DX Core certificate and Kubernetes secret](./container/ManualDXCoreCertUpdate.md)|
+|Migrated|Container|[How to roll back to a previous CF version in Kubernetes or OpenShift](./container/RollbackCFinContainers.md)|
+|Migrated|Development|[How to create an external application JAR file and invoke it using a JSP component](./development/ExternalJARinvokeJSP.md)|
+|Migrated|Performance|[How to analyze JCR and XPath query performance](./performance/AnalyzingJCRQueryPerformanceXPath.md)|
+|Migrated|Search|[How to include pages containing the Web Content Viewer portlet in a portal seedlist](./search/IncludeWebContentViewerPortlet.md)|
+|Migrated|Search|[How to use REST API constraints for searches in content and authoring templates](./search/SearchConstraintAPI.md)|
+|Migrated|Web Content Manager|[How to use `RefreshAllItems` for WCM libraries](./wcm/SampleInvocationRefreshLibrary.md)|
+
 ## CF236
 
 | Type | Category | Article |
@@ -24,11 +69,15 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Container|[How to delete duplicate `CONFIG_CHECKSUM` environment variables](./container/DeleteDuplicateCheckSum.md)|
 |Migrated|Container|[How to get Helm chart values](./container/HelmChartValues.md)|
 |Migrated|Container|[How to safely restart persistence nodes](./container/RestartPersistenceNodes.md)|
+|Migrated|Content|[How to manage DAM asset URLs after a library import from another environment](./content/WCMObjectsHostname.md)|
+|Migrated|Content|[How to use XSL with HCL DX and WCM](./content/UsingXSLWithPortalAndWCM.md)|
 |Migrated|Performance|[How to tune the LDAP configuration in HCL DX](./performance/DX_Tune_LDAP.md)|
 |Migrated|Personalization|[How to use PZN to query values from an LDAP Server not configured in a user repository](./personalization/PZNToQueryValuesLdap.md)|
 |Migrated|Search|[How to create a search service for a Virtual Portal](./search//VPSearchService.md)|
+|Migrated|Search|[How to implement a search query using WCM HTML and search components](./search/SampleSearchQueryWCMComponent.md)|
 |Migrated|Security|[How to integrate the impersonation API with SAML](./security/ImpersonationAPIWithSAML.md)|
 |Migrated|Troubleshooting|[How to debug SSL handshake problems in HCL DX](./../troubleshooting/security/SSLHandshakeLogging.md)|
+|New|Configuration|[How to install and configure Ingress with virtual portals](./configuration/ConfigureIngressWithVPs.md)|
 
 ## CF235
 
@@ -53,7 +102,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Security|[How to identify missing DX resource roles](./security/determineRequiredRole.md)|
 |Migrated|Security|[How to integrate HCL DX user authentication using Microsoft Azure AD](./security/AuthenticationMSAzure.md)|
 |Migrated|Security|[How to prevent Log4j warnings from security scanners](./security/UnifiedTaskListLog4j.md)|
-|Migrated|Syndication|[How to create a syndicator-subscriber pair](./syndication/CreateSyndicatorSubsciberPair.md)|
+|Migrated|Syndication|[How to create a syndicator-subscriber pair in WCM](./syndication/CreateSyndicatorSubsciberPair.md)|
 |Migrated|Troubleshooting|[How to collect HCL DX logs from an OpenShift or Kubernetes deployment](../troubleshooting/container_deployments/collectDataOpenShiftAndK8.md)|
 |Migrated|Troubleshooting|[How to generate a PACDump](../troubleshooting/security/PumaDump.md)|
 
@@ -96,9 +145,8 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to create a custom login or logout filter in HCL DX](./development/custom_login_filter_sample.md)|
 |Migrated|Development|[How to create a custom login portlet with credential vault handling in HCL DX](./development/CustomLoginPortlet.md)|
 |Migrated|Migration|[How to configure and performing a staging to production environment](./migration/StagingToProductionWithPAA.md)|
-|Migrated|Security|[How to implement SAML in HCL DX](./security/implementsaml_portal.md)|
 |Migrated|Upgrade|[How to use XML Access to export and import portal pages](./upgrade/XMLAccessExportImport.md)|
-|New|Configuration|[How to set generic JVM arguments on the dx-core pod in a containerized HCL DX environment](./configuration/SetGenericJVMArgumentsCorePod.md)|
+|New|Configuration|[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./configuration/SetGenericJVMArgumentsCorePod.md)|
 |New|Security|[How to add additional security realms for Virtual Portals](./security/AddAdditionalWASRealms.md)|
 
 ## CF230

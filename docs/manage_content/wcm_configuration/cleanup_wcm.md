@@ -15,7 +15,7 @@ The following are examples of items which you can clean up:
 
 The following sections provide information on how to deal with each of these items.
 
-!!!note "DISCLAIMER OF WARRANTIES"
+!!!note "Disclaimer of warranties"
     The files in the [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip) file are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
 
 ## Drafts
