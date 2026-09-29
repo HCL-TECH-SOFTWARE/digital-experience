@@ -1,4 +1,4 @@
-# How to skip the Health Checker while running `applyCF`
+# How to skip the Health Checker when running `applyCF`
 
 ## Applies to
 
@@ -40,7 +40,7 @@ This article describes how to skip the Health Checker while running the `applyCF
 
 ## Instructions
 
-To skip the Health Checker while running `applyCF`, append `-Dskip.cf.validation=true` to the command. For example:
+To skip the Health Checker when running `applyCF`, append `-Dskip.cf.validation=true` to the command. For example:
 
 - Linux or Unix:
 

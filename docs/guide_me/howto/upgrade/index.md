@@ -4,7 +4,7 @@ This section includes how-to articles about upgrade topics in HCL Digital Experi
 
 - **[How to avoid Java Runtime failures during CF upgrade on older DX systems](./upgradeJava8Requirement.md)**  
 Learn how to update WebSphere Application Server profiles and IBM Installation Manager to Java 8 to prevent Java Runtime failures during Cumulative Fix (CF) upgrades on HCL DX version 8.5 and higher starting from CF238.
-- **[How to skip the Health Checker while running `applyCF`](./ApplyCFSkipHealthChecker.md)**  
+- **[How to skip the Health Checker when running `applyCF`](./ApplyCFSkipHealthChecker.md)**  
 Learn how to skip Health Checker validation during when running the `applyCF` ConfigEngine task to prevent unexpected server shutdowns.
 - **[How to use command-line syntax for installing Fixes with IBM Installation Manager](./CommandLineIIM.md)**  
 Learn how to use command-line syntax for installing Fixes with IBM Installation Manager.
