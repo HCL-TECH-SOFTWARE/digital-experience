@@ -15,7 +15,9 @@ Learn how to configure HCL DX and WebSphere Application Server (WAS) activation 
 - **[How to configure the IBM Rational Application Developer to use the HCL DX server](./ConfigureRAD.md)**  
 Learn how to configure the IBM Rational Application Developer (RAD) for use in HCL DX servers.  
 - **[How to determine default WCM configuration values](./DefaultWCMValues.md)**  
-Learn how to check default WCM configuration properties using the WebSphere console or local configuration files.  
+Learn how to check default WCM configuration properties using the WebSphere console or local configuration files.
+- **[How to enable Dojo debugging in the browser console](./EnableDjConfigDebug.md)**  
+Learn how to configure the `djConfig` object in HCL DX to display Dojo framework debug statements and diagnostic logs in the browser console.
 - **[How to enable support for additional image formats in HCL Web Content Manager](./EnableImageFormats.md)**  
 Learn how to configure the HCL DX server to recognize additional image formats in the HCL Web Content Manager.  
 - **[How to install and configure Ingress with virtual portals](./ConfigureIngressWithVPs.md)**  
@@ -32,7 +34,3 @@ Learn how to remove state information from page URLs.
 Learn how to configure Firefox connection timeout settings to resolve intermittent image display issues caused by network or server performance delays.
 - **[How to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment](./SetGenericJVMArgumentsCorePod.md)**  
 Learn how to set generic JVM arguments on the `dx-core` pod in a containerized HCL DX environment.
-
-
-- **[How to enable djConfig.isDebug output to the browser console](./EnableDjConfigDebug.md)**  
-Learn how to enable djConfig.isDebug output to the browser console.

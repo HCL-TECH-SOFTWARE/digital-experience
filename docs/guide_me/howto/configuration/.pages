@@ -8,6 +8,7 @@ nav:
     - configureJMSMessages.md
     - ConfigureRAD.md
     - DefaultWCMValues.md
+    - EnableDjConfigDebug.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md
@@ -16,4 +17,3 @@ nav:
     - RemoveStateInformationFromURL.md
     - WcmImageDisplayIssueInFirefox.md
     - SetGenericJVMArgumentsCorePod.md
-    - EnableDjConfigDebug.md
