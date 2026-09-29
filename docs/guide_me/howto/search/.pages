@@ -1,6 +1,7 @@
 title: Search
 nav:
     - index.md
+    - AccessWasAfterRemoteSearchInstall.md
     - VPSearchService.md
     - SampleSearchQueryWCMComponent.md
     - IncludeWebContentViewerPortlet.md
