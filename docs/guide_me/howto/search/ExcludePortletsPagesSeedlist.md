@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Exclude specific portlets or pages from an HCL Digital Experience (DX) search collection seedlist to prevent unwanted content from being indexed in search results. This article describes how to exclude portlets and pages from a search collection.
+You can exclude specific portlets or pages from a search collection seedlist in HCL Digital Experience (DX) to prevent unwanted content from being indexed in search results. This article describes how to exclude portlets and pages from a search collection.
 
 ## Instructions
 
