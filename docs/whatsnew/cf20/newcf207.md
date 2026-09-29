@@ -2,18 +2,18 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update CF207 on [supported platforms](../../deployment/install/index.md):
 
--   DX Client Updates support ability to execute in multiple container environments
--   Digital Asset Management Plugin extensibility Helm configuration updates
--   DAM Friendly URLs update adds ability to define a collection-unique name
--   DAM Asset Keyword updates
--   Content Composer enhancements adds ability to add keywords to content items
--   New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
--   Web Content Manager Apply Content Template API update
--   Syndication Administration updates extend Delegated Administration roles assignments
--   HCL Digital Experience Cloud Native 9.5 Entitlement checks
--   HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and [HCL Leap](https://www.hcltechsw.com/leap)
--   New HCL Digital Experience Help Center
--   Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+- DX Client Updates support ability to execute in multiple container environments
+- Digital Asset Management Plugin extensibility Helm configuration updates
+- DAM Friendly URLs update adds ability to define a collection-unique name
+- DAM Asset Keyword updates
+- Content Composer enhancements adds ability to add keywords to content items
+- New Script Application Tutorials and Sample Applications are available on the HCL Software Github repository
+- Web Content Manager Apply Content Template API update
+- Syndication Administration updates extend Delegated Administration roles assignments
+- HCL Digital Experience Cloud Native 9.5 Entitlement checks
+- HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and [HCL Leap](https://www.hcltechsw.com/leap)
+- New HCL Digital Experience Help Center
+- Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
 !!!note
     Tabs in each section indicate the supported platforms/deployments each feature is available on.
@@ -21,12 +21,12 @@ The following features and updates are available to customers installing HCL Dig
 ## DX Client Updates support ability to execute in multiple container environments
 
 === "Containers"
-    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/index.md) topic in the Help Center for more information. 
+    By default, the Docker container runtime is supported, updates enable use of any container runtime that implements the OCI Runtime Specification.  See the [DX Client](../../extend_dx/development_tools/dxclient/index.md) topic in the Help Center for more information.
 
 ## Digital Asset Management Plugin extensibility Helm configuration updates
 
 === "Containers"
-    See the [Configure DAM extensibility](../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) topic in the Help Center for more information. 
+    See the [Configure DAM extensibility](../../manage_content/digital_assets/configuration/dam_extensibility/configure_dam_extensibility.md) topic in the Help Center for more information.
 
 ## DAM Friendly URLs Update adds ability to define a collection-unique name
 
@@ -38,7 +38,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     We have now added capability to show a detailed display of keywords, options to retain or replace keywords and to generate new keywords. See the [DAM Keyword enhancements](../../manage_content/digital_assets/usage/managing_dam/modify_dam/dam_keyword_enhancement.md) topic for more information.
 
-## Content Composer enhancements 
+## Content Composer enhancements
 
 === "Containers"
 
@@ -66,7 +66,7 @@ The following features and updates are available to customers installing HCL Dig
     
     You can also access the **DX ScriptApps How-To Guides** Tutorials and Samples on the [HCL Software Github repository](https://github.com/HCL-TECH-SOFTWARE/DX-Modules-and-ScriptApps){target="_blank"}.
 
-## Web Content Manager Apply Content Template API update 
+## Web Content Manager Apply Content Template API update
 
 === "Containers"
 
@@ -76,7 +76,7 @@ The following features and updates are available to customers installing HCL Dig
 
     Developers can now specify a library to apply a content template. See the [Apply Content Template API](../../manage_content/wcm_development/wcm_rest/wcm_rest_mng_content/wcm_rest_template/wcm_rest_content_template/wcm_rest_crud_cont_temp_default.md#apply-content-template-api) topic in the Help Center for more information.
 
-## Syndication Administration updates 
+## Syndication Administration updates
 
 === "Containers"
 
@@ -95,8 +95,8 @@ Beginning with HCL Digital Experience 9.5 Container Update CF207, you must speci
 ## HCL Digital Experience Cloud Native 9.5 offering adds components for on-premises installations and HCL Leap
 
 === "Containers"
-     
-    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native  Help Center topic.
+
+    The [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) offering provides powerful digital experience platform software optimized for deployment to Kubernetes container environments, with additional support to install to on-premises supported Operating system platforms. Effective with HCL Digital Experience 9.5 CF207, this offering includes all of the capabilities of the HCL Digital Experience platform, including HCL Portal Server, Web Content Manager, Digital Asset Management, also [HCL Leap](https://www.hcltechsw.com/leap),  For more information, see the [HCL Digital Experience Cloud Native 9.5](../../get_started/product_overview/offerings.md#hcl-digital-experience-cloud-native) Help Center topic.
 
 === "On-Premises"
 
@@ -104,8 +104,15 @@ Beginning with HCL Digital Experience 9.5 Container Update CF207, you must speci
 
 ## The new HCL Digital Experience Help Center
 
-At HCL, we are continuously improving the quality and overall user experience of our product documentation. The new HCL Digital Experience 9.5 product documentation has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you. 
+At HCL, we are continuously improving the quality and overall user experience of our product documentation. The new HCL Digital Experience 9.5 product documentation has enhanced search capability and an improved content architecture for easy navigation and access to topics that are relevant to you.
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF207, take the [DX CF207 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D881){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

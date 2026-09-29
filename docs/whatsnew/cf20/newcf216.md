@@ -26,7 +26,7 @@ The following features and updates are available to customers installing HCL Dig
 - OCI-based registry for Harbor Helm chart repository
 - Digital Asset Management - Resync DAM Staging environments
 - DX Picker - Previewing an asset
-- Digital Asset Management - Moving a collection 
+- Digital Asset Management - Moving a collection
 - Digital Asset Management - Extending the trust store
 
 ## All Digital Experience Versions (8.5, 9.0, 9.5)
@@ -55,13 +55,13 @@ The following features and updates are available to customers installing HCL Dig
 === "On-Premises"
     New sample to integrate [Google Vertex AI](https://cloud.google.com/vertex-ai) services with WCM Author services is available on the HCL Software Github repository. For more information, see [hcl-dx-google-vertex-sample](https://github.com/HCL-TECH-SOFTWARE/dx-google-vertex-sample).
 
-### Web Content Manager REST API v2 - Updated custom configurations for Open AI 
+### Web Content Manager REST API v2 - Updated custom configurations for Open AI
 
 === "Containers"
     The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
 
 === "On-Premises"
-    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).    
+    The OpenAI model is switched to ```gpt-3.5-turbo``` because of OpenAI discontinuing support for ```text-davinci-003``` starting January 4, 2024. For more information, see [OpenAI ChatGPT custom configurations](../../get_started/plan_deployment/container_deployment/wcm_content_ai_analysis.md#openai-chatgpt-specific-custom-configurations).
 
 ### Updated documentation for setting up OIDC in HCL DX
 
@@ -129,7 +129,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     With DX Picker, you can now open an image in Preview mode. When in Preview mode, you can view image renditions, download or select an image, navigate between assets, and zoom in and out of an image. For more information, see [Using DX Picker](../../manage_content/wcm_authoring/dx_picker/usage.md).
 
-### Digital Asset Management - Moving a collection 
+### Digital Asset Management - Moving a collection
 
 === "Containers"
     DX 9.5 Container Update CF216 adds capability to move a collection to a new location, either to another collection or to the root level. This includes an option to save the collection under a new name if naming conflicts occur. For more information, see [Moving a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#moving-a-collection).
@@ -141,6 +141,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF216, take the [DX CF216 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2164){target="_blank"} on HCLSoftware U.
 
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
 
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

@@ -2,7 +2,7 @@
 
 This HCL Digital Experience 9.5 Container Update and CF202 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio (Beta) components. The release also includes updated CICD release process artifacts, new Remote Model REST APIs, Personalization REST APIs, updated Helm deployment guidance to create Persistent Volume Claims for DX Core, configure credentials, also new HCL Digital Experience Cloud Native 9.5 offering, new Digital Experience How-To Videos and Lab exercises, and more.
 
-This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases.
 
 You can access product software at the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
 
@@ -16,9 +16,9 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/container_deployment/index.md)
--   [Configure PersistentVolumeClaims \(PVCs\)](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
--   [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
+- [HCL DX 9.5 Helm deployment](../../get_started/plan_deployment/container_deployment/index.md)
+- [Configure PersistentVolumeClaims \(PVCs\)](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
+- [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
 
 ## Digital Asset Management
 
@@ -31,9 +31,9 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../..
 Design Studio enables content managers and designers to build and style their digital site properties quickly. Available for use with DX 9.5 container-based deployments, Design Studio presents a modern, intuitive, and role-based tool aggregating all needed functions to visually assemble, curate, design, and model pages, content, and applications in DX sites. New features available with Container Update CF202 include baseline stylesheet upload and download in Site overview, guidance when styling elements, replacing images, using the Layers panel, and re-use of Content containers.
 
 !!!note
-    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments. 
+    Design Studio is provided for beta evaluation with HCL Digital Experience 9.5 Container Update CF202, and includes a sample DX site.  It is not yet supported for use in production deployments.
 
-See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information. 
+See the [Design Studio (Beta)](https://opensource.hcltechsw.com/digital-experience/cf204/productfeatures/design_studio/){:target="_blank"}<!-- (../design_studio/design_studio_overview.md) --> Help Center topic for more information.
 
 ## Digital Experience Cloud Native 9.5 offering
 
@@ -77,16 +77,9 @@ A new optional process is added to retain customizations made to the [Woodburn S
 
 See the [Upgrade to Woodburn Studio Pages Optional](https://help.hcltechsw.com/digital-experience/9.5/woodburn_studio/update_pages_optional.html){:target="_blank"}<!-- (../woodburn_studio/update_pages_optional.md) --> Help Center topic for additional information.
 
-## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
-
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators.
-
-See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
-
-## New Digital Experience 9.5 How-To Video:
+## New Digital Experience 9.5 How-To Video
 
 [Update HCL DX 9.5 Container to a later DX version using Helm](https://www.youtube.com/watch?v=TwZuNOeWdT4)
-
 
 <!-- ???info "Related information"
     - [Digital Asset Management Help Center](../design/digital_asset_mgmt/digital_asset_mgmt_overview.md)
@@ -96,4 +89,14 @@ See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLea
     - [Personalization Rules APIs](../../design/api/dev_pzn_rules_api.md)
     - [Integrate Google Analytics with HCL Digital Experience](../design/admin/integrate_google_analytics.md) 
     - [Upgrade to Woodburn Studio Pages Optional](../woodburn_studio/update_pages_optional.md)-->
-    
+
+## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
+
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF202, take the [DX CF202 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D576){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

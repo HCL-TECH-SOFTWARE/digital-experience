@@ -1,8 +1,8 @@
-# How to create a syndicator-subscriber pair
+# How to create a syndicator-subscriber pair in WCM
 
 ## Applies to
 
-> HCL Digital Experience version 9.5 and higher  
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
