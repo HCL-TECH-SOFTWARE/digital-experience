@@ -22,4 +22,4 @@ To exclude portlets or pages from a search collection, perform the following ste
 6. Select **OK** to save your changes.
 
 !!!note
-    To exclude an entire page, all portlets on that page must have the `INCLUDE_IN_SEARCH_INDEX` parameter set to `false`. This parameter requires fix [PI65690](https://www.ibm.com/support/pages/apar/PI65690){target="_blank"} (included in Combined Cumulative Fix 22 [CF22] and higher).
+    To exclude an entire page, all portlets on that page must have the `INCLUDE_IN_SEARCH_INDEX` parameter set to `false`. This parameter requires the Authorized Program Analysis Report (APAR) [PI65690](https://www.ibm.com/support/pages/apar/PI65690){target="_blank"}, which is included in Combined Cumulative Fix 22, (CF22) and higher.
