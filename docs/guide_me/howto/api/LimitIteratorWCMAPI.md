@@ -1,24 +1,22 @@
-# How to limit the number returned for an iterator when using WCM API
+# How to limit the number of items returned by an iterator when using the WCM API
 
 ## Applies to
 
-> HCL Digital Experience 8.5 and higher
+> HCL Digital Experience v8.5 and higher
 
 ## Introduction
 
-The WCM Workspace Interface provides several methods to find WCM items and the items returned are stored in an iterator object. You can increase or decrease the value of the WCM Configuration property **iterator.pagesize** to control the maximum number of items returned by the iterator at once.
+The Web Content Manager (WCM) `Workspace` interface in HCL Digital Experience (DX) provides several methods to find WCM items, which are stored in an iterator object. You can configure the `iterator.pagesize` custom property to control the maximum number of items returned by the iterator at one time. This article explains how to limit the number returned for an iterator when using the WCM API.
 
 ## Instructions
 
-The custom property can be set as following:  
+To limit the number of items returned by an iterator, perform the following steps:
 
-1. Login into the IBM Integrated Solutions Console (IBM WebSphere Application Server Administrative Console) as administrator.
-
+1. Log in to the IBM Integrated Solutions Console (WAS admin console) as an administrator.
 2. Navigate to **Resources > Resource Environment > Resource environment providers > WCM WCMConfigService > Custom properties**.
-
-3. Click to the **New** button and add the custom property **iterator.pagesize** and assign the desired value.
-
-4. Restart the HCL DX server.
-
-!!!note
-    A server restart is required for the setting to take effect.
+3. Select **New**.
+4. In the **Name** box, enter `iterator.pagesize`.
+5. In the **Value** box, enter the desired value.
+6. Select **Apply**.
+7. Select **Save** at the top of the console messages.
+8. Restart the HCL DX server.
