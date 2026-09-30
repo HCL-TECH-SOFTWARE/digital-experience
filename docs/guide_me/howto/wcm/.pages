@@ -2,6 +2,7 @@ title: Web Content Manager
 nav:
     - index.md
     - ProfileEnablementUtility.md
+    - ServeMsOfficeWithWcm.md
     - StopWCMLibDel.md
     - SampleInvocationRefreshLibrary.md
     
