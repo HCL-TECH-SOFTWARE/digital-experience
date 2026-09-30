@@ -1,4 +1,4 @@
-# How to hide the impersonation button for normal users, but keep for administrators
+# How to hide the impersonation button for non-administrator users
 
 ## Applies to
 
@@ -6,18 +6,16 @@
 
 ## Introduction
 
-This document describes how to hide the impersonation button for a normal user, but leave it enabled for administrators.  
+HCL Digital Experience (DX) allows administrators to manage access control and page permissions across portal environments. Restricting access to sensitive controls ensures that feature privileges remain limited to authorized roles. This article explains how to hide the impersonation button for non-administrator users.
 
 ## Instructions
 
-Please carry out the following steps:
+To hide the impersonation button for non-administrator users, perform the following steps:
 
-1. Login into the Portal as Portal administration user.
-
-2. In the menubar click to the Home icon and navigate to **Administration -> Site Management (Manage Pages) -> Content Root -> Hidden Pages**.
-
-3. Click on the permissions icon for the Impersonation page.
-
-4. Edit the user role and revoke all authentication users. Then save the changes.
-
-5. Restart the portal server and check.  
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Open applications menu > Administration > Site Management > Content Root > Hidden Pages**.
+3. In the **Impersonation** row, select the **Edit Page Permissions** key icon.
+4. Select the **Edit role** pencil icon for the role whose permission you want to revoke (for example, **User**).
+5. Select the **Delete Member from Role** trash icon for **All Authenticated Portal Users**.
+6. Select **OK** to confirm.
+7. Restart the HCL DX server and verify the changes.

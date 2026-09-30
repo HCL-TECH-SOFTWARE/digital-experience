@@ -12,8 +12,8 @@ nav:
     - PreventApplicationStartUp.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
+    - HideImpersonationButton.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - ResetWCMViewerPortlet.md
     - UseJavaScriptToReplaceText.md
-    - HideImpersonationButton.md
