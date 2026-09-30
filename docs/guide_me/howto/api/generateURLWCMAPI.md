@@ -1,4 +1,4 @@
-# How to use WCM APIs to generate a URL based on the locale of the request
+# How to use WCM API to generate a URL based on the locale of the request
 
 ## Applies to
 
@@ -6,14 +6,24 @@
 
 ## Introduction
 
-This document provides a WCM API sample to generate a URL based on the locale of the request.  
+You can dynamically retrieve content and generate targeted URLs in HCL Digital Experience (DX) based on the locale of an incoming request. Utilizing Web Content Manager (WCM) APIs allows custom code to inspect request properties and route users to localized site areas and content components automatically. This article provides a WCM API sample to generate a URL based on the locale of the request. 
+
+???+ info "disclaimer of warranties"
+    The following code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ## Instructions
 
-???+ info "Disclaimer of warranties"
-    The following code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+The code demonstrates how to generate a URL based on the request locale. Update these placeholders in the code sample to match your environment:
 
-Sample code:
+- `"English"`: Replace with the display language string returned by your locale check logic (or evaluate `userlocale.getLanguage()` and `userlocale.toString()`).
+
+- `"EnglishLibrary/EnglishSiteArea"`: Replace with the path to your primary site area.
+
+- `"RichTextElement"`: Replace with the exact name or reference of your targeted content element or component.
+
+- `"FrenchLibrary/FrenchSiteArea"`: Replace with the path to your secondary or alternate site area.
+
+Refer to the sample implementation below:
 
 ```java
 try {
