@@ -1,4 +1,4 @@
-# How to get the UUID of WCM object by name via the Command Line
+# How to retrieve the UUID of a WCM object by name using the command line
 
 ## Applies to
 
@@ -6,37 +6,75 @@
 
 ## Introduction
 
-Sometimes, you need the UUID of a given object in WCM. When you have the whole path of the object, you can use the **WCM Support Tools** portlet to get it. But if you know only the name of the WCM object, using the command line would be easier as you can use a REST API and Linux tools like CURL, GREP, PERL, etc. The WCM object can be a "Library", a "Content", a "Presentation Template", a "Site Area", etc.
+You can retrieve the Universally Unique Identifier (UUID) of an object in Web Content Manager (WCM) using a command line when only the name is available. Querying the WCM REST API with `curl`, `grep`, and `perl` is an alternative to using the WCM support tools when searching across libraries, content items, presentation templates, and site areas in HCL Digital Experience (DX). This article describes how to retrieve the UUID of a WCM object using the command line.
+
+For more information on WCM Support Tools, refer to the [HCL Web Content Manager Support Tools](../../../deployment/manage/troubleshooting/wcm_support_tools.md)
+
+## Prerequisites
+
+Before you begin, your environment should have `curl` and `perl` installed. To check if these tools are available, perform the following steps:
+
+1. Open a terminal window.
+2. Run the following command:
+
+    ```bash
+    command -v curl perl
+    ```
+
+3. If the command does not return paths for both binaries (for example, `/usr/bin/curl` and `/usr/bin/perl`), use your distribution's package manager (`yum`, `dnf`, or `apt`) to install the missing tools:
+
+    - For modern RHEL, CentOS, or Fedora (RHEL 8+, Fedora 22+)
+
+        ```bash
+        sudo dnf install curl perl
+        ```
+
+    - For Legacy RHEL or CentOS (RHEL 7)
+
+        ```bash
+        sudo yum install curl perl
+        ```
+
+    - For Debian or Ubuntu
+
+        ```bash
+        sudo apt update && sudo apt install curl perl
+        ```
 
 ## Instructions
 
-Before you begin, your environment should have `curl` and `perl` installed. If you don't, you can install them using `yum`, `dnf` or `apt`, depending on your linux distribution.
+To retrieve the UUID of a WCM object by name, perform the following steps:
 
-1. To begin you need to define some environment variables. Change these variables, according to your environment.
-
-    **The name of the WCM object you want the UUID:**  
+1. Open a terminal window.
+2. Define the following required environment variables in your terminal session according to your environment settings:
 
     ```bash
     OBJECT_NAME="Article"
-    ```
-
-    **Some other DX needed values:**  
-
-    ```bash
     WPS_ADMIN_USR="wpsadmin"
     WPS_ADMIN_PWD="wpsadmin"
     WP_PROFILE_HOME="/opt/HCL/wp_profile"
-    HOSTNAME=`hostname -f`
-    PORT=`grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2`
+    HOSTNAME=$(hostname -f)
+    PORT=$(grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2)
     ```
+    `OBJECT_NAME`: The name of the target WCM object for which you want to retrieve the UUID (for example, "Article").
 
-2. Now that all required variables have been set up, let's get the UUID of the WCM Object, as defined above, in `OBJECT_NAME`:
+    `WPS_ADMIN_USR`: The administrator username.
+    
+    `WPS_ADMIN_PWD`: The administrator password.
+    
+    `WP_PROFILE_HOME`: The file path to your HCL DX profile directory.
+    
+    `HOSTNAME`: Dynamically set the fully qualified domain name (FQDN) of your host server.
+    
+    `PORT`: Dynamically extract the WebSphere Portal host port number from your configuration properties file.
+
+4. Run the `curl` command to query the WCM REST API and return the UUID, type, and path of the specified object:
 
     ```bash
     curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?options=item-path" --data-urlencode "title=$OBJECT_NAME" 2>/dev/null | grep -v 'query?options' | egrep 'wcm:type|<id>|wcm:title xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<wcm:type>|Type: |g' 
     ```
 
-    You should see the command return something like including UUIDs:  
+    The command returns output similar to the following:
 
     ```bash
     UUID: 9f0826ff-9601-49c7-9411-7672e6adce33

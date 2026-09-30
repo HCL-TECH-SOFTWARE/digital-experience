@@ -2,6 +2,6 @@ title: Web Content Manager
 nav:
     - index.md
     - ProfileEnablementUtility.md
-    - StopWCMLibDel.md
     - WCMUUIDCommandLine.md
+    - StopWCMLibDel.md
     
