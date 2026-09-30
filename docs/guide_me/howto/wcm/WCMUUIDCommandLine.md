@@ -6,9 +6,7 @@
 
 ## Introduction
 
-You can retrieve the Universally Unique Identifier (UUID) of an object in Web Content Manager (WCM) using a command line when only the name is available. Querying the WCM REST API with `curl`, `grep`, and `perl` is an alternative to using the WCM support tools when searching across libraries, content items, presentation templates, and site areas in HCL Digital Experience (DX). This article describes how to retrieve the UUID of a WCM object using the command line.
-
-For more information on WCM Support Tools, refer to the [HCL Web Content Manager Support Tools](../../../deployment/manage/troubleshooting/wcm_support_tools.md)
+You can retrieve the Universally Unique Identifier (UUID) of an object in Web Content Manager (WCM) using a command line when only the name is available. Querying the WCM REST API with `curl`, `grep`, and `perl` is an alternative to using the WCM Support Tools when searching across libraries, content items, presentation templates, and site areas in HCL Digital Experience (DX). For more information on WCM Support Tools, refer to the [HCL Web Content Manager Support Tools](../../../deployment/manage/troubleshooting/wcm_support_tools.md). This article describes how to retrieve the UUID of a WCM object using the command line.
 
 ## Prerequisites
 
@@ -56,17 +54,12 @@ To retrieve the UUID of a WCM object by name, perform the following steps:
     HOSTNAME=$(hostname -f)
     PORT=$(grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2)
     ```
-    `OBJECT_NAME`: The name of the target WCM object for which you want to retrieve the UUID (for example, "Article").
-
-    `WPS_ADMIN_USR`: The administrator username.
-    
-    `WPS_ADMIN_PWD`: The administrator password.
-    
-    `WP_PROFILE_HOME`: The file path to your HCL DX profile directory.
-    
-    `HOSTNAME`: Dynamically set the fully qualified domain name (FQDN) of your host server.
-    
-    `PORT`: Dynamically extract the WebSphere Portal host port number from your configuration properties file.
+    - `OBJECT_NAME`: The name of the target WCM object for which you want to retrieve the UUID (for example, "Article").
+    - `WPS_ADMIN_USR`: The administrator username.
+    - `WPS_ADMIN_PWD`: The administrator password.
+    - `WP_PROFILE_HOME`: The file path to your HCL DX profile directory.
+    - `HOSTNAME`: Dynamically set the fully qualified domain name (FQDN) of your host server.
+    - `PORT`: Dynamically extract the WebSphere Portal host port number from your configuration properties file.
 
 4. Run the `curl` command to query the WCM REST API and return the UUID, type, and path of the specified object:
 
