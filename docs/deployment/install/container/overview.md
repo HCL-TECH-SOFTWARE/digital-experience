@@ -9,3 +9,7 @@ Whether developing, testing, or running a full production environment, use of Do
 ![Containerization Architecture Overview](../../../images/HCL-DX-deployment-diagram-Kubernetes.png)
 
 Please see the [Containerization requirements and limitations](../../../get_started/plan_deployment/container_deployment/limitations_requirements.md) and [Deployment](../container/helm_deployment/overview.md) sections of the documentation before you begin.
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
