@@ -4,8 +4,11 @@ This section describes how to configure the IQ Integrator to authenticate with y
 
 ## Prerequisites
 
-- Deploy the [IQ Integrator and MCP Server services](deploy-services.md).
-- If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md). If you use a static LiteLLM API key instead, the database is not required but is recommended to persist conversations and sessions.
+Before configuring IQ to access LiteLLM:
+
+- Deploy the [LiteLLM proxy server](deploy-litellm.md) and ensure the `iq-general-purpose` and `iq-summary` proxy models are configured.
+- Deploy the [IQ Integrator and MCP Server services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md).
+- (Optional) If you require session persistence and multi-pod coordination, [prepare the PostgreSQL database](prepare-database.md).
 
 ## Using a static LiteLLM API key
 
@@ -26,7 +29,7 @@ Complete the following steps to configure and verify the static key:
       --namespace <DX_NAMESPACE>
     ```
 
-    Replace `<YOUR_LITELLM_API_KEY>` with the key provided by your LiteLLM proxy administrator.
+    `<YOUR_LITELLM_API_KEY>`: The key provided by your LiteLLM proxy administrator.
 
     If the secret already exists from a previous installation, delete the secret first and then recreate it:
 
@@ -37,31 +40,45 @@ Complete the following steps to configure and verify the static key:
       --namespace <DX_NAMESPACE>
     ```
 
-2. Upgrade the IQ deployment:
+2. Update your `custom-iq-values.yaml` file with the LiteLLM URL if you haven't already:
+
+    In your `custom-iq-values.yaml` file (created in [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#preparing-configuration-values)), ensure the LiteLLM URL is set:
+
+    ```yaml
+    configuration:
+      litellm:
+        liteLlmUrl: "<YOUR_LITELLM_URL>"
+    ```
+
+    `<YOUR_LITELLM_URL>`: The URL of your LiteLLM proxy server (for example, `https://litellm.example.com`). You can skip this step if you already set the URL during the initial installation of the IQ Integrator.
+
+3. Upgrade the IQ deployment with your `custom-iq-values.yaml` file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <DX_NAMESPACE> \
-      --reuse-values \
-      --set configuration.litellm.liteLlmUrl="<YOUR_LITELLM_URL>"
+      -f custom-iq-values.yaml
     ```
 
-    Replace `<YOUR_LITELLM_URL>` with the URL of your LiteLLM proxy server. You can omit this flag if you already set the URL during the initial installation of the IQ Integrator.
+    - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and path.
+    - `<IQ_HELM_CHART_VERSION>`: The IQ Helm chart version.
 
-    Monitor the rollout status of the deployment:
+4. Monitor the rollout status of the deployment:
 
     ```bash
     kubectl rollout status deployment/dx-iq-integrator -n <DX_NAMESPACE>
     ```
 
-3. Run the following command to check the logs for static key confirmation:
+    `<DX_NAMESPACE>`: The DX deployment namespace.
+
+5. Check the logs for static key confirmation:
 
     ```bash
     kubectl logs -n <DX_NAMESPACE> deployment/dx-iq-integrator | grep -i "LITELLM_API_KEY configured statically"
     ```
 
-4. Confirm that the output matches the following log entry:
+6. Confirm that the output matches the following log entry:
 
     ```log
     [DeploymentKey] LITELLM_API_KEY configured statically, skipping KMS flow
@@ -69,8 +86,18 @@ Complete the following steps to configure and verify the static key:
 
     If you see this message, your static LiteLLM API key is correctly configured, and KMS flow was skipped.
 
-5. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
+7. Send a test message through the IQ chat interface to verify that you receive an AI-generated response without errors.
+
+## Next steps
+
+After configuring IQ Integrator authentication with your LiteLLM proxy server:
+
+1. [Validate your deployment](validation.md).
+2. [Enable and configure](../enable.md) the IQ assistant.
 
 ???+ info "Related information"
-    - [Deploying services](deploy-services.md)
+    - [Enabling IQ](../enable.md)
+    - [IQ environment variables](environment-variables.md)
     - [Preparing the database](prepare-database.md)
+    - [Troubleshooting - LiteLLM](../troubleshooting.md#litellm)
+    - [Validating the deployment](validation.md)
