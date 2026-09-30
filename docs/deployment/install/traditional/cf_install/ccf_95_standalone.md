@@ -209,7 +209,7 @@ There are several different methods to install the cumulative fix. Choose one me
 
     ```
     ./imcl install com.ibm.websphere.PORTAL.SERVER.v85 
-    	-repositories (fullpath/to/repository.config) -installationDirectory (portal_server_root)
+    	-repositories (fullpath/to/repository.config)
     	-installationDirectory(portal_server_root) 
         -acceptLicense
     ```

@@ -17,7 +17,7 @@ This article provides the sample code that you can use to determine the number o
 
 Refer to the following steps to download and use the sample code to create a login or logout filter:
 
-1. Download the [currentUserFilters.zip](./files/concurrentUserFilters.zip){target="_blank"} file containing the filter code and the binary JAR file.
+1. Download the [currentUserFilters.zip](./files/concurrentUserFilters.zip) file containing the filter code and the binary JAR file.
 
     The sample code includes the following classes:
 
@@ -90,7 +90,7 @@ This section contains the sample code for the following custom filter classes:
 - [`CustomPortalLogoutFilter`](#customportallogoutfilter)
 - [`Userlist`](#userlist)
 
-???+ info "DISCLAIMER OF WARRANTIES"
+???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corp.  
     This sample code is provided to you solely for the purpose of assisting you in the development of your applications.  
     The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.

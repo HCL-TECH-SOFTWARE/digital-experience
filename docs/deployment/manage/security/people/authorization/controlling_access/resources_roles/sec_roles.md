@@ -2,7 +2,7 @@
 
 Roles provide task permissions for users on resources. For example, Editor is a role that allows users to view, modify, and create resources. Roles are denoted as Role@Resource; for example, Editor@Portal Page.
 
-Roles are organized in a hierarchy. Roles are organized in a hierarchy. Roles that are higher in the hierarchy generally inherit the permissions of child roles. For example, to install web modules the Editor role on the virtual resource `Web Modules`, `Editor@Web Modules`, is the minimum role assignment for this operation. The Manager role is higher in the hierarchy than the Editor role. For this reason, the Manager role includes the permissions of the Editor role. The `Manager@Web Modules` role also allows users to install web modules.
+Roles are organized in a hierarchy. Roles that are higher in the hierarchy generally inherit the permissions of child roles. For example, to install web modules the Editor role on the virtual resource `Web Modules`, `Editor@Web Modules`, is the minimum role assignment for this operation. The Manager role is higher in the hierarchy than the Editor role. For this reason, the Manager role includes the permissions of the Editor role. The `Manager@Web Modules` role also allows users to install web modules.
 
 ![Illustration of role hierarchy. Refer to the topic text for information about this graphic.](../../../../../../../images/rolehierarchy.jpg)
 
@@ -30,6 +30,22 @@ For example, suppose that a user, Mary, is a member of the Sales group. You can 
 
 Inheritance through the resource hierarchy can be blocked at any level to provide more granular access control.
 
+Using the [Resource Permissions](../../../../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/h_rperm_resources.md) portlet, **Allow Inheritance** and **Allow Propagation** are settings used to manage role blocks that control how permissions flow through the resource hierarchy.
+
+For more information about role blocks, see:
+[Role blocks for resources](../../../../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/resources/sec_blockroles.md)
+
+- **Allow Inheritance**  
+  When enabled, the current resource receives role assignments from its parent resource.  
+  When disabled, it creates an *inheritance block*, preventing parent permissions from applying to this resource.
+
+- **Allow Propagation**  
+  When enabled, the current resource sends its own role assignments to its child resources.  
+When disabled, it creates a propagation block, ensuring that roles assigned directly to this resource do not automatically grant access to its sub-resources.
+
+Additional information about the Resource Permissions portlet can be found here:  
+[Working with resource permissions](../../../../../../../deployment/manage/security/people/authorization/controlling_access/working_with_resource_permission/index.md)  
+
 ![Illustration of role inheritance](../../../../../../../images/inheritance.jpg)
 
 ## Role Assignments
@@ -38,7 +54,7 @@ Roles are assigned to users and groups that are contained in the user registry. 
 
 -   Explicitly assigned to an individual user
 -   Implicitly assigned through group membership. If a group has a role, all members of the group automatically acquire the role. Nested groups \(groups that are members of another group\) inherit role assignments from their parent groups.
--   Inherited through a role assignment on a parent resource. By default, roles on a resource automatically apply to all child resource unless role blocks are used.
+-   Inherited through a role assignment on a parent resource. By default, roles on a resource automatically apply to all child resources unless role blocks are used.
 
 Users and groups can have multiple roles on the same resource. For example, a user might have both the Editor and Manager roles on a particular page. One of these roles might be inherited through the resource hierarchy and the other might be explicitly assigned. If two roles in the same hierarchy are assigned for a user for the same resource, the higher role takes precedence. For example, if a user has the Manager and Editor role on a resource, the Manager role takes precedence over the Editor role.
 

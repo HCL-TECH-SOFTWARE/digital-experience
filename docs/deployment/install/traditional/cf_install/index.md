@@ -49,7 +49,7 @@ To opt in and install DX v9.5, refer to the following instructions:
 
     - **For Windows:** The `install_95` flag can fail in Windows environments.  It is recommended to complete the CF upgrade according to [legacy instructions](../../../../get_started/plan_deployment/traditional_deployment/roadmaps/rm_install_deployment/rm_cf.md) and then manually [upgrade to HCL DX 9.5](https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0079619){target="_blank"} using the repositories packaged within the cumulative fix.
 
-After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [How to enable Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+After the v9.5 installation, your WebSphere_Portal server is at v9.5 CF219 but v9.5 UI features are not yet enabled. To enable 9.5 UI features, refer to [Enabling Practitioner Studio](../../../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 To opt out and upgrade to CF219 without installing v9.5, run the applyCF script without setting the install_95 parameter.
 
@@ -77,6 +77,9 @@ Apply these instructions on an HCL DX system running either 8.5 or 9.0. CF17 is 
 11. CF16 for DX versions 8.5 and 9.0 changes the behavior of Cumulative Fix installation related to out of the box resources to address CVE-2018-1420. Prior to CF16, access control settings of out of the box resources were reset to their out of the box access control settings, overriding potential customizations. This has been changed such that the Cumulative Fix installation leaves the access control settings at their current values. A side effect of this change is, that out of the box resources introduced in a Cumulative Fix after the initial version of DX version 8.5 or Version 9.0 will not receive any access control settings, if CF16 or later is installed on top of a CF level prior to introduction of an out of the box resource. In such a case the resource will not have any access control configured, and will have to be set manually to your security requirements. See the HCL Digital Experience 8.5 documentation on [how to manage the access control](../../../../deployment/manage/security/people/authorization/controlling_access/sec_ac_adm.md) and get an overview of [initial access control settings](../../../../deployment/manage/security/people/authorization/controlling_access/resources_roles/init_acc_cntl_set.md).
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.
 

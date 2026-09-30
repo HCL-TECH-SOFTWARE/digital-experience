@@ -1,4 +1,4 @@
-# HCL Digital Asset Management
+# Digital Assets
 
 The Digital Asset Management (DAM) feature of HCL Digital Experience (DX) helps you centrally organize, share, and control all your digital assets. Use these assets in any UI design, content, sites, applications, or emails. DAM enables you to reduce costs, accelerate team workflows, and build content consistency. You can access the HCL DAM features in HCL DX 9.5 Container Update Release CF181 and higher releases.
 
@@ -34,5 +34,8 @@ This section provides steps on how to backup and restore for DAM persistence and
 This section describes the limitations that currently exist in HCL DAM.
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to use Digital Asset Management, go to [Digital Assets](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D302){target="_blank"}. To try it out yourself, refer to [Digital Asset Management Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Digital_Asset_Management_Lab.pdf){target="_blank"} and corresponding [Digital Asset Management Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Digital_Asset_Management_Lab_Resources.zip).

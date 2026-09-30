@@ -22,10 +22,15 @@ URLs control how you access different sites, pages, components, and content that
 -   **[Social rendering](../../build_sites/social_rendering/index.md)**  
 HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.
 -   **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md)**  
-The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites. 
+The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
+-   **[Information and Education | HCL Digital Experience](../../build_sites/create_sites/welcome_info.md)**  
+Access education, documentation, and in-product guidance to help you get started and use HCL Digital Experience effectively.
 
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to use the Site Manager for beginners, go to [Site Manager](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D291){target="_blank"}. To try it out yourself, refer to [Site Manager Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab.pdf){target="_blank"} and corresponding [Site Manager Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab_Resources.zip).
 

@@ -26,8 +26,8 @@ The following [Digital Experience 9.5 applications](../../../../get_started/plan
 
 HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in [Kubernetes](https://kubernetes.io/) environments:
 
--   [Prometheus](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) - Discovers metrics by evaluating the [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) of the services
--   [Prometheus Operator](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) - Discovers metrics using the [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) custom resources
+- [Prometheus](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) - Discovers metrics by evaluating the [`annotation`](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) of the services
+- [Prometheus Operator](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) - Discovers metrics using the [`ServiceMonitor`](https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/user-guides/getting-started.md#related-resources) custom resources
 
 Administrators can configure the HCL DX 9.5 metrics depending on their specific Prometheus deployment, as outlined in the following sections.
 
@@ -97,17 +97,19 @@ The following dashboards are provided by [HCL Software](https://www.hcltechsw.co
 
 To leverage the full potential of the [Digital Experience 9.5 applications](../../../../get_started/plan_deployment/container_deployment/application_architecture.md) metrics, an existing [Prometheus](https://prometheus.io/) and [Grafana](https://grafana.com/grafana/) deployment can be used. Following is a list of additional metrics tracking and visualization services \(non-exhaustive\) that you can consider when developing solutions according to your deployment needs:
 
--   [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart that includes:
+- [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart that includes:
+    - The [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
+    - Highly available [Prometheus](https://prometheus.io/)
+    - Highly available [Alertmanager](https://github.com/prometheus/alertmanager)
+    - [Prometheus node-exporter](https://github.com/prometheus/node_exporter)
+    - [Prometheus adapter for Kubernetes metrics APIs](https://github.com/DirectXMan12/k8s-prometheus-adapter)
+    - [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
+    - [Grafana](https://grafana.com/)
 
-    -   The [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
-    -   Highly available [Prometheus](https://prometheus.io/)
-    -   Highly available [Alertmanager](https://github.com/prometheus/alertmanager)
-    -   [Prometheus node-exporter](https://github.com/prometheus/node_exporter)
-    -   [Prometheus adapter for Kubernetes metrics APIs](https://github.com/DirectXMan12/k8s-prometheus-adapter)
-    -   [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
-    -   [Grafana](https://grafana.com/)
-    
         !!!note
             The [`kube-prometheus-stack`](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack#kube-prometheus-stack) Helm chart is based on the [`kube-prometheus`](https://github.com/prometheus-operator/kube-prometheus) repository, and comes with a set of tools to monitor the Kubernetes cluster, as well as pre-installed Grafana dashboards for visualization.
-            
-    -   [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
+
+    - [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
+
+???+ info "Related information"
+    - [OpenTelemetry Integration Guide](../../../../guide_me/guides/opentelemetry_integration/index.md)

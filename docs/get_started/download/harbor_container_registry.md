@@ -14,10 +14,10 @@ Using OCI commands requires an initial login before you can run the pull command
     - It is recommended to pull the Helm chart images directly into your own repositories in the event that Harbor becomes unavailable.
     - While the Helm chart images may remain available in Harbor indefinitely, only the three most recent images are guaranteed to be available.
 
-  1. Log in to the Helm registry by using the following command:
+1. Log in to the Helm registry by using the following command:
 
     ```bash
-    helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET> https://hclcr.io/
+    helm registry login -u <YOUR_HARBOR_USERNAME> -p <YOUR_HARBOR_CLI_SECRET> hclcr.io
     ```
 
 2. Run the following OCI-based pull command:
@@ -25,7 +25,6 @@ Using OCI commands requires an initial login before you can run the pull command
     ```bash
     helm pull oci://hclcr.io/dx/hcl-dx-deployment --version <HELM_CHART_VERSION_NUMBER>
     ```
-
 
     !!! note
         Running the pull command without the `--version` parameter downloads the latest Helm chart version.  
@@ -38,9 +37,7 @@ Using OCI commands requires an initial login before you can run the pull command
     ls -lah
     ```
 
-
     **Example output:**
-
 
     ```
     total 8868
@@ -49,27 +46,32 @@ Using OCI commands requires an initial login before you can run the pull command
 
 ## Helm chart and CF versions
 
-Refer to the following table to identify which Helm chart version corresponds to each CF (Continuous Fix) version.
+Refer to the following table to identify which Helm chart version corresponds to each Cumulative Fix (CF) version.
 
-| HCL DX Deployment version | HCL DX Search version | CF version |
-| :------------------------ | :-------------------- | :--------- |
-| 2.26.0                    |                       | CF217      |
-| 2.27.0                    |                       | CF218      |
-| 2.28.0                    |                       | CF219      |
-| 2.29.0                    |                       | CF220      |
-| 2.30.0                    |                       | CF221      |
-| 2.31.0                    |                       | CF222      |
-| 2.32.0                    |                       | CF223      |
-| 2.33.0                    |                       | CF224      |
-| 2.34.0                    | 2.23.0                | CF225      |
-| 2.35.0                    | 2.24.0                | CF226      |
-| 2.36.0                    | 2.25.0                | CF227      |
-| 2.37.3                    | 2.26.0                | CF228      |
-| 2.40.0                    | 2.27.0                | CF229      |
-| 2.41.0                    | 2.28.0                | CF230      |
-| 2.42.1                    | 2.29.0                | CF231      |
-| 2.43.0                    | 2.30.0                | CF232      |
-| 2.44.0                    | 2.31.0                | CF233      |
+| CF version | HCL DX Deployment version | HCL DX Search version | HCL DX IQ version |
+| :--------- | :------------------------ | :-------------------- | :---------------- |
+| CF238      | 2.49.0                    | 2.36.0                | 1.0.2             |
+| CF237      | 2.48.0                    | 2.35.0                | 1.0.1             |
+| CF236      | 2.47.0                    | 2.34.0                | 1.0.0             |
+| CF235      | 2.46.0                    | 2.33.0                |                   |
+| CF234      | 2.45.0                    | 2.32.0                |                   |
+| CF233      | 2.44.0                    | 2.31.0                |                   |
+| CF232      | 2.43.0                    | 2.30.0                |                   |
+| CF231      | 2.42.1                    | 2.29.0                |                   |
+| CF230      | 2.41.0                    | 2.28.0                |                   |
+| CF229      | 2.40.0                    | 2.27.0                |                   |
+| CF228      | 2.37.3                    | 2.26.0                |                   |
+| CF227      | 2.36.0                    | 2.25.0                |                   |
+| CF226      | 2.35.0                    | 2.24.0                |                   |
+| CF225      | 2.34.0                    | 2.23.0                |                   |
+| CF224      | 2.33.0                    |                       |                   |
+| CF223      | 2.32.0                    |                       |                   |
+| CF222      | 2.31.0                    |                       |                   |
+| CF221      | 2.30.0                    |                       |                   |
+| CF220      | 2.29.0                    |                       |                   |
+| CF219      | 2.28.0                    |                       |                   |
+| CF218      | 2.27.0                    |                       |                   |
+| CF217      | 2.26.0                    |                       |                   |
 
 After downloading the Helm charts, the next step is [Retagging images](../../deployment/install/container/helm_deployment/preparation/get_the_code/prepare_load_images.md#re-tag-images) as part of your deployment process.
 

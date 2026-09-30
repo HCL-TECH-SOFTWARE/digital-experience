@@ -21,7 +21,7 @@ This section describes how to enable and disable Search V2 manually.
 The `enable-search-v2` config task is not automatically executed. You can enable and disable this task by running `enable-search-v2` and `disable-search-v2` respectively. Once enabled, you can also use it after creating a Virtual Portal.
 
 !!! important
-    Before manually enabling Search V2, you need to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [How to enable Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
+    Before manually enabling Search V2, you need to enable Practitioner Studio. For more information on how to enable Practitioner Studio, refer to [Enabling Practitioner Studio](../../build_sites/practitioner_studio/working_with_ps/enable_prac_studio.md).
 
 For more information on how to do container-based Helm deployments, refer to [Deploying using Helm](../../deployment/install/container/helm_deployment/overview.md).
 

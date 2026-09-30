@@ -32,8 +32,8 @@ From the DAM perspective, each individual root-level collection and child collec
 | Edit collection details                    | No        | Yes         | Yes                |
 | Upload items                               | No        | Yes         | Yes                |
 | Create collections                         | No        | Yes         | Yes                |
-| Delete items in a collection               | No        | No          | Yes                |
-| Delete a collection                        | No        | No          | Yes                |
+| Move items in a collection to trash        | No        | No          | Yes                |
+| Move a collection to trash                 | No        | No          | Yes                |
 | Manage permissions for other users         | No        | No          | Yes                |
 
 A user that creates a root collection gets the Administrator role on the collection and so can do anything with that collection as indicated above.

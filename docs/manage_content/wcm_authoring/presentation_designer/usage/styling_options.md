@@ -1,42 +1,51 @@
-# Styling options in Presentation Designer
+# Styling options
 
-Styling options allow users to make the elements on the canvas presentable. Styles enable an interactive design experience that lets users see their style changes reflected on the canvas in real-time. This topic outlines the different styling options you can do in the **Style** panel of Presentation Designer.
+Styling options allow users to make the elements on the canvas presentable. Styles enable an interactive design experience that lets users see their style changes reflected on the canvas in real-time. This topic outlines the different styling options you can do in the **Style items** panel of Presentation Designer.
 
-To access Presentation Designer and understand its user interface, refer to the **[Access Presentation Designer](../access.md)** topic.
+## Style items panel
 
-To learn how to use the different user elements in Presentation Designer, refer to the **[User Elements in Presentation Designer](../usage/user_elements.md)** topic. 
+The styling options change based on the specific user element selected on the canvas. To check the available styling options for each element on your canvas, click an element and check the rendered style options in the **Style items** panel.
 
-## Style panel
-
-The styling options change based on the specific user element selected on the canvas. To check the available styling options for each element on your canvas, click an element and check the rendered style options in the **Style** panel.
-
-See the following sample styling options for a static text element:
+Sample styling options for a static text element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Text_Sample.png)
 
-See the following sample styling options for a static container element:
+Sample styling options for a static container element:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Static_Container_Sample.png)
 
+### Style validation
+
+Presentation Designer includes real-time validation within the **Style items** panel to ensure custom layout inputs remain syntactically correct. The system evaluates property inputs such as font size, colors, and spacing to prevent invalid CSS from breaking page layouts.
+
+When validating style inputs, the system applies the following rules:
+
+- Entering an invalid value highlights the input field in red and displays an inline "Invalid value" error message.
+- Syntactically invalid style values do not render on the live canvas.
+- Active validation errors block template saving. The **Save** button in the header toolbar is disabled and displays a "Resolve all errors to save your changes" tooltip on hover.
+- Empty input fields pass validation automatically and fall back to default stylesheet configurations.
+- Selecting another element on the canvas or changing the device context (**Desktop**, **Tablet**, or **Mobile**) clears error indicators from the previously selected element.
+- Switching elements or device viewports automatically reverts style values in the panel to their last valid state to prevent unresolved errors from persisting across template configurations.
+
 ## Inline styles
 
-In Presentation Designer, styling options are applied directly to the selected elements through inline styles. 
+In Presentation Designer, styling options are applied directly to the selected elements through inline styles.
 
-See the following sample static text element with styles applied in Presentation Designer:
+Sample static text element with styles applied:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Applied.png)
 
-See the following sample markup generated after saving the presentation template:
+Sample markup generated after saving the presentation template:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Markup.png)
 
-See the following sample preview displayed in a browser:
+Sample preview displayed in a browser:
 
 ![](../../../../assets/HCL_Presentation_Designer_Styling_Options_Sample_Styles_Preview.png)
 
 ## Style sections
 
-Style sections in Presentation Designer refer to categorized areas where users can adjust specific style properties of the selected user element on the canvas. Each section focuses on a different aspect of an element's design, helping users navigate the **Style** panel and apply the adjustments they need for each element.
+Style sections in Presentation Designer refer to categorized areas where users can adjust specific style properties of the selected user element on the canvas. Each section focuses on a different aspect of an element's design, helping users navigate the **Style items** panel and apply the adjustments they need for each element.
 
 You can change the measuring unit of each style property depending on the supported units. Click the measuring unit next to a style property to reveal a list of units you can choose from. For example:
 
@@ -111,6 +120,8 @@ The **Layout** section allows users to control the structural positioning and se
     - **Supported Units**: `px`  
     - **Sample Values**: `10px`, `20px`
 
+- **Auto Flow**: Controls how the grid elements are distributed within the grid. Possible values include `row`, `column`, and `row or column dense`.
+
 - **Column Gap**: Defines the space between columns in the grid.  
     - **Supported Units**: `px`  
     - **Sample Values**: `15px`, `25px`
@@ -122,6 +133,8 @@ The **Layout** section allows users to control the structural positioning and se
 
 - **Grid Cell (Rows)**: Specifies the number of rows the grid cell will occupy.  
     - **Sample Values**: `1`, `2`, `3`
+
+- **Area Layout** : A count-based layout override that automates responsiveness for Tablet and Mobile viewports. It dynamically balances rows and columns based on the specified track count, eliminating manual calculations while keeping all grid cells perfectly equal and uniform.
 
 ### Position
 

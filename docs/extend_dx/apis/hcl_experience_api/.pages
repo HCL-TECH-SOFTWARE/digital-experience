@@ -8,4 +8,5 @@ nav:
     - DAM Friendly URLs: dam_friendly_urls.md
     - Sample API Calls: openapi_example_API_calls.md
     - Sample Content UI: sample_content_ui
+    - Logout API Call: logout_api_updates.md
 

@@ -10,12 +10,12 @@ To trigger the staging mismatch process and download the report, refer to the fo
 
 1. Find the subscriber ID against which the mismatch needs to be checked. For the existing DX Client command that you can use to see subscriber details, refer to [Get all subscribers details for DAM staging](dam_subscription_staging.md#getting-all-subscribers-details-for-dam-staging).
 2. Trigger the action to find the differences between the publisher and subscriber by using the [Find staging mismatch](#find-staging-mismatch) command. 
-    - For the **hostname** attribute, use the publisher host name. 
-    - For the **subscriber ID** attribute, retrieve the subscriber ID by following Step 1. 
-    
+    - For the **hostname** attribute, use the publisher host name.
+    - For the **subscriber ID** attribute, retrieve the subscriber ID by following Step 1.
+
     !!!note
            You can find discrepancies between a publisher and more than one subscriber. However, you can only run the action against one subscriber at a time. 
-   
+
 3. Verify the status of the mismatch operation. Check the resyncStatus field response (for example, FIND_MISMATCH_START, FIND_MISMATCH_COMPLETED, FIND_MISMATCH_FAILED) by executing the command in [Get all subscribers details for DAM staging](dam_subscription_staging.md#getting-all-subscribers-details-for-dam-staging). If the status is FIND_MISMATCH_START, the find mismatch operation is still in progress. If the status is FIND_MISMATCH_COMPLETED or FIND_MISMATCH_FAILED, the find mismatch operation is finished.
 
 4. After the status is changed to FIND_MISMATCH_COMPLETED, [download the report](#download-mismatch-report) using DXClient. 
@@ -493,4 +493,4 @@ To verify if both the environments are in sync, perform the following steps.
 
 - Performing a resync is not supported for two-way staging (for example, a scenario where two environments are each other's publisher and subscriber). Performing resync on these environments will lead to loss of collections or assets from both the environments.
 - Before triggering the find mismatch operation, ensure there are no in progress staging operations. You can verify this by checking if there are any [Operations](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find) in subscriber with triggerFunctions that begin with the text `sync` (for example, syncStagingCollectionContent, syncStagingPermissionResource, syncStagingDeletePermission, syncStagingCreatePermission, syncStagingFavoriteContent, syncStagingRenditionContent, syncStagingVersionContent, syncStagingMediaTypeContent, syncStagingMediaTypeGroupContent, syncStagingMediaContent etc) and with the following statuses: "TODO", "PROCESSING","READ", "RETRY", "WAIT", and  "PENDING".
-- Before starting the resync process, ensure that there are no failed staging operations in the subscriber. Use the [OperationController.find API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find) in subscriber to verify operations that are in "FAILED" status and contain trigger functions that begin with the text `sync`. Currently, all failed operations are deleted after a [certain interval](../../operation_framework.md#failed-operations-clean-up-job).
+- Before starting the resync process, ensure that there are no failed staging operations in the subscriber. Use the [OperationController.find API](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#operation/OperationController.find) in subscriber to verify operations that are in "FAILED" status and contain trigger functions that begin with the text `sync`. Currently, all failed operations are deleted after a [certain interval](../../operation_framework.md#cleanup-of-failed-and-obsolete-operations).

@@ -8,4 +8,5 @@ nav:
     - content_management.md
     - asset_management.md
     - dxclient.md
+    - doc_iq_chatbot.md
     - ...

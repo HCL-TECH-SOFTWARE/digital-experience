@@ -2,7 +2,7 @@
 
 ## Applies to
 
-> HCL Digital Experience 9.5 and higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
@@ -10,7 +10,7 @@ This document describes a sample JSP code that you can use to convert a file (fo
 
 ## Instructions
 
-???+ info "DISCLAIMER OF WARRANTIES"  
+???+ info "Disclaimer of warranties"  
     The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ```java

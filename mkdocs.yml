@@ -81,15 +81,25 @@ edit_uri: edit/main/docs
 # Customization
 extra_css:
   - assets/stylesheets/style.css
+  - assets/stylesheets/minichat.css
 
 extra_javascript:
   - javascripts/extra.js
   - javascripts/current.js
+  - javascripts/MiniChatJavaScript.js
 
 plugins:
   - awesome-pages
   - search
   - tags
+  - meta-descriptions:
+      export_csv: false
+      quiet: false
+      enable_checks: false
+      min_length: 50
+      max_length: 160
+      trim: false
+      fallback_if_short: false
   - mike:
       canonical_version: latest
       alias_type: redirect

@@ -15,6 +15,8 @@ Learn more about managing libraries, creating, editing or cleaning up data, and 
     Learn how to preview content items in a portal environment to see how they would be displayed to users.
 - [**Managing web content libraries**](../../../manage_content/wcm_authoring/authoring_portlet/web_content_libraries/index.md)<br>
     Learn how to organize and manage your web content.
+- [**Presentation Designer**](../../../manage_content/wcm_authoring/presentation_designer/index.md)<br>
+    Learn how to create and edit presentation templates with a visual drag-and-drop interface.
 
 ## Digital Assets
 The [Digital Asset Management (DAM)](../dam.md) is to provide a central platform for storing and managing rich media assets, enabling engaging and consistently branded experiences across digital channels in HCL DX.
@@ -24,6 +26,9 @@ Create [site templates](../site_templates.md) or section templates for use with 
 
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on web content management, go to [Web Content](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D301){target="_blank"}. To try it out yourself, refer to [Web Content - Content Composer Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Business_User/HDX-BU-100_Web_Content_-_Content_Composer_Lab.pdf){target="_blank"}.
 

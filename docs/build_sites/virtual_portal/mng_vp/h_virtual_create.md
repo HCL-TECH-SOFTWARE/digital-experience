@@ -55,6 +55,10 @@ To create a new virtual portal, perform the following steps:
 
     For more detailed information, read *Adding the Site Builder and Script Application libraries*.
 
+5. To access the Presentation Designer in a virtual portal, HCL Digital Experience 9.5 CF235 or later is required. The virtual portal must be created and configured with WCM enabled. Additionally, Practitioner Studio must be enabled in the main portal. Once these prerequisites are met, the Presentation Designer is automatically included.
+
+    For more detailed information, read *[Web Content > Presentation Designer](../../practitioner_studio/web_content.md) and [Enabling Practitioner Studio](../../practitioner_studio/working_with_ps/enable_prac_studio.md).*
+
 
 !!! note
     -   **For advanced administrators:**

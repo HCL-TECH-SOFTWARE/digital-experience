@@ -6,7 +6,3 @@ In HCL Digital Experience (DX), the Registration/Edit My Profile and Login portl
 
 ???+ info "Related information"
     - [Registration/Edit My Profile and Login portlets](../../deployment/manage/security/people/authorization/users_and_groups/sec_subman.md)
-
-
-
-
