@@ -10,7 +10,7 @@ nav:
     - CreateAServletForStaticFiles.md
     - ExternalJARinvokeJSP.md
     - returnLanguageRequestedByBrowser.md  
+    - UpdateContentinRichTextElement.md
     - DynaCacheToStoreData.md
     - CodeToPrintUserAndHostname.md
     - WCMAPIRenderComponent.md
-    - UpdateContentinRichTextElement.md

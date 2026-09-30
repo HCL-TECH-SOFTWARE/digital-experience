@@ -1,21 +1,22 @@
-# How to use the WCM API sample code to update content in a rich text element
+# How to update content in a rich text element using the WCM API
 
 ## Applies to
 
-> HCL Digital Experience v9.5 and Higher
+> HCL Digital Experience v9.5 and higher
 
 ## Introduction
 
-This article provides an example of how to update content in a rich text element using the WCM API.
-
-???+ info "DISCLAIMER OF WARRANTIES"  
-    The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+Updating rich text elements programmatically allows developers and administrators to automate content modifications across Web Content Manager (WCM) items in HCL Digital Experience (DX). The sample code provided in this guide uses the server-side Java WCM API and must be executed within an HCL DX Java context (such as a Custom Workflow Action, JSP file, or custom Portlet) where an active WCM Workspace instance is available. This article explains how to update content in a rich text element using the WCM API.
 
 ## Instructions
 
-### Sample 1
+To update content in a rich text element using the WCM API, perform the following steps:
 
-1. Use this logic to find a content item by name, retrieve its rich text component, update the text value, and save the changes:
+???+ info "Disclaimer of warranties"
+    The following enclosed code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
+
+1. Deploy the Java logic within a Custom Workflow Action, JSP, or Portlet that initializes an active WCM `Workspace` session object.
+2. To query content items by name, retrieve the rich text component, update the string value, and save the content item, use the following code:
 
     ```java
     //Find the document id of the content items that match by name
@@ -49,13 +50,7 @@ This article provides an example of how to update content in a rich text element
     } //end while
     ```
 
----
-
-### Sample 2
-
-The following is a slightly different approach. This code will replace all occurrences of a string in the rich text elements of WCM Content items:
-
-1. Implement this routine within your try-catch block to iterate through all content items, check for components containing "ody" in the name, and perform a global string replacement:
+3. To iterate through content items by document type, filter for components containing "ody" in the name, and replace string occurrences within rich text components, use the following code:
 
     ```java
     DocumentIdIterator docIt;  
