@@ -6,9 +6,7 @@
 
 ## Introduction
 
-You can retrieve the Universally Unique Identifier (UUID) of an object in Web Content Manager (WCM) using a command line when only the name is available. Querying the WCM REST API with `curl`, `grep`, and `perl` is an alternative to using the WCM support tools when searching across libraries, content items, presentation templates, and site areas in HCL Digital Experience (DX). This article describes how to retrieve the UUID of a WCM object using the command line.
-
-For more information on WCM Support Tools, refer to the [HCL Web Content Manager Support Tools](../../../deployment/manage/troubleshooting/wcm_support_tools.md)
+You can retrieve the Universally Unique Identifier (UUID) of an object in Web Content Manager (WCM) using a command line when only the name is available. Querying the WCM REST API with `curl`, `grep`, and `perl` is an alternative to using the WCM Support Tools when searching across libraries, content items, presentation templates, and site areas in HCL Digital Experience (DX). For more information on WCM Support Tools, refer to the [HCL Web Content Manager Support Tools](../../../deployment/manage/troubleshooting/wcm_support_tools.md). This article describes how to retrieve the UUID of a WCM object using the command line.
 
 ## Prerequisites
 
