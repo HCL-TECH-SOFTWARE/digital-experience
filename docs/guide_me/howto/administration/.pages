@@ -8,6 +8,7 @@ nav:
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
+    - DenyAdminConsoleIngressk8.md
     - DetermineWebsphereAppServer.md
     - PreventApplicationStartUp.md
     - ExpediteAsyncDeletes.md
@@ -16,4 +17,3 @@ nav:
     - SystemReportForCompare.md
     - ResetWCMViewerPortlet.md
     - UseJavaScriptToReplaceText.md
-    - DenyAdminConsoleIngressk8.md
