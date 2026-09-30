@@ -5,15 +5,82 @@ This page summarizes Helm values updates across DX releases. Each table below de
 !!!note
     For more information on the keys described in this page, including their possible values and usage, refer to the downloadable sample `values.yaml` in [Prepare Configuration - The default HCL DX 9.5 `values.yaml` file](../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#the-default-hcl-dx-95-valuesyaml-file).
 
+### CF239
+
+### CF238
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| configuration.digitalAssetManagement.defaultView | grid | <!-- Commit: 38c9c781, Author: ANANDVARDHANCHILUMULA, Date: 2026-07-20 -->
+| configuration.digitalAssetManagement.verifySubscriberHeartbeatIntervalTimeInMinutes | 10 | <!-- Commit: b451e054, Author: rakeshbutham5, Date: 2026-08-20 -->
+| configuration.webEngine.wcmApiV3Enabled | true | <!-- Commit: 50f79f88, Author: Neelkanth Patel, Date: 2026-08-17 -->
+| incubator.configuration.coreEditor.enabled | true | <!-- Commit: 367d0028, Author: Cedric Jastine Marcelino, Date: 2026-08-04 -->
+| incubator.configuration.coreEditor.default | false | <!-- Commit: 1b03ca76, Author: Cedric Jastine Marcelino, Date: 2026-08-17 -->
+| incubator.configuration.searchMiddleware.adminUI.enabled | false | <!-- Commit: aaa90b04, Author: Kristine Gazeline Apalla, Date: 2026-07-17 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| incubator.configuration.webEngine.wcmApiV3Enabled | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| security.openLdap.ldapPassword | p0rtal4u | "" | <!-- Commit: 3db4dd0a, Author: Mary Dooley, Date: 2026-07-13 -->
+
+### CF237
+
+**Added Keys:**
+
+| Key | Default Value |
+|-----|---------------|
+| automountServiceAccountToken.contentComposer | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.core | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.damPluginGoogleVision | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.digitalAssetManagement | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.imageProcessor | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.openLdap | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.persistenceConnectionPool | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.persistenceNode | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.remoteSearch | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.ringApi | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.runtimeController | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.haproxy | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.licenseManager | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.damPluginKaltura | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| automountServiceAccountToken.webEngine | null | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.enabled | false | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.audience | "" | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.runtimeController.projectedServiceAccountToken.expirationSeconds | 3600 | <!-- Commit: 2256b471, Author: chestlynne-macabale, Date: 2026-06-30 -->
+| configuration.searchMiddleware.searchReleaseName | dx-search | <!-- Commit: 39eab526, Author: Priyanshu Dubey, Date: 2026-07-07 -->
+| configuration.webEngine.db2HadrMaxRetries | 20 | <!-- Commit: 1d0d37ed, Author: Priyanka Priya, Date: 2026-05-14 -->
+| configuration.webEngine.db2HadrRetryInterval | 5 | <!-- Commit: 1d0d37ed, Author: Priyanka Priya, Date: 2026-05-14 -->
+| incubator.configuration.webEngine.wcmApiV3Enabled | false | <!-- Commit: f3b480ca, Author: Neelkanth Patel, Date: 2026-07-23 -->
+
+**Removed Keys:**
+
+| Key |
+|-----|
+| networking.dxIqIntegratorMaxReplicas | 
+| incubator.configuration.digitalAssetManagement.renderNewUI | 
+| incubator.configuration.digitalAssetManagement.enableRootCollectionSort | 
+| incubator.configuration.digitalAssetManagement.enableSoftDelete | 
+
+**Changed Values:**
+
+| Key | Old Value | New Value |
+|-----|-----------|-----------|
+| security.digitalAssetManagement.dbPassword | d1gitalExperience | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.digitalAssetManagement.replicationPassword | d1gitalExperience | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.digitalAssetManagement.damPassword | 1234 | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| security.persistence.connectionPoolPassword | adminpassword | "" | <!-- Commit: 71dcec8c, Author: rakeshbutham5, Date: 2026-06-22 -->
+| configuration.searchMiddleware.pushAdminPassword | adminpush | "" | <!-- Commit: 64d9e83b, Author: Priyanshu Dubey, Date: 2026-06-21 -->
+
 ### CF236
-
-**Deprecated Keys:**
-
-| Key | Default Value |Removed in|
-|-----|---------------|----------|
-|[`incubator.configuration.digitalAssetManagement.enableRootCollectionSort`](../manage_content/digital_assets/usage/managing_dam/upload_rich_media_assets.md#sorting-root-and-nested-collections)||CF237|
-|[`incubator.configuration.digitalAssetManagement.enableSoftDelete`](../manage_content/digital_assets/usage/managing_dam/dam_soft_delete.md)||CF237|
-|[`incubator.configuration.digitalAssetManagement.renderNewUI`](../manage_content/digital_assets/index.md)||CF237|
 
 **Added Keys:**
 
@@ -786,3 +853,7 @@ None
 | configuration.searchMiddleware.pushAdminUser | pushAdmin | pushadmin |
 | configuration.searchMiddleware.pushAdminPassword | adminPush | adminpush |
 | incubator.configuration.digitalAssetManagement.renderNewUI | false | true |
+
+## HCLSoftware U learning materials
+
+For an introduction and a demo on how to upgrade your HCL Digital Experience deployment to the latest Cumulative Fix, go to [Upgrade the HCL Digital Experience software](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1461){target="_blank"}.

@@ -32,9 +32,26 @@ To provide a comprehensive example, the goal is to have a **Content Section** pr
 
        ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_Presentation_Template_Empty_Markup.png)
 
-## Editing presentation templates
+## Automatic presentation template locking
 
-Refer to the following steps to edit a presentation template in Presentation Designer.
+Presentation Designer automatically locks presentation templates during active editing sessions to prevent conflicting edits.
+
+![](../../../../assets/HCL_Presentation_Designer_Locked_PT.png "HCL Presentation Designer - Locked Presentation Template")
+
+!!! note
+    The lock icon is visible only on the **Authoring** page.
+
+Opening a template in **Edit mode** or switching from **Read only** to **Edit mode** locks the template for your active session. If you attempt to edit a template locked by another user, Presentation Designer switches to **Read only** mode and displays a notification identifying the lock owner, such as `"{Title}" is locked by {username}`.
+
+Clicking **Save** updates the template content while maintaining your active lock so you can continue editing without interruption. The lock releases when you:
+
+- Toggle from **Edit** to **Read** mode.
+- Click **Save and Close**.
+- Click **Cancel** or navigate back to the Authoring portlet.
+
+For more information, refer to **[Locked items](../../../../manage_content/wcm_authoring/authoring_portlet/change_management/item_locks.md#locked-items)**.
+
+## Editing presentation templates
 
 1. From the **Authoring portlet**, select the newly created presentation template, and then click **Edit > Edit in Presentation Designer**.
 
@@ -222,6 +239,36 @@ Use the **Preview** feature from the **Authoring portlet** to check the presenta
 
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Preview_Content_Nex_Haven_Smart_TV.png)
 
+## Saving a presentation template as a draft
+
+Use the **Save as draft** option in your canvas to save your presentation template as a draft, ensuring your published presentation template remains completely untouched.
+
+![](../../../../assets/HCL_Presentation_Designer_Save_As_Draft.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Authors can stage layout and style changes before pushing them to published template.
+- Reviewers can inspect the draft version safely without breaking the currently published template.
+- In-progress style edits are safely isolated into a separate draft override stylesheet to avoid partially-broken published CSS.
+
+The Presentation Designer header tracks your workflow and displays a **PUBLISHED** or **DRAFT** status badge so you always know which version you are editing.
+
+![](../../../../assets/HCL_Presentation_Designer_Published_Badge.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Draft sessions are safely persisted, allowing authors to resume an in-progress session even after a page refresh.
+- The system actively blocks conflicting edits. If a draft template exists, other users cannot overwrite it.
+
+Once your layout and styling updates are completed and reviewed, select **Save and publish** to push the draft to your published template.
+
+![](../../../../assets/HCL_Presentation_Designer_Save_And_Publish.png){: style="display: block; margin: 0 auto;"width="50%"}
+
+- Your style and content edits of your draft are merged back into the published presentation template.
+- Your draft CSS rules are seamlessly integrated back into the published override stylesheet.
+- The system deletes the temporary draft stylesheet is deleted only after the template successfully publishes to prevent backend conflicts.
+
+!!!note
+    When you build a presentation template using Presentation Designer, you must also use Presentation Designer for its lifecycle workflows (such as **Save as draft** and **Save and Publish**). Only Presentation Designer has the capability to create and handle override stylesheets (both draft and published). The standard Authoring portlet does not support these unique capabilities, including the handling, merging, and deleting of draft override stylesheets during the publish workflow.
+
+For more information on draft override stylesheet, refer to **[Draft override stylesheet](../usage/default_and_override_stylesheet.md#draft-override-stylesheet)**.
+
 ### Sample presentation templates
 
 With Presentation Designer, you can create a wide range of custom designs and template layouts tailored to your needs. The intuitive drag-and-drop interface, combined with real-time styling, helps content managers take full control of their designs. This section contains images showing possible presentation templates you can build using Presentation Designer.
@@ -249,6 +296,6 @@ With Presentation Designer, you can create a wide range of custom designs and te
     ![](../../../../assets/HCL_Presentation_Designer_Edit_PT_Sample_PT_Recent_Items_Preview.png)
 
 ???+ info "Related information"
-    - [Presentation Designer UI](../access.md#the-presentation-designer-ui)
-    - [User Elements](../usage/user_elements.md)
-    - [Styling Options](../usage/styling_options.md)
+    - [User interface](../access.md#user-interface)
+    - [User elements](../usage/user_elements/index.md)
+    - [Styling options](../usage/styling_options.md)

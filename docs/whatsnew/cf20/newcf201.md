@@ -1,8 +1,8 @@
 # What's new in CF201
 
-This HCL Digital Experience 9.5 Container Update and CF201 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new DX Personalization REST APIs, Updated Helm deployment and logging capacity, LDAP, and environment configuration guidance, also metrics and visualization samples, Script Application updates, new React profile for the DX 8.5 sample Theme, extensibility plugin and sample for Digital Asset Management, and more. 
+This HCL Digital Experience 9.5 Container Update and CF201 release includes updated releases of HCL DX core Portal and Web Content Manager, Content Composer, Digital Asset Management, Experience API, and Design Studio \(Beta\) components. The release also includes updated CICD release process artifacts, new DX Personalization REST APIs, Updated Helm deployment and logging capacity, LDAP, and environment configuration guidance, also metrics and visualization samples, Script Application updates, new React profile for the DX 8.5 sample Theme, extensibility plugin and sample for Digital Asset Management, and more.
 
-This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases. 
+This site describes new features in each release. Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=9bd40c1f1bbf5cd0534c4159cc4bcbbd#CF17){:target="_blank"} and [HCL DX Software Fix list](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0013939&sys_kb_id=519ebc84db1c341055f38d6d13961959){:target="_blank"} for the list of software fixes, including Container Update releases.
 
 You can access product software at the [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="blank"}. See [Step-by-step guide to downloading DX products and accessing Customer Support](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0077878&sys_kb_id=2cde06a31b885494c48197d58d4bcbe2){:target="_blank"} for more information.
 
@@ -16,10 +16,10 @@ Beginning with HCL Digital Experience 9.5 Container Update CF196, administrators
 
 See the following Help Center topics for more information:
 
--   [Containers overview](../../get_started/plan_deployment/container_deployment/index.md)
--   [Containerization Requirements and Limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md)
--   [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
--   [Monitor the HCL Digital Experience Container Deployment using Metrics](../../deployment/manage/container_configuration/monitoring/basic_monitor_helm_deployment.md)
+- [Containers overview](../../get_started/plan_deployment/container_deployment/index.md)
+- [Containerization Requirements and Limitations](../../get_started/plan_deployment/container_deployment/limitations_requirements.md)
+- [Additional Helm Tasks](../../deployment/install/container/helm_deployment/preparation/index.md)
+- [Monitor the HCL Digital Experience Container Deployment using Metrics](../../deployment/manage/container_configuration/monitoring/basic_monitor_helm_deployment.md)
 
 ## Digital Asset Management
 
@@ -53,8 +53,14 @@ See the Help Center topic [Disabling the language switcher](../../build_sites/cr
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. New modules are available for Digital Experience developers and administrators. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF201, take the [DX CF201 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D417){target="_blank"} on HCLSoftware U.
 
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
 
 <!-- ???info "Related information"
     - [Using DAM Extensibility](../digital_asset_mgmt/dam_extensibility.md)
@@ -63,4 +69,3 @@ The HCLSoftware U offers technical education for the HCL Software portfolio of p
     - [DXClient and DXConnect tooling supporting CICD release processes](../containerization/dxclient.md)
     - [Personalization Folder APIs](../design/api/dev_pzn_folders_api.md)
     - [Disabling the language switcher](../design/wcm/wcm_mngpages_disable_lang_switch.md) -->
-    

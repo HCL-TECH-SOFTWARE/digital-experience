@@ -3,19 +3,19 @@
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF209 on supported platforms:
 
 - Content Composer - Save content item updates as a new content item
-- Ability to change the default Page Template 
+- Ability to change the default Page Template
 - Login portlet Anonymous sign-up feature disabled by default
-- Option to configure the Timezone in container deployment Helm chart 
+- Option to configure the Timezone in container deployment Helm chart
 - DXClient Restart Core Pods command  
 - Notice of deprecation of Textbox.io
 - Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-## Content Composer - Save content item updates as a new content item 
+## Content Composer - Save content item updates as a new content item
 
-=== "Containers"                                  
+=== "Containers"
     DX 9.5 Container Update CF209 adds capability to save content item updates as a new content item. See the topic [Content Composer Manage Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) for more information.
 
-## Ability to change the default Page Template 
+## Ability to change the default Page Template
 
 === "Containers"
     Guidance is added for Page Template authors and designers to change the default Page Template. See the topic [Page templates](../../build_sites/create_sites/create_reusable_assets/site_page_temps.md) for more information.
@@ -26,15 +26,15 @@ The following features and updates are available to customers installing HCL Dig
 ## Login portlet Anonymous sign-up feature disabled by default
 
 === "Containers"
-    Starting with CF209, the anonymous sign-up feature is disabled by default for anonymous users. Administrators can choose to enable this feature using supplied tasks or configuration steps.  See the Help Center topic [Registration/Edit My Profile and Login portlets](../../deployment/manage/security/people/authorization/users_and_groups/sec_subman.md) for more information. 
+    Starting with CF209, the anonymous sign-up feature is disabled by default for anonymous users. Administrators can choose to enable this feature using supplied tasks or configuration steps.  See the Help Center topic [Registration/Edit My Profile and Login portlets](../../deployment/manage/security/people/authorization/users_and_groups/sec_subman.md) for more information.
 
 === "On-Premises"
-    Starting with CF209, the anonymous sign-up feature is disabled by default for anonymous users. Administrators can choose to enable this feature using supplied tasks or configuration steps.  See the Help Center topic [Registration/Edit My Profile and Login portlets](../../deployment/manage/security/people/authorization/users_and_groups/sec_subman.md) for more information. 
+    Starting with CF209, the anonymous sign-up feature is disabled by default for anonymous users. Administrators can choose to enable this feature using supplied tasks or configuration steps.  See the Help Center topic [Registration/Edit My Profile and Login portlets](../../deployment/manage/security/people/authorization/users_and_groups/sec_subman.md) for more information.
 
-## Option to configure the Timezone in container deployment Helm chart 
+## Option to configure the Timezone in container deployment Helm chart
 
 === "Containers"
-    By default, time zone of all containers in a Helm-based DX container deployment is in UTC. Administrators may optionally update this setting in the custom values file field definition. See the Help Center topic [Configure Timezone](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure-timezone.md) for more information. 
+    By default, time zone of all containers in a Helm-based DX container deployment is in UTC. Administrators may optionally update this setting in the custom values file field definition. See the Help Center topic [Configure Timezone](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_configure-timezone.md) for more information.
 
 ## DXClient Restart Core Pods command  
 
@@ -51,4 +51,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/#HCLDXLearningJourneys){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF209, take the [DX CF209 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1355){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

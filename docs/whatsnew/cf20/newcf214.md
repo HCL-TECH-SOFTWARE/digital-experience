@@ -2,7 +2,7 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF214 on supported platforms:
 
-**All  Digital Experience Versions (8.5, 9.0, 9.5)**
+**All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Updated version of Amazon RDS with Oracle in System Requirements
 - Web Content Manager - Rendering WCM comments in themes and external components
@@ -29,9 +29,9 @@ The following features and updates are available to customers installing HCL Dig
 
 - HCL Volt MX Foundry components supporting K8s Helm deployments are now available
 
-## All  Digital Experience Versions (8.5, 9.0, 9.5)
+## All Digital Experience Versions (8.5, 9.0, 9.5)
 
-### Updated version of Amazon RDS with Oracle in System Requirements 
+### Updated version of Amazon RDS with Oracle in System Requirements
 
 === "Containers"
     Oracle Database Standard and Enterprise Edition 21c and Oracle on Amazon Relational Database Service are added as supported databases in the System requirements. See the topic [Databases](../../get_started/system_requirements/kubernetes/databases.md) for more information.
@@ -42,10 +42,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - Rendering WCM comments in themes and external components
 
 === "Containers"
-    WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. In addition, you can configure WCM comments in a theme. You can also now soft delete orphaned WCM comments data stored in the library. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information. 
+    WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. In addition, you can configure WCM comments in a theme. You can also now soft delete orphaned WCM comments data stored in the library. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information.
 
 === "On-Premises"
-    WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. In addition, you can configure WCM comments in a theme. You can also now soft delete orphaned WCM comments data stored in the library. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information. 
+    WCM comments can be rendered in external components such as Page Components and Rich Text, Script applications or Custom Portlet. In addition, you can configure WCM comments in a theme. You can also now soft delete orphaned WCM comments data stored in the library. See the Help Center topic [Comments in WCM](../../build_sites/create_sites/developing_managing_content/comments_wcm.md) for more information.
 
 ### Web Content Manager REST API v2 - AI Analysis API supports custom content AI providers
 
@@ -58,7 +58,7 @@ The following features and updates are available to customers installing HCL Dig
 ### New documentation for configuring developer mode for MacOS
 
 === "Containers"
-    Instructions on how to change to a developer mode environment is now available. See the Help Center topic [MacOS: Configuring a developer mode environment](../../deployment/manage/change_dev_mode_env/cfg_dev_mode-MacOS.md) for more information. 
+    Instructions on how to change to a developer mode environment is now available. See the Help Center topic [MacOS: Configuring a developer mode environment](../../deployment/manage/change_dev_mode_env/cfg_dev_mode-MacOS.md) for more information.
 
 === "On-Premises"
     Instructions on how to change to a developer mode environment is now available. See the Help Center topic [MacOS: Configuring a developer mode environment](../../deployment/manage/change_dev_mode_env/cfg_dev_mode-MacOS.md) for more information.
@@ -66,10 +66,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - Parameters for item-path-full and details-full options
 
 === "Containers"
-    New parameters `options=item-path-full` and `options=details-full` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information. 
+    New parameters `options=item-path-full` and `options=details-full` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information.
 
 === "On-Premises"
-    New parameters `options=item-path-full` and `options=details-full` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information. 
+    New parameters `options=item-path-full` and `options=details-full` are now available to add more information to REST API search query results. See [Adding item path information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-item-path-information-to-the-rest-api-search-query-results) and [Adding more detailed information to the REST API search query results](../../manage_content/wcm_development/wcm_rest/wcm_rest_query/wcm_rest_adhoc.md#adding-more-detailed-information-to-the-rest-api-search-query-results) for more information.
 
 ### DXClient - Theme List feature for LiveSync and Disable Prompt attribute
 
@@ -110,10 +110,8 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation/index.md) for additional information.
 
-
 === "On-Premises"
     Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation/index.md) for additional information.
-
 
 ## Digital Experience 9.5 Container Version
 
@@ -127,7 +125,7 @@ The following features and updates are available to customers installing HCL Dig
 === "Containers"
     The topics [Managing Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/manage_content_items.md) and [Author Content Items](../../manage_content/wcm_authoring/content_composer/usage/author_and_manage_content_items/author_content_items.md) have been updated to replace instances of "site area" with "location". The location can either be a site area or a page.
 
-###  Support for DAM staging on different users for subscribers and publishers
+### Support for DAM staging on different users for subscribers and publishers
 
 === "Containers"
     DAM staging supports different Lightweight Directory Access Protocol (LDAP) for publishers and subscribers. For more information, see the topic [Staging DAM to rendering environments](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md).
@@ -135,7 +133,7 @@ The following features and updates are available to customers installing HCL Dig
 ### Scaffolding framework for picker plugins and Picker Basic Version
 
 === "Containers"
-    HCL DX Picker is a web component that allows users to view and select an asset from Digital Asset Management and use it in their custom web application. For more information on how to install, access, and use this feature, see [HCL DX Picker](../../manage_content/wcm_authoring/dx_picker/index.md). 
+    HCL DX Picker is a web component that allows users to view and select an asset from Digital Asset Management and use it in their custom web application. For more information on how to install, access, and use this feature, see [HCL DX Picker](../../manage_content/wcm_authoring/dx_picker/index.md).
 
 ## HCL Digital Experience Cloud Native 9.5 Offering
 
@@ -145,4 +143,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF214, take the [DX CF214 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1883){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
