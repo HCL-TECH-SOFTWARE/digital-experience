@@ -1,4 +1,4 @@
-# How to send plain text or HTML encoded emails using WCM?
+# How to send plain text or HTML encoded emails using WCM
 
 ## Applies to
 
