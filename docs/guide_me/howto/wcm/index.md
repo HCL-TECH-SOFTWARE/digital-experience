@@ -6,10 +6,10 @@ This section includes how-to articles about importing and exporting Web Content 
 Learn how to use the `profileEnablement` module to add missing profiles to WCM items.
 - **[How to host Microsoft Office files with Web Content Manager (WCM)](./ServeMsOfficeWithWcm.md)**  
 Learn how to upload Microsoft Office files using File Resource components and display or link directly within HCL DX presentation templates. 
+- **[How to send plain text or HTML encoded emails using WCM](./PlainTextHTMLEmailWCM.md)**  
+Learn how to configure WCM HTML and JSP components with JavaMail to process forms and send plain text or HTML encoded emails in HCL DX.  
 - **[How to stop a background WCM library delete](./StopWCMLibDel.md)**  
 Learn how to terminate a background WCM library deletion process and restore normal library status in HCL DX.
 - **[How to use `RefreshAllItems` for WCM libraries](./SampleInvocationRefreshLibrary.md)**  
-Learn how to run the `RefreshAllItems` module using HTTP requests or ConfigEngine tasks to update security permissions, refresh scheduled items, or fix specific item types across WCM libraries.
-- **[How to send plain text or HTML encoded emails using WCM](./PlainTextHTMLEmailWCM.md)**  
-Learn how to send emails with Web Content Manager (WCM) using a JSP file.
+Learn how to run the `RefreshAllItems` module using HTTP requests or ConfigEngine tasks to update security permissions, refresh scheduled items, or fix specific item types across WCM libraries.  
 

@@ -24,6 +24,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 |Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
+|Migrated|WCM|[How to send plain text or HTML encoded emails using WCM](./wcm/PlainTextHTMLEmailWCM.md)|
 
 ## CF238
 

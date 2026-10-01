@@ -6,14 +6,20 @@
 
 ## Introduction
 
-This document describe how to send emails with Web Content Manager (WCM) using a JSP file. In this case, the native java classes in the IBM WebSphere Application Server JVM are used. The HTML form is included in this document if you want to use HTML forms. Alternatively, you could code the input fields in the JSP itself without requiring the HTML form.
+You can configure Web Content Manager (WCM) to send plain text or HTML encoded emails by integrating Java Server Pages (JSP) with native JavaMail classes in the IBM WebSphere Application Server (WAS) JVM. You can collect user inputs through an HTML form component or code input fields directly within the JSP. This article describes how to send plain text or HTML encoded emails using Web Content Manager (WCM) in HCL Digital Experience (DX).
 
 ## Instructions
 
-???+ info "Disclaimer of warranties"
+To send plain text or HTML encoded emails, perform the following steps:
+
+???+ info "disclaimer of warranties"
     The following code is sample code created by HCL Corp. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
-1. Create an html component titled `MailHTMLForm` with these contents:
+### Creating the HTML form component
+1. Log in to HCL DX as an administrator.
+2. Navigate to **Open applications menu > Web Content > Authoring** and select your target web content library.
+3. Select **New > Component > HTML** and enter a name for the component (for example, `MailHTMLForm`).
+4. In the **HTML Markup** box, add an HTML code similar to the following:
 
     ```html
     <HTML>
@@ -28,8 +34,14 @@ This document describe how to send emails with Web Content Manager (WCM) using a
         </BODY>
     </HTML>
     ```
+    
+    - HTML code block creates an input form that prompts users for their name, email address, and message content, then submits the input data to `wcmmail.jsp`.
 
-2. Create a JSP titled `wcmmail.jsp` and place in directory `\installedApps\index\wcm.ear\ilwwcm.war\jsp\html`. Add the following content into the jsp-file:
+5. Select **Save and Close**.
+
+### Creating and deploying the JSP file
+1. Create a JSP file named `wcmmail.jsp`.
+2. In the JSP file, add content similar to the following:
 
     ```html
     //START JSP CONTENTS
@@ -65,15 +77,28 @@ This document describe how to send emails with Web Content Manager (WCM) using a
     </HTML>
     //END JSP CONTENTS
     ```
+    
+    - The JSP code block imports JavaMail classes, extracts input parameters from the HTML form request, configures SMTP properties, constructs an HTML email message, and sends the message using the JVM JavaMail Transport API.
 
-3. Modify the JSP properties above to match your email server/environment.
+    !!!note
+        Modify the server properties in the JSP file to match your specific SMTP mail server configuration.
 
-4. Create a WCM JSP component titled `SendMailJSPComponent` with this path `/jsp/html/wcmmail.jsp`.
+3. Place the file in the WCM web application JSP directory similar to the following:
 
-5. Preview the html component `MailHTMLForm` using a url similar to this:  
+    `\installedApps\index\wcm.ear\ilwwcm.war\jsp\html`
+
+### Creating the JSP component
+1. Select **New > Component > JSP**.
+2. Enter a name for the component (for example, `SendMailJSPComponent`).
+3. In the **Path** box, enter `/jsp/html/wcmmail.jsp`.
+4. Select **Save and Close**.
+
+### Testing the email form
+1. Preview the `MailHTMLForm` component by navigating to a URL similar to the following:
+
     `http://myPortalServer.myCompany.com:10040/wps/wcm/jsp/html/emailform.htm`
 
-6. Fill in the fields, for example, enter this in the `content` field:
+2. Enter the required information in the fields. For example, in the `content` field:
 
     ```text
     Please register  
