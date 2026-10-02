@@ -81,7 +81,7 @@ To send plain text or HTML encoded emails, perform the following steps:
     //END JSP CONTENTS
     ```
     
-    - The JSP code block imports JavaMail classes, extracts input parameters from the HTML form request, configures SMTP properties, constructs an HTML email message, and sends the message using the JVM JavaMail Transport API.
+    This code block imports JavaMail classes, extracts input parameters from the HTML form request, configures SMTP properties, constructs an HTML email message, and sends the message using the JVM JavaMail Transport API.
 
     !!!note
         Modify the server properties in the JSP file to match your specific SMTP mail server configuration.
