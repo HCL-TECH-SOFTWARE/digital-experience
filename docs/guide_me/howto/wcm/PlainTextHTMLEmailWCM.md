@@ -46,6 +46,9 @@ To send plain text or HTML encoded emails, perform the following steps:
 1. Create a JSP file named `wcmmail.jsp`.
 2. In the JSP file, add content similar to the following:
 
+    !!!note
+        Modify the server properties in the JSP file to match your specific Simple Mail Transfer Protocol (SMTP) mail server configuration.
+
     ```html
     //START JSP CONTENTS
     <%@ page import="java.io.*, java.net.*, javax.mail.*, javax.mail.internet.*, java.util.Properties" %>
@@ -83,9 +86,6 @@ To send plain text or HTML encoded emails, perform the following steps:
     
     This code block imports JavaMail classes, extracts input parameters from the HTML form request, configures SMTP properties, constructs an HTML email message, and sends the message using the JVM JavaMail Transport API.
 
-    !!!note
-        Modify the server properties in the JSP file to match your specific SMTP mail server configuration.
-
 3. Place the file in the WCM web application JSP directory similar to the following:
 
     ```text
@@ -100,6 +100,7 @@ To send plain text or HTML encoded emails, perform the following steps:
 4. Select **Save and Close**.
 
 ### Testing the email form
+
 1. Preview the `MailHTMLForm` component by navigating to a URL similar to the following:
 
     `http://myPortalServer.myCompany.com:10040/wps/wcm/jsp/html/emailform.htm`
@@ -110,3 +111,5 @@ To send plain text or HTML encoded emails, perform the following steps:
     Please register  
     Press "Send email" > email arrives at destination in HTML encoded format.  
     ```
+
+3. Select **Send email**.
