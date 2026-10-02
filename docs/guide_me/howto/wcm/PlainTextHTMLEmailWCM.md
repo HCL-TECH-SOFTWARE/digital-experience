@@ -21,7 +21,7 @@ To send plain text or HTML encoded emails, perform the following steps:
 2. Navigate to **Open applications menu > Web Content > Authoring** and select your target web content library.
 3. Select **New > Component > HTML**.
 4. Enter a **Name** for the component (for example, `MailHTMLForm`).
-4. In the **HTML Markup** box, add an HTML code similar to the following:
+5. In the **HTML Markup** box, add HTML code similar to the following:
 
     ```html
     <HTML>
