@@ -19,7 +19,8 @@ To send plain text or HTML encoded emails, perform the following steps:
 
 1. Log in to HCL DX as an administrator.
 2. Navigate to **Open applications menu > Web Content > Authoring** and select your target web content library.
-3. Select **New > Component > HTML** and enter a name for the component (for example, `MailHTMLForm`).
+3. Select **New > Component > HTML**.
+4. Enter a **Name** for the component (for example, `MailHTMLForm`).
 4. In the **HTML Markup** box, add an HTML code similar to the following:
 
     ```html
