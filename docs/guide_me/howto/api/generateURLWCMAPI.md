@@ -16,11 +16,8 @@ You can dynamically retrieve content and generate targeted URLs in HCL Digital E
 The code demonstrates how to generate a URL based on the request locale. Update these placeholders in the code sample to match your environment:
 
 - `"English"`: Replace with the display language string returned by your locale check logic (or evaluate `userlocale.getLanguage()` and `userlocale.toString()`).
-
 - `"EnglishLibrary/EnglishSiteArea"`: Replace with the path to your primary site area.
-
 - `"RichTextElement"`: Replace with the exact name or reference of your targeted content element or component.
-
 - `"FrenchLibrary/FrenchSiteArea"`: Replace with the path to your secondary or alternate site area.
 
 Refer to the sample implementation below:
