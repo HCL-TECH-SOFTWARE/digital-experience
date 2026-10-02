@@ -74,7 +74,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     Documentation for integrating HCL Commerce with HCL DX is now available. The three integration patterns are discussed in [Integrating HCL Commerce with HCL Digital Experience](../../extend_dx/integration/commerce.md).
 
-### Notice of deprecation of Textbox.io Rich Text Editor 
+### Notice of deprecation of Textbox.io Rich Text Editor
 
 === "Containers"
     The Textbox.io Rich Text Editor component in the HCL Digital Experience software is deprecated effective January 31, 2023 and will End of Support (EOS) on January 31, 2024. See the Help Center topic [Deprecated features](../deprecated_features.md) for more information.
@@ -88,7 +88,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     On June 30, 2023, HCL Software announced end of support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-    
+
 ### Automatically apply 9.5 from a later CF installation
 
 === "On-Premises"
@@ -114,24 +114,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### New search configuration using OpenSearch
 
 === "Containers"
-    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, pushing API for use with WCM Content Sources, and searching using REST API. For more information, see [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) and [Configuring OpenSearch](../../deployment/manage/container_configuration/configure_opensearch/index.md). 
+    There is a new search configuration for DX that is based on OpenSearch. The search currently provides the following capabilities: WCM crawling, pushing API for use with WCM Content Sources, and searching using REST API. For more information, see [Installing search based on OpenSearch](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md) and [Configuring OpenSearch](../../deployment/manage/container_configuration/configure_opensearch/index.md).
 
 ### Digital Asset Management - Access control for nested collections
 
 === "Containers"
     Access control for nested collections is enabled in DAM. For more details, see [Nested collection permissions](../../manage_content/digital_assets/usage/managing_dam/dam_access_control.md#nested-collection-permissions). While upgrading to CF220, resources are created for all nested collections. It is recommended to disable DAM Staging during the upgrade and re-enable DAM Staging after both the publisher (source) and the subscriber (target) are on the same CF version.
 
-
 ### Digital Asset Management - PostgreSQL version upgrade
 
 === "Containers"
     PostgreSQL version 11 is no longer supported. The PostgreSQL version in the persistence node is upgraded from version 11 to version 16. It is recommended to back up your database dump before upgrading to CF220 and later versions. For more details, see [PostgreSQL version upgrade](../../get_started/plan_deployment/container_deployment/dam_persistence_architecture.md#postgresql-version-upgrade).
 
-
 ### Added guidance for upgrading a Helm deployment
 
 === "Containers"
-    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available. 
+    Information about the [prerequisites](../../deployment/install/container/helm_deployment/update_helm_deployment.md#prerequisites) when upgrading a Helm deployment and the [recommended actions before a CF upgrade for Kubernetes](../../deployment/install/container/helm_deployment/update_helm_deployment.md#recommended-actions-before-a-cf-upgrade) are now available.
 
 ### Notice of deprecation of non-OCI-based registry for Harbor Helm chart repository
 
@@ -145,4 +143,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF220, take the [DX CF220 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D2912){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

@@ -37,7 +37,14 @@ You can create themes using modules to contribute to separate areas of pages to 
 - **[Virtual Portal](./virtual_portal/index.md)**  
 Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL DX installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
 
+## See it in action
+
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to use the Site Manager for beginners, go to [Site Manager](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D291){target="_blank"}. To try it out yourself, refer to [Site Manager Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab.pdf){target="_blank"} and corresponding [Site Manager Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab_Resources.zip).
 

@@ -18,6 +18,8 @@ Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when ac
 Learn about long Portal URLs and how to decode them.  
 - **[How to determine the HCL DX application server runtime](./DetermineWebsphereAppServer.md)**  
 Learn how to determine whether your DX environment runs on traditional WebSphere Application Server or IBM Open Liberty by inspecting server log files.  
+- **[How to disable an application blocking the HCL DX server startup](./PreventApplicationStartUp.md)**  
+Learn how to identify and disable a hanging application to allow the HCL DX server to start successfully.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
 - **[How to find the virtual portal name by ObjectID](./DetermineVPObjectID.md)**  
@@ -25,6 +27,8 @@ Learn how to determine the virtual portal (VP) name associated an ObjectID (OID)
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
-Learn how to create a system report to check DX configuration settings and compare them with other DX environments.  
+Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
+- **[How to reset the Web Content Viewer portlet to its default state](./ResetWCMViewerPortlet.md)**  
+Learn how to reset the Web Content Viewer portlet to clear corrupted preference keys and restore default configuration settings.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page.
+Learn how to use custom JavaScript to find and replace specific text strings on HCL DX Portal pages.

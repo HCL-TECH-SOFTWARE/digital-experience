@@ -1,29 +1,35 @@
-# What's new in CF238
+# What's new in CF238 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF238 on supported platforms:
 
 **All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Blueprint updates
+- Core Editor - New rich text editor option
+- Java 8 required for future CF upgrades
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio dashboard - New widgets
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio Dashboard - New widgets
+- Presentation Designer - Feature updates
+
 **Digital Experience 9.5 Container Version**
 
+- DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
-- Helm values updates <!--update values-->
-- WAS, JDK, UBI, and iFix versions <!--update values-->
+- Helm values updates
+- WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
 
 - Advanced Rich Text Editor (8.5, 9.0, and 9.5)
-- Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
 - Removal of automated Pod restart on ConfigMap updates (9.5)
 - Woodburn Studio demo site (9.5)
 
@@ -34,10 +40,28 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/238.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF238. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/238.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
+
+### Core Editor - New rich text editor option
+
+=== "Containers"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+=== "On-Premises"
+    Core Editor is now available as an optional rich text editor for HCL Web Content Manager. You can use this editor as an alternative to the Enhanced (TinyMCE) and Advanced (CKEditor) rich tech editors in both the WCM Authoring Portlet and Site Manager in-place editing. For more information about the Core Editor, including a list of features supported and limitations, refer to [Configuring Core Editor](../../manage_content/wcm_configuration/cfg_webcontent_auth_env/wcm_config_core_editor.md).
+
+### Java 8 required for future CF upgrades
+
+=== "On-Premises"
+    If you are upgrading older or unchanged HCL DX 8.5, 9.0, or 9.5 environments on WebSphere Application Server (WAS) 8.5.5, you must verify that the active WAS SDK and target profile use Java 8 before applying CF238 or higher cumulative fixes. These CF packages include Java 8 binaries. Upgrades will fail if the environment uses Java 7.
+
+    !!!important
+        This is a permanent baseline requirement for future CF upgrades. There is no fallback path for Java 7 environments.
+
+    For older WebSphere Application Server 8.5.5 environments, refer to [How to avoid Java Runtime failures during CF Upgrade on older DX systems](../../guide_me/howto/upgrade/upgradeJava8Requirement.md). If your environment is on an upgrade path prior to CF14 and requires upgrade planning or hands-on assistance, contact [HCL Support](https://support.hcl-software.com/csm){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -65,6 +89,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf238) section.
 
+## Digital Experience 8.5 and 9.0 Versions
+
+### Extended Support option now available for DX versions 8.5 and 9.0
+
+=== "On-Premises"
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
+
+### Automatically apply 9.5 from a later CF installation
+
+=== "On-Premises"
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
@@ -83,33 +123,42 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     
     For more information, refer to [My Sites](../../build_sites/practitioner_studio/dashboard.md#my-sites) and [Recently Modified Pages](../../build_sites/practitioner_studio/dashboard.md#recently-modified-pages).
 
-## Digital Experience 8.5 and 9.0 Versions
+### Presentation Designer - Feature updates
 
-### Extended Support option now available for DX versions 8.5 and 9.0
+=== "Containers"
+    The following features are now available in Presentation Designer:
 
-=== "On-Premises"
-    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
-
-### Automatically apply 9.5 from a later CF installation
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static elements directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 === "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+    The following features are now available in Presentation Designer:
+
+    - You can use the **Custom HTML** static element to embed raw HTML markup directly into a presentation template using a resizable, syntax-highlighted code editor. The element renders inside a shadow DOM host so custom `<style>` rules do not leak into the document layout. Scripts and event handlers are also disabled during authoring but run normally in saved output. For more information, refer to [Custom HTML](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md#custom-html).
+    - You can resize the **Container** and **Grid** static elements directly on the canvas by dragging the handles (top, right, bottom, or left) that appear around its edges. This provides a more interactive alternative to resizing these elements from the **Style items** panel. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
+    - You can use the **Save as draft** option to save your presentation template as a **Draft override stylesheet**. This stylesheet saves your in-progress style edits into a separate file, ensuring that the CSS of the live or published presentation template is not accidentally overwritten or partially broken while you are actively staging layout or style changes. For more information, refer to [Saving a presentation template as a draft](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#saving-a-presentation-template-as-a-draft) and [Draft override stylesheet](../../manage_content/wcm_authoring/presentation_designer/usage/default_and_override_stylesheet.md#draft-override-stylesheet).
 
 ## Digital Experience 9.5 Container Version
+
+### DAM - Enhanced staging to handle secret rotation
+
+=== "Containers"
+    DAM staging in HCL DX now supports periodic heartbeat verification to manage subscriber connections during secret rotation. The system uses the [SubscriberInterfaceController](https://opensource.hcltechsw.com/experience-api-documentation/dam-api/#tag/SubscriberInterfaceController){target="_blank"} API endpoint to detect connectivity issues and automatically disable or re-enable subscribers when authentication credentials change.
+
+    Configure the verification frequency by using the `verifySubscribersIntervalInMinutes` Helm parameter in `values.yaml`. For more information, refer to [Verifying subscriber connectivity during secret rotation](../../manage_content/digital_assets/configuration/staging_dam/dam_subscription_staging.md#verifying-subscriber-connectivity-during-secret-rotation).
 
 ### DAM - New parameters for setting the initial collections view
 
 === "Containers"
     You can now configure the initial view for Digital Asset Management (DAM) collections using the `configuration.digitalAssetManagement.defaultView` Helm value. Supported values are `grid` and `list`. For more information, refer to Step 3 of [Browsing and searching for media assets in a collection](../../manage_content/digital_assets/usage/managing_dam/manage_collections.md#browsing-and-searching-for-media-assets-in-a-collection).
 
-### Helm values updates <!--update values-->
+### Helm values updates
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf238).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF238 contains the following:
@@ -117,8 +166,8 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - [WebSphere Application Server (WAS) 9.0.5.28](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
     - [Java Development Kit (JDK) 8.0.8.65](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
-        - Core and Remote Search: 8.10-1780550539
-        - Other Images: 9.8-1780378819
+        - Core and Remote Search: XXXXXXXXXXXXXX
+        - Other Images: XXXXXXXXXXXXXX
     - iFix PH71453
     - iFix PH71454
     - iFix PH71590
@@ -127,21 +176,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Notices of deprecation
 
-### Advanced Rich Text Editor (8.5, 9.0, and 9.5)
+### Advanced rich text editor (8.5, 9.0, and 9.5)
 
 === "Containers"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 === "On-Premises"
-    The Advanced Rich Text Editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-### Enhanced Rich Text Editor (8.5, 9.0, and 9.5)
-
-=== "Containers"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
-
-=== "On-Premises"
-    The Enhanced Rich Text Editor (TinyMCE) component in the HCL DX software will be deprecated on September 30, 2026 and will reach End of Support (EOS) on October 01, 2027. For more information, refer to [Deprecated features](../deprecated_features.md).
+    The Advanced rich text editor (CKEditor) component in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md).
 
 ### Removal of automated Pod restart on ConfigMap updates (9.5)
 
@@ -158,4 +199,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF238, take the [DX CF238 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D4727){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
