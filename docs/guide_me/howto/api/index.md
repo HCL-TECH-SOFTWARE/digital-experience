@@ -9,4 +9,4 @@ Learn how to create a JSP that uses the WCM `QueryService` API to select content
 - **[How to use WCM API to generate a URL based on the locale of the request](./generateURLWCMAPI.md)**  
 Learn how to generate a URL based on the request locale using WCM APIs to inspect locales and deliver targeted content components. 
 - **[How to use WCM API to search for pages in the Portal site library](./searchPagesInPortalSiteLibrary.md)**  
-Learn how to use a JSP script with the WCM API to search for pages in the Poral site library by title and display their page names and path locations.  
+Learn how to use a JSP script with the WCM API to search for pages in the Portal site library by title and display their page names and path locations.  
