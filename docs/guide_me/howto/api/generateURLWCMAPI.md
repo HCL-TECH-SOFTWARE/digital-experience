@@ -6,7 +6,7 @@
 
 ## Introduction
 
-You can dynamically retrieve content and generate targeted URLs in HCL Digital Experience (DX) based on the locale of an incoming request. Utilizing Web Content Manager (WCM) APIs allows custom code to inspect request properties and route users to localized site areas and content components automatically. This article provides a WCM API sample to generate a URL based on the locale of the request. 
+You can dynamically retrieve content and generate targeted URLs in HCL Digital Experience (DX) based on the locale of an incoming request. Utilizing Web Content Manager (WCM) APIs allows custom code to inspect request properties and route users to localized site areas and content components automatically. This article provides a WCM API sample code to generate a URL based on the locale of the request. 
 
 ???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
