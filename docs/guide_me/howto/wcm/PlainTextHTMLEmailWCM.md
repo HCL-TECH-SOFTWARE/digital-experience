@@ -42,6 +42,7 @@ To send plain text or HTML encoded emails, perform the following steps:
 6. Select **Save and Close**.
 
 ### Creating and deploying the JSP file
+
 1. Create a JSP file named `wcmmail.jsp`.
 2. In the JSP file, add content similar to the following:
 
