@@ -6,7 +6,7 @@
 
 ## Introduction
 
-You can locate content hierarchy nodes using the WCM (Web Content Manager) API in HCL Digital Experience (DX). When using the `findByName` method with the `DocumentTypes.SiteArea` option, the API queries only non-top-level site areas. To locate a top-level site area, you must use `DocumentTypes.Site` instead. This behavior preserves backward compatibility with versions 6.1 and earlier, ensuring custom codes continue to operate as expected. This article explains how to retrieve top-level site areas using WCM API.
+You can locate content hierarchy nodes using the Web Content Manager (WCM) API in HCL Digital Experience (DX). When using the `findByName` method with the `DocumentTypes.SiteArea` option, the API queries only non-top-level site areas. To locate a top-level site area, you must use `DocumentTypes.Site` instead. This behavior preserves backward compatibility with versions 6.1 and earlier, ensuring custom codes continue to operate as expected. This article explains how to retrieve top-level site areas using WCM API.
 
 ## Instructions
 
