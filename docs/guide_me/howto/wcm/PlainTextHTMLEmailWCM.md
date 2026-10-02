@@ -6,7 +6,7 @@
 
 ## Introduction
 
-You can configure Web Content Manager (WCM) to send plain text or HTML encoded emails by integrating Java Server Pages (JSP) with native JavaMail classes in the IBM WebSphere Application Server (WAS) JVM. You can collect user inputs through an HTML form component or code input fields directly within the JSP. This article describes how to send plain text or HTML encoded emails using Web Content Manager (WCM) in HCL Digital Experience (DX).
+You can configure Web Content Manager (WCM) to send plain text or HTML encoded emails by integrating Java Server Pages (JSP) with native JavaMail classes in the IBM WebSphere Application Server (WAS) Java Virtual Machine (JVM). You can collect user inputs through an HTML form component or code input fields directly within the JSP. This article describes how to send plain text or HTML encoded emails using Web Content Manager (WCM) in HCL Digital Experience (DX).
 
 ## Instructions
 
