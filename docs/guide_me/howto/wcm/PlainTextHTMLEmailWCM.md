@@ -88,7 +88,9 @@ To send plain text or HTML encoded emails, perform the following steps:
 
 3. Place the file in the WCM web application JSP directory similar to the following:
 
-    `\installedApps\index\wcm.ear\ilwwcm.war\jsp\html`
+    ```text
+    \installedApps\index\wcm.ear\ilwwcm.war\jsp\html
+    ```
 
 ### Creating the JSP component
 1. Select **New > Component > JSP**.
