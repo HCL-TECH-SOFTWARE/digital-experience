@@ -20,7 +20,7 @@ The code demonstrates how to generate a URL based on the request locale. Update 
 - `"RichTextElement"`: Replace with the exact name or reference of your targeted content element or component.
 - `"FrenchLibrary/FrenchSiteArea"`: Replace with the path to your secondary or alternate site area.
 
-Refer to the sample implementation below:
+Refer to the following sample implementation:
 
 ```java
 try {
