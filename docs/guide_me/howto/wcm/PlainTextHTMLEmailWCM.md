@@ -37,7 +37,7 @@ To send plain text or HTML encoded emails, perform the following steps:
     </HTML>
     ```
     
-    - HTML code block creates an input form that prompts users for their name, email address, and message content, then submits the input data to `wcmmail.jsp`.
+    This code block creates an input form that prompts users for their name, email address, and message content, and then submits the input data to `wcmmail.jsp`.
 
 5. Select **Save and Close**.
 
