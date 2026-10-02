@@ -93,7 +93,8 @@ To send plain text or HTML encoded emails, perform the following steps:
     ```
 
 ### Creating the JSP component
-1. Select **New > Component > JSP**.
+
+1. In the **Library Explorer**, select **New > Component > JSP**.
 2. Enter a name for the component (for example, `SendMailJSPComponent`).
 3. In the **Path** box, enter `/jsp/html/wcmmail.jsp`.
 4. Select **Save and Close**.
