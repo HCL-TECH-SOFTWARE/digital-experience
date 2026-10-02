@@ -81,12 +81,12 @@ You can dynamically retrieve content and generate targeted URLs in HCL Digital E
 5. Trigger the custom Java plugin through an incoming web request using one of the following methods:
     - Navigate to the URL endpoint with your browser's language set to English or French:
     
-        ```Plaintext
+        ```plaintext
         https://<your_portal_host>:<port>/wps/PA_MyCustomPlugin/LocaleUrlServlet
         ```
 
     - Execute `curl` command to simulate localized requests:
     
-        ```Bash
+        ```bash
         curl -H "Accept-Language: fr-FR,fr;q=0.9" https://<your_portal_host>:<port>/wps/PA_MyCustomPlugin/LocaleUrlServlet
         ```
