@@ -16,6 +16,7 @@ To send plain text or HTML encoded emails, perform the following steps:
     The following code is sample code created by HCL Corp. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
 
 ### Creating the HTML form component
+
 1. Log in to HCL DX as an administrator.
 2. Navigate to **Open applications menu > Web Content > Authoring** and select your target web content library.
 3. Select **New > Component > HTML** and enter a name for the component (for example, `MailHTMLForm`).
