@@ -119,8 +119,6 @@ This section explains the different methods available to access the IQ interface
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
 - **[Updating IQ](./updating.md)**  
 This section explains how to update the IQ Helm chart independently from the DX Helm chart while maintaining the supported version difference of up to two releases.
-- **[IQ cross-version support](./cross-version.md)**
-This section explains the supported IQ and DX Core version combinations and how compatibility is managed.
 - **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  

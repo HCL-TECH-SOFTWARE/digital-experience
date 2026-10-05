@@ -25,7 +25,7 @@ The following features and updates are available to customers installing HCL Dig
 - DAM - Enhanced staging to handle secret rotation
 - DAM - New parameters for setting the initial collections view
 - Helm values updates
-- IQ cross-version support
+- IQ - Cross-version support
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -162,9 +162,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### IQ cross-version support
 
 === "Containers"
-    IQ now supports compatible HCL Digital Experience (DX) Core and DX Compose (WebEngine) versions within a two cumulative fix release window. The MCP Server detects the underlying DX Core version and exposes the MCP tools supported by that version through a tools matrix.
-
-    For more information, refer to [IQ cross-version support](../../build_sites/iq/cross-version.md).
+    HCL DX IQ supports cross-version compatibility with HCL DX Core and DX Compose within a two cumulative fix (CF) release window (n-2). This enables independent upgrade paths while automatically adapting features and tools based on the connected HCL DX Core version. For more information, refer to [Cross-version support](../../build_sites/iq/updating.md#cross-version-support).
 
 ### WAS, JDK, UBI, and iFix versions
 

@@ -1,3 +1,4 @@
+<!--
 # IQ cross-version support
 
 IQ and HCL Digital Experience (DX) Core are delivered through separate Helm charts and can be upgraded independently. To support this deployment model, IQ supports DX Core versions within a two cumulative fix (CF) release window.
@@ -46,3 +47,4 @@ Release-specific limitations, when applicable, are documented with the correspon
 When investigating an IQ issue, first identify both the IQ and DX Core versions in the deployment. Then review the MCP Server logs to confirm the DX Core version detected by the server.
 
 If the versions are outside the supported window, update IQ, DX Core, or both components until the versions are within two CF releases. For general diagnostic steps, refer to [Troubleshooting IQ](troubleshooting.md).
+-->
