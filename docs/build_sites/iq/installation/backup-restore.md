@@ -97,7 +97,13 @@ Backing up persistence data secures the session information and chat history dat
 Restoring persistence data reconstructs session information and conversation history from a saved database dump file. This procedure is required during system recovery, database failures, or cluster migrations.
 
 !!! warning "Cross-session memory and restored dumps"
-    A dump of `iqdb` includes the `rag_chunks` and `rag_embedding_metadata` tables. If you restore a dump that was taken under a different RAG configuration than the one currently deployed, IQ detects the mismatch at startup and enters graceful degradation mode, disabling cross-session memory while continuing to serve requests. Before restoring, confirm that `VECTOR_DB_BACKEND`, `EMBEDDING_DIMENSIONS`, `USE_MULTILINGUAL_EMBEDDINGS`, `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, and `RAG_CHUNK_SEPARATORS` in your `custom-iq-values.yaml` file match the values that were in effect when the dump was created. Refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration).
+    A dump of `iqdb` includes the `rag_chunks` and `rag_embedding_metadata` tables.
+    
+    - If you restore a dump taken under a different RAG configuration than the one currently deployed, IQ detects the mismatch at startup
+    - IQ enters graceful degradation mode, disabling cross-session memory while continuing to serve requests
+    - All new conversation chunks will not be stored until the configuration mismatch is resolved
+    
+    Before restoring, confirm that the following configuration values in your `custom-iq-values.yaml` file match the values that were in effect when the dump was created: `VECTOR_DB_BACKEND`, `EMBEDDING_DIMENSIONS`, `USE_MULTILINGUAL_EMBEDDINGS`, `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, and `RAG_CHUNK_SEPARATORS`. Refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration).
 
 1. Identify the primary `persistence-node` pod:
 

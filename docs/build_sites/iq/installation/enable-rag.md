@@ -2,6 +2,9 @@
 
 This topic describes how to enable and configure cross-session memory for IQ. When cross-session memory is enabled, IQ stores semantic chunks of past conversations in a vector database and retrieves relevant context at query time, injecting it into the system prompt so the model can reference information from previous sessions.
 
+!!! note "Version availability"
+    Cross-session memory (RAG) support was introduced in IQ CF239 and later versions.
+
 Cross-session memory is powered by Retrieval-Augmented Generation (RAG) and uses pgvector, a PostgreSQL extension, as the vector store. The same PostgreSQL database used for IQ session persistence stores the RAG chunks alongside your other IQ data.
 
 ## Prerequisites
@@ -114,7 +117,9 @@ The following parameters control how many chunks are retrieved and which similar
 If you need to change any locked RAG or embedding parameters after RAG has been running, the existing stored data is incompatible with the new configuration. You must drop the RAG tables and restart the pod to apply the changes.
 
 !!! warning
-    Dropping the RAG tables permanently deletes all stored cross-session memory for all users. IQ recreates them automatically on the next restart, but all historical context is lost. If you want the option to revert to the old configuration, take a full IQ database backup before proceeding. Refer to [Backing up and restoring data](backup-restore.md).
+    Dropping the RAG tables permanently deletes all stored cross-session memory for all users. IQ recreates them automatically on the next restart, but all historical context is lost. 
+    
+    **Recommended practice for production deployments:** Take a full IQ database backup before making RAG configuration changes. This provides a recovery point if you need to revert to your previous RAG configuration or troubleshoot any issues after the configuration change. Refer to [Backing up and restoring data](backup-restore.md).
 
 1. Connect to your IQ PostgreSQL database.
 
