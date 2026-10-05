@@ -443,9 +443,21 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
 
         Expected response: A JSON object with a `choices` array containing the model's response.
 
+!!! note "Tested LLM providers"
+    In addition to AWS Bedrock Claude models shown above, IQ has also been tested with the following LLM provider configurations:
+    
+    - **Google Gemini** — Gemini 2.5 Pro (general purpose) and Gemini 2.5 Flash (summary)
+    - **OpenAI GPT** — GPT 4.1 (general purpose) and GPT 4o mini (summary)
+    - **Anthropic Claude** — Sonnet 4.6 (stable) or Sonnet 5.5 (latest) for general purpose, Haiku 4.5 for summary
+    
+    For any of these providers, update the `proxy_config.model_list` in your `litellm-values.yaml` with the appropriate `model` identifier and `api_key` environment variable. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax details for each provider.
+
+!!! warning "OpenAI reasoning models not supported"
+    Do not use OpenAI reasoning model variants (GPT-5.x with decimal versions such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`). These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors. Use base models `gpt-4.1` or `gpt-4o-mini` instead.
+
 ## Registering embedding models for cross-session memory
 
-If you plan to use [cross-session memory (RAG)](enable-rag.md), your LiteLLM proxy must include two embedding model aliases in addition to the chat models. IQ uses these fixed aliases to generate and store vector embeddings for past conversations.
+If you plan to use [cross-session memory (RAG)](enable-rag.md), you must register embedding model aliases in addition to your chat models. IQ uses these fixed aliases to generate and store vector embeddings for past conversations.
 
 | Alias | Purpose | When used |
 |---|---|---|
@@ -454,7 +466,7 @@ If you plan to use [cross-session memory (RAG)](enable-rag.md), your LiteLLM pro
 
 The alias determines which registered model IQ calls. IQ does not verify whether the model bound to each alias is actually multilingual, so you can bind either alias to any embedding model available from your provider.
 
-Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock:
+Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock Cohere embeddings (1024 dimensions):
 
 ```yaml
 proxy_config:
@@ -481,7 +493,7 @@ proxy_config:
     The `dimensions` value in the LiteLLM config must match the `EMBEDDING_DIMENSIONS` environment variable in your IQ configuration. If these values diverge after initial startup, IQ enters graceful degradation mode and disables cross-session memory while continuing to serve requests. The default `EMBEDDING_DIMENSIONS` value is `1024`.
 
 !!! note "For other LLM providers"
-    Replace the `model` and `api_key` values with the embedding model available from your provider. For example, for OpenAI use `model: "openai/text-embedding-3-small"` with `api_key: os.environ/OPENAI_API_KEY`. Verify that the `dimensions` value matches both the model's actual output dimension and your `EMBEDDING_DIMENSIONS` setting. For more information, refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
+    Update the `model` and `api_key` values accordingly in your configuration. Verify that the `dimensions` value matches both the model's actual output dimension and your `EMBEDDING_DIMENSIONS` environment variable setting. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for provider-specific syntax details.
 
 !!! tip "Controlling rate limits for embedding models"
     For production deployments at scale, you can configure rate limits per embedding model to prevent quota exhaustion or excessive costs from your embedding API provider. LiteLLM supports per-model rate limit configuration. Refer to [LiteLLM Proxy - Set Rate Limits](https://docs.litellm.ai/docs/proxy/users#set-rate-limits){target="_blank"} for detailed configuration instructions on limiting requests per user, model, or time window.
