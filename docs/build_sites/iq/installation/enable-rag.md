@@ -20,6 +20,15 @@ Before enabling cross-session memory, verify that the following conditions are m
 
     Matching dimensions does not make two models interchangeable. Models that both produce 1024-dimensional vectors still generate different embeddings, so chunks embedded by one model cannot be meaningfully compared against chunks embedded by another. If you change the embedding model or its dimension after the first startup, IQ detects the mismatch and enters graceful degradation mode, disabling cross-session memory while continuing to serve requests. To apply the change, recreate the RAG tables. Refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
+!!! warning "pgvector extension availability"
+    Cross-session memory requires the `pgvector` PostgreSQL extension. For internal databases provisioned by DX Persistence Node or DX Runtime Controller, `pgvector` is included by default. For external PostgreSQL databases, you must explicitly enable the extension:
+    
+    ```sql
+    CREATE EXTENSION IF NOT EXISTS vector;
+    ```
+    
+    If the extension is not available, IQ startup will fail with an error about missing `pgvector` schema. Contact your database administrator to install the `pgvector` extension on your PostgreSQL instance. The `pgvector` package is available from the [PostgreSQL Global Development Group (PGDG) repository](https://yum.postgresql.org/){target="_blank"}.
+
 ## Enabling cross-session memory
 
 To enable cross-session memory, add the following variables to your `custom-iq-values.yaml` file and upgrade the IQ Helm release.
@@ -170,6 +179,9 @@ WHERE "userId" = '<USER_ID>';
 ```
 
 - `<USER_ID>`: The IQ user identifier for the user whose data you are erasing.
+
+!!! tip "Audit logging for compliance"
+    For GDPR and data governance compliance, ensure that your organization maintains audit logs of all data deletion operations. Most database management systems and cloud providers support query auditing. Consider enabling database audit logging to track who executed deletion queries, when they were executed, and what data was affected. Refer to your database provider's documentation for audit logging configuration.
 
 ### Deleting chunks for a specific session
 

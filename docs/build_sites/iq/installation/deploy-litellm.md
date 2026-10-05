@@ -483,6 +483,9 @@ proxy_config:
 !!! note "For other LLM providers"
     Replace the `model` and `api_key` values with the embedding model available from your provider. For example, for OpenAI use `model: "openai/text-embedding-3-small"` with `api_key: os.environ/OPENAI_API_KEY`. Verify that the `dimensions` value matches both the model's actual output dimension and your `EMBEDDING_DIMENSIONS` setting. For more information, refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"}.
 
+!!! tip "Controlling rate limits for embedding models"
+    For production deployments at scale, you can configure rate limits per embedding model to prevent quota exhaustion or excessive costs from your embedding API provider. LiteLLM supports per-model rate limit configuration. Refer to [LiteLLM Proxy - Set Rate Limits](https://docs.litellm.ai/docs/proxy/users#set-rate-limits){target="_blank"} for detailed configuration instructions on limiting requests per user, model, or time window.
+
 After adding the embedding models, redeploy LiteLLM to apply the updated configuration:
 
 ```bash
