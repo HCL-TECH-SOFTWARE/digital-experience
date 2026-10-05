@@ -63,37 +63,6 @@ Use the following JSON-RPC parameters to propagate request-scoped context to dow
 
 The MCP endpoints are internal to the IQ backend deployment and are accessed only by the IQ integrator service within the cluster. They are not exposed externally and are not routed through HAProxy.
 
-### Enabling HTTPS for the MCP Server
-
-The MCP Server supports HTTPS for communication with the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart.
-
-Before deploying IQ, ensure that the Kubernetes namespace contains a TLS secret named `dx-tls-cert`. The secret must contain the standard `tls.crt` and `tls.key` entries.
-
-```bash
-kubectl create secret tls dx-tls-cert \
-    --cert=<PATH_TO_CERTIFICATE> \
-    --key=<PATH_TO_PRIVATE_KEY> \
-    --namespace <YOUR_NAMESPACE>
-```
-
-Enable HTTPS through the IQ Helm values:
-
-```yaml
-configuration:
-    mcpServer:
-        httpsEnabled: true
-
-environment:
-    pod:
-        integrator:
-            - name: "MCP_SERVER_LIST"
-                value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
-```
-
-The chart mounts `dx-tls-cert` at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
-
-When HTTPS is enabled, the MCP Server health probes use HTTPS automatically. Use `https://` in `MCP_SERVER_LIST`; otherwise, the IQ Integrator cannot connect to the MCP Server.
-
 Route tool execution requests through the following endpoints to handle traffic for enabled DX tool domains:
 
 | Endpoint path {: style="width: 25%; white-space: nowrap;"}| Type | Network and runtime behavior {: style="width: 50%;"}|
@@ -110,6 +79,40 @@ Monitor service health and backend dependency availability using these operation
 |:-----------|:-----|:------------|
 |`/probe/live`|Liveness probe|A standard health check that confirms the server process is actively running inside the container.|
 |`/probe/ready`|Readiness probe|A dependency check that validates the backend tools are responsive. This check runs only for enabled tool domains. It reports healthy if at least one domain works and fails if everything is turned off or broken.|
+
+### Enabling HTTPS for the MCP Server
+
+By default, the IQ Helm chart (`hcl-dx-iq`) enables HTTPS to secure connections between the MCP Server and the IQ Integrator. To deploy IQ with HTTPS enabled:
+
+1. Create a TLS secret named `dx-tls-cert` in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys:
+
+    ```bash
+    kubectl create secret tls dx-tls-cert \
+        --cert=<PATH_TO_CERTIFICATE> \
+        --key=<PATH_TO_PRIVATE_KEY> \
+        --namespace <YOUR_NAMESPACE>
+    ```
+
+    The chart mounts `dx-tls-cert` at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
+
+2. Configure the `httpsEnabled` parameter in the `hcl-dx-iq` Helm chart:
+
+    ```yaml
+    configuration:
+        mcpServer:
+            httpsEnabled: true
+
+    environment:
+        pod:
+            integrator:
+                - name: "MCP_SERVER_LIST"
+                    value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
+    ```
+
+    When HTTPS is enabled, the MCP Server health probes use HTTPS automatically.
+
+    !!!note
+        The `MCP_SERVER_LIST` value must use `https://` for the IQ Integrator to connect to the MCP Server.
 
 ## Validating post-deployment status
 
