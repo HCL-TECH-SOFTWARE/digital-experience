@@ -443,17 +443,16 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
 
         Expected response: A JSON object with a `choices` array containing the model's response.
 
-!!! note "Tested LLM providers"
-    In addition to AWS Bedrock Claude models shown above, IQ has also been tested with the following LLM provider configurations:
+!!! note "Tested LLM models"
+    IQ has been extensively tested and validated with:
     
-    - **Google Gemini** — Gemini 2.5 Pro (general purpose) and Gemini 2.5 Flash (summary)
-    - **OpenAI GPT** — GPT 4.1 (general purpose) and GPT 4o mini (summary)
-    - **Anthropic Claude** — Sonnet 4.6 (stable) or Sonnet 5.5 (latest) for general purpose, Haiku 4.5 for summary
+    - **General purpose (iq-general-purpose)**: Claude Sonnet 4.6, Claude Sonnet 5.5
+    - **Summarization (iq-summary)**: Claude Haiku 4.5
     
-    For any of these providers, update the `proxy_config.model_list` in your `litellm-values.yaml` with the appropriate `model` identifier and `api_key` environment variable. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax details for each provider.
+    Alternative LLM models may also be compatible. Update the `proxy_config.model_list` in your `litellm-values.yaml` with the appropriate `model` identifier and `api_key` environment variable for your chosen provider. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax details for each provider.
 
 !!! warning "OpenAI reasoning models not supported"
-    Do not use OpenAI reasoning model variants (GPT-5.x with decimal versions such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`). These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors. Use base models `gpt-4.1` or `gpt-4o-mini` instead.
+    Do not use OpenAI reasoning model variants (GPT-5.x with decimal versions such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`). These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors: `Function tools with reasoning_effort are not supported`.
 
 ## Registering embedding models for cross-session memory
 
@@ -480,7 +479,7 @@ proxy_config:
         api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
         dimensions: 1024
 
-    # Fallback embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false). Cohere v4 above is the newer model and is recommended even for multilingual workloads.
+    # Fallback embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false)
     - model_name: iq-embed
       litellm_params:
         model: "bedrock/cohere.embed-multilingual-v3"
@@ -492,8 +491,8 @@ proxy_config:
 !!! important "Dimension alignment"
     The `dimensions` value in the LiteLLM config must match the `EMBEDDING_DIMENSIONS` environment variable in your IQ configuration. If these values diverge after initial startup, IQ enters graceful degradation mode and disables cross-session memory while continuing to serve requests. The default `EMBEDDING_DIMENSIONS` value is `1024`.
 
-!!! note "For other LLM providers"
-    Update the `model` and `api_key` values accordingly in your configuration. Verify that the `dimensions` value matches both the model's actual output dimension and your `EMBEDDING_DIMENSIONS` environment variable setting. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for provider-specific syntax details.
+!!! warning "Compatibility with alternative LLM models"
+    IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. While alternative LLM models may work, compatibility is not guaranteed. Due to the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. Thoroughly test any alternative configuration before production use.
 
 !!! tip "Controlling rate limits for embedding models"
     For production deployments at scale, you can configure rate limits per embedding model to prevent quota exhaustion or excessive costs from your embedding API provider. LiteLLM supports per-model rate limit configuration. Refer to [LiteLLM Proxy - Set Rate Limits](https://docs.litellm.ai/docs/proxy/users#set-rate-limits){target="_blank"} for detailed configuration instructions on limiting requests per user, model, or time window.

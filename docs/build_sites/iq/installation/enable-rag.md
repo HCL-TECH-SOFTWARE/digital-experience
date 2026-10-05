@@ -15,10 +15,14 @@ Before enabling cross-session memory, verify that the following conditions are m
 - Your LiteLLM proxy has the embedding model aliases registered. IQ calls one of two fixed aliases, `iq-multilingual-embed` or `iq-embed`, depending on the value of `USE_MULTILINGUAL_EMBEDDINGS`. For instructions, refer to [Registering embedding models for cross-session memory](deploy-litellm.md#registering-embedding-models-for-cross-session-memory).
 - The value of `EMBEDDING_DIMENSIONS` matches the output dimension of the registered embedding model.
 
-???+ info "Embedding model dimension requirements"
-    Different embedding models produce vectors of different sizes. Set `EMBEDDING_DIMENSIONS` to match the output dimension of the model you registered in LiteLLM. Cohere Embed v4 (`bedrock/us.cohere.embed-v4:0`) is recommended over Cohere Embed v3, because v4 is the newer model and supports configurable output dimensions.
-
-    Matching dimensions does not make two models interchangeable. Models that both produce 1024-dimensional vectors still generate different embeddings, so chunks embedded by one model cannot be meaningfully compared against chunks embedded by another. If you change the embedding model or its dimension after the first startup, IQ detects the mismatch and enters graceful degradation mode, disabling cross-session memory while continuing to serve requests. To apply the change, recreate the RAG tables. Refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
+!!! warning "Embedding model compatibility"
+    IQ has been extensively tested and validated with Cohere v4 for the `iq-multilingual-embed` model. While alternative embedding models may work, compatibility is not guaranteed due to the rapidly evolving nature of AI model releases.
+    
+    If you choose to use alternative embedding models:
+    - Ensure the model output dimension is set correctly in both LiteLLM and the `EMBEDDING_DIMENSIONS` environment variable
+    - Thoroughly test embedding quality and retrieval relevance before production use
+    
+    If the `EMBEDDING_DIMENSIONS` value no longer matches the embedding model's output dimension after initial startup, IQ detects the mismatch and enters graceful degradation mode, disabling cross-session memory while continuing to serve requests. To apply changes, recreate the RAG tables. Refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 !!! warning "pgvector extension availability"
     Cross-session memory requires the `pgvector` PostgreSQL extension. For internal databases provisioned by DX Persistence Node or DX Runtime Controller, `pgvector` is included by default. For external PostgreSQL databases, you must explicitly enable the extension:

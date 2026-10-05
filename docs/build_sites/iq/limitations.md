@@ -47,12 +47,15 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
-- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. The base models (`gpt-5` and `gpt-5-mini`) may work, but are not validated for production use. AWS Bedrock Claude models, such as Sonnet or Haiku, are recommended for production deployments. For more configuration details, refer to Step 4 of [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
+- IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. While alternative LLM models may work, compatibility is not guaranteed. Due to the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. For configuration details and compatibility warnings, refer to [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
+- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors: `Function tools with reasoning_effort are not supported`.
 
 ### Database
 
 - Multi-pod and production deployments do not support in-memory SQLite due to session state inconsistency across instances. For multi-pod environments, use PostgreSQL to ensure consistent session state and conversation history across all service instances.
 - Database names are fixed to `iqdb` for internal and Runtime Controller (RTC)-managed databases. External databases allow custom database names.
+- Cross-session memory (RAG) requires PostgreSQL with the `pgvector` extension. The extension is included by default in internal databases managed by DX Persistence Node or DX Runtime Controller. For external PostgreSQL databases, you must explicitly enable the `pgvector` extension using `CREATE EXTENSION IF NOT EXISTS vector;`. Refer to [Enabling cross-session memory (RAG)](./installation/enable-rag.md#prerequisites) for configuration details.
+- Embedding dimension mismatch causes graceful degradation: If the `EMBEDDING_DIMENSIONS` environment variable no longer matches the output dimension of the registered embedding model after initial startup, IQ silently disables cross-session memory while continuing to serve requests. Recreate the RAG tables to apply dimension changes. Refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration).
 
 ## MCP Server
 
