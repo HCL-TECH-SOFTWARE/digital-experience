@@ -16,6 +16,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- IQ - HTTPS support for the MCP Server
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -82,6 +83,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf239).
+
+### IQ - HTTPS support for the MCP Server
+
+=== "Containers"
+    IQ now uses HTTPS to secure connections between the MCP Server and the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart through the `httpsEnabled` parameter. For more information, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
