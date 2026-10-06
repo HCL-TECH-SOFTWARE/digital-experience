@@ -505,6 +505,26 @@ helm upgrade --install litellm litellm/litellm \
   -n dxns
 ```
 
+!!! tip "Customizing model aliases (Advanced)"
+    By default, IQ uses four fixed model aliases configured in LiteLLM:
+    - `iq-general-purpose` — Premium model for inquiries and tool execution
+    - `iq-summary` — Cost-efficient model for conversation summarization
+    - `iq-multilingual-embed` — Multilingual embedding model
+    - `iq-embed` — Alternative embedding model (fallback when `USE_MULTILINGUAL_EMBEDDINGS=false`)
+    
+    **Override these defaults** only if you want to experiment with many different models under different aliases without constantly deleting and recreating models under the same four alias names. To override, set these environment variables in your IQ server deployment:
+    
+    ```bash
+    LITELLM_GENERAL_PURPOSE_MODEL=my-custom-general-purpose
+    LITELLM_SUMMARY_MODEL=my-custom-summary
+    LITELLM_MULTILINGUAL_EMBED_MODEL=my-custom-multilingual-embed
+    LITELLM_TEXT_EMBED_MODEL=my-custom-embed
+    ```
+    
+    The model names you specify must already be registered in your LiteLLM `proxy_config.model_list`. For most deployments, the default aliases are sufficient and no customization is needed.
+    
+    For complete details on all IQ environment variables and their defaults, see [IQ environment variables](environment-variables.md).
+
 ### LiteLLM service endpoint
 
 After LiteLLM is deployed and verified, LiteLLM is accessible within your cluster at:
