@@ -99,14 +99,14 @@ By default, the IQ Helm chart (`hcl-dx-iq`) enables HTTPS to secure connections 
 
     ```yaml
     configuration:
-        mcpServer:
-            httpsEnabled: true
+      mcpServer:
+        httpsEnabled: true
 
     environment:
-        pod:
-            integrator:
-                - name: "MCP_SERVER_LIST"
-                    value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
+      pod:
+        integrator:
+          - name: "MCP_SERVER_LIST"
+            value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
     ```
 
     When HTTPS is enabled, the MCP Server health probes use HTTPS automatically.
