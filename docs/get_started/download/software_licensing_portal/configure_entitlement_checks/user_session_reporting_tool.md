@@ -100,6 +100,11 @@ For every request, a key is computed based on the requesting IP address of the u
 
 If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
 
+If your environment utilizes complex proxy chaining (such as Akamai combined with IHS), the standard X-Forwarded-For extraction may result in fragmented session counts if intermediate proxy IPs rotate per request. To address this, you can append the -assumeClientIP flag when running the tool. The -assumeClientIP flag explicitly instructs the tool to extract only the first IP address listed in the X-Forwarded-For header. Because proxy setups vary significantly across environments, there is no one-size-fits-all extraction method. If you choose to use this flag, it is entirely the customer's responsibility to ensure their network and proxy headers are configured so that the stable client IP is always placed in the first position.
+
+!!! note
+    Due to the risk of accidentally fragmenting session counts, this flag should only be used after consulting with HCL Support to verify it aligns with your specific network architecture.
+
 ### Analyzing access logs
 
 Once the access logs are extracted, the next step is to understand how the tool processes them to identify and count unique user sessions. The tool determines session uniqueness based on certain criteria.
@@ -165,6 +170,7 @@ java -jar <jarFilepath> -h
 # <excludeSessionKey> Session key to exclude from session counts (multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
+# <-assumeClientIP> (Optional) Instructs the tool to extract the first IP address from the X-Forwarded-For header to use as the stable client IP.
 ```
 
 ```cmd
@@ -182,7 +188,7 @@ The following is a sample command for running the User Session Reporting Tool us
     As of CF229, the `productFeatureIdName` parameter has been removed as a command-line parameter. The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] [-assumeClientIP] <startDate> <endDate>
 
 # Example
 java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 
