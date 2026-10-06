@@ -266,6 +266,7 @@ Before investigating MCP-related errors, perform these basic checks:
 | Payload-related request failures | Request body exceeds configured size limit | Validate payload size and review the `BODY_PARSER_JSON_LIMIT` configuration. |
 | Unable to connect to AI service | MCP Server cannot reach configured AI provider dependencies | Check provider credentials, secrets, and outbound connectivity from cluster services. |
 | Invalid format or protocol errors | Service version mismatch or contract mismatch across components | Verify compatible DX, IQ integrator, and MCP Server versions, and then review logs for parsing or schema failures. |
+| Version incompatibility | IQ and HCL DX Core versions fall outside the supported compatibility window. | Check MCP Server logs for the detected HCL DX Core version, and update components to within two CF releases. |
 
 ## Advanced diagnostics
 
