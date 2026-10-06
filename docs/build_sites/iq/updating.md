@@ -92,12 +92,6 @@ The DX Model Context Protocol (MCP) Server detects the underlying DX Core versio
 !!! important
     Keep the IQ and DX Core versions within two CF releases of each other. Combinations outside this n-2 support window are not supported.
 
-## Troubleshooting version compatibility
-
-When investigating an IQ issue, first identify both the IQ and DX Core versions in the deployment. Then review the MCP Server logs to confirm the DX Core version detected by the server.
-
-If the versions are outside the supported window, update IQ, DX Core, or both components until the versions are within two CF releases. For general diagnostic steps, refer to [Troubleshooting IQ](troubleshooting.md).
-
 ???+ info "Related information"
     - [Installing IQ](installation/index.md)
     - [Enabling IQ](enable.md)
