@@ -523,7 +523,7 @@ helm upgrade --install litellm litellm/litellm \
     
     The model names you specify must already be registered in your LiteLLM `proxy_config.model_list`. For most deployments, the default aliases are sufficient and no customization is needed.
     
-    For complete details on all IQ environment variables and their defaults, see [IQ environment variables](environment-variables.md).
+For complete details on all IQ environment variables and their defaults, see [IQ environment variables](environment-variables.md).
 
 ### LiteLLM service endpoint
 
