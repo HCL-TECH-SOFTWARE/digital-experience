@@ -170,7 +170,7 @@ java -jar <jarFilepath> -h
 # <excludeSessionKey> Session key to exclude from session counts (multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
-# <-assumeClientIP> (Optional) Instructs the tool to extract the first IP address from the X-Forwarded-For header to use as the stable client IP.
+# <assumeClientIP> (Optional) Instructs the tool to extract the first IP address from the X-Forwarded-For header to use as the stable client IP.
 ```
 
 ```cmd
