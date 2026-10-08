@@ -1,7 +1,3 @@
----
-title: AWS Marketplace Helm Deployment
----
-
 # AWS Marketplace Helm deployment 
 
 This topic provides information on how to deploy HCL Digital Experience (DX) acquired from the AWS Marketplace on both Amazon-managed Kubernetes and self-managed Kubernetes for on-premise deployments. 
