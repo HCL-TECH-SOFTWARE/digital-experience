@@ -18,17 +18,13 @@ Exceptions are permissible only when HCL requests customers to use a specially p
 Your environment must meet the following file-system requirements:
 
 -   DX requires two `ReadWriteMany` volumes:
-
     -   One volume for Core.
-
     -   One volume for Digital Asset Management.
-
 -   All the other pods require `ReadWriteOnce` volumes.
 -   DX is input-output (I/O) intensive and requires a high-performance file system for optimization.
 -   A `persistence-node` relies on PostgreSQL, which requires the use of hard links. Storage systems \(like Azure Files\) that do not support hard links cannot be used. For more information, refer to [Microsoft documentation for features not supported by the Azure File service](https://docs.microsoft.com/en-us/rest/api/storageservices/features-not-supported-by-the-azure-file-service){target="_blank"}.
 -   All DX applications require the use of symbolic links and soft links. Storage systems must support the use of symbolic links and soft links. If you use Azure Files, you must enable `mountOptions` settings of the StorageClass by using `mfsymlinks`. For more information, refer to [Microsoft documentation on troubleshooting Azure Files on Linux \(SMB\)](https://docs.microsoft.com/en-us/azure/storage/files/storage-troubleshoot-linux-file-connection-problems#cannot-create-symbolic-links---ln-failed-to-create-symbolic-link-t-operation-not-supported){target="_blank"}.
 -   You can configure volume sizes individually per volume and these depend on the respective usage. For more information, refer to the following Help Center topics:
-
     -   [Configuring PVCs in a Helm deployment](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_persistent_volume_claims.md)
     -   [Customizing the container for Operator-based deployments](https://help.hcltechsw.com/digital-experience/9.5/containerization/customizing_container_deployment.html)
 
@@ -59,17 +55,19 @@ To deploy HCL DX 9.5 CF200 to the supported Kubernetes platforms that use Helm, 
 
 - **Container platform capacity resource requirements**:
 
-   The following table outlines the minimum possible amount of resource requests by the HCL DX 9.5 container components in Helm-based deployments and the minimum number of pods required for each component.
+    The following table outlines the minimum possible amount of resource requests by the HCL DX 9.5 container components in Helm-based deployments and the minimum number of pods required for each component.
 
-   To use the minimal configuration, adjust the resource requests in your `custom-values.yaml` file accordingly. You can use alternatives to these numbers. Increasing any number is not an issue. In fact, for best results in a production environment, increase these numbers to scale to your specific needs. You can also decrease some of these numbers and still be able to start DX (for example, for deployment environments), but this action is not officially supported.
+    To use the minimal configuration, adjust the resource requests in your `custom-values.yaml` file accordingly. You can use alternatives to these numbers. Increasing any number is not an issue. In fact, for best results in a production environment, increase these numbers to scale to your specific needs. You can also decrease some of these numbers and still be able to start DX (for example, for deployment environments), but this action is not officially supported.
 
-   All the following CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
+    All the following CPU sizings relate to an environment with 2nd generation Intel Xeon scalable processors (Cascade Lake 8223CL) or 1st generation Intel Xeon Platinum 8000 series (Skylake 8124M) processors.
 
 !!!note
     - Every Kubernetes node requires some memory for Kubernetes-specific services. Ensure that your Kubernetes Node has enough capacity to host both the Kubernetes services and HCL DX. The overall requested amount of resources might vary based on disabled and enabled applications.
     - The overall sums for CPU and memory include all components of HCL DX. In most cases, you only want to deploy a subset of all components. Therefore, the minimal system requirements decrease accordingly.
     - This configuration outlines the minimum requirements. For production environments or higher workloads, scale to small, medium, or larger configurations as appropriate. If you encounter performance issues, increase resource allocations as needed. For guidance on optimizing your deployment, refer to [Performance Tuning Guide](../../../guide_me/guides/performance_tuning/kubernetes/index.md).
-    - Use the [HCL DX 9.5 Docker images](../../../deployment/install/container/image_list.md) as provided. Modifying a base image alters the image ID and results in an unsupported configuration. Instead, maintain all customizations in `wp_profile` and the deployment database, and store all custom files and scripts directly in `/opt/HCL/wp_profile/`. For related topics, refer to [Customizing the container deployment](https://help.hcl-software.com/digital-experience/dx-95-doc-archive/CF202/platform/kubernetes/operator-based/customizing_container_deployment.html) and [dxctl](https://help.hcl-software.com/digital-experience/dx-95-doc-archive/CF202/platform/kubernetes/operator-based/dxtools_dxctl.html).
+
+!!!warning
+    Do not modify the [HCL DX 9.5 Docker images](../../../deployment/install/container/image_list.md). Modifying a base image alters the image ID and results in an unsupported configuration. Keep all customizations in `wp_profile` and the deployment database, and store all custom files and scripts directly in `/opt/HCL/wp_profile/`. For more information, refer to [Prepare configuration](../../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md).
 
 | **Pod name** | **Minimum number of Pods** | **Container** | **Container Image** | **Container CPU request and limit** | **Container Memory request and limit** |
 |---|---|---|---|---|---|
