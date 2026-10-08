@@ -7,6 +7,7 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
+- User Session Reporting Tool - New `-assumeClientIP` flag
 
 **Digital Experience 8.5 and 9.0 Versions**
 
@@ -16,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- IQ - HTTPS support for the MCP Server
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -62,6 +64,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf239) section.
 
+### User Session Reporting Tool - New `-assumeClientIP` flag
+
+=== "Containers"
+    The User Session Reporting Tool now includes an optional `-assumeClientIP` command-line flag. This flag is designed for deployments utilizing complex proxy chaining, such as Akamai combined with IBM HTTP Server (IHS). When enabled, it instructs the tool to extract only the first IP address from the `X-Forwarded-For` header to use as the stable client IP, preventing session fragmentation. For more information, refer to [Handling the routing setup](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md#handling-the-routing-setup) and [Generating user session data usage in MHS metrics format](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md#generating-user-session-data-usage-in-mhs-metrics-format-traditional-deployment).
+
+=== "On-Premises"
+    The User Session Reporting Tool now includes an optional `-assumeClientIP` command-line flag. This flag is designed for deployments utilizing complex proxy chaining, such as Akamai combined with IBM HTTP Server (IHS). When enabled, it instructs the tool to extract only the first IP address from the `X-Forwarded-For` header to use as the stable client IP, preventing session fragmentation. For more information, refer to [Handling the routing setup](../../get_started/download/software_licensing_portal/configure_entitlement_checks/user_session_reporting_tool.md#handling-the-routing-setup) and [Generating user session data usage in MHS metrics format](../../get_started/download/software_licensing_portal/configure_entitlement_checks/configuring_mhs_file_base_session_reporting.md#generating-user-session-data-usage-in-mhs-metrics-format-traditional-deployment).
+
 ## Digital Experience 8.5 and 9.0 Versions
 
 ### Extended Support option now available for DX versions 8.5 and 9.0
@@ -82,6 +92,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf239).
+
+### IQ - HTTPS support for the MCP Server
+
+=== "Containers"
+    IQ now uses HTTPS to secure connections between the MCP Server and the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart through the `httpsEnabled` parameter. For more information, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 

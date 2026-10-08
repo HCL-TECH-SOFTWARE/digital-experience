@@ -28,12 +28,13 @@ java -jar <jarFilepath> -h
 # <endDate> Specifies the end date in YYYY-MM-DD format
 # <deploymentId> String deploymentID from MHS
 # <option> Specify "fileOutput" to write usage into an automatically named file. If option is unspecified, the usage metrics are displayed in the terminal and not saved in a file.
+# <assumeClientIP> (Optional) Instructs the tool to extract the first IP address from the X-Forwarded-For header to use as the stable client IP.
 ```
 
 See the sample command for running the User Session Reporting Tool using all the parameters provided:
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate> <deploymentId> <option>
+java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] [-assumeClientIP] <startDate> <endDate> <deploymentId> <option>
 ```
 
 !!!note
