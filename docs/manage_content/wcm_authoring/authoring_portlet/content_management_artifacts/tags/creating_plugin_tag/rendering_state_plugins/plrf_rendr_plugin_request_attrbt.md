@@ -81,4 +81,4 @@ This plug-in uses the following attributes:
     ```
 
 ???+ info "Related information"
-    - [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)
+    [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)

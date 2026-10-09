@@ -4,129 +4,164 @@ With the Portal Scripting Interface, you can create Jacl or Jython scripts to au
 
 Using the Project bean with the Portal Scripting Interface, you can perform the following actions on projects:
 
--   List all available projects
--   Create and delete projects
--   Set an active project
--   Retrieve information about a specific project
--   Retrieve locale-specific attributes for projects
--   Submit a project for review
--   Withdraw a project from review.
--   Approve projects
--   Decline a project
--   Approve all documents of a project, that is all Web Content Manager items that are parts of a workflow
--   Decline all documents of a project, that is all Web Content Manager items that are parts of a workflow
--   Publish projects
+- List all available projects
+- Create and delete projects
+- Set an active project
+- Retrieve information about a specific project
+- Retrieve locale-specific attributes for projects
+- Submit a project for review
+- Withdraw a project from review.
+- Approve projects
+- Decline a project
+- Approve all documents of a project, that is all Web Content Manager (WCM) items that are parts of a workflow
+- Decline all documents of a project, that is all WCM items that are parts of a workflow
+- Publish projects
 
 To run commands with the Project bean, you can use the Portal bean to set a project as the context for subsequent commands.
 
-## List projects
+## Listing projects
 
-To retrieve a list of projects, use the listall method. This method returns the names of the projects.
+To retrieve a list of projects, use the `listall` method. This method returns the names of the projects.
 
--   Jacl syntax: `$Project listall`
--   Jython syntax: `Project.listall()`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project listall
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project listall
     '"TestProject1" "TestProject2"'
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.listall()
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.listall()
     '"TestProject1" "TestProject2"'
     ```
 
+## Creating projects
 
-## Create projects
+To create a project, use the `create` method.
 
-To create a project, use the create method.
+- Jacl syntax:
 
--   Jacl syntax: `$Project create "project\_name"`
--   Jython syntax: `Project.create("project\_name")`
+    ```
+    $Project create "project\_name"
+    ```
 
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project create "TestProject1"
     TestProject1
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.create("project\_name")
+    ```
+
+    For example:
 
     ```
     Project.create("TestProject1")
     'TestProject1'
     ```
 
-
 !!!note
-  If you create a project with the Portal Scripting Interface, the project is not listed with the recent projects in the project menu.
+    If you create a project with the Portal Scripting Interface, the project is not listed with the recent projects in the project menu.
 
-## Delete projects
+## Deleting projects
 
-To delete a project, use the delete method.
+To delete a project, use the `delete` method.
 
--   Jacl syntax: `$Project delete "project_name"`
--   Jython syntax: `Project.delete("project_name")`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project delete "project_name"
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project delete "TestProject1"
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.delete("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.delete("TestProject1")
     ```
 
+## Setting active projects
 
-## Set active project
-
-For commands that you want to run within a project, use the setproject method of the Portal bean to specify the project. When invoking the setproject method, you identify the active project with the name of the project. If you invoke the setproject method without specifying a project name, the active project is cleared. When you set the project during a session, the project is active immediately.
+For commands that you want to run within a project, use the `setproject` method of the Portal bean to specify the project. When invoking the `setproject` method, you identify the active project with the name of the project. If you invoke the `setproject` method without specifying a project name, the active project is cleared. When you set the project during a session, the project is active immediately.
 
 To set the active project, you must establish a user session with the portal by using the login command of the Portal bean.
 
--   Jacl syntax: `$Project setproject "project_name"`
--   Jython syntax: `Portal.setproject("project_name")`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project setproject "project_name"
+    ```
+
+    For example:
 
     ```
     wsadmin>$Portal setproject "TestProject1"
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Portal.setproject("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Portal.setproject("TestProject1")
     ```
 
-
 ## Retrieve project details
 
 Retrieve project details with the details method. This method returns the following information about the project:
 
--   Universally Unique Identifier (UUID)
--   State
--   Name
--   Title
--   Approvers
--   Outstanding approvals
--   Approval mode, that is whether all approvers need to approve or only one approver needs to approve
--   History, that is which actions have been performed on the project before.
+- Universally Unique Identifier (UUID)
+- State
+- Name
+- Title
+- Approvers
+- Outstanding approvals
+- Approval mode, that is whether all approvers need to approve or only one approver needs to approve
+- History, that is which actions have been performed on the project before.
 
 Syntax:
 
--   Jacl syntax: `$Project details "project_name"`
--   Jython syntax: `Project.details("project_name")`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project details "project_name"
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project details "TestProject2"
@@ -154,7 +189,13 @@ Syntax:
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.details("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>print Project.details("TestProject2")
@@ -182,44 +223,54 @@ Syntax:
     
     ```
 
+## Retrieving translated attributes
 
-## Retrieve translated attributes
+If any project attributes are translated, such as the title or description, you can retrieve those attributes with the `nlsget` method. Specify the attribute with one of the following parameters:
 
-If any project attributes are translated, such as the title or description, you can retrieve those attributes with the nlsget method. Specify the attribute with one of the following parameters:
-
--   title: title or t
--   Description: description, descr, or d
+- title: title or t
+- Description: description, descr, or d
 
 Syntax:
 
--   Jacl syntax: `$Project nlsget "project_name" attribute_parameter [locale]`
--   Jython syntax: `Project.nlsget("project_name","attribute_parameter"[,"locale"])`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project nlsget "project_name" attribute_parameter [locale]
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project nlsget "TestProject1" descr en
     This is the description for TestProject1.
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.nlsget("project_name","attribute_parameter"[,"locale"])
+    ```
+
+    For example:
 
     ```
     wsadmin>print Project.nlsget("TestProject1", "descr", "en")
     This is the description for TestProject1.
     ```
 
-
 If you do not specify a value for the locale parameter, the currently selected locale is used.
 
-## Submit a project for review
+## Submitting a project for review
 
-To submit a project for review, use the submitforreview method. The project needs to be in active state, and all contained documents need to be in publish, pending, or deleted state. When you submit a project for review, the project moves into the review state.
+To submit a project for review, use the `submitforreview` method. The project needs to be in active state, and all contained documents need to be in publish, pending, or deleted state. When you submit a project for review, the project moves into the review state.
 
--   Jacl syntax: `$Project submitforreview "project_name"`
--   Jython syntax: `Project.submitforreview("project_name")`
+- Jacl syntax:
 
--   **Jacl example:**
+    ```
+    $Project submitforreview "project_name"
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project submitforreview TestProject
@@ -240,7 +291,13 @@ To submit a project for review, use the submitforreview method. The project need
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.submitforreview("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.submitforreview("TestProject")
@@ -261,15 +318,17 @@ To submit a project for review, use the submitforreview method. The project need
     
     ```
 
+## Withdrawing a project from review
 
-## Withdraw a project from review
+To withdraw a project from review, use the `withdrawfromreview` method. The project needs to be in review state. When you withdraw a project from review, the project moves into the active state.
 
-To withdraw a project from review, use the withdrawfromreview method. The project needs to be in review state. When you withdraw a project from review, the project moves into the active state.
+- Jacl syntax:
 
--   Jacl syntax: `$Project withdrawfromreview "project_name"`
--   Jython syntax: `Project.withdrawfromreview("project_name")`
+    ```
+    $Project withdrawfromreview "project_name"
+    ```
 
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project withdrawfromreview TestProject
@@ -298,7 +357,13 @@ To withdraw a project from review, use the withdrawfromreview method. The projec
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.withdrawfromreview("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.withdrawfromreview("TestProject")
@@ -327,29 +392,20 @@ To withdraw a project from review, use the withdrawfromreview method. The projec
     
     ```
 
+## Approving projects
 
-## Approve projects
-
-To approve the drafts in a project, use the approve method. Additional to the project, you can add a comment as a second parameter. If the project setup requires a comment, the comment is mandatory. If not, the comment is optional.
+To approve the drafts in a project, use the `approve` method. Additional to the project, you can add a comment as a second parameter. If the project setup requires a comment, the comment is mandatory. If not, the comment is optional.
 
 The command approves only the project. The drafts in the project need to be approved separately, for example by using the `approvedocuments` method. Before you can approve a project, all of its documents must be in publish, pending, or deleted state.
 
--   Jacl syntax:
+- Jacl syntax:
 
     ```
     $Project approve "project_name"
     $Project approve "project_name" "comment"
     ```
 
--   Jython syntax:
-
-    ```
-    Project.approve("project_name")
-    Project.approve("project_name", "comment")
-    ```
-
-
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project approve TestProject "ok"
@@ -383,7 +439,14 @@ The command approves only the project. The drafts in the project need to be appr
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.approve("project_name")
+    Project.approve("project_name", "comment")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.approve("TestProject1")
@@ -416,27 +479,18 @@ The command approves only the project. The drafts in the project need to be appr
     
     ```
 
+## Declining projects
 
-## Decline projects
+To decline the drafts in a project, use the `decline` method. Additional to the project, you can add a comment as a second parameter. If the project setup requires a comment, the comment is mandatory. If not, the comment is optional. The command only declines the project. The drafts in the project remain in their current state. For a project to be declined, the project needs to be in review state.
 
-To decline the drafts in a project, use the decline method. Additional to the project, you can add a comment as a second parameter. If the project setup requires a comment, the comment is mandatory. If not, the comment is optional. The command only declines the project. The drafts in the project remain in their current state. For a project to be declined, the project needs to be in review state.
-
--   Jacl syntax:
+- Jacl syntax:
 
     ```
     $Project decline "project\_name"
     $Project decline "project\_name" "comment"
     ```
 
--   Jython syntax:
-
-    ```
-    Project.decline("project\_name")
-    Project.decline("project\_name", "comment")
-    ```
-
-
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project decline TestProject "needs rework"
@@ -461,7 +515,14 @@ To decline the drafts in a project, use the decline method. Additional to the pr
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.decline("project\_name")
+    Project.decline("project\_name", "comment")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.decline("TestProject1")
@@ -485,15 +546,17 @@ To decline the drafts in a project, use the decline method. Additional to the pr
     
     ```
 
+## Approving all documents in a project
 
-## Approve all documents of a project
+To approve all documents ing a project, use the `approvedocuments` method. It approves all WCM items that are parts of a workflow.
 
-To approve all documents of a project, use the approvedocuments method. It approves all Web Content Manager items that are parts of a workflow.
+- Jacl syntax:
 
--   Jacl syntax: `$Project approvedocuments project_name`
--   Jython syntax: `Project.approvedocuments("project_name")`
+    ```
+    $Project approvedocuments project_name
+    ```
 
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project approvedocuments TestProject
@@ -513,7 +576,13 @@ To approve all documents of a project, use the approvedocuments method. It appro
     
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.approvedocuments("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.approvedocuments("TestProject")
@@ -533,15 +602,17 @@ To approve all documents of a project, use the approvedocuments method. It appro
     
     ```
 
+## Declining all documents in a project
 
-## Decline all documents of a project
+To decline all documents in a project, use the `declinedocuments` method. This method declines all WCM items that are parts of a workflow.
 
-To decline all documents of a project, use the declinedocuments method. This method declines all Web Content Manager items that are parts of a workflow.
+- Jacl syntax:
 
--   Jacl syntax: `$Project declinedocuments project_name`
--   Jython syntax: `Project.declinedocuments("project_name")`
+    ```
+    $Project declinedocuments project_name
+    ```
 
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project declinedocuments TestProject
@@ -560,7 +631,13 @@ To decline all documents of a project, use the declinedocuments method. This met
       testpage (draft / new)
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.declinedocuments("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>$Project.declinedocuments("TestProject")
@@ -579,15 +656,17 @@ To decline all documents of a project, use the declinedocuments method. This met
       testpage (draft / new)
     ```
 
+## Publishing projects
 
-## Publish projects
+To publish a project, use the `publish` method. Before you can publish a project, all items in the project must be approved and the project needs to be in publish pending state.
 
-To publish a project, use the publish method. Before you can publish a project, all items in the project must be approved and the project needs to be in publish pending state.
+- Jacl syntax:
 
--   Jacl syntax: `$Project publish "project_name"`
--   Jython syntax: `Project.publish("project_name")`
+    ```
+    $Project publish "project_name"
+    ```
 
--   **Jacl example:**
+    For example:
 
     ```
     wsadmin>$Project publish TestProject
@@ -622,7 +701,13 @@ To publish a project, use the publish method. Before you can publish a project, 
       testpage (published)
     ```
 
--   **Jython example:**
+- Jython syntax:
+
+    ```
+    Project.publish("project_name")
+    ```
+
+    For example:
 
     ```
     wsadmin>Project.publish("TestProject1")
@@ -656,21 +741,20 @@ To publish a project, use the publish method. Before you can publish a project, 
       testpage (published)
     ```
 
-
 ## Examples
 
 These examples demonstrate a typical command sequence to create a page within a specific project. Each example script performs the following operations:
 
--   Establishes a user session.
--   Creates a project (`myproject`).
--   Retrieves the details for the `myproject` project.
--   Sets the active project to the `myproject` project.
--   Locates the `Home` page in the portal.
--   Creates the `testpage1` page as a child page of the `Home` page. This operation takes place within the context of the active project.
--   Clears the active project.
--   Terminates the user session.
+- Establishes a user session.
+- Creates a project (`myproject`).
+- Retrieves the details for the `myproject` project.
+- Sets the active project to the `myproject` project.
+- Locates the `Home` page in the portal.
+- Creates the `testpage1` page as a child page of the `Home` page. This operation takes place within the context of the active project.
+- Clears the active project.
+- Terminates the user session.
 
--   **Jacl example:**
+- **Jacl example:**
 
     ```
     $Portal login
@@ -683,7 +767,7 @@ These examples demonstrate a typical command sequence to create a page within a 
     $Portal logout
     ```
 
--   **Jython example:**
+- **Jython example:**
 
     ```
     Portal.login()
@@ -696,8 +780,5 @@ These examples demonstrate a typical command sequence to create a page within a 
     Portal.logout()
     ```
 
-
-
 ???+ info "Related information"  
-    -   [Command reference for the Portal Scripting Interface](../../../../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
-
+    [Command reference for the Portal Scripting Interface](../../../../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
