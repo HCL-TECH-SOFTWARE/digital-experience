@@ -59,7 +59,7 @@ To bulk add applications to the Application Palette, perform the following steps
 
 1. Log in to HCL DX as an administrator.
 2. Go to **Administration > Site Management > Pages > Content Root > Hidden Pages**.
-3. Find the the label **Application Categories**.  You may have to page through the list.  The Application Categories lable with have the unique name: `ibm.portal.toolbar.applications.category.label.root`.
+3. Find the the label **Application Categories**.  You may have to page through the list.  The Application Categories label will have the unique name: `ibm.portal.toolbar.applications.category.label.root`.
 <img width="1532" height="777" alt="image" src="https://git.cwp.pnp-hcl.com/user-attachments/assets/58a9c6ab-03cb-4005-9104-243ddb9f97a5" />
 
 4. Under the application category root label, select new URL. This opens a new editor.  Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.
