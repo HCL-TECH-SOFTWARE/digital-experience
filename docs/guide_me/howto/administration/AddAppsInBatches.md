@@ -40,7 +40,15 @@ To bulk add applications to the Application Palette, perform the following steps
     </request>
     ```
 
-2. Run the XMLAccess command using your created file to assign the tags to the specified portlets. <!-- What's the command?-->
+2. Run the XMLAccess command using your created file to assign the tags to the specified portlets. 
+   xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://[myhost]:[port]/wps/config -in yourInputFile.xml -out result.xml
+
+   Replace Portal _admin_user with the name of the portal admin user.
+   Replace Portal_admin_password with the password for the admin user.
+   Replace yourInputFile.xml with the full path to your input file relative to where you are running the xmlaccess command.
+
+   You can use whatever name you like for the output file.  In the example above we called it result.xml.
+
 3. Obtain the portlet entity feed of all portlets tagged with your custom tag (for example, `CustomAppCategory`) using the following URL structure:
 
     ```url
@@ -51,7 +59,11 @@ To bulk add applications to the Application Palette, perform the following steps
 
 1. Log in to HCL DX as an administrator.
 2. Go to **Administration > Site Management > Pages > Content Root > Hidden Pages**.
-3. Find the applications root. The unique name is: `com.ibm.portal.toolbar.applications.category.label.root`.
-4. Under the application category root label, create a new URL. Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.
+3. Find the the label **Application Categories**.  You may have to page through the list.  The Application Categories lable with have the unique name: `ibm.portal.toolbar.applications.category.label.root`.
+<img width="1532" height="777" alt="image" src="https://git.cwp.pnp-hcl.com/user-attachments/assets/58a9c6ab-03cb-4005-9104-243ddb9f97a5" />
 
-This creates a category and will add all portlets tagged with that category to the application category immediately.
+4. Under the application category root label, select new URL. This opens a new editor.  Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.
+<img width="1077" height="541" alt="image" src="https://git.cwp.pnp-hcl.com/user-attachments/assets/7ecca973-f8da-482a-b8cf-872eb6b7adf7" />
+
+
+This creates a category and will add all portlets tagged with that category to the application category immediately.  Note that you may need to refresh your browser to see the new category in case the page is cached.
