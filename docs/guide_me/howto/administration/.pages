@@ -8,6 +8,7 @@ nav:
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
+    - DenyAdminConsoleIngressk8.md
     - DetermineWebsphereAppServer.md
     - PreventApplicationStartUp.md
     - ExpediteAsyncDeletes.md
