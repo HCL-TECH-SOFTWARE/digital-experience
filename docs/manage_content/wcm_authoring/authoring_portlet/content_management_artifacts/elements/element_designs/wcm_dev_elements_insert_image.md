@@ -1,21 +1,17 @@
 ---
-title: Inserting an Image
+title: Inserting an image into elements
 ---
-# Inserting an Image in an Element
 
 You can insert images into elements that use HTML or rich text fields
 
-1.  To insert an image, click:
+1. To insert an image, click:
 
-    1.  the ![Insert Image](../../../../../../images/insertImage.jpg) icon in a rich text field.
+    1. the ![Insert Image](../../../../../../images/insertImage.jpg) icon in a rich text field.
+    2. the **Insert an Image** button in an HTML field.
 
-    2.  the **Insert an Image** button in an HTML field.
-
-2.  To insert an image that is stored on your file system, click **Browse** under **Upload an image file** and select an image to upload.
-
-3.  To insert an image component, click **Browse** under **Insert a library image** and select an image component and then click **Close**.
-
-4.  You can set the following image properties under **Image Attributes**:
+2. To insert an image that is stored on your file system, click **Browse** under **Upload an image file** and select an image to upload.
+3. To insert an image component, click **Browse** under **Insert a library image** and select an image component and then click **Close**.
+4. You can set the following image properties under **Image Attributes**:
 
     |Property|Description|
     |--------|-----------|
@@ -24,14 +20,12 @@ You can insert images into elements that use HTML or rich text fields
     |**Height**|Set the height of the image (in pixels). Optional.|
     |**Alternate text**|Enter the name of the image to display if the browser cannot display the image.|
 
-5.  You can also define different renditions for different media types:
+5. You can also define different renditions for different media types:
 
-    1.  Open the rendition section in the form.
+    1. Open the rendition section in the form.
+    2. To upload a version of the image that is sized for your purpose, select the rendition, such as **desktop** and click **Replace Rendition**. You can choose from **desktop**, **tablet**, **smartphone**, or **none**.
 
-    2.  To upload a version of the image that is sized for your purpose, select the rendition, such as **desktop** and click **Replace Rendition**. You can choose from **desktop**, **tablet**, **smartphone**, or **none**.
-
-6.  Click **OK**.
-
+6. Click **OK**.
 
 **Inserting images into a rich text element using Firefox:**
 

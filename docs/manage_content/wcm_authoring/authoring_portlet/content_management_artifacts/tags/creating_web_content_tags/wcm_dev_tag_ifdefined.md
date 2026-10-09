@@ -18,9 +18,7 @@ See the format of an `IfDefined` tag:
 To create an `IfDefined` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **If Defined** as the tag type.
-
 3. Select the source item type and context:
 
     If not set, the item type is `content` and the context is `current`.
@@ -37,7 +35,6 @@ To create an `IfDefined` tag:
     **Portal mapping versus portal context:** The portal mapping context is determined by the web content associations that are assigned to each page. This context is used for rendering when users first access a page. The context of the page can change when users interact with the content on the page. Each web content viewer on a page can be configured with an explicit context that overrides the rendering page context. The context of the portlet can also change if it is configured to receive links. When users click a link within the viewer that is configured to broadcast its links, the page context is updated. This new context is maintained until users click another link, or until users start a new session. When users start a new session, the original page context is used.
 
 4. Click **Select authoring template** to select an appropriate authoring template. Select an element from the list of available elements. If this element is defined, the markup that is entered within the If Defined tag is rendered. This parameter is added to the tag as the `key=" "` parameter.
-
 5. Click **OK** to add the tag to your navigator design.
 
 ## HCLSoftware U learning materials

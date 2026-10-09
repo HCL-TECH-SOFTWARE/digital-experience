@@ -18,9 +18,7 @@ See the format of an `IfNotEditMode` tag:
 To create an `IfNotEditMode` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **If Not Edit Mode** as the tag type.
-
 3. Click **OK** to add the tag to your navigator design.
 
 Additional text, HTML, or tags must be added between the `[IfNotEditMode]` and `[/IfNotEditMode]` tags. The text and tags added here is what is rendered when a page is in view mode.

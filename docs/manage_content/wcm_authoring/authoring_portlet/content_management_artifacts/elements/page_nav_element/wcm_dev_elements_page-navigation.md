@@ -4,8 +4,8 @@ A page navigation element provides navigation controls that are used to browse t
 
 A page navigation element can generate two kinds of page navigation controls:
 
--   Shuttle controls provide navigation relative to the current page. This includes sequential linking to the previous or next page of results and quick linking to the first and last pages in the set.
--   Paging controls provide navigation according to the page number of the result set. A list of page number links is displayed, along with a continuation link for access to the previous or next set of page numbers, if all page numbers are not displayed.
+- Shuttle controls provide navigation relative to the current page. This includes sequential linking to the previous or next page of results and quick linking to the first and last pages in the set.
+- Paging controls provide navigation according to the page number of the result set. A list of page number links is displayed, along with a continuation link for access to the previous or next set of page numbers, if all page numbers are not displayed.
 
 A page navigation element can combine both shuttle and paging controls, as in the following Navigation example.
 
@@ -24,5 +24,3 @@ A page navigation element can combine both shuttle and paging controls, as in th
 ## Creating a page navigation element
 
 You can only use a page navigation element by creating a page navigation component. You cannot add a page navigation element to authoring templates, site areas, or content items.
-
-

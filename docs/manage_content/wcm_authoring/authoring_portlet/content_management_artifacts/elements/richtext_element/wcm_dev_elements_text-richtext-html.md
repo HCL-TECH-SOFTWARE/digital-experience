@@ -24,7 +24,7 @@ A rich text element is similar to the HTML element except that it includes a ric
 
 You must use rich text elements sparingly in authoring templates, site areas, and content items as adding multiple rich text elements to these items can reduce authoring performance.
 
-The rich text editors that are used by Web Content Manager are supplied by other vendors. For information on using the rich text editor, see the user documentation that is supplied by the specific rich text editor vendor.
+The rich text editors that are used by Web Content Manager (WCM) are supplied by other vendors. For information on using the rich text editor, see the user documentation that is supplied by the specific rich text editor vendor.
 
 ## How to use web content tags in rich text and HTML elements
 
@@ -34,7 +34,5 @@ The rich text editors that are used by Web Content Manager are supplied by other
 |HTML elements|Any combination of web content tags can be used in HTML elements with the following exceptions:<br><br>1.  You cannot use single quotation marks around attribute values.<br>-   `[Component name='example']`<br>-   `[Component name='example' start='<a href="' end=' ">link</a>']`<br>-   `[Component name='example' start='<img src="' end=' "/>']`<br>2.  You cannot use double quotation marks inside attribute values<br>-   `[Component name="example" start="<a href="" end="">link</a>"]`<br>-   `[Component name="example" start="<img src="" end=""/>"]`|
 |Rich text elements|Basic Web Content Manager tags can be used in rich text elements. For example, the following tags can be used in Rich Text elements:<br><br>-   `[component name="test"]`<br>-   `[element type="content" context="current" key="body"]`<br><br>The following tag formats are invalid:<br><br>1.  The use of single quotation marks around attribute values.<br>-   `[Component name='example']`<br>-   `[Component name='example' start='<a href="' end=' ">link</a>']`<br>-   `[Component name='example' start='<img src="' end=' "/>']`<br>2.  The use of double quotation marks inside attribute values.<br>-   `[Component name="example" start="<a href="" end="">link</a>"]`<br>-   `[Component name="example" start="<img src="" end=""/>"]`<br>3.  Embedding tags inside other HTML tags.<br>-   `<a href='[Component name="example"]'>link</a>`<br>-   `<img src='[Component name="example"]'/>`|
 
-
-???+ info "Related information" 
+???+ info "Related information"
     -   [Setting service configuration properties](../../../../../../deployment/manage/config_portal_behavior/service_config_properties/index.md)
-

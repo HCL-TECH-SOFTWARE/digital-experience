@@ -4,9 +4,9 @@ A personalization element stores a reference to a personalization rule or conten
 
 A personalization element can:
 
--   Display personalization content within a presentation template or element design.
--   Display a link to personalization content within a presentation template or element design.
--   Display attributes of personalization content within a presentation template or element design.
+- Display personalization content within a presentation template or element design.
+- Display a link to personalization content within a presentation template or element design.
+- Display attributes of personalization content within a presentation template or element design.
 
 ## Creating a personalization element
 
@@ -28,5 +28,3 @@ If you delete a Personalization Rule or content Spot that is referenced in a Per
 ## Caching Personalization components
 
 Web content caching can sometimes be used with Personalization components but depends on the conditions set in the personalization rule, or the resources that are used to determine the rule results. Cache testing is required to determine whether the content returned by your personalization component can be cached by using web content caching.
-
-
