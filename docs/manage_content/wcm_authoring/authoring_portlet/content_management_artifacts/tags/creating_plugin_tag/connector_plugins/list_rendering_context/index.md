@@ -2,7 +2,7 @@
 
 Learn how to create a list-rendering context.
 
-In Digital Data Connector \(DDC\) for HCL Digital Experience, the list-rendering context represents an aggregated data object. DDC plug-ins can use the data object to determine which data to load and how to filter and sort the data. You can create a list-rendering context by adding a `[Plugin:ListRenderingContext]` tag to your Web Content Manager designs. Parts of the context content are automatically completed by the DDC framework. These parts include the current portlet request and response, and the public Digital Data Connector render parameters. Other parts must be specified through parameters of the `Plugin:ListRenderingContext` tag. The general syntax of the tag is as follows:
+In Digital Data Connector \(DDC\) for HCL Digital Experience (DX), the list-rendering context represents an aggregated data object. DDC plug-ins can use the data object to determine which data to load and how to filter and sort the data. You can create a list-rendering context by adding a `[Plugin:ListRenderingContext]` tag to your Web Content Manager (WCM) designs. Parts of the context content are automatically completed by the DDC framework. These parts include the current portlet request and response, and the public Digital Data Connector render parameters. Other parts must be specified through parameters of the `Plugin:ListRenderingContext` tag. The general syntax of the tag is as follows:
 
 ```
 [Plugin:ListRenderingContext action=”” extension-id=”” profile=””attribute=”” 
@@ -11,78 +11,77 @@ In Digital Data Connector \(DDC\) for HCL Digital Experience, the list-rendering
 
 The parameters are described in the following list:
 
--   **action**
+- **action**
 
     This parameter is mandatory. Use this parameter to identify the action that you want to be run. Supported values are as follows:
 
-    -   **set**
+    - **set**
 
         Use this value to establish a new list-rendering context. You can nest list-rendering contexts. If you specify this value, you need to also set the extension-id parameter.
 
-    -   **remove**
+    - **remove**
 
         Use this value to remove the current list-rendering context. If this list-rendering context was a nested list-rendering context, the outer list-rendering context becomes active again.
 
-    -   **getListProperty**
+    - **getListProperty**
 
         Use this value to extract properties of the bean list that was loaded for the current list-rendering context.
 
-    -   **getAttribute**
+    - **getAttribute**
 
         Use this value to extract individual attributes that you specified when you created the current list-rendering context.
 
-    -   **getFilter**
+    - **getFilter**
 
         Use this value to retrieve the value of a specific DDC filter public render parameter.
 
-    -   **reloadProfiles**
+    - **reloadProfiles**
 
         Use this value to clear all DDC related caches and reload all list-rendering profiles. This parameter can be useful in development environments for activating modifications in deployed list-rendering profiles.
 
-    -   **clearCaches**
+    - **clearCaches**
 
         Use this value to clear all DDC related caches. This parameter can be useful in development environments for analyzing caching issues.
 
-    -   **exceptionOccured**
+    - **exceptionOccured**
 
         Use this value to check whether an exception occurred during bean list computation. The Web Content Viewer portlet renders the content of the `ListRenderingContext` plug-in tag with this action only if an exception occurred when the current list-rendering context was processed.
 
-    -   **getExceptionMessage**
+    - **getExceptionMessage**
 
         Use this value to retrieve the message of an exception that occurred during bean list computation.
 
--   **extension-id**
+- **extension-id**
 
     Use this parameter to identify the specific DDC plug-in that you want to handle this context. This parameter is mandatory with the setting action="set". For addressing the generic XML DDC plug-in, specify the value `ibm.portal.ddc.xml`.
 
--   **profile**
+- **profile**
 
     Use this parameter to identify the list-rendering profile that you want to be used. This parameter becomes effective only in combination with the setting action="set". This parameter is mandatory when you address the generic XML DDC plug-in in the extension-id parameter.
 
--   **attribute**
+- **attribute**
 
     Use this parameter as a multivalued attribute that you can use to add extra information to the list-rendering context. This parameter is relevant for the setting action="set" only. The generic XML DDC plug-in supports a set of attributes. For details about these attributes, read *The generic XML Digital Data Connector plug-in*.
 
--   **key**
+- **key**
 
     Use this parameter to identify a specific attribute or list property that you want to be written to the markup. This parameter is relevant for the settings action="getListProperty" and action="getAttribute" only.
 
--   **format**
+- **format**
 
     Use this parameter to specify the formatting that you want to be used when the plug-in writes list properties of type `Date` to the markup. This parameter is relevant for the settingaction="getListProperty" only.
 
--   **separator**
+- **separator**
 
     Use this parameter to specify the markup fragment that you want to be written to the markup between the elements of a multivalued list property. The default value is a comma \(,\). This parameter is relevant for the settingaction="getListProperty" only.
 
--   **escape**
+- **escape**
 
     Use this parameter to specify the escaping that you want to apply for markup that is generated by the plug-in. Supported values are as follows: xml, json, javascript, and none. The default value is none. This parameter is relevant for action="getListProperty", action="getAttribute", action="getFilter", and action="getExceptionMessage" only.
 
--   **prefix**
+- **prefix**
 
     Use this parameter to specify the prefix for the DDC filter public render parameter that you want to be retrieved. This parameter is relevant for action="getFilter" only.
-
 
 The following table shows which actions the parameters support and whether they are mandatory.
 
@@ -100,5 +99,4 @@ The following table shows which actions the parameters support and whether they 
 For examples about how to set the list-rendering context, read the following topics.
 
 ???+ info "Related information"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../../extend_dx/ddc/index.md)
-
+    [Digital Data Connector \(DDC\) for HCL Digital Experience](../../../../../../../../extend_dx/ddc/index.md)

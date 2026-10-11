@@ -6,5 +6,3 @@ If an item is participating in a workflow, the creator is given manager access t
 |--------------|--------------------|---------------------|
 |**User****Contributor** <br> **Editor** <br> **Manager** <br> **Reviewer** <br>**Draft Creator**|-   Administrator defined <br>-   Workflow defined |-   Administrator defined <br>-   Workflow defined|
 |**Administrator**|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|If you are assigned the administrator role to a library, you automatically inherit all administration access down to the item-level. It cannot be turned off.|
-
-

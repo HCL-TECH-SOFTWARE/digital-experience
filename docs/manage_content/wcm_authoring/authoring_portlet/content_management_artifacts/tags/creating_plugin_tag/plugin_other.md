@@ -3,20 +3,17 @@ id: plugin_other
 title: Other plug-ins
 ---
 
-
-
-
 This topic contains information for other plug-ins.
 
--   **Get Date Plug-in**
+- **Get Date Plug-in**
 
-    -   Writes the current date with a given date pattern.
-    -   The format is `[plugin:getDate format='dd/MM/yyyy']`.
-    
--   **The Script Portlet Namespace Plugin**
+    - Writes the current date with a given date pattern.
+    - The format is `[plugin:getDate format='dd/MM/yyyy']`.
 
-    -   Renders the namespace for the portlet that the plugin is used in.
-    -   The format is `[Plugin:ScriptPortletNamespace]`.
+- **The Script Portlet Namespace Plugin**
+
+    - Renders the namespace for the portlet that the plugin is used in.
+    - The format is `[Plugin:ScriptPortletNamespace]`.
 
 ## HCLSoftware U learning materials
 

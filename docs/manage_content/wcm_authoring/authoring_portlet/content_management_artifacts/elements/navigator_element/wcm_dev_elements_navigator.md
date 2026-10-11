@@ -15,5 +15,3 @@ Navigators display links to different site areas in a website. As such, each sit
 ## Creating a navigator element
 
 You can only use a navigator element by creating a navigator component. You cannot add a navigator element to authoring templates, site areas, or content items.
-
-

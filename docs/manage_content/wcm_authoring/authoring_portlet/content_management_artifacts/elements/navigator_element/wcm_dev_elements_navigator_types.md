@@ -41,4 +41,3 @@ To create a site map, the navigator is configured as follows:
 |**Expand navigator to display current site area**|No|
 |**Expand current navigator branch one level**|No|
 |**Highlight current site area or content using final navigator result design**|No|
-

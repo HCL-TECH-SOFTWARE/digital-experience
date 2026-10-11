@@ -12,5 +12,3 @@ There are two element design options available: one is rendered when the logged 
 ## Creating a taxonomy element
 
 You can use a taxonomy element only by creating a taxonomy component. You cannot add a taxonomy element to authoring templates, site areas, or content items.
-
-
