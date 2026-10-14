@@ -6,7 +6,7 @@
 
 ## Introduction
 
-You can dynamically retrieve content and generate targeted URLs in HCL Digital Experience (DX) based on the locale of an incoming request. Utilizing Web Content Manager (WCM) APIs allows custom code to inspect request properties and route users to localized site areas and content components automatically. This article provides a WCM API sample code to generate a URL based on the locale of the request. 
+You can dynamically retrieve content and generate targeted URLs in HCL Digital Experience (DX) based on the locale of an incoming request. Utilizing Web Content Manager (WCM) APIs allows custom code to inspect request properties and route users to localized site areas and content components automatically. This article provides a WCM API sample code to generate a URL based on the locale of the request.  
 
 ???+ info "Disclaimer of warranties"
     The following code is sample code created by HCL Corporation. This sample code is provided to you solely for the purpose of assisting you in the development of your applications. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if they have been advised of the possibility of such damages.
@@ -80,13 +80,13 @@ You can dynamically retrieve content and generate targeted URLs in HCL Digital E
 4. Deploy and restart the web application module.
 5. Trigger the custom Java plugin through an incoming web request using one of the following methods:
     - Navigate to the URL endpoint with your browser's language set to English or French:
-    
+
         ```plaintext
         https://<your_portal_host>:<port>/wps/PA_MyCustomPlugin/LocaleUrlServlet
         ```
 
     - Execute `curl` command to simulate localized requests:
-    
+
         ```bash
         curl -H "Accept-Language: fr-FR,fr;q=0.9" https://<your_portal_host>:<port>/wps/PA_MyCustomPlugin/LocaleUrlServlet
         ```
