@@ -1,8 +1,8 @@
 # Image element
 
-You store an image in an image element.
+You store an image in an Image element.
 
-When you store an image in an image element:
+When you store an image in an Image element:
 
 - You can reference the image anywhere in your site regardless of the original file location or URL.
 - The image is automatically transferred to other servers during syndication.

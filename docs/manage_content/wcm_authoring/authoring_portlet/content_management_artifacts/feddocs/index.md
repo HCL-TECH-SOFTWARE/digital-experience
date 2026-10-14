@@ -10,7 +10,7 @@ The federated documents feature can acquire metadata from remote systems that su
 
 - **[Creating a federated documents selection rule](wcm_dev_feddocs_createrule.md)**  
 Create a selection rule that selects metadata of documents that are contained in a specific folder of a remote content management system or document repository.
-- **[How to use a federated documents rule in a personalization component](../feddocs/howtouse_feddocs/index.md)**  
+- **[Using a federated documents rule in a personalization component](../feddocs/howtouse_feddocs/index.md)**  
 To access the information from a federated documents rule in your web content system, create a personalization component, associate it with the rule, and specify the design for displaying document information that is retrieved by the rule.
 
 ???+ info "Related information"

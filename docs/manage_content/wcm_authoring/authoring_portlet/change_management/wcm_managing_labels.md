@@ -1,4 +1,4 @@
-# Labeling a set of items in a library
+# Managing labels
 
 You can apply a label to the most recent versions of all items in a library. This action does not create a version, it updates the label of the most recent version. If you created a label, you can later restore items in the library based on that label.
 

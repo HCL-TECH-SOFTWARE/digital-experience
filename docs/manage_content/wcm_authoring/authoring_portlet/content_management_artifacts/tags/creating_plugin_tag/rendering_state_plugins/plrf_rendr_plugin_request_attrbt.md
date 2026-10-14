@@ -1,4 +1,4 @@
-# The request attribute plug-in
+# Request attribute plug-in
 
 Use the `RequestAttribute` rendering plug-in to retrieve, set, or remove attributes on the underlying request.
 

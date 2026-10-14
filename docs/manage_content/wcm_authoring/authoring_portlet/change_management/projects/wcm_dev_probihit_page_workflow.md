@@ -51,13 +51,13 @@ You can set a workflow only on draft items, you must create the template as a dr
         ![](../../../../../images/Workflow_publish2.png)
 
     3. Click on the menu bar and select **Publish**.
-        
+
         ![](../../../../../images/Workflow_publish3.png)
 
         The newly crated page template is now in publishing state.
 
         ![](../../../../../images/Workflow_publish4.png)
-    
+
 After publishing the new page template, if a user tries to use the template to create a new page outside a project, the system blocks the page creation and shows a notification saying that the template has an assigned workflow.
 
 ![](../../../../../images/Workflow_Output.png)

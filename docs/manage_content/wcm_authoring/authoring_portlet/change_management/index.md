@@ -15,14 +15,14 @@ Additionally, developers may be involved to extend workflow capabilities, which 
 ## More Information
 
 - [Projects](projects/index.md)
-- [Workflow](workflow/index.md)
-- [Working with Drafts](drafts.md)
+- [Workflow and change management](workflow/index.md)
+- [Drafting an item](drafts.md)
 - [Managing published items](published_items.md)
-- [Managing expiry](expired_items.md)
+- [Managing expired items](expired_items.md)
 - [Deleting items](deleting.md)
 - [Locked and draft items](item_locks.md)
-- [Item references](references.md)
-- [Versions](versions.md)
+- [Managing item references](references.md)
+- [Managing item versions](versions.md)
 - [Restoring an item](versions_restore.md)
 - [Restoring items in a library](wcm_managing_versions_library.md) - You can restore a set of items within a library that either have the same label or were versioned at, or before, a specified date and time.
 - [Managing labels](wcm_managing_labels.md) - You can apply a label to the most recent versions of all items in a library. This action does not create a version, it updates the label of the most recent version. If you created a label, you can later restore items in the library based on that label.

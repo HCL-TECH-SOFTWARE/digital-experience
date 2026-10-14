@@ -1,4 +1,4 @@
-# The render parameter plug-in
+# Render parameter plug-in
 
 Use the `RenderParam` rendering plug-in to access public and private render parameters from your web content.
 

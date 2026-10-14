@@ -3,11 +3,11 @@ id: wcm_dev_elements_search_props
 title: Creating a search results design
 ---
 
-The search element is used to define the design that is used to display search results.
+The Search element is used to define the design that is used to display search results.
 
 1. Select a search service.
 2. Select a search collection.
-3. Specify paging options for the search element.
+3. Specify paging options for the Search element.
 
     1. Enter the number of items that are displayed in each navigator page.
     2. Enter the number of the page to display first.

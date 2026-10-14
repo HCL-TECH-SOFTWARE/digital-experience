@@ -1,4 +1,4 @@
-# The render URL plug-in
+# Render URL plug-in
 
 Use the `RenderURL` rendering plug-in to create URLs that set or remove render parameters.
 
