@@ -13,6 +13,8 @@ The dashboard includes the following widgets:
 - **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
 - **My Sites:** Displays managed sites in a card layout with thumbnails, status indicators, and direct navigation.
 - **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site and includes quick search.
+- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on their publish and expiry dates.
+- **Search Crawlers:** Displays the status of Search V2 crawlers (requires Search V2).
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
@@ -62,6 +64,18 @@ Each metric includes customizable time filters ranging from **Today** to **Withi
 !!! note
     - For **Expiring**, **Within 7 days** includes the current day and the next six days.
     - For **Published** and **Drafts**, **Within 7 days** includes the current day and the previous six days.
+
+## Calendar
+
+Use the **Calendar** widget to see which content items are scheduled to publish or expire, laid out as a monthly or weekly grid.
+
+![Calendar](../../assets/HCL_Practitioner_dashboard_Calendar.png)
+
+- **Grid pane:** Browse by **Month** or **Week** (**Week** is the default view). Use **Today**, the month/year picker, and the previous/next arrows to move through the calendar. Each day shows color-coded status for scheduled items.
+- **Agenda pane:** Select a day in the grid, or use the previous/next day controls, to view a time-ordered list of items for that day. Select a content item and click eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+
+!!! note
+    The status shown on a calendar chip is calculated by comparing the item's publish date and expiry date to the current date. It does not reflect the item's actual workflow or content status. For example, an item can still show a Publishing or Published based on its publish date even if it has not actually completed the publish workflow. If an item has both a publish date and an expiry date that fall within the visible range, it appears as two separate chips, one for each date, rather than a single combined status.
 
 ## My Projects
 
@@ -116,6 +130,18 @@ The **Results** pane displays content items that match your selected tags.
 - View content items matching selected tags, including **Title**, **Last Modified**, and **Tags and keywords**.
 - Select **any** or **all** to filter content matching any or all selected tags.
 - Select a content title to open its source location.
+
+## Search Crawlers
+
+Use the **Search Crawlers** widget to check the status of your Search V2 crawlers.
+
+![Calendar](../../assets/HCL_Practitioner_dashboard_Search_Crawlers.png)
+
+- View the **Crawler name**, **Last crawled** date, and **Status** for each crawler, sorted by name.
+- Use the search field in the widget header to filter the list by crawler name.
+
+!!! note
+    This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
 
 ## My Sites
 
@@ -175,6 +201,8 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
 | `MY_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Sites** widget, which displays managed sites in a grid view that includes thumbnails and status indicators. |
 | `RECENT_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recently Modified Pages** widget, which displays a hierarchical tree view of pages and site areas within the most recently modified site. |
+| `CALENDAR_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Calendar** widget, which displays a monthly or weekly grid and daily agenda of contents based on their publish and expiry dates. |
+| `SEARCH_CRAWLERS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Search Crawlers** widget, which displays the status of Search V2 crawlers. **Note:** This widget requires Search V2 to be enabled. |
 
 ## Configuring main portals
 
