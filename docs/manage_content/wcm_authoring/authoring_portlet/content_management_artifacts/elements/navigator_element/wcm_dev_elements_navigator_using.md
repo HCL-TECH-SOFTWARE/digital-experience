@@ -1,10 +1,10 @@
-# Defining navigator element design options
+# Defining Navigator element design options
 
-You use the element design options of a navigator element to determine how to display the results a navigator.
+You use the element design options of a Navigator element to determine how to display the results a navigator.
 
 1. Select **Expand current navigator branch one level** to display the content items and site areas one-level under the current site area in the navigator.
 2. Select **Expand navigator to display current site area** to display all the parent site areas from the start site area down to the current site area.
-3. Specify paging options for the navigator element.
+3. Specify paging options for the Navigator element.
 
     1. Enter the number of items that are displayed in each navigator page.
     2. Enter the number of the page to display first.

@@ -9,7 +9,7 @@ To create a project, open the applications menu and go to **Content > Web Conten
 
 1. [Entering identification information](../../../content_management_artifacts/common/items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
-2. [Manage items in a project](wcm_dev_projects_items.md)  
+2. [Managing items in a project](wcm_dev_projects_items.md)  
 You can both create new items or add existing items to a project and then edit them as required.
 3. [Defining project approval settings](wcm_dev_projects_form_approval.md)  
 If you want a project to be reviewed before it is published, you must select at least one approver in the approval section.

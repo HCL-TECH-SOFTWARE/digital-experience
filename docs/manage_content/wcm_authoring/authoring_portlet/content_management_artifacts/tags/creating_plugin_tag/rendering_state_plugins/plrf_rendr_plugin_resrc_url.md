@@ -1,4 +1,4 @@
-# The resource URL plug-in
+# Resource URL plug-in
 
 Use the `ResourceURL` rendering plug-in to add query parameters to URLs and to generate URLs to resources that you want to serve through the HCL Digital Experience (DX) Ajax proxy.
 

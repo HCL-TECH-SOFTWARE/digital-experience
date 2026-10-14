@@ -1,4 +1,4 @@
-# Define Roles in a Library
+# Defining roles within a library
 
 You can define the access of a user or group for a library to determine who has access to a library, and to define access within the authoring portlet.
 

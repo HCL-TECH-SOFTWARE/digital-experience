@@ -1,4 +1,4 @@
-# The session attribute plug-in
+# Session attribute plug-in
 
 Use the `SessionAttribute` rendering plug-in to retrieve, set, or remove attributes from the portlet or servlet session. When you access the portlet session, you can also specify the scope of the session attributes as either application or portlet scope.
 
