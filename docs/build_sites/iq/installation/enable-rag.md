@@ -55,7 +55,7 @@ environment:
 ```
 
 !!! warning "Embedding and vector database parameters are locked after initial startup"
-    Changing `VECTOR_DB_BACKEND`, `EMBEDDING_DIMENSIONS`, or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
+    Changing `EMBEDDING_DIMENSIONS` or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 #### Embedding model compatibility
 

@@ -57,7 +57,6 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 - If any of the following environment variables no longer match the configuration saved in the `rag_embedding_metadata` table after initial startup, IQ enters graceful degradation mode and silently disables cross-session memory while continuing to serve requests.
 
     - `EMBEDDING_DIMENSIONS`
-    - `VECTOR_DB_BACKEND`
     - `USE_MULTILINGUAL_EMBEDDINGS`
     - `RAG_CHUNK_SIZE`
     - `RAG_CHUNK_OVERLAP`
