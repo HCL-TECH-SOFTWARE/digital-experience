@@ -44,6 +44,7 @@ Before you begin, your environment should have `curl` and `perl` installed. To c
 To retrieve the UUID of a WCM object by name, perform the following steps:
 
 1. Open a terminal window.
+
 2. Define the following required environment variables in your terminal session according to your environment settings:
 
     ```bash
@@ -54,14 +55,15 @@ To retrieve the UUID of a WCM object by name, perform the following steps:
     HOSTNAME=$(hostname -f)
     PORT=$(grep ^WpsHostPort $WP_PROFILE_HOME/ConfigEngine/properties/wkplc.properties | cut -d= -f2)
     ```
+
     - `OBJECT_NAME`: The name of the target WCM object for which you want to retrieve the UUID (for example, "Article").
     - `WPS_ADMIN_USR`: The administrator username.
     - `WPS_ADMIN_PWD`: The administrator password.
     - `WP_PROFILE_HOME`: The file path to your HCL DX profile directory.
-    - `HOSTNAME`: The fully qualified domain name (FQDN) of your host server.
-    - `PORT`: The host port number from your configuration properties file.
+    - `HOSTNAME`: The fully qualified domain name (FQDN) of your DX server.
+    - `PORT`: The host port number of the DX server specified in the wkplc.properties file.
 
-4. Run the `curl` command to query the WCM REST API and return the UUID, type, and path of the specified object:
+3. Run the `curl` command to query the WCM REST API and return the UUID, type, and path of the specified object:
 
     ```bash
     curl -L -u $WPS_ADMIN_USR:$WPS_ADMIN_PWD -G "http://$HOSTNAME:$PORT/wps/mycontenthandler/wcmrest/query?options=item-path" --data-urlencode "title=$OBJECT_NAME" 2>/dev/null | grep -v 'query?options' | egrep 'wcm:type|<id>|wcm:title xml' | perl -pe 's| xml:lang="en"||g ; s|        ||g' | sed 's|<id>|\n<id>|g' | perl -pe 's|</wcm:title>\R\z|/|g' | perl -pe 's|^<wcm:title>|Path: |g ; s|<wcm:title>||g ; s|/$|\n|g ; s|</[a-z:]*>||g ; s|<id>wcmrest:|UUID: |g ; s|<wcm:type>|Type: |g' 
