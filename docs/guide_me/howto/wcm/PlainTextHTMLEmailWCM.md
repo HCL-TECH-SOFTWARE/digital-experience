@@ -36,7 +36,7 @@ To send plain text or HTML encoded emails, perform the following steps:
         </BODY>
     </HTML>
     ```
-    
+
     This code block creates an input form that prompts users for their name, email address, and message content, and then submits the input data to `wcmmail.jsp`.
 
 6. Select **Save and Close**.
@@ -83,7 +83,7 @@ To send plain text or HTML encoded emails, perform the following steps:
     </HTML>
     //END JSP CONTENTS
     ```
-    
+
     This code block imports JavaMail classes, extracts input parameters from the HTML form request, configures SMTP properties, constructs an HTML email message, and sends the message using the JVM JavaMail Transport API.
 
 3. Place the file in the WCM web application JSP directory similar to the following:
