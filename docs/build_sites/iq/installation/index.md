@@ -48,9 +48,11 @@ This section details the steps for deploying the IQ backend servers (IQ Integrat
 - **[Configuring the MCP Server](configuring-mcp.md)**  
 This section describes the configuration model, parameter properties, endpoint behavior, and security constraints required to manage tool execution and data exchange patterns for the MCP Server.
 - **[Preparing the database](prepare-database.md)**  
-This section provides instructions for setting up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and choosing between internally or externally managed database options.
+This section describes how to set up an optional PostgreSQL database to save chat histories and user sessions. It covers creating database instances, configuring Kubernetes security secrets, and selecting internal or external database options.
 - **[Preparing LiteLLM access](prepare-litellm-access.md)**  
 This section describes how to configure the IQ Integrator to authenticate with your deployed LiteLLM proxy server using a static API key.  
+- **[Configuring cross-session memory](enable-rag.md)**  
+This section describes how to enable and configure cross-session memory, an optional feature of IQ that retrieves relevant context from past conversations and injects it into the current session.
 - **[Validating the deployment](validation.md)**  
 This section provides instructions for verifying that your deployment is healthy and operational at any stage of the installation process.
 - **[Backing up and restoring data](backup-restore.md)**  
