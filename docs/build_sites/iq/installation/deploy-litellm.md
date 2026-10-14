@@ -4,11 +4,18 @@ This page provides instructions for deploying LiteLLM as a prerequisite service 
 
 Before you can [install the IQ backend services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md), you must configure the following LiteLLM proxy models:
 
-- `iq-general-purpose`: A premium model (such as Claude 4.6 Sonnet or 4.8 Opus) for general inquiries and tool execution
-- `iq-summary`: A cost-efficient model (such as Claude 4.5 Haiku) for conversation summarization
+| Alias | Description |
+| ----- | ----------- |
+| `iq-general-purpose` | A premium model (such as Claude Sonnet or Opus) for general inquiries and tool execution. |
+| `iq-summary` | A cost-efficient model (such as Claude Haiku) for conversation summarization. |
 
-!!! note
-    IQ transmits conversation history to LiteLLM to enable proper context and functionality. User authentication credentials (cookies) remain within your Kubernetes cluster and are never transmitted to external LLM services. You control the LiteLLM proxy server and determine where conversation data is routed.
+!!! note "Tested models"
+    IQ is tested and validated with the following models:
+
+    - Claude Sonnet 4.6 and Claude Sonnet 5.5 for `iq-general-purpose`
+    - Claude Haiku 4.5 for `iq-summary`
+
+    While alternative LLM models may work, compatibility is not guaranteed. Due to the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. Thoroughly test any alternative configuration before production use. Update the `proxy_config.model_list` in your `litellm-values.yaml` file with the appropriate `model` identifier and `api_key` environment variable for your provider. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax details for each provider.
 
 ## Prerequisites
 
@@ -26,7 +33,10 @@ If your IQ deployment requires persistence, ensure:
 
 ## Deploying LiteLLM in-cluster
 
-LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic for IQ. This standard architecture routes requests through an internal gateway, maintaining prompt data within the cluster perimeter and securing API credentials through Kubernetes secrets.
+LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic for IQ. This standard architecture routes requests through an internal gateway, maintaining prompt data within the cluster perimeter and securing API credentials through Kubernetes secrets. 
+
+!!! note
+    IQ transmits conversation history to LiteLLM to enable proper context and functionality. User authentication credentials (cookies) remain within your Kubernetes cluster and are never transmitted to external LLM services. You control the LiteLLM proxy server and determine where conversation data is routed.
 
 1. Add the LiteLLM helm repository to your environment:
 
@@ -63,10 +73,7 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
               -n dxns
             ```
 
-        3. Create the LLM provider credentials secret. For example:
-
-            !!! tip "Consolidated secrets"
-                To reduce the number of secrets to manage, combine the provider credentials and master key into a single `litellm-env` secret. 
+        3. Create the LLM provider credentials secret. To reduce the number of secrets to manage, combine the provider credentials and master key into a single `litellm-env` secret. For example:
 
             - AWS Bedrock:
 
@@ -111,10 +118,7 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
               -n dxns
             ```
 
-        3. Create the LLM provider credentials secret. For example:
-
-            !!! tip "Consolidated secrets"
-                To reduce the number of secrets to manage, combine the provider credentials and master key into a single `litellm-env` secret. 
+        3. Create the LLM provider credentials secret. To reduce the number of secrets to manage, combine the provider credentials and master key into a single `litellm-env` secret. For example:
 
             - AWS Bedrock:
 
@@ -443,89 +447,75 @@ LiteLLM deploys as a container in the DX Kubernetes namespace to manage traffic 
 
         Expected response: A JSON object with a `choices` array containing the model's response.
 
-!!! note "Tested LLM models"
-    IQ has been extensively tested and validated with:
-    
-    - **General purpose (iq-general-purpose)**: Claude Sonnet 4.6, Claude Sonnet 5.5
-    - **Summarization (iq-summary)**: Claude Haiku 4.5
-    
-    Alternative LLM models may also be compatible. Update the `proxy_config.model_list` in your `litellm-values.yaml` with the appropriate `model` identifier and `api_key` environment variable for your chosen provider. Refer to [LiteLLM Proxy - Model Management](https://docs.litellm.ai/docs/proxy/model_management){target="_blank"} for syntax details for each provider.
-
-!!! warning "OpenAI reasoning models not supported"
-    Do not use OpenAI reasoning model variants (GPT-5.x with decimal versions such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`). These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors: `Function tools with reasoning_effort are not supported`.
-
 ## Registering embedding models for cross-session memory
 
-If you plan to use [cross-session memory (RAG)](enable-rag.md), you must register embedding model aliases in addition to your chat models. IQ uses these fixed aliases to generate and store vector embeddings for past conversations.
+To use [cross-session memory](enable-rag.md), you must register embedding model aliases in addition to your chat models. IQ uses these fixed aliases to generate and store vector embeddings for past conversations.
 
-| Alias | Purpose | When used |
-|---|---|---|
-| `iq-multilingual-embed` | Primary embedding model | Default — used when `USE_MULTILINGUAL_EMBEDDINGS=true` (the default) |
-| `iq-embed` | Alternative embedding model | Used when `USE_MULTILINGUAL_EMBEDDINGS=false` |
+| Alias | Description |
+| ----- | ----------- |
+| `iq-multilingual-embed` | The default embedding model. Used when `USE_MULTILINGUAL_EMBEDDINGS` is set to `true`. |
+| `iq-embed` | The alternative embedding model. Used when `USE_MULTILINGUAL_EMBEDDINGS` is set to `false`. |
 
 The alias determines which registered model IQ calls. IQ does not verify whether the model bound to each alias is actually multilingual, so you can bind either alias to any embedding model available from your provider.
 
-Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock Cohere embeddings (1024 dimensions):
+1. Register both aliases by adding them to the `proxy_config.model_list` in your `litellm-values.yaml` file. The following example uses AWS Bedrock Cohere embeddings:
 
-```yaml
-proxy_config:
-  model_list:
-    # ... existing iq-general-purpose and iq-summary entries ...
+    ```yaml
+    proxy_config:
+      model_list:
+        # ... existing iq-general-purpose and iq-summary entries ...
 
-    # Multilingual embedding model (default path for RAG)
-    - model_name: iq-multilingual-embed
-      litellm_params:
-        model: "bedrock/us.cohere.embed-v4:0"
-        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
-        dimensions: 1024
+        # Multilingual embedding model (default path for RAG)
+        - model_name: iq-multilingual-embed
+          litellm_params:
+            model: "bedrock/us.cohere.embed-v4:0"
+            api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+            dimensions: 1024
 
-    # Fallback embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false)
-    - model_name: iq-embed
-      litellm_params:
-        model: "bedrock/cohere.embed-multilingual-v3"
-        api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
-        embedding_types: ["float"]
-        additional_drop_params: ["output_dimension", "dimensions"]
-```
-
-!!! important "Dimension alignment"
-    The `dimensions` value in the LiteLLM config must match the `EMBEDDING_DIMENSIONS` environment variable in your IQ configuration. If these values diverge after initial startup, IQ enters graceful degradation mode and disables cross-session memory while continuing to serve requests. The default `EMBEDDING_DIMENSIONS` value is `1024`.
-
-!!! warning "Compatibility with alternative LLM models"
-    IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. While alternative LLM models may work, compatibility is not guaranteed. Due to the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. Thoroughly test any alternative configuration before production use.
-
-!!! tip "Controlling rate limits for embedding models"
-    For production deployments at scale, you can configure rate limits per embedding model to prevent quota exhaustion or excessive costs from your embedding API provider. LiteLLM supports per-model rate limit configuration. Refer to [LiteLLM Proxy - Set Rate Limits](https://docs.litellm.ai/docs/proxy/users#set-rate-limits){target="_blank"} for detailed configuration instructions on limiting requests per user, model, or time window.
-
-After adding the embedding models, redeploy LiteLLM to apply the updated configuration:
-
-```bash
-helm upgrade --install litellm litellm/litellm \
-  -f litellm-values.yaml \
-  -n dxns
-```
-
-!!! tip "Customizing model aliases (Advanced)"
-    By default, IQ uses four fixed model aliases configured in LiteLLM:
-    - `iq-general-purpose` — Premium model for inquiries and tool execution
-    - `iq-summary` — Cost-efficient model for conversation summarization
-    - `iq-multilingual-embed` — Multilingual embedding model
-    - `iq-embed` — Alternative embedding model (fallback when `USE_MULTILINGUAL_EMBEDDINGS=false`)
-    
-    **Override these defaults** only if you want to experiment with many different models under different aliases without constantly deleting and recreating models under the same four alias names. To override, set these environment variables in your IQ server deployment:
-    
-    ```bash
-    LITELLM_GENERAL_PURPOSE_MODEL=my-custom-general-purpose
-    LITELLM_SUMMARY_MODEL=my-custom-summary
-    LITELLM_MULTILINGUAL_EMBED_MODEL=my-custom-multilingual-embed
-    LITELLM_TEXT_EMBED_MODEL=my-custom-embed
+        # Fallback embedding model (used when USE_MULTILINGUAL_EMBEDDINGS=false)
+        - model_name: iq-embed
+          litellm_params:
+            model: "bedrock/cohere.embed-multilingual-v3"
+            api_key: os.environ/AWS_BEARER_TOKEN_BEDROCK
+            embedding_types: ["float"]
+            additional_drop_params: ["output_dimension", "dimensions"]
     ```
-    
-    The model names you specify must already be registered in your LiteLLM `proxy_config.model_list`. For most deployments, the default aliases are sufficient and no customization is needed.
-    
-For complete details on all IQ environment variables and their defaults, see [IQ environment variables](environment-variables.md).
 
-### LiteLLM service endpoint
+    The `dimensions` value must match the `EMBEDDING_DIMENSIONS` environment variable in your IQ configuration. If these values diverge after initial startup, IQ enters graceful degradation mode and disables cross-session memory while continuing to serve requests. The default `EMBEDDING_DIMENSIONS` value is `1024`.
+
+2. Redeploy LiteLLM to apply the updated configuration:
+
+    ```bash
+    helm upgrade --install litellm litellm/litellm \
+      -f litellm-values.yaml \
+      -n dxns
+    ```
+
+### Configuring rate limits for embedding models
+
+For production deployments at scale, you can configure rate limits per embedding model to prevent quota exhaustion or excessive costs from your embedding API provider. LiteLLM supports per-model rate limit configuration. Refer to [LiteLLM Proxy - Set Rate Limits](https://docs.litellm.ai/docs/proxy/users#set-rate-limits){target="_blank"} for detailed configuration instructions on limiting requests per user, model, or time window.
+
+## Customizing model aliases
+
+By default, IQ uses four fixed model aliases configured in LiteLLM:
+
+- `iq-general-purpose`
+- `iq-summary`
+- `iq-multilingual-embed`
+- `iq-embed`
+
+Override these defaults only if you want to experiment with different models under different aliases without deleting and recreating models under the same four alias names. To override, set these environment variables in your IQ server deployment:
+
+```env
+LITELLM_GENERAL_PURPOSE_MODEL=my-custom-general-purpose
+LITELLM_SUMMARY_MODEL=my-custom-summary
+LITELLM_MULTILINGUAL_EMBED_MODEL=my-custom-multilingual-embed
+LITELLM_TEXT_EMBED_MODEL=my-custom-embed
+```
+
+The model names you specify must already be registered in your LiteLLM `proxy_config.model_list`. For most deployments, the default aliases are sufficient and no customization is needed. For a list of all IQ environment variables and their defaults, refer to [IQ environment variables](environment-variables.md).
+
+## LiteLLM service endpoint
 
 After LiteLLM is deployed and verified, LiteLLM is accessible within your cluster at:
 
