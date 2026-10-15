@@ -82,9 +82,9 @@ Monitor service health and backend dependency availability using these operation
 
 ### Enabling HTTPS for the MCP Server
 
-By default, the IQ Helm chart (`hcl-dx-iq`) enables HTTPS to secure connections between the MCP Server and the IQ Integrator. To deploy IQ with HTTPS enabled:
+HTTPS is disabled by default in the IQ Helm chart (`hcl-dx-iq`). To secure connections between the MCP Server and the IQ Integrator, enable HTTPS and configure a Kubernetes TLS Secret:
 
-1. Create a TLS secret named `dx-tls-cert` in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys:
+1. Create a TLS Secret in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys. The example uses `dx-tls-cert`; you can use another name as long as it matches `tlsCertSecret` in your Helm values:
 
     ```bash
     kubectl create secret tls dx-tls-cert \
@@ -93,14 +93,13 @@ By default, the IQ Helm chart (`hcl-dx-iq`) enables HTTPS to secure connections 
         --namespace <YOUR_NAMESPACE>
     ```
 
-    The chart mounts `dx-tls-cert` at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
-
-2. Configure the `httpsEnabled` parameter in the `hcl-dx-iq` Helm chart:
+2. Set `httpsEnabled` to `true` and set `tlsCertSecret` to the name of the TLS Secret. The chart requires a non-empty `tlsCertSecret` when HTTPS is enabled and mounts the Secret at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
 
     ```yaml
     configuration:
       mcpServer:
         httpsEnabled: true
+        tlsCertSecret: "dx-tls-cert"
 
     environment:
       pod:

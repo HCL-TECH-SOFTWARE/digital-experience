@@ -10,7 +10,7 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 
 Before installing the IQ backend server, deploy the LiteLLM service to configure the required proxy models (`iq-general-purpose` and `iq-summary`). For more information, refer to [Deploying LiteLLM](../../../../../../build_sites/iq/installation/deploy-litellm.md).
 
-If MCP Server HTTPS is enabled, create the `dx-tls-cert` TLS secret in the target namespace before installing the IQ chart. The secret must contain the standard `tls.crt` and `tls.key` entries.
+If MCP Server HTTPS is enabled, create a TLS Secret in the target namespace before installing the IQ chart. Its name must match `configuration.mcpServer.tlsCertSecret` in your values, and it must contain the standard `tls.crt` and `tls.key` entries. This example uses `dx-tls-cert`.
 
 ```bash
 kubectl create secret tls dx-tls-cert \
@@ -104,6 +104,7 @@ configuration:
   # MCP Server configuration
   mcpServer:
     httpsEnabled: true
+    tlsCertSecret: "dx-tls-cert"
     standaloneMode: false
     enableWcm: true
     enableDam: true
