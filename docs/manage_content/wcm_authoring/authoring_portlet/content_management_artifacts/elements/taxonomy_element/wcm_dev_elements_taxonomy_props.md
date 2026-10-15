@@ -1,6 +1,6 @@
-# Defining taxonomy component properties
+# Defining Taxonomy component properties
 
-You use the taxonomy element to define the properties of the taxonomy component.
+You use the Taxonomy element to define the properties of the Taxonomy component.
 
 1. Click **Select Start Category** to select a category to start the category selection tree.
 2. Select **Include Start** to display the category that you defined in "Start Area" as the first item in the category selection tree. If not selected, the first category after the category that is defined in "Start Area" is displayed as the first item in the category selection tree.

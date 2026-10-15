@@ -1,22 +1,22 @@
 # Personalization element examples
 
-The layout and design of a personalization element is created in a similar way to a menu element, with a header design, footer design, and a design to be repeated for each result.
+The layout and design of a Personalization element is created in a similar way to a menu element, with a header design, footer design, and a design to be repeated for each result.
 
 ## Creating a Personalized menu
 
-1. Create a content spot or personalization rule in Portal Personalization based on some Web Content Manager (WCM) content.
-2. Create a personalization element in WCM.
+1. Create a content spot or Personalization rule in Portal Personalization based on some Web Content Manager (WCM) content.
+2. Create a Personalization element in WCM.
 
-    - Click **Search** and select the content spot or personalization rule you created before. Click **OK**.
-    - Create an element design to display the results of the content spot or personalization rule. This method is similar to designing a menu element or navigator. For example, enter this text in the "**Design for each menu search result**" section:
+    - Click **Search** and select the content spot or Personalization rule you created before. Click **OK**.
+    - Create an element design to display the results of the content spot or Personalization rule. This method is similar to designing a menu element or navigator. For example, enter this text in the "**Design for each menu search result**" section:
 
         ```
         [placeholder tag="namelink"] 
         <br>
         ```
 
-3. Save the personalization element.
-4. Reference the personalization element in a presentation template.
+3. Save the Personalization element.
+4. Reference the Personalization element in a presentation template.
 
 ## Displaying personalized content
 
@@ -24,11 +24,11 @@ To display a single piece of personalized WCM content for different users:
 
 1. Create an authoring template that includes an element. For example, a text element called "body".
 2. Create a set of content items that are based on this authoring template.
-3. Create a content spot or personalization rule in Portal Personalization based on the authoring template and content. The content spot or personalization rule must return only a single piece of WCM Content for each user.
-4. Create a personalization element in WCM.
+3. Create a content spot or Personalization rule in Portal Personalization based on the authoring template and content. The content spot or Personalization rule must return only a single piece of WCM Content for each user.
+4. Create a Personalization element in WCM.
 
-    - Click **Search** and select the content spot or personalization rule you created before. Click **OK**.
-    - Create an element design to display the results of the content spot or personalization rule. For example, enter this text in the **Design for each menu search result** section:
+    - Click **Search** and select the content spot or Personalization rule you created before. Click **OK**.
+    - Create an element design to display the results of the content spot or Personalization rule. For example, enter this text in the **Design for each menu search result** section:
 
         ```
         [element type="Content" context="autofill" key="Body"]
@@ -36,18 +36,18 @@ To display a single piece of personalized WCM content for different users:
 
         This displays the content of the text element called "Body" from the content item that is returned by the content spot or personalization rule.
 
-5. Save the personalization element.
-6. Reference the personalization element in a presentation template.
+5. Save the Personalization element.
+6. Reference the Personalization element in a presentation template.
 
 ## Displaying personalized web content components
 
-A set of personalized web content components can be displayed by using a personalization element:
+A set of personalized web content components can be displayed by using a Personalization element:
 
-1. Create a content spot or personalization rule in Portal Personalization that searches for web content components.
-2. Create a personalization element in WCM.
+1. Create a content spot or Personalization rule in Portal Personalization that searches for web content components.
+2. Create a Personalization element in WCM.
 
-    - Click **Search** and select the content spot or personalization rule you created before. Click **OK**.
-    - Create an element design to display the results of the content spot or personalization rule. For example, Enter this text in the **element design** section:
+    - Click **Search** and select the content spot or Personalization rule you created before. Click **OK**.
+    - Create an element design to display the results of the content spot or Personalization rule. For example, Enter this text in the **element design** section:
 
         **Header:**
 
@@ -71,18 +71,18 @@ A set of personalized web content components can be displayed by using a persona
         </div>
         ```
 
-3. Save the personalization element.
-4. Reference the personalization element in a presentation template.
+3. Save the Personalization element.
+4. Reference the Personalization element in a presentation template.
 
 ## Displaying attributes of Personalized content
 
-The attributes of personalized content can also be displayed by using a personalization element:
+The attributes of personalized content can also be displayed by using a Personalization element:
 
-1. Create a content spot or personalization rule in Portal Personalization .
-2. Create a personalization element in WCM.
+1. Create a content spot or Personalization rule in Portal Personalization .
+2. Create a Personalization element in WCM.
 
-    - Click **Search** and select the content spot or personalization rule you created before. Click **OK**.
-    - Create an element design to display the results of the content spot or personalization rule. For example, Enter this text in the **element design** section:
+    - Click **Search** and select the content spot or Personalization rule you created before. Click **OK**.
+    - Create an element design to display the results of the content spot or Personalization rule. For example, Enter this text in the **element design** section:
 
         **Header:**
 
@@ -107,8 +107,8 @@ The attributes of personalized content can also be displayed by using a personal
         </div>
         ```
 
-3. Save the personalization element.
-4. Reference the personalization element in a presentation template.
+3. Save the Personalization element.
+4. Reference the Personalization element in a presentation template.
 
 !!!note
     - To retrieve a list of categories, keywords, authors, and owners, use the Property tag.

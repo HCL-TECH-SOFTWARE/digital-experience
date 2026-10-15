@@ -8,5 +8,5 @@ These are examples of search queries you can create by using an HTML element.
 Often you want certain types of content to not be shown in your search results. By filtering your search results to ensure that certain types of content are not displayed.
 - **[Search parameters](wcm_dev_search_form_query_parameters.md)**  
 The following parameters can be used in a search query in this format.
-- **[How to use a search query form](wcm_dev_search_form_query_using.md)**  
+- **[Using a search query form](wcm_dev_search_form_query_using.md)**  
 The following search syntaxes can be used when you search for text by using the "search\_query" parameter.

@@ -1,8 +1,8 @@
 # Displaying search results
 
-You use a search element that is stored in search component to display the results of a search query.
+You use a Search element that is stored in Search component to display the results of a search query.
 
-## Using a search component
+## Using a Search component
 
 1. Click **New > Component > Search** to create a new search component.
 2. Enter [identification](../../../../content_management_artifacts/common/items_id.md) information.
@@ -15,7 +15,7 @@ You use a search element that is stored in search component to display the resul
     - Enter the number of results pages to read ahead when using a page navigation element. For example, if you enter 3, the page navigation element will calculate results up to 3 pages ahead of the current page. Increasing this number will improve the accuracy of the page navigation element. Lowering this number will improve the performance of the page navigation element when rendered.
 
         !!!note
-            To display multiple pages, you will need to use a [page navigation element](../../page_nav_element/wcm_dev_elements_page-navigation.md). This is referenced within the header or footer of the search element design specified below.
+            To display multiple pages, you will need to use a [page navigation element](../../page_nav_element/wcm_dev_elements_page-navigation.md). This is referenced within the header or footer of the Search element design specified below.
 
 5. Select how the search results should be sorted.
 6. Define the design of the search results using HTML and text.

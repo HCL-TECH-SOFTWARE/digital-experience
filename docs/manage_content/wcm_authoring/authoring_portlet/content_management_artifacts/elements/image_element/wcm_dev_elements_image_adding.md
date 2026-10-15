@@ -1,6 +1,6 @@
 ---
 id: wcm_dev_elements_image_adding
-title: Adding an image element to an item
+title: Adding an Image element to an item
 ---
 
 You add an image element to a site area or content item when you want the image to be used for a specific site area or content item.
@@ -17,10 +17,10 @@ You add an image element to a site area or content item when you want the image 
 7. Click **Add**. The image element is added to your form.
 8. Go to the image element you created:
 
-    1. Click **Upload a file** to select a file to store in the image component.
+    1. Click **Upload a file** to select a file to store in the Image component.
 
         !!!note
-            In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing image component, or store an image in a different library, or apply different access settings to the original image component. You can select a component only if this option is enabled for the image element in the authoring template that is used by the content item or site area.
+            In CF06 or higher, click **Upload** to upload a file, or click **Select** to select a component. Selecting a component is useful if you need to apply different image properties to an existing Image component, or store an image in a different library, or apply different access settings to the original Image component. You can select a component only if this option is enabled for the Image element in the authoring template that is used by the content item or site area.
 
     2. Define the image properties:
 

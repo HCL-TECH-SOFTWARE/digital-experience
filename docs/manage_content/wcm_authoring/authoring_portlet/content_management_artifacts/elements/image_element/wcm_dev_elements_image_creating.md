@@ -1,11 +1,11 @@
 ---
 id: wcm_dev_elements_image_creating
-title: Creating an image component
+title: Creating an Image component
 ---
 
-You create an image component when you want to reuse an image in multiple places in your website.
+You create an Image component when you want to reuse an image in multiple places in your website.
 
-To create an image component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Image**.
+To create an Image component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Image**.
 
 1. [Entering identification information](../../../content_management_artifacts/common/items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

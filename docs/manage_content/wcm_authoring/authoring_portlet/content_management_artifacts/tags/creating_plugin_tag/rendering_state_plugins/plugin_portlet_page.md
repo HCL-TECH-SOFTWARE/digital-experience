@@ -1,6 +1,6 @@
 ---
 id: plugin_portlet_page
-title: The Page mode rendering plug-in
+title: Page mode rendering plug-in
 ---
 
 Use the `PageMode` rendering plug-in to write web content depending on the mode of a portal page (for example, `EDIT`, `HELP`, and `INFO` mode).

@@ -3,18 +3,18 @@ id: wcm_dev_elements_menu_design
 title: Menu element design examples
 ---
 
-Format the design and layout of menu elements with HTML and placeholder tags.
+Format the design and layout of Menu elements with HTML and placeholder tags.
 
 ## Simple menu design
 
-This example shows the basic structure of the element design that is used by a menu to format the search data. You enter the following tags into the **Design for each menu search result** section of the menu element form.
+This example shows the basic structure of the element design that is used by a menu to format the search data. You enter the following tags into the **Design for each menu search result** section of the Menu element form.
 
 |Design|Details|
 |------|-------|
 |`<a href="[placeholder tag="href"]">`|Instead of a URL, use an href placeholder.|
 |`[placeholder tag="title"] </a><br>`|Instead of text, insert a title placeholder.|
 
-This is repeated for every link that is returned by the search query that is defined in the menu element. You can also use a TitleLink tag:
+This is repeated for every link that is returned by the search query that is defined in the Menu element. You can also use a TitleLink tag:
 
 |Design|details|
 |------|-------|

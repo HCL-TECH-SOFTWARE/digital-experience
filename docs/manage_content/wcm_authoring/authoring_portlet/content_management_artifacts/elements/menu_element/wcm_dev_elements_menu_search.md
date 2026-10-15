@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_menu_search
-title: Defining menu element search properties
+title: Defining Menu element search properties
 ---
 
-Specify the search criteria to be used when you generate the menu element. You can limit the search according to the properties of content items, including authoring templates, site areas, categories, and keywords.
+Specify the search criteria to be used when you generate the Menu element. You can limit the search according to the properties of content items, including authoring templates, site areas, categories, and keywords.
 
 Between different criteria, menu searches are "and" searches, but within each search criteria, menu searches are "or" searches. For example, a menu element that searches for two different categories and an authoring template displays content items that are profiled with at least one of each profile type. Content that matches only one profile type is not displayed.
 
