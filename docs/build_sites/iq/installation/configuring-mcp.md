@@ -63,6 +63,8 @@ Use the following JSON-RPC parameters to propagate request-scoped context to dow
 
 The MCP endpoints are internal to the IQ backend deployment and are accessed only by the IQ integrator service within the cluster. They are not exposed externally and are not routed through HAProxy.
 
+### Endpoints and health probes
+
 Route tool execution requests through the following endpoints to handle traffic for enabled DX tool domains:
 
 | Endpoint path {: style="width: 25%; white-space: nowrap;"}| Type | Network and runtime behavior {: style="width: 50%;"}|
@@ -84,7 +86,9 @@ Monitor service health and backend dependency availability using these operation
 
 HTTPS is disabled by default in the IQ Helm chart (`hcl-dx-iq`). To secure connections between the MCP Server and the IQ Integrator, enable HTTPS and configure a Kubernetes TLS Secret:
 
-1. Create a TLS Secret in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys. The example uses `dx-tls-cert`; you can use another name as long as it matches `tlsCertSecret` in your Helm values:
+1. Create a TLS Secret in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys.
+
+    The following example uses `dx-tls-cert` as the Secret name. You can use another name as long as it matches the `tlsCertSecret` value in your Helm chart:
 
     ```bash
     kubectl create secret tls dx-tls-cert \
@@ -93,7 +97,9 @@ HTTPS is disabled by default in the IQ Helm chart (`hcl-dx-iq`). To secure conne
         --namespace <YOUR_NAMESPACE>
     ```
 
-2. Set `httpsEnabled` to `true` and set `tlsCertSecret` to the name of the TLS Secret. The chart requires a non-empty `tlsCertSecret` when HTTPS is enabled and mounts the Secret at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
+2. Set `httpsEnabled` to `true` and set `tlsCertSecret` to the name of the TLS Secret. 
+
+    The chart requires a non-empty `tlsCertSecret` when HTTPS is enabled and mounts the Secret at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
 
     ```yaml
     configuration:
