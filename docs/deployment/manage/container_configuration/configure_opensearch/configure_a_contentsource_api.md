@@ -33,6 +33,46 @@ Before you can perform administrative tasks, you need to authenticate as a searc
     | --- | --- |
     | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
 
+## Authenticating as a DX administrator
+
+As an alternative to the `searchadmin` credential flow above, you can authenticate as a DX administrator using one of the following endpoints. Both endpoints issue a `dx-admin-jwt` httpOnly cookie that is used to authorize subsequent requests.
+
+### Exchanging a DX session for an admin token
+
+If you already have an active DX session, you can exchange its `LtpaToken2` cookie for an admin token by calling the `/dx/api/search/v2/auth/dx-admin-token` endpoint with a `POST` request. The request requires a valid `LtpaToken2` cookie and no request body.
+
+**Response codes:**
+
+| Code | Body | Description |
+| --- | --- | --- |
+| `200` | `{ "success": true }` | Token issued; `dx-admin-jwt` httpOnly cookie set |
+| `401` | `{ "error": "InvalidToken" \| "Unauthorized" }` | Missing/invalid LTPA token, or the user is not an administrator |
+| `502` | `{ "error": "DX Core service unavailable" }` | DX Core access control endpoint unreachable |
+| `500` | `{ "error": "Internal server error" }` | Unexpected server error |
+
+### Logging in with DX administrator credentials
+
+To log in directly with a DX administrator username and password, call the `/dx/api/search/v2/auth/dx-admin-login` endpoint with a `POST` request and the following payload:
+
+**Payload:**
+
+```json
+{
+  "username": "dxadmin",
+  "password": "yourpassword"
+}
+```
+
+**Response codes:**
+
+| Code | Body | Description |
+| --- | --- | --- |
+| `200` | `{ "success": true }` | `dx-admin-jwt` and `LtpaToken2` httpOnly cookies set |
+| `400` | `{ "error": "Username and password are required" }` | Missing credentials in the request body |
+| `401` | `{ "error": "Invalid credentials" \| "User is not an administrator" \| "Authorization check failed" }` | Authentication failed |
+| `502` | `{ "error": "DX Core service unavailable" }` | DX Core unreachable |
+| `500` | `{ "error": "Internal server error" }` | Unexpected server error |
+
 
 ## Listing existing content source types
 
@@ -170,6 +210,26 @@ You can provide the following properties:
 | `security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
 | `security.passwordField` | yes | The field name of the password field in a FORM based authentication. |
 | `security.loginPath` | yes | The path where the FORM authentication request is being made. |
+| `apiBaseUrl` | yes | The base URL of the DAM API. Only needed for `dam` content sources, to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
+| `apiPath` | yes | The path of the DAM API (for example, `/dx/api/dam/v1`). Only needed for `dam` content sources, to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
+
+To create a `dam` content source that supports [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source), also include the `apiBaseUrl` and `apiPath` properties:
+
+```json
+{
+  "name": "mydam",
+  "type": "dam",
+  "aclLookupHost": "https://my-environment.arbitarydomaintest.com",
+  "aclLookupPath": "/wps/mycontenthandler",
+  "security": {
+    "type": "basic",
+    "username": "dxadminuser",
+    "password": "dxadminpassword"
+  },
+  "apiBaseUrl": "https://my-environment.arbitarydomaintest.com",
+  "apiPath": "/dx/api/dam/v1"
+}
+```
 
 The response of the API call looks similar to the following sample:
 
@@ -216,3 +276,49 @@ The Search V2 UI uses the  `aclLookupPath` to determine which content sources ar
 ## Out-of-the-box content sources
 
 If enabled in the Helm chart during deployment, the Search V2 configures the content sources out-of-the-box. These content sources are for `wcm`, `jcr` and `portal` types and are scoped at your configured context root and base portal. A content source for `dam` is also pre-configured out-of-the-box but the Search V2 UI currently does not support it.
+
+## Getting document counts
+
+To get document counts for all content sources, grouped by content source ID, call the `/dx/api/search/v2/documentcounts` endpoint with a `GET` request. Each entry includes a total count and a per-document-type breakdown.
+
+**Response:**
+
+```json
+{
+  "documentCounts": {
+    "ee0765b4-be3e-4d10-9ab4-95e60464e676": {
+      "total": 350,
+      "byType": {
+        "page": 200,
+        "file": 100,
+        "sitearea": 50
+      }
+    },
+    "ab123456-cd78-90ef-ab12-34567890abcd": {
+      "total": 120,
+      "byType": {
+        "page": 80,
+        "file": 40
+      }
+    }
+  }
+}
+```
+
+!!! note
+    The `byType` keys reflect the actual document types stored in the content source index (for example, `page`, `file`, `sitearea`). An `unknown` type is used for documents where the type field is missing or unrecognized.
+
+## Triggering a DAM reindex for a content source
+
+To trigger a reindex of a DAM content source, call the `/dx/api/search/v2/contentsources/{contentsource_id}/dam-reindex` endpoint with a `POST` request, where `contentsource_id` is the `id` of the DAM content source to reindex.
+
+**Response codes:**
+
+| Code | Description |
+| --- | --- |
+| `200` | Success |
+| `400` | Invalid content source or missing configuration |
+| `401` | Authentication error |
+| `404` | Content source ID not found |
+| `500` | Server error |
+| `502` | DAM API unavailable |

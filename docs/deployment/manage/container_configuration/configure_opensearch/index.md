@@ -14,3 +14,7 @@ This topic provides the steps on how to configure a content source and how to co
 This topic provides the steps on how to configure a crawler to index data from your HCL DX environment.
 - **[Running search queries using REST API](run_search_queries_api.md)**  
 This topic explains the search endpoints of the REST API and provides information on how to run queries.
+- **[Configuring common field mappings using REST API](configure_common_field_mappings_api.md)**  
+This topic provides the steps on how to manage common field mappings for a content source type.
+- **[Configuring NLS translations using REST API](configure_nls_translations_api.md)**  
+This topic provides the steps on how to manage NLS translations for common field names.

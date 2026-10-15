@@ -246,3 +246,52 @@ This removes the currently stored `incrementalTimestamp` of the crawler and trig
 Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp_true` endpoint with a `POST` request.
 
 After the crawler has run, all current state data is indexed in the content source.
+
+## Getting crawler status summary
+
+To get aggregated crawler status counts and the most recent crawl result, call the `/dx/api/search/v2/crawlers/status-summary` endpoint with a `GET` request.
+
+**Response:**
+
+```json
+{
+  "counts": {
+    "new": 2,
+    "triggered": 0,
+    "running": 1,
+    "stopped": 0,
+    "failed": 1,
+    "finished": 5,
+    "scheduled": 3
+  },
+  "lastCrawl": {
+    "name": "WCM Crawler",
+    "result": "Success",
+    "timestamp": 1723622400000
+  }
+}
+```
+
+## Stopping a crawler
+
+To gracefully stop a running crawler, call the `/dx/api/search/v2/crawlers/{crawler_id}/stop` endpoint with a `PUT` request, where `crawler_id` is the UUID of the crawler to stop. The crawler halts after completing the current page, preserving any partial crawl results already indexed. If the crawler is not currently running, the call returns `200` with the current crawler document and an informational message instead of an error.
+
+**Response codes:**
+
+| Code | Body | Description |
+| --- | --- | --- |
+| `200` | `{ "message": "...", "crawler": {...} }` | Stopped successfully, or was already not running |
+| `404` | `{ "message": "Crawler does not exist." }` | Crawler ID not found |
+| `500` | `{ "message": "Unable to stop crawler document in management index." }` | Internal server error |
+
+## Listing crawler types
+
+To list the crawler type identifiers supported by the server, call the `/dx/api/search/v2/crawlertypes` endpoint with a `GET` request. This endpoint is unprotected so it can be used before you log in.
+
+**Response:**
+
+```json
+{
+  "types": ["wcm", "jcr", "portal", "website"]
+}
+```
