@@ -125,14 +125,24 @@ The following parameters control how many chunks are retrieved and which similar
 | `RAG_TOP_K` | `5` | Number of most-similar chunks returned per query. |
 | `RAG_MIN_SIMILARITY` | `0` | Minimum cosine similarity score (0–1) a chunk must reach to be included in the results. Set a value such as `0.6` to filter out low-relevance chunks. |
 
-## Changing RAG and embedding configuration
+## Changing locked RAG and embedding configuration
 
-If you need to change any locked RAG or embedding parameters after RAG has been running, the existing stored data is incompatible with the new configuration. You must drop the RAG tables and restart the pod to apply the changes.
+Some RAG parameters are **locked after initial startup** and require table recreation if changed. Other retrieval parameters can be updated immediately without any pod restart.
+
+### Locked parameters (require table recreation)
+
+The following parameters determine data structure and vector compatibility. Changing them requires dropping and recreating RAG tables:
+
+- `RAG_CHUNK_SIZE`
+- `RAG_CHUNK_OVERLAP`
+- `RAG_CHUNK_SEPARATORS`
+- `EMBEDDING_DIMENSIONS`
+- `USE_MULTILINGUAL_EMBEDDINGS`
+
+To change locked parameters in an active deployment, existing stored data is incompatible with the new configuration. Drop the RAG tables and upgrade the Helm release.
 
 !!! warning
-    Dropping the RAG tables permanently deletes all stored cross-session memory for all users. IQ recreates them automatically on the next restart, but all historical context is lost. 
-    
-    **Recommended practice for production deployments:** Take a full IQ database backup before making RAG configuration changes. This provides a recovery point if you need to revert to your previous RAG configuration or troubleshoot any issues after the configuration change. Refer to [Backing up and restoring data](backup-restore.md).
+    Dropping RAG tables permanently deletes cross-session memory for all users. IQ recreates the tables when the pod restarts, but historical context is lost. Before changing RAG configuration in a production deployment, take a full IQ database backup. A backup provides a recovery point to revert configuration or troubleshoot issues. For more information, refer to [Backing up and restoring data](backup-restore.md).
 
 1. Connect to your IQ PostgreSQL database.
 
@@ -145,7 +155,29 @@ If you need to change any locked RAG or embedding parameters after RAG has been 
 
 3. Update your `custom-iq-values.yaml` file with the new parameter values.
 
-4. Restart the IQ Integrator pod. IQ automatically recreates the tables on startup with the new configuration.
+4. Upgrade the IQ Helm release to apply the new values:
+
+    ```bash
+    helm upgrade <IQ_RELEASE_NAME> \
+      https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
+      --namespace <IQ_NAMESPACE> \
+      -f custom-iq-values.yaml
+    ```
+
+    IQ automatically recreates the RAG tables on pod startup with the new configuration.
+
+### Hot-tuning retrieval parameters
+
+For `RAG_TOP_K` and `RAG_MIN_SIMILARITY`, use `kubectl set env` instead of helm upgrade. The pod will roll, but no table recreation is required:
+
+```bash
+kubectl set env deployment/<IQ_DEPLOYMENT_NAME> \
+  RAG_TOP_K=8 \
+  RAG_MIN_SIMILARITY=0.5 \
+  -n <IQ_NAMESPACE>
+```
+
+The new retrieval settings take effect immediately after the pod restarts, without any data loss.
 
 ## Managing stored data
 

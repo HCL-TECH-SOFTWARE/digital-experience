@@ -36,6 +36,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
+- IQ is supported only on container-based HCL DX Core or DX Compose deployments running in Kubernetes using Helm charts. Non-container (traditional) deployments are not supported.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
@@ -43,6 +44,7 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### Integrator
 
 - If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
+- If you navigate away from, close, or reload the IQ interface while a request is being processed, the assistant reply may not be broadcasted to the UI and the request may only be partially processed. To avoid lost responses or partial results, wait for the current turn to complete before leaving the interface.
 
 ### AI model
 
