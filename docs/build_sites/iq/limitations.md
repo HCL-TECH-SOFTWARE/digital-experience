@@ -36,7 +36,9 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
-- IQ is supported only on container-based HCL DX Core or DX Compose deployments running in Kubernetes using Helm charts. Non-container (traditional) deployments are not supported.
+- IQ requires a fully containerized HCL DX Core or DX Compose deployment running in Kubernetes. Traditional deployments, where HCL DX runs on WebSphere Application Server (WAS) outside of containers, are not supported.
+- Hybrid deployments, where HCL DX Core runs on WAS alongside separately containerized services, are not supported. The IQ Integrator must run within the same Kubernetes cluster as your HCL DX deployment.
+- The MCP Server is the only IQ component that supports operation outside of a full HCL DX deployment, through its `standaloneMode` configuration. All other IQ components require a complete Kubernetes-based DX environment.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
