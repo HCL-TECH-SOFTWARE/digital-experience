@@ -7,5 +7,6 @@ nav:
     - WCM_CacheID.md
     - WCMUUIDCommandLine.md
     - ServeMsOfficeWithWcm.md
+    - PlainTextHTMLEmailWCM.md
     - StopWCMLibDel.md
     - SampleInvocationRefreshLibrary.md

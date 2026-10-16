@@ -37,6 +37,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
 |Migrated|WCM|[How to prevent `cacheId` from appending to WCM URLs](./wcm/WCM_CacheID.md)|
 |Migrated|WCM|[How to retrieve the UUID of a WCM object by name using the command line](./wcm/WCMUUIDCommandLine.md)|
+|Migrated|WCM|[How to send plain text or HTML encoded emails using WCM](./wcm/PlainTextHTMLEmailWCM.md)|
 
 ## CF238
 
