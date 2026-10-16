@@ -33,6 +33,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Themes|[How to change the WebDAV folder name](./themes/WebDAVFolderName.md)|
 |Migrated|WCM|[How to create links that display WCM content without the portal theme](./wcm/WCMLinksNoPortalTheme.md)|
 |Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
+|Migrated|WCM|[How to prevent `cacheId` from appending to WCM URLs](./wcm/WCM_CacheID.md)|
 |Migrated|WCM|[How to retrieve the UUID of a WCM object by name using the command line](./wcm/WCMUUIDCommandLine.md)|
 
 ## CF238
