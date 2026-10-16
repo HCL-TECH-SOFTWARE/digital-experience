@@ -17,4 +17,5 @@ nav:
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - ResetWCMViewerPortlet.md
+    - ConfigEngineAltTempDir.md
     - UseJavaScriptToReplaceText.md

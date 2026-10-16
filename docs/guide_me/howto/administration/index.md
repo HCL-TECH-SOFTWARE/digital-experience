@@ -34,6 +34,8 @@ Learn how to increase the duration of transaction timeouts to reduce timeout err
 Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
 - **[How to reset the Web Content Viewer portlet to its default state](./ResetWCMViewerPortlet.md)**  
 Learn how to reset the Web Content Viewer portlet to clear corrupted preference keys and restore default configuration settings.
+- **[How to use a custom temporary directory with ConfigEngine](./ConfigEngineAltTempDir.md)**  
+Learn how to specify a custom temporary directory using the `-Djava.io.tmpdir` parameter when running ConfigEngine tasks in HCL DX.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use custom JavaScript to find and replace specific text strings on HCL DX Portal pages.
 
