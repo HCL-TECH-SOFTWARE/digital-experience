@@ -28,6 +28,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to update content in a rich text element using the WCM API](./development/UpdateContentinRichTextElement.md)|
 |Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
+|Migrated|Themes|[How to change the WebDAV folder name](./themes/WebDAVFolderName.md)|
 |Migrated|WCM|[How to create links that display WCM content without the portal theme](./wcm/WCMLinksNoPortalTheme.md)|
 |Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
 |Migrated|WCM|[How to retrieve the UUID of a WCM object by name using the command line](./wcm/WCMUUIDCommandLine.md)|
