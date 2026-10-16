@@ -26,6 +26,8 @@ Learn how to identify and disable a hanging application to allow the HCL DX serv
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
 - **[How to find the virtual portal name by ObjectID](./DetermineVPObjectID.md)**  
 Learn how to determine the virtual portal (VP) name associated an ObjectID (OID).  
+- **[How to hide the impersonation button for non-administrator users](./HideImpersonationButton.md)**  
+Learn how to modify page permissions in HCL DX to hide the impersonation button for non-administrative users.
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
@@ -34,3 +36,4 @@ Learn how to create a system report to check DX configuration settings and compa
 Learn how to reset the Web Content Viewer portlet to clear corrupted preference keys and restore default configuration settings.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
 Learn how to use custom JavaScript to find and replace specific text strings on HCL DX Portal pages.
+
