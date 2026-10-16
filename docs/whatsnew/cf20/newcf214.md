@@ -108,10 +108,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - Content Reporting enabled by default
 
 === "Containers"
-    Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation/index.md) for additional information.
+    Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation.md) for additional information.
 
 === "On-Premises"
-    Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation/index.md) for additional information.
+    Starting CF214, the Content Reporting feature is installed and deployed by default as part of the CF update process. See the Help Center topic [Installing and Deploying Content Reporting](../../manage_content/wcm_authoring/content_reporting/installation.md) for additional information.
 
 ## Digital Experience 9.5 Container Version
 

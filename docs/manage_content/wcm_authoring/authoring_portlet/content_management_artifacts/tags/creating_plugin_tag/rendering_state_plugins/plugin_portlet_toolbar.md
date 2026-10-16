@@ -1,27 +1,23 @@
 ---
 id: plugin_portlet_toolbar
-title: The Toolbar state rendering plug-in
+title: Toolbar state rendering plug-in
 ---
-
-
-
 
 Use the `ToolbarState` rendering plug-in to retrieve the state of the site toolbar that is provided with the Portal 8.0 theme.
 
 The plug-in renders the following strings to indicate the current state of the toolbar:
 
--   **`open`**
+- **`open`**
 
     Indicates that the toolbar is expanded because the page is in edit mode.
 
--   **`closed`**
+- **`closed`**
 
     Indicates that the toolbar is collapsed because the page is in view mode.
 
--   **`unknown`**
+- **`unknown`**
 
     Indicates that no page mode is selected. This state can occur, for example, directly after log-in.
-
 
 Example:
 
@@ -36,4 +32,3 @@ You can use the `Equals` plug-in to check for the current state of the toolbar a
     [Component name="web content templates/edit"]
 [/Plugin:Equals]
 ```
-

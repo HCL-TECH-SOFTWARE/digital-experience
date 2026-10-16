@@ -18,9 +18,7 @@ See the format of an `IfEditMode` tag:
 To create an `IfEditMode` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **If Edit Mode** as the tag type.
-
 3. Click **OK** to add the tag to your navigator design.
 
 Extra text, HTML, or tags are added between the `[IfEditMode]` and `[/IfEditMode]` tags. The text and tags added here is what is rendered when a page is in edit mode.

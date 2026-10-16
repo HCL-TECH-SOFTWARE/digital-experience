@@ -17,9 +17,7 @@ htmlencode=" " awareness=" "  ifEmpty=" " start=" " end=" " ]
 To create an `Element` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Element** as the tag type.
-
 3. Select the item type where the element is stored, and the context that is used to determine which item to reference:
 
     If not set, the item type is `content` and the context is `current`.

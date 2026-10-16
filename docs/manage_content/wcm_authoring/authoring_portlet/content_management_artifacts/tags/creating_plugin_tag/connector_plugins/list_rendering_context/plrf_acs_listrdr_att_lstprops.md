@@ -3,10 +3,7 @@ id: plrf_acs_listrdr_att_lstprops
 title: Accessing list-rendering attributes and list properties
 ---
 
-
-
-
-To generate your list designs with Digital Data Connector \(DDC\) for HCL Digital Experience, you can access individual list-rendering context attributes and list properties.
+To generate your list designs with Digital Data Connector \(DDC\) for HCL Digital Experience (DX), you can access individual list-rendering context attributes and list properties.
 
 When you set a new list-rendering context, you can use the attribute parameter to add arbitrary name-value pairs to that list-rendering context. You can then extract these name-value pairs from the list-rendering context at other places by using the \[Plugin:ListRenderingContext action="getAttribute"\] tag. If you use this technique in nested contexts, it always addresses the currently active list-rendering context. For example, you can establish a list-rendering context such as the following one:
 
@@ -24,7 +21,7 @@ If you do so, you can retrieve the values for the source and myValue properties 
 [Plugin:ListRenderingContext action="getAttribute" key="myKey"]
 ```
 
-You can use this mechanism to pass information from a parent list-rendering context into a nested list-rendering context. After a nested list-rendering context has been established, information from the parent list-rendering context is not available via the `[AttributeResource]` tag. Therefore, when you set a nested list-rendering context, you can make parent attributes available to the nested context as follows:
+You can use this mechanism to pass information from a parent list-rendering context into a nested list-rendering context. After a nested list-rendering context has been established, information from the parent list-rendering context is not available through the `[AttributeResource]` tag. Therefore, when you set a nested list-rendering context, you can make parent attributes available to the nested context as follows:
 
 ```
 [Plugin:ListRenderingContext action="set" extension-id="ibm.portal.ddc.xml"
@@ -42,6 +39,5 @@ You can also use the `[Plugin:ListRenderingContext]` plug-in to access individua
 
 When you write list-rendering context attributes or bean list properties to the markup, you can use the parameters `format`, `separator`, and `escape` to control the transformation into markup:
 
--   The `format` and `separator` parameters work the same way as they do with the `[AttributeResource]` tag. For more information, read *Setting the list-rendering context*.
--   To conform to the surrounding markup type, you can use the `escape` parameter to escape the string that the plug-in returns. Supported values are xml, json, javascript, and none.
-
+- The `format` and `separator` parameters work the same way as they do with the `[AttributeResource]` tag. For more information, read *Setting the list-rendering context*.
+- To conform to the surrounding markup type, you can use the `escape` parameter to escape the string that the plug-in returns. Supported values are xml, json, javascript, and none.
