@@ -1,17 +1,13 @@
-# Troubleshooting the Search Admin UI
+# Troubleshoot the Search Admin UI
 
-HCL Digital Experience (DX) log files record application events used for troubleshooting. The following section describes how you can enable logging and tracing for the Search Admin UI to capture detailed information.
+HCL Digital Experience (DX) log files record application events used for troubleshooting. Enable logging and tracing for the Search Admin UI to capture detailed diagnostic information.
 
-## Client-side tracing
+## Enabling client-side tracing
 
-You can enable logging through client-side tracing using your browser's developer tools.
-
-1. Open your browser's **Developer Tools**.
-2. Navigate to the **Applications** tab.
+1. Open your browser's developer tools.
+2. Select the **Applications** tab.
 3. Under **Local storage**, select the page you want to trace.
 4. Right-click and select **Add new**.
-5. Enter the following **Key** and **Value** pair:
-
-    |Type of logging|Key|Value|
-    |---|---|---|
-    |Logging the Search Admin UI|`debug`|`DEBUG:client:admin-ui:*`|
+5. Enter the key and value:
+    - In the **Key** field, enter `debug`.
+    - In the **Value** field, enter `DEBUG:client:admin-ui:*`.
