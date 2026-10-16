@@ -102,7 +102,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### IQ - HTTPS support for the MCP Server
 
 === "Containers"
-    IQ now uses HTTPS to secure connections between the MCP Server and the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart through the `httpsEnabled` parameter. For more information, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
+    IQ now supports HTTPS to secure connections between the MCP server and the IQ Integrator. HTTPS is disabled by default. For configuration instructions, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
