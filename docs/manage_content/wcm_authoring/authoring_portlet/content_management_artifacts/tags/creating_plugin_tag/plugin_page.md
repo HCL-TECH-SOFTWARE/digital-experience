@@ -3,23 +3,20 @@ id: plugin_page
 title: Page plug-ins
 ---
 
-
-
-
 Logic plug-ins are used with the current page context. This topic contains additional information for some of these plug-ins.
 
 ## Page plug-in
 
--   Used access information about a portal page.
--   `[Plugin:Page key=" " selection=" " ]`
--   To specify the information to retrieve, use the "key" attribute and set the value to "id", "title" or "description".
--   To specify the page these information should be retrieved for you can optionally set for the "selection" attribute to "current", "parent" or set it to the ID or unique name of the page. The default for "selection" attribute is "current".
+- Used access information about a portal page.
+- `[Plugin:Page key=" " selection=" " ]`
+- To specify the information to retrieve, use the "key" attribute and set the value to "id", "title" or "description".
+- To specify the page these information should be retrieved for you can optionally set for the "selection" attribute to "current", "parent" or set it to the ID or unique name of the page. The default for "selection" attribute is "current".
 
 For example:
 
--   To write the ID of the current portal page use `[Plugin:Page key="id"]`.
--   To write the title of the parent page use `[Plugin:Page key="title" selection="parent"]`.
--   To write the description of the page with the unique name "intranet.sales" use `[Plugin:Page key="description" selection="intranet.sales"]`
+- To write the ID of the current portal page use `[Plugin:Page key="id"]`.
+- To write the title of the parent page use `[Plugin:Page key="title" selection="parent"]`.
+- To write the description of the page with the unique name "intranet.sales" use `[Plugin:Page key="description" selection="intranet.sales"]`
 
 ## Theme capability rendering plug-in
 
@@ -46,12 +43,12 @@ You can use the `Matches` plug-in to check for the availability of specific them
 
 ## URL encode plug-in
 
--   This plug-in encodes text so that it can be used in a URL.
--   `[plugin:urlencode text="Text"]`
+- This plug-in encodes text so that it can be used in a URL.
+- `[plugin:urlencode text="Text"]`
 
 ## HCLSoftware U learning materials
 
 !!!note
-	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+ Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

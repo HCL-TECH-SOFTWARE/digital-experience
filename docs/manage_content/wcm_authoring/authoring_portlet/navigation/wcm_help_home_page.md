@@ -1,6 +1,5 @@
 # Your Home Page
 
-
 Your home page is a personalized landing page for all your common web content management tasks. It is a simpler and more personalized user interface than the more advanced library explorer.
 
 If your administrator has enabled the home page, this page is the first thing that you see when you access the authoring portlet. You can access most of your daily tasks by using the home page, including creating content, reviewing drafts, and approving items, without having to access the more advanced library explorer. You can access the library explorer by clicking **Open the Library Explorer**. To return to the home page from the library explorer, click **Home** in the library explorer navigation bar. If the navigation bar is disabled, return to the home page by closing the current form that you are editing.
@@ -16,4 +15,3 @@ This view displays any views that you have opened in the library explorer during
 ## Web Content Activity
 
 This view displays recent activity by all the users of your authoring system and is used to keep track of any recent activity on your authoring system. Additionally, you can also view lists of your favorite items, items you have recently edited, your current draft items and any items that require your approval.
-

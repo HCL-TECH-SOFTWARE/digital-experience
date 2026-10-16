@@ -3,9 +3,6 @@ id: wcm_dev_search_form_query_parameters
 title: Search parameters
 ---
 
-
-
-
 The following parameters can be used in a search query in this format.
 
 ```
@@ -29,4 +26,3 @@ The following parameters can be used in a search query in this format.
 |`search_name`|Used to search the name of the content item.|
 |`search_owners`|Used to search the name or names of the owners of the content item, if any are defined.<br>**Searching for LDAP users:** When searching for LDAP users, the full distinguished name must be submitted. Users are unaware of what the actual distinguished name of a user will be. It is recommended that if planning to allow users to search for authors, you should create a predefined list or dropdown to allow users to select a known author. That way the user names can be displayed in a user-friendly manner, but the parameters that are submitted by the form can be the distinguished name for the selected user.|
 |`search_title`|Used to search the title of the content item.|
-

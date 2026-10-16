@@ -1,4 +1,4 @@
-# How to use a search element
+# Using a search element
 
 A search element is used to display the results of a search query. A search element cannot be used in isolation, but must be used together with an HTML element that is used to define the search query form.
 

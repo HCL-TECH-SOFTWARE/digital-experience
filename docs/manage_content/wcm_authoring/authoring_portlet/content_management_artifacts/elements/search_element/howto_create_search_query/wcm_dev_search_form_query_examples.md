@@ -43,7 +43,7 @@ This is typically the same content item that this HTML element is stored in.
         <input type="submit" value="Search"/>
     </td></tr>
 </table>
-``` 
+```
 
 </td>
 <td> 
@@ -58,7 +58,7 @@ In this example, a table has been used to format the search query form.
 
 ```
 </form>
-``` 
+```
 
 </td>
 <td> 
@@ -132,7 +132,7 @@ This is the body of the search form. Like any standard HTML form, it contains in
 
 ```
 </form>
-``` 
+```
 
 </td>
 <td> 
@@ -177,7 +177,7 @@ This is typically the same content item that this HTML element is stored in.
 <input type="hidden"
        name="search_authoringtemplate"
        value="Press Release"/>
-``` 
+```
 
 </td>
 <td> 
@@ -208,7 +208,7 @@ Here a hidden input field has been added that searches for content that use the 
         <input type="submit" value="Search"/>
     </td></tr>
 </table>
-``` 
+```
 
 </td>
 <td> 
@@ -222,7 +222,7 @@ This is the body of the search form. Like any standard HTML form, it contains in
 
 ```
 </form>
-``` 
+```
 
 </td>
 <td> 
@@ -235,10 +235,8 @@ This closes the form.
 
 ## Setting the search query in the request attributes
 
-The query parameters can also be set in the request attributes on the server. For instance, a search component that is displayed after the following tag is used displays search results for shoes: 
+The query parameters can also be set in the request attributes on the server. For instance, a search component that is displayed after the following tag is used displays search results for shoes:
 
 ```
 [Plugin:RequestAttribute key="search_query" value="shoes" compute="once"]
 ```
-
-

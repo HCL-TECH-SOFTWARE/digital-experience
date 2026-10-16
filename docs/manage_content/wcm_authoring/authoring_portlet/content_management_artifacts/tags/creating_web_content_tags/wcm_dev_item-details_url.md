@@ -17,16 +17,14 @@ targetCurrentPortalPage=" " usedIn=" " start=" " end=" " htmlencode=" "]
 To create a `URLCmpnt` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **URL** as the tag type.
-
 3. Select a `mode` type. The `mode` type determines the type of URL that is generated. This parameter is added to the tag as the `mode=" "` parameter.
 
     |Mode|Details|
     |----|-------|
     |`mode="portal"`|The `portal` mode generates a URL to a portal page. This parameter is used when you display web content within a web content viewer portlet|
-    |`mode="standAlone"`|The `standAlone` mode generates a URL to a web page. This parameter is used when you display web content using the Web Content Manager servlet.|
-    |`mode="current"`|The `current` mode generates a URL based on the format of the current request. For example, if the current request is a HCL Portal request, then mode="portal" is used.|
+    |`mode="standAlone"`|The `standAlone` mode generates a URL to a web page. This parameter is used when you display web content using the Web Content Manager (WCM) servlet.|
+    |`mode="current"`|The `current` mode generates a URL based on the format of the current request. For example, if the current request is a HCL Digital Experience (DX) request, then mode="portal" is used.|
     |`mode="static"`|The `static` mode generates a POC URL that will render as portal URL for portal pages, and as a standard URL for a servlet site.|
 
 4. Select the `context` and item type that is used to determine which URL to reference.
@@ -61,4 +59,4 @@ When you add this tag to your design, you can also add the following parameters 
 !!!note
 	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL DX Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

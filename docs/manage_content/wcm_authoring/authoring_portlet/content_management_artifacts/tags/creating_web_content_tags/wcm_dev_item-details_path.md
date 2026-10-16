@@ -16,9 +16,7 @@ See the format of a `pathcmpnt` tag:
 To create a `pathcmpnt` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Path Component** as the tag type.
-
 3. Select a path type. This parameter is added to the tag as the type=" " parameter:
 
     - **Base**
