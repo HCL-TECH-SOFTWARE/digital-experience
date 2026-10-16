@@ -9,11 +9,11 @@
 When running ConfigEngine tasks, such as applying a Cumulative Fix (CF) upgrade or running the Health Checker, the process fails if the default `/tmp` directory lacks sufficient space. For example, the Health Checker displays the following error message:
 
 ```text
- Test: Available temporary space  
+Test: Available temporary space  
    
- ERROR: There is not enough space in the /tmp/ directory  
- for the configuration tasks to run successfully.  
- At lease 1 GB of disk space in the /tmp/ directory is needed.  
+ERROR: There is not enough space in the /tmp/ directory  
+for the configuration tasks to run successfully.  
+At lease 1 GB of disk space in the /tmp/ directory is needed.  
 ```
 
 This article describes how to specify a custom temporary directory when running ConfigEngine tasks in HCL DX.
