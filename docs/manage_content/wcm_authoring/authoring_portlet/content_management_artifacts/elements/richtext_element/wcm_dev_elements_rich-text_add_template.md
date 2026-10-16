@@ -1,20 +1,20 @@
 ---
 id: wcm_dev_elements_rich-text_add_template
-title: Adding a rich text element to a template
+title: Adding a Rich Text element to a template
 ---
 
-You add a rich text element to an authoring template when you want a section of HTML to be used by a set of items that use the same authoring template and you want your content authors to use a rich text editor to create and edit the HTML.
+You add a Rich Text element to an authoring template when you want a section of HTML to be used by a set of items that use the same authoring template and you want your content authors to use a rich text editor to create and edit the HTML.
 
 1. Open or create an authoring template.
 2. Click **Manage Elements**.
-3. Select **rich text** as the element type.
+3. Select **Rich Text** as the element type.
 4. Enter a name. Do not use double-byte and non-ASCII characters.
 5. Enter a display title to use as the title of the element that is displayed in indexes and forms.
 6. If you create a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different display title for each language it is configured for. The text that is entered in the **Display Title** field is only used if an appropriate display title is not available from the selected text provider, or if the text provider is not available.
-7. Click **OK**. The rich text element is added to your form.
+7. Click **OK**. The Rich Text element is added to your form.
 8. Go to the **Default Content** tab.
-9. Go to the rich text element you added.
-10. Enter text in the rich text field, or do nothing if you want your content creators to enter text in the rich text field.
+9. Go to the Rich Text element you added.
+10. Enter text in the Rich Text field, or do nothing if you want your content creators to enter text in the rich text field.
 11. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This is where you define how the element is displayed on the item form.
 
     1. To display the element as a required field select **Identify this as a required field**.
@@ -25,7 +25,7 @@ You add a rich text element to an authoring template when you want a section of 
 
     3. Type the number of characters to use in **Field Width** to set the size of the displayed field. If you leave this blank, the default field size is used.
     4. Type a number into the maximum or minimum characters or words fields to set limits on the number of characters or words a user can enter in a field.
-    5. You can edit the default behavior of rich text elements.
+    5. You can edit the default behavior of Rich Text elements.
 
         - **Use stylesheet, hide fonts/size/color**
 

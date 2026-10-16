@@ -9,6 +9,7 @@ nav:
     - configureJMSMessages.md
     - ConfigureRAD.md
     - DefaultWCMValues.md
+    - EnableDjConfigDebug.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md

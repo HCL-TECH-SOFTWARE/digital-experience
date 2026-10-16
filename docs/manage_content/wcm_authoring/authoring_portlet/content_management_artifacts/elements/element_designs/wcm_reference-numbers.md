@@ -1,9 +1,8 @@
 ---
 id: wcm_reference-numbers
-title: Use Formatting Numbers
+title: Using formatting numbers
 ---
 
-# Use Formatting Numbers
 The Java Number Format Pattern Syntax is used to set the format of numbers.
 
 |Symbol|Meaning.|
@@ -20,7 +19,7 @@ The Java Number Format Pattern Syntax is used to set the format of numbers.
 |`¤`|Displays the number as a currency.|
 |`'`|Used to quote special characters in a prefix or suffix.|
 
-## Examples:
+## Examples
 
 For the number 123456.789.
 

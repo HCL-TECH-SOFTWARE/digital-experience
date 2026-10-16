@@ -1,9 +1,7 @@
 ---
 id: wcm_reference-dates
-title: Set Parameters to Format Dates
+title: Setting parameters to format dates
 ---
-
-# Set Parameters to Format Dates
 
 These parameters are used to set the format of dates.
 
@@ -32,21 +30,21 @@ These parameters are used to set the format of dates.
 
 **The number of letters determines format:**
 
--   **Text**
+- **Text**
 
-    -   Four or more pattern letters, use full form.
-    -   Less than four, use short or abbreviated form if one exists.
-    -   **Example: Day/Month/Year**
+    - Four or more pattern letters, use full form.
+    - Less than four, use short or abbreviated form if one exists.
+    - **Example: Day/Month/Year**
 
-        -   d,M,y = 3,3,3.
-        -   dd,MM,yy = 03,03,03.
-        -   dd,MMM,yy = 03,Mar,03.
-        -   dd,MMMM,yyyy = 03,March,2003.
+        - d,M,y = 3,3,3.
+        - dd,MM,yy = 03,03,03.
+        - dd,MMM,yy = 03,Mar,03.
+        - dd,MMMM,yyyy = 03,March,2003.
 
 **Lowercase and uppercase:**
 
--   The case of letters that are used in date and time code is not consistent. For example, "M" for month but "d" for day and "y" for year.
--   Uppercase and lowercase letters can mean different things. For example, "s" for second and "S" for millisecond.
+- The case of letters that are used in date and time code is not consistent. For example, "M" for month but "d" for day and "y" for year.
+- Uppercase and lowercase letters can mean different things. For example, "s" for second and "S" for millisecond.
 
 **Incorrect format:**
 
@@ -56,7 +54,7 @@ If a date or time code is entered incorrectly, nothing is returned.
 
 Any characters in the pattern that are not in the ranges of ['a'..'z'] and ['A'..'Z'] is treated as quoted text. For example, characters like ':', '.', ' ', '\#' and '@' appear in the resulting time text even if they are not embraced within single quotation marks.
 
-## Examples Using the US locale:
+## Examples using the US locale
 
 |Format Pattern|Result|
 |--------------|------|
@@ -66,4 +64,3 @@ Any characters in the pattern that are not in the ranges of ['a'..'z'] and ['A'.
 |`"hh 'o''clock' a, zzzz"`|12 o'clock PM, Pacific Standard Time|
 |`"K:mm a, z"`|0:00 PM, PST|
 |`"yyyyy.MMMMM.dd GGG hh:mm aaa"`|1996.July.10 AD 12:08 PM|
-

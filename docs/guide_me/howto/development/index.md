@@ -20,6 +20,8 @@ Learn how to create a servlet that serves static files.
 Learn how to create a custom Java class, package it into an external application JAR file, and invoke it using a WCM JSP component.
 - **[How to retrieve the language requested by the browser](./returnLanguageRequestedByBrowser.md)**  
 Learn how to retrieve the language requested by the browser when standard headers return the user profile language.  
+- **[How to update content in a rich text element using the WCM API](./UpdateContentinRichTextElement.md)**  
+Learn how to update rich text component values and perform string replacement across content items using the Java WCM API.
 - **[How to use the IBM WebSphere DynaCache to store and share data](./DynaCacheToStoreData.md)**  
 Learn how to configure an object cache instance in the IBM WebSphere Application Server and write custom JSP code to store and retrieve shared data across cluster members.
 - **[How to use the PUMA API within a WCM JSP component to print out the user and hostname sending the request](CodeToPrintUserAndHostname.md)**  

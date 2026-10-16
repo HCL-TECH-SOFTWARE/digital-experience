@@ -4,23 +4,19 @@ You can insert elements tags for all the elements of a selected authoring templa
 
 This is useful when first designing a presentation template as you can quickly generate element tags for all the elements that are used by an authoring template. You can then copy and paste the element tags to the correct section of your presentation template design.
 
-1.  Open or create a presentation template in edit mode.
+1. Open or create a presentation template in edit mode.
+2. Go to the presentation template design field and click **Insert Element Tags**.
+3. Select an authoring template.
+4. Click **OK**.
+5. The following tags are added to the presentation template design:
 
-2.  Go to the presentation template design field and click **Insert Element Tags**.
-
-3.  Select an authoring template.
-
-4.  Click **OK**.
-
-5.  The following tags are added to the presentation template design:
-
-    -   A property tag that is configured to display the title of the current item. For example:
+    - A property tag that is configured to display the title of the current item. For example:
 
         ```
         [Property type="content" context="current" field="title"]
         ```
 
-    -   Element tags for each element that is contained in the selected authoring template. For example, if your authoring template contained a text element named "headline" the following element tag would be created:
+    - Element tags for each element that is contained in the selected authoring template. For example, if your authoring template contained a text element named "headline" the following element tag would be created:
 
         ```
         <!-- Text -->
@@ -28,7 +24,6 @@ This is useful when first designing a presentation template as you can quickly g
         ```
 
 <!-- **Related information**  
-
 
 [Page layout](../panel_help/wcm_dev_pres-temp_examples_layout.md)
 
