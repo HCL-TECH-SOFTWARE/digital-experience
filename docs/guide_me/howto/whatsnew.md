@@ -30,6 +30,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Development|[How to update content in a rich text element using the WCM API](./development/UpdateContentinRichTextElement.md)|
 |Migrated|Performance|[How to locate a recursive loop in WCM](./performance/LocateWCMRecursiveLoop.md)|
 |Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
+|Migrated|Search|[How to exclude portlets or pages from a search collection](./search/ExcludePortletsPagesSeedlist.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 |Migrated|Themes|[How to change the WebDAV folder name](./themes/WebDAVFolderName.md)|
 |Migrated|Upgrade|[How to skip the Health Checker when running `applyCF`](./upgrade/ApplyCFSkipHealthChecker.md)|
