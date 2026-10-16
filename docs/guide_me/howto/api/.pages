@@ -3,5 +3,6 @@ nav:
     - index.md
     - updateWcmLibraryRoles.md
     - createJSPUsingWCMAPI.md
+    - findTopLevelSiteArea.md
     - generateURLWCMAPI.md
     - searchPagesInPortalSiteLibrary.md

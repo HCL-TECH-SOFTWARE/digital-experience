@@ -23,6 +23,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Administration|[How to deny IBM Integrated Solutions Console access in Kubernetes](./administration/DenyAdminConsoleIngressk8.md)|
 |Migrated|Administration|[How to hide the impersonation button for non-administrator users](./administration/HideImpersonationButton.md)|
 |Migrated|Administration|[How to use a custom temporary directory with ConfigEngine](./administration/ConfigEngineAltTempDir.md)|
+|Migrated|API|[How to use WCM API `findByName` method to retrieve top-level site areas](./api/findTopLevelSiteArea.md)|
 |Migrated|API|[How to use WCM API to generate a URL based on the locale of the request](./api/generateURLWCMAPI.md)|
 |Migrated|Configuration|[How to configure friendly URLs for hidden pages](./configuration/friendlyURLadmin.md)|
 |Migrated|Configuration|[How to enable Dojo debugging in the browser console](./configuration/EnableDjConfigDebug.md)|
