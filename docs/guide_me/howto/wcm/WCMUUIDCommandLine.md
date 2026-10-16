@@ -44,7 +44,6 @@ Before you begin, your environment should have `curl` and `perl` installed. To c
 To retrieve the UUID of a WCM object by name, perform the following steps:
 
 1. Open a terminal window.
-
 2. Define the following required environment variables in your terminal session according to your environment settings:
 
     ```bash
@@ -61,7 +60,7 @@ To retrieve the UUID of a WCM object by name, perform the following steps:
     - `WPS_ADMIN_PWD`: The administrator password.
     - `WP_PROFILE_HOME`: The file path to your HCL DX profile directory.
     - `HOSTNAME`: The fully qualified domain name (FQDN) of your DX server.
-    - `PORT`: The host port number of the DX server specified in the wkplc.properties file.
+    - `PORT`: The host port number of the DX server specified in the `wkplc.properties` file.
 
 3. Run the `curl` command to query the WCM REST API and return the UUID, type, and path of the specified object:
 
