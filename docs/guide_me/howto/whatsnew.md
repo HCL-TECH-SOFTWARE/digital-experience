@@ -32,6 +32,7 @@ This section contains the newly created and migrated how-to articles. The articl
 |Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
 |Migrated|Themes|[How to change the WebDAV folder name](./themes/WebDAVFolderName.md)|
+|Migrated|Upgrade|[How to skip the Health Checker when running `applyCF`](./upgrade/ApplyCFSkipHealthChecker.md)|
 |Migrated|WCM|[How to create links that display WCM content without the portal theme](./wcm/WCMLinksNoPortalTheme.md)|
 |Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
 |Migrated|WCM|[How to prevent `cacheId` from appending to WCM URLs](./wcm/WCM_CacheID.md)|
