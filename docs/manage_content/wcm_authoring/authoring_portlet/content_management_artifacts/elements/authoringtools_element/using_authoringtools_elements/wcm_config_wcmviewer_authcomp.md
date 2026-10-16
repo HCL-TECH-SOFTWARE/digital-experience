@@ -1,18 +1,16 @@
 ---
-title: Configure Authoring tool components
+title: Configuring Authoring Tool components
 ---
 
-# How to configure authoring tools components
-
-Authoring tools components that are rendered in a web content viewer allow you to create, read, edit, delete, approve, or reject content items directly in the web content viewer, instead of requiring you to browse to the HCL Web Content Manager authoring portlet to run the same action. The web content viewer either opens a window from the current page or redirects the user to another portal page that contains the authoring portlet.
+Authoring tools components that are rendered in a web content viewer allow you to create, read, edit, delete, approve, or reject content items directly in the web content viewer, instead of requiring you to browse to the HCL Web Content Manager (WCM) authoring portlet to run the same action. The web content viewer either opens a window from the current page or redirects the user to another portal page that contains the authoring portlet.
 
 You can specify which behavior to use in the authoring tools element design. Typically placeholder tags are used to display authoring tools elements. The value of the `format` attribute of the placeholder tag determines what URL is created to run an authoring task:
 
--   **`format="tag"`**
+- **`format="tag"`**
 
     The placeholder is rendered as a URL that opens a window that contains the authoring portlet.
 
--   **`format="url"`**
+- **`format="url"`**
 
     The placeholder is rendered as a URL that redirects the user to another portal page that is used by the web content viewer for inline editing.
 
@@ -60,7 +58,5 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 !!!note
     You can open the portal page in a separate browser window by adding `target="_blank"` to the HTML anchor tag in the design.
 
-
 <!-- ???+ info "**Related information**"  
   [Setting service configuration properties](../admin-system/adsetcfg.md) -->
-

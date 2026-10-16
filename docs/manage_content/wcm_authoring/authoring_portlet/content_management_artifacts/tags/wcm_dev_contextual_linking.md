@@ -12,9 +12,6 @@ Contextual path links can be applied to elements referenced by using the element
 [Element type="content" context="current" key="body" link="path" ]
 ```
 
-
 It can be used only if context=current or context=autofill.
 
 When contextual path linking is used, a compatible link is searched for using the same relative path. If no link is found, the original link is used.
-
-

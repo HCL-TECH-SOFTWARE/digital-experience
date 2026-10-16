@@ -1,6 +1,6 @@
 # Web content tags
 
-Use HCL Web Content Manager tags to reference elements within presentation templates and element designs. You use tags to reference elements within presentation templates and element designs.
+Use HCL Web Content Manager (WCM) tags to reference elements within presentation templates and element designs. You use tags to reference elements within presentation templates and element designs.
 
 To create a web content tag, click **Insert Tag** from a rich text editor, a presentation template, or an element design field. The Tag Helper dialog opens.
 
@@ -42,7 +42,7 @@ Use the `placeholder` tag to display metadata within an element or component des
 Use the plug-in (`plugin`) tag to reference rendering plug-ins. You can select preinstalled rendering plug-ins or your own custom plug-ins.
 - **[Property tag](wcm_dev_item-details_property.md)**  
 Use the `Property` tag display various fields and metadata from content items and site areas.
-- **[Style element tag](wcm_dev_referencing_components_style-sheet.md)**  
+- **[Style Element tag](wcm_dev_referencing_components_style-sheet.md)**  
 Use the style element (`StyleElement`) tag to reference the default style sheet component defined in an authoring template. You can also use it to reference style sheets linked in a site area or content item through a component reference.
 - **[URL Component tag](wcm_dev_item-details_url.md)**  
 Use the URL Component (`URLCmpnt`) to generate a URL to a site area or content item.
@@ -54,7 +54,7 @@ Use the URL Component (`URLCmpnt`) to generate a URL to a site area or content i
 
 To learn how to get started with the development aspects of HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
 
-To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn more details on how to develop with HCL DX Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
     - [Digital Data Connector profiles for social rendering](../../../../../../build_sites/social_rendering/customizing_view_definitions/customizing_visualdesign/customizing_markup_gen/ddc_profiles_for_social_rend/index.md)

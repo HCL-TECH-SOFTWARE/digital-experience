@@ -6,6 +6,7 @@ nav:
     - configuring-mcp.md
     - prepare-database.md
     - prepare-litellm-access.md
+    - enable-rag.md
     - validation.md
     - backup-restore.md
     - environment-variables.md

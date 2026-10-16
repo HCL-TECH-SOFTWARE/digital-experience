@@ -72,5 +72,3 @@ To render a complete list of information with a table, you can use a design like
 ```
 </table>
 ```
-
-

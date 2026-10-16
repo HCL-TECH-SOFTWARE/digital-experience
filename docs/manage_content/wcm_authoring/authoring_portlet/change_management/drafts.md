@@ -1,9 +1,6 @@
 ---
-title: Work with Drafts
+title: Drafting an item
 ---
-
-# How to work with draft items
-
 
 Creating a draft of an item allows users to work on changes to that item without changing the published version of the item. Draft items can either be stand-alone items, or form part of a workflow. When the changes are completed, you can choose to either publish the item, or discard the changes by canceling the draft. You can create multiple drafts of a single item.
 
@@ -14,35 +11,33 @@ Creating a draft of an item allows users to work on changes to that item without
 
 You can directly create a draft of any non-workflowed items.
 
--   **Creating a draft item**
+- **Creating a draft item**
 
     To create a new draft item:
 
-    -   open a non-workflowed published item in edit mode and click **Save as Draft**. This tool creates a draft copy of the published item without removing the published item from the live site.
-    -   open a non-workflowed published item in read mode and click **Create Draft**. This tool creates a draft copy of the published item without removing the published item from the live site.
-    -   open a non-workflowed published item and click **Change to Draft**. This tool changes the state of the item from "published" to "draft" and the item is no longer be visible on the live site. You cannot change an item to draft if it is being referenced by any other items.
+    - open a non-workflowed published item in edit mode and click **Save as Draft**. This tool creates a draft copy of the published item without removing the published item from the live site.
+    - open a non-workflowed published item in read mode and click **Create Draft**. This tool creates a draft copy of the published item without removing the published item from the live site.
+    - open a non-workflowed published item and click **Change to Draft**. This tool changes the state of the item from "published" to "draft" and the item is no longer be visible on the live site. You cannot change an item to draft if it is being referenced by any other items.
 
--   **Saving a draft item**
+- **Saving a draft item**
 
     When the draft has is created:
 
-    -   to save the draft item, click **Save**, **Save and Close**, or **Save and Read**.
-    -   to publish the draft item, click **Save and publish**.
+    - to save the draft item, click **Save**, **Save and Close**, or **Save and Read**.
+    - to publish the draft item, click **Save and publish**.
     When saved, your draft item is displayed along side other items in your item views but is displayed with a status of draft. If you create a draft of a previously published item, both the draft and published versions of your item appear in your item views. You can edit and save drafts multiple times before your changes are published.
 
-
--   **Publishing a draft item**
+- **Publishing a draft item**
 
     Any changes that are made to a draft item do not appear in the live site until you publish the draft item. When your draft is ready to publish, you can either:
 
-    -   select an item in a view and click **Publish item**.
-    -   open an item in read-mode and click **Publish item**.
-    -   open an item in edit-mode and click **Save and publish**.
+    - select an item in a view and click **Publish item**.
+    - open an item in read-mode and click **Publish item**.
+    - open an item in edit-mode and click **Save and publish**.
 
--   **Canceling a draft**
+- **Canceling a draft**
 
     Canceling a draft is essentially the same as deleting a draft as all the changes made to the item are discarded. To cancel a draft, open a draft item and click **Cancel draft**. You need editor access or higher to cancel a draft of items without a workflow.
-
 
 ## How to work draft items in a workflow
 
@@ -71,7 +66,6 @@ You use draft items within a project in the same way you use drafts outside of a
 
 ## Managing drafts
 
--   If you view a published item with only one draft item, you can view the draft item by clicking **Go to draft**.
--   When you view a draft item, you can open the published version of an item by clicking **Go to published**.
--   If a published item has more than one draft, the **Manage Drafts** tool is displayed on both the published and draft versions of an item. You click **Manage Drafts** to view a list of drafts for the current item. All drafts are displayed, but you can read, edit and cancel drafts only that you have sufficient access to.
-
+- If you view a published item with only one draft item, you can view the draft item by clicking **Go to draft**.
+- When you view a draft item, you can open the published version of an item by clicking **Go to published**.
+- If a published item has more than one draft, the **Manage Drafts** tool is displayed on both the published and draft versions of an item. You click **Manage Drafts** to view a list of drafts for the current item. All drafts are displayed, but you can read, edit and cancel drafts only that you have sufficient access to.
