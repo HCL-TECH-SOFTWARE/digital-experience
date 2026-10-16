@@ -13,7 +13,7 @@ To access the Search Admin UI as a standalone application, go to the following U
 
 `https://<host>/dx/ui/search/admin-ui`
 
-![](../../../assets/Search_Admin_UI_standalone_view.png)
+![](../../assets/Search_Admin_UI_standalone_view.png)
 
 For a standalone Search Admin UI deployment, grant access to the **Pages** resource only:
 
@@ -27,7 +27,7 @@ To access the Search Admin UI inside the Portal, go to:
 
 **Practitioner Studio > Administration > Search > Search Admin**
 
-![](../../../assets/Search_Admin_UI_portal_view.png)
+![](../../assets/Search_Admin_UI_portal_view.png)
 
 When the Search Admin UI is accessed inside Practitioner Studio, grant access to both the page and portlet resources.
 
