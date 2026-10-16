@@ -21,6 +21,7 @@ This section contains the newly created and migrated how-to articles. The articl
 | Type | Category | Article |
 |------|----------|---------|
 |Migrated|Administration|[How to deny IBM Integrated Solutions Console access in Kubernetes](./administration/DenyAdminConsoleIngressk8.md)|
+|Migrated|API|[How to use WCM API to generate a URL based on the locale of the request](./api/generateURLWCMAPI.md)|
 |Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
 |Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
