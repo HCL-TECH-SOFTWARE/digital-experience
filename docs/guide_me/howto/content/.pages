@@ -6,6 +6,7 @@ nav:
     - disableManagedPages.md
     - GetUUIDAndPathOfContent.md
     - IdentifyNewManagedPages.md
+    - WCMFeedImportConfig.md
     - IsolateWCMItemsMarkup.md
     - WCMObjectsHostname.md
     - PreRenderSpecialCharacters.md
