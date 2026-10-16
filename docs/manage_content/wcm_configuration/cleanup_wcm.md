@@ -8,7 +8,7 @@ The following are examples of items which you can clean up:
 - Versions
 - Expired content
 - Published projects
-- References to users and groups that no longer exist 
+- References to users and groups that no longer exist
 - Item history
 - Deleted items
 - Unused items
@@ -16,13 +16,13 @@ The following are examples of items which you can clean up:
 The following sections provide information on how to deal with each of these items.
 
 !!!note "Disclaimer of warranties"
-    The files in the [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip) file are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
+    The files in the [`wcm_maintenance.zip`](https://github.com/HCL-TECH-SOFTWARE/digital-experience/raw/main/docs/assets/wcm_maintenance.zip) file are sample codes. The code is provided "AS IS", without warranty of any kind. HCL shall not be liable for any damages arising out of your use of the sample code, even if you have been advised of the possibility of such damages.
 
 ## Drafts
 
 Draft items that are not published can accumulate over time. Use the following sample JSP file to clean up drafts that are no longer needed. You can adjust the file to go against different libraries and to have a "last changed" check.
 
-Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeDrafts.jsp` located in the wcm_maintenance folder.
+Download the file [`wcm_maintenance.zip`](https://github.com/HCL-TECH-SOFTWARE/digital-experience/raw/main/docs/assets/wcm_maintenance.zip). The sample JSP file is `purgeDrafts.jsp` located in the wcm_maintenance folder.
 
 ## Versions
 
@@ -34,11 +34,11 @@ With the clear versions tool, you can specify how many versions you want to keep
 
 When content expires as part of a workflow, an additional action in the workflow can trigger a deletion of the content as well. If the additional action was not done and a lot of expired content still exists, they can accumulate. Use the following sample JSP file to clean up expired contents that are no longer needed. You can adjust the file to go against different libraries and to modify how recent content is deleted.
 
-Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeExpiredData.jsp` located in the wcm_maintenance folder.
+Download the file [`wcm_maintenance.zip`](https://github.com/HCL-TECH-SOFTWARE/digital-experience/raw/main/docs/assets/wcm_maintenance.zip). The sample JSP file is `purgeExpiredData.jsp` located in the wcm_maintenance folder.
 
 ## Published projects
 
-While there is no out-of-the-box tool to delete published projects, you can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to delete published projects. 
+While there is no out-of-the-box tool to delete published projects, you can use [WCM API](https://help.hcl-software.com/digital-experience/8.5/dev/javadoc/vrm/850/api_docs/com/ibm/workplace/wcm/api/Workspace.html){target="_blank"} to delete published projects.
 
 Another option is to delete them through the WCM Authoring portlet. Go to **Project > Published** to display all published projects. Select the projects for deletion and click **Delete Project**.
 
@@ -46,7 +46,7 @@ You can also configure a utility to run in the background to delete published pr
 
 ## References to users and groups that no longer exist
 
-Users and groups are referenced in Web Content Manager items to ensure that only authorized users can access the items. It is common for user names or group names to change over time.
+Users and groups are referenced in WCM items to ensure that only authorized users can access the items. It is common for user names or group names to change over time.
 
 Sample scenarios:
 
@@ -65,7 +65,7 @@ Administrators can use the clear history tool to clear the history of an item. F
 
 When items are deleted, they are not completely removed to give users the chance to undo a deletion. These "deleted" items grow over time. To finally delete an item, WCM offers the Purge command. You can trigger the Purge through the user interface or API.
 
-Use the following sample JSP file to clean up drafts that are no longer needed. You can adjust the file to go against different libraries and to have a "last changed" check. Download the file [`wcm_maintenance.zip`](https://git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/files/1822/wcm_maintenance.zip). The sample JSP file is `purgeContent.jsp` located in the wcm_maintenance folder.
+Use the following sample JSP file to clean up drafts that are no longer needed. You can adjust the file to go against different libraries and to have a "last changed" check. Download the file [`wcm_maintenance.zip`](https://github.com/HCL-TECH-SOFTWARE/digital-experience/raw/main/docs/assets/wcm_maintenance.zip). The sample JSP file is `purgeContent.jsp` located in the wcm_maintenance folder.
 
 You can also configure a utility to run in the background to delete published projects. For more information, see [Configuring Web content cleanup tasks](./wcm_adm_tools/wcm_config_clean_tasks.md).
 
