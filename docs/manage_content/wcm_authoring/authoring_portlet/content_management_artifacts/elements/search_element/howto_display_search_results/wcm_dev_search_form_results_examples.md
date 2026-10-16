@@ -13,15 +13,15 @@ In this example, a table is used to lay out the search results.
 <td> <b>Design field</b> </td> <td> <b>Details</b> </td><td> <b>Code example</b> </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Header
 
 </td>
-<td> 
+<td>
 
 </td>
-<td> 
+<td>
 
 ```
 <table>
@@ -30,17 +30,17 @@ Header
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Result
 
 </td>
-<td> 
+<td>
 
 The attributes to display in each search result are defined here.
 
 </td>
-<td> 
+<td>
 
 ```
 <tr><td>
@@ -52,17 +52,17 @@ The attributes to display in each search result are defined here.
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Separator
 
 </td>
-<td> 
+<td>
 
 A separator can be used to delineate each search result.
 
 </td>
-<td> 
+<td>
 
 ```
 <tr><td  bgcolor="#FFFAA" colspan="2"/></tr>
@@ -71,17 +71,17 @@ A separator can be used to delineate each search result.
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Footer
 
 </td>
-<td> 
+<td>
 
 A page navigation element that is stored in a component is referenced here to add page navigation to the search results.
 
 </td>
-<td> 
+<td>
 
 ```
     <tr><td>
@@ -93,15 +93,15 @@ A page navigation element that is stored in a component is referenced here to ad
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 No results
 
 </td>
-<td> 
+<td>
 
 </td>
-<td> 
+<td>
 
 There are no results for your query. Please refine your search and try again.
 
@@ -120,15 +120,15 @@ In this example, a table is used to lay out the search results.
 <td> <b>Design field</b> </td> <td> <b>Details</b> </td><td> <b>Code example</b> </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Header
 
 </td>
-<td> 
+<td>
 
 </td>
-<td> 
+<td>
 
 ```
 <table>
@@ -142,7 +142,7 @@ Header
 Result
 
 </td>
-<td> 
+<td>
 
 The attributes to display in each search result are defined here.
 When displaying search results in a rendering portlet, you must specify the page that the linked content is displayed in when opened.
@@ -150,7 +150,7 @@ When displaying search results in a rendering portlet, you must specify the page
 A URL map to the portal page that contains the rendering portlet is required.
 
 </td>
-<td> 
+<td>
 
 ```
 <tr><td>
@@ -165,17 +165,17 @@ A URL map to the portal page that contains the rendering portlet is required.
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Separator
 
 </td>
-<td> 
+<td>
 
 A separator can be used to delineate each search result.
 
 </td>
-<td> 
+<td>
 
 ```
 <tr> <td  bgcolor="#FFFAA" colspan="2"/>  </tr>
@@ -184,17 +184,17 @@ A separator can be used to delineate each search result.
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 Footer
 
 </td>
-<td> 
+<td>
 
 A page navigation element that is stored in a component is referenced here to add page navigation to the search results.
 
 </td>
-<td> 
+<td>
 
 ```
     <tr><td>
@@ -206,15 +206,15 @@ A page navigation element that is stored in a component is referenced here to ad
 </td>
 </tr>
 <tr>
-<td> 
+<td>
 
 No results
 
 </td>
-<td> 
+<td>
 
 </td>
-<td> 
+<td>
 
 There are no results for your query. Please refine your search and try again.
 
@@ -238,8 +238,8 @@ The following parameters can be used to display data in a search result design u
 attributeName=authoringtemplate
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The name of the authoring template, if available, that was used to create the content item.
 
@@ -252,8 +252,8 @@ The name of the authoring template, if available, that was used to create the co
 attributeName=author
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The name or names of the authors of the content item, if any are defined. If there is more than one author, then they will be rendered with the string specified in the optional separator attribute between each value.
 
@@ -266,8 +266,8 @@ The name or names of the authors of the content item, if any are defined. If the
 attributeName=category
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The categories of the content item if any are defined. If there is more than one category, then they will be rendered with the string specified in the optional separator attribute between each value.
 
@@ -280,7 +280,7 @@ The categories of the content item if any are defined. If there is more than one
 attributeName=contentid
 ```
 
-</td> 
+</td>
 <td> 
 
 The id of the content item.
@@ -294,7 +294,7 @@ The id of the content item.
 attributeName=contentpath
 ```
 
-</td> 
+</td>
 <td> 
 
 The path excluding the server address, port or servlet context (`/wps/wcm`) for this search result.
@@ -308,8 +308,8 @@ The path excluding the server address, port or servlet context (`/wps/wcm`) for 
 attributeName=date
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The value of the date field from the SIAPI result. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](https://help.hcltechsw.com/digital-experience/8.5/dev/reference_docs.html) for `SimpleDateFormat` in the Java SDK for details.
 
@@ -322,8 +322,8 @@ The value of the date field from the SIAPI result. The format of the date can be
 attributeName=description
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The description of the content item.
 
@@ -336,8 +336,8 @@ The description of the content item.
 attributeName=effectivedate
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The effective date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](https://help.hcltechsw.com/digital-experience/8.5/dev/reference_docs.html) for `SimpleDateFormat` in the Java SDK for details.
 
@@ -351,8 +351,8 @@ The effective date of the content item. The format of the date can be specified 
 attributeName=expirationdate
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The expiration date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](https://help.hcltechsw.com/digital-experience/8.5/dev/reference_docs.html) for `SimpleDateFormat` in the Java SDK for details.
 
@@ -366,8 +366,8 @@ The expiration date of the content item. The format of the date can be specified
 attributeName=keywords
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The keywords of the content item if any are defined. If there is more than one keyword, then they will be rendered with the string specified in the optional separator attribute between each value.
 
@@ -381,8 +381,8 @@ The keywords of the content item if any are defined. If there is more than one k
 attributeName=lastmodifieddate
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The last modified date of the content item. The format of the date can be specified by using the optional format attribute. See the [Javadoc HTML documentation](https://help.hcltechsw.com/digital-experience/8.5/dev/reference_docs.html) for `SimpleDateFormat` in the Java SDK for details.
 
@@ -395,8 +395,8 @@ The last modified date of the content item. The format of the date can be specif
 attributeName=modifier
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The name of the last person to modify the content item.
 
@@ -409,8 +409,8 @@ The name of the last person to modify the content item.
 attributeName=name
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The name of the content item.
 
@@ -424,8 +424,8 @@ The name of the content item.
 attributeName=namelink
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 This assembles a complete link based on the name of the item being returned.
 
@@ -439,8 +439,8 @@ This assembles a complete link based on the name of the item being returned.
 attributeName=owner
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The name or names of the owners of the content item, if any are defined. If there is more than one author, then they will be rendered with the string specified in the optional separator attribute between each value.
 
@@ -454,8 +454,8 @@ The name or names of the owners of the content item, if any are defined. If ther
 attributeName=parentcontentpath
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 This is used to return the content path excluding the server address, port or Servlet context for the parent content item of this search result. For example: `/wps/wcm`.
 
@@ -471,8 +471,8 @@ This parameter is valid when the search results include a link to a file resourc
 attributeName=relevance
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The relevance “score” for this search result from the search engine.
 
@@ -486,8 +486,8 @@ The relevance “score” for this search result from the search engine.
 attributeName=summary
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The summary of the content item as generated by Portal Search.
 
@@ -501,8 +501,8 @@ The summary of the content item as generated by Portal Search.
 attributeName=title
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 This is the title of a content item.
 
@@ -516,8 +516,8 @@ This is the title of a content item.
 attributeName=titlelink
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 This assembles a complete link based on the title of the item being returned.
 
@@ -531,10 +531,10 @@ This assembles a complete link based on the title of the item being returned.
 attributeName=url
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
-Displays the URL of a content item. 
+Displays the URL of a content item.
 
 </td>
 </tr>
@@ -546,8 +546,8 @@ Displays the URL of a content item.
 separator=" "
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 Enter text or code to be used to separate multiple search results. For example: `separator=" - "`
 
@@ -561,15 +561,12 @@ Enter text or code to be used to separate multiple search results. For example: 
 format=" "
 ```
 
-</td> 
-<td> 
+</td>
+<td>
 
 The format of date parameters can be set using this parameter. See the [Javadoc HTML documentation](https://help.hcltechsw.com/digital-experience/8.5/dev/reference_docs.html) for `SimpleDateFormat` in the Java SDK for details.
 
 </td>
 </tr>
 
-
 </table>
-
-

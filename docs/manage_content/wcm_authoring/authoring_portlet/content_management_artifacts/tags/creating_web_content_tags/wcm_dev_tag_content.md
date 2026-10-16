@@ -20,9 +20,7 @@ See the format of a `Content` tag:
 To create a `Content` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Content** as the tag type.
-
 3. Select a context type:
 
     - **Autofill**

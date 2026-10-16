@@ -125,10 +125,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Web Content Manager - Content Reporting limitation for owners and authors
 
 === "Containers"
-    For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations/index.md).
+    For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations.md).
 
 === "On-Premises"
-    For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations/index.md).
+    For the **Owner** and  **Author** criteria, user and group attributes only display attributes that can be searched through text input or whose data type is string. For more information, see [Content Reporting limitations](../../manage_content/wcm_authoring/content_reporting/limitations.md).
 
 ### New React 16, 17, and 18 theme profiles available
 

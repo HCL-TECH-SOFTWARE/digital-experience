@@ -1,6 +1,6 @@
-# How to use stylesheets in items
+# Using stylesheets in items
 
-Stylesheets can be used to format the design of HCL Web Content Manager pages in the same way as normal web pages.
+Stylesheets can be used to format the design of HCL Web Content Manager (WCM) pages in the same way as normal web pages.
 
 ## Creating and referencing stylesheet elements
 
@@ -44,12 +44,10 @@ For example, to add a class that is called "`wcm`" to a heading tag:
 
 ## How to use styles in web content tags
 
-Stylesheets can be used to format the style of content that is retrieved by using Web Content Manager tags. The style must exist in the stylesheet that is referenced in the presentation template that is used to render the Web Content Manager tag.
+Stylesheets can be used to format the style of content that is retrieved by using WCM tags. The style must exist in the stylesheet that is referenced in the presentation template that is used to render the WCM tag.
 
 For example, to format the links in a menu by using a stylesheet class called "`wcm`", the following placeholder tag would be used:
 
 ```
 <a href="<placeholder tag="href" />" class="wcm"><placeholder tag="name" /></a>
 ```
-
-

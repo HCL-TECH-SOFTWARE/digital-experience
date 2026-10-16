@@ -8,11 +8,14 @@ nav:
     - ClearWebSphereDynacache.md
     - CustomizeErrorBehavior.md
     - DecodeLongURLs.md
+    - DenyAdminConsoleIngressk8.md
     - DetermineWebsphereAppServer.md
     - PreventApplicationStartUp.md
     - ExpediteAsyncDeletes.md
     - DetermineVPObjectID.md
+    - HideImpersonationButton.md
     - IncreaseTransactionTimeout.md
     - SystemReportForCompare.md
     - ResetWCMViewerPortlet.md
+    - ConfigEngineAltTempDir.md
     - UseJavaScriptToReplaceText.md
