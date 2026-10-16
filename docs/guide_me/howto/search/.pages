@@ -3,6 +3,7 @@ nav:
     - index.md
     - AccessWasAfterRemoteSearchInstall.md
     - VPSearchService.md
+    - ExcludePortletsPagesSeedlist.md
     - SampleSearchQueryWCMComponent.md
     - IncludeWebContentViewerPortlet.md
     - SearchByDateTime.md
