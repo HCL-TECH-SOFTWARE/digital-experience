@@ -6,9 +6,7 @@ To enforce a review, a user with editor access or higher clicks **Submit for Rev
 
 When a project is in the review state:
 
--   Users with editor access or higher can return a project to an active state by clicking **Withdraw from Review**.
--   Approvers can approve a project by clicking **Approve Project**. A project can either require the approval of only a single approver or all approvers.
--   Approvers can decline a project by clicking **Reject Project**. The project is returned to the active state.
--   If joint approval is specified, approvers can withdraw an approval while the project is still in review by clicking **Withdraw Approval**. The users's approval is withdrawn, but the project remains in a state of review.
-
-
+- Users with editor access or higher can return a project to an active state by clicking **Withdraw from Review**.
+- Approvers can approve a project by clicking **Approve Project**. A project can either require the approval of only a single approver or all approvers.
+- Approvers can decline a project by clicking **Reject Project**. The project is returned to the active state.
+- If joint approval is specified, approvers can withdraw an approval while the project is still in review by clicking **Withdraw Approval**. The users's approval is withdrawn, but the project remains in a state of review.

@@ -3,10 +3,7 @@ id: wcm_dev_renderplugins_remote
 title: Remote action plug-in
 ---
 
-
-
-
-Use the RemoteAction plug-in to reference remote actions from your web content. Remote actions are used to run actions, such as creating and editing items and generating views.
+Use the `RemoteAction` plug-in to reference remote actions from your web content. Remote actions are used to run actions, such as creating and editing items and generating views.
 
 You can reference remote actions by using plug-in tags with the following format:
 
@@ -15,22 +12,21 @@ You can reference remote actions by using plug-in tags with the following format
 useCurrentSelection=" " dialog=" " useCurrentContext=" "]
 ```
 
--   **`action=`**
+- **`action=`**
 
     This attribute is the remote action to run.
 
--   **`docid=`**
+- **`docid=`**
 
     This attribute is the document ID of the item to run the remote action against.
 
--   **`useCurrentContext=`**
+- **`useCurrentContext=`**
 
     If set to true, then the document ID is obtained form the rendering context instead of the docid attribute.
 
--   **`dialog=`**
+- **`dialog=`**
 
     If this attribute is set to true, when rendered within a web content viewer, the remote action is rendered as a URL. The URL redirects the user to a hidden portal page that is used by the viewer for inline editing.
-
 
 This example demonstrates a "new" action to create a content item:
 
@@ -44,4 +40,3 @@ wcmfield.autosave="true" wcmfield.saveValidate="true" ]
 ```
 
 For details on the remote actions that you can access with plug-in tags, see *Using remote actions*.
-

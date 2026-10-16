@@ -7,5 +7,3 @@ Most web pages contain links, either to other web pages, or to files. In a web c
 ## Creating a link element
 
 To create a link element, you can either add a link element to an authoring template, site area or content item, or create a link component.
-
-

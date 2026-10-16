@@ -266,6 +266,39 @@ Before investigating MCP-related errors, perform these basic checks:
 | Payload-related request failures | Request body exceeds configured size limit | Validate payload size and review the `BODY_PARSER_JSON_LIMIT` configuration. |
 | Unable to connect to AI service | MCP Server cannot reach configured AI provider dependencies | Check provider credentials, secrets, and outbound connectivity from cluster services. |
 | Invalid format or protocol errors | Service version mismatch or contract mismatch across components | Verify compatible DX, IQ integrator, and MCP Server versions, and then review logs for parsing or schema failures. |
+| Version incompatibility | IQ and HCL DX Core versions fall outside the supported compatibility window. | Check MCP Server logs for the detected HCL DX Core version, and update components to within two CF releases. |
+
+## Cross-session memory
+
+When [cross-session memory](./installation/enable-rag.md) fails to initialize, IQ enters graceful degradation mode. Since cross-session memory is an optional feature, IQ continues to operate normally if it fails. The Integrator pod stays healthy and continues to answer questions, but it silently stops storing and retrieving context from past conversations. Because there is no visible error in the user interface, check the Integrator logs to confirm whether cross-session memory is active.
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> deployment/<IQ_RELEASE_NAME>-integrator --tail=500 | grep -E "\[RAG\]|\[Embedding\]"
+```
+
+All related entries are prefixed with `[RAG]` or `[Embedding]`. A healthy startup produces these entries:
+
+```text
+[RAG] Initializing vector DB backend: pgvector
+[RAG] INITIALIZED: active backend=pgvector, RAG_ENABLED=true
+```
+
+Use the following table to interpret failure entries:
+
+| Log entry | Cause | Solution |
+|-----------|-------|----------|
+| `[RAG] RAG_ENABLED=false (false by default; set RAG_ENABLED=true to enable)` | Cross-session memory is not enabled. | Set `RAG_ENABLED` to `true`. For instructions, refer to [Enabling cross-session memory](./installation/enable-rag.md#enabling-cross-session-memory). |
+| `[RAG] vector dimension mismatch: configured=<N>, model=<M>` | `EMBEDDING_DIMENSIONS` does not match the output dimension of the model registered in LiteLLM. | Set `EMBEDDING_DIMENSIONS` to the value reported as `model=<M>`, or change the `dimensions` value in your LiteLLM model configuration. For instructions, refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+| `[RAG] backend init failed; RAG will be inactive this run` | The vector database failed to initialize. | Verify that `DB_ENABLED` is set to `true`, that the database is reachable, and that the `pgvector` extension is enabled. For instructions, refer to [Preparing the database](./installation/prepare-database.md). |
+| `[RAG] RAG disabled due to embedding model/schema drift.` | The stored configuration no longer matches the current embedding or chunking settings. | Recreate the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration). |
+| `[RAG] initialization failure handled; continuing without RAG context` | An earlier initialization failure occurred, causing the pod to operate in graceful degradation mode. | Resolve the preceding `[RAG]` error entry. The system retries initialization the next time it attempts to ingest or retrieve context. |
+| `[RAG] Vector DB not initialized!` | IQ attempted to retrieve context before initialization succeeded. | Resolve the preceding initialization error. |
+| `[RAG] RETRIEVAL FAILED: <error>` | The vector search query failed in the database. | Check database connectivity and confirm the `rag_chunks` table exists. |
+| `[RAG] ingest failed (sessionId=<id>, messageId=<id>)` | A message could not be chunked, embedded, or stored. | Check the accompanying `[Embedding]` entries and confirm the LiteLLM proxy is reachable. |
+| `[Embedding] LITELLM_API_KEY is required for the LiteLLM embedding adapter.` | The Integrator has no LiteLLM API key. | Configure the key. For instructions, refer to [Preparing LiteLLM access](./installation/prepare-litellm-access.md). |
+| `[Embedding] Provider returned no embedding vector.` | The embedding alias is missing from the LiteLLM proxy or the provider rejected the request. | Confirm `iq-multilingual-embed` or `iq-embed` is registered and callable. For instructions, refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+
+To capture detailed activity when ingesting and retrieving context while reproducing an issue, set `RAG_DEBUG` to `true`. For more information, refer to [Environment variables - Cross-session memory](./installation/environment-variables.md#cross-session-memory). Disable `RAG_DEBUG` after reproducing the issue to prevent logging conversation content.
 
 ## Advanced diagnostics
 
@@ -408,6 +441,7 @@ If you are [using an external database](./installation/prepare-database.md#confi
     - [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](./installation/configuring-mcp.md)
     - [Preparing the database](./installation/prepare-database.md)
+    - [Configuring cross-session memory](./installation/enable-rag.md)
     - [Validating the deployment](./installation/validation.md)
     - [Enabling IQ](enable.md)
     - [Using IQ](usage.md)

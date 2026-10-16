@@ -16,9 +16,7 @@ See the format of a `placeholder` tag:
 To create a `placeholder` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Placeholder** as the tag type.
-
 3. Select a placeholder tag type. This is added to the placeholder tag as the `Placeholder tag=""` parameter:
 
     - **Name**

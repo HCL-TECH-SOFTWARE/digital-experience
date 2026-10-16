@@ -12,5 +12,3 @@ Syndication does not move the JSP page referred to in a JSP element. Only the it
 
 !!!note
     The JSP referenced within a JSP component must not include a reference, directly or indirectly, to the same JSP component. This restriction includes references within web content tags or the API. If it does, a loop is created and errors occur.
-
-

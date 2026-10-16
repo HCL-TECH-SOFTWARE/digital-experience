@@ -6,52 +6,50 @@ With the Portal Scripting Interface, you can create Jacl or Jython scripts to au
 
 To create a library, use the create method.
 
--   Jacl syntax: `$DocumentLibrary create "library_name"`
--   Jython syntax: `DocumentLibrary.create("library_name")`
+- Jacl syntax: `$DocumentLibrary create "library_name"`
+- Jython syntax: `DocumentLibrary.create("library_name")`
 
--   **Jacl example:**
+- **Jacl example:**
 
     ```
     wsadmin>$DocumentLibrary create "Library1"
     "library1"
     ```
 
--   **Jython example:**
+- **Jython example:**
 
     ```
     wsadmin>DocumentLibrary.create("Library1")
     '"library1"'
     ```
 
-
 ## Delete libraries
 
 To delete a library, use the delete method.
 
--   Jacl syntax: `$DocumentLibrary delete "library_name"`
--   Jython syntax: `DocumentLibrary.delete("library_name")`
+- Jacl syntax: `$DocumentLibrary delete "library_name"`
+- Jython syntax: `DocumentLibrary.delete("library_name")`
 
--   **Jacl example:**
+- **Jacl example:**
 
     ```
     wsadmin>$DocumentLibrary delete "Library1"
     ```
 
--   **Jython example:**
+- **Jython example:**
 
     ```
     wsadmin>DocumentLibrary.delete("Library1")
     ```
 
-
 ## List libraries
 
 To retrieve a list of libraries, use the listall method.
 
--   Jacl syntax: `$DocumentLibrary listall`
--   Jython syntax: `DocumentLibrary.listall()`
+- Jacl syntax: `$DocumentLibrary listall`
+- Jython syntax: `DocumentLibrary.listall()`
 
--   **Jacl example:**
+- **Jacl example:**
 
     ```
     wsadmin>$DocumentLibrary listall
@@ -60,7 +58,7 @@ To retrieve a list of libraries, use the listall method.
     "library1"
     ```
 
--   **Jython example:**
+- **Jython example:**
 
     ```
     wsadmin>DocumentLibrary.listall()
@@ -69,15 +67,14 @@ To retrieve a list of libraries, use the listall method.
     "library1"'
     ```
 
-
 ## Retrieve library details
 
 Retrieve library details with the details method. This method returns the following information about the library: the Universally Unique Identifier (UUID), state, name, and title.
 
--   Jacl syntax: `$DocumentLibrary details "library_name"`
--   Jython syntax: `DocumentLibrary.details("library_name")`
+- Jacl syntax: `$DocumentLibrary details "library_name"`
+- Jython syntax: `DocumentLibrary.details("library_name")`
 
--   **Jacl example:**
+- **Jacl example:**
 
     ```
     wsadmin>$DocumentLibrary details "Library1"
@@ -89,7 +86,7 @@ Retrieve library details with the details method. This method returns the follow
     deletion prohibited: false
     ```
 
--   **Jython example:**
+- **Jython example:**
 
     ```
     wsadmin>print DocumentLibrary.details("Library1")
@@ -101,8 +98,5 @@ Retrieve library details with the details method. This method returns the follow
     deletion prohibited: false
     ```
 
-
-
 ???+ info "Related information"  
-    -   [Command reference for the Portal Scripting Interface](../../../../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)
-
+    [Command reference for the Portal Scripting Interface](../../../../../../../deployment/manage/portal_admin_tools/portal_scripting_interface/command_ref_psi/index.md)

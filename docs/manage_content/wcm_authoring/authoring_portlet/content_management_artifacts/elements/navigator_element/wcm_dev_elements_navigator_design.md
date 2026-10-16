@@ -3,14 +3,12 @@ id: wcm_dev_elements_navigator_design
 title: Navigator element formatting examples
 ---
 
-# Navigator element formatting examples
-
 You use HTML to format the layout of a navigator.
 
--   Navigator elements can have more than one element design.
--   Each level in the navigator can have its own element design.
--   If you want all the levels in your navigator to look the same, then you build one element design only.
--   If there are three levels in a site area but only two element designs in your navigator, then the last two levels in your navigator use the final element design.
+- Navigator elements can have more than one element design.
+- Each level in the navigator can have its own element design.
+- If you want all the levels in your navigator to look the same, then you build one element design only.
+- If there are three levels in a site area but only two element designs in your navigator, then the last two levels in your navigator use the final element design.
 
 The following tables contain some examples of the ways you can format the look of a navigator.
 
@@ -38,7 +36,7 @@ In this example, a URLCmpnt tag is used to create a link instead of a placeholde
 
 In this example, unordered list tags are used to format navigator results. This design requires the following navigator parameters to be selected:
 
--   Show header, footer, and separator fields for each result design
+- Show header, footer, and separator fields for each result design
 
 |Design|Details|Design|
 |------|-------|------|
@@ -47,4 +45,3 @@ In this example, unordered list tags are used to format navigator results. This 
 |Separator 1|The separator field closes and open the `<li>` tag for each item that is displayed in the navigator.|`</li><li>`|
 |Footer 1|The footer is used to close `<ul>` and `<li>` tags at each level in the navigator.|`</li></ul>`|
 |Navigator result design 2|In this example, you do not need to add any markup to the Navigator result design 2. The markup that is entered in Navigator result design 1 is automatically used for the other levels of the navigator.| |
-

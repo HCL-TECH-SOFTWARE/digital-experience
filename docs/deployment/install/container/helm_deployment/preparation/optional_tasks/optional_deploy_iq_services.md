@@ -8,7 +8,8 @@ This section provides step-by-step instructions for deploying the IQ backend ser
 
 ## Prerequisites
 
-Before installing the IQ backend server, deploy the LiteLLM service to configure the required proxy models (`iq-general-purpose` and `iq-summary`). For more information, refer to [Deploying LiteLLM](../../../../../../build_sites/iq/installation/deploy-litellm.md).
+- Before installing the IQ backend server, deploy the LiteLLM service to configure the required proxy models (`iq-general-purpose` and `iq-summary`). For more information, refer to [Deploying LiteLLM](../../../../../../build_sites/iq/installation/deploy-litellm.md).
+- If MCP Server HTTPS is enabled, create a TLS Secret in the target namespace before installing the IQ chart. For more information, refer to [Enabling HTTPS for the MCP Server](../../../../../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
 
 ## Understanding IQ services
 
@@ -94,6 +95,8 @@ configuration:
   
   # MCP Server configuration
   mcpServer:
+    httpsEnabled: true
+    tlsCertSecret: "dx-tls-cert"
     standaloneMode: false
     enableWcm: true
     enableDam: true
@@ -119,9 +122,9 @@ environment:
       # CRITICAL: MCP Server list configuration
       # Must match your Helm release name. Default points to 'dx-ai' release.
       # If your release name is different (for example, 'dx-iq'), update accordingly.
-      # Format: http://<IQ_RELEASE_NAME>-mcp-server:<PORT>
+      # Format: https://<IQ_RELEASE_NAME>-mcp-server:<PORT>
       - name: "MCP_SERVER_LIST"
-        value: "http://<IQ_RELEASE_NAME>-mcp-server:3000"
+        value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
       
       # Optional: LLM model parameters (uncomment and adjust if your model requires specific values)
       # - name: "LLM_MAX_TOKENS"
