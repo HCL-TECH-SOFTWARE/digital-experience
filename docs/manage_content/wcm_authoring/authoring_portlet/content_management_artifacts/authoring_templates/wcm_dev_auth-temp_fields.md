@@ -6,7 +6,6 @@ title: Defining display settings of fields and elements
 You can define the display properties of field and elements that are displayed on a content form. Different field and element types have different display properties.
 
 1. To hide an entire section in a content form from all users, select **Hide Section**. You must specify a default value in any required fields within the section to use this option.
-
 2. Click ![properties](../../../../../images/propIcon.jpg) to open the display properties of a field or element.
 
     The following field properties can be set. Different field and element types have different display properties.

@@ -4,4 +4,6 @@ nav:
     - updateWcmLibraryRoles.md
     - createJSPUsingWCMAPI.md
     - LimitIteratorWCMAPI.md
+    - findTopLevelSiteArea.md
+    - generateURLWCMAPI.md
     - searchPagesInPortalSiteLibrary.md

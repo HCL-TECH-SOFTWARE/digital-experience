@@ -16,9 +16,7 @@ See the format of a `PageInfo` tag:
 To create a `PageInfo` tag:
 
 1. Click **Insert a Tag** from a presentation template or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Page Information** as the tag type.
-
 3. Select a page information value:
 
     - currentPage

@@ -18,17 +18,11 @@ Tag Body Content
 To create a `plugin` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **Plugin Component** as the tag type.
-
 3. Select a plug-in type.
-
 4. Select the plug-in to reference. Information about the plug-in, and valid parameters, are displayed.
-
 5. Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
-
 6. Click **OK** to add the tag to your navigator design.
-
 7. You can then add custom parameters to your tag design.
 
     After you add the tag to your design, you can also add the following parameters to the tag:

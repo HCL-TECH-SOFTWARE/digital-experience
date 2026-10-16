@@ -22,15 +22,13 @@ The following changes inside of the scope of a project to a page managed with We
 
 Changes to page draft elements result in either a new draft or an update to an existing draft. A page draft consists of the following elements:
 
--   The page item itself, including title, description, metadata, and properties
--   The access control of the page
--   The page layout
--   Any public page wires that are connected to portlets on the same page or on another page
--   Any portlet preferences that are defined in **Edit Shared Settings** mode
--   The web content mappings of the current page
--   The Vanity URLs of the current page
+- The page item itself, including title, description, metadata, and properties
+- The access control of the page
+- The page layout
+- Any public page wires that are connected to portlets on the same page or on another page
+- Any portlet preferences that are defined in **Edit Shared Settings** mode
+- The web content mappings of the current page
+- The Vanity URLs of the current page
 
 ???+ info "Related information"
     - [Site Manager](../../../inline_editing/index.md)
-
-
