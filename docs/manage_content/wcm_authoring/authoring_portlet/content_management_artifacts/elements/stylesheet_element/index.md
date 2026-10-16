@@ -1,8 +1,8 @@
-# Using a style sheet element
+# Using a Style Sheet element
 
-You store a style sheet file in a style sheet element. You can use a style sheet element only by creating a style sheet component. You cannot add a style sheet element to authoring templates, site areas, or content items.
+You store a style sheet file in a Style Sheet element. You can use a Style Sheet element only by creating a Style Sheet component. You cannot add a Style Sheet element to authoring templates, site areas, or content items.
 
-To create a style sheet component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Style Sheet**.
+To create a Style Sheet component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Style Sheet**.
 
 1. [Entering identification information](../../../content_management_artifacts/common/items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

@@ -17,6 +17,7 @@ The following features and updates are available to customers installing HCL Dig
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- IQ - Configuring cross-session memory
 - IQ - HTTPS support for the MCP Server
 - WAS, JDK, UBI, and iFix versions
 
@@ -113,10 +114,15 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf239).
 
+### IQ - Configuring cross-session memory
+
+=== "Containers"
+   You can now enable the optional cross-session memory feature in IQ. This feature allows IQ to store and reference context from past conversations. To enable cross-session memory, set `RAG_ENABLED` to `true` in your `custom-iq-values.yaml` file and upgrade the Helm release. For more information, refer to [Configuring cross-session memory](../../build_sites/iq/installation/enable-rag.md).
+
 ### IQ - HTTPS support for the MCP Server
 
 === "Containers"
-    IQ now uses HTTPS to secure connections between the MCP Server and the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart through the `httpsEnabled` parameter. For more information, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
+    IQ now supports HTTPS to secure connections between the MCP server and the IQ Integrator. HTTPS is disabled by default. For configuration instructions, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 

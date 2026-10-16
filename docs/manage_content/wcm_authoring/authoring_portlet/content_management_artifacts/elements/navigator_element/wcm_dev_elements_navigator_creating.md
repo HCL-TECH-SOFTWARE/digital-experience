@@ -1,11 +1,11 @@
 ---
 id: wcm_dev_elements_navigator_creating
-title: Creating a navigator component
+title: Creating a Navigator component
 ---
 
-You can use a navigator element only by creating a navigator component. You cannot add a navigator element to authoring templates, site areas, or content items.
+You can use a Navigator element only by creating a Navigator component. You cannot add a Navigator element to authoring templates, site areas, or content items.
 
-To create a navigator component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Navigator**.
+To create a Navigator component, open the applications menu and go to **Content > Web Content Management** and then click **New > Component > Navigator**.
 
 1. [Entering identification information](../../../content_management_artifacts/common/items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.

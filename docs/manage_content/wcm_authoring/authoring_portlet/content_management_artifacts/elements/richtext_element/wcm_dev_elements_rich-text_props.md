@@ -1,10 +1,10 @@
-# Using the rich text element
+# Using the Rich Text element
 
-You use the rich text element to enter and format text.
+You use the Rich Text element to enter and format text.
 
 The rich text editors that are used by Web Content Manager (WCM) are supplied by other vendors. For information about using the rich text editor, see the user documentation that is supplied by the specific rich text editor vendor.
 
-Basic WCM tags can be used in rich text elements. For example, the following tags can be used in Rich Text elements:
+Basic WCM tags can be used in Rich Text elements. For example, the following tags can be used in Rich Text elements:
 
 - `[component name="test"]`
 - `[element type="content" context="current" key="body"]`

@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_link_adding
-title: Adding a link element to an item
+title: Adding a Link element to an item
 ---
 
-You add a link element to a site area or content item when you want a link to be used for a specific site area or content item.
+You add a Link element to a site area or content item when you want a link to be used for a specific site area or content item.
 
 !!!note
     You can add an element to a content item only if the manage elements feature is enabled in the authoring template that is used by the content item.
@@ -14,15 +14,15 @@ You add a link element to a site area or content item when you want a link to be
 4. Enter a name. Do not use double-byte and non-ASCII characters.
 5. Enter a display title to use as the title of the element displayed indexes and forms.
 6. If you have created a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different display title for each language it is configured for. The text that is entered in the **Display Title** field is only used if an appropriate display title is not available from the selected text provider, or if the text provider is not available.
-7. Click **OK**. The link element is added to your form.
-8. Go to the link element you created.
+7. Click **OK**. The Link element is added to your form.
+8. Go to the Link element you created.
 9. Select either **External URL**, or **Web Content**.
 10. To add a link to a URL, either type or paste the URL in the **Type a URL** field.
 
     !!!note
         The inserted URL is rendered relative to the URL of the site area of the currently rendered content item. Internet protocols, such as "`Http://`", must be added at the beginning of the inserted link if an absolute URL is intended to be rendered.
 
-11. To add a link to web content, an image component, a file component, or an existing link component, click **Browse Content**.
+11. To add a link to web content, an image component, a file component, or an existing Link component, click **Browse Content**.
 
     In CF08 or higher, click **Browse**.
 

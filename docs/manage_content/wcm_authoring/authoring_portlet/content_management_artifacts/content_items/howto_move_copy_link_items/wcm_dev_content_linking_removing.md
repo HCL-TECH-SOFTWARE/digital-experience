@@ -18,4 +18,3 @@ You remove content items from site areas with the **Remove Links** or **Link** f
 2. Click **Link To**.
 3. Select the site area that you would like to remove a link from and then click **Remove**.
 4. Click **OK**.
-

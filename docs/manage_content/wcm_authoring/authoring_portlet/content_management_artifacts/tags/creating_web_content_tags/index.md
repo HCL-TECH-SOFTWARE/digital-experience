@@ -42,7 +42,7 @@ Use the `placeholder` tag to display metadata within an element or component des
 Use the plug-in (`plugin`) tag to reference rendering plug-ins. You can select preinstalled rendering plug-ins or your own custom plug-ins.
 - **[Property tag](wcm_dev_item-details_property.md)**  
 Use the `Property` tag display various fields and metadata from content items and site areas.
-- **[Style element tag](wcm_dev_referencing_components_style-sheet.md)**  
+- **[Style Element tag](wcm_dev_referencing_components_style-sheet.md)**  
 Use the style element (`StyleElement`) tag to reference the default style sheet component defined in an authoring template. You can also use it to reference style sheets linked in a site area or content item through a component reference.
 - **[URL Component tag](wcm_dev_item-details_url.md)**  
 Use the URL Component (`URLCmpnt`) to generate a URL to a site area or content item.

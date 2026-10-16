@@ -1,8 +1,8 @@
-# Defining menu element formatting options
+# Defining Menu element formatting options
 
-Define how search results are displayed for the menu element. These options include defining the sort order for results, paging options for menu elements with multiple pages of results, and formatting options that control how the menu is rendered.
+Define how search results are displayed for the Menu element. These options include defining the sort order for results, paging options for Menu elements with multiple pages of results, and formatting options that control how the menu is rendered.
 
-1. Specify how the search results displayed in the menu element are sorted.
+1. Specify how the search results displayed in the Menu element are sorted.
 
     1. **Prior to CF210**, there is only one sort order option for all sort fields:
 
@@ -26,7 +26,7 @@ Define how search results are displayed for the menu element. These options incl
         !!!note
             On creation, the default sort key is the title and the order is ascending.
 
-2. Specify paging options for the menu element.
+2. Specify paging options for the Menu element.
 
     1. Enter the number of items that are displayed on each menu page.
     2. Enter the number of the start page for displaying search results in the menu.
@@ -37,9 +37,9 @@ Define how search results are displayed for the menu element. These options incl
         - To display multiple menu pages, you need to use a page navigation element. This element is referenced within the header or footer of the menu design.
         - Changes to paging options are not visible to users until the session cache is expired, or a user starts a new session.
 
-3. Specify the formatting options that are used to display the menu element. Enter text, tags, and code into the menu design fields.
+3. Specify the formatting options that are used to display the Menu element. Enter text, tags, and code into the menu design fields.
 
-    - The text that is entered in the **Header** and **Footer** designs will appear before and after the displayed menu results. When you enter design tagging for menu elements with multiple pages of search results, you can reference a page navigation element in the header or footer to provide the user with a way of browsing through the menu pages.
+    - The text that is entered in the **Header** and **Footer** designs will appear before and after the displayed menu results. When you enter design tagging for Menu elements with multiple pages of search results, you can reference a page navigation element in the header or footer to provide the user with a way of browsing through the menu pages.
     - The text that is entered into the **Component Design for each matching content** field defines the format of each menu result.
     - The text that is entered into the **Separator** field appears between each displayed menu result.
     - The text that is entered into the **No result design** field is displayed if no matches are found for the menu search criteria.

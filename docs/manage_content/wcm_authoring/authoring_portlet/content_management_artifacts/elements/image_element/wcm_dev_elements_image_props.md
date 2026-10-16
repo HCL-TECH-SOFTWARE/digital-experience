@@ -3,9 +3,9 @@ id: wcm_dev_elements_image_props
 title: Selecting an image
 ---
 
-You use the image element to upload an image.
+You use the Image element to upload an image.
 
-1. Click **Upload a file** to select a file to store in the image component.
+1. Click **Upload a file** to select a file to store in the Image component.
 2. Define the image properties:
 
     - **Border**

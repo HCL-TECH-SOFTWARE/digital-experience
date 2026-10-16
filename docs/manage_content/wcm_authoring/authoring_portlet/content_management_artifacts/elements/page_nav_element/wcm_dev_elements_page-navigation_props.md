@@ -1,15 +1,15 @@
 # Defining a page navigator
 
-You use the page navigation element to define a page navigator.
+You use the Page Navigation element to define a page navigator.
 
-1. Select the types of page navigation controls that you want to use with the page navigation element.
+1. Select the types of page navigation controls that you want to use with the Page Navigation element.
 
     - Select **Shuttle** to include relative navigation links, such as previous page, next page, first page, and last page.
     - Select **Paging** to include navigation links based on page numbers.
     - Select **Jump to page** to include a field where users can type the page number to display.
     - Select **Page size** to include different options for the number of items to display on a page.
 
-2. Specify the layout and design of the header, separator, and footer for the page navigation element by entering HTML tagging in the respective input fields.
+2. Specify the layout and design of the header, separator, and footer for the Page Navigation element by entering HTML tagging in the respective input fields.
 
     The code that is entered in the header and footer designs will appear before and after the displayed page controls. The code that is entered into the separator design appears between each displayed page control.
 
@@ -45,12 +45,12 @@ You use the page navigation element to define a page navigator.
 
 4. If you are using page number controls, specify the paging options and continuation design.
 
-    1. Indicate how many pages you want to make available from the page navigation element at one time.
+    1. Indicate how many pages you want to make available from the Page Navigation element at one time.
 
         - Click **Show all pages** to include navigation links for every page in the result set.
         - To display a subset of the result set, click **Limit number of pages**, and enter the number of pages you want to include.
 
-    2. If you are limiting the number of pages that are displayed in the page navigation element, specify the layout and design of the **Continuation** control by entering HTML tagging in the input field.
+    2. If you are limiting the number of pages that are displayed in the Page Navigation element, specify the layout and design of the **Continuation** control by entering HTML tagging in the input field.
 
         The **Continuation** control is displayed on either side of the page numbers to provide access to the preceding or following set of pages.
 

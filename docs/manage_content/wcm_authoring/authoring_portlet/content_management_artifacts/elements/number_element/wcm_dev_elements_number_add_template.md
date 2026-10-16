@@ -1,9 +1,9 @@
 ---
 id: wcm_dev_elements_number_add_template
-title: Adding a number element to a template
+title: Adding a Number element to a template
 ---
 
-You add a number element to an authoring template when you want the number element to be used by a set of items that use the same authoring template.
+You add a Number element to an authoring template when you want the Number element to be used by a set of items that use the same authoring template.
 
 1. Open or create an authoring template.
 2. Click **Manage Elements**.
@@ -11,9 +11,9 @@ You add a number element to an authoring template when you want the number eleme
 4. Enter a name. Do not use double-byte and non-ASCII characters.
 5. Enter a display title to use as the title of the element displayed indexes and forms.
 6. If you create a text provider plug-in for a multi-locale site, you can also select the text provider and enter a key to look up a string from the selected text provider. The text provider displays a different display title for each language it is configured for. The text that is entered in the **Display Title** field is only used if an appropriate display title is not available from the selected text provider, or if the text provider is not available.
-7. Click **OK**. The number element is added to your form.
+7. Click **OK**. The Number element is added to your form.
 8. Go to the **Default Content** tab.
-9. Go to the number element you created. Enter a numeric value. The maximum number of digits that can be entered into a number element is 16.
+9. Go to the Number element you created. Enter a numeric value. The maximum number of digits that can be entered into a Number element is 16.
 10. Click ![properties](../../../../../../images/propIcon.jpg) to open the display properties of the element. This property is where you define how the element is displayed on the item form.
 
     1. To display the element as a required field select **Identify this as a required field**.
