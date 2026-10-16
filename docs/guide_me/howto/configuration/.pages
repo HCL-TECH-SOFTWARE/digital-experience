@@ -5,9 +5,11 @@ nav:
     - ChangeCellandNodeName.md
     - DefaultPortletConfig.md
     - ChangeDisplayLanguage.md
+    - friendlyURLadmin.md
     - configureJMSMessages.md
     - ConfigureRAD.md
     - DefaultWCMValues.md
+    - EnableDjConfigDebug.md
     - EnableImageFormats.md
     - ConfigureIngressWithVPs.md
     - IntegrateLDAP.md

@@ -4,8 +4,6 @@ title: The portlet plug-in
 ---
 
 
-
-
 Use the `Portlet` rendering plug-in to add portlet information to your web content. This plug-in provides access to the instance of the Web Content Viewer portlet that renders the plug-in. The `Portlet` rendering plug-in uses the following attributes:
 
 - **key**
