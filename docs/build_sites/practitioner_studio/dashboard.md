@@ -1,6 +1,6 @@
 # Dashboard
 
-The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
+The Practitioner Studio Dashboard is a modern, react-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
 
 ![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
 
@@ -13,7 +13,7 @@ The dashboard includes the following widgets:
 - **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
 - **My Sites:** Displays managed sites in a card layout with thumbnails, status indicators, and direct navigation.
 - **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site and includes quick search.
-- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on their publish and expiry dates.
+- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on the publish and expiry dates.
 - **Search Crawlers:** Displays the status of Search V2 crawlers (requires Search V2).
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
@@ -71,11 +71,11 @@ Use the **Calendar** widget to see which content items are scheduled to publish 
 
 ![Calendar](../../assets/HCL_Practitioner_dashboard_Calendar.png)
 
-- **Grid pane:** Browse by **Month** or **Week** (**Week** is the default view). Use **Today**, the month/year picker, and the previous/next arrows to move through the calendar. Each day shows color-coded status for scheduled items.
-- **Agenda pane:** Select a day in the grid, or use the previous/next day controls, to view a time-ordered list of items for that day. Select a content item and click eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+- **Grid pane:** Switch between **Month** and **Week** views (**Week** is default). Select **Today**, the month and year selector, or use the arrows to navigate the calendar. Days display color-coded status indicators for scheduled items.
+- **Agenda pane:** Select a date in the grid or use the arrows to view items scheduled for that day in chronological order. Select a content item and select the eye icon to open in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
-    The status shown on a calendar chip is calculated by comparing the item's publish date and expiry date to the current date. It does not reflect the item's actual workflow or content status. For example, an item can still show a Publishing or Published based on its publish date even if it has not actually completed the publish workflow. If an item has both a publish date and an expiry date that fall within the visible range, it appears as two separate chips, one for each date, rather than a single combined status.
+    The status displayed on a calendar chip is based on comparing the item's publish date and expiry date to the current date. This does not reflect the item's actual workflow or content status. For example, an item might display Publishing or Published status based on its publish date even if it has not completed the publishing workflow. If an item has both a publish date and an expiration date within the selected date range, it appears as two separate chips.
 
 ## My Projects
 
@@ -87,7 +87,7 @@ Use the **My Projects** widget to view and manage your projects.
 - Select **Go to My Projects** to view your projects in the [Web Content Manager (WCM) Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
-    Viewing and managing projects in this widget requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
+    Viewing and managing projects requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
 
 ## Recent content and project
 
@@ -95,7 +95,7 @@ Use the **Recent content and project** widget to view up to 100 of your most rec
 
 ![Recent content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
-- Select the eye icon on a content item to view it directly.  
+- Select the eye icon on a content item to view directly.  
 - Select **Go to Authoring** to view the library explorer in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 ## Personalization rules
@@ -113,7 +113,7 @@ Use the **Personalization Rules** widget to monitor the personalization (PZN) ru
 Use the **Tags & Keywords Manager** widget to search and filter content by WCM keywords, DAM keywords, and social tags using a two-pane interface. The widget uses a split-pane layout to separate search controls from content results.
 
 !!! note
-    - This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
+    - This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL Digital Experience (DX) deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
     - If DAM is not enabled in a virtual portal, DAM keyword links are disabled.
 
 ![Tags & Keywords Manager](../../assets/HCL_Practitioner_dashboard_Tags_Keywords.png)
@@ -141,7 +141,7 @@ Use the **Search Crawlers** widget to check the status of your Search V2 crawler
 - Use the search field in the widget header to filter the list by crawler name.
 
 !!! note
-    This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
+    The widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
 
 ## My Sites
 
@@ -201,7 +201,7 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
 | `MY_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Sites** widget, which displays managed sites in a grid view that includes thumbnails and status indicators. |
 | `RECENT_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recently Modified Pages** widget, which displays a hierarchical tree view of pages and site areas within the most recently modified site. |
-| `CALENDAR_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Calendar** widget, which displays a monthly or weekly grid and daily agenda of contents based on their publish and expiry dates. |
+| `CALENDAR_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Calendar** widget, which displays a monthly or weekly grid and daily agenda of contents based on the publish and expiry dates. |
 | `SEARCH_CRAWLERS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Search Crawlers** widget, which displays the status of Search V2 crawlers. **Note:** This widget requires Search V2 to be enabled. |
 
 ## Configuring main portals

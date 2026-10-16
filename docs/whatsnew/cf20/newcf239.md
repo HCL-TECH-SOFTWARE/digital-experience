@@ -92,17 +92,21 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
-    The Practitioner Studio Dashboard introduces two new widgets to help you monitor content schedules and monitor search indexing:
+    The Practitioner Studio Dashboard provides a centralized view for managing site operations, tracking content lifecycle, and ensuring search functionality remains active and up to date. Use the dashboard to streamline daily authoring tasks and maintain real-time visibility into your publishing workflows and system health.
 
-    - **Calendar**: Displays a monthly or weekly grid and daily agenda of contents based on their publish and expiry dates.
+    The dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
     - **Search Crawlers**: Displays the status of Search V2 crawlers.
 
     For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
 
 === "On-Premises"
-    The Practitioner Studio Dashboard introduces two new widgets to help you monitor content schedules and monitor search indexing:
+    The Practitioner Studio Dashboard provides a centralized view for managing site operations, tracking content lifecycle, and ensuring search functionality remains active and up to date. Use the dashboard to streamline daily authoring tasks and maintain real-time visibility into your publishing workflows and system health.
 
-    - **Calendar**: Displays a monthly or weekly grid and daily agenda of contents based on their publish and expiry dates.
+    The dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
     - **Search Crawlers**: Displays the status of Search V2 crawlers.
 
     For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
