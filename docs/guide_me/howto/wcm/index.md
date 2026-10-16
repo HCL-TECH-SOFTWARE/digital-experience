@@ -3,7 +3,9 @@
 This section includes how-to articles about importing and exporting Web Content Manager (WCM) library and other WCM-related content in HCL Digital Experience (DX).
 
 - **[How to add profiles to WCM items](./ProfileEnablementUtility.md)**  
-Learn how to use the `profileEnablement` module to add missing profiles to WCM items.  
+Learn how to use the `profileEnablement` module to add missing profiles to WCM items.
+- **[How to create links that display WCM content without the portal theme](./WCMLinksNoPortalTheme.md)**  
+Learn how to create menu item links that display WCM content without the surrounding portal theme and navigation.
 - **[How to host Microsoft Office files with Web Content Manager (WCM)](./ServeMsOfficeWithWcm.md)**  
 Learn how to upload Microsoft Office files using File Resource components and display or link directly within HCL DX presentation templates.  
 - **[How to retrieve the UUID of a WCM object by name using the command line](./WCMUUIDCommandLine.md)**  
