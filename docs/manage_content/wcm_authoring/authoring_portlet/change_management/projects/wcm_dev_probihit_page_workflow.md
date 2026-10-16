@@ -1,12 +1,9 @@
-#  Prohibiting a page from creating outside of a WCM project using page templates
+# Prohibiting a page from creating outside of a WCM project using page templates
 
-
-In HCL DX (Digital Experience), if a page template is used with an associated workflow that is not the default, then any page created from that template must be part of a project.
-
+In HCL Digital Experience (DX), if a page template is used with an associated workflow that is not the default, then any page created from that template must be part of a project.
 
 !!! Important
     Users with Privileged User access can personalize a page by adding content or by making other customizations to the page. Your custom workflow can be bypassed by users with this access because the Privileged User access is inherited by pages by default. If you want to ensure that users can update the page only through the workflow, disable the inheritance of Privileged User access for the page.
-
 
 To create a new page, use an existing workflow or create a new workflow. Different workflows are used with different page templates. For example, the approval process for a page used to deploy applications are different from a content-based page.
 You can set a workflow only on draft items, you must create the template as a draft in the context of a project. After you add your custom workflow to the draft, publish the draft to make the page template available.
@@ -54,13 +51,13 @@ You can set a workflow only on draft items, you must create the template as a dr
         ![](../../../../../images/Workflow_publish2.png)
 
     3. Click on the menu bar and select **Publish**.
-        
+
         ![](../../../../../images/Workflow_publish3.png)
 
         The newly crated page template is now in publishing state.
 
         ![](../../../../../images/Workflow_publish4.png)
-    
+
 After publishing the new page template, if a user tries to use the template to create a new page outside a project, the system blocks the page creation and shows a notification saying that the template has an assigned workflow.
 
 ![](../../../../../images/Workflow_Output.png)

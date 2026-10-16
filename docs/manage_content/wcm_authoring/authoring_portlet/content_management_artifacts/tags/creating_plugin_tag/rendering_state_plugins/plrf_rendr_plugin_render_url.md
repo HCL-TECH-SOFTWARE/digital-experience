@@ -1,6 +1,6 @@
-# The render URL plug-in
+# Render URL plug-in
 
-Use the RenderURL rendering plug-in to create URLs that set or remove render parameters.
+Use the `RenderURL` rendering plug-in to create URLs that set or remove render parameters.
 
 The syntax for this plug-in is as follows:
 
@@ -25,7 +25,7 @@ To set, add, or remove public or private render parameters, use the following at
 
     Use this attribute to set the name of the parameter. For the value, specify the simple identifier of a private or public parameter.
 
-    Limited support for non-declared public render parameters: Digital Data Connector \(DDC\) for HCL Portal also provides limited support for public parameters that are not declared in the Web Content Viewer deployment descriptor. You can identify such parameters by the fully qualified name in the format `{ns}localname`. Non-declared public render parameters do not work when you use them with WSRP. They are not included by default in the portlet fragment cache key if portlet fragment caching is enabled.
+    Limited support for non-declared public render parameters: Digital Data Connector \(DDC\) for HCL Digital Experience (DX) also provides limited support for public parameters that are not declared in the Web Content Viewer deployment descriptor. You can identify such parameters by the fully qualified name in the format `{ns}localname`. Non-declared public render parameters do not work when you use them with WSRP. They are not included by default in the portlet fragment cache key if portlet fragment caching is enabled.
 
 - **prefix.value**
 
@@ -152,4 +152,4 @@ The following examples show how you can set render parameters when the form is s
 To learn about Script Applications, go to [Script Application](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3655){target="_blank"}. You can try it out using the [Script Application Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application.pdf){target="_blank"} and corresponding [Script Application Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Script_Application_Lab_Resources.zip){target="_blank"}.
 
 ???+ info "Related information"
-    - [Digital Data Connector \(DDC\) for HCL Portal](../../../../../../../extend_dx/ddc/index.md)
+    [Digital Data Connector \(DDC\) for HCL Digital Experience](../../../../../../../extend_dx/ddc/index.md)

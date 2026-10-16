@@ -1,4 +1,4 @@
-# The request attribute plug-in
+# Request attribute plug-in
 
 Use the `RequestAttribute` rendering plug-in to retrieve, set, or remove attributes on the underlying request.
 
@@ -81,4 +81,4 @@ This plug-in uses the following attributes:
     ```
 
 ???+ info "Related information"
-    - [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)
+    [Digital Data Connector \(DDC\) for HCL DX](../../../../../../../extend_dx/ddc/index.md)

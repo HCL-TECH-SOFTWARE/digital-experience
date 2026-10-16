@@ -96,6 +96,11 @@ Backing up persistence data secures the session information and chat history dat
 
 Restoring persistence data reconstructs session information and conversation history from a saved database dump file. This procedure is required during system recovery, database failures, or cluster migrations.
 
+!!! warning "Cross-session memory and restored dumps"
+    An `iqdb` database dump includes the `rag_chunks` and `rag_embedding_metadata` tables. If you restore a dump whose RAG configuration does not match the active deployment, IQ detects the mismatch at startup and enters graceful degradation mode. IQ continues serving requests, but disables cross-session memory and stops storing new conversation chunks until the configuration mismatch is resolved.
+
+    Before restoring a database dump, ensure that the following configuration values in your `custom-iq-values.yaml` file match the values used when the dump was created: `EMBEDDING_DIMENSIONS`, `USE_MULTILINGUAL_EMBEDDINGS`, `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, and `RAG_CHUNK_SEPARATORS`. For more information, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration).
+
 1. Identify the primary `persistence-node` pod:
 
     ```bash

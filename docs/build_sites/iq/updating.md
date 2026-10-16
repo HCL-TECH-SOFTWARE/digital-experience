@@ -55,15 +55,11 @@ helm get values dx-iq --namespace <YOUR_NAMESPACE> --all > current-iq-values.yam
     helm upgrade dx-iq \
       <IQ_CHART_URL_OR_PATH> \
       --namespace <YOUR_NAMESPACE> \
-      --reuse-values \
       --values custom-iq-values.yaml
     ```
 
     - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
     - `<IQ_CHART_URL_OR_PATH>`: The location of the IQ Helm chart package.
-
-    !!!note
-        Use `--reuse-values` only when the command also includes the complete set of intended changes. If `custom-iq-values.yaml` is recreated from `helm get values --all`, you can use it as the complete values file without `--reuse-values`.
 
 3. Verify both IQ services:
 
@@ -86,6 +82,15 @@ helm get values dx-iq --namespace <YOUR_NAMESPACE> --all > current-iq-values.yam
     `<YOUR_NAMESPACE>`: The Kubernetes namespace.
 
 2. Confirm that IQ opens, connects to the backend, and returns a response.
+
+## Cross-version support
+
+IQ and DX Core are delivered through separate Helm charts and can be upgraded independently. To support this deployment model, IQ and DX Core support each other within a two cumulative fix (CF) release window (the current release and the two preceding releases). This support applies to both DX Core and DX Compose (WebEngine) deployments.
+
+The DX Model Context Protocol (MCP) Server detects the underlying DX Core version and uses a tools matrix to expose only the MCP tools supported by that version. This enables an IQ deployment to adapt its available operations to the connected DX Core version. The IQ user interface also resolves web component interface-property changes across supported versions. This supports adding, renaming, and removing properties when the UI and DX Core versions differ.
+
+!!! important
+    Keep the IQ and DX Core versions within two CF releases of each other. Combinations outside this n-2 support window are not supported.
 
 ???+ info "Related information"
     - [Installing IQ](installation/index.md)
