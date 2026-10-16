@@ -6,12 +6,12 @@ Projects are included in syndication, the method that is used by HCL Web Content
 
 When a project is syndicated, the publish method on the subscriber is automatically changed to "Deferred to Syndication", and the following actions are not enabled on the subscriber:
 
--   Validate project
--   Publish project
--   Add to project
--   Remove from project
--   Mark for deletion
--   Cancel deletion
+- Validate project
+- Publish project
+- Add to project
+- Remove from project
+- Mark for deletion
+- Cancel deletion
 
 This means that the project on the subscriber cannot be updated or published unless it receives updates from the syndicator.
 
@@ -19,9 +19,9 @@ This means that the project on the subscriber cannot be updated or published unl
 
 Projects are not associated with a library. As syndication is library-based, a project is only syndicated when it contains unpublished items. Empty projects or previously published projects are not syndicated. Therefore, you might encounter some unexpected behavior. For example:
 
--   If you delete a project on the syndicator and that project is empty on the subscriber, then the project deletion does not syndicate to the subscriber, because empty projects are not syndicated.
--   However, if you remove all items from a project on a syndicator and then delete the project before syndication, then the project deletion is syndicated because there are still items in the subscriber version of the project.
--   When a project is published on the syndicator, the project might no longer be visible on the subscriber.
+- If you delete a project on the syndicator and that project is empty on the subscriber, then the project deletion does not syndicate to the subscriber, because empty projects are not syndicated.
+- However, if you remove all items from a project on a syndicator and then delete the project before syndication, then the project deletion is syndicated because there are still items in the subscriber version of the project.
+- When a project is published on the syndicator, the project might no longer be visible on the subscriber.
 
 ## Publishing a project on a subscriber
 
@@ -29,14 +29,14 @@ By default, syndicated projects can be published only on the server the project 
 
 This behavior can be changed by using the configuration property wcm.publishProjectOnSubscriberEnabled. When set to true, users can publish projects on subscriber.
 
-1.  Log in to the WebSphere® Integrated Solutions Console.
-2.  Click **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties**
+1. Log in to the WebSphere® Integrated Solutions Console.
+2. Click **Resources > Resource Environment > Resource Environment Providers > WCM WCMConfigService > Custom properties**
 
     **Cluster note:** If you are using this web content server as part of a cluster, ensure that you use the WebSphere Integrated Solutions Console for the deployment manager when you edit configuration properties.
 
-3.  Add the following property:
-    -   Property name: wcm.publishProjectOnSubscriberEnabled
-    -   Value: `true`
+3. Add the following property:
+    - Property name: wcm.publishProjectOnSubscriberEnabled
+    - Value: `true`
 
 !!!restriction
     -   While manually syndicating by using **Update** or **Rebuild** will continue to change items in a published project, only [**Rebuild with mirror**](../../../../wcm_delivery/syndication/manage_synd_subs/wcm_syndication_manual.md) will revert the project itself to an unpublished state after publishing on a subscriber. Any syndication option other than **Rebuild with mirror** results in a history on the subscriber that is written as though the project was published and that items were then changed to match the syndicator.
@@ -45,5 +45,3 @@ This behavior can be changed by using the configuration property wcm.publishProj
     -   Syndication does not always delete the project item on the subscriber when a project is deleted on the Syndicator even when all the items in the project are deleted on both servers. You might then need to delete the empty project item itself on the subscriber.
     -   Project templates are not syndicated.
     -   Workflows set to immediately publish drafts are not supported by projects.
-
-

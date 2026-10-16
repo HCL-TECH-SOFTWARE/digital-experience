@@ -207,9 +207,9 @@ The following syntax may be used to define the correct image configuration for y
 # Fill in the values fitting to your configuration
 # Ensure to use the correct image version tags
 images:
-    repository: "my/test/repository"
-    # Image tag for each application
-    tags:
+  repository: "my/test/repository"
+  # Image tag for each application
+  tags:
     contentComposer: "v95_CFXXX_XXXXXXXX-XXXX"
     core: "v95_CFXXX_XXXXXXXX-XXXX"
     digitalAssetManagement: "vX.X.X_XXXXXXXX-XXXX"
@@ -219,8 +219,8 @@ images:
     remoteSearch: "v95_CFXXX_XXXXXXXX-XXXX"
     ringApi: "vX.X.X_XXXXXXXX-XXXX"
     runtimeController: "vX.X.X_XXXXXXXX-XXXX"
-    # Image name for each application
-    names:
+  # Image name for each application
+  names:
     contentComposer: "dx/content-composer"
     core: "dx/core"
     digitalAssetManagement: "dx/digital-asset-manager"

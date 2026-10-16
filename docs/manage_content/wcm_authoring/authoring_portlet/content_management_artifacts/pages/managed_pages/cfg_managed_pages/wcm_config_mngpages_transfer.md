@@ -7,77 +7,75 @@ When you enable manage pages, any web content pages that you have are converted 
 
 When you transfer the content association for a page to the Portal Site library, several things happen:
 
--   The content that is referenced by the default content association for the page is copied to the portal page site area for the page. Only the default content association is affected; other content associations for the page are ignored.
+- The content that is referenced by the default content association for the page is copied to the portal page site area for the page. Only the default content association is affected; other content associations for the page are ignored.
 
     !!!note
         Nested pages are not copied. Nested site areas are not copied in the following cases:
 
-    -   The nested site area is referenced by the default association of another page.
-    -   The nested site area has the same name as an existing site area for the same page.
--   Template mappings and content elements that exist in the associated site area are copied over into the portal page. If the template mapping or element exists for the page, the copy is not performed.
--   The default content setting for the portal page is modified to reference the copied content.
--   The configuration of any web content viewers on the page is updated to reference the content that is stored in the portal page site area. However, viewer configurations that use content paths are not affected.
+        - The nested site area is referenced by the default association of another page.
+        - The nested site area has the same name as an existing site area for the same page.
 
-1.  To transfer content associations, run the `internalize-content-mappings` task from the wp_profile_root/ConfigEngine` directory.
+- Template mappings and content elements that exist in the associated site area are copied over into the portal page. If the template mapping or element exists for the page, the copy is not performed.
+- The default content setting for the portal page is modified to reference the copied content.
+- The configuration of any web content viewers on the page is updated to reference the content that is stored in the portal page site area. However, viewer configurations that use content paths are not affected.
 
-    -   **Windows™**
+1. To transfer content associations, run the `internalize-content-mappings` task from the wp_profile_root/ConfigEngine` directory.
+
+    - **Windows™**
 
         `ConfigEngine.bat internalize-content-mappings -DPortalPage=target_page -DIncludeDescendants=true_or_false -DSynchronous=true_or_false -DPortalAdminPwd=password -DWasPassword=password`
 
-    -   **AIX® and Linux™**
+    - **AIX® and Linux™**
 
         `./ConfigEngine.sh internalize-content-mappings -DPortalPage=target_page -DIncludeDescendants=true_or_false -DSynchronous=true_or_false -DPortalAdminPwd=password -DWasPassword=password`
 
     The following properties must be specified either on the command line or in the `wkplc.properties` file.
 
-    -   **PortalPage**
+    - **PortalPage**
 
         The object ID or the unique page name of the page for which you want to transfer content. If the target page is contained in a virtual portal, you must identify the virtual portal by specifying either the VirtualPortalContext parameter or VirtualPortalHost parameter.
 
-    -   **IncludeDescendants**
+    - **IncludeDescendants**
 
         Specify true to transfer content for the target page and any child pages. To transfer content only for the target page, specify false. If not specified, the default value is true.
 
-    -   **Synchronous**
+    - **Synchronous**
 
         Specify true to perform the transfer synchronously. To perform the transfer asynchronously, specify false. If not specified, the default value is true.
 
-    -   **Verbose**
+    - **Verbose**
 
         Specify true to output additional information to the log. To generate basic log information, specify false. If not specified, the default value is false.
 
-    -   ****CollisionHandling****
+    - **CollisionHandling**
 
         When you copy content to a page, specify the action to take if the content item exists. By default, that content item is not copied. If you set CollisionHandling to replace, the content item on the page is replaced with the content item to be copied to the page.
 
-    -   **VirtualPortalContext**
+    - **VirtualPortalContext**
 
         Specify the virtual portal context that identifies the virtual portal. For example, `vp1`.
 
-    -   **VirtualPortalHost**
+    - **VirtualPortalHost**
 
         Specify the host name of the virtual portal. For example, `vp.example.com`.
 
         !!!important
             If the host name of the virtual portal is the same as the host name of the default virtual portal, you must also specify the VirtualPortalContext property. You can specify the VirtualPortalHost property by itself only if the host name is unique.
 
-    -   **PortalAdminPwd**
+    - **PortalAdminPwd**
 
-        The administrator password for HCL Portal.
+        The administrator password for HCL Digital Experience (DX).
 
-    -   **WasPassword**
+    - **WasPassword**
 
         The administrator password for WebSphere® Application Server.
 
     Example commands:
 
-    -   Windows: `ConfigEngine.bat internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
-    -   AIX and Linux: `./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
-
-
+    - Windows: `ConfigEngine.bat internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
+    - AIX and Linux: `./ConfigEngine.sh internalize-content-mappings -DPortalPage=example.page -DIncludeDescendants=true -DSynchronous=true -DPortalAdminPwd=password -DWasPassword=password`
 
 ???+ info "Related information"  
-    -   [Enabling managed pages](wcm_config_mngpages_enable.md)
-    -   [Page templates](../../../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
-    -   [Migration: Enabling managed pages](../../../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)
-
+    - [Enabling managed pages](wcm_config_mngpages_enable.md)
+    - [Page templates](../../../../../../../build_sites/sitebuilder/site_dev_with_sitebuilder/creating_sites_using_sitebuilder/sitebuilder_learn_pgtemplate.md)
+    - [Migration: Enabling managed pages](../../../../../../../deployment/manage/migrate/next_steps/enable_func_migrated_portal/mig_t_enable_mngpages.md)

@@ -22,9 +22,7 @@ See the format of an `EditableProperty` tag:
 To create an `EditableProperty` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **EditableProperty** as the tag type.
-
 3. Select a property type. This parameter is added to the tag as the field=" " parameter:
 
     !!! note
@@ -48,7 +46,6 @@ To create an `EditableProperty` tag:
     |**context="Autofill"**Use this option when the item that is referenced is determined by the search parameters of a menu, navigator, or taxonomy component. If the tag is not used within a menu, navigator, or taxonomy component, the context reverts to the current item.|This parameter makes the property of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property from a content item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.If a site area is selected, then nothing is editable.|If the current item returned by a menu, navigator, or taxonomy component is a site area, then the property from the site area is editable when the page is in edit mode.If the current item returned by a menu, navigator, or taxonomy component is a content item, this parameter makes the property of the parent site area editable when the page is in edit mode.|This parameter makes the property of the parent item of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|This parameter makes the property of the first item in the path of the item that is returned by a menu, navigator, or taxonomy component editable when the page is in edit mode.|
 
 5. Select whether to include start and end sections. You can enter extra text between the start and end sections of the tag, and other web content tags such as a component or element tag.
-
 6. Click **OK** to add the tag to your navigator design.
 
 When you add this tag to your design, you can also add the following parameters to the tag:

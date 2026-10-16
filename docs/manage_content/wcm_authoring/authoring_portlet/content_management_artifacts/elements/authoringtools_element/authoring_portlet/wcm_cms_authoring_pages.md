@@ -1,11 +1,11 @@
-# Custom Portal Pages for Authoring
+# Custom portal pages for authoring
 
-You can create a new HCL Digital Experience portal page to act as the home page of your authoring system.
+You can create a new HCL Digital Experience (DX) portal page to act as the home page of your authoring system.
 
 You can create separate subpages under an authoring home page. For example:
 
--   add an authoring portlet to one subpage
--   add web content viewer portlets to other subpages to allow users to preview different parts of a website
+- add an authoring portlet to one subpage
+- add web content viewer portlets to other subpages to allow users to preview different parts of a website
 
 You can also create pages specifically for different types of users. For example, you can create a separate page for your site designers and content creators. The authoring portlets that you add to each page can be configured specifically for each user type.
 
@@ -13,8 +13,8 @@ You can also create pages specifically for different types of users. For example
 
 When new pages are created that contain an authoring portlet, add the following metadata parameter to the advanced settings in the page properties:
 
--   Parameter: resourceaggregation.profile
--   Value: profiles/profile_wcmauthoring.json
+- Parameter: `resourceaggregation.profile`
+- Value: `profiles/profile_wcmauthoring.json`
 
 ## Example authoring home page
 
@@ -25,5 +25,3 @@ To create a shared authoring environment for both sets of users you would create
 |Site designers page|Content creators page|Header|
 |-------------------|---------------------|------|
 |-   Includes an authoring portlet that is configured to use both the design and content libraries.<br> -   Only site designers can access this page.|-   Includes an authoring portlet that is configured to use only the content library <br> -   Only content creators can access this page.|-   Includes a web content viewer portlet that is used to preview the website.<br> -   Both site designers and content creators can access this page.|
-
-

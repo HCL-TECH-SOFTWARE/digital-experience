@@ -1,18 +1,18 @@
 # Page components
 
-Create page components by using Web Content Manager to provide content authors a set of predefined page components that can be selected from the toolbar and added to a page.
+Create page components by using Web Content Manager (WCM) to provide content authors a set of predefined page components that can be selected from the toolbar and added to a page.
 
 Page components are used by site developers to quickly create predefined and page-ready groups of web content items. Content authors use these predefined page components to quickly add content to a page.
 
 To generate a new page component:
 
-1.  Open the applications menu and go to **Content > *Web Content Authoring** and then click **Generate > Page Component**.
-2.  Select the type of page component you want to generate.
-3.  Type a **Name** and **Display Title** and select the library to save the web content items under.
-4.  Click **OK**.
-5.  A set of page-ready web content items are created under the selected library with the specified name and display title. Edit these web content items to match your site requirements.
+1. Open the applications menu and go to **Content > *Web Content Authoring** and then click **Generate > Page Component**.
+2. Select the type of page component you want to generate.
+3. Type a **Name** and **Display Title** and select the library to save the web content items under.
+4. Click **OK**.
+5. A set of page-ready web content items are created under the selected library with the specified name and display title. Edit these web content items to match your site requirements.
 
-**Syndication:** Generated page components cannot be syndicated to servers that use versions of HCL Portal before version 8.5 with CF09. If you plan to generate your own page component types, all the servers in your system need to use HCL Portal version 8.5 with CF09 or higher.
+**Syndication:** Generated page components cannot be syndicated to servers that use versions of HCL Digital Experience (DX) before version 8.5 with CF09. If you plan to generate your own page component types, all the servers in your system need to use HCL DX version 8.5 with CF09 or higher.
 
 !!!remember
     When you use inline editing with page components, users must have Editor access to the Portal Site library.
@@ -23,11 +23,11 @@ Page components can be added to projects in the same way as other web content it
 
 Not all items that are generated with the page component are added to the project. For example, the site areas that are named **Page Components** and **Localizations** are not added to the project because they are shared by all page components.
 
--   **[Items used by a page component](wcm_dev_page_components_pattern.md)**  
+- **[Items used by a page component](wcm_dev_page_components_pattern.md)**  
 Each page component uses a basic set of templates, components, and content items. When a content author adds a page component to a page, copies of the items that are used by the page component are created.
--   **[Customizing page components](wcm_dev_page_components_customize.md)**  
+- **[Customizing page components](wcm_dev_page_components_customize.md)**  
 Each page component is constructed from a common pattern of design, configuration, and content features. These features can all be customized to match the design of your site. When a content author adds a page component to a page, copies of the items used by the page component are created.
--   **[Troubleshooting page components](wcm_dev_page_components_tips.md)**  
+- **[Troubleshooting page components](wcm_dev_page_components_tips.md)**  
 Tips and tricks to help you troubleshoot any issues with your customized page components.
 
 ## HCLSoftware U learning materials
@@ -35,4 +35,4 @@ Tips and tricks to help you troubleshoot any issues with your customized page co
 !!!note
 	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
-To learn how to get started with the development aspects of HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
+To learn how to get started with the development aspects of HCL DX Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Beginners)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D414 ){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-100_Web_Content_Development_Lab_Resources.zip){target="_blank"}.
