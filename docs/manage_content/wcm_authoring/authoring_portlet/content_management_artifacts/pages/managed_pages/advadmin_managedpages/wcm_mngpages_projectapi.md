@@ -2,14 +2,14 @@
 
 You can redirect request processing to a specific project by generating URLs with the ProjectIdentificationService API, or the REST API. Request processing operates either completely within the scope of a project or completely outside the scope of a project. You cannot switch projects during request processing.
 
-When a request originates from within a project, the request URL contains a project identifier for that project. The project information is included only in the URL and is not bound to the session. The project identifier can be an object ID (OID), as used by the portal, or a universally unique identifier (UUID), as used by Web Content Manager. To direct request processing to a specific project, you must generate a URL for the project and then render the URL.
+When a request originates from within a project, the request URL contains a project identifier for that project. The project information is included only in the URL and is not bound to the session. The project identifier can be an object ID (OID), as used by the portal, or a universally unique identifier (UUID), as used by Web Content Manager (WCM). To direct request processing to a specific project, you must generate a URL for the project and then render the URL.
 
 ## Java API
 
 To generate URLs that target a project by using the Java API in the portal, you can use the ProjectIdentificationService API with the StateManagerService API:
 
--   The ProjectIdentificationService provides methods to create a `ServerContext` object, based on the identifier of the target project and the current `ServerContext` object.
--   The project-specific `ServerContext` object can then be used to retrieve a `URLFactory` object from the state manager service. All URLs generated with this factory contain the project ID.
+- The ProjectIdentificationService provides methods to create a `ServerContext` object, based on the identifier of the target project and the current `ServerContext` object.
+- The project-specific `ServerContext` object can then be used to retrieve a `URLFactory` object from the state manager service. All URLs generated with this factory contain the project ID.
 
 This example constructs a portal URL to the current navigational state for a new project:
 

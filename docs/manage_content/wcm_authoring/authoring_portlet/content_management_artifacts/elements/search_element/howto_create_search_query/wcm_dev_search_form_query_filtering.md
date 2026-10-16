@@ -3,9 +3,6 @@ id: wcm_dev_search_form_query_filtering
 title: Filtering search results
 ---
 
-
-
-
 Often you want certain types of content to not be shown in your search results. By filtering your search results to ensure that certain types of content are not displayed.
 
 A search component uses a set of fields, such as "search\_query", "search\_categories" and "search\_authoringtemplate", to construct a single query to send to the search engine. This constructed search does not explicitly perform a filter. It does not mark any of the criteria as required and therefore the search that is performed is a "best fit" search where the results can match any of the criteria that are mentioned, but is ordered so that the best fitting results are displayed first.
@@ -22,19 +19,18 @@ To include only content that is using a specific authoring template, append this
 
 To specify multiple authoring templates, append the appropriate string to the end of the search query:
 
--   For query results that match either template:
+- For query results that match either template:
 
     ```
     ^(authoringtemplate::"Template Title 1" authoringtemplate::"Template Title 2")
     
     ```
 
--   For query results that match all templates:
+- For query results that match all templates:
 
     ```
     ^(+authoringtemplate::"Template Title 1"  +authoringtemplate::"Template Title 2")
     ```
-
 
 To include only content that does not use a specific authoring template, append this string to the search query:
 
@@ -117,4 +113,3 @@ Query: <input name="query"/>
 
 </form>  
 ```
-

@@ -33,5 +33,3 @@ The components that are associated with your page component are created under th
 A component that is named **Styles: Your Page Component** is generated under this folder. This component stores the CSS styles that are used by your page component.
 
 Other components specific to a particular page component are also stored under this folder.
-
-
