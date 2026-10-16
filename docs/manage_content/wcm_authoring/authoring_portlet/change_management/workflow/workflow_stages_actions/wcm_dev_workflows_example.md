@@ -37,5 +37,3 @@ The following stages make up the Workflow:
 **Using workflows and access to workflow items:**
 
 Users do not require access to a workflow's actions or stages to participate in a workflow. Actions are performed using system access and are not determined by the access of the user who approved/rejected the item.
-
-

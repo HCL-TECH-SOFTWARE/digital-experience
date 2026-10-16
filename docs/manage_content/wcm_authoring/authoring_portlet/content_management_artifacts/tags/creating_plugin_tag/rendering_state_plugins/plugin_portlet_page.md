@@ -1,23 +1,19 @@
 ---
 id: plugin_portlet_page
-title: The Page mode rendering plug-in
+title: Page mode rendering plug-in
 ---
 
-
-
-
-Use the `PageMode` rendering plug-in to write web content, depending on the mode of a portal page, for example EDIT, HELP, INFO mode.
+Use the `PageMode` rendering plug-in to write web content depending on the mode of a portal page (for example, `EDIT`, `HELP`, and `INFO` mode).
 
 This plug-in uses the following attribute:
 
--   **pageMode**
+- **pageMode**
 
     Use this attribute to specify the name of the page mode for which you want to check. If the specified page mode is active, this plug-in renders the content between the plug-in opening and closing tags.
 
-
 Examples:
 
--   To render the content between the opening and the closing tag only if the page is in EDIT mode, use the following plug-in tag:
+- To render the content between the opening and the closing tag only if the page is in EDIT mode, use the following plug-in tag:
 
     ```
     [Plugin:PageMode pageMode="EDIT"]   
@@ -26,7 +22,7 @@ Examples:
     
     ```
 
--   To render the content between the opening and the closing tag only if the page is in HELP mode, use the following plug-in tag:
+- To render the content between the opening and the closing tag only if the page is in HELP mode, use the following plug-in tag:
 
     ```
     [Plugin:PageMode pageMode="HELP"]    
@@ -34,12 +30,10 @@ Examples:
     [/Plugin:PageMode]
     ```
 
--   To render the content between the opening and the closing tag only if the page is in INFO mode, use the following plug-in tag:
+- To render the content between the opening and the closing tag only if the page is in INFO mode, use the following plug-in tag:
 
     ```
     [Plugin:PageMode pageMode="INFO"]    
        This markup is rendered only if the current page is in info mode.  
     [/Plugin:PageMode]
     ```
-
-

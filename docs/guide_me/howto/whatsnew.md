@@ -20,9 +20,22 @@ This section contains the newly created and migrated how-to articles. The articl
 
 | Type | Category | Article |
 |------|----------|---------|
+|Migrated|Administration|[How to deny IBM Integrated Solutions Console access in Kubernetes](./administration/DenyAdminConsoleIngressk8.md)|
+|Migrated|Administration|[How to hide the impersonation button for non-administrator users](./administration/HideImpersonationButton.md)|
+|Migrated|Administration|[How to use a custom temporary directory with ConfigEngine](./administration/ConfigEngineAltTempDir.md)|
+|Migrated|API|[How to use WCM API to generate a URL based on the locale of the request](./api/generateURLWCMAPI.md)|
+|Migrated|Configuration|[How to configure friendly URLs for hidden pages](./configuration/friendlyURLadmin.md)|
+|Migrated|Configuration|[How to enable Dojo debugging in the browser console](./configuration/EnableDjConfigDebug.md)|
 |Migrated|Content|[How to render or pre-render special characters in a Unix or Linux environment](./content/PreRenderSpecialCharacters.md)|
+|Migrated|Development|[How to update content in a rich text element using the WCM API](./development/UpdateContentinRichTextElement.md)|
 |Migrated|Performance|[How to locate a recursive loop in WCM](./performance/LocateWCMRecursiveLoop.md)|
+|Migrated|Search|[How to access the WAS admin console after installing remote search service](./search/AccessWasAfterRemoteSearchInstall.md)|
 |Migrated|Security|[How to configure a Web Application Bridge for basic authentication](./security/WABBasicAuthentication.md)|
+|Migrated|Themes|[How to change the WebDAV folder name](./themes/WebDAVFolderName.md)|
+|Migrated|WCM|[How to create links that display WCM content without the portal theme](./wcm/WCMLinksNoPortalTheme.md)|
+|Migrated|WCM|[How to host Microsoft Office files with Web Content Manager (WCM)](./wcm/ServeMsOfficeWithWcm.md)|
+|Migrated|WCM|[How to prevent `cacheId` from appending to WCM URLs](./wcm/WCM_CacheID.md)|
+|Migrated|WCM|[How to retrieve the UUID of a WCM object by name using the command line](./wcm/WCMUUIDCommandLine.md)|
 
 ## CF238
 
