@@ -4,5 +4,7 @@ nav:
     - ProfileEnablementUtility.md
     - WCMLinksNoPortalTheme.md
     - StopWCMLibDel.md
+    - WCMUUIDCommandLine.md
+    - ServeMsOfficeWithWcm.md
+    - StopWCMLibDel.md
     - SampleInvocationRefreshLibrary.md
-    

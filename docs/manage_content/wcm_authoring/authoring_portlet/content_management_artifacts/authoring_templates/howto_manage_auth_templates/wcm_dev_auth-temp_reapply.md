@@ -3,8 +3,6 @@ id: wcm_dev_auth-temp_reapply
 title: Reapplying an updated authoring template
 ---
 
-# Reapplying an updated authoring template
-
 You can reapply changes that are made to an authoring template to the items that are created from the template.
 
 Reapplying an authoring template is required when the following kinds of changes are made to an authoring template:
@@ -17,11 +15,8 @@ Reapplying an authoring template is required when the following kinds of changes
     You cannot reapply an authoring template if you are currently editing the template. Before you reapply the template, you must save your changes or switch from edit mode.
 
 1. Display a list of authoring templates by clicking **Authoring Template**.
-
 2. Click the authoring template to open the template in read-only mode.
-
 3. Click **Apply Authoring Template**.
-
 4. Select any of the following options:
 
     - **Add new elements**: If the new authoring template contains elements that do not exist in the item, these elements are added to the converted item.

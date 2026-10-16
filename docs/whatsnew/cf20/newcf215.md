@@ -69,10 +69,10 @@ The following features and updates are available to customers installing HCL Dig
 ### Web Content Manager - Sorting search results in Content Reporting
 
 === "Containers"
-    Starting CF215, you can sort search results in HCL Content Reporting by **Title**, by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. See the Help Center topics [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/access/index.md) and [Generating a content report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md) for additional information.
+    Starting CF215, you can sort search results in HCL Content Reporting by **Title**, by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. See the Help Center topics [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/access.md) and [Generating a content report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md) for additional information.
 
 === "On-Premises"
-    Starting CF215, you can sort search results in HCL Content Reporting by **Title**, by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. See the Help Center topics [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/access/index.md) and [Generating a content report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md) for additional information.
+    Starting CF215, you can sort search results in HCL Content Reporting by **Title**, by **Name**, by **Last modified on**, by **Owners**, or by **Authors**. See the Help Center topics [Accessing the Content Reporting portlet](../../manage_content/wcm_authoring/content_reporting/access.md) and [Generating a content report](../../manage_content/wcm_authoring/content_reporting/usage/generate_content_report.md) for additional information.
 
 ## Digital Experience 9.5 Container Version
 

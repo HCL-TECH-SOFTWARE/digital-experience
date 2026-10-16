@@ -18,9 +18,7 @@ See the format of an `InContext` tag:
 To create an `InContext` tag:
 
 1. Click **Insert a Tag** from a presentation template, component, or element design field. The **Tag Helper** dialog opens.
-
 2. Select **In Context** as the tag type.
-
 3. Select a context type:
 
     - **Autofill**
@@ -52,7 +50,6 @@ To create an `InContext` tag:
         If selected, the context is set by the selected item. You select an item by clicking **Select**. The selected item is added to the tag as the `uuid=" "` parameter. If the UUID or path parameter is specified, the context is always "selected", so you do not have to specify `context="Selected"`.
 
 4. Click **OK** to add the tag to your navigator design.
-
 
 ## Usage examples
 

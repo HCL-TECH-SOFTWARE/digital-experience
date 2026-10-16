@@ -4,38 +4,34 @@ There are three major status levels that an item can be in at any one time; **Dr
 
 ## Status types
 
--   **Draft**
+- **Draft**
 
     This indicates that the item is being updated.
 
--   **Pending published**
+- **Pending published**
 
     An item that uses a workflow can appear in a state of pending published. This indicates that the item has entered a workflow stage that includes a publish action but the action has yet to be processed.
 
-
--   **Published**
+- **Published**
 
     A published status indicates that an item is ready to be rendered in the live site.
 
-
--   **Pending expired**
+- **Pending expired**
 
     An item that uses a workflow can appear in a state of pending expired. This indicates that the item has entered a workflow stage that includes an expire action but the action has yet to be processed.
 
-
--   **Expired**
+- **Expired**
 
     An expired status indicates that an item is ready to be expired from the live site.
-
 
 ## Changing status
 
 The status of an item can change only in a linear fashion:
 
--   **Draft** to **Published**.
--   **Published** to **Expired**.
--   **Expired** to **Published**.
--   **Published** to **Draft**.
+- **Draft** to **Published**.
+- **Published** to **Expired**.
+- **Expired** to **Published**.
+- **Published** to **Draft**.
 
 You cannot change an item's status from **Expired** to **Draft**.
 
@@ -45,7 +41,5 @@ When the status of an item changes to published or expired, this change does not
 
 The actual time a published item appears on a website, or the time an expired item is removed from a website, also depends on:
 
--   how long it takes to syndicate updates to the delivery server
--   how long it takes for the current cache to expire
-
-
+- how long it takes to syndicate updates to the delivery server
+- how long it takes for the current cache to expire

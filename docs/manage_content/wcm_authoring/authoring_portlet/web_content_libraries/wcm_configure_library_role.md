@@ -1,4 +1,4 @@
-# Define Roles in a Library
+# Defining roles within a library
 
 You can define the access of a user or group for a library to determine who has access to a library, and to define access within the authoring portlet.
 
@@ -14,37 +14,25 @@ With a subtractive strategy, you apply the Manager or Administrator role to a us
 
 Propagation from the web content library is the preferred strategy because this strategy simplifies administering library access and because disabling propagation might result in access-related errors.
 
-1.  Assigning access permissions to a library and library item types:
-2.  Click the **Administration menu** icon in the toolbar. Then, click **Portal Content** \> **Web Content Libraries**.
+1. Assigning access permissions to a library and library item types:
+2. Click the **Administration menu** icon in the toolbar. Then, click **Portal Content** \> **Web Content Libraries**.
+3. Set your library access permissions:
 
-3.  Set your library access permissions:
+    1. Click ![permissions](../../../../images/permissions.jpg) on the library you would like to edit.
+    2. Click ![edit](../../../../images/edit.jpg) on the role you would like to edit.
+    3. Click **Add** and search for any users or groups you would like to assign to a role.
+    4. Click **OK**.
+    5. Click **Resources** to return to the previous view.
+    6. Click **Done**.
 
-    1.  Click ![permissions](../../../../images/permissions.jpg) on the library you would like to edit.
+4. Set **access permissions** to the different library item types. This setting defines the views and actions that are available from within the authoring portlet:
 
-    2.  Click ![edit](../../../../images/edit.jpg) on the role you would like to edit.
-
-    3.  Click **Add** and search for any users or groups you would like to assign to a role.
-
-    4.  Click **OK**.
-
-    5.  Click **Resources** to return to the previous view.
-
-    6.  Click **Done**.
-
-4.  Set **access permissions** to the different library item types. This setting defines the views and actions that are available from within the authoring portlet:
-
-    1.  Click ![Library resource](../../../../images/keydoc.jpg) on the library you would like to edit.
-
-    2.  Click ![edit](../../../../images/edit.jpg) on the role you would like to edit.
-
-    3.  Click **Add** and search for any users or groups you would like to assign to a role.
-
-    4.  Click **OK**.
-
-    5.  Click **Resources** to return to the previous view.
-
-    6.  Click **Done**.
-
+    1. Click ![Library resource](../../../../images/keydoc.jpg) on the library you would like to edit.
+    2. Click ![edit](../../../../images/edit.jpg) on the role you would like to edit.
+    3. Click **Add** and search for any users or groups you would like to assign to a role.
+    4. Click **OK**.
+    5. Click **Resources** to return to the previous view.
+    6. Click **Done**.
 
 **Item-level security inheritance:**
 
@@ -52,9 +40,9 @@ By default, each role's access is automatically inherited down to each item in a
 
 The permissions set for item types in a library do not automatically give you access to individual items. They give you access only to specific tasks and views within the authoring portlet.
 
-To disable automatic inheritance you, specify the following property in the WCM WCMConfigService service by using the IBM® WebSphere® Application Server administration console:
+To disable automatic inheritance you, specify the following property in the **WCM WCMConfigService** service by using the IBM® WebSphere® Application Server administration console:
 
--   Property name: `default.inherit.permissions.enabled`
--   Value: `false`
+- Property name: `default.inherit.permissions.enabled`
+- Value: `false`
 
-You must restart HCL Portal to enable any configuration changes.
+You must restart HCL Digital Experience (DX) to enable any configuration changes.
