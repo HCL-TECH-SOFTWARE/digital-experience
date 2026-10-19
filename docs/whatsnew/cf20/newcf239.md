@@ -138,10 +138,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Woodburn Studio demo site (9.5)
 
 === "Containers"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+    The Woodburn Studio demo site in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 === "On-Premises"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+    The Woodburn Studio demo site in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U <!--Update URL-->
 
