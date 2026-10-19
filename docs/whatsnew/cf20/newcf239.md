@@ -19,6 +19,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - IQ - Configuring cross-session memory
 - IQ - HTTPS support for the MCP Server
+- Practitioner Studio Dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -86,6 +87,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
+    - **Search Crawlers**: Displays the status of Search V2 crawlers.
+
+    For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
+    - **Search Crawlers**: Displays the status of Search V2 crawlers.
+
+    For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
 
 ## Digital Experience 9.5 Container Version
 
