@@ -1,6 +1,6 @@
 # Dashboard
 
-The Practitioner Studio Dashboard is a modern, react-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
+The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
 
 ![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
 
@@ -71,11 +71,11 @@ Use the **Calendar** widget to see which content items are scheduled to publish 
 
 ![Calendar](../../assets/HCL_Practitioner_dashboard_Calendar.png)
 
-- **Grid pane:** Switch between **Month** and **Week** views (**Week** is default). Select **Today**, the month and year selector, or use the arrows to navigate the calendar. Days display color-coded status indicators for scheduled items.
-- **Agenda pane:** Select a date in the grid or use the arrows to view items scheduled for that day in chronological order. Select a content item and select the eye icon to open in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+- The grid pane on the left displays month and week views where week is default, allowing you to select Today, the month and year selector, or use the arrows to navigate the calendar while days display color-coded status indicators for scheduled items.
+- The agenda pane on the right displays items scheduled for that day in chronological order when you select a date in the grid or use the arrows, enabling you to select a content item and the eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
-    The status displayed on a calendar chip is based on comparing the item's publish date and expiry date to the current date. This does not reflect the item's actual workflow or content status. For example, an item might display Publishing or Published status based on its publish date even if it has not completed the publishing workflow. If an item has both a publish date and an expiration date within the selected date range, it appears as two separate chips.
+    The status displayed on a calendar chip is based on comparing the item's publish and expiry dates to the current date. This does not reflect the item's actual workflow or content status. For example, an item might display **Publishing** or **Published** status based on its publish date even if it has not completed the publishing workflow. If an item has both a publish date and an expiration date within the selected date range, it appears as two separate chips.
 
 ## My Projects
 
@@ -198,11 +198,11 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `RECENT_STATUS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Status Monitor** widget, which displays system health and alerts. |
 | `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent Personalization (PZN) activities and campaigns. |
 | `PROJECTS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Projects** widget, which displays your projects in a paginated data grid. |
-| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
+| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. <br>**Note:** This widget requires Search V2 to be enabled. |
 | `MY_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Sites** widget, which displays managed sites in a grid view that includes thumbnails and status indicators. |
 | `RECENT_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recently Modified Pages** widget, which displays a hierarchical tree view of pages and site areas within the most recently modified site. |
 | `CALENDAR_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Calendar** widget, which displays a monthly or weekly grid and daily agenda of contents based on the publish and expiry dates. |
-| `SEARCH_CRAWLERS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Search Crawlers** widget, which displays the status of Search V2 crawlers. **Note:** This widget requires Search V2 to be enabled. |
+| `SEARCH_CRAWLERS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Search Crawlers** widget, which displays the status of Search V2 crawlers. <br>**Note:** This widget requires Search V2 to be enabled. |
 
 ## Configuring main portals
 
