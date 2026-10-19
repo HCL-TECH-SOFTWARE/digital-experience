@@ -14,12 +14,15 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio Dashboard - New widgets
+
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
 - IQ - Configuring cross-session memory
 - IQ - HTTPS support for the MCP Server
-- Practitioner Studio Dashboard - New widgets
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
