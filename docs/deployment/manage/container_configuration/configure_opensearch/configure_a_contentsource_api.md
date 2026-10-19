@@ -1,16 +1,14 @@
-# Configuring a Content Source using REST API
+# Configuring a content source by using the REST API
 
-This topic explains the use of the Content Source REST API to create a Content Source. This can later be used to crawl the content source in your HCL DX instance and will contain the items that you can find by using search queries.
+Use the Content Source REST API to create a content source. You can then crawl the content source in your HCL Digital Experience (DX) instance to find items by using search queries.
 
-You can access all API endpoints through a Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
+You can access all API endpoints through the Swagger UI at `/dx/api/search/v2/explorer`.
 
 ## Authenticating as a search administrator
 
 Before you can perform administrative tasks, you need to authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search V2.
 
-1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
-
-    **Payload:**
+1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint with the following payload:
 
     ```json
     {
@@ -19,7 +17,7 @@ Before you can perform administrative tasks, you need to authenticate as a searc
     }
     ```
 
-    **Response:**
+    The endpoint returns the following response:
 
     ```json
     {
@@ -27,7 +25,7 @@ Before you can perform administrative tasks, you need to authenticate as a searc
     }
     ```
 
-2. Add the returned JWT in all upcoming HTTP requests in the `Authorization` header using the `Bearer` prefix:
+2. Add the returned JSON Web Token (JWT) in all upcoming HTTP requests in the `Authorization` header by using the `Bearer` prefix:
 
     | Header | Value |
     | --- | --- |
@@ -35,26 +33,24 @@ Before you can perform administrative tasks, you need to authenticate as a searc
 
 ## Authenticating as a DX administrator
 
-As an alternative to the `searchadmin` credential flow above, you can authenticate as a DX administrator using one of the following endpoints. Both endpoints issue a `dx-admin-jwt` httpOnly cookie that is used to authorize subsequent requests.
+As an alternative to the `searchadmin` credential flow, you can authenticate as a DX administrator by using one of the following endpoints. Both endpoints issue a `dx-admin-jwt` HTTP-only cookie that is used to authorize subsequent requests.
 
 ### Exchanging a DX session for an admin token
 
-If you already have an active DX session, you can exchange its `LtpaToken2` cookie for an admin token by calling the `/dx/api/search/v2/auth/dx-admin-token` endpoint with a `POST` request. The request requires a valid `LtpaToken2` cookie and no request body.
+If you already have an active DX session, you can exchange its `LtpaToken2` cookie for an admin token by sending a `POST` request to the `/dx/api/search/v2/auth/dx-admin-token` endpoint. The request requires a valid `LtpaToken2` cookie and no request body.
 
-**Response codes:**
+The endpoint returns the following response codes:
 
 | Code | Body | Description |
 | --- | --- | --- |
-| `200` | `{ "success": true }` | Token issued; `dx-admin-jwt` httpOnly cookie set |
-| `401` | `{ "error": "InvalidToken" \| "Unauthorized" }` | Missing/invalid LTPA token, or the user is not an administrator |
-| `502` | `{ "error": "DX Core service unavailable" }` | DX Core access control endpoint unreachable |
-| `500` | `{ "error": "Internal server error" }` | Unexpected server error |
+| `200` | `{ "success": true }` | The endpoint issues the token and sets the `dx-admin-jwt` HTTP-only cookie. |
+| `401` | `{ "error": "InvalidToken" \| "Unauthorized" }` | The LTPA token is missing or invalid, or the user is not an administrator. |
+| `502` | `{ "error": "DX Core service unavailable" }` | The DX Core access control endpoint is unreachable. |
+| `500` | `{ "error": "Internal server error" }` | An unexpected server error occurred. |
 
 ### Logging in with DX administrator credentials
 
-To log in directly with a DX administrator username and password, call the `/dx/api/search/v2/auth/dx-admin-login` endpoint with a `POST` request and the following payload:
-
-**Payload:**
+To log in directly with a DX administrator username and password, send a `POST` request to the `/dx/api/search/v2/auth/dx-admin-login` endpoint with the following payload:
 
 ```json
 {
@@ -63,24 +59,21 @@ To log in directly with a DX administrator username and password, call the `/dx/
 }
 ```
 
-**Response codes:**
+The endpoint returns the following response codes:
 
 | Code | Body | Description |
 | --- | --- | --- |
-| `200` | `{ "success": true }` | `dx-admin-jwt` and `LtpaToken2` httpOnly cookies set |
-| `400` | `{ "error": "Username and password are required" }` | Missing credentials in the request body |
-| `401` | `{ "error": "Invalid credentials" \| "User is not an administrator" \| "Authorization check failed" }` | Authentication failed |
-| `502` | `{ "error": "DX Core service unavailable" }` | DX Core unreachable |
-| `500` | `{ "error": "Internal server error" }` | Unexpected server error |
-
+| `200` | `{ "success": true }` | The endpoint sets the `dx-admin-jwt` and `LtpaToken2` HTTP-only cookies. |
+| `400` | `{ "error": "Username and password are required" }` | Credentials are missing from the request body. |
+| `401` | `{ "error": "Invalid credentials" \| "User is not an administrator" \| "Authorization check failed" }` | Authentication failed. |
+| `502` | `{ "error": "DX Core service unavailable" }` | The DX Core service is unreachable. |
+| `500` | `{ "error": "Internal server error" }` | An unexpected server error occurred. |
 
 ## Listing existing content source types
 
-To see which content source types are available and can be used, call the `/dx/api/search/v2/contentsourcetypes` endpoint with a `GET` request.
+To see which content source types are available, send a `GET` request to the `/dx/api/search/v2/contentsourcetypes` endpoint.
 
-The response of the API call is similar to the following example:
-
-**Response:**
+The API returns a response similar to the following example:
 
 ```json
 {
@@ -95,9 +88,9 @@ The response of the API call is similar to the following example:
 
 ## Listing existing content sources
 
-To see which content sources are configured, call the `/dx/api/search/v2/contentsources` endpoint with a `GET` request:
+To see which content sources are configured, send a `GET` request to the `/dx/api/search/v2/contentsources` endpoint.
 
-**Response:**
+If no content sources are configured, the API returns the following response:
 
 ```json
 {
@@ -105,9 +98,7 @@ To see which content sources are configured, call the `/dx/api/search/v2/content
 }
 ```
 
-If you have content sources configured, the response looks similar to the following example:
-
-**Response:**
+If you have content sources configured, The API returns a response similar to the following example:
 
 ```json
 {
@@ -148,9 +139,9 @@ If you have content sources configured, the response looks similar to the follow
 }
 ```
 
-To see configured content sources for a certain type (for example, `wcm`), call the `/dx/api/search/v2/contentsources?type=wcm` endpoint with a `GET` request:
+To view configured content sources for a specific type (for example, `wcm`), send a `GET` request `/dx/api/search/v2/contentsources?type=wcm` endpoint.
 
-**Response:**
+The API returns a response similar to the following example:
 
 ```json
 {
@@ -178,9 +169,7 @@ To see configured content sources for a certain type (for example, `wcm`), call 
 
 ## Creating a new content source
 
-To create a new content source, call the `/dx/api/search/v2/contentsources` endpoint with a `POST` request and the following payload:
-
-**Payload:**
+To create a new content source, send a `POST` request to the `/dx/api/search/v2/contentsources` endpoint with the following payload:
 
 ```json
 {
@@ -200,18 +189,18 @@ You can provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
-| `name` | no | A speaking identifier for your content source. |
+| `name` | no | A descriptive name for the content source. |
 | `type` | no | The type of content source you want to create. Allowed types are `wcm`, `jcr`, `portal` and `dam`. |
-| `aclLookupHost` | no | The host where the ACL lookup for search requests is being made. It can directly point to your HCL DX HAProxy Service inside your Kubernetes deployment. The name consists of the release name used during the `helm install` and the suffix `-haproxy`. You can also use the regular hostname of your deployment. |
-| `aclLookupPath` | yes | The path where the ACL lookup for search requests is being made. This should point to the `mycontenthandler` endpoint of your deployment (for example, `/wps/mycontenthandler`). If no path is provided, it defaults back to `/wps/mycontenthandler`. |
+| `aclLookupHost` | no | The host where the ACL lookup for search requests is made. It can directly point to your HCL DX HAProxy service in your Kubernetes deployment. The name consists of the release name used during `helm install` and the suffix `-haproxy`. You can also use the regular hostname of your deployment. |
+| `aclLookupPath` | yes | The path where the ACL lookup for search requests is made. This must point to the `mycontenthandler` endpoint of your deployment (for example, `/wps/mycontenthandler`). If no path is provided, it defaults to `/wps/mycontenthandler`. |
 | `security.type` | no | The type of authentication to use. Allowed types are `none`, `basic` and `form`. |
 | `security.username` | no | The username of a user that has access to crawl the seedlist. |
 | `security.password` | no | The password of a user that has access to crawl the seedlist. |
-| `security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
-| `security.passwordField` | yes | The field name of the password field in a FORM based authentication. |
-| `security.loginPath` | yes | The path where the FORM authentication request is being made. |
-| `apiBaseUrl` | yes | The base URL of the DAM API. Only needed for `dam` content sources, to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
-| `apiPath` | yes | The path of the DAM API (for example, `/dx/api/dam/v1`). Only needed for `dam` content sources, to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
+| `security.usernameField` | yes | The field name of the username field in a FORM-based authentication. |
+| `security.passwordField` | yes | The field name of the password field in a FORM-based authentication. |
+| `security.loginPath` | yes | The path where the FORM-based authentication request is being made. |
+| `apiBaseUrl` | yes | The base URL of the Digital Asset Management (DAM) API. Only needed for `dam` content sources, to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
+| `apiPath` | yes | The path of the DAM API (for example, `/dx/api/dam/v1`). Only needed for `dam` content sources to support [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source). |
 
 To create a `dam` content source that supports [triggering a DAM reindex](#triggering-a-dam-reindex-for-a-content-source), also include the `apiBaseUrl` and `apiPath` properties:
 
@@ -231,9 +220,7 @@ To create a `dam` content source that supports [triggering a DAM reindex](#trigg
 }
 ```
 
-The response of the API call looks similar to the following sample:
-
-**Response:**
+The API returns a response similar to the following example:
 
 ```json
 {
@@ -258,9 +245,9 @@ The response contains the `id` of the content source, which is required when you
 
 ## Configuring content sources for virtual portals and alternate context roots
 
-If you want to configure content sources for a virtual portal or for an alternate context root, you must adjust the `aclLookupPath` to match you target portal.
+If you want to configure content sources for a virtual portal or for an alternate context root, adjust the `aclLookupPath` to match you target portal.
 
-See the following sample configurations:
+Refer to the following sample configurations:
 
 | Portal | Context root | `aclLookupPath` |
 | --- | --- | --- |
@@ -269,19 +256,19 @@ See the following sample configurations:
 | Base portal  | `/mycontext` | `/mycontext/mycontenthandler` |
 | Base portal  | `/` | `/mycontenthandler` |
 
-The Search V2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that only the content sources that are available for the current portal are shown in the search UI and you only see results from your current portal.
+The Search V2 UI uses the  `aclLookupPath` to determine which content sources are available for your current portal. This ensures that the search UI displays only the content sources and results available for the current portal.
 
-`aclLookupPath` is also used to validate the users' ACLs when performing a search query and to ensure that only results are shown that the user has access to.
+The `aclLookupPath` is also used to validate user access control lists (ACLs) during search queries to ensure that users only see results they have permission to access.
 
 ## Out-of-the-box content sources
 
-If enabled in the Helm chart during deployment, the Search V2 configures the content sources out-of-the-box. These content sources are for `wcm`, `jcr` and `portal` types and are scoped at your configured context root and base portal. A content source for `dam` is also pre-configured out-of-the-box but the Search V2 UI currently does not support it.
+If enabled in the Helm chart during deployment, Search V2 configures content sources out of the box. These content sources are for `wcm`, `jcr` and `portal` types and are scoped at your configured context root and base portal. A content source for `dam` is also preconfigured out of the box but the Search V2 UI currently does not support it.
 
 ## Getting document counts
 
-To get document counts for all content sources, grouped by content source ID, call the `/dx/api/search/v2/documentcounts` endpoint with a `GET` request. Each entry includes a total count and a per-document-type breakdown.
+To get document counts for all content sources, grouped by content source ID, send a `GET` request to the `/dx/api/search/v2/documentcounts` endpoint. Each entry includes a total count and a per-document-type breakdown.
 
-**Response:**
+The API returns a response similar to the following example:
 
 ```json
 {
@@ -306,19 +293,19 @@ To get document counts for all content sources, grouped by content source ID, ca
 ```
 
 !!! note
-    The `byType` keys reflect the actual document types stored in the content source index (for example, `page`, `file`, `sitearea`). An `unknown` type is used for documents where the type field is missing or unrecognized.
+    The `byType` keys reflect the actual document types stored in the content source index (for example, `page`, `file`, or `sitearea`). The `unknown` type is used for documents where the type field is missing or unrecognized.
 
 ## Triggering a DAM reindex for a content source
 
-To trigger a reindex of a DAM content source, call the `/dx/api/search/v2/contentsources/{contentsource_id}/dam-reindex` endpoint with a `POST` request, where `contentsource_id` is the `id` of the DAM content source to reindex.
+To trigger a reindex of a DAM content source, send a `POST` request to the `/dx/api/search/v2/contentsources/{contentsource_id}/dam-reindex`, where `contentsource_id` is the `id` of the DAM content source to reindex.
 
-**Response codes:**
+The endpoint returns the following response codes:
 
-| Code | Description |
+| Status code | Description |
 | --- | --- |
-| `200` | Success |
-| `400` | Invalid content source or missing configuration |
-| `401` | Authentication error |
-| `404` | Content source ID not found |
-| `500` | Server error |
-| `502` | DAM API unavailable |
+| `200` | The reindex request succeeded. |
+| `400` | The content source is invalid or missing required configuration. |
+| `401` | Authentication failed. |
+| `404` | The content source ID was not found. |
+| `500` | An unexpected server error occurred. |
+| `502` | The DAM API is unreachable. |

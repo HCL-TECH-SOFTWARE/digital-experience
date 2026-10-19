@@ -7,18 +7,22 @@ Grant users access to the Search Admin UI by assigning the required resource per
 
 ## Standalone Search Admin UI
 
-1. Navigate to **Pages > Content Root > Practitioner Studio > Administration > Search > Search Admin**.
-2. Assign the **Administrator** role to the user or group.
-3. Open `https://<host>/dx/ui/search/admin-ui`.
+1. Log in to HCL Digital Experience (DX) as an administrator.
+2. Navigate to **Open applications menu > Site Management > Administration > Pages > Content Root > Practitioner Studio > Administration > Search > Search Admin**.
+3. Assign the **Administrator** role to the user or group.
+4. Open `https://<host>/dx/ui/search/admin-ui`.
 
     ![](../../assets/Search_Admin_UI_standalone_view.png)
 
 ## Search Admin UI in Practitioner Studio
 
-1. Navigate to **Pages > Content Root > Practitioner Studio > Administration > Search > Search Admin**.
-2. Assign the **Administrator** role to the user or group.
-3. Navigate to **Portlets > Search Center Administration portlet**.
-4. Assign at least the **User** role to the user or group.
-5. In HCL Digital Experience (DX), navigate to **Practitioner Studio > Administration > Search > Search Admin**.
+<!--Please check if the steps are still accurate-->
+
+1. Log in to HCL Digital Experience (DX) as an administrator.
+2. Navigate to **Open applications menu > Site Management > Administration > Pages > Content Root > Practitioner Studio > Administration > Search > Search Admin**.
+3. Assign the **Administrator** role to the user or group.
+4. Navigate to **Portlets > Search Center Administration portlet**.
+5. Assign at least the **User** role to the user or group.
+6. Navigate to **Practitioner Studio > Administration > Search > Search Admin**.
 
     ![](../../assets/Search_Admin_UI_portal_view.png)

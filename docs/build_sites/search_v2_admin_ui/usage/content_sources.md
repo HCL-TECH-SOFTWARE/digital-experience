@@ -1,8 +1,8 @@
 # Managing content sources
 
-This section describes how to manage content sources in the Search Admin UI.
+Use the Search Admin UI to manage content sources.
 
-A content source represents a single index in the search engine that items can be indexed to and searched from. The following content source types are available:
+A content source represents a single search engine index where items are indexed and searched. The following content source types are available:
 
 - Digital Asset Management (DAM)
 - Java Content Repository (JCR)
@@ -12,65 +12,86 @@ A content source represents a single index in the search engine that items can b
 - Website
 
 !!! note
-    DAM and People content sources do not have an associated crawler. Instead, they use the Content Push API, which allows these content sources to push documents directly to the search index. For more information about content sources that use crawlers, refer to [Crawlers](crawlers.md).
+    DAM and People content sources do not have an associated crawler. Instead, they use the Content Push API to push documents directly to the search index. For more information about content sources that use crawlers, refer to [Crawlers](crawlers.md).
 
-On the **Content Sources** panel, you can do the following tasks:
+## Content Sources & Crawlers tab
 
-## Viewing content sources
+On the **Content Sources & Crawlers** tab, you can do the following tasks:
 
-1. Go to the Search Admin UI.
-2. Click the **Content Sources & Crawlers** tab.
+### Viewing content sources
 
-    ![](../../../assets/Search_Admin_UI_view_content_sources.png)
+In the **Content sources** section, view the list of existing content sources.
 
-The list of existing content sources is displayed.
+![](../../../assets/Search_Admin_UI_view_content_sources.png)
 
-## Creating a content source
+### Creating a content source
 
-1. Click **Add content source**.
+1. Select **Add content source**.
 
     ![](../../../assets/Search_Admin_UI_add_content_source_button.png)
 
-2. Fill up the required fields in the dialog that opens, then save your changes.
+2. Enter the following details:
 
-    ![](../../../assets/Search_Admin_UI_add_content_source_dialog.png)
+    ![](../../../assets/Search_Admin_UI_add_content_source_dialog.png){: width="500" style="display: block; margin: 0 auto;"}
 
-## Viewing content source properties
+    - **Source name:** Enter a unique name for the content source (for example, `dam_default_content_source`).
+    - **Source type:** Select the content source type from the drop-down list (**WCM**, **DAM**, **JCR**, **PORTAL**, **PEOPLE**, or **WEBSITE**).
+    - **General parameters:** Expand the section to configure the following connection parameters:
+        - **ACL Lookup Host:** Enter the host URL used for Access Control List (ACL) lookups (for example, `https://dx-deployment-haproxy`).
+        - **ACL Lookup Path:** Enter the endpoint path used for ACL lookups (for example, `/wps/mycontenthandler`).
+        - **API Base URL:** Enter the base URL of the source service API (for example, `https://dx-deployment-haproxy`).
+        - **API Path:** Enter the endpoint path for the content API (for example, `/dx/api/dam/v1`).
+    - **Security:** Expand the section to configure the following authentication settings:
+        - **Authentication (Type):** Select the authentication protocol (**None**, **Basic**, or **Form**). Selecting **None** requires no additional settings.
+        - If you select **Basic** or **Form**, enter the following additional details:
+            - **Username**: Enter the administrative username for authenticating with the source (for example, `wpsadmin`).
+            - **Password**: Enter the account password.
+            - **Login path**: Enter the authentication endpoint path (for example, `/wps/mycontenthandler/!ut/p/um/currentuser`).
+        - If you select **Form**, enter the following additional details:
+            - **Username field**: Enter the form field name for the username (for example, `username`).
+            - **Password field**: Enter the form field name for the password (for example, `password`).
 
-1. Hover on a content source row.
-2. Click the **Properties** icon beside the content source title.
+    <!--Please confirm if the descriptions are correct and adequate, especially for Security. If we can be more specific on the descriptions, that would be great-->
 
-The properties panel opens, showing the source name and type, general parameters (such as ID, ACL lookup host and path, API base URL and path, and the created and last modified dates), and security settings (such as authentication type, username, and login path).
+3. Select **Add**, or select **Cancel**. If you select **Cancel**, select **Discard** to discard changes or **Keep editing** to return to the dialog box.
 
-## Searching for a content source
+### Viewing content source properties
 
-1. Click the **Search content source** field.
+1. Hover over a content source row.
+2. Select the **Properties** icon.
 
-    ![](../../../assets/Search_Admin_UI_content_source_search_field.png)
+    ![](../../../assets/Search_Admin_UI_content_source_view.png)
 
-2. Enter a search term. The list is filtered to show all content sources that match the search term.
+    The **Properties** panel displays the source name and type, general parameters (such as ID, ACL lookup host and path, and API base URL and path), and security settings (such as authentication type, username, and login path).
 
-    ![](../../../assets/Search_Admin_UI_content_source_search_results.png)
+### Searching for a content source
 
-## Updating a content source
+1. Select the **Search content source** box and enter a search term.
+2. Select the search icon or press **Enter**. The list filters to show all content sources that match the search term you entered.
 
-1. Hover on a content source row.
-2. Click the **Properties** icon.
-3. In the properties panel, edit the properties, then click **Save**.
+![](../../../assets/Search_Admin_UI_content_source_search_results.png)
 
-    ![](../../../assets/Search_Admin_UI_content_source_properties_panel.png)
+### Updating a content source
 
-## Deleting a content source
+1. Hover over a content source row.
+2. Select the **Properties** icon.
+3. In the **Properties** panel, edit the properties, and then select **Save**.
 
-1. Hover on a content source row.
-2. Click the **Overflow** icon, then click **Delete**.
+    ![](../../../assets/Search_Admin_UI_content_source_properties_panel.png){: width="700" style="display: block; margin: 0 auto;"}
+
+### Deleting a content source
+
+1. Hover over a content source row.
+2. Select the **More actions** icon.
 
     ![](../../../assets/Search_Admin_UI_content_source_overflow_menu.png)
 
+3. Select **Delete**.
+
     ![](../../../assets/Search_Admin_UI_content_source_delete_option.png)
 
-3. In the confirmation dialog, click **Delete** to continue, or click **Cancel** to cancel the deletion.
+4. In the confirmation dialog box, select **Delete** to continue, or select **Cancel**.
 
-    ![](../../../assets/Search_Admin_UI_content_source_delete_dialog.png)
+    ![](../../../assets/Search_Admin_UI_content_source_delete_dialog.png){: width="500" style="display: block; margin: 0 auto;"}
 
-Deleting a content source removes it from the list and makes it unavailable for search indexing. If the content source has a corresponding crawler, the crawler is also deleted, provided it is not currently running.
+    Deleting a content source removes it from the list and makes it unavailable for search indexing. If the content source has an associated crawler that is not currently running, the crawler is also deleted.

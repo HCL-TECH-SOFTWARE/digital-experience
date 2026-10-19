@@ -1,73 +1,75 @@
 # Managing common field mappings
 
-This section describes how to manage common field mappings in the Search Admin UI.
+Use the Search Admin UI to manage common field mappings.
 
 Common field mappings map the fields used in search to the corresponding `documentObject` field for each content source type. Each content source type indexes with default field mappings.
 
 !!! note
-    Required field mappings (title, description, link, type, and tags) cannot be renamed or deleted. You can only modify their mapped value for each content source type, or add and modify custom fields.
+    You cannot rename or delete required field mappings (title, description, link, type, and tags). You can only modify their mapped value for each content source type, or add and modify custom fields.
 
-On the **Common Field Mappings** panel, you can do the following tasks:
+## Mappings & translations tab
 
-## Viewing common field mappings
+On the **Mappings & translations tab**, you can do the following tasks:
 
-1. Click the **Mapping & Translations** tab. The list of existing common field mappings is displayed.
+### Viewing common field mappings
 
-    ![](../../../assets/Search_Admin_UI_mapping_list.png)
+In the **Common Field Mappings** section, view the list of existing common field mappings.
 
-!!! note
-    If a common field mapping has not been edited, it shows a **Default** label.
+![](../../../assets/Search_Admin_UI_mapping_list.png)
 
-    ![](../../../assets/Search_Admin_UI_mapping_default.png)
+If your common field mapping are unedited, the section displays a **Default** label.
 
-    Once it has been edited, or a new custom field mapping has been added, it shows a **Customized** label instead.
+![](../../../assets/Search_Admin_UI_mapping_default.png)
 
-    ![](../../../assets/Search_Admin_UI_mapping_customized.png)
+If you change any mapped value in a common field mapping, or add a custom field mapping, the label changes to **Customized**. <!--Let me know if this is accurate-->
 
-## Adding a common field mapping
+![](../../../assets/Search_Admin_UI_mapping_customized.png)
 
-1. Click **Add common field mapping**.
+### Adding a common field mapping
+
+1. Select **Add common field mapping**.
 
     ![](../../../assets/Search_Admin_UI_mapping_add_button.png)
 
-2. In the **Add Common Field Mapping** form that opens, add a custom common field and its mapped value for each type.
+2. In the **Add Common Field Mapping** dialog box, enter a **Common Field Name** and its mapped value for each type (**WCM**, **DAM**, **JCR**, **PORTAL**, **WEBSITE**, and **PEOPLE**).
 
-    ![](../../../assets/Search_Admin_UI_mapping_add_form_dialog.png)
+    ![](../../../assets/Search_Admin_UI_mapping_add_form_dialog.png){: width="500" style="display: block; margin: 0 auto;"}
 
-3. To add more common field mappings in the same form, click **Add another common field mapping**.
+3. To add more common field mappings in the same dialog box, select **Add another common field mapping**.
 
-    ![](../../../assets/Search_Admin_UI_mapping_add_form_add_more.png)
+    ![](../../../assets/Search_Admin_UI_mapping_add_form_add_more.png){: width="500" style="display: block; margin: 0 auto;"}
 
-4. Once you are done, click **Add**.
+4. Select **Add**, or select **Cancel**. If you select **Cancel**, select **Discard** to discard changes or **Keep editing** to return to the dialog box.
 
-## Searching for a common field mapping
+### Searching for a common field mapping
 
-1. Type a search term in the **Search common field mappings** field. The list is filtered to show the results matching the search term.
+1. Select the **Search common field mappings** box and enter a search term.
+2. Select the search icon or press **Enter**. The list is filtered to show the common field mappings matching the search term.
 
     ![](../../../assets/Search_Admin_UI_mapping_search_results.png)
 
-## Updating a common field mapping
+### Updating a common field mapping
 
-1. Hover on a common field mapping.
-2. Click the **Edit** icon.
+1. Hover over a common field mapping.
+2. Select the **Edit mapping** icon.
 
-    ![](../../../assets/Search_Admin_UI_mapping_edit_button.png)
+    ![](../../../assets/Search_Admin_UI_mapping_edit_button.png){: width="800" style="display: block; margin: 0 auto;"}
 
-3. In the dialog that opens, change the mapped value, then click **Save**.
+3. In the dialog box, edit the mapped values you want to change, and then select **Save**.
 
-    ![](../../../assets/Search_Admin_UI_mapping_edit_form_dialog.png)
+    ![](../../../assets/Search_Admin_UI_mapping_edit_form_dialog.png){: width="500" style="display: block; margin: 0 auto;"}
 
-## Deleting a common field mapping
+### Deleting a common field mapping
 
-You can only delete a custom common field mapping.
+!!!note
+    - You can only delete a custom common field mapping.
+    - Deleting a custom field removes it from the list for all content source types.
 
-1. Hover on a mapping.
-2. Click the **Delete** icon.
+1. Hover over a mapping.
+2. Select the **Delete** icon.
 
-    ![](../../../assets/Search_Admin_UI_mapping_delete_button.png)
+    ![](../../../assets/Search_Admin_UI_mapping_delete_button.png){: width="800" style="display: block; margin: 0 auto;"}
 
-3. In the confirmation dialog, click **Delete** to confirm, or click **Cancel** to cancel the deletion.
+3. In the confirmation dialog box, select **Delete** to confirm, or select **Cancel**.
 
-    ![](../../../assets/Search_Admin_UI_mapping_delete_confirm_dialog.png)
-
-Deleting a custom field removes it from the list for all content source types.
+    ![](../../../assets/Search_Admin_UI_mapping_delete_confirm_dialog.png){: width="500" style="display: block; margin: 0 auto;"}
