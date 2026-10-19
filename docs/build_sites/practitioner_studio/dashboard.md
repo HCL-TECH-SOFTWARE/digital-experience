@@ -71,8 +71,8 @@ Use the **Calendar** widget to see which content items are scheduled to publish 
 
 ![Calendar](../../assets/HCL_Practitioner_dashboard_Calendar.png)
 
-- The grid pane on the left displays month and week views where week is default, allowing you to select Today, the month and year selector, or use the arrows to navigate the calendar while days display color-coded status indicators for scheduled items.
-- The agenda pane on the right displays items scheduled for that day in chronological order when you select a date in the grid or use the arrows, enabling you to select a content item and the eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+- The grid pane on the left displays scheduled items. In the view drop-down list in the upper-right corner, select **Month** or **Week** (**Week** is selected by default). Select **Today**, the month and year selector, or the navigation arrows to move through the calendar. Days display color-coded status indicators for scheduled items.
+- The agenda pane on the right displays items scheduled for the selected date in chronological order. Select a date in the grid or use the navigation arrows to view scheduled items for that day. Select a content item, and then select the eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
     The status displayed on a calendar chip is based on comparing the item's publish and expiry dates to the current date. This does not reflect the item's actual workflow or content status. For example, an item might display **Publishing** or **Published** status based on its publish date even if it has not completed the publishing workflow. If an item has both a publish date and an expiration date within the selected date range, it appears as two separate chips.
@@ -84,7 +84,7 @@ Use the **My Projects** widget to view and manage your projects.
 ![My Projects](../../assets/HCL_Practitioner_dashboard_My_Projects.png)
 
 - View the **Projects**, **Last Modified** date, and **Status**.
-- Select **Go to My Projects** to view your projects in the [Web Content Manager (WCM) Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+- Select **Go to My Projects** to view your projects in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
     Viewing and managing projects requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
@@ -158,6 +158,7 @@ You can add a thumbnail to a site in two ways:
 
 - Create a site using a template that includes a theme with an Open Graph (OG) image (`og:image`) metadata already configured. The thumbnail is automatically displayed based on the OG image defined in the theme.
 - Configure the site manually:
+
     1. Navigate to **Web Content > Authoring > Portal Site > Content > Content Root**.
     2. Select the check box for the site you want to update, and then select **Edit**.
     3. Under **Portal Page Properties**, select **Manage Elements**.
