@@ -1,6 +1,6 @@
 # Search Admin UI
 
-The Search Admin UI is a centralized interface for managing HCL Digital Experience (DX) Search V2 components. It provides administrators with the ability to manage content sources, crawlers, common field mappings, and NLS (Native Language Support) translations from a single location.
+The Search Admin UI is a centralized interface for managing HCL Digital Experience (DX) Search V2 components. It provides administrators with the ability to manage content sources, crawlers, common field mappings, and Native Language Support (NLS) translations from a single location.
 
 !!! important
     Before you can use the Search Admin UI, you need to install and enable the [Search V2 backend](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_install_new_search.md).
