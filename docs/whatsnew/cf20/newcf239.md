@@ -23,6 +23,7 @@ The following features and updates are available to customers installing HCL Dig
 - Helm values updates
 - IQ - Configuring cross-session memory
 - IQ - HTTPS support for the MCP Server
+- Search V2 - Search Admin UI
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -127,6 +128,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     IQ now supports HTTPS to secure connections between the MCP server and the IQ Integrator. HTTPS is disabled by default. For configuration instructions, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
+
+### Search V2 - Search Admin UI
+
+=== "Containers"
+    The Search Admin UI provides a centralized interface for managing Search V2 components. Administrators can configure content sources, crawlers, common field mappings, and native language support (NLS) translations from a single dashboard. You can access the UI either as a standalone application or directly within Practitioner Studio. For more information, refer to [Search Admin UI](../../build_sites/search_v2_admin_ui/index.md).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
