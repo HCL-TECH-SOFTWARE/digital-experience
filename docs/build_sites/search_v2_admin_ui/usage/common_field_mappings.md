@@ -21,7 +21,7 @@ If your common field mapping are unedited, the section displays a **Default** la
 
 ![](../../../assets/Search_Admin_UI_mapping_default.png)
 
-If you change any mapped value in a common field mapping, or add a custom field mapping, the label changes to **Customized**. <!--Let me know if this is accurate-->
+If you change any mapped value in a common field mapping, or add a custom field mapping, the label changes to **Customized**.
 
 ![](../../../assets/Search_Admin_UI_mapping_customized.png)
 
