@@ -23,24 +23,24 @@ You can access all API endpoints through the Swagger UI at `/dx/api/search/v2/ex
 
 Before you can perform administrative tasks with the Search V2 REST API, you must authenticate. You can authenticate either as a search administrator or as a DX administrator. You do not need both roles. Either role authorizes the protected endpoints described in the following table.
 
-| Endpoints | Authentication required |
-| --- | --- |
-| Content sources: `GET /contentsources`, `GET /contentsourcetypes` | None |
-| Content sources: all other operations | Search administrator or DX administrator |
-| Crawlers: `GET /crawlertypes` | None |
-| Crawlers: all other operations | Search administrator or DX administrator |
-| Common field mappings: `GET` operations | None |
-| Common field mappings: `POST`, `PUT`, `PATCH`, and `DELETE` operations | Search administrator or DX administrator |
-| NLS translations: all operations | Search administrator or DX administrator |
+| Resource | Operation or endpoint | Required role |
+| --- | --- | --- |
+| Content sources | `GET /contentsources`<br>`GET /contentsourcetypes` | None |
+| Content sources | All other operations | Search administrator or DX administrator |
+| Crawlers | `GET /crawlertypes` | None |
+| Crawlers | All other operations | Search administrator or DX administrator |
+| Common field mappings | `GET` operations | None |
+| Common field mappings | `POST`, `PUT`, `PATCH`, `DELETE` | Search administrator or DX administrator |
+| NLS translations | All operations | Search administrator or DX administrator |
 
 !!! note
-    Access control is determined by the combination of the HTTP method and the path. The same path can be unprotected for one method and protected for another. For example, `GET /mapping/common-fields` is unprotected, but `POST`, `PUT`, `PATCH`, and `DELETE` on the same path require authentication.
+    Access control is determined by the HTTP method and the path. The same path can be unprotected for one method and protected for another. For example, `GET /mapping/common-fields` is unprotected, but `POST`, `PUT`, `PATCH`, and `DELETE` on the same path require authentication.
 
 ### Authenticating as a search administrator
 
 The search administrator credentials are configured during the Helm installation of Search V2.
 
-1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint with the following payload:
+1. Send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint with the following payload:
 
     ```json
     {

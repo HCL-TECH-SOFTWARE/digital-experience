@@ -44,7 +44,10 @@ In the **Crawlers** section, view the list of existing crawlers.
         - **Page crawl delay (s)**: Enter the delay in seconds between page requests. Use this setting to reduce load on the target system.
         - **Max crawl time (s)**: Enter the time limit in seconds for the overall crawler run. Use this setting to prevent stuck crawlers.
     - **Security**: Expand the section to configure authentication settings:
-        - **Authentication (Type)**: Select the authentication method that the crawler uses to connect to the seedlist: **Inherit** to reuse the security configuration of the associated content source, **Basic** for HTTP basic authentication, or **Form** for form-based login.
+        - **Authentication (Type)**: Select the authentication method that the crawler uses to connect to the seedlist:
+            - **Inherit** to reuse the security configuration of the associated content source.
+            - **Basic** for HTTP basic authentication.
+            - **Form** for form-based login.
         - If you select **Basic** or **Form**, enter the following additional details:
             - **Username**: Enter the username of an account that has permission to crawl the seedlist (for example, `wpsadmin`).
             - **Password**: Enter the password for the specified account. The password is masked as `********` in API responses.

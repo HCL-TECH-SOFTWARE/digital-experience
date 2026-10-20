@@ -42,7 +42,10 @@ In the **Content sources** section, view the list of existing content sources.
         - **API Base URL:** Enter the base URL of the source service API (for example, `https://dx-deployment-haproxy`).
         - **API Path:** Enter the endpoint path for the content API (for example, `/dx/api/dam/v1`).
     - **Security:** Expand the section to configure the following authentication settings:
-        - **Authentication (Type):** Select the authentication method that the search service uses to connect to the content source: **None** for sources that allow anonymous access, **Basic** for HTTP basic authentication, or **Form** for form-based login. Selecting **None** requires no additional settings.
+        - **Authentication (Type):** Select the authentication method that the search service uses to connect to the content source:
+            - **None** for sources that allow anonymous access. Selecting **None** requires no additional settings.
+            - **Basic** for HTTP basic authentication.
+            - **Form** for form-based login.
         - If you select **Basic** or **Form**, enter the following additional details:
             - **Username**: Enter the username of an account that has permission to read the content you want to index (for example, `wpsadmin`).
             - **Password**: Enter the password for the specified account. The password is masked as `********` in API responses.
