@@ -42,16 +42,16 @@ In the **Content sources** section, view the list of existing content sources.
         - **API Base URL:** Enter the base URL of the source service API (for example, `https://dx-deployment-haproxy`).
         - **API Path:** Enter the endpoint path for the content API (for example, `/dx/api/dam/v1`).
     - **Security:** Expand the section to configure the following authentication settings:
-        - **Authentication (Type):** Select the authentication protocol (**None**, **Basic**, or **Form**). Selecting **None** requires no additional settings.
+        - **Authentication (Type):** Select the authentication method that the search service uses to connect to the content source: **None** for sources that allow anonymous access, **Basic** for HTTP basic authentication, or **Form** for form-based login. Selecting **None** requires no additional settings.
         - If you select **Basic** or **Form**, enter the following additional details:
-            - **Username**: Enter the administrative username for authenticating with the source (for example, `wpsadmin`).
-            - **Password**: Enter the account password.
-            - **Login path**: Enter the authentication endpoint path (for example, `/wps/mycontenthandler/!ut/p/um/currentuser`).
+            - **Username**: Enter the username of an account that has permission to read the content you want to index (for example, `wpsadmin`).
+            - **Password**: Enter the password for the specified account. The password is masked as `********` in API responses.
+            - **Login path**: Enter the path where the authentication request is sent (for example, `/wps/mycontenthandler/!ut/p/um/currentuser`).
         - If you select **Form**, enter the following additional details:
-            - **Username field**: Enter the form field name for the username (for example, `username`).
-            - **Password field**: Enter the form field name for the password (for example, `password`).
+            - **Username field**: Enter the name of the username input field in the login form (for example, `username`).
+            - **Password field**: Enter the name of the password input field in the login form (for example, `password`).
 
-    <!--Please confirm if the descriptions are correct and adequate, especially for Security. If we can be more specific on the descriptions, that would be great-->
+    For the full definition of each property, refer to [Configuring a content source by using the REST API](../../../deployment/manage/container_configuration/configure_opensearch/configure_a_contentsource_api.md).
 
 3. Select **Add**, or select **Cancel**. If you select **Cancel**, select **Discard** to discard changes or **Keep editing** to return to the dialog box.
 

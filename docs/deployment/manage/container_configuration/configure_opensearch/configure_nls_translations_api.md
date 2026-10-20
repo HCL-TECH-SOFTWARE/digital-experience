@@ -5,7 +5,7 @@ Use the REST API to manage native language support (NLS) translations. NLS objec
 You can access all API endpoints through the Swagger UI at `/dx/api/search/v2/explorer`.
 
 !!! note
-    Using the REST API endpoints requires authentication. For more information, refer to [Authenticating as a search administrator](configure_a_contentsource_api.md#authenticating-as-a-search-administrator) and [Authenticating as a DX administrator](configure_a_contentsource_api.md#authenticating-as-a-dx-administrator).
+    Using the REST API endpoints requires authentication as a search administrator or a DX administrator. For more information, refer to [Authentication](index.md#authentication).
 
 ## Listing NLS translations
 
@@ -39,10 +39,14 @@ To replace all translations for a language, send a `PUT` request to the `/dx/api
 ```json
 {
   "translations": {
-    "title": "Titre"
+    "title": "Titre",
+    "description": "Description",
+    "link": "Lien"
   }
 }
 ```
+
+The request replaces all existing translations for the language. Any key that you omit from the payload is removed.
 
 ## Updating an NLS translation
 
@@ -56,7 +60,7 @@ To merge provided translations into a language while preserving existing keys, s
 }
 ```
 
-<!--Let me know if this code block is accurate-->
+The request updates only the keys that you include in the payload. All other existing keys remain unchanged.
 
 ## Deleting an NLS translation
 

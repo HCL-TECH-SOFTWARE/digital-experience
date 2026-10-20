@@ -14,32 +14,8 @@ The following crawler types are available:
 
 You can configure one or more crawlers for each content source. All crawled documents are stored in the same content source index. To keep data separate, use one crawler per content source. You cannot assign a crawler of a different type to a content source. For example, you can only crawl Web Content Manager (WCM) data with a WCM crawler in a WCM content source.
 
-## Authenticating as a search administrator
-
-Before you can perform administrative tasks, you must authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search V2.
-
-1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint with the following payload:
-
-    ```json
-    {
-      "username": "searchadmin",
-      "password": "yourconfiguredpassword"
-    }
-    ```
-
-    The endpoint returns the following response:
-
-    ```json
-    {
-      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
-    }
-    ```
-
-2. Add the returned JSON Web Token (JWT) in all upcoming HTTP requests in the `Authorization` header by using the `Bearer` prefix:
-
-    | Header | Value |
-    | --- | --- |
-    | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+!!! note
+    Most crawler operations require authentication as a search administrator or a DX administrator. The `GET /crawlertypes` endpoint is unprotected. For more information, refer to [Authentication](index.md#authentication).
 
 ## Configuring the crawler
 

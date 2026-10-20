@@ -5,7 +5,7 @@ Use the REST API to manage common field mappings. Common field mappings define h
 You can access all API endpoints through the Swagger UI at `/dx/api/search/v2/explorer`.
 
 !!! note
-    The `GET` endpoints for common field mappings are unprotected. All other operations require authentication. For more information, refer to [Authenticating as a search administrator](configure_a_contentsource_api.md#authenticating-as-a-search-administrator) and [Authenticating as a DX administrator](configure_a_contentsource_api.md#authenticating-as-a-dx-administrator).
+    The `GET` endpoints for common field mappings are unprotected. All other operations require authentication as a search administrator or a DX administrator. For more information, refer to [Authentication](index.md#authentication).
 
 ## Listing common field mappings
 
@@ -63,7 +63,7 @@ To update specific fields in an existing mapping, send a `PATCH` request to the 
 }
 ```
 
-<!--Let me know if this code block is accurate-->
+The payload must contain at least one field. The request updates only the fields that you include. All other fields in the mapping remain unchanged.
 
 ## Deleting a mapping
 

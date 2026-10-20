@@ -36,20 +36,20 @@ In the **Crawlers** section, view the list of existing crawlers.
     - **Crawler name**: Enter a name for the crawler.
     - **Content source**: Select the content source from the drop-down list. The selected content source determines the **Crawler type**.
     - **General parameters**: Expand the section to configure the following parameters:
-        - **Target data source**: Enter the target data source.
-        - **Schedule**: Enter the crawler schedule.
-        - **Max depth level**: Enter the maximum depth level.
-        - **Max documents to crawl**: Enter the maximum number of documents to crawl.
-        - **Links expire after (s)**: Enter the time in seconds before links expire.
-        - **Page crawl delay (s)**: Enter the delay time in seconds between page crawls.
-        - **Max crawl time (s)**: Enter the maximum crawl time in seconds.
+        - **Target data source**: Enter the seedlist URL that the crawler pulls data from (for example, `https://dx-deployment-haproxy/wps/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`).
+        - **Schedule**: Enter a cron expression that controls how often the crawler runs automatically (for example, `*/15 * * * *`). Leave this box empty to run the crawler only when triggered manually.
+        - **Max depth level**: Enter the maximum number of levels the crawler follows from the starting point.
+        - **Max documents to crawl**: Enter the maximum number of documents to index in a single crawl.
+        - **Links expire after (s)**: Enter the time in seconds before a discovered link is considered stale.
+        - **Page crawl delay (s)**: Enter the delay in seconds between page requests. Use this setting to reduce load on the target system.
+        - **Max crawl time (s)**: Enter the time limit in seconds for the overall crawler run. Use this setting to prevent stuck crawlers.
     - **Security**: Expand the section to configure authentication settings:
-        - **Authentication (Type)**: Select the authentication protocol (**Inherit**, **Basic**, or **Form**).
+        - **Authentication (Type)**: Select the authentication method that the crawler uses to connect to the seedlist: **Inherit** to reuse the security configuration of the associated content source, **Basic** for HTTP basic authentication, or **Form** for form-based login.
         - If you select **Basic** or **Form**, enter the following additional details:
-            - **Username**: Enter the username.
-            - **Password**: Enter the password.
+            - **Username**: Enter the username of an account that has permission to crawl the seedlist (for example, `wpsadmin`).
+            - **Password**: Enter the password for the specified account. The password is masked as `********` in API responses.
 
-    <!--Please confirm if the descriptions are correct and adequate, especially for Security. If we can be more specific on the descriptions, that would be great-->
+    For the full definition of each property, refer to [Configuring a crawler by using the REST API](../../../deployment/manage/container_configuration/configure_opensearch/configure_a_crawler_api.md).
 
 3. Select **Create**, or select **Cancel**. If you select **Cancel**, select **Discard** to discard changes or **Keep editing** to return to the dialog box.
 
