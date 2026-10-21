@@ -4,9 +4,13 @@ This page lists the known limitations of IQ.
 
 ## User interface
 
+### Websocket connectivity
+
+- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
+
 ### Conversation history
 
-- Conversation history does not persist across sessions in the user interface.
+- Conversation history from previous sessions is not visible in the user interface.
 - Resetting a session or closing the interface permanently clears the active context. You cannot record or replay conversations in the chat window.
 - Exporting and reviewing previous conversations are not supported.
 - Enabling [cross-session memory](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session but does not restore the previous transcript in the user interface.
@@ -42,11 +46,6 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
-
-### Integrator
-
-- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
-- If you navigate away from, close, or reload the IQ interface while a request is being processed, the assistant reply may not be broadcasted to the UI and the request may only be partially processed. To avoid lost responses or partial results, wait for the current turn to complete before leaving the interface.
 
 ### AI model
 
