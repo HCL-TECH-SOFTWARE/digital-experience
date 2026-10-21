@@ -1,7 +1,6 @@
 ---
-title: Adding the Custom Namespace Definition
+title: Adding the custom namespace definition to the feed
 ---
-# Adding the custom namespace definition to the feed
 
 The first requirement is to add the namespace reference to the RSS element at the beginning of the feed.
 
@@ -36,6 +35,4 @@ For example:
 </rss>
 ```
 
-The namespace label "ibmwcm" can be changed if the label specified in the namespace declaration matches the label that is used on the extended elements in the feed.
-
-
+The namespace label `ibmwcm` can be changed if the label specified in the namespace declaration matches the label that is used on the extended elements in the feed.

@@ -6,10 +6,10 @@ This page lists the known limitations of IQ.
 
 ### Conversation history
 
-- Chat history does not persist across sessions in the user interface.
-- Resetting a session or closing the interface permanently clears the active context. Conversations cannot be recovered or replayed in the chat window.
+- Conversation history does not persist across sessions in the user interface.
+- Resetting a session or closing the interface permanently clears the active context. You cannot record or replay conversations in the chat window.
 - Exporting and reviewing previous conversations are not supported.
-- Enabling [cross-session memory (RAG)](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session. It does not restore the previous transcript in the user interface.
+- Enabling [cross-session memory](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session but does not restore the previous transcript in the user interface.
 
 ### Localization
 
@@ -51,15 +51,22 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
-- IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. While alternative LLM models may work, compatibility is not guaranteed. Due to the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. For configuration details and compatibility warnings, refer to [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
-- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and causes errors: `Function tools with reasoning_effort are not supported`.
+- IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. Althought alternative LLMs may work, compatibility is not guaranteed. Because of the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. For configuration details and compatibility warnings, refer to [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
+- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and results in the following error: `Function tools with reasoning_effort are not supported`.
 
 ### Database
 
 - Multi-pod and production deployments do not support in-memory SQLite due to session state inconsistency across instances. For multi-pod environments, use PostgreSQL to ensure consistent session state and conversation history across all service instances.
 - Database names are fixed to `iqdb` for internal and Runtime Controller (RTC)-managed databases. External databases allow custom database names.
-- Cross-session memory (RAG) requires PostgreSQL with the `pgvector` extension. The extension is included by default in internal databases managed by DX Persistence Node or DX Runtime Controller. For external PostgreSQL databases, you must explicitly enable the `pgvector` extension using `CREATE EXTENSION IF NOT EXISTS vector;`. Refer to [Enabling cross-session memory (RAG)](./installation/enable-rag.md#prerequisites) for configuration details.
-- Embedding dimension mismatch causes graceful degradation: If the `EMBEDDING_DIMENSIONS` environment variable no longer matches the output dimension of the registered embedding model after initial startup, IQ silently disables cross-session memory while continuing to serve requests. Recreate the RAG tables to apply dimension changes. Refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration).
+- If any of the following environment variables no longer match the configuration saved in the `rag_embedding_metadata` table after initial startup, IQ enters graceful degradation mode and silently disables cross-session memory while continuing to serve requests.
+
+    - `EMBEDDING_DIMENSIONS`
+    - `USE_MULTILINGUAL_EMBEDDINGS`
+    - `RAG_CHUNK_SIZE`
+    - `RAG_CHUNK_OVERLAP`
+    - `RAG_CHUNK_SEPARATORS`
+
+    To apply configuration changes, re-create the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration). For more information on these variables, refer to [Environment variables - Cross-session memory](./installation/environment-variables.md#cross-session-memory).
 
 ## MCP Server
 

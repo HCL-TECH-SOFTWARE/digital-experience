@@ -1,4 +1,4 @@
-# Processing Images
+# Processing images
 
 The Web Content Integrator has an image-processing feature, which allows images that are referenced within HTML and rich text elements to be created as image components while processing a feed.
 
@@ -19,13 +19,14 @@ For example:
 
 Both URLs create or update the same image component, named `program.path`.
 
--   **Enable and disable embedded rich text images**:
+- **Enable and disable embedded rich text images**:
+
     Images can be embedded directly into rich text elements instead of first creating a separate image component. This function ensures that images within rich text elements consumed by the Web Content Integrator process identically to images added through the authoring UI.
 
     By default, embedded rich text images are disabled. To enable them, set these properties:
 
-    -   `disable.img.processing=false`
-    -   `richtext.embedded.images.enabled=true`
+  - `disable.img.processing=false`
+  - `richtext.embedded.images.enabled=true`
 
 ## Absolute image source URLs
 
@@ -52,6 +53,7 @@ The following example shows an absolute image source URL in a feed item:
   </item>
 
 ```
+
 ## Relative image source URLs
 
 You can specify images within HTML and rich text elements using relative HTTP URLs in the src attribute. The link element of the item provides the base URL. The Web Content Integrator processes relative image source URLs by concatenating the item's link element and the image's src attributes in the HTML
@@ -78,18 +80,14 @@ Example feed item:
   </item>
 ```
 
-## How to use both absolute and relative image source URLs
-
+## Using both absolute and relative image source URLs
 
 Images within HTML and rich text elements can use a combination of relative and absolute HTTP URLs in the `src` attribute.  
-
 
 - The Web Content Integrator processes **relative image source URLs** by combining the item's `<link>` element with the relative path.  
 - It processes **absolute image source URLs** exactly as specified in the feed.
 
-
 ### Example feed item
-
 
 ```
 <item>

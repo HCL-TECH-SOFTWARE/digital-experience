@@ -1,6 +1,6 @@
 ---
 id: plugin_portlet_toolbar
-title: The Toolbar state rendering plug-in
+title: Toolbar state rendering plug-in
 ---
 
 Use the `ToolbarState` rendering plug-in to retrieve the state of the site toolbar that is provided with the Portal 8.0 theme.

@@ -3,19 +3,19 @@ id: wcm_dev_elements_pzn_props
 title: Defining a Personalization rule
 ---
 
-You use the Personalization element to define a new personalization rule or select an existing personalization rule or content spot.
+You use the Personalization element to define a new Personalization rule or select an existing Personalization rule or content spot.
 
-1. Click **New** to create a personalization rule.
-2. Click **Search** to search for an existing personalization rule or content spot.
+1. Click **New** to create a Personalization rule.
+2. Click **Search** to search for an existing Personalization rule or content spot.
 
-    1. Select a personalization rule or content spot.
+    1. Select a Personalization rule or content spot.
     2. Click **OK**.
 
-3. Click **Edit** to edit a selected personalization rule.
-4. Click **Clear** to remove a selected personalization rule.
+3. Click **Edit** to edit a selected Personalization rule.
+4. Click **Clear** to remove a selected Personalization rule.
 
     !!!important
-        If the "New" button was used previously to create the personalization rule, the personalization rule is deleted and cannot be restored.
+        If the "New" button was used previously to create the Personalization rule, the Personalization rule is deleted and cannot be restored.
 
 5. Enter the total number of items to display in the **Results per page** field.
 6. Specify the formatting options that are used to display the Personalization element.

@@ -14,10 +14,16 @@ The following features and updates are available to customers installing HCL Dig
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
 
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio Dashboard - New widgets
+
 **Digital Experience 9.5 Container Version**
 
 - Helm values updates
+- IQ - Configuring cross-session memory
 - IQ - HTTPS support for the MCP Server
+- Search V2 - Search Admin UI
 - WAS, JDK, UBI, and iFix versions
 
 **Notices of deprecation**
@@ -86,6 +92,26 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
+## Digital Experience 9.5 Version
+
+### Practitioner Studio Dashboard - New widgets
+
+=== "Containers"
+    The Practitioner Studio Dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
+    - **Search Crawlers**: Displays the status of Search V2 crawlers.
+
+    For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
+
+=== "On-Premises"
+    The Practitioner Studio Dashboard now includes two widgets to help you monitor content schedules and search indexing:
+
+    - **Calendar**: Displays a monthly or weekly grid and daily agenda of content based on publish and expiry dates.
+    - **Search Crawlers**: Displays the status of Search V2 crawlers.
+
+    For more information, refer to [Calendar](../../build_sites/practitioner_studio/dashboard.md#calendar) and [Search Crawlers](../../build_sites/practitioner_studio/dashboard.md#search-crawlers).
+
 ## Digital Experience 9.5 Container Version
 
 ### Helm values updates
@@ -93,10 +119,20 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Helm value properties in HCL DX that were added, removed, deprecated, or changed for this release are documented in [DX Helm values updates](../dx_helm_values_updates.md#cf239).
 
+### IQ - Configuring cross-session memory
+
+=== "Containers"
+   You can now enable the optional cross-session memory feature in IQ. This feature allows IQ to store and reference context from past conversations. To enable cross-session memory, set `RAG_ENABLED` to `true` in your `custom-iq-values.yaml` file and upgrade the Helm release. For more information, refer to [Configuring cross-session memory](../../build_sites/iq/installation/enable-rag.md).
+
 ### IQ - HTTPS support for the MCP Server
 
 === "Containers"
-    IQ now uses HTTPS to secure connections between the MCP Server and the IQ Integrator. HTTPS is enabled by default in the `hcl-dx-iq` Helm chart through the `httpsEnabled` parameter. For more information, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
+    IQ now supports HTTPS to secure connections between the MCP server and the IQ Integrator. HTTPS is disabled by default. For configuration instructions, refer to [Enabling HTTPS for the MCP Server](../../build_sites/iq/installation/configuring-mcp.md#enabling-https-for-the-mcp-server).
+
+### Search V2 - Search Admin UI
+
+=== "Containers"
+    The Search Admin UI provides a centralized interface for managing Search V2 components. Administrators can configure content sources, crawlers, common field mappings, and native language support (NLS) translations from a single dashboard. You can access the UI either as a standalone application or directly within Practitioner Studio. For more information, refer to [Search Admin UI](../../build_sites/search_v2_admin_ui/index.md).
 
 ### WAS, JDK, UBI, and iFix versions <!--update values-->
 
@@ -132,10 +168,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Woodburn Studio demo site (9.5)
 
 === "Containers"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+    The Woodburn Studio demo site in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 === "On-Premises"
-    The Woodburn Studio demo site in HCL DX has been deprecated on August 05, 2025 and will reach End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
+    The Woodburn Studio demo site in HCL DX was deprecated on August 05, 2025 and reached End of Support (EOS) on August 04, 2026. For more information, refer to [Deprecated features](../deprecated_features.md). It has been replaced by [Nex Haven](../../build_sites/nex_haven.md).
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U <!--Update URL-->
 

@@ -2,7 +2,7 @@
 
 The Authoring Tool element is used to add authoring portlet functions to web pages. When you create an Authoring Tool element, you need to define the layout of the authoring tool and any required actions, and select parameters for each action layout as required.
 
-- **[The Authoring tools element](.//authoring_tools_cmpnt/wcm_dev_elements_authoring-tools_examples.md)**  
+- **[Defining Authoring Tools](.//authoring_tools_cmpnt/wcm_dev_elements_authoring-tools_examples.md)**  
 The authoring tool element is used to add authoring portlet functions to web pages.
 - **[Inline item creation with Authoring tool components](.//wcm_dev_elements_authoring-tools_inline.md)**  
 Inline item creation can be enabled for authoring tool components so that users can quickly create a new content item without having to access the authoring interface.

@@ -5,11 +5,11 @@ You use category selection trees to allow users to personalize menus.
 !!!note
     - Ensure the `connect.businesslogic.module.ajpecatselect.class` property is defined in the `WCM WCMConfigService` service, using the IBM® WebSphere® Application Server administration console, with a value of `com.aptrix.pluto.CategoryProfileUpdaterModule`.
     - You cannot use category selection trees in a local rendering portlet. Instead, you must render the tree directly. For example: `http://host:port/wps/wcm/myconnect/library/sitearea/content`.
-    - If using a taxonomy element, users must be given "Edit" access to their own user item to enable them to update their selected categories.
+    - If using a Taxonomy element, users must be given "Edit" access to their own user item to enable them to update their selected categories.
 
 ## Taxonomy element form
 
-The main function of the taxonomy element is to display a category selection tree that is used to allow a user to select categories for menu personalization.
+The main function of the Taxonomy element is to display a category selection tree that is used to allow a user to select categories for menu personalization.
 
 - You configure the element by selecting either a taxonomy or a category as a start area.
 - Select a child depth from the start area and a parent level relative to the start area.
@@ -20,7 +20,7 @@ The main function of the taxonomy element is to display a category selection tre
     - The other is rendered if the user has not selected the category.
     These element designs are rich text elements, and are used in a similar fashion to the navigator and menu elements.
 
-The taxonomy element form example creates a check box input form:
+The Taxonomy element form example creates a check box input form:
 
 - The category identity number is assigned to the "value" attribute in the input fields.
 - Check box input fields are created, assigning the "selectedCategories" value to the "name" attribute.
@@ -153,9 +153,9 @@ This is used to display selected items in the rendered category selection tree.
 
 </table>
 
-This example uses the indent element tag. This can be used in the navigator and taxonomy elements. This tag represents an HTML/text string that should be repeated depending on the depth of a tree node being rendered in these elements.
+This example uses the indent element tag. This can be used in the Navigator and Taxonomy elements. This tag represents an HTML/text string that should be repeated depending on the depth of a tree node being rendered in these elements.
 
-In the taxonomy element example, the indent element is used to render and repeat the "." string dependent on the depth of the node the element design is being applied to. It is possible to offset the repeat value by assigning an integer value to the "offset" attribute of the tag. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
+In the Taxonomy element example, the indent element is used to render and repeat the "." string dependent on the depth of the node the element design is being applied to. It is possible to offset the repeat value by assigning an integer value to the "offset" attribute of the tag. For example, A current node depth of 5 and an offset value of -2 would render the repeat string three times. If the sum of the offset and the node depth is negative or 0, the repeat string is not rendered.
 
 !!!note "Element designs"
     The only difference between the unselected element design and the selected element design is that the check box input field in the selected element design has the "checked" attribute set.

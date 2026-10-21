@@ -1,4 +1,4 @@
-# Channel-level Elements
+# Channel-level elements
 
 The following element must be a direct child of the feed's channel element since it applies to the feed as a whole rather than to an individual item in the feed.
 
@@ -19,5 +19,3 @@ Example:
 ```
 <ibmfs:etag>ABC0012</ibmfs:etag>
 ```
-
-

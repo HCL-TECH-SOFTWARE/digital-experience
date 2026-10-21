@@ -1,6 +1,6 @@
 # Navigator element type examples
 
-You can use navigator elements to display different sections of a site framework in different ways.
+You can use Navigator elements to display different sections of a site framework in different ways.
 
 ## Breadcrumb navigators
 
@@ -24,7 +24,7 @@ You use the following configuration settings to create a breadcrumb navigator:
 
 ## Site map navigators
 
-A site map provides, at a glance, the framework of your site. A site map is a navigator component that displays that part of the site framework that you define.
+A site map provides, at a glance, the framework of your site. A site map is a Navigator component that displays that part of the site framework that you define.
 
 To create a site map, the navigator is configured as follows:
 

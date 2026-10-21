@@ -18,11 +18,11 @@ You use a text element to store larger amounts of text than can be stored in a s
 
 An HTML element is used to store fragments of HTML that can be reused in presentation templates and other elements designs. You can enter HTML directly into the element or upload HTML from a previously created HTML file.
 
-## Rich text element
+## Rich Text element
 
-A rich text element is similar to the HTML element except that it includes a rich text editor. The rich text editor can be used to format text that is stored within a rich text element. The main purpose of the rich text element is to provide base-level content creators with an easy-to-use text editor. Advanced users who are required to produce more advanced code, including web content tags, or who need to store fragments of HTML must use an HTML element instead.
+A Rich Text element is similar to the HTML element except that it includes a rich text editor. The rich text editor can be used to format text that is stored within a rich text element. The main purpose of the Rich Text element is to provide base-level content creators with an easy-to-use text editor. Advanced users who are required to produce more advanced code, including web content tags, or who need to store fragments of HTML must use an HTML element instead.
 
-You must use rich text elements sparingly in authoring templates, site areas, and content items as adding multiple rich text elements to these items can reduce authoring performance.
+You must use Rich Text elements sparingly in authoring templates, site areas, and content items as adding multiple Rich Text elements to these items can reduce authoring performance.
 
 The rich text editors that are used by Web Content Manager (WCM) are supplied by other vendors. For information on using the rich text editor, see the user documentation that is supplied by the specific rich text editor vendor.
 

@@ -2,6 +2,7 @@ title: Upgrade
 nav:
     - index.md
     - upgradeJava8Requirement.md
+    - ApplyCFSkipHealthChecker.md
     - CommandLineIIM.md
     - XMLAccessExportImport.md
     - checkSuccessfullUpgrade.md
