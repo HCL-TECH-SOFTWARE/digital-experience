@@ -55,7 +55,7 @@ environment:
 ```
 
 !!! warning "Embedding and vector database parameters are locked after initial startup"
-    Changing `EMBEDDING_DIMENSIONS` or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing locked RAG and embedding configuration](#changing-locked-rag-and-embedding-configuration).
+    Changing `EMBEDDING_DIMENSIONS` or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 #### Embedding model compatibility
 
@@ -71,7 +71,7 @@ If you choose to use alternative embedding models:
 IQ splits conversation messages into overlapping text chunks before embedding them. The chunking parameters determine chunk boundaries, which controls how many vector entries are created and indexed in the database.
 
 !!! warning "Chunking parameters are locked after initial startup"
-    Changing `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, or `RAG_CHUNK_SEPARATORS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing locked RAG and embedding configuration](#changing-locked-rag-and-embedding-configuration).
+    Changing `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, or `RAG_CHUNK_SEPARATORS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 To customize chunking, add these variables under the `environment.pod.integrator` section of your `custom-iq-values.yaml` file:
 
@@ -137,9 +137,9 @@ helm upgrade <IQ_RELEASE_NAME> \
 
 On startup, IQ creates the `rag_chunks` and `rag_embedding_metadata` tables in the existing IQ database if they do not exist. Manual schema migration is not required.
 
-## Changing locked RAG and embedding configuration
+## Changing RAG and embedding configuration
 
-Some RAG parameters are **locked after initial startup** and require table recreation if changed. Other retrieval parameters can be updated immediately without any pod restart.
+Some RAG parameters are **locked after initial startup** and require table recreation if changed. Retrieval parameters (`RAG_TOP_K` and `RAG_MIN_SIMILARITY`) do not; to change them, refer to [Tuning retrieval parameters](#tuning-retrieval-parameters).
 
 ### Locked parameters (require table recreation)
 
@@ -175,19 +175,6 @@ To change locked parameters in an active deployment, existing stored data is inc
     ```
 
     IQ automatically recreates the RAG tables on pod startup with the new configuration.
-
-### Hot-tuning retrieval parameters
-
-For `RAG_TOP_K` and `RAG_MIN_SIMILARITY`, use `kubectl set env` instead of helm upgrade. The pod will roll, but no table recreation is required:
-
-```bash
-kubectl set env deployment/<IQ_DEPLOYMENT_NAME> \
-  RAG_TOP_K=8 \
-  RAG_MIN_SIMILARITY=0.5 \
-  -n <IQ_NAMESPACE>
-```
-
-The new retrieval settings take effect immediately after the pod restarts, without any data loss.
 
 ## Managing stored data
 
