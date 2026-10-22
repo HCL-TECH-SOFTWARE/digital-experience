@@ -6,7 +6,7 @@ This page lists the known limitations of IQ.
 
 ### Websocket connectivity
 
-- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
+- If you close the browser window or tab, reload the page, or experience a network interruption, background MCP server tools that have already started might not stop immediately. This can result in incomplete or inconsistent data states. Select **Cancel** to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed.
 
 ### Conversation history
 
@@ -40,8 +40,8 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
-- IQ requires a fully containerized HCL DX Core or DX Compose deployment running in Kubernetes. Traditional deployments, where HCL DX runs on WebSphere Application Server (WAS) outside of containers, are not supported.
-- Hybrid deployments, where HCL DX Core runs on WAS alongside separately containerized services, are not supported. The IQ Integrator must run within the same Kubernetes cluster as your HCL DX deployment.
+- Traditional deployments that run HCL DX on WebSphere Application Server (WAS) outside containers are not supported. IQ requires a fully containerized HCL DX Core or DX Compose deployment running on Kubernetes.
+- Hybrid deployments that run HCL DX Core on WAS alongside separately containerized services are not supported. The IQ Integrator must run in the same Kubernetes cluster as your HCL DX deployment.
 - The MCP Server is the only IQ component that supports operation outside of a full HCL DX deployment, through its `standaloneMode` configuration. All other IQ components require a complete Kubernetes-based DX environment.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.

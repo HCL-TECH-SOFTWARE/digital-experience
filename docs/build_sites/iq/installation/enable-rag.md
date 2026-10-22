@@ -8,7 +8,9 @@ Cross-session memory is powered by Retrieval-Augmented Generation (RAG) and uses
 
 Before enabling cross-session memory, verify that the following conditions are met:
 
-- Before enabling cross-session memory, verify that a PostgreSQL database is configured and connected to IQ, and `DB_ENABLED` is set to `true`. For setup instructions, refer to [Preparing the database](prepare-database.md). Internal databases provisioned by HCL DX Persistence Node or HCL DX Runtime Controller include the `pgvector` extension by default. For external PostgreSQL databases (cloud-managed, on-premises, or separate cluster), explicitly enable `pgvector`:
+- A PostgreSQL database is connected to IQ, has `DB_ENABLED` set to `true`, and has the `pgvector` extension enabled. For setup instructions, refer to [Preparing the database](prepare-database.md).
+
+    Internal databases provisioned by HCL DX Persistence Node or HCL DX Runtime Controller include the `pgvector` extension by default. For external PostgreSQL databases (cloud-managed, on-premises, or separate cluster), explicitly enable `pgvector`:
 
     ```sql
     CREATE EXTENSION IF NOT EXISTS vector;
@@ -54,8 +56,8 @@ environment:
         value: "1024"
 ```
 
-!!! warning "Embedding and vector database parameters are locked after initial startup"
-    Changing `EMBEDDING_DIMENSIONS` or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
+!!! warning "Locked parameters"
+    Changing `EMBEDDING_DIMENSIONS` or `USE_MULTILINGUAL_EMBEDDINGS` after initial startup requires recreating the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 #### Embedding model compatibility
 
@@ -70,8 +72,8 @@ If you choose to use alternative embedding models:
 
 IQ splits conversation messages into overlapping text chunks before embedding them. The chunking parameters determine chunk boundaries, which controls how many vector entries are created and indexed in the database.
 
-!!! warning "Chunking parameters are locked after initial startup"
-    Changing `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, or `RAG_CHUNK_SEPARATORS` after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, recreate the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
+!!! warning "Locked parameters"
+    Changing `RAG_CHUNK_SIZE`, `RAG_CHUNK_OVERLAP`, or `RAG_CHUNK_SEPARATORS` after initial startup requires recreating the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](#changing-rag-and-embedding-configuration).
 
 To customize chunking, add these variables under the `environment.pod.integrator` section of your `custom-iq-values.yaml` file:
 
@@ -95,16 +97,9 @@ environment:
 
 ### Tuning retrieval parameters
 
-The following parameters control how many chunks are retrieved and which similarity threshold filters out irrelevant results. Updating these parameters requires running `helm upgrade` to restart the pod, but does not require recreating RAG tables or dropping stored data.
+Retrieval parameters control how many chunks are retrieved and which similarity threshold filters out irrelevant results. Updating these parameters requires running `helm upgrade` to restart the pod, but does not require recreating RAG tables or dropping stored data.
 
-| Parameter | Default | Description |
-| --------- | ------- | ----------- |
-| `RAG_TOP_K` | `5` | Number of most-similar chunks returned per query. |
-| `RAG_MIN_SIMILARITY` | `0` | Minimum cosine similarity score (0–1) a chunk must reach to be included in the results. Set a value such as `0.6` to filter out low-relevance chunks. |
-
-For example, setting `RAG_TOP_K` to `8` and `RAG_MIN_SIMILARITY` to `0.7` retrieves up to eight context chunks per query while discarding any chunk with a cosine similarity score lower than `0.7`.
-
-To tune retrieval parameters, add these variables under the `environment.pod.integrator` section of your `custom-iq-values.yaml` file:
+To tune retrieval parameters, add the variables under the `environment.pod.integrator` section of your `custom-iq-values.yaml` file:
 
 ```yaml
 environment:
@@ -115,6 +110,13 @@ environment:
       - name: RAG_MIN_SIMILARITY
         value: "0.7"
 ```
+
+| Parameter | Default | Description |
+| --------- | ------- | ----------- |
+| `RAG_TOP_K` | `5` | The maximum number of relevant chunks to retrieve per query. |
+| `RAG_MIN_SIMILARITY` | `0` | The minimum cosine similarity score (`0` to `1`) a chunk must reach to be included in the results. Set a value such as `0.6` to filter out low-relevance chunks. |
+
+For example, setting `RAG_TOP_K` to `8` and `RAG_MIN_SIMILARITY` to `0.7` retrieves up to eight context chunks per query while discarding any chunk with a cosine similarity score lower than `0.7`.
 
 ## Applying the configuration
 
@@ -139,11 +141,7 @@ On startup, IQ creates the `rag_chunks` and `rag_embedding_metadata` tables in t
 
 ## Changing RAG and embedding configuration
 
-Some RAG parameters are **locked after initial startup** and require table recreation if changed. Retrieval parameters (`RAG_TOP_K` and `RAG_MIN_SIMILARITY`) do not; to change them, refer to [Tuning retrieval parameters](#tuning-retrieval-parameters).
-
-### Locked parameters (require table recreation)
-
-The following parameters determine data structure and vector compatibility. Changing them requires dropping and recreating RAG tables:
+The following parameters are locked after initial startup because they determine data structure and vector compatibility:
 
 - `RAG_CHUNK_SIZE`
 - `RAG_CHUNK_OVERLAP`
@@ -151,10 +149,10 @@ The following parameters determine data structure and vector compatibility. Chan
 - `EMBEDDING_DIMENSIONS`
 - `USE_MULTILINGUAL_EMBEDDINGS`
 
-To change locked parameters in an active deployment, existing stored data is incompatible with the new configuration. Drop the RAG tables and upgrade the Helm release.
+Changing locked parameters in an active deployment invalidates existing stored data. To apply new values, drop the RAG tables and upgrade the Helm release.
 
 !!! warning
-    Dropping RAG tables permanently deletes cross-session memory for all users. IQ recreates the tables when the pod restarts, but historical context is lost. Before changing the RAG configuration in a production deployment, take a full IQ database backup. A backup provides a recovery point to revert configuration or troubleshoot issues. For more information, refer to [Backing up and restoring data](backup-restore.md).
+    Dropping RAG tables permanently deletes cross-session memory for all users. IQ recreates the tables when the pod restarts, but historical context is lost. Before changing the RAG configuration in a production deployment, take a full IQ database backup. For more information, refer to [Backing up and restoring data](backup-restore.md).
 
 1. Connect to your IQ PostgreSQL database.
 2. Drop the RAG tables:
@@ -232,9 +230,9 @@ WHERE "sessionId" = '<SESSION_ID>';
 
 After configuring cross-session memory:
 
-1. [Validate the deployment](validation.md) to verify that services are operational.
-2. Set up [database backups](backup-restore.md) to protect stored context.
-3. Review [IQ environment variables](environment-variables.md) to configure optional settings.
+1. [Validate the deployment](validation.md).
+2. [Set up database backups](backup-restore.md) to protect stored context.
+3. [Review IQ environment variables](environment-variables.md) to configure optional settings.
 
 ???+ info "Related information"
     - [Deploying LiteLLM](deploy-litellm.md)
