@@ -18,6 +18,10 @@ The dashboard includes the following widgets:
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
+## See it in action
+
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.hcl-software.com/NQ7IrzqbErGDx51OjETf?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use the HCL DX Practitioner Studio Dashboard to track content status and resume work" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## Explore Digital Experience info hub
 
 The Explore Digital Experience info hub provides direct access to tutorials and documentation through interactive cards for common tasks. Toggle **Collapse info hub** to collapse or expand this section to manage screen space.
