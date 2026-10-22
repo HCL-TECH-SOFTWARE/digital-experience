@@ -87,3 +87,8 @@ If IQ finishes generating a response or receives a system update while the chat 
 
 ![Notification badge on the toolbar button in panel view](../../assets/HCL_IQ_Panel_View.png "Notification badge on the toolbar button"){ height="100" } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Notification badge on the floating icon in compact view](../../assets/HCL_IQ_Compact_View.png "Notification badge on the floating icon"){ height="100" }
 {: style="text-align: center; margin: 24px 0;" }
+
+## See it in action
+
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.hcl-software.com/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
