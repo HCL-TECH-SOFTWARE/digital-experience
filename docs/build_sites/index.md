@@ -4,6 +4,12 @@ HCL Digital Experience (DX) provides an array of features that provides a seamle
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
 
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
+## Overview
+
+<!--Insert intro-->
+
 - **[Setting up sites](./create_sites/index.md)**  
 Setting up a website includes creating pages, adding navigation, setting up search, and adding content to the site.
 - **[Blueprint](./blueprint.md)**  
@@ -36,10 +42,6 @@ Tagging and rating feature supports collaboration and interaction between users 
 You can create themes using modules to contribute to separate areas of pages to provide flexibility, enhance the user experience, and maximize performance. To optimize themes on your website, use the theme optimization module framework. The framework separates feature-specific logic and capabilities from the theme code.
 - **[Virtual Portal](./virtual_portal/index.md)**  
 Virtual portals can be of benefit if you want to serve multiple user groups by separate virtual portals for different purposes, but still want to keep your environment simple and limited to a single HCL DX installation. Virtual portals allow a large extent of scoping and separating portal resources, user groups, and administration.
-
-## See it in action
-
-<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 ## HCLSoftware U learning materials
 

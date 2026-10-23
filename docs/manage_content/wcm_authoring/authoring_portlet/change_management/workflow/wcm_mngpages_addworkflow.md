@@ -2,7 +2,16 @@
 
 The default workflow that is used for published pages has only a draft and approved state. However, if the default workflow is not sufficient, you can define custom workflows and use them with published pages.
 
-Before you do this task, ensure that you add the **Portal Site** library to the list of libraries that you can edit in the **Web Content Authoring** tab. In the **Web Content Authoring** tab, click **Preferences**, and then click **Configure** or **Edit Shared Settings**.
+<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/eb13GmnOyAtVljKprzVN?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Assign a Workflow to a Digital Experience Page Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
+## Prerequisite
+
+Ensure that you add the **Portal Site** library to the list of libraries that you can edit in the **Web Content Authoring** tab.
+
+1. In the **Web Content Authoring** tab, click **Preferences**.
+2. Click **Configure** or **Edit Shared Settings**.
+
+## Specifying the custom workflow
 
 To use a custom workflow with a published page, you must create a page template and specify the custom workflow on the template. When you create a page that is based on the template, the custom workflow is used for the page.
 
@@ -34,9 +43,5 @@ To use a custom workflow with a published page, you must create a page template 
 
 After you complete this task, you can select the new page template when you create a page in a project, and the custom workflow is automatically used.
 
-## See it in action
-
-<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/eb13GmnOyAtVljKprzVN?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Assign a Workflow to a Digital Experience Page Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
-
 ???+ info "Related information"
-    - [Scope of edits](../projects/wcm_mngpages_editscope.md)
+    [Scope of edits](../projects/wcm_mngpages_editscope.md)
