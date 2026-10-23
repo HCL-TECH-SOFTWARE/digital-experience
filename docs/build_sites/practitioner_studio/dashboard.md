@@ -2,25 +2,25 @@
 
 The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
 
-![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
-
-The dashboard includes the following widgets:
-
-- **Status monitoring:** Shows items that require approval or attention, including expiring content.
-- **My Projects:** Displays project names, last modified timestamps, and status.
-- **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
-- **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
-- **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
-- **My Sites:** Displays managed sites in a card layout with thumbnails, status indicators, and direct navigation.
-- **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site and includes quick search.
-- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on the publish and expiry dates.
-- **Search Crawlers:** Displays the status of Search V2 crawlers (requires Search V2).
-
-The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
-
-## See it in action
+<!--![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)-->
 
 <div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.hcl-software.com/NQ7IrzqbErGDx51OjETf?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use the HCL DX Practitioner Studio Dashboard to track content status and resume work" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
+<!--Check link, it is dead-->
+
+The dashboard includes the following widgets: <!--Confirm sequence in sandbox, ensure bulleted list and subsections follow the sequence-->
+
+- **Monitor:** Shows items that require approval or attention, including expiring content.
+- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on the publish and expiry dates.
+- **My Projects:** Displays project names, last modified timestamps, and status.
+- **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
+- **Personalization Rules:** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
+- **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
+- **My Sites:** Displays managed sites in a card layout with thumbnails, status indicators, and direct navigation.
+- **Search Crawlers:** Displays the status of Search V2 crawlers (requires Search V2).
+- **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site and includes quick search.
+
+The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
 ## Explore Digital Experience info hub
 
