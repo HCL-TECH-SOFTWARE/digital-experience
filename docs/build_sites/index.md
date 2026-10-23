@@ -8,7 +8,7 @@ Setting up a website includes, creating pages, adding navigation, setting up sea
 
 ## Overview
 
-<!--Insert intro-->
+HCL DX provides features to build and manage digital portals seamlessly. The following sections covers setting up sites, configuring navigation, customizing themes, and using platform features:
 
 - **[Setting up sites](./create_sites/index.md)**  
 Setting up a website includes creating pages, adding navigation, setting up search, and adding content to the site.
