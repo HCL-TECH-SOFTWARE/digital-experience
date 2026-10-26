@@ -8,16 +8,7 @@ Cross-session memory is powered by Retrieval-Augmented Generation (RAG) and uses
 
 Before enabling cross-session memory, verify that the following conditions are met:
 
-- A PostgreSQL database is connected to IQ, has `DB_ENABLED` set to `true`, and has the `pgvector` extension enabled. For setup instructions, refer to [Preparing the database](prepare-database.md).
-
-    Internal databases provisioned by HCL DX Persistence Node or HCL DX Runtime Controller include the `pgvector` extension by default. For external PostgreSQL databases (cloud-managed, on-premises, or separate cluster), explicitly enable `pgvector`:
-
-    ```sql
-    CREATE EXTENSION IF NOT EXISTS vector;
-    ```
-
-    If the extension is unavailable, IQ startup fails with a missing schema error. Contact your database administrator to install `pgvector` from the [PostgreSQL Global Development Group (PGDG) repository](https://yum.postgresql.org/){target="_blank"}.
-
+- A PostgreSQL database is connected to IQ and has the `pgvector` extension enabled. For setup instructions, refer to [Preparing the database](prepare-database.md) and Step 6 of [Configuring an external database](prepare-database.md#configuring-an-external-database).
 - Your LiteLLM proxy has the embedding model aliases registered. IQ calls one of two fixed aliases, `iq-multilingual-embed` or `iq-embed`, depending on the value of `USE_MULTILINGUAL_EMBEDDINGS`. For instructions, refer to [Registering embedding models for cross-session memory](deploy-litellm.md#registering-embedding-models-for-cross-session-memory).
 - The value of `EMBEDDING_DIMENSIONS` matches the output dimension of the registered embedding model.
 

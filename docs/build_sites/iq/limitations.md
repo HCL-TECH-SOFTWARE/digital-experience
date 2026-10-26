@@ -6,11 +6,11 @@ This page lists the known limitations of IQ.
 
 ### Websocket connectivity
 
-- Network disruptions, reloading the page, or closing the browser window during active operations may cause incomplete or inconsistent data, as background MCP Server processes may not terminate immediately. To safely stop an operation, use the 'Cancel' button. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
+- Experiencing network disruptions, reloading the page, or closing the browser window during active operations can cause incomplete or inconsistent data because background MCP server processes might not terminate immediately. To safely stop an operation, select **Cancel**. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
 
 ### Conversation history
 
-- Previous conversation history is currently unavailable within the user interface.
+- Conversation history is not available in the user interface.
 - Resetting a session or closing the interface permanently clears the active context. You cannot record or replay conversations in the chat window.
 - Exporting and reviewing previous conversations are not supported.
 - Enabling [cross-session memory](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session but does not restore the previous transcript in the user interface.
@@ -40,8 +40,8 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
-- Traditional, non-containerized deployments — including hybrid setups where DX Core is deployed on-premises — are not supported.
-- The MCP Server in its standalone configuration is the only IQ component supported outside a Kubernetes environment. All other IQ components require deployment within Kubernetes.
+- Traditional, non-containerized deployments, including hybrid configurations where DX Core is deployed on-premises, are not supported.
+- The MCP server in its standalone configuration is the only IQ component supported outside a Kubernetes environment. All other IQ components must be deployed in Kubernetes.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
