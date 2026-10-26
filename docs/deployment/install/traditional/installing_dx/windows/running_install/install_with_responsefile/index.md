@@ -1,8 +1,8 @@
 # Installing HCL DX in Windows using a response file
 
-Use either a sample response file or a response file that you created to install HCL DX on to an existing IBM WebSphere Application Server.
+Use either a sample response file or a response file that you created to install HCL Digital Experience (DX) on to an existing IBM WebSphere Application Server.
 
-- A working installation of IBM® WebSphere® Application Server is required. Ensure that it is not used by another copy of HCL DX.
+- A working installation of IBM WebSphere Application Server is required. Ensure that it is not used by another copy of HCL DX.
 - You need to create a response file first based on your environment. Go to [Create a response file for your Windows environment](inst_response-windows.md) for more information.
 
 Locate the sample response file in the SETUP\_root/products/WP95\_Server/native directory then unzip wp.im.portal95.samples\_9.5.0.201909290018.zip. Modify the file with your environment values. Search for repository and enter the appropriate paths for your environment. Then, search on offering and enter the appropriate offering IDs and profiles for your license. Finally, search on value= and either leave the default values or enter appropriate values for your environment. Read all of the comments for important information.

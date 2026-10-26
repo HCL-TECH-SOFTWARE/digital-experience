@@ -32,7 +32,7 @@ The installation program verifies the operating system and its prerequisites, av
 
 4. On the main IBM Installation Manager panel, select **Install**.
 
-5. If you are installing DX to an existing copy of WebSphere® Application Server, then select only **HCL DX Server** on the Install Packages screen. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
+5. If you are installing DX to an existing copy of WebSphere Application Server, then select only **HCL Portal Server** on the Install Packages page. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
 
     - WebSphere Application Server 9.0.5 or later
     - Java Version 8.0.5.
@@ -41,21 +41,21 @@ The installation program verifies the operating system and its prerequisites, av
 
 6. Using the IBM Installation Manager, do the following:
 
-    1. Install **HCL DX 8.5** on **WebSphere Application Server 9.0.5** with the required fixes.
-    2. Update **HCL DX 8.5** to the latest available HCL DX CF, minimally CF205, and then run `applyCF.sh`.
-    3. Install **HCL DX Server 9.5**, along with applicable extended offerings (like WCM, ENABLE, EXTEND, etc.).
+    1. Install **HCL Portal 8.5** on **WebSphere Application Server 9.0.5** with the required fixes.
+    2. Update **HCL Portal 8.5** to the latest available HCL DX CF, minimally CF205, and then run `applyCF.sh`.
+    3. Install **HCL Portal Server 9.5**, along with applicable extended offerings (like WCM, ENABLE, EXTEND, etc.).
 
     !!!note
-        - The **IBM WebSphere SDK Java Technology Edition** option is required for an HCL DX installation even though it might be marked as "Optional" on the Select packages to install screen.
-        - If you have a HCL DX Enable license, you must select both the **HCL DX Server**, **HCL DX Express**,  and **HCL DX Enable** packages.
+        - The **IBM WebSphere SDK Java Technology Edition** option is required for an HCL DX installation even though it might be marked as "Optional" on the **Select packages to install** page.
+        - If you have a HCL Portal Enable license, you must select both the **HCL Portal Server**, **HCL Portal Express**,  and **HCL Portal Enable** packages.
 
-7. On Install Packages: Select the fixes to install screen, select any required fixes. Then, click **Next**.
+7. On Install Packages: Select the fixes to install page, select any required fixes. Then, click **Next**.
 8. Accept the license agreement and then click **Next**.
 9. Enter the directory where you want to store shared resources and then click **Next**.
 10. Complete the following steps on the Install Packages: Installation Directory panel:
 
-    !!!remember
-        The installation directory that you specify must NOT contain any files or the following characters: ~ ! @ # $ % ^ & * ( ) + { } | < > ? ` = [ ] ; ' , . " and spaces.
+    !!! note
+        The installation directory must be empty and cannot contain spaces or special characters.
 
     1. Select the WebSphere Application Server Package Group Name and then enter the installation directory path.
     2. Select the HCL DX Package Group Name and then enter the installation directory path.

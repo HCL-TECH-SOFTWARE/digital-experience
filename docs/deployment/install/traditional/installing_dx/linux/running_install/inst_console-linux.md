@@ -2,7 +2,7 @@
 
 Use the IBM Installation Manager to install HCL Digital Experience (DX) to an existing IBM WebSphere Application Server.
 
-A working installation of IBM® WebSphere® Application Server is required. Ensure that it is not used by another copy of HCL DX. Before you install the HCL DX package, install **IBM WebSphere SDK Java Technology Edition** into the same directory where IBM WebSphere Application Server is installed. The SDK Java version must be 8.0.3.
+A working installation of IBM WebSphere Application Server is required. Ensure that it is not used by another copy of HCL DX. Before you install the HCL DX package, install **IBM WebSphere SDK Java Technology Edition** into the same directory where IBM WebSphere Application Server is installed. The SDK Java version must be 8.0.3.
 
 The installation program verifies the operating system and its prerequisites, available disk space, and any required software prerequisites before installation. You cannot install two instances of the server at the same time, even if you are installing to different directories. You must install each server completely before you install the next one.
 
@@ -35,14 +35,14 @@ The installation program verifies the operating system and its prerequisites, av
     6. Enter R to return to the **Main** menu.
 
 6. Enter 1 to install the software packages.
-7. Select **HCL DX Server**. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
+7. Select **HCL Portal Server**. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
 
     - WebSphere Application Server Version 8.5.5.2 or later
     - Java Version 8.0.3.
     - No existing DX profile
 
     !!! tip
-        If you have a HCL DX Enable license, you must select both the **HCL DX Server**, **HCL DX Express** and **HCL DX Enable** packages.
+        If you have a HCL Portal Enable license, you must select both the **HCL Portal Server**, **HCL Portal Express** and **HCL Portal Enable** packages.
 
 8. Choose one of the following options:
 

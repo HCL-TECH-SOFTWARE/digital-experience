@@ -19,7 +19,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 3. Consider the following recommendations when you install to avoid excessively long path names:
 
     !!!note
-        If you exceed the 259 maximum character length, you might receive one of the following error messages during configuration or in the IBM® Installation Manager log files:
+        If you exceed the 259 maximum character length, you might receive one of the following error messages during configuration or in the IBM Installation Manager log files:
         -   The input line is too long.
         -   The syntax of the command is incorrect.
         -   The file name is too long.

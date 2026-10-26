@@ -2,57 +2,79 @@
 
 Prepare the operating system to ensure a successful HCL Digital Experience (DX) installation.
 
-1. If you have AIX® 7.1 Technology Level (TL) 1, Service Pack (SP) 0 or 1, find the corresponding technote available at the [HCL Digital Experience Knowledge Base Technical Articles](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2) and complete the steps.
+1. If you have AIX® 7.1 Technology Level (TL) 1, Service Pack (SP) 0 or 1, find the corresponding technote available at the [HCL Digital Experience Knowledge Base Technical Articles](https://support.hcltechsw.com/csm?id=kb_category&kb_category=c0ef98b71bb0778083cb86e9cd4bcbf2){target="_blank"} and complete the steps.
 
 2. Set the file descriptor limit to `10240`.
-
-    For example, run the following command to set the file descriptor limit:
 
     ```bash
     ulimit -n 10240
     ```
 
-3. If you are using IBM GPFS file sharing, set the file system `inodes` limit to `25000` or higher.
+3. If you are using IBM General Parallel File System (GPFS) file sharing, set the file system `inodes` limit to `25000` or higher: <!-- This page says 250,000, not 25,000 https://help.hcl-software.com/digital-experience/9.5/CF237/deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_gpfs/ please confirm-->
 
-    For example, run the `mmchfs /dev/gpfs1nsd -F 250000` command. `/dev/gpfs1nsd` is the HCL DX installation file system.
+    ```bash
+    mmchfs /dev/gpfs1nsd -F 250000
+    ```
 
-4. **Updating operating system settings to enable full core dumps**:
+    `/dev/gpfs1nsd`: The HCL DX installation file system.
 
-    - Use the `ulimit -f` command to set the maximum size of files to unlimited.
-    - Use the `ulimit -c` command to set the maximum size to cores to unlimited.
-    - Run the `chdev -a fullcore=true -lsys0` command to generate complete core dumps.
+4. Update your operating system settings to enable full core dumps:
 
-    For information about these commands, see your operating system documentation.
+    1. Set the maximum size of files to unlimited:
 
-5. Install and configure X server on AIX (such as X Window System or GNOME) to use the graphical user interface the installation program provides.
+        ```bash
+        ulimit -f
+        ```
+
+    2. Set the maximum size of core dump files to unlimited:
+
+        ```bash
+        ulimit -c unlimited
+        ```
+
+    3. Enable the system to generate complete core dumps:
+
+        ```bash
+        chdev -a fullcore=true -l sys0
+        ```
+
+    For information about these commands, refer to your operating system documentation.
+
+5. Install and configure X server on AIX (such as X Window System or GNOME) to use the graphical user interface that the installation program provides.
+
+    - Ensure that `gtk2` package is installed:
+
+        ```bash
+        dnf install gtk2
+        ```
+
+    - Ensure that the `LIBPATH` is set correctly to start the Installation Manager.
+
+        ```bash
+        export LIBPATH=/opt/freeware/lib:$LIBPATH
+        ```
 
     !!!note
-        - Ensure that gtk2 package is installed (command: `dnf install gtk2`).
-        - Ensure that the LIBPATH is set correctly to start the Installation Manager. (command: `export LIBPATH=/opt/freeware/lib:$LIBPATH`)
-        - If you plan to use a response file to install the software, X server is not required.
+        If you plan to use a response file to install the software, X server is not required.
 
-6. Increase the paging space 1024 - 8192 MB.
-7. Complete the following steps to use the Work Load Partition (WPAR) software that is installed with your AIX operating system software:
+6. Increase the paging space to between 1024 MB to 8192 MB.
+7. Configure an AIX Workload Partition (WPAR):
 
-    1. Read and follow the guidelines in this [technote](https://support.hcltechsw.com/csm){target="_blank"} to install in a WPAR.
-    2. Set up the host system with enough disk space.
-    3. Request new IP address and host name on the same subnet as the host system.
-    4. After you get the new IP address and host name, run the following command to create a WPAR that contains a non-shared file system:
-
-        !!!note
-            A non-shared file system means `/usr` and `/opt` are private to this new WPAR.
-
-        For example:
+    1. Read and follow the guidelines in this [technote](https://support.hcltechsw.com/csm){target="_blank"} to install in a WPAR. <!--The tech note just leads to the support URL-->
+    2. Allocate sufficient disk space on the host system.
+    3. Request an IP address and host name on the same subnet as the host system.
+    4. Create a WPAR that contains a non-shared file system:
 
         ```bash
         mkwpar -r -l -n newhostname
         ```
 
+        !!!note
+            A non-shared file system keeps `/usr` and `/opt` private to this WPAR.
+
     5. Verify that the `mkwpar` task completed successfully.
-    6. Use the host system `smitty` to configure network interfaces with the new information.
-    7. Use the `telnet` or `ssh` command to connect and log in to the system.
+    6. Configure network interfaces on the host system by using the System Management Interface Tool (`smitty`).
+    7. Connect and log in to the system by using `telnet` or `ssh`.
     8. Verify that the `/usr` and `/opt` directories are writable.
 
-    The WPAR instance is now ready to install IBM® Installation Manager and HCL DX.
-
-8. Ensure that the DB2® settings are not defined within the root user environment where the installation program runs. DB2 cannot be included within the `PATH`, the `DB2INSTANCE` variable cannot be set, and the root user is not required to run the `db2profile` command. The HCL DX package installs a copy of DB2 for its own use and definitions within the root environment for other DB2 installations can interfere with that process.
+8. Ensure that the DB2 settings are not defined within the root user environment where the installation program runs. DB2 cannot be included within the `PATH`, the `DB2INSTANCE` variable cannot be set, and the root user is not required to run the `db2profile` command. The HCL DX package installs a copy of DB2 for its own use and definitions within the root environment for other DB2 installations can interfere with that process.

@@ -9,7 +9,7 @@ Use the [Configuration Wizard](../../../../manage/portal_admin_tools/cfg_wizard/
 - **[Configuring Windows to install HCL DX](../windows/prep_os-windows.md)**  
 Prepare the operating system to ensure a successful HCL DX installation.
 - **[Setting up the IBM Installation Manager on Windows](../windows/inst_iim-windows.md)**  
-Use the IBM Installation Manager (IIM) to install packages such as HCL DX and IBM WebSphere Application Server.
+Use the IBM Installation Manager to install packages such as HCL DX and IBM WebSphere Application Server.
 - **[Running the HCL DX installer on Windows](../windows/running_install/index.md)**  
 Ensure the system is running the immediately preceding version of HCL DX with applicable fixes applied before installing.
 - **[Configuring post-installation settings on Windows](../windows/inst_next_steps-windows.md)**  

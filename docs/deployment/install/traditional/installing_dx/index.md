@@ -18,8 +18,8 @@ Learn how to prepare AIX and complete deployment using IBM Installation Manager.
 Learn how to set Linux dependencies and deploy platform binaries.
 - **[Installing HCL DX on Windows](../installing_dx/windows/index.md)**  
 Learn how to configure Windows administrator rights and run the installer.
-- **[Troubleshooting HCL DX Express 9.5 server startup and installation](inst_portal_express_95.md)**  
-Learn how to resolve startup failures on HCL DX Express 8.5, 9.0, or new 9.5 installations.
+- **[Troubleshooting HCL DX v9.5 server startup and installation](inst_portal_express_95.md)**  
+Learn how to resolve startup failures on HCL DX v8.5, v9.0, or new v9.5 installations.
 
 ???+ info "Related information"  
-    -   [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)
+    [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)

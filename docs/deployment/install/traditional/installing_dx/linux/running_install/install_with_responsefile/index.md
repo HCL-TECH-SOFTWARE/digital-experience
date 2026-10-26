@@ -2,7 +2,7 @@
 
 You can install IBM WebSphere Application Server from a response file. You can create a response file with the graphical user interface.
 
-- A working installation of IBM® WebSphere® Application Server is required. Ensure that it is not used by another copy of HCL DX.
+- A working installation of IBM WebSphere Application Server is required. Ensure that it is not used by another copy of HCL DX.
 - You need to create a response file first based on your environment. Go to [Create a response file for your Linux environment](inst_response-linux.md) for more information.
 
 Locate the sample response file in the SETUP_root/products/WP95_Server/native directory then unzip wp.im.portal95.samples\_9.5.0.201909290018.zip. Modify the file with your environment values. Search for repository and enter the appropriate paths for your environment. Then, search on offering and enter the appropriate offering IDs and profiles for your license. Finally, search on value= and either leave the default values or enter appropriate values for your environment. Read all of the comments for important information.

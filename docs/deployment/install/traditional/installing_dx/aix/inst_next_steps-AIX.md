@@ -45,7 +45,7 @@ If you select to run the configuration in real time, you still have the opportun
 
 During the configuration process, you may need the following URLs to access different administration user interfaces.
 
-Use the following default URLs to access HCL DX, the WebSphere® Integrated Solutions Console, and the Configuration Wizard:
+Use the following default URLs to access HCL DX, the WebSphere Integrated Solutions Console, and the Configuration Wizard:
 
 - **HCL DX**
 
@@ -54,7 +54,7 @@ Use the following default URLs to access HCL DX, the WebSphere® Integrated Solu
     https://localhost:10042/wps/portal
     ```
 
-- **WebSphere® Integrated Solutions Console**
+- **WebSphere Integrated Solutions Console**
 
     ```url
     http://localhost:10038/ibm/console

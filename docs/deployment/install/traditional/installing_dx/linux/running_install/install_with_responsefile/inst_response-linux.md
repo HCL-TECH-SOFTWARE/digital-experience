@@ -23,7 +23,7 @@ You can also use the console mode to generate a response file. Go to [Installing
 
 4. Complete the following steps to add the repositories where the installation media exists:
 
-    1. Open the IBM® Installation Manager and go to **File > Preferences > Repositories**.
+    1. Open the IBM Installation Manager and go to **File > Preferences > Repositories**.
     2. Select **Add Repositories**.
     3. Select **Browse**, go to the `Portal-install-eimage/Setup/repository.config` file, and then click **OK**.
     4. Ensure that all required repositories are checked. Then, click **Test Connections** to ensure that the IBM Installation Manager can successfully access the directory where the service repositories are stored.
@@ -31,7 +31,7 @@ You can also use the console mode to generate a response file. Go to [Installing
     6. Select **OK**.
 
 5. On the main IBM Installation Manager panel, select **Install**.
-6. If you are installing DX to an existing copy of WebSphere® Application Server, then select only **HCL DX Server** on the Install Packages screen. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
+6. If you are installing DX to an existing copy of WebSphere Application Server, then select only **HCL Portal Server** on the **Install Packages** page. To complete this installation option, your existing copy of WebSphere Application Server must meet the following requirements:
 
     - WebSphere Application Server Version 8.5.5.2 or later
     - Java Version 8.0.3.
@@ -41,25 +41,25 @@ You can also use the console mode to generate a response file. Go to [Installing
 7. On Install Packages: Select packages to install, select the following packages, and then click **Next**:
 
     - **IBM WebSphere Application Server Network Deployment**
-    - **HCL DX Server**
+    - **HCL Portal Server**
     - **IBM WebSphere SDK Java Technology Edition**
 
         !!!note
             For new installations, you must have SDK Java version 8.0.3.
 
         !!!note
-            The **IBM WebSphere SDK Java Technology Edition** option is required for a HCL DX installation even though it might be marked as "Optional" on the Select packages to install screen.
+            The **IBM WebSphere SDK Java Technology Edition** option is required for a HCL DX installation even though it might be marked as "Optional" on the **Select packages to install** page.
 
     !!!tip
-        If you have a HCL DX Enable license, you must select both the **HCL DX Server**, **HCL DX Express**, and **HCL DX Enable** packages.
+        If you have a HCL Portal Enable license, you must select both the **HCL Portal Server**, **HCL Portal Express**, and **HCL Portal Enable** packages.
 
-8. On Install Packages: Select the fixes to install screen, select any required fixes. Then, click **Next**.
+8. On Install Packages: **Select the fixes to install** page, select any required fixes. Then, click **Next**.
 9. Accept the license agreement and then click **Next**.
 10. Enter the directory where you want to store shared resources and then click **Next**.
 11. Complete the following steps on the Install Packages: Installation Directory panel:
 
-    !!!remember
-        The installation directory that you specify must NOT contain any files or the following characters: ~ ! @ # $ % ^ & * ( ) + { } | < > ? ` = [ ] ; ' , . " and spaces.
+    !!! note
+        The installation directory must be empty and cannot contain spaces or special characters.
 
     1. Select the WebSphere Application Server Package Group Name and then enter the installation directory path.
     2. Select the HCL DX Package Group Name and then enter the installation directory path.

@@ -35,7 +35,7 @@ If you select to run the configuration in real time, you still have the opportun
 
 During the configuration process, you may need the following URLs to access different administration user interfaces.
 
-Use the following default URLs to access HCL DX, the WebSphere® Integrated Solutions Console, and the Configuration Wizard:
+Use the following default URLs to access HCL DX, the WebSphere Integrated Solutions Console, and the Configuration Wizard:
 
 - **HCL DX**
 
@@ -44,7 +44,7 @@ Use the following default URLs to access HCL DX, the WebSphere® Integrated Solu
     http://yourserver:10042/wps/portal
     ```
 
-- **WebSphere® Integrated Solutions Console**
+- ** Integrated Solutions Console**
 
     ```url
     http://yourserver:10038/ibm/console
@@ -61,4 +61,4 @@ Use the following default URLs to access HCL DX, the WebSphere® Integrated Solu
 If you had any processes from other software in the default port range when the installation started, you might have different port numbers than the defaults.
 
 ???+ info "Related information"
-    -   [WebSphere® Integrated Solutions Console](../../../../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)
+    [WebSphere Integrated Solutions Console](../../../../manage/portal_admin_tools/WebSphere_Integrated_Solutions_Console.md)

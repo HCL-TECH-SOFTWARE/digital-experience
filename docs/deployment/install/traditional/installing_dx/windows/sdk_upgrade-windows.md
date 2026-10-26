@@ -6,7 +6,7 @@ Ensure that your DX profile is created before you upgrade the SDK.
 
 ## Procedure
 
-1. Start the IBM® Installation Manager.
+1. Start the IBM Installation Manager.
 
 2. Install the latest supported version of IBM WebSphere SDK Java Technology Edition.
 

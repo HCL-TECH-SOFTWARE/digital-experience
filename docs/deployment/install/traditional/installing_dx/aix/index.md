@@ -9,7 +9,7 @@ Use the [Configuration Wizard](../../../../manage/portal_admin_tools/cfg_wizard/
 - **[Configuring AIX to install HCL DX](prep_os-AIX.md)**  
 Prepare the operating system to ensure a successful HCL DX installation.
 - **[Setting up the IBM Installation Manager on AIX](inst_iim-AIX.md)**  
-Use the IBM Installation Manager (IIM) to install packages such as HCL DX and IBM WebSphere Application Server.
+Use the IBM Installation Manager to install packages such as HCL DX and IBM WebSphere Application Server.
 - **[Running the HCL DX installer on AIX](../aix/running_install/index.md)**  
 Ensure the system is running the immediately preceding version of HCL DX with applicable fixes applied before installing.
 - **[Configuring post-installation settings on AIX](inst_next_steps-AIX.md)**  
