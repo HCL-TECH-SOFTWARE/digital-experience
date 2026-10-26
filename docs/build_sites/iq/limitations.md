@@ -4,9 +4,13 @@ This page lists the known limitations of IQ.
 
 ## User interface
 
+### Websocket connectivity
+
+- Experiencing network disruptions, reloading the page, or closing the browser window during active operations can cause incomplete or inconsistent data because background MCP server processes might not terminate immediately. To safely stop an operation, click **Cancel**. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
+
 ### Conversation history
 
-- Conversation history does not persist across sessions in the user interface.
+- Conversation history is not available in the user interface.
 - Resetting a session or closing the interface permanently clears the active context. You cannot record or replay conversations in the chat window.
 - Exporting and reviewing previous conversations are not supported.
 - Enabling [cross-session memory](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session but does not restore the previous transcript in the user interface.
@@ -36,13 +40,11 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
+- Traditional, non-containerized deployments, including hybrid configurations where DX Core is deployed on-premises, are not supported.
+- The MCP server in its standalone configuration is the only IQ component supported outside a Kubernetes environment. All other IQ components must be deployed in Kubernetes.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
-
-### Integrator
-
-- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
 
 ### AI model
 

@@ -305,6 +305,16 @@ Use this option to connect to an existing PostgreSQL database located outside of
         curl -u <USERNAME>:<TOKEN> "https://<YOUR_REPOSITORY_FQDN_AND_PATH>/"
         ```
 
+6. (Optional) Enable the `pgvector` extension on your external PostgreSQL database.
+
+    Internal databases provisioned by HCL DX Persistence Node or HCL DX Runtime Controller include the `pgvector` extension by default. For external PostgreSQL databases (cloud-managed, on-premises, or in a separate cluster), run the following SQL command:
+
+    ```sql
+    CREATE EXTENSION IF NOT EXISTS vector;
+    ```
+
+    If the extension is unavailable, IQ startup fails with a missing schema error. Contact your database administrator to install `pgvector` from the [PostgreSQL Global Development Group (PGDG) repository](https://yum.postgresql.org/){target="_blank"}.
+
 ## Configuring an RTC-managed database
 
 Use this option to automatically provision and manage a PostgreSQL database within the DX deployment using the DX RTC.
