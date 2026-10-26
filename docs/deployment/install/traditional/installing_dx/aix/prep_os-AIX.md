@@ -60,7 +60,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 6. Increase the paging space to between 1024 MB to 8192 MB.
 7. Configure an AIX Workload Partition (WPAR):
 
-    1. Read and follow the guidelines in this [technote](https://www.ibm.com/docs/en/aix/7.1.0?topic=wpars-creating-system-wpar){target="_blank"} to install in a WPAR.
+    1. Read and follow the guidelines on the IBM page [Configuring system WPARs](https://www.ibm.com/docs/en/aix/7.3.0?topic=aix-configuring-system-wpars){target="_blank"} to install in a WPAR.
     2. Allocate sufficient disk space on the host system.
     3. Request an IP address and host name on the same subnet as the host system.
     4. Create a WPAR that contains a non-shared file system:
