@@ -6,7 +6,7 @@ This page lists the known limitations of IQ.
 
 ### Websocket connectivity
 
-- Experiencing network disruptions, reloading the page, or closing the browser window during active operations can cause incomplete or inconsistent data because background MCP server processes might not terminate immediately. To safely stop an operation, select **Cancel**. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
+- Experiencing network disruptions, reloading the page, or closing the browser window during active operations can cause incomplete or inconsistent data because background MCP server processes might not terminate immediately. To safely stop an operation, click **Cancel**. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
 
 ### Conversation history
 

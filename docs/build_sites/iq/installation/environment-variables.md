@@ -32,6 +32,7 @@ This page lists the environment variables available for the IQ Integrator and DX
 
 | Environment variable | Helm values key | Type | Default | Description | Accepted values |
 |----------------------|-----------------|------|---------|-------------|-----------------|
+| `DB_ENABLED` | `configuration.database.enabled` | Boolean | `false` | Enables PostgreSQL persistence for sessions and deployment key tokens. When set to `false`, the system stores sessions in memory, which clear on pod restart. | `true`, `false` |
 | `DB_HOST` | `configuration.database.dbHost` | String | — | Specifies the hostname of the PostgreSQL database server. | Any valid hostname or IP address |
 | `DB_PORT` | `configuration.database.dbPort` | Integer | `5432` | Specifies the port of the PostgreSQL database server. | Any valid port number |
 | `DB_NAME` | `configuration.database.dbName` | String | `iqdb` | Specifies the name of the PostgreSQL database. | Any valid PostgreSQL database name |
