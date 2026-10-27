@@ -134,19 +134,16 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     The Search Admin UI provides a centralized interface for managing Search V2 components. Administrators can configure content sources, crawlers, common field mappings, and native language support (NLS) translations from a single dashboard. You can access the UI either as a standalone application or directly within Practitioner Studio. For more information, refer to [Search Admin UI](../../build_sites/search_v2_admin_ui/index.md).
 
-### WAS, JDK, UBI, and iFix versions <!--update values-->
+### WAS, JDK, UBI, and iFix versions
 
 === "Containers"
     HCL DX 9.5 CF239 contains the following:
 
-    - [WebSphere Application Server (WAS) 9.0.5.28](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
-    - [Java Development Kit (JDK) 8.0.8.65](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
+    - [WebSphere Application Server (WAS) 9.0.5.29](../../get_started/system_requirements/traditional/supported_config.md#websphere-application-server)
+    - [Java Development Kit (JDK) 8.0.8.71](../../get_started/system_requirements/traditional/supported_config.md#java-sdk)
     - [Red Hat Universal Base Image (UBI)](../../deployment/install/container/image_list.md#hcl-dx-ubi-levels):
-        - Core and Remote Search: XXXXXXXXXXXXXX
-        - Other Images: XXXXXXXXXXXXXX
-    - iFix PH71453
-    - iFix PH71454
-    - iFix PH71590
+        - Core, Remote Search, and PostgreSQL Replication Manager: 8.10-1792742827
+        - Other Images: 9.8-1792742033
 
     For more information, refer to [WAS, JDK, UBI, and iFix versions](../../get_started/system_requirements/kubernetes/kubernetes-runtime.md#was-jdk-ubi-and-ifix-versions).
 
