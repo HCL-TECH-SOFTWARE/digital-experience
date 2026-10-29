@@ -10,7 +10,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
     ulimit -n 10240
     ```
 
-3. If you are using IBM General Parallel File System (GPFS) file sharing, set the file system `inodes` limit to `250000` or higher: <!-- This page says 250,000, not 25,000 https://help.hcl-software.com/digital-experience/9.5/CF237/deployment/manage/portalfarm_cfg/choose_portalfarm/settingup_with_sharedconfig/set_portal_farm_gpfs/ please confirm-->
+3. If you are using IBM General Parallel File System (GPFS) file sharing, set the file system `inodes` limit to `250000` or higher:
 
     ```bash
     mmchfs /dev/gpfs1nsd -F 250000
@@ -60,7 +60,7 @@ Prepare the operating system to ensure a successful HCL Digital Experience (DX) 
 6. Increase the paging space to between 1024 MB to 8192 MB.
 7. Configure an AIX Workload Partition (WPAR):
 
-    1. Read and follow the guidelines on the IBM page [Configuring system WPARs](https://www.ibm.com/docs/en/aix/7.3.0?topic=aix-configuring-system-wpars){target="_blank"} to install in a WPAR.
+    1. Read and follow the guidelines in [Configuring system WPARs](https://www.ibm.com/docs/en/aix/7.3.0?topic=aix-configuring-system-wpars){target="_blank"} to install in a WPAR.
     2. Allocate sufficient disk space on the host system.
     3. Request an IP address and host name on the same subnet as the host system.
     4. Create a WPAR that contains a non-shared file system:
