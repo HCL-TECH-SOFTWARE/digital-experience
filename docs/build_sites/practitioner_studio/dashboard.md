@@ -4,9 +4,7 @@ The Practitioner Studio Dashboard is a modern, React-based dashboard that replac
 
 <!--![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)-->
 
-<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.hcl-software.com/NQ7IrzqbErGDx51OjETf?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use the HCL DX Practitioner Studio Dashboard to track content status and resume work" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
-
-<!--Check link, it is dead-->
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/NQ7IrzqbErGDx51OjETf?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use the HCL DX Practitioner Studio Dashboard to track content status and resume work" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 The dashboard includes the following widgets:
 
