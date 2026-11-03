@@ -9,9 +9,7 @@ To streamline your workflow, IQ performs actions directly within your DX system.
 !!! note
     IQ is a separate assistant from the Doc IQ chatbot. For more information, refer to [Differences between IQ and Doc IQ](../../get_started/product_overview/doc_iq_chatbot.md#differences-between-iq-and-doc-iq).
 
-<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.hcl-software.com/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
-
-<!--Link is dead, check with Herbert-->
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 ## Prerequisites
 
