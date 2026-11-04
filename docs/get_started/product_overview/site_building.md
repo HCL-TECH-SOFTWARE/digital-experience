@@ -10,6 +10,8 @@ hide: tags
 
 With HCL Digital Experience (DX), you can combine [applications](application_integration.md), [content](content_management.md), and [assets](asset_management.md) into websites. You can use [personalization](personalization.md) and [role based access control](role_based_access.md) to ensure that your users receive an experience that is tailored to their needs and to your organization's security policies.
 
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## Site building and editing
 
 HCL DX provides a flexible set of tools for building and managing websites on the platform. You can host multiple sites on a single deployment, differentiated by either host name or path. Applications, content, and assets can be shared between those sites.
