@@ -13,40 +13,40 @@ If you are deploying the HCL DX 9.5 CF239 Container update release, the package 
 ### HCL DX 9.5 CF239 DXClient files
 
 ```
-hcl-dxclient-image-v95_CF239_20260915-2027.zip
-hcl-dxclient-v95_CF239_20260915-2027.zip
+hcl-dxclient-image-v95_CF239_20261103-1406.zip
+hcl-dxclient-v95_CF239_20261103-1406.zip
 ```
 
 ### hcl-dx-kubernetes-v95-CF239.zip
 
 ```shell
 HCL DX notices V9.5 CF239.txt
-hcl-dx-content-composer-image-v1.51.0_20260915-2014.tar.gz
-hcl-dx-core-image-v95_CF239_20260915-2234.tar.gz
-hcl-dx-dam-plugin-google-vision-image-v1.0.0_20260915-2024.tar.gz
-hcl-dx-dam-plugin-kaltura-image-v1.0.0_20260915-2023.tar.gz
-hcl-dx-deployment-v2.49.0_20260917-1304.tgz
-hcl-dx-digital-asset-manager-image-v1.50.0_20260915-2020.tar.gz
-hcl-dx-file-processor-image-v2.0.0_20260915-2017.tar.gz
-hcl-dx-haproxy-image-v1.34.0_20260915-2015.tar.gz
-hcl-dx-image-processor-image-v1.51.0_20260915-2026.tar.gz
-hcl-dx-iq-integration-image-v1.0.2_20260916-0154.tar.gz
-hcl-dx-iq-v1.0.2_20260917-1304.tgz
-hcl-dx-license-manager-image-v95_CF239_20260915-2013.tar.gz
-hcl-dx-logging-sidecar-image-v1.0.0_20260915-2017.tar.gz
-hcl-dx-mcp-service-image-v1.0.2_20260915-2011.tar.gz
-hcl-dx-openldap-image-v2.6.8_20260915-2011.tar.gz
-hcl-dx-opensearch-image-v2.0.0_20260915-2023.tar.gz
-hcl-dx-people-service-image-v1.0.0_20260915-2011.tar.gz
-hcl-dx-persistence-connection-pool-image-v1.48.0_20260915-2026.tar.gz
-hcl-dx-persistence-metrics-exporter-image-v1.46.0_20260915-2026.tar.gz
-hcl-dx-persistence-node-image-v1.38_20260915-2026.tar.gz
-hcl-dx-prereqs-checker-image-v1.0.0_20260915-2022.tar.gz
-hcl-dx-remote-search-image-v95_CF239_20260915-2234.tar.gz
-hcl-dx-ringapi-image-v1.51.0_20260915-2011.tar.gz
-hcl-dx-runtime-controller-image-v95_CF239_20260915-2023.tar.gz
-hcl-dx-search-middleware-image-v2.0.0_20260915-2017.tar.gz
-hcl-dx-search-v2.36.0_20260917-1304.tgz
+hcl-dx-content-composer-image-v1.52.0_20261103-1345.tar.gz
+hcl-dx-core-image-v95_CF239_20261103-1617.tar.gz
+hcl-dx-dam-plugin-google-vision-image-v1.0.0_20261103-1350.tar.gz
+hcl-dx-dam-plugin-kaltura-image-v1.0.0_20261103-1350.tar.gz
+hcl-dx-deployment-v2.50.0_20261103-2219.tgz
+hcl-dx-digital-asset-manager-image-v1.51.0_20261103-1357.tar.gz
+hcl-dx-file-processor-image-v2.0.0_20261103-1405.tar.gz
+hcl-dx-haproxy-image-v1.35.0_20261103-1405.tar.gz
+hcl-dx-image-processor-image-v1.52.0_20261103-1355.tar.gz
+hcl-dx-iq-integration-image-v1.0.3_20261103-1350.tar.gz
+hcl-dx-iq-v1.0.3_20261103-2219.tgz
+hcl-dx-license-manager-image-v95_CF239_20261103-1351.tar.gz
+hcl-dx-logging-sidecar-image-v1.0.0_20261103-1351.tar.gz
+hcl-dx-mcp-service-image-v1.0.3_20261103-1351.tar.gz
+hcl-dx-openldap-image-v2.6.8_20261103-1350.tar.gz
+hcl-dx-opensearch-image-v2.0.0_20261103-1352.tar.gz
+hcl-dx-people-service-image-v1.0.0_20261103-1401.tar.gz
+hcl-dx-persistence-connection-pool-image-v1.49.0_20261103-1356.tar.gz
+hcl-dx-persistence-metrics-exporter-image-v1.47.0_20261103-1356.tar.gz
+hcl-dx-persistence-node-image-v1.39_20261103-1357.tar.gz
+hcl-dx-prereqs-checker-image-v1.0.0_20261103-1403.tar.gz
+hcl-dx-remote-search-image-v95_CF239_20261103-1617.tar.gz
+hcl-dx-ringapi-image-v1.52.0_20261103-1358.tar.gz
+hcl-dx-runtime-controller-image-v95_CF239_20261103-1404.tar.gz
+hcl-dx-search-middleware-image-v2.0.0_20261103-1404.tar.gz
+hcl-dx-search-v2.37.0_20261103-2219.tgz
 ```
 
 ### HCL DX file package listings (supported OS platforms)
