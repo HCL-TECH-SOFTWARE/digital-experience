@@ -2,28 +2,33 @@
 
 Setting up a website includes, creating pages, adding navigation, setting up search, and adding content to the site. Themes are used to customize the portal's look-and-feel. Out-of-the-box templates and the site wizard can help you set up your portal site faster. You can add wikis and blogs to your site and let users tag and rate content on your site.
 
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
--   **[Website building blocks](../create_sites/website_building_blocks/index.md)**  
+## Overview
+
+HCL DX provides the features to build, manage, and deliver websites at scale. The following sections cover the building blocks, reusable assets, authoring and content management, delivery, URL addressability, social rendering, multilingual support, and learning resources:
+
+- **[Website building blocks](../create_sites/website_building_blocks/index.md)**  
 Unless you are familiar with the HCL Digital Experience and HCL Web Content Manager website model, review the building blocks. Building blocks are the different parts that make up the website framework, such as pages, navigation, themes, content, content libraries, and more.
--   **[Creating reusable assets](../create_sites/create_reusable_assets/index.md)**  
+- **[Creating reusable assets](../create_sites/create_reusable_assets/index.md)**  
 Use reusable assets to store or generate content that is used in more than one place in your website.
--   **[Building the website](../create_sites/building_website/index.md)**  
+- **[Building the website](../create_sites/building_website/index.md)**  
 Building a website includes creating libraries, pages, and web content. You also create links and navigation to your content, and assign access to different types of users, such as editors and viewers.
--   **[Authoring tools](../create_sites/authoring_tools/index.md)**  
+- **[Authoring tools](../create_sites/authoring_tools/index.md)**  
 There are multiple ways to create and manage content including using the site toolbar, inline editing, and the authoring portlet.
--   **[Preparing for content authors](../create_sites/site_prep_content_author/index.md)**  
+- **[Preparing for content authors](../create_sites/site_prep_content_author/index.md)**  
 Before content authors can create content you must prepare your site to be ready for content creation, including preparing the site toolbar, enabling inline editing, and creating templates.
--   **[Developing and managing content](../create_sites/developing_managing_content/index.md)**  
+- **[Developing and managing content](../create_sites/developing_managing_content/index.md)**  
 Use these tools and processes to develop and manage your website.
--   **[Delivering web content](../create_sites/index.md)**  
+- **[Delivering web content](../create_sites/index.md)**  
  The type of delivery method you use to deliver web content to your viewers depend on the type of content that is being delivered, and the type of viewers your website is intended for.
--   **[URL Addressability](url_addressing/index.md)**  
+- **[URL Addressability](url_addressing/index.md)**  
 URLs control how you access different sites, pages, components, and content that make up your site. There are various configuration options to tailor URLs to your needs and achieve a good Search Engine Optimization.
--   **[Social rendering](../../build_sites/social_rendering/index.md)**  
+- **[Social rendering](../../build_sites/social_rendering/index.md)**  
 HCL Digital Experience page editors can use social rendering to feature social data that is hosted on a remote HCL Connections server in the context of portal pages.
--   **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md)**  
+- **[HCL Web Content Manager Multilingual Solution](../../manage_content/wcm_authoring/multi_lingual/index.md)**  
 The Web Content Manager Multilingual Solution is a set of tools that are used to manage translated versions of localized and regionalized websites.
--   **[Information and Education | HCL Digital Experience](../../build_sites/create_sites/welcome_info.md)**  
+- **[Information and Education | HCL Digital Experience](../../build_sites/create_sites/welcome_info.md)**  
 Access education, documentation, and in-product guidance to help you get started and use HCL Digital Experience effectively.
 
 

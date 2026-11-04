@@ -38,6 +38,8 @@ These solutions integrate web content with applications and business processes t
 
 For more information about HCL Digital Experience functions, see [Getting Started with HCL Digital Experience](../gettingstartedwithDX.md).
 
+<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/I4tcGeWFA6xl37SU7Rdb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="HCL Digital Experience Introduction for Business Users" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## Who is HCL DX for?
 
 HCL DX is aimed at teams of people responsible for delivering digital experiences for their organizations. These teams work together to produce and manage the complex digital experiences like those mentioned earlier. Many HCL DX customers are in regulated industries such as government, banking, financial services, insurance and healthcare.
@@ -55,10 +57,6 @@ To enable the use cases and users mentioned earlier, HCL DX provides the followi
 - With [**Forms building**](forms_building.md), non-technical users can quickly build data capture applications.
 
 You can read more about the platform's architecture and technical capabilities in the [Architecture overview](../architecture_overview/index.md) section.
-
-## See it in action
-
-<div style="position: relative; padding-bottom: calc(56.885% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/I4tcGeWFA6xl37SU7Rdb?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="HCL Digital Experience Introduction for Business Users" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 ## HCLSoftware U learning materials
 
