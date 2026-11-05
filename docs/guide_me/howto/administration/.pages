@@ -1,6 +1,7 @@
 title: Administration
 nav:
     - index.md
+    - AddAppsInBatches.md
     - SupportForAdditionalMIMETypes.md
     - RedirectTimeout.md
     - ClearOSGIandTempFiles.md
@@ -19,3 +20,4 @@ nav:
     - ResetWCMViewerPortlet.md
     - ConfigEngineAltTempDir.md
     - UseJavaScriptToReplaceText.md
+
