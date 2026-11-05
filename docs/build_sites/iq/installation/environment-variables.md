@@ -10,6 +10,8 @@ This page lists the environment variables available for the IQ Integrator and DX
 |----------------------|-----------------|------|---------|-------------|-----------------|
 | `LITELLM_API_KEY` | `iq-litellm-api-secret` | String | — | Specifies the static LiteLLM API key set through a Kubernetes secret. When you set this key, the system bypasses the deployment key flow entirely. This variable is mutually exclusive with `IQ_DEPLOYMENT_KEY`. | Any valid LiteLLM virtual key |
 | `LITELLM_URL` | `configuration.litellm.liteLlmUrl` | String | — | Specifies the base URL of the LiteLLM Gateway Proxy. | A valid HTTPS URL (for example, `https://litellm.example.com`) |
+| `LLM_MAX_TOKENS` | `environment.pod.integrator` | Integer | — | Specifies the maximum number of tokens for LLM completion responses. You must override the default value based on the token limits of your LLM model to prevent errors from models that enforce strict token limits. | Any positive integer within the model's supported range (for example, `16384`, `8192`, `4096`) |
+| `LLM_TEMPERATURE` | `environment.pod.integrator` | Float | — | Specifies the temperature parameter for LLM response generation, controlling randomness and determinism. You must override the default value based on the constraints of your LLM model as some models require specific temperature values. | Any float value within the model's supported range (for example, `0.7`, `1`, `0`) |
 
 ### DX integration
 
@@ -30,13 +32,27 @@ This page lists the environment variables available for the IQ Integrator and DX
 
 | Environment variable | Helm values key | Type | Default | Description | Accepted values |
 |----------------------|-----------------|------|---------|-------------|-----------------|
-| `DB_ENABLED` | `configuration.database.enabled` | Boolean | `false` | Enables PostgreSQL persistence for sessions and deployment key tokens. When set to `false`, the system stores sessions in memory, which clear on pod restart." | `true`, `false` |
+| `DB_ENABLED` | `configuration.database.enabled` | Boolean | `false` | Enables PostgreSQL persistence for sessions and deployment key tokens. When set to `false`, the system stores sessions in memory, which clear on pod restart. | `true`, `false` |
 | `DB_HOST` | `configuration.database.dbHost` | String | — | Specifies the hostname of the PostgreSQL database server. | Any valid hostname or IP address |
 | `DB_PORT` | `configuration.database.dbPort` | Integer | `5432` | Specifies the port of the PostgreSQL database server. | Any valid port number |
 | `DB_NAME` | `configuration.database.dbName` | String | `iqdb` | Specifies the name of the PostgreSQL database. | Any valid PostgreSQL database name |
 | `DB_USER` | `configuration.database.dbUser` | String | — | Specifies the PostgreSQL username. The system ignores this value when `dbCustomSecret` is set.| Any valid PostgreSQL username |
 | `DB_PASSWORD` | `configuration.database.dbPassword` | String | — | Specifies the PostgreSQL password. The system ignores this value when `dbCustomSecret` is set. Do not commit this password to version control. Use `dbCustomSecret` for production deployments. | Any valid PostgreSQL password |
 | `DB_TLS_ENABLED` | `configuration.database.dbTlsEnabled` | Boolean | `false` | Enables TLS encryption for the database connection. | `true`, `false` |
+
+### Cross-session memory
+
+| Environment variable | Helm values key | Type | Default | Description | Accepted values |
+|----------------------|-----------------|------|---------|-------------|-----------------|
+| `RAG_ENABLED` | `environment.pod.integrator` | Boolean | `false` | Enables cross-session memory, powered by Retrieval-Augmented Generation (RAG). When enabled, IQ stores semantic chunks of past conversations in a vector database, retrieves relevant context when processing a query, and injects it into the system prompt so the model can reference information from previous sessions. Requires a [PostgreSQL database](prepare-database.md) and [registered embedding model](enable-rag.md#configuring-the-embedding-model) aliases in LiteLLM. | `true`, `false` |
+| `EMBEDDING_DIMENSIONS` | `environment.pod.integrator` | Integer | `1024` | Specifies the vector dimension produced by your embedding model. This value must match the output dimension of the model registered in LiteLLM. Changing this value after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, re-create the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration). | Any positive integer matching your embedding model's output dimension (for example, `1024` or `1536`) |
+| `USE_MULTILINGUAL_EMBEDDINGS` | `environment.pod.integrator` | Boolean | `true` | Specifies whether IQ uses multilingual embeddings. <br> - When set to `true`, IQ uses the `iq-multilingual-embed` LiteLLM proxy alias. <br> - When set to `false`, IQ uses the `iq-embed` LiteLLM proxy alias.<br>Changing this value after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, re-create the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration). | `true`, `false` |
+| `RAG_CHUNK_SIZE` | `environment.pod.integrator` | Integer | `512` | Specifies the maximum number of characters per chunk. Changing this value after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, re-create the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration). | Any positive integer (for example, `256`, `512`, or `1024`) |
+| `RAG_CHUNK_OVERLAP` | `environment.pod.integrator` | Integer | `50` | Specifies the number of characters that adjacent chunks share, preserving context across chunk boundaries. Changing this value after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, re-create the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration). | Any nonnegative integer less than `RAG_CHUNK_SIZE` (for example, `0`, `50`, or `100`) |
+| `RAG_CHUNK_SEPARATORS` | `environment.pod.integrator` | JSON string array | `["\n\n","\n",". ","? ","! "," ",""]` | Specifies the ordered list of separator strings used by the chunking algorithm. The chunker tests each separator from coarsest to finest to split text into segments within `RAG_CHUNK_SIZE`. Provide this value as a JSON-encoded string array, where backslashes escape special characters (for example, `\n` represents a new line and `\n\n` represents two new lines). Changing this value after initial startup causes IQ to enter graceful degradation mode and disable cross-session memory while continuing to serve requests. To apply new values, re-create the RAG tables and restart the pod. For instructions, refer to [Changing RAG and embedding configuration](enable-rag.md#changing-rag-and-embedding-configuration). | A valid JSON string array (for example, `["\n\n","\n",". "]`) |
+| `RAG_TOP_K` | `environment.pod.integrator` | Integer | `5` | Specifies the number of most similar chunks returned per query. Updating this parameter requires running `helm upgrade` to apply the changes, but does not require re-creating RAG tables or dropping stored data. | Any positive integer (for example, `3`, `5`, or `10`) |
+| `RAG_MIN_SIMILARITY` | `environment.pod.integrator` | Float | `0.35` | Specifies the minimum cosine similarity score (`0` to `1`) that a chunk must reach to be retrieved. Set a nonzero value (such as `0.6`) to filter out low-relevance chunks. Updating this parameter requires running `helm upgrade` to apply the changes, but does not require re-creating RAG tables or dropping stored data. | Float from `0` to `1` (for example, `0`, `0.5`, or `0.7`) |
+| `RAG_DEBUG` | `environment.pod.integrator` | Boolean | `false` | Enables verbose debug logging for RAG ingestion and retrieval. Do not enable in production environments. | `true`, `false` |
 
 ### Operations
 
@@ -67,6 +83,9 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `ENABLE_DAM` | `configuration.mcpServer.enableDam` | Boolean | `true` | Enables Digital Asset Management (DAM) tools. | `true`, `false` |
 | `STANDALONE_MODE` | `configuration.mcpServer.standaloneMode` | Boolean | `false` | When set to `true`, this variable disables DX authentication tools and runs the MCP Server in isolation, without integrating with HCL DX user authentication. Use this mode for development or testing only. | `true`, `false` |
 | `BODY_PARSER_JSON_LIMIT` | `configuration.mcpServer.bodyParserJsonLimit` | String | `1mb` | Specifies the maximum size for incoming JSON-RPC payloads. This setting uses Express.js byte notation (lowercase units). Increase this value if your deployment requires larger tool payloads. | A size string with lowercase units (for example, `1mb`, `5mb`, `10mb`) |
+| `HTTPS_ENABLED` | `configuration.mcpServer.httpsEnabled` | Boolean | `false` | Enables HTTPS for the MCP Server. When enabled, set `configuration.mcpServer.tlsCertSecret` to the name of a Kubernetes Secret containing `tls.crt` and `tls.key`. | `true`, `false` |
+| `HTTPS_KEY_PATH` | Fixed chart path | String | `/etc/mcp-tls-config/tls.key` | Specifies the mounted TLS private-key path used by the MCP Server. This path is provided by the chart and should not be changed. | A path to a mounted private-key file |
+| `HTTPS_CERT_PATH` | Fixed chart path | String | `/etc/mcp-tls-config/tls.crt` | Specifies the mounted TLS certificate path used by the MCP Server. This path is provided by the chart and should not be changed. | A path to a mounted certificate file |
 
 ### Operations
 
@@ -75,7 +94,9 @@ This page lists the environment variables available for the IQ Integrator and DX
 | `MAINTENANCE_MODE` | `maintenanceMode.mcpServer` | Boolean | `false` | Starts the MCP Server pod in maintenance mode. The application does not run, but the container remains active to let you debug inside the container. | `true`, `false` |
 
 ???+ info "Related information"
+    - [Deploying LiteLLM](deploy-litellm.md)
     - [Deploying IQ services](../../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](configuring-mcp.md)
+    - [Configuring cross-session memory](enable-rag.md)
     - [Preparing the database](prepare-database.md)
     - [Preparing LiteLLM access](prepare-litellm-access.md)

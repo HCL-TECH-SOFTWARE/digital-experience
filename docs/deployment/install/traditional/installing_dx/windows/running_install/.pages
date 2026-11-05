@@ -1,5 +1,6 @@
+title: Running the HCL DX installer on Windows
 nav:
     - index.md
     - inst_gui-windows.md
     - inst_console-windows.md
-    - Windows - Install with response file: install_with_responsefile
+    - install_with_responsefile

@@ -1,5 +1,6 @@
 title: Themes
-
 nav:
     - index.md
+    - WebDAVFolderName.md
     - OnlyExportThemeSkins.md
+    - ThemeJSPinSegment.md

@@ -129,6 +129,11 @@ If tools are unexpectedly disabled, verify that `mcpServer.enableWcm` and `mcpSe
         1. Refresh the page and confirm the prior conversation remains available.
         2. Log out and log back in, then verify that the same conversation state is restored.
 
+## Next step
+
+After deploying IQ services and validating your deployment, [enable and configure](../enable.md) the IQ assistant.
+
 ???+ info "Related information"
     - [Accessing IQ](../access.md)
+    - [Enabling IQ](../enable.md)
     - [Troubleshooting - Backend services](../troubleshooting.md#backend-services)

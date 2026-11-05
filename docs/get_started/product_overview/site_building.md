@@ -10,6 +10,8 @@ hide: tags
 
 With HCL Digital Experience (DX), you can combine [applications](application_integration.md), [content](content_management.md), and [assets](asset_management.md) into websites. You can use [personalization](personalization.md) and [role based access control](role_based_access.md) to ensure that your users receive an experience that is tailored to their needs and to your organization's security policies.
 
+<div style="position: relative; padding-bottom: calc(66.4354% + 41px); height: 0px; width: 100%;"><iframe src="https://demos.hcl-software.com/dUfLenXG7tlrvAZFhomM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true " title="Create a Website Using a Blueprint Template" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## Site building and editing
 
 HCL DX provides a flexible set of tools for building and managing websites on the platform. You can host multiple sites on a single deployment, differentiated by either host name or path. Applications, content, and assets can be shared between those sites.
@@ -48,6 +50,9 @@ Mobile preview is built in and provides a real-time preview of HCL DX sites on a
 For more information, see [Mobile](../../build_sites/mobile/index.md).
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on how to use the Site Manager for beginners, go to [Site Manager](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D291){target="_blank"}. To try it out yourself, refer to [Site Manager Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab.pdf){target="_blank"} and corresponding [Site Manager Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Introduction/HCL_Digital_Experience_Getting_Started_Lab_Resources.zip).
 

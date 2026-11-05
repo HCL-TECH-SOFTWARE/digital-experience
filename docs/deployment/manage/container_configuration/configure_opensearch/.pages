@@ -5,3 +5,5 @@ nav:
   - configure_a_contentsource_api.md
   - configure_a_crawler_api.md
   - run_search_queries_api.md
+  - configure_common_field_mappings_api.md
+  - configure_nls_translations_api.md

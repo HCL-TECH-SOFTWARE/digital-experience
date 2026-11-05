@@ -12,8 +12,14 @@ Learn how to toggle the Managed Pages feature to control site aggregation, versi
 Learn how to execute bash commands to extract the unique identifier and repository location of specific WCM items.
 - **[How to identify new managed pages in HCL DX](./IdentifyNewManagedPages.md)**  
 Learn how to locate newly created or unreleased managed pages within the portal hierarchy.
+- **[How to increase WCM feed import file size settings](./WCMFeedImportConfig.md)**  
+Learn how to update WCM configuration parameters to allow larger feed imports.
+- **[How to isolate the WCM item generating a specific output or markup](./IsolateWCMItemsMarkup.md)**  
+Learn how to enable trace logging and analyze HCL DX trace logs to identify the WCM item or component generating target output or markup.
 - **[How to manage DAM asset URLs after a library import from another environment](./WCMObjectsHostname.md)**  
 Learn how to configure Digital Asset Management (DAM) asset URL parameters to ensure consistent pathing after a library import from another environment.
+- **[How to render or pre-render special characters in a Unix or Linux environment](./PreRenderSpecialCharacters.md)**  
+Learn how to resolve character encoding discrepancies between UTF-8 and ISO-8859-1 when rendering or pre-rendering special characters on Unix or Linux systems.
 - **[How to use JSPs in WCM](./useJSPinWCM.md)**  
 Learn how to use JavaServer Pages (JSPs) components in HCL DX using WCM.
 - **[How to use XML Access](./xmlaccess_faq.md)**  

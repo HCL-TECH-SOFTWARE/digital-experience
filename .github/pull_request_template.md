@@ -14,7 +14,7 @@ Please provide a summary of the changes and the related issue.
 
 - [ ] I have updated relevant documentation in `docs/` or elsewhere as needed
 - [ ] I have checked that the documentation builds
-- [ ] I have checked spelling, grammar, captialisation and other style rules
+- [ ] I have checked spelling, grammar, capitalization, and other style rules
 - [ ] I have fixed any broken links in the pages that I have amended
 
 

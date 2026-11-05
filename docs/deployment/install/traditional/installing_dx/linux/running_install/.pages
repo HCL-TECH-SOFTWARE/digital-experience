@@ -1,5 +1,6 @@
+title: Running the HCL DX installer on Linux
 nav:
     - index.md
     - inst_gui-linux.md
     - inst_console-linux.md
-    - Linux - Install with response file: install_with_responsefile
+    - install_with_responsefile

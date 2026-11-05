@@ -1,6 +1,6 @@
 # Limitations of Search V2
 
-Be aware of the following limitations when using Search V2.
+Review the current limitations and unsupported features for Search V2.
 
 ## Content sources and indexing
 
