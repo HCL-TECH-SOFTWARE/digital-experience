@@ -58,6 +58,7 @@ This section presents the latest available HCL DX file package listings for supp
 |HCL-DX-CF239_Express_Update|HCL-DX-CF239_Express_Update.zip|
 |HCL-DX-CF239_RemoteSearch_Update|HCL-DX-CF239_RemoteSearch_Update.zip|
 |HCL-DX-CF239_Server_Update|HCL-DX-CF239_Server_Update.zip|
+|UserSessionReporting-v2.1.1|UserSessionReporting-v2.1.1.zip|
 
 ### HCL DX UBI levels
 
