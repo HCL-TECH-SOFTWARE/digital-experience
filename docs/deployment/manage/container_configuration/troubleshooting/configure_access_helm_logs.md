@@ -20,6 +20,11 @@ You can see the string format in the following list. Once the property is set, r
 ```yaml
 # Logging configuration
 logging:
+  # DX Core specific logging configuration for the wp_profile/WebSphere_Portal server and the cw_profile/server1
+  core:
+    level:
+      - "wp_profile:*=info"        
+      - "cw_profile:*=info"
   # Content Composer specific logging configuration
   contentComposer:
     level: 
