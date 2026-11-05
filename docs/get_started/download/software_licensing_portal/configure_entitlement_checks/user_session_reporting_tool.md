@@ -1,7 +1,6 @@
 ---
 title: User Session Reporting Tool
 ---
-# User Session Reporting Tool
 
 This topic describes how you can use the User Session Reporting Tool to count and report user sessions.
 
@@ -13,7 +12,7 @@ This section provides information about the functionalities and use cases of the
 
 - **Detects new unique sessions based on parameters such as Internet Protocol (IP) addresses, user-agent strings, and timestamp.** The tool increments the session counter when a session becomes inactive. Inactive is defined as no new requests from the same user for 30 minutes or after a maximum of 4 hours from the start of the session. This ensures accurate session counting, even across extended periods of user activity. It supports custom date range analysis, allowing users to track and report on specific time frames.
 
-- **Allows manual exclusion of internal requests.** The tool filters out internal requests, ensuring that session data only reflects external user activity. You can exclude specific IPs or [session keys](./user_session_reporting_tool.md#running-the-user-session-reporting-tool) (which consists of the remote host, User-Agent, and X-Forwarded-For headers) by either passing them as command-line parameters or listing them within text files. This feature is crucial for organizations that focus on customer interactions rather than internal maintenance or system-generated traffic. The User Session Reporting Tool has also been rigorously tested with large sets of log files and across different access log formats. This ensures its reliability in handling diverse and extensive data sources without compromising accuracy.
+- **Allows manual exclusion of internal requests.** The tool filters out internal requests, ensuring that session data only reflects external user activity. You can exclude specific IPs or [session keys](./user_session_reporting_tool.md#running-the-user-session-reporting-tool) (which consists of the remote host, `User-Agent`, and `X-Forwarded-For` headers) by either passing them as command-line parameters or listing them within text files. This feature is crucial for organizations that focus on customer interactions rather than internal maintenance or system-generated traffic. The User Session Reporting Tool has also been rigorously tested with large sets of log files and across different access log formats. This ensures its reliability in handling diverse and extensive data sources without compromising accuracy.
 
 - **Handles complex scenarios such as merging multiple log files without overcounting sessions.** This feature is useful in environments where logs are segmented or spread across different servers. You can manually input and exclude specific IP addresses for greater flexibility in reporting and ensuring that internal or irrelevant traffic does not skew the session data. The tool also supports alternate syntax inputs to avoid potential user errors during setup or configuration.
 
@@ -46,8 +45,8 @@ Note the following deployment scenarios and their use cases when using the tool:
 
 - Make sure that a Java Development Kit (JDK) is installed. The recommended version is at least Java 8.
 - Complete the following prerequisites before running the User Session Reporting Tool:
-    - [Enable access logs](#enabling-access-logs)
-    - [(Optional) Handle the routing setup](#optional-handling-the-routing-setup)
+    - [Enabling access logs](#enabling-access-logs)
+    - [Handling the routing setup](#handling-the-routing-setup) (if you are using a proxy server)
 
 ### Enabling access logs
 
@@ -92,13 +91,19 @@ You can obtain access log files inside the `wp_profile` directory (`/opt/IBM/Web
 !!!important
     There is a [known issue with WAS fix packs 9.0.5.16 and 9.0.5.17](https://www.ibm.com/docs/en/was/9.0.5?topic=application-enabling-access-logging){target="_blank"} where timestamps are broken, making the access log files unusable.
 
-### (Optional) Handling the routing setup
+### Handling the routing setup
 
-If you are not using a proxy server, you do not have to follow the routing setup in this section.
+!!!note
+    If you do not use a proxy server, skip this section.
 
-For every request, a key is computed based on the requesting IP address of the user. If you are using a proxy server in your deployment setup, this key is combined with the user agent and a forwarding header (`X-Forwarded-For`) for proxy usage. The next interactions during the same user session period use that key to identify the same user.
+The tool computes a key for every request based on the user's IP address. If you use a proxy server in your deployment setup, the tool combines this key with the user agent and the `X-Forwarded-For` header. Subsequent interactions during the same user session use that key to identify the user.
 
-If a reverse proxy server, load balancer, or a similar component is used in the deployment setup, the [X-Forwarded-For header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} is used to identify the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Make sure that the `X-Forwarded-For` header is correctly configured in your routing setup.
+If your deployment setup uses a reverse proxy server, load balancer, or similar component, the [`X-Forwarded-For` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For){target="_blank"} identifies the user. This header is the standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer. Ensure that the `X-Forwarded-For` header is correctly configured in your routing setup.
+
+If your environment uses complex proxy chaining, such as Akamai combined with IBM HTTP Server (IHS), standard `X-Forwarded-For` extraction may result in fragmented session counts if intermediate proxy IPs rotate per request. To address this, append the `-assumeClientIP` flag when running the tool to extract only the first IP address listed in the `X-Forwarded-For` header.
+
+!!! note
+    Proxy setups vary significantly across environments, so no standard extraction method exists. If you choose to use this flag, you are responsible for ensuring that your network and proxy headers are configured so that the stable client IP is in the first position. Due to the risk of accidentally fragmenting session counts, use this flag only after consulting with [HCL Support](https://support.hcl-software.com/csm){target="_blank"} to verify that it aligns with your specific network architecture.
 
 ### Analyzing access logs
 
@@ -165,6 +170,7 @@ java -jar <jarFilepath> -h
 # <excludeSessionKey> Session key to exclude from session counts (multiple session keys can be excluded by adding multiple -excludeSessionKey parameters)
 # <startDate> Specifies the start date in YYYY-MM-DD format
 # <endDate> Specifies the end date in YYYY-MM-DD format
+# <assumeClientIP> (Optional) Instructs the tool to extract the first IP address from the `X-Forwarded-For` header to use as the stable client IP.
 ```
 
 ```cmd
@@ -182,7 +188,7 @@ The following is a sample command for running the User Session Reporting Tool us
     As of CF229, the `productFeatureIdName` parameter has been removed as a command-line parameter. The product feature ID is automatically read from the License Manager's environment variable. You do not need to specify it as a parameter when running the User Session Reporting Tool.
 
 ```cmd
-java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] <startDate> <endDate>
+java -jar <jarFilepath> <filePaths...> [-excludeIPFilePath <excludeIPFile>] [-excludeSessionKeyFilePath <excludeSessionKeyFile>] [-excludeIP <excludedIP>] [-excludeSessionKey <excludeSessionKey>] [-assumeClientIP] <startDate> <endDate>
 
 # Example
 java -jar input.log -excludeIPFilePath ./excludedIPs.txt -excludeSessionKeyFilePath ./excludeSessionKeys1.txt -excludeIP "192.168.243.142" -excludeSessionKey "192.168.243.136 \"axios/1.6.7\" \"-\"" 2022-07-22 2025-07-28 
@@ -224,5 +230,8 @@ After running the command, the system returns the expected session count within 
 - Additionally, if there are logs from multiple deployments belonging to the same system (for example, in Active-Active setups or backups), you must process those logs together in one run because the tool will merge them to provide a comprehensive and accurate session count.
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 To learn how to monitor, troubleshoot, and contact Support about issues you encounter with DX, go to [Monitoring and Troubleshooting](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3436){target="_blank”}. You can try it out using the [Monitoring and Troubleshooting Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab.pdf){target="_blank”} and corresponding [Monitoring and Troubleshooting Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Administrator/HDX-ADM-200_Monitoring_and_Troubleshooting_Lab_Resources.zip){target="_blank”}.

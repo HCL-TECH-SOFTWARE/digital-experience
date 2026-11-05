@@ -2,7 +2,7 @@
 
 This page describes the configuration model, parameter properties, and capability constraints for the Model Context Protocol (MCP) Server in HCL Digital Experience (DX) IQ deployments.
 
-The MCP Server establishes the communication layer that enables HCL DX IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
+The MCP Server establishes the communication layer that enables IQ services to exchange structured requests and responses with supported AI capabilities. It centralizes tool execution and maintain consistent data exchange patterns across the backend environment.
 
 The configuration architecture delivers these capabilities through the following features:
 
@@ -43,6 +43,9 @@ Use the following feature flags to enable or disable tool domains to expose only
 |`ENABLE_WCM`|Enables Web Content Manager (WCM) and DX Core content-related tools.|`false`|
 |`STANDALONE_MODE`|Controls authentication tool enablement and determines whether the server integrates with HCL DX user authentication or runs in isolation.|`false`|
 
+!!! warning
+    At least one of `ENABLE_DAM` or `ENABLE_WCM` must be set to `true`. If both parameters are disabled, the MCP Server does not expose any DAM or WCM tool domains and the readiness probe reports the service as unhealthy.
+
 Use the following parameter to adjust the payload handling limit:
 
 | Parameter {: style="width: 25%; white-space: nowrap;"}| Description {: style="width: 45%;"}| Default value {: style="width: 15%;"}|
@@ -59,6 +62,8 @@ Use the following JSON-RPC parameters to propagate request-scoped context to dow
 ## Managing endpoints and security
 
 The MCP endpoints are internal to the IQ backend deployment and are accessed only by the IQ integrator service within the cluster. They are not exposed externally and are not routed through HAProxy.
+
+### Endpoints and health probes
 
 Route tool execution requests through the following endpoints to handle traffic for enabled DX tool domains:
 
@@ -77,6 +82,43 @@ Monitor service health and backend dependency availability using these operation
 |`/probe/live`|Liveness probe|A standard health check that confirms the server process is actively running inside the container.|
 |`/probe/ready`|Readiness probe|A dependency check that validates the backend tools are responsive. This check runs only for enabled tool domains. It reports healthy if at least one domain works and fails if everything is turned off or broken.|
 
+### Enabling HTTPS for the MCP Server
+
+HTTPS is disabled by default in the IQ Helm chart (`hcl-dx-iq`). To secure connections between the MCP Server and the IQ Integrator, enable HTTPS and configure a Kubernetes TLS Secret:
+
+1. Create a TLS Secret in your Kubernetes namespace containing the standard `tls.crt` and `tls.key` keys.
+
+    The following example uses `dx-tls-cert` as the Secret name. You can use another name as long as it matches the `tlsCertSecret` value in your Helm chart:
+
+    ```bash
+    kubectl create secret tls dx-tls-cert \
+        --cert=<PATH_TO_CERTIFICATE> \
+        --key=<PATH_TO_PRIVATE_KEY> \
+        --namespace <YOUR_NAMESPACE>
+    ```
+
+2. Set `httpsEnabled` to `true` and set `tlsCertSecret` to the name of the TLS Secret. 
+
+    The chart requires a non-empty `tlsCertSecret` when HTTPS is enabled and mounts the Secret at `/etc/mcp-tls-config`. The MCP Server reads the certificate from `/etc/mcp-tls-config/tls.crt` and the private key from `/etc/mcp-tls-config/tls.key`.
+
+    ```yaml
+    configuration:
+      mcpServer:
+        httpsEnabled: true
+        tlsCertSecret: "dx-tls-cert"
+
+    environment:
+      pod:
+        integrator:
+          - name: "MCP_SERVER_LIST"
+            value: "https://<IQ_RELEASE_NAME>-mcp-server:3000"
+    ```
+
+    When HTTPS is enabled, the MCP Server health probes use HTTPS automatically.
+
+    !!!note
+        The `MCP_SERVER_LIST` value must use `https://` for the IQ Integrator to connect to the MCP Server.
+
 ## Validating post-deployment status
 
 After deployment, upgrade, or configuration updates, validate the following baseline items:
@@ -87,5 +129,15 @@ After deployment, upgrade, or configuration updates, validate the following base
 4. Requests process reliably without repeated timeout or payload-limit failures.
 5. No persistent MCP connectivity errors, timeout logs, or unauthorized access patterns appear in the system logs.
 
+## Next steps
+
+After configuring the MCP Server:
+
+1. (Optional) Set up a [PostgreSQL database](prepare-database.md) for persistence.
+2. Configure [IQ Integrator authentication for LiteLLM access](prepare-litellm-access.md).
+
 ???+ info "Related information"
+    - [IQ environment variables](environment-variables.md)
+    - [Preparing the database](prepare-database.md)
+    - [Preparing LiteLLM access](prepare-litellm-access.md)
     - [Troubleshooting - MCP Server](../troubleshooting.md#mcp-server)

@@ -21,7 +21,8 @@ If interface or display issues occur, clear the browser cache and perform a hard
 
 If the sparkle icon or floating action button (FAB) does not appear:
 
-- Verify if IQ is installed or enabled. For more information, refer to [Enabling IQ](enable.md).
+- Verify that IQ is installed and enabled. For instructions, refer to [Enabling IQ](enable.md).
+- Confirm that all IQ components upgraded successfully and the deployment is healthy after a DX Core Helm upgrade.
 - Verify your account permissions with a system administrator. While IQ is optimized for the Practitioner persona, any authorized DX user can access it.
 
 **Incorrect message display**
@@ -70,6 +71,87 @@ To identify the underlying cause behind this banner, review the backend response
 | Unauthorized | The active user session does not have the necessary roles or permissions to access IQ. | Contact your HCL DX system administrator to check your user persona configuration and role assignments. |
 | Unsupported operation | The AI assistant does not have the capability required to perform the action requested by your prompt. | Rephrase the prompt. If the operation is supported on your system, make sure the required backend modules or integrations are fully configured and enabled. |
 
+## LiteLLM
+
+**LiteLLM pod startup failure**
+
+If the LiteLLM pod fails to start and remains in a `CrashLoopBackOff` state:
+
+- Run the following command to examine recent deployment logs:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm --tail=50
+    ```
+
+- Verify external database endpoints and credentials if database connections fail.
+- Check the `proxy_config` structure in the Helm values file for syntax errors.
+- Confirm all referenced secrets exist in the `dxns` namespace.
+- Verify that Kubernetes nodes have sufficient unallocated CPU and memory resources.
+
+**Health probe failure**
+
+If the readiness probe fails and the pod does not accept traffic:
+
+- Diagnose pod deployment issues:
+
+    ```bash
+    kubectl describe pod -n dxns -l app=litellm
+    ```
+
+- Test database network accessibility from the pod:
+
+    ```bash
+    kubectl exec -it <litellm-pod> -- nc -zv <db-host> 5432
+    ```
+
+- Increase the `failureThreshold` parameter in the startup probe to give database migrations more time to complete.
+- Review LiteLLM pod logs to identify database initialization errors.
+
+**Models not available**
+
+If IQ cannot locate the `iq-general-purpose` or `iq-summary` models:
+
+- Check for upstream API errors and startup failures:
+
+    ```bash
+    kubectl logs -n dxns -l app=litellm
+    ```
+
+- Verify the available proxy models:
+
+    ```bash
+    curl -H "Authorization: Bearer <LITELLM_MASTER_KEY>" \
+      http://litellm.dxns.svc.cluster.local:4000/v1/models
+    ```
+
+- Verify model names (`iq-general-purpose`, `iq-summary`) match the values defined in proxy_config.
+- Confirm LLM provider credentials exist in Kubernetes secrets.
+- Verify the upstream provider account has access to the specified models.
+
+**Connection refused from IQ**
+
+If the IQ backend service cannot establish network communication with LiteLLM:
+
+- Test endpoint accessibility from the IQ pod:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- \
+      curl http://litellm.dxns.svc.cluster.local:4000/health/readiness
+    ```
+
+- Verify that the LiteLLM service is running:
+
+    ```bash
+    kubectl get svc -n dxns litellm
+    ```
+
+- Check Kubernetes network policies to ensure traffic is allowed between IQ and LiteLLM pods.
+- Verify cluster DNS resolution:
+
+    ```bash
+    kubectl exec -it <iq-integrator-pod> -n dxns -- nslookup litellm.dxns.svc.cluster.local
+    ```
+
 ## Backend services
 
 If [validation](./installation/validation.md) fails, use this table to isolate the cause:
@@ -80,7 +162,7 @@ If [validation](./installation/validation.md) fails, use this table to isolate t
 | Database connection fails | Incorrect credentials or host | Verify database secret and configuration in [Preparing the database](./installation/prepare-database.md). |
 | WebSocket errors | Network policy restrictions | Check Kubernetes network policies. |
 | Model Context Protocol (MCP) integration issues | Web Content Manager (WCM) or Digital Asset Management (DAM) not enabled | Verify `mcpServer.enableWcm` and `mcpServer.enableDam` settings in Helm values. |
-| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying IQ services - Installing the IQ backend server](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#installing-the-iq-backend-server). |
+| No AI responses | LiteLLM configuration issue | Check `LITELLM_API_KEY` and `LITELLM_URL` in [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md). |
 
 To inspect pod configurations and system logs:
 
@@ -149,9 +231,9 @@ kubectl run pg-test --rm -it --image=postgres:16 --restart=Never -n <YOUR_NAMESP
   psql "host=<DB_HOST> port=5432 dbname=iqdb user=<DB_USERNAME> password=<DB_PASSWORD> sslmode=require"
 ```
 
-#### Runtime Controller (RTC)-managed database
+#### RTC-managed database
 
-Check the Runtime Controller logs to confirm the automatic provisioning completed successfully:
+Check the Runtime Controller (RTC) logs to confirm the automatic provisioning completed successfully:
 
 ```bash
 kubectl logs -n <YOUR_NAMESPACE> deployment/<DX_RELEASE_NAME>-runtime-controller | grep -i "iq database"
@@ -176,8 +258,6 @@ Before investigating MCP-related errors, perform these basic checks:
 5. Confirm MCP endpoint reachability for your deployment path (`/mcp` or `/dx/api/iq/v1/mcp`).
 6. Confirm probe endpoint status (`/probe/live` healthy and `/probe/ready` ready). For readiness pass or fail behavior, refer to [Managing endpoints and security](./installation/configuring-mcp.md#managing-endpoints-and-security).
 
-### Common symptoms and actions
-
 | Issue | Possible cause | Solution |
 |-------|----------------|----------|
 | IQ request does not return a response | MCP Server is unreachable, unhealthy, or routed incorrectly | Validate service health, route configuration, and MCP endpoint reachability. |
@@ -186,6 +266,39 @@ Before investigating MCP-related errors, perform these basic checks:
 | Payload-related request failures | Request body exceeds configured size limit | Validate payload size and review the `BODY_PARSER_JSON_LIMIT` configuration. |
 | Unable to connect to AI service | MCP Server cannot reach configured AI provider dependencies | Check provider credentials, secrets, and outbound connectivity from cluster services. |
 | Invalid format or protocol errors | Service version mismatch or contract mismatch across components | Verify compatible DX, IQ integrator, and MCP Server versions, and then review logs for parsing or schema failures. |
+| Version incompatibility | IQ and HCL DX Core versions fall outside the supported compatibility window. | Check MCP Server logs for the detected HCL DX Core version, and update components to within two CF releases. |
+
+## Cross-session memory
+
+When [cross-session memory](./installation/enable-rag.md) fails to initialize, IQ enters graceful degradation mode. Since cross-session memory is an optional feature, IQ continues to operate normally if it fails. The Integrator pod stays healthy and continues to answer questions, but it silently stops storing and retrieving context from past conversations. Because there is no visible error in the user interface, check the Integrator logs to confirm whether cross-session memory is active.
+
+```bash
+kubectl logs -n <YOUR_NAMESPACE> deployment/<IQ_RELEASE_NAME>-integrator --tail=500 | grep -E "\[RAG\]|\[Embedding\]"
+```
+
+All related entries are prefixed with `[RAG]` or `[Embedding]`. A healthy startup produces these entries:
+
+```text
+[RAG] Initializing vector DB backend: pgvector
+[RAG] INITIALIZED: active backend=pgvector, RAG_ENABLED=true
+```
+
+Use the following table to interpret failure entries:
+
+| Log entry | Cause | Solution |
+|-----------|-------|----------|
+| `[RAG] RAG_ENABLED=false (false by default; set RAG_ENABLED=true to enable)` | Cross-session memory is not enabled. | Set `RAG_ENABLED` to `true`. For instructions, refer to [Enabling cross-session memory](./installation/enable-rag.md#enabling-cross-session-memory). |
+| `[RAG] vector dimension mismatch: configured=<N>, model=<M>` | `EMBEDDING_DIMENSIONS` does not match the output dimension of the model registered in LiteLLM. | Set `EMBEDDING_DIMENSIONS` to the value reported as `model=<M>`, or change the `dimensions` value in your LiteLLM model configuration. For instructions, refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+| `[RAG] backend init failed; RAG will be inactive this run` | The vector database failed to initialize. | Verify that the database is reachable and the `pgvector` extension is enabled. For setup instructions, refer to [Preparing the database](./installation/prepare-database.md) and Step 6 of [Configuring an external database](./installation/prepare-database.md#configuring-an-external-database). |
+| `[RAG] RAG disabled due to embedding model/schema drift.` | The stored configuration no longer matches the current embedding or chunking settings. | Recreate the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration). |
+| `[RAG] initialization failure handled; continuing without RAG context` | An earlier initialization failure occurred, causing the pod to operate in graceful degradation mode. | Resolve the preceding `[RAG]` error entry. The system retries initialization the next time it attempts to ingest or retrieve context. |
+| `[RAG] Vector DB not initialized!` | IQ attempted to retrieve context before initialization succeeded. | Resolve the preceding initialization error. |
+| `[RAG] RETRIEVAL FAILED: <error>` | The vector search query failed in the database. | Check database connectivity and confirm the `rag_chunks` table exists. |
+| `[RAG] ingest failed (sessionId=<id>, messageId=<id>)` | A message could not be chunked, embedded, or stored. | Check the accompanying `[Embedding]` entries and confirm the LiteLLM proxy is reachable. |
+| `[Embedding] LITELLM_API_KEY is required for the LiteLLM embedding adapter.` | The Integrator has no LiteLLM API key. | Configure the key. For instructions, refer to [Preparing LiteLLM access](./installation/prepare-litellm-access.md). |
+| `[Embedding] Provider returned no embedding vector.` | The embedding alias is missing from the LiteLLM proxy or the provider rejected the request. | Confirm `iq-multilingual-embed` or `iq-embed` is registered and callable. For instructions, refer to [Registering embedding models](./installation/deploy-litellm.md#registering-embedding-models-for-cross-session-memory). |
+
+To capture detailed activity when ingesting and retrieving context while reproducing an issue, set `RAG_DEBUG` to `true`. For more information, refer to [Environment variables - Cross-session memory](./installation/environment-variables.md#cross-session-memory). Disable `RAG_DEBUG` after reproducing the issue to prevent logging conversation content.
 
 ## Advanced diagnostics
 
@@ -241,9 +354,9 @@ logging:
       - "api:server-v1:*=info"
 ```
 
-To apply these configurations during a troubleshooting session, update the custom values file and upgrade the Helm release.
+To apply these configurations during a troubleshooting session, update your `custom-iq-values.yaml` file (the same file you created in [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md#preparing-configuration-values)) and upgrade the Helm release.
 
-1. Change the `logging` level in your `custom-iq-debug-values.yaml` file:
+1. Add the `logging` configuration to your `custom-iq-values.yaml` file:
 
     ```yaml
     logging:
@@ -267,19 +380,21 @@ To apply these configurations during a troubleshooting session, update the custo
     | `ui:*=info` | Info-level logging for the UI layer |
     | `ui:*=debug` | Debug-level logging for the UI layer |
 
-2. Apply the updated settings:
+2. Apply the updated settings by upgrading with your `custom-iq-values.yaml` file:
 
     ```bash
     helm upgrade dx-iq \
       https://<YOUR_REPOSITORY_FQDN_AND_PATH>/<IQ_HELM_CHART_VERSION>.tgz \
       --namespace <YOUR_NAMESPACE> \
-      --reuse-values \
-      --values custom-iq-debug-values.yaml
+      -f custom-iq-values.yaml
     ```
 
     - `<IQ_HELM_CHART_VERSION>`: The Helm chart version (for example, `hcl-dx-iq-v1.0.0_20260518-2104.tgz`).
     - `<YOUR_NAMESPACE>`: The Kubernetes namespace.
     - `<YOUR_REPOSITORY_FQDN_AND_PATH>`: The repository fully qualified domain name (FQDN) and chart path.
+
+    !!! tip "Reverting debug logging"
+        After troubleshooting, reset the log level to `info` in your `custom-iq-values.yaml` file and run the `upgrade` command again.
 
 3. Reproduce the issue, then pull the logs from both services:
 
@@ -326,8 +441,10 @@ If you are [using an external database](./installation/prepare-database.md#confi
     - [Deploying IQ services](../../deployment/install/container/helm_deployment/preparation/optional_tasks/optional_deploy_iq_services.md)
     - [Configuring the MCP Server](./installation/configuring-mcp.md)
     - [Preparing the database](./installation/prepare-database.md)
+    - [Configuring cross-session memory](./installation/enable-rag.md)
     - [Validating the deployment](./installation/validation.md)
     - [Enabling IQ](enable.md)
     - [Using IQ](usage.md)
+    - [Updating IQ](updating.md)
     - [IQ limitations](limitations.md)
     - [HCL Support portal](https://support.hcl-software.com/csm){target="_blank"}

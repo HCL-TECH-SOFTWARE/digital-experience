@@ -1,10 +1,7 @@
 ---
 id: wcm_dev_profiling_categories_creating
-title: Categories
+title: Creating a category
 ---
-
-# Creating a category
-
 
 Categories are used to build a taxonomy.
 
@@ -13,16 +10,18 @@ Categories are used to build a taxonomy.
 
 To create a category, open the applications menu and go to **Content > Web Content Management** and then click **New > Category**.
 
-
-1.  [Entering identification information](./common/items_id.md)  
+1. [Entering identification information](./common/items_id.md)  
 Specify identification information for the current item, including the name and title for the item. The identification section is common to all item forms.
-2.  [Specifying a location for an item](./common/items_location.md)  
+2. [Specifying a location for an item](./common/items_location.md)  
 When you create an item, you can specify the location of the item.
-3.  [Entering item properties](./common/items_props.md)  
+3. [Entering item properties](./common/items_props.md)  
 Specify properties for the current item, including the location of the item and the list of authors and owners that are associated with the item. The item properties section is common to all item forms.
-4.  [Granting users or groups access to an item](./common/grant_access.md)  
+4. [Granting users or groups access to an item](./common/grant_access.md)  
 Specify the access control settings for the current item to designate which users have access to an item and their level of access. The access section is common to all item forms.
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

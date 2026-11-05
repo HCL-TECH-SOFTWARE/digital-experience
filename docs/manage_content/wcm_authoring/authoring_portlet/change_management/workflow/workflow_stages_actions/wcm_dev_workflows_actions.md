@@ -12,5 +12,3 @@ The following table describes the actions that you can choose for workflow stage
 |**Scheduled Move**|Runs a scheduled move to the next stage on a specified date. A list-box allows users to select one of four date types that are entered on each individual document, or you can specify a static date.|
 |**Version**|This action creates a version of an item when run.|
 |**Custom**|You can also create custom workflow actions by creating a custom workflow plug-in. These actions can be used and scheduled within a workflow like other workflow actions.|
-
-

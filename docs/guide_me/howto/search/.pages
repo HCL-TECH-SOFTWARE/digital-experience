@@ -1,8 +1,11 @@
 title: Search
 nav:
     - index.md
+    - AccessWasAfterRemoteSearchInstall.md
     - VPSearchService.md
+    - ExcludePortletsPagesSeedlist.md
     - SampleSearchQueryWCMComponent.md
+    - IncludeWebContentViewerPortlet.md
     - SearchByDateTime.md
     - DX_Search_and_Search_Center.md
     - SearchConstraintAPI.md

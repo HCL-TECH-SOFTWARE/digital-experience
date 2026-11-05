@@ -151,7 +151,7 @@ Modify the initial Helm chart configuration as follows. The following table outl
 
 For convenience, these values were added to the `large-config-values.yaml` file in the `hcl-dx-deployment` Helm chart. To use these values, complete the following steps:
 
-1. Download the `hcl-dx-deployment` Helm chart from FlexNet or Harbor.
+1. Download the `hcl-dx-deployment` Helm chart from [My HCLSoftware (MHS) portal](https://my.hcltechsw.com/){target="_blank"} or Harbor.
 
 2. Extract the `hcl-dx-deployment-XXX.tgz` file.
 

@@ -1,12 +1,12 @@
-# Delete Items
+# Deleting items
 
 You cannot always immediately delete items. Sometimes you need to take steps to prepare an item for deletion.
 
 To delete an item:
 
-1.  Select the items that you want to delete from an index view.
-2.  Click **Delete**.
-3.  If any item cannot be deleted, a dialog opens listing which items need to be fixed before they can be deleted.
+1. Select the items that you want to delete from an index view.
+2. Click **Delete**.
+3. If any item cannot be deleted, a dialog opens listing which items need to be fixed before they can be deleted.
 
 ## Referential integrity
 

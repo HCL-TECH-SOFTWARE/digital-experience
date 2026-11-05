@@ -2,6 +2,8 @@
 
 IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
 
 To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
@@ -13,10 +15,14 @@ To streamline your workflow, IQ performs actions directly within your DX system.
 
 Ensure your environment meets the following requirements:
 
-1. HCL DX version 236 or higher is installed and running in a container-based deployment.
+1. HCL DX CF236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Resource Permission Portlets](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
+4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource.
+
+    ![Resource Permissions - IQ Virtual Resource](../../assets/HCL_IQ_Virtual_Resource.png "Virtual Resource Permissions - IQ Integration API")
+
+    For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Architecture
 
@@ -38,22 +44,68 @@ IQ is deployed as a set of services inside a Kubernetes cluster alongside your e
 
 IQ processes user requests and coordinates actions across deployment components using a synchronized communication loop.
 
-![IQ Communication Flow](../../assets/IQ-data-flow.png "IQ Communication Flow")
+```mermaid
+sequenceDiagram
+    participant Browser as Browser
+    participant Integrator as IQ Integrator
+    participant MCP as DX MCP Server
+    participant DX as DX Core or DX Compose
+    participant LiteLLM as LiteLLM
+    participant LLM as LLM Provider
 
-1. At startup, the Integrator retrieves the list of available tools from the MCP Server and starts a watchdog process to check for tool updates based on your configuration.
+    Note over Integrator: 1. IQ retrieves tools and starts watchdog
+    Integrator->>MCP: Retrieves available tools list
+    MCP-->>Integrator: Tools and metadata
+    Integrator->>Integrator: Start watchdog process
 
-2. When you open the user interface, your browser starts a WebSocket connection to the Integrator. The Integrator validates your cookies and verifies your authorization to access the `wps.DX_IQ_INTEGRATOR_API` virtual resource against DX Core or DX Compose. After validation, the Integrator opens a session scoped to your user and virtual portal context.
+    Note over Browser,Integrator: 2. User opens interface
+    Browser->>Integrator: WebSocket connection
+    Integrator->>DX: Validate user cookies and permissions
+    DX-->>Integrator: Authorization confirmed
+    Integrator->>Browser: Session opened
 
-3. You can submit a DX inquiry to ask a question about DX, or an imperative action to trigger a task. Your browser sends this message to the Integrator over the active WebSocket connection.
+    Note over Browser,Integrator: 3. User submits message
+    Browser->>Integrator: DX inquiry or action request
 
-4. The Integrator routes your message to the LLM through the LiteLLM Gateway Proxy along with the system prompt that defines IQ behavior, the conversation summary, recent messages for context, and the list of available MCP tools. The LLM then selects one of the following actions:
+    Note over Integrator,LLM: 4. IQ routes request to LLM with context
+    Integrator->>LiteLLM: Message, system prompt, and tools list
+    LiteLLM->>LLM: Chat completion request
+    LLM-->>LiteLLM: Response (direct or tool request)
 
-    - Responds directly using its training data without running tools.
-    - Requests one or more MCP tool executions to collect data or complete the task.
+    alt LLM needs tool execution
+        Note over Integrator, MCP: 5. IQ executes tools
+        LiteLLM-->>Integrator: Tool call required
+        Integrator->>MCP: Execute tool (with user context)
+        MCP->>DX: API calls with user cookies
+        DX-->>MCP: Results
+        MCP-->>Integrator: Tool results
+        Integrator->>LiteLLM: Tool results (no sensitive data)
+        LiteLLM->>LLM: Tool results for context
+        LLM-->>LiteLLM: Final response
+    else Direct response
+        Note over LLM: Use training data
+    end
 
-5. If the LLM requires a tool, the Integrator calls the MCP Server on your behalf and passes your cookies and virtual portal context. The MCP Server runs the corresponding API calls against DX and returns the results. This loop can repeat up to the configured iteration limit. The Integrator removes sensitive data, such as cookies, before it sends the results back to the LLM.
+    Note over Integrator,Browser: 6. IQ sends response to user
+    LiteLLM-->>Integrator: Final response
+    Integrator->>Browser: Response delivered through WebSocket
+    Browser-->>Browser: Display in chat interface
+```
 
-6. The LLM generates the final response, and the Integrator sends it to the user interface over the WebSocket connection.
+1. **IQ retrieves tools and starts watchdog:** The Integrator retrieves the list of available tools from the MCP Server and starts a watchdog process to check for tool updates based on your configuration.
+
+2. **User opens interface:** When you open the user interface, your browser starts a WebSocket connection to the Integrator. The Integrator validates your cookies and verifies your authorization to access the `wps.DX_IQ_INTEGRATOR_API` virtual resource against DX Core or DX Compose. After validation, the Integrator opens a session scoped to your user and virtual portal context.
+
+3. **User submits message:** You submit a DX-related inquiry to ask a question or trigger a task. Your browser sends this message to the Integrator over the active WebSocket connection.
+
+4. **IQ routes request to LLM with context:** The Integrator routes your message to the LLM through the LiteLLM Gateway Proxy along with the system prompt that defines IQ behavior, the conversation summary, recent messages for context, and the list of available MCP tools. The LLM then selects one of the following actions:
+
+    - Respond directly using its training data without running tools.
+    - Request one or more MCP tool executions to collect data or complete the task.
+
+5. **IQ executes tools:** If the LLM requires a tool, the Integrator calls the MCP Server on your behalf and passes your cookies and virtual portal context. The MCP Server runs the corresponding API calls against DX and returns the results. This loop can repeat up to the configured iteration limit. The Integrator removes sensitive data, such as cookies, before sending the results back to the LLM.
+
+6. **IQ sends response to user:** The LLM generates the final response, and the Integrator sends it to the user interface over the WebSocket connection.
 
 ## Overview
 
@@ -67,6 +119,8 @@ This section provides detailed instructions for enabling, configuring, and deplo
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
+- **[Updating IQ](./updating.md)**  
+This section explains how to update the IQ Helm chart independently from the DX Helm chart while maintaining the supported version difference of up to two releases.
 - **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  

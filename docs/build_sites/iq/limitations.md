@@ -4,11 +4,16 @@ This page lists the known limitations of IQ.
 
 ## User interface
 
+### Websocket connectivity
+
+- Experiencing network disruptions, reloading the page, or closing the browser window during active operations can cause incomplete or inconsistent data because background MCP server processes might not terminate immediately. To safely stop an operation, click **Cancel**. If a process is interrupted, you can use the chat feature to correct or revert any partial changes.
+
 ### Conversation history
 
-- Chat history does not persist across sessions.
-- Resetting a session or closing the interface permanently clears the active context. Conversations cannot be recovered.
+- Conversation history is not available in the user interface.
+- Resetting a session or closing the interface permanently clears the active context. You cannot record or replay conversations in the chat window.
 - Exporting and reviewing previous conversations are not supported.
+- Enabling [cross-session memory](./installation/enable-rag.md) lets IQ retrieve relevant context from past conversations and inject it into a new session but does not restore the previous transcript in the user interface.
 
 ### Localization
 
@@ -35,29 +40,38 @@ To enable full accessibility within the IQ interface, turn on keyboard navigatio
 
 ### Service scope
 
+- Traditional, non-containerized deployments, including hybrid configurations where DX Core is deployed on-premises, are not supported.
+- The MCP server in its standalone configuration is the only IQ component supported outside a Kubernetes environment. All other IQ components must be deployed in Kubernetes.
 - The IQ backend server is designed specifically for WebSocket-based AI integration and session management.
 - The service manages only the session state, conversation messages, and orchestration between the client, LLMs, and Model Context Protocol (MCP) servers.
 - The service does not replace or alter existing DX Core functionality.
 
-### Integrator
-
-- If a browser or tab is closed, or if a network issue occurs, background MCP Server tools that have already started may not stop immediately. Use the **Cancel** button to stop processing safely, and then ask the LLM in chat to undo or correct any partial changes if needed. Closing the browser window or reloading the page while background operations are running can result in incomplete or inconsistent data states.
-
 ### AI model
 
 - Knowledge of HCL DX architecture, APIs, and configurations is restricted to documentation available prior to the model's training data cutoff date and excludes subsequent updates, features, or best practices. For more information about the latest releases and features, refer to the official [HCL DX](https://help.hcl-software.com/digital-experience/9.5/latest/){target="_blank"} and [HCL DX Compose](https://help.hcl-software.com/digital-experience/dx-compose/latest/){target="_blank"} documentation.
+- IQ has been extensively tested and validated with Claude Sonnet 4.6 and Sonnet 5.5 for general purpose tasks, and Claude Haiku 4.5 for summarization. Althought alternative LLMs may work, compatibility is not guaranteed. Because of the rapidly evolving nature of AI model releases, newer models may introduce parameter changes or tool calling behavior incompatibilities. For configuration details and compatibility warnings, refer to [Deploying LiteLLM in-cluster](./installation/deploy-litellm.md#deploying-litellm-in-cluster).
+- OpenAI reasoning model variants (for example, GPT-5.x decimal-versioned models such as `gpt-5.4`, `gpt-5.5`, or `gpt-5.6-sol`) are not supported. These models automatically inject a `reasoning_effort` parameter that conflicts with IQ's function tools and results in the following error: `Function tools with reasoning_effort are not supported`.
 
 ### Database
 
 - Multi-pod and production deployments do not support in-memory SQLite due to session state inconsistency across instances. For multi-pod environments, use PostgreSQL to ensure consistent session state and conversation history across all service instances.
 - Database names are fixed to `iqdb` for internal and Runtime Controller (RTC)-managed databases. External databases allow custom database names.
+- If any of the following environment variables no longer match the configuration saved in the `rag_embedding_metadata` table after initial startup, IQ enters graceful degradation mode and silently disables cross-session memory while continuing to serve requests.
+
+    - `EMBEDDING_DIMENSIONS`
+    - `USE_MULTILINGUAL_EMBEDDINGS`
+    - `RAG_CHUNK_SIZE`
+    - `RAG_CHUNK_OVERLAP`
+    - `RAG_CHUNK_SEPARATORS`
+
+    To apply configuration changes, re-create the RAG tables. For instructions, refer to [Changing RAG and embedding configuration](./installation/enable-rag.md#changing-rag-and-embedding-configuration). For more information on these variables, refer to [Environment variables - Cross-session memory](./installation/environment-variables.md#cross-session-memory).
 
 ## MCP Server
 
 ### Deployment
 
 - The MCP Server must be deployed within the same Helm chart as the Integrator to establish automatic network connectivity.
-- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. The MCP Server functions regardless of which tools are enabled.
+- WCM and DAM tools are unavailable to the MCP Server unless they are explicitly enabled through the `enableWcm` and `enableDam` Helm configuration values. At least one of these tool domains must remain enabled for the readiness probe to report the MCP Server as healthy.
 - The `standaloneMode` parameter disables HCL DX user authentication integration, causing the MCP Server to function in isolation.
 
 ### Scope and enablement

@@ -87,7 +87,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "On-Premises"
     On June 30, 2023, HCL Software announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-    
+
 ### Automatically apply 9.5 from a later CF installation
 
 === "On-Premises"
@@ -100,14 +100,14 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "Containers"
     Values for heartbeat intervals and threshold times are moved from the incubator to the main section. If those values are changed in your [`values.yaml` or custom `values.yaml` file](../../deployment/install/container/helm_deployment/preparation/mandatory_tasks/prepare_configuration.md#helm-chart-valuesyaml), adjust them accordingly. For more information, see [Cleanup and Rendition Version Regeneration](../../manage_content/digital_assets/configuration/rendition_version_regeneration_and_cleanup.md).
 
-### DAM Indexing - Updated API endpoints 
+### DAM Indexing - Updated API endpoints
 
-=== "Containers" 
-    The API endpoint used for [creating the `damContentSourceID`](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#configuring-dam-indexing) is now `/dx/api/search/v2/contentsources` while the endpoint for [starting the reindexing process](../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md#reindexing) is `/dx/api/dam/v1/reindex`. 
+=== "Containers"
+    The API endpoint used for [creating the `damContentSourceID`](../../manage_content/digital_assets/configuration/dam_indexing/configure_dam_indexing.md#configuring-dam-indexing) is now `/dx/api/search/v2/contentsources` while the endpoint for [starting the reindexing process](../../manage_content/digital_assets/configuration/dam_indexing/using_dam_indexing.md#reindexing) is `/dx/api/dam/v1/reindex`.
 
 ### New sizing guidance for rendering in a medium configuration
 
-=== "Containers"    
+=== "Containers"
     Results of DX sizing tests for rendering in a Kubernetes medium configuration are now available. This guidance presents the key performance indicators (KPIs) and discusses how adjustments to the pod configuration can make improvements in the responsiveness of the system. For more information, see the topic [Sizing guidance for rendering in a Kubernetes medium configuration](../../guide_me/guides/performance_tuning/kubernetes/Kubernetes_Deployments/rendering_medium_config.md).
 
 ### Documentation for using Logstash to push pod logs to OpenSearch
@@ -119,7 +119,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 === "Containers"
     Starting CF216, the Harbor repository is updated with an OCI-based registry and the Helm chart command is updated to be OCI-compliant. Instructions on how to pull Helm charts using OCI commands are now available. For more information, see the Help Center topics [Configure Harbor Helm Repository](../../deployment/install/container/helm_deployment/preparation/get_the_code/configure_harbor_helm_repo.md) and [Download and Deploy from HCL Harbor Repository](../../get_started/download/harbor_container_registry.md).
-    
+
 ### Removal of automated Pod restart on ConfigMap updates
 
 === "Containers"
@@ -127,4 +127,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF222, take the [DX CF222 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3056){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.
