@@ -58,12 +58,17 @@ To bulk add applications to the Application Palette, perform the following steps
 ### Creating the custom category
 
 1. Log in to HCL DX as an administrator.
-2. Go to **Administration > Site Management > Pages > Content Root > Hidden Pages**.
-3. Find the the label **Application Categories**.  You may have to page through the list.  The Application Categories label will have the unique name: `ibm.portal.toolbar.applications.category.label.root`. Select the label.
-<img width="1532" height="777" alt="image" src="https://git.cwp.pnp-hcl.com/user-attachments/assets/58a9c6ab-03cb-4005-9104-243ddb9f97a5" />
+2. Go to **Open applications menu > Administration > Site Management > Pages > Content Root.**
+3. Select **Hidden Pages** with the **ibm.portal.HiddenPages** identifier.
+4. Search and select **Application Categories**.
+5. Select **New URL**.
+6. Under **A link to a Web page with the following URL**, ensure the **HTML** box is checked.
+7. In the URL box, enter the relative URI of the full portlet entity feed, such as `rm:empty?tmparam=tm%3aname%3aCustomAppCategory`.  
+8. Select **OK**.
 
-4. Under the application category root label, select the new URL button. This opens an editor for creating the new URL.  Select the markup type as HTML and then put in a relative URL. In our case, it is the URI of the full portlet entity feed URL. For example you can paste the following for the URL: **rm:empty?tmparam=tm%3aname%3aCustomAppCategory**.  After filling in the fields, select the OK button.
-<img width="1077" height="541" alt="image" src="https://git.cwp.pnp-hcl.com/user-attachments/assets/7ecca973-f8da-482a-b8cf-872eb6b7adf7" />
+### Verifying the custom category
 
-
-This creates a category and will add all portlets tagged with that category to the application category immediately.  Note that you may need to refresh your browser to see the new category in case the page is cached.  Navigate to any page and put it into edit mode.  Select the + button in the toolbar. This opens a new dialog for adding page components and applications. Select the applications tab.  You should see your new category here.  When you slect it, you should see the custom portlets that use the tag you specified in the xml input file.
+1. Navigate to any page and toggle **Edit Mode**.
+2. Select **Open site toolbar**, and then select **Add page components and applications**. On the toolbar, select +.
+3. Select the **Applications** tab.
+4. Select the custom category to verify the portlets defined in the XML input file.
