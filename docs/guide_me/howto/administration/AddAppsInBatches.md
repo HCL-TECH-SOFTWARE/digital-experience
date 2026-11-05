@@ -40,14 +40,16 @@ To bulk add applications to the Application Palette, perform the following steps
     </request>
     ```
 
-2. Run the XMLAccess command using your created file to assign the tags to the specified portlets. 
-   xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://[myhost]:[port]/wps/config -in yourInputFile.xml -out result.xml
+2. Run the XMLAccess command using your created file to assign the tags to the specified portlets.
 
-   Replace Portal _admin_user with the name of the portal admin user.
-   Replace Portal_admin_password with the password for the admin user.
-   Replace yourInputFile.xml with the full path to your input file relative to where you are running the xmlaccess command.
+    ```xml
+    xmlaccess -user Portal_admin_user -password Portal_admin_password -url http://[myhost]:[port]/wps/config -in yourInputFile.xml -out result.xml
+    ```
 
-   You can use whatever name you like for the output file.  In the example above we called it result.xml.
+    - Replace `Portal_admin_user` with the portal admin username.
+    - Replace `Portal_admin_password` with the portal admin user password.
+    - Replace `yourInputFile.xml` with the full path to your input file relative to where you are running the `xmlaccess` command.
+    - Replace `result.xml` with the name of the output file.
 
 3. Obtain the portlet entity feed of all portlets tagged with your custom tag (for example, `CustomAppCategory`) using the following URL structure:
 
