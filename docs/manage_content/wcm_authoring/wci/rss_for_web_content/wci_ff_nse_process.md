@@ -1,13 +1,13 @@
-# Process Control Elements
+# Process control elements
 
 These elements are used to provide the Web Content Integrator with some information about how to handle the data that is contained within the item.
 
-## action
+## `action`
 
 This element indicates the action to be run on the item that is represented by the `<item>`.
 
-|Element parameters:|Details for this element:|
-|-------------------|-------------------------|
+| Element parameters | Details |
+| ------------------ | ------- |
 |Applies to item types|All|
 |Required for item types|All|
 |Allowable Values|"add", "update", or "delete".|
@@ -22,18 +22,15 @@ Example:
 <ibmwcm:action>update</ibmwcm:action>
 ```
 
-## itemType
+## `itemType`
 
-The itemType element indicates the type of item that is represented by the feed entry. These correspond to the Web Content Manager item types that can be created or updated via the feed. In some cases, the value of this element is combined with the value in the `<ibmwcm:path>` element to determine which Web Content Manager item type to create.
+The `itemType` element indicates the type of item that is represented by the feed entry. These correspond to the Web Content Manager (WCM) item types that can be created or updated through the feed. In some cases, the value of this element is combined with the value in the `<ibmwcm:path>` element to determine which WCM item type to create.
 
-|Element parameters:|Details for this element:|
-|-------------------|-------------------------|
+| Element parameters | Details |
+| ------------------ | ------- |
 |Applies to item types|All|
 |Required for item types|All|
-|Allowable Values|"siteArea" for site areas.<br>
-"content" for content items.<br>
-"component" for components.<br>
-"category" for taxonomies and categories.|
+|Allowable Values|"siteArea" for site areas.<br>"content" for content items.<br>"component" for components.<br>"category" for taxonomies and categories.|
 |Required Attributes|None|
 |Optional Attributes|None|
 |Required sub-elements|None|
@@ -41,37 +38,34 @@ The itemType element indicates the type of item that is represented by the feed 
 
 Example:
 
--   **Site Area**
+- **Site Area**
 
     ```
     <ibmwcm:itemType>siteArea</ibmwcm:itemType> + any other value for <ibmwcm:path> 
     or the lack of an <ibmwcm:path> element.
     ```
 
--   **Taxonomy**
+- **Taxonomy**
 
     ```
     <ibmwcm:itemType>category</ibmwcm:itemType> + <ibmwcm:path>/</ibmwcm:path>
     ```
 
--   **Category**
+- **Category**
 
     ```
     <ibmwcm:itemType>category</ibmwcm:itemType> + any other value for <ibmwcm:path> 
     or the lack of an <ibmwcm:path> element.
     ```
 
--   **Component**
+- **Component**
 
     ```
     <ibmwcm:itemType>component</ibmwcm:itemType>
     ```
 
--   **Content**
+- **Content**
 
     ```
     <ibmwcm:itemType>content</ibmwcm:itemType>
     ```
-
-
-

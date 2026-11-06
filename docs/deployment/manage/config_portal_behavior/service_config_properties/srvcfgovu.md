@@ -1,6 +1,6 @@
 # Overview of configuration services
 
-Get an overview of the HCL Portal configuration services available for the portal.
+Get an overview of the HCL Digital Experience (DX) configuration services available for the portal.
 
 The following table lists the configuration services:
 
@@ -11,7 +11,7 @@ The following table lists the configuration services:
 !!!note
     The configuration for each service is stored in the WebSphere Integrated Solutions Console. You can change the configuration only there.
 
-|HCL Portal service|Service name in the WebSphere Integrated Solutions Console|HCL Portal properties file|
+|HCL DX service|Service name in the WebSphere Integrated Solutions Console|HCL DX properties file|
 |------------------|----------------------------------------------------------|--------------------------|
 |[Administrator Unique Names Mapping Service](../service_config_properties/portal_svc_cfg/srvcfgref_uniq_name.md)|WP AdminUniqueNamesMappingService|AdminUniqueNamesMappingService.properties|
 |[Cache Manager Service](../service_config_properties/portal_svc_cfg/srvcfgref_cach_mgr.md)|WP CacheManagerService|CacheManagerService.properties|
@@ -33,7 +33,7 @@ The following table lists the configuration services:
 |[State Manager Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/index.md)<br> See also [URL normalization for search of portal pages by external search engines](../../config_portal_behavior/service_config_properties/portal_svc_cfg/statemanager_svc/srvcfgref_url_normlz.md)|WP StateManagerService|StateManagerService.properties|
 |[Virtual Portal Configuration Service](../service_config_properties/portal_svc_cfg/srvcfg_virtual_portal.md)|WP VirtualPortalConfigService|VirtualPortalConfigService.properties|
 
-|HCL Portal security service|Service name in the WebSphere Integrated Solutions Console|HCL Portal properties file|
+|HCL DX security service|Service name in the WebSphere Integrated Solutions Console|HCL DX properties file|
 |---------------------------|----------------------------------------------------------|--------------------------|
 |[Authentication Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/srvcfgref_secy_auth.md)|WP AuthenticationService|AuthenticationService.properties|
 |[Credential Vault Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/srvcfgref_cred_vault.md)|WP VaultService|VaultService.properties|
@@ -48,9 +48,9 @@ The following table lists the configuration services:
 |    [Puma Store Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/puma_svc/srvcfgref_puma_store.md)|WP PumaStoreService|PumaStoreService.properties|
 |    [Puma Validation Service](../../config_portal_behavior/service_config_properties/portal_svc_cfg/security_svc/puma_svc/srvcfgref_puma_validn.md)|WP ValidationService|ValidationService.properties|
 
-**Other HCL Portal configuration services**
+**Other HCL DX configuration services**
 
-|HCL Portal service|Service name in the WebSphere Integrated Solutions Console|HCL Portal properties file|
+|HCL DX service|Service name in the WebSphere Integrated Solutions Console|HCL DX properties file|
 |------------------|----------------------------------------------------------|--------------------------|
 |Credential Type Registry Service|WP CredentialTypeRegistryService|CredentialTypeRegistryService.properties|
 |Dynamic UI Manager Factory Service|WP DynamicUIManagerFactoryService|DynamicUIManagerFactoryService.properties|
@@ -76,6 +76,9 @@ The following table lists the configuration services:
 There is a number of other Web Content Manager configuration services. The Web Content Manager properties files are located in the `wp_profile_root/PortalServer/wcm/shared/app/config/wcmservices` directory.
 
 ## HCLSoftware U learning materials
+
+!!!note
+	Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 For an introduction and a demo on DX deployment, go to [Deployment for Beginners](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1479){target="_blank"}. Several deployment options are provided in the course.
 

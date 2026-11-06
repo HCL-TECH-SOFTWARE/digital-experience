@@ -2,10 +2,10 @@
 
 The following features and updates are available to customers installing HCL Digital Experience Container Update and CF212 on supported platforms:
 
-**All  Digital Experience Versions (8.5, 9.0, 9.5)**
+**All Digital Experience Versions (8.5, 9.0, 9.5)**
 
 - Notice of deprecation of Textbox.io Rich Text Editor
-- New guidance for using Site Manager 
+- New guidance for using Site Manager
 - Additional steps in DDC for sending request body via content item
 
 **Digital Experience 9.5 Container Version**
@@ -15,7 +15,7 @@ The following features and updates are available to customers installing HCL Dig
 - Rendition Version Regeneration and Cleanup
 - DAM Limitation on CF upgrades
 
-## All  Digital Experience Versions (8.5, 9.0, 9.5)
+## All Digital Experience Versions (8.5, 9.0, 9.5)
 
 ### Notice of deprecation of Textbox.io Rich Text Editor
 
@@ -32,7 +32,7 @@ The following features and updates are available to customers installing HCL Dig
 
 === "On-Premises"
     Added additional documentation for using Site Manager to author and manage content in Woodburn Studio. See the topics [Site Manager](../../manage_content/wcm_authoring/inline_editing/index.md) and [Examples of using the Site Manager in Woodburn Studio](../../manage_content/wcm_authoring/inline_editing/site_manager_samples.md) for more information.
-    
+
 ### Additional steps in DDC for sending request body via content item
 
 === "Containers"
@@ -73,4 +73,11 @@ The following features and updates are available to customers installing HCL Dig
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF212, take the [DX CF212 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D1767){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

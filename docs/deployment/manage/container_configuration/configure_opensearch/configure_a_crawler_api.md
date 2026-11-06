@@ -1,8 +1,8 @@
-# Configuring a crawler using REST API
+# Configuring a crawler by using the REST API
 
-Certain types of content sources come with an integrated crawler that you can configure to pull data from the data source. This topic explains how to configure a crawler using the REST API.
+Certain content source types include an integrated crawler that pulls data from the data source. Use the REST API to configure a crawler for your content source.
 
-You can access all API endpoints through the Swagger UI available at the following URL: `/dx/api/search/v2/explorer`.
+You can access all API endpoints through the Swagger UI at `/dx/api/search/v2/explorer`.
 
 ## Available crawler types
 
@@ -12,42 +12,14 @@ The following crawler types are available:
 - `jcr`
 - `portal`
 
-It is technically possible to configure one or more crawlers per content source. All crawled documents are then stored inside the same content source index. However, it is recommended to use one crawler per content source to keep the data separated. It is not possible to assign a crawler of a different type to a content source. This means you can only crawl WCM data with a WCM crawler in a WCM content source.
+You can configure one or more crawlers for each content source. All crawled documents are stored in the same content source index. To keep data separate, use one crawler per content source. You cannot assign a crawler of a different type to a content source. For example, you can only crawl Web Content Manager (WCM) data with a WCM crawler in a WCM content source.
 
-## Authenticating as a search administrator
-
-Before you can perform administrative tasks, you must authenticate as a search administrator. The search administrator credentials are configured during the Helm installation of Search V2.
-
-1. To authenticate, send a `POST` request to the `/dx/api/search/v2/admin/authenticate` endpoint using the following payload:
-
-    **Payload:**
-
-    ```json
-    {
-      "username": "searchadmin",
-      "password": "yourconfiguredpassword"
-    }
-    ```
-
-    **Response:**
-
-    ```json
-    {
-      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....."
-    }
-    ```
-
-2. Add the returned JWT in all upcoming HTTP requests in the `Authorization` header using the `Bearer` prefix:
-
-    | Header | Value |
-    | --- | --- |
-    | `Authorization` | `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....` |
+!!! note
+    Most crawler operations require authentication as a search administrator or a DX administrator. The `GET /crawlertypes` endpoint is unprotected. For more information, refer to [Authentication](index.md#authentication).
 
 ## Configuring the crawler
 
-To configure a crawler, call the `/dx/api/search/v2/crawlers` endpoint with a `POST` request and a payload similar to the following example:
-
-**Payload:**
+To configure a crawler, send a `POST` request to the `/dx/api/search/v2/crawlers` endpoint with a payload similar to the following example:
 
 ```json
 {
@@ -71,34 +43,46 @@ Provide the following properties:
 
 | Property | Optional | Description |
 | --- | --- | --- |
-| `contentSource` | no | The `id` of the content source you want the crawler to be configured for. |
+| `contentSource` | no | The ID of the target content source. |
 | `type` | no | The type of crawler you want to configure. Allowed types are `wcm`, `portal` and `jcr`. The value must match the type of the associated content source. |
-| `configuration.targetDataSource` | no | The seedlist URL. You can use the internal HCL DX Core hostname for direct communication to it. The name consists of the release name used during the Helm install (for example, `dx`). |
-| `configuration.schedule` | yes | A cron type notation controlling the automated execution of the crawler. You can omit this for no schedule. |
-| `configuration.security.type` | no | The type of authentication used for the crawler. Allowed types are `basic`, `form`, `inherit` and `none`. |
-| `configuration.security.username` | no | The username of a user that has access to crawl the seedlist. |
-| `configuration.security.password` | no | The password of a user that has access to crawl the seedlist. |
-| `configuration.security.usernameField` | yes | The field name of the username field in a FORM based authentication. |
-| `configuration.security.passwordField` | yes | The field name of the password field in a FORM based authentication. |
-| `configuration.security.loginPath` | yes | The path where the FORM authentication request is being made. |
-| `configuration.maxCrawlTime` | yes | The time limit in seconds for the overall crawler execution. This is useful to prevent stuck crawlers. |
-| `configuration.maxRequestTime` | yes | The maximum request time per crawler request. This limits how long the crawler will wait for an answer from the seedlist provider. |
+| `configuration.targetDataSource` | no | The seedlist URL. You can use the internal HCL DX Core hostname for direct communication. The name consists of the release name used during `helm install` (for example, `dx`). |
+| `configuration.schedule` | yes | Cron notation that controls the automated execution of the crawler. Omit this property to run the crawler without a schedule. |
+| `configuration.security.type` | no | The authentication protocol used for the crawler. Allowed types are `basic`, `form`, `inherit`, and `none`. |
+| `configuration.security.username` | no | The username of an account authorized to crawl the seedlist. |
+| `configuration.security.password` | no | The password of an account authorized to crawl the seedlist. |
+| `configuration.security.usernameField` | yes | The field name of the username field in FORM-based authentication. |
+| `configuration.security.passwordField` | yes | The field name of the password field in FORM-based authentication. |
+| `configuration.security.loginPath` | yes | The path where the FORM-based authentication request is sent. |
+| `configuration.maxCrawlTime` | yes | The time limit in seconds for overall crawler execution. Prevents crawlers from stalling. |
+| `configuration.maxRequestTime` | yes | The maximum wait time in seconds for a crawler request to receive a response from the seedlist provider. |
 
 ### Crawler endpoints for `targetDataSource`
 
-The target data source configures the endpoint where the crawler pulls the data from. The configuration depends on the content source type, your DX context root, a possible virtual portal, and the DX host.
+The `targetDataSource` property specifies the endpoint from which the crawler pulls data. The configuration depends on the content source type, your HCL Digital Experience (DX) context root, virtual portals (VPs), and the DX host. You can either use the internal HAProxy service of your DX deployment or the regular hostname of your deployment.
 
-You can either use the internal HAProxy service of your DX deployment or the regular hostname of your deployment.
+Use the following endpoints to crawl the different content source types:
 
-You can use the following endpoints to crawl the different types of content sources:
+- `wcm`:
 
-- `wcm`: `/seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments`
-- `jcr`: `/seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1`
-- `portal`: `/seedlist/myserver?SeedlistId=&Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments`
+    ```text
+    /seedlist/myserver?SeedlistId=&Source=com.ibm.workplace.wcm.plugins.seedlist.retriever.WCMRetrieverFactory&Action=GetDocuments
+    ```
 
-When configuring the `targetDataSource`, you need to incorporate the context root of your DX deployment. It also might be necessary to include the virtual portal context root if you are using virtual portals and want to limit the indexed data to a specific virtual portal.
+- `jcr`:
 
-Here are some examples of how to configure the `targetDataSource` with different context roots and virtual portals for WCM:
+    ```text
+    /seedlist/myserver?Action=GetDocuments&Format=ATOM&Locale=en_US&Range=100&Source=com.ibm.lotus.search.plugins.seedlist.retriever.jcr.JCRRetrieverFactory&Start=0&SeedlistId=1@OOTB_CRAWLER1
+    ```
+
+- `portal`:
+
+    ```text
+    /seedlist/myserver?SeedlistId=&Source=com.ibm.lotus.search.plugins.seedlist.retriever.portal.PortalRetrieverFactory&Action=GetDocuments
+    ```
+
+When you configure `targetDataSource`, include the context root of your DX deployment. If you use virtual portals and want to limit indexed data to a specific virtual portal, also include the virtual portal context root.
+
+Refer to the following example configurations of targetDataSource with different context roots and virtual portals for WCM:
 
 | Portal | Context Root | Seedlist URL |
 | --- | --- | --- |
@@ -112,16 +96,14 @@ Here are some examples of how to configure the `targetDataSource` with different
 
 The following security configuration options are available:
 
-- `none`: No authentication is required.
-- `basic`: Basic authentication is required. Provide a `username` and `password`.
-- `form`: Form-based authentication is required. Provide a `username`, `password`, `usernameField`, `passwordField`, and `loginPath`.
-- `inherit`: Inherit the security configuration from the content source.
+| Option | Description |
+| ------ | ----------- |
+| `none` | No authentication is required |
+| `basic` | Basic authentication is required. Provide a `username` and `password`. |
+| `form` | FORM-based authentication is required. Provide a `username`, `password`, `usernameField`, `passwordField`, and `loginPath` |
+| `inherit` | Inherit the security configuration from the content source. |
 
-### Response
-
-The response contains the created crawler object:
-
-**Response:**
+The API returns the created crawler object:
 
 ```json
 {
@@ -147,31 +129,29 @@ The response contains the created crawler object:
 }
 ```
 
-The following returned properties are populated after the crawler has run:
+The endpoint populates the following properties after the crawler runs:
 
 | Property | Description |
 | --- | --- |
-| `crawlingInstance` | The actual search-middleware node that performs the crawls. Will state the actual Pod name in Kubernetes. |
-| `lastCrawled` | UNIX timestamp of the last time the crawler ran. |
-| `lastCrawlDuration` | Last runtime of the crawler in milliseconds. |
-| `status` | Last known status of the crawler. |
-| `incrementalTimestamp` | The stored timestamp of the crawler that is used in the next crawl iteration. |
+| `crawlingInstance` | The search-middleware node that performs the crawl, specified as the Kubernetes pod name. |
+| `lastCrawled` | The UNIX timestamp of the last crawler run. |
+| `lastCrawlDuration` | The runtime of the last crawl in milliseconds. |
+| `status` | The last known status of the crawler. |
+| `incrementalTimestamp` | The stored timestamp used in the next crawl iteration. |
 
 ## Testing the crawler configuration
 
-To test if your crawler configuration is correct, call the `/dx/api/search/v2/crawlers/{crawler_id}/test` endpoint with a `POST` request. The system then tries to retrieve the first page of the seedlist without actually performing a crawl. This ensures the URL and credentials are correct and search is able to contact the seedlist provider.
+To test the crawler configuration, send a `POST` request to the `/dx/api/search/v2/crawlers/{crawler_id}/test` endpoint, where `{crawler_id}` is the ID of the crawler. The endpoint retrieves the first page of the seedlist without performing a crawl to verify that the URL and credentials are correct and that Search can reach the seedlist provider.
 
-Calling the endpoint responds with a fitting HTTP status code after execution. A `200 OK` is returned if the configuration is working.
+The endpoint returns a `200 OK` status code if the configuration is valid.
 
 ## Triggering the crawler manually
 
-If you do not want to wait for the crawler to run by schedule or you have not configured a schedule, you can manually trigger the crawler.
+If you do not want to wait for the scheduled crawl or have not configured a schedule, you can trigger the crawler manually.
 
-Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger` endpoint with a `POST` request.
+Send a `POST` request to the `/dx/api/search/v2/crawlers/{crawler_id}/trigger` endpoint, where `{crawler_id}` is the ID of the crawler.
 
-The following response is returned after a crawl is triggered:
-
-**Response:**
+The endpoint returns the following response:
 
 ```json
 {
@@ -181,9 +161,9 @@ The following response is returned after a crawl is triggered:
 
 ## Verifying the crawler status
 
-After triggering a crawler, you can check the crawler status by calling the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint with a `GET` request. This returns complete crawler object to you, including the status.
+To check the crawler status after triggering a crawl, send a `GET` request to the `/dx/api/search/v2/crawlers/{crawler_id}` endpoint, where `{crawler_id}` is the ID of the crawler.
 
-**Response:**
+The endpoint returns the complete crawler object, including the status:
 
 ```json
 {
@@ -214,23 +194,20 @@ After triggering a crawler, you can check the crawler status by calling the `/dx
 
 ## Out-of-the-box crawlers
 
-If enabled during the Helm installation, Search V2 configures out-of-the box crawlers for default content sources. These crawlers are configured with the default seedlist URLs and credentials. You can adjust the configuration of these crawlers to your needs.
+If enabled during Helm installation, Search V2 configures crawlers out of the box for default content sources. These crawlers use default seedlist URLs and credentials. You can adjust the configuration of these crawlers as needed.
 
-## Forcing a full re-crawl
+## Forcing a full recrawl
 
-In some cases, it might be necessary to force a full re-crawl of a data source. Re-crawling a data source is a two-step process:
+To force a full recrawl of a data source, perform the following steps:
+
 1. [Remove existing data in the content source index.](#removing-existing-data-in-the-content-source-index)
-2. [Trigger the crawler with the clear_timestamp parameter.](#triggering-the-crawler-with-the-clear_timestamp-parameter)
+2. [Trigger the crawler with the `clear_timestamp` parameter.](#triggering-the-crawler-with-the-clear_timestamp-parameter)
 
 ### Removing existing data in the content source index
 
-A full crawl will not inform you about documents that do not exist anymore. Therefore, it is recommended to remove all content from the content source index. Removing all content ensures that only the newly reported documents by the seedlist are actually stored and returned in the search results.
+A full crawl does not detect deleted documents. Remove all content from the content source index before recrawling to ensure that search results only return documents currently in the seedlist.
 
-To remove all existing data, use the Push REST API endpoint to delete by query:
-
-`DELETE` - `/dx/api/search/v2/contentsources/<content_source_id>/documents/byquery`
-
-If you leave the query to match all documents, you must delete all documents stored in the content source index:
+To remove all existing data, send a `DELETE` request to the `/dx/api/search/v2/contentsources/{content_source_id}/documents/byquery` endpoint, where `{content_source_id}` is the ID of the content source, with the following payload:
 
 ```json
 {
@@ -238,11 +215,59 @@ If you leave the query to match all documents, you must delete all documents sto
 }
 ```
 
-### Triggering the crawler with the clear_timestamp parameter
+### Triggering the crawler with the `clear_timestamp` parameter
 
-After the data has been deleted, you can trigger your crawler again and provide the query parameter `clear_timestamp` with the value `true`.  
-This removes the currently stored `incrementalTimestamp` of the crawler and triggers a new, full crawl.
+After deleting the data, send a `POST` request to the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp=true` endpoint, where `{crawler_id}` is the ID of the crawler.
 
-Call the `/dx/api/search/v2/crawlers/{crawler_id}/trigger?clear_timestamp_true` endpoint with a `POST` request.
+Setting `clear_timestamp` to `true` clears the stored `incrementalTimestamp` of the crawler and initiates a full recrawl.
 
-After the crawler has run, all current state data is indexed in the content source.
+After the crawler runs, all current state data is indexed in the content source.
+
+## Getting crawler status summary
+
+To get aggregated crawler status counts and the most recent crawl result, send a `GET` request to the `/dx/api/search/v2/crawlers/status-summary` endpoint.
+
+The endpoint returns the following response:
+
+```json
+{
+  "counts": {
+    "new": 2,
+    "triggered": 0,
+    "running": 1,
+    "stopped": 0,
+    "failed": 1,
+    "finished": 5,
+    "scheduled": 3
+  },
+  "lastCrawl": {
+    "name": "WCM Crawler",
+    "result": "Success",
+    "timestamp": 1723622400000
+  }
+}
+```
+
+## Stopping a crawler
+
+To stop a running crawler, send a `PUT` request to the `/dx/api/search/v2/crawlers/{crawler_id}/stop endpoint`, where `{crawler_id}` is the universally unique identifier (UUID) of the crawler to stop. The crawler stops after completing the current page, preserving indexed crawl results. If the crawler is not running, the endpoint returns a `200` status code with the current crawler document and an informational message.
+
+The endpoint returns the following response codes:
+
+| Status code | Body | Description |
+| --- | --- | --- |
+| `200` | `{ "message": "...", "crawler": {...} }` | The crawler stopped successfully, or it was not running. |
+| `404` | `{ "message": "Crawler does not exist." }` | The crawler ID was not found. |
+| `500` | `{ "message": "Unable to stop crawler document in management index." }` | An unexpected server error occurred. |
+
+## Listing crawler types
+
+To list the crawler type identifiers supported by the server, send a `GET` request to the `/dx/api/search/v2/crawlertypes` endpoint. This endpoint is public and does not require authentication.
+
+The endpoint returns the following response:
+
+```json
+{
+  "types": ["wcm", "jcr", "portal", "website"]
+}
+```

@@ -2,8 +2,12 @@
 
 This section includes how-to articles about Search-related content in HCL Digital Experience (DX).
 
+- **[How to access the WAS admin console after installing remote search service](./AccessWasAfterRemoteSearchInstall.md)**  
+Learn how to access the IBM Integrated Solutions Console (WAS admin console) to manage the remote search service.
 - **[How to create a search service for a Virtual Portal](./VPSearchService.md)**  
 Learn how to configure a dedicated search service to isolate search scopes and indices specifically for a Virtual Portal environment.
+- **[How to exclude portlets or pages from a search collection](./ExcludePortletsPagesSeedlist.md)**  
+Learn how to configure portlet parameters in HCL DX to exclude specific portlets or entire pages from search collection seedlists.    
 - **[How to implement a search query using WCM HTML and search components](./SampleSearchQueryWCMComponent.md)**  
 Learn how to configure an HTML input form to pass search queries to a search component and display filtered results within a unified presentation template.
 - **[How to include pages containing the Web Content Viewer portlet in a portal seedlist](./IncludeWebContentViewerPortlet.md)**  
@@ -13,4 +17,4 @@ Learn how to search for Web Content Manager (WCM) content created within a speci
 - **[How to use DX Search and the DX Search Center](./DX_Search_and_Search_Center.md)**  
 Learn how to use DX Search and the DX Search Center to find documents used in HCL DX and configure WCM documents to be more easily searched using the search service.
 - **[How to use REST API constraints for searches in content and authoring templates](./SearchConstraintAPI.md)**  
-Learn how to apply REST API search constraints and configure search scopes to filter content items and authoring templates while preventing duplicate search results.
+Learn how to apply REST API search constraints and configure search scopes to filter content items and authoring templates while preventing duplicate search results.  

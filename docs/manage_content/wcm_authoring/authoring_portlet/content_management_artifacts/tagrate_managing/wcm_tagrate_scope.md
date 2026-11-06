@@ -4,11 +4,9 @@ Scoping is typically used to filter the tag cloud or ratings overview according 
 
 You can configure the advanced settings of the web content viewer to limit results to show only tags or ratings that are associated with one or more of the following scopes:
 
--   The parent of the content item that is being displayed (for example, a site area).
--   The authoring template that is used to generate the content item or site area that is being displayed.
--   The categories that are used to profile the content item that is being displayed. In this way, you can manage scopes from within your web content system by defining taxonomies for your content items.
+- The parent of the content item that is being displayed (for example, a site area).
+- The authoring template that is used to generate the content item or site area that is being displayed.
+- The categories that are used to profile the content item that is being displayed. In this way, you can manage scopes from within your web content system by defining taxonomies for your content items.
 
-
-???+ info "Related information" 
-    -   [Synchronizing scopes for web content](./syn_scope/index.md)
-
+???+ info "Related information"
+    [Synchronizing scopes for web content](./syn_scope/index.md)

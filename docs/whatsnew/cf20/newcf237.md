@@ -1,4 +1,4 @@
-# What's new in CF237
+# What's new in CF237 
 
 The following features and updates are available to customers installing HCL Digital Experience (DX) Container Update CF237 on supported platforms:
 
@@ -7,13 +7,16 @@ The following features and updates are available to customers installing HCL Dig
 - Blueprint updates
 - My HCLSoftware delivery portal
 - New How-to articles now available
-- Practitioner Studio Dashboard - New widgets
-- Presentation Designer - Feature updates
 
 **Digital Experience 8.5 and 9.0 Versions**
 
 - Extended Support option now available for DX versions 8.5 and 9.0
 - Automatically apply 9.5 from a later CF installation
+
+**Digital Experience 9.5 Version**
+
+- Practitioner Studio Dashboard - New widgets
+- Presentation Designer - Feature updates
 
 **Digital Experience 9.5 Container Version**
 
@@ -36,10 +39,10 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Blueprint updates
 
 === "Containers"
-    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/237.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 === "On-Premises"
-    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/latest/?path=/docs/overview-changelog--documentation){target="_blank"}.
+    The HCL DX Blueprint design system has been updated for CF237. For more information on the changes, improvements, and bugfixes, refer to the [Blueprint changelog](https://opensource.hcltechsw.com/dx-blueprint-storybook/237.0.0/?path=/docs/overview-changelog--documentation){target="_blank"}.
 
 ### My HCLSoftware delivery portal
 
@@ -67,6 +70,22 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 === "On-Premises"
     A new batch of How-to articles has been migrated from the knowledge base to the HCL DX Help Center. For more information, refer to the [New and migrated articles](../../guide_me/howto/whatsnew.md#cf237) section.
 
+## Digital Experience 8.5 and 9.0 Versions
+
+### Extended Support option now available for DX versions 8.5 and 9.0
+
+=== "On-Premises"
+    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
+
+    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
+
+### Automatically apply 9.5 from a later CF installation
+
+=== "On-Premises"
+    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
+
+## Digital Experience 9.5 Version
+
 ### Practitioner Studio Dashboard - New widgets
 
 === "Containers"
@@ -88,7 +107,7 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 ### Presentation Designer - Feature updates
 
 === "Containers"
-    The following features have been added to Presentation Designer:
+    The following features are now available in Presentation Designer:
 
     - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
     - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
@@ -97,27 +116,13 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
     - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
 
 === "On-Premises"
-    The following features have been added to Presentation Designer:
+    The following features are now available in Presentation Designer:
 
     - Added automatic locking for presentation templates during active editing sessions to prevent conflicting edits. These locks release upon exiting **Edit mode**, saving and closing the template, or cancelling and navigating back to the **Authoring** portlet. For more information, refer to [Automatic presentation template locking](../../manage_content/wcm_authoring/presentation_designer/usage/edit_presentation_template.md#automatic-presentation-template-locking).
     - Added the **Layers** panel to display a hierarchical tree view of canvas elements. The panel maps out parent containers and child contents to help you navigate complex presentation templates without clicking through nested elements in the workspace. For more information, refer to [Layers](../../manage_content/wcm_authoring/presentation_designer/access.md#layers).
     - Updated the **Style items** panel to validate style values in real time by highlighting syntax errors in red, preventing invalid CSS from rendering on the canvas. The **Save** button is disabled until all errors are resolved. For more information, refer to [Style validation](../../manage_content/wcm_authoring/presentation_designer/usage/styling_options.md#style-validation).
     - Added **Button** and **Video** static elements. For more information, refer to [Static elements](../../manage_content/wcm_authoring/presentation_designer/usage/user_elements/static_elements.md).
     - Integrated DX Picker into the Canvas Context Preview feature, allowing you to select content items and digital assets directly from WCM libraries to evaluate real-time layout rendering. For more information, refer to [Canvas Context Preview](../../manage_content/wcm_authoring/presentation_designer/usage/context_preview.md).
-
-## Digital Experience 8.5 and 9.0 Versions
-
-### Extended Support option now available for DX versions 8.5 and 9.0
-
-=== "On-Premises"
-    HCLSoftware announced End of Support for HCL Digital Experience versions 8.5 and 9, effective June 30, 2025. Customers are encouraged to upgrade to HCL Digital Experience version 9.5, released in a continuous delivery model. Refer to the [Deprecated features](../deprecated_features.md) page for more information.
-
-    To accommodate the customers who might be unable to update from DX versions 8.5 and 9.0 to DX version 9.5 by that date, customers can sign up for Extended Support. For more information, see the article [Starting on August 30, 2024, Extended Support will be available for HCL Digital Experience V8.5.x and 9](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0115794){target="_blank"}.
-
-### Automatically apply 9.5 from a later CF installation
-
-=== "On-Premises"
-    In CF219, a feature was introduced where [DX version 9.5 is automatically applied](../../deployment/install/traditional/cf_install/index.md) to an 8.5 or 9.0 installation if the configuration setting `install_95=true` is set. Note that a later CF might apply 9.5 by default unless you set `install_95=false`. This statement is not a guarantee of future releases or their features.
 
 ## Digital Experience 9.5 Container Version
 
@@ -191,4 +196,11 @@ Go to the [HCL Software Support Site/HCL DX Software Fix list](https://support.h
 
 ## Access the latest HCL Digital Experience 9.5 Education Materials on HCLSoftware U
 
-The HCLSoftware U offers technical education for the HCL Software portfolio of products, organized by practitioner role. See the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section of HCLSoftware U and the [What’s New for Digital Experience](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section for more information.
+!!!note
+    - Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
+    - To learn more about the new features in CF237, take the [DX CF237 interactive lesson](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D4658){target="_blank"} on HCLSoftware U.
+
+HCLSoftware U offers technical education for the HCLSoftware product portfolio, organized by practitioner role.
+
+- To access Learning Journeys, events, and replays, go to the [HCL Digital Experience](https://hclsoftwareu.hcl-software.com/hcl-dx){target="_blank"} section.
+- For more DX CF lessons, go to the **What's New** category of the [Courses](https://hclsoftwareu.hcl-software.com/courses?search=eyJjYXQiOiI1NSIsInRpdGxlIjoiIiwiZmlsdGVyIjoiIn0=){target="_blank"} section.

@@ -2,9 +2,6 @@
 title: Logic plug-ins
 ---
 
-
-
-
 Logic plug-ins are used for programming logic. This topic contains additional information for some of these plug-ins.
 
 ## Comment rendering plug-in
@@ -62,7 +59,7 @@ You can also have negative pattern matching. In this case, the markup of the bod
 
 Examples:
 
--   The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name contains the word Review.
+- The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name contains the word Review.
 
     ```
     [Plugin:Matches text="[Property type='content' context='current' 
@@ -82,7 +79,7 @@ Examples:
     
     ```
 
--   The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name does not contain the word Review:
+- The following sample renders the markup between the start and end tags only if the rendered content is in a workflow stage whose name does not contain the word Review:
 
     ```
     [Plugin:Matches text="[Property type='content' context='current' 
@@ -92,7 +89,7 @@ Examples:
     
     ```
 
--   You can also use capture groups for regular expressions. To access the value of a group, use the `MatchedGroup` plug-in. You can use this plug-in only between the start and end tags of the `Matches` rendering plug-in. It provides the attribute group to retrieve a capture group by its index. For example, to access the first word in a list of comma-separated words, use the plug-in as follows:
+- You can also use capture groups for regular expressions. To access the value of a group, use the `MatchedGroup` plug-in. You can use this plug-in only between the start and end tags of the `Matches` rendering plug-in. It provides the attribute group to retrieve a capture group by its index. For example, to access the first word in a list of comma-separated words, use the plug-in as follows:
 
     ```
     [Plugin:Matches pattern="(.*)(,)(.*)" text="key1,key2"] 
@@ -100,18 +97,17 @@ Examples:
     [/Plugin:Matches]
     ```
 
-
 ## Otherwise rendering plug-in
 
 Use the `Otherwise` rendering plug-in to conditionally insert markup into your web content if any of the following render plug-ins evaluate as false before the `Otherwise` plug-in is evaluated:
 
--   `Equals` rendering plug-in
--   `NotEquals` rendering plug-in
--   `Matches` rendering plug-in
+- `Equals` rendering plug-in
+- `NotEquals` rendering plug-in
+- `Matches` rendering plug-in
 
 Examples:
 
--   The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Document not in review`\) only if the rendered content is not in a workflow stage that is named Review.
+- The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Document not in review`\) only if the rendered content is not in a workflow stage that is named Review.
 
     ```
     [Plugin:Equals text1="Review" text2=" [Property type='content'
@@ -125,7 +121,7 @@ Examples:
     
     ```
 
--   The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Internal document`\) only if the type element of the rendered content has the value `Internal`.
+- The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Internal document`\) only if the type element of the rendered content has the value `Internal`.
 
     ```
     [Plugin:NotEquals text1="Internal" text2=" [Element type='content'
@@ -138,7 +134,7 @@ Examples:
     
     ```
 
--   The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Document not in review`\) only if the rendered content is in a workflow stage whose name does not contain the word `Review`.
+- The following sample renders the markup between the start and end tag of the `Otherwise` rendering plug-in \(`Document not in review`\) only if the rendered content is in a workflow stage whose name does not contain the word `Review`.
 
     ```
     [Plugin:Matches text=" [Property type='content' context='current'
@@ -151,12 +147,11 @@ Examples:
     
     ```
 
-
 You can also nest the `Equals`, `NotEquals`, and `Matches` rendering plug-ins when conditionally adding markup. When you use these plug-ins together in this way, you might want to have different `Otherwise` plug-ins that are associated with each conditional rendering plug-in. To associate a plug-in with a specific `Otherwise` plug-in, add a scope attribute with the same value to the conditional rendering plug-in and to the `Otherwise` plug-in. If no scope attribute is specified for the `Otherwise` plug-in, it is applied to the conditional plug-in that was last evaluated.
 
 Examples:
 
--   The following sample uses multiple nested rendering plug-ins to conditionally render markup. The `Otherwise` plug-in with the scope attribute set to 1 refers to the `Equals` plug-in. The `Otherwise` plug-in with the scope attribute set to 2 refers to the `Matches` rendering plug-in.
+- The following sample uses multiple nested rendering plug-ins to conditionally render markup. The `Otherwise` plug-in with the scope attribute set to 1 refers to the `Equals` plug-in. The `Otherwise` plug-in with the scope attribute set to 2 refers to the `Matches` rendering plug-in.
 
     ```
     [Plugin:Equals text1="Review" text2=" [Property type='content'
@@ -177,5 +172,8 @@ Examples:
     ```
 
 ## HCLSoftware U learning materials
+
+!!!note
+    Access HCLSoftware U resources for free. [Log in](https://hclsoftwareu.hcl-software.com/login-page){target="_blank"} or [Sign up](https://hclsoftwareu.hcl-software.com/hclsoftwareu-signup){target="_blank"} to get started. If you have further questions, [Contact us](https://hclsoftwareu.hcl-software.com/contactus){target="_blank"} or check the [FAQ](https://hclsoftwareu.hcl-software.com/frequently-asked-questions){target="_blank"}.
 
 To learn more details on how to develop with HCL Digital Experience (DX) Web Content, go to the [Web Content Development lesson in the HCL Digital Experience for Developers (Intermediate)](https://hclsoftwareu.hcl-software.com/component/axs/?view=sso_config&id=4&forward=https%3A%2F%2Fhclsoftwareu.hcl-software.com%2Fcourses%2Flesson%2F%3Fid%3D3500){target="_blank"} course. You can try it out using the [Web Content Development Lab](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development.pdf){target="_blank"} and corresponding [Web Content Development Lab Resources](https://hclsoftwareu.hcl-software.com/images/Lc4sMQCcN5uxXmL13gSlsxClNTU3Mjc3NTc4MTc2/DS_Academy/DX/Developer/HDX-DEV-200_Web_Content_Development_Lab_Resources.zip){target="_blank"}.

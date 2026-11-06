@@ -2,6 +2,8 @@
 
 IQ is an AI-powered assistant integrated into HCL Digital Experience (DX) that handles content creation and management through real-time, context-aware automation. Built on the Model Context Protocol (MCP), IQ offers a conversational interface directly within the DX environment where you can ask questions or have the assistant perform actions for you, such as creating templates, updating content, and searching for assets.
 
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 The IQ assistant is accessible through a chat interface integrated into HCL DX. Depending on the page context, the interface displays in either a panel view or a compact view, and both options can expand to a full-screen view. Responses are delivered over WebSocket connections once the AI model finishes processing the request. The assistant maintains conversational context within an active session. The user interface menus and labels are available only in English. However, the assistant can process prompts and generate responses in multiple languages, supporting both left-to-right (LTR) and right-to-left (RTL) text layouts.
 
 To streamline your workflow, IQ performs actions directly within your DX system. You can instruct the assistant to build and organize your workspace, including creating, updating, or deleting content items, site areas, pages, and templates. The assistant also handles project management tasks by adding assets and publishing changes, and can run comprehensive searches across your libraries and collections.
@@ -16,7 +18,11 @@ Ensure your environment meets the following requirements:
 1. HCL DX CF236 or higher is installed and running in a container-based deployment.
 2. IQ is installed and configured in your DX environment. For detailed instructions on the installation process, refer to [Installing IQ](installation/index.md).
 3. Network connectivity is open for WebSocket communication between the browser and the IQ backend service.
-4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource. For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
+4. Virtual Resource permission to access IQ. Users must be granted access to the `wps.DX_IQ_INTEGRATOR_API` Virtual Resource.
+
+    ![Resource Permissions - IQ Virtual Resource](../../assets/HCL_IQ_Virtual_Resource.png "Virtual Resource Permissions - IQ Integration API")
+
+    For more information, refer to [Setting resource permissions](../../deployment/manage/security/people/authorization/controlling_access/sec_rpp.md).
 
 ## Architecture
 
@@ -113,6 +119,8 @@ This section provides detailed instructions for enabling, configuring, and deplo
 This section explains the different methods available to access the IQ interface within DX.
 - **[Using IQ](./usage.md)**  
 This section provides a step-by-step guide for interacting with IQ, managing conversations, and leveraging its features effectively.
+- **[Updating IQ](./updating.md)**  
+This section explains how to update the IQ Helm chart independently from the DX Helm chart while maintaining the supported version difference of up to two releases.
 - **[IQ limitations](./limitations.md)**  
 This section highlights current limitations and known issues.
 - **[Troubleshooting IQ](./troubleshooting.md)**  

@@ -1,26 +1,25 @@
-# Installing the HCL Digital Experience software
+# Installing HCL Digital Experience
 
-The HCL Digital Experience is designed to help create, manage, simplify, and integrate your processes into an engaging online experience.
+HCL Digital Experience (DX) is designed to help you create, manage, simplify, and integrate your processes into an engaging online experience.
 
-Prerequisites
--   [Planning to install HCL Digital Experience](../../../../get_started/plan_deployment/traditional_deployment/index.md)
+## Prerequisites
 
-Select a roadmap to guide you through the installation and deployment process. The installation process uses IBM® Installation Manager to install the digital experience. Select your operating system to get started. After you complete the installation, you have a functional portal, unless you selected to install only the binaries for a migration path. Then, use the Configuration Wizard to complete the deployment.
+Before installing HCL DX, complete the following tasks:
 
-Existing users need to be on one-level previous version of HCL Digital Experience with applicable software fixes before installing Version 9.5 on top of it. See [Supported migration paths](../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md) for more information.
+- Review [Planning to install HCL Digital Experience](../../../../get_started/plan_deployment/traditional_deployment/index.md).
+- Select an installation roadmap for your operating system. IBM Installation Manager installs the platform binaries. After installation finishes, use the Configuration Wizard to complete deployment.
+- Upgrade existing installations to the supported prior version and apply all required software fixes before installing version 9.5. For details, refer to [Supported migration paths](../../../../deployment/manage/migrate/planning_migration/mig_plan_supported_paths.md).
 
--   **[HCL Portal Express 9.5 - Server startup and installation](inst_portal_express_95.md)**  
-Learn how to resolve HCL Portal server startup/restart failure on HCL Portal Express 8.5 or 9.0 or new HCL Portal Express installation failures.
--   **[AIX system - HCL Digital Experience installation](../installing_dx/aix/index.md)**  
-Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
--   **[Preparing your Linux system for installation](../installing_dx/linux/index.md)**  
-Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
--   **[Windows system - HCL Digital Experience installation](../installing_dx/windows/index.md)**  
-Installing includes preparing your operating system, installing HCL Portal and HCL Web Content Manager, and completing the deployment configuration.
+## Installation options
 
-
-
+- **[Installing HCL DX on AIX](../installing_dx/aix/index.md)**  
+Learn how to prepare AIX and complete deployment using IBM Installation Manager.
+- **[Installing HCL DX on Linux](../installing_dx/linux/index.md)**  
+Learn how to set Linux dependencies and deploy platform binaries.
+- **[Installing HCL DX on Windows](../installing_dx/windows/index.md)**  
+Learn how to configure Windows administrator rights and run the installer.
+- **[Troubleshooting HCL DX v9.5 server startup and installation](inst_portal_express_95.md)**  
+Learn how to resolve startup failures on HCL DX v8.5, v9.0, or new v9.5 installations.
 
 ???+ info "Related information"  
-    -   [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)
-
+    [Installing the HCL Digital Experience software](../../../../deployment/install/traditional/installing_dx/index.md)

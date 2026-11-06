@@ -1,4 +1,4 @@
-# Running search queries via REST API
+# Running search queries by using the REST API
 
 Search queries follow the capabilities that OpenSearch provides. However, the request schema is different from the one that OpenSearch uses.
 

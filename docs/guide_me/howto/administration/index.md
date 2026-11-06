@@ -2,6 +2,8 @@
 
 This section includes how-to articles about administration in HCL Digital Experience (DX).  
 
+- **[How to add applications to the Application Palette in batches](./AddAppsInBatches.md)**  
+Learn how to create custom categories and assign portlets to the Application Palette in batches.
 - **[How to add MIME types to the DX server](./SupportForAdditionalMIMETypes.md)**  
 Learn how to add support for additional MIME types to your DX server.  
 - **[How to change the redirect URL for Login, Logout, and Session Timeout](./RedirectTimeout.md)**  
@@ -16,15 +18,26 @@ Learn how to clear WebSphere Dynacache caches using the sample JSP code.
 Learn how to customize the behavior of HTTP-404 and HTTP-403 error codes when accessing WCM resources.  
 - **[How to decode long Portal URLs](./DecodeLongURLs.md)**  
 Learn about long Portal URLs and how to decode them.  
+- **[How to deny IBM Integrated Solutions Console access in Kubernetes](./DenyAdminConsoleIngressk8.md)**  
+Learn how to configure an NGINX Ingress resource to deny access to the IBM Integrated Solutions Console for non-administrative users in Kubernetes.
 - **[How to determine the HCL DX application server runtime](./DetermineWebsphereAppServer.md)**  
 Learn how to determine whether your DX environment runs on traditional WebSphere Application Server or IBM Open Liberty by inspecting server log files.  
+- **[How to disable an application blocking the HCL DX server startup](./PreventApplicationStartUp.md)**  
+Learn how to identify and disable a hanging application to allow the HCL DX server to start successfully.  
 - **[How to expedite the processing of asynchronous deletes in the JCR database](./ExpediteAsyncDeletes.md)**  
 Learn how to expedite the purging of pending deletes when running the `clearVersions` ConfigEngine task.  
 - **[How to find the virtual portal name by ObjectID](./DetermineVPObjectID.md)**  
 Learn how to determine the virtual portal (VP) name associated an ObjectID (OID).  
+- **[How to hide the impersonation button for non-administrator users](./HideImpersonationButton.md)**  
+Learn how to modify page permissions in HCL DX to hide the impersonation button for non-administrative users.
 - **[How to increase the duration of transaction timeouts in HCL DX](./IncreaseTransactionTimeout.md)**  
 Learn how to increase the duration of transaction timeouts to reduce timeout errors.  
 - **[How to generate a system report to compare different DX environments](SystemReportForCompare.md)**  
-Learn how to create a system report to check DX configuration settings and compare them with other DX environments.  
+Learn how to create a system report to check DX configuration settings and compare them with other DX environments.
+- **[How to reset the Web Content Viewer portlet to its default state](./ResetWCMViewerPortlet.md)**  
+Learn how to reset the Web Content Viewer portlet to clear corrupted preference keys and restore default configuration settings.
+- **[How to use a custom temporary directory with ConfigEngine](./ConfigEngineAltTempDir.md)**  
+Learn how to specify a custom temporary directory using the `-Djava.io.tmpdir` parameter when running ConfigEngine tasks in HCL DX.
 - **[How to use JavaScript to find and replace text on a Portal page](./UseJavaScriptToReplaceText.md)**  
-Learn how to use JavaScript to find and replace text on a Portal page.
+Learn how to use custom JavaScript to find and replace specific text strings on HCL DX Portal pages.
+

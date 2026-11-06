@@ -2,15 +2,21 @@
 
 The Practitioner Studio Dashboard is a modern, React-based dashboard that replaces the Practitioner Studio homepage. It includes widgets, quick links, and an info hub to help you manage content, track status, and personalize user experiences.
 
-![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)
+<!--![Practitioner Dashboard](../../assets/HCL_Practitioner_dashboard.png)-->
+
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/NQ7IrzqbErGDx51OjETf?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use the HCL DX Practitioner Studio Dashboard to track content status and resume work" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
 
 The dashboard includes the following widgets:
 
-- **Status monitoring:** Shows items that require approval or attention, including expiring content.
+- **Monitor:** Shows items that require approval or attention, including expiring content.
+- **My Sites:** Displays managed sites in a card layout with thumbnails, status indicators, and direct navigation.
+- **Calendar:** Displays a monthly or weekly grid and a daily agenda of content and projects based on the publish and expiry dates.
+- **Recently Modified Pages:** Displays a hierarchical tree view of sites or pages for your most recently modified site and includes quick search.
 - **My Projects:** Displays project names, last modified timestamps, and status.
 - **Recent content and project:** Displays recently modified content items and projects with preview capabilities and direct authoring access.
 - **Tags & Keywords Manager:** Search and filter content using tags and keywords (requires Search V2).
-- **Personalization rules (PZN):** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
+- **Personalization Rules:** Monitors visibility rules, profilers, select actions, and binding rules targeted at site users.
+- **Search Crawlers:** Displays the status of Search V2 crawlers (requires Search V2).
 
 The dashboard also includes an interactive banner that displays dynamic announcements, tips, and tutorials. These can include notifications about new CF releases and links to helpful tutorials.
 
@@ -61,6 +67,59 @@ Each metric includes customizable time filters ranging from **Today** to **Withi
     - For **Expiring**, **Within 7 days** includes the current day and the next six days.
     - For **Published** and **Drafts**, **Within 7 days** includes the current day and the previous six days.
 
+## My Sites
+
+Use the **My Sites** widget to quickly access and monitor your managed sites. The widget includes thumbnails and status indicators.
+
+![My Sites](../../assets/HCL_Practitioner_dashboard_My_Sites.png)
+
+- **Site Cards:** View sites in a grid layout containing the site thumbnail, site title, status badge, and last modified timestamp.
+- **Direct Navigation:** Select the **View** icon on a site card to open the target site in a new browser tab.
+
+### Adding a thumbnail to a site
+
+You can add a thumbnail to a site in two ways:
+
+- Create a site using a template that includes a theme with an Open Graph (OG) image (`og:image`) metadata already configured. The thumbnail is automatically displayed based on the OG image defined in the theme.
+- Configure the site manually:
+
+    1. Navigate to **Web Content > Authoring > Portal Site > Content > Content Root**.
+    2. Select the check box for the site you want to update, and then select **Edit**.
+    3. Under **Portal Page Properties**, select **Manage Elements**.
+    4. In the **Element type** list, select **Image**.
+    5. In the **Name** box, enter `thumbnail`.
+    6. Select **OK**.
+    7. Under the newly created **thumbnail** element, select **Upload** to add a thumbnail image.
+    8. Select **Save and close**.
+
+!!! note
+    If both an OG image and a thumbnail are configured for a site, the OG image takes precedence and is displayed as the site's thumbnail.
+
+## Calendar
+
+Use the **Calendar** widget to see which content items are scheduled to publish or expire, laid out as a monthly or weekly grid.
+
+![Calendar](../../assets/HCL_Practitioner_dashboard_Calendar.png)
+
+- The grid pane on the left displays scheduled items. In the view drop-down list in the upper-right corner, select **Month** or **Week** (**Week** is selected by default). Select **Today**, the month and year selector, or the navigation arrows to move through the calendar. Days display color-coded status indicators for scheduled items.
+- The agenda pane on the right displays items scheduled for the selected date in chronological order. Select a date in the grid or use the navigation arrows to view scheduled items for that day. Select a content item, and then select the eye icon to open it in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+
+!!! note
+    The status displayed on a calendar chip is based on comparing the item's publish and expiry dates to the current date. This does not reflect the item's actual workflow or content status. For example, an item might display **Publishing** or **Published** status based on its publish date even if it has not completed the publishing workflow. If an item has both a publish date and an expiration date within the selected date range, it appears as two separate chips.
+
+## Recently Modified Pages
+
+Use the **Recently Modified Pages** widget to explore and search the page structure of your most recently modified site.
+
+![Recently Modified Pages](../../assets/HCL_Practitioner_dashboard_Recently_Modified_Pages.png)
+
+- View the root site name, nested sites, and child pages. Expand or collapse site levels to navigate the hierarchy.
+- Select any page or site in the tree to navigate directly to that item.
+- Use the search bar to locate specific pages within the current site tree.
+
+!!! note
+    The widget displays only the 20 most recently modified pages.
+
 ## My Projects
 
 Use the **My Projects** widget to view and manage your projects.
@@ -68,10 +127,10 @@ Use the **My Projects** widget to view and manage your projects.
 ![My Projects](../../assets/HCL_Practitioner_dashboard_My_Projects.png)
 
 - View the **Projects**, **Last Modified** date, and **Status**.
-- Select **Go to My Projects** to view your projects in the [Web Content Manager (WCM) Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
+- Select **Go to My Projects** to view your projects in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
 
 !!! note
-    Viewing and managing projects in this widget requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
+    Viewing and managing projects requires Editor-level access for the WCM REST Service under Virtual Resources. For more information, refer to [Web Content Manager REST service](../../manage_content/wcm_development/wcm_rest/wcm_rest_starting.md).
 
 ## Recent content and project
 
@@ -79,25 +138,15 @@ Use the **Recent content and project** widget to view up to 100 of your most rec
 
 ![Recent content](../../assets/HCL_Practitioner_dashboard_Recent_Content.png)
 
-- Select the eye icon on a content item to view it directly.  
+- Select the eye icon on a content item to view directly.  
 - Select **Go to Authoring** to view the library explorer in the [WCM Authoring Portlet](../../manage_content/wcm_authoring/authoring_portlet/index.md).
-
-## Personalization rules
-
-Use the **Personalization Rules** widget to monitor the personalization (PZN) rules that customize user experiences on your website.
-
-![Personalization Rules](../../assets/HCL_Practitioner_dashboard_Personalization_Rules.png)
-
-- View the **Rule**, **Rule Type**, **Author**, and **Last Modified** date.
-- Filter or review rules by **Rule Type** such as **Visibility Rule**, **Profiler**, **Select Action**, and **Binding Rules**.
-- Select **Go to Personalization** to manage and configure rules on the main Personalization page.
 
 ## Tags & Keywords Manager
 
 Use the **Tags & Keywords Manager** widget to search and filter content by WCM keywords, DAM keywords, and social tags using a two-pane interface. The widget uses a split-pane layout to separate search controls from content results.
 
 !!! note
-    - This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
+    - This widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL Digital Experience (DX) deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
     - If DAM is not enabled in a virtual portal, DAM keyword links are disabled.
 
 ![Tags & Keywords Manager](../../assets/HCL_Practitioner_dashboard_Tags_Keywords.png)
@@ -115,6 +164,28 @@ The **Results** pane displays content items that match your selected tags.
 - Select **any** or **all** to filter content matching any or all selected tags.
 - Select a content title to open its source location.
 
+## Personalization rules
+
+Use the **Personalization Rules** widget to monitor the personalization (PZN) rules that customize user experiences on your website.
+
+![Personalization Rules](../../assets/HCL_Practitioner_dashboard_Personalization_Rules.png)
+
+- View the **Rule**, **Rule Type**, **Author**, and **Last Modified** date.
+- Filter or review rules by **Rule Type** such as **Visibility Rule**, **Profiler**, **Select Action**, and **Binding Rules**.
+- Select **Go to Personalization** to manage and configure rules on the main Personalization page.
+
+## Search Crawlers
+
+Use the **Search Crawlers** widget to check the status of your Search V2 crawlers.
+
+![Search Crawlers](../../assets/HCL_Practitioner_dashboard_Search_Crawlers.png)
+
+- View the **Crawler name**, **Last crawled** date, and **Status** for each crawler, sorted by name.
+- Use the search field in the widget header to filter the list by crawler name.
+
+!!! note
+    The widget requires [Search V2](../search_v2/index.md) to be enabled in your HCL DX deployment. For more information, refer to [Installing Search V2](../search_v2/installation.md).
+
 ## Configuring widget parameters
 
 Use the dashboard to customize which widgets appear on your screen. To change these settings:
@@ -130,7 +201,11 @@ Use the dashboard to customize which widgets appear on your screen. To change th
 | `RECENT_STATUS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Status Monitor** widget, which displays system health and alerts. |
 | `RECENT_PZN_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Personalization** widget, which displays recent Personalization (PZN) activities and campaigns. |
 | `PROJECTS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Projects** widget, which displays your projects in a paginated data grid. |
-| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. **Note:** This widget requires Search V2 to be enabled. |
+| `TAG_MANAGER_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Tags & Keywords Manager** widget, which displays managed tags and keywords. <br>**Note:** This widget requires Search V2 to be enabled. |
+| `MY_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **My Sites** widget, which displays managed sites in a grid view that includes thumbnails and status indicators. |
+| `RECENT_SITES_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Recently Modified Pages** widget, which displays a hierarchical tree view of pages and site areas within the most recently modified site. |
+| `CALENDAR_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Calendar** widget, which displays a monthly or weekly grid and daily agenda of contents based on the publish and expiry dates. |
+| `SEARCH_CRAWLERS_WIDGET` | Boolean (checkbox) | `true` | Shows or hides the **Search Crawlers** widget, which displays the status of Search V2 crawlers. <br>**Note:** This widget requires Search V2 to be enabled. |
 
 ## Configuring main portals
 

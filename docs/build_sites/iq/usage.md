@@ -2,6 +2,8 @@
 
 This section provides a comprehensive guide on how to interact with IQ, manage active conversation sessions, and handle system alerts within HCL Digital Experience (DX).
 
+<div style="position: relative; padding-bottom: calc(56.25% + 41px); height: 0px; width: 100%;"><iframe src="https://demo.arcade.software/OjItTk62Vf8dY9OJTUK2?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Use HCL IQ in HCL DX to create pages, update content, and manage assets with natural language" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write; autoplay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div>
+
 ## Features
 
 IQ is an assistant purpose-built for HCL DX that understands DX-specific concepts, APIs, and workflows, and can both answer questions and perform actions directly on your DX system.

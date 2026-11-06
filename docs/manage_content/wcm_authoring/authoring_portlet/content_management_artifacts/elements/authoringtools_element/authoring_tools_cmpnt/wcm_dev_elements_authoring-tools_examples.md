@@ -1,30 +1,28 @@
 ---
 id: wcm_dev_elements_authoring-tools_examples
-title: Define Authoring Tools
+title: Defining Authoring Tools
 ---
-# How to Define Authoring Tools
-
 
 You can format the design of an authoring tool in different ways, including displaying authoring tools as text-based links, or image-based links.
 
 ## Authoring tool options
 
--   When you create a "new" action, you can either select an authoring template and site area to use with the new content item, use the same authoring template and site area as the current content item, user, or portlet, or allow users to select an authoring template and site area.
--   When you create an "edit" action you select either to create a draft item, or allow users to edit the rendered content.
+- When you create a "new" action, you can either select an authoring template and site area to use with the new content item, use the same authoring template and site area as the current content item, user, or portlet, or allow users to select an authoring template and site area.
+- When you create an "edit" action you select either to create a draft item, or allow users to edit the rendered content.
 
 ## Authoring tool designs
 
 You use placeholder tags to display authoring tools. You can use these placeholder tags in authoring tool designs:
 
--   name
--   href
--   namelink
+- name
+- href
+- namelink
 
 ## Text-based authoring tool
 
 This example describes the element designs used to display a text-based authoring tool. Each design includes placeholder tags that are used to generate the text and link for each authoring tool.
 
--   **New action design:**
+- **New action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
@@ -36,126 +34,124 @@ This example describes the element designs used to display a text-based authorin
     <a href="javascript:;" onclick="[Placeholder tag="href"]">Create</a>
     ```
 
--   **Read action design:**
+- **Read action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
     ```
 
--   **Edit action design:**
+- **Edit action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
     ```
 
--   **Delete action design:**
+- **Delete action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
     ```
 
--   **Approve action design:**
+- **Approve action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
     ```
 
--   **Reject action design:**
+- **Reject action design:**
 
     ```
     <a href="[Placeholder tag="href"]">[Placeholder tag="name"]</a>
     ```
 
--   **Header:**
+- **Header:**
 
     ```
     <div><span>
     ```
 
--   **Separator:**
+- **Separator:**
 
     ```
     </span><span>
     ```
 
--   **Footer:**
+- **Footer:**
 
     ```
     </span></div>
     ```
 
-
 ## Image-based authoring tool
 
 This example describes the element designs used to display an image-based authoring tool. In this example, the `[Placeholder tag="name"]` tag is replaced with a component tag that references an image component. Before you create these element designs, you must create an image component for each image that is used in the design. In this example, the following image components are required:
 
--   new-image
--   read-image
--   edit-image
--   delete-image
--   approve-image
--   reject-image
+- new-image
+- read-image
+- edit-image
+- delete-image
+- approve-image
+- reject-image
 
--   **New action design:**
+- **New action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="new-image" ]</a>
     ```
 
--   **Read action design:**
+- **Read action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="read-image" ]</a>
     ```
 
--   **Edit action design:**
+- **Edit action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="edit-image" ]</a>
     ```
 
--   **Delete action design:**
+- **Delete action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="delete-image" ]</a>
     ```
 
--   **Approve action design:**
+- **Approve action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="approve-image" ]</a>
     ```
 
--   **Reject action design:**
+- **Reject action design:**
 
     ```
     <a href="[Placeholder tag="href"]" >
     [component name="reject-image" ]</a>
     ```
 
--   **Header:**
+- **Header:**
 
     ```
     <div><span>
     ```
 
--   **Separator:**
+- **Separator:**
 
     ```
     </span><span>
     ```
 
--   **Footer:**
+- **Footer:**
 
     ```
     </span></div>
     ```
-
 
 ## How to use authoring tools components when displayed in a pop-up window
 
@@ -210,4 +206,3 @@ To redirect users to another page for authoring tasks, specify a value of `url` 
 [Inserting element tags](wcm_dev_elements_insert_tags.md)
 
 [Creating web content tags](wcm_dev_referencing_tags.md) -->
-
